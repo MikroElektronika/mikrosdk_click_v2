@@ -18,7 +18,7 @@
  * while Y slider increases/decreases the LEDs intensity.
  * 
  * ## NOTE 
- * In some cases, the user will need to wait several seconds after the click initialization
+ * In some cases, the user will need to wait several seconds after the Click initialization
  * for the sensor to be stabilized.
  * 
  * \author MikroE Team

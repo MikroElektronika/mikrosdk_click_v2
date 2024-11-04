@@ -3,6 +3,6 @@
     "description": "7-SEG 2 Click is a compact add-on board that represents an easy solution for adding a numeric or hexadecimal display to your application. This board features the LDT-M2804RI, a three-digit seven-segment display from Lumex. The display has a 0.28” height, red LED segments, gray faces, and white diffused segments. All three digits come with a following dot point that can be used as a decimal point in displaying the number values.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LED1202QTR"],
+    "hw" : ["Click","LED1202QTR"],
     "category" : ["Click Boards > Display & LED > LED segment"]
 }

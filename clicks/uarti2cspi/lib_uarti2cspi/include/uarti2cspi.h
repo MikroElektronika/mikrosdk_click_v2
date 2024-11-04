@@ -266,7 +266,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void uarti2cspi_cfg_setup ( uarti2cspi_cfg_t *cfg );
@@ -277,7 +277,7 @@ void uarti2cspi_cfg_setup ( uarti2cspi_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 UARTI2CSPI_RETVAL uarti2cspi_init ( uarti2cspi_t *ctx, uarti2cspi_cfg_t *cfg );
 
@@ -322,7 +322,7 @@ void uarti2cspi_set_reset ( uarti2cspi_t *ctx, uint8_t state );
  * @param parity_mode  Parity mode.
  * @param stop_bits    Stop bits.
  *
- * @description This function configures the click module.
+ * @description This function configures the Click module.
  */
 void uarti2cspi_advanced_init ( uarti2cspi_t *ctx, uint32_t baud_rate, uint8_t data_bits, 
                                                    uint8_t parity_mode, uint8_t stop_bits );
@@ -333,7 +333,7 @@ void uarti2cspi_advanced_init ( uarti2cspi_t *ctx, uint32_t baud_rate, uint8_t d
  * @param ctx        Click object.
  * @param vector     IER vector. 
  *
- * @description This function enables/disables interrupts on the click module by writing the 
+ * @description This function enables/disables interrupts on the Click module by writing the 
  *              specified configuration vector to the Interrupt Enable Register.
  */
 void uarti2cspi_interrupt_enable ( uarti2cspi_t *ctx, uint8_t vector );
@@ -377,7 +377,7 @@ uint8_t uarti2cspi_uart_data_ready ( uarti2cspi_t *ctx );
  * 
  * @return Read data byte.
  * 
- * @description This function reads one byte from the click module.
+ * @description This function reads one byte from the Click module.
  */
 uint8_t uarti2cspi_uart_read ( uarti2cspi_t *ctx );
 
@@ -387,6 +387,6 @@ uint8_t uarti2cspi_uart_read ( uarti2cspi_t *ctx );
 #endif  // _UARTI2CSPI_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

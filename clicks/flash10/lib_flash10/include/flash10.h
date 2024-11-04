@@ -298,7 +298,7 @@ typedef enum
 
 /**
  * @brief Flash 10 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #flash10_cfg_t object definition for detailed explanation.
@@ -310,7 +310,7 @@ void flash10_cfg_setup ( flash10_cfg_t *cfg );
 /**
  * @brief Flash 10 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #flash10_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

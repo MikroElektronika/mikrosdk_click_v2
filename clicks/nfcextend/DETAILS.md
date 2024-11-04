@@ -1,6 +1,6 @@
 
 ---
-# NFC Extend click
+# NFC Extend Click
 
 NFC Extend Click is NFC tag interface device with possibility of using any shape and size external antenna, offering 16 Kbit of electrically erasable programmable memory (EEPROM). This Click Board™ offer two communication interfaces.>
 
@@ -8,7 +8,7 @@ NFC Extend Click is NFC tag interface device with possibility of using any shape
   <img src="https://download.mikroe.com/images/click_for_ide/nfcextend_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nfc-extend-click)
+[Click Product page](https://www.mikroe.com/nfc-extend-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to configure and use the NFC Extend click. The click is an NFC tag 
+> This example showcases how to configure and use the NFC Extend Click. The Click is an NFC tag 
   interface which uses the I2C serial interface and an RF link interface in order to communicate.
   The example requires the ST25 NFC Tap application which can be downloaded to your phone. 
 
@@ -63,7 +63,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

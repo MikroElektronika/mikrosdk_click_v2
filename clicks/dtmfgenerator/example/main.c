@@ -12,7 +12,7 @@
  * run the power-on sequence, also write log.
  *
  * ## Application Task
- * DTMF Generator click board DTMF generator transmits the signal 
+ * DTMF Generator Click board DTMF generator transmits the signal 
  * for generating tone for digits :
  * "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
  * "A", "B", "C", "D", "*" and "#".

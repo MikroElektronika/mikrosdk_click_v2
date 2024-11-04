@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Relay 4 click
+# Relay 4 Click
 
 > Relay 4 Click is a compact add-on board with a general-purpose relay that any host MCU can control. This board features the J1031C3VDC, high-current single-pole double-throw (SPDT) signal relay from CIT Relay and Switch. Highly sensitive, the J1031C3VDC offers a low coil power consumption in a small, lightweight package with PC pin mounting. It comes with a dimension of 12.5x7.5x10 millimetre (LxWxH) and a 1C contact arrangement with a coil voltage of 3VDC, providing a switching voltage of 125VAC/60VDC maximum.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/relay4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/relay-4-click)
+[Click Product page](https://www.mikroe.com/relay-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ void relay4_set_relay2_open ( relay4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Relay 4 click board by toggling the relays state.
+> This example demonstrates the use of Relay 4 Click board by toggling the relays state.
 
 **The demo application is composed of two sections :**
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

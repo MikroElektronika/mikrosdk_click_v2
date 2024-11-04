@@ -1,6 +1,6 @@
 
 ---
-# ADC 11 click
+# ADC 11 Click
 
 ADC 11 Click is a compact add-on board that contains a high-performance data converter. This board features the LTC1864, a 16-bit 250ksps analog-to-digital converter from Analog Devices. With a typical supply current of only 850µA at the maximum sampling frequency, the LTC1864 is among the lowest power consumption ADCs available. After conversion, the LTC1864 goes into a low-power Sleep mode, further reducing the supply current. That’s why it can run at proper micro-power levels in applications that do not require the maximum sampling rate of the LTC1864.
 
@@ -8,7 +8,7 @@ ADC 11 Click is a compact add-on board that contains a high-performance data con
   <img src="https://download.mikroe.com/images/click_for_ide/adc11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-11-click)
+[Click Product page](https://www.mikroe.com/adc-11-click)
 
 ---
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART Click](https://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

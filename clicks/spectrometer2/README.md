@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Spectrometer 2 click
+# Spectrometer 2 Click
 
 > Spectrometer 2 Click is a compact add-on board that collects light waves. This board features the VD6283TX, a color sensor with advanced light flicker extraction from STMicroelectronics. The VD6283TX performs fast and accurate light measurements thanks to an individual ADC and a readout for each color channel - red, green, blue, IR, clear, and visible. It uses hybrid color filters with precise responses allowing accurate computation of the correlated color temperature (CCT) and Lux information. Its patented architecture and a high-performance photodiode design can also extract light-flickering frequencies to avoid banding effects or check that they are safe for the human eye.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/spectrometer2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spectrometer-2-click)
+[Click Product page](https://www.mikroe.com/spectrometer-2-click)
 
 ---
 
@@ -70,14 +70,14 @@ uint8_t spectrometer2_get_color ( spectrometer2_hsl_t *hsl );
 
 ## Example Description
 
-> This example demonstrates the use of Spectrometer 2 click board by reading data from 6 ALS channels and
+> This example demonstrates the use of Spectrometer 2 Click board by reading data from 6 ALS channels and
 converting them to HSL color and displaying those data as well as the detected color name on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -143,7 +143,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void stretch_cfg_setup ( stretch_cfg_t *cfg );
@@ -154,7 +154,7 @@ void stretch_cfg_setup ( stretch_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 STRETCH_RETVAL stretch_init ( stretch_t *ctx, stretch_cfg_t *cfg );
 
@@ -163,7 +163,7 @@ STRETCH_RETVAL stretch_init ( stretch_t *ctx, stretch_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Stretch click.
+ * @description This function executes default configuration for Stretch Click.
  */
 void stretch_default_cfg ( stretch_t *ctx );
 
@@ -182,7 +182,7 @@ stretch_data_t stretch_generic_read ( stretch_t *ctx );
  *
  * @param ctx        Click object
  * Function turn on the LED by set PWM pin
- * on Stretch click board.
+ * on Stretch Click board.
 */
 void stretch_turn_on_led( stretch_t *ctx );
 
@@ -191,7 +191,7 @@ void stretch_turn_on_led( stretch_t *ctx );
  *
  * @param ctx        Click object
  * Function turn off the LED by clear PWM pin
- * on Stretch click board.
+ * on Stretch Click board.
 */
 void stretch_turn_off_led( stretch_t *ctx );
 
@@ -201,6 +201,6 @@ void stretch_turn_off_led( stretch_t *ctx );
 #endif  // _STRETCH_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

@@ -215,7 +215,7 @@ typedef enum
 
 /**
  * @brief ADC 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #adc12_cfg_t object definition for detailed explanation.
@@ -229,7 +229,7 @@ void adc12_cfg_setup ( adc12_cfg_t *cfg );
 /**
  * @brief ADC 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #adc12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -246,7 +246,7 @@ err_t adc12_init ( adc12_t *ctx, adc12_cfg_t *cfg );
 
 /**
  * @brief ADC 12 send command function.
- * @details This function sends a desired command byte to the click board via I2C serial interface. 
+ * @details This function sends a desired command byte to the Click board via I2C serial interface. 
  * @param[out] ctx : Click context object.
  * See #adc12_t object definition for detailed explanation.
  * @param[in] cmd_byte : Command byte.
@@ -262,7 +262,7 @@ err_t adc12_send_cmd ( adc12_t *ctx, uint8_t cmd_byte );
 
 /**
  * @brief ADC 12 read data function.
- * @details This function reads two bytes of data from the click board via I2C serial interface. 
+ * @details This function reads two bytes of data from the Click board via I2C serial interface. 
  * @param[out] ctx : Click context object.
  * See #adc12_t object definition for detailed explanation.
  * @param[out] data_out : Read data output.

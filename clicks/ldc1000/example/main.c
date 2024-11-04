@@ -3,13 +3,13 @@
  * \brief Ldc1000 Click example
  * 
  * # Description
- * This example showcases how to initialize and configure the logger and click modules and
+ * This example showcases how to initialize and configure the logger and Click modules and
  * read and display proximity and impendance data.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules. Configuration data 
+ * This function initializes and configures the logger and Click modules. Configuration data 
  * is written to the: rp maximum/minimum, sensor frequency, LDC/Clock/Power registers.
  * 
  * ## Application Task  

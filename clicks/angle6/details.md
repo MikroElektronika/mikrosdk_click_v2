@@ -1,6 +1,6 @@
 
 ---
-# Angle 6 click
+# Angle 6 Click
 
 > Angle 6 Click is a compact add-on board that detects the absolute angular position of a permanent magnet, typically a diametrically magnetized cylinder on a rotating shaft. This board features the MAQ470GQE, a 12-bit contactless angle sensor with PWM output from Monolithic Power Systems. It supports a wide range of magnetic field strengths and spatial configurations, with both end-of-shaft and off-axis (side-shaft mounting), supported configurations. Fast data acquisition and processing provides accurate angle measurement at speeds from 0 to 60,000 rpm, alongside magnetic field strength detection with programmable thresholds.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/angle6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/angle-6-click)
+[Click Product page](https://www.mikroe.com/angle-6-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t angle6_read_angle ( angle6_t *ctx, float *angle );
 
 ## Example Description
 
-> This example demonstrates the use of Angle 6 click board by reading and displaying the magnet's angular position in degrees.
+> This example demonstrates the use of Angle 6 Click board by reading and displaying the magnet's angular position in degrees.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the rotation direction to clockwise.
+> Initializes the driver and performs the Click default configuration which sets the rotation direction to clockwise.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

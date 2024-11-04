@@ -168,7 +168,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void stspin250_cfg_setup ( stspin250_cfg_t *cfg );
@@ -179,7 +179,7 @@ void stspin250_cfg_setup ( stspin250_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 STSPIN250_RETVAL stspin250_init ( stspin250_t *ctx, stspin250_cfg_t *cfg );
 
@@ -188,7 +188,7 @@ STSPIN250_RETVAL stspin250_init ( stspin250_t *ctx, stspin250_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Stspin250 click.
+ * @description This function executes default configuration for Stspin250 Click.
  */
 void stspin250_default_cfg ( stspin250_t *ctx );
 
@@ -267,6 +267,6 @@ uint8_t stspin250_get_fault ( stspin250_t *ctx );
 #endif  // _STSPIN250_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

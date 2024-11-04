@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration,
+ * Initializes the driver and performs the Click default configuration,
  * then setting the ON time to 2 seconds.
  *
  * ## Application Task

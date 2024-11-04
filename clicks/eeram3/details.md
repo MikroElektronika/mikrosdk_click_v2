@@ -1,6 +1,6 @@
 
 ---
-# EERAM 3 click
+# EERAM 3 Click
 
 > EERAM 3 Click is a compact add-on board that contains EERAM memory designed to retain data during power loss without the aid of external batteries. This board features the 48L256, a serial EERAM with SRAM memory core, including hidden EEPROM backup from Microchip Technology.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eeram3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeram-3-click)
+[Click Product page](https://www.mikroe.com/eeram-3-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t eeram3_set_block_protection ( eeram3_t *ctx, uint8_t block_protect );
 
 ## Example Description
 
-> This example demonstrates the use of EERAM 3 click board.
+> This example demonstrates the use of EERAM 3 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

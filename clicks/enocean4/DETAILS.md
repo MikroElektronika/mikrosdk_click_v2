@@ -1,6 +1,6 @@
 
 ---
-# EnOcean 4 click
+# EnOcean 4 Click
 
 EnOcean 4 Click carries a ultra-low power TCM515U transceiver gateway module which operates at 902MHz radio band, perfectly suited for the realization of transceiver gateways, actuators and controllers for systems communicating based on the EnOcean radio standard.
 
@@ -8,7 +8,7 @@ EnOcean 4 Click carries a ultra-low power TCM515U transceiver gateway module whi
   <img src="https://download.mikroe.com/images/click_for_ide/enocean4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/enocean-4-click)
+[Click Product page](https://www.mikroe.com/enocean-4-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -199,7 +199,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

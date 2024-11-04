@@ -3,13 +3,13 @@
  * @brief Brushless 31 Click example
  *
  * # Description
- * This example demonstrates the use of the Brushless 31 click board by driving the 
+ * This example demonstrates the use of the Brushless 31 Click board by driving the 
  * motor in both directions at different speeds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Controls the motor speed by changing the PWM duty cycle every 500 milliseconds.
@@ -17,7 +17,7 @@
  * Each step will be logged on the USB UART where you can track the program flow.
  *
  * @note
- * This click board is designed for 5V systems but can also be controlled with 3V3 GPIO lines.
+ * This Click board is designed for 5V systems but can also be controlled with 3V3 GPIO lines.
  * Ensure your MCU is 5V tolerant on mikroBUS GPIO lines before turning on the power supply.
  * 
  * @author Stefan Filipovic

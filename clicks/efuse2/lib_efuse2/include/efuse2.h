@@ -237,7 +237,7 @@ typedef enum
 
 /**
  * @brief eFuse 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #efuse2_cfg_t object definition for detailed explanation.
@@ -249,7 +249,7 @@ void efuse2_cfg_setup ( efuse2_cfg_t *cfg );
 /**
  * @brief eFuse 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -263,7 +263,7 @@ err_t efuse2_init ( efuse2_t *ctx, efuse2_cfg_t *cfg );
 /**
  * @brief eFuse 2 default configuration function.
  * @details This function executes a default configuration of eFuse 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -278,7 +278,7 @@ err_t efuse2_default_cfg ( efuse2_t *ctx );
  * @brief Generic write data to the AD5241 function.
  * @details The function writes a the byte of data and instruction of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] cmd : Pointer to the memory location where data is stored.
@@ -293,7 +293,7 @@ err_t efuse2_write_ad5241 ( efuse2_t *ctx, ad5241_instru_t cmd, uint8_t data_byt
  * @brief Generic read data from the AD5241 function.
  * @details The function read a the byte of data from the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return Read the byte of the data.
@@ -304,7 +304,7 @@ uint8_t efuse2_read_ad5241 ( efuse2_t *ctx );
  * @brief Hardware reset function.
  * @details The function reset the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[out] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return Nothing.
@@ -315,7 +315,7 @@ void efuse2_hw_reset ( efuse2_t *ctx );
  * @brief Set operating voltage function.
  * @details The function set operating voltage, OVLO and UVLO of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] voltage : Operating voltage ( from 3.65 V to the 15.0 V ).
@@ -330,7 +330,7 @@ err_t efuse2_set_operating_voltage ( efuse2_t *ctx, float voltage, float *min_vo
  * @brief Generic write data to the AD5175 function.
  * @details The function writes a 10-bit data to the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the eFuse 2 click board.
+ * and 50-TP Memory on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] cmd : Pointer to the memory location where data is stored.
@@ -345,7 +345,7 @@ err_t efuse2_write_ad5175 ( efuse2_t *ctx, uint8_t cmd, uint16_t data_byte );
  * @brief Generic read data from the AD5175 function.
  * @details The function read a 10-bit data of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the eFuse 2 click board.
+ * and 50-TP Memory on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] cmd : Command Operation:
@@ -368,7 +368,7 @@ uint16_t efuse2_read_ad5175 ( efuse2_t *ctx, uint8_t cmd, uint8_t wiper_location
  * @brief Read RDAC function.
  * @details The function read a 10-bit RDAC data of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the eFuse 2 click board.
+ * and 50-TP Memory on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return 10-bit read data.
@@ -379,7 +379,7 @@ uint16_t efuse2_read_rdac ( efuse2_t *ctx );
  * @brief Enable write function.
  * @details The function enable write of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the eFuse 2 click board.
+ * and 50-TP Memory on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -392,7 +392,7 @@ err_t efuse2_enable_write ( efuse2_t *ctx );
  * @brief Write RDAC function.
  * @details The function writes a 10-bit RDAC data of the
  * AD5175 Single-Channel, 1024-Position, Digital Rheostat with I2C Interface
- * and 50-TP Memory on the eFuse 2 click board.
+ * and 50-TP Memory on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -405,7 +405,7 @@ err_t efuse2_write_rdac ( efuse2_t *ctx, uint16_t data_byte );
  * @brief Set operating current function.
  * @details The function set operating current of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] current : Operating current ( from 0.125 A to the 2.0 A ).
@@ -419,7 +419,7 @@ err_t efuse2_set_current_limit ( efuse2_t *ctx, float current );
  * @brief Software reset function.
  * @details The function software reset the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -432,7 +432,7 @@ err_t efuse2_sw_reset ( efuse2_t *ctx );
  * @brief Store wiper setting function.
  * @details The function store wiper setting, store RDAC setting to 50-TP
  * of the AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -445,7 +445,7 @@ err_t efuse2_store_wiper ( efuse2_t *ctx );
  * @brief Set operating mode function.
  * @details The function set operating mode of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] mode : Operation mode options
@@ -459,7 +459,7 @@ err_t efuse2_operating_mode ( efuse2_t *ctx, uint8_t mode );
  * @brief Next frame read function.
  * @details The function next frame read of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @param[in] wiper_location : Wiper location ( from 0x00 to the 0x38 ).
@@ -472,7 +472,7 @@ uint16_t efuse2_next_frame_read ( efuse2_t *ctx, uint8_t wiper_location );
  * @details The function read address of the
  * last 50-TP programmed memory location of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return 10-bit read data.
@@ -483,7 +483,7 @@ uint16_t efuse2_read_memory ( efuse2_t *ctx );
  * @brief Read control register function.
  * @details The function read contents of the control register of the
  * AD5241 I2C Compatible, 256-Position Digital Potentiometers
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return Control data
@@ -500,7 +500,7 @@ uint8_t efuse2_read_control ( efuse2_t *ctx );
  * It is an open-drain output that requires an external pull-up resistance
  * of the TPS2596 2.7 to 19 V, 0.125 to 2-A, 89-mO eFuse
  * With Accurate Current Monitor and Fast Overvoltage Protection
- * on the eFuse 2 click board.
+ * on the eFuse 2 Click board.
  * @param[in] ctx : Click context object.
  * See #efuse2_t object definition for detailed explanation.
  * @return State of the FLT ( INT ) pin.

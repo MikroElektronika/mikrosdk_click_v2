@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# BT-EZ click
+# BT-EZ Click
 
-The BT-EZ click is a Click board™ which provide BLE connectivity for any embedded application.
+The BT-EZ Click is a Click board™ which provide BLE connectivity for any embedded application.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/btez_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bt-ez-click)
+[Click Product page](https://www.mikroe.com/bt-ez-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly from compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -127,7 +127,7 @@ void application_task ( void )
 ## Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
-> A smartphone and the click board must be paired in order to exchange messages with each other.
+> A smartphone and the Click board must be paired in order to exchange messages with each other.
 
 The full application code, and ready to use projects can be installed directly from compilers IDE(recommended) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](http://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](http://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

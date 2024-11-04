@@ -638,7 +638,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adswio2_cfg_setup ( adswio2_cfg_t *cfg );
@@ -649,7 +649,7 @@ void adswio2_cfg_setup ( adswio2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADSWIO2_RETVAL adswio2_init ( adswio2_t *ctx, adswio2_cfg_t *cfg );
 
@@ -658,7 +658,7 @@ ADSWIO2_RETVAL adswio2_init ( adswio2_t *ctx, adswio2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for AD SWIO 2 click.
+ * @description This function executes default configuration for AD SWIO 2 Click.
  */
 void adswio2_default_cfg ( adswio2_t *ctx );
 
@@ -678,7 +678,7 @@ void adswio2_generic_transfer ( adswio2_t *ctx, uint8_t *wr_buf, uint16_t wr_len
 /**
  * @brief Click Reset function.
  *
- * @description This function executes a hardware reset of the click board.
+ * @description This function executes a hardware reset of the Click board.
  */
 void adswio2_reset( adswio2_t *ctx );
 
@@ -809,12 +809,12 @@ void adswio2_mask_alert_set ( adswio2_t *ctx, uint16_t alert_mask );
  * @brief Live Status function.
  *
  * @param ctx          Click object. 
- * @param status       Live status of the click.
+ * @param status       Live status of the Click.
  * @param status_mask  Irrelevant status flags to be masked.
  *
  * @returns 0 - Ok; 3 - Readback status error; 9 - CRC error.
  *
- * @description This function allows user to check the live status of the click,
+ * @description This function allows user to check the live status of the Click,
  *              masking the irrelevant status flags.
  */
 adswio2_err_t adswio2_status_live ( adswio2_t *ctx, uint16_t *status, uint16_t status_mask );
@@ -839,7 +839,7 @@ adswio2_err_t adswio2_status_data_ready ( adswio2_t *ctx, uint8_t *drdy, uint16_
  * @brief Alert Status function.
  *
  * @param ctx           Click object. 
- * @param status        Alert status of the click.
+ * @param status        Alert status of the Click.
  * @param status_mask   Irrelevant status flags to be masked.
  *
  * @returns 0 - Ok; 3 - Readback status error; 9 - CRC error.
@@ -865,7 +865,7 @@ adswio2_err_t adswio2_status_alert ( adswio2_t *ctx, uint16_t *status, uint16_t 
  *          11 - Invalid conversion mode.
  * </pre> 
  *
- * @description This function sets the conversion mode and performs power control of the click.
+ * @description This function sets the conversion mode and performs power control of the Click.
  */
 adswio2_err_t adswio2_set_conv_mode ( adswio2_t *ctx, uint8_t mode );
 
@@ -982,6 +982,6 @@ adswio2_err_t adswio2_get_diag_results ( adswio2_t *ctx, uint8_t diagnostic, uin
 #endif  // _ADSWIO2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

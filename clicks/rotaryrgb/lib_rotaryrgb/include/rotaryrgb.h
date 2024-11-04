@@ -204,7 +204,7 @@ typedef enum
 
 /**
  * @brief Rotary RGB configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #rotaryrgb_cfg_t object definition for detailed explanation.
@@ -216,7 +216,7 @@ void rotaryrgb_cfg_setup ( rotaryrgb_cfg_t *cfg, drv_logic_t logic_zero, drv_log
 /**
  * @brief Rotary RGB initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #rotaryrgb_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -301,7 +301,7 @@ uint32_t rotaryrgb_make_color ( uint8_t red, uint8_t green, uint8_t blue, uint8_
 /**
  * @brief Rotary RGB DI pin setting function.
  * @details This function sets the DI pin on the high level of
- * Rotary RGB click board.
+ * Rotary RGB Click board.
  * @param[in] ctx : Click context object.
  * See #rotaryrgb_t object definition for detailed explanation.
  * @return Nothing.
@@ -312,7 +312,7 @@ void rotaryrgb_set_state_di_pin ( rotaryrgb_t *ctx );
 /**
  * @brief Rotary RGB DI pin clearing function.
  * @details This function clears the DI pin on the low level of
- * Rotary RGB click board.
+ * Rotary RGB Click board.
  * @param[in] ctx : Click context object.
  * See #rotaryrgb_t object definition for detailed explanation.
  * @return Nothing.
@@ -323,7 +323,7 @@ void rotaryrgb_di_pin_clear ( rotaryrgb_t *ctx );
 /**
  * @brief Rotary RGB get DO pin state function.
  * @details This function reads the state of the DO pin of Rotary RGB
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rotaryrgb_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

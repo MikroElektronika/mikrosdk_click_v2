@@ -3,7 +3,7 @@
  * \brief Expand7 Click example
  * 
  * # Description
- * This example demonstrates the use of the EXPAND 7 click.
+ * This example demonstrates the use of the EXPAND 7 Click.
  *
  * The demo application is composed of two sections :
  * 
@@ -11,7 +11,7 @@
  * Initalizes I2C driver and makes an initial log.
  * 
  * ## Application Task  
- * This example shows the capabilities of the EXPAND 7 click by toggling 
+ * This example shows the capabilities of the EXPAND 7 Click by toggling 
  * each of the 40 available pins.
  * 
  * \author MikroE Team
@@ -55,7 +55,7 @@ void application_init ( void )
     Delay_ms ( 100 );
     
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, "   EXPAND 7 click   \r\n" );
+    log_printf( &logger, "   EXPAND 7 Click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
 

@@ -330,7 +330,7 @@ typedef enum
 
 /**
  * @brief 10x10 RGB 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c10x10rgb2_cfg_t object definition for detailed explanation.
@@ -342,7 +342,7 @@ void c10x10rgb2_cfg_setup ( c10x10rgb2_cfg_t *cfg );
 /**
  * @brief 10x10 RGB 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c10x10rgb2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -357,7 +357,7 @@ err_t c10x10rgb2_init ( c10x10rgb2_t *ctx, c10x10rgb2_cfg_t *cfg );
 /**
  * @brief 10x10 RGB 2 default configuration function.
  * @details This function executes a default configuration of 10x10 RGB 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c10x10rgb2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -386,7 +386,7 @@ err_t c10x10rgb2_write_leds ( c10x10rgb2_t *ctx, c10x10rgb2_led_t *leds, uint16_
 
 /**
  * @brief 10x10 RGB 2 write led matrix function.
- * @details This function writes the led matrix data from the click context object.
+ * @details This function writes the led matrix data from the Click context object.
  * @param[in] ctx : Click context object.
  * See #c10x10rgb2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -406,7 +406,7 @@ err_t c10x10rgb2_write_led_matrix ( c10x10rgb2_t *ctx );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function doesn't write the led matrix to the click board. In order for this change
+ * @note This function doesn't write the led matrix to the Click board. In order for this change
  * to take effect you will need to call the c10x10rgb2_write_led_matrix function afterward.
  */
 void c10x10rgb2_set_led_brightness ( c10x10rgb2_t *ctx, uint16_t led_num, uint8_t brightness );
@@ -420,7 +420,7 @@ void c10x10rgb2_set_led_brightness ( c10x10rgb2_t *ctx, uint16_t led_num, uint8_
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function doesn't write the led matrix to the click board. In order for this change
+ * @note This function doesn't write the led matrix to the Click board. In order for this change
  * to take effect you will need to call the c10x10rgb2_write_led_matrix function afterward.
  */
 void c10x10rgb2_set_leds_brightness ( c10x10rgb2_t *ctx, uint8_t brightness );
@@ -435,7 +435,7 @@ void c10x10rgb2_set_leds_brightness ( c10x10rgb2_t *ctx, uint8_t brightness );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function doesn't write the led matrix to the click board. In order for this change
+ * @note This function doesn't write the led matrix to the Click board. In order for this change
  * to take effect you will need to call the c10x10rgb2_write_led_matrix function afterward.
  */
 void c10x10rgb2_set_led_color ( c10x10rgb2_t *ctx, uint16_t led_num, uint32_t rgb );
@@ -449,7 +449,7 @@ void c10x10rgb2_set_led_color ( c10x10rgb2_t *ctx, uint16_t led_num, uint32_t rg
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function doesn't write the led matrix to the click board. In order for this change
+ * @note This function doesn't write the led matrix to the Click board. In order for this change
  * to take effect you will need to call the c10x10rgb2_write_led_matrix function afterward.
  */
 void c10x10rgb2_set_leds_color ( c10x10rgb2_t *ctx, uint32_t rgb );

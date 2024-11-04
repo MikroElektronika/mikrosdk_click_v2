@@ -1,6 +1,6 @@
 
 ---
-# MRAM 3 click
+# MRAM 3 Click
 
 > MRAM 3 Click is a compact add-on board representing a magneto-resistive random-access memory solution. This board features the AS3001204, 1Mb high-performance serial SPI MRAM memory organized as 128K words of 8 bits each from Avalanche Technology. The MRAM technology is analog to Flash technology with SRAM compatible read/write timings (Persistent SRAM, P-SRAM), where data is always non-volatile. It also has a hardware write-protection feature and performs read and write operations with data retention for one million years and a write endurance of 1014 cycles.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mram3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mram-3-click)
+[Click Product page](https://www.mikroe.com/mram-3-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t mram3_aug_memory_write ( mram3_t *ctx, uint8_t address, uint8_t *data_in, 
 
 ## Example Description
 
-> This example demonstrates the use of MRAM 3 click board by writing specified data to the memory and reading it back.
+> This example demonstrates the use of MRAM 3 Click board by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

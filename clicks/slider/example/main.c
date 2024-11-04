@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver
+ * Initializes Click driver
  * 
  * ## Application Task  
  * Converts analog input voltage (VCC), witch value depends on the slider position,

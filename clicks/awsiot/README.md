@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# AWS IoT click
+# AWS IoT Click
 
 > AWS IoT Click is a compact add-on board that allows users to easily connected to AWS IoT services and securely interact with cloud applications and other devices. This board features the ESP32-C3-MINI-1-N4-A, a small 2.4GHz WiFi (802.11 b/g/n) and Bluetooth® 5 module from Espressif Systems that use ESP32C3 series of SoC RISCV single-core microprocessor (ESP32-C3FN4) with 4MB flash in a single chip package. The module uses UART communication alongside several other features like standalone possibility via USB interface, firmware boot, JTAG for debugging, and others.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/awsiot_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/aws-iot-click)
+[Click Product page](https://www.mikroe.com/aws-iot-click)
 
 ---
 
@@ -60,15 +60,15 @@ void awsiot_send_cmd ( awsiot_t *ctx, uint8_t *cmd );
 
 ## Example Description
 
-> This example demonstrates the use of AWS IoT click board by bridging the USB UART
-to mikroBUS UART which allows the click board to establish a connection with
+> This example demonstrates the use of AWS IoT Click board by bridging the USB UART
+to mikroBUS UART which allows the Click board to establish a connection with
 the AWS IoT over the Quick Connect demo application without an AWS account.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, resets the click board to factory default settings, reads
+> Initializes the driver, resets the Click board to factory default settings, reads
 and displays the vendor model and thing name on the USB UART, sets the WiFi credentials,
 and attempts to connect to the AWS Cloud. If the initial attempt fails and the error
 message "Failed to access network" or "Failed to login AWS (MQTT) broker" appears,
@@ -210,7 +210,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,14 +1,14 @@
 
 ---
-# Wifi ESP click
+# Wifi ESP Click
 
-> WiFi ESP click carries the ESP-WROOM-02 module that integrates ESP8266EX.
+> WiFi ESP Click carries the ESP-WROOM-02 module that integrates ESP8266EX.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/wifiesp_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/wifi-esp-click)
+[Click Product page](https://www.mikroe.com/wifi-esp-click)
 
 ---
 
@@ -70,7 +70,7 @@ int32_t wifiesp_generic_read ( wifiesp_t *ctx, char *data_buf, int32_t max_len )
 ## Example Description
 
 > This example connects to the desired WiFi network and then
-> creates web server on the IP address assigned to the click board.
+> creates web server on the IP address assigned to the Click board.
 > The user can connect to the server via web browser.
 
 **The demo application is composed of two sections :**
@@ -78,7 +78,7 @@ int32_t wifiesp_generic_read ( wifiesp_t *ctx, char *data_buf, int32_t max_len )
 ### Application Init 
 
 > Initializes driver and wifi communication, then connects to the desired WiFi network
-> and creates web server on the IP address assigned to the click board.
+> and creates web server on the IP address assigned to the Click board.
 
 ```c
 
@@ -122,7 +122,7 @@ void application_init ( void )
 
 > Waits for the client request (paste IP address in your web browser and 
 > refresh to send a request).
-> The click board will respond by sending a page content to the client.
+> The Click board will respond by sending a page content to the client.
 
 ```c
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,6 +1,6 @@
 
 ---
-# 4-20mA T 2 click
+# 4-20mA T 2 Click
 
 > 4-20mA T 2 Click is a compact add-on board for transmitting an analog output current over an industry-standard 4-20mA current loop. This board features DAC161S997, a low-power 16-bit ΣΔ digital-to-analog converter (DAC) from Texas Instruments. It has a programmable Power-Up condition and loop-error detection/reporting accessible via simple 4-wire SPI for data transfer and configuration of the DAC functions. In addition, it is characterized by low power consumption and the possibility of simple Highway Addressable Remote Transducer (HART) modulator interfacing, allowing the injection of FSK-modulated digital data into the 4-20mA current loop.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/420mat2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4-20ma-t-2-click)
+[Click Product page](https://www.mikroe.com/4-20ma-t-2-click)
 
 ---
 
@@ -203,7 +203,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

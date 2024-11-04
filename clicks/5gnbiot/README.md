@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# 5G NB IoT click
+# 5G NB IoT Click
 
 5G NB IoT Click is a Click board™ based on Gemalto's Cinterion® ENS22 NB-IoT Wireless Module platform that boosts highly efficient future 5G connectivity for the IoT.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/5gnbiot_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/5g-nb-iot-click)
+[Click Product page](https://www.mikroe.com/5g-nb-iot-click)
 
 ---
 
@@ -274,7 +274,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

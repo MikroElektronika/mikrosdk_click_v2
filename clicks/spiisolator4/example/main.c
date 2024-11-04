@@ -3,9 +3,9 @@
  * @brief SPIIsolator4 Click example
  *
  * # Description
- * This library contains API for the SPI Isolator 4 click driver.
- * This demo application shows an example of an SPI Isolator 4 click wired 
- * to the nvSRAM 4 click for reading Device ID.
+ * This library contains API for the SPI Isolator 4 Click driver.
+ * This demo application shows an example of an SPI Isolator 4 Click wired 
+ * to the nvSRAM 4 Click for reading Device ID.
  *
  * The demo application is composed of two sections :
  *
@@ -14,8 +14,8 @@
  * After driver initialization, the app sets the default configuration.
  *
  * ## Application Task
- * This is an example that shows the use of an SPI Isolator 4 click board™.
- * Logs Device ID of the nvSRAM 4 click wired to the SPI Isolator 4 board™.  
+ * This is an example that shows the use of an SPI Isolator 4 Click board™.
+ * Logs Device ID of the nvSRAM 4 Click wired to the SPI Isolator 4 board™.  
  * Results are being sent to the Usart Terminal where you can track their changes.
  *
  * ## Additional Function

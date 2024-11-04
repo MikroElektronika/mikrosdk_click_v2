@@ -1,6 +1,6 @@
 
 ---
-# Power Monitor 2 click
+# Power Monitor 2 Click
 
 > Power Monitoring 2 Click is a compact add-on board for precise power monitoring of connected load devices. This board features two INA219 12-bit I2C-output digital power monitors from Texas Instruments. This Click board™ monitors current and voltage on two separate power rails - 3.3V and 5V - of an onboard mikroBUS™ socket, providing real-time digital readings of the power consumption of added Click boards™. It supports high-speed I2C communication with configurable I2C addresses and operates at 3.3V and 5V logic levels, which makes it ideal for applications in power management, system diagnostics, and energy optimization in embedded systems.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/powermonitor2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/power-monitor-2-click)
+[Click Product page](https://www.mikroe.com/power-monitor-2-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t powermonitor2_read_data_avg ( powermonitor2_t *ctx, uint16_t num_conv, pow
 
 ## Example Description
 
-> This example demonstrates the use of Power Monitor 2 click by reading and displaying the power consumption at 3V3 and 5V of the connected click board.
+> This example demonstrates the use of Power Monitor 2 Click by reading and displaying the power consumption at 3V3 and 5V of the connected Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

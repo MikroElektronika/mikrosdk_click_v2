@@ -172,7 +172,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void i2cmux2_cfg_setup ( i2cmux2_cfg_t *cfg );
@@ -183,7 +183,7 @@ void i2cmux2_cfg_setup ( i2cmux2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t i2cmux2_init ( i2cmux2_t *ctx, i2cmux2_cfg_t *cfg );
 
@@ -217,7 +217,7 @@ void i2cmux2_generic_read ( i2cmux2_t *ctx, uint8_t reg, uint8_t *data_buf, uint
  *
  * @param ctx    Click object.
  * 
- * @details This function resets I2C MUX 2 click board
+ * @details This function resets I2C MUX 2 Click board
  * by clearing the RST pin for 100ms.
  */
 void i2cmux2_hw_reset ( i2cmux2_t *ctx );
@@ -229,7 +229,7 @@ void i2cmux2_hw_reset ( i2cmux2_t *ctx );
  * @param tx_data      8-bit data to be transmitted.
  *
  * @details Function executes writes command to the TCA9545A
- * Low Voltage 4-Channel I2C on the I2C MUX 2 click board.
+ * Low Voltage 4-Channel I2C on the I2C MUX 2 Click board.
  */
 void i2cmux2_write_cmd ( i2cmux2_t *ctx, uint8_t tx_data );
 
@@ -242,7 +242,7 @@ void i2cmux2_write_cmd ( i2cmux2_t *ctx, uint8_t tx_data );
  * 8-bit read data.
  *
  * @details Function executes read command from the TCA9545A
- * Low Voltage 4-Channel I2C on the I2C MUX 2 click board.
+ * Low Voltage 4-Channel I2C on the I2C MUX 2 Click board.
  */
 uint8_t i2cmux2_read_cmd ( i2cmux2_t *ctx );
 
@@ -254,7 +254,7 @@ uint8_t i2cmux2_read_cmd ( i2cmux2_t *ctx );
  *
  * @param ch_slave_address   pointer to the data to be written.
  *
- * @details Function sets channel of the I2C MUX 2 click board.
+ * @details Function sets channel of the I2C MUX 2 Click board.
  */
 void i2cmux2_set_channel ( i2cmux2_t *ctx, uint8_t channel, uint8_t ch_slave_address );
 
@@ -271,7 +271,7 @@ void i2cmux2_set_channel ( i2cmux2_t *ctx, uint8_t channel, uint8_t ch_slave_add
  * - [ bit 3 ] : Interrupt on channel 3;
  *
  * @details Function get interrupt status by reading from the TCA9545A
- * Low Voltage 4-Channel I2C on the I2C MUX 2 click board.
+ * Low Voltage 4-Channel I2C on the I2C MUX 2 Click board.
 */
 uint8_t i2cmux2_read_interrupt ( i2cmux2_t *ctx );
 
@@ -286,7 +286,7 @@ uint8_t i2cmux2_read_interrupt ( i2cmux2_t *ctx );
  * - 1 : Not active;
  *
  * @details Function check interrupt state by returning the state
- * of the INT pin of I2C MUX 2 click board.
+ * of the INT pin of I2C MUX 2 Click board.
 */
 uint8_t i2cmux2_check_int ( i2cmux2_t *ctx );
 
@@ -296,6 +296,6 @@ uint8_t i2cmux2_check_int ( i2cmux2_t *ctx );
 #endif  // _I2CMUX2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

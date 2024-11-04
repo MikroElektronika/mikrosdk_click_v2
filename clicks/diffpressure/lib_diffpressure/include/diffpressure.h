@@ -135,7 +135,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void diffpressure_cfg_setup ( diffpressure_cfg_t *cfg );
@@ -146,7 +146,7 @@ void diffpressure_cfg_setup ( diffpressure_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t diffpressure_init ( diffpressure_t *ctx, diffpressure_cfg_t *cfg );
 
@@ -155,7 +155,7 @@ err_t diffpressure_init ( diffpressure_t *ctx, diffpressure_cfg_t *cfg );
  *
  * @param ctx          Click object.
  *
- * @details This function read ADC voltage value from Diff Pressure click.
+ * @details This function read ADC voltage value from Diff Pressure Click.
  */
 float diffpressure_read_adc_voltage ( diffpressure_t *ctx );
 
@@ -175,6 +175,6 @@ int32_t diffpressure_get_pa_difference ( diffpressure_t *ctx, float adc_voltage 
 #endif  // _DIFFPRESSURE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,6 +1,6 @@
 
 ---
-# Current Limit 7 click
+# Current Limit 7 Click
 
 > Current Limit 7 Click is a compact add-on board representing a current-limiting solution. This board features the MAX14575A, an adjustable current-limit switch from Analog Devices. This Click board™ features internal current limiting to prevent damage to host devices due to faulty load conditions, has a low 32mΩ on-resistance, and operates from a 2.3V to 5.5V input voltage range. Also, the current limit is adjustable from 250mA to 2.5A programmed through AD5272 digital rheostat and set via onboard range switch. This Click board™ is suitable for applications in portable equipment and condition monitoring or power supplies, protecting them in short circuits or other overload conditions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/currentlimit7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-limit-7-click)
+[Click Product page](https://www.mikroe.com/current-limit-7-click)
 
 ---
 
@@ -210,7 +210,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

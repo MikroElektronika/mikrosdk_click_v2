@@ -157,7 +157,7 @@ typedef enum
 
 /**
  * @brief RS485 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #rs4858_cfg_t object definition for detailed explanation.
@@ -169,7 +169,7 @@ void rs4858_cfg_setup ( rs4858_cfg_t *cfg );
 /**
  * @brief RS485 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #rs4858_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -184,7 +184,7 @@ err_t rs4858_init ( rs4858_t *ctx, rs4858_cfg_t *cfg );
 /**
  * @brief RS485 8 default configuration function.
  * @details This function executes a default configuration of RS485 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rs4858_t object definition for detailed explanation.
  * @return Nothing.
@@ -224,7 +224,7 @@ err_t rs4858_generic_read ( rs4858_t *ctx, uint8_t *data_out, uint16_t len );
 /**
  * @brief RS485 8 enable the device function.
  * @details This function is used to enable the RS485 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rs4857_t object definition for detailed explanation.
  * @return Nothing.
@@ -235,7 +235,7 @@ void rs4858_enable_device ( rs4858_t *ctx );
 /**
  * @brief RS485 8 disable the device function.
  * @details This function is used to disable the RS485 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #rs4857_t object definition for detailed explanation.
  * @return Nothing.

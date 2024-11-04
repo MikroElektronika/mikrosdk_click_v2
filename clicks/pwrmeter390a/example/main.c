@@ -3,13 +3,13 @@
  * @brief PWR Meter 3 90A Click example
  *
  * # Description
- * This example demonstrates the use of PWR Meter 3 90A click board by reading and displaying
+ * This example demonstrates the use of PWR Meter 3 90A Click board by reading and displaying
  * the voltage, current, and power RMS measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets the DC measurement
+ * Initializes the driver and performs the Click default configuration which sets the DC measurement
  * and VRMS thresholds to about 28V for overvoltage and about 9.3V for undervoltage flag.
  *
  * ## Application Task

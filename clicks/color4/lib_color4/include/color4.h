@@ -218,7 +218,7 @@ typedef struct
 
 /**
  * @brief Color 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #color4_cfg_t object definition for detailed explanation.
@@ -230,7 +230,7 @@ void color4_cfg_setup ( color4_cfg_t *cfg );
 /**
  * @brief Color 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board™.
+ * for this Click board™.
  * @param[out] ctx : Click context object.
  * See #color4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -246,7 +246,7 @@ err_t color4_init ( color4_t *ctx, color4_cfg_t *cfg );
  * @brief Color 4 default configuration function.
  * @details This function executes a default configuration:
  * Integration time 320ms, no trigger, auto mode and enable color sensor
- * of Color 4 click board™.
+ * of Color 4 Click board™.
  * @param[in] ctx : Click context object.
  * See #color4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -293,7 +293,7 @@ err_t color4_generic_read ( color4_t *ctx, uint8_t reg, uint8_t *data_out, uint8
  * @brief Color 4 set configuration function.
  * @details This function executes a configuration of the 
  * VEML6040 RGBW Color Sensor with I2C Interface
- * on the Color 4 click board™.
+ * on the Color 4 Click board™.
  * @param[in] ctx : Click context object.
  * See #color4_t object definition for detailed explanation.
  * @param[in] config : Sensor configuration object.
@@ -308,7 +308,7 @@ err_t color4_set_config ( color4_t *ctx, color4_config_t config );
  * @brief Color 4 get configuration function.
  * @details This function reads the configuration data 
  * of the VEML6040 RGBW Color Sensor with I2C Interface
- * on the Color 4 click board™.
+ * on the Color 4 Click board™.
  * @param[in] ctx : Click context object.
  * See #color4_t object definition for detailed explanation.
  * @param[out] config : Sensor configuration object.
@@ -324,7 +324,7 @@ err_t color4_get_config ( color4_t *ctx, color4_config_t *config );
  * @details This function reads color data of the desired channel 
  * from which the data will be converted
  * of the VEML6040 RGBW Color Sensor with I2C Interface
- * on the Color 4 click board™.
+ * on the Color 4 Click board™.
  * @param[in] ctx : Click context object.
  * See #color4_t object definition for detailed explanation.
  * @param[in] ch_color : Channel from which the data will be converted.
@@ -340,7 +340,7 @@ err_t color4_get_color_data ( color4_t *ctx, color4_ch_color_t ch_color, uint16_
  * @brief Color 4 get ambient light level function.
  * @details This function reads the ambient light data and calculate
  * of the VEML6040 RGBW Color Sensor with I2C Interface
- * on the Color 4 click board™.
+ * on the Color 4 Click board™.
  * @param[in] ctx : Click context object.
  * See #color4_t object definition for detailed explanation.
  * @param[out] ambient_light : Ambient light level in Lux.
@@ -357,7 +357,7 @@ err_t color4_get_ambient_light ( color4_t *ctx, float *ambient_light );
  * @details This function reads the RGB color data 
  * and calculate the correlated color temperature (empirical approach)
  * of the VEML6040 RGBW Color Sensor with I2C Interface
- * on the Color 4 click board™.
+ * on the Color 4 Click board™.
  * @param[in] ctx : Click context object.
  * See #color4_t object definition for detailed explanation.
  * @param[out] cct : Correlated color temperature.

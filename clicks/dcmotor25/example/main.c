@@ -3,13 +3,13 @@
  * @brief DC Motor 25 Click example
  *
  * # Description
- * This example demonstrates the use of DC Motor 25 click board™
+ * This example demonstrates the use of DC Motor 25 Click board™
  * by driving the DC motor in both directions every 3 seconds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the I2C driver and performs the click default configuration.
+ * Initializes the I2C driver and performs the Click default configuration.
  *
  * ## Application Task
  * This example demonstrates the use of the DC Motor 25 Click board™.

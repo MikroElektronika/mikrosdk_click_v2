@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Opto Encoder 3 click
+# Opto Encoder 3 Click
 
-Opto Encoder 3 Click is a linear incremental optical sensor/encoder click, which can be used for the movement or rotation encoding.
+Opto Encoder 3 Click is a linear incremental optical sensor/encoder Click, which can be used for the movement or rotation encoding.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/optoencoder3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/opto-encoder-3-click)
+[Click Product page](https://www.mikroe.com/opto-encoder-3-click)
 
 ---
 
@@ -48,7 +48,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Functions for reading number of swipes
 > uint8_t optoencoder3_cnt ( optoencoder3_t *ctx );
  
-- Sets state of click
+- Sets state of Click
 > void optoencoder3_enable ( optoencoder3_t *ctx, uint8_t active );
 
 - Sets state of all pins
@@ -126,7 +126,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

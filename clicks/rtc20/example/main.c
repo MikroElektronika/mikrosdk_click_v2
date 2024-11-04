@@ -3,7 +3,7 @@
  * @brief RTC 20 Click example
  *
  * # Description
- * This example demonstrates the use of the RTC 20 click board™
+ * This example demonstrates the use of the RTC 20 Click board™
  * by reading and displaying the RTC time and date values.
  *
  * The demo application is composed of two sections :

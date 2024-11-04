@@ -189,7 +189,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pressure7_cfg_setup ( pressure7_cfg_t *cfg );
@@ -200,7 +200,7 @@ void pressure7_cfg_setup ( pressure7_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PRESSURE7_RETVAL pressure7_init ( pressure7_t *ctx, pressure7_cfg_t *cfg );
 
@@ -209,7 +209,7 @@ PRESSURE7_RETVAL pressure7_init ( pressure7_t *ctx, pressure7_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Pressure7 click.
+ * @description This function executes default configuration for Pressure7 Click.
  */
 void pressure7_default_cfg ( pressure7_t *ctx );
 
@@ -237,12 +237,12 @@ void pressure7_default_cfg ( pressure7_t *ctx );
 void pressure7_generic_read ( pressure7_t *ctx, uint8_t reg_addr, uint8_t *data_buf, uint8_t len );
 
 /**
- * @brief Send command to click.
+ * @brief Send command to Click.
  * 
  * @param ctx               Click object.
  * @param cmd               Action to be commited.
  *
- * @description This function sends command cmd to click object ctx. 
+ * @description This function sends command cmd to Click object ctx. 
  */
 void pressure7_send_command ( pressure7_t *ctx, uint8_t cmd );
 
@@ -251,7 +251,7 @@ void pressure7_send_command ( pressure7_t *ctx, uint8_t cmd );
  *
  * @param ctx               Click object.
  *
- * @description This function starts reset sequence of click object ctx.
+ * @description This function starts reset sequence of Click object ctx.
  */
 void pressure7_reset ( pressure7_t *ctx );
 
@@ -316,6 +316,6 @@ void pressure7_set_over_sampling_ratio ( uint8_t osr_d1, uint8_t osr_d2 );
 #endif  // _PRESSURE7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

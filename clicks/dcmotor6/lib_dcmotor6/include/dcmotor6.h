@@ -138,7 +138,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dcmotor6_cfg_setup ( dcmotor6_cfg_t *cfg );
@@ -148,7 +148,7 @@ void dcmotor6_cfg_setup ( dcmotor6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DCMOTOR6_RETVAL dcmotor6_init ( dcmotor6_t *ctx, dcmotor6_cfg_t *cfg );
 
@@ -182,6 +182,6 @@ void dcmotor6_set_direction( dcmotor6_t *ctx, uint8_t dir );
 #endif  // _DCMOTOR6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

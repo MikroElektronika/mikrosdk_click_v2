@@ -3,8 +3,8 @@
  * @brief MCP2003B Click Example.
  *
  * # Description
- * This example demonstrates the use of an MCP2003B click board by showing
- * the communication between the two click board configured as a receiver and transmitter.
+ * This example demonstrates the use of an MCP2003B Click board by showing
+ * the communication between the two Click board configured as a receiver and transmitter.
  *
  * The demo application is composed of two sections :
  *
@@ -16,7 +16,7 @@
  * sends the desired message every 3 seconds.
  *
  * @note
- * The click boards should be connected as follows: VBB->VBB, LBUS->LBUS, GND->GND.
+ * The Click boards should be connected as follows: VBB->VBB, LBUS->LBUS, GND->GND.
  * The communication power supply voltage provided on VBB pin should be in range from 5.5V to 30V.
  
  * @author Stefan Filipovic
@@ -30,7 +30,7 @@
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
-#define DEMO_TEXT_MESSAGE   "MIKROE - MCP2003B click board\r\n"
+#define DEMO_TEXT_MESSAGE   "MIKROE - MCP2003B Click board\r\n"
 
 static mcp2003b_t mcp2003b;
 static log_t logger;

@@ -3,14 +3,14 @@
  * \brief AnalogMUX Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the Analog MUX click module. 
- * The click switches one of the 16 inputs to output so the adc value of that input 
+ * This example showcases how to initialize, configure and use the Analog MUX Click module. 
+ * The Click switches one of the 16 inputs to output so the adc value of that input 
  * can be read on the COM (AN) pin. The RST, PWM, CS and INT are used as control output pins. 
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function reads ADC value and voltage from channel 0 (AN0) and shows the results 

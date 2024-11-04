@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# I2C MUX click
+# I2C MUX Click
 
-I2C MUX Click is an quad bidirectional translating I2C and SMBus switch with reset function, intended for applications with I2C slave address conflicts (multiple, identical temp sensors). It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9546A from Texas Instruments. Click has three address jumpers, allowing up to eight TCA9546A devices on the same bus. I2C MUX click allows voltage translation between 1.8V, 2.5V, 3.3V, and 5V buses, and also supports hot insertion.
+I2C MUX Click is an quad bidirectional translating I2C and SMBus switch with reset function, intended for applications with I2C slave address conflicts (multiple, identical temp sensors). It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9546A from Texas Instruments. Click has three address jumpers, allowing up to eight TCA9546A devices on the same bus. I2C MUX Click allows voltage translation between 1.8V, 2.5V, 3.3V, and 5V buses, and also supports hot insertion.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/i2cmux_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-mux-click)
+[Click Product page](https://www.mikroe.com/i2c-mux-click)
 
 ---
 
@@ -44,10 +44,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function resets I2C MUX 2 click board by clearing the RST pin for 100ms.
+- This function resets I2C MUX 2 Click board by clearing the RST pin for 100ms.
 > void i2cmux_hw_reset ( i2cmux_t *ctx );
  
-- This function sets channel of the I2C MUX click board.
+- This function sets channel of the I2C MUX Click board.
 > void i2cmux_set_channel ( i2cmux_t *ctx, uint8_t channel, uint8_t ch_slave_address );
 
 - This function reads data from the desired register.
@@ -93,7 +93,7 @@ void application_init ( void )
     Delay_ms ( 100 );
     
     i2cmux_set_channel( &i2cmux, I2CMUX_CMD_SET_CH_0, 0x39 );
-    log_printf( &logger, " Please connect a Spectrometer click to channel 0\r\n" );
+    log_printf( &logger, " Please connect a Spectrometer Click to channel 0\r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -103,7 +103,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the device ID of a Spectrometer click (dev ID: 0x24) and displays it on the USB UART each second.
+> Reads the device ID of a Spectrometer Click (dev ID: 0x24) and displays it on the USB UART each second.
 
 ```c
 
@@ -112,7 +112,7 @@ void application_task ( void )
     uint8_t rx_data;
     
     i2cmux_generic_read( &i2cmux, 0x92, &rx_data, 1 );
-    log_printf( &logger, " The click device ID is:  0x%.2X\r\n", ( uint16_t ) rx_data );
+    log_printf( &logger, " The Click device ID is:  0x%.2X\r\n", ( uint16_t ) rx_data );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
 }
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

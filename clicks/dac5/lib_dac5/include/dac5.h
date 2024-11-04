@@ -244,7 +244,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dac5_cfg_setup ( dac5_cfg_t *cfg );
@@ -255,7 +255,7 @@ void dac5_cfg_setup ( dac5_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DAC5_RETVAL dac5_init ( dac5_t *ctx, dac5_cfg_t *cfg );
 
@@ -283,7 +283,7 @@ void dac5_generic_write ( dac5_t *ctx, uint8_t reg, uint16_t data_buf );
 uint16_t dac5_generic_read ( dac5_t *ctx, uint8_t reg );
 
 /**
- * @brief Function for configurating click
+ * @brief Function for configurating Click
  *
  * @param   ctx             Click object.
  * @param   config_data     Configuration data
@@ -354,6 +354,6 @@ uint8_t dac5_send_data ( dac5_t *ctx, uint8_t data_reg, uint16_t data_buf );
 #endif  // _DAC5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

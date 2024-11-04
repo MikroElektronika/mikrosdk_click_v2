@@ -1,8 +1,8 @@
 {
     "name": "SHT Click",
-    "description": "SHT click is a temperature and humidity sensing click board that carries Sensiron’s SHT3x-DIS IC. Compared to its predecessor (SHT11), SHT3x click has increased reliability and enhanced signal processing features with a high signal-to-noise ratio.s",
+    "description": "SHT Click is a temperature and humidity sensing Click board that carries Sensiron’s SHT3x-DIS IC. Compared to its predecessor (SHT11), SHT3x Click has increased reliability and enhanced signal processing features with a high signal-to-noise ratio.s",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SHT3x-DIS"],
+    "hw" : ["Click","SHT3x-DIS"],
     "category" : ["Temperature & humidity"] 
 }

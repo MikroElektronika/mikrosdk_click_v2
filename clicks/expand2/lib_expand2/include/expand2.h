@@ -248,7 +248,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void expand2_cfg_setup ( expand2_cfg_t *cfg );
@@ -258,7 +258,7 @@ void expand2_cfg_setup ( expand2_cfg_t *cfg );
  * @param expand2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EXPAND2_RETVAL expand2_init ( expand2_t *ctx, expand2_cfg_t *cfg );
 
@@ -267,7 +267,7 @@ EXPAND2_RETVAL expand2_init ( expand2_t *ctx, expand2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Expand2 click.
+ * @description This function executes default configuration for Expand2 Click.
  */
 void expand2_default_cfg ( expand2_t *ctx );
 
@@ -570,7 +570,7 @@ void expand2_set_port_b ( expand2_t *ctx, uint8_t module_address, uint8_t positi
  * @param module_address                     module address
  * @param write_data                         pull up value
  *
- * @description Function reset Expand 2 click by set RST pin from low to high.
+ * @description Function reset Expand 2 Click by set RST pin from low to high.
  *
  * @note delay is 11ms
  */
@@ -597,6 +597,6 @@ uint8_t expand2_getInterrupt( expand2_t *ctx );
 #endif  // _EXPAND2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

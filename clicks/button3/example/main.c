@@ -3,13 +3,13 @@
  * @brief Button 3 Click example
  *
  * # Description
- * This example demonstrates the use of Button 3 click board by toggling a button
+ * This example demonstrates the use of Button 3 Click board by toggling a button
  * LED and its switch state on a button press.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Toggles a button LED and its switch state on a button press and displays the state

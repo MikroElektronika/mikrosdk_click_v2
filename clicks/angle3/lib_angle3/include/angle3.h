@@ -199,7 +199,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void angle3_cfg_setup ( angle3_cfg_t *cfg );
@@ -209,7 +209,7 @@ void angle3_cfg_setup ( angle3_cfg_t *cfg );
  *
  * @param ctx  Click configuration structure.
  *
- * @details This function initializes default click configuration structure to init state.
+ * @details This function initializes default Click configuration structure to init state.
  * <pre>
  * Configuration sets default normal operating mode.
  * </pre>
@@ -222,7 +222,7 @@ void angle3_default_cfg ( angle3_t *ctx );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t angle3_init ( angle3_t *ctx, angle3_cfg_t *cfg );
 
@@ -318,7 +318,7 @@ uint16_t angle3_read_register ( angle3_t* ctx, uint8_t reg_addr );
  * @param ctx          Click object.
  * @param set_mode     Mode to set Angle3 to.
  *
- * @details  Function sets mode of Angle3 click to the one provided.
+ * @details  Function sets mode of Angle3 Click to the one provided.
  * The two valid modes are: normal with value 0x0000,
  * and user with value 0x050F.
  *
@@ -330,7 +330,7 @@ void angle3_set_mode( angle3_t* ctx, uint16_t set_mode );
  *
  * @param ctx          Click object.
  *
- * @details  Function sets mode of Angle3 click to normal.
+ * @details  Function sets mode of Angle3 Click to normal.
  * Set value 0x0000 for normal mode.
  *
  */
@@ -341,7 +341,7 @@ void angle3_set_normal_mode ( angle3_t* ctx );
  *
  * @param ctx          Click object.
  *
- * @details  Function sets mode of Angle3 click to user. 
+ * @details  Function sets mode of Angle3 Click to user. 
  * Set value 0x050F for user mode.
  *
  */
@@ -367,7 +367,7 @@ uint16_t angle3_read_angle_data ( angle3_t* ctx );
  * @return result      Float value of angle in degrees.
  *
  * @details  Function converts an angle value read from Angle3
- * click to degrees.
+ * Click to degrees.
  *
  */
 float angle3_calculate_degrees ( angle3_t* ctx, uint16_t angle );
@@ -389,6 +389,6 @@ uint8_t angle3_read_error ( angle3_t* ctx );
 #endif  // ANGLE3_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------ END

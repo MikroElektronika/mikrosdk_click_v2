@@ -235,7 +235,7 @@ typedef enum
 
 /**
  * @brief Diff Press 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #diffpress3_cfg_t object definition for detailed explanation.
@@ -247,7 +247,7 @@ void diffpress3_cfg_setup ( diffpress3_cfg_t *cfg );
 /**
  * @brief Diff Press 3 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #diffpress3_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -263,7 +263,7 @@ void diffpress3_drv_interface_selection ( diffpress3_cfg_t *cfg, diffpress3_drv_
 /**
  * @brief Diff Press 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #diffpress3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -305,7 +305,7 @@ err_t diffpress3_read_voltage ( diffpress3_t *ctx, float *voltage );
 
 /**
  * @brief Diff Press 3 set vref function.
- * @details This function sets the voltage reference for Diff Press 3 click driver.
+ * @details This function sets the voltage reference for Diff Press 3 Click driver.
  * @param[in] ctx : Click context object.
  * See #diffpress3_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

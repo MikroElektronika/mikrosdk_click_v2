@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BarGraph 4 click
+# BarGraph 4 Click
 
 > BarGraph 4 Click is a compact add-on board that contains four green four-segment LED bar graph displays. This board features the TLC59283, a 16-channel, constant-current sink light-emitting diode (LED) driver from Texas Instruments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/bargraph_4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bargraph-4-click)
+[Click Product page](https://www.mikroe.com/bargraph-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t bargraph4_set_channel_level ( bargraph4_t *ctx, bargraph4_sel_ch_t channel
 
 ## Example Description
 
-> This example demonstrates the use of BarGraph 4 click board.
+> This example demonstrates the use of BarGraph 4 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

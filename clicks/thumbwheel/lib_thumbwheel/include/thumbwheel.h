@@ -196,7 +196,7 @@ typedef enum
 
 /**
  * @brief Thumbwheel configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #thumbwheel_cfg_t object definition for detailed explanation.
@@ -208,7 +208,7 @@ void thumbwheel_cfg_setup ( thumbwheel_cfg_t *cfg );
 /**
  * @brief Thumbwheel driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #thumbwheel_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -224,7 +224,7 @@ void thumbwheel_gpio_selection ( thumbwheel_cfg_t *cfg, thumbwheel_gpio_sel_t gp
 /**
  * @brief Thumbwheel initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #thumbwheel_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Current 11 click
+# Current 11 Click
 
 > Current 11 Click is a compact add-on board for industrial and commercial current-sensing applications. This board features the ACS37600K (ACS37600KOKATN-006B5-C), a programmable linear Hall-effect sensor IC from Allegro Microsystems. This sensor features a chopper-stabilized Hall-effect front-end for precise magnetic flux detection, with a sensitivity of 6mV/G and a bidirectional operating range of ±333G.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/current11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-11-click)
+[Click Product page](https://www.mikroe.com/current-11-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t current11_init ( current11_t *ctx, current11_cfg_t *cfg );
 
 #### Example key functions :
 
-- `current11_set_vref` This function sets the voltage reference for Current 11 click driver.
+- `current11_set_vref` This function sets the voltage reference for Current 11 Click driver.
 ```c
 err_t current11_set_vref ( current11_t *ctx, float vref );
 ```
@@ -65,7 +65,7 @@ err_t current11_read_current ( current11_t *ctx, float *current );
 
 ## Example Description
 
-> This example demonstrates the use of Current 11 click board by reading and displaying the input current measurements.
+> This example demonstrates the use of Current 11 Click board by reading and displaying the input current measurements.
 
 **The demo application is composed of two sections :**
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

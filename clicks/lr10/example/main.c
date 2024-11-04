@@ -3,7 +3,7 @@
  * @brief LR 10 Click Example.
  *
  * # Description
- * This example demonstrates the use of LR 10 click board by processing
+ * This example demonstrates the use of LR 10 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :

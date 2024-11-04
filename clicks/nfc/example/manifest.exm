@@ -1,8 +1,8 @@
 {
     "name": "NFC Click",
-    "description": "NFC click is a mikroBUS™ add-on board with a versatile near field communications controller from NXP — the PN7120 IC. NFC devices are used in contactless payment systems, electronic ticketing, smartcards, but also in retail and advertising — inexpensive NFC tags can be embedded into packaging labels, flyers or posters.",
+    "description": "NFC Click is a mikroBUS™ add-on board with a versatile near field communications controller from NXP — the PN7120 IC. NFC devices are used in contactless payment systems, electronic ticketing, smartcards, but also in retail and advertising — inexpensive NFC tags can be embedded into packaging labels, flyers or posters.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PN7120"],
+    "hw" : ["Click","PN7120"],
     "category" : ["Click Boards > Wireless connectivity > RFID/NFC"]
 }

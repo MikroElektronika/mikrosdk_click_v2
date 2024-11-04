@@ -3,13 +3,13 @@
  * @brief Grid-EYE 2 Click example
  *
  * # Description
- * This example demonstrates the use of Grid-EYE 2 click by reading and displaying
+ * This example demonstrates the use of Grid-EYE 2 Click by reading and displaying
  * the temperature measurements as an 8x8 pixels grid.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which enables
+ * Initializes the driver and performs the Click default configuration which enables
  * the data ready interrupt and sets data measurement to 10 frames per second.
  *
  * ## Application Task

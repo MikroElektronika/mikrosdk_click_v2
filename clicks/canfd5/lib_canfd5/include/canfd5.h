@@ -184,7 +184,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void canfd5_cfg_setup ( canfd5_cfg_t *cfg );
@@ -194,7 +194,7 @@ void canfd5_cfg_setup ( canfd5_cfg_t *cfg );
  * @param canfd5 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CANFD5_RETVAL canfd5_init ( canfd5_t *ctx, canfd5_cfg_t *cfg );
 
@@ -224,7 +224,7 @@ int32_t canfd5_generic_read ( canfd5_t *ctx, char *data_buf, uint16_t max_len );
  * - 1 ( CANFD5_PIN_STATE_ENABLE )  : Enable.
  *
  * @description This function set state of the SLP ( CS ) pin
- * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 click board.
+ * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 Click board.
  */
 void canfd5_set_slp_pin_state ( canfd5_t *ctx, uint8_t slp_state );
 
@@ -237,7 +237,7 @@ void canfd5_set_slp_pin_state ( canfd5_t *ctx, uint8_t slp_state );
  * - 1 ( CANFD5_PIN_STATE_ENABLE )  : Enable.
  *
  * @description This function set state of the WAK ( PWM ) pin
- * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 click board.
+ * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 Click board.
  */
 void canfd5_set_wak_pin_state ( canfd5_t *ctx, uint8_t wak_state );
 
@@ -250,7 +250,7 @@ void canfd5_set_wak_pin_state ( canfd5_t *ctx, uint8_t wak_state );
  * state of the CTS ( INT ) pin.
  *
  * @description This function get state of the CTS ( INT ) pin
- * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 click board.
+ * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 Click board.
  */
 uint8_t canfd5_get_cts_pin_state ( canfd5_t *ctx );
 
@@ -260,7 +260,7 @@ uint8_t canfd5_get_cts_pin_state ( canfd5_t *ctx );
  * @param ctx Click object.
  * 
  * @description This function set normal operating mode
- * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 click board.
+ * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 Click board.
  */
 void canfd5_set_normal_operating_mode ( canfd5_t *ctx );
 
@@ -270,7 +270,7 @@ void canfd5_set_normal_operating_mode ( canfd5_t *ctx );
  * @param ctx Click object.
  * 
  * @description This function set stand-by operating mode
- * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 click board.
+ * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 Click board.
  */
 void canfd5_set_standby_operating_mode ( canfd5_t *ctx );
 
@@ -280,7 +280,7 @@ void canfd5_set_standby_operating_mode ( canfd5_t *ctx );
  * @param ctx Click object.
  * 
  * @description This function set sleep operating mode
- * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 click board.
+ * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 Click board.
  */
 void canfd5_set_sleep_operating_mode ( canfd5_t *ctx );
 
@@ -294,7 +294,7 @@ void canfd5_set_sleep_operating_mode ( canfd5_t *ctx );
  * - 2 ( CANFD5_OPERATING_MODE_SLEEP )    : Sleep mode;
  *
  * @description This function set desired operating mode
- * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 click board.
+ * of UJA1162A Self-supplied high-speed CAN transceiver on CAN FD 5 Click board.
  */
 void canfd5_set_operating_mode ( canfd5_t *ctx, uint8_t op_mode );
 
@@ -304,6 +304,6 @@ void canfd5_set_operating_mode ( canfd5_t *ctx, uint8_t op_mode );
 #endif  // _CANFD5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

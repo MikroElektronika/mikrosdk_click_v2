@@ -1,19 +1,19 @@
 
 ---
-# Headphone AMP 2 click
+# Headphone AMP 2 Click
 
 > Headphone AMP 2 Click is a compact add-on board that contains a stereo headphone amplifier. 
 > This board features the MAX9723, a stereo DirectDrive headphone amplifier with BassMax, volume control, 
 > and I2C from Analog Devices. The amplifier delivers 62mW into a 16Ω load, 
 > and features a high 90dB PSRR at 1KHz and a low 0.006% THD+N. 
-> It also features an integrated 32-level volume control, click-and-pop suppression, 
+> It also features an integrated 32-level volume control, Click-and-pop suppression, 
 > ±8kV HBM ESD-protected headphone outputs, short-circuit and thermal-overload protection, and more.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/headphoneamp2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/headphone-amp-2-click)
+[Click Product page](https://www.mikroe.com/headphone-amp-2-click)
 
 ---
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

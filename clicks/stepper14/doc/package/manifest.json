@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Stepper 14 click",
+    "display_name": "Stepper 14 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,17 +24,18 @@
     },
     "name": "mikroe.click.stepper14",
     "product_link": "https://www.mikroe.com/stepper-14-click",
-    "short_description": "The Stepper 14 Click is a Click board™ that features the DRV8847PWPR, a step motor driver, from Texas Instruments. This Click board™ provides a bipolar step motor controle, It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. This click board™ also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.",
+    "short_description": "The Stepper 14 Click is a Click board™ that features the DRV8847PWPR, a step motor driver, from Texas Instruments. This Click board™ provides a bipolar step motor controle, It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. This Click board™ also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
     "related_projects": [
         3243
     ],
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Stepper14",
     "subdir_name": "lib_stepper14"
 }
+
 
 

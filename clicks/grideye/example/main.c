@@ -11,7 +11,7 @@
  * Initalizes I2C driver, applies default settings, and makes an initial log.
  * 
  * ## Application Task  
- * This example demonstrates the use of Grid-EYE click board by reading full grid and displaying values via USART terminal
+ * This example demonstrates the use of Grid-EYE Click board by reading full grid and displaying values via USART terminal
  * 
  * 
  * \author MikroE Team

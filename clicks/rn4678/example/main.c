@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  * 
  * ## Application Task  
  * Checks for the received data, reads it and replies with a certain message.
@@ -20,7 +20,7 @@
  * 
  * @note
  * We have used the Serial Bluetooth Terminal smartphone application for the test. 
- * A smartphone and the click board must be paired in order to exchange messages with each other.
+ * A smartphone and the Click board must be paired in order to exchange messages with each other.
  * 
  * \author MikroE Team
  *

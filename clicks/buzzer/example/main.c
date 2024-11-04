@@ -3,7 +3,7 @@
  * @brief Buzzer Click example
  *
  * # Description
- * This example demonstrates the use of Buzzer click board by playing
+ * This example demonstrates the use of Buzzer Click board by playing
  * the Imperial March melody on the buzzer.
  *
  * The demo application is composed of two sections :

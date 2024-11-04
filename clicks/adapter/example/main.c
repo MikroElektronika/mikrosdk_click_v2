@@ -3,7 +3,7 @@
  * \brief Adapter Click example
  * 
  * # Description
- * Adapter click is a breakout board which simplifies connection of add-on boards. 
+ * Adapter Click is a breakout board which simplifies connection of add-on boards. 
  * There are two ways of establishing connection: using male or female IDC10 connectors. 
  * Male header must be soldered on the top side of Adapter Click to connect the add-on board 
  * directly or via flat cable. Female header can be soldered either on the top, or the bottom 
@@ -16,9 +16,9 @@
  * Initalizes I2C or SPI driver and makes an initial log.
  * 
  * ## Application Task  
- * This is an example that shows the use of the Adapter click board (SPI mode -  set as default). 
- * In I2C mode we are reading internal temperature from another device (THERMO 5 click board).
- * In SPI mode example we are writing "mikroElektronika" to SRAM click board, 
+ * This is an example that shows the use of the Adapter Click board (SPI mode -  set as default). 
+ * In I2C mode we are reading internal temperature from another device (THERMO 5 Click board).
+ * In SPI mode example we are writing "mikroElektronika" to SRAM Click board, 
  * and then reading from the same memory location.
  * 
  * ## Additional Functions

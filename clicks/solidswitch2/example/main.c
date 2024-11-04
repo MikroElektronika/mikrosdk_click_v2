@@ -3,12 +3,12 @@
  * @brief SolidSwitch 2 Click example
  *
  * # Description
- * This example demonstrates the use of SolidSwitch 2 click board by controlling the output state.
+ * This example demonstrates the use of SolidSwitch 2 Click board by controlling the output state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which maps outputs as follows:
+ * Initializes the driver and performs the Click default configuration which maps outputs as follows:
  * OUT2   - IN0,
  * OUT3   - IN1,
  * OUT4-5 - PWM GEN,

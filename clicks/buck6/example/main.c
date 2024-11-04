@@ -3,7 +3,7 @@
  * \brief BUCK6 Click example
  * 
  * # Description
- * BUCK 6 click is an advanced synchronous DC-DC step down (buck) converter, 
+ * BUCK 6 Click is an advanced synchronous DC-DC step down (buck) converter, 
  * with a very wide input voltage range and reasonably high output current. 
  *
  * The demo application is composed of two sections :

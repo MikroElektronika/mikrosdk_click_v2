@@ -178,7 +178,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void airquality7_cfg_setup ( airquality7_cfg_t *cfg );
@@ -188,7 +188,7 @@ void airquality7_cfg_setup ( airquality7_cfg_t *cfg );
  * @param airquality7 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AIRQUALITY7_RETVAL airquality7_init ( airquality7_t *ctx, airquality7_cfg_t *cfg );
 
@@ -220,7 +220,7 @@ void airquality7_generic_read ( airquality7_t *ctx, uint8_t *data_buf );
  * @param ppmco2_value  4 bytes of CO2 data to be written in ppm.
  *
  * @description This function is used to send the ppmCO2 value given by an 
- * external analyzer to the Air quality 7 click in order to recalibrate its 
+ * external analyzer to the Air quality 7 Click in order to recalibrate its 
  * outputs.
  */
 void airquality7_set_ppmco2( airquality7_t *ctx, uint8_t *ppmco2_value );
@@ -237,7 +237,7 @@ void airquality7_set_ppmco2( airquality7_t *ctx, uint8_t *ppmco2_value );
  * @returns 0 - Ok,
  *          1 - CRC error.
  *
- * @description This function is used to read the Air quality 7 click status 
+ * @description This function is used to read the Air quality 7 Click status 
  * coded on tVOC data byte [0 - 1000 ppb], CO2 data byte [400 - 2000 ppm], 
  * resistor value data 3 bytes [Ohm], error status byte and CRC byte.
  */
@@ -287,6 +287,6 @@ airquality7_err_t airquality7_get_r0_calib( airquality7_t *ctx, uint16_t *r0_koh
 #endif  // _AIRQUALITY7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

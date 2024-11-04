@@ -3,14 +3,14 @@
  * @brief Temp-Log 7 Click Example.
  *
  * # Description
- * This example demonstrates the use of Temp-Log 7 click board by reading
+ * This example demonstrates the use of Temp-Log 7 Click board by reading
  * the temperature in Celsius, then writing the specified data to the memory
  * and reading it back.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which
+ * Initializes the driver and performs the Click default configuration which
  * clears the EEPROM memory, sets the temperature resolution to 16-bit, enables
  * alert interrupt and sets the temperature alerts to 5 degrees Celsius for low
  * and 40 degrees for high level. Other three IO pins are configured as INPUT.
@@ -29,7 +29,7 @@
 #include "log.h"
 #include "templog7.h"
 
-#define DEMO_TEXT_MESSAGE           "MikroE - Temp-Log 7 click"
+#define DEMO_TEXT_MESSAGE           "MikroE - Temp-Log 7 Click"
 #define STARTING_ADDRESS            0x00
 
 static templog7_t templog7;

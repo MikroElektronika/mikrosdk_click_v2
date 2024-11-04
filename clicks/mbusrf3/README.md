@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# M-BUS RF 3 click
+# M-BUS RF 3 Click
 
 > M-BUS RF 3 Click is a compact add-on board designed for utility metering and various telemetry applications. This board features the Metis-II (2607021183000), an 868MHz radio module from Würth Elektronik. It integrates an MSP430 microcontroller and a CC1125 RF chip-set to ensure efficient data transmission. Key features include a frequency range of 868.3MHz to 869.525MHz, support for the Wireless M-BUS EN13757-4:2013 and Open Metering System (OMS) standards, and communication capabilities up to 1000 meters in line-of-sight conditions. The board also offers energy-saving functionalities such as Wake-On-Radio, an output power of +14dBm output, and AES-128 encryption for secure communication.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mbusrf3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/m-bus-rf-3-click)
+[Click Product page](https://www.mikroe.com/m-bus-rf-3-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t mbusrf3_send_data ( mbusrf3_t *ctx, uint8_t *data_in, uint8_t len );
 
 ## Example Description
 
-> This example demonstrates the use of M-BUS RF 3 click board by processing
+> This example demonstrates the use of M-BUS RF 3 Click board by processing
   the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click configuration depending on selected DEMO_EXAMPLE macro.
+> Initializes the driver and performs the Click configuration depending on selected DEMO_EXAMPLE macro.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

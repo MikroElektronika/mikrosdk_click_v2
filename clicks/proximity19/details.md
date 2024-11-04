@@ -1,6 +1,6 @@
 
 ---
-# Proximity 19 click
+# Proximity 19 Click
 
 > Proximity 19 Click is a compact add-on board designed for precise proximity sensing in various applications. This board features the RPR-0720, a digital optical proximity sensor from ROHM Semiconductor. The RPR-0720 integrates an infrared VCSEL (IrVCSEL) and an IC with an I2C interface, featuring a detection range adjustable from 1 to 15mm and an ambient light canceling function. The board uses a 2-wire I2C interface for communication, supporting up to 400kHz frequency clock, allowing control over sensor functions such as operating mode, interrupt system, and offset/threshold adjustments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-19-click)
+[Click Product page](https://www.mikroe.com/proximity-19-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t proximity19_set_period ( proximity19_t *ctx, uint8_t period );
 
 ## Example Description
 
-> This example demonstrates the use of the Proximity 19 click board 
+> This example demonstrates the use of the Proximity 19 Click board 
 > by measuring and displaying the distance data.
 
 **The demo application is composed of two sections :**
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

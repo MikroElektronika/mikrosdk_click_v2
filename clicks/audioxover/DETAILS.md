@@ -1,6 +1,6 @@
 
 ---
-# Audio Xover click
+# Audio Xover Click
 
 Audio Xover Click is an analog active crossover solution for two-way loudspeakers. The primary purpose of the crossover circuit in a loudspeaker is to split an incoming audio signal into frequency bands that are passed to the speaker or “driver” best suited.
 
@@ -9,7 +9,7 @@ Audio Xover Click is an analog active crossover solution for two-way loudspeaker
 </p>
 
 
-[click Product page](https://www.mikroe.com/audio-xover-click)
+[Click Product page](https://www.mikroe.com/audio-xover-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. 
+> This function initializes and configures the Click and logger modules. 
 
 ```c
 
@@ -91,7 +91,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This function enables and disables the click board every 10 seconds, and logs an appropriate message on the USB UART.
+> This function enables and disables the Click board every 10 seconds, and logs an appropriate message on the USB UART.
 
 ```c
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

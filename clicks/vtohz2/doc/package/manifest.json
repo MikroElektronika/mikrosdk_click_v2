@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "V to Hz 2 click",
+    "display_name": "V to Hz 2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.vtohz2",
     "product_link": "https://www.mikroe.com/v-to-hz-2-click",
-    "short_description": "V to Hz 2 click is a device that converts an analog voltage input signal into a pulse wave signal of a certain frequency.",
+    "short_description": "V to Hz 2 Click is a device that converts an analog voltage input signal into a pulse wave signal of a certain frequency.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2426
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.VToHz2",
     "subdir_name": "lib_vtohz2"
 }
+
 
 
 

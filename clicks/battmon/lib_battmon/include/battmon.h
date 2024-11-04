@@ -279,7 +279,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void battmon_cfg_setup ( battmon_cfg_t *cfg );
@@ -289,7 +289,7 @@ void battmon_cfg_setup ( battmon_cfg_t *cfg );
  * @param battmon Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BATTMON_RETVAL battmon_init ( battmon_t *ctx, battmon_cfg_t *cfg );
 
@@ -312,7 +312,7 @@ BATTMON_RETVAL battmon_init ( battmon_t *ctx, battmon_cfg_t *cfg );
  *      Set: BATTMON_REG_ALARM_VOLTAGE
  *            - 3000
  *</pre>
- * @description This function executes default configuration for BattMon click.
+ * @description This function executes default configuration for BattMon Click.
  */
 void battmon_default_cfg ( battmon_t *ctx );
 
@@ -491,6 +491,6 @@ void battmon_reset_conv_cnt ( battmon_t *ctx );
 #endif  // _BATTMON_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

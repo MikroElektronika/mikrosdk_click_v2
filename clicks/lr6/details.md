@@ -1,6 +1,6 @@
 
 ---
-# LR 6 click
+# LR 6 Click
 
 > LR 6 Click is a compact add-on board designed for ultra-long-distance spread-spectrum communication. This board features the Ra-01S, a LoRa™ wireless radio frequency module from Ai-Thinker Technology, featuring the SX1268 radio chip. This module provides exceptional sensitivity of over -148dBm, a power output of +22dBm, and supports multiple modulation methods, including LoRa™, within the 433MHz frequency band. The board offers robust anti-interference capabilities and low power consumption, making it ideal for applications requiring reliable long-range communication.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lr6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lr-6-click)
+[Click Product page](https://www.mikroe.com/lr-6-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t lr6_set_lr_config ( lr6_t *ctx, lr6_lora_cfg_t lora_cfg );
 
 ## Example Description
 
-> This example demonstrates the use of LR 6 click board by processing
+> This example demonstrates the use of LR 6 Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

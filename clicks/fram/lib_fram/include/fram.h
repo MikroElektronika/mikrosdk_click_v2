@@ -174,7 +174,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void fram_cfg_setup ( fram_cfg_t *cfg );
@@ -185,7 +185,7 @@ void fram_cfg_setup ( fram_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FRAM_RETVAL fram_init ( fram_t *ctx, fram_cfg_t *cfg );
 
@@ -203,16 +203,16 @@ FRAM_RETVAL fram_init ( fram_t *ctx, fram_cfg_t *cfg );
 void fram_generic_transfer ( fram_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
 
 /**
- * @brief Fram click init function.
+ * @brief Fram Click init function.
  *
  * @param ctx  Click object.
  *
- * @description This function that initializes Fram click by setting Chip select.
+ * @description This function that initializes Fram Click by setting Chip select.
  */
 void fram_init_f ( fram_t *ctx );
 
 /**
- * @brief Fram click Write Enable function.
+ * @brief Fram Click Write Enable function.
  *
  * @param ctx  Click object.
  *
@@ -221,7 +221,7 @@ void fram_init_f ( fram_t *ctx );
 void fram_write_enable ( fram_t *ctx );
 
 /**
- * @brief Fram click Write Disable function.
+ * @brief Fram Click Write Disable function.
  *
  * @param ctx  Click object.
  *
@@ -230,7 +230,7 @@ void fram_write_enable ( fram_t *ctx );
 void fram_write_disable ( fram_t *ctx );
 
 /**
- * @brief Fram click Read Status function.
+ * @brief Fram Click Read Status function.
  *
  * @param ctx  Click object.
  *
@@ -239,7 +239,7 @@ void fram_write_disable ( fram_t *ctx );
 uint8_t fram_read_status ( fram_t *ctx ) ;
 
 /**
- * @brief Fram click Write Status function.
+ * @brief Fram Click Write Status function.
  *
  * @param ctx  Click object.
  *
@@ -286,6 +286,6 @@ void fram_erase_all ( fram_t *ctx );
 #endif  // _FRAM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

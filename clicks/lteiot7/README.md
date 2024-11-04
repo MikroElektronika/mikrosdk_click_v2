@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LTE IoT 7 click
+# LTE IoT 7 Click
 
 > LTE IoT 7 Click is an add-on board representing a secure-cloud multi-band solution designed for IoT applications. This board features the SARA-R422M8S, a multi-band LTE-M/NB-IoT/EGPRS multi-mode solution with integrated high-performance standard precision M8 GNSS receiver for global position acquisition from u-blox. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, it also provides over-the-air firmware updates, end-to-end trusted domain security, and u-Blox’s leading GNSS technology.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lteiot7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-iot-7-click)
+[Click Product page](https://www.mikroe.com/lte-iot-7-click)
 
 ---
 
@@ -203,7 +203,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -324,7 +324,7 @@ typedef enum
 
 /**
  * @brief CDC configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #cdc_cfg_t object definition for detailed explanation.
@@ -336,7 +336,7 @@ void cdc_cfg_setup ( cdc_cfg_t *cfg );
 /**
  * @brief CDC driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #cdc_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -352,7 +352,7 @@ void cdc_drv_interface_sel ( cdc_cfg_t *cfg, cdc_drv_t drv_sel );
 /**
  * @brief CDC initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #cdc_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -367,7 +367,7 @@ err_t cdc_init ( cdc_t *ctx, cdc_cfg_t *cfg );
 /**
  * @brief CDC default configuration function.
  * @details This function executes a default configuration of CDC
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #cdc_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

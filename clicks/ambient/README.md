@@ -2,15 +2,15 @@
   
 
 ---
-# Ambient click
+# Ambient Click
 
-> Ambient click carries the Melexis MLX75305 IC. It’s a CMOS integrated optical sensor that consists of a photodiode, a transimpendance amplifier, and an output transistor.
+> Ambient Click carries the Melexis MLX75305 IC. It’s a CMOS integrated optical sensor that consists of a photodiode, a transimpendance amplifier, and an output transistor.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ambient_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-click)
+[Click Product page](https://www.mikroe.com/ambient-click)
 
 ---
 
@@ -54,7 +54,7 @@ err_t ambient_init ( ambient_t *ctx, ambient_cfg_t *cfg );
 err_t ambient_read_an_pin_voltage ( ambient_t *ctx, float *data_out );
 ```
 
-- `ambient_get_light_intensity` Calculates the light intensity from analog voltage measurement of the Melexis MLX75305 IC on Ambient click board.
+- `ambient_get_light_intensity` Calculates the light intensity from analog voltage measurement of the Melexis MLX75305 IC on Ambient Click board.
 ```c
 uint16_t ambient_get_light_intensity ( ambient_t *ctx );
 ```
@@ -101,8 +101,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example which demonstrates the use of Ambient click board.
-Ambient click reads ADC voltage once per second and converts it to light intensity [ uW/cm2 ].
+> This is an example which demonstrates the use of Ambient Click board.
+Ambient Click reads ADC voltage once per second and converts it to light intensity [ uW/cm2 ].
 Results are being sent to the USB UART where you can track their changes.
 
 ```c
@@ -128,7 +128,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

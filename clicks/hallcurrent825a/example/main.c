@@ -14,7 +14,7 @@
  * Initializes ADC driver, calibrate AD conversion of the AN pin and start to write log.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the Hall Current 8 25A click board.
+ * This is an example that demonstrates the use of the Hall Current 8 25A Click board.
  * In this example, we read and display current data [A], AN pin voltage level [V]. 
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

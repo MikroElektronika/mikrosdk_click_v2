@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# ECG 3 click
+# ECG 3 Click
 
-ECG 3 click is a complete solution for ECG and HR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE). ECG 3 click uses the MAX30003 IC, an ultra-low power, single-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of heart rate and ECG monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG 3 click is also equipped with the 3.5mm electrodes connector, making it ready to be used out of the box.
+ECG 3 Click is a complete solution for ECG and HR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE). ECG 3 Click uses the MAX30003 IC, an ultra-low power, single-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of heart rate and ECG monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG 3 Click is also equipped with the 3.5mm electrodes connector, making it ready to be used out of the box.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ecg3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ecg-3-click)
+[Click Product page](https://www.mikroe.com/ecg-3-click)
 
 ---
 
@@ -59,7 +59,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click is made for ECG and HR, 
+> This Click is made for ECG and HR, 
 > equipped with an ultra-low power, single channel, integrated biopotential AFE, 
 > with the ECG and R-to-R detection functionality. 
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,6 +3,6 @@
     "description": "DIGI POT 11 Click is a compact add-on board representing a digitally controlled potentiometer. This board features a double pack of the MAX5387, a dual, 256-tap, volatile, low-voltage linear taper digital potentiometer from Analog Devices. This way, four digitally I2C-controlled potentiometers are realized with end-to-end resistance values of 50kΩ. Operating from a single +3.3V power supply, this device provides a low 35ppm/ºC end-to-end temperature coefficient.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX5387MAUD"],
+    "hw" : ["Click","MAX5387MAUD"],
     "category" : ["Click Boards > Mixed signal > Digital potentiometer"]
 }

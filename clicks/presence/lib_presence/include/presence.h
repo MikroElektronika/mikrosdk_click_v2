@@ -259,7 +259,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void presence_cfg_setup ( presence_cfg_t *cfg );
@@ -270,14 +270,14 @@ void presence_cfg_setup ( presence_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t presence_init ( presence_t *ctx, presence_cfg_t *cfg );
 
 /**
  * @brief Presence default configuration function.
  * @details This function executes a default configuration of Presence
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #presence_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -394,6 +394,6 @@ err_t presence_object_temperature( presence_t *ctx, float *temperature );
 #endif  // _PRESENCE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

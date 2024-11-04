@@ -159,7 +159,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lighttemp_cfg_setup ( lighttemp_cfg_t *cfg );
@@ -170,7 +170,7 @@ void lighttemp_cfg_setup ( lighttemp_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LIGHTTEMP_RETVAL lighttemp_init ( lighttemp_t *ctx, lighttemp_cfg_t *cfg );
 
@@ -278,6 +278,6 @@ void lighttemp_led2_pwm_start ( lighttemp_t *ctx );
 #endif  // _LIGHTTEMP_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

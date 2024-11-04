@@ -3,7 +3,7 @@
  * @brief GNSS MAX 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of GNSS MAX 2 click by reading and displaying
+ * This example demonstrates the use of GNSS MAX 2 Click by reading and displaying
  * the GNSS coordinates.
  *
  * The demo application is composed of two sections :

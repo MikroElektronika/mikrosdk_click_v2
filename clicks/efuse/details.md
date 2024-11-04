@@ -1,6 +1,6 @@
 
 ---
-# eFuse click
+# eFuse Click
 
 Fuse Click is a compact add-on board that contains a programmable electronic power breaker. This board features the STPW12, an integrated electronic power breaker optimized to monitor the input power from STMicroelectronics. Connected in series to the power rail, it can disconnect the electronic circuitry on its output if the power consumption overcomes the programmed limit. The intervention of the protection is communicated to the MCU through a signal on the fault pin. The device can also be enabled/disabled through a dedicated Enable pin with a direct PWM mode, which can be achieved through an external PWM signal.
 
@@ -8,7 +8,7 @@ Fuse Click is a compact add-on board that contains a programmable electronic pow
   <img src="https://download.mikroe.com/images/click_for_ide/efuse_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/efuse-click)
+[Click Product page](https://www.mikroe.com/efuse-click)
 
 ---
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,13 +3,13 @@
  * @brief DC Motor 23 Click example
  *
  * # Description
- * This example demonstrates the use of DC Motor 23 click board™. 
+ * This example demonstrates the use of DC Motor 23 Click board™. 
  * by driving the motors in both direction every 3 seconds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration 
+ * Initializes the driver and performs the Click default configuration 
  * which sets the output torque to 100%.
  *
  * ## Application Task

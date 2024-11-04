@@ -12,7 +12,7 @@
  * Application Init performs Logger and Click initialization.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of AudioAmp 3 click board.
+ * This is an example which demonstrates the use of AudioAmp 3 Click board.
  * In application task function is used that will increase volume of the sound
  * from MIN to MAX and reverse.
  * Results are being sent to the UART Terminal where you can track their changes.

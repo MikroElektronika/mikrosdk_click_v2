@@ -503,7 +503,7 @@ extern "C"{
  *
  * @param cfg Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proxfusion2_cfg_setup ( proxfusion2_cfg_t *cfg );
@@ -517,7 +517,7 @@ void proxfusion2_cfg_setup ( proxfusion2_cfg_t *cfg );
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t proxfusion2_init ( proxfusion2_t *ctx, proxfusion2_cfg_t *cfg );
 
@@ -530,7 +530,7 @@ err_t proxfusion2_init ( proxfusion2_t *ctx, proxfusion2_cfg_t *cfg );
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
  * 
- * @details This function executes default configuration for ProxFusion2 click.
+ * @details This function executes default configuration for ProxFusion2 Click.
  */
 err_t proxfusion2_default_cfg ( proxfusion2_t *ctx );
 
@@ -604,6 +604,6 @@ uint8_t proxfusion2_detect_hall ( proxfusion2_t *ctx );
 #endif  // _PROXFUSION2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

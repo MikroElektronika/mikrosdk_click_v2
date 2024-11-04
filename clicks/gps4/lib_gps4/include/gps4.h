@@ -218,7 +218,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gps4_cfg_setup ( gps4_cfg_t *cfg );
@@ -228,7 +228,7 @@ void gps4_cfg_setup ( gps4_cfg_t *cfg );
  * @param gps4 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GPS4_RETVAL gps4_init ( gps4_t *ctx, gps4_cfg_t *cfg );
 
@@ -302,6 +302,6 @@ gps4_error_t gps4_generic_parser
 #endif  // _GPS4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

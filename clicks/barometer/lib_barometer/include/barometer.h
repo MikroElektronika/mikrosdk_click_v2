@@ -249,7 +249,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void barometer_cfg_setup ( barometer_cfg_t *cfg );
@@ -259,7 +259,7 @@ void barometer_cfg_setup ( barometer_cfg_t *cfg );
  * @param barometer Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BAROMETER_RETVAL barometer_init ( barometer_t *ctx, barometer_cfg_t *cfg );
 
@@ -273,7 +273,7 @@ BAROMETER_RETVAL barometer_init ( barometer_t *ctx, barometer_cfg_t *cfg );
  *       set: BAROMETER_CTRL_REG1
  *              - BAROMETER_DEFAULT_CONFIG
  *</pre>
- * @description This function executes default configuration for Barometer click.
+ * @description This function executes default configuration for Barometer Click.
  */
 void barometer_default_cfg ( barometer_t *ctx );
 
@@ -401,6 +401,6 @@ uint8_t barometer_check_interrupt ( barometer_t *ctx );
 #endif  // _BAROMETER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

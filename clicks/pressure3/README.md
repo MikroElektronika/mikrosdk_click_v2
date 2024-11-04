@@ -3,15 +3,15 @@
  
 
 ---
-# Pressure 3 click
+# Pressure 3 Click
 
-Pressure 3 click is a mikroBUS add-on board that carries an Infineon DPS310 digital barometric pressure sensor.
+Pressure 3 Click is a mikroBUS add-on board that carries an Infineon DPS310 digital barometric pressure sensor.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pressure3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-3-click)
+[Click Product page](https://www.mikroe.com/pressure-3-click)
 
 ---
 
@@ -100,7 +100,7 @@ void application_init ( void )
 ### Application Task
 
 > This is an example which demonstrates the use of Pressure 3 Click board.
-     Measured pressure and temperature data from the DPS310 sensor on Pressure 3 click board.
+     Measured pressure and temperature data from the DPS310 sensor on Pressure 3 Click board.
      Results are being sent to the Usart Terminal where you can track their changes.
      All data logs write on usb uart changes for every 3 sec.
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

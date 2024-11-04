@@ -3,13 +3,13 @@
  * @brief DCMotor13 Click example
  *
  * # Description
- * This example demonstrates the use of DC Motor 13 click board by driving the motors
+ * This example demonstrates the use of DC Motor 13 Click board by driving the motors
  * in both direction in the span of 9 seconds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets the output
+ * Initializes the driver and performs the Click default configuration which sets the output
  * torque to 100%.
  *
  * ## Application Task

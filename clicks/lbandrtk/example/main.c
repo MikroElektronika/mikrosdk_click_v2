@@ -3,7 +3,7 @@
  * @brief LBAND RTK Click example
  *
  * # Description
- * This example demonstrates the use of LBAND RTK click by setting the Point to multipoint (PMP)
+ * This example demonstrates the use of LBAND RTK Click by setting the Point to multipoint (PMP)
  * configuration and waiting for the UBX-RXM-PMP message, then parsing it and displaying on the USB UART.
  *
  * The demo application is composed of two sections :

@@ -12,7 +12,7 @@
  * and start to write log.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the ProxFusion 3 click board.
+ * This is an example that demonstrates the use of the ProxFusion 3 Click board.
  * In this example, we check the touch event and display the last detected touch. 
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

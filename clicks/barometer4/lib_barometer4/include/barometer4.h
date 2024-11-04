@@ -198,7 +198,7 @@ typedef enum
 
 /**
  * @brief Barometer 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #barometer4_cfg_t object definition for detailed explanation.
@@ -210,7 +210,7 @@ void barometer4_cfg_setup ( barometer4_cfg_t *cfg );
 /**
  * @brief Barometer 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -226,7 +226,7 @@ err_t barometer4_init ( barometer4_t *ctx, barometer4_cfg_t *cfg );
 /**
  * @brief Barometer 4 default configuration function.
  * @details This function executes a default configuration of Barometer 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -276,7 +276,7 @@ err_t barometer4_generic_read ( barometer4_t *ctx, uint16_t cmd, uint16_t *rx_bu
  * @brief Barometer 4 set command function.
  * @details This function sets desired command of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -292,7 +292,7 @@ err_t barometer4_set_command ( barometer4_t *ctx, uint16_t cmd ) ;
  * @brief Barometer 4 software reset function.
  * @details This function performs a software reset of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -307,7 +307,7 @@ err_t barometer4_soft_reset ( barometer4_t *ctx );
  * @brief Barometer 4 get device ID function.
  * @details This function read device ID of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @param[out] device_id : Device ID value.
@@ -323,7 +323,7 @@ err_t barometer4_get_device_id ( barometer4_t *ctx, uint16_t *device_id );
  * @brief Barometer 4 set up OTP read function.
  * @details This function performs a OTP read mode of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -338,7 +338,7 @@ err_t barometer4_set_up_otp_read ( barometer4_t *ctx );
  * @brief Barometer 4 get OTP function.
  * @details This function read OTP values of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @param[out] otp_data : OTP values.
@@ -354,7 +354,7 @@ err_t barometer4_get_otp ( barometer4_t *ctx, uint16_t *otp_data );
  * @brief Barometer 4 inverse process data function.
  * @details This function performs a inverse process data of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @param[in] cfg_data : Data structure to hold pressure sensor related parameters.
@@ -370,7 +370,7 @@ err_t barometer4_inv_invpres_calibration ( barometer4_t *ctx, barometer4_invpres
  * @brief Barometer 4 get RAW data function.
  * @details This function read RAW data of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @param[in] measurement_comd : Operation mode measurement commands.
@@ -388,7 +388,7 @@ err_t barometer4_get_raw_data ( barometer4_t *ctx, uint16_t measurement_comd, ui
  * @brief Barometer 4 get pressure and temperature function.
  * @details This function read pressure ( Pa ) and temperature ( degree Celsius ) of the 
  * ICP-10111, High Accuracy, Low Power, Waterproof Barometric Pressure a
- * nd Temperature Sensor IC on the Barometer 4 click board™. 
+ * nd Temperature Sensor IC on the Barometer 4 Click board™. 
  * @param[in] ctx : Click context object.
  * See #barometer4_t object definition for detailed explanation.
  * @param[out] pressure : Pressure data ( Pa ).

@@ -1,6 +1,6 @@
 
 ---
-# Flash 8 click
+# Flash 8 Click
 
 > Flash 8 Click is a compact add-on board representing a highly reliable memory solution. This board features the GD5F2GQ5UEYIGR, a 2Gb high-density non-volatile memory storage solution for embedded systems from GigaDevice Semiconductor. It is based on an industry-standard NAND Flash memory core, representing an attractive alternative to SPI-NOR and standard parallel NAND Flash with advanced features. The GD5F2GQ5UEYIGR also has advanced security features (8K-Byte OTP region), software/hardware write protection, can withstand many write cycles (minimum 100k), and has a data retention period greater than ten years.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/flash8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-8-click)
+[Click Product page](https://www.mikroe.com/flash-8-click)
 
 ---
 
@@ -227,7 +227,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

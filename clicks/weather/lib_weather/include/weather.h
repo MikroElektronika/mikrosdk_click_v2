@@ -367,7 +367,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void weather_cfg_setup ( weather_cfg_t *cfg );
@@ -377,7 +377,7 @@ void weather_cfg_setup ( weather_cfg_t *cfg );
  * @param weather Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t weather_init ( weather_t *ctx, weather_cfg_t *cfg );
 
@@ -386,7 +386,7 @@ err_t weather_init ( weather_t *ctx, weather_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Weather click.
+ * @details This function executes default configuration for Weather Click.
  *
  * @note Default configuration of the chip contains the settings :
  *         - oversampling huidity -  WEATHER_HUM_OS_1X;
@@ -429,7 +429,7 @@ err_t weather_generic_read ( weather_t *ctx, uint8_t reg, uint8_t *data_buf, uin
  * @param ctx      Click object.
  * @param device_id (8 bit) Device ID - 0x60 - default
  *
- * @details You can use this function as a check on click communication with your MCU.
+ * @details You can use this function as a check on Click communication with your MCU.
  */
 err_t weather_get_device_id ( weather_t *ctx, uint8_t *device_id );
 
@@ -466,6 +466,6 @@ err_t weather_measurement_cfg ( weather_t *ctx, weather_measurement_cfg_t *cfg )
 #endif  // _WEATHER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

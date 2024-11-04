@@ -1,6 +1,6 @@
 
 ---
-# AD-SWIO 3 click
+# AD-SWIO 3 Click
 
 > AD-SWIO 3 Click is a compact add-on board representing a software configurable input/output solution for various purposes. This board features the AD74115H, a single-channel, software-configurable input and output with HART mode from Analog Devices. It provides many functionality for analog input, analog output, digital input, digital output, 2-wire, 3-wire, and 4-wire resistance temperature detector (RTD), and thermocouple measurement capability. The supply power and isolation part are managed by the ADP1034, a 3-channel isolated micropower management unit with seven digital isolators and programmable power control, also from Analog Devices.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adswio3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ad-swio-3-click)
+[Click Product page](https://www.mikroe.com/ad-swio-3-click)
 
 ---
 
@@ -201,7 +201,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

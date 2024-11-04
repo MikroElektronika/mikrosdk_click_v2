@@ -338,7 +338,7 @@ typedef enum
 
 /**
  * @brief Smoke 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #smoke2_cfg_t object definition for detailed explanation.
@@ -350,7 +350,7 @@ void smoke2_cfg_setup ( smoke2_cfg_t *cfg );
 /**
  * @brief Smoke 2 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #smoke2_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -366,7 +366,7 @@ void smoke2_drv_interface_selection ( smoke2_cfg_t *cfg, smoke2_drv_t drv_sel );
 /**
  * @brief Smoke 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -382,7 +382,7 @@ err_t smoke2_init ( smoke2_t *ctx, smoke2_cfg_t *cfg );
 /**
  * @brief Smoke 2 default configuration function.
  * @details This function executes a default configuration of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @return Nothing.
@@ -428,7 +428,7 @@ err_t smoke2_generic_read ( smoke2_t *ctx, uint8_t reg, uint8_t *data_out, uint8
 /**
  * @brief Smoke 2 get state of int pin function.
  * @details This function eget state of int pin of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @return Pin state.
@@ -439,7 +439,7 @@ uint8_t smoke2_get_int_pin ( smoke2_t *ctx );
 /**
  * @brief Smoke 2 generic function for writing data to register function.
  * @details This function is generic for writing data to register of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] reg : register address.
@@ -452,7 +452,7 @@ void smoke2_write_data( smoke2_t *ctx, uint8_t reg, uint16_t tx_data );
 /**
  * @brief Smoke 2 generic function for reading data from registar.
  * @details This function is generic for reading data from registar of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] reg : register address.
@@ -464,7 +464,7 @@ uint16_t smoke2_read_data( smoke2_t *ctx, uint8_t reg );
 /**
  * @brief Smoke 2 generic function for writing bit state.
  * @details This function is generic for writing bit state of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] reg : register address.
@@ -478,7 +478,7 @@ void smoke2_set_bit ( smoke2_t *ctx, uint8_t reg, uint8_t bit_num , uint8_t val 
 /**
  * @brief Smoke 2 generic function for reading bit state.
  * @details This function is generic for reading bit state of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] reg : register address.
@@ -491,7 +491,7 @@ uint8_t smoke2_get_bit ( smoke2_t *ctx, uint8_t reg, uint8_t bit_num );
 /**
  * @brief Smoke 2 setting mode function.
  * @details This function setting mode of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] mode : device mode.
@@ -503,7 +503,7 @@ void smoke2_set_mode ( smoke2_t *ctx, uint8_t mode );
 /**
  * @brief Smoke 2 get mode function.
  * @details This function get mode of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[out] fifo : fifo data.
@@ -517,7 +517,7 @@ void smoke2_get_int ( smoke2_t *ctx, uint8_t *fifo, uint8_t *slot_a, uint8_t *sl
 /**
  * @brief Smoke 2 reading bit state function.
  * @details This function reading bit state of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] slot  : slot to be read.
@@ -530,7 +530,7 @@ uint16_t smoke2_read_sens_data ( smoke2_t *ctx, uint8_t slot, uint8_t chn );
 /**
  * @brief Smoke 2 reseting device function.
  * @details This function reseting device of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @return Nothing.
@@ -541,7 +541,7 @@ void smoke2_soft_reset ( smoke2_t *ctx );
 /**
  * @brief Smoke 2 calibrating data and setting threshold function.
  * @details This function calibrating data and setting threshold of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @param[in] threshold : threshold for smoke detection.
@@ -553,7 +553,7 @@ uint16_t smoke2_smoke_calibration ( smoke2_t *ctx, uint16_t threshold );
 /**
  * @brief Smoke 2 checking smoke detection function.
  * @details This function checking smoke detection of Smoke 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smoke2_t object definition for detailed explanation.
  * @return SMOKE2_SMOKE_DETECTED or SMOKE2_SMOKE_NOT_DETECTED macro.

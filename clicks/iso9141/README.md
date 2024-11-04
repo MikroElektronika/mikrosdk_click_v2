@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ISO 9141 click
+# ISO 9141 Click
 
 > ISO 9141 Click is a compact add-on board that contains a monolithic bus driver with ISO 9141 interface. This board features the L9637, a monolithic integrated circuit containing standard ISO 9141 compatible interface functions from ST Microelectronics.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/iso9141_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/iso-9141-click)
+[Click Product page](https://www.mikroe.com/iso-9141-click)
 
 ---
 
@@ -60,7 +60,7 @@ err_t iso9141_generic_read ( iso9141_t *ctx, uint8_t *data_buf, uint16_t max_len
 
 ## Example Description
 
-> This example demonstrates the use of an ISO 9141 click board by showing the communication between the two click boards.
+> This example demonstrates the use of an ISO 9141 Click board by showing the communication between the two Click boards.
 
 **The demo application is composed of two sections :**
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

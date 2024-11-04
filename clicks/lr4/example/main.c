@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, and resets the click board to factory default configuration.
+ * Initializes the driver, and resets the Click board to factory default configuration.
  * Then performs a group of commands for getting the FW version, the serial number, and the DevEUI.
  * After that executes the join activation by personalization command.
  * 

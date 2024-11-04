@@ -3,7 +3,7 @@
  * \brief ADAC Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the ADAC click module. The click
+ * This example showcases how to initialize, configure and use the ADAC Click module. The Click
  * has an ADC and a DAC. An external power supply sets the maximum voltage of the input analog
  * signal, which is bound to 2.5 V by default. For the input any external analog signal will
  * suffice and a multimeter is needed to read the output on one of the channels. 
@@ -11,8 +11,8 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules. It does a hardware 
- * reset first and after that configures the click module using default settings.
+ * This function initializes and configures the Click and logger modules. It does a hardware 
+ * reset first and after that configures the Click module using default settings.
  * 
  * ## Application Task  
  * This function first writes digital values ranging from 0 to 256 to output channel 3 with a 

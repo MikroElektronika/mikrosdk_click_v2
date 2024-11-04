@@ -3,13 +3,13 @@
  * @brief Step Down 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of Step Down 3 click board by
+ * This example demonstrates the use of Step Down 3 Click board by
  * iterating through the entire output voltage range.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, then enables the click board and disables
+ * Initializes the driver and logger, then enables the Click board and disables
  * the auxiliary output.
  *
  * ## Application Task

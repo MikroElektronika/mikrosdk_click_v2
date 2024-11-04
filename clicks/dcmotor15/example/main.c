@@ -3,7 +3,7 @@
  * @brief DC Motor 15 Click Example.
  *
  * # Description
- * This example demonstrates the use of DC Motor 15 click board. 
+ * This example demonstrates the use of DC Motor 15 Click board. 
  *
  * The demo application is composed of two sections :
  *

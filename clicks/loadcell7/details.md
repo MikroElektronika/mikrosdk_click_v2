@@ -1,6 +1,6 @@
 
 ---
-# Load Cell 7 click
+# Load Cell 7 Click
 
 > Load Cell 7 Click is a compact add-on board representing a weigh scale solution. This board features the ADS1230, a high-precision 20-bit delta-sigma analog-to-digital converter (ADC) with an outstanding noise performance from Texas Instruments. This SPI-configurable ADC (read-only) offers selectable gain and data rate values, supporting a full-scale differential input of ±39mV/±19.5mV and 10SPS/80SPS, respectively. It comes with an onboard low-noise programmable gain amplifier (PGA) and onboard oscillator providing a complete front-end solution.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/loadcell7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/load-cell-7-click)
+[Click Product page](https://www.mikroe.com/load-cell-7-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t loadcell7_get_weight ( loadcell7_t *ctx, float *weight );
 
 ## Example Description
 
-> This example demonstrates the use of Load Cell 7 click by measuring the weight in grams of the goods from the load cell sensor connected to the click board.
+> This example demonstrates the use of Load Cell 7 Click by measuring the weight in grams of the goods from the load cell sensor connected to the Click board.
 
 **The demo application is composed of two sections :**
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,14 +3,14 @@
  * \brief HeartRate Click example
  * 
  * # Description
- * This click features an advanced oximeter and heart rate monitoring sensor, 
+ * This Click features an advanced oximeter and heart rate monitoring sensor, 
  * which relies on two integrated LEDs. It is enough to place an index finger on a top 
  * of the sensor to get both of the heart rate and blood oxygen saturation via the I2C interface. 
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes heartrate driver and set the click board default configuration.
+ * Initializes heartrate driver and set the Click board default configuration.
  * 
  * ## Application Task  
  * Reading values from both Ir and Red diode and displaying their average values on the USB UART.

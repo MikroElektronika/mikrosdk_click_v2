@@ -117,7 +117,7 @@ typedef enum
 
 /**
  * @brief Boost 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #boost8_cfg_t object definition for detailed explanation.
@@ -129,7 +129,7 @@ void boost8_cfg_setup ( boost8_cfg_t *cfg );
 /**
  * @brief Boost 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -144,7 +144,7 @@ err_t boost8_init ( boost8_t *ctx, boost8_cfg_t *cfg );
 /**
  * @brief Boost 8 default configuration function.
  * @details This function executes a default configuration of Boost 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @return Nothing.
@@ -155,7 +155,7 @@ void boost8_default_cfg ( boost8_t *ctx );
 
 /**
  * @brief Boost 8 enable positive voltage output function.
- * @details This function enables positive output of Boost 8 click board.
+ * @details This function enables positive output of Boost 8 Click board.
  * @param[in] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @return Nothing.
@@ -165,7 +165,7 @@ void boost8_enable_positive_voltage( boost8_t *ctx );
 
 /**
  * @brief Boost 8 disable positive voltage output function.
- * @details This function disables positive output of Boost 8 click board.
+ * @details This function disables positive output of Boost 8 Click board.
  * @param[in] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @return Nothing.
@@ -175,7 +175,7 @@ void boost8_disable_positive_voltage( boost8_t *ctx );
 
 /**
  * @brief Boost 8 enable negative voltage output function.
- * @details This function enables negative output of Boost 8 click board.
+ * @details This function enables negative output of Boost 8 Click board.
  * @param[in] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @return Nothing.
@@ -185,7 +185,7 @@ void boost8_enable_negative_voltage( boost8_t *ctx );
 
 /**
  * @brief Boost 8 disable negative voltage output function.
- * @details This function disables negative output of Boost 8 click board.
+ * @details This function disables negative output of Boost 8 Click board.
  * @param[in] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @return Nothing.
@@ -195,7 +195,7 @@ void boost8_disable_negative_voltage( boost8_t *ctx );
 
 /**
  * @brief Boost 8 enable both voltage outputs function.
- * @details This function enables both outputs of Boost 8 click board.
+ * @details This function enables both outputs of Boost 8 Click board.
  * @param[in] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @return Nothing.
@@ -205,7 +205,7 @@ void boost8_enable_both_outputs ( boost8_t *ctx );
 
 /**
  * @brief Boost 8 disable both voltage outputs function.
- * @details This function disables both outputs of Boost 8 click board.
+ * @details This function disables both outputs of Boost 8 Click board.
  * @param[in] ctx : Click context object.
  * See #boost8_t object definition for detailed explanation.
  * @return Nothing.

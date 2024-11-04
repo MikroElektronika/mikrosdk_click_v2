@@ -1,6 +1,6 @@
 
 ---
-# LED Driver 17 click
+# LED Driver 17 Click
 
 > LED Driver 17 Click is a compact add-on board that offers a simple solution for controlling multiple LEDs, making it an ideal choice for various applications. This board features the LTR3755, a highly efficient DC/DC controller from Analog Devices that operates as a constant-current source. It can easily drive high current LEDs and features onboard low-side external N-channel power MOSFETs driven from an internal regulated supply. The LED Driver 17 Click is capable of stable operation over a wide supply range and offers several LED protection features, including overvoltage and overcurrent protection. Additionally, the frequency adjust pin allows users to program the switching frequency from 100kHz to 1MHz, optimizing efficiency and performance.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-17-click)
+[Click Product page](https://www.mikroe.com/led-driver-17-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t leddriver17_set_duty_cycle ( leddriver17_t *ctx, float duty_cycle );
 
 ## Example Description
 
-> This example demonstrates the use of LED Driver 17 click board by changing the LEDs dimming level.
+> This example demonstrates the use of LED Driver 17 Click board by changing the LEDs dimming level.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,6 +3,6 @@
     "description": "Temp&Hum 10 Click is a smart temperature and humidity sensing Click board™, aimed towards IoT applications, due to its extremely small size and very low power consumption.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BPS230"],
+    "hw" : ["Click","BPS230"],
     "category" : ["Temperature & humidity"] 
 }

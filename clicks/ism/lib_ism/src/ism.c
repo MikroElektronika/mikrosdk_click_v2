@@ -183,7 +183,7 @@ const uint8_t rx1_address[ 5 ] =
 
 /**
  * @brief The event start-up.
- * @details The event start-up for the control LED on the ISM click board™.
+ * @details The event start-up for the control LED on the ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return Nothing.
@@ -193,7 +193,7 @@ static void dev_event_startup ( ism_t *ctx );
 
 /**
  * @brief The event trigger.
- * @details The event trigger for the control LED on the ISM click board™.
+ * @details The event trigger for the control LED on the ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return Nothing.
@@ -203,7 +203,7 @@ static void dev_event_trig_init ( ism_t *ctx );
 
 /**
  * @brief The event receive.
- * @details The event receive for the control LED on the ISM click board™.
+ * @details The event receive for the control LED on the ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return Nothing.
@@ -213,7 +213,7 @@ static void dev_event_trig_rec ( ism_t *ctx );
 
 /**
  * @brief The event transmit.
- * @details The event transmit for the control LED on the ISM click board™.
+ * @details The event transmit for the control LED on the ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return Nothing.

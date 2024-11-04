@@ -1,6 +1,6 @@
 
 ---
-# BT Audio 3 click
+# BT Audio 3 Click
 
 > BT Audio 3 Click is a compact add-on board with high-performing voice and audio post-processing capability for Bluetooth audio applications. This board features the BM83, a fully certified Bluetooth v5.0 stereo audio module from Microchip. The BM83 contains an onboard Bluetooth stack and audio profiles and supports 24-bit/96 kHz high-resolution audio formats to enable high-fidelity wireless audio. An integrated Digital Signal Processor (DSP) decodes AAC and SBC codecs and executes advanced audio and voice processing such as Wide-Band (WB) speech, Acoustic Echo Cancellation (AEC), and Noise Reduction (NR). Configured in Host mode, the BM83 allows data processing via the UART interface, and in addition, comes with many additional features such as audio control buttons, onboard microphones, LED indicators, and more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/btaudio3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bt-audio-3-click)
+[Click Product page](https://www.mikroe.com/bt-audio-3-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t btaudio3_set_eq_mode ( btaudio3_t *ctx, btaudio3_eq_mode_t eq_mode );
 
 ## Example Description
 
-> This example demonstrates the use of BT Audio 3 click board by reading the commands received from remote device and performing adequate actions accordingly.
+> This example demonstrates the use of BT Audio 3 Click board by reading the commands received from remote device and performing adequate actions accordingly.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -140,8 +140,8 @@ void application_task ( void )
 ## Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
-A smartphone and the click board must be paired in order to exchange messages
-with each other. So make sure to pair your device with the click board and
+A smartphone and the Click board must be paired in order to exchange messages
+with each other. So make sure to pair your device with the Click board and
 connect it to using the Serial Bluetooth Terminal application, then you will be able 
 to send commands listed below.
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

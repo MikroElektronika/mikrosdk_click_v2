@@ -212,7 +212,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dcmotor7_cfg_setup ( dcmotor7_cfg_t *cfg );
@@ -223,7 +223,7 @@ void dcmotor7_cfg_setup ( dcmotor7_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DCMOTOR7_RETVAL dcmotor7_init ( dcmotor7_t *ctx, dcmotor7_cfg_t *cfg );
 
@@ -241,7 +241,7 @@ DCMOTOR7_RETVAL dcmotor7_init ( dcmotor7_t *ctx, dcmotor7_cfg_t *cfg );
           - DCMOTOR7_HBMODE_SMALL_MODE
  * </pre>
  * 
- * @description This function is default configuration for this click.
+ * @description This function is default configuration for this Click.
  */
 void dcmotor7_default_cfg ( dcmotor7_t *ctx );
 
@@ -341,6 +341,6 @@ void dcmotor7_set_pwm_motor_b ( dcmotor7_t *ctx, uint8_t state );
 #endif  // _DCMOTOR7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

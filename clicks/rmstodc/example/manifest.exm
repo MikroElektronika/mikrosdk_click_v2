@@ -1,8 +1,8 @@
 {
     "name": "RMS to DC Click",
-    "description": "RMS to DC click is a Click board™ that is used to convert the RMS of the input signal into a DC voltage, with a value directly readable over the I2C interface.",
+    "description": "RMS to DC Click is a Click board™ that is used to convert the RMS of the input signal into a DC voltage, with a value directly readable over the I2C interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LTC1968"],
+    "hw" : ["Click","LTC1968"],
     "category" : ["Measurements"] 
 }

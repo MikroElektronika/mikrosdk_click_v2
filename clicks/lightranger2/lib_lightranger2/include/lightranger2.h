@@ -369,7 +369,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lightranger2_cfg_setup ( lightranger2_cfg_t *cfg );
@@ -379,7 +379,7 @@ void lightranger2_cfg_setup ( lightranger2_cfg_t *cfg );
  * @param lightranger2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LIGHTRANGER2_RETVAL lightranger2_init ( lightranger2_t *ctx, lightranger2_cfg_t *cfg );
 
@@ -388,7 +388,7 @@ LIGHTRANGER2_RETVAL lightranger2_init ( lightranger2_t *ctx, lightranger2_cfg_t 
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for LightRanger2 click.
+ * @description This function executes default configuration for LightRanger2 Click.
  */
 LIGHTRANGER2_RETVAL lightranger2_default_cfg ( lightranger2_t *ctx );
 
@@ -401,7 +401,7 @@ LIGHTRANGER2_RETVAL lightranger2_default_cfg ( lightranger2_t *ctx );
  *
  * @description This function writes a byte of data to the targeted 8-bit register
  * address of the VL53L0X ranging and gesture detection sensor on the LightRanger
- * 2 click board.
+ * 2 Click board.
  */
 void lightranger2_write_byte ( lightranger2_t* ctx, uint8_t reg_address, uint8_t write_data );
 
@@ -415,7 +415,7 @@ void lightranger2_write_byte ( lightranger2_t* ctx, uint8_t reg_address, uint8_t
  *
  * @description Function reads a byte of data from the targeted 8-bit register 
  * address of the VL53L0X ranging and gesture detection sensor on the LightRanger
- * 2 click board.
+ * 2 Click board.
  */
 uint8_t lightranger2_read_byte ( lightranger2_t* ctx, uint8_t reg_address );
 
@@ -428,7 +428,7 @@ uint8_t lightranger2_read_byte ( lightranger2_t* ctx, uint8_t reg_address );
  *
  * @description This function writes the 16-bit data to the targeted 8-bit register
  * address of the VL53L0X ranging and gesture detection sensor on the LightRanger
- * 2 click board.
+ * 2 Click board.
  */
 void lightranger2_write_data ( lightranger2_t* ctx, uint8_t reg_address, uint16_t write_data );
 
@@ -442,7 +442,7 @@ void lightranger2_write_data ( lightranger2_t* ctx, uint8_t reg_address, uint16_
  *
  * @description Function reads the 16-bit data from the targeted 8-bit register
  * address of the VL53L0X ranging and gesture detection sensor on the LightRanger
- * 2 click board.
+ * 2 Click board.
  */
 uint16_t lightranger2_read_data ( lightranger2_t* ctx, uint8_t reg_address );
 
@@ -457,7 +457,7 @@ uint16_t lightranger2_read_data ( lightranger2_t* ctx, uint8_t reg_address );
  * @description Function writes a sequential data starting to the
  * targeted 8-bit register address of the
  * VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 void lightranger2_write_bytes ( lightranger2_t* ctx, uint8_t reg_address, uint8_t* write_data, uint8_t n_bytes );
 
@@ -472,7 +472,7 @@ void lightranger2_write_bytes ( lightranger2_t* ctx, uint8_t reg_address, uint8_
  * @description Function read a sequential data starting from the
  * targeted 8-bit register address of the
  * VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 void lightranger2_read_bytes ( lightranger2_t* ctx, uint8_t reg_address, uint8_t* read_data, uint8_t n_bytes );
 
@@ -497,7 +497,7 @@ void lightranger2_hw_reset ( lightranger2_t* ctx );
  *
  * @description Function enable VL53L0X ranging and gesture detection sensor
  * by sets to '1' states of RST pin
- * of the LightRanger 2 click board.
+ * of the LightRanger 2 Click board.
  */
 void lightranger2_enable ( lightranger2_t* ctx );
 
@@ -508,7 +508,7 @@ void lightranger2_enable ( lightranger2_t* ctx );
  *
  * @description Function disable VL53L0X ranging and gesture detection sensor
  * by cleared to '0' states of RST pin
- * of the LightRanger 2 click board.
+ * of the LightRanger 2 Click board.
  */
 void lightranger2_disable ( lightranger2_t* ctx );
 
@@ -523,7 +523,7 @@ void lightranger2_disable ( lightranger2_t* ctx );
  *
  * @description The function gets interrupt state
  * by return status of INT pin of the
- * LightRanger 2 click board.
+ * LightRanger 2 Click board.
  */
 uint8_t lightranger2_get_interrupt ( lightranger2_t* ctx );
 
@@ -535,7 +535,7 @@ uint8_t lightranger2_get_interrupt ( lightranger2_t* ctx );
  *
  * @description Function start continuous ranging measurements of the
  * VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 void lightranger2_start_continuous ( lightranger2_t* ctx, uint32_t period_ms );
 
@@ -546,7 +546,7 @@ void lightranger2_start_continuous ( lightranger2_t* ctx, uint32_t period_ms );
  *
  * @description Function stop continuous ranging measurements of the
  * VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 void lightranger2_stop_continuous ( lightranger2_t* ctx );
 
@@ -563,7 +563,7 @@ void lightranger2_stop_continuous ( lightranger2_t* ctx );
  * @description Function sets the limit presumably determines
  * the minimum measurement necessary for the sensor to report a valid reading
  * of the VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 LIGHTRANGER2_RETVAL lightranger2_set_signal_rate_limit ( lightranger2_t* ctx,
                                                          float limit_mcps );
@@ -578,7 +578,7 @@ LIGHTRANGER2_RETVAL lightranger2_set_signal_rate_limit ( lightranger2_t* ctx,
  *
  * @description Function gets the signal rate limit check value of the
  * VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 float lightranger2_get_signal_rate_limit ( lightranger2_t* ctx );
 
@@ -596,7 +596,7 @@ float lightranger2_get_signal_rate_limit ( lightranger2_t* ctx );
  * @description Function get reference SPAD ( single photon avalanche diode )
  * count and type of the
  * VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 LIGHTRANGER2_RETVAL lightranger2_get_spad_info ( lightranger2_t* ctx, 
                                                  uint8_t* count_data, 
@@ -614,7 +614,7 @@ LIGHTRANGER2_RETVAL lightranger2_get_spad_info ( lightranger2_t* ctx,
  *
  * @description Function perform single reference calibration
  * of the VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 LIGHTRANGER2_RETVAL lightranger2_single_calibration ( lightranger2_t* ctx,
                                                       uint8_t vhv_init_byte );
@@ -629,7 +629,7 @@ LIGHTRANGER2_RETVAL lightranger2_single_calibration ( lightranger2_t* ctx,
  *
  * @description Function gets a range measurement in millimeters when continuous mode is active
  * of the VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 uint16_t lightranger2_get_range_continuous ( lightranger2_t* ctx );
 
@@ -643,7 +643,7 @@ uint16_t lightranger2_get_range_continuous ( lightranger2_t* ctx );
  *
  * @description Function gets a range measurement in millimeters when single mode is active
  * of the VL53L0X ranging and gesture detection sensor
- * on the LightRanger 2 click board.
+ * on the LightRanger 2 Click board.
  */
 uint16_t lightranger2_get_range_single ( lightranger2_t* ctx );
 
@@ -653,6 +653,6 @@ uint16_t lightranger2_get_range_single ( lightranger2_t* ctx );
 #endif  // _LIGHTRANGER2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

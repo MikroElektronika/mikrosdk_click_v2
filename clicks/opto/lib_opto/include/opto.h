@@ -133,7 +133,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void opto_cfg_setup ( opto_cfg_t *cfg );
@@ -143,7 +143,7 @@ void opto_cfg_setup ( opto_cfg_t *cfg );
  * @param opto Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 OPTO_RETVAL opto_init ( opto_t *ctx, opto_cfg_t *cfg );
 
@@ -198,6 +198,6 @@ uint8_t opto_check_out4( opto_t *ctx );
 #endif  // _OPTO_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

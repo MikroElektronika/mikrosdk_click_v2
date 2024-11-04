@@ -394,7 +394,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pwm_cfg_setup ( pwm_cfg_t *cfg );
@@ -405,7 +405,7 @@ void pwm_cfg_setup ( pwm_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PWM_RETVAL pwm_init ( pwm_t *ctx, pwm_cfg_t *cfg );
 
@@ -556,6 +556,6 @@ void pwm_set_all_raw ( pwm_t *ctx, uint16_t raw_dc );
 #endif  // _PWM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

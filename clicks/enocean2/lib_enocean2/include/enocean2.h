@@ -339,7 +339,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void enocean2_cfg_setup ( enocean2_cfg_t *cfg );
@@ -350,7 +350,7 @@ void enocean2_cfg_setup ( enocean2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ENOCEAN2_RETVAL enocean2_init ( enocean2_t *ctx, enocean2_cfg_t *cfg );
 
@@ -359,7 +359,7 @@ ENOCEAN2_RETVAL enocean2_init ( enocean2_t *ctx, enocean2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for EnOcean2 click.
+ * @description This function executes default configuration for EnOcean2 Click.
  */
 void enocean2_default_cfg ( enocean2_t *ctx );
 
@@ -462,6 +462,6 @@ uint8_t enocean2_packet_recieve ( enocean2_t *ctx, enocean2_ring_buffer_t *rb );
 #endif  // _ENOCEAN2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

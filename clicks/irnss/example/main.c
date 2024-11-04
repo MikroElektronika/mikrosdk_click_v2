@@ -3,13 +3,13 @@
  * @brief IRNSS Click Example.
  *
  * # Description
- * This example demonstrates the use of IRNSS click by reading and displaying
+ * This example demonstrates the use of IRNSS Click by reading and displaying
  * the GPS coordinates.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and resets the click board.
+ * Initializes the driver and resets the Click board.
  *
  * ## Application Task
  * Reads the received data, parses the GNGGA info from it, and once it receives the position fix

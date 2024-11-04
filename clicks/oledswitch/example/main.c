@@ -3,15 +3,15 @@
  * \brief OledSwitch Click example
  * 
  * # Description
- * This example showcases how to configure and use the OLED Switch click. This click is a 
+ * This example showcases how to configure and use the OLED Switch Click. This Click is a 
  * combination of a button and a full color organic LED display. Displays settings are first
  * loaded onto the chip and after that you can show any 64x48 pixel image on the display.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click modules. In order for the
- * click to work properly, you need to configure display and power settings. 
+ * This function initializes and configures the Click modules. In order for the
+ * Click to work properly, you need to configure display and power settings. 
  * The full initialization of the chip is done in the default_cfg(...) function.
  * 
  * ## Application Task  

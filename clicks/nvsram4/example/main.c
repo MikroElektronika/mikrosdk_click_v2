@@ -3,7 +3,7 @@
  * @brief nvSRAM4 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the nvSRAM 4 click board.
+ * This is an example that demonstrates the use of the nvSRAM 4 Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -74,7 +74,7 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     
     log_printf( &logger, "-----------------------\r\n" );
-    log_printf( &logger, "     nvSRAM 4 click    \r\n" );
+    log_printf( &logger, "     nvSRAM 4 Click    \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     
     memory_addr = 112233;

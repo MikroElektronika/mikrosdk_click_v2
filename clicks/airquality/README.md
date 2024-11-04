@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Air quality click
+# Air quality Click
 
-Air quality click carries an MQ-135 sensor for detecting poisonous gases that impact air quality in homes and offices. The click is designed to run on a 5V power supply. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.
+Air quality Click carries an MQ-135 sensor for detecting poisonous gases that impact air quality in homes and offices. The Click is designed to run on a 5V power supply. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/airquality_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/air-quality-click)
+[Click Product page](https://www.mikroe.com/air-quality-click)
 
 ---
 
@@ -66,7 +66,7 @@ err_t airquality_read_an_pin_voltage ( airquality_t *ctx, float *data_out );
 
 ### Application Init
 
-> Configuring clicks and log objects.
+> Configuring Clicks and log objects.
 
 ```c
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

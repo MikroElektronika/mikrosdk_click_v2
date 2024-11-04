@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Microwave 2 click
+# Microwave 2 Click
 
-Microwave 2 click is an accurate and reliable short to medium range motion detection Click board™, based on a Doppler radar principle.
+Microwave 2 Click is an accurate and reliable short to medium range motion detection Click board™, based on a Doppler radar principle.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/microwave2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/microwave-2-eu-click)
+[Click Product page](https://www.mikroe.com/microwave-2-eu-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the click board for communication.
+> Initializes the Click board for communication.
 
 ```c
 
@@ -91,7 +91,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Data sent from the click board is captured and different actions are applied.
+> Data sent from the Click board is captured and different actions are applied.
 
 ```c
 
@@ -113,7 +113,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

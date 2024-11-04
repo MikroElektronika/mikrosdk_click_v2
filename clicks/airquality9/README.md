@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Air Quality 9 click
+# Air Quality 9 Click
 
 > Air quality 9 Click is a compact add-on board containing a best-in-class air-quality sensing solution. This board features the ENS160, a digital multi-gas sensor solution based on metal oxide (MOX) technology with four MOx sensor elements from ScioSense. Each sensor element has independent hotplate control to detect a wide range of gases. The ENS160 series features TrueVOC™ air quality detection and supports intelligent algorithms, which calculate CO2 equivalents, TVOC, air quality index (AQI), and perform humidity and temperature compensation. This Click board™ is interface-configurable and characterized by outstanding long-term stability and lifetime.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/airquality9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/air-quality-9-click)
+[Click Product page](https://www.mikroe.com/air-quality-9-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t airquality9_read_eco2 ( airquality9_t *ctx, uint16_t *eco2 );
 
 ## Example Description
 
-> This example demonstrates the use of Air Quality 9 click board by reading and displaying outputs such as eCO2, TVOC and AQI in compliance with worldwide IAQ standards.
+> This example demonstrates the use of Air Quality 9 Click board by reading and displaying outputs such as eCO2, TVOC and AQI in compliance with worldwide IAQ standards.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration.
+> Initializes the driver and logger and performs the Click default configuration.
 
 ```c
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Barometer 4 click
+# Barometer 4 Click
 
 > Barometer 4 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the ICP-10111, a high accuracy low power barometric and temperature sensor from TDK InvenSense. The ICP-10111 is based on MEMS capacitive technology providing ultra-low noise at the lowest power, enabling industry-leading relative accuracy, sensor throughput, and temperature stability. It comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 30kPa up to 110kPa with an accuracy of ±1Pa over a wide operating temperature range.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/barometer4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barometer-4-click)
+[Click Product page](https://www.mikroe.com/barometer-4-click)
 
 ---
 
@@ -170,7 +170,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

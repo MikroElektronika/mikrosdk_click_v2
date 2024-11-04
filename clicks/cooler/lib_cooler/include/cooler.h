@@ -267,7 +267,7 @@ typedef enum
 
 /**
  * @brief Cooler configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #cooler_cfg_t object definition for detailed explanation.
@@ -280,7 +280,7 @@ void cooler_cfg_setup ( cooler_cfg_t *cfg );
 /**
  * @brief Cooler initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -295,7 +295,7 @@ err_t cooler_init ( cooler_t *ctx, cooler_cfg_t *cfg );
 /**
  * @brief Cooler default configuration function.
  * @details This function executes a default configuration of Cooler
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -342,7 +342,7 @@ err_t cooler_generic_read ( cooler_t *ctx, uint8_t reg, uint8_t *data_out, uint8
  * @brief Cooler 16-bit data writing function.
  * @details This function writes a 16-bit data to the selected register
  * of the TMP007 Infrared Thermopile Sensor with Integrated Math Engine
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[in] reg : Register address.
@@ -358,7 +358,7 @@ err_t cooler_data_write ( cooler_t *ctx, uint8_t reg, uint16_t data_in );
  * @brief Cooler 16-bit data reading function.
  * @details This function reads a 16-bit data from the selected register 
  * of the TMP007 Infrared Thermopile Sensor with Integrated Math Engine
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[in] reg : Register address.
@@ -374,7 +374,7 @@ err_t cooler_data_read ( cooler_t *ctx, uint8_t reg, uint16_t *data_out );
  * @brief Cooler get device ID function.
  * @details This function reads a device ID value 
  * of the TMP007 Infrared Thermopile Sensor with Integrated Math Engine
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[out] device_id : Device ID.
@@ -389,7 +389,7 @@ err_t cooler_get_device_id ( cooler_t *ctx, uint16_t *device_id );
  * @brief Cooler get sensor voltage result function.
  * @details This function reads the sensor voltage result
  * of the TMP007 Infrared Thermopile Sensor with Integrated Math Engine
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[out] voltage : Sensor voltage result [+-5.12mV].
@@ -404,7 +404,7 @@ err_t cooler_sensor_voltage ( cooler_t *ctx, float *voltage );
  * @brief Cooler get object temperature function.
  * @details This function reads the object's temperature data in degrees Celsius
  * of the TMP007 Infrared Thermopile Sensor with Integrated Math Engine
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[out] temperature : Temperature (degrees Celsius).
@@ -418,7 +418,7 @@ err_t cooler_get_object_temperature ( cooler_t *ctx, float *temperature );
 /**
  * @brief Cooler fault indication function.
  * @details This function reads the state of the ALR (INT) pin of Cooler
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -455,7 +455,7 @@ err_t cooler_read_voltage ( cooler_t *ctx, float *voltage );
 
 /**
  * @brief Cooler set vref function.
- * @details This function sets the voltage reference for Cooler click driver.
+ * @details This function sets the voltage reference for Cooler Click driver.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).
@@ -471,7 +471,7 @@ err_t cooler_set_vref ( cooler_t *ctx, float vref );
  * @details This function sets the IN1 (PWM) pin on the high level 
  * of the DRV8213 4-A Brushed DC Motor Driver with Integrated Current Sense, 
  * Current Regulation and Stall Detection
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @return Nothing.
@@ -484,7 +484,7 @@ void cooler_set_in1_pin ( cooler_t *ctx );
  * @details This function clears the IN1 (PWM) pin on the low level
  * of the DRV8213 4-A Brushed DC Motor Driver with Integrated Current Sense, 
  * Current Regulation and Stall Detection
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @return Nothing.
@@ -497,7 +497,7 @@ void cooler_clear_in1_pin ( cooler_t *ctx );
  * @details This function sets the IN2 (RST) pin on the high level 
  * of the DRV8213 4-A Brushed DC Motor Driver with Integrated Current Sense, 
  * Current Regulation and Stall Detection
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @return Nothing.
@@ -510,7 +510,7 @@ void cooler_set_in2_pin ( cooler_t *ctx );
  * @details This function clears the IN2 (RST) pin on the low level
  * of the DRV8213 4-A Brushed DC Motor Driver with Integrated Current Sense, 
  * Current Regulation and Stall Detection
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @return Nothing.
@@ -523,7 +523,7 @@ void cooler_clear_in2_pin ( cooler_t *ctx );
  * @details This function controls the operation of the cooler - on/off
  * of the DRV8213 4-A Brushed DC Motor Driver with Integrated Current Sense, 
  * Current Regulation and Stall Detection
- * on the Cooler click board.
+ * on the Cooler Click board.
  * @param[in] ctx : Click context object.
  * See #cooler_t object definition for detailed explanation.
  * @param[in] out_state : Motor states selection.

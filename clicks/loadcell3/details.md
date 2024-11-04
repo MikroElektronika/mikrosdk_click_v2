@@ -1,6 +1,6 @@
 
 ---
-# Load Cell 3 click
+# Load Cell 3 Click
 
 Load Cell 3 Click is a compact add-on board that represents a weigh scale solution. This board features the PGA302, a low-drift, low-noise, programmable signal-conditioner device designed for various resistive bridge-sensing applications from Texas Instruments. It creates 2.5V of bridge excitation and a current output source with programmable current output up to 1mA. Two identical analog front-end (AFE) channels followed by a 16-bit Sigma-Delta ADC are available at the input, where each AFE channel has a dedicated programmable gain amplifier with gain up to 200V/V. It also comes with an on-chip temperature sensor and integrated EEPROM memory for device configuration, calibration, and user data.
 
@@ -8,7 +8,7 @@ Load Cell 3 Click is a compact add-on board that represents a weigh scale soluti
   <img src="https://download.mikroe.com/images/click_for_ide/load_cell_3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/load-cell-3-click)
+[Click Product page](https://www.mikroe.com/load-cell-3-click)
 
 ---
 
@@ -69,7 +69,7 @@ float loadcell3_get_weight ( loadcell3_t *ctx, loadcell3_data_t *cell_data );
 
 ## Example Description
 
-> This library contains API for the Load Cell 3 click driver.
+> This library contains API for the Load Cell 3 Click driver.
 > The library also includes a function for tare and calibration and weight measurement.
 > This demo application shows an example of weight measurement.
 
@@ -201,8 +201,8 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of a Load Cell 3 click board™.
-> The Load Cell 3 click board can be used to measure weight,
+> This is an example that shows the use of a Load Cell 3 Click board™.
+> The Load Cell 3 Click board can be used to measure weight,
 > shows the measurement of scales in grams [ g ].
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -227,7 +227,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

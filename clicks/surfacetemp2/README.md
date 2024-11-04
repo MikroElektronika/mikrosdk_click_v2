@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Surface Temp 2 click
+# Surface Temp 2 Click
 
 Surface temp 2 Click is a compact add-on board that contains a high accuracy temperature sensor offering breakthrough performance over a wide industrial temperature range.
 
@@ -10,7 +10,7 @@ Surface temp 2 Click is a compact add-on board that contains a high accuracy tem
 </p>
 
 
-[click Product page](https://www.mikroe.com/surface-temp-2-click)
+[Click Product page](https://www.mikroe.com/surface-temp-2-click)
 
 ---
 
@@ -62,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initalizes the driver and configures the click board.
+> Initalizes the driver and configures the Click board.
 
 ```c
 
@@ -129,7 +129,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

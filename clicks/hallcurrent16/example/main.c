@@ -3,7 +3,7 @@
  * @brief Hall Current 16 Click example
  *
  * # Description
- * This example demonstrates the use of Hall Current 16 click board 
+ * This example demonstrates the use of Hall Current 16 Click board 
  * by reading and displaying the current measurements.
  *
  * The demo application is composed of two sections :

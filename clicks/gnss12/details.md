@@ -1,6 +1,6 @@
 
 ---
-# GNSS 12 click
+# GNSS 12 Click
 
 > GNSS 12 Click is a compact add-on board that provides fast positioning capability. This board features the CAM-M8C, a professional-grade GNSS module built on the high-performing M8 GNSS engine from u-blox. This module utilizes concurrent reception of up to three GNSS systems (GPS/Galileo together with either BeiDou or GLONASS), offering high sensitivity and strong signal levels. Besides internal, the CAM-M8C can use an optional external active antenna. It has a configurable host interface, advanced jamming/spoofing detection, and provides outstanding positioning accuracy even in GNSS-hostile environments. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-12-click)
+[Click Product page](https://www.mikroe.com/gnss-12-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t gnss12_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_d
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 12 click by reading and displaying the GNSS coordinates.
+> This example demonstrates the use of GNSS 12 Click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

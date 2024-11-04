@@ -3,16 +3,16 @@
  
 
 ---
-# DAC 7 click
+# DAC 7 Click
 
-DAC 7 click carries the AD5624R 12-bit buffered Digital-to-Analog Converter that converts 
+DAC 7 Click carries the AD5624R 12-bit buffered Digital-to-Analog Converter that converts 
 digital value to the corresponding voltage level using external voltage reference.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/dac7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-7-click)
+[Click Product page](https://www.mikroe.com/dac-7-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> DAC 7 click carries the AD5624R 12-bit buffered Digital-to-Analog Converter 
+> DAC 7 Click carries the AD5624R 12-bit buffered Digital-to-Analog Converter 
 > that converts digital value to the corresponding voltage level 
 > using external voltage reference.
 
@@ -250,7 +250,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

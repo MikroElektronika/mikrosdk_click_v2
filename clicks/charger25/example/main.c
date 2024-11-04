@@ -3,7 +3,7 @@
  * @brief Charger 25 Click example
  *
  * # Description
- * This example demonstrates the use of Charger 25 click board™ 
+ * This example demonstrates the use of Charger 25 Click board™ 
  * by enabling battery charging and displaying battery voltage and charging status.
  *
  * The demo application is composed of two sections :

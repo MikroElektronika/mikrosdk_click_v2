@@ -3,6 +3,6 @@
     "description": "FM Click with it’s Si4703 IC is a complete FM radio tuner in the form of add-on board. It supports worldwide FM band (76 – 108 MHz).",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","Si4703"],
+    "hw" : ["Click","Si4703"],
     "category" : ["FM"] 
 }

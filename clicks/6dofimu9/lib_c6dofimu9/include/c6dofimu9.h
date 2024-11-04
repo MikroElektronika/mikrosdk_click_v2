@@ -340,7 +340,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c6dofimu9_cfg_setup ( c6dofimu9_cfg_t *cfg );
@@ -350,7 +350,7 @@ void c6dofimu9_cfg_setup ( c6dofimu9_cfg_t *cfg );
  * @param c6dofimu9 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C6DOFIMU9_RETVAL c6dofimu9_init ( c6dofimu9_t *ctx, c6dofimu9_cfg_t *cfg );
 
@@ -359,7 +359,7 @@ C6DOFIMU9_RETVAL c6dofimu9_init ( c6dofimu9_t *ctx, c6dofimu9_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 6DOF IMU 9 click.
+ * @description This function executes default configuration for 6DOF IMU 9 Click.
  */
 void c6dofimu9_default_cfg ( c6dofimu9_t *ctx );
 
@@ -781,6 +781,6 @@ void c6dofimu9_get_gyro_data ( c6dofimu9_t *ctx, int16_t *p_gyro_x, int16_t *p_g
 #endif  // _C6DOFIMU9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

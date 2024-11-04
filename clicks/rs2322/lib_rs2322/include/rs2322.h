@@ -171,7 +171,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rs2322_cfg_setup ( rs2322_cfg_t *cfg );
@@ -181,7 +181,7 @@ void rs2322_cfg_setup ( rs2322_cfg_t *cfg );
  * @param rs2322 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RS2322_RETVAL rs2322_init ( rs2322_t *ctx, rs2322_cfg_t *cfg );
 
@@ -264,6 +264,6 @@ void rs2322_send_command ( rs2322_t *ctx, char *command );
 #endif  // _RS2322_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

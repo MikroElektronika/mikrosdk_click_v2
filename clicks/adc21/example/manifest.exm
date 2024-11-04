@@ -3,6 +3,6 @@
     "description": "ADC 21 Click is a compact add-on board that converts an analog voltage into a digital representation. This board features the ADC1283, a low-power, eight-channel pure CMOS 12-bit analog-to-digital converter from STMicroelectronics. The ADC1283 is specified for conversion from 50ksps to 200ksps. Its architecture is based on a successive approximation register with an internal track-and-hold cell. It features eight single-ended multiplexed inputs, where the output serial data is straight binary and SPI-compatible.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ADC1283IPT"],
+    "hw" : ["Click","ADC1283IPT"],
     "category" : ["Click Boards > Mixed signal > ADC"]
 }

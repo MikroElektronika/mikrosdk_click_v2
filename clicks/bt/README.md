@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BT click
+# BT Click
 
 BT Click is a compact add-on board targeted for applications that require both Bluetooth Smart and Classic connectivity. This board features the BT121, a dual-mode Bluetooth Smart Ready module solution that gives unparalleled flexibility to integrate both Bluetooth Smart and Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR) wireless technologies from Silicon Labs.
 
@@ -9,7 +9,7 @@ BT Click is a compact add-on board targeted for applications that require both B
   <img src="https://download.mikroe.com/images/click_for_ide/bt_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bt-click)
+[Click Product page](https://www.mikroe.com/bt-click)
 
 ---
 
@@ -58,7 +58,7 @@ err_t bt_default_cfg ( bt_t *ctx );
 err_t bt_set_local_name ( bt_t *ctx, char *name );
 ```
 
-- `bt_send_package` This function sends a data package to the click board.
+- `bt_send_package` This function sends a data package to the Click board.
 ```c
 err_t bt_send_package ( bt_t *ctx, bt_package_t pkg );
 ```
@@ -70,13 +70,13 @@ err_t bt_read_package ( bt_t *ctx, bt_package_t *pkg );
 
 ## Example Description
 
-> This example demonstrates the use of BT click board.
+> This example demonstrates the use of BT Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -116,7 +116,7 @@ void application_init ( void )
                          ( BT_OK == bt_default_cfg ( &bt ) ? "OK" : "FAIL" ) );
 
     log_printf( &logger, " Set Local Name : %s\r\n\n", ( char * )
-                        ( BT_OK == bt_set_local_name ( &bt, "MikroE - BT click" ) ? "OK" : "FAIL" ) );
+                        ( BT_OK == bt_set_local_name ( &bt, "MikroE - BT Click" ) ? "OK" : "FAIL" ) );
     
     log_printf( &logger, " Delete Bondings : %s\r\n\n", ( char * )
                         ( BT_OK == bt_delete_bondings ( &bt ) ? "OK" : "FAIL" ) );
@@ -160,7 +160,7 @@ void application_task ( void )
 ## Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
-> A smartphone and the click board must be paired in order to exchange messages with each other.
+> A smartphone and the Click board must be paired in order to exchange messages with each other.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

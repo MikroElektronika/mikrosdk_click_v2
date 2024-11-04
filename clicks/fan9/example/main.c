@@ -3,13 +3,13 @@
  * @brief Fan 9 Click example
  *
  * # Description
- * This example demonstrates the use of FAN 9 click board, 
+ * This example demonstrates the use of FAN 9 Click board, 
  * by changing speed of the fan from 0 to 100 percent, then decreasing it back to 0.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the speed of fans by changing the PWM duty cycle.

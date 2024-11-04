@@ -251,7 +251,7 @@ typedef enum
 
 /**
  * @brief Wireless SUN configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #wirelesssun_cfg_t object definition for detailed explanation.
@@ -263,7 +263,7 @@ void wirelesssun_cfg_setup ( wirelesssun_cfg_t *cfg );
 /**
  * @brief Wireless SUN initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #wirelesssun_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -305,7 +305,7 @@ err_t wirelesssun_generic_read ( wirelesssun_t *ctx, char *data_out, uint16_t le
 
 /**
  * @brief Wireless SUN send cmd function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #wirelesssun_t object definition for detailed explanation.
  * @param[in] cmd : Command string to be send.
@@ -316,7 +316,7 @@ void wirelesssun_send_cmd ( wirelesssun_t *ctx, char *cmd );
 
 /**
  * @brief Wireless SUN send cmd function.
- * @details This function sends a specified command to the click module with desired parameters appended to.
+ * @details This function sends a specified command to the Click module with desired parameters appended to.
  * @param[in] ctx : Click context object.
  * See #wirelesssun_t object definition for detailed explanation.
  * @param[in] cmd : Command string to be send.

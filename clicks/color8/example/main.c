@@ -13,7 +13,7 @@
  * ## Application Task  
  * Reads RED, GREEEN, BLUE and IR data. 
  * Converts data to HSL value and return detect color.
- * For a successful color test, place a click near the color of the monitor and detect the color on the screen.
+ * For a successful color test, place a Click near the color of the monitor and detect the color on the screen.
  * 
  * \author MikroE Team
  *

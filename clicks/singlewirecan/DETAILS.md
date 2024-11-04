@@ -1,6 +1,6 @@
 
 ---
-# Single Wire CAN click
+# Single Wire CAN Click
 
 Single Wire CAN Click is a compact add-on board that contains an IC for a single wire data link capable of operating with various protocols such as the Controller Area Network (CAN). This board features the NCV7356D1R2G, Single Wire CAN transceiver from ON Semiconductor, which operates from a supply voltage from 5V to 27V with bus speed up to 40 kbps. 
 
@@ -8,7 +8,7 @@ Single Wire CAN Click is a compact add-on board that contains an IC for a single
   <img src="https://download.mikroe.com/images/click_for_ide/singlewirecan_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/single-wire-can-click)
+[Click Product page](https://www.mikroe.com/single-wire-can-click)
 
 ---
 
@@ -55,13 +55,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrate the use of Single Wire CAN click board.
+> This example demonstrate the use of Single Wire CAN Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and configures the click for the normal operation mode.
+> Initializes the driver and configures the Click for the normal operation mode.
 
 ```c
 
@@ -130,7 +130,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

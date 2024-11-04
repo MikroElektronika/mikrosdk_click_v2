@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Thermo 17 click
+# Thermo 17 Click
 
 The Thermo 17 Click is a Click board™ based on the TMP451-Q1, a high-accuracy, lowpower remote temperature sensor monitor with a built-in local temperature sensor from Texas Instruments.
 
@@ -9,7 +9,7 @@ The Thermo 17 Click is a Click board™ based on the TMP451-Q1, a high-accuracy,
   <img src="https://download.mikroe.com/images/click_for_ide/thermo17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-17-click)
+[Click Product page](https://www.mikroe.com/thermo-17-click)
 
 ---
 
@@ -56,7 +56,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This demo-app shows local and remote temperature measurement procedure using Thermo 17 click.
+> This demo-app shows local and remote temperature measurement procedure using Thermo 17 Click.
 
 **The demo application is composed of two sections :**
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

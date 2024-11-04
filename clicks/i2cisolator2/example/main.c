@@ -3,9 +3,9 @@
  * \brief I2C Isolator 2 Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the I2C Isolator 2 click module.
- * The click provides I2C lines and power isolation for slave devices. In order for this 
- * example to work, you need the EEPROM 3 click.
+ * This example showcases how to initialize, configure and use the I2C Isolator 2 Click module.
+ * The Click provides I2C lines and power isolation for slave devices. In order for this 
+ * example to work, you need the EEPROM 3 Click.
  *
  * The demo application is composed of two sections :
  * 
@@ -13,11 +13,11 @@
  * Initializes the driver and enables the power output.
  * 
  * ## Application Task  
- * Writes the desired message to EEPROM 3 click board and reads it back every 2 seconds.
+ * Writes the desired message to EEPROM 3 Click board and reads it back every 2 seconds.
  * All data is being displayed on the USB UART where you can track the program flow.
  * 
  * @note
- * Make sure to provide the VCC power supply on VCC pin and EEPROM 3 click.
+ * Make sure to provide the VCC power supply on VCC pin and EEPROM 3 Click.
  * 
  * \author MikroE Team
  *
@@ -32,7 +32,7 @@
 
 #define EEPROM3_MEMORY_ADDRESS   0x10000ul
 #define EEPROM3_SLAVE_ADDRESS    0x54
-#define EEPROM3_DEMO_TEXT        "MikroE - I2C Isolator 2 with EEPROM 3 click!"
+#define EEPROM3_DEMO_TEXT        "MikroE - I2C Isolator 2 with EEPROM 3 Click!"
 
 static i2cisolator2_t i2cisolator2;
 static log_t logger;
@@ -101,7 +101,7 @@ void application_task ( )
     if ( I2CISOLATOR2_OK == eeprom3_write_page ( EEPROM3_MEMORY_ADDRESS, EEPROM3_DEMO_TEXT, 
                                                  strlen( EEPROM3_DEMO_TEXT ) ) )
     {
-        log_printf( &logger, " Demo text message is written to EEPROM 3 click!\r\n" );
+        log_printf( &logger, " Demo text message is written to EEPROM 3 Click!\r\n" );
     }
     Delay_ms ( 1000 );
     

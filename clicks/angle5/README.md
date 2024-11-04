@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Angle 5 click
+# Angle 5 Click
 
 Angle 5 Click is a compact add-on board that detects the absolute angular position of a permanent magnet, typically a diametrically magnetized cylinder on a rotating shaft.
 
@@ -9,7 +9,7 @@ Angle 5 Click is a compact add-on board that detects the absolute angular positi
   <img src="https://download.mikroe.com/images/click_for_ide/angle5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/angle-5-click)
+[Click Product page](https://www.mikroe.com/angle-5-click)
 
 ---
 
@@ -52,7 +52,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> Angle 5 click is a magnetic rotational sensor. 
+> Angle 5 Click is a magnetic rotational sensor. 
 > It communicates with the target microcontroller over SPI interface.
 
 **The demo application is composed of two sections :**
@@ -119,7 +119,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

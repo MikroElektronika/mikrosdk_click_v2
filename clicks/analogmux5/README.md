@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Analog MUX 5 click
+# Analog MUX 5 Click
 
 > Analog MUX 5 Click is a compact add-on board that switches one of many inputs to one output. This board features the MAX4634, a fast, low-voltage four-channel CMOS analog multiplexer from Analog Devices. This low-voltage multiplexer operates from both mikroBUS™ power rails and features 4Ω maximum ON-resistance (RON). CMOS switch construction allows the processing of analog signals within the supply voltage range. It is also characterized by an easy way of management, only through a couple of signals from the mikroBUS™ socket. This Click board™ is suitable for various applications, from industrial and instrumentation to medical, consumer, communications, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/analogmux5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/analog-mux-5-click)
+[Click Product page](https://www.mikroe.com/analog-mux-5-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t analogmux5_read_an_pin_voltage ( analogmux5_t *ctx, float *data_out );
 
 ## Example Description
 
-> This example showcases how to initialize, configure and use the Analog MUX 5 click module.
+> This example showcases how to initialize, configure and use the Analog MUX 5 Click module.
 
 **The demo application is composed of two sections :**
 
@@ -120,7 +120,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of a Analog MUX 5 click board
+> This is an example that shows the use of a Analog MUX 5 Click board
 > In this example, we switch from channel AN1 to channel AN4, 
 > read and display the analog value and voltage on the active channel.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -178,7 +178,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

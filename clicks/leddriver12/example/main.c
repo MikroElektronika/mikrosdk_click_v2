@@ -3,12 +3,12 @@
  * @brief LEDDriver12 Click example
  *
  * # Description
- * This example demonstrates the use of LED Driver 12 click board.
+ * This example demonstrates the use of LED Driver 12 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which turns OFF
+ * Initializes the driver and performs the Click default configuration which turns OFF
  * the LEDs 0 to 7, configures LEDs 8 to 11 for PWM0, and LEDs 12 to 15 for PWM1 settings.
  * PWM0 is set at half duty cycle with a one-second blinking period, while PWM1 is configured
  * for a quarter of duty cycle with a half-second blinking period.

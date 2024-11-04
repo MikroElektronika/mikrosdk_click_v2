@@ -3,17 +3,17 @@
  
 
 ---
-# Fan 2 click
+# Fan 2 Click
 
-Fan 2 click carries the MAX31760 precision fan-speed controller.
+Fan 2 Click carries the MAX31760 precision fan-speed controller.
 It can measure temperature and adjust the fan speed to keep the temperature at the same level.
-Fan 2 click can also control two fans at the same time.
+Fan 2 Click can also control two fans at the same time.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/fan2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fan-2-click)
+[Click Product page](https://www.mikroe.com/fan-2-click)
 
 ---
 
@@ -72,7 +72,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init
 
 >
-> Initializes I2C driver and executes a default configuration for Fan 2 click.
+> Initializes I2C driver and executes a default configuration for Fan 2 Click.
 > Also initializes UART logger for results logging.
 >
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

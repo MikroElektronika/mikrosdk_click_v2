@@ -140,7 +140,7 @@ typedef enum
 
 /**
  * @brief RF Switch configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #rfswitch_cfg_t object definition for detailed explanation.
@@ -152,7 +152,7 @@ void rfswitch_cfg_setup ( rfswitch_cfg_t *cfg );
 /**
  * @brief RF Switch initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #rfswitch_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -167,7 +167,7 @@ err_t rfswitch_init ( rfswitch_t *ctx, rfswitch_cfg_t *cfg );
 
 /**
  * @brief RF Switch power on function.
- * @details This function is used to power up RF Switch click board.
+ * @details This function is used to power up RF Switch Click board.
  * @param[in] ctx : Click context object.
  * See #rfswitch_t object definition for detailed explanation.
  * @return Nothing.
@@ -178,7 +178,7 @@ void rfswitch_power_on ( rfswitch_t *ctx );
 /**
  * @brief RF Switch ON pin setting function.
  * @details This function sets the ON pin on the high level or low level
- * of RF Switch click board.
+ * of RF Switch Click board.
  * @param[in] ctx : Click context object.
  * See #rfswitch_t object definition for detailed explanation.
  * @param[in] enable : State of the ON pin.
@@ -190,7 +190,7 @@ void rfswitch_on_pin_set ( rfswitch_t *ctx, uint8_t enable );
 /**
  * @brief RF Switch SEL pin setting function.
  * @details This function sets the SEL pin on the high level or low level
- * of RF Switch click board.
+ * of RF Switch Click board.
  * @param[in] ctx : Click context object.
  * See #rfswitch_t object definition for detailed explanation.
  * @param[in] enable : State of the SEL pin.
@@ -202,7 +202,7 @@ void rfswitch_sel_pin_set ( rfswitch_t *ctx, uint8_t enable );
 /**
  * @brief RF Switch switch channel function.
  * @details This function toggles the SEL pin from high to low levels of
- * RF Switch click board, and vice versa, therefore changing the channel.
+ * RF Switch Click board, and vice versa, therefore changing the channel.
  * @param[in] ctx : Click context object.
  * See #rfswitch_t object definition for detailed explanation.
  * @return Nothing.
@@ -213,7 +213,7 @@ void rfswitch_switch_channel ( rfswitch_t *ctx );
 /**
  * @brief RF Switch select channel function.
  * @details This function enables users to select from channel 1 or channel 2 of the 
- * RF Switch click board.
+ * RF Switch Click board.
  * @param[in] ctx : Click context object.
  * See #rfswitch_t object definition for detailed explanation.
  * @param[in] select_channel : Selected channel.

@@ -197,7 +197,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to
+ * @description This function initializes Click configuration structure to
  * initial state.
  * @note The all used pins will be set to unconnected state.
  */
@@ -214,7 +214,7 @@ charger5_cfg_setup( charger5_cfg_t *cfg );
  *                                 2 - Module init error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for Charger 5 click.
+ * used for Charger 5 Click.
  */
 charger5_err_t
 charger5_init( charger5_t *ctx, charger5_cfg_t *cfg );
@@ -225,7 +225,7 @@ charger5_init( charger5_t *ctx, charger5_cfg_t *cfg );
  * @param ctx  Click object.
  *
  * @description This function executes a default configuration for Charger 5
- * click.
+ * Click.
  * @note Executes a TCONTROL register configuration, wiper resistor network 0
  *       is enabled, and wiper resistor network 1 is disabled, don't exist.
  */

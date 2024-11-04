@@ -5,13 +5,13 @@
  * # Description
  * Buck 5 Click is a high-efficiency buck DC/DC converter, which can provide digitally 
  * adjusted step-down voltage on its output while delivering a considerable amount of current. 
- * Buck 5 click accepts a wide voltage range on its input - from 5V to 30V. The output voltage 
+ * Buck 5 Click accepts a wide voltage range on its input - from 5V to 30V. The output voltage 
  * may be adjusted via the SPI interface, in the range from 0.9V to approximately 5.5V.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver init, and enables the click board.
+ * Initializes driver init, and enables the Click board.
  * 
  * ## Application Task  
  * Increases the output voltage by 500mV every 3 seconds from MIN to MAX VOUT.

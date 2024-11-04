@@ -1,14 +1,14 @@
 
 ---
-# RS232 SPI click
+# RS232 SPI Click
 
-RS232 SPI click is based around the MAX3100, a universal asynchronous receiver transmitter (UART) - the first UART specifically optimized for small microcontroller-based systems, from Maxim Integrated. Because of the features contained in its modules, the RS232 SPI click can be used for handheld instruments, small networks in HVAC or Building control, UART in SPI systems, battery-powered systems, PDAs, notebooks and many more.
+RS232 SPI Click is based around the MAX3100, a universal asynchronous receiver transmitter (UART) - the first UART specifically optimized for small microcontroller-based systems, from Maxim Integrated. Because of the features contained in its modules, the RS232 SPI Click can be used for handheld instruments, small networks in HVAC or Building control, UART in SPI systems, battery-powered systems, PDAs, notebooks and many more.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rs232spi_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs232-spi-click)
+[Click Product page](https://www.mikroe.com/rs232-spi-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize and use the RS232 SPI click. The click has a uni-
+> This example showcases how to initialize and use the RS232 SPI Click. The Click has a uni-
   versal asynchronous transceiver which uses a SPI serial interface to communicate with the 
   MCU. In order for this example to work, 2 clicks are needed - a receiver and a transmitter. 
 
@@ -63,7 +63,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules. Additional configura-
+> This function initializes and configures the logger and Click modules. Additional configura-
   ting is done in the default_cfg(...) function.
 
 ```c
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

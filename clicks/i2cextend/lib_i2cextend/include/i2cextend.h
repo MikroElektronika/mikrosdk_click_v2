@@ -81,7 +81,7 @@ extern "C"{
 
 /**
  * @brief 6DOF IMU 11 description register.
- * @details Specified register for description of I2C 6DOF IMU 11 click.
+ * @details Specified register for description of I2C 6DOF IMU 11 Click.
  */
 #define C6DOFIMU11_REG_WHO_AM_I                                     0x00
 #define C6DOFIMU11_REG_CNTL2                                        0x3A
@@ -143,7 +143,7 @@ extern "C"{
 
 /**
  * @brief 6DOF IMU 11 bit mask.
- * @details Bit mask of 6DOF IMU 11 click driver.
+ * @details Bit mask of 6DOF IMU 11 Click driver.
  */
 #define C6DOFIMU11_CNTL2_TEMP_EN_STANDBY_MODE                       0x00
 #define C6DOFIMU11_CNTL2_MAG_EN_STANDBY_MODE                        0x00
@@ -169,7 +169,7 @@ extern "C"{
 /**
  * @brief 6DOF IMU 11 device address setting.
  * @details Specified setting for device slave address selection of
- * 6DOF IMU 11 click driver.
+ * 6DOF IMU 11 Click driver.
  */
 #define C6DOFIMU11_I2C_SLAVE_ADDRESS_GND                            0x0E
 #define C6DOFIMU11_I2C_SLAVE_ADDRESS_VCC                            0x0F
@@ -285,7 +285,7 @@ typedef enum
 
 /**
  * @brief I2C Extend configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #i2cextend_cfg_t object definition for detailed explanation.
@@ -297,7 +297,7 @@ void i2cextend_cfg_setup ( i2cextend_cfg_t *cfg );
 /**
  * @brief I2C Extend initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -314,7 +314,7 @@ err_t i2cextend_init ( i2cextend_t *ctx, i2cextend_cfg_t *cfg );
  * @brief Generic write data function.
  * @details Function writes a byte of data to the targeted 8-bit
  * register address of the LTC4331 I2C Slave Device Extender
- * Over Rugged Differential Link on the I2c Extend click board.
+ * Over Rugged Differential Link on the I2c Extend Click board.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -327,7 +327,7 @@ void i2cextend_generic_write ( i2cextend_t *ctx, uint8_t reg, uint8_t tx_data );
  * @brief Generic read data function.
  * @details Function read a byte of data from the targeted 8-bit
  * register address of the LTC4331 I2C Slave Device Extender
- * Over Rugged Differential Link on the I2c Extend click board.
+ * Over Rugged Differential Link on the I2c Extend Click board.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -338,8 +338,8 @@ uint8_t i2cextend_generic_read ( i2cextend_t *ctx, uint8_t reg );
 /**
  * @brief Generic write data in Remote Mode function.
  * @details Function writes a byte of data to the targeted 8-bit
- * register address of the click board connected 
- * to the I2c Extend click in Remote Mode.
+ * register address of the Click board connected 
+ * to the I2c Extend Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] rmt_slave_addr : 7-bit slave address.
@@ -352,8 +352,8 @@ void i2cextend_rmt_write ( i2cextend_t *ctx, uint8_t rmt_slave_addr, uint8_t reg
 /**
  * @brief Generic read data in Remote Mode function.
  * @details Function read a byte of data from the targeted 8-bit
- * register address of the click board connected
- * to the I2c Extend click in Remote Mode.
+ * register address of the Click board connected
+ * to the I2c Extend Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] rmt_slave_addr : 7-bit slave address.
@@ -365,8 +365,8 @@ uint8_t i2cextend_rmt_read ( i2cextend_t *ctx, uint8_t rmt_slave_addr, uint8_t r
 /**
  * @brief Generic multi write data in Remote Mode function.
  * @details Function writes a sequential data starting 
- * to the targeted register address of the click board connected
- * to the I2c Extend click in Remote Mode.
+ * to the targeted register address of the Click board connected
+ * to the I2c Extend Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] rmt_slave_addr : 7-bit slave address.
@@ -380,8 +380,8 @@ void i2cextend_rmt_multi_write ( i2cextend_t *ctx, uint8_t rmt_slave_addr, uint8
 /**
  * @brief Generic multi read data in Remote Mode function.
  * @details Function read a sequential data starting
- * from the targeted register address of the click board connected
- * to the I2c Extend click in Remote Mode.
+ * from the targeted register address of the Click board connected
+ * to the I2c Extend Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] rmt_slave_addr : 7-bit slave address.
@@ -395,7 +395,7 @@ void i2cextend_rmt_multi_read ( i2cextend_t *ctx, uint8_t rmt_slave_addr, uint8_
 /**
  * @brief Set the configuration function.
  * @details Function set configuration
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] intr_mode : Internal slave interrupt behavior.
@@ -407,7 +407,7 @@ void i2cextend_set_config ( i2cextend_t *ctx, uint8_t intr_mode, uint8_t ctrl_se
 /**
  * @brief Check the status function.
  * @details Function read status register and update status data structe
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] status_data : Pointer to the memory location where data be stored.
@@ -418,7 +418,7 @@ void i2cextend_status ( i2cextend_t *ctx, i2cextend_status_data_t *status_data )
 /**
  * @brief Set enable alerts function.
  * @details Function enable alerts
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] link_good : The local and remote I2C networks alert.
@@ -431,7 +431,7 @@ void i2cextend_enable_alerts ( i2cextend_t *ctx, uint8_t link_good, uint8_t link
 /**
  * @brief Check the fault state function.
  * @details Function read fault register and update fault state data structe
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[out] fault_data : Pointer to the memory location where data be stored.
@@ -442,7 +442,7 @@ void i2cextend_fault ( i2cextend_t *ctx, i2cextend_fault_data_t *fault_data );
 /**
  * @brief Get scratch function.
  * @details Function read scratch register and return scratch data
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @return 8-bit scratch data ( default 0x08 );
@@ -454,7 +454,7 @@ uint8_t i2cextend_get_scratch ( i2cextend_t *ctx );
  * @details Function output slave address,
  * incoming 7-bit I2C addresses are translated to the remote network by: 
  * out_slave_address = i2c_trans XOR in_slave_address
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] out_slave_address : 7-bit out slave address.
@@ -465,7 +465,7 @@ void i2cextend_set_out_slave_address ( i2cextend_t *ctx, uint8_t out_slave_addre
 /**
  * @brief Set out CTRL function.
  * @details Function set output value of the remote CTRL pin
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] out_ctrl : Output value of the remote CTRL.
@@ -476,7 +476,7 @@ void i2cextend_set_out_ctrl ( i2cextend_t *ctx, uint8_t out_ctrl );
 /**
  * @brief Set RTS pin state function.
  * @details Function set RTS pin state
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] en_rst : RST pin state.
@@ -487,7 +487,7 @@ void i2cextend_set_rst ( i2cextend_t *ctx, uint8_t en_rst );
 /**
  * @brief Set CS pin state function.
  * @details Function set CS pin state
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] en_cs : CS pin state.
@@ -498,7 +498,7 @@ void i2cextend_set_cs ( i2cextend_t *ctx, uint8_t en_cs );
 /**
  * @brief Set ON pin state function.
  * @details Function set ON pin state
- * of I2c Extend click in Local Mode.
+ * of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] on_state : ON pin state.
@@ -509,7 +509,7 @@ void i2cextend_set_on ( i2cextend_t *ctx, uint8_t on_state );
 /**
  * @brief Check interrupt ststus function.
  * @details Function check interrupt state by return state
- * of the INT pin of I2c Extend click in Local Mode.
+ * of the INT pin of I2c Extend Click in Local Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @return Interrupt state.

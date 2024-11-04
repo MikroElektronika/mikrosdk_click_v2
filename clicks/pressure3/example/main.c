@@ -12,7 +12,7 @@
  * 
  * ## Application Task  
  * This is an example which demonstrates the use of Pressure 3 Click board.
-     Measured pressure and temperature data from the DPS310 sensor on Pressure 3 click board.
+     Measured pressure and temperature data from the DPS310 sensor on Pressure 3 Click board.
      Results are being sent to the Usart Terminal where you can track their changes.
      All data logs write on usb uart changes for every 3 sec.
  * 

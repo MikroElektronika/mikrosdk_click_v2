@@ -241,7 +241,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void airquality5_cfg_setup ( airquality5_cfg_t *cfg );
@@ -252,7 +252,7 @@ void airquality5_cfg_setup ( airquality5_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AIRQUALITY5_RETVAL airquality5_init ( airquality5_t *ctx, airquality5_cfg_t *cfg );
 
@@ -261,7 +261,7 @@ AIRQUALITY5_RETVAL airquality5_init ( airquality5_t *ctx, airquality5_cfg_t *cfg
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Airquality5 click.
+ * @description This function executes default configuration for Airquality5 Click.
  */
 void airquality5_default_cfg ( airquality5_t *ctx );
 
@@ -351,6 +351,6 @@ uint8_t airq5_get_interrupt ( airquality5_t *ctx );
 #endif  // _AIRQUALITY5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

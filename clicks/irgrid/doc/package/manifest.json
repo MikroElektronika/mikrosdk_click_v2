@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "IR Grid click",
+    "display_name": "IR Grid Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.irgrid",
     "product_link": "https://www.mikroe.com/ir-grid-click",
-    "short_description": "IR Grid click is a thermal imaging sensor. It has an array of 64 very sensitive factory calibrated IR elements (pixels), arranged in 4 rows of 16 pixels, each measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90621ESF-BAD IR sensor used on this Click board™ has only four pins, and it is mounted inside of the industry standard TO39 package. It is equipped with 2Kbit of EEPROM for storing the compensation and calibration parameters.",
+    "short_description": "IR Grid Click is a thermal imaging sensor. It has an array of 64 very sensitive factory calibrated IR elements (pixels), arranged in 4 rows of 16 pixels, each measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90621ESF-BAD IR sensor used on this Click board™ has only four pins, and it is mounted inside of the industry standard TO39 package. It is equipped with 2Kbit of EEPROM for storing the compensation and calibration parameters.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2364
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.IRGrid",
     "subdir_name": "lib_irgrid"
 }
+
 
 
 

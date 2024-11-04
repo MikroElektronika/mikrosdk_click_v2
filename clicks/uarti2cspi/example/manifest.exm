@@ -3,6 +3,6 @@
     "description": "UART I2C/SPI Click is an all-in-one solution which allows ESD-protected RS-232 connectivity to any embedded application while bridging the UART and I2C/SPI interfaces at the same time. It is equipped with the DE-9 connector, so it can be easily connected.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SC16IS740"],
+    "hw" : ["Click","SC16IS740"],
     "category" : ["RS232"] 
 }

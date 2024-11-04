@@ -3,14 +3,14 @@
  * \brief Current Click example
  * 
  * # Description
- * This is an example that shows the capabilities of the Current click board 
- * by measuring current in miliampers. Current click board can be used to safely
+ * This is an example that shows the capabilities of the Current Click board 
+ * by measuring current in miliampers. Current Click board can be used to safely
  * measure DC current in the range of 2-2048mA depending on shunt resistor.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initalizes SPI, LOG and click drivers.
+ * Initalizes SPI, LOG and Click drivers.
  * 
  * ## Application Task  
  * Measures DC current and displays the results on USB UART each second.

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger 6 click
+# Charger 6 Click
 
 Charger 6 Click is a compact add-on board that represents a single-cell battery charger. This board features the BQ25601, an I2C controlled battery charger for high input voltage and narrow voltage DC power path management from Texas Instruments. This buck charger supports USB, and it’s optimized for USB voltage input. The low impedance power path optimizes switch-mode operation efficiency, reduces battery charging time, and extends battery life during discharge. It also has a programmable current limiting, allowing it to use an external power supply rated up to 13.5V. This Click board™ is suitable as a Li-Ion and Li-polymer battery charger for portable devices and accessories, power tools, and more.
 
@@ -9,7 +9,7 @@ Charger 6 Click is a compact add-on board that represents a single-cell battery 
   <img src="https://download.mikroe.com/images/click_for_ide/charger6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-6-click)
+[Click Product page](https://www.mikroe.com/charger-6-click)
 
 ---
 
@@ -192,7 +192,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,8 +3,8 @@
  * @brief CAN Bus Click Example.
  *
  * # Description
- * This library contains API for CAN Bus click board™.
- * This example transmits/receives and processes data from CAN Bus click.
+ * This library contains API for CAN Bus Click board™.
+ * This example transmits/receives and processes data from CAN Bus Click.
  * The library initializes and defines the 
  * UART bus drivers to transmit or receive data. 
  *

@@ -3,7 +3,7 @@
  * @brief Buzz3 Click example
  *
  * # Description
- * This example demonstrates the use of Buzz 3 click boards with PAM8904 for play the Imperial March. 
+ * This example demonstrates the use of Buzz 3 Click boards with PAM8904 for play the Imperial March. 
  * PAM8904 is piezo-sounder driver with an integrated Multi-Mode charge pump boost converter from Diodes Incorporated. 
  *
  * The demo application is composed of two sections :

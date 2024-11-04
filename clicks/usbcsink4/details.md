@@ -1,6 +1,6 @@
 
 ---
-# USB-C Sink 4 click
+# USB-C Sink 4 Click
 
 > USB-C Sink 4 Click is a compact add-on board designed to enable devices to draw power through the USB Type-C interface. This board features the CYPD3178, a USB Type-C power sink controller from Infineon. This Click board™ includes a controller with an integrated USB Type-C transceiver, load switch control with soft start, and system-level fault protection. It has configurable charging protocols, voltage negotiation, and an unpopulated SAFE 5V header for an alternate power supply.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/usbcsink4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/usb-c-sink-4-click)
+[Click Product page](https://www.mikroe.com/usb-c-sink-4-click)
 
 ---
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

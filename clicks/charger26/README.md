@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger 26 click
+# Charger 26 Click
 
 > Charger 26 Click is a compact add-on board that provides a single-cell charging solution. This board features the MAX1811, a USB-powered Li+ charger from Analog Devices. The charger uses an internal FET to deliver the battery up to 500mA charging current. It has pre-conditioning that soft-starts a near-dead battery cell before charging. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger26_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-26-click)
+[Click Product page](https://www.mikroe.com/charger-26-click)
 
 ---
 
@@ -70,7 +70,7 @@ uint8_t charger26_get_chg_state ( charger26_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Charger 26 click board by enabling the device
+> This example demonstrates the use of Charger 26 Click board by enabling the device
   and then reading and displaying the charger status.
 
 **The demo application is composed of two sections :**
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

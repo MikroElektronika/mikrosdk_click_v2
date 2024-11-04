@@ -3,7 +3,7 @@
  * @brief DRAM Click example
  *
  * # Description
- * This example demonstrates the use of DRAM click board by writing specified data to
+ * This example demonstrates the use of DRAM Click board by writing specified data to
  * the memory and reading it back.
  *
  * The demo application is composed of two sections :
@@ -25,7 +25,7 @@
 #include "dram.h"
 
 #define DEMO_TEXT_MESSAGE_1     "MikroE"
-#define DEMO_TEXT_MESSAGE_2     "DRAM click"
+#define DEMO_TEXT_MESSAGE_2     "DRAM Click"
 #define STARTING_ADDRESS        0x012345ul
 
 static dram_t dram;

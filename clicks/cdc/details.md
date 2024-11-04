@@ -1,6 +1,6 @@
 
 ---
-# CDC click
+# CDC Click
 
 > CDC Click is a compact add-on board that allows your application do a conversion of capacitance to a digital format. This board features the PCAP04, a capacitance-to-digital converter (CDC) from ScioSense. It also includes an integrated digital signal processor (DSP) for on-chip data post-processing. The converter has high flexibility and allows you to convert grounded capacitors and floating capacitors to a digital format. It has up to 50KHz sampling rate in up to 20-bit resolution.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/cdc_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/cdc-click)
+[Click Product page](https://www.mikroe.com/cdc-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t cdc_read_results ( cdc_t *ctx, cdc_results_t *results );
 
 ## Example Description
 
-> This example demonstrates the use of CDC click board by reading capacitance
+> This example demonstrates the use of CDC Click board by reading capacitance
 measurements from C3/C2 and C5/C4 ports calculated from pure capacitance ratio
 between those ports and port C1/C0 which is used as external C reference.
 
@@ -77,7 +77,7 @@ between those ports and port C1/C0 which is used as external C reference.
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

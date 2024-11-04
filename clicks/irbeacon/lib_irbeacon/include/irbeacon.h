@@ -150,7 +150,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void irbeacon_cfg_setup ( irbeacon_cfg_t *cfg );
@@ -160,7 +160,7 @@ void irbeacon_cfg_setup ( irbeacon_cfg_t *cfg );
  * @param irbeacon Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 IRBEACON_RETVAL irbeacon_init ( irbeacon_t *ctx, irbeacon_cfg_t *cfg );
 
@@ -227,6 +227,6 @@ void irbeacon_reset_mod ( irbeacon_t *ctx );
 #endif  // _IRBEACON_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

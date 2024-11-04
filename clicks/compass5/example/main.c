@@ -12,7 +12,7 @@
  * Initializes I2C and starts to write log, performs power down mode, sets continuous measurement mode; also writes log.
  *
  * ## Application Task
- * When Compass 5 click is connected via I2C communication, then this example, collects data on the current position of the X, 
+ * When Compass 5 Click is connected via I2C communication, then this example, collects data on the current position of the X, 
  * Y and Z axes, processes and displays via the UART terminal. All axis data is printed every 2 seconds.
  *
  * @author Jelena Milosavljevic
@@ -64,7 +64,7 @@ void application_init ( void ) {
     
     if  ( ( company_id == COMPASS5_COMPANI_ID_NUM ) && ( device_id == COMPASS5_DEVICE_ID_NUM ) ) {
         log_printf( &logger, "--------------------\r\n" );
-        log_printf( &logger, "  Compass 3 click   \r\n" );
+        log_printf( &logger, "  Compass 3 Click   \r\n" );
         log_printf( &logger, "--------------------\r\n" );
     }
     else {

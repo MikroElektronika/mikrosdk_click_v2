@@ -3,7 +3,7 @@
  * @brief A5000 Plug n Trust Click example
  *
  * # Description
- * This application is showcasing basic functionality of A5000 Plug&Trust click board. 
+ * This application is showcasing basic functionality of A5000 Plug&Trust Click board. 
  * It gets identify data from device, selects card manager and applet. 
  * Then checks free memory, reads all objects and deletes not reserved ones. 
  * After that showcases a few of functionality: 

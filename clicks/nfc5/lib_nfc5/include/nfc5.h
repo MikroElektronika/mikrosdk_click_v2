@@ -1298,7 +1298,7 @@ typedef struct
 
 /**
  * @brief NFC 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nfc5_cfg_t object definition for detailed explanation.
@@ -1310,7 +1310,7 @@ void nfc5_cfg_setup ( nfc5_cfg_t *cfg );
 /**
  * @brief NFC 5 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #nfc5_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -1326,7 +1326,7 @@ void nfc5_drv_interface_sel ( nfc5_cfg_t *cfg, nfc5_drv_t drv_sel );
 /**
  * @brief NFC 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nfc5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -1341,7 +1341,7 @@ err_t nfc5_init ( nfc5_t *ctx, nfc5_cfg_t *cfg );
 /**
  * @brief NFC 5 default configuration function.
  * @details This function executes a default configuration of NFC 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #nfc5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1648,7 +1648,7 @@ err_t nfc5_clear_interrupts ( nfc5_t *ctx );
 /**
  * @brief NFC 5 check for received interrupts function.
  * @details This function checks the received interrupts and saves the result into 
- * the int_status variable of the click context object structure.
+ * the int_status variable of the Click context object structure.
  * @param[in] ctx : Click context object.
  * See #nfc5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -1679,7 +1679,7 @@ uint32_t nfc5_wait_interrupt ( nfc5_t *ctx, uint32_t mask, uint32_t timeout );
 /**
  * @brief NFC 5 get interrupt function.
  * @details This function is used to check whether the interrupt given by @a mask 
- * is set in the int_status variable of the click context object structure. 
+ * is set in the int_status variable of the Click context object structure. 
  * If yes the interrupt gets cleared. This function returns
  * only status bits which are inside @a mask.
  * @param[in] ctx : Click context object.

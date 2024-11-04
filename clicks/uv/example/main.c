@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Configuration of the click and log objects.
+ * Configuration of the Click and log objects.
  *
  * ## Application Task
  * Reads the result of AD conversion once per second and calculates

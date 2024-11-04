@@ -300,7 +300,7 @@ void apc1sensor_cfg_setup ( apc1sensor_cfg_t *cfg );
 /**
  * @brief APC1 Sensor driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #apc1sensor_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.

@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# LR 5 click
+# LR 5 Click
 
 LR 5 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001409, RF technology-based SRD transceiver, which operates at a frequency of 915MHz from Mipot.
 
@@ -9,7 +9,7 @@ LR 5 Click is a compact add-on board that contains a long-range transceiver. Thi
   <img src="https://download.mikroe.com/images/click_for_ide/lr5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lr-5-click)
+[Click Product page](https://www.mikroe.com/lr-5-click)
 
 ---
 
@@ -239,7 +239,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

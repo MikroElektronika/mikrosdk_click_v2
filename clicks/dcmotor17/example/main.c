@@ -14,8 +14,8 @@
  * Initializes GPIO driver, set default configuration and start to write log.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the DC Motor 17 click board.
- * This example demonstrates the use of DC Motor 17 click,
+ * This is an example that demonstrates the use of the DC Motor 17 Click board.
+ * This example demonstrates the use of DC Motor 17 Click,
  * we first control motion A by driving it forward motion for 5 seconds, 
  * than applying short brakes it for 2 second, then driving it in reverse for 5 seconds
  * and stop the motor for 2 seconds.
@@ -49,7 +49,7 @@ void application_init ( void ) {
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
     log_printf( &logger, "----------------------------\r\n" );
-    log_printf( &logger, "      DC Motor 17 click     \r\n" );
+    log_printf( &logger, "      DC Motor 17 Click     \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
     log_info( &logger, " Application Init " );
 

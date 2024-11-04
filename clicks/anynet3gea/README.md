@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# AnyNet 3G-EA click
+# AnyNet 3G-EA Click
 
-> AnyNet 3G-EA Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing. AnyNet click board™ provides a secure connection with the AWS over the air (OTA), by utilizing the Quectel UG95-EA 3G module,  offering worldwide UMTS/HSPA and GSM/GPRS/EDGE coverage Eseye ES4623 embedded SIM card, that can work with more than 235 cellular operators from all over the world. An Eseye embedded sim card can work with more than 235 cellular operators from all over the world. The AnyNet 3G click can be used as an AWS IoT button with almost no configuration.
+> AnyNet 3G-EA Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing. AnyNet Click board™ provides a secure connection with the AWS over the air (OTA), by utilizing the Quectel UG95-EA 3G module,  offering worldwide UMTS/HSPA and GSM/GPRS/EDGE coverage Eseye ES4623 embedded SIM card, that can work with more than 235 cellular operators from all over the world. An Eseye embedded sim card can work with more than 235 cellular operators from all over the world. The AnyNet 3G Click can be used as an AWS IoT button with almost no configuration.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/anynet3gea_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/anynet-3g-ea-click)
+[Click Product page](https://www.mikroe.com/anynet-3g-ea-click)
 
 ---
 
@@ -48,12 +48,12 @@ err_t anynet3gea_init ( anynet3gea_t *ctx, anynet3gea_cfg_t *cfg );
 
 #### Example key functions :
 
-- `anynet3gea_send_cmd` This function sends a specified command to the click module.
+- `anynet3gea_send_cmd` This function sends a specified command to the Click module.
 ```c
 void anynet3gea_send_cmd ( anynet3gea_t *ctx, uint8_t *cmd );
 ```
 
-- `anynet3gea_send_cmd_with_par` This function sends a command with specified parameter to the click module.
+- `anynet3gea_send_cmd_with_par` This function sends a command with specified parameter to the Click module.
 ```c
 void anynet3gea_send_cmd_with_par ( anynet3gea_t *ctx, uint8_t *at_cmd_buf, uint8_t *param_buf );
 ```
@@ -65,13 +65,13 @@ void anynet3gea_send_cmd_check ( anynet3gea_t *ctx, uint8_t *at_cmd_buf );
 
 ## Example Description
 
-> This example demonstrates the use of AnyNet 3G-EA click board.
+> This example demonstrates the use of AnyNet 3G-EA Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and sends a few AT commands to test the communication and configure the click board.
+> Initializes the driver and sends a few AT commands to test the communication and configure the Click board.
 
 ```c
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

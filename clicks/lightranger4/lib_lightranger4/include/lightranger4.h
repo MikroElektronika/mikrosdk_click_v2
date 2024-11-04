@@ -1584,7 +1584,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lightranger4_cfg_setup ( lightranger4_cfg_t *cfg );
@@ -1594,7 +1594,7 @@ void lightranger4_cfg_setup ( lightranger4_cfg_t *cfg );
  * @param lightranger4 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LIGHTRANGER4_RETVAL lightranger4_init ( lightranger4_t *ctx, lightranger4_cfg_t *cfg );
 
@@ -1605,7 +1605,7 @@ LIGHTRANGER4_RETVAL lightranger4_init ( lightranger4_t *ctx, lightranger4_cfg_t 
  * @retval Function return device error status (_ID_IS_NOT_VALID or _FIRMWARE_TIMEOUT_ERROR) or device ok status (_INIT_IS_SUCCESSFUL)
  * @note This function should be called in the start program after the power on procedure, in order to check the chip communication and configure the chip for the operation.
  *
- * @description This function executes default configuration for LightRanger4 click.
+ * @description This function executes default configuration for LightRanger4 Click.
  */
 LIGHTRANGER4_RETVAL lightranger4_default_cfg ( lightranger4_t *ctx );
 
@@ -1769,6 +1769,6 @@ void lightranger4_power_on ( lightranger4_t *ctx );
 #endif  // _LIGHTRANGER4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

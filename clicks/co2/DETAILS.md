@@ -1,7 +1,7 @@
 
 ---
 
-# CO2 click
+# CO2 Click
 
 CO2 Click is a compact add-on board that contains Sensirion’s miniature CO2 sensor. This board features the STC31, a gas concentration sensor designed for high-volume applications. The STC31 utilizes a revolutionized thermal conductivity measurement principle, which results in superior repeatability and long-term stability. The outstanding performance of these sensors is based on Sensirion’s patented CMOSens® sensor technology, which combines the sensor element, signal processing, and digital calibration on a small CMOS chip. It features a digital I2C interface, which makes it easy to connect directly to MCU. This Click board™ represents an ideal choice for health, environmental, industrial, residential monitoring of high CO2 concentrations and applications where reliability is crucial.
 
@@ -9,7 +9,7 @@ CO2 Click is a compact add-on board that contains Sensirion’s miniature CO2 se
   <img src="https://download.mikroe.com/images/click_for_ide/CO2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/co2-click)
+[Click Product page](https://www.mikroe.com/co2-click)
 
 ---
 
@@ -184,7 +184,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

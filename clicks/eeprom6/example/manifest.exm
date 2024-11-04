@@ -3,6 +3,6 @@
     "description": "EEPROM 6 Click is a compact add-on board that contains a serial EEPROM memory that operates from the 1-Wire interface. This board features the DS28EC20, a 20480-bit EEPROM organized as 80 memory pages of 256 bits each from Analog Devices. As a specific feature, blocks of eight memory pages can be write-protected or put in “EPROM-Emulation” Mode, where bits can only be changed from a 1 to a 0 state. It communicates with MCU at 15.4kbps or 90kbps over the 1-Wire protocol and has a 64-bit registration number that ensures error-free device selection.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","DS28EC20P"],
+    "hw" : ["Click","DS28EC20P"],
     "category" : ["EEPROM"]
 }

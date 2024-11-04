@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Single Cell click",
+    "display_name": "Single Cell Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.singlecell",
     "product_link": "https://www.mikroe.com/single-cell-click",
-    "short_description": "The Single Cell click is a Click board™ which features MCP16251 synchronous boost regulator with true load disconnect and MCP1811A low-dropout (LDO) linear regulator that provide an ultra low quiescent current during device operation of about 250nA and can be shut down for 5nA (typical) supply current draw. Given the potential applications of these features, the Single Cell click can be used for one, two and three-cell Alkaline and NiMH/NiCd portable products, solar cell applications, personal care and medical products, smartphones, MP3 players, wireless sensors and many more.",
+    "short_description": "The Single Cell Click is a Click board™ which features MCP16251 synchronous boost regulator with true load disconnect and MCP1811A low-dropout (LDO) linear regulator that provide an ultra low quiescent current during device operation of about 250nA and can be shut down for 5nA (typical) supply current draw. Given the potential applications of these features, the Single Cell Click can be used for one, two and three-cell Alkaline and NiMH/NiCd portable products, solar cell applications, personal care and medical products, smartphones, MP3 players, wireless sensors and many more.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2922
     ],
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.SingleCell",
     "subdir_name": "lib_singlecell"
 }
+
 
 
 

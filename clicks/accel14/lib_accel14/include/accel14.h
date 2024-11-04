@@ -377,7 +377,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel14_cfg_setup ( accel14_cfg_t *cfg );
@@ -387,7 +387,7 @@ void accel14_cfg_setup ( accel14_cfg_t *cfg );
  * @param accel14 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL14_RETVAL accel14_init ( accel14_t *ctx, accel14_cfg_t *cfg );
 
@@ -396,7 +396,7 @@ ACCEL14_RETVAL accel14_init ( accel14_t *ctx, accel14_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Accel 14 click.
+ * @description This function executes default configuration for Accel 14 Click.
  */
 void accel14_default_cfg ( accel14_t *ctx );
 
@@ -592,6 +592,6 @@ uint8_t accel14_check_int2 ( accel14_t *ctx );
 #endif  // _ACCEL14_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

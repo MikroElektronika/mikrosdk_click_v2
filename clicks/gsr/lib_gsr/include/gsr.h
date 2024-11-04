@@ -137,7 +137,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gsr_cfg_setup ( gsr_cfg_t *cfg );
@@ -147,7 +147,7 @@ void gsr_cfg_setup ( gsr_cfg_t *cfg );
  * @param gsr Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GSR_RETVAL gsr_init ( gsr_t *ctx, gsr_cfg_t *cfg );
 
@@ -173,7 +173,7 @@ void gsr_generic_transfer
  *
  * @param ctx  Click object.
  *
- * @description This function read measurement using MCP3201 ADC integrated on click board.
+ * @description This function read measurement using MCP3201 ADC integrated on Click board.
  */
 uint16_t gsr_read_value ( gsr_t *ctx );
 
@@ -183,6 +183,6 @@ uint16_t gsr_read_value ( gsr_t *ctx );
 #endif  // _GSR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

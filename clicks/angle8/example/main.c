@@ -3,13 +3,13 @@
  * @brief Angle8 Click example
  *
  * # Description
- * This example demonstrates the use of Angle 8 click board by reading and displaying
+ * This example demonstrates the use of Angle 8 Click board by reading and displaying
  * the magnet's angular position in degrees.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which 
+ * Initializes the driver and performs the Click default configuration which 
  * sets the clockwise rotation direction and cycle time to 100ms.
  *
  * ## Application Task

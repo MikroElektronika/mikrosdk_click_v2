@@ -294,7 +294,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void geomagnetic_cfg_setup ( geomagnetic_cfg_t *cfg );
@@ -305,7 +305,7 @@ void geomagnetic_cfg_setup ( geomagnetic_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GEOMAGNETIC_RETVAL geomagnetic_init ( geomagnetic_t *ctx, geomagnetic_cfg_t *cfg );
 
@@ -314,7 +314,7 @@ GEOMAGNETIC_RETVAL geomagnetic_init ( geomagnetic_t *ctx, geomagnetic_cfg_t *cfg
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for geomagnetic click.
+ * @description This function executes default configuration for geomagnetic Click.
  */
 void geomagnetic_default_cfg ( geomagnetic_t *ctx );
 
@@ -409,7 +409,7 @@ uint8_t get_interrupt ( geomagnetic_t *ctx );
  *
  * @param ctx    Click object.
  *
- * @description This function resets the click module.
+ * @description This function resets the Click module.
  */
 void geomagnetic_software_reset ( geomagnetic_t *ctx );
 
@@ -418,7 +418,7 @@ void geomagnetic_software_reset ( geomagnetic_t *ctx );
  *
  * @param ctx    Click object.
  *
- * @description This function configures some click module registers after the device has
+ * @description This function configures some Click module registers after the device has
  *              been reset.
  */
 void geomagnetic_power_on_reset ( geomagnetic_t *ctx );
@@ -429,6 +429,6 @@ void geomagnetic_power_on_reset ( geomagnetic_t *ctx );
 #endif  // _GEOMAGNETIC_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

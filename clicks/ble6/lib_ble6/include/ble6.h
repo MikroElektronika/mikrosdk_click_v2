@@ -236,7 +236,7 @@ typedef void ( *ble6_hdl_t )( uint8_t* );
 
 /**
  * @brief BLE 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ble6_cfg_t object definition for detailed explanation.
@@ -248,7 +248,7 @@ void ble6_cfg_setup ( ble6_cfg_t *cfg );
 /**
  * @brief BLE 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ble6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -314,7 +314,7 @@ uint8_t ble6_byte_ready ( ble6_t *ctx );
  * @details The function enable/disble power on 
  * by set states of the RST pin of BLUENRG-M2SP, 
  * Very low power application processor module for Bluetooth� low energy v5.0
- * on BLE 6 click.
+ * on BLE 6 Click.
  * @param[out] ctx : Click context object.
  * See #ble6_t object definition for detailed explanation.
  * @param[in] en_pwr : State of the RST pin.
@@ -326,7 +326,7 @@ void ble6_power_on ( ble6_t *ctx, uint8_t en_pwr );
  * @brief Send command function
  * @details The function send command to the BLUENRG-M2SP,
  * Very low power application processor module for Bluetooth� low energy v5.0
- * on BLE 6 click.
+ * on BLE 6 Click.
  * @param[in] ctx : Click context object.
  * See #ble6_t object definition for detailed explanation.
  * @param[in] tx_data : Pointer to the memory location where at_command be stored.

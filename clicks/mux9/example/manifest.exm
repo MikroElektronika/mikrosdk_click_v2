@@ -3,6 +3,6 @@
     "description": "MUX 9 Click is a compact add-on board that contains a precise multiplexing solution. This board features the ADG1438, a CMOS 8-channel analog matrix switch with a high-speed serially controlled 4-wire interface from Analog Devices. Each switch is software-controlled (by a bit of the appropriate register) and conducts equally well in both directions, making it ideal for mux/demux applications. It is specified for a wide supply range ±15V/+12V/±5V where all channels exhibit break-before-make switching action, preventing momentary shorting when switching channels.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ADG1438"],
+    "hw" : ["Click","ADG1438"],
     "category" : ["Click Boards > Mixed signal > DAC"]
 }

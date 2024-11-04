@@ -3,13 +3,13 @@
  * @brief 3DHall9 Click example
  *
  * # Description
- * This example demonstrates the use of 3D Hall 9 click board by reading the magnetic
+ * This example demonstrates the use of 3D Hall 9 Click board by reading the magnetic
  * flux density from 3 axes as well as the angles between axes and the sensor temperature.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and the click board.
+ * Initializes the driver and the Click board.
  *
  * ## Application Task
  * Reads the new data from the sensor approximately every 300ms and displays 

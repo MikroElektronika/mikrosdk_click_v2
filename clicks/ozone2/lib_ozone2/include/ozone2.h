@@ -165,7 +165,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  *       Be sure that the ADC selection is properly selected.
  */
@@ -179,7 +179,7 @@ void ozone2_cfg_setup ( ozone2_cfg_t *cfg );
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  * @note The ADC selection should be set before call this function.
  */
 err_t ozone2_init ( ozone2_t *ctx, ozone2_cfg_t *cfg );
@@ -215,6 +215,6 @@ err_t ozone2_read_measurement ( ozone2_t *ctx, uint16_t *data_out );
 #endif  // OZONE2_H
 
 /** \} */ // End public_function group
-/** \} */ // End click Driver group
+/** \} */ // End Click Driver group
 
 // ------------------------------------------------------------------------ END

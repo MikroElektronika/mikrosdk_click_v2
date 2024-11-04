@@ -3,13 +3,13 @@
  * @brief Power Monitor 2 Click example
  *
  * # Description
- * This example demonstrates the use of Power Monitor 2 click by reading and displaying
- * the power consumption at 3V3 and 5V of the connected click board.
+ * This example demonstrates the use of Power Monitor 2 Click by reading and displaying
+ * the power consumption at 3V3 and 5V of the connected Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the voltage, current, and power measurements from U2 and U3 sensors averaged

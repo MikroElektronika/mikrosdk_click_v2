@@ -3,9 +3,9 @@
  * @brief SPI Isolator 5 Click example
  *
  * # Description
- * This example demonstrates the use of SPI Isolator 5 click board 
+ * This example demonstrates the use of SPI Isolator 5 Click board 
  * by reading the manufacturer ID and device ID 
- * of the connected Flash 11 click board.
+ * of the connected Flash 11 Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -15,7 +15,7 @@
  *
  * ## Application Task
  * The demo application reads and checks the manufacturer ID and 
- * device ID of the connected Flash 11 click board. 
+ * device ID of the connected Flash 11 Click board. 
  * Results are being sent to the UART Terminal, where you can track their changes.
  *
  * @author Nenad Filipovic

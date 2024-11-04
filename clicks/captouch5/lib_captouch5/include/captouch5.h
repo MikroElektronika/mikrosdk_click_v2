@@ -387,7 +387,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void captouch5_cfg_setup ( captouch5_cfg_t *cfg );
@@ -397,7 +397,7 @@ void captouch5_cfg_setup ( captouch5_cfg_t *cfg );
  * @param captouch5 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CAPTOUCH5_RETVAL captouch5_init ( captouch5_t *ctx, captouch5_cfg_t *cfg );
 
@@ -407,7 +407,7 @@ CAPTOUCH5_RETVAL captouch5_init ( captouch5_t *ctx, captouch5_cfg_t *cfg );
  * @param ctx  Click object.
  * @param device_cfg Click configuration structure
  *
- * @description This function executes default configuration for CapTouch5 click.
+ * @description This function executes default configuration for CapTouch5 Click.
  */
 void captouch5_default_cfg ( captouch5_t *ctx, T_CAPTOUCH5_DEVICE_CONFIG *device_cfg );
 
@@ -521,7 +521,7 @@ uint16_t captouch5_get_device_id ( captouch5_t *ctx );
  *
  * @returns             CAPTOUCH5_FAMILY_ID
  *
- * @description This function gets family id of click object ctx.
+ * @description This function gets family id of Click object ctx.
  */
 uint8_t captouch5_get_family_id ( captouch5_t *ctx );
 
@@ -582,6 +582,6 @@ void captouch5_config_slider ( captouch5_t *ctx, uint8_t slider_data );
 #endif  // _CAPTOUCH5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

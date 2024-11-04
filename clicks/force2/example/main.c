@@ -3,7 +3,7 @@
  * \brief Force 2 Click example
  * 
  * # Description
- * This example demonstrates the use of Force 2 click board by reading and displaying
+ * This example demonstrates the use of Force 2 Click board by reading and displaying
  * the voltage from AN pin and the calculated force (N) value.
  *
  * The demo application is composed of two sections :
@@ -56,7 +56,7 @@ void application_init ( void )
     force2_init( &force2, &cfg );
 
     log_printf( &logger, "--------------------\r\n" );
-    log_printf( &logger, "    Force 2 click   \r\n" );
+    log_printf( &logger, "    Force 2 Click   \r\n" );
     log_printf( &logger, "--------------------\r\n" );
     Delay_ms ( 500 );
 }

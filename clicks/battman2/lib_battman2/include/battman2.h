@@ -561,7 +561,7 @@ typedef struct
 
 /**
  * @brief BATT-MAN 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #battman2_cfg_t object definition for detailed explanation.
@@ -573,7 +573,7 @@ void battman2_cfg_setup ( battman2_cfg_t *cfg );
 /**
  * @brief BATT-MAN 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -589,7 +589,7 @@ err_t battman2_init ( battman2_t *ctx, battman2_cfg_t *cfg );
 /**
  * @brief BATT-MAN 2 default configuration function.
  * @details This function executes a default configuration of BATT-MAN 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -640,7 +640,7 @@ err_t battman2_generic_read ( battman2_t *ctx, uint8_t reg, uint8_t *rx_buf, uin
  * @details This function performs a hardware reset of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -656,7 +656,7 @@ err_t battman2_hw_reset ( battman2_t *ctx );
  * @details This function check global interrupts of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[out] int_glbl0 : Global interrupts register 0 data.
@@ -674,7 +674,7 @@ err_t battman2_check_int_glbl ( battman2_t *ctx, uint8_t *int_glbl0, uint8_t *in
  * @details This function check error flags of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[out] faults : Error flags data.
@@ -691,7 +691,7 @@ err_t battman2_check_faults_occurred ( battman2_t *ctx, uint8_t *faults );
  * @details This function check global states of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[out] stat : Global states data.
@@ -709,7 +709,7 @@ err_t battman2_check_stat ( battman2_t *ctx, uint8_t *stat );
  * @details This function sets desare gpio output state of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO selection:
@@ -732,7 +732,7 @@ err_t battman2_set_gpio_output ( battman2_t *ctx, uint8_t gpio_sel, uint8_t led_
  * @details This function read device ID data of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[out] cid : Device ID data.
@@ -749,7 +749,7 @@ err_t battman2_get_id ( battman2_t *ctx, uint8_t *cid );
  * @details This function set desired charger work mode of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[in] en_chg : Desired charger work mode:
@@ -768,7 +768,7 @@ err_t battman2_set_charger_enable ( battman2_t *ctx, uint8_t en_chg );
  * @details This function set desired configuration of the charger of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[in] chg_cnfg : Charger configuration object.
@@ -785,7 +785,7 @@ err_t battman2_set_charger_cfg ( battman2_t *ctx, battman2_chg_cnfg_t chg_cnfg )
  * @details This function get charger configuration of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[out] chg_cnfg : Charger configuration object.
@@ -802,7 +802,7 @@ err_t battman2_get_charger_cfg ( battman2_t *ctx, battman2_chg_cnfg_t *chg_cnfg 
  * @details This function get charger status of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[out] chg_stat : Charger status object.
@@ -819,7 +819,7 @@ err_t battman2_get_chg_status ( battman2_t *ctx, battman2_stat_chg_t *chg_stat )
  * @details This function set desired configuration of the SIMO Buck-Boost of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[in] sbb_sel : Buck and boost channel selection:
@@ -840,7 +840,7 @@ err_t battman2_set_sbb_config ( battman2_t *ctx, uint8_t sbb_sel, battman2_sbb_c
  * @details This function get Buck and Boost configuration of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[in] sbb_sel : Buck and boost channel selection:
@@ -861,7 +861,7 @@ err_t battman2_get_sbb_config ( battman2_t *ctx, uint8_t sbb_sel, battman2_sbb_c
  * @details This function set desired configuration of the linear regulator of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[in] ldo_cfg : Linear regulator object.
@@ -878,7 +878,7 @@ err_t battman2_set_ldo_config ( battman2_t *ctx, battman2_ldo_cnfg_t ldo_cfg );
  * @details This function get linear regulator configuration of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @param[out] ldo_cfg : Linear regulator object.
@@ -895,7 +895,7 @@ err_t battman2_get_ldo_config ( battman2_t *ctx, battman2_ldo_cnfg_t *ldo_cfg );
  * @details This function check state of the interrupt ( IRQ pin ) of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @return @li @c 0 - IRQ pin state low,
@@ -911,7 +911,7 @@ uint8_t battman2_check_interrupt ( battman2_t *ctx );
  * @details This function LED indicator test of the 
  * MAX77654 Ultra-Low Power PMIC Featuring SingleInductor, 3-Output Buck-Boost, 
  * 2-LDOs, PowerPath Charger for Small Li+, and Ship Mode on the
- * BATT-MAN 2 click board™.
+ * BATT-MAN 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #battman2_t object definition for detailed explanation.
  * @return @li @c 0 - IRQ pin state low,

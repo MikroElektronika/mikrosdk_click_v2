@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# SRAM 3 click
+# SRAM 3 Click
 
 SRAM 3 Click is a compact add-on board that contains a serial non-volatile SRAM with a high storage capacity. This board features the ANV32AA1WDK66, a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell organized as 128k words of 8 bits each from Anvo-System Dresden. The serial SRAM provides fast access & cycle times, high data accuracy, ease of use, and unlimited read & write accessed by a high-speed SPI compatible bus. This Click board™ is suitable to store drive profiles, configurations, and similar data, or for applications such as medical devices, industrial automation (for example, motor control and robotics), smart metering systems, and many others.
 
@@ -9,7 +9,7 @@ SRAM 3 Click is a compact add-on board that contains a serial non-volatile SRAM 
   <img src="https://download.mikroe.com/images/click_for_ide/sram_3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/sram-3-click)
+[Click Product page](https://www.mikroe.com/sram-3-click)
 
 ---
 
@@ -65,7 +65,7 @@ void sram3_protect_memory( sram3_t *ctx, uint8_t protect_range );
 
 ## Example Description
 
-> This is an example that shows the use of SRAM memory, using SRAM 3 click. SRAM 3 click is based on ANV32AA1W, and ANV32AA1W is a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell, 
+> This is an example that shows the use of SRAM memory, using SRAM 3 Click. SRAM 3 Click is based on ANV32AA1W, and ANV32AA1W is a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell, 
 organized as 128k words of 8 bits each. 
 The devices are accessed by a high speed SPI-compatible bus. Specifically in this example, we used the high-speed SPI communication characteristics to write data to a specific registration address and read it.
 
@@ -73,7 +73,7 @@ The devices are accessed by a high speed SPI-compatible bus. Specifically in thi
 
 ### Application Init
 
-> Initialization SPI module, logger initalization and click initialization.
+> Initialization SPI module, logger initalization and Click initialization.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

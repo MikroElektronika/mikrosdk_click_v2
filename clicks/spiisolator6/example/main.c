@@ -3,8 +3,8 @@
  * @brief SPIIsolator6 Click example
  *
  * # Description
- * This example demonstrates the use of SPI Isolator 6 click board by reading the
- * device ID of the connected Accel 22 click board.
+ * This example demonstrates the use of SPI Isolator 6 Click board by reading the
+ * device ID of the connected Accel 22 Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -12,7 +12,7 @@
  * Initializes the driver and logger.
  *
  * ## Application Task
- * Reads and checks the device ID of the connected Accel 22 click board, and displays the
+ * Reads and checks the device ID of the connected Accel 22 Click board, and displays the
  * results on the USB UART approximately once per second.
  *
  * @note
@@ -31,7 +31,7 @@ static log_t logger;
 
 /**
  * @brief SPI Isolator 6 get accel 22 device id function.
- * @details This function reads and checks the device ID of the connected Accel 22 click board.
+ * @details This function reads and checks the device ID of the connected Accel 22 Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator6_t object definition for detailed explanation.
  * @return None.
@@ -94,7 +94,7 @@ int main ( void )
 
 void spiisolator6_get_accel22_device_id ( spiisolator6_t *ctx )
 {
-    #define DEVICE_NAME             "Accel 22 click"
+    #define DEVICE_NAME             "Accel 22 Click"
     #define DEVICE_SPI_READ_REG     0x0B
     #define DEVICE_REG_ID           0x00
     #define DEVICE_ID               0xAD

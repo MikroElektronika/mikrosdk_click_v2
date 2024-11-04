@@ -403,7 +403,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void canfd2_cfg_setup ( canfd2_cfg_t *cfg );
@@ -414,7 +414,7 @@ void canfd2_cfg_setup ( canfd2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t canfd2_init ( canfd2_t *ctx, canfd2_cfg_t *cfg );
 
@@ -519,6 +519,6 @@ uint8_t canfd2_get_mode ( canfd2_t *ctx );
 #endif  // _CANFD2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,15 +1,15 @@
  
 
 ---
-# Color click
+# Color Click
 
-Color click is a color light sensing Click board™, featuring the popular TSC3471 integrated color sensor. It is capable of sensing red, green, and blue light components, as well as the clear light.
+Color Click is a color light sensing Click board™, featuring the popular TSC3471 integrated color sensor. It is capable of sensing red, green, and blue light components, as well as the clear light.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/color_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-click)
+[Click Product page](https://www.mikroe.com/color-click)
 
 ---
 
@@ -56,13 +56,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > float color_get_color_value ( color_t *ctx );
 
 
-- This function determines which color is read by click sensor function has been invoked previously.
+- This function determines which color is read by Click sensor function has been invoked previously.
 > uint8_t color_get_color ( float color_value );
 
 
 ## Examples Description
 
-The following code demonstrates color detection/recognition functionality of the click.
+The following code demonstrates color detection/recognition functionality of the Click.
 
 **The demo application is composed of two sections :**
 
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

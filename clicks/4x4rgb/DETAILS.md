@@ -1,14 +1,14 @@
 
 ---
-# 4x4 RGB click
+# 4x4 RGB Click
 
-4x4 RGB click is a matrix of 16 intelligent RGB elements, forming a 4x4 display screen.
+4x4 RGB Click is a matrix of 16 intelligent RGB elements, forming a 4x4 display screen.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/4x4rgb_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4x4-rgb-click)
+[Click Product page](https://www.mikroe.com/4x4-rgb-click)
 
 ---
 
@@ -35,12 +35,12 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- `c4x4rgb_cfg_setup` This function initializes click configuration structure to init state.
+- `c4x4rgb_cfg_setup` This function initializes Click configuration structure to init state.
 ```c
 void c4x4rgb_cfg_setup ( c4x4rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_logic_t logic_one, uint8_t select_ctrl_pin );
 ```
 
-- `c4x4rgb_init` This function initializes all necessary pins and peripherals used for this click.
+- `c4x4rgb_init` This function initializes all necessary pins and peripherals used for this Click.
 ```c
 err_t c4x4rgb_init ( c4x4rgb_t *ctx, c4x4rgb_cfg_t *cfg );
 ```
@@ -91,8 +91,8 @@ void application_init ( void )
 ### Application Task
 
 > This is an example which demonstrates the use of 4x4 RGB Click board.
-> This simple example shows all ten numbers in different colors on 4x4 RGB click.
-> The 4x4 RGB click carries a matrix of 16 RGB LEDs and an MCP1826 low dropout regulator.
+> This simple example shows all ten numbers in different colors on 4x4 RGB Click.
+> The 4x4 RGB Click carries a matrix of 16 RGB LEDs and an MCP1826 low dropout regulator.
 > These LEDs actually consist of three single colored LEDs ( Red, Green and Blue ) in a single package.
 > Various colors can be reproduced by mixing the intensity of each LED.
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

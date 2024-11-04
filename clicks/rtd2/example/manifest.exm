@@ -3,6 +3,6 @@
     "description": "RTD 2 Click is a compact add-on board used for applications with resistive elements that change resistance over temperature. This board features the ADS1247, 24-bit analog-to-digital converter with a programmable gain amplifier (PGA) for sensor measurement applications from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ADS1247"],
+    "hw" : ["Click","ADS1247"],
     "category" : ["Temperature & humidity"]
 }

@@ -3,15 +3,15 @@
  
 
 ---
-# LEM click
+# LEM Click
 
-LEM click carries the LTS 6-NP current transducer and MCP3201 ADC converter. The click can measure AC and DC current with exceptional speed, up to 200 KHz.
+LEM Click carries the LTS 6-NP current transducer and MCP3201 ADC converter. The Click can measure AC and DC current with exceptional speed, up to 200 KHz.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/lem__click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lem-click)
+[Click Product page](https://www.mikroe.com/lem-click)
 
 ---
 
@@ -53,7 +53,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > 
-> Demo app measures and displays current by using LEM click board.
+> Demo app measures and displays current by using LEM Click board.
 > 
 
 **The demo application is composed of two sections :**
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init 
 
 >
-> Initalizes SPI, LOG and click drivers.
+> Initalizes SPI, LOG and Click drivers.
 > 
 
 ```c
@@ -99,7 +99,7 @@ void application_init ( void )
 ### Application Task
 
 >
-> This is an example that shows the capabilities of the LEM click by measuring 
+> This is an example that shows the capabilities of the LEM Click by measuring 
 > current passing through the conductor placed through the hole on the sensor.
 > 
 
@@ -127,7 +127,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

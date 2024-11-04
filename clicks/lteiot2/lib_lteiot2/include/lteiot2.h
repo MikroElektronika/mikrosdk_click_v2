@@ -251,7 +251,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lteiot2_cfg_setup ( lteiot2_cfg_t *cfg );
@@ -262,7 +262,7 @@ void lteiot2_cfg_setup ( lteiot2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LTEIOT2_RETVAL lteiot2_init ( lteiot2_t *ctx, lteiot2_cfg_t *cfg );
 
@@ -312,7 +312,7 @@ uint8_t lteiot2_get_cts ( lteiot2_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot2_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -323,7 +323,7 @@ void lteiot2_send_cmd ( lteiot2_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot2_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.
@@ -414,6 +414,6 @@ lteiot2_error_t lteiot2_generic_parser
 #endif  // _LTEIOT2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

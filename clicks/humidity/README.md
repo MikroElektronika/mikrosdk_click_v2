@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Humidity click
+# Humidity Click
 
 > Humidity Click is a compact add-on board used to sense the amount of water vapor in the air. This board features the HIH-5030, an analog output relative humidity sensor from Honeywell Sensing and Productivity Solutions. The HIH-5031 is a covered, condensation-resistant, integrated circuit humidity sensor that is factory-fitted with a hydrophobic filter allowing usage in many condensing environments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/humidity_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/humidity-click)
+[Click Product page](https://www.mikroe.com/humidity-click)
 
 ---
 
@@ -58,14 +58,14 @@ err_t humidity_read_voltage ( humidity_t *ctx, float *voltage );
 float humidity_voltage_to_rh ( humidity_t *ctx, float voltage );
 ```
 
-- `humidity_drv_interface_selection` This function sets a serial driver interface which will be used further in the click driver.
+- `humidity_drv_interface_selection` This function sets a serial driver interface which will be used further in the Click driver.
 ```c
 void humidity_drv_interface_selection ( humidity_cfg_t *cfg, humidity_drv_t drv_sel );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of Humidity click board.
+> This example demonstrates the use of Humidity Click board.
 
 **The demo application is composed of two sections :**
 
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

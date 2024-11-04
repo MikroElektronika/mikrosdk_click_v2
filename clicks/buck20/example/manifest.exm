@@ -3,6 +3,6 @@
     "description": "Buck 20 Click is a compact add-on board that contains a DC-DC power converter that steps down the voltage from its input to its output. This board features the MP2316, a fully-integrated, high-efficiency, synchronous, step-down switch-mode converter from Monolithic Power Systems (MPS). The MP2316 achieves 3A continuous output current over a wide input supply range from 4V to 19V. It has excellent load and line regulation and can operate efficiently over a vast output voltage load range. The MP2316 also offers advanced protection features such as undervoltage, overcurrent, and short-circuit detections.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MP2316GD-Z","AD5235BRUZ250-R7"],
+    "hw" : ["Click","MP2316GD-Z","AD5235BRUZ250-R7"],
     "category" : ["Click Boards > Power management > Buck"]
 }

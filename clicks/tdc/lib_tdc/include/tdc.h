@@ -268,7 +268,7 @@ typedef enum
 
 /**
  * @brief TDC configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #tdc_cfg_t object definition for detailed explanation.
@@ -280,7 +280,7 @@ void tdc_cfg_setup ( tdc_cfg_t *cfg );
 /**
  * @brief TDC initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -296,7 +296,7 @@ err_t tdc_init ( tdc_t *ctx, tdc_cfg_t *cfg );
 /**
  * @brief TDC default configuration function.
  * @details This function executes a default configuration of TDC
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -391,7 +391,7 @@ void tdc_gen_pulse ( tdc_t *ctx, uint32_t u_sec, uint8_t n_stops );
  * @brief TDC start measurement function.
  * @details This function start a new measurement 
  * of the TDC7200 Time-to-Digital Converter for Time-of-Flight Applications in LIDAR, 
- * Magnetostrictive and Flow Meters on the TDC click board™. 
+ * Magnetostrictive and Flow Meters on the TDC Click board™. 
  * @param[in] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @return Nothing.
@@ -404,7 +404,7 @@ void tdc_start_measurement ( tdc_t *ctx );
  * @brief TDC setup overflow function.
  * @details This function configuration of the overflow
  * of the TDC7200 Time-to-Digital Converter for Time-of-Flight Applications in LIDAR, 
- * Magnetostrictive and Flow Meters on the TDC click board™.
+ * Magnetostrictive and Flow Meters on the TDC Click board™.
  * @param[in] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @param[in] overflow_ps : Overflow time in  ( ps ).
@@ -418,7 +418,7 @@ void tdc_setup_overflow ( tdc_t *ctx, uint32_t overflow_ps );
  * @brief TDC setup measurement function.
  * @details This function measurements configuration  
  * of the TDC7200 Time-to-Digital Converter for Time-of-Flight Applications in LIDAR, 
- * Magnetostrictive and Flow Meters on the TDC click board™. 
+ * Magnetostrictive and Flow Meters on the TDC Click board™. 
  * @param[in] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @param[in] cal_periods : Number of measuring clock periods, one of ( 2, 10, 20, 40 ).
@@ -437,7 +437,7 @@ err_t tdc_setup_measurement ( tdc_t *ctx, uint8_t cal_periods, uint8_t avg_cycle
  * @brief TDC get measurement function.
  * @details This function get measurements  
  * of the TDC7200 Time-to-Digital Converter for Time-of-Flight Applications in LIDAR, 
- * Magnetostrictive and Flow Meters on the TDC click board™. 
+ * Magnetostrictive and Flow Meters on the TDC Click board™. 
  * @param[in] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @param[in] clock_mode : MCU clock mode.
@@ -457,7 +457,7 @@ err_t tdc_get_measurement ( tdc_t *ctx, uint8_t clock_mode, uint8_t measure_num_
  * @brief TDC get interrupt function.
  * @details This function get interrupt pin state
  * of the TDC7200 Time-to-Digital Converter for Time-of-Flight Applications in LIDAR, 
- * Magnetostrictive and Flow Meters on the TDC click board™.
+ * Magnetostrictive and Flow Meters on the TDC Click board™.
  * @param[in] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @return INT pin state.
@@ -470,7 +470,7 @@ uint8_t tdc_get_interrupt ( tdc_t *ctx );
  * @brief TDC get trigger signal function.
  * @details This function get trigger signal
  * of the TDC7200 Time-to-Digital Converter for Time-of-Flight Applications in LIDAR, 
- * Magnetostrictive and Flow Meters on the TDC click board™.
+ * Magnetostrictive and Flow Meters on the TDC Click board™.
  * @param[in] ctx : Click context object.
  * See #tdc_t object definition for detailed explanation.
  * @return TRG pin state.

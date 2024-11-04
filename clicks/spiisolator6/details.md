@@ -1,6 +1,6 @@
 
 ---
-# SPI Isolator 6 click
+# SPI Isolator 6 Click
 
 > SPI Isolator 6 Click is a compact add-on board representing a digital isolator optimized for a serial peripheral interface. This board features the MAX22345, a fast, low-power 4-channel digital galvanic isolator from Analog Devices. This device comes with a maximum data rate of 200Mbps and transfers digital signals between circuits with different power domains featuring reinforced isolation for a withstand voltage rating of 3.75kVRMS for 60 seconds.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/spiisolator6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spi-isolator-6-click)
+[Click Product page](https://www.mikroe.com/spi-isolator-6-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t spiisolator6_generic_read ( spiisolator6_t *ctx, uint8_t *data_in, uint8_t
 
 ## Example Description
 
-> This example demonstrates the use of SPI Isolator 6 click board by reading the device ID of the connected Accel 22 click board.
+> This example demonstrates the use of SPI Isolator 6 Click board by reading the device ID of the connected Accel 22 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -103,7 +103,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads and checks the device ID of the connected Accel 22 click board, and displays the results on the USB UART approximately once per second.
+> Reads and checks the device ID of the connected Accel 22 Click board, and displays the results on the USB UART approximately once per second.
 
 ```c
 void application_task ( void )
@@ -128,7 +128,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

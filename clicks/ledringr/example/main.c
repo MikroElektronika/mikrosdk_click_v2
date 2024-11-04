@@ -3,7 +3,7 @@
  * \brief LedringR Click example
  * 
  * # Description
- * LED ring  R click is a mikroBUS™ add-on board with a ring of 32 red LEDs driven.
+ * LED ring  R Click is a mikroBUS™ add-on board with a ring of 32 red LEDs driven.
  *
  * The demo application is composed of two sections :
  * 

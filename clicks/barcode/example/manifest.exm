@@ -1,8 +1,8 @@
 {
     "name": "Barcode Click",
-    "description": "Barcode Click is a very fast and agile barcode scanner on a click board™, which is compliant with a wide range of different 1D and 2D barcode protocols.",
+    "description": "Barcode Click is a very fast and agile barcode scanner on a Click board™, which is compliant with a wide range of different 1D and 2D barcode protocols.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LV3296"],
+    "hw" : ["Click","LV3296"],
     "category" : ["Miscellaneous"] 
 }

@@ -1,6 +1,6 @@
 
 ---
-# N-PLC click
+# N-PLC Click
 
 > N-PLC Click is a compact add-on board that uses existing electrical power lines to transmit data signals. This board features the SM2400, an advanced multi-standard Narrow-band Power Line Communication (N-PLC) modem from Semitech. The SM2400 features a dual-core architecture, a DSP core for N-PLC modulations, and a 32-bit core for running protocols for superior communication performance and flexibility for various open standards and customized implementations. It includes firmware options for IEEE 1901.2 compliant PHY and MAC layers, a 6LoWPAN data link layer, and special modes for industrial IoT applications. In addition to the ability to accept signals from another PLC modem or the power line communication AC coupling circuit, this board also has a handful of other features, such as a selectable interface and power supply, firmware update capabilities, LED indicators, and many others.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nplc_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/n-plc-click)
+[Click Product page](https://www.mikroe.com/n-plc-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t nplc_generic_read ( nplc_t *ctx, char *data_out, uint16_t len );
 
 ## Example Description
 
-> This example demonstrates the use of an N-PLC click boards by showing the communication between the two click boards configured as a receiver and transmitter.
+> This example demonstrates the use of an N-PLC Click boards by showing the communication between the two Click boards configured as a receiver and transmitter.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, resets the click board to default config, displays the firmware version and switches to data operation mode.
+> Initializes the driver, resets the Click board to default config, displays the firmware version and switches to data operation mode.
 After that displays the selected application mode and sends an initial message in case of transmitter mode.
 
 ```c
@@ -191,7 +191,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

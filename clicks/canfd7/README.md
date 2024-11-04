@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# CAN FD 7 click
+# CAN FD 7 Click
 
 > CAN FD 7 Click is a compact add-on board that contains a CAN transceiver that supports both CAN and CAN FD protocols. This board features the TCAN1462, an automotive fault-protected CAN FD transceiver from Texas Instruments. It is a high-speed Controller Area Network (CAN) transceiver that meets the ISO 11898-2:2016 high-speed CAN specification and the CiA 601-4 signal improvement capability (SIC) specification.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/canfd7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/can-fd-7-click)
+[Click Product page](https://www.mikroe.com/can-fd-7-click)
 
 ---
 
@@ -77,7 +77,7 @@ void canfd7_set_stb_pin ( canfd7_t *ctx, uint8_t pin_state );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

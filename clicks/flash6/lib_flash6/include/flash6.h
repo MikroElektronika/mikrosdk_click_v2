@@ -194,7 +194,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void flash6_cfg_setup ( flash6_cfg_t *cfg );
@@ -204,7 +204,7 @@ void flash6_cfg_setup ( flash6_cfg_t *cfg );
  * @param flash6 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FLASH6_RETVAL flash6_init ( flash6_t *ctx, flash6_cfg_t *cfg );
 
@@ -327,6 +327,6 @@ void flash6_software_reset ( flash6_t *ctx );
 #endif  // _FLASH6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

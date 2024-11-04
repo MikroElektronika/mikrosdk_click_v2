@@ -325,7 +325,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ldc1101_cfg_setup ( ldc1101_cfg_t *cfg );
@@ -335,7 +335,7 @@ void ldc1101_cfg_setup ( ldc1101_cfg_t *cfg );
  * @param ldc1101 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LDC1101_RETVAL ldc1101_init ( ldc1101_t *ctx, ldc1101_cfg_t *cfg );
 
@@ -344,7 +344,7 @@ LDC1101_RETVAL ldc1101_init ( ldc1101_t *ctx, ldc1101_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Ldc1101 click.
+ * @description This function executes default configuration for Ldc1101 Click.
  * @note
  *    Click default configuration:
  * -------------------------------------------------
@@ -622,6 +622,6 @@ uint8_t ldc1101_get_interrupt( ldc1101_t *ctx );
 #endif  // _LDC1101_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

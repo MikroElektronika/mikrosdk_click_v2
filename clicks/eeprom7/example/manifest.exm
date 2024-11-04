@@ -3,6 +3,6 @@
     "description": "EEPROM 7 Click is a compact add-on board that contains the highest-density memory solution. This board feature the 25CSM04, a 4-Mbit SPI Serial EEPROM with a 128-bit serial number and enhanced write protection mode from Microchip. Internally organized as 2,048 pages of 256 bytes each, the 25CSM04 comes up with the compatible SPI serial interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","25CSM04"],
+    "hw" : ["Click","25CSM04"],
     "category" : ["EEPROM"]
 }

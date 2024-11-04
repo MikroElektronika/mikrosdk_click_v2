@@ -32,11 +32,11 @@
 
 // ------------------------------------------------------------- PRIVATE MACROS
 
-//  Temp-Log 2 click device address.
+//  Temp-Log 2 Click device address.
 #define TEMPLOG2_ADDR_SEL_0  0x48
 #define TEMPLOG2_ADDR_SEL_1  0x49
 
-//  Temp-Log 2 click general call address and reset command.
+//  Temp-Log 2 Click general call address and reset command.
 #define TEMPLOG2_GENERAL_CALL_ADDR  0x00
 #define TEMPLOG2_RESET_CMD          0x06
 

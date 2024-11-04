@@ -1,14 +1,14 @@
 
 ---
-# 4Dot-Matrix R click
+# 4Dot-Matrix R Click
 
-4Dot-Matrix R click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.
+4Dot-Matrix R Click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/4dotmatrixr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4dot-matrix-r-click)
+[Click Product page](https://www.mikroe.com/4dot-matrix-r-click)
 
 ---
 
@@ -58,13 +58,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of 4Dot-Matrix R click board.
+> This example demonstrates the use of 4Dot-Matrix R Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -100,7 +100,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Displays a desired text message and then numbers from -20 to 20 on the click board.
+> Displays a desired text message and then numbers from -20 to 20 on the Click board.
 > Each step will be logged on the USB UART where you can track the program flow.
 
 ```c
@@ -109,7 +109,7 @@ void application_task ( void )
 {
     int8_t i;
     log_printf( &logger, "------------------------------------\r\n" );
-    log_printf( &logger, "Displaying \"Mikroelektronika\" on the click board...\r\n" );
+    log_printf( &logger, "Displaying \"Mikroelektronika\" on the Click board...\r\n" );
     for ( i = 0; i < 20; i++ )
     {
         c4dot_write_text(  &c4dotmatrixr, text + i );
@@ -120,7 +120,7 @@ void application_task ( void )
     c4dot_clear_display( &c4dotmatrixr );
     Delay_ms ( 500 );
         
-    log_printf( &logger, "Displaying all integer numbers from -20 to 20 on the click board...\r\n" );
+    log_printf( &logger, "Displaying all integer numbers from -20 to 20 on the Click board...\r\n" );
     // Write some numbers on the display.
     for ( i = -20; i <= 20; i++ )
     {
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,13 +3,13 @@
  * @brief Radar Click Example.
  *
  * # Description
- * This example demonstrates the use of Radar click board by reading and parsing 
+ * This example demonstrates the use of Radar Click board by reading and parsing 
  * events as well as the module internal temperature.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and performs the click default configuration.
+ * Initializes the driver and logger and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the detection event and then displays on the USB UART the distance of detected 

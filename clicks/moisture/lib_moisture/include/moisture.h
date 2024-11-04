@@ -317,7 +317,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void moisture_cfg_setup ( moisture_cfg_t *cfg );
@@ -328,7 +328,7 @@ void moisture_cfg_setup ( moisture_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MOISTURE_RETVAL moisture_init ( moisture_t *ctx, moisture_cfg_t *cfg );
 
@@ -337,7 +337,7 @@ MOISTURE_RETVAL moisture_init ( moisture_t *ctx, moisture_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Moisture click.
+ * @description This function executes default configuration for Moisture Click.
  * <pre>
  *   MOISTURE_REG_RESET_DEV
  * -------------------------------------------
@@ -554,6 +554,6 @@ uint8_t moisture_check_interrupt ( moisture_t *ctx );
 #endif  // _MOISTURE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

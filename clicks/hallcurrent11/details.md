@@ -1,6 +1,6 @@
 
 ---
-# Hall Current 11 click
+# Hall Current 11 Click
 
 > Hall Current 11 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the TMCS1108A2U, a galvanically isolated Hall-effect current sensor with high accuracy, excellent linearity, and temperature stability from Texas Instruments. The input current flows through an internal 1.8mΩ conductor that generates a magnetic field measured by an integrated Hall-effect sensor. It features a 100V functional isolation working voltage with both unidirectional and bidirectional current sensing. Based on the selected logic voltage VCC, the TMCS1108A2U allows the user to measure current in two appropriate ranges, where after that, can process the output signal in analog or digital form.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-11-click)
+[Click Product page](https://www.mikroe.com/hall-current-11-click)
 
 ---
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

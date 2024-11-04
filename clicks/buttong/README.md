@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Button G click
+# Button G Click
 
-Button G click is the simplest solution for adding a single pushbutton to your design. The button itself is transparent, 6.8mm in diameter and has a green LED backlight. When pressed, it sends an interrupt signal to the target board microcontroller. The backlight LED is controlled separately through the mikroBUS PWM pin, so you can program all kinds of patterns (varying level of light intensity or rate of blinking on subsequent button presses). The board can use either a 3.3V or a 5V power supply.
+Button G Click is the simplest solution for adding a single pushbutton to your design. The button itself is transparent, 6.8mm in diameter and has a green LED backlight. When pressed, it sends an interrupt signal to the target board microcontroller. The backlight LED is controlled separately through the mikroBUS PWM pin, so you can program all kinds of patterns (varying level of light intensity or rate of blinking on subsequent button presses). The board can use either a 3.3V or a 5V power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/button_g_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/button-g-click)
+[Click Product page](https://www.mikroe.com/button-g-click)
 
 ---
 
@@ -74,7 +74,7 @@ uint8_t buttong_get_button_state ( buttong_t *ctx );
 
 ### Application Init
 
-> This function initializes and configures the logger and click modules. 
+> This function initializes and configures the logger and Click modules. 
 
 ```c
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

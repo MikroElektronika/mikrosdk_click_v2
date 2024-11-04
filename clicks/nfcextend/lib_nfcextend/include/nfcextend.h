@@ -248,7 +248,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void nfcextend_cfg_setup ( nfcextend_cfg_t *cfg );
@@ -258,7 +258,7 @@ void nfcextend_cfg_setup ( nfcextend_cfg_t *cfg );
  * @param nfcextend Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 NFCEXTEND_RETVAL nfcextend_init ( nfcextend_t *ctx, nfcextend_cfg_t *cfg );
 
@@ -267,7 +267,7 @@ NFCEXTEND_RETVAL nfcextend_init ( nfcextend_t *ctx, nfcextend_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for NfcExtend click.
+ * @description This function executes default configuration for NfcExtend Click.
  */
 uint8_t nfcextend_default_cfg ( nfcextend_t *ctx );
 
@@ -317,6 +317,6 @@ uint8_t nfcextend_digital_read_int ( nfcextend_t *ctx );
 #endif  // _NFCEXTEND_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -155,7 +155,7 @@ typedef enum
 
 /**
  * @brief DTMF Generator configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #dtmfgenerator_cfg_t object definition for detailed explanation.
@@ -167,7 +167,7 @@ void dtmfgenerator_cfg_setup ( dtmfgenerator_cfg_t *cfg );
 /**
  * @brief DTMF Generator initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #dtmfgenerator_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

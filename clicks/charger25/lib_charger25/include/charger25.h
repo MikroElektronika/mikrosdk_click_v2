@@ -393,7 +393,7 @@ typedef enum
 
 /**
  * @brief Charger 25 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #charger25_cfg_t object definition for detailed explanation.
@@ -405,7 +405,7 @@ void charger25_cfg_setup ( charger25_cfg_t *cfg );
 /**
  * @brief Charger 25 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -420,7 +420,7 @@ err_t charger25_init ( charger25_t *ctx, charger25_cfg_t *cfg );
 /**
  * @brief Charger 25 default configuration function.
  * @details This function executes a default configuration of Charger 25
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -469,7 +469,7 @@ err_t charger25_generic_read ( charger25_t *ctx, uint8_t reg, uint8_t *data_out,
  * or system power reset control input [QON] pin
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] state :QON pin state.
@@ -483,7 +483,7 @@ void charger25_set_qon_pin ( charger25_t *ctx, uint8_t state );
  * @details This function enable charging by sets the state of the EN pin low
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @return Nothing.
@@ -496,7 +496,7 @@ void charger25_enable ( charger25_t *ctx );
  * @details This function disable charging by sets the state of the EN pin high
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @return Nothing.
@@ -509,7 +509,7 @@ void charger25_disable ( charger25_t *ctx );
  * @details This function get states of the Interrupt [INT] pin
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -523,7 +523,7 @@ uint8_t charger25_get_interrupt ( charger25_t *ctx );
  * @details This function is used to software reset
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -538,7 +538,7 @@ err_t charger25_sw_reset ( charger25_t *ctx );
  * @details This function gets the battery remote sensing voltage ADC reading
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] vbat : Battery remote sensing voltage [0-20000mV]
@@ -554,7 +554,7 @@ err_t charger25_get_vbat ( charger25_t *ctx, uint16_t *vbat );
  * @details This function gets the minimal system voltage
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] vsys_min : Minimal system voltage [2500-16000mV]
@@ -570,7 +570,7 @@ err_t charger25_get_vsys_min ( charger25_t *ctx, uint16_t *vsys_min );
  * @details This function configure ADC control
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] adc_ctrl : ADC control object.
@@ -587,7 +587,7 @@ err_t charger25_set_adc_control ( charger25_t *ctx, charger25_adc_ctrl_t adc_ctr
  * @details This function configure ADC function
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] adc_func : ADC function object.
@@ -604,7 +604,7 @@ err_t charger25_set_adc_function ( charger25_t *ctx, charger25_adc_func_t adc_fu
  * @details This function gets the battery voltage limit
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] vtg_lim : Battery voltage limit [3000-18800mV].
@@ -620,7 +620,7 @@ err_t charger25_get_vbat_lim ( charger25_t *ctx, uint16_t *vtg_lim );
  * @details This function set the battery voltage limit
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] vtg_lim : Battery voltage limit [3000-18800mV].
@@ -640,7 +640,7 @@ err_t charger25_set_vbat_lim ( charger25_t *ctx, uint16_t vtg_lim );
  * @details This function gets the battery cell count
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] cell_count : Battery cell count.
@@ -660,7 +660,7 @@ err_t charger25_get_cell_count ( charger25_t *ctx, uint8_t *cell_count );
  * @details This function set the battery cell count
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] cell_count : Battery cell count [1-4].
@@ -680,7 +680,7 @@ err_t charger25_set_cell_count ( charger25_t *ctx, uint8_t cell_count );
  * @details This function gets the charge current limit
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] current_lim : Charge current limit [50mA-5000mA].
@@ -696,7 +696,7 @@ err_t charger25_get_current_limit ( charger25_t *ctx, uint16_t *current_lim );
  * @details This function set the charge current limit
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] current_lim : Charge current limit [50mA-5000mA].
@@ -712,7 +712,7 @@ err_t charger25_set_current_limit ( charger25_t *ctx, uint16_t current_lim );
  * @details This function gets the absolute VINDPM threshold
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] input_vtg_limit : Input voltage limit [3600mV-22000mV].
@@ -728,7 +728,7 @@ err_t charger25_get_input_vtg_limit ( charger25_t *ctx, uint16_t *input_vtg_limi
  * @details This function set the absolute VINDPM threshold
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] input_vtg_limit : Input voltage limit [3600mV-22000mV].
@@ -744,7 +744,7 @@ err_t charger25_set_input_vtg_limit ( charger25_t *ctx, uint16_t input_vtg_limit
  * @details This function gets the input current limi
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] input_curr_limit : Input current limit [100mA-3300mA].
@@ -760,7 +760,7 @@ err_t charger25_get_input_curr_limit ( charger25_t *ctx, uint16_t *input_curr_li
  * @details This function set the input current limi
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[in] input_curr_limit : Input current limit [100mA-3300mA].
@@ -776,7 +776,7 @@ err_t charger25_set_input_curr_limit ( charger25_t *ctx, uint16_t input_curr_lim
  * @details This function gets charging status
  * of the BQ25792 I2C Controlled, 1-4 Cell, 5-A Buck-Boost Battery Charger 
  * with Dual-Input Selector and USB PD 3.0 OTG Output
- * on the Charger 25 click board™. 
+ * on the Charger 25 Click board™. 
  * @param[in] ctx : Click context object.
  * See #charger25_t object definition for detailed explanation.
  * @param[out] status : Charger status.

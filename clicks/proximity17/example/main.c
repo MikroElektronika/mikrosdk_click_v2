@@ -3,13 +3,13 @@
  * @brief Proximity17 Click example
  *
  * # Description
- * This example demonstrates the use of Proximity 17 click board by reading and 
+ * This example demonstrates the use of Proximity 17 Click board by reading and 
  * displaying the proximity data on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, and performs the click default configuration.
+ * Initializes the driver and logger, and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the proximity data and displays it on the USB UART approximately once per second.

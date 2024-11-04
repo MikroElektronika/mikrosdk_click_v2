@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Gyro 8 click
+# Gyro 8 Click
 
 > Gyro 8 Click is a compact add-on board that contains a high-performance gyroscope. This board features Murata's SCR2100-D08, a high-performance single-axis angular rate sensor (gyroscope). Based on Murata's proven capacitive 3D-MEMS technology, the SCR2100-D08 is characterized by high stability and reliability, providing immensely stable output over a wide range of temperatures, humidity, and vibration. This high-resolution gyroscope supports ±125°/s X-axis angular rate measurement range, extensive self-diagnostic features, an SPI serial interface, and low power consumption.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gyro8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gyro-8-click)
+[Click Product page](https://www.mikroe.com/gyro-8-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t gyro8_read_angular_rate ( gyro8_t *ctx, float *rate );
 
 ## Example Description
 
-> This example demonstrates the use of Gyro 8 click board by reading and displaying the temperature and angular rate measurements.
+> This example demonstrates the use of Gyro 8 Click board by reading and displaying the temperature and angular rate measurements.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and the click board, and reads the serial ID number which is marked on the sensor lid.
+> Initializes the driver and the Click board, and reads the serial ID number which is marked on the sensor lid.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

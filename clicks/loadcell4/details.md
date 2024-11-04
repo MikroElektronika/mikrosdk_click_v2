@@ -1,6 +1,6 @@
 
 ---
-# Load Cell 4 click
+# Load Cell 4 Click
 
 > Load Cell 4 Click is a compact add-on board that contains a resistive sensor signal conditioner with a fast power-up data output response. This board features the ZSC31014, a CMOS integrated circuit for highly accurate amplification and analog-to-digital conversion of differential and half-bridge input signals from Renesas. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/loadcell4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/load-cell-4-click)
+[Click Product page](https://www.mikroe.com/load-cell-4-click)
 
 ---
 
@@ -69,7 +69,7 @@ float loadcell4_get_weight ( loadcell4_t *ctx, loadcell4_data_t *cell_data );
 
 ## Example Description
 
-> This is an example that demonstrates the use of the Load Cell 4 click board.
+> This is an example that demonstrates the use of the Load Cell 4 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -199,7 +199,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> The Load Cell 4 click board can be used to measure weight, shows the measurement of scales in grams [ g ].
+> The Load Cell 4 Click board can be used to measure weight, shows the measurement of scales in grams [ g ].
 > Results are being sent to the Usart Terminal where you can track their changes. All data logs write on USB uart changes for every 4 sec.
 
 ```c
@@ -224,7 +224,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -151,7 +151,7 @@ typedef enum
 
 /**
  * @brief Button Y configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #buttony_cfg_t object definition for detailed explanation.
@@ -163,7 +163,7 @@ void buttony_cfg_setup ( buttony_cfg_t *cfg );
 /**
  * @brief Button Y initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #buttony_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

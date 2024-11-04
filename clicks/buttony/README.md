@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Button Y click
+# Button Y Click
 
-Button Y click is a Click board™ equipped with the tactile switch, sometimes referred to as a pushbutton. A pushbutton is a component that is used very often in various designs, allowing the user to interact with the application. Although it sounds simple, a button needs to comply with a range of application requirements. It needs to have a very good mechanical endurance while retaining its specifications, a predictable bouncing time, a very low ON resistance, very high OFF resistance, and it needs to fulfill aesthetical requirements.
+Button Y Click is a Click board™ equipped with the tactile switch, sometimes referred to as a pushbutton. A pushbutton is a component that is used very often in various designs, allowing the user to interact with the application. Although it sounds simple, a button needs to comply with a range of application requirements. It needs to have a very good mechanical endurance while retaining its specifications, a predictable bouncing time, a very low ON resistance, very high OFF resistance, and it needs to fulfill aesthetical requirements.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/button_y_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/button-y-click)
+[Click Product page](https://www.mikroe.com/button-y-click)
 
 ---
 
@@ -74,7 +74,7 @@ uint8_t buttony_get_button_state ( buttony_t *ctx );
 
 ### Application Init
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

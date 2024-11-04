@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Charger 2 click",
+    "display_name": "Charger 2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.charger2",
     "product_link": "https://www.mikroe.com/charger-2-click",
-    "short_description": "Charger 2 click is a LiPo/Li-Ion battery charger with the additional monitoring IC onboard. This Click board™ as a whole, offers unpreceded battery charging and monitoring solution for 3.7V LiPo/Li-Ion batteries, with the capacity measurement/gas gauge function, for up to 7000 mAh.",
+    "short_description": "Charger 2 Click is a LiPo/Li-Ion battery charger with the additional monitoring IC onboard. This Click board™ as a whole, offers unpreceded battery charging and monitoring solution for 3.7V LiPo/Li-Ion batteries, with the capacity measurement/gas gauge function, for up to 7000 mAh.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2403
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.Charger2",
     "subdir_name": "lib_charger2"
 }
+
 
 
 

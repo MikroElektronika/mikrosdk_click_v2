@@ -3,16 +3,16 @@
  * @brief Ambient 20 Click example
  *
  * # Description
- * This example demonstrates the use of Ambient 20 click board by measuring 
+ * This example demonstrates the use of Ambient 20 Click board by measuring 
  * the ambient light level.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
- * Measuring ambient light level by reading DATA0 and DATA1 channels of the Ambient 20 click board
+ * Measuring ambient light level by reading DATA0 and DATA1 channels of the Ambient 20 Click board
  * and displaying it using UART Serial terminal.
  *
  * @author Stefan Ilic

@@ -167,7 +167,7 @@ typedef enum
 
 /**
  * @brief MR Angle configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #mrangle_cfg_t object definition for detailed explanation.
@@ -179,7 +179,7 @@ void mrangle_cfg_setup ( mrangle_cfg_t *cfg );
 /**
  * @brief MR Angle initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -194,7 +194,7 @@ err_t mrangle_init ( mrangle_t *ctx, mrangle_cfg_t *cfg );
 /**
  * @brief MR Angle default configuration function.
  * @details This function executes a default configuration of MR Angle
- * click board™.
+ * Click board™.
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @return None.
@@ -207,7 +207,7 @@ void mrangle_default_cfg ( mrangle_t *ctx );
  * @brief MR Angle powerdown mode function.
  * @details This function powerdown mode switches the device into Power-down mode
  * or Power-up mode of the KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™.
+ * MR Angle Click board™.
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[in] pd_mode : Enum values for powerdown mode.
@@ -221,7 +221,7 @@ void mrangle_powerdown_mode ( mrangle_t *ctx, mrangle_powerdown_mode_value_t pd_
  * @details This function output mode switches to the desired device output mode
  * sine and cosine output mode or temperature output mode of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™.
+ * MR Angle Click board™.
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[in] output_mode : Enum values for data output mode.
@@ -266,7 +266,7 @@ err_t mrangle_generic_read ( mrangle_t *ctx, uint8_t reg, uint8_t *data_out, uin
  * @brief MR Angle get ADC sine function.
  * @details This function reads a sine ADC value of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™. 
+ * MR Angle Click board™. 
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[out] sin_adc : Pointer to the memory location of the structure where data be stored.
@@ -282,7 +282,7 @@ err_t mrangle_get_adc_sin ( mrangle_t *ctx, uint16_t *sin_adc );
  * @details This function reads a sine ADC value and 
  * calculate sine output signal amplitude of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™. 
+ * MR Angle Click board™. 
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[out] sin : Pointer to the memory location of the structure where data be stored.
@@ -297,7 +297,7 @@ err_t mrangle_get_sin ( mrangle_t *ctx, float *sin );
  * @brief MR Angle get ADC cosine function.
  * @details This function reads a cosine ADC value of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™. 
+ * MR Angle Click board™. 
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[out] cos_adc : Pointer to the memory location of the structure where data be stored.
@@ -313,7 +313,7 @@ err_t mrangle_get_adc_cos ( mrangle_t *ctx, uint16_t *cos_adc );
  * @details This function reads a cosine ADC value and 
  * calculate cosine output signal amplitude of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™. 
+ * MR Angle Click board™. 
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[out] cos : Pointer to the memory location of the structure where data be stored.
@@ -328,7 +328,7 @@ err_t mrangle_get_cos ( mrangle_t *ctx, float *cos );
  * @brief MR Angle get ADC temperature function.
  * @details This function reads a temperature ADC value of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™. 
+ * MR Angle Click board™. 
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[out] temp_adc : Pointer to the memory location of the structure where data be stored.
@@ -343,7 +343,7 @@ err_t mrangle_get_adc_temp ( mrangle_t *ctx, uint16_t *temp_adc );
  * @brief MR Angle get temperature function.
  * @details This function reads a temperature data ( degree Celsius ) of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™. 
+ * MR Angle Click board™. 
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[out] temperature : Pointer to the memory location of the structure where data be stored.
@@ -358,7 +358,7 @@ err_t mrangle_get_temperature ( mrangle_t *ctx, float *temperature );
  * @brief MR Angle get angle function.
  * @details This function reads a angle data ( degree ) of the 
  * KMZ60 Angle sensor with integrated amplifier on the 
- * MR Angle click board™. 
+ * MR Angle Click board™. 
  * @param[in] ctx : Click context object.
  * See #mrangle_t object definition for detailed explanation.
  * @param[out] angle : Pointer to the memory location of the structure where data be stored.

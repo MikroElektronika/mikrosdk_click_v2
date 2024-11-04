@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DIGI POT 14 click
+# DIGI POT 14 Click
 
 > DIGI POT 14 Click is a compact add-on board that contains a digitally controlled potentiometer. This board features the TPL0102, a dual-channel digital potentiometer with non-volatile memory from Texas Instruments. It is a 100K resistance end-to-end potentiometer with a 256-position resolution, where the wiper position can be stored in EEPROM. It can operate from both 3.3V and 5V power supplies and provides a typical 92ppm/ºC end-to-end nominal resistance temperature coefficient and only 4ppm/ºC ratiometric.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/digipot14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-pot-14-click)
+[Click Product page](https://www.mikroe.com/digi-pot-14-click)
 
 ---
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# Thermo 29 click
+# Thermo 29 Click
 
 > Thermo 29 Click is a compact add-on board for accurate temperature measurements. This board features the TMP126, a high-accuracy SPI-configurable digital temperature sensor from Texas Instruments. The TMP126 consists of an internal thermal BJT factory-calibrated sensor, 14-bit ADC, and a digital signal processor, offering a high accuracy of ±0.25°C and a temperature resolution of 0.03125°C per LSB. It also has a programmable alarm function that outputs an interrupt signal to the MCU when a specific temperature event occurs.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo29_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-29-click)
+[Click Product page](https://www.mikroe.com/thermo-29-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t thermo29_read_temperature ( thermo29_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo 29 click board by reading and displaying the temperature measurements.
+> This example demonstrates the use of Thermo 29 Click board by reading and displaying the temperature measurements.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, and performs the click default configuration which enables
+> Initializes the driver and logger, and performs the Click default configuration which enables
 continuous conversion and sets the conversion rate to 1 Hz with a data ready flag enabled on
 the alert pin. After that, reads and displays the device 48-bit unique ID.
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

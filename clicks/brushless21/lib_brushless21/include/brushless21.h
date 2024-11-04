@@ -262,7 +262,7 @@ typedef enum
 
 /**
  * @brief Brushless 21 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #brushless21_cfg_t object definition for detailed explanation.
@@ -274,7 +274,7 @@ void brushless21_cfg_setup ( brushless21_cfg_t *cfg );
 /**
  * @brief Brushless 21 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #brushless21_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -290,7 +290,7 @@ void brushless21_drv_interface_selection ( brushless21_cfg_t *cfg, brushless21_d
 /**
  * @brief Brushless 21 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #brushless21_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -305,7 +305,7 @@ err_t brushless21_init ( brushless21_t *ctx, brushless21_cfg_t *cfg );
 /**
  * @brief Brushless 21 default configuration function.
  * @details This function executes a default configuration of Brushless 21
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #brushless21_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -324,7 +324,7 @@ err_t brushless21_default_cfg ( brushless21_t *ctx );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in GPIO mode.
+ * @note This function can only be used when the Click is configured in GPIO mode.
  */
 err_t brushless21_pwm_stop ( brushless21_t *ctx );
 
@@ -336,7 +336,7 @@ err_t brushless21_pwm_stop ( brushless21_t *ctx );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in GPIO mode.
+ * @note This function can only be used when the Click is configured in GPIO mode.
  */
 err_t brushless21_pwm_start ( brushless21_t *ctx );
 
@@ -363,7 +363,7 @@ err_t brushless21_set_duty_cycle ( brushless21_t *ctx, float duty_cycle );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in I2C mode.
+ * @note This function can only be used when the Click is configured in I2C mode.
  */
 err_t brushless21_write_register ( brushless21_t *ctx, uint8_t reg, uint16_t data_in );
 
@@ -377,7 +377,7 @@ err_t brushless21_write_register ( brushless21_t *ctx, uint8_t reg, uint16_t dat
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in I2C mode.
+ * @note This function can only be used when the Click is configured in I2C mode.
  */
 err_t brushless21_read_register ( brushless21_t *ctx, uint8_t reg, uint16_t *data_out );
 
@@ -407,7 +407,7 @@ void brushless21_disable_device ( brushless21_t *ctx );
  * @param[in] ctx : Click context object.
  * See #brushless21_t object definition for detailed explanation.
  * @return Pin logic state.
- * @note This function can only be used when the click is configured in GPIO mode.
+ * @note This function can only be used when the Click is configured in GPIO mode.
  */
 uint8_t brushless21_get_fg_pin ( brushless21_t *ctx );
 
@@ -420,7 +420,7 @@ uint8_t brushless21_get_fg_pin ( brushless21_t *ctx );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in I2C mode.
+ * @note This function can only be used when the Click is configured in I2C mode.
  */
 err_t brushless21_get_temperature ( brushless21_t *ctx, int8_t *temperature );
 
@@ -433,7 +433,7 @@ err_t brushless21_get_temperature ( brushless21_t *ctx, int8_t *temperature );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in I2C mode.
+ * @note This function can only be used when the Click is configured in I2C mode.
  */
 err_t brushless21_get_motor_speed ( brushless21_t *ctx, float *motor_speed_hz );
 
@@ -446,7 +446,7 @@ err_t brushless21_get_motor_speed ( brushless21_t *ctx, float *motor_speed_hz );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in I2C mode.
+ * @note This function can only be used when the Click is configured in I2C mode.
  */
 err_t brushless21_get_vbb_voltage ( brushless21_t *ctx, float *vbb_voltage );
 
@@ -460,7 +460,7 @@ err_t brushless21_get_vbb_voltage ( brushless21_t *ctx, float *vbb_voltage );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in I2C mode.
+ * @note This function can only be used when the Click is configured in I2C mode.
  */
 err_t brushless21_set_direction ( brushless21_t *ctx, uint8_t direction );
 
@@ -472,7 +472,7 @@ err_t brushless21_set_direction ( brushless21_t *ctx, uint8_t direction );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click is configured in I2C mode.
+ * @note This function can only be used when the Click is configured in I2C mode.
  */
 err_t brushless21_switch_direction ( brushless21_t *ctx );
 

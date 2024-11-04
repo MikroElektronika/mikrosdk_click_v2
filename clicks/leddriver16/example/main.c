@@ -3,13 +3,13 @@
  * @brief LED Driver 16 Click example
  *
  * # Description
- * This example demonstrates the use of LED Driver 16 click board by performing
+ * This example demonstrates the use of LED Driver 16 Click board by performing
  * 3 different types of LED control (LED PWM dimming, LED blinking, and LED curtain).
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Performs 3 different types of LED control examples. Each example repeats 5 times before

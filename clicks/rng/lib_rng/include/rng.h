@@ -228,7 +228,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rng_cfg_setup ( rng_cfg_t *cfg );
@@ -239,7 +239,7 @@ void rng_cfg_setup ( rng_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RNG_RETVAL rng_init ( rng_t *ctx, rng_cfg_t *cfg );
 
@@ -248,7 +248,7 @@ RNG_RETVAL rng_init ( rng_t *ctx, rng_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Rng click.
+ * @description This function executes default configuration for Rng Click.
  */
 void rng_default_cfg ( rng_t *ctx );
 
@@ -333,6 +333,6 @@ void rng_set_threshold ( rng_t *ctx, uint8_t thresh_reg, uint16_t thresh_data );
 #endif  // _RNG_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

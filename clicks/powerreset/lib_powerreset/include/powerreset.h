@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void powerreset_cfg_setup ( powerreset_cfg_t *cfg );
@@ -144,7 +144,7 @@ void powerreset_cfg_setup ( powerreset_cfg_t *cfg );
  * @param powerreset Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 POWERRESET_RETVAL powerreset_init ( powerreset_t *ctx, powerreset_cfg_t *cfg );
 
@@ -176,6 +176,6 @@ powerreset_state_t powerreset_get_rst( powerreset_t *ctx );
 #endif  // _POWERRESET_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

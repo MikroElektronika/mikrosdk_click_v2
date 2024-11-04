@@ -3,7 +3,7 @@
  * \brief TempHum9 Click example
  * 
  * # Description
- * This example demonstrates the use of TempHum 9 click board by reading and displaying
+ * This example demonstrates the use of TempHum 9 Click board by reading and displaying
  * the temperature and humidity measurement results.
  *
  * The demo application is composed of two sections :

@@ -126,7 +126,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void reed_cfg_setup ( reed_cfg_t *cfg );
@@ -139,7 +139,7 @@ void reed_cfg_setup ( reed_cfg_t *cfg );
  * @return    0  - Ok,
  *          (-1) - Error.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t reed_init ( reed_t *ctx, reed_cfg_t *cfg );
 
@@ -163,6 +163,6 @@ uint8_t reed_get_status ( reed_t *ctx );
 #endif  // REED_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 
 // ------------------------------------------------------------------------ END

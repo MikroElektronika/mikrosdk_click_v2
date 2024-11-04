@@ -3,7 +3,7 @@
  
 
 ---
-# Flash 3 click
+# Flash 3 Click
 
 Flash 3 Click is a mikroBUS add-on board for adding more Flash Memory to your target board microcontroller. It carries an ISSI IS25LP128 IC with 128 Mbit capacity.
 
@@ -11,7 +11,7 @@ Flash 3 Click is a mikroBUS add-on board for adding more Flash Memory to your ta
   <img src="https://download.mikroe.com/images/click_for_ide/flash3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-3-click)
+[Click Product page](https://www.mikroe.com/flash-3-click)
 
 ---
 
@@ -67,7 +67,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initalizes device, Flash 3 click board and makes an initial log. 
+> Initalizes device, Flash 3 Click board and makes an initial log. 
 
 ```c
 
@@ -107,8 +107,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the capabilities of the Flash 3 click by
-  writing into memory array of a Flash 3 click board and reading same data from memory array.
+> This is an example that shows the capabilities of the Flash 3 Click by
+  writing into memory array of a Flash 3 Click board and reading same data from memory array.
 
 ```c
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

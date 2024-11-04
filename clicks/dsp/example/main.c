@@ -12,7 +12,7 @@
  * Initializes GPIO driver, set the default configuration and start to write log.
  *
  * ## Application Task
- * This is an example that shows the use of a DSP click board.
+ * This is an example that shows the use of a DSP Click board.
  * In this example, we change different sound effects
  * such as multiple reverbs, echo, phaser, chorus, flanger, etc. every 10 sec.
  * Results are being sent to the Usart Terminal where you can track their changes.
@@ -136,7 +136,7 @@ void application_init ( void ) {
     Delay_ms ( 100 );
     
     log_printf( &logger, "-------------------------------\r\n" );
-    log_printf( &logger, "           DSP click           \r\n" );
+    log_printf( &logger, "           DSP Click           \r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
     log_printf( &logger, "     Digital Multi-Effects     \r\n" );
 }

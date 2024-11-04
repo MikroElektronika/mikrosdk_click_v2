@@ -1,6 +1,6 @@
 
 ---
-# DAC 9 click
+# DAC 9 Click
 
 > DAC 9 Click is a compact add-on board that contains a fully-featured, highly accurate digital-to-analog converter. This board features the DAC80501, a 16-bit voltage-output digital-to-analog converter with precision internal reference from Texas Instruments. It supports both I2C and SPI serial interface and offers a linearity of < 1 LSB. It also includes a 2.5V internal reference, giving full-scale output voltage ranges of 1.25V, 2.5V, or 5V, incorporate a Power-On Reset function, consume a low current of 1mA, and include a Power-Down feature that reduces current consumption to typically 15μA at 5V.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-9-click)
+[Click Product page](https://www.mikroe.com/dac-9-click)
 
 ---
 
@@ -120,7 +120,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> Demonstrates use of DAC 9 click board by changeing output values every two seconds.
+> Demonstrates use of DAC 9 Click board by changeing output values every two seconds.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

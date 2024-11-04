@@ -3,7 +3,7 @@
  * @brief IoT ExpressLink 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of IoT ExpressLink 2 click board by connecting
+ * This example demonstrates the use of IoT ExpressLink 2 Click board by connecting
  * to the selected AWS account's data endpoint and showcasing the messaging topic model
  * through sending and receiving messages to/from AWS IoT console.
  *
@@ -54,7 +54,7 @@
 // Device topic and text message
 #define TOPIC_NUM               "1"
 #define TOPIC_NAME              "IoT_ExpressLink_2"
-#define TEXT_MESSAGE            "IoT ExpressLink 2 click board - demo message"
+#define TEXT_MESSAGE            "IoT ExpressLink 2 Click board - demo message"
 
 // Application buffer size
 #define APP_BUFFER_SIZE         900

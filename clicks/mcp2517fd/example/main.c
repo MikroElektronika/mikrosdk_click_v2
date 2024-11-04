@@ -3,13 +3,13 @@
  * @brief MCP2517FD Click example
  *
  * # Description
- * This example demonstrates the use of an MCP2517FD click board by showing
- * the communication between the two click boards configured as a receiver and transmitter.
+ * This example demonstrates the use of an MCP2517FD Click board by showing
+ * the communication between the two Click boards configured as a receiver and transmitter.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, performs the click default configuration and 
+ * Initializes the driver and logger, performs the Click default configuration and 
  * displays the selected application mode.
  *
  * ## Application Task

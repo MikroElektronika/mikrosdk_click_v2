@@ -3,6 +3,6 @@
     "description": "WiFi NORA Click is a compact add-on board that provides WiFi and BLE connectivity for professional-grade applications. This board features the NORA-W366-00B6-00B, a dual-band WiFi module with Bluetooth Low Energy (BLE) from u-blox, offering support for WiFi 4 (802.11a/b/g/n) in both 2.4 and 5GHz bands and Bluetooth v5.3 with peripheral and central roles. It features a UART interface for easy integration with the host MCU, high-level AT command configuration, and robust security protocols, including WPA2/WPA3 and TLS encryption. The board also includes a user-configurable RGB LED indicator and buttons for bootloader and application mode selection.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","NORA-W366"],
+    "hw" : ["Click","NORA-W366"],
     "category" : ["Click Boards > Wireless connectivity > WIFI"]
 }

@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# IrDA 2 click
+# IrDA 2 Click
 
-> IrDA2 click features the TFDU4101 infrared transceiver module as well as MCP2120 infrared encoder/decoder from Microchip connected with the 7.3728 MHz external crystal. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target board via UART interface and the following mikroBUS™ pins: AN, RST, CS.
+> IrDA2 Click features the TFDU4101 infrared transceiver module as well as MCP2120 infrared encoder/decoder from Microchip connected with the 7.3728 MHz external crystal. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target board via UART interface and the following mikroBUS™ pins: AN, RST, CS.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irda2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/irda2-click)
+[Click Product page](https://www.mikroe.com/irda2-click)
 
 ---
 
@@ -70,7 +70,7 @@ void irda2_reset( irda2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of an IrDA 2 click board by showing the communication between the two click boards.
+> This example demonstrates the use of an IrDA 2 Click board by showing the communication between the two Click boards.
 
 **The demo application is composed of two sections :**
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

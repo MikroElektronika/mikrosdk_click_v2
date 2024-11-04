@@ -3,13 +3,13 @@
  * @brief MultiStepperTB67S102 Click example
  *
  * # Description
- * This example demonstrates the use of the Multi Stepper TB67S102 click board by driving the 
+ * This example demonstrates the use of the Multi Stepper TB67S102 Click board by driving the 
  * motor in both directions for a desired number of steps.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Drives the motor clockwise for 200 steps and then counter-clockiwse for 100 steps with

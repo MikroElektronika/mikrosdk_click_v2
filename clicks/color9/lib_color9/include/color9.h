@@ -246,7 +246,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void color9_cfg_setup ( color9_cfg_t *cfg );
@@ -257,7 +257,7 @@ void color9_cfg_setup ( color9_cfg_t *cfg );
  * @param color9 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COLOR9_RETVAL color9_init ( color9_t *ctx, color9_cfg_t *cfg );
 
@@ -458,6 +458,6 @@ void color9_lower_tresset ( color9_t* ctx, uint32_t set_val );
 #endif  // _COLOR9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

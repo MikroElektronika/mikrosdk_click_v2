@@ -3,7 +3,7 @@
  * @brief Color13 Click example
  *
  * # Description
- * This application showcases ability of click board to read RGB and IR data
+ * This application showcases ability of Click board to read RGB and IR data
  * from device. Also it can be configured to read proximity data and
  * ALS data in lux units.
  *

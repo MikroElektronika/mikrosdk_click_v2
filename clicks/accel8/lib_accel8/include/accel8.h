@@ -446,7 +446,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel8_cfg_setup ( accel8_cfg_t *cfg );
@@ -457,7 +457,7 @@ void accel8_cfg_setup ( accel8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL8_RETVAL accel8_init ( accel8_t *ctx, accel8_cfg_t *cfg );
 
@@ -469,7 +469,7 @@ ACCEL8_RETVAL accel8_init ( accel8_t *ctx, accel8_cfg_t *cfg );
  * @param accel_range   Accel range output value.
  * @param rng           Range value object.
  *
- * @description This function executes default configuration and gets values for range for Accel8 click.
+ * @description This function executes default configuration and gets values for range for Accel8 Click.
  */
 void accel8_default_cfg ( accel8_t *ctx, uint8_t accel_cfg, uint8_t gyro_cfg, range_retval_t *rng );
 
@@ -566,6 +566,6 @@ uint8_t accel8_get_interrupt ( accel8_t *ctx );
 #endif  // _ACCEL8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

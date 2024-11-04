@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * This example contains Transmitter/Receiver task depending on uncommented code.

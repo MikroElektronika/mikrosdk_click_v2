@@ -1,8 +1,8 @@
 {
     "name": "Load cell Click",
-    "description": "Load cell click is a weight measurement click which utilizes a load cell element, in order to precisely measure the weight of an object. The Load Cell click can be used with the strain gauge type of load cells and can measure up to ±20V or ±40V of differential voltage.",
+    "description": "Load cell Click is a weight measurement Click which utilizes a load cell element, in order to precisely measure the weight of an object. The Load Cell Click can be used with the strain gauge type of load cells and can measure up to ±20V or ±40V of differential voltage.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","HX711"],
+    "hw" : ["Click","HX711"],
     "category" : ["Force"] 
 }

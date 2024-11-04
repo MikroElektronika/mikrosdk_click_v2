@@ -1,8 +1,8 @@
 {
     "name": "SQI FLASH Click",
-    "description": "SQI FLASH click is based on the SST26VF064B, a 64 Mbit Serial Quad I/O flash device from Microchip. The chip utilizes 4-bit multiplexed I/O serial interface to boost the performance. The click is a very fast solid-state, non-volatile data storage medium, that can be electrically erased and reprogrammed.",
+    "description": "SQI FLASH Click is based on the SST26VF064B, a 64 Mbit Serial Quad I/O flash device from Microchip. The chip utilizes 4-bit multiplexed I/O serial interface to boost the performance. The Click is a very fast solid-state, non-volatile data storage medium, that can be electrically erased and reprogrammed.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SST26VF064B"],
+    "hw" : ["Click","SST26VF064B"],
     "category" : ["FLASH"]
 }

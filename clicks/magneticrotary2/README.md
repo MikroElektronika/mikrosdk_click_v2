@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Magnetic Rotary 2 click
+# Magnetic Rotary 2 Click
 
 > Magnetic Rotary 2 Click is a compact add-on board used for accurate magnet-position sensing. This board features the AEAT-9922, an angular magnetic rotary sensor providing accurate angular measurement over a full 360 degrees of rotation from Broadcom Limited. The AEAT-9922 uses integrated Hall sensor elements with complex analog and digital signal processing within a single device. The absolute angle measurement provides an instant indication of the magnet's angular position with a selectable and one-time programmable resolution from 10 to 18 bits.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneticrotary2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magnetic-rotary-2-click)
+[Click Product page](https://www.mikroe.com/magnetic-rotary-2-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t magneticrotary2_get_angle ( magneticrotary2_t *ctx, float *angle );
 
 ## Example Description
 
-> This example demonstrates the use of Magnetic Rotary 2 click board by reading and displaying the magnet's angular position in degrees.
+> This example demonstrates the use of Magnetic Rotary 2 Click board by reading and displaying the magnet's angular position in degrees.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

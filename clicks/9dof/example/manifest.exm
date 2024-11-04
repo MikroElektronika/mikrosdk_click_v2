@@ -1,8 +1,8 @@
 {
     "name": "9DOF Click",
-    "description": "9DOF click carries ST’s LSM9DS1 inertial measurement module that combines a 3D accelerometer, a 3D gyroscope and a 3D magnetometer into a single device outputting so called nine degrees of freedom data...",
+    "description": "9DOF Click carries ST’s LSM9DS1 inertial measurement module that combines a 3D accelerometer, a 3D gyroscope and a 3D magnetometer into a single device outputting so called nine degrees of freedom data...",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LSM9DS1"],
+    "hw" : ["Click","LSM9DS1"],
     "category" : ["Motion"] 
 }

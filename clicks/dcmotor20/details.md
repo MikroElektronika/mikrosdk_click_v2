@@ -1,6 +1,6 @@
 
 ---
-# DC Motor 20 click
+# DC Motor 20 Click
 
 > DC Motor 20 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TC78H651AFNG, a dual H-bridge driver for one or two DC brushed motors, which incorporates DMOS with low ON resistance in output transistors from Toshiba Semiconductor.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-20-click)
+[Click Product page](https://www.mikroe.com/dc-motor-20-click)
 
 ---
 
@@ -64,13 +64,13 @@ void dcmotor20_set_standby_mode ( dcmotor20_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of DC Motor 20 click board by driving the motors in both direction in the span of 14 seconds.
+> This example demonstrates the use of DC Motor 20 Click board by driving the motors in both direction in the span of 14 seconds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and sets the click board to standby mode.
+> Initializes the driver and sets the Click board to standby mode.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

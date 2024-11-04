@@ -3,6 +3,6 @@
     "description": "Opto Encoder 4 Click is a compact add-on board that contains an optical sensor/encoder that can be used for movement or rotation encoding. This board features the EE-SX4330, a transmissive photo-microsensor from OMRON. It is intended to be used with an encoder disk or similar device that will act as a barrier between the emitter and detector of the sensor. Usually, it will be the disk with perforations, which is commonly used to detect the rotation speed.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","EE-SX4330"],
+    "hw" : ["Click","EE-SX4330"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

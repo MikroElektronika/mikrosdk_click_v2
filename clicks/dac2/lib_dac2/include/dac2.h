@@ -165,7 +165,7 @@ extern "C"{
  *
  * @param cfg           Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dac2_cfg_setup ( dac2_cfg_t *cfg );
@@ -176,7 +176,7 @@ void dac2_cfg_setup ( dac2_cfg_t *cfg );
  * @param dac2          Click object.
  * @param cfg           Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DAC2_RETVAL dac2_init ( dac2_t *ctx, dac2_cfg_t *cfg );
 
@@ -205,7 +205,7 @@ void dac2_generic_transfer
  *
  * @param ctx           Click object.
  *
- * @description This function executes default configuration for LTC2601 click.
+ * @description This function executes default configuration for LTC2601 Click.
  */
 void dac2_default_cfg ( dac2_t *ctx );
 
@@ -249,6 +249,6 @@ void dac2_write_output_voltage_data ( dac2_t *ctx, uint16_t value_data );
 #endif  // _DAC2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

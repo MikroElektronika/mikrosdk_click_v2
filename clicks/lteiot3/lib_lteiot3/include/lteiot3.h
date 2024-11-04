@@ -241,7 +241,7 @@ typedef enum
 
 /**
  * @brief LTE IoT 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lteiot3_cfg_t object definition for detailed explanation.
@@ -253,7 +253,7 @@ void lteiot3_cfg_setup ( lteiot3_cfg_t *cfg );
 /**
  * @brief LTE IoT 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lteiot3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -348,7 +348,7 @@ uint8_t lteiot3_get_cts_pin ( lteiot3_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot3_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -359,7 +359,7 @@ void lteiot3_send_cmd ( lteiot3_t *ctx, uint8_t *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot3_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

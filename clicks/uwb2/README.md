@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# UWB 2 click
+# UWB 2 Click
 
 > UWB 2 Click is a compact add-on board that brings Ultra-Wideband communication to any solution. This board features the DWM3000, an IEEE 802.15-z UWB transceiver module from Qorvo. This module fully aligns with FiRaTM PHY, MAC, and certification development. It uses an integrated UWB antenna to establish wireless communication in UWB channels 5 (6.5GHz) and 9 (8GHz). This Click board™ makes the perfect solution for developing precision real-time location systems (RTLS) using two-way ranging or TDoA schemes in various markets, location-aware wireless sensor networks (WSNs), and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uwb2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uwb-2-click)
+[Click Product page](https://www.mikroe.com/uwb-2-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t uwb2_read_message ( uwb2_t *ctx, uint8_t *data_out, uint16_t *len );
 
 ## Example Description
 
-> This example demonstrates the use of an UWB 2 click board by showing the communication between the two click boards.
+> This example demonstrates the use of an UWB 2 Click board by showing the communication between the two Click boards.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration, then reads and displays the device ID number.
+> Initializes the driver, performs the Click default configuration, then reads and displays the device ID number.
 
 ```c
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

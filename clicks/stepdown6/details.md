@@ -1,6 +1,6 @@
 
 ---
-# Step Down 6 click
+# Step Down 6 Click
 
 > Step Down 6 Click is a compact add-on board that converts higher voltages into lower ones. This board features the MPM54304, a quad-output power module from Monolithic Power Systems (MPS). It is a quad-output, DC/DC step-down power module with up to 3A per output on channels 1 and 2 and up to 2A per channels 3 and 4, providing continuous current on all four channels.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepdown6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/step-down-6-click)
+[Click Product page](https://www.mikroe.com/step-down-6-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

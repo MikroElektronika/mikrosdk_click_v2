@@ -192,7 +192,7 @@ typedef enum
 
 /**
  * @brief ISM RX configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ismrx_cfg_t object definition for detailed explanation.
@@ -232,7 +232,7 @@ err_t ismrx_task_init ( ismrx_t *ctx, ismrx_cfg_t *cfg );
 /**
  * @brief ISM RX default configuration function.
  * @details This function executes a default configuration of ISM RX.
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ismrx_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

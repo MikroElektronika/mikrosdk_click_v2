@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pll_cfg_setup ( pll_cfg_t *cfg );
@@ -144,7 +144,7 @@ void pll_cfg_setup ( pll_cfg_t *cfg );
  * @param pll Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t pll_init ( pll_t *ctx, pll_cfg_t *cfg );
 
@@ -257,6 +257,6 @@ void pll_set_pll_5_3125x ( pll_t *ctx );
 #endif  // _PLL_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

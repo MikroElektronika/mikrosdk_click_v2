@@ -1,8 +1,8 @@
 {
     "name": "Semper Flash 2 Click",
-    "description": "Semper Flash 2 Click is a Click board™ which features the S25HL512T from Cypress, a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Semper Flash 2 click can also be used for the code shadowing, execute-in-place (XIP), and data storage.",
+    "description": "Semper Flash 2 Click is a Click board™ which features the S25HL512T from Cypress, a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Semper Flash 2 Click can also be used for the code shadowing, execute-in-place (XIP), and data storage.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","S25HL512T"],
+    "hw" : ["Click","S25HL512T"],
     "category" : ["FLASH"] 
 }

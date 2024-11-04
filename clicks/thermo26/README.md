@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Thermo 26 click
+# Thermo 26 Click
 
 > Thermo 26 Click is a compact add-on board that accurately measures temperature. 
 > This board features the STS31-DIS, a high-accuracy digital temperature sensor from Sensirion. 
@@ -15,7 +15,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo26_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-26-click)
+[Click Product page](https://www.mikroe.com/thermo-26-click)
 
 ---
 
@@ -71,7 +71,7 @@ err_t thermo26_read_temperature ( thermo26_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo 26 click board by reading and displaying the temperature measurements.
+> This example demonstrates the use of Thermo 26 Click board by reading and displaying the temperature measurements.
 
 **The demo application is composed of two sections :**
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

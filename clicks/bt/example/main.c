@@ -3,12 +3,12 @@
  * @brief BT Click Example.
  *
  * # Description
- * This example demonstrates the use of BT click board.
+ * This example demonstrates the use of BT Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board.
+ * Initializes the driver and configures the Click board.
  *
  * ## Application Task
  * Handles most of the events required for this example, the packages of events not 
@@ -26,7 +26,7 @@
  *
  * @note
  * We have used the Serial Bluetooth Terminal smartphone application for the test. 
- * A smartphone and the click board must be paired in order to exchange messages with each other.
+ * A smartphone and the Click board must be paired in order to exchange messages with each other.
  *
  * @author Stefan Filipovic
  *
@@ -49,13 +49,13 @@ static log_t logger;
  * @param[in] ctx : Click context object.
  * See #bt_t object definition for detailed explanation.
  * @return None.
- * @note The click board must be configured and the remote device must be connected to it.
+ * @note The Click board must be configured and the remote device must be connected to it.
  */
 static void bt_event_handler ( bt_t *ctx );
 
 /**
  * @brief BT led blink function.
- * @details This function toggles the LEDs on the click board.
+ * @details This function toggles the LEDs on the Click board.
  * @param[in] ctx : Click context object.
  * See #bt_t object definition for detailed explanation.
  * @param[in] time_s : LED blinking time in seconds.
@@ -110,7 +110,7 @@ void application_init ( void )
                          ( BT_OK == bt_default_cfg ( &bt ) ? "OK" : "FAIL" ) );
 
     log_printf( &logger, " Set Local Name : %s\r\n\n", ( char * )
-                        ( BT_OK == bt_set_local_name ( &bt, "MikroE - BT click" ) ? "OK" : "FAIL" ) );
+                        ( BT_OK == bt_set_local_name ( &bt, "MikroE - BT Click" ) ? "OK" : "FAIL" ) );
     
     log_printf( &logger, " Delete Bondings : %s\r\n\n", ( char * )
                         ( BT_OK == bt_delete_bondings ( &bt ) ? "OK" : "FAIL" ) );

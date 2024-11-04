@@ -3,13 +3,13 @@
  * @brief BM78 Click Example.
  *
  * # Description
- * This example demonstrates the use of BM78 click board by processing
+ * This example demonstrates the use of BM78 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration by writing it into the EEPROM.
+ * Initializes the driver and performs the Click default configuration by writing it into the EEPROM.
  *
  * ## Application Task
  * Reads and processes all incoming data from the Serial Bluetooth Terminal smartphone application and displays them on the USB UART.
@@ -21,7 +21,7 @@
  *
  * @note
  * We have used the Serial Bluetooth Terminal smartphone application for the test. 
- * A smartphone and the click board must be paired in order to exchange messages with each other.
+ * A smartphone and the Click board must be paired in order to exchange messages with each other.
  *
  * @author Stefan Ilic
  *

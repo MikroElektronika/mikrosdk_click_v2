@@ -169,7 +169,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c3dhall_cfg_setup ( c3dhall_cfg_t *cfg );
@@ -180,7 +180,7 @@ void c3dhall_cfg_setup ( c3dhall_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C3DHALL_RETVAL c3dhall_init ( c3dhall_t *ctx, c3dhall_cfg_t *cfg );
 
@@ -210,6 +210,6 @@ uint8_t c3dhall_calculate_angle ( c3dhall_t *ctx, uint16_t data_angle );
 #endif  // _C3DHALL_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

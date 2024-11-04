@@ -1,6 +1,6 @@
 
 ---
-# VCP Monitor 2 click
+# VCP Monitor 2 Click
 
 VCP Monitor 2 Click is a three-channel, high-side current and bus voltage monitor with alert indication function ensuring the intended application works within desired operating conditions. Featured chip INA3221-Q1, by Texas Instruments, monitors both shunt voltage drops and bus supply voltages, in addition to having programmable conversion times and averaging modes for these signals.
 
@@ -8,7 +8,7 @@ VCP Monitor 2 Click is a three-channel, high-side current and bus voltage monito
   <img src="https://download.mikroe.com/images/click_for_ide/vcpmonitor2_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/vcp-monitor-2-click)
+[Click Product page](https://www.mikroe.com/vcp-monitor-2-click)
 
 ---
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

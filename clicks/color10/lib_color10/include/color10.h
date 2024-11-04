@@ -178,7 +178,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void color10_cfg_setup ( color10_cfg_t *cfg );
@@ -189,7 +189,7 @@ void color10_cfg_setup ( color10_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COLOR10_RETVAL color10_init ( color10_t *ctx, color10_cfg_t *cfg );
 
@@ -223,7 +223,7 @@ uint16_t color10_generic_read ( color10_t *ctx, uint8_t cmd_addr );
  * @param ctx          Click object.
  * @param cfg_data     Configuration data.
  * 
- * @description        This function configures the click according to the config data.
+ * @description        This function configures the Click according to the config data.
  */
 void color10_config ( color10_t *ctx, uint16_t cfg_data );
 
@@ -279,6 +279,6 @@ uint8_t color10_get_color ( float color_value );
 #endif  // _COLOR10_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

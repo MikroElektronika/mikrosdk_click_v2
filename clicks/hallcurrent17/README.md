@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Hall Current 17 click
+# Hall Current 17 Click
 
 > Hall Current 17 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the ACS37010, a high-accuracy current sensor from Allegro MicroSystems. The ACS37010 has a high operating bandwidth of 450kHz and a fast response time of 1.3μs response time. It features a highly isolated compact surface-mount package, low internal primary conductor resistance, low sensitivity error, low offset voltage over temperature, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-17-click)
+[Click Product page](https://www.mikroe.com/hall-current-17-click)
 
 ---
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

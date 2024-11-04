@@ -1,6 +1,6 @@
 
 ---
-# Air Quality 7 click
+# Air Quality 7 Click
 
 Air quality 7 Click is a compact add-on board that combines state-of-the-art MOS sensor technology with intelligent detection algorithms to monitor VOCs and CO2 equivalent variations in confined spaces.
 
@@ -9,7 +9,7 @@ Air quality 7 Click is a compact add-on board that combines state-of-the-art MOS
 </p>
 
 
-[click Product page](https://www.mikroe.com/air-quality-7-click)
+[Click Product page](https://www.mikroe.com/air-quality-7-click)
 
 ---
 
@@ -178,7 +178,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

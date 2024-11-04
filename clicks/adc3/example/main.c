@@ -4,7 +4,7 @@
  * 
  * # Description
  * ADC 3 Click represent 16-bit multichannel analog-to-digital converter. 
- * The click has four pairs of screw terminals onboard, letting you access the chip’s four differential input channels.
+ * The Click has four pairs of screw terminals onboard, letting you access the chip’s four differential input channels.
  *
  * The demo application is composed of two sections :
  * 

@@ -203,7 +203,7 @@ typedef enum
 
 /**
  * @brief 1-Wire I2C configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c1wirei2c_cfg_t object definition for detailed explanation.
@@ -215,7 +215,7 @@ void c1wirei2c_cfg_setup ( c1wirei2c_cfg_t *cfg );
 /**
  * @brief 1-Wire I2C driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #c1wirei2c_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -231,7 +231,7 @@ void c1wirei2c_gpio_selection ( c1wirei2c_cfg_t *cfg, c1wirei2c_gpio_sel_t gpio_
 /**
  * @brief 1-Wire I2C initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c1wirei2c_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -246,7 +246,7 @@ err_t c1wirei2c_init ( c1wirei2c_t *ctx, c1wirei2c_cfg_t *cfg );
 /**
  * @brief 1-Wire I2C default configuration function.
  * @details This function executes a default configuration of 1-Wire I2C
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c1wirei2c_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

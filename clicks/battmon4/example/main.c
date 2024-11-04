@@ -3,7 +3,7 @@
  * @brief BATTMON4 Click example
  *
  * # Description
- * This example demonstrates the use of BATT-MON 4 click board by reading
+ * This example demonstrates the use of BATT-MON 4 Click board by reading
  * the battery voltage and the chip internal temperature.
  *
  * The demo application is composed of two sections :

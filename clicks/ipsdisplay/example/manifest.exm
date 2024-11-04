@@ -1,0 +1,8 @@
+{
+    "name": "IPS Display Click",
+    "description": "IPS Display Click is a compact add-on board that displays high-resolution graphics in embedded applications. This board features the ER-TFT1.14-2, a 1.14inch TFT LCD display from BuyDisplay, part of EastRising Technology, and utilizes the ST7789V controller for 262K color output. The display offers a 135x240 pixel resolution, operates through a 3-wire SPI interface, and includes additional control lines such as RST and RS for precise display management. Its small form factor and high-resolution output make it suitable for various projects, including handheld devices, smart displays, and control panels requiring clear visual output.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","ER-TFT1.14-2","ST7789V"],
+    "category" : ["Click Boards > Display & LED > LCD"]
+}

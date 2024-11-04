@@ -1,6 +1,6 @@
 
 ---
-# Oximeter 2 click
+# Oximeter 2 Click
 
 Oximeter 2 Click is a compact add-on board suitable for measuring blood oxygen saturation.
 
@@ -9,7 +9,7 @@ Oximeter 2 Click is a compact add-on board suitable for measuring blood oxygen s
 </p>
 
 
-[click Product page](https://www.mikroe.com/oximeter-2-click)
+[Click Product page](https://www.mikroe.com/oximeter-2-click)
 
 ---
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

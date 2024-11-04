@@ -1,6 +1,6 @@
 
 ---
-# TempHum 25 click
+# TempHum 25 Click
 
 > Temp&Hum 25 Click is a compact add-on board designed for precise temperature and humidity monitoring. This board features the SHT33-DIS-B2.5KS, a high-reliability, third-generation relative humidity and temperature sensor from Sensirion. This sensor offers exceptional accuracy and reliability, with a range of 0-100% RH and -40 to +125°C, and features ISO17025-certified calibration, CMOSens® technology, and NIST-traceability. The board supports the new Click Snap feature, allowing easy detachment of the sensor area for flexible use.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum25_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-25-click)
+[Click Product page](https://www.mikroe.com/temphum-25-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t temphum25_read_measurement ( temphum25_t *ctx, float *temperature, float *
 
 ## Example Description
 
-> This example demonstrates the use of TempHum 25 click board by reading the temperature and humidity data.
+> This example demonstrates the use of TempHum 25 Click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

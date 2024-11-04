@@ -3,7 +3,7 @@
  * @brief Touchpad3 Click example
  *
  * # Description
- * This example prints the coordinate points of the position we touch on a click. We use RST and INT
+ * This example prints the coordinate points of the position we touch on a Click. We use RST and INT
  * pins. The whole project is done through i2c communication.
  *
  * The demo application is composed of two sections :
@@ -13,7 +13,7 @@
  * I2C, perform a hardware reset, configuration (general, decoding, sensor mapping), get device ID and enable the touch, also write log.
  *
  * ## Application Task
- * This is an example that demonstrates the use of the TouchPad 3 click board. TouchPad 3 click board uses USB UART log to display
+ * This is an example that demonstrates the use of the TouchPad 3 Click board. TouchPad 3 Click board uses USB UART log to display
  * X and Y coordinates of the touch, depending on the selected Touch ID.
  *
  * @author Jelena Milosavljevic

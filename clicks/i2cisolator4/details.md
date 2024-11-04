@@ -1,6 +1,6 @@
 
 ---
-# I2C Isolator 4 click
+# I2C Isolator 4 Click
 
 > I2C Isolator 4 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the MAX14937, a two-channel, 5kVRMS I2C digital isolator from Analog Devices. The MAX14937 provides two bidirectional, open-drain channels for applications that require data to be transmitted in both directions on the same line. It supports data rates from DC up to 1.7MHz and can be used in isolated I2C busses with or without clock stretching.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-isolator-4-click)
+[Click Product page](https://www.mikroe.com/i2c-isolator-4-click)
 
 ---
 
@@ -69,9 +69,9 @@ err_t i2cisolator4_set_slave_address ( i2cisolator4_t *ctx, uint8_t address );
 
 ## Example Description
 
-> This library contains API for the I2C Isolator 4 click driver.
-> This demo application shows an example of an I2C Isolator 4 click 
-> wired to the VAV Press click for reading 
+> This library contains API for the I2C Isolator 4 Click driver.
+> This demo application shows an example of an I2C Isolator 4 Click 
+> wired to the VAV Press Click for reading 
 > differential pressure and temperature measurement.
 
 **The demo application is composed of two sections :**
@@ -80,7 +80,7 @@ err_t i2cisolator4_set_slave_address ( i2cisolator4_t *ctx, uint8_t address );
 
 > Initialization of I2C module and log UART.
 > After driver initialization and default settings, 
-> the app set VAV Press click I2C slave address ( 0x5C ) 
+> the app set VAV Press Click I2C slave address ( 0x5C ) 
 > and enable device.
 
 ```c
@@ -127,9 +127,9 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of an I2C Isolator 4 click board™.
+> This is an example that shows the use of an I2C Isolator 4 Click board™.
 > Logs pressure difference [ Pa ] and temperature [ degree Celsius ] values 
-> of the VAV Press click wired to the I2C Isolator 4 click board™.  
+> of the VAV Press Click wired to the I2C Isolator 4 Click board™.  
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Stepper 23 click
+# Stepper 23 Click
 
 > Stepper 23 Click is a compact add-on board designed to drive small stepping motors in consumer electronics and industrial equipment applications. This board features the TB67S569FTG, a BiCD constant-current 2-phase bipolar stepping motor driver IC from Toshiba Semiconductor. Key features include a PWM chopper-type 2-phase bipolar drive system, high withstand voltage of up to 34V operating, and a maximum operating current of 1.8A per phase. The board also integrates safety mechanisms such as over-temperature, over-current, and low-supply voltage detection. Additional control is provided by the PCA9555A port expander via I2C, enabling functions like decay and torque modes, step resolution settings, and many more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepper23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-23-click)
+[Click Product page](https://www.mikroe.com/stepper-23-click)
 
 ---
 
@@ -70,13 +70,13 @@ void stepper23_drive_motor ( stepper23_t *ctx, uint32_t steps, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 23 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 23 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

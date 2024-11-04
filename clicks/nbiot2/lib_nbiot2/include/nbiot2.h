@@ -217,7 +217,7 @@ typedef enum
 
 /**
  * @brief NB IoT 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nbiot2_cfg_t object definition for detailed explanation.
@@ -229,7 +229,7 @@ void nbiot2_cfg_setup ( nbiot2_cfg_t *cfg );
 /**
  * @brief NB IoT 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nbiot2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -303,7 +303,7 @@ void nbiot2_hw_reset ( nbiot2_t *ctx );
 
 /**
  * @brief NB IoT 2 send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #nbiot_t object definition for detailed explanation.
  * @param[in] cmd : Command variable.
@@ -314,7 +314,7 @@ void nbiot2_send_cmd ( nbiot2_t *ctx, char *cmd );
 
 /**
  * @brief NB IoT 2 send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #nbiot_t object definition for detailed explanation.
  * @param[in] at_cmd_buf : Command buffer.

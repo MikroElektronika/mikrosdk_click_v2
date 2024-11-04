@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# TempHum 22 click
+# TempHum 22 Click
 
 > Temp&Hum 22 Click is a compact add-on board representing temperature and humidity sensing solution. This board features the SHT41A, a 4th generation automotive-grade relative humidity and temperature sensor from Sensirion. The SHT41A is characterized by its high accuracy (±2% RH and ±0.3°C over a wide operating temperature range) and high resolution providing 16-bit data to the host controller with a configurable I2C interface. Also, it is designed for reliable operation in harsh conditions such as condensing environments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum22_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-22-click)
+[Click Product page](https://www.mikroe.com/temphum-22-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t temphum22_read_measurement_high_precision ( temphum22_t *ctx, float *temp,
 
 ## Example Description
 
-> This example demonstrates the use of Temp & Hum 22 click board by reading the temperature and humidity data.
+> This example demonstrates the use of Temp & Hum 22 Click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

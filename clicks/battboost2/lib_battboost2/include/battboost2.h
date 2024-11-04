@@ -363,7 +363,7 @@ typedef enum
 
 /**
  * @brief BATT Boost 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #battboost2_cfg_t object definition for detailed explanation.
@@ -375,7 +375,7 @@ void battboost2_cfg_setup ( battboost2_cfg_t *cfg );
 /**
  * @brief BATT Boost 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #battboost2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -390,7 +390,7 @@ err_t battboost2_init ( battboost2_t *ctx, battboost2_cfg_t *cfg );
 /**
  * @brief BATT Boost 2 default configuration function.
  * @details This function executes a default configuration of BATT Boost
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #battboost2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

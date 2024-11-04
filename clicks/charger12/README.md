@@ -3,15 +3,15 @@
  
 
 ---
-# CHARGER 12 click
+# CHARGER 12 Click
 
-Charger 12 Click is a single lithium-ion (Li+) cell or three-cell NiMH/NiCd battery charger. This click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc. Charger 12 click is based on MAX1501 controller which has some extra features enabling charging without too much hassle.
+Charger 12 Click is a single lithium-ion (Li+) cell or three-cell NiMH/NiCd battery charger. This Click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc. Charger 12 Click is based on MAX1501 controller which has some extra features enabling charging without too much hassle.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/charger12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-12-click)
+[Click Product page](https://www.mikroe.com/charger-12-click)
 
 ---
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

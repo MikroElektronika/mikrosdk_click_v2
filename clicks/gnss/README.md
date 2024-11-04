@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# GNSS click
+# GNSS Click
 
-GNSS click carries Quectel’s L86 GNSS module with a patch antenna along with an external antenna connector.
+GNSS Click carries Quectel’s L86 GNSS module with a patch antenna along with an external antenna connector.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gnss_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-click)
+[Click Product page](https://www.mikroe.com/gnss-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t gnss_parse_gpgga ( char *rsp_buf, uint8_t gpgga_element, char *element_dat
 
 ## Example Description
 
-> This example demonstrates the use of GNSS click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of GNSS Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

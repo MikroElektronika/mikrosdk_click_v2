@@ -3,6 +3,6 @@
     "description": "Brushless 27 Click is a compact add-on board that controls DC brushless motors with any MCU. This board features the TMC6300, a power driver for BLDC/PMSM motors from TRINAMIC. It is a highly efficient low voltage, zero standby driver for 3-phase BLDC/PMSM motors with up to 2A peak current.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TMC6300-LA"],
+    "hw" : ["Click","TMC6300-LA"],
     "category" : ["Click Boards > Motor control > Brushless"]
 }

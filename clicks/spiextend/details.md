@@ -1,6 +1,6 @@
 
 ---
-# SPI Extend click
+# SPI Extend Click
 
 > SPI Extend Click is a compact add-on board for applications that require extending the SPI communication bus over a long distance. This board features the LTC4332, an SPI slave extender device, from Analog Devices. Using a ±60V fault protected differential transceiver, the LTC4332 can transmit SPI data, including an interrupt signal, up to 2MHz over two twisted-pair cables. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/spiextend_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spi-extend-click)
+[Click Product page](https://www.mikroe.com/spi-extend-click)
 
 ---
 
@@ -52,17 +52,17 @@ err_t spiextend_default_cfg ( spiextend_t *ctx );
 
 #### Example key functions :
 
-- `spiextend_get_config` Function get configuration of the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+- `spiextend_get_config` Function get configuration of the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
 ```c
 void spiextend_get_config ( spiextend_t *ctx, spiextend_config_data_t *config_data );
 ```
 
-- `spiextend_set_config` Function set configuration of the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+- `spiextend_set_config` Function set configuration of the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
 ```c
 void spiextend_set_config ( spiextend_t *ctx, spiextend_config_data_t config_data );
 ```
 
-- `spiextend_get_status` Function set configuration of the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+- `spiextend_get_status` Function set configuration of the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
 ```c
 void spiextend_get_status ( spiextend_t *ctx, spiextend_status_data_t *status_data );
 ```
@@ -151,7 +151,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> If the click is connected properly then the status becomes active and the X-axis coordinate is printed first on the UART terminal, then Y and finally Z. After 1s the process is repeated. 
+> If the Click is connected properly then the status becomes active and the X-axis coordinate is printed first on the UART terminal, then Y and finally Z. After 1s the process is repeated. 
 In case an error has occurred, printed "LINK is not established" on UART Terminal.
 
 ```c
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

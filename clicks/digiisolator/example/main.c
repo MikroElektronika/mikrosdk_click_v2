@@ -3,7 +3,7 @@
  * @brief DIGI Isolator Click example
  *
  * # Description
- * This example demonstrates the use of the DIGI Isolator click board 
+ * This example demonstrates the use of the DIGI Isolator Click board 
  * by reading and writing data by using SPI and UART serial interface 
  * and reading results of AD conversion.
  *
@@ -14,7 +14,7 @@
  *
  * ## Application Task
  * At the start, the demo application reads and checks the manufacturer ID and 
- * device ID of the connected Flash 11 click board by using SPI serial interface. 
+ * device ID of the connected Flash 11 Click board by using SPI serial interface. 
  * After that, sends a "MikroE" message, reads the received data, 
  * and parses it by using UART serial interface in loopback mode. 
  * And finally, the demo app reads the results of the AD conversion of the D1 (AN) pin. 

@@ -1,14 +1,14 @@
 
 ---
-# RF Meter click
+# RF Meter Click
 
-RF Meter click is a radio frequency power measurement device covering a frequency span from 1 MHz to 8 GHz over a 60 dB range (approximately).
+RF Meter Click is a radio frequency power measurement device covering a frequency span from 1 MHz to 8 GHz over a 60 dB range (approximately).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rfmeter_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rf-meter-click-click)
+[Click Product page](https://www.mikroe.com/rf-meter-click-click)
 
 ---
 
@@ -50,7 +50,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ## Examples Description
 
 > 
-> Demo app measures and displays signal strenght by using RF Meter click board.
+> Demo app measures and displays signal strenght by using RF Meter Click board.
 > 
 
 **The demo application is composed of two sections :**
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 ### Application Init 
 
 >
-> Initalizes SPI, LOG and click drivers.
+> Initalizes SPI, LOG and Click drivers.
 > 
 
 ```c
@@ -96,7 +96,7 @@ void application_init ( void )
 ### Application Task
 
 >
-> This is an example that shows the capabilities of the RF Meter click by
+> This is an example that shows the capabilities of the RF Meter Click by
 > measuring radio frequency signal strenght.
 > 
 
@@ -126,7 +126,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

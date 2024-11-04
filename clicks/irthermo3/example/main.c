@@ -4,7 +4,7 @@
  * 
  * # Description
  * The demo application displays ambient and object temperature measurements
- * using IrThermo 3 click.
+ * using IrThermo 3 Click.
  *
  * The demo application is composed of two sections :
  *

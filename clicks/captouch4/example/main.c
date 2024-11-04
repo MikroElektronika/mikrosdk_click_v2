@@ -3,13 +3,13 @@
  * @brief Cap Touch 4 Click example
  *
  * # Description
- * This example demonstrates the use of Cap Touch 4 click board by reading
+ * This example demonstrates the use of Cap Touch 4 Click board by reading
  * the proximity, touch, and movement events.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the proximity, touch, and movement events and approximately displays

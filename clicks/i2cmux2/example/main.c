@@ -11,11 +11,11 @@
  * Initializes the driver, performs the device reset, and makes an initial log.
  * 
  * ## Application Task  
- * In this example, we read the device ID register of the connected click boards.
- * Channel 0 : 6DOF IMU 11 click [slave address: 0x0E; reg: 0x00; id val.: 0x2D],
- * Channel 1 : Altitude click    [slave address: 0x60; reg: 0x0C; id val.: 0xC4],
- * Channel 2 : 6DOF IMU 9 click  [slave address: 0x69; reg: 0x75; id val.: 0xA9],
- * Channel 3 : Compass 3 click   [slave address: 0x30; reg: 0x2F; id val.: 0x0C].
+ * In this example, we read the device ID register of the connected Click boards.
+ * Channel 0 : 6DOF IMU 11 Click [slave address: 0x0E; reg: 0x00; id val.: 0x2D],
+ * Channel 1 : Altitude Click    [slave address: 0x60; reg: 0x0C; id val.: 0xC4],
+ * Channel 2 : 6DOF IMU 9 Click  [slave address: 0x69; reg: 0x75; id val.: 0xA9],
+ * Channel 3 : Compass 3 Click   [slave address: 0x30; reg: 0x2F; id val.: 0x0C].
  * All data logs write on USB UART changes every 2 sec.
  * 
  * @note
@@ -133,7 +133,7 @@ void application_task ( void )
     log_printf( &logger, "----------------------\r\n" );
     
 #ifdef ENABLE_CHANNEL_0
-    // SET CHANNEL 0: 6DOF IMU 11 click
+    // SET CHANNEL 0: 6DOF IMU 11 Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_0, 0x0E );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x00, &rx_data, 1 );
@@ -141,7 +141,7 @@ void application_task ( void )
 #endif
     
 #ifdef ENABLE_CHANNEL_1
-    // SET CHANNEL 1: Altitude click
+    // SET CHANNEL 1: Altitude Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_1, 0x60 );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x0C, &rx_data, 1 );
@@ -149,7 +149,7 @@ void application_task ( void )
 #endif
     
 #ifdef ENABLE_CHANNEL_2
-    // SET CHANNEL 2: 6DOF IMU 9 click
+    // SET CHANNEL 2: 6DOF IMU 9 Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_2, 0x69 );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x75, &rx_data, 1 );
@@ -157,7 +157,7 @@ void application_task ( void )
 #endif
 
 #ifdef ENABLE_CHANNEL_3
-    // SET CHANNEL 3: Compass 3 click
+    // SET CHANNEL 3: Compass 3 Click
     i2cmux2_set_channel( &i2cmux2, I2CMUX2_CMD_SET_CH_3, 0x30 );
     Delay_ms ( 100 );
     i2cmux2_generic_read( &i2cmux2, 0x2F, &rx_data, 1 );

@@ -3,13 +3,13 @@
  * \brief Accel10 Click example
  * 
  * # Description
- * This example demonstrates the use of Accel 10 click board.
+ * This example demonstrates the use of Accel 10 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Initializes the driver and checks the communication by reading the device ID.
- * After that, performs the click default configuration.
+ * After that, performs the Click default configuration.
  * 
  * ## Application Task  
  * Reads the accel values for X, Y, and Z axis and also reads the temperature in Celsius

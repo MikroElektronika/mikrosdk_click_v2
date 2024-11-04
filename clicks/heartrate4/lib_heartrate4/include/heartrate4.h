@@ -80,7 +80,7 @@
 /** \} */
 
 /**
- * \defgroup slave_addr Heart Rate 4 click slave address 
+ * \defgroup slave_addr Heart Rate 4 Click slave address 
  * \{
  */
 #define HEARTRATE4_I2C_ADDRESS    0x57
@@ -336,7 +336,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void heartrate4_cfg_setup ( heartrate4_cfg_t *cfg );
@@ -347,7 +347,7 @@ void heartrate4_cfg_setup ( heartrate4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HEARTRATE4_RETVAL heartrate4_init ( heartrate4_t *ctx, heartrate4_cfg_t *cfg );
 
@@ -356,7 +356,7 @@ HEARTRATE4_RETVAL heartrate4_init ( heartrate4_t *ctx, heartrate4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for HeartRate4 click.
+ * @description This function executes default configuration for HeartRate4 Click.
  */
 void heartrate4_default_cfg ( heartrate4_t *ctx );
 
@@ -679,6 +679,6 @@ void heartrate4_set_registers( heartrate4_t *ctx, heartrate4_set_registers_t *re
 #endif  // _HEARTRATE4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,14 +1,14 @@
  
 ---
-# RTC 3 click
+# RTC 3 Click
 
-> RTC3 click carries BQ32000, a real time clock with an integrated trickle charge circuit for automatic switchover to a backup power supply (the circuit maintains the backup charge with an onboard super capacitor).
+> RTC3 Click carries BQ32000, a real time clock with an integrated trickle charge circuit for automatic switchover to a backup power supply (the circuit maintains the backup charge with an onboard super capacitor).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtc3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-3-click)
+[Click Product page](https://www.mikroe.com/rtc-3-click)
 
 ---
 
@@ -64,7 +64,7 @@ void rtc3_get_date ( rtc3_t *ctx );
 
 ## Examples Description
 
-> This example demonstrates the use of RTC 3 click board by reading and displaying the time and date values.
+> This example demonstrates the use of RTC 3 Click board by reading and displaying the time and date values.
 
 **The demo application is composed of two sections :**
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

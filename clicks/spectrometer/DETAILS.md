@@ -1,6 +1,6 @@
 
 ---
-# Spectrometer click
+# Spectrometer Click
 
 Spectrometer Click features an 11-channel spectrometer for spectral identification and color matching applications. This Click board™ features the AS7341 from AMS-AG, whose spectral response is defined in the wavelengths from approximately 350nm to 1000nm.
 
@@ -9,7 +9,7 @@ Spectrometer Click features an 11-channel spectrometer for spectral identificati
 </p>
 
 
-[click Product page](https://www.mikroe.com/spectrometer-click)
+[Click Product page](https://www.mikroe.com/spectrometer-click)
 
 ---
 
@@ -102,7 +102,7 @@ void application_init ( void )
     if ( id_val == SPECTROMETER_ID_VALUE )
     {
         log_printf( &logger, "-------------------------\r\n" );
-        log_printf( &logger, "   Spectrometer  click   \r\n" );
+        log_printf( &logger, "   Spectrometer  Click   \r\n" );
         log_printf( &logger, "-------------------------\r\n" );
     }
     else
@@ -122,7 +122,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example shows the capabilities of the Spectrometer click
+> This example shows the capabilities of the Spectrometer Click
 > by reading out channels with SMUX configrations 1 and 2, detecting 
 > flicker for 100 and 120 Hz and displaying data via USART terminal.
 
@@ -223,7 +223,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

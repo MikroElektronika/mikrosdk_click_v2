@@ -198,7 +198,7 @@ typedef enum
 
 /**
  * @brief Barometer 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #barometer5_cfg_t object definition for detailed explanation.
@@ -210,7 +210,7 @@ void barometer5_cfg_setup ( barometer5_cfg_t *cfg );
 /**
  * @brief Barometer 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -226,7 +226,7 @@ err_t barometer5_init ( barometer5_t *ctx, barometer5_cfg_t *cfg );
 /**
  * @brief Barometer 5 default configuration function.
  * @details This function executes a default configuration of Barometer 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -276,7 +276,7 @@ err_t barometer5_generic_read ( barometer5_t *ctx, uint8_t reg, uint8_t *rx_buf,
  * @brief Barometer 5 set command function.
  * @details This function writes a desired command
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -292,7 +292,7 @@ err_t barometer5_set_command ( barometer5_t *ctx, uint8_t cmd );
  * @brief Barometer 5 set data ratio function.
  * @details This function sets data ratio
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[in] temp_ratio : Determines oversampling ratio for temperature measurement.
@@ -309,7 +309,7 @@ err_t barometer5_set_ratio ( barometer5_t *ctx, uint8_t temp_ratio, uint8_t pres
  * @brief Barometer 5 software reset function.
  * @details This function performs a software reset
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -324,7 +324,7 @@ err_t barometer5_sw_reset ( barometer5_t *ctx );
  * @brief Barometer 5 get calibration data function.
  * @details This function read and store calibration data
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -339,7 +339,7 @@ err_t barometer5_get_calibration_data ( barometer5_t *ctx );
  * @brief Barometer 5 get raw data function.
  * @details This function read raw temperature and pressure data
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[out] temp_data : Raw temperature data.
@@ -356,7 +356,7 @@ err_t barometer5_get_raw_data ( barometer5_t *ctx, uint32_t *temp_data, uint32_t
  * @brief Barometer 5 get temperature data function.
  * @details This function read temperature data and convert to the degree Celsius
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[out] temperature : Temperature in degree Celsius.
@@ -372,7 +372,7 @@ err_t barometer5_get_temperature ( barometer5_t *ctx, float *temperature );
  * @brief Barometer 5 get pressure data function.
  * @details This function read pressure data and convert to the mbar
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[out] pressure : Pressure in mbar.
@@ -390,7 +390,7 @@ err_t barometer5_get_pressure ( barometer5_t *ctx, float *pressure );
  * and calculate altitude data,
  * depending on the temperature and pressure data, function calculates altitude in meters
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[out] altitude : Altitude data in meters.
@@ -407,7 +407,7 @@ err_t barometer5_calculate_altitude ( barometer5_t *ctx, float *altitude );
  * @details This function read temperature and pressure data, 
  * convert temperature data to the degree Celsius and pressure data to the mbar 
  * of the MS5637 Low Voltage Barometric Pressure Sensor  
- * on the Barometer 5 click board™.
+ * on the Barometer 5 Click board™.
  * @param[in] ctx : Click context object.
  * See #barometer5_t object definition for detailed explanation.
  * @param[out] temperature : Temperature in degree Celsius.

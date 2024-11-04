@@ -3,7 +3,7 @@
  * @brief RMS to DC 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of the RMS to DC 2 click board by measuring
+ * This example demonstrates the use of the RMS to DC 2 Click board by measuring
  * the RMS voltage of the input signal.
  *
  * The demo application is composed of two sections :

@@ -135,7 +135,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void airquality4_cfg_setup ( airquality4_cfg_t *cfg );
@@ -146,7 +146,7 @@ void airquality4_cfg_setup ( airquality4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AIRQUALITY4_RETVAL airquality4_init ( airquality4_t *ctx, airquality4_cfg_t *cfg );
 
@@ -155,7 +155,7 @@ AIRQUALITY4_RETVAL airquality4_init ( airquality4_t *ctx, airquality4_cfg_t *cfg
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for AirQuality4 click.
+ * @description This function executes default configuration for AirQuality4 Click.
  */
 void airquality4_default_cfg ( airquality4_t *ctx );
 
@@ -174,7 +174,7 @@ void air_quality4_get_id ( airquality4_t *ctx, uint8_t *data_buf);
  *
  * @param ctx          Click object.
  *
- * @description Function initializes click and starts measurement.
+ * @description Function initializes Click and starts measurement.
  */
 void air_quality4_dev_init ( airquality4_t *ctx );
 
@@ -279,6 +279,6 @@ void air_quality4_get_version ( airquality4_t *ctx, uint8_t *version );
 #endif  // _AIRQUALITY4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------- END

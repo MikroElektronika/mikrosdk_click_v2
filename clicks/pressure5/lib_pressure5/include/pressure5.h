@@ -407,7 +407,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pressure5_cfg_setup ( pressure5_cfg_t *cfg );
@@ -417,7 +417,7 @@ void pressure5_cfg_setup ( pressure5_cfg_t *cfg );
  * @param pressure5 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PRESSURE5_RETVAL pressure5_init ( pressure5_t *ctx, pressure5_cfg_t *cfg );
 
@@ -426,7 +426,7 @@ PRESSURE5_RETVAL pressure5_init ( pressure5_t *ctx, pressure5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Pressure 5 click.
+ * @description This function executes default configuration for Pressure 5 Click.
  */
 void pressure5_default_cfg ( pressure5_t *ctx );
 
@@ -475,7 +475,7 @@ uint8_t pressure5_get_interrupt_state ( pressure5_t *ctx );
  *
  * @param ctx             Click object.
  *
- * @description This function performs software reset of click ctx
+ * @description This function performs software reset of Click ctx
  */
 void pressure5_software_reset ( pressure5_t *ctx );
 /**
@@ -485,7 +485,7 @@ void pressure5_software_reset ( pressure5_t *ctx );
  * @param data_addr       Pressure(PRESSURE_RAW_DATA) or Temperature(TEMPERATURE_RAW_DATA) raw data.
  * @returns               24bit raw data.
  * 
- * @description This function reads raw data from click ctx. 
+ * @description This function reads raw data from Click ctx. 
  */
 uint32_t pressure5_get_raw_data ( pressure5_t *ctx, uint8_t data_addr );
 /**
@@ -528,6 +528,6 @@ float pressure5_get_pressure_data ( pressure5_t *ctx );
 #endif  // _PRESSURE5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

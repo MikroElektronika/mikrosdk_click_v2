@@ -3,6 +3,6 @@
     "description": "Air Velocity Click is a compact add-on board that measures direct airspeed. This board features the FS3000-1005, a surface-mount type air velocity module utilizing a MEMS thermopile-based sensor from Renesas. This I2C-configurable air velocity module features a digital output with a 12-bit resolution with a wide operational range of 0-7.2meter/second (0-16.2mph). The sensor comprises a “solid” thermal isolation technology and silicon-carbide coating to protect it from abrasive wear and water condensation.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","FS3000-1005"],
+    "hw" : ["Click","FS3000-1005"],
     "category" : ["Click Boards > Sensors > Environmental"]
 }

@@ -1,14 +1,14 @@
 
 ---
-# 7-SEG RGB click
+# 7-SEG RGB Click
 
-7-SEG RGB click carries a full color single 7 segment digit display. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over the CS, and PWM pin on the mikroBUS™ line.
+7-SEG RGB Click carries a full color single 7 segment digit display. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over the CS, and PWM pin on the mikroBUS™ line.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/7segrgb_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/7-seg-rgb-click)
+[Click Product page](https://www.mikroe.com/7-seg-rgb-click)
 
 ---
 
@@ -35,12 +35,12 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Standard key functions :
 
-- `c7segrgb_cfg_setup` This function initializes click configuration structure to init state.
+- `c7segrgb_cfg_setup` This function initializes Click configuration structure to init state.
 ```c
 void c7segrgb_cfg_setup ( c7segrgb_cfg_t *cfg );
 ```
 
-- `c7segrgb_init` This function initializes all necessary pins and peripherals used for this click.
+- `c7segrgb_init` This function initializes all necessary pins and peripherals used for this Click.
 ```c
 err_t c7segrgb_init ( c7segrgb_t *ctx, c7segrgb_cfg_t *cfg );
 ```
@@ -52,14 +52,14 @@ err_t c7segrgb_init ( c7segrgb_t *ctx, c7segrgb_cfg_t *cfg );
 void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t character, uint8_t green_brightness, uint8_t red_brightness, uint8_t blue_brightness );
 ```
  
-- `c7segrgb_set_seven_seg` The function sets the state and color of every segment from click board object segment array data.
+- `c7segrgb_set_seven_seg` The function sets the state and color of every segment from Click board object segment array data.
 ```c
 void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
 ```
 
 ## Examples Description
 
-> This click shows all ten digits on a full-color single 7 segment digit display. 
+> This Click shows all ten digits on a full-color single 7 segment digit display. 
 > Each segment has R, G, B LEDs that can be adjusted in 255 steps and the ability to control the brightness of all the LED.
 
 **The demo application is composed of two sections :**
@@ -96,7 +96,7 @@ void application_init ( void )
 ### Application Task
 
 > This is an example which demonstrates the use of 7-SEG RGB Click board.
-> This simple example shows all ten digits in different colors on 7-SEG RGB click.
+> This simple example shows all ten digits in different colors on 7-SEG RGB Click.
 
 ```c
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

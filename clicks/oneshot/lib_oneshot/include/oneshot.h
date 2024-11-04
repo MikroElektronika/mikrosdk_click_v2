@@ -166,7 +166,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void oneshot_cfg_setup ( oneshot_cfg_t *cfg );
@@ -177,7 +177,7 @@ void oneshot_cfg_setup ( oneshot_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ONESHOT_RETVAL oneshot_init ( oneshot_t *ctx, oneshot_cfg_t *cfg );
 
@@ -186,7 +186,7 @@ ONESHOT_RETVAL oneshot_init ( oneshot_t *ctx, oneshot_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for OneShot click.
+ * @description This function executes default configuration for OneShot Click.
  */
 void oneshot_default_cfg ( oneshot_t *ctx );
 
@@ -248,6 +248,6 @@ void oneshot_digital_write_cs ( oneshot_t *ctx, uint8_t signal );
 #endif  // _ONESHOT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

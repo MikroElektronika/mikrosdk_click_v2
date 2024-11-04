@@ -3,7 +3,7 @@
  * @brief POT 4 Click Example.
  *
  * # Description
- * This example demonstrates the use of POT 4 click board by reading and displaying
+ * This example demonstrates the use of POT 4 Click board by reading and displaying
  * the potentiometer position.
  *
  * The demo application is composed of two sections :

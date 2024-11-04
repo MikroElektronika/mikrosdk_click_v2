@@ -3,13 +3,13 @@
  * @brief TempHum 24 Click example
  *
  * # Description
- * This example demonstrates the use of Temp & Hum 24 click board by reading
+ * This example demonstrates the use of Temp & Hum 24 Click board by reading
  * the temperature and humidity data.
  * 
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which
+ * Initializes the driver and performs the Click default configuration which
  * resets the device and starts the auto measurement mode with data rate of 1 Hz.
  *
  * ## Application Task

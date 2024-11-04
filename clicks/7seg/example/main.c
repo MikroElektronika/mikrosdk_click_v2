@@ -12,7 +12,7 @@
  * Application Init performs Logger and Click Initialization.
  * 
  * ## Application Task  
- * Application Task shows functionality of the 7seg click,
+ * Application Task shows functionality of the 7seg Click,
  * shows number or character on left and right display.
  *  
  * \author Mihajlo Djordjevic

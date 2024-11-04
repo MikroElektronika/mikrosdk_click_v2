@@ -142,7 +142,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo4_cfg_setup ( thermo4_cfg_t *cfg );
@@ -153,7 +153,7 @@ void thermo4_cfg_setup ( thermo4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO4_RETVAL thermo4_init ( thermo4_t *ctx, thermo4_cfg_t *cfg );
 
@@ -162,7 +162,7 @@ THERMO4_RETVAL thermo4_init ( thermo4_t *ctx, thermo4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Thermo4 click.
+ * @description This function executes default configuration for Thermo4 Click.
  */
 void thermo4_default_cfg ( thermo4_t *ctx );
 
@@ -341,6 +341,6 @@ void thermo4_write_temp_hyst( thermo4_t *ctx, float input_val );
 #endif  // _THERMO4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

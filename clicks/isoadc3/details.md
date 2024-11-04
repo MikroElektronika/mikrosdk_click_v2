@@ -1,6 +1,6 @@
 
 ---
-# ISO ADC 3 click
+# ISO ADC 3 Click
 
 > ISO ADC 3 Click is a compact add-on board that contains a single-channel precision isolation amplifier. This board features the AMC1100, a precision isolation amplifier with an output separated from the input circuitry by a silicon dioxide barrier that is highly resistant to magnetic interference from Texas Instruments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/isoadc3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/iso-adc-3-click)
+[Click Product page](https://www.mikroe.com/iso-adc-3-click)
 
 ---
 
@@ -63,7 +63,7 @@ uint16_t isoadc3_read_voltage ( isoadc3_t *ctx, uint16_t v_ref );
 
 ## Example Description
 
-> This example shows the capabilities of the ISO ADC 3 click.
+> This example shows the capabilities of the ISO ADC 3 Click.
 
 **The demo application is composed of two sections :**
 
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

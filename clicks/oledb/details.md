@@ -1,14 +1,14 @@
 
 ---
-# OLED B click
+# OLED B Click
 
-OLED B click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.
+OLED B Click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/oled_b_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/oled-b-click)
+[Click Product page](https://www.mikroe.com/oled-b-click)
 
 ---
 
@@ -70,7 +70,7 @@ void oledb_write_string( oledb_t *ctx, uint8_t font, uint8_t row, uint8_t positi
 
 ### Application Init
 
-> Configures the microcontroller for communication and initializes the click board to default state.
+> Configures the microcontroller for communication and initializes the Click board to default state.
 
 ```c
 
@@ -119,7 +119,7 @@ void application_task ( void ) {
     Delay_ms ( 100 );
 
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 0, 0, "     MIKROE     " );
-    oledb_write_string( &oledb, OLEDB_FONT_6X8, 1, 0, "  OLED B click  " );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 1, 0, "  OLED B Click  " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 2, 0, "  with SSD1306  " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 3, 0, "   controller   " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 4, 0, "  TEST EXAMPLE  " );
@@ -194,7 +194,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

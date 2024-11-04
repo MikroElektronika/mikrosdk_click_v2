@@ -381,7 +381,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void htu21d_cfg_setup ( htu21d_cfg_t *cfg );
@@ -391,7 +391,7 @@ void htu21d_cfg_setup ( htu21d_cfg_t *cfg );
  * @param htu21d Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HTU21D_RETVAL htu21d_init ( htu21d_t *ctx, htu21d_cfg_t *cfg );
 
@@ -497,6 +497,6 @@ float htu21d_get_humidity( htu21d_t *ctx );
 #endif  // _HTU21D_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

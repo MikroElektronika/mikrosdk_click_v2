@@ -3,6 +3,6 @@
     "description": "Barcode 3 Click is a compact add-on board for efficient barcode scanning applications. This board features the LV30, an advanced area image engine from Rakinda. The LV30 features a laser aiming system and LED illumination, ensuring quick and accurate barcode decoding on various media, including paper and magnetic cards. This module also includes a red LED for low-light conditions, a laser aimer for precise positioning, an onboard buzzer for audible feedback, buttons for scanning and resetting, and an LED indicator for successful reads.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","LV30"],
+    "hw" : ["Click","LV30"],
     "category" : ["Click Boards > Sensors > Miscellaneous"]
 }

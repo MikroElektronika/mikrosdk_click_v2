@@ -3,7 +3,7 @@
  * \brief DC Motor 6 Click example
  * 
  * # Description
- * This example demonstrates the use of DC Motor 6 click board.
+ * This example demonstrates the use of DC Motor 6 Click board.
  *
  * The demo application is composed of two sections :
  * 

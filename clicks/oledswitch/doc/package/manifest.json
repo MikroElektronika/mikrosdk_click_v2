@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "OLED Switch click",
+    "display_name": "OLED Switch Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.oledswitch",
     "product_link": "https://www.mikroe.com/oled-switch-click",
-    "short_description": "If you are building any type of human machine interface, OLED Switch click can help you keep the design simple, clear and interactive. It can be used in designing a control panel for an industrial machine… or a DIY arcade.",
+    "short_description": "If you are building any type of human machine interface, OLED Switch Click can help you keep the design simple, clear and interactive. It can be used in designing a control panel for an industrial machine… or a DIY arcade.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1931
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.OledSwitch",
     "subdir_name": "lib_oledswitch"
 }
+
 
 
 

@@ -3,12 +3,12 @@
  * \brief Barometer3 Click example
  * 
  * # Description
- * This example demonstrates the use of Barometer 3 click board.
+ * This example demonstrates the use of Barometer 3 Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, sets the click board default configuration and check the 
+ * Initializes the driver, sets the Click board default configuration and check the 
  * communication by reading the device ID.
  * 
  * ## Application Task  

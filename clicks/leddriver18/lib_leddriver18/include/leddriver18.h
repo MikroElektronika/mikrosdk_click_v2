@@ -201,7 +201,7 @@ typedef enum
 
 /**
  * @brief LED Driver 18 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #leddriver18_cfg_t object definition for detailed explanation.
@@ -213,7 +213,7 @@ void leddriver18_cfg_setup ( leddriver18_cfg_t *cfg );
 /**
  * @brief LED Driver 18 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #leddriver18_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -228,7 +228,7 @@ err_t leddriver18_init ( leddriver18_t *ctx, leddriver18_cfg_t *cfg );
 /**
  * @brief LED Driver 18 default configuration function.
  * @details This function executes a default configuration of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #leddriver18_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -274,7 +274,7 @@ err_t leddriver18_generic_read ( leddriver18_t *ctx, uint8_t reg, uint8_t *data_
 /**
  * @brief LED Driver 18 set output channel PWM value function.
  * @details This function is used to set output PWM of selected channel of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] out_num : Selected output number.
  * @param[in] pwm_val : PWM value.
  * @return @li @c  0 - Success,
@@ -288,7 +288,7 @@ err_t leddriver18_set_output_pwm ( uint8_t out_num, float pwm_val );
 /**
  * @brief LED Driver 18 get output channel PWM value function.
  * @details This function is used to get output PWM of selected channel of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] out_num : Selected output number.
  * @return PWM value of the selected output
  * @note None.
@@ -298,7 +298,7 @@ float leddriver18_get_output_pwm ( uint8_t out_num );
 /**
  * @brief LED Driver 18 write config function.
  * @details This function is used to update output settings of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #leddriver18_t object definition for detailed explanation.
  * @return Nothing.
@@ -309,7 +309,7 @@ void leddriver18_write_config ( leddriver18_t *ctx );
 /**
  * @brief LED Driver 18 enable output function.
  * @details This function is used to enable output of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #leddriver18_t object definition for detailed explanation.
  * @return Nothing.
@@ -320,7 +320,7 @@ void leddriver18_enable_output ( leddriver18_t *ctx );
 /**
  * @brief LED Driver 18 disable output function.
  * @details This function is used to disable output of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #leddriver18_t object definition for detailed explanation.
  * @return Nothing.
@@ -331,7 +331,7 @@ void leddriver18_disable_output ( leddriver18_t *ctx );
 /**
  * @brief LED Driver 18 set constant current output function.
  * @details This function is used to set constant current output of of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #leddriver18_t object definition for detailed explanation.
  * @param[in] current_limit : Constant current value to be set.
@@ -345,7 +345,7 @@ err_t leddriver18_set_cc_output ( leddriver18_t *ctx, uint8_t current_limit );
 /**
  * @brief LED Driver 18 get constant current output function.
  * @details This function is used to read constant current output of LED Driver 18
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #leddriver18_t object definition for detailed explanation.
  * @param[in] current_limit : Constant current value to be set.

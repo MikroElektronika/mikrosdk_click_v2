@@ -3,7 +3,7 @@
  * \brief HeartRate2 Click example
  * 
  * # Description
- * This example demonstrates the use of Heart rate 2 click board.
+ * This example demonstrates the use of Heart rate 2 Click board.
  *
  * The demo application is composed of two sections :
  * 

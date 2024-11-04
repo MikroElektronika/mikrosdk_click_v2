@@ -1,6 +1,6 @@
 
 ---
-# DAC 18 click
+# DAC 18 Click
 
 > DAC 18 Click is a compact add-on board for converting general-purpose input to PWM signals. This board features the DAC539G2-Q1, a 10-bit smart DAC from Texas Instruments. The board offers two key output channels: one for digital-to-analog conversion (OUT1) and the other for voltage-to-PWM conversion (OUT0) supporting triangle or sawtooth waveforms. It features an operational mode selection pin for I2C programming or standalone operation, along with nonvolatile memory for storing register settings. DAC 18 Click is ideal for automotive lighting systems and industrial environments requiring reliable signal conversion.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-18-click)
+[Click Product page](https://www.mikroe.com/dac-18-click)
 
 ---
 
@@ -69,7 +69,7 @@ void dac18_get_gpi_status ( dac18_t *ctx, uint8_t *gpi_status );
 
 ## Example Description
 
-> This example demonstrates the use of the DAC 18 click board 
+> This example demonstrates the use of the DAC 18 Click board 
 > by configuring the waveform signals from a function generator on the OUT0 
 > and voltage level on the OUT1.
 
@@ -122,7 +122,7 @@ void application_init ( void )
 ### Application Task
 
 > The demo application operated in standalone mode and displayed the voltage level on OUT1.
-> The GP0, GP1, and GP2 switches on the DAC 18 click board 
+> The GP0, GP1, and GP2 switches on the DAC 18 Click board 
 > are used to change the output voltage level and waveform signals.
 > Results are being sent to the UART Terminal, where you can track their changes.
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

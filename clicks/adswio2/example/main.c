@@ -13,7 +13,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Performs a hardware reset of the click board and
+ * Performs a hardware reset of the Click board and
  * executes a default configuration that enables channel A and sets it to measure voltage
  * input in the range from 0V to 10V, with 4800 SPS.
  * 
@@ -23,7 +23,7 @@
  *  
  * ## Additional Functions
  *
- * - void application_default_handler ( uint8_t *err_msg ) - Sends an error report messages from click
+ * - void application_default_handler ( uint8_t *err_msg ) - Sends an error report messages from Click
  * driver to initialized console module. It must be set using adswio2_set_handler function.
  * 
  * \author MikroE Team
@@ -94,7 +94,7 @@ void application_init ( void )
     adswio2_ch_a = DUMMY;
     adswio2_res  = DUMMY;
     adswio2_err  = ADSWIO2_ERR_STATUS_OK;
-    log_printf( &logger, " AD-SWIO 2 click initialization done \r\n");
+    log_printf( &logger, " AD-SWIO 2 Click initialization done \r\n");
     log_printf( &logger, "************************************\r\n");
 }
 

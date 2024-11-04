@@ -85,7 +85,7 @@ void application_init ( void )
     
     Delay_ms ( 200 );
 
-    log_printf( &logger, "** Temp-Log 3 click is initialized ** \r\n" );
+    log_printf( &logger, "** Temp-Log 3 Click is initialized ** \r\n" );
 }
 
 void application_task ( void )

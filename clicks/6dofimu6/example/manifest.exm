@@ -3,6 +3,6 @@
     "description": "6DOF IMU 6 Click features a 6-axis MotionTracking device that combines a 3-axis gyroscope, a 3-axis accelerometer, and a Digital Motion Processor™ (DMP) labeled as ICM-20689. The ICM-20689 from company TDK InvenSense includes on-chip 16-bit ADCs, programmable digital filters, an embedded temperature sensor, and programmable interrupts. The gyroscope and accelerometer are full-scale range, user-programmable sensors with factory-calibrated initial sensitivity for reduced production-line calibration requirements.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ICM-20689"],
+    "hw" : ["Click","ICM-20689"],
     "category" : ["Motion"] 
 }

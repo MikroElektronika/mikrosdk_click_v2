@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Gyro 6 click
+# Gyro 6 Click
 
 > Gyro 6 Click is a compact add-on board that contains a high-performance gyroscope. This board features the IAM-20380, a 3-axis, digital-output X-, Y-, and Z-axis angular rate sensor (gyroscope) from TDK InvenSense. It has a full-scale programmable range of ±250DPS, ±500DPS, ±1000DPS, and ±2000DPS with a factory-calibrated initial sensitivity and configurable host interface that supports both SPI and I2C serial communication.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gyro6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gyro-6-click)
+[Click Product page](https://www.mikroe.com/gyro-6-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t gyro6_set_low_power_mode ( gyro6_t *ctx, uint8_t sample_rate, uint8_t aver
 
 ## Example Description
 
-> This example demonstrates the use of Gyro 6 click board.
+> This example demonstrates the use of Gyro 6 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

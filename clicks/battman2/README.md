@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BATT-MAN 2 click
+# BATT-MAN 2 Click
 
 > BATT-MAN 2 Click is a compact add-on board representing an advanced battery and power management solution. This board features the MAX77654, a single inductor, multiple-output (SIMO) power management IC (PMIC) from Maxim Integrated, now part of Analog Devices. This I2C programmable board features a buck-boost regulator that provides three independently programmable power rails from a single inductor. Also, it has one 100mA LDO output with ripple rejection for audio and other noise-sensitive applications and a highly-configurable linear charger that supports a wide range of Li+ battery capacities featuring battery temperature monitoring for additional safety (JEITA).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/battman2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/batt-man-2-click)
+[Click Product page](https://www.mikroe.com/batt-man-2-click)
 
 ---
 
@@ -187,7 +187,7 @@ void application_init ( void )
 > This is an example that shows the use of a BATT-MAN 2 Click board™.
 > The choice of example profile tasks depends on uncommented code.
 > Examples profile: CHARGER and BUCK-BOOST.
-> In the CHARGER profile, while on the BATT-MAN 2 click board™ the 
+> In the CHARGER profile, while on the BATT-MAN 2 Click board™ the 
 > blue LED is the battery charging indicator, 
 > while the red LED indicates the cessation of battery charging. 
 > The yellow LED is an indicator of the BUCK-BOOST profile.
@@ -248,7 +248,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

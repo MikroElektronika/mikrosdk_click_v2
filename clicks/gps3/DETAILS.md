@@ -1,14 +1,14 @@
 
 ---
-# GPS 3 click
+# GPS 3 Click
 
-GPS3 click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS module with a patch antenna.
+GPS3 Click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS module with a patch antenna.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gps3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gps-3-click)
+[Click Product page](https://www.mikroe.com/gps-3-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t gps3_parse_gpgga ( char *rsp_buf, uint8_t gpgga_element, char *element_dat
 
 ## Example Description
 
-> This example demonstrates the use of GPS 3 click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of GPS 3 Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

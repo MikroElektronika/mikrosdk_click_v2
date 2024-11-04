@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DAQ click
+# DAQ Click
 
 > DAQ Click is a compact add-on board representing a data acquisition solution. This board features the ADAQ7768-1, a 24-bit precision data acquisition (DAQ) μModule system that encapsulates signal conditioning, conversion, and processing blocks into one SiP from Analog Devices. It supports a fully differential input signal with a maximum voltage range of ±12V with an excellent common-mode rejection ratio (CMRR). The input signal is fully buffered with a low input bias current, enabling the ADAQ7768-1 to interface to sensors with high output impedance directly.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/daq_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/daq-click)
+[Click Product page](https://www.mikroe.com/daq-click)
 
 ---
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

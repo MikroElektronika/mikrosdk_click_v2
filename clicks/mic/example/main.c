@@ -3,7 +3,7 @@
  * \brief Mic Click example
  * 
  * # Description
- * This example showcases the initialization and configuration of the click and logger
+ * This example showcases the initialization and configuration of the Click and logger
  * modules and later on reads and displays data recorded by the mic.
  *
  * The demo application is composed of two sections :

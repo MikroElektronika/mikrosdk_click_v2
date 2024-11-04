@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init
- * Initializes driver and enables the click board. 
+ * Initializes driver and enables the Click board. 
  * 
  * ## Application Task  
  * Alternates between different output frequencies.
@@ -16,7 +16,7 @@
  * ## Additional functions
  *  - set_output_frequency - Changing the output frequency by setting the PWM duty cycle to desired value. 
  * 
- * @note Output frequency may vary depending on the offset and gain potentiometers on board the click.
+ * @note Output frequency may vary depending on the offset and gain potentiometers on board the Click.
  * 
  * \author MikroE Team
  *

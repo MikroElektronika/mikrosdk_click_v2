@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Shutter click
+# Shutter Click
 
 > Shutter Click is an adapter Click board™ used to implement an automated capturing feature. This Click board™ features one 3.5mm jack connector suitable for a camera connection with which the frame is captured. By combining two mikroBUS™ pins and the VO617A, a high-reliability phototransistor from Vishay Semiconductors used as a camera activation switch, activating the camera's Auto-Focus and the action of taking pictures is realized. This Click board™ allows you to expressly capture frames in a simple way for various types of photographic and security applications to capture those parts you need.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/shutter_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/shutter-click)
+[Click Product page](https://www.mikroe.com/shutter-click)
 
 ---
 
@@ -65,7 +65,7 @@ void shutter_take_picture ( shutter_t *ctx, uint8_t auto_focus );
 
 ## Example Description
 
-> This example demonstrates the use of Shutter click board by taking pictures with and without auto focus function.
+> This example demonstrates the use of Shutter Click board by taking pictures with and without auto focus function.
 
 **The demo application is composed of two sections :**
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

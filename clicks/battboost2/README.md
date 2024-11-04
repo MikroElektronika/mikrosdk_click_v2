@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BATT Boost 2 click
+# BATT Boost 2 Click
 
 > BATT Boost 2 Click is a compact add-on board designed to extend the battery life of non-rechargeable, primary batteries in low-voltage, low-power applications. This board features the NBM7100A, a coin-cell battery-life booster with adaptive power optimization from Nexperia. The NBM7100A integrates two high-efficiency DC-DC conversion stages and an intelligent learning algorithm to optimize energy usage, allowing it to handle bursts of current up to 200mA without depleting the battery. It features two output terminals: VDH for high pulse load applications and VDP for powering 'Always-ON' components. Communication with the host MCU is achieved via the I2C interface, supporting up to 1MHz clock frequencies.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/battboost2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/batt-boost-2-click)
+[Click Product page](https://www.mikroe.com/batt-boost-2-click)
 
 ---
 
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

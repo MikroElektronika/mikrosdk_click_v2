@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Rotary W 2 click
+# Rotary W 2 Click
 
 > Rotary W 2 Click is a compact add-on board that allows you to add a precision input knob to your design. This board features the TLC5925, a low-power 16-channel constant-current LED sink driver from Texas Instruments that, combined with a high-quality rotary encoder from ALPS, the EC12D1564402, allows you to add a precision input knob to your design. It also features an LED ring composed of 16 individual white LEDs that can be used to represent the encoder position more visually.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rotaryw2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rotary-w-2-click)
+[Click Product page](https://www.mikroe.com/rotary-w-2-click)
 
 ---
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

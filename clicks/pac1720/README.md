@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# PAC1720 click
+# PAC1720 Click
 
 > PAC1720 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1720, an I2C configurable dual high-side bidirectional current sensing monitor with precision voltage measurement capabilities from Microchip Technology. The PAC1720 measures the voltage developed across external sense resistors to represent the high-side current of a battery or voltage regulator.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pac1720_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pac1720-click)
+[Click Product page](https://www.mikroe.com/pac1720-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t pac1720_get_measurements ( pac1720_t *ctx, pac1720_ch_sel_t ch, float *vol
 
 ## Example Description
 
-> This example demonstrates the use of PAC1720 click board by reading the voltage, current, and power from both available channels.
+> This example demonstrates the use of PAC1720 Click board by reading the voltage, current, and power from both available channels.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

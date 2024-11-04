@@ -3,14 +3,14 @@
  * \brief SemperFlash2 Click example
  * 
  * # Description
- * This example showcases how to initialize and use the Semper Flash 2 click. The click
+ * This example showcases how to initialize and use the Semper Flash 2 Click. The Click
  * is a 512 Mbit SPI Flash memory module. Data can be stored in and read from the flash
  * memory. There's also the option of erasing it's contents. Here's how to do it.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules. Additional con-
+ * This function initializes and configures the Click and logger modules. Additional con-
  * figuring is done in the default_cfg(...) function. The device ID should appear in the 
  * UART console if the setup finishes successfully.
  * 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Air Velocity click
+# Air Velocity Click
 
 > Air Velocity Click is a compact add-on board that measures direct airspeed. This board features the FS3000-1005, a surface-mount type air velocity module utilizing a MEMS thermopile-based sensor from Renesas. This I2C-configurable air velocity module features a digital output with a 12-bit resolution with a wide operational range of 0-7.2meter/second (0-16.2mph). The sensor comprises a “solid” thermal isolation technology and silicon-carbide coating to protect it from abrasive wear and water condensation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/airvelocity_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/air-velocity-click)
+[Click Product page](https://www.mikroe.com/air-velocity-click)
 
 ---
 
@@ -60,7 +60,7 @@ float airvelocity_convert_counts_to_mps ( uint16_t out_counts );
 
 ## Example Description
 
-> This example demonstrates the use of Air Velocity click board by reading and displaying the output counts and air velocity in m/sec.
+> This example demonstrates the use of Air Velocity Click board by reading and displaying the output counts and air velocity in m/sec.
 
 **The demo application is composed of two sections :**
 
@@ -130,7 +130,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

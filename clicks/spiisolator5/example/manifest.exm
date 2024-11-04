@@ -3,6 +3,6 @@
     "description": "SPI Isolator 5 Click is a compact add-on board with a digital isolator optimized for a serial peripheral interface. This board features the DCL541A01, a high-speed quad-channel digital isolator from Toshiba Semiconductor. Outstanding performance characteristics of the DCL541A01 are achieved by Toshiba CMOS technology and the magnetic coupling structure. In addition, they comply with UL 1577 safety-related certification, have a withstand voltage rating of 5kVrms, and operate with the external supply voltage ranging from 2.25V to 5.5V, providing compatibility with lower voltage systems enabling voltage translation functionality across the isolation barrier.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DCL541A01"],
+    "hw" : ["Click","DCL541A01"],
     "category" : ["Click Boards > Interface > SPI"]
 }

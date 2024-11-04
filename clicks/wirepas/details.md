@@ -1,6 +1,6 @@
 
 ---
-# Wirepas click
+# Wirepas Click
 
 > Wirepas Click is a compact add-on board that allows you to implement the Wirepas Mesh wireless connectivity stack to your application. This board features the WIRL-PRO2 Thetis-I (2611011021010), a radio module with Wirepas Mesh Protocol from Würth Elektronik. It supports creating a Wirepas routing mesh protocol and is optimized for ultra-low energy consumption. The large scalability is ideal for extensive IoT networks and can work as a host-controlled device.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/wirepas_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/wirepas-click)
+[Click Product page](https://www.mikroe.com/wirepas-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t wirepas_send_data ( wirepas_t *ctx, wirepas_sink_data sink_data, uint8_t t
 
 ## Example Description
 
-> This example demonstrates the use of Wirepas click board by processing
+> This example demonstrates the use of Wirepas Click board by processing
   the incoming data and displaying them on the USB UART in sink mode, and sending data to 
   the sinks in router mode.
 
@@ -77,7 +77,7 @@ err_t wirepas_send_data ( wirepas_t *ctx, wirepas_sink_data sink_data, uint8_t t
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration, setting device mode, node,
+> Initializes the driver and performs the Click default configuration, setting device mode, node,
   net and channel addresses, and starting stack.
 
 ```c
@@ -241,7 +241,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

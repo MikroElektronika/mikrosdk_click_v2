@@ -3,6 +3,6 @@
     "description": "Pressure 23 Click - 07BA is a compact add-on board for accurate and reliable absolute pressure and temperature measurements in harsh environments. This board features the MS5849-07BA, an ultra-compact, chlorine-resistant sensor from TE Connectivity that delivers 24-bit resolution data via I2C or SPI interfaces. It operates within pressure ranges of 0.4 to 7 bar, features a chlorine-resistant gel coating, and measures temperatures from -20 to +85°C. The sensor's grounded metal ring provides robust protection and secure O-ring mounting, while the flexible communication options allow for optimized performance.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MS5849-07BA"],
+    "hw" : ["Click","MS5849-07BA"],
     "category" : ["Click Boards > Sensors > Pressure"]
 }

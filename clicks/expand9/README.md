@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Expand 9 click
+# Expand 9 Click
 
 > Expand 9 Click is a compact add-on board that contains a multi-port I/O expander. This board features the SX1509QB, the world’s lowest voltage level shifting GPIO expander from Semtech Corporation. The SX1509QB comes in a 16-channel configuration and allows easy serial expansion of I/O through a standard I2C serial interface. It also has a built-in level shifting feature making it highly flexible in power supply systems where communication between incompatible I/O voltages is required, an integrated LED driver for enhanced lighting, and a keypad scanning engine to implement keypad applications up to 8x8 matrix.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand_9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-9-click)
+[Click Product page](https://www.mikroe.com/expand-9-click)
 
 ---
 
@@ -123,7 +123,7 @@ void application_init ( void )
 ### Application Task
 
 > his is an example that demonstrates the use of the Expand 9 Click board™.
-> This example shows the capabilities of the Expand 9 click by toggling each of 16 available channels.
+> This example shows the capabilities of the Expand 9 Click by toggling each of 16 available channels.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
@@ -186,7 +186,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

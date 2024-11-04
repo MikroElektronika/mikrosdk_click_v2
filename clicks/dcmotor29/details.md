@@ -1,6 +1,6 @@
 
 ---
-# DC Motor 29 click
+# DC Motor 29 Click
 
 > DC Motor 29 Click is a compact add-on board that contains a high-performance DC motor driver. This board features the DRV8245P, an automotive H-Bridge driver with integrated current sense and diagnostic from Texas Instruments. It can be configured as a single full-bridge driver or independent half-bridge driver. The driver offers excellent power handling and thermal capability due to a BiCMOS high power process technology mode, in which it is designed.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor29_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-29-click)
+[Click Product page](https://www.mikroe.com/dc-motor-29-click)
 
 ---
 
@@ -76,7 +76,7 @@ err_t dcmotor29_drive_motor ( dcmotor29_t *ctx, uint8_t state );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -170,7 +170,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

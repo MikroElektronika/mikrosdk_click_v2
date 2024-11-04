@@ -30,7 +30,7 @@
 /**
  * @brief Power Monitor get ADC range function.
  * @details This function gets shunt full scale range selection across IN+ and IN- 
- * of Power Monitor click board.
+ * of Power Monitor Click board.
  * @param[in] ctx : Click context object.
  * See #powermonitor_t object definition for detailed explanation.
  * @return @li @c 0 - Shunt full scale range ±163.84 mV,
@@ -45,7 +45,7 @@ static uint8_t powermonitor_get_adcrange ( powermonitor_t *ctx );
 /**
  * @brief Power Monitor configuration delay function.
  * @details This function executes a gonfiguratio delay of the 10 milliseconds 
- * of Power Monitor click board.
+ * of Power Monitor Click board.
  * @return Nothing.
  *
  * @note None.

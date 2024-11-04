@@ -1,14 +1,14 @@
 
 ---
-# GSM-GPS click
+# GSM-GPS Click
 
-GSM-GPS click is a mikroBUS add-on board with a SIM808 module that combines GSM/GPRS and GPS into a single device. 
+GSM-GPS Click is a mikroBUS add-on board with a SIM808 module that combines GSM/GPRS and GPS into a single device. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gsmgps_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gsm-gps-click)
+[Click Product page](https://www.mikroe.com/gsm-gps-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example reads and processes data from GSM-GPS click.
+> This example reads and processes data from GSM-GPS Click.
 
 **The demo application is composed of two sections :**
 
@@ -291,7 +291,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

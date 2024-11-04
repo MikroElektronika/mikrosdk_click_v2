@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Hall Current 19 click
+# Hall Current 19 Click
 
 > Hall Current 19 Click is a compact add-on board designed for precise current sensing in various applications. This board features the CZ3AG2, a coreless current sensor from AKM Semiconductor. The CZ3AG2 offers high-accuracy and high-speed current sensing using Hall sensor technology, with features like stray magnetic field reduction and dual overcurrent detection.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-19-click)
+[Click Product page](https://www.mikroe.com/hall-current-19-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t hallcurrent19_get_current ( hallcurrent19_t *ctx, float *current );
 
 ## Example Description
 
-> This example demonstrates the use of Hall Current 19 click board
+> This example demonstrates the use of Hall Current 19 Click board
   by reading and displaying the current measurements.
 
 **The demo application is composed of two sections :**
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

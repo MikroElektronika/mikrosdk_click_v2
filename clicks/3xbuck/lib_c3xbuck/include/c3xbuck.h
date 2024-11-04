@@ -325,7 +325,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c3xbuck_cfg_setup ( c3xbuck_cfg_t *cfg );
@@ -335,7 +335,7 @@ void c3xbuck_cfg_setup ( c3xbuck_cfg_t *cfg );
  * @param c3xbuck Click object.
  * @param cfg     Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  * @returns       Initialization response. 
  */
 C3XBUCK_RETVAL c3xbuck_init ( c3xbuck_t *ctx, c3xbuck_cfg_t *cfg );
@@ -345,7 +345,7 @@ C3XBUCK_RETVAL c3xbuck_init ( c3xbuck_t *ctx, c3xbuck_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for 3xBuck click.
+ * @description This function executes default configuration for 3xBuck Click.
  */
 void c3xbuck_default_cfg ( c3xbuck_t *ctx );
 
@@ -383,7 +383,7 @@ uint8_t c3xbuck_read_byte( c3xbuck_t *ctx, uint8_t reg);
  *
  * @param ctx  Click object.
  *
- * @description This function enables desired Buck on the click.
+ * @description This function enables desired Buck on the Click.
  */
 void c3xbuck_enable_buck ( c3xbuck_t *ctx, uint8_t buck );
 
@@ -392,7 +392,7 @@ void c3xbuck_enable_buck ( c3xbuck_t *ctx, uint8_t buck );
  *
  * @param ctx  Click object.
  *
- * @description This function disables 3xBuck click.
+ * @description This function disables 3xBuck Click.
  */
 void c3xbuck_disable_buck ( c3xbuck_t *ctx, uint8_t buck );
 
@@ -423,7 +423,7 @@ uint8_t c3xbuck_get_status( c3xbuck_t *ctx );
  * @param ctx  Click object.
  * @param buck Buck 1 - 3.
  * 
- * @description This function executes default configuration for 3xBuck click.
+ * @description This function executes default configuration for 3xBuck Click.
  */
 void c3xbuck_configuration_buck( c3xbuck_t *ctx, uint8_t buck, uint8_t config);
 
@@ -433,6 +433,6 @@ void c3xbuck_configuration_buck( c3xbuck_t *ctx, uint8_t buck, uint8_t config);
 #endif  // _C3XBUCK_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

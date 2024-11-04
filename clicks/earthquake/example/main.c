@@ -12,7 +12,7 @@
  * Intializes of I2C driver and makes initial log.
  * 
  * ## Application Task  
- * This is an example that shows most of the functions that Earthquake click
+ * This is an example that shows most of the functions that Earthquake Click
  * has. Results are being sent to the Usart Terminal where you can track their 
  * changes.
  * 

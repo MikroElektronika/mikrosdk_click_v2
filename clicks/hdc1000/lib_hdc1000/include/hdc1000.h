@@ -178,7 +178,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hdc1000_cfg_setup ( hdc1000_cfg_t *cfg );
@@ -189,7 +189,7 @@ void hdc1000_cfg_setup ( hdc1000_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HDC1000_RETVAL hdc1000_init ( hdc1000_t *ctx, hdc1000_cfg_t *cfg );
 
@@ -198,7 +198,7 @@ HDC1000_RETVAL hdc1000_init ( hdc1000_t *ctx, hdc1000_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for HDC1000 click.
+ * @description This function executes default configuration for HDC1000 Click.
  * @note
  *      Click default configuration:
  * Sets both temperature and humidity 
@@ -286,6 +286,6 @@ uint8_t hdc1000_get_interrupt ( hdc1000_t *ctx );
 #endif  // _HDC1000_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

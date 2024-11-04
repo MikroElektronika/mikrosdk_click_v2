@@ -252,7 +252,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void color8_cfg_setup ( color8_cfg_t *cfg );
@@ -262,7 +262,7 @@ void color8_cfg_setup ( color8_cfg_t *cfg );
  * @param color8 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COLOR8_RETVAL color8_init ( color8_t *ctx, color8_cfg_t *cfg );
 
@@ -364,6 +364,6 @@ uint8_t color8_get_color ( color8_t *ctx, float color_value );
 #endif  // _COLOR8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

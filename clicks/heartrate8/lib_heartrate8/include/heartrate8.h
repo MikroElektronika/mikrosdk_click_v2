@@ -249,7 +249,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void heartrate8_cfg_setup ( heartrate8_cfg_t *cfg );
@@ -260,7 +260,7 @@ void heartrate8_cfg_setup ( heartrate8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HEARTRATE8_RETVAL heartrate8_init ( heartrate8_t *ctx, heartrate8_cfg_t *cfg );
 
@@ -269,7 +269,7 @@ HEARTRATE8_RETVAL heartrate8_init ( heartrate8_t *ctx, heartrate8_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for HeartRate8 click.
+ * @description This function executes default configuration for HeartRate8 Click.
  */
 void heartrate8_default_cfg ( heartrate8_t *ctx );
 
@@ -381,6 +381,6 @@ uint8_t heartrate8_get_data ( heartrate8_t *ctx, uint8_t data_select, uint16_t *
 #endif  // _HEARTRATE8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

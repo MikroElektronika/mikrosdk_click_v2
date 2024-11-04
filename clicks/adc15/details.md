@@ -1,6 +1,6 @@
 
 ---
-# ADC 15 click
+# ADC 15 Click
 
 > ADC 15 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS131M02, a two-channel, simultaneously sampling, 24-bit, delta-sigma (ΔΣ), analog-to-digital converter from Texas Instruments. The ADC inputs can be independently configured via serial peripheral interface depending on the sensor input. A low noise, programmable gain amplifier (PGA) provides gains ranging from 1 to 128 to amplify low-level signals.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adc15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-15-click)
+[Click Product page](https://www.mikroe.com/adc-15-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t adc15_set_word_len ( adc15_t *ctx, adc15_word_t word_len );
 
 ## Example Description
 
-> This example showcases ability of the click board to 
+> This example showcases ability of the Click board to 
 read adc data from 2 different channels. It's also configuratable
 to read data in different output rate, resolutions( word/data len ),
 and gain.
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

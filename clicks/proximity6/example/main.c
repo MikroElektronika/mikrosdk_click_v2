@@ -3,13 +3,13 @@
  * \brief Proximity 6 Click example
  * 
  * # Description
- * This application demonstrates the use of Proximity 6 click board by reading
+ * This application demonstrates the use of Proximity 6 Click board by reading
  * and displaying the raw data measurements from 4 photodiode channels.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  * 
  * ## Application Task
  * Reads the raw data measurements from 4 photodiode channels and displays the results

@@ -3,13 +3,13 @@
  * @brief Expand14 Click example
  *
  * # Description
- * This example demonstrates the use of Expand 14 click board by setting and reading 
+ * This example demonstrates the use of Expand 14 Click board by setting and reading 
  * the ports state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets 
+ * Initializes the driver and performs the Click default configuration which sets 
  * the port 0 as output and the port 1 as input.
  *
  * ## Application Task

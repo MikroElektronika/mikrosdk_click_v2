@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger 3 click
+# Charger 3 Click
 
 > Charger 3 Click is a compact add-on board that represents a standalone battery charger with thermal regulation. This board features the TP4056, a complete constant-current/constant-voltage linear charger for single-cell lithium-ion batteries from NanJing Top Power ASIC Corp.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-3-click)
+[Click Product page](https://www.mikroe.com/charger-3-click)
 
 ---
 
@@ -72,7 +72,7 @@ float charger3_calc_digipot_res ( charger3_t *ctx );
 
 ## Examples Description
 
-This example demonstrates the utilization of Charger 3 click.
+This example demonstrates the utilization of Charger 3 Click.
 
 **The demo application is composed of two sections :**
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

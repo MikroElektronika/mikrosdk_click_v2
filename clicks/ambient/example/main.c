@@ -11,8 +11,8 @@
  * Initialization driver and logger.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of Ambient click board.
- * Ambient click reads ADC voltage once per second and converts it to light intensity [ uW/cm2 ].
+ * This is an example which demonstrates the use of Ambient Click board.
+ * Ambient Click reads ADC voltage once per second and converts it to light intensity [ uW/cm2 ].
  * Results are being sent to the USB UART where you can track their changes.
  *
  * \author MikroE Team

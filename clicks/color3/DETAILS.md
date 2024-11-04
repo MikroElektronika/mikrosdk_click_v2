@@ -2,15 +2,15 @@
  
 
 ---
-# Color 3 click
+# Color 3 Click
 
-Color 3 click is a mikroBUS™ add-on board with a TCS3771 color sensor (also known as a light-to-digital converter) and a narrow beam Infrared LED. The circuit can also function as a proximity sensor
+Color 3 Click is a mikroBUS™ add-on board with a TCS3771 color sensor (also known as a light-to-digital converter) and a narrow beam Infrared LED. The circuit can also function as a proximity sensor
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/color3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-3-click)
+[Click Product page](https://www.mikroe.com/color-3-click)
 
 ---
 
@@ -66,7 +66,7 @@ uint8_t color3_get_color ( color3_hsl_t *hsl );
 
 ## Examples Description
 
-> This example demonstrates the use of Color 3 click board by reading data
+> This example demonstrates the use of Color 3 Click board by reading data
 from RGBC channels and converting them to HSL color and displaying those data as 
 well as the detected color name on the USB UART.
 
@@ -74,7 +74,7 @@ well as the detected color name on the USB UART.
 
 ### Application Init 
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

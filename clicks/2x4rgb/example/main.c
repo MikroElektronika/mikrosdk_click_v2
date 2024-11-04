@@ -3,14 +3,14 @@
  * @brief 2x4 RGB Click Example.
  *
  * # Description
- * This example demonstrates the use of 2x4 RGB click board by cycling through
+ * This example demonstrates the use of 2x4 RGB Click board by cycling through
  * a set of colors, gradually increasing the brightness of each LED in a sequence,
  * and then decreasing the brightness before moving on to the next color in the array.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets
+ * Initializes the driver and performs the Click default configuration which sets
  * the LEDs brightness and current gain to a minimum and the color to black (all LEDs off).
  *
  * ## Application Task

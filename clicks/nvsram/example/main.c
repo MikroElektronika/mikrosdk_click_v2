@@ -3,7 +3,7 @@
  * @brief nvSRAM Click example
  *
  * # Description
- * This is an example that demonstrates the use of the nvSRAM click board.
+ * This is an example that demonstrates the use of the nvSRAM Click board.
  * In this example, we write and then read data from nvSRAM memory.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on USB uart changes approximately for every 5 sec.

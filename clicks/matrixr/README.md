@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Matrix R click
+# Matrix R Click
 
-Matrix R click is a mikroBUS add-on board with two red 5x7 matrices driven by two MAX7219 8-bit LED Display Drivers. The active area of each matrix is 7.62mm high and 5.08 mm wide. 7x5 is a standard resolution for displaying ASCII characters, so the click is essentially a dual-character display capable of showing letters in more readable typefaces compared to a 14-segment display. The click communicates with the target MCU through the mikroBUS:tm: SPI interface with two separate Chip Select lines for each matrix (CSL for the left, CSR for the right). This board is designed to use a 5V power supply.
+Matrix R Click is a mikroBUS add-on board with two red 5x7 matrices driven by two MAX7219 8-bit LED Display Drivers. The active area of each matrix is 7.62mm high and 5.08 mm wide. 7x5 is a standard resolution for displaying ASCII characters, so the Click is essentially a dual-character display capable of showing letters in more readable typefaces compared to a 14-segment display. The Click communicates with the target MCU through the mikroBUS:tm: SPI interface with two separate Chip Select lines for each matrix (CSL for the left, CSR for the right). This board is designed to use a 5V power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/matrixr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/matrix-r-click)
+[Click Product page](https://www.mikroe.com/matrix-r-click)
 
 ---
 
@@ -53,7 +53,7 @@ void matrixr_default_cfg ( matrixr_t *ctx );
 
 #### Example key functions :
 
-- `matrixr_display_characters` This function displays the specified characters on the L/R segments of the click.
+- `matrixr_display_characters` This function displays the specified characters on the L/R segments of the Click.
 ```c
 void matrixr_display_characters ( matrixr_t *ctx, uint8_t left_char, uint8_t right_char );
 ```
@@ -70,13 +70,13 @@ void matrixr_set_csn_low ( matrixr_t *ctx );
 
 ## Example Description
 
-> This example showcases how to prepare the logger and click modules for use and how to display ASCII characters on both of the LED segments of the click.
+> This example showcases how to prepare the logger and Click modules for use and how to display ASCII characters on both of the LED segments of the Click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> This function initializes and configures the logger and click modules. After the initialization of the logger module, communication, mikrobus and pin setup, some of the registers are configured in order for the click module to work properly.
+> This function initializes and configures the logger and Click modules. After the initialization of the logger module, communication, mikrobus and pin setup, some of the registers are configured in order for the Click module to work properly.
 
 ```c
 
@@ -158,7 +158,7 @@ void application_task ( ) {
 
 ## Note
 
-> The click has two chips, each controlling one of the LED segments, on and requires you to write data to both at the same time. Writing to one specific chip will not work. If you wish to display characters on a single segment, you have to send ' ' characters to the other segment.
+> The Click has two chips, each controlling one of the LED segments, on and requires you to write data to both at the same time. Writing to one specific chip will not work. If you wish to display characters on a single segment, you have to send ' ' characters to the other segment.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

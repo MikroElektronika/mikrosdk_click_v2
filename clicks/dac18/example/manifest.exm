@@ -3,6 +3,6 @@
     "description": "DAC 18 Click is a compact add-on board for converting general-purpose input to PWM signals. This board features the DAC539G2-Q1, a 10-bit smart DAC from Texas Instruments. The board offers two key output channels: one for digital-to-analog conversion (OUT1) and the other for voltage-to-PWM conversion (OUT0) supporting triangle or sawtooth waveforms. It features an operational mode selection pin for I2C programming or standalone operation, along with nonvolatile memory for storing register settings. DAC 18 Click is ideal for automotive lighting systems and industrial environments requiring reliable signal conversion.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DAC539G2RTERQ1"],
+    "hw" : ["Click","DAC539G2RTERQ1"],
     "category" : ["Click Boards > Mixed signal > DAC"]
 }

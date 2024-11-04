@@ -3,7 +3,7 @@
  * \brief Dac6 Click example
  * 
  * # Description
- * DAC 6 click carries 12-bit buffered Digital-to-Analog Converter. It converts digital value 
+ * DAC 6 Click carries 12-bit buffered Digital-to-Analog Converter. It converts digital value 
  * to the corresponding voltage level using external voltage reference. 
  *
  * The demo application is composed of two sections :
@@ -12,7 +12,7 @@
  * Initalizes SPI driver.
  * 
  * ## Application Task  
- * This example shows capabilities of DAC 6 click by changeing
+ * This example shows capabilities of DAC 6 Click by changeing
  * output values from 0 to the maximum output range on all four channels.
  * Output voltage is calculated by using the equation : 
  * Vout = Vrefin * (set_out / 4095).

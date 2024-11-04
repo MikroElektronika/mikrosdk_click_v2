@@ -3,6 +3,6 @@
     "description": "UVC Click is an ultraviolet sensing board which complements UVC Light Click for a ultimate ultraviolet solution. The board is based on GUVC-T21GH ultraviolet sensor from GenUV, capable of measuring UVC spectrum in the range of 220nm up to 280nm and light intensity from 0mW/cm² up to 9.3mW/cm².",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","GUVC-T21GH"],
+    "hw" : ["Click","GUVC-T21GH"],
     "category" : ["Measurement"] 
 }

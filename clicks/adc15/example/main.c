@@ -3,7 +3,7 @@
  * @brief ADC15 Click example
  *
  * # Description
- * This example showcases ability of the click board to 
+ * This example showcases ability of the Click board to 
  * read adc data from 2 different channels. It's also configuratable
  * to read data in different output rate, resolutions( word/data len ),
  * and gain.

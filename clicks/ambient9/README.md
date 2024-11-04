@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Ambient 9 click
+# Ambient 9 Click
 
 Ambient 9 Click is a compact add-on board that contains an integrated ambient light sensing and proximity detector with IR LED in an optical module. This board features the APDS-9160-003, digital ALS, and IR sensing, an IR LED, and a complete proximity sensing solution from Broadcom Limited, that is fit to be used under a small aperture of the devices cover windows. It has a wide dynamic range, the proximity detection feature operates well from bright sunlight to dark rooms, and both the PS and ALS functions independently provides maximum flexibility in applications.
 
@@ -10,7 +10,7 @@ Ambient 9 Click is a compact add-on board that contains an integrated ambient li
 </p>
 
 
-[click Product page](https://www.mikroe.com/ambient-9-click)
+[Click Product page](https://www.mikroe.com/ambient-9-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

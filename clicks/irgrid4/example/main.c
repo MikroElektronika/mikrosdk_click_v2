@@ -3,13 +3,13 @@
  * @brief IR Grid 4 Click example
  *
  * # Description
- * This example demonstrates the use of IR Grid 4 click by reading and displaying
+ * This example demonstrates the use of IR Grid 4 Click by reading and displaying
  * the ambient and object temperature measurements in a 16x12 pixels grid format.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the ambient and object temperature measurements every 500ms and displays

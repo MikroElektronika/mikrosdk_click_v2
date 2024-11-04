@@ -3,6 +3,6 @@
     "description": "Force 4 Click is based on HSFPAR003A piezoresistive force sensor from Alpsalpine. This product is a force sensor using the effect of a piezoresistive bridge circuit formed on silicon diaphragm.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","HSFPAR003A"],
+    "hw" : ["Click","HSFPAR003A"],
     "category" : ["Force"] 
 }

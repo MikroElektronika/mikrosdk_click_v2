@@ -19,7 +19,7 @@
  * 
  * @note 
  * - M-Bus master communication works at 36v.
- * - This click acts only as 'master', therefore it must be connected to appropriate 'slave'.
+ * - This Click acts only as 'master', therefore it must be connected to appropriate 'slave'.
  * 
  * \author MikroE Team
  *
@@ -32,7 +32,7 @@
 
 #define PROCESS_RX_BUFFER_SIZE 500
 
-#define TEXT_TO_SEND "MikroE - M-Bus Master click board\r\n"
+#define TEXT_TO_SEND "MikroE - M-Bus Master Click board\r\n"
 
 // #define DEMO_APP_RECEIVER
 #define DEMO_APP_TRANSMITTER

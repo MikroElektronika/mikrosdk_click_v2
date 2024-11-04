@@ -3,15 +3,15 @@
  
 
 ---
-# Current click
+# Current Click
 
-Current click is an add-on board used for measurement of electric current. It features INA196 current shunt monitor, MCP3201 12-bit ADC, MAX6106 voltage reference as well as two screw terminals. 
+Current Click is an add-on board used for measurement of electric current. It features INA196 current shunt monitor, MCP3201 12-bit ADC, MAX6106 voltage reference as well as two screw terminals. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/current_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-click)
+[Click Product page](https://www.mikroe.com/current-click)
 
 ---
 
@@ -52,15 +52,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This is an example that shows the capabilities of the Current click board 
-> by measuring current in miliampers. Current click board can be used to safely
+> This is an example that shows the capabilities of the Current Click board 
+> by measuring current in miliampers. Current Click board can be used to safely
 > measure DC current in the range of 2-2048mA depending on shunt resistor.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initalizes SPI, LOG and click drivers.
+> Initalizes SPI, LOG and Click drivers.
 
 ```c
 
@@ -130,7 +130,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

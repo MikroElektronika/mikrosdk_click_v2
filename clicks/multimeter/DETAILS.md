@@ -1,15 +1,15 @@
 
 ---
-# Multimeter click
+# Multimeter Click
 
-<Multimeter click is a Click board™ designed to measure voltage, current, resistance, and capacitance properties of the components, connected to the input terminals. Each property measurement is done on a separate terminal.>
+<Multimeter Click is a Click board™ designed to measure voltage, current, resistance, and capacitance properties of the components, connected to the input terminals. Each property measurement is done on a separate terminal.>
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/multimeter_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/multimeter-click)
+[Click Product page](https://www.mikroe.com/multimeter-click)
 
 ---
 
@@ -57,15 +57,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to configure, initialize and use the Multimeter click. The
-  click measures resistance in Ohms, voltage in mVs, current in mAs and capacitance in nFs
+> This example showcases how to configure, initialize and use the Multimeter Click. The
+  Click measures resistance in Ohms, voltage in mVs, current in mAs and capacitance in nFs
   using a dual CMOS and quad CMOS op-amps, an ADC and other on board modules. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules. Additional 
+> This function initializes and configures the logger and Click modules. Additional 
   calibration of the measurement components is done in the default_cfg(...) function.
 
 ```c
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

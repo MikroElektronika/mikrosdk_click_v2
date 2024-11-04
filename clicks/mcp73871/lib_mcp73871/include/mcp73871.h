@@ -127,7 +127,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mcp73871_cfg_setup ( mcp73871_cfg_t *cfg );
@@ -137,7 +137,7 @@ void mcp73871_cfg_setup ( mcp73871_cfg_t *cfg );
  * @param mcp73871 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MCP73871_RETVAL mcp73871_init ( mcp73871_t *ctx, mcp73871_cfg_t *cfg );
 
@@ -145,9 +145,9 @@ MCP73871_RETVAL mcp73871_init ( mcp73871_t *ctx, mcp73871_cfg_t *cfg );
  * @brief Enable pin control
  *
  * @param ctx         Click object.
- * @param pin_state   1 = click enabled, 0 = click disabled
+ * @param pin_state   1 = Click enabled, 0 = Click disabled
  *
- * @description Controls the CE pin, enabling or disabling the click operation.
+ * @description Controls the CE pin, enabling or disabling the Click operation.
  */
 void mcp73871_enable_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
 
@@ -177,6 +177,6 @@ void mcp73871_timer_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
 #endif  // _MCP73871_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

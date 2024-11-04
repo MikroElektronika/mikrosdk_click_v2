@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ledflash_cfg_setup ( ledflash_cfg_t *cfg );
@@ -144,7 +144,7 @@ void ledflash_cfg_setup ( ledflash_cfg_t *cfg );
  * @param ledflash Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LEDFLASH_RETVAL ledflash_init ( ledflash_t *ctx, ledflash_cfg_t *cfg );
 
@@ -220,6 +220,6 @@ uint8_t ledflash_flash_rdy_flag ( ledflash_t *ctx );
 #endif  // _LEDFLASH_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

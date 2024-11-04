@@ -150,7 +150,7 @@ typedef enum
 
 /**
  * @brief Headphone AMP configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #headphoneamp_cfg_t object definition for detailed explanation.
@@ -162,7 +162,7 @@ void headphoneamp_cfg_setup ( headphoneamp_cfg_t *cfg );
 /**
  * @brief Headphone AMP initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #headphoneamp_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -178,7 +178,7 @@ err_t headphoneamp_init ( headphoneamp_t *ctx, headphoneamp_cfg_t *cfg );
 /**
  * @brief Headphone AMP default configuration function.
  * @details This function executes a default configuration of Headphone AMP
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #headphoneamp_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -195,7 +195,7 @@ err_t headphoneamp_default_cfg ( headphoneamp_t *ctx );
  * @details This function set the amplifier bias circuitry shutdown 
  * of the LM4811 Dual 105mW Headphone Amplifier 
  * with Digital Volume Control and Shutdown Mode 
- * on the Headphone AMP click board™.
+ * on the Headphone AMP Click board™.
  * @param[in] ctx : Click context object.
  * See #headphoneamp_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -210,7 +210,7 @@ err_t headphoneamp_shutdown ( headphoneamp_t *ctx );
  * @brief Headphone AMP power up function.
  * @details This function performs power-up sequence 
  * of the LM4811 Dual 105mW Headphone Amplifier with Digital Volume Control and Shutdown Mode 
- * on the Headphone AMP click board™.
+ * on the Headphone AMP Click board™.
  * @param[in] ctx : Click context object.
  * See #headphoneamp_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -226,7 +226,7 @@ err_t headphoneamp_power_up ( headphoneamp_t *ctx );
  * @details This function set sound volume down 
  * on of the LM4811 Dual 105mW Headphone Amplifier 
  * with Digital Volume Control and Shutdown Mode 
- * on the Headphone AMP click board™.
+ * on the Headphone AMP Click board™.
  * @param[in] ctx : Click context object.
  * See #headphoneamp_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -242,7 +242,7 @@ err_t headphoneamp_volume_down ( headphoneamp_t *ctx );
  * @details This function set sound volume up 
  * on of the LM4811 Dual 105mW Headphone Amplifier 
  * with Digital Volume Control and Shutdown Mode 
- * on the Headphone AMP click board™.
+ * on the Headphone AMP Click board™.
  * @param[in] ctx : Click context object.
  * See #headphoneamp_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -258,7 +258,7 @@ err_t headphoneamp_volume_up ( headphoneamp_t *ctx );
  * @details This function sets a desired sound volume
  * on of the LM4811 Dual 105mW Headphone Amplifier 
  * with Digital Volume Control and Shutdown Mode 
- * on the Headphone AMP click board™.
+ * on the Headphone AMP Click board™.
  * @param[in] ctx : Click context object.
  * See #headphoneamp_t object definition for detailed explanation.
  * @param[in] sound_volume : Desired sound volume from -33 dB to 12 dB.

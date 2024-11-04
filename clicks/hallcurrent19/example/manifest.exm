@@ -3,6 +3,6 @@
     "description": "Hall Current 19 Click is a compact add-on board designed for precise current sensing in various applications. This board features the CZ3AG2, a coreless current sensor from AKM Semiconductor. The CZ3AG2 offers high-accuracy and high-speed current sensing using Hall sensor technology, with features like stray magnetic field reduction and dual overcurrent detection.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CZ3AG2"],
+    "hw" : ["Click","CZ3AG2"],
     "category" : ["Click Boards > Sensors > Current sensor"]
 }

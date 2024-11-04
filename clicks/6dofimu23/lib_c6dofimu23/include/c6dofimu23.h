@@ -264,7 +264,7 @@ typedef enum
 
 /**
  * @brief 6DOF IMU 23 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c6dofimu23_cfg_t object definition for detailed explanation.
@@ -276,7 +276,7 @@ void c6dofimu23_cfg_setup ( c6dofimu23_cfg_t *cfg );
 /**
  * @brief 6DOF IMU 23 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c6dofimu23_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -291,7 +291,7 @@ err_t c6dofimu23_init ( c6dofimu23_t *ctx, c6dofimu23_cfg_t *cfg );
 /**
  * @brief 6DOF IMU 23 default configuration function.
  * @details This function executes a default configuration of 6DOF IMU 23
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu23_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -366,7 +366,7 @@ void c6dofimu23_device_disable ( c6dofimu23_t *ctx );
  * @brief 6DOF IMU 23 get odr function.
  * @details This function gets states of the output data-ready ( ODR-INT ) pin 
  * of the IIM-20670, SmartIndustrial 6-axis MotionTracking MEMS
- * on the 6DOF IMU 23 click board.
+ * on the 6DOF IMU 23 Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu23_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -379,7 +379,7 @@ uint8_t c6dofimu23_get_odr ( c6dofimu23_t *ctx );
  * @brief 6DOF IMU 23 get the accel sensor axes function.
  * @details This function reads the accelerometer sensor axes measurement data 
  * of the IIM-20670, SmartIndustrial 6-axis MotionTracking MEMS
- * on the 6DOF IMU 23 click board.
+ * on the 6DOF IMU 23 Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu23_t object definition for detailed explanation.
  * @param[out] acc_axis : Linear acceleration output data object (mg).
@@ -394,7 +394,7 @@ err_t c6dofimu23_get_accel_data ( c6dofimu23_t *ctx, c6dofimu23_axis_t *acc_axis
  * @brief 6DOF IMU 23 get the gyro sensor axes function.
  * @details This function reads the gyroscope sensor axes measurement data 
  * of the IIM-20670, SmartIndustrial 6-axis MotionTracking MEMS
- * on the 6DOF IMU 23 click board.
+ * on the 6DOF IMU 23 Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu23_t object definition for detailed explanation.
  * @param[out] gyro_axis : Angular rate output data object (dps).
@@ -409,7 +409,7 @@ err_t c6dofimu23_get_gyro_data ( c6dofimu23_t *ctx, c6dofimu23_axis_t *gyro_axis
  * @brief 6DOF IMU 23 get the internal temperature function.
  * @details This function reads the internal temperature sensor measurement in degrees Celsius
  * of the IIM-20670, SmartIndustrial 6-axis MotionTracking MEMS
- * on the 6DOF IMU 23 click board.
+ * on the 6DOF IMU 23 Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu23_t object definition for detailed explanation.
  * @param[out] temperature : Internal temperature (degrees Celsius).

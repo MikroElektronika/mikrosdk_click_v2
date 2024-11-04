@@ -568,7 +568,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c9dof3_cfg_setup ( c9dof3_cfg_t *cfg );
@@ -576,7 +576,7 @@ void c9dof3_cfg_setup ( c9dof3_cfg_t *cfg );
 /**
  * @brief 9DOF 3 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #c9dof3_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -595,7 +595,7 @@ void c9dof3_drv_interface_selection ( c9dof3_cfg_t *cfg, c9dof3_drv_t drv_sel );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C9DOF3_RETVAL c9dof3_init ( c9dof3_t *ctx, c9dof3_cfg_t *cfg );
 
@@ -729,6 +729,6 @@ uint8_t c9dof3_check_interrupt ( c9dof3_t *ctx );
 #endif  // _C9DOF3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

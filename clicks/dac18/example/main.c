@@ -3,7 +3,7 @@
  * @brief DAC 18 Click example
  *
  * # Description
- * This example demonstrates the use of the DAC 18 click board 
+ * This example demonstrates the use of the DAC 18 Click board 
  * by configuring the waveform signals from a function generator on the OUT0 
  * and voltage level on the OUT1.
  *
@@ -15,7 +15,7 @@
  *
  * ## Application Task
  * The demo application operated in standalone mode and displayed the voltage level on OUT1.
- * The GP0, GP1, and GP2 switches on the DAC 18 click board 
+ * The GP0, GP1, and GP2 switches on the DAC 18 Click board 
  * are used to change the output voltage level and waveform signals.
  * Results are being sent to the UART Terminal, where you can track their changes.
  *

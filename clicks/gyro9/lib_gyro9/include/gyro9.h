@@ -338,7 +338,7 @@ typedef enum
 
 /**
  * @brief Gyro 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gyro9_cfg_t object definition for detailed explanation.
@@ -350,7 +350,7 @@ void gyro9_cfg_setup ( gyro9_cfg_t *cfg );
 /**
  * @brief Gyro 9 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #gyro9_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -366,7 +366,7 @@ void gyro9_drv_interface_selection ( gyro9_cfg_t *cfg, gyro9_drv_t drv_sel );
 /**
  * @brief Gyro 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -381,7 +381,7 @@ err_t gyro9_init ( gyro9_t *ctx, gyro9_cfg_t *cfg );
 /**
  * @brief Gyro 9 default configuration function.
  * @details This function executes a default configuration of Gyro 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -428,7 +428,7 @@ err_t gyro9_generic_read ( gyro9_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t
  * @brief Gyro 9 get device ID function.
  * @details This function reads a device identification value
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[out] who_am_i : Device identification data value.
@@ -443,7 +443,7 @@ err_t gyro9_get_device_id ( gyro9_t *ctx, uint8_t *who_am_i );
  * @brief Gyro 9 set output data rate function.
  * @details This function sets the desired output data rate
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[in] odr : Output data rate [0-3].
@@ -458,7 +458,7 @@ err_t gyro9_set_output_data_rate ( gyro9_t *ctx, uint8_t odr );
  * @brief Gyro 9 set bandwidth function.
  * @details This function sets the desired bandwidth
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[in] bandwidth : Bandwidth selection [0-3].
@@ -473,7 +473,7 @@ err_t gyro9_set_bandwidth_sel ( gyro9_t *ctx, uint8_t bandwidth );
  * @brief Gyro 9 set power-down mode function.
  * @details This function sets power-down mode
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -487,7 +487,7 @@ err_t gyro9_set_mode_pd ( gyro9_t *ctx );
  * @brief Gyro 9 set sleep mode function.
  * @details This function sets sleep mode
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -501,7 +501,7 @@ err_t gyro9_set_mode_sleep ( gyro9_t *ctx );
  * @brief Gyro 9 set normal mode function.
  * @details This function sets normal mode
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -515,7 +515,7 @@ err_t gyro9_set_mode_normal ( gyro9_t *ctx );
  * @brief Gyro 9 set FIFO mode function.
  * @details This function sets the desired FIFO mode
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[in] fifo_mode : FIFO mode configuration [0-2].
@@ -530,7 +530,7 @@ err_t gyro9_set_fifo_mode ( gyro9_t *ctx, uint8_t fifo_mode );
  * @brief Gyro 9 enable data ready function.
  * @details This function enable data ready DR pin 
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -544,7 +544,7 @@ err_t gyro9_enable_data_ready ( gyro9_t *ctx );
  * @brief Gyro 9 get status function.
  * @details This function reads status register
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[in] status : Status register data value.
@@ -559,7 +559,7 @@ err_t gyro9_get_status ( gyro9_t *ctx, uint8_t *status );
  * @brief Gyro 9 get gyro data function.
  * @details This function reads the gyroscope raw data 
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[out] gyro_axis : Gyroscope raw data object.
@@ -575,7 +575,7 @@ err_t gyro9_get_axis_data ( gyro9_t *ctx, gyro9_axis_data_t *gyro_axis );
  * @brief Gyro 9 get gyro sensor axes function.
  * @details This function reads the gyroscope raw data and convert to the engineering units 
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[out] gyro_axis : Angular rate output data object (dps).
@@ -591,7 +591,7 @@ err_t gyro9_get_gyro_axis ( gyro9_t *ctx, gyro9_axis_t *gyro_axis );
  * @brief Gyro 9 get temperature data function.
  * @details This function reads the temperature raw data 
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @param[out] temp_raw : Temperature raw data.
@@ -606,7 +606,7 @@ err_t gyro9_get_temperature_raw ( gyro9_t *ctx, int8_t *temp_raw );
  * @brief Gyro 9 get data ready function.
  * @details This function gets states of the data ready (DR) pin 
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @return @li @c 0 - Data is not ready,
@@ -619,7 +619,7 @@ uint8_t gyro9_get_data_ready ( gyro9_t *ctx );
  * @brief Gyro 9 get interrupt function.
  * @details This function gets states of the Interrupt (INT) pin 
  * of the A3G4250D, MEMS motion sensor: 3-axis digital output gyroscope
- * on the Gyro 9 click board™.
+ * on the Gyro 9 Click board™.
  * @param[in] ctx : Click context object.
  * See #gyro9_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

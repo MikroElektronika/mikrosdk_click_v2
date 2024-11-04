@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes and configures the click and logger modules.
+ * Initializes and configures the Click and logger modules.
  * 
  * ## Application Task  
  * Reads and displays data from all three axes every two seconds.

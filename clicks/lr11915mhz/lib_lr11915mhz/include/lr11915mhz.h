@@ -300,7 +300,7 @@ typedef enum
 
 /**
  * @brief LR 11 915MHz configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lr11915mhz_cfg_t object definition for detailed explanation.
@@ -312,7 +312,7 @@ void lr11915mhz_cfg_setup ( lr11915mhz_cfg_t *cfg );
 /**
  * @brief LR 11 915MHz initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lr11915mhz_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -396,7 +396,7 @@ uint8_t lr11915mhz_get_rts_pin ( lr11915mhz_t *ctx );
 
 /**
  * @brief LR 11 915MHz cmd run function.
- * @details This function sends a specified command with or without parameters to the click module.
+ * @details This function sends a specified command with or without parameters to the Click module.
  * @param[in] ctx : Click context object.
  * See #lr11915mhz_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -408,7 +408,7 @@ void lr11915mhz_cmd_run ( lr11915mhz_t *ctx, uint8_t *cmd, uint8_t *param );
 
 /**
  * @brief LR 11 915MHz cmd set function.
- * @details This function sets a value to a specified command parameter of the click module.
+ * @details This function sets a value to a specified command parameter of the Click module.
  * @param[in] ctx : Click context object.
  * See #lr11915mhz_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -421,7 +421,7 @@ void lr11915mhz_cmd_set ( lr11915mhz_t *ctx, uint8_t *cmd, uint8_t *param_id, ui
 
 /**
  * @brief LR 11 915MHz cmd get function.
- * @details This function is used to get the value of a given command parameter from the click module.
+ * @details This function is used to get the value of a given command parameter from the Click module.
  * @param[in] ctx : Click context object.
  * See #lr11915mhz_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -433,7 +433,7 @@ void lr11915mhz_cmd_get ( lr11915mhz_t *ctx, uint8_t *cmd, uint8_t *param_id );
 
 /**
  * @brief LR 11 915MHz cmd help function.
- * @details This function provides a short description of the given command parameter of the click module.
+ * @details This function provides a short description of the given command parameter of the Click module.
  * @param[in] ctx : Click context object.
  * See #lr11915mhz_t object definition for detailed explanation.
  * @param[in] cmd : Command string.

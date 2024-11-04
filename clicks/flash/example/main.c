@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes all necessary peripherals and pins used by Flash click and also
+ * Initializes all necessary peripherals and pins used by Flash Click and also
  * initializes uart logger to show results.
  *
  * ## Application Task

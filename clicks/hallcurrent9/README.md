@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Hall Current 9 click
+# Hall Current 9 Click
 
 Hall Current 9 Click is a compact add-on board that contains the coreless current sensor corresponding to the safety standards. This board features the CQ3300, a high-speed response coreless current sensor using a Hall sensor that outputs the analog voltage proportional to the AC/DC from AKM Semiconductor.
 
@@ -9,7 +9,7 @@ Hall Current 9 Click is a compact add-on board that contains the coreless curren
   <img src="https://download.mikroe.com/images/click_for_ide/hall_current_9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-9-click)
+[Click Product page](https://www.mikroe.com/hall-current-9-click)
 
 ---
 
@@ -101,7 +101,7 @@ void application_init ( void ) {
     log_init( &logger, &log_cfg );
     log_printf( &logger, "\r\n" );
     log_printf( &logger, "--------------------------\r\n" );
-    log_printf( &logger, "   Hall Current 9 click   \r\n" );
+    log_printf( &logger, "   Hall Current 9 Click   \r\n" );
     log_printf( &logger, "--------------------------\r\n" );
     log_info( &logger, " Application Init " );
 
@@ -147,7 +147,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Hall Current 9 click board.
+> This is an example that demonstrates the use of the Hall Current 9 Click board.
 > In this example, we read and display the ADC and current ( mA ) data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

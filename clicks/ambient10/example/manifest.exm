@@ -3,6 +3,6 @@
     "description": "Ambient 10 Click is a compact add-on board used to sense the amount of the present ambient light. This board features the APDS-9006-020, analog-output ambient light photosensor from Broadcom Limited.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","APDS-9006"],
+    "hw" : ["Click","APDS-9006"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

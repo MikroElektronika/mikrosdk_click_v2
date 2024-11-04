@@ -261,7 +261,7 @@ typedef enum
 
 /**
  * @brief Smart Buck 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #smartbuck4_cfg_t object definition for detailed explanation.
@@ -273,7 +273,7 @@ void smartbuck4_cfg_setup ( smartbuck4_cfg_t *cfg );
 /**
  * @brief Smart Buck 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -288,7 +288,7 @@ err_t smartbuck4_init ( smartbuck4_t *ctx, smartbuck4_cfg_t *cfg );
 /**
  * @brief Smart Buck 4 default configuration function.
  * @details This function executes a default configuration of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -302,7 +302,7 @@ err_t smartbuck4_default_cfg ( smartbuck4_t *ctx );
 /**
  * @brief Smart Buck 4 set R40 pin state function.
  * @details This function is used to set R40 pin value of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @param[in] out_level : Pin output value.
@@ -314,7 +314,7 @@ void smartbuck4_set_r40_out ( smartbuck4_t *ctx, uint8_t out_level );
 /**
  * @brief Smart Buck 4 enable 400A regulator function.
  * @details This function is used to enable 400A regulator of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @return Nothing.
@@ -325,7 +325,7 @@ void smartbuck4_en_r40_reg ( smartbuck4_t *ctx );
 /**
  * @brief Smart Buck 4 disable 400A regulator function.
  * @details This function is used to disable 400A regulator of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @return Nothing.
@@ -336,7 +336,7 @@ void smartbuck4_dis_r40_reg ( smartbuck4_t *ctx );
 /**
  * @brief Smart Buck 4 set R60 pin state function.
  * @details This function is used to set R60 pin value of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @param[in] out_level : Pin output value.
@@ -348,7 +348,7 @@ void smartbuck4_set_r60_out ( smartbuck4_t *ctx, uint8_t out_level );
 /**
  * @brief Smart Buck 4 enable 600A regulator function.
  * @details This function is used to enable 600A regulator of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @return Nothing.
@@ -359,7 +359,7 @@ void smartbuck4_en_r60_reg ( smartbuck4_t *ctx );
 /**
  * @brief Smart Buck 4 disable 600A regulator function.
  * @details This function is used to disable 600A regulator of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @return Nothing.
@@ -370,7 +370,7 @@ void smartbuck4_dis_r60_reg ( smartbuck4_t *ctx );
 /**
  * @brief Smart Buck 4 send command function.
  * @details This function is used to send a specific command of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @param[in] addr : Specific sub-address.
@@ -385,7 +385,7 @@ err_t smartbuck4_send_command ( smartbuck4_t *ctx, uint8_t addr, uint8_t data_in
 /**
  * @brief Smart Buck 4 disable regulators function.
  * @details This function is used to disable regulator output of Smart Buck 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartbuck4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -147,7 +147,7 @@ typedef enum
 
 /**
  * @brief Terminal 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #terminal2_cfg_t object definition for detailed explanation.
@@ -159,7 +159,7 @@ void terminal2_cfg_setup ( terminal2_cfg_t *cfg );
 /**
  * @brief Terminal 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #terminal2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -174,7 +174,7 @@ err_t terminal2_init ( terminal2_t *ctx, terminal2_cfg_t *cfg );
 /**
  * @brief Terminal 2 set pin high function.
  * @details This function sets the specified pin to high logic level.
- * @param[in] pin  Pointer to digital out pin structure from click context object.
+ * @param[in] pin  Pointer to digital out pin structure from Click context object.
  * See #digital_out_t object definition for detailed explanation.
  * @note The pin address should be acquired in the following way: { &click.pin }
  */
@@ -183,7 +183,7 @@ void terminal2_set_pin_high ( digital_out_t *pin );
 /**
  * @brief Terminal 2 set pin low function.
  * @details This function sets the specified pin to low logic level.
- * @param[in] pin  Pointer to digital out pin structure from click context object.
+ * @param[in] pin  Pointer to digital out pin structure from Click context object.
  * See #digital_out_t object definition for detailed explanation.
  * @note The pin address should be acquired in the following way: { &click.pin }
  */
@@ -192,7 +192,7 @@ void terminal2_set_pin_low ( digital_out_t *pin );
 /**
  * @brief Terminal 2 toggle pin function.
  * @details This function toggles the specified pin logic level.
- * @param[in] pin  Pointer to digital out pin structure from click context object.
+ * @param[in] pin  Pointer to digital out pin structure from Click context object.
  * See #digital_out_t object definition for detailed explanation.
  * @note The pin address should be acquired in the following way: { &click.pin }
  */

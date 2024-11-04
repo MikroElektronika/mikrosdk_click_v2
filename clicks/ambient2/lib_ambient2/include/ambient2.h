@@ -267,7 +267,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to initial state.
+ * @description This function initializes Click configuration structure to initial state.
  * @note All used pins will be set to unconnected state.
  */
 void ambient2_cfg_setup( ambient2_cfg_t *cfg );
@@ -280,7 +280,7 @@ void ambient2_cfg_setup( ambient2_cfg_t *cfg );
  *
  * @returns 0x0 - Ok, 0xFE - Driver init error, 0xFF - Unsupported pin.
  *
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ambient2_err_t ambient2_init( ambient2_t *ctx, ambient2_cfg_t *cfg );
 
@@ -289,7 +289,7 @@ ambient2_err_t ambient2_init( ambient2_t *ctx, ambient2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes a default configuration for Ambient 2 click.
+ * @description This function executes a default configuration for Ambient 2 Click.
  */
 void ambient2_default_cfg( ambient2_t *ctx );
 

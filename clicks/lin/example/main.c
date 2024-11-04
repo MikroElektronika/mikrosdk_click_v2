@@ -18,7 +18,7 @@
  * - lin_process ( ) - The general process of collecting the received data.
  * 
  * @note
- * Make sure to set the onboard Master/Slave jumpers properly and to connect and power two click 
+ * Make sure to set the onboard Master/Slave jumpers properly and to connect and power two Click 
  * boards according to LIN Specification 2.2A.
  * 
  * \author MikroE Team
@@ -33,7 +33,7 @@
 
 #define PROCESS_RX_BUFFER_SIZE 500
 
-#define TEXT_TO_SEND "MikroE - LIN click board\r\n"
+#define TEXT_TO_SEND "MikroE - LIN Click board\r\n"
 
 #define DEMO_APP_RECEIVER
 // #define DEMO_APP_TRANSMITTER

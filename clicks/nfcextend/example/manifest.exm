@@ -3,6 +3,6 @@
     "description": "NFC Extend Click is NFC tag interface device with possibility of using any shape and size external antenna, offering 16 Kbit of electrically erasable programmable memory (EEPROM). This Click Board™ offer two communication interfaces.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ST25DV16K "],
+    "hw" : ["Click","ST25DV16K "],
     "category" : ["RFID/NFC"] 
 }

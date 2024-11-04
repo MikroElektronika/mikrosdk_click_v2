@@ -3,7 +3,7 @@
  * \brief LteIot2 Click example
  * 
  * # Description
- * This example reads and processes data from LTE IoT 2 click.
+ * This example reads and processes data from LTE IoT 2 Click.
  *
  * The demo application is composed of two sections :
  * 
@@ -497,7 +497,7 @@ static void gps_parser_application ( char *rsp )
     lteiot2_generic_parser( rsp, LTEIOT2_NMEA_GPGGA, LTEIOT2_GPGGA_LATITUDE, element_buf );
     if ( strlen( element_buf ) > 0 )
     {
-        strcpy( gps_info_message, "LTE IoT 2 click - GPS info\n" );
+        strcpy( gps_info_message, "LTE IoT 2 Click - GPS info\n" );
         strcat( gps_info_message, "Latitude: " );
         strncat( gps_info_message, element_buf, 2 );
         strcat( gps_info_message, " deg, " );

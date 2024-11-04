@@ -214,7 +214,7 @@ typedef enum
 
 /**
  * @brief ESP8684 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #esp8684_cfg_t object definition for detailed explanation.
@@ -226,7 +226,7 @@ void esp8684_cfg_setup ( esp8684_cfg_t *cfg );
 /**
  * @brief ESP8684 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #esp8684_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -241,7 +241,7 @@ err_t esp8684_init ( esp8684_t *ctx, esp8684_cfg_t *cfg );
 /**
  * @brief ESP8684 default configuration function.
  * @details This function executes a default configuration of ESP8684
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #esp8684_t object definition for detailed explanation.
  * @return Nothing.

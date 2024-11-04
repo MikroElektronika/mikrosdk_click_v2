@@ -2,15 +2,15 @@
  
 
 ---
-# IR distance click
+# IR distance Click
 
-IR distance click carries Sharp’s GP2Y0A60SZ0F distance measuring sensor, which comprises of an integrated PSD (position sensitive detector), an infrared LED and a signal processing circuit. The measuring range is between 10 and 150 cm. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over RST and AN pin on the mikroBUS™ line.
+IR distance Click carries Sharp’s GP2Y0A60SZ0F distance measuring sensor, which comprises of an integrated PSD (position sensitive detector), an infrared LED and a signal processing circuit. The measuring range is between 10 and 150 cm. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over RST and AN pin on the mikroBUS™ line.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irdistance_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-distance-click)
+[Click Product page](https://www.mikroe.com/ir-distance-click)
 
 ---
 
@@ -49,18 +49,18 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- Function enable distance measuring sensor by set RST pin on Stretch click board.
+- Function enable distance measuring sensor by set RST pin on Stretch Click board.
 > void irdistance_enable ( irdistance_t *ctx );
  
 - This function reads ADC data using analog_in_read function
 > irdistance_data_t irdistance_read_adc ( irdistance_t *ctx );
 
-- Function calculate the voltage output of distance measuring sensor on IR Distance click board.
+- Function calculate the voltage output of distance measuring sensor on IR Distance Click board.
 > float irdistance_get_voltage_out ( uint32_t adc_value, uint16_t resolution_value, float vcc_value );
 
 ## Examples Description
 
-> The click board outputs an analog voltage corresponding to the distance of the object 
+> The Click board outputs an analog voltage corresponding to the distance of the object 
 > (through the mikroBUS AN pin). An Enable (EN) pin is also utilized.
 
 **The demo application is composed of two sections :**
@@ -101,8 +101,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example which demonstrates the use of IR Distance click board.
-> IR Distance click reads and displays ADC value.
+> This is an example which demonstrates the use of IR Distance Click board.
+> IR Distance Click reads and displays ADC value.
 > Results are being sent to the Usart Terminal where you can track their changes.
 > All data logs on USB uart change for every 1 sec.
  
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

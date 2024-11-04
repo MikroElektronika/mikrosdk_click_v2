@@ -1,16 +1,16 @@
 \mainpage Main Page
  
 ---
-# DHT22 2 click
+# DHT22 2 Click
 
-DHT22 2 click is used for measuring the environmental temperature and relative humidity. It uses the AM2322 sensor, with very accurate thermal and humidity measuring capabilities. It can use either 1-Wire or I2C protocol to communicate with the integrated circuit.
+DHT22 2 Click is used for measuring the environmental temperature and relative humidity. It uses the AM2322 sensor, with very accurate thermal and humidity measuring capabilities. It can use either 1-Wire or I2C protocol to communicate with the integrated circuit.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/dht222_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/dht22-2-click)
+[Click Product page](https://www.mikroe.com/dht22-2-click)
 
 ---
 
@@ -66,7 +66,7 @@ err_t dht222_get_temp_hum ( dht222_t *ctx, uint16_t *temperature, uint16_t *humi
 
 ## Examples Description
 
-> This example demonstrates the use of DHT22 2 click board by reading the temperature and humidity data.
+> This example demonstrates the use of DHT22 2 Click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

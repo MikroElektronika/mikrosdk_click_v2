@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Relay 5 click
+# Relay 5 Click
 
 > Relay 5 Click is a compact add-on board with general-purpose relays that any host MCU can control. This board features three J1031C3VDC.15S, a high-current single-pole double-throw (SPDT) signal relays controlled by the PCA9538A, a low-voltage 8-bit I/O port expander from NXP Semiconductors. Highly sensitive, the J1031C3VDC.15S offers a low coil power consumption in a small, lightweight package with PC pin mounting. It comes with a dimension of 12.5x7.5x10 millimeters (LxWxH) and a 1C contact arrangement with a coil voltage of 3VDC, providing a maximum switching voltage of 125VAC/60VDC.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/relay5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/relay-5-click)
+[Click Product page](https://www.mikroe.com/relay-5-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t relay5_switch_relay1 ( relay5_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Relay 5 click board by toggling the relays state.
+> This example demonstrates the use of Relay 5 Click board by toggling the relays state.
 
 **The demo application is composed of two sections :**
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

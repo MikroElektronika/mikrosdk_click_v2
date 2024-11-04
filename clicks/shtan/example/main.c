@@ -3,7 +3,7 @@
  * \brief ShtAn Click example
  * 
  * # Description
- * This app demonstrates the use of SHT AN click to measure temperature and humidity.
+ * This app demonstrates the use of SHT AN Click to measure temperature and humidity.
  *
  * The demo application is composed of two sections :
  * 

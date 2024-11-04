@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Load Cell 8 click
+# Load Cell 8 Click
 
 > Load Cell 8 Click is a compact add-on board representing a weigh scale solution. This board features the ZSC31050, an advanced differential sensor signal conditioner from Renesas designed for high-precision signal conditioning in applications requiring detailed sensor-specific corrections. It excels in processing differential sensor signals for various resistive bridge sensors. The ZSC31050 is capable of highly accurate amplification, offering digital compensation of sensor offset, sensitivity, temperature drift, and non-linearity. It supports a broad signal range from 1mV/V to 275mV/V, making its use across industrial, medical, and consumer applications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/loadcell8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/load-cell-8-click)
+[Click Product page](https://www.mikroe.com/load-cell-8-click)
 
 ---
 
@@ -70,8 +70,8 @@ err_t loadcell8_calibration_weight ( loadcell8_t *ctx, uint16_t cal_val, loadcel
 
 ## Example Description
 
-> This example demonstrates the use of Load Cell 8 click by measuring the weight
- in grams of the goods from the load cell sensor connected to the click board.
+> This example demonstrates the use of Load Cell 8 Click by measuring the weight
+ in grams of the goods from the load cell sensor connected to the Click board.
 
 **The demo application is composed of two sections :**
 
@@ -189,7 +189,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -343,7 +343,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void color6_cfg_setup ( color6_cfg_t *cfg );
@@ -353,7 +353,7 @@ void color6_cfg_setup ( color6_cfg_t *cfg );
  * @param color6 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COLOR6_RETVAL color6_init ( color6_t *ctx, color6_cfg_t *cfg );
 
@@ -362,7 +362,7 @@ COLOR6_RETVAL color6_init ( color6_t *ctx, color6_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Color6 click.
+ * @description This function executes default configuration for Color6 Click.
  */
 void color6_default_cfg ( color6_t *ctx );
 
@@ -464,6 +464,6 @@ float color6_converting_to_ee ( color6_t *ctx, uint8_t channel, uint16_t mres_da
 #endif  // _COLOR6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

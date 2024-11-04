@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes I2C driver and executes a default configuration for Fan 2 click.
+ * Initializes I2C driver and executes a default configuration for Fan 2 Click.
  * Also initializes UART logger for results logging.
  *
  * ## Application Task

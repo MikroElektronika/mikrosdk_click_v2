@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes RTD click driver, and sets the
+ * Initializes RTD Click driver, and sets the
  * proper configuration mode for three wire RTD.
  * 
  * ## Application Task  

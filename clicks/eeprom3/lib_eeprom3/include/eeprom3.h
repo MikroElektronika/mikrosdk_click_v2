@@ -130,7 +130,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void eeprom3_cfg_setup ( eeprom3_cfg_t *cfg );
@@ -141,7 +141,7 @@ void eeprom3_cfg_setup ( eeprom3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t eeprom3_init ( eeprom3_t *ctx, eeprom3_cfg_t *cfg );
 
@@ -185,6 +185,6 @@ void eeprom3_read ( eeprom3_t *ctx, uint16_t reg_address, uint8_t *data_out, uin
 #endif  // _EEPROM3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

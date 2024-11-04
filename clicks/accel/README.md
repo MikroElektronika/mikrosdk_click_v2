@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Accel click
+# Accel Click
 
 Accel Click is an accessory board in mikroBUS form factor. It features ADXL345 3-axis accelerometer module with ultra-low power and high resolution (13-bit) measurement.
 
@@ -10,7 +10,7 @@ Accel Click is an accessory board in mikroBUS form factor. It features ADXL345 3
 </p>
 
 
-[click Product page](https://www.mikroe.com/accel-click)
+[Click Product page](https://www.mikroe.com/accel-click)
 
 ---
 
@@ -71,7 +71,7 @@ int16_t accel_read_z_axis ( accel_t *ctx );
 
 ## Examples Description
 
-> This example demonstrates the use of Accel click board by reading and displaying the accelerometer data (X, Y, and Z axis).
+> This example demonstrates the use of Accel Click board by reading and displaying the accelerometer data (X, Y, and Z axis).
 
 **The demo application is composed of two sections :**
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

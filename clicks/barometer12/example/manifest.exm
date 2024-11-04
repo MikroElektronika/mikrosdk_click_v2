@@ -3,6 +3,6 @@
     "description": "Barometer 12 Click is a compact add-on board that measures air pressure in a specific environment. This board features the ICP-10125, a high-accuracy, low-power, 10-atm waterproof barometric pressure and temperature sensor from TDK InvenSense. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ICP-10125"],
+    "hw" : ["Click","ICP-10125"],
     "category" : ["Click Boards > Sensors > Pressure"]
 }

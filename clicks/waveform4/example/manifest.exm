@@ -3,6 +3,6 @@
     "description": "Waveform 4 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9106, a quad-channel, 12-bit, 180MSPS waveform generator, integrating on-chip static random access memory (SRAM) and direct digital synthesis (DDS) for complex waveform generation from Analog Devices. The DDS is up to a 180 MHz master clock sinewave generator with a 24-bit tuning word allowing 10.8 Hz/LSB frequency resolution.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AD9106"],
+    "hw" : ["Click","AD9106"],
     "category" : ["Clock generator"]
 }

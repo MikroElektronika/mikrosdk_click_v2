@@ -277,7 +277,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to 
+ * @description This function initializes Click configuration structure to 
  * init state.
  * @note All used pins will be set to unconnected state.
  */
@@ -289,7 +289,7 @@ void compass3_cfg_setup ( compass3_cfg_t *cfg );
  * @param cfg Click configuration structure.
  * 
  * @description This function initializes all necessary pins and peripherals 
- * used for this click.
+ * used for this Click.
  */
 COMPASS3_RETVAL compass3_init ( compass3_t *ctx, compass3_cfg_t *cfg );
 
@@ -298,7 +298,7 @@ COMPASS3_RETVAL compass3_init ( compass3_t *ctx, compass3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Compass3 click.
+ * @description This function executes default configuration for Compass3 Click.
  */
 void compass3_default_cfg ( compass3_t *ctx );
 
@@ -370,6 +370,6 @@ uint8_t compass3_check_int ( compass3_t *ctx );
 #endif  // _COMPASS3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

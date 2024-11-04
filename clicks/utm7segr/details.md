@@ -1,14 +1,14 @@
 
 ---
-# UT-M 7-SEG R click
+# UT-M 7-SEG R Click
 
-UT-M 7-SEG R click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
+UT-M 7-SEG R Click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/utm7segr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ut-m-7-seg-r-click)
+[Click Product page](https://www.mikroe.com/ut-m-7-seg-r-click)
 
 ---
 
@@ -75,7 +75,7 @@ err_t utm7segr_display_number ( utm7segr_t *ctx, uint8_t number, uint8_t dot_pos
 
 ### Application Init
 
-> Configuring clicks and log objects. Settings the click in the default configuration.
+> Configuring clicks and log objects. Settings the Click in the default configuration.
 
 ```c
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

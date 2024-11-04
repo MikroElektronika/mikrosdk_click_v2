@@ -165,7 +165,7 @@
 /** \} */
 
 /**
- * \defgroup ecg3_commands  Commands for ECG 3 click 
+ * \defgroup ecg3_commands  Commands for ECG 3 Click 
  * \{
  */
 #define ECG3_SW_RST_CMD                    0x000000
@@ -379,7 +379,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ecg3_cfg_setup ( ecg3_cfg_t *cfg );
@@ -390,7 +390,7 @@ void ecg3_cfg_setup ( ecg3_cfg_t *cfg );
  * @param ecg3          Click object.
  * @param cfg           Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ECG3_RETVAL ecg3_init ( ecg3_t *ctx, ecg3_cfg_t *cfg );
 
@@ -399,7 +399,7 @@ ECG3_RETVAL ecg3_init ( ecg3_t *ctx, ecg3_cfg_t *cfg );
  *
  * @param ctx           Click object.
  *
- * @description This function executes default configuration for ECG 3 click.
+ * @description This function executes default configuration for ECG 3 Click.
  */
 void ecg3_default_cfg ( ecg3_t *ctx );
 
@@ -510,6 +510,6 @@ void ecg3_get_rtor ( ecg3_t *ctx, uint16_t *out_hr, uint16_t *out_rr );
 #endif  // _ECG3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

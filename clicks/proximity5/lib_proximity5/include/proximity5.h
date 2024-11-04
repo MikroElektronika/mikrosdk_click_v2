@@ -559,7 +559,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity5_cfg_setup ( proximity5_cfg_t *cfg );
@@ -570,7 +570,7 @@ void proximity5_cfg_setup ( proximity5_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PROXIMITY5_RETVAL proximity5_init ( proximity5_t *ctx, proximity5_cfg_t *cfg );
 
@@ -579,7 +579,7 @@ PROXIMITY5_RETVAL proximity5_init ( proximity5_t *ctx, proximity5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Proximity5 click.
+ * @description This function executes default configuration for Proximity5 Click.
  */
 void proximity5_default_cfg ( proximity5_t *ctx );
 
@@ -651,6 +651,6 @@ void proximity5_get_values ( proximity5_t *ctx, uint16_t *prox_val );
 #endif  // _PROXIMITY5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

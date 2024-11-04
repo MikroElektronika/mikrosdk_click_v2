@@ -1,6 +1,6 @@
 
 ---
-# DC Motor 13 click
+# DC Motor 13 Click
 
 > DC Motor 13 Click is a compact add-on board with a brushed DC motor driver. This board features the TB67H481FNG, a dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor that uses the PWM IN interface to control the DC motor outputs. Fabricated with the BiCD process (DMOSFET is used for output power transistor), it covers a wide operating voltage range of 8.2V to 44V with a maximum output current capacity of 2A. It also offers helpful features like a robust and reliable operation, like the decay modes selection function, PWM constant-current drive, torque settings, protection features, and one anomaly detection indicator.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-13-click)
+[Click Product page](https://www.mikroe.com/dc-motor-13-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t dcmotor13_set_outa_torque ( dcmotor13_t *ctx, uint8_t torque );
 
 ## Example Description
 
-> This example demonstrates the use of DC Motor 13 click board by driving the motors in both direction in the span of 9 seconds.
+> This example demonstrates the use of DC Motor 13 Click board by driving the motors in both direction in the span of 9 seconds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the output torque to 100%.
+> Initializes the driver and performs the Click default configuration which sets the output torque to 100%.
 
 ```c
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

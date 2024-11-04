@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Pressure 23 30BA click
+# Pressure 23 30BA Click
 
 > Pressure 23 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MS5849-30BA, an ultra-compact chlorine-resistant absolute pressure sensor from TE Connectivity. The sensor is a small digital altimeter operating from 300 up to 30000mbar, optimized for applications where chlorine is present. The sensor’s stainless-steel housing is filled with gel, which makes it robust and enables it to work in harsh environments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pressure23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-23-click)
+[Click Product page](https://www.mikroe.com/pressure-23-click)
 
 ---
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

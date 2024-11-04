@@ -1,6 +1,6 @@
 
 ---
-# CAN Isolator 3 click
+# CAN Isolator 3 Click
 
 > CAN Isolator 3 Click is a compact add-on board that provides isolated CAN communication. This board features the MAX14882, an isolated CAN transceiver with an integrated transformer driver from Analog Devices. It is galvanically isolated between the device's CAN-protocol controller side (TDX, RDX) and the physical wires of the CAN network (CANH, CANL) cable-side/bus-side of the transceiver.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/canisolator3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/can-isolator-3-click)
+[Click Product page](https://www.mikroe.com/can-isolator-3-click)
 
 ---
 
@@ -76,7 +76,7 @@ void canisolator3_set_pol_pin ( canisolator3_t *ctx, uint8_t pin_state );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

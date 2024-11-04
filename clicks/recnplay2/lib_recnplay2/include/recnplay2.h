@@ -139,7 +139,7 @@ typedef enum
 
 /**
  * @brief Rec N Play 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #recnplay2_cfg_t object definition for detailed explanation.
@@ -151,7 +151,7 @@ void recnplay2_cfg_setup ( recnplay2_cfg_t *cfg );
 /**
  * @brief Rec N Play 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #recnplay2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -166,7 +166,7 @@ err_t recnplay2_init ( recnplay2_t *ctx, recnplay2_cfg_t *cfg );
 /**
  * @brief Rec N Play 2 default configuration function.
  * @details This function executes a default configuration of Rec N Play 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #recnplay2_t object definition for detailed explanation.
  * @return Nothing.
@@ -178,7 +178,7 @@ void recnplay2_default_cfg ( recnplay2_t *ctx );
 /**
  * @brief Rec N Play 2 REC pin setting function.
  * @details This function sets the REC pin on the selected level of
- * Rec N Play 2 click board.
+ * Rec N Play 2 Click board.
  * @param[in] ctx : Click context object.
  * See #recnplay2_t object definition for detailed explanation.
  * @param[in] pin_state : Selected pin level.
@@ -190,7 +190,7 @@ void recnplay2_set_rec_pin ( recnplay2_t *ctx, uint8_t pin_state );
 /**
  * @brief Rec N Play 2 Pe pin setting function.
  * @details This function sets the PE pin on the selected level of
- * Rec N Play 2 click board.
+ * Rec N Play 2 Click board.
  * @param[in] ctx : Click context object.
  * See #recnplay2_t object definition for detailed explanation.
  * @param[in] pin_state : Selected pin level.
@@ -202,7 +202,7 @@ void recnplay2_set_pe_pin ( recnplay2_t *ctx, uint8_t pin_state );
 /**
  * @brief Rec N Play 2 PL pin setting function.
  * @details This function sets the PL pin on the selected level of
- * Rec N Play 2 click board.
+ * Rec N Play 2 Click board.
  * @param[in] ctx : Click context object.
  * See #recnplay2_t object definition for detailed explanation.
  * @param[in] pin_state : Selected pin level.
@@ -214,7 +214,7 @@ void recnplay2_set_pl_pin ( recnplay2_t *ctx, uint8_t pin_state );
 /**
  * @brief Rec N Play 2 record sound function.
  * @details This function is used to record sound with
- * Rec N Play 2 click board.
+ * Rec N Play 2 Click board.
  * @param[in] ctx : Click context object.
  * See #recnplay2_t object definition for detailed explanation.
  * @param[in] rec_len : Recording lenght in mS.
@@ -226,7 +226,7 @@ err_t recnplay2_record_sound ( recnplay2_t *ctx, uint16_t rec_len );
 /**
  * @brief Rec N Play 2 play recorded sounds function.
  * @details This function is used to play recorded sounds with
- * Rec N Play 2 click board.
+ * Rec N Play 2 Click board.
  * @param[in] ctx : Click context object.
  * See #recnplay2_t object definition for detailed explanation.
  * @param[in] rec_len : Playing time in mS.

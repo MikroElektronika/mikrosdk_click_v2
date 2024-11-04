@@ -255,7 +255,7 @@ typedef enum
 
 /**
  * @brief Flash 7 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #flash7_cfg_t object definition for detailed explanation.
@@ -267,7 +267,7 @@ void flash7_cfg_setup ( flash7_cfg_t *cfg );
 /**
  * @brief Flash 7 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #flash7_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -283,7 +283,7 @@ err_t flash7_init ( flash7_t *ctx, flash7_cfg_t *cfg );
 /**
  * @brief Flash 7 default configuration function.
  * @details This function executes a default configuration of Flash 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -357,7 +357,7 @@ void flash7_hold ( flash7_t *ctx, uint8_t en_hold );
  * @brief Send command function.
  * @details The function sends the desired command
  * to the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[in] cmd : 8-bit commands instruction.
@@ -369,7 +369,7 @@ void flash7_send_command ( flash7_t *ctx, uint8_t cmd );
  * @brief Write enable function.
  * @details The function sends enable write command
  * to the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @return Nothing.
@@ -380,7 +380,7 @@ void flash7_write_enable ( flash7_t *ctx );
  * @brief Write disable function.
  * @details The function sends disable write command
  * to the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @return Nothing.
@@ -391,7 +391,7 @@ void flash7_write_disable ( flash7_t *ctx );
  * @brief Chip erase function.
  * @details The function sends chip erase command
  * to the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @return Nothing.
@@ -402,7 +402,7 @@ void flash7_chip_erase ( flash7_t *ctx );
  * @brief Read status register function.
  * @details The function reads status byte
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[in] status_byte : Read LSB or MSB status register.
@@ -414,7 +414,7 @@ uint8_t flash7_read_status_register ( flash7_t *ctx, uint8_t status_byte );
  * @brief Write status register function.
  * @details The function writes status data
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[in] status_data : 16-bit write status data.
@@ -427,7 +427,7 @@ void flash7_write_status_register ( flash7_t *ctx, uint16_t status_data );
  * @details The function writes a sequential data starting
  * from the targeted 24-bit register address
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[in] mem_addr : 24-bit start memory address.
@@ -442,7 +442,7 @@ uint8_t flash7_page_program ( flash7_t *ctx, uint32_t mem_addr, uint8_t *p_tx_da
  * @details The function reads a sequential data starting
  * from the targeted 24-bit register address
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[in] mem_addr : 24-bit start memory address.
@@ -457,7 +457,7 @@ void flash7_read_memory ( flash7_t *ctx, uint32_t mem_addr, uint8_t *p_rx_data, 
  * @details The function reads a sequential data starting
  * from the targeted 24-bit register address
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[in] mem_addr : 24-bit start memory address.
@@ -472,7 +472,7 @@ void flash7_fast_read_memory ( flash7_t *ctx, uint32_t mem_addr, uint8_t *p_rx_d
  * @details This function performs
  * erase of all data in the chosen sector
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param mem_sector
@@ -489,7 +489,7 @@ uint8_t flash7_sector_erase ( flash7_t *ctx, uint16_t mem_sector );
  * @details This function performs erase of all data
  * with the range depending on block length in the chosen block
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[in] mem_block : Number of block in memory for complete erase
@@ -508,7 +508,7 @@ uint8_t flash7_block_erase ( flash7_t *ctx, uint8_t mem_block, uint8_t mem_block
  * is the only way to put the device in the lowest consumption mode,
  * executing the Deep Power-Down
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @return Nothing.
@@ -520,7 +520,7 @@ void flash7_go_to_sleep ( flash7_t *ctx );
  * @details The function performs wake up,
  * release from power-down and read device ID
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @return 8-bit device ID.
@@ -531,7 +531,7 @@ uint8_t flash7_wake_up ( flash7_t *ctx );
  * @brief Read ID function.
  * @details The function acquries manufacturer and device ID
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[out] manufacturer_id : Pointer to the memory location where the manufacturer ID is stored.
@@ -544,7 +544,7 @@ void flash7_read_id ( flash7_t *ctx, uint8_t *manufacturer_id, uint8_t *device_i
  * @brief Get identification function.
  * @details The function acquries identification data
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @param[out] manufacturer_id : Pointer to the memory location where the manufacturer ID is stored.
@@ -558,7 +558,7 @@ void flash7_get_identification ( flash7_t *ctx, uint8_t *manufacturer_id, uint8_
  * @brief Soft reset function.
  * @details The function performs a software reset
  * of the GD25LQ16C 1.8V Uniform Sector Dual and Quad Serial Flash
- * on Flash 7 click board.
+ * on Flash 7 Click board.
  * @param[in] ctx : Click context object.
  * See #flash7_cfg_t object definition for detailed explanation.
  * @return Nothing.

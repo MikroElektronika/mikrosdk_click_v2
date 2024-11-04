@@ -3,7 +3,7 @@
  * \brief Ir Eclipse Click example
  * 
  * # Description
- * This is an example of IR ECLIPSE click board
+ * This is an example of IR ECLIPSE Click board
  *
  * The demo application is composed of two sections :
  * 

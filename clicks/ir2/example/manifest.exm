@@ -3,6 +3,6 @@
     "description": "IR 2 Click is a compact add-on board representing a compact and easy solution for adding infrared (IR) remote control to your design. This board features the TSMP58138, a miniaturized sensor for receiving the modulated signal of QEE113 IR emitting diode from Vishay Semiconductors. This IR sensor module consists of a photodetector, pre-amplifier, and automatic gain control to surpass ambient noise with signals transmitted to it in the near-infrared range with a wavelength of 940nm. It also communicates with the target MCU via selectable GPIO lines.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TSOP98638","BC846B-7-F"],
+    "hw" : ["Click","TSOP98638","BC846B-7-F"],
     "category" : ["Optical"]
 }

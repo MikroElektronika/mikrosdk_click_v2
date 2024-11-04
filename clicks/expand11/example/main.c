@@ -3,13 +3,13 @@
  * @brief Expand 11 Click example
  *
  * # Description
- * This example demonstrates the use of Expand 11 click board by setting and
+ * This example demonstrates the use of Expand 11 Click board by setting and
  * reading the port state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets 
+ * Initializes the driver and performs the Click default configuration which sets 
  * the pins P0-P1 as output and P2-P3 as input.
  *
  * ## Application Task

@@ -3,13 +3,13 @@
  * @brief Stepper 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of the Stepper 2 click board by driving the 
+ * This example demonstrates the use of the Stepper 2 Click board by driving the 
  * motor in both directions for a desired number of steps.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Drives the motor clockwise for 64 steps and then counter-clockiwse for 32 steps
@@ -17,7 +17,7 @@
  * the USB UART where you can track the program flow.
  *
  * @note
- * Step Motor 5v [MIKROE-1530] is a compatible stepper motor for this click board:
+ * Step Motor 5v [MIKROE-1530] is a compatible stepper motor for this Click board:
  * https://www.mikroe.com/step-motor-5v
  *
  * @author Stefan Filipovic

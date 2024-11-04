@@ -216,7 +216,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void lcdmono_cfg_setup ( lcdmono_cfg_t *cfg );
@@ -226,7 +226,7 @@ void lcdmono_cfg_setup ( lcdmono_cfg_t *cfg );
  * @param lcdmono Click object.
  * @param cfg Click configuration structure.
  *
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t lcdmono_init ( lcdmono_t *ctx, lcdmono_cfg_t *cfg );
 
@@ -304,6 +304,6 @@ void lcdmono_display_reset ( lcdmono_t *ctx );
 #endif  // LCDMONO_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------ END

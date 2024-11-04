@@ -2,15 +2,15 @@
  
 
 ---
-# EEPROM 3 click
+# EEPROM 3 Click
 
-EEPROM 3 click provides 2 Mbit (2,097,152 bits) of Electrically Erasable Programmable Read Only Memory, organized in bytes. In other words, this click board™ is an EEPROM memory medium with the capacity of 256 KB. The used EEPROM module has outstanding endurance, with 1,000,000 write cycles and data retention period of over 100 years.
+EEPROM 3 Click provides 2 Mbit (2,097,152 bits) of Electrically Erasable Programmable Read Only Memory, organized in bytes. In other words, this Click board™ is an EEPROM memory medium with the capacity of 256 KB. The used EEPROM module has outstanding endurance, with 1,000,000 write cycles and data retention period of over 100 years.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-3-click)
+[Click Product page](https://www.mikroe.com/eeprom-3-click)
 
 ---
 
@@ -111,7 +111,7 @@ void application_init ( void )
 void application_task ( void )
 {
     eeprom3_write_page( &eeprom3, 0x100, text, 6 );
-    log_printf( &logger, "Writing Mikroe to EEPROM 3 click\r\n" );
+    log_printf( &logger, "Writing Mikroe to EEPROM 3 Click\r\n" );
     Delay_ms ( 1000 );
     
     eeprom3_read( &eeprom3, 0x100, mem_value, 6 );
@@ -132,7 +132,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

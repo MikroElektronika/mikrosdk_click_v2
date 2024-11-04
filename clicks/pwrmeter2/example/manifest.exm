@@ -1,8 +1,8 @@
 {
     "name": "PWR Meter 2 Click",
-    "description": "PWR Meter 2 click is a compact and accurate power monitoring Click board™, capable of measuring and monitoring voltage up to 24V and current up to 5A.",
+    "description": "PWR Meter 2 Click is a compact and accurate power monitoring Click board™, capable of measuring and monitoring voltage up to 24V and current up to 5A.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP3910"],
+    "hw" : ["Click","MCP3910"],
     "category" : ["Measurements"] 
 }

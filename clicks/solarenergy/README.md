@@ -3,9 +3,9 @@
  
 
 ---
-# SOLAR ENERGY click
+# SOLAR ENERGY Click
 
-There are many battery chargers and solar energy harvesters out there already, but the Solar energy click has the unique feature - it encompasses both of these devices in a single package. The click uses Texas Instruments BQ25570 - a nano-power high-efficiency boost charger and buck converter device, designed to work with very low power energy harvesting elements, such as the photovoltaic and thermoelectric generators
+There are many battery chargers and solar energy harvesters out there already, but the Solar energy Click has the unique feature - it encompasses both of these devices in a single package. The Click uses Texas Instruments BQ25570 - a nano-power high-efficiency boost charger and buck converter device, designed to work with very low power energy harvesting elements, such as the photovoltaic and thermoelectric generators
 
 
 <p align="center">
@@ -14,7 +14,7 @@ There are many battery chargers and solar energy harvesters out there already, b
 
 
 
-[click Product page](https://www.mikroe.com/solar-energy-click)
+[Click Product page](https://www.mikroe.com/solar-energy-click)
 
 ---
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

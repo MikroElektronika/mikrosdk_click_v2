@@ -219,7 +219,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pressure4_cfg_setup ( pressure4_cfg_t *cfg );
@@ -230,7 +230,7 @@ void pressure4_cfg_setup ( pressure4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t pressure4_init ( pressure4_t *ctx, pressure4_cfg_t *cfg );
 
@@ -239,7 +239,7 @@ err_t pressure4_init ( pressure4_t *ctx, pressure4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Pressure 4 click.
+ * @details This function executes default configuration for Pressure 4 Click.
  */
 void pressure4_default_cfg ( pressure4_t *ctx );
 
@@ -330,6 +330,6 @@ float pressure4_get_pressure ( pressure4_t *ctx );
 #endif  // _PRESSURE4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

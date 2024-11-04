@@ -1,6 +1,6 @@
 
 ---
-# Flash 7 click
+# Flash 7 Click
 
 Flash 7 Click is a compact add-on board that contains a high-performance memory solution. This board features the GD25LQ16C, a high-performance 16Mbit SPI NOR Flash Memory solution with advanced security features from GigaDevice Semiconductor. 
 
@@ -8,7 +8,7 @@ Flash 7 Click is a compact add-on board that contains a high-performance memory 
   <img src="https://download.mikroe.com/images/click_for_ide/flash7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-7-click)
+[Click Product page](https://www.mikroe.com/flash-7-click)
 
 ---
 
@@ -69,7 +69,7 @@ void flash7_read_memory ( flash7_t *ctx, uint32_t mem_addr, uint8_t *p_rx_data, 
 
 ## Example Description
 
-> This is an example that demonstrates the use of the Flash 7 click board. 
+> This is an example that demonstrates the use of the Flash 7 Click board. 
 
 **The demo application is composed of two sections :**
 
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

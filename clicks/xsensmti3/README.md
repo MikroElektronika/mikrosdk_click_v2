@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# XSENS MTi-3 click
+# XSENS MTi-3 Click
 
 > XSENS MTi-3 Click is a compact add-on board that contains a fully functional module that can be configured as an Inertial Measurement Unit, Vertical reference Unit, or even an Attitude & Heading Reference System. This board features the MTi-3, a module outputting 3D orientation, 3D rate of turn, 3D accelerations, and 3D magnetic field, depending on the product configuration from Xsens.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/xsensmti3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/xsens-mti-3-click)
+[Click Product page](https://www.mikroe.com/xsens-mti-3-click)
 
 ---
 
@@ -188,7 +188,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

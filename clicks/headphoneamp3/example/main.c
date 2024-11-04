@@ -3,8 +3,8 @@
  * @brief Headphone AMP 3 Click Example.
  *
  * # Description
- * This library contains API for the Headphone AMP 3 click driver.
- * This demo application shows use of a Headphone AMP 3 click board™.
+ * This library contains API for the Headphone AMP 3 Click driver.
+ * This demo application shows use of a Headphone AMP 3 Click board™.
  *
  * The demo application is composed of two sections :
  *
@@ -13,7 +13,7 @@
  * After driver initialization the app set default settings.
  *
  * ## Application Task
- * This example demonstrates the use of the Headphone AMP 3 click board™.
+ * This example demonstrates the use of the Headphone AMP 3 Click board™.
  * The app is enabling and disabling headphone output by changing ENA pin state every 10 seconds. 
  *
  * @author Stefan Ilic

@@ -217,7 +217,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void irsense2_cfg_setup ( irsense2_cfg_t *cfg );
@@ -227,7 +227,7 @@ void irsense2_cfg_setup ( irsense2_cfg_t *cfg );
  * @param irsense2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 IRSENSE2_RETVAL irsense2_init ( irsense2_t *ctx, irsense2_cfg_t *cfg );
 
@@ -236,7 +236,7 @@ IRSENSE2_RETVAL irsense2_init ( irsense2_t *ctx, irsense2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for IrSense2 click.
+ * @description This function executes default configuration for IrSense2 Click.
  */
 void irsense2_default_cfg ( irsense2_t *ctx );
 
@@ -339,6 +339,6 @@ void irsense2_get_int_pin( irsense2_t *ctx );
 #endif  // _IRSENSE2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

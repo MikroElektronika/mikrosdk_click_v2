@@ -357,7 +357,7 @@ typedef enum
 
 /**
  * @brief PAC1954 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pac1954_cfg_t object definition for detailed explanation.
@@ -369,7 +369,7 @@ void pac1954_cfg_setup ( pac1954_cfg_t *cfg );
 /**
  * @brief PAC1954 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pac1954_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -385,7 +385,7 @@ err_t pac1954_init ( pac1954_t *ctx, pac1954_cfg_t *cfg );
 /**
  * @brief PAC1954 default configuration function.
  * @details This function executes a default configuration of PAC1954
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pac1954_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -610,7 +610,7 @@ void pac1954_set_ch_8_sps ( pac1954_t *ctx, uint8_t state );
 
 /**
  * @brief PAC1954 Power Control Function.
- * @details This function executes a power control of the PAC1954 click using 
+ * @details This function executes a power control of the PAC1954 Click using 
  * EN pin.
  * @param[in] ctx : Click context object.
  * See #pac1954_t object definition for detailed explanation.

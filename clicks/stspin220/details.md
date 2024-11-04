@@ -1,14 +1,14 @@
 
 ---
-# STSPIN220 click
+# STSPIN220 Click
 
-> STSPIN220 click is a stepper motor driver with the PWM current control and selectable microstepping up to 256 microsteps. It is based on the STSPIN220, a low voltage stepper motor driver from STSPIN2 series. It is optimized for battery-powered, low voltage motor driving applications, featuring the lowest standby current available on the market (max 80 nA). The STSPIN220 is a high-efficiency motor driver, featuring low ON resistance MOSFETs as the output stage, in a small 3x3mm QFN package. Its output stage implements the PWM current control with fixed OFF time, along with a full set of protection features. The device can be used with the step motor voltage ranging from 1.8V to 10V, and current up to 1.3A per bridge.
+> STSPIN220 Click is a stepper motor driver with the PWM current control and selectable microstepping up to 256 microsteps. It is based on the STSPIN220, a low voltage stepper motor driver from STSPIN2 series. It is optimized for battery-powered, low voltage motor driving applications, featuring the lowest standby current available on the market (max 80 nA). The STSPIN220 is a high-efficiency motor driver, featuring low ON resistance MOSFETs as the output stage, in a small 3x3mm QFN package. Its output stage implements the PWM current control with fixed OFF time, along with a full set of protection features. The device can be used with the step motor voltage ranging from 1.8V to 10V, and current up to 1.3A per bridge.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/stspin220_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stspin220-click)
+[Click Product page](https://www.mikroe.com/stspin220-click)
 
 ---
 
@@ -69,13 +69,13 @@ void stspin220_reset_device ( stspin220_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the STSPIN220 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the STSPIN220 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

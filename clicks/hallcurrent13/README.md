@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Hall Current 13 click
+# Hall Current 13 Click
 
 > Hall Current 13 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the TMCS1107-Q1, a galvanically isolated Hall-effect current sensor capable of DC or AC current measurement with high accuracy, excellent linearity, and temperature stability from Texas Instruments. It enables the lowest drift, <3% full-scale error, and highest accuracy over time and temperature. It also provides a reliable 420V lifetime working voltage and 3kVRMS isolation between the current path and circuitry with uni/bidirectional current sensing. Besides, the user is allowed to process the output signal in analog or digital form.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-13-click)
+[Click Product page](https://www.mikroe.com/hall-current-13-click)
 
 ---
 
@@ -63,14 +63,14 @@ err_t hallcurrent13_read_current ( hallcurrent13_t *ctx, float *current );
 err_t hallcurrent13_read_voltage ( hallcurrent13_t *ctx, float *voltage );
 ```
 
-- `hallcurrent13_set_vref` This function sets the voltage reference for Hall Current 13 click driver.
+- `hallcurrent13_set_vref` This function sets the voltage reference for Hall Current 13 Click driver.
 ```c
 err_t hallcurrent13_set_vref ( hallcurrent13_t *ctx, float vref );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of Hall Current 13 click board by reading and displaying the input current measurements.
+> This example demonstrates the use of Hall Current 13 Click board by reading and displaying the input current measurements.
 
 **The demo application is composed of two sections :**
 
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

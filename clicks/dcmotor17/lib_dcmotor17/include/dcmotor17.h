@@ -162,7 +162,7 @@ typedef struct
 
 /**
  * @brief DC Motor 17 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #dcmotor17_cfg_t object definition for detailed explanation.
@@ -174,7 +174,7 @@ void dcmotor17_cfg_setup ( dcmotor17_cfg_t *cfg );
 /**
  * @brief DC Motor 17 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -190,7 +190,7 @@ err_t dcmotor17_init ( dcmotor17_t *ctx, dcmotor17_cfg_t *cfg );
 /**
  * @brief DC Motor 17 default configuration function.
  * @details This function executes a default configuration of DC Motor 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  *
@@ -203,7 +203,7 @@ void dcmotor17_default_cfg ( dcmotor17_t *ctx );
 /**
  * @brief DC Motor 17 set to standby operating mode function.
  * @details This function sets the standby operating mode of
- * DC Motor 17 click board.
+ * DC Motor 17 Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  * @return Nothing.
@@ -214,7 +214,7 @@ void dcmotor17_standby_mode ( dcmotor17_t *ctx );
 /**
  * @brief DC Motor 17 set to normal operating mode function.
  * @details This function sets the normal operating mode of
- * DC Motor 17 click board.
+ * DC Motor 17 Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  * @return Nothing.
@@ -225,7 +225,7 @@ void dcmotor17_normal_mode ( dcmotor17_t *ctx );
 /**
  * @brief DC Motor 17 set operating mode function.
  * @details This function sets the desired operating mode of
- * DC Motor 17 click board.
+ * DC Motor 17 Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  * @param[in] op_mode : Operating mode.
@@ -240,7 +240,7 @@ dcmotor17_retval_t dcmotor17_set_mode ( dcmotor17_t *ctx, uint8_t op_mode );
 /**
  * @brief DC Motor 17 stop motor function.
  * @details This function is used to stop the motor of
- * DC Motor 17 click board.
+ * DC Motor 17 Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  * @param[in] sel_out : Select channel motor output.
@@ -255,7 +255,7 @@ dcmotor17_retval_t dcmotor17_stop ( dcmotor17_t *ctx, uint8_t sel_out );
 /**
  * @brief DC Motor 17 forward function.
  * @details This function is used to drive the motor forward of
- * DC Motor 17 click board.
+ * DC Motor 17 Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  * @param[in] sel_out : Select channel motor output.
@@ -270,7 +270,7 @@ dcmotor17_retval_t dcmotor17_forward ( dcmotor17_t *ctx, uint8_t sel_out );
 /**
  * @brief DC Motor 17 reverse function.
  * @details This function is used to drive the motor reverse of
- * DC Motor 17 click board.
+ * DC Motor 17 Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor17_t object definition for detailed explanation.
  * @return @li @c 0x00 ( DCMOTOR17_OK )    - Ok,

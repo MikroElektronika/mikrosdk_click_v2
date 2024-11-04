@@ -1,6 +1,6 @@
 
 ---
-# SPI Isolator 5 click
+# SPI Isolator 5 Click
 
 > SPI Isolator 5 Click is a compact add-on board with a digital isolator optimized for a serial peripheral interface. This board features the DCL541A01, a high-speed quad-channel digital isolator from Toshiba Semiconductor. Outstanding performance characteristics of the DCL541A01 are achieved by Toshiba CMOS technology and the magnetic coupling structure. In addition, they comply with UL 1577 safety-related certification, have a withstand voltage rating of 5kVrms, and operate with the external supply voltage ranging from 2.25V to 5.5V, providing compatibility with lower voltage systems enabling voltage translation functionality across the isolation barrier.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/spiisolator5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spi-isolator-5-click)
+[Click Product page](https://www.mikroe.com/spi-isolator-5-click)
 
 ---
 
@@ -64,9 +64,9 @@ err_t spiisolator5_transfer ( spiisolator5_t *ctx, uint8_t *data_in, uint8_t *da
 
 ## Example Description
 
-> This example demonstrates the use of SPI Isolator 5 click board 
+> This example demonstrates the use of SPI Isolator 5 Click board 
 > by reading the manufacturer ID and device ID 
-> of the connected Flash 11 click board.
+> of the connected Flash 11 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -115,7 +115,7 @@ void application_init ( void )
 ### Application Task
 
 > The demo application reads and checks the manufacturer ID and 
-> device ID of the connected Flash 11 click board. 
+> device ID of the connected Flash 11 Click board. 
 > Results are being sent to the UART Terminal, where you can track their changes.
 
 ```c
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

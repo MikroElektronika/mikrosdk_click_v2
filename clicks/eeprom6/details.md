@@ -1,6 +1,6 @@
 
 ---
-# EEPROM 6 click
+# EEPROM 6 Click
 
 > EEPROM 6 Click is a compact add-on board that contains a serial EEPROM memory that operates from the 1-Wire interface. This board features the DS28EC20, a 20480-bit EEPROM organized as 80 memory pages of 256 bits each from Analog Devices. As a specific feature, blocks of eight memory pages can be write-protected or put in “EPROM-Emulation” Mode, where bits can only be changed from a 1 to a 0 state. It communicates with MCU at 15.4kbps or 90kbps over the 1-Wire protocol and has a 64-bit registration number that ensures error-free device selection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-6-click)
+[Click Product page](https://www.mikroe.com/eeprom-6-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t eeprom6_read_mem ( eeprom6_t *ctx, uint16_t reg_adr, uint8_t *data_in, uin
 
 ## Example Description
 
-> This example demonstrates the use of EEPROM6 click board by writing string to a memory at some specific location and then reading it back.
+> This example demonstrates the use of EEPROM6 Click board by writing string to a memory at some specific location and then reading it back.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

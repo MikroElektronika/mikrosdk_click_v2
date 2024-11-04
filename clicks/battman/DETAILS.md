@@ -1,15 +1,15 @@
 
 ---
-# BATT-MAN click
+# BATT-MAN Click
 
-BATT-MAN click is a very versatile battery operated power manager. When powered via mikroBUS™, it will charge the connected Li-Ion/Li-Po 3.7V battery, while providing the output voltage on all its outputs at the same time. The interesting feature of this device is that it can provide additional current to the connected load if the current provided from the mikroBUS™ socket is not enough.
+BATT-MAN Click is a very versatile battery operated power manager. When powered via mikroBUS™, it will charge the connected Li-Ion/Li-Po 3.7V battery, while providing the output voltage on all its outputs at the same time. The interesting feature of this device is that it can provide additional current to the connected load if the current provided from the mikroBUS™ socket is not enough.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/battman_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/batt-man-click)
+[Click Product page](https://www.mikroe.com/batt-man-click)
 
 ---
 
@@ -45,7 +45,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- Controls the operation of the click.
+- Controls the operation of the Click.
 > void battman_set_enable ( battman_t *ctx, uint8_t state );
  
 - Charging indicator status.
@@ -53,7 +53,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> BATT-MAN click is a very versatile battery operated power manager. When powered via mikroBUS,
+> BATT-MAN Click is a very versatile battery operated power manager. When powered via mikroBUS,
 > it will charge the connected Li-Ion/Li-Po 3.7V battery, while providing the output voltage 
 > on all its outputs at the same time.
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the click driver and logger utility and enables the click board.
+> Initializes the Click driver and logger utility and enables the Click board.
 
 ```c
 
@@ -90,7 +90,7 @@ void application_init ( void )
     battman_init( &battman, &cfg );
     
     battman_set_enable( &battman, 1 );
-    log_printf( &logger, "BATT-MAN click enabled.\r\n" );
+    log_printf( &logger, "BATT-MAN Click enabled.\r\n" );
     chg_flag = 0;
 }
   
@@ -136,7 +136,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

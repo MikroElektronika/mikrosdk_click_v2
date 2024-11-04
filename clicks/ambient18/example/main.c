@@ -3,7 +3,7 @@
  * @brief Ambient 18 Click Example.
  *
  * # Description
- * This example demonstrates the use of Ambient 18 click board by measuring and displaying
+ * This example demonstrates the use of Ambient 18 Click board by measuring and displaying
  * the illuminance value in Lux.
  *
  * The demo application is composed of two sections :

@@ -3,13 +3,13 @@
  * \brief ThermoK Click example
  * 
  * # Description
- * Demo application shows basic temperature reading using Thermo K click.
+ * Demo application shows basic temperature reading using Thermo K Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Reads the device ID and also checks the click and MCU communication.
+ * Reads the device ID and also checks the Click and MCU communication.
  * 
  * ## Application Task  
  * Reads Temperature data(Type K probe) and this data logs to USBUART every 500ms.

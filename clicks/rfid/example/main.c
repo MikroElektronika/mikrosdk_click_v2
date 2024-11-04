@@ -10,7 +10,7 @@
  *
  * ## Application Init
  * Initializes the driver, selects the communication interface and performs
- * the click default configuration.
+ * the Click default configuration.
  *
  * ## Application Task
  * If there's a tag detected, it reads its UID and displays it on USB UART.

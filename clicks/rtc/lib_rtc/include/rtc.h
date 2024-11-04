@@ -196,7 +196,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rtc_c_cfg_setup ( rtc_c_cfg_t *cfg );
@@ -206,7 +206,7 @@ void rtc_c_cfg_setup ( rtc_c_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t rtc_c_init ( rtc_c_t *ctx, rtc_c_cfg_t *cfg );
 
@@ -543,6 +543,6 @@ uint8_t rtc_c_get_interrupt( rtc_c_t *ctx );
 #endif  // _RTC_C_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

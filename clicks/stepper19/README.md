@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Stepper 19 click
+# Stepper 19 Click
 
 > Stepper 19 Click is a compact add-on board for precise control over stepper motors. This board features the DRV8424, a stepper motor driver from Texas Instruments designed to drive both industrial and consumer stepper motors. The DRV8424 has dual N-channel power MOSFET H-bridge drivers, a microstepping indexer, and integrated current sensing, eliminating the need for external power sense resistors. Operating on a 5V to 30V external power supply, the DRV8424 can deliver up to 2.5A of full-scale output current, with an internal PWM current regulation scheme that includes smart tune, slow, and mixed decay options to optimize performance. Ideal for applications in multichannel system monitoring, robotics, precision positioning, and automated manufacturing processes, this Click board™ appears as a versatile solution for sophisticated stepper motor control.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepper19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-19-click)
+[Click Product page](https://www.mikroe.com/stepper-19-click)
 
 ---
 
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -388,7 +388,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity10_cfg_setup ( proximity10_cfg_t *cfg );
@@ -399,7 +399,7 @@ void proximity10_cfg_setup ( proximity10_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PROXIMITY10_RETVAL proximity10_init ( proximity10_t *ctx, proximity10_cfg_t *cfg );
 
@@ -408,7 +408,7 @@ PROXIMITY10_RETVAL proximity10_init ( proximity10_t *ctx, proximity10_cfg_t *cfg
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Proximity10 click.
+ * @description This function executes default configuration for Proximity10 Click.
  */
 void proximity10_default_cfg ( proximity10_t *ctx );
 
@@ -548,6 +548,6 @@ uint8_t proximity10_param_or ( proximity10_t *ctx, uint8_t param_addr, uint8_t p
 #endif  // _PROXIMITY10_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

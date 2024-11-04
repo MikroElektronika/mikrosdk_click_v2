@@ -173,7 +173,7 @@ typedef enum
 
 /**
  * @brief Magneto 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #magneto12_cfg_t object definition for detailed explanation.
@@ -185,7 +185,7 @@ void magneto12_cfg_setup ( magneto12_cfg_t *cfg );
 /**
  * @brief Magneto 12 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #magneto12_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -201,7 +201,7 @@ void magneto12_drv_interface_selection ( magneto12_cfg_t *cfg, magneto12_drv_t d
 /**
  * @brief Magneto 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #magneto12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -244,7 +244,7 @@ err_t magneto12_read_voltage ( magneto12_t *ctx, float *voltage );
 
 /**
  * @brief Magneto 12 set vref function.
- * @details This function sets the voltage reference for Magneto 12 click driver.
+ * @details This function sets the voltage reference for Magneto 12 Click driver.
  * @param[in] ctx : Click context object.
  * See #magneto12_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

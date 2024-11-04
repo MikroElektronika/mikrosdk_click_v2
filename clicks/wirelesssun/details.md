@@ -1,6 +1,6 @@
 
 ---
-# Wireless SUN click
+# Wireless SUN Click
 
 > Wireless SUN Click is a compact add-on board representing a Wireless Smart Utility Network for Field Area Network (Wi-SUN FAN) solution. This board features the BP35C5, a Wi-SUN FAN-compatible wireless communication module from Rohm Semiconductor. The BP35C5 operates in the 920MHz band and includes a Wi-SUN software stack that enables operation at different transmission modes for high efficiency. Besides, certification under ARIB and the FCC allows immediate use in Japan and the US in large-scale (up to 1,000-node Sub-GHz) multi-hop mesh networks supporting channel hopping.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/wirelesssun_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/wireless-sun-click)
+[Click Product page](https://www.mikroe.com/wireless-sun-click)
 
 ---
 
@@ -47,12 +47,12 @@ err_t wirelesssun_init ( wirelesssun_t *ctx, wirelesssun_cfg_t *cfg );
 
 #### Example key functions :
 
-- `wirelesssun_send_cmd` This function sends a specified command to the click module.
+- `wirelesssun_send_cmd` This function sends a specified command to the Click module.
 ```c
 void wirelesssun_send_cmd ( wirelesssun_t *ctx, char *cmd );
 ```
 
-- `wirelesssun_send_cmd_with_parameter` This function sends a specified command to the click module with desired parameters appended to.
+- `wirelesssun_send_cmd_with_parameter` This function sends a specified command to the Click module with desired parameters appended to.
 ```c
 void wirelesssun_send_cmd_with_parameter ( wirelesssun_t *ctx, char *cmd, char *param_buf );
 ```
@@ -64,13 +64,13 @@ err_t wirelesssun_generic_read ( wirelesssun_t *ctx, char *data_out, uint16_t le
 
 ## Example Description
 
-> This example demonstrates the use of Wireless SUN click board by showing the communication between the two click boards configured as BORDER and ROUTER.
+> This example demonstrates the use of Wireless SUN Click board by showing the communication between the two Click boards configured as BORDER and ROUTER.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board by performing a hardware reset
+> Initializes the driver and configures the Click board by performing a hardware reset
 and a clear parameters feature, and setting the device network name, device role to
 BORDER or ROUTER depending on the application mode. In the end, it saves settings and reboots device.
 
@@ -235,7 +235,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "IR Grid 3 click",
+    "display_name": "IR Grid 3 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.irgrid3",
     "product_link": "https://www.mikroe.com/ir-grid-3-click",
-    "short_description": "IR Grid 3 click is a thermal imaging sensor. It has an array of 768 very sensitive, factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels, each measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90640ESF-BAA IR sensor used on this Click board™ has only four pins, and it is mounted inside of the industry standard TO39 package. ",
+    "short_description": "IR Grid 3 Click is a thermal imaging sensor. It has an array of 768 very sensitive, factory calibrated IR elements (pixels), arranged in 32 rows of 24 pixels, each measuring an object temperature up to 300˚C within its local Field of View (FOV). The MLX90640ESF-BAA IR sensor used on this Click board™ has only four pins, and it is mounted inside of the industry standard TO39 package. ",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         2579
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
+    "version": "2.1.0.12",
     "cmake": true,
     "alias": "Click.IRGrid3",
     "subdir_name": "lib_irgrid3"
 }
+
 
 
 

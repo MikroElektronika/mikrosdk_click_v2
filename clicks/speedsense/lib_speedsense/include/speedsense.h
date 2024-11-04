@@ -146,7 +146,7 @@ typedef enum
 
 /**
  * @brief Speed Sense configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #speedsense_cfg_t object definition for detailed explanation.
@@ -158,7 +158,7 @@ void speedsense_cfg_setup ( speedsense_cfg_t *cfg );
 /**
  * @brief Speed Sense initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #speedsense_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -173,7 +173,7 @@ err_t speedsense_init ( speedsense_t *ctx, speedsense_cfg_t *cfg );
 /**
  * @brief Speed Sense CHA pin reading function.
  * @details This function reads the state of the CHA pin used for speed output protocols
- * Speed Sense click board.
+ * Speed Sense Click board.
  * @param[in] ctx : Click context object.
  * See #speedsense_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -185,7 +185,7 @@ uint8_t speedsense_get_speed ( speedsense_t *ctx );
 /**
  * @brief Speed Sense CHB pin reading function.
  * @details This function reads the state of the CHB pin used for direction output protocols
- * of Speed Sens click board.
+ * of Speed Sens Click board.
  * @param[in] ctx : Click context object.
  * See #speedsense_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

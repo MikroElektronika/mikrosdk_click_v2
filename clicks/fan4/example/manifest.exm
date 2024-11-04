@@ -1,8 +1,8 @@
 {
     "name": "FAN 4 Click",
-    "description": "Fan 4 click is a very compact, two-wire fan driver. It utilizes an integrated 5V, DC, brushless-motor driver chip.",
+    "description": "Fan 4 Click is a very compact, two-wire fan driver. It utilizes an integrated 5V, DC, brushless-motor driver chip.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LTC1695"],
+    "hw" : ["Click","LTC1695"],
     "category" : ["Brushless"] 
 }

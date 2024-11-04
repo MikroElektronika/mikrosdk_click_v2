@@ -3,13 +3,13 @@
  * @brief SolidSwitch3 Click example
  *
  * # Description
- * This example demonstrates the use of SolidSwitch 3 click board by controlling
+ * This example demonstrates the use of SolidSwitch 3 Click board by controlling
  * the output state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Enables all outputs one by one in the span of 8 seconds, and after that disables 

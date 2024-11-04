@@ -1,8 +1,8 @@
 {
     "name": "NB IoT Click",
-    "description": "NB IoT click is a Click board™ that allows LTE Cat NB1 connectivity by utilizing Quectel BC95-G, a specialized multi-band IoT module with very low power requirements and compact form factor, making it perfectly suited for various IoT-based applications.",
+    "description": "NB IoT Click is a Click board™ that allows LTE Cat NB1 connectivity by utilizing Quectel BC95-G, a specialized multi-band IoT module with very low power requirements and compact form factor, making it perfectly suited for various IoT-based applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BC95","FT230X","TXB0106"],
+    "hw" : ["Click","BC95","FT230X","TXB0106"],
     "category" : ["LTE IoT"] 
 }

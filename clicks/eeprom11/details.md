@@ -1,6 +1,6 @@
 
 ---
-# EEPROM 11 click
+# EEPROM 11 Click
 
 > EEPROM 11 Click is a compact add-on board with a highly reliable, nonvolatile memory solution. This board features the S-34C04AB, an EEPROM for DIMM serial presence detection from ABLIC. The EEPROM is internally organized as 2 pages of 256 words x 8-bit, and a capacity of 4Kbits and is an EE1004-1 JEDEC standard-compliant.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-11-click)
+[Click Product page](https://www.mikroe.com/eeprom-11-click)
 
 ---
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

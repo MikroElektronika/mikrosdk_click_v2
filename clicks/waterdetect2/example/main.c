@@ -4,7 +4,7 @@
  *
  * # Description
  * This library contains API for Water Detect 2 Click driver.
- * Water Detect 2 click is used for detecting water and other electroconductive liquids. 
+ * Water Detect 2 Click is used for detecting water and other electroconductive liquids. 
  *
  * The demo application is composed of two sections :
  *

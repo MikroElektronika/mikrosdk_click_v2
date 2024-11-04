@@ -3,18 +3,18 @@
  * @brief UART to I2C Click Example.
  *
  * # Description
- * This example demonstrates the use of USB to I2C click board by reading the device ID
- * of a 3D Hall 11 click board connected to the I2C port and controlling the GPIO pins.
+ * This example demonstrates the use of USB to I2C Click board by reading the device ID
+ * of a 3D Hall 11 Click board connected to the I2C port and controlling the GPIO pins.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default config which resets
+ * Initializes the driver and performs the Click default config which resets
  * the device and sets the GPIO pins 0-3 as push-pull output and others as input.
  * After that, reads and displays the chip firmware version.
  *
  * ## Application Task
- * Reads the device ID of a 3D Hall 11 click board connected to the I2C port, 
+ * Reads the device ID of a 3D Hall 11 Click board connected to the I2C port, 
  * toggles the output pins and displays the GPIO port state. The results will
  * be displayed on the USB UART approximately once per second.
  *
@@ -27,7 +27,7 @@
 #include "uarttoi2c.h"
 
 // I2C target device configuration
-#define DEVICE_NAME                 "3D Hall 11 click"
+#define DEVICE_NAME                 "3D Hall 11 Click"
 #define DEVICE_SLAVE_ADDRESS        0x35
 #define DEVICE_REG_ID               0x0D
 #define DEVICE_ID                   0x01

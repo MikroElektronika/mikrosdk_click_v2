@@ -97,7 +97,7 @@ typedef struct
 {
     analog_in_t  adc;   /**< ADC module. */
     float        vref;  /**< ADC reference voltage. */
-    float        vdiv;  /**< Voltage divider between ADC ref voltage and voltage selection on the click board. */
+    float        vdiv;  /**< Voltage divider between ADC ref voltage and voltage selection on the Click board. */
 
 } analogkey_t;
 
@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void analogkey_cfg_setup ( analogkey_cfg_t *cfg );
@@ -145,7 +145,7 @@ void analogkey_cfg_setup ( analogkey_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * @return 0 - Ok, (-1) - Error.
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t analogkey_init ( analogkey_t *ctx, analogkey_cfg_t *cfg );
 
@@ -186,6 +186,6 @@ analogkey_key_id_t analogkey_get_key ( analogkey_t* ctx, float an_value );
 #endif  // ANALOGKEY_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

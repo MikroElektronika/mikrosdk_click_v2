@@ -1,6 +1,6 @@
 
 ---
-# Brushless 10 click
+# Brushless 10 Click
 
 > Brushless 10 Click is a compact add-on board that provides precise control over brushless DC motors. This board features the TC78B016FTG, a 3-phase sine-wave PWM driver from Toshiba Semiconductor. The TC78B016FTG features Intelligent Phase Control (InPAC) for automatic motor phase adjustment, eliminating manual calibration, supporting an external power supply from 6V to 30V, and adjusting current output up to 3A. It also includes various control and diagnostic features such as rotational speed output, brake function, speed command, and safety detections with visual indicators. The onboard DAC also offers additional tunability for motor control enhancements like lead angle control, output duty cycle, motor lockout, and PWM frequency selection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-10-click)
+[Click Product page](https://www.mikroe.com/brushless-10-click)
 
 ---
 
@@ -69,13 +69,13 @@ void brushless10_release_brake ( brushless10_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 10 click board by driving the motor at different speeds.
+> This example demonstrates the use of the Brushless 10 Click board by driving the motor at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

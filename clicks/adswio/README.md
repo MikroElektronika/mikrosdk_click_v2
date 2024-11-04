@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# AD SWIO click
+# AD SWIO Click
 
 AD-SWIO Click is a quad-channel software configurable input/output solution based on AD74412R. The AD74412R is a quad-channel software configurable input/output integrated circuit for building and process control applications. 
 
@@ -9,7 +9,7 @@ AD-SWIO Click is a quad-channel software configurable input/output solution base
   <img src="https://download.mikroe.com/images/click_for_ide/adswio_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ad-swio-click)
+[Click Product page](https://www.mikroe.com/ad-swio-click)
 
 ---
 
@@ -57,7 +57,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click provides a fully integrated single chip solution for input and output operation. 
+> This Click provides a fully integrated single chip solution for input and output operation. 
 > The AD-SWIO Click contains four 13-bit DACs, one per chanal, and 16-bit Σ-∆ ADC. 
 > These options give a lot of flexibility in choosing functionality for analog output, 
 > analog input, digital input, resistance temperature detector (RTD), and thermocouple 
@@ -67,7 +67,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Performs a hardware reset of the click board and
+> Performs a hardware reset of the Click board and
 > executes a default configuration that enables channel A and sets it to measure voltage
 > input in the range from 0V to 10V, with 4800 SPS.
 
@@ -106,7 +106,7 @@ void application_init ( void )
     adswio_res  = DUMMY;
     adswio_err  = ADSWIO_ERR_STATUS_OK;
 
-    log_printf( &logger, " AD-SWIO click initialization done \r\n");
+    log_printf( &logger, " AD-SWIO Click initialization done \r\n");
     log_printf( &logger, "************************************\r\n");
 }
   
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

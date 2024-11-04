@@ -1,16 +1,16 @@
 \mainpage Main Page
  
 ---
-# I2C 1 Wire click
+# I2C 1 Wire Click
 
-> I2C 1-Wire click carries DS2482-800, a bridge device that performs bidirectional conversions between I2C masters and 1-Wire slave devices. These can be EEPROM chips, temperature sensors and similar devices that have momentary high source current modes.
+> I2C 1-Wire Click carries DS2482-800, a bridge device that performs bidirectional conversions between I2C masters and 1-Wire slave devices. These can be EEPROM chips, temperature sensors and similar devices that have momentary high source current modes.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/i2c1wire_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/i2c-1-wire-click)
+[Click Product page](https://www.mikroe.com/i2c-1-wire-click)
 
 ---
 
@@ -49,33 +49,33 @@ err_t i2c1wire_init ( i2c1wire_t *ctx, i2c1wire_cfg_t *cfg );
 
 #### Example key functions :
 
-- `i2c1wire_write_byte_one_wire` This function writes one byte to the click module.
+- `i2c1wire_write_byte_one_wire` This function writes one byte to the Click module.
 ```c
 void i2c1wire_write_byte_one_wire ( i2c1wire_t *ctx, uint8_t input );
 ```
 
-- `i2c1wire_read_byte_one_wire` This function reads one byte from the click module.
+- `i2c1wire_read_byte_one_wire` This function reads one byte from the Click module.
 ```c
 uint8_t i2c1wire_read_byte_one_wire ( i2c1wire_t *ctx );
 ```
 
-- `i2c1wire_one_wire_reset` This function does a hardware reset of the click module.
+- `i2c1wire_one_wire_reset` This function does a hardware reset of the Click module.
 ```c
 void i2c1wire_one_wire_reset ( i2c1wire_t *ctx );
 ```
 
 ## Examples Description
 
-> This example showcases how to initialize, confiure and use the I2C 1-Wire click. The click
+> This example showcases how to initialize, confiure and use the I2C 1-Wire Click. The Click
   is a I2C (host) to 1-Wire interface (slave). In order for the example to work one or more 
-  1-Wire (GPIO) click modules are required. Gnd goes to gnd, power goes to power and the cha-
+  1-Wire (GPIO) Click modules are required. Gnd goes to gnd, power goes to power and the cha-
   nnels are there to read data from connected modules.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules.
+> This function initializes and configures the logger and Click modules.
 
 ```c
 
@@ -108,7 +108,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This function reads all of the channels on the click module and displays any data it acqu-
+> This function reads all of the channels on the Click module and displays any data it acqu-
   ires from them with a 100 millisecond delay. 
 
 ```c
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,7 +3,7 @@
  * \brief Index Counter Click example
  * 
  * # Description
- * This application enables usage of Index counter click board which can be used to measure rotational speed.
+ * This application enables usage of Index counter Click board which can be used to measure rotational speed.
  * 
  *
  * The demo application is composed of two sections :
@@ -12,7 +12,7 @@
  * Initilaziation of GPIO and write log.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of the Index Counter click board.
+ * This is an example which demonstrates the use of the Index Counter Click board.
  * This example shows the direction of movement, Rotations Per Minute ( RPM or speed )
  * of the three pairs of rotating poles positioned in the sensor operating range.
  * Results are being sent to the Usart Terminal where you can track their changes.

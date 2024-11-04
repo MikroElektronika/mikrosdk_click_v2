@@ -3,13 +3,13 @@
  * @brief 3D Hall 14 Click example
  *
  * # Description
- * This example demonstrates the use of 3D Hall 14 click board by reading
+ * This example demonstrates the use of 3D Hall 14 Click board by reading
  * the magnetic field strength from 3 axes and the sensor internal temperature.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads data from the sensor and displays them on the USB UART every 200ms.

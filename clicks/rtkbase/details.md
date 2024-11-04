@@ -1,6 +1,6 @@
 
 ---
-# RTK Base click
+# RTK Base Click
 
 > RTK Base Click is a compact add-on board used to improve the positional accuracy of the compatible RTK Rover board. This board features Quectel’s LG69TASMD, a dual-band multi-constellation GNSS module featuring a high-performance and high-reliability positioning engine. This module carries an RTK base station function by calculating and transmitting differential correction data via radio to allow the roving GPS to correct its position. It features the fifth generation of STMicroelectronics® positioning receiver platform with 80 tracking and four fast acquisition channels, supports up to 4 concurrent global constellations (GPS, QZSS, Galileo, and BDS) alongside RTCM 3.x protocol and commonly used UART interface.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtkbase_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtk-base-click)
+[Click Product page](https://www.mikroe.com/rtk-base-click)
 
 ---
 
@@ -64,7 +64,7 @@ uint32_t rtkbase_calculate_crc24( uint8_t *data_buf, uint16_t data_len );
 
 ## Example Description
 
-> This example demonstrates the use of RTK Base click by reading and displaying the RTCM3 messages.
+> This example demonstrates the use of RTK Base Click by reading and displaying the RTCM3 messages.
 
 **The demo application is composed of two sections :**
 
@@ -119,7 +119,7 @@ void application_task ( void )
 
 ## Note
 
-> The click board comes with the default baud rate of 460800, but the baud rate is set to 115200
+> The Click board comes with the default baud rate of 460800, but the baud rate is set to 115200
 in the example due to code portability and speed limitations of some MCUs. So in order to run
 the example you will need to adjust the baud rate using Quectel QGNSS evaluation software.
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

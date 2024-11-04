@@ -3,13 +3,13 @@
  * @brief Thermo 29 Click example
  *
  * # Description
- * This example demonstrates the use of Thermo 29 click board by reading and displaying
+ * This example demonstrates the use of Thermo 29 Click board by reading and displaying
  * the temperature measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, and performs the click default configuration which enables
+ * Initializes the driver and logger, and performs the Click default configuration which enables
  * continuous conversion and sets the conversion rate to 1 Hz with a data ready flag enabled on
  * the alert pin. After that, reads and displays the device 48-bit unique ID.
  *

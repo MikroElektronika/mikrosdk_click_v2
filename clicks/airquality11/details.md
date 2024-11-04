@@ -1,6 +1,6 @@
 
 ---
-# Air Quality 11 click
+# Air Quality 11 Click
 
 > Air Quality 11 Click is a compact add-on board for monitoring and analyzing indoor air quality. This board features the ENS161, a multi-gas sensor from ScioSense based on metal oxide (MOX) technology, to detect a range of volatile organic compounds with high sensitivity. The board supports I2C and SPI communication protocols, allowing flexible integration with various MCU platforms. It can calculate equivalent CO2 and TVOC levels and provide standardized air quality indices directly on-chip.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/airquality11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/air-quality-11-click)
+[Click Product page](https://www.mikroe.com/air-quality-11-click)
 
 ---
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

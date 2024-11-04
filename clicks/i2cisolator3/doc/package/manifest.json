@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "I2C Isolator 3 click",
+    "display_name": "I2C Isolator 3 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
     "related_projects": [
         4110
     ],
-    "version": "2.1.0.16",
+    "version": "2.1.0.17",
     "cmake": true,
     "alias": "Click.I2CIsolator3",
     "subdir_name": "lib_i2cisolator3"
 }
+
 
 
 

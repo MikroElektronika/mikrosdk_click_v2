@@ -1,8 +1,8 @@
 {
     "name": "Thermo K Click",
-    "description": "THERMO K click carries the MCP9600 IC from Microchip. Depending on the type of probe it uses the click can measure temperatures from −200 °C to +1372 °C.",
+    "description": "THERMO K Click carries the MCP9600 IC from Microchip. Depending on the type of probe it uses the Click can measure temperatures from −200 °C to +1372 °C.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP9600"],
+    "hw" : ["Click","MCP9600"],
     "category" : ["Temperature & humidity"] 
 }

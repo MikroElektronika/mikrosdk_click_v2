@@ -225,7 +225,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void manometer_cfg_setup ( manometer_cfg_t *cfg );
@@ -235,7 +235,7 @@ void manometer_cfg_setup ( manometer_cfg_t *cfg );
  * @param manometer Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MANOMETER_RETVAL manometer_init ( manometer_t *ctx, manometer_cfg_t *cfg );
 
@@ -244,7 +244,7 @@ MANOMETER_RETVAL manometer_init ( manometer_t *ctx, manometer_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Manometer click.
+ * @description This function executes default configuration for Manometer Click.
  */
 void manometer_default_cfg ( manometer_t *ctx );
 
@@ -299,6 +299,6 @@ float manometer_get_temperature ( manometer_t *ctx );
 #endif  // _MANOMETER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

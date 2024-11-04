@@ -3,6 +3,6 @@
     "description": "Accel 10 Click features an ultra-low power triaxial femto accelerometer sensor with embedded intelligence, labeled as the LIS2DW12TR.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LIS2DW12"],
+    "hw" : ["Click","LIS2DW12"],
     "category" : ["Click Boards > Sensors > Motion"] 
 }

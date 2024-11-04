@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Hall Current 8 120A click
+# Hall Current 8 120A Click
 
 > Hall Current 8 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4971-A120T5, a high-precision coreless current sensor for industrial/consumer applications from Infineon Technologies. The TLI4971-A120T5 has an analog interface and two fast overcurrent detection outputs, which support the protection of the power circuitry. Galvanic isolation is also provided according to the magnetic sensing principle. Infineon's monolithic Hall technology enables accurate and highly linear measurement of currents with a full scale up to 120A. This Click board™ is suitable for AC/DC current measurement applications: electrical drives, general-purpose inverters, chargers, current monitoring, overload, over-current detection, and many more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent8120a_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-8-click-120a)
+[Click Product page](https://www.mikroe.com/hall-current-8-click-120a)
 
 ---
 
@@ -135,7 +135,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Hall Current 8 120A click board. 
+> This is an example that demonstrates the use of the Hall Current 8 120A Click board. 
 In this example, we read and display current data [A], AN pin voltage level [V]. 
 Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

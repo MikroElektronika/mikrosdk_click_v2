@@ -1,6 +1,6 @@
 
 ---
-# RTC2 click
+# RTC2 Click
 
 < RTC2 Click is an accessory board in mikroBus™ form factor. It features the DS1307 serial real-time clock (RTC). It is a low-power, full binary-coded decimal (BCD) clock/calendar with programmable square-wave output signal. >
 
@@ -9,7 +9,7 @@
 </p>
 
 
-[click Product page](https://www.mikroe.com/rtc-2-click)
+[Click Product page](https://www.mikroe.com/rtc-2-click)
 
 ---
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

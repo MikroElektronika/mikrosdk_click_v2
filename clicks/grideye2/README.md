@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Grid-EYE 2 click
+# Grid-EYE 2 Click
 
 > Grid-EYE 2 Click is a compact add-on board designed for thermal imaging and motion detection applications. This board features the AMG883543, an infrared array sensor from Panasonic with a 90° viewing angle and an 8x8 pixel matrix that measures temperatures from 0°C to 80°C with a resolution of 0.25°C. The sensor can detect objects up to 5 meters away and outputs temperature data via a digital interface. The board also supports the Click Snap feature, allowing the main sensor area to be detached for flexible positioning.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/grideye2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/grid-eye-2-click)
+[Click Product page](https://www.mikroe.com/grid-eye-2-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t grideye2_clear_status ( grideye2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Grid-EYE 2 click by reading and displaying the temperature measurements as an 8x8 pixels grid.
+> This example demonstrates the use of Grid-EYE 2 Click by reading and displaying the temperature measurements as an 8x8 pixels grid.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which enables the data ready interrupt and sets data measurement to 10 frames per second.
+> Initializes the driver and performs the Click default configuration which enables the data ready interrupt and sets data measurement to 10 frames per second.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

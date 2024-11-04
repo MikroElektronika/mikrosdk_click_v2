@@ -1,8 +1,8 @@
 {
     "name": "1-Wire I2C Click",
-    "description": "1-Wire I2C click carries DS28E17 1-Wire-to-I2C master bridge from Analog Devices.",
+    "description": "1-Wire I2C Click carries DS28E17 1-Wire-to-I2C master bridge from Analog Devices.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DS28E17Q"],
+    "hw" : ["Click","DS28E17Q"],
     "category" : ["Click Boards > Interface > 1-Wire"]
 }

@@ -1,8 +1,8 @@
 {
     "name": "ccRF 3 Click",
-    "description": "The clicks will enable you to add a low-power consumption radio transceiver at 433 MHz frequency. ccRF 3 click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over SPI interface.",
+    "description": "The clicks will enable you to add a low-power consumption radio transceiver at 433 MHz frequency. ccRF 3 Click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over SPI interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CC1120"],
+    "hw" : ["Click","CC1120"],
     "category" : ["2.4 GHz Transceivers"]
 }

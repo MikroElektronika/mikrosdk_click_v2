@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ISO ADC click
+# ISO ADC Click
 
 > The ISO ADC Click is add-on board current-shunt measurement device with isolated delta-sigma modulator. This Click board™ is based on AMC1204BDWR provide a single-chip solution for measuring the small signal of a shunt resistor across an isolated barrier from Texas Instruments. ISO ADC Click contains shunt resistor, these types of resistors are typically used to sense currents in motor control inverters, green energy generation systems, and other industrial applications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/isoadc_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/iso-adc-click)
+[Click Product page](https://www.mikroe.com/iso-adc-click)
 
 ---
 
@@ -65,7 +65,7 @@ float isoadc_get_power ( isoadc_t *ctx, float voltage );
 
 ## Example Description
 
-> This example demonstrates the use of ISO ADC click board by reading the shunt voltage, current, and power.
+> This example demonstrates the use of ISO ADC Click board by reading the shunt voltage, current, and power.
 
 **The demo application is composed of two sections :**
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

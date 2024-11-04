@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Brushless 27 click
+# Brushless 27 Click
 
 > Brushless 27 Click is a compact add-on board that controls DC brushless motors with any MCU. This board features the TMC6300, a power driver for BLDC/PMSM motors from TRINAMIC. It is a highly efficient low voltage, zero standby driver for 3-phase BLDC/PMSM motors with up to 2A peak current.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless27_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-27-click)
+[Click Product page](https://www.mikroe.com/brushless-27-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t brushless27_drive_motor ( brushless27_t *ctx, uint8_t dir, uint8_t speed, 
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 27 click board by driving the 
+> This example demonstrates the use of the Brushless 27 Click board by driving the 
   motor in both directions at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

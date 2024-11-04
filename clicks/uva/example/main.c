@@ -3,13 +3,13 @@
  * @brief UVA Click example
  *
  * # Description
- * This example demonstrates the use of UVA click board by reading and displaying
+ * This example demonstrates the use of UVA Click board by reading and displaying
  * the UVA data measurement results.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and applies the click default configuration.
+ * Initializes the driver and applies the Click default configuration.
  *
  * ## Application Task
  * Reads the UVA data measurements every 100ms and displays the results on the USB UART.

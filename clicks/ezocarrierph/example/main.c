@@ -3,13 +3,13 @@
  * @brief EZO Carrier pH Click Example.
  *
  * # Description
- * This example demonstrates the use of EZO Carrier pH click board by processing
+ * This example demonstrates the use of EZO Carrier pH Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default factory reset, and mid point calibration.
+ * Initializes the driver, performs the Click default factory reset, and mid point calibration.
  *
  * ## Application Task
  * Reads and processes all incoming pH value data and displays them on the USB UART.

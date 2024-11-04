@@ -1,6 +1,6 @@
 
 ---
-# TempHum 24 click
+# TempHum 24 Click
 
 > Temp&Hum 24 Click is a compact add-on board that measures the surrounding environment's humidity and temperature. This board features the HDC3021, an integrated capacitive-based relative humidity and temperature sensor with a removable tape cover from Texas Instruments. The HDC3021 is characterized by its high accuracy (±0.5%RH and ±0.1°C over a wide operating temperature range) and high resolution, providing 16-bit data to the host controller with a configurable I2C interface. Offset Error Correction reduces RH sensor offset due to aging, exposure to extreme operating conditions, and contaminants to return the device to within accuracy specifications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum24_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-24-click)
+[Click Product page](https://www.mikroe.com/temphum-24-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t temphum24_read_rh_history ( temphum24_t *ctx, float *hum_min, float *hum_m
 
 ## Example Description
 
-> This example demonstrates the use of Temp & Hum 24 click board by reading the temperature and humidity data.
+> This example demonstrates the use of Temp & Hum 24 Click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which resets the device and starts the auto measurement mode with data rate of 1 Hz.
+> Initializes the driver and performs the Click default configuration which resets the device and starts the auto measurement mode with data rate of 1 Hz.
 
 ```c
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

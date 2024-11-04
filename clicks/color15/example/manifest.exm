@@ -3,6 +3,6 @@
     "description": "Color 15 Click is a compact add-on board representing an accurate color sensing solution. This board features the CLS-16D24-44-DF8/TR8, a low power, high sensitivity, color light sensor from Everlight Electronics. This Click board™, with an I2C configurable color sensor, senses red, green, blue, white (RGBW), and infrared light and converts them to digital values. The RGBW sensor is designed to reject IR in light sources allowing the device to operate in environments from sunlight to dark rooms. The integrating ADC rejects 50Hz and 60Hz flickers caused by artificial light sources.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CLS-16D24-44-DF8/TR8"],
+    "hw" : ["Click","CLS-16D24-44-DF8/TR8"],
     "category" : ["Optical"]
 }

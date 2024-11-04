@@ -4,7 +4,7 @@
  *
  * # Description
  * This demo application shows the performance of AMR Angle
- * click by reading and presenting the temperature and angle
+ * Click by reading and presenting the temperature and angle
  * results on the UART log.
  *
  * The demo application is composed of two sections :

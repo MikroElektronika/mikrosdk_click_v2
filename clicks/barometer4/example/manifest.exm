@@ -3,6 +3,6 @@
     "description": "Barometer 4 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the ICP-10111, a high accuracy low power barometric and temperature sensor from TDK InvenSense. The ICP-10111 is based on MEMS capacitive technology providing ultra-low noise at the lowest power, enabling industry-leading relative accuracy, sensor throughput, and temperature stability. It comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 30kPa up to 110kPa with an accuracy of ±1Pa over a wide operating temperature range.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ICP-10111"],
+    "hw" : ["Click","ICP-10111"],
     "category" : ["Pressure"]
 }

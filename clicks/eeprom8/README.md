@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# EEPROM 8 click
+# EEPROM 8 Click
 
 > EEPROM 8 Click is a compact add-on board that contains a highly reliable nonvolatile memory solution. This board features the CAV24C512, a 512-Kb electrically erasable programmable memory with enhanced hardware write protection for entire memory from ON Semiconductor. Internally organized as 65,536 words of 8 bits each, the CAV24C512 comes up with the compatible I2C serial interface. The CAV24C512 combines unprecedented data storage with excellent energy efficiency. It lasts one million full-memory read/write/erase cycles with more than 100 years of data retention.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/eeprom8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/eeprom-8-click)
+[Click Product page](https://www.mikroe.com/eeprom-8-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t eeprom8_read_sequential( eeprom8_t *ctx, uint16_t reg_addr, uint16_t n_byt
 
 ## Example Description
 
-> This example demonstrates the use of EEPROM 8 click board by writing specified data to the memory and reading it back.
+> This example demonstrates the use of EEPROM 8 Click board by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,0 +1,8 @@
+{
+    "name": "BarGraph 5 Click",
+    "description": "BarGraph 5 Click is a compact add-on board designed for visual data representation through LED bargraph displays. This board features three HLMP-2685 red LED bargraph displays from Broadcom Limited, controlled by the TLC5947, a 12-bit PWM LED driver from Texas Instruments. These rectangular red light bars are housed in single-in-line packages, delivering a luminous intensity of 83.4mcd with a peak wavelength of 626nm.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TLC5947RHBR","HLMP-2685"],
+    "category" : ["Click Boards > Display & LED > LED segment"]
+}

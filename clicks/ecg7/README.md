@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ECG 7 click
+# ECG 7 Click
 
 > ECG 7 Click is a compact add-on board that records the heart's electrical activity. This board features the MCP6N16, a single zero-drift instrumentation amplifier with selectable gain from Microchip. In addition to the jack connector provided for connecting the cable with ECG electrodes, this Click board™ offers the possibility of connecting electrodes through screw terminals or an onboard header if the electrode connection does not match the jack connector. Besides, the user is allowed to process the output signal in analog or digital form.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ecg7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ecg-7-click)
+[Click Product page](https://www.mikroe.com/ecg-7-click)
 
 ---
 
@@ -58,14 +58,14 @@ err_t ecg7_read_raw_adc ( ecg7_t *ctx, uint16_t *raw_adc );
 err_t ecg7_read_voltage ( ecg7_t *ctx, float *voltage );
 ```
 
-- `ecg7_set_vref` This function sets the voltage reference for ECG 7 click driver.
+- `ecg7_set_vref` This function sets the voltage reference for ECG 7 Click driver.
 ```c
 err_t ecg7_set_vref ( ecg7_t *ctx, float vref );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of ECG 7 click board by reading and displaying the voltage from VOUT BUFF which can be visualized on the SerialPlot application.
+> This example demonstrates the use of ECG 7 Click board by reading and displaying the voltage from VOUT BUFF which can be visualized on the SerialPlot application.
 
 **The demo application is composed of two sections :**
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# MR Angle click
+# MR Angle Click
 
 > MR Angle Click is a compact add-on board that contains a magnetoresistive sensor with an integrated amplifier. This board features the KMZ60, a high precision sensor for magnetic angle measurement with single-ended cosine and sine outputs from NXP Semiconductors. The MR sensor element comes with two Wheatstone bridges for cosine and sine signals, supports functions for control circuit and signal amplification, and enables angular measurements with high accuracy by an excellent linearity and temperature drift behavior. The KMZ60 is fully automotive qualified as well as applicable for industrial and consumer applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mr_angle_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mr-angle-click)
+[Click Product page](https://www.mikroe.com/mr-angle-click)
 
 ---
 
@@ -69,7 +69,7 @@ void mrangle_powerdown_mode ( mrangle_t *ctx, mrangle_powerdown_mode_value_t pd_
 
 ## Example Description
 
-> This library contains API for the MR Angle click driver.
+> This library contains API for the MR Angle Click driver.
 > This demo application shows an example of angle measurement.
 
 **The demo application is composed of two sections :**
@@ -117,7 +117,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of an MR Angle click board™.
+> This is an example that shows the use of an MR Angle Click board™.
 > The application task consists of reading the angle measurements in degrees ( 0 - 180 ).
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

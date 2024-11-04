@@ -1,6 +1,6 @@
 
 ---
-# 3D Hall 10 click
+# 3D Hall 10 Click
 
 > 3D Hall 10 Click is a compact add-on board used to detect the strength of a magnetic field in all three dimensions. This board features the TMAG5170, a high-precision linear 3D Hall effect sensor from Texas Instruments. The TMAG5170 features an SPI interface for configuration by MCU. The measurement data is provided in digital format of 12-bits corresponding to the magnetic field measured in each X, Y, and Z axes. It can achieve ultra-high precision at speeds up to 20kSPS for faster and more accurate real-time control and offers multiple diagnostics features to detect and report both system and device-level failures.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/3d-hall-10-click)
+[Click Product page](https://www.mikroe.com/3d-hall-10-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t c3dhall10_write_frame ( c3dhall10_t *ctx, uint8_t reg_addr, uint16_t data_
 
 ## Example Description
 
-> This example demonstrates the use of 3D Hall 10 click board by reading the magnetic
+> This example demonstrates the use of 3D Hall 10 Click board by reading the magnetic
 flux density from 3 axes, and the angle and magnitude between X and Y axes as well as the sensor internal temperature.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

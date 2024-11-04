@@ -500,7 +500,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void touchkey4_cfg_setup ( touchkey4_cfg_t *cfg );
@@ -511,7 +511,7 @@ void touchkey4_cfg_setup ( touchkey4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TOUCHKEY4_RETVAL touchkey4_init ( touchkey4_t *ctx, touchkey4_cfg_t *cfg );
 
@@ -656,6 +656,6 @@ uint8_t touchkey4_check_interrupt ( touchkey4_t *ctx );
 #endif  // _TOUCHKEY4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

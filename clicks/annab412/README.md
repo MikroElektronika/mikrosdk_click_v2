@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ANNA-B412 click
+# ANNA-B412 Click
 
 > ANNA-B412 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. 
 > This board features the ANNA-B412, a standalone Bluetooth 5.1 low-energy module from u-blox. 
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/annab412_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/anna-b412-click)
+[Click Product page](https://www.mikroe.com/anna-b412-click)
 
 ---
 
@@ -75,14 +75,14 @@ err_t annab412_set_cmd_device_name ( annab412_t *ctx, char *device_name );
 
 ## Example Description
 
-> This example demonstrates the use of ANNA-B412 click board by processing
+> This example demonstrates the use of ANNA-B412 Click board by processing
 > the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 void application_init ( void ) 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -495,7 +495,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rtd2_cfg_setup ( rtd2_cfg_t *cfg );
@@ -507,7 +507,7 @@ void rtd2_cfg_setup ( rtd2_cfg_t *cfg );
  *
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t rtd2_init ( rtd2_t *ctx, rtd2_cfg_t *cfg );
 
@@ -519,7 +519,7 @@ err_t rtd2_init ( rtd2_t *ctx, rtd2_cfg_t *cfg );
  * @details The function set default configuration of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
  * 
  * @note Default configuration 
  *         [ reg ]           :         [ reg value ]
@@ -540,7 +540,7 @@ void rtd2_default_cfg ( rtd2_t *ctx );
  * @details The function hardware reset,
  * resets the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
  *
  * @note Delay time of 1 ms after RESET rising edge.
 **/
@@ -557,7 +557,7 @@ void rtd2_hw_reset ( rtd2_t *ctx );
  * @details The function toggle CS pin, set CS pin condition of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_toggle_cs ( rtd2_t *ctx, uint8_t cs_state );
 
@@ -572,7 +572,7 @@ void rtd2_toggle_cs ( rtd2_t *ctx, uint8_t cs_state );
  * @details The function enables ADC conversion of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_enable_start ( rtd2_t *ctx, uint8_t en_start );
 
@@ -590,7 +590,7 @@ void rtd2_enable_start ( rtd2_t *ctx, uint8_t en_start );
  * of the INT pin of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
  */
 uint8_t rtd2_check_interupt ( rtd2_t *ctx );
 
@@ -603,7 +603,7 @@ uint8_t rtd2_check_interupt ( rtd2_t *ctx );
  * @details The function sends the command to control the operation of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_send_cmd ( rtd2_t *ctx, uint8_t cmd );
 
@@ -615,7 +615,7 @@ void rtd2_send_cmd ( rtd2_t *ctx, uint8_t cmd );
  * @details The function set wakeup, after a sleep, power up the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_wakeup ( rtd2_t *ctx );
 
@@ -627,7 +627,7 @@ void rtd2_set_wakeup ( rtd2_t *ctx );
  * @details The function set to sleep, places into power-down mode the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_sleep ( rtd2_t *ctx );
 
@@ -640,7 +640,7 @@ void rtd2_set_sleep ( rtd2_t *ctx );
  * resets the ADC digital filter and starts a new conversion of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_sync ( rtd2_t *ctx );
 
@@ -653,7 +653,7 @@ void rtd2_set_sync ( rtd2_t *ctx );
  * restores the registers to the respective default values of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_reset ( rtd2_t *ctx );
 
@@ -666,7 +666,7 @@ void rtd2_set_reset ( rtd2_t *ctx );
  * loads the most recent conversion result into the output register of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_read_data_once ( rtd2_t *ctx );
 
@@ -679,7 +679,7 @@ void rtd2_set_read_data_once ( rtd2_t *ctx );
  * enables read data continuous mode of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_read_data_continuous ( rtd2_t *ctx );
 
@@ -692,7 +692,7 @@ void rtd2_set_read_data_continuous ( rtd2_t *ctx );
  * terminates read data continuous mode of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_stop_data ( rtd2_t *ctx );
 
@@ -711,7 +711,7 @@ void rtd2_set_stop_data ( rtd2_t *ctx );
  * from the targeted register address of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_write_continuous ( rtd2_t *ctx, uint8_t reg, uint8_t *p_tx_data, uint8_t n_bytes );
 
@@ -730,7 +730,7 @@ void rtd2_write_continuous ( rtd2_t *ctx, uint8_t reg, uint8_t *p_tx_data, uint8
  * from the targeted register address of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_read_continuous ( rtd2_t *ctx, uint8_t reg, uint8_t *p_rx_data, uint8_t n_bytes );
 
@@ -747,7 +747,7 @@ void rtd2_read_continuous ( rtd2_t *ctx, uint8_t reg, uint8_t *p_rx_data, uint8_
  * of the desired register address of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement 
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_write_reg ( rtd2_t *ctx, uint8_t reg, uint8_t tx_data );
 
@@ -765,7 +765,7 @@ void rtd2_write_reg ( rtd2_t *ctx, uint8_t reg, uint8_t tx_data );
  * of the desired register address of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 uint8_t rtd2_read_reg ( rtd2_t *ctx, uint8_t reg );
 
@@ -787,7 +787,7 @@ uint8_t rtd2_read_reg ( rtd2_t *ctx, uint8_t reg );
  * @details The function set burn out source of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 uint8_t rtd2_set_burn_out_source ( rtd2_t *ctx, uint8_t burn_out );
 
@@ -812,7 +812,7 @@ uint8_t rtd2_set_burn_out_source ( rtd2_t *ctx, uint8_t burn_out );
  * set positive and negative input channel selection of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_mux_sel ( rtd2_t *ctx, uint8_t adc_pos, uint8_t adc_neg );
 
@@ -835,7 +835,7 @@ void rtd2_set_mux_sel ( rtd2_t *ctx, uint8_t adc_pos, uint8_t adc_neg );
  * @details The function set bias voltage of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 uint8_t rtd2_set_bias ( rtd2_t *ctx, uint8_t bias );
 
@@ -856,7 +856,7 @@ uint8_t rtd2_set_bias ( rtd2_t *ctx, uint8_t bias );
  * @details The function set internal reference control of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 uint8_t rtd2_set_int_ref ( rtd2_t *ctx, uint8_t s_ref );
 
@@ -877,7 +877,7 @@ uint8_t rtd2_set_int_ref ( rtd2_t *ctx, uint8_t s_ref );
  * @details The function set system monitor control of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_system_monitor ( rtd2_t *ctx, uint8_t sys_mon );
 
@@ -911,7 +911,7 @@ void rtd2_set_system_monitor ( rtd2_t *ctx, uint8_t sys_mon );
  * @details The function set system control of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_system_control ( rtd2_t *ctx, uint8_t gain, uint8_t output_rate );
 
@@ -933,7 +933,7 @@ void rtd2_set_system_control ( rtd2_t *ctx, uint8_t gain, uint8_t output_rate );
  * @details The function set IDAC excitation current magnitude of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_idac_current_mag ( rtd2_t *ctx, uint8_t c_idac );
 
@@ -957,7 +957,7 @@ void rtd2_set_idac_current_mag ( rtd2_t *ctx, uint8_t c_idac );
  * @details The function set IDAC excitation current output 1 and 2, of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 void rtd2_set_idac_current_out ( rtd2_t *ctx, uint8_t c_out_1, uint8_t c_out_2 );
 
@@ -973,7 +973,7 @@ void rtd2_set_idac_current_out ( rtd2_t *ctx, uint8_t c_out_1, uint8_t c_out_2 )
  * @details The function check new data ready of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 uint8_t rtd2_check_new_data_ready ( rtd2_t *ctx );
 
@@ -987,7 +987,7 @@ uint8_t rtd2_check_new_data_ready ( rtd2_t *ctx );
  * @details The function read output data of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 int32_t rtd2_read_output_data ( rtd2_t *ctx );
 
@@ -1003,7 +1003,7 @@ int32_t rtd2_read_output_data ( rtd2_t *ctx );
  * @details The function calculates the temperature of the
  * 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 float rtd2_calc_temperature ( int32_t adc_val );
 
@@ -1018,7 +1018,7 @@ float rtd2_calc_temperature ( int32_t adc_val );
  * return ambient temperature from the PT100 3-wire temperature probe
  * wired to the 4ADS1247 24-Bit, 2-kSPS, Analog-To-Digital Converters With
  * Programmable Gain Amplifier (PGA) For Sensor Measurement
- * on the RTD 2 click board.
+ * on the RTD 2 Click board.
 **/
 float rtd2_get_temperature ( rtd2_t *ctx );
 
@@ -1028,6 +1028,6 @@ float rtd2_get_temperature ( rtd2_t *ctx );
 #endif  // _RTD2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

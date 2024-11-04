@@ -1,8 +1,8 @@
 {
     "name": "Smoke Click",
-    "description": "Smoke click carries the MAX30105 high-sensitivity optical sensor for smoke detection. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface with additional functionality provided by the INT pin on the mikroBUS™ line.",
+    "description": "Smoke Click carries the MAX30105 high-sensitivity optical sensor for smoke detection. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface with additional functionality provided by the INT pin on the mikroBUS™ line.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click"," MAX30105"],
+    "hw" : ["Click"," MAX30105"],
     "category" : ["Optical"] 
 }

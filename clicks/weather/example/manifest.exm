@@ -1,8 +1,8 @@
 {
     "name": "Weather Click",
-    "description": "Weather click carries BME280 integrated environmental unit from Bosch.",
+    "description": "Weather Click carries BME280 integrated environmental unit from Bosch.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BME280"],
+    "hw" : ["Click","BME280"],
     "category" : ["Environmental"] 
 }

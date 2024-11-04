@@ -4,7 +4,7 @@
  *
  * # Description
  * This is an example that demonstrates the use
- * of the Flash 7 click board. 
+ * of the Flash 7 Click board. 
  *
  * The demo application is composed of two sections :
  *

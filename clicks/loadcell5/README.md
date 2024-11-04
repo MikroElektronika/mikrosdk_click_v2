@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Load Cell 5 click
+# Load Cell 5 Click
 
 Load Cell 5 Click is a compact add-on board that represents a weigh scale solution. This board features the AD7780, a pin-programmable, low power, 24-bit sigma-delta ΣΔ ADC from Analog Devices. It interfaces directly to the load cell, where the low-level signal from the load cell is amplified by the AD7780’s internal low noise programmable gain amplifier programmed to operate with a gain of 128 or 1. It also has a power-down mode allowing the user to switch off the power to the bridge sensor and power-down the AD7780 when not converting, increasing the product battery life. 
 
@@ -9,7 +9,7 @@ Load Cell 5 Click is a compact add-on board that represents a weigh scale soluti
   <img src="https://download.mikroe.com/images/click_for_ide/loadcell5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/load-cell-5-click)
+[Click Product page](https://www.mikroe.com/load-cell-5-click)
 
 ---
 
@@ -202,8 +202,8 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Load Cell 5 click board.
-> The Load Cell 5 click board can be used to measure weight,
+> This is an example that demonstrates the use of the Load Cell 5 Click board.
+> The Load Cell 5 Click board can be used to measure weight,
 > shows the measurement of scales in grams [ g ].
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -230,7 +230,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART Click](https://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

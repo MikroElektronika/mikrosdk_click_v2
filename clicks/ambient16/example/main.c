@@ -12,7 +12,7 @@
  * Initializes I2C driver performs software reset and applies default settings.
  *
  * ## Application Task
- * Demonstrates use of Ambient 16 click board by reading data values of DATA0 and DATA1 in Lux
+ * Demonstrates use of Ambient 16 Click board by reading data values of DATA0 and DATA1 in Lux
  * every second, and logging it on the UART terminal.
  *
  * @author Stefan Ilic

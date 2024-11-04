@@ -3,6 +3,6 @@
     "description": "Keylock 2 Click carries antistatic process sealed keylock mechanism that has three positions.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SK13AEG13"],
+    "hw" : ["Click","SK13AEG13"],
     "category" : ["Pushbutton/Switches"] 
 }

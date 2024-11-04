@@ -3,13 +3,13 @@
  * @brief Accel 29 Click example
  *
  * # Description
- * This example demonstrates the use of Accel 29 click board by reading and
+ * This example demonstrates the use of Accel 29 Click board by reading and
  * displaying the accelerometer data (X, Y, and Z axis) averaged from 100 samples.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration, and calibrates
+ * Initializes the driver, performs the Click default configuration, and calibrates
  * the accel data offsets.
  *
  * ## Application Task
@@ -17,7 +17,7 @@
  * averaged from 100 samples.
  *
  * @note
- * This click board should be used for high g applications of up to +-200g. 
+ * This Click board should be used for high g applications of up to +-200g. 
  * It is not recommended for low g applications because of its high scale
  * factor which is about 48.83 mg per LSB.
  *

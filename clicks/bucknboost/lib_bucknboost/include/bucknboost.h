@@ -442,7 +442,7 @@ bucknboost_cfg_buck_t;
 
 /**
  * @brief Buck n Boost configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #bucknboost_cfg_t object definition for detailed explanation.
@@ -454,7 +454,7 @@ void bucknboost_cfg_setup ( bucknboost_cfg_t *cfg );
 /**
  * @brief Buck n Boost initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #bucknboost_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -470,7 +470,7 @@ err_t bucknboost_init ( bucknboost_t *ctx, bucknboost_cfg_t *cfg );
 /**
  * @brief Buck n Boost default configuration function.
  * @details This function executes a default configuration of Buck n Boost
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #bucknboost_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

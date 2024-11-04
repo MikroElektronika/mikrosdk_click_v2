@@ -472,7 +472,7 @@ typedef enum
 
 /**
  * @brief Brushless 23 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #brushless23_cfg_t object definition for detailed explanation.
@@ -484,7 +484,7 @@ void brushless23_cfg_setup ( brushless23_cfg_t *cfg );
 /**
  * @brief Brushless 23 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #brushless23_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -499,7 +499,7 @@ err_t brushless23_init ( brushless23_t *ctx, brushless23_cfg_t *cfg );
 /**
  * @brief Brushless 23 default configuration function.
  * @details This function executes a default configuration of Brushless 23
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #brushless23_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -800,7 +800,7 @@ err_t brushless23_set_change_out_duty ( brushless23_t *ctx, float duty_cycle );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note This function can only be used when the click SPD switch is configured in I2C mode.
+ * @note This function can only be used when the Click SPD switch is configured in I2C mode.
  */
 err_t brushless23_set_duty_cycle ( brushless23_t *ctx, float duty_cycle );
 

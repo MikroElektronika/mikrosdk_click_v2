@@ -1,6 +1,6 @@
 
 ---
-# Inclinometer 2 click
+# Inclinometer 2 Click
 
 > Inclinometer 2 Click is a compact add-on board that measures the orientation angle of an object with respect to the force of gravity. This board features the IIS2ICLX, high accuracy, and resolution two-axis inclinometer from STMicroelectronics. It allows selectable full-scale measurements in ranges of ±0.5/±1/±2/±3g in two axes with a configurable host interface that supports both SPI and I2C serial communication. The sensing element is manufactured using a dedicated micromachining process developed by STMicroelectronics to produce inertial sensors and actuators on silicon wafers.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/inclinometer2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/inclinometer-2-click)
+[Click Product page](https://www.mikroe.com/inclinometer-2-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t inclinometer2_get_temperature ( inclinometer2_t *ctx, float *temperature )
 
 ## Example Description
 
-> This example demonstrates the use of Inclinometer 2 click board by reading and displaying the Accel X and Y axis data (mg) and the temperature (degC) on the USB UART.
+> This example demonstrates the use of Inclinometer 2 Click board by reading and displaying the Accel X and Y axis data (mg) and the temperature (degC) on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which enables the accel data ready interrupt, sets output data rate to 12.5 Hz and accel full-scale range to +-2g.
+> Initializes the driver and performs the Click default configuration which enables the accel data ready interrupt, sets output data rate to 12.5 Hz and accel full-scale range to +-2g.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

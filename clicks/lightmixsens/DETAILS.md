@@ -1,6 +1,6 @@
 
 ---
-# Light mix sens click
+# Light mix sens Click
 
 Light mix-sens Click is carrying TMD37253, an advanced proximity measurement, color sense (RGBC+IR), and digital ambient light sensing (ALS) device. The TMD37253 slim module package has been designed to accommodate a “single hole” aperture approach that incorporates an IR LED and factory calibrated LED driver. The proximity detection feature provides object detection (e.g., mobile device screen to the user’s ear) by photodiode detection of reflected IR energy (sourced by the integrated LED). The ALS detection feature provides photopic light intensity data. The color photodiodes have UV and IR blocking filters and a dedicated data converters producing 16-bit data.
 
@@ -9,7 +9,7 @@ Light mix-sens Click is carrying TMD37253, an advanced proximity measurement, co
 </p>
 
 
-[click Product page](https://www.mikroe.com/light-mix-sens-click)
+[Click Product page](https://www.mikroe.com/light-mix-sens-click)
 
 ---
 
@@ -114,7 +114,7 @@ void application_init ( void )
     lightmixsens_bdata = LIGHTMIXSENS_DUMMY_DATA;
     lightmixsens_pdata = LIGHTMIXSENS_DUMMY_DATA;
 
-    log_printf( &logger, "*  Light mix-sens click initialization done.  *\r\n" );
+    log_printf( &logger, "*  Light mix-sens Click initialization done.  *\r\n" );
 }
   
 ```
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,7 +3,7 @@
  * @brief LTE IoT 9 Click Example.
  *
  * # Description
- * This application shows capability of LTE IoT 9 click board.
+ * This application shows capability of LTE IoT 9 Click board.
  * It connects to network with standard "AT" commands, then
  * sends SMS whit SIM card, and then logs GNNS data.
  *

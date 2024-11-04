@@ -1,8 +1,8 @@
 {
     "name": "Single Cell Click",
-    "description": "The Single Cell click is a Click board™ which features MCP16251 synchronous boost regulator with true load disconnect and MCP1811A low-dropout (LDO) linear regulator that provide an ultra low quiescent current during device operation of about 250nA and can be shut down for 5nA (typical) supply current draw. Given the potential applications of these features, the Single Cell click can be used for one, two and three-cell Alkaline and NiMH/NiCd portable products, solar cell applications, personal care and medical products, smartphones, MP3 players, wireless sensors and many more.",
+    "description": "The Single Cell Click is a Click board™ which features MCP16251 synchronous boost regulator with true load disconnect and MCP1811A low-dropout (LDO) linear regulator that provide an ultra low quiescent current during device operation of about 250nA and can be shut down for 5nA (typical) supply current draw. Given the potential applications of these features, the Single Cell Click can be used for one, two and three-cell Alkaline and NiMH/NiCd portable products, solar cell applications, personal care and medical products, smartphones, MP3 players, wireless sensors and many more.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP16251, MCP1811A"],
+    "hw" : ["Click","MCP16251, MCP1811A"],
     "category" : ["Boost,Linear"] 
 }

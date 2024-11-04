@@ -1,6 +1,6 @@
 
 ---
-# Pressure 17 click
+# Pressure 17 Click
 
 > Pressure 17 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the BM1390GLV-Z, a high-precision piezoresistive pressure sensor from Rohm Semiconductor. The BM1390GLV-Z comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 300hPa up to 1300hPa with an accuracy of ±1hPa.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pressure17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-17-click)
+[Click Product page](https://www.mikroe.com/pressure-17-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t pressure17_write_register ( pressure17_t *ctx, uint8_t reg, uint8_t data_i
 
 ## Example Description
 
-> This example demonstrates the use of Pressure 17 click board by reading and displaying the pressure and temperature data.
+> This example demonstrates the use of Pressure 17 Click board by reading and displaying the pressure and temperature data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

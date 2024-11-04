@@ -12,7 +12,7 @@
  *
  * ## Application Task
  * Detect the movement's direction
- * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt click board.
+ * of RPI-1035 Surface Mount Type 4-Direction Detector on Tilt Click board.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs on usb uart when the movement's direction is changed.
  *

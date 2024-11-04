@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# CXPI click
+# CXPI Click
 
 > CXPI Click is a compact add-on board that contains a transceiver that supports the next-generation automotive communication protocol. This board features the BD41000AFJ-C, a transceiver for the CXPI (Clock Extension Peripheral Interface) communication from Rohm Semiconductor.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/cxpi_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/cxpi-click)
+[Click Product page](https://www.mikroe.com/cxpi-click)
 
 ---
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

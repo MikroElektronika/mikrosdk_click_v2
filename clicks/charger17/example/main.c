@@ -3,13 +3,13 @@
  * @brief Charger 17 Click example
  *
  * # Description
- * This example demonstrates the use of Charger 17 click board by enabling battery charging and
+ * This example demonstrates the use of Charger 17 Click board by enabling battery charging and
  * displaying the charging status.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which enables charging.
+ * Initializes the driver and performs the Click default configuration which enables charging.
  *
  * ## Application Task
  * Reads and displays the battery charging status (IC_STATUS and STAT0 regs) on the USB UART

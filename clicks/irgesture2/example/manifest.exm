@@ -3,6 +3,6 @@
     "description": "IR Gesture 2 Click is a compact add-on board that provides contactless gesture recognition. This board features the MAX25405, a data-acquisition system for the gesture and proximity sensing from Analog Devices. Detection distance is improved by integrating a complete optical system with a lens, aperture, visible light filter, and a 6x10 photodetector array. The proximity, hand detection, and gesture recognition functions of the MAX25405 operate by detecting the light reflected from the controlled IR-LED light sources driven directly from the MAX25405. It can also detect these gestures even when exposed to bright ambient light and process data from the sensor through an SPI interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX25405"],
+    "hw" : ["Click","MAX25405"],
     "category" : ["Motion"]
 }

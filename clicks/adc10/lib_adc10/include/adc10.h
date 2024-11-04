@@ -470,7 +470,7 @@ adc10_settings_t;
 
 /**
  * @brief ADC 10 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #adc10_cfg_t object definition for detailed explanation.
@@ -482,7 +482,7 @@ void adc10_cfg_setup ( adc10_cfg_t *cfg );
 /**
  * @brief ADC 10 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -498,7 +498,7 @@ err_t adc10_init ( adc10_t *ctx, adc10_cfg_t *cfg );
 /**
  * @brief ADC 10 default configuration function.
  * @details This function executes a default configuration of ADC 10
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @return Nothing.
@@ -542,7 +542,7 @@ err_t adc10_generic_read ( adc10_t *ctx, char *data_buf, uint16_t max_len );
  * @brief ADC 10 Hardware reset function.
  * @details This function perform a hardware reset the
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @return Nothing.
@@ -556,7 +556,7 @@ void adc10_hw_reset ( adc10_t *ctx );
  * @details This function indicates when a new conversion result is ready 
  * for retrieval of the
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @return @li @c 0x00 ( ADC10_NEW_DATA_IS_READY )  - Data ready,
@@ -570,7 +570,7 @@ uint8_t adc10_check_drdy ( adc10_t *ctx );
  * @brief ADC 10 Send command function.
  * @details This function sends the desired command to the
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[in] cmd : Commands instruction.
@@ -584,7 +584,7 @@ void adc10_send_command ( adc10_t *ctx, uint8_t cmd );
  * @brief ADC 10 Software reset function.
  * @details This function perform a software reset
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @return Nothing.
@@ -597,7 +597,7 @@ void adc10_reset ( adc10_t *ctx );
  * @brief ADC 10 Start the synchronization function.
  * @details This function send start sync command to the
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @return Nothing.
@@ -610,7 +610,7 @@ void adc10_start_sync ( adc10_t *ctx );
  * @brief ADC 10 Shutdown function.
  * @details This function perform a shutdown of the
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @return Nothing.
@@ -624,7 +624,7 @@ void adc10_shutdown ( adc10_t *ctx );
  * @details This function perform a writes the byte of data to the targeted 8-bit
  * register address of the 
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[in] reg : Register address.
@@ -640,7 +640,7 @@ void adc10_write_reg ( adc10_t *ctx, uint8_t reg, uint8_t tx_data );
  * @details This function perform a read the byte of data to the targeted 8-bit
  * register address of the 
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[in] reg : Register address.
@@ -654,7 +654,7 @@ uint8_t adc10_read_reg ( adc10_t *ctx, uint8_t reg );
  * @brief ADC 10 Get the channel output function.
  * @details This function reads the ADC output of the channel
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[in] sel_ch : @li @c 0x00 ( ADC10_ANALOG_INPUT_CH_0 ) - Analog input 0.
@@ -671,7 +671,7 @@ int32_t adc10_get_ch_output ( adc10_t *ctx, uint8_t sel_ch );
  * @brief ADC 10 Calculate the voltage function.
  * @details This function reads the ADC output of the channel
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[in] adc_data : 24-bits of data ( two's complement format ) ADC data.
@@ -687,7 +687,7 @@ float adc10_calc_voltage ( adc10_t *ctx, int32_t adc_data, float vref, uint8_t g
  * @brief ADC 10 Set configuration function.
  * @details This function set configuration data of the
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[in] adc10_settings_t : Click settings configuration object.
@@ -701,7 +701,7 @@ void adc10_set_config ( adc10_t *ctx, adc10_settings_t cfg_data );
  * @brief ADC 10 Get configuration function.
  * @details This function get configuration data of the
  * ADS122U04 24-Bit, 4-Channel, 2-kSPS, Delta-Sigma ADC With UART Interface
- * on the ADC 10 click board.
+ * on the ADC 10 Click board.
  * @param[in] ctx : Click context object.
  * See #adc10_t object definition for detailed explanation.
  * @param[out] adc10_settings_t : Click settings configuration object.

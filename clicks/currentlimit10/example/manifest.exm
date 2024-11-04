@@ -3,6 +3,6 @@
     "description": "Current Limit 10 Click is a compact add-on board representing a current-limiting solution for your application. This board features the HS2950P, a load protection HotSwitch from Semtech. It features a wide input voltage range of 2.7V up to 29V and can provide up to 5A output current. The HS2950P features an adjustable current limit, over-voltage protection, automatic output discharge, and soft start. It automatically restarts from all faults except OVP and UVLO.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","HS2950P,MAX5419LETA+T"],
+    "hw" : ["Click","HS2950P,MAX5419LETA+T"],
     "category" : ["Click Boards > Power management > Power Switch"]
 }

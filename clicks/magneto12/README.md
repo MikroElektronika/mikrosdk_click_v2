@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Magneto 12 click
+# Magneto 12 Click
 
 > Magneto 12 Click is a compact add-on board that contains an accurate and reliable magnetic sensing device. This board features the A31315, a magnetic position sensor designed for on- and off-axis rotary and linear stroke position measurement from Allegro Microsystems. This sensor integrates vertical and planar Hall-effect elements with precision temperature-compensating circuitry to detect two out of three magnetic field components (X and Y). Using configurable signal processing (the user is allowed to process the output signal in analog or digital form), linearization and angle calculation allows the A31315 to accurately resolve the absolute rotary (full 360° and short-stroke <360°) or linear position of a moving magnetic target.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneto12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magneto-12-click)
+[Click Product page](https://www.mikroe.com/magneto-12-click)
 
 ---
 
@@ -53,7 +53,7 @@ err_t magneto12_init ( magneto12_t *ctx, magneto12_cfg_t *cfg );
 err_t magneto12_read_voltage ( magneto12_t *ctx, float *voltage );
 ```
 
-- `magneto12_set_vref` This function sets the voltage reference for Magneto 12 click driver.
+- `magneto12_set_vref` This function sets the voltage reference for Magneto 12 Click driver.
 ```c
 err_t magneto12_set_vref ( magneto12_t *ctx, float vref );
 ```
@@ -65,7 +65,7 @@ err_t magneto12_read_angle ( magneto12_t *ctx, float *angle );
 
 ## Example Description
 
-> This example demonstrates the use of Magneto 12 click board by reading and displaying the magnet's angular position in degrees.
+> This example demonstrates the use of Magneto 12 Click board by reading and displaying the magnet's angular position in degrees.
 
 **The demo application is composed of two sections :**
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

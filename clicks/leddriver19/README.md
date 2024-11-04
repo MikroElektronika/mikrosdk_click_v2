@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LED Driver 19 click
+# LED Driver 19 Click
 
 > LED Driver 19 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the LED1202, a 12-channel low quiescent current LED driver from STMicroelectronics. It can output 5V, and each channel can provide up to 20mA with a headroom voltage of typically 350mW.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-19-click)
+[Click Product page](https://www.mikroe.com/led-driver-19-click)
 
 ---
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

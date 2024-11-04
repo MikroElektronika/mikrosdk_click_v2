@@ -180,7 +180,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void capwheel2_cfg_setup ( capwheel2_cfg_t *cfg );
@@ -190,7 +190,7 @@ void capwheel2_cfg_setup ( capwheel2_cfg_t *cfg );
  * @param capwheel2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CAPWHEEL2_RETVAL capwheel2_init ( capwheel2_t *ctx, capwheel2_cfg_t *cfg );
 
@@ -200,7 +200,7 @@ CAPWHEEL2_RETVAL capwheel2_init ( capwheel2_t *ctx, capwheel2_cfg_t *cfg );
  * @param ctx  Click object.
  * @returns    Data buffer setted to default values.
  *
- * @description This function executes default configuration for CapWheel2 click.
+ * @description This function executes default configuration for CapWheel2 Click.
  */
 uint8_t capwheel2_default_cfg ( capwheel2_t *ctx );
 
@@ -284,6 +284,6 @@ uint8_t capwheel2_i2c_write_wait ( capwheel2_t *ctx, uint8_t register_address, u
 #endif  // _CAPWHEEL2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

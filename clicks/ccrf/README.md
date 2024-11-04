@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# ccRF click
+# ccRF Click
 
-> ccRF click is a low-power 2.4 GHz transceiver designed for the 2400- 2483.5 MHz ISM and SRD frequency bands. It features CC2500 Low-Power 2.4 GHz RF transceiver as well as PCB trace antenna. The CC2500 is integrated with a highly configurable baseband modem that supports various modulation formats and has data rate up to 500 kBaud.
+> ccRF Click is a low-power 2.4 GHz transceiver designed for the 2400- 2483.5 MHz ISM and SRD frequency bands. It features CC2500 Low-Power 2.4 GHz RF transceiver as well as PCB trace antenna. The CC2500 is integrated with a highly configurable baseband modem that supports various modulation formats and has data rate up to 500 kBaud.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ccrf_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ccrf-click)
+[Click Product page](https://www.mikroe.com/ccrf-click)
 
 ---
 
@@ -70,13 +70,13 @@ uint8_t ccrf_get_start( ctx );
 
 ## Examples Description
 
-> This example demonstrates the use of an ccRF click board by showing the communication between the two click boards configured as a receiver and transmitter.
+> This example demonstrates the use of an ccRF Click board by showing the communication between the two Click boards configured as a receiver and transmitter.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and logger, performs the click default configuration and displays the selected application mode.
+> Initializes the driver and logger, performs the Click default configuration and displays the selected application mode.
 
 ```c
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

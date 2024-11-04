@@ -158,7 +158,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c7seg_cfg_setup ( c7seg_cfg_t *cfg );
@@ -169,7 +169,7 @@ void c7seg_cfg_setup ( c7seg_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C7SEG_RETVAL c7seg_init ( c7seg_t *ctx, c7seg_cfg_t *cfg );
 
@@ -178,7 +178,7 @@ C7SEG_RETVAL c7seg_init ( c7seg_t *ctx, c7seg_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for c7seg click.
+ * @description This function executes default configuration for c7seg Click.
  * @note
  *  Click default configuration:
  * -------------------------------------------------
@@ -221,7 +221,7 @@ void c7seg_write_data ( c7seg_t *ctx, uint8_t write_left, uint8_t write_right );
  *
  * @param ctx  Click object.
  *
- * @description This function executes device reset for 7seg click.
+ * @description This function executes device reset for 7seg Click.
  */
 void c7seg_reset ( c7seg_t *ctx );
 
@@ -231,7 +231,7 @@ void c7seg_reset ( c7seg_t *ctx );
  * @param ctx             Click object.
  * @param display_mode    State of display.
  *
- * @description This function sets display state for 7seg click.
+ * @description This function sets display state for 7seg Click.
  */
 void c7seg_display_mode ( c7seg_t *ctx, uint8_t display_mode );
 
@@ -263,7 +263,7 @@ void c7seg_write_data_character ( c7seg_t *ctx, char left_char, char right_char 
 #endif  // _C7SEG_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 
 // ------------------------------------------------------------------------- END

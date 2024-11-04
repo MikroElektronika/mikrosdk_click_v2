@@ -3,7 +3,7 @@
  * @brief Opto Encoder 4 Click Example.
  *
  * # Description
- * This example demonstrates the use of Opto Encoder 4 click board by processing
+ * This example demonstrates the use of Opto Encoder 4 Click board by processing
  * the encoder output pin state and incrementing the step counter on falling edge.
  *
  * The demo application is composed of two sections :

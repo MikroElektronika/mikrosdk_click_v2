@@ -487,7 +487,7 @@ typedef enum
 
 /**
  * @brief IR Gesture 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #irgesture3_cfg_t object definition for detailed explanation.
@@ -499,7 +499,7 @@ void irgesture3_cfg_setup ( irgesture3_cfg_t *cfg );
 /**
  * @brief IR Gesture 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #irgesture3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -514,7 +514,7 @@ err_t irgesture3_init ( irgesture3_t *ctx, irgesture3_cfg_t *cfg );
 /**
  * @brief IR Gesture 3 default configuration function.
  * @details This function executes a default configuration of IR Gesture 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #irgesture3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

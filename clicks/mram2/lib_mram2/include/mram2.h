@@ -196,7 +196,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mram2_cfg_setup ( mram2_cfg_t *cfg );
@@ -206,7 +206,7 @@ void mram2_cfg_setup ( mram2_cfg_t *cfg );
  * @param mram2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t mram2_init ( mram2_t *ctx, mram2_cfg_t *cfg );
 
@@ -375,6 +375,6 @@ void mram2_hold ( mram2_t *ctx, uint8_t state );
 #endif  // _MRAM2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

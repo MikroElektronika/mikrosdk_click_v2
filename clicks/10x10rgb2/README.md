@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 10x10 RGB 2 click
+# 10x10 RGB 2 Click
 
 > 10x10 RGB 2 Click is a compact add-on board designed for creating vibrant LED displays and lighting solutions. This board features the IN-PC20TBT5R5G5B, an RGB LED with an advanced IC for seamless operation from Inolux. The board features a 10x10 matrix of "smart" RGB LEDs capable of dual-wire transmission and a sophisticated control circuit for dynamic color rendering. It incorporates CMOS technology for low power consumption and supports 256 grayscale levels for precise PWM dimming, along with 32 levels of brightness control.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/10x10rgb2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/10x10-rgb-2-click)
+[Click Product page](https://www.mikroe.com/10x10-rgb-2-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t c10x10rgb2_draw_picture ( c10x10rgb2_t *ctx, const uint32_t *image );
 
 ## Example Description
 
-> This example demonstrates the use of the 10x10 RGB 2 click board by showing a practical example of using the implemented functions.
+> This example demonstrates the use of the 10x10 RGB 2 Click board by showing a practical example of using the implemented functions.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -190,7 +190,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

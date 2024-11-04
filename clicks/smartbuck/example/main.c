@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes I2C interface and logger and peforms the click default configuration.
+ * Initializes I2C interface and logger and peforms the Click default configuration.
  * 
  * ## Application Task  
  * Sends command for updating data registers with new converted data, 

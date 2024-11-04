@@ -350,7 +350,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo5_cfg_setup ( thermo5_cfg_t *cfg );
@@ -361,7 +361,7 @@ void thermo5_cfg_setup ( thermo5_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO5_RETVAL thermo5_init ( thermo5_t *ctx, thermo5_cfg_t *cfg );
 
@@ -642,6 +642,6 @@ uint8_t thermo5_read_diode_2_beta_config ( thermo5_t *ctx );
 #endif  // _THERMO5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

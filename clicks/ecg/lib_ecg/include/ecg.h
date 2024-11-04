@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ecg_cfg_setup ( ecg_cfg_t *cfg );
@@ -145,7 +145,7 @@ void ecg_cfg_setup ( ecg_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ECG_RETVAL ecg_init ( ecg_t *ctx, ecg_cfg_t *cfg );
 
@@ -154,7 +154,7 @@ ECG_RETVAL ecg_init ( ecg_t *ctx, ecg_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for ECG click.
+ * @description This function executes default configuration for ECG Click.
  */
 void ecg_default_cfg ( ecg_t *ctx );
 
@@ -175,6 +175,6 @@ ecg_data_t ecg_generic_read ( ecg_t *ctx );
 #endif  // _ECG_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

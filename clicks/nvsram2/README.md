@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# nvSRAM 2 click
+# nvSRAM 2 Click
 
 nvSRAM 2 Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY14B101Q, a 1Mbit nvSRAM organized as 128K words of 8 bits each with a nonvolatile element in each memory cell from Cypress Semiconductor. The embedded nonvolatile elements incorporate the QuantumTrap technology and provide highly reliable nonvolatile storage of data. Data transfer, initiated by the user through SPI commands, from SRAM to the nonvolatile elements takes place automatically at Power-Down. On the other hand, during the Power-Up, data is restored to the SRAM from the nonvolatile memory. This Click board™ is suitable for all applications that require fast access and high reliability of stored data, and unlimited endurance.
 
@@ -9,7 +9,7 @@ nvSRAM 2 Click is a compact add-on board that contains the most reliable nonvola
   <img src="https://download.mikroe.com/images/click_for_ide/nvsram2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nvsram-2-click)
+[Click Product page](https://www.mikroe.com/nvsram-2-click)
 
 ---
 
@@ -58,19 +58,19 @@ err_t nvsram2_default_cfg ( nvsram2_t *ctx );
 void nvsram2_hold ( nvsram2_t *ctx, uint8_t en_hold );
 ```
 
-- `nvsram2_set_cmd` The function sends desired command to the CY14B101Q2A memory on nvSRAM 2 click board.
+- `nvsram2_set_cmd` The function sends desired command to the CY14B101Q2A memory on nvSRAM 2 Click board.
 ```c
 void nvsram2_set_cmd ( nvsram2_t *ctx, uint8_t cmd );
 ```
 
-- `nvsram2_read_id` The function performs the device ID read of the CY14B101Q2A memory on nvSRAM 2 click board.
+- `nvsram2_read_id` The function performs the device ID read of the CY14B101Q2A memory on nvSRAM 2 Click board.
 ```c
 uint32_t nvsram2_read_id ( nvsram2_t *ctx );
 ```
 
 ## Example Description
 
-> This is an example using nvSRAM 2 click based on CY14B101Q which is combines a 1-Mbit nvSRAM with a nonvolatile element in each memory cell with serial SPI interface. The memory is organized as 128K words of 8 bits each.
+> This is an example using nvSRAM 2 Click based on CY14B101Q which is combines a 1-Mbit nvSRAM with a nonvolatile element in each memory cell with serial SPI interface. The memory is organized as 128K words of 8 bits each.
 
 **The demo application is composed of two sections :**
 
@@ -126,7 +126,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that demonstrates the use of the nvSRAM 2 click board. In this example, the data is read from the targeted memory address. The results are being sent to the Usart Terminal. This task repeats every 5 sec.
+> This is an example that demonstrates the use of the nvSRAM 2 Click board. In this example, the data is read from the targeted memory address. The results are being sent to the Usart Terminal. This task repeats every 5 sec.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

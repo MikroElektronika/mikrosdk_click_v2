@@ -1,6 +1,6 @@
 
 ---
-# 6DOF IMU 13 click
+# 6DOF IMU 13 Click
 
 6DOF IMU 13 Click is a compact add-on board that contains an eCompass that consists of a 3-axis linear accelerometer and a 3-axis magnetic field sensor. This board features the MC6470, an accelerometer and magnetometer for a 6 DoF (6 Degrees of Freedom) sensor solution, from mCube Inc.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-13-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-13-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t c6dofimu13_accel_get_data ( c6dofimu13_t *ctx, float *accel_x, float *acce
 
 ## Example Description
 
-> This example demonstrates the use of 6DOF IMU 13 click board.
+> This example demonstrates the use of 6DOF IMU 13 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

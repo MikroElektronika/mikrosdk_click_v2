@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LightRanger 11 click
+# LightRanger 11 Click
 
 > LightRanger 11 Click is a compact add-on board suitable for range-finding and distance-sensing applications. This board features the VL53L7CX, a time-of-flight 8x8 multizone ranging sensor from STMicroelectronics. It is a fast and accurate multizone distance-ranging sensor width of 90° wide FoV. The multizone-ranging output with either 4x4 or 8x8 separate zones, width multitarget detection, and distance measurement in each zone. As a multizone-ranging device, its range is only up to 350cm.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lightranger11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lightranger-11-click)
+[Click Product page](https://www.mikroe.com/lightranger-11-click)
 
 ---
 
@@ -70,14 +70,14 @@ uint8_t lightranger11_get_int_pin ( lightranger11_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of LightRanger 11 click board by reading and displaying
+> This example demonstrates the use of LightRanger 11 Click board by reading and displaying
 > 8x8 zones measurements on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 void application_init ( void ) 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

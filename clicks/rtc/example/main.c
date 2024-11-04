@@ -3,7 +3,7 @@
  * \brief RTC Click example
  * 
  * # Description
- * This application enables setup and measurement of time with RTC click.
+ * This application enables setup and measurement of time with RTC Click.
  *
  * The demo application is composed of two sections :
  * 

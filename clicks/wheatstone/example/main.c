@@ -3,7 +3,7 @@
  * \brief Wheatstone Click example
  * 
  * # Description
- * This example demonstrates the use of Wheatstone click board by measuring the input
+ * This example demonstrates the use of Wheatstone Click board by measuring the input
  * resistance.
  *
  * The demo application is composed of two sections :

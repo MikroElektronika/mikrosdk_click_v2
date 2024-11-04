@@ -3,7 +3,7 @@
  * \brief Dac2 Click example
  * 
  * # Description
- * DAC 2 click represents a 16-bit digital-to-analog converter.
+ * DAC 2 Click represents a 16-bit digital-to-analog converter.
  *
  * The demo application is composed of two sections :
  * 

@@ -244,7 +244,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void templog5_cfg_setup ( templog5_cfg_t *cfg );
@@ -255,7 +255,7 @@ void templog5_cfg_setup ( templog5_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TEMPLOG5_RETVAL templog5_init ( templog5_t *ctx, templog5_cfg_t *cfg );
 
@@ -264,7 +264,7 @@ TEMPLOG5_RETVAL templog5_init ( templog5_t *ctx, templog5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for TempLog5 click.
+ * @description This function executes default configuration for TempLog5 Click.
  * 
  * @note
  * <pre>
@@ -370,6 +370,6 @@ uint8_t templog5_get_interrupt_status ( templog5_t *ctx );
 #endif  // _TEMPLOG5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

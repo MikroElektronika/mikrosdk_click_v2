@@ -26,12 +26,12 @@
  * to beacon administrators.
  *
  * ## Application Task
- * This is an example that shows the use of a BLE TX click board™.
+ * This is an example that shows the use of a BLE TX Click board™.
  * In this example, the application turns the selected advertising frames
  * ON and OFF for a period of 10 seconds.
  *
  * @note
- * For scanning BLE TX click board™ BLE Scanner is a recommended Android application 
+ * For scanning BLE TX Click board™ BLE Scanner is a recommended Android application 
  * and you can find it at the link:
  * https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner
  * 

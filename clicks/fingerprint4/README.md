@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Fingerprint 4 click
+# Fingerprint 4 Click
 
 > Fingerprint 4 Click is an adapter Click board™ used to interface a compatible fingerprint sensor with the host MCU. This board features FINGERPRINTS BM-Lite Module, a complete biometric fingerprint solution ready to be used out-of-the-box. The BM-Lite Module combines superior biometric performance and a high standard of quality components to offer a comprehensive embedded solution for increased security and enhanced user convenience. It uses a 3D pixel sensing technology that can read virtually any finger, dry or wet, alongside simple serial commands with a configurable communication interface to enroll and verify. Its protective coating helps in protection against ESD, scratches, impact, and everyday wear and tear.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/fingerprint4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fingerprint-4-click)
+[Click Product page](https://www.mikroe.com/fingerprint-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t fingerprint4_wait_finger_not_present ( fingerprint4_t *ctx, uint32_t timeo
 
 ## Example Description
 
-> This example demonstrates the use of the Fingerprint 4 click boards by registering 3 fingerprints and
+> This example demonstrates the use of the Fingerprint 4 Click boards by registering 3 fingerprints and
 then waiting until a finger is detected on the sensor and identifying if the fingerprint matches one of
 those stored in the Flash storage.
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# eFuse 4 click
+# eFuse 4 Click
 
 > eFuse 4 Click is a compact add-on board with a power path protection solution 
 > that limits circuit currents and voltages to safe levels during fault conditions. 
@@ -16,7 +16,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/efuse4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/efuse-4-click)
+[Click Product page](https://www.mikroe.com/efuse-4-click)
 
 ---
 
@@ -176,7 +176,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

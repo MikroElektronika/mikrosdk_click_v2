@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 4G LTE GNSS click
+# 4G LTE GNSS Click
 
 > 4G LTE&GNSS Click is a compact add-on board designed for advanced global tracking and telematics applications, enabling developers to build highly efficient and smaller solutions without compromising performance. This board features the LENA-R8, a multi-mode LTE Cat 1bis module from u-blox. It stands out for its compact size and extensive network compatibility. It supports 14 LTE bands, four GSM/GPRS bands for universal connectivity, and integrated u-blox GNSS for precise global tracking. The board facilitates seamless communication via UART and includes a USB interface for comprehensive device management and firmware updates.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/4gltegnss_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/4g-ltegnss-click)
+[Click Product page](https://www.mikroe.com/4g-ltegnss-click)
 
 ---
 
@@ -198,7 +198,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

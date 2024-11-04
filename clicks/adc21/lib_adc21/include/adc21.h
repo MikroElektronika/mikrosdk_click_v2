@@ -175,7 +175,7 @@ typedef enum
 
 /**
  * @brief ADC 21 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #adc21_cfg_t object definition for detailed explanation.
@@ -187,7 +187,7 @@ void adc21_cfg_setup ( adc21_cfg_t *cfg );
 /**
  * @brief ADC 21 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #adc21_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

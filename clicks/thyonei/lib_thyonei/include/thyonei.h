@@ -253,7 +253,7 @@ typedef enum
 
 /**
  * @brief Thyone-I configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #thyonei_cfg_t object definition for detailed explanation.
@@ -265,7 +265,7 @@ void thyonei_cfg_setup ( thyonei_cfg_t *cfg );
 /**
  * @brief Thyone-I initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -280,7 +280,7 @@ err_t thyonei_init ( thyonei_t *ctx, thyonei_cfg_t *cfg );
 /**
  * @brief Thyone-I default configuration function.
  * @details This function executes a default configuration of Thyone-I
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @return Nothing.
@@ -374,7 +374,7 @@ void thyonei_set_wup ( thyonei_t *ctx, uint8_t pin_state );
 /**
  * @brief Thyone-I hardware reser function.
  * @details This function is used to perform hardware reset of Thyone-I
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @return None.
@@ -385,7 +385,7 @@ void thyonei_hw_reset ( thyonei_t *ctx );
 /**
  * @brief Thyone-I send command function.
  * @details This function is used to send selected command and their payload to Thyone-I
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @param[in] command : Command to be sent.
@@ -401,7 +401,7 @@ err_t thyonei_send_command ( thyonei_t *ctx, uint8_t command, uint16_t payload_l
 /**
  * @brief Thyone-I set individual parameters function.
  * @details This command can be used to set individual setting parameters in flash of Thyone-I
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @param[in] settings_index : Index of the selected parameter.
@@ -417,7 +417,7 @@ err_t thyonei_set_req ( thyonei_t *ctx, uint8_t settings_index, uint8_t paramete
 /**
  * @brief Thyone-I get individual parameters function.
  * @details This command can be used to query individual setting parameters stored in flash of Thyone-I
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @param[in] settings_index : Index of the selected parameter.
@@ -433,7 +433,7 @@ err_t thyonei_get_req ( thyonei_t *ctx, uint8_t settings_index, uint8_t *param_l
 /**
  * @brief Thyone-I brodcast data function.
  * @details This command provides the simple broadcast data transmission of Thyone-I
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @param[in] settings_index : Index of the selected parameter.
@@ -449,7 +449,7 @@ err_t thyonei_broadcast_data_req ( thyonei_t *ctx, uint8_t message_len, uint8_t 
 /**
  * @brief Thyone-I multicast data function.
  * @details This command provides the multicast data transmission to a group of modules 
- * configured with the same MAC GROUP ADDRESS of Thyone-I click board.
+ * configured with the same MAC GROUP ADDRESS of Thyone-I Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @param[in] settings_index : Index of the selected parameter.
@@ -465,7 +465,7 @@ err_t thyonei_multicast_data_req ( thyonei_t *ctx, uint8_t message_len, uint8_t 
 /**
  * @brief Thyone-I unicast data function.
  * @details This command provides the unicast data transmission to the configured
- *  MAC DESTINATION ADDRESS of Thyone-I click board.
+ *  MAC DESTINATION ADDRESS of Thyone-I Click board.
  * @param[in] ctx : Click context object.
  * See #thyonei_t object definition for detailed explanation.
  * @param[in] settings_index : Index of the selected parameter.

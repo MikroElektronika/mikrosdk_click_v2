@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Serializer click
+# Serializer Click
 
 > Serializer Click is a compact add-on board that contains a digital input translator/serializer. This board features the MAX31910, an eight-channel digital input serializer for high-channel density digital input modules in industrial and process automation from Analog Devices. The MAX31910 translates, conditions, and serializes the 24V digital output of sensors and switches to 5V CMOS-compatible signals required by the MCU. It provides the front-end interface circuit of a programmable logic controller (PLC) digital input module. It communicates with MCU via the SPI interface and comes in configuration with an installed digital isolator. This Click board™ is suited for various applications such as industrial, process, and building automation, digital input modules for PLCs, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/serializer_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/serializer-click)
+[Click Product page](https://www.mikroe.com/serializer-click)
 
 ---
 
@@ -60,7 +60,7 @@ err_t serializer_read_input ( serializer_t *ctx, uint8_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of a Serializer click board by reading the state of all inputs and displaying the results on the USB UART.
+> This example demonstrates the use of a Serializer Click board by reading the state of all inputs and displaying the results on the USB UART.
 
 **The demo application is composed of two sections :**
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

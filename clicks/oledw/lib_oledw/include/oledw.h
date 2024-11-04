@@ -238,7 +238,7 @@ extern "C"{
 
 /**
  * @brief Configuration Object Setup function.
- * @details This function initializes click configuration structure to
+ * @details This function initializes Click configuration structure to
  * initial state.
  * @param[in] cfg  Click configuration structure.
  * @returns Nothing.
@@ -264,7 +264,7 @@ err_t oledw_init( oledw_t *ctx, oledw_cfg_t *cfg );
 
 /**
  * @brief Send function.
- * @details This function sends commands or data to OLED W click.
+ * @details This function sends commands or data to OLED W Click.
  * @param[in] ctx  Click object.
  * @param[in] tx_data  Data to be sent.
  * @param[in] data_mode  0x3C - Command,
@@ -278,7 +278,7 @@ err_t oledw_send( oledw_t *ctx, oledw_data_t tx_data, oledw_data_mode_t data_mod
 
 /**
  * @brief Click Default Configuration function.
- * @details This function configures OLED W click to default state.
+ * @details This function configures OLED W Click to default state.
  * @param[in] ctx  Click object.
  * 
  * @returns Nothing.

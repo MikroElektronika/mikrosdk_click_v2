@@ -3,20 +3,20 @@
  * @brief PMIC Click example
  *
  * # Description
- * This example demonstrates the use of PMIC click board by enabling battery charging and
+ * This example demonstrates the use of PMIC Click board by enabling battery charging and
  * displaying the charging status.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which enables charging.
+ * Initializes the driver and performs the Click default configuration which enables charging.
  *
  * ## Application Task
  * Reads and displays the VBAT, VBUS, and VSYS voltage and the battery charging status on the USB UART
  * approximately once per second.
  *
  * @note
- * A charged battery or a USB at VBUS must be connected to communicate with the click board.
+ * A charged battery or a USB at VBUS must be connected to communicate with the Click board.
  *
  * @author Stefan Filipovic
  *

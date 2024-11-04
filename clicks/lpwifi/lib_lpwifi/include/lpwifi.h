@@ -229,7 +229,7 @@ typedef enum
 
 /**
  * @brief LP WiFi configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lpwifi_cfg_t object definition for detailed explanation.
@@ -241,7 +241,7 @@ void lpwifi_cfg_setup ( lpwifi_cfg_t *cfg );
 /**
  * @brief LP WiFi initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lpwifi_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -257,7 +257,7 @@ err_t lpwifi_init ( lpwifi_t *ctx, lpwifi_cfg_t *cfg );
 /**
  * @brief LP WiFi default configuration function.
  * @details This function executes a default configuration of LP WiFi
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #lpwifi_t object definition for detailed explanation.
  * @return None.
@@ -308,7 +308,7 @@ void lpwifi_factory_reset_device ( lpwifi_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #lpwifi_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -319,7 +319,7 @@ void lpwifi_send_cmd ( lpwifi_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #lpwifi_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

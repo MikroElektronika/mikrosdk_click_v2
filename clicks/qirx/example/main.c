@@ -11,7 +11,7 @@
  * Initalizes I2C driver and makes an initial log.
  *
  * ## Application Task
- * This example shows the capabilities of the Qi RX click by measuring voltage of the connected
+ * This example shows the capabilities of the Qi RX Click by measuring voltage of the connected
  * battery. In order to get correct calculations user should change "v_ref" value 
  * to his own power supply voltage.
  *
@@ -55,7 +55,7 @@ void application_init ( void )
         for ( ; ; );
     }
     log_printf( &logger, "----------------------- \r\n" );
-    log_printf( &logger, "      Qi RX click       \r\n" );
+    log_printf( &logger, "      Qi RX Click       \r\n" );
     log_printf( &logger, "----------------------- \r\n" );
     
     log_info( &logger, " Application Task " );

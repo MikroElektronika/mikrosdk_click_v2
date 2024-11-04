@@ -182,7 +182,7 @@ typedef enum
 
 /**
  * @brief Current 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #current9_cfg_t object definition for detailed explanation.
@@ -194,7 +194,7 @@ void current9_cfg_setup ( current9_cfg_t *cfg );
 /**
  * @brief Current 9 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #current9_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -210,7 +210,7 @@ void current9_drv_interface_selection ( current9_cfg_t *cfg, current9_drv_t drv_
 /**
  * @brief Current 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #current9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -250,7 +250,7 @@ err_t current9_read_voltage ( current9_t *ctx, float *voltage );
 
 /**
  * @brief Current 9 set vref function.
- * @details This function sets the voltage reference for Current 9 click driver.
+ * @details This function sets the voltage reference for Current 9 Click driver.
  * @param[in] ctx : Click context object.
  * See #current9_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

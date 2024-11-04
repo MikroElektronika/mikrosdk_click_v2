@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Flash 10 click
+# Flash 10 Click
 
 > Flash 10 Click is a compact add-on board representing a highly reliable memory solution. This board features the AT25FF321A, an SPI configurable 32Mbit (2Mx16) serial Flash memory solution from Dialog Semiconductor. The AT25FF321A is an ideal solution for systems in which program code is shadowed from Flash memory into embedded or external RAM (code shadow) for execution and where small amounts of data are stored and updated locally in the Flash memory. It has a flexible and optimized erase architecture for code and data storage applications, non-volatile protection, and four specialized 128-byte OTP security registers to store a unique device ID and locked key storage. This memory can withstand many write cycles (minimum 100k) and has a data retention period greater than 20 years.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/flash10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-10-click)
+[Click Product page](https://www.mikroe.com/flash-10-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t flash10_memory_read ( flash10_t *ctx, uint32_t address, uint8_t *data_out,
 
 ## Example Description
 
-> This example demonstrates the use of Flash 10 click board by writing specified data to the memory and reading it back.
+> This example demonstrates the use of Flash 10 Click board by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
 
@@ -179,7 +179,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

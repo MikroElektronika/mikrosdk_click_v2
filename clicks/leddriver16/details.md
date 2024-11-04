@@ -1,6 +1,6 @@
 
 ---
-# LED Driver 16 click
+# LED Driver 16 Click
 
 > LED Driver 16 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the PCA9745B, an SPI-configurable sixteen-channel constant current LED driver from NXP Semiconductors. Each LED output has an 8-bit resolution (256 steps) fixed-frequency individual PWM controller that operates at 31.25kHz with an adjustable duty cycle from 0 to 100% to allow the LED to be set to a specific brightness value. Powered through a selected mikroBUS™ power rail, either 3.3V or 5V, it provides a maximum output current of 57mA per channel and multiple built-in protection functions that protect the circuit during abnormalities.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-16-click)
+[Click Product page](https://www.mikroe.com/led-driver-16-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t leddriver16_set_led_iref ( leddriver16_t *ctx, uint16_t led_ch_mask, uint8
 
 ## Example Description
 
-> This example demonstrates the use of LED Driver 16 click board by performing 3 different types of LED control (LED PWM dimming, LED blinking, and LED curtain).
+> This example demonstrates the use of LED Driver 16 Click board by performing 3 different types of LED control (LED PWM dimming, LED blinking, and LED curtain).
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -198,7 +198,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

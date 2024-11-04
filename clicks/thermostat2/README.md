@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Thermostat 2 click
+# Thermostat 2 Click
 
-> Thermostat 2 click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the DS1820 sensor design: 3-pin package with 1-Wire® communication interface.
+> Thermostat 2 Click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the DS1820 sensor design: 3-pin package with 1-Wire® communication interface.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/thermostat2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermostat-2-click)
+[Click Product page](https://www.mikroe.com/thermostat-2-click)
 
 ---
 
@@ -65,7 +65,7 @@ void thermostat2_relay_state ( thermostat2_t *ctx, uint8_t state );
 
 ## Example Description
 
-> This example demonstrates the use of Thermostat 2 click board by reading
+> This example demonstrates the use of Thermostat 2 Click board by reading
 and displaying the temperature in Celsius and turning the relay on/off 
 depending on the temperature value.
 DS1820, DS18S20 and DS18B20 chips can be used in this example. 
@@ -74,7 +74,7 @@ DS1820, DS18S20 and DS18B20 chips can be used in this example.
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -118,7 +118,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads and displays the temperature measured by the click board on the UART Terminal.
+> Reads and displays the temperature measured by the Click board on the UART Terminal.
 If the temperature goes beneath the THERMOSTAT2_TEMPERATURE_LIMIT, 
 the relay will be turned off while otherwise it will be turned on. 
 In both cases an appropriate message will be displayed on the terminal.  
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,7 +3,7 @@
  * \brief TempHum11 Click example
  * 
  * # Description
- * This click has two sensors which can be set to sample measurements with the resolution 
+ * This Click has two sensors which can be set to sample measurements with the resolution 
  * of 8, 11 or 14 bits, based on the measurement time. Calibration coefficients that are applied 
  * to the measured value and the results are stored in the MSB/LSB format, on the output registers. 
  * These values are then used in formulas so that the final temperature or relative humidity data can be calculated.

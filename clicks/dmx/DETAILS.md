@@ -1,6 +1,6 @@
 
 ---
-# DMX click
+# DMX Click
 
 > DMX Click is a device used to establish communication between the MCU and equipment that uses the DMX512-A communication protocol.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dmx_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dmx-click)
+[Click Product page](https://www.mikroe.com/dmx-click)
 
 ---
 
@@ -64,13 +64,13 @@ void dmx_send_cmd ( dmx_t* ctx, uint8_t *cmd );
 
 ## Examples Description
 
-> This example demonstrates the use of the DMX click board by showcasing the control for a 6-channel DMX RGB LED reflector connected to it.
+> This example demonstrates the use of the DMX Click board by showcasing the control for a 6-channel DMX RGB LED reflector connected to it.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -242,7 +242,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

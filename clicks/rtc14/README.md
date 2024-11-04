@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RTC 14 click
+# RTC 14 Click
 
 > RTC 14 Click is a compact add-on board that measures the passage of time. This board features the ISL1221, a low-power RTC with battery-backed SRAM and event detection from Renesas. The ISL1221 tracks time with separate registers for hours, minutes, and seconds, operating in normal and battery mode. It also can timestamp an event by either issuing an output signal, containing the second, minute, hour, date, month, and year that the triggering event occurred, or by stopping the RTC registers from advancing at the moment the event occurs. The calendar feature is exceptionally accurate through 2099, with automatic leap year correction.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtc14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-14-click)
+[Click Product page](https://www.mikroe.com/rtc-14-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t rtc14_get_date ( rtc14_t *ctx, rtc14_date_t *rtc_date );
 
 ## Example Description
 
-> This is an example that demonstrates the use of the RTC 14 click board™.
+> This is an example that demonstrates the use of the RTC 14 Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -139,7 +139,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of a RTC 14 click board™.
+> This is an example that shows the use of a RTC 14 Click board™.
 > In this example, we read and display the current time ( AM or PM ) 
 > and date ( day of the week ), which we also previously set.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -184,7 +184,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

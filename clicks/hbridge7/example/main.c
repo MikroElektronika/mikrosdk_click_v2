@@ -3,7 +3,7 @@
  * \brief H-BRIDGE 7 Click example
  * 
  * # Description
- * This example demonstrates the use of H-Bridge 7 click board. 
+ * This example demonstrates the use of H-Bridge 7 Click board. 
  *
  * The demo application is composed of two sections :
  * 

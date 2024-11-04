@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# OLED W click
+# OLED W Click
 
-OLED W click carries a 96 x 39px white monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.
+OLED W Click carries a 96 x 39px white monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/oled_w_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/oled-w-click)
+[Click Product page](https://www.mikroe.com/oled-w-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t oledw_init ( oledw_t *ctx, oledw_cfg_t *cfg );
 
 #### Example key functions :
 
-- `oledw_send` This function sends commands or data to OLED W click.
+- `oledw_send` This function sends commands or data to OLED W Click.
 ```c
 err_t oledw_send( oledw_t *ctx, oledw_data_t tx_data, oledw_data_mode_t data_mode );
 ```
@@ -71,7 +71,7 @@ void oledw_set_contrast( oledw_t *ctx, oledw_data_t value );
 
 ### Application Init
 
-> Configures the microcontroller for communication and initializes the click board to default state.
+> Configures the microcontroller for communication and initializes the Click board to default state.
 
 ```c
 
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -160,7 +160,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void shuttle_cfg_setup ( shuttle_cfg_t *cfg );
@@ -170,7 +170,7 @@ void shuttle_cfg_setup ( shuttle_cfg_t *cfg );
  * @param shuttle Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SHUTTLE_RETVAL shuttle_init ( shuttle_t *ctx, shuttle_cfg_t *cfg );
 
@@ -202,6 +202,6 @@ void shuttle_set_pin_low ( digital_out_t *pin );
 #endif  // _SHUTTLE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

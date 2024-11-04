@@ -3,13 +3,13 @@
  * @brief Thermo 23 Click Example.
  *
  * # Description
- * This example demonstrates the use of Thermo 23 click board by reading and displaying
+ * This example demonstrates the use of Thermo 23 Click board by reading and displaying
  * the temperature measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, and performs the click default configuration which enables
+ * Initializes the driver and logger, and performs the Click default configuration which enables
  * continuous conversion and sets the conversion rate to 1 Hz.
  *
  * ## Application Task

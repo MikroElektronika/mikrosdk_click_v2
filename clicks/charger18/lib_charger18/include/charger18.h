@@ -146,7 +146,7 @@ typedef enum
 
 /**
  * @brief Charger 18 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #charger18_cfg_t object definition for detailed explanation.
@@ -158,7 +158,7 @@ void charger18_cfg_setup ( charger18_cfg_t *cfg );
 /**
  * @brief Charger 18 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #charger18_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -174,7 +174,7 @@ err_t charger18_init ( charger18_t *ctx, charger18_cfg_t *cfg );
 /**
  * @brief Charger 18 buck control function.
  * @details This function controls the buck regulator enable state of
- * Charger 18 click board.
+ * Charger 18 Click board.
  * @param[in] ctx : Click context object.
  * See #charger18_t object definition for detailed explanation.
  * @param[in] state : @li @c 0 - Disable,
@@ -187,7 +187,7 @@ void charger18_buck_control ( charger18_t *ctx, uint8_t state );
 /**
  * @brief Charger 18 ldo control function.
  * @details This function controls the low dropout (LDO) regulator enable state of
- * Charger 18 click board.
+ * Charger 18 Click board.
  * @param[in] ctx : Click context object.
  * See #charger18_t object definition for detailed explanation.
  * @param[in] state : @li @c 0 - Disable,
@@ -200,7 +200,7 @@ void charger18_ldo_control ( charger18_t *ctx, uint8_t state );
 /**
  * @brief Charger 18 suspend control function.
  * @details This function controls the suspend charging mode state of
- * Charger 18 click board.
+ * Charger 18 Click board.
  * @param[in] ctx : Click context object.
  * See #charger18_t object definition for detailed explanation.
  * @param[in] state : @li @c 0 - Disable,
@@ -213,7 +213,7 @@ void charger18_suspend_control ( charger18_t *ctx, uint8_t state );
 /**
  * @brief Charger 18 power control function.
  * @details This function controls the chip power state of
- * Charger 18 click board.
+ * Charger 18 Click board.
  * @param[in] ctx : Click context object.
  * See #charger18_t object definition for detailed explanation.
  * @param[in] state : @li @c 0 - Disable,

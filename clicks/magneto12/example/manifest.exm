@@ -3,6 +3,6 @@
     "description": "Magneto 12 Click is a compact add-on board that contains an accurate and reliable magnetic sensing device. This board features the A31315, a magnetic position sensor designed for on- and off-axis rotary and linear stroke position measurement from Allegro Microsystems. This sensor integrates vertical and planar Hall-effect elements with precision temperature-compensating circuitry to detect two out of three magnetic field components (X and Y). Using configurable signal processing (the user is allowed to process the output signal in analog or digital form), linearization and angle calculation allows the A31315 to accurately resolve the absolute rotary (full 360° and short-stroke <360°) or linear position of a moving magnetic target.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","A31315LOLATR-XY-S-AR-10","MCP3221A5T"],
+    "hw" : ["Click","A31315LOLATR-XY-S-AR-10","MCP3221A5T"],
     "category" : ["Magnetic"]
 }

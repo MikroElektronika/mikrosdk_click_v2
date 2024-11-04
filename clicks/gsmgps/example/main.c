@@ -3,7 +3,7 @@
  * \brief Gsmgps Click example
  * 
  * # Description
- * This example reads and processes data from GSM-GPS click.
+ * This example reads and processes data from GSM-GPS Click.
  *
  * The demo application is composed of two sections :
  * 
@@ -491,7 +491,7 @@ static void gps_parser_application ( char *rsp )
     gsmgps_generic_parser( rsp, GSMGPS_NEMA_GPGGA, GSMGPS_GPGGA_LATITUDE, element_buf );
     if ( strcmp( element_buf, "0000.0000" ) != 0 )
     {
-        strcpy( gps_info_message, "GSM-GPS click - GPS info\n" );
+        strcpy( gps_info_message, "GSM-GPS Click - GPS info\n" );
         strcat( gps_info_message, "Latitude: " );
         strcat( gps_info_message, element_buf );
         log_printf( &logger, "Latitude:  %s\r\n", element_buf );

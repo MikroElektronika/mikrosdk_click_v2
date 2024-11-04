@@ -3,7 +3,7 @@
  * @brief Ambient 12 Click Example.
  *
  * # Description
- * This example demonstrates the use of Ambient 12 click board.
+ * This example demonstrates the use of Ambient 12 Click board.
  *
  * The demo application is composed of two sections :
  *

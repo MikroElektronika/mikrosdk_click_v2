@@ -1,6 +1,6 @@
 
 ---
-# Force 5 click
+# Force 5 Click
 
 > Force 5 Click is a compact add-on board that contains a stable and flexible compensated/amplified micro force sensor. This board features the FMAMSDXX025WC2C3, a piezoresistive-based force sensors offering a digital output for reading force over the specified full-scale force span and a temperature range from Honeywell Sensing and Productivity Solutions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/force5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/force-5-click)
+[Click Product page](https://www.mikroe.com/force-5-click)
 
 ---
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

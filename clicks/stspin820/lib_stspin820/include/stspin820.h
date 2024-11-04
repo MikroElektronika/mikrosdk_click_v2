@@ -163,7 +163,7 @@ typedef enum
 
 /**
  * @brief STSPIN820 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #stspin820_cfg_t object definition for detailed explanation.
@@ -175,7 +175,7 @@ void stspin820_cfg_setup ( stspin820_cfg_t *cfg );
 /**
  * @brief STSPIN820 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #stspin820_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -190,7 +190,7 @@ err_t stspin820_init ( stspin820_t *ctx, stspin820_cfg_t *cfg );
 /**
  * @brief STSPIN820 default configuration function.
  * @details This function executes a default configuration of STSPIN820
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #stspin820_t object definition for detailed explanation.
  * @return None.

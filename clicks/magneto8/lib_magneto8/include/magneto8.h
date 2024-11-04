@@ -247,7 +247,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void magneto8_cfg_setup ( magneto8_cfg_t *cfg );
@@ -258,7 +258,7 @@ void magneto8_cfg_setup ( magneto8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t magneto8_init ( magneto8_t *ctx, magneto8_cfg_t *cfg );
 
@@ -279,7 +279,7 @@ err_t magneto8_init ( magneto8_t *ctx, magneto8_cfg_t *cfg );
  *       - MAGNETO8_ABN_64
  * </pre>
  * 
- * @details This function executes default configuration for Magneto8 click.
+ * @details This function executes default configuration for Magneto8 Click.
  */
 void magneto8_default_cfg ( magneto8_t *ctx );
 
@@ -391,6 +391,6 @@ uint8_t magneto8_psh_pin_state ( magneto8_t *ctx );
 #endif  // _MAGNETO8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

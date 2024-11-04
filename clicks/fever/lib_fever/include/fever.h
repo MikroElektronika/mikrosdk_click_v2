@@ -203,7 +203,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void fever_cfg_setup ( fever_cfg_t *cfg );
@@ -214,7 +214,7 @@ void fever_cfg_setup ( fever_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FEVER_RETVAL fever_init ( fever_t *ctx, fever_cfg_t *cfg );
 
@@ -223,7 +223,7 @@ FEVER_RETVAL fever_init ( fever_t *ctx, fever_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Fever click.
+ * @description This function executes default configuration for Fever Click.
  */
 void fever_default_cfg ( fever_t *ctx );
 
@@ -266,6 +266,6 @@ float fever_get_temperature ( fever_t *ctx );
 #endif  // _FEVER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

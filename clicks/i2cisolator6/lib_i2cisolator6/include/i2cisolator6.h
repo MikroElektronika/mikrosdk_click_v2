@@ -147,7 +147,7 @@ typedef enum
 
 /**
  * @brief I2C Isolator 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #i2cisolator6_cfg_t object definition for detailed explanation.
@@ -159,7 +159,7 @@ void i2cisolator6_cfg_setup ( i2cisolator6_cfg_t *cfg );
 /**
  * @brief I2C Isolator 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #i2cisolator6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

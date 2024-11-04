@@ -3,7 +3,7 @@
  * @brief DIGIPOT7 Click example
  *
  * # Description
- * This is an example that demonstrate the use of the DIGI POT 7 click board.
+ * This is an example that demonstrate the use of the DIGI POT 7 Click board.
  * 
  * The demo application is composed of two sections :
  *

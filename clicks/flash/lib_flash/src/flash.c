@@ -73,7 +73,7 @@ static void flash_spi_master_transfer( flash_t *ctx,
  * @param ctx      Click object.
  * @param command  Command to be sent.
  *
- * @description Generic function for sending commands to Flash click.
+ * @description Generic function for sending commands to Flash Click.
  */
 static void flash_send_cmd( flash_t *ctx, uint8_t command );
 

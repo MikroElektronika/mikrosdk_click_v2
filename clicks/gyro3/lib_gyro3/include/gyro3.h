@@ -344,7 +344,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gyro3_cfg_setup ( gyro3_cfg_t *cfg );
@@ -355,7 +355,7 @@ void gyro3_cfg_setup ( gyro3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GYRO3_RETVAL gyro3_init ( gyro3_t *ctx, gyro3_cfg_t *cfg );
 
@@ -364,7 +364,7 @@ GYRO3_RETVAL gyro3_init ( gyro3_t *ctx, gyro3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Gyro 3 click.
+ * @description This function executes default configuration for Gyro 3 Click.
  */
 void gyro3_default_cfg ( gyro3_t *ctx );
 
@@ -515,6 +515,6 @@ uint8_t gyro3_set_int1_duration ( gyro3_t *ctx, uint8_t wait_enable_bit, uint8_t
 #endif  // _GYRO3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

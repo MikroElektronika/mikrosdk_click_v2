@@ -1,6 +1,6 @@
 
 ---
-# Angle 10 click
+# Angle 10 Click
 
 > Angle 10 Click is a compact add-on board that detects the absolute angular position of a permanent magnet. 
 > This board features the AS5070A, a high-resolution angular position sensor with an analog output for precise absolute angle measurement from ams AG. 
@@ -13,7 +13,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/angle10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/angle-10-click)
+[Click Product page](https://www.mikroe.com/angle-10-click)
 
 ---
 
@@ -62,14 +62,14 @@ err_t angle10_read_voltage ( angle10_t *ctx, float *voltage );
 err_t angle10_get_angle ( angle10_t *ctx, float *angle );
 ```
 
-- `angle10_set_vref` This function sets the voltage reference for Angle 10 click driver.
+- `angle10_set_vref` This function sets the voltage reference for Angle 10 Click driver.
 ```c
 err_t angle10_set_vref ( angle10_t *ctx, float vref );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of Angle 10 click board by reading and displaying the magnet's angular position in degrees and analog voltage output.
+> This example demonstrates the use of Angle 10 Click board by reading and displaying the magnet's angular position in degrees and analog voltage output.
 
 **The demo application is composed of two sections :**
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

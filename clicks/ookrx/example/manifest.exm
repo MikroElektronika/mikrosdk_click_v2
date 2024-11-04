@@ -1,8 +1,8 @@
 {
     "name": "OOK RX Click",
-    "description": "OOK RX click is a wireless receiver that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad hoc communication network between a receiver and compatible transmitter.",
+    "description": "OOK RX Click is a wireless receiver that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad hoc communication network between a receiver and compatible transmitter.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MICRF230 IC"],
+    "hw" : ["Click","MICRF230 IC"],
     "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
 }

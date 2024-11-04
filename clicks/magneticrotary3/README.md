@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Magnetic Rotary 3 click
+# Magnetic Rotary 3 Click
 
 > Magnetic Rotary 3 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5147, an SPI-configurable high-resolution rotary position sensor for fast absolute angle measurement over a full 360-degree range from ams AG.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneticrotary3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magnetic-rotary-3-click)
+[Click Product page](https://www.mikroe.com/magnetic-rotary-3-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t magneticrotary3_get_angle ( magneticrotary3_t *ctx, float *angle );
 
 ## Example Description
 
-> This example demonstrates the use of Magnetic Rotary 3 click board by reading and displaying the magnet's angular position in degrees.
+> This example demonstrates the use of Magnetic Rotary 3 Click board by reading and displaying the magnet's angular position in degrees.
 
 **The demo application is composed of two sections :**
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

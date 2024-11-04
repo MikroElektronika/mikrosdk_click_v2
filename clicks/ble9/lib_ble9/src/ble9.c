@@ -32,12 +32,12 @@
 // ------------------------------------------------ PRIVATE FUNCTION DECLARATIONS
 
 /**
- * @brief Generic BLE9 click error check function.
+ * @brief Generic BLE9 Click error check function.
  * Reads @b read_n_elements number of elements, places them in
  * @b ret_val_check array if any value is needed( handle for example ),
  * and checks @b check_var_num element for return value.
  *
- * @param ctx BLE9 click object.
+ * @param ctx BLE9 Click object.
  * @param read_n_elements Number of elements to read.
  * @param check_char_num Ordinal number of element to check.
  * @param ret_val_check Array address.

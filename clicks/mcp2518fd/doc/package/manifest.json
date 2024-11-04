@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "MCP2518FD click",
+    "display_name": "MCP2518FD Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
         2452
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.4",
+    "version": "2.1.0.5",
     "cmake": true,
     "alias": "Click.MCP2518FD",
     "subdir_name": "lib_mcp2518fd"
 }
+
 
 
 

@@ -339,7 +339,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pressure10_cfg_setup ( pressure10_cfg_t *cfg );
@@ -349,7 +349,7 @@ void pressure10_cfg_setup ( pressure10_cfg_t *cfg );
  * @param pressure10 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PRESSURE10_RETVAL pressure10_init ( pressure10_t *ctx, pressure10_cfg_t *cfg );
 
@@ -358,7 +358,7 @@ PRESSURE10_RETVAL pressure10_init ( pressure10_t *ctx, pressure10_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Pressure 10 click.
+ * @description This function executes default configuration for Pressure 10 Click.
  */
 void pressure10_default_cfg ( pressure10_t *ctx );
 
@@ -450,6 +450,6 @@ uint8_t pressure10_get_drdy_pin ( pressure10_t *ctx );
 #endif  // _PRESSURE10_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

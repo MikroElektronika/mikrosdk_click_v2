@@ -3,6 +3,6 @@
     "description": "SPI Extend Click is a compact add-on board for applications that require extending the SPI communication bus over a long distance. This board features the LTC4332, an SPI slave extender device, from Analog Devices. Using a ±60V fault protected differential transceiver, the LTC4332 can transmit SPI data, including an interrupt signal, up to 2MHz over two twisted-pair cables.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LTC4332"],
+    "hw" : ["Click","LTC4332"],
     "category" : ["SPI"]
 }

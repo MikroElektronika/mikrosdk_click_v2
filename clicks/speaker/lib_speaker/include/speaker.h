@@ -116,7 +116,7 @@ typedef enum
 
 /**
  * @brief Speaker configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #speaker_cfg_t object definition for detailed explanation.
@@ -128,7 +128,7 @@ void speaker_cfg_setup ( speaker_cfg_t *cfg );
 /**
  * @brief Speaker initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #speaker_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -144,7 +144,7 @@ err_t speaker_init ( speaker_t *ctx, speaker_cfg_t *cfg );
 /**
  * @brief Speaker default configuration function.
  * @details This function executes a default configuration of Speaker
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #speaker_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -160,7 +160,7 @@ err_t speaker_default_cfg ( speaker_t *ctx );
  * @brief Speaker enables the slave amplifier function.
  * @details This function enables the slave amplifier by 
  * clears the SB ( INT ) pin on the low level 
- * of the Speaker click board™.
+ * of the Speaker Click board™.
  * @param[in] ctx : Click context object.
  * See #speaker_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -174,7 +174,7 @@ err_t speaker_enable_slave_amp ( speaker_t *ctx );
  * @brief Speaker disables the slave amplifier function.
  * @details This function disables the slave amplifier by 
  * sets the SB ( INT ) pin on the high level 
- * of the Speaker click board™.
+ * of the Speaker Click board™.
  * @param[in] ctx : Click context object.
  * See #speaker_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -188,7 +188,7 @@ err_t speaker_disable_slave_amp ( speaker_t *ctx );
  * @brief Speaker shutdown mode function.
  * @details This function enables the shutdown mode by 
  * clears the PWR ( PWM ) pin on the low level 
- * of the Speaker click board™.
+ * of the Speaker Click board™.
  * @param[in] ctx : Click context object.
  * See #speaker_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -202,7 +202,7 @@ err_t speaker_shutdown ( speaker_t *ctx );
  * @brief Speaker normal operation mode function.
  * @details This function enables the shutdown mode by 
  * sets the PWR ( PWM ) pin on the high level 
- * of the Speaker click board™.
+ * of the Speaker Click board™.
  * @param[in] ctx : Click context object.
  * See #speaker_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

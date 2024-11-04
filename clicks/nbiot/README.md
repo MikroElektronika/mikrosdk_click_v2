@@ -2,15 +2,15 @@
  
 
 ---
-# NB IoT click
+# NB IoT Click
 
-NB IoT click is a Click board™ that allows LTE Cat NB1 connectivity by utilizing Quectel BC95-G, a specialized multi-band IoT module with very low power requirements and compact form factor, making it perfectly suited for various IoT-based applications.
+NB IoT Click is a Click board™ that allows LTE Cat NB1 connectivity by utilizing Quectel BC95-G, a specialized multi-band IoT module with very low power requirements and compact form factor, making it perfectly suited for various IoT-based applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/nbiot_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nb-iot-click)
+[Click Product page](https://www.mikroe.com/nb-iot-click)
 
 ---
 
@@ -232,7 +232,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

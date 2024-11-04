@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Radar click
+# Radar Click
 
 > Radar Click is a compact add-on board that alerts you to the presence of an intruder via interpreting the infrared radiation that emanates from their body. This board features the MM5D91-00, a presence detection sensor module that integrates 60GHz mmWave technology that counts the number of people entering or exiting an entrance from Jorjin Technologies Inc. It includes the ARM Cortex-M4F based processor system, 1Tx, 3Rx antenna, and integrated regulator, alongside azimuth and elevation field of view of ±45° and ±40°. Its detection goes up to 10m for macro and 5m for micro motion with environmental-factors immunity such as temperature, wind, sunlight, and dust. This Click board™ is suitable for various presence sensing applications, from office and home to commercial buildings and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/radar_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/radar-click)
+[Click Product page](https://www.mikroe.com/radar-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t radar_set_detection_range ( radar_t *ctx, float min, float max );
 
 ## Example Description
 
-> This example demonstrates the use of Radar click board by reading and parsing events as well as the module internal temperature.
+> This example demonstrates the use of Radar Click board by reading and parsing events as well as the module internal temperature.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration.
+> Initializes the driver and logger and performs the Click default configuration.
 
 ```c
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

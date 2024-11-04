@@ -3,7 +3,7 @@
  * @brief Watchdog Click Example.
  *
  * # Description
- * This is an example that demonstrates the use of the Watchdog click board.
+ * This is an example that demonstrates the use of the Watchdog Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -16,7 +16,7 @@
  * we send pulses in a valid time window (Correct Operation).
  * The second part of the example sends pulses outside the valid time window
  * and then the watchdog detects a fault condition, display "Fault",
- * performs the reset and turn on the LED ( WDT FLT ) on the Watchdog click board.
+ * performs the reset and turn on the LED ( WDT FLT ) on the Watchdog Click board.
  * Results are being sent to the Usart Terminal where you can track their changes.
  *
  *

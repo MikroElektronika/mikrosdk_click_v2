@@ -4,9 +4,9 @@
  * 
  * # Description
  * Clock Gen Click represent a replacement for crystals, crystal oscillators, VCXOs, phase-locked 
- * loops (PLLs), and fanout buffers. This click features an I2C configurable clock generator 
+ * loops (PLLs), and fanout buffers. This Click features an I2C configurable clock generator 
  * based on a PLL + high resolution MultiSynth fractional divider architecture which can generate
- * any frequency up to 200 MHz with 0 ppm error. The chip on click is capable of generating 
+ * any frequency up to 200 MHz with 0 ppm error. The chip on Click is capable of generating 
  * synchronous or free-running non-integer related clock frequencies at each of its outputs 
  * (CLK0, CLK1, and CLK2), enabling one device to synthesize clocks for multiple clock domains in a design.
  *

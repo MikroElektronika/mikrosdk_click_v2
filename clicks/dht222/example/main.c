@@ -3,7 +3,7 @@
  * \brief DHT22 2 Click example
  * 
  * # Description
- * This example demonstrates the use of DHT22 2 click board by reading
+ * This example demonstrates the use of DHT22 2 Click board by reading
  * the temperature and humidity data.
  * 
  * The demo application is composed of two sections :

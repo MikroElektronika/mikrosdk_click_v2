@@ -192,7 +192,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void magneto4_cfg_setup ( magneto4_cfg_t *cfg );
@@ -202,7 +202,7 @@ void magneto4_cfg_setup ( magneto4_cfg_t *cfg );
  * @param magneto4 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MAGNETO4_RETVAL magneto4_init ( magneto4_t *ctx, magneto4_cfg_t *cfg );
 
@@ -211,7 +211,7 @@ MAGNETO4_RETVAL magneto4_init ( magneto4_t *ctx, magneto4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Magneto4 click.
+ * @description This function executes default configuration for Magneto4 Click.
  * @note Set start encoder position to zero position and
  * first read of magnetic field strength. 
  */
@@ -359,6 +359,6 @@ void magneto4_set_start_position ( magneto4_t *ctx, int32_t encoder_pos );
 #endif  // _MAGNETO4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

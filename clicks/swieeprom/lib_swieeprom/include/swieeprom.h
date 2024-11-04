@@ -127,7 +127,7 @@ typedef enum
 /**
  * @brief SWI EEPROM initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #swieeprom_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -3,7 +3,7 @@
  * \brief Pollution Click example
  * 
  * # Description
- * Pollution click carries the VOC gas sensor and has high sensitivity to organic gases 
+ * Pollution Click carries the VOC gas sensor and has high sensitivity to organic gases 
  * such as methanal (also known as formaldehyde), benzene, alcohol, toluene, etc.
  *
  * The demo application is composed of two sections :

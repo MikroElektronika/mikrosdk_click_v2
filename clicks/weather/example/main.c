@@ -3,13 +3,13 @@
  * @brief Weather Click example
  * 
  * # Description
- * This demo-app shows the temperature, pressure and humidity measurement using Weather click.
+ * This demo-app shows the temperature, pressure and humidity measurement using Weather Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Setting the click in the default configuration to start the measurement.
+ * Setting the Click in the default configuration to start the measurement.
  * 
  * ## Application Task  
  * Reads Temperature data, Relative Humidity data and Pressure data, 

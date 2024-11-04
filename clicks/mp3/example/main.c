@@ -3,13 +3,13 @@
  * \brief Mp3 Click example
  * 
  * # Description
- * This app demonstrates the use of MP3 click by playing the specified sound
+ * This app demonstrates the use of MP3 Click by playing the specified sound
  * from the mp3_resources.h file.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and performs the default click configuration.
+ * Initializes the driver and performs the default Click configuration.
  * 
  * ## Application Task  
  * Playing the specified sound form the mp3_resources.h file.

@@ -194,7 +194,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void wifiesp_cfg_setup ( wifiesp_cfg_t *cfg );
@@ -204,7 +204,7 @@ void wifiesp_cfg_setup ( wifiesp_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t wifiesp_init ( wifiesp_t *ctx, wifiesp_cfg_t *cfg );
 
@@ -213,7 +213,7 @@ err_t wifiesp_init ( wifiesp_t *ctx, wifiesp_cfg_t *cfg );
  *
  * @param ctx Click object.
  *
- * @details This function executes default configuration for wifiesp click.
+ * @details This function executes default configuration for wifiesp Click.
  */
 void wifiesp_default_cfg ( wifiesp_t *ctx );
 
@@ -240,7 +240,7 @@ int32_t wifiesp_generic_read ( wifiesp_t *ctx, char *data_buf, int32_t max_len )
  * @param cmd AT command
  * @param args AT command arguments string pointer (NULL if no arguments).
  * 
- * @details This function sends AT command to wifiesp click. 
+ * @details This function sends AT command to wifiesp Click. 
  */
 void wifiesp_send_cmd( wifiesp_t* ctx, uint8_t* cmd, uint8_t* args );
 
@@ -250,6 +250,6 @@ void wifiesp_send_cmd( wifiesp_t* ctx, uint8_t* cmd, uint8_t* args );
 #endif  // _WIFIESP_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

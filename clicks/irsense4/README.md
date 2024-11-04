@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# IR Sense 4 click
+# IR Sense 4 Click
 
 > IR Sense 4 Click is a compact add-on board that can be used in short-range IR sensing applications. This board features the STHS34PF80, a low-power high-sensitivity infrared (IR) sensor from STMicroelectronics. It is a sensor for presence and motion detection and can reach up to 4m without a lens for object measuring. The sensor can detect stationary objects and distinguish them from moving objects.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irsense4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-sense-4-click)
+[Click Product page](https://www.mikroe.com/ir-sense-4-click)
 
 ---
 
@@ -171,7 +171,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

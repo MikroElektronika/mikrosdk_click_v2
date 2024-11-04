@@ -1,6 +1,6 @@
 
 ---
-# Joystick 4 click
+# Joystick 4 Click
 
 > Joystick 4 Click is a compact add-on board that provides precise and reliable input control for various interactive projects. This board features the 2434804-1, a 5-position tactile switch from the ALCOSWITCH series by TE Connectivity. The switch features an extended top actuator for precise input detection, a stainless steel contact base, and silver contact plating, ensuring durability and corrosion resistance with a lifespan of 100,000 cycles. With a low-profile design, it handles a contact current rating of 50mA.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/joystick4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/joystick-4-click)
+[Click Product page](https://www.mikroe.com/joystick-4-click)
 
 ---
 
@@ -69,13 +69,13 @@ uint8_t joystick4_get_position ( uint8_t pin_mask );
 
 ## Example Description
 
-> This example demonstrates the use of the Joystick 4 click board by reading and displaying the joystick position.
+> This example demonstrates the use of the Joystick 4 Click board by reading and displaying the joystick position.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -230,7 +230,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

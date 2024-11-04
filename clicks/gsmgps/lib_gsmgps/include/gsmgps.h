@@ -261,7 +261,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gsmgps_cfg_setup ( gsmgps_cfg_t *cfg );
@@ -271,7 +271,7 @@ void gsmgps_cfg_setup ( gsmgps_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GSMGPS_RETVAL gsmgps_init ( gsmgps_t *ctx, gsmgps_cfg_t *cfg );
 
@@ -321,7 +321,7 @@ uint8_t gsmgps_get_cts ( gsmgps_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #gsmgps_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -332,7 +332,7 @@ void gsmgps_send_cmd ( gsmgps_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #gsmgps_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.
@@ -423,6 +423,6 @@ gsmgps_error_t gsmgps_generic_parser
 #endif  // _GSMGPS_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

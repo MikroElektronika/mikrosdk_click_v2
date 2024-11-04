@@ -1,6 +1,6 @@
 
 ---
-# Power MUX 2 click
+# Power MUX 2 Click
 
 Power MUX 2 Click is a compact add-on board that contains a highly configurable power mux. This board features the TPS2120, a dual-input single-output power multiplexer with an automatic switchover feature from Texas Instruments. This Click board™ prioritizes the main supply when present and quickly switches to auxiliary supply when the main supply drops. During switchover, the voltage drop is controlled to block reverse current before it happens and provide uninterrupted power to the load with minimal hold-up capacitance. This Click board™ is suitable for applications as a backup and standby power, input source selection, and various systems having multiple power sources.
 
@@ -8,7 +8,7 @@ Power MUX 2 Click is a compact add-on board that contains a highly configurable 
   <img src="https://download.mikroe.com/images/click_for_ide/power_mux_2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/power-mux-2-click)
+[Click Product page](https://www.mikroe.com/power-mux-2-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

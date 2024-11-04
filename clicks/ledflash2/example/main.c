@@ -8,16 +8,16 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes device and sets the click into "OFF" mode.
+ * Initializes device and sets the Click into "OFF" mode.
  * 
  * ## Application Task  
  * This function will demonstrate how to use the flash mode,
  * and the torch mode, with different power settings. 
- * It will then turn the click off.
+ * It will then turn the Click off.
  * 
  * ## NOTE 
  * LED lights can be very bright, even on lowest power settings.
- * Avoid looking directly into the light when click is in operation.
+ * Avoid looking directly into the light when Click is in operation.
  * 
  * \author MikroE Team
  *

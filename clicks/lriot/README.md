@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LR IoT click
+# LR IoT Click
 
 > LR IoT Click is a compact add-on board that contains a long-range LoRa transceiver. This board features Semtech Corporation’s LR1110, an ultra-low power platform integrating a LoRa® transceiver, multi-constellation GNSS, and passive WiFi AP MAC address scanner. Alongside its sub-GHz capabilities, the LR1110 also has a multi-band front-end capable of receiving 802.11b/g/n WiFi Access Point MAC addresses and GNSS (GPS, BeiDou, geostationary) satellite raw data befitting geo-positioning purposes. The acquired information is then transmitted using an LPWAN network to a geolocation server, which analyzes it and correlates the position with data from a geolocation database, enabling a unique balance between low power and performance.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lriot_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lr-iot-click)
+[Click Product page](https://www.mikroe.com/lr-iot-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t lriot_send_lora_message ( lriot_t *ctx, uint8_t *message );
 
 ## Example Description
 
-> This example demonstrates the use of LR IoT click board by reading a GNSS and WiFi
+> This example demonstrates the use of LR IoT Click board by reading a GNSS and WiFi
 scanning results and displaying it on the USB UART. In the case of a tranceive firmware
 the communication between two devices over LoRa will be demonstrated as well.
 
@@ -78,7 +78,7 @@ the communication between two devices over LoRa will be demonstrated as well.
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration, and after that reads
+> Initializes the driver, performs the Click default configuration, and after that reads
 and displays the chip's firmware information. In the case you need to update or change the default
 firmware refer to the @b LRIOT_UPDATE_FIRMWARE and @b LRIOT_FIRMWARE_SELECTOR macro definition.
 
@@ -238,7 +238,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,8 +1,8 @@
 {
     "name": "Ammeter Click",
-    "description": "Ammeter click is a mikroBUS add-on board with circuitry for measuring electric current (both AC and DC).",
+    "description": "Ammeter Click is a mikroBUS add-on board with circuitry for measuring electric current (both AC and DC).",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP3201"],
+    "hw" : ["Click","MCP3201"],
     "category" : ["Measurements"] 
 }

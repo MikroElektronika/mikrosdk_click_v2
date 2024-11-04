@@ -11,7 +11,7 @@
  * Initializes Driver init and turn ON chip and settings mode with improvement current.
  * 
  * ## Application Task  
- * The click has a constant output voltage of 5V, no additional settings are required.
+ * The Click has a constant output voltage of 5V, no additional settings are required.
  * 
  * 
  * \author MikroE Team

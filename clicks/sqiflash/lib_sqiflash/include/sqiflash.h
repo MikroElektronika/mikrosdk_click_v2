@@ -225,7 +225,7 @@ typedef enum
 
 /**
  * @brief SQI FLASH configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #sqiflash_cfg_t object definition for detailed explanation.
@@ -237,7 +237,7 @@ void sqiflash_cfg_setup ( sqiflash_cfg_t *cfg );
 /**
  * @brief SQI FLASH initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #sqiflash_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -280,12 +280,12 @@ err_t sqiflash_generic_read ( sqiflash_t *ctx, uint8_t reg, uint8_t *data_out, u
 
 /**
  * @brief SQI FLASH Busy. 
- * @details Checks if click is busy reading/writing.
+ * @details Checks if Click is busy reading/writing.
  * @param[in] ctx : Click context object.
  * See #sqiflash_t object definition for detailed explanation.
  * @return 0 - Success, else - failure.
  *
- * @note Used to check when click is ready to be written to / read from.
+ * @note Used to check when Click is ready to be written to / read from.
  */
 uint8_t sqiflash_busy ( sqiflash_t *ctx );
 
@@ -301,7 +301,7 @@ uint8_t sqiflash_get_status_reg ( sqiflash_t *ctx );
 
 /**
  * @brief SQI FLASH Erase Status.
- * @details Checks if click erase is suspended.
+ * @details Checks if Click erase is suspended.
  * @param[in] ctx : Click context object.
  * See #sqiflash_t object definition for detailed explanation.
  * @return 0-erase not suspended, 1-erase suspended.
@@ -310,7 +310,7 @@ uint8_t sqiflash_erase_status ( sqiflash_t *ctx );
 
 /**
  * @brief SQI FLASH Write Status.
- * @details Checks if click write is suspended.
+ * @details Checks if Click write is suspended.
  * @param[in] ctx : Click context object.
  * See #sqiflash_t object definition for detailed explanation.
  * @return @li @c 0 - Write not suspended
@@ -320,7 +320,7 @@ uint8_t sqiflash_write_status ( sqiflash_t *ctx );
 
 /**
  * @brief SQI FLASH Program Status.
- * @details Checks if click write-program is suspended.
+ * @details Checks if Click write-program is suspended.
  * @param[in] ctx : Click context object.
  * See #sqiflash_t object definition for detailed explanation.
  * @return @li @c 0 - Write program not suspended.
@@ -330,7 +330,7 @@ uint8_t sqiflash_program_status ( sqiflash_t *ctx );
 
 /**
  * @brief SQI FLASH Protect Status.
- * @details Checks if click write-protect lock-down is suspended.
+ * @details Checks if Click write-protect lock-down is suspended.
  * @param[in] ctx : Click context object.
  * See #sqiflash_t object definition for detailed explanation.
  * @return @li @c 0 - write-protect not suspended
@@ -351,7 +351,7 @@ void sqiflash_lock_security_id ( sqiflash_t *ctx );
 
 /**
  * @brief SQI FLASH Security Status.
- * @details Checks if click security ID is locked.
+ * @details Checks if Click security ID is locked.
  * @param[in] ctx : Click context object.
  * See #sqiflash_t object definition for detailed explanation.
  * @return @li @c 0 - Security ID not locked.

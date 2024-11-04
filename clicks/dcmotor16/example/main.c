@@ -3,7 +3,7 @@
  * @brief DCMotor16 Click example
  *
  * # Description
- * This example shows the capabilities of the DC Motor 16 click board.
+ * This example shows the capabilities of the DC Motor 16 Click board.
  *
  * The demo application is composed of two sections :
  *

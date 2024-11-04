@@ -1,8 +1,8 @@
 {
     "name": "CAP WHEEL Click",
-    "description": "CAP Wheel Click is a capacitive touch sensor with round shaped electrodes integrated on a Click board™. This click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself",
+    "description": "CAP Wheel Click is a capacitive touch sensor with round shaped electrodes integrated on a Click board™. This Click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","IQS333"],
+    "hw" : ["Click","IQS333"],
     "category" : ["Capacitive"] 
 }

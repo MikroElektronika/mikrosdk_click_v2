@@ -1,6 +1,6 @@
 
 ---
-# 6DOF IMU 14 click
+# 6DOF IMU 14 Click
 
 6DOF IMU 14 Click is a compact add-on board that contains a 6-axis MEMS motion tracking device combining a 3-axis gyroscope and a 3-axis accelerometer. This board features the ICM-42688-P, high precision 6-axis MEMS motion tracking device, from TDK InvenSense.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/6dofimu14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/6dof-imu-14-click)
+[Click Product page](https://www.mikroe.com/6dof-imu-14-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t c6dofimu14_software_reset ( c6dofimu14_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of 6DOF IMU 14 click board.
+> This example demonstrates the use of 6DOF IMU 14 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

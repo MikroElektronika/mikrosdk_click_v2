@@ -3,13 +3,13 @@
  * @brief ISM 5 Click example
  *
  * # Description
- * This example demonstrates the use of an ISM 5 click board by showing
- * the communication between the two click boards (Server and Client).
+ * This example demonstrates the use of an ISM 5 Click board by showing
+ * the communication between the two Click boards (Server and Client).
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration, then reads
+ * Initializes the driver, performs the Click default configuration, then reads
  * and displays the device part information.
  *
  * ## Application Task
@@ -35,7 +35,7 @@
 #define DEMO_APP_SERVER
 
 // Text message which the client device sends to the server
-#define TEXT_MESSAGE_TO_SEND    "Greetings from ISM 5 click board client"
+#define TEXT_MESSAGE_TO_SEND    "Greetings from ISM 5 Click board client"
 
 // An acknowledge response message which the server device sends to the client
 #define ACKNOWLEDGE_RESPONSE    "ACK OK"

@@ -3,17 +3,17 @@
  * @brief USB UART ISO Click Example.
  *
  * # Description
- * This example demonstrates the use of USB UART ISO click board by processing
+ * This example demonstrates the use of USB UART ISO Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Any data which the host PC sends via UART Terminal
- * will be sent over USB to the click board and then it will be read and 
+ * will be sent over USB to the Click board and then it will be read and 
  * echoed back by the MCU to the PC where the terminal program will display it.
  * Results are being sent to the UART Terminal, where you can track their changes.
  *

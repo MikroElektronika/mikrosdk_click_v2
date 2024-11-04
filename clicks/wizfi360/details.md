@@ -1,6 +1,6 @@
 
 ---
-# WIZFI360 click
+# WIZFI360 Click
 
 > WIZFI360 Click is a compact add-on board for reliable WiFi connectivity in industrial applications. This board features the WIZFI360, a WiFi module from WIZnet, known for its low power consumption and full compliance with IEEE802.11 b/g/n standards. The board supports SoftAP, Station, and SoftAP+Station modes, operates within the frequency range of 2400MHz to 2483.5MHz, and offers a versatile serial port baud rate of up to 2Mbps. It features WPA_PSK and WPA2_PSK encryption for secure communication, configurable operating channels from 1 to 13, and the ability to handle up to 5 simultaneous TCP/UDP links.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/wizifi360_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/wizfi360-click)
+[Click Product page](https://www.mikroe.com/wizfi360-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t wizfi360_send_message ( wizfi360_t *ctx, uint8_t *message );
 
 ## Example Description
 
-> This example demonstrates the use of the WIZFI360 click board 
+> This example demonstrates the use of the WIZFI360 Click board 
 > by processing the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -221,7 +221,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -171,7 +171,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rtd_cfg_setup ( rtd_cfg_t *cfg );
@@ -182,7 +182,7 @@ void rtd_cfg_setup ( rtd_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t rtd_init ( rtd_t *ctx, rtd_cfg_t *cfg );
 
@@ -229,7 +229,7 @@ uint16_t rtd_read_temperature ( rtd_t *ctx );
  * @details This function convert data from temperature registers.
  * 
  * @note
- * Referent resistance on the click board can be changed to better match the
+ * Referent resistance on the Click board can be changed to better match the
  * sensor in use. Input the value of the resistor used in Ohms to get correct
  * data. 
  */
@@ -241,6 +241,6 @@ float rtd_convert_temperature ( rtd_t *ctx, uint16_t input_data, uint16_t refere
 #endif  // _RTD_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

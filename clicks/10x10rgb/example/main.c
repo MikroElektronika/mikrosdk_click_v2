@@ -3,14 +3,14 @@
  * \brief 10x10 RGB Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the 10x10 RGB click module. The
- * click has a 10 by 10 RGB LED matrix which can be programmed to show different colors or even
+ * This example showcases how to initialize, configure and use the 10x10 RGB Click module. The
+ * Click has a 10 by 10 RGB LED matrix which can be programmed to show different colors or even
  * images. LED elements that form the matrix communicate by a single line with the host MCU.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click board.
+ * This function initializes and configures the Click board.
  * 
  * ## Application Task  
  * This function first displays 3 chars { R, G, B }, the string "MIKROE", the company logo and

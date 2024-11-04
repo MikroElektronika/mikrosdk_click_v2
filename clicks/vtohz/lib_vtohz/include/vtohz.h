@@ -156,7 +156,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void vtohz_cfg_setup ( vtohz_cfg_t *cfg );
@@ -166,7 +166,7 @@ void vtohz_cfg_setup ( vtohz_cfg_t *cfg );
  * @param vtohz Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 VTOHZ_RETVAL vtohz_init ( vtohz_t *ctx, vtohz_cfg_t *cfg );
 
@@ -200,11 +200,11 @@ void vtohz_pwm_stop ( vtohz_t *ctx );
 void vtohz_pwm_start ( vtohz_t *ctx );
 
 /**
- * @brief Enable the click module.
+ * @brief Enable the Click module.
  *
  * @param ctx  Click object.
  *
- * @description This function enables the click module.
+ * @description This function enables the Click module.
  */
 void vtohz_enable ( vtohz_t *ctx );
 
@@ -214,6 +214,6 @@ void vtohz_enable ( vtohz_t *ctx );
 #endif  // _VTOHZ_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

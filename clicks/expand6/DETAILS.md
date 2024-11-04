@@ -1,6 +1,6 @@
  
 ---
-# Expand 6 click
+# Expand 6 Click
 
 EXPAND 6 Click is a compact add-on board that contains an I2C configurable multi-port I/O expander with independently configurable pins as bi-directional input/outputs or PWM outputs.
 
@@ -9,7 +9,7 @@ EXPAND 6 Click is a compact add-on board that contains an I2C configurable multi
 </p>
 
 
-[click Product page](https://www.mikroe.com/expand-6-click)
+[Click Product page](https://www.mikroe.com/expand-6-click)
 
 ---
 
@@ -55,7 +55,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of EXPAND 6 click board.
+> This example demonstrates the use of EXPAND 6 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -93,7 +93,7 @@ void application_init ( void )
     Delay_ms ( 1000 );
     
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, "   EXPAND 6 click   \r\n" );
+    log_printf( &logger, "   EXPAND 6 Click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
   
@@ -101,7 +101,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example shows the capabilities of the EXPAND 6 click by toggling each of the 20 available pins.
+> This example shows the capabilities of the EXPAND 6 Click by toggling each of the 20 available pins.
 
 ```c
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

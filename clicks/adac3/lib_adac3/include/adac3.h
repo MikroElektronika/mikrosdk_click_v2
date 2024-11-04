@@ -176,7 +176,7 @@ typedef enum
 
 /**
  * @brief ADAC 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #adac3_cfg_t object definition for detailed explanation.
@@ -188,7 +188,7 @@ void adac3_cfg_setup ( adac3_cfg_t *cfg );
 /**
  * @brief ADAC 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #adac3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -203,7 +203,7 @@ err_t adac3_init ( adac3_t *ctx, adac3_cfg_t *cfg );
 /**
  * @brief ADAC 3 default configuration function.
  * @details This function executes a default configuration of ADAC 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #adac3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

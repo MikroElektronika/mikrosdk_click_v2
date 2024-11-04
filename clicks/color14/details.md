@@ -1,6 +1,6 @@
 
 ---
-# Color 14 click
+# Color 14 Click
 
 > Color 14 Click is a compact add-on board that represents an accurate color sensing solution. This board features the APDS-9151, an integrated RGB, ambient light sensing, IR LED, and a complete proximity detection system from Broadcom Limited. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/color_14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-14-click)
+[Click Product page](https://www.mikroe.com/color-14-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t color14_get_proximity ( color14_t *ctx, uint16_t *ps_data );
 
 ## Example Description
 
-> This application showcases ability of click board to read RGB and IR data
+> This application showcases ability of Click board to read RGB and IR data
 from device. Also it can be configured to read proximity data and
 ALS data in lux units.
 
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

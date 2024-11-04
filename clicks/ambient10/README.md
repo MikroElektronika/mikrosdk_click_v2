@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Ambient 10 click
+# Ambient 10 Click
 
 > Ambient 10 Click is a compact add-on board used to sense the amount of the present ambient light. This board features the APDS-9006-020, analog-output ambient light photosensor from Broadcom Limited.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-10-click)
+[Click Product page](https://www.mikroe.com/ambient-10-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t ambient10_init ( ambient10_t *ctx, ambient10_cfg_t *cfg );
 
 #### Example key functions :
 
-- `ambient10_set_vref` This function sets the voltage reference for Ambient 10 click driver.
+- `ambient10_set_vref` This function sets the voltage reference for Ambient 10 Click driver.
 ```c
 err_t ambient10_set_vref ( ambient10_t *ctx, float vref );
 ```
@@ -65,7 +65,7 @@ uint16_t ambient10_voltage_to_lux ( ambient10_t *ctx, float voltage );
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 10 click board.
+> This example demonstrates the use of Ambient 10 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,7 +3,7 @@
  * @brief LoadCell3 Click example
  *
  * # Description
- * This library contains API for the Load Cell 3 click driver.
+ * This library contains API for the Load Cell 3 Click driver.
  * The library also includes a function for tare and calibration and weight measurement.
  * This demo application shows an example of weight measurement.
  *
@@ -15,8 +15,8 @@
  * calibrate scale and start measurements. 
  *
  * ## Application Task
- * This is an example that shows the use of a Load Cell 3 click board™.
- * The Load Cell 3 click board can be used to measure weight,
+ * This is an example that shows the use of a Load Cell 3 Click board™.
+ * The Load Cell 3 Click board can be used to measure weight,
  * shows the measurement of scales in grams [ g ].
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

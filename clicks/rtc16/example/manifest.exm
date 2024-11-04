@@ -3,6 +3,6 @@
     "description": "RTC 16 Click is a compact add-on board that accurately keeps the time of a day. This board features the BU9873, a CMOS real-time clock that has a built-in interrupt generation function from Rohm Semiconductors. The BU9873 provides year, month, day, weekday, hours, minutes, and seconds based on a 32.768kHz quartz crystal. This RTC is connected to the MCU through an I2C interface and configured to serial transmit time and calendar data. It also has an alarm function that outputs an interrupt signal to the MCU when the day of the week, hour, or minute matches with the preset time.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BU9873NUX"],
+    "hw" : ["Click","BU9873NUX"],
     "category" : ["RTC"]
 }

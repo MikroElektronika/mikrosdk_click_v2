@@ -242,7 +242,7 @@ extern "C"{
 
 /**
  * @brief Configuration Object Setup function.
- * @details This function initializes click configuration structure to
+ * @details This function initializes Click configuration structure to
  * initial state.
  * @param[in] cfg  Click configuration structure.
  * @returns Nothing.
@@ -268,7 +268,7 @@ err_t oledb_init( oledb_t *ctx, oledb_cfg_t *cfg );
 
 /**
  * @brief Send cmd function.
- * @details This function sends commands to OLED B click.
+ * @details This function sends commands to OLED B Click.
  * @param[in] ctx  Click object.
  * @param[in] tx_cmd  Command to be sent.
  * @returns Nothing.
@@ -277,7 +277,7 @@ void oledb_send_cmd( oledb_t *ctx, oledb_data_t tx_cmd );
 
 /**
  * @brief Send data function.
- * @details This function sends data to OLED B click.
+ * @details This function sends data to OLED B Click.
  * @param[in] ctx  Click object.
  * @param[in] tx_data  Data to be sent.
  * @param[in] data_len  Number of data bytes.
@@ -287,7 +287,7 @@ void oledb_send_data( oledb_t *ctx, oledb_data_t *tx_data, uint8_t data_len );
 
 /**
  * @brief Click Default Configuration function.
- * @details This function configures OLED B click to default state.
+ * @details This function configures OLED B Click to default state.
  * @param[in] ctx  Click object.
  * 
  * @returns Nothing.

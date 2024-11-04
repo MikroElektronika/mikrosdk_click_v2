@@ -4,8 +4,8 @@
  * 
  * # Description
  * This library contains an API for the Brushless5 Click driver.
- * This example showcases how to initialize and use the Brushless 5 click. 
- * The click has a brushless 5 motor driver which controls the work 
+ * This example showcases how to initialize and use the Brushless 5 Click. 
+ * The Click has a brushless 5 motor driver which controls the work 
  * of the motor through the BLDC terminal. 
  * In order for this example to work a motor and a power supply are needed.
  *

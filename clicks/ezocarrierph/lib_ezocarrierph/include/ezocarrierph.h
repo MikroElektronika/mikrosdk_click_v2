@@ -220,7 +220,7 @@ typedef enum
 
 /**
  * @brief EZO Carrier pH configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ezocarrierph_cfg_t object definition for detailed explanation.
@@ -232,7 +232,7 @@ void ezocarrierph_cfg_setup ( ezocarrierph_cfg_t *cfg );
 /**
  * @brief EZO Carrier pH driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #ezocarrierph_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -248,7 +248,7 @@ void ezocarrierph_drv_interface_sel ( ezocarrierph_cfg_t *cfg, ezocarrierph_drv_
 /**
  * @brief EZO Carrier pH initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ezocarrierph_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -291,7 +291,7 @@ err_t ezocarrierph_generic_read ( ezocarrierph_t *ctx, uint8_t *data_out, uint16
 
 /**
  * @brief Send command function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #ezocarrierph_t object definition for detailed explanation.
  * @param[in] cmd : Command buffer.
@@ -302,7 +302,7 @@ void ezocarrierph_send_cmd ( ezocarrierph_t *ctx, uint8_t *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #ezocarrierph_t object definition for detailed explanation.
  * @param[in] cmd : Command buffer.

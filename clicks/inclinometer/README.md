@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Inclinometer click
+# Inclinometer Click
 
 > Inclinometer Click is a compact add-on board that offers best-in-class characteristics for inclination measurements. This board features the SCL3300, a high-performance inclinometer sensor component from Murata.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/inclinometer_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/inclinometer-click)
+[Click Product page](https://www.mikroe.com/inclinometer-click)
 
 ---
 
@@ -192,7 +192,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver, enables the click board and configures it for the selected mode.
+ * Initializes the driver, enables the Click board and configures it for the selected mode.
  * 
  * ## Application Task  
  * Depending on the selected mode, it reads all the received data or sends a desired message

@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# ECG GSR click
+# ECG GSR Click
 
-ECG GSR click is a complete solution for PPG, ECG and GSR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE) and electrical front-end. ECG GSR click uses the AS7030B IC, an ultra-low power, multi-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of blood oxygen level, heart rate and galvanic skin response monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG GSR click is also equipped with the 3.5mm electrodes connectors, making it ready to be used out of the box.
+ECG GSR Click is a complete solution for PPG, ECG and GSR application development, utilizing a specialized IC with a clinical-grade analog front-end (AFE) and electrical front-end. ECG GSR Click uses the AS7030B IC, an ultra-low power, multi-channel bio-sensor, which features a wide range of different options, making it an ideal solution for development of blood oxygen level, heart rate and galvanic skin response monitoring applications, fitness applications, for the ECG bio-authentication, and similar applications related to heart monitoring. ECG GSR Click is also equipped with the 3.5mm electrodes connectors, making it ready to be used out of the box.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/ecg_gsr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ecg-gsr-click)
+[Click Product page](https://www.mikroe.com/ecg-gsr-click)
 
 ---
 
@@ -70,7 +70,7 @@ void ecggsr_reset( ecggsr_t *ctx );
 
 ## Examples Description
 
-> This click is made for PPG, ECG and GSR,
+> This Click is made for PPG, ECG and GSR,
 > equipped with an ultra-low power, multi channel, integrated biopotential AFE and EFE.
 
 **The demo application is composed of two sections :**
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

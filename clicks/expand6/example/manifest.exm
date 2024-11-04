@@ -3,6 +3,6 @@
     "description": "EXPAND 6 Click is a compact add-on board that contains an I2C configurable multi-port I/O expander with independently configurable pins as bi-directional input/outputs or PWM outputs.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CY8C9520A"],
+    "hw" : ["Click","CY8C9520A"],
     "category" : ["Port expander"] 
 }

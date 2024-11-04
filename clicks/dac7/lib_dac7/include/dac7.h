@@ -254,7 +254,7 @@ extern "C"{
  *
  * @param cfg           Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dac7_cfg_setup ( dac7_cfg_t *cfg );
@@ -265,7 +265,7 @@ void dac7_cfg_setup ( dac7_cfg_t *cfg );
  * @param dac7          Click object.
  * @param cfg           Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DAC7_RETVAL dac7_init ( dac7_t *ctx, dac7_cfg_t *cfg );
 
@@ -433,6 +433,6 @@ DAC7_RETVAL_T dac7_set_internal_reference ( dac7_t *ctx, uint8_t int_ref_en );
 #endif  // _DAC7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

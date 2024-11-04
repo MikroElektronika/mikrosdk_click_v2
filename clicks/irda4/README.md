@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# IrDA 4 click
+# IrDA 4 Click
 
 > IrDA 4 Click is a compact add-on board that provides a cost-effective solution for sending and receiving IR serial data. This board features the TFBS4650, an infrared transceiver from Vishay Semiconductors. The transceiver includes a PIN photodiode, an infrared emitter, and a low-power integral circuit and complies with the IrDA physical layer specification. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irda4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/irda-4-click)
+[Click Product page](https://www.mikroe.com/irda-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ void irda_hw_reset ( irda4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of IrDA 4 click board by processing
+> This example demonstrates the use of IrDA 4 Click board by processing
  the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

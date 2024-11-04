@@ -200,7 +200,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dac3_cfg_setup ( dac3_cfg_t *cfg );
@@ -210,7 +210,7 @@ void dac3_cfg_setup ( dac3_cfg_t *cfg );
  * @param dac3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DAC3_RETVAL dac3_init ( dac3_t *ctx, dac3_cfg_t *cfg );
 
@@ -220,7 +220,7 @@ DAC3_RETVAL dac3_init ( dac3_t *ctx, dac3_cfg_t *cfg );
  * @param ctx      Click object.
  * @param output   Output voltage.
  *
- * @description This function sets the output voltage on the click module terminal.
+ * @description This function sets the output voltage on the Click module terminal.
  */
 void dac3_set_out_voltage ( dac3_t *ctx, uint16_t output );
 
@@ -230,7 +230,7 @@ void dac3_set_out_voltage ( dac3_t *ctx, uint16_t output );
  * @param ctx      Click object.
  * @param cmd      SPI command.
  *
- * @description This function sends a command to the click module using SPI communication.
+ * @description This function sends a command to the Click module using SPI communication.
  */
 void dac3_send_command ( dac3_t *ctx, uint8_t cmd );
 
@@ -240,7 +240,7 @@ void dac3_send_command ( dac3_t *ctx, uint8_t cmd );
  * @param ctx      Click object.
  * @param cmd      SPI command.
  *
- * @description This function configures the click module.
+ * @description This function configures the Click module.
  * @note In order to use this function properly you need to initialize the dac_cfg object in ctx.
  */
 void dac3_write_all_mem ( dac3_t *ctx, uint16_t value );
@@ -251,6 +251,6 @@ void dac3_write_all_mem ( dac3_t *ctx, uint16_t value );
 #endif  // _DAC3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

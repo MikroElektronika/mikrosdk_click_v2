@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Flash 9 click
+# Flash 9 Click
 
 > Flash 9 Click is a compact add-on board that contains a highly reliable memory solution. This board features the W25Q02JV, an SPI configurable serial Flash memory solution from Winbond Electronics. It represents a four 512Mb stack die supporting linear addressing for the full 2Gb memory address range, offering flexibility and performance well beyond ordinary Serial Flash devices. The W25Q02JV array is organized into 1,048,576 programmable pages of 256-bytes each, where up to 256 bytes can be programmed at a time. This memory also has advanced security features, can withstand many write cycles (minimum 100k), and has a data retention period greater than 20 years.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/flash9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-9-click)
+[Click Product page](https://www.mikroe.com/flash-9-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t flash9_memory_read_fast ( flash9_t *ctx, uint32_t address, uint8_t *data_o
 
 ## Example Description
 
-> This example demonstrates the use of Flash 9 click board by writing specified data to the memory and reading it back.
+> This example demonstrates the use of Flash 9 Click board by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

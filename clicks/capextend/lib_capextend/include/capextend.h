@@ -287,7 +287,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void capextend_cfg_setup ( capextend_cfg_t *cfg );
@@ -297,7 +297,7 @@ void capextend_cfg_setup ( capextend_cfg_t *cfg );
  * @param capextend Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CAPEXTEND_RETVAL capextend_init ( capextend_t *ctx, capextend_cfg_t *cfg );
 
@@ -359,7 +359,7 @@ uint16_t capextend_read_buttons ( capextend_t *ctx );
  *
  * @param ctx          Click object.
  *
- * @description This function does a software reset of the click module.
+ * @description This function does a software reset of the Click module.
  */
 void capextend_reset ( capextend_t *ctx );
 
@@ -396,6 +396,6 @@ uint8_t capextend_get_int_input ( capextend_t *ctx );
 #endif  // _CAPEXTEND_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

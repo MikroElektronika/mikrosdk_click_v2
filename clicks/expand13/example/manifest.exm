@@ -3,6 +3,6 @@
     "description": "Expand 13 Click is a compact add-on board that contains a multi-port I/O expander. This board features the PI4IOE5V96248, a 48-bit general-purpose I/O expander providing remote I/O expansion for most MCU’s families from Diodes Incorporated. The PI4IOE5V96248 comes in a 6-channel configuration and allows easy addition of I/O through a standard I2C serial interface. It has a built-in level shifting feature that makes it highly flexible in power supply systems where communication between incompatible I/O voltages is required.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PI4IOE5V96248"],
+    "hw" : ["Click","PI4IOE5V96248"],
     "category" : ["Port expander"]
 }

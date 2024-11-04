@@ -249,7 +249,7 @@ typedef enum
 
 /**
  * @brief H-Bridge 12 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hbridge12_cfg_t object definition for detailed explanation.
@@ -261,7 +261,7 @@ void hbridge12_cfg_setup ( hbridge12_cfg_t *cfg );
 /**
  * @brief H-Bridge 12 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hbridge12_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -276,7 +276,7 @@ err_t hbridge12_init ( hbridge12_t *ctx, hbridge12_cfg_t *cfg );
 /**
  * @brief H-Bridge 12 default configuration function.
  * @details This function executes a default configuration of H-Bridge 12
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #hbridge12_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -345,7 +345,7 @@ void hbridge12_get_settings ( hbridge12_t *ctx, uint8_t channel_sel, hbridge12_c
 /**
  * @brief H-Bridge 12 set settings function.
  * @details This function writes settings for configuration of H-Bridge 12
- * click board into structure.
+ * Click board into structure.
  * @param[in] cfg : Click configuration structure.
  * See #hbridge12_cfg_t object definition for detailed explanation.
  * @param[in] channel_sel : Selection between AB and CD channels.
@@ -359,7 +359,7 @@ void hbridge12_set_settings ( hbridge12_t *ctx, uint8_t channel_sel, hbridge12_c
 /**
  * @brief H-Bridge 12 write settings function.
  * @details This function writes settings for configuration of H-Bridge 12
- * click board.
+ * Click board.
  * @param[in] cfg : Click configuration structure.
  * See #hbridge12_cfg_t object definition for detailed explanation.
  * @param[in] config_data : Data to be written.
@@ -373,7 +373,7 @@ err_t hbridge12_write_config ( hbridge12_t *ctx, hbridge12_config_t config_data 
 /**
  * @brief H-Bridge 12 set current scale function.
  * @details This function writes the current scale configuration of the selected channel H-Bridge 12
- * click board.
+ * Click board.
  * @param[in] cfg : Click configuration structure.
  * See #hbridge12_cfg_t object definition for detailed explanation.
  * @param[in] channel_sel : Selection between AB and CD channels.
@@ -388,7 +388,7 @@ void hbridge12_set_current_scale ( hbridge12_t *ctx, uint8_t channel_sel, uint8_
 /**
  * @brief H-Bridge 12 set decay function.
  * @details This function writes the decay configuration of the selected channel H-Bridge 12
- * click board.
+ * Click board.
  * @param[in] cfg : Click configuration structure.
  * See #hbridge12_cfg_t object definition for detailed explanation.
  * @param[in] channel_sel : Selection between AB and CD channels.

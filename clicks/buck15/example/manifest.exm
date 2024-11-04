@@ -3,6 +3,6 @@
     "description": "Buck 15 Click is a compact add-on board for precision voltage regulation across various applications. This board features the TPS62903, a synchronous step-down DC/DC converter from Texas Instruments. It is known for its adaptability, rapid transient response, and high output voltage accuracy of ±1.5% across all operating temperatures. Featuring the innovative DCS-control topology, it supports a wide input voltage range of 3V to 17V, an adjustable output voltage from 0.4V to 5V, and currents up to 3A. This Click board™ can be used in a variety of automotive applications, such as the ADAS, body electronics and lighting, infotainment and cluster, hybrid, electric, and powertrain systems, any application with a 12V input voltage or a 1-4 cell lithium battery pack, and more.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TPS62903QRYTRQ1"],
+    "hw" : ["Click","TPS62903QRYTRQ1"],
     "category" : ["Click Boards > Power management > Buck"]
 }

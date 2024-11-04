@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Binho Nova click
+# Binho Nova Click
 
 > Binho Nova Click is an adapter Click board™ that can be used as a multi-protocol adapter. This board features two female 1.27mm 2x5 connectors suitable for connecting the Binho Nova Multi-Protocol USB Host Adapter depending on the desired interface. This Click board™ is designed for ultimate flexibility and provides the ability to use this adapter with different communication protocols, such as I2C, SPI, or UART. It features five signal pins, which can be used as Digital Input/Output, PWM Output, Digital Interrupt, or Analog Input/Output. Along with these connectors, it also features two power jumpers that can be used to supply the host from the Binho Nova.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/binhonova_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/binho-nova-click)
+[Click Product page](https://www.mikroe.com/binho-nova-click)
 
 ---
 
@@ -60,7 +60,7 @@ err_t binhonova_generic_read ( binhonova_t *ctx, uint8_t *data_out, uint16_t len
 
 ## Example Description
 
-> This example demonstrates the use of Binho Nova click board by processing the incoming data and displaying them on the USB UART.
+> This example demonstrates the use of Binho Nova Click board by processing the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

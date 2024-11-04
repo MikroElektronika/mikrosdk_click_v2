@@ -168,7 +168,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void excelonlp_cfg_setup ( excelonlp_cfg_t *cfg );
@@ -179,7 +179,7 @@ void excelonlp_cfg_setup ( excelonlp_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EXCELONLP_RETVAL excelonlp_init ( excelonlp_t *ctx, excelonlp_cfg_t *cfg );
 
@@ -245,6 +245,6 @@ uint8_t excelonlp_read_memory_data ( excelonlp_t *ctx, uint8_t opcode, uint32_t 
 #endif  // _EXCELONLP_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

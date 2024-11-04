@@ -166,7 +166,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c7segrgb_cfg_setup ( c7segrgb_cfg_t *cfg );
@@ -176,7 +176,7 @@ void c7segrgb_cfg_setup ( c7segrgb_cfg_t *cfg );
  * @param c7segrgb Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t c7segrgb_init ( c7segrgb_t *ctx, c7segrgb_cfg_t *cfg );
 
@@ -250,7 +250,7 @@ void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t character, uint8_t green_bright
  * 
  * @param ctx  Click object.
  *
- * @description The function sets the state and color of every segment from click board object segment array data.
+ * @description The function sets the state and color of every segment from Click board object segment array data.
  */
 void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
 
@@ -260,6 +260,6 @@ void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
 #endif  // _C7SEGRGB_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

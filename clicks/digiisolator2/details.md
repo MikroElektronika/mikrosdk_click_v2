@@ -1,6 +1,6 @@
 
 ---
-# DIGI Isolator 2 click
+# DIGI Isolator 2 Click
 
 > DIGI Isolator 2 Click is a compact add-on board that provides isolated digital input signals to your application. This board features the ISO1228, an eight-channel isolated digital input from Texas Instruments. It comes with 8-channel isolated 24V digital input receivers, with a current limit and diagnostics. The device also provides a field-side input-current-powered LED indication to reduce system power dissipation and reduce the board temperatures.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/digiisolator2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-isolator-2-click)
+[Click Product page](https://www.mikroe.com/digi-isolator-2-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t digiisolator2_read_inputs ( digiisolator2_t *ctx, uint8_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of DIGI Isolator 2 click board by reading and displaying the state of 8 digital input channels.
+> This example demonstrates the use of DIGI Isolator 2 Click board by reading and displaying the state of 8 digital input channels.
 
 **The demo application is composed of two sections :**
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

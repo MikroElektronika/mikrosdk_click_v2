@@ -253,7 +253,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void nfctag4_cfg_setup ( nfctag4_cfg_t *cfg );
@@ -264,7 +264,7 @@ void nfctag4_cfg_setup ( nfctag4_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 NFCTAG4_RETVAL nfctag4_init ( nfctag4_t *ctx, nfctag4_cfg_t *cfg );
 
@@ -273,7 +273,7 @@ NFCTAG4_RETVAL nfctag4_init ( nfctag4_t *ctx, nfctag4_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for NfcTag4 click.
+ * @description This function executes default configuration for NfcTag4 Click.
  */
 void nfctag4_default_cfg ( nfctag4_t *ctx );
 
@@ -376,6 +376,6 @@ uint8_t nfctag4_enable_rf ( nfctag4_t* ctx, uint8_t enable_rf );
 #endif  // _NFCTAG4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

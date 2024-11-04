@@ -1,16 +1,16 @@
 
 
 ---
-# CapSense click
+# CapSense Click
 
-CapSense click add-on board features a capacitive sensing module CY8C201A0 which takes human body capacitance as an input and directly provides the real time sensor information via I2C output.
+CapSense Click add-on board features a capacitive sensing module CY8C201A0 which takes human body capacitance as an input and directly provides the real time sensor information via I2C output.
 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/capsense_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/capsense-click)
+[Click Product page](https://www.mikroe.com/capsense-click)
 
 ---
 
@@ -71,13 +71,13 @@ err_t capsense_write_data( capsense_t *ctx, uint8_t reg_address, uint8_t write_c
 
 ## Examples Description
 
-> This example waits user to press top and bottom button to turn click's LEDs ON or OFF.
+> This example waits user to press top and bottom button to turn Click's LEDs ON or OFF.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-Initialize CapSense click and logger.
+Initialize CapSense Click and logger.
 
 ```c
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

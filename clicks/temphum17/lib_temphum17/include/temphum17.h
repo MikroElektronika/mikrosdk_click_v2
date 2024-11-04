@@ -215,7 +215,7 @@ typedef enum
 
 /**
  * @brief Temp&Hum 17 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #temphum17_cfg_t object definition for detailed explanation.
@@ -229,7 +229,7 @@ void temphum17_cfg_setup ( temphum17_cfg_t *cfg );
 /**
  * @brief Temp&Hum 17 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -247,7 +247,7 @@ err_t temphum17_init ( temphum17_t *ctx, temphum17_cfg_t *cfg );
 /**
  * @brief Temp&Hum 17 default configuration function.
  * @details This function executes a default configuration of Temp&Hum 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -318,7 +318,7 @@ err_t temphum17_wake_up ( temphum17_t *ctx );
 /**
  * @brief Temp&Hum 17 get raw data function.
  * @details This function get raw data of the HS3001 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 17 click board™.
+ * on the  Temp&Hum 17 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @param[in] resolution : 
@@ -352,7 +352,7 @@ err_t temphum17_get_raw_data ( temphum17_t *ctx, uint8_t resolution, int16_t *te
  * @brief Temp&Hum 17 get temperature and humidity function.
  * @details This function get temperature ( degree Celsius ) and humidity ( % ) of the 
  * HS3001 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 17 click board™.
+ * on the  Temp&Hum 17 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @param[in] resolution : 
@@ -384,7 +384,7 @@ err_t temphum17_get_temp_hum ( temphum17_t *ctx, uint8_t resolution, float *temp
  * @brief Temp&Hum 17 enter programming mode function.
  * @details This function enter programming mode, accessing the non-volatile memory of the 
  * HS3001 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 17 click board™.
+ * on the  Temp&Hum 17 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -401,7 +401,7 @@ err_t temphum17_enter_programming_mode ( temphum17_t *ctx );
  * @brief Temp&Hum 17 enter measurements mode function.
  * @details This function enter measurements mode, exit programming mode of the 
  * HS3001 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 17 click board™.
+ * on the  Temp&Hum 17 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -418,7 +418,7 @@ err_t temphum17_enter_measurements_mode ( temphum17_t *ctx );
  * @brief Temp&Hum 17 set relative humidity resolution function.
  * @details This function sets desired relative humidity resolution of the 
  * HS3001 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 17 click board™.
+ * on the  Temp&Hum 17 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @param[in] resolution : 
@@ -440,7 +440,7 @@ err_t temphum17_set_relative_humidity_resolution ( temphum17_t *ctx, uint8_t res
  * @brief Temp&Hum 17 set temperature resolution function.
  * @details This function sets desired temperature resolution of the 
  * HS3001 High Performance Relative Humidity and Temperature Sensor
- * on the  Temp&Hum 17 click board™.
+ * on the  Temp&Hum 17 Click board™.
  * @param[in] ctx : Click context object.
  * See #temphum17_t object definition for detailed explanation.
  * @param[in] resolution : 

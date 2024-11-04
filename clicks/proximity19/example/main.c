@@ -3,7 +3,7 @@
  * @brief Proximity 19 Click example
  *
  * # Description
- * This example demonstrates the use of the Proximity 19 click board 
+ * This example demonstrates the use of the Proximity 19 Click board 
  * by measuring and displaying the distance data.
  *
  * The demo application is composed of two sections :

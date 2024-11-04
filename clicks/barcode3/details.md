@@ -1,6 +1,6 @@
 
 ---
-# Barcode 3 click
+# Barcode 3 Click
 
 > Barcode 3 Click is a compact add-on board for efficient barcode scanning applications. This board features the LV30, an advanced area image engine from Rakinda. The LV30 features a laser aiming system and LED illumination, ensuring quick and accurate barcode decoding on various media, including paper and magnetic cards. This module also includes a red LED for low-light conditions, a laser aimer for precise positioning, an onboard buzzer for audible feedback, buttons for scanning and resetting, and an LED indicator for successful reads.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/barcode3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barcode-3-click)
+[Click Product page](https://www.mikroe.com/barcode-3-click)
 
 ---
 
@@ -64,7 +64,7 @@ void barcode3_stop_scanning ( barcode3_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Barcode 3 click board by scanning and displaying the content of a barcode or QR Code.
+> This example demonstrates the use of the Barcode 3 Click board by scanning and displaying the content of a barcode or QR Code.
 
 **The demo application is composed of two sections :**
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -8,12 +8,12 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * SQI FLASH Driver Initialization, initializes the click by setting mikroBUS to
+ * SQI FLASH Driver Initialization, initializes the Click by setting mikroBUS to
  * approprieate logic levels, performing global block unlock and chip erase functions,
  * reads manufacturer ID, memory type and device ID and logs it on USB UART terminal.
  *
  * ## Application Task
- * Writing data to click memory and displaying the read data via UART.
+ * Writing data to Click memory and displaying the read data via UART.
  *
  * @author Stefan Ilic
  *

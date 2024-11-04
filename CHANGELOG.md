@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241104](#20241104)**
 + **[20241024](#20241024)**
 + **[20240926](#20240926)**
 + **[20240919](#20240919)**
@@ -108,6 +109,21 @@
 
 ---
 ---
+---
+
+## `20241104`
+
+*Following click boards have been added:*
+
++ `IPS Display`
++ `RGB Ring`
++ `BarGraph 5`
++ `LTE IoT 17`
+
+*Fixed "Click" word in all click boards packages.*
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241024`

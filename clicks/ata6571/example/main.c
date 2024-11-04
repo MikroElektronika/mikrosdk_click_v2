@@ -3,7 +3,7 @@
  * @brief ATA6571 Click Example.
  *
  * # Description
- * This example reads and processes data from ATA6571 clicks.
+ * This example reads and processes data from ATA6571 Clicks.
  *
  * The demo application is composed of two sections :
  *
@@ -32,7 +32,7 @@
 #define DEMO_APP_RECEIVER
 // #define DEMO_APP_TRANSMITTER
 
-#define TEXT_TO_SEND           "MikroE - ATA6571 click board\r\n"
+#define TEXT_TO_SEND           "MikroE - ATA6571 Click board\r\n"
 
 static ata6571_t ata6571;
 static log_t logger;

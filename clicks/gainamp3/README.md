@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# GainAMP 3 click
+# GainAMP 3 Click
 
 > GainAMP 3 Click is a compact add-on board that contains a 4-channel programmable gain amplifier. This board features the ADA4254, a zero drift, high voltage, programmable gain instrumentation amplifier from Analog Devices. It features 12 binary weighted gains and three scaling gain options resulting in 36 possible gain settings. It comes with an input multiplexer providing ±60V protection to the high impedance inputs of the amplifier and an excitation current source output available to bias sensors such as resistance temperature detectors (RTDs).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gainamp3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gainamp-3-click)
+[Click Product page](https://www.mikroe.com/gainamp-3-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t gainamp3_set_input_channel ( gainamp3_t *ctx, uint8_t channel );
 
 ## Example Description
 
-> This example demonstrates the use of GainAMP 3 click board.
+> This example demonstrates the use of GainAMP 3 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which verifies the communication and sets active the input channel 1.
+> Initializes the driver and performs the Click default configuration which verifies the communication and sets active the input channel 1.
 
 ```c
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

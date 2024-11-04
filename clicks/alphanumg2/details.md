@@ -1,6 +1,6 @@
 
 ---
-# AlphaNum G 2 click
+# AlphaNum G 2 Click
 
 > AlphaNum G 2 Click is a compact add-on board that represents an easy solution for adding numeric or hexadecimal displays to your application. This board features the LTP-3862, a dual-digit 16-segment alphanumeric green display from Lite-ON. It is a 0.3” (7.62mm) display with black face and white segments. The LED segments use common anodes, and besides segments, the decimal point (DP) dot is also available.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/alphanumg2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/alphanum-g-2-click)
+[Click Product page](https://www.mikroe.com/alphanum-g-2-click)
 
 ---
 
@@ -118,7 +118,7 @@ void application_init ( void )
 
 > The demo application displays digits from '0' to '9', 
 > symbols: colon, semicolon, less-than, equals-to, greater-than, question mark, at sign 
-> and capital alphabet letters, on both alphanumeric segments of the click. 
+> and capital alphabet letters, on both alphanumeric segments of the Click. 
 > Results are being sent to the UART Terminal, where you can track their changes.
 
 ```c
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

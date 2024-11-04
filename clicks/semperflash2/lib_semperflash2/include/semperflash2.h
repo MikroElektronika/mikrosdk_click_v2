@@ -249,7 +249,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void semperflash2_cfg_setup ( semperflash2_cfg_t *cfg );
@@ -259,7 +259,7 @@ void semperflash2_cfg_setup ( semperflash2_cfg_t *cfg );
  * @param semperflash2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SEMPERFLASH2_RETVAL semperflash2_init ( semperflash2_t *ctx, semperflash2_cfg_t *cfg );
 
@@ -268,7 +268,7 @@ SEMPERFLASH2_RETVAL semperflash2_init ( semperflash2_t *ctx, semperflash2_cfg_t 
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Semper Flash click.
+ * @description This function executes default configuration for Semper Flash Click.
  */
 void semperflash2_default_cfg ( semperflash2_t *ctx );
 
@@ -278,7 +278,7 @@ void semperflash2_default_cfg ( semperflash2_t *ctx );
  * @param ctx  Click object.
  * @param cmd  Command variable.
  *
- * @description This function sends the specified command to the click module.
+ * @description This function sends the specified command to the Click module.
  */
 void semperflash2_send_cmd ( semperflash2_t *ctx, uint8_t cmd );
 
@@ -291,7 +291,7 @@ void semperflash2_send_cmd ( semperflash2_t *ctx, uint8_t cmd );
  * @param read_buf   Read buffer.  
  * @param rbuf_size   Buffer size.
  * 
- * @description This function transfers data to/from the click module.
+ * @description This function transfers data to/from the Click module.
  */
 void semperflash2_transfer_data 
 (   
@@ -309,7 +309,7 @@ void semperflash2_transfer_data
  * @param write_buf  Write data.
  * @param buf_size   Buffer size.
  * 
- * @description This function transfers data to the click module.
+ * @description This function transfers data to the Click module.
  */
 void semperflash2_generic_write 
 (   
@@ -324,7 +324,7 @@ void semperflash2_generic_write
  * @param ctx        Click object.
  * @param cfg_data   Configuration data buffer.
  * 
- * @description This function sends a set of configuration parameters to the click module.
+ * @description This function sends a set of configuration parameters to the Click module.
  */
 void semperflash2_write_config ( semperflash2_t *ctx, semperflash2_config_t *cfg_data );
 
@@ -398,7 +398,7 @@ uint8_t semperflash2_check_manufacturer_id ( semperflash2_t *ctx );
  *
  * @param ctx        Click object.
  * 
- * @description This function checks the status register on the click module.
+ * @description This function checks the status register on the Click module.
  */
 uint8_t semperflash2_check_status_reg_1 ( semperflash2_t *ctx );
 
@@ -408,6 +408,6 @@ uint8_t semperflash2_check_status_reg_1 ( semperflash2_t *ctx );
 #endif  // _SEMPERFLASH2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

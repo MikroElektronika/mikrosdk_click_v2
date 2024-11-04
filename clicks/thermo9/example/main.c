@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Logger initialization, click initialization and calibration.
+ * Logger initialization, Click initialization and calibration.
  * 
  * ## Application Task  
- * This example shows capabilities of Thermo 9 click by measuring
+ * This example shows capabilities of Thermo 9 Click by measuring
  * temperature every 3 seconds and displaying temperature in degrres Celsius 
  * via USART terminal.
  * 
@@ -60,7 +60,7 @@ void application_init ( void )
     thermo9_init( &thermo9, &cfg );
     Delay_ms ( 100 );
     log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "    Thermo 9 click   \r\n" );
+    log_printf( &logger, "    Thermo 9 Click   \r\n" );
     log_printf( &logger, "---------------------\r\n" );
     thermo9_calibation( &thermo9 );
     Delay_ms ( 100 );

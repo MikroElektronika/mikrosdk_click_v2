@@ -3,7 +3,7 @@
  * @brief Charger 19 Click Example.
  *
  * # Description
- * This example demonstrates the use of Charger 19 click board by enabling the device
+ * This example demonstrates the use of Charger 19 Click board by enabling the device
  * and then reading and displaying the battery voltage.
  *
  * The demo application is composed of two sections :

@@ -1,8 +1,8 @@
 {
     "name": "AnyNet 3G-EA Click",
-    "description": "AnyNet 3G-EA Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing. AnyNet click board™ provides a secure connection with the AWS over the air (OTA), by utilizing the Quectel UG95-EA 3G module,  offering worldwide UMTS/HSPA and GSM/GPRS/EDGE coverage Eseye ES4623 embedded SIM card, that can work with more than 235 cellular operators from all over the world. An Eseye embedded sim card can work with more than 235 cellular operators from all over the world. The AnyNet 3G click can be used as an AWS IoT button with almost no configuration.",
+    "description": "AnyNet 3G-EA Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing. AnyNet Click board™ provides a secure connection with the AWS over the air (OTA), by utilizing the Quectel UG95-EA 3G module,  offering worldwide UMTS/HSPA and GSM/GPRS/EDGE coverage Eseye ES4623 embedded SIM card, that can work with more than 235 cellular operators from all over the world. An Eseye embedded sim card can work with more than 235 cellular operators from all over the world. The AnyNet 3G Click can be used as an AWS IoT button with almost no configuration.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","Quectel UG95"],
+    "hw" : ["Click","Quectel UG95"],
     "category" : ["GSM/LTE"]
 }

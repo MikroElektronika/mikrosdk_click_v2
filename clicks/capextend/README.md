@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Cap Extend click
+# Cap Extend Click
 
-Cap Extend click is a mikroBUS add-on board with a SEMTECH SX8633 low power, capacitive button touch controller. It has 12 pins for connecting capacitive inputs (either touch-buttons or proximity sensors).
+Cap Extend Click is a mikroBUS add-on board with a SEMTECH SX8633 low power, capacitive button touch controller. It has 12 pins for connecting capacitive inputs (either touch-buttons or proximity sensors).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/capextend_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/cap-extend-click)
+[Click Product page](https://www.mikroe.com/cap-extend-click)
 
 ---
 
@@ -45,7 +45,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function does a software reset of the click module.
+- This function does a software reset of the Click module.
 > void capextend_reset ( capextend_t *ctx );
  
 - This function reads the MSB button map data.
@@ -56,14 +56,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases the initialization and configuration of the logger and click modules
+> This example showcases the initialization and configuration of the logger and Click modules
   and later on shows how to read and display the 16-bit button map ( LSB + MSB ). 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. 
+> This function initializes and configures the Click and logger modules. 
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,7 +3,7 @@
  * @brief Thumbwheel Click Example.
  *
  * # Description
- * This example demonstrates the use of Thumbwheel click board 
+ * This example demonstrates the use of Thumbwheel Click board 
  * by displaying the exact position of the rotary sprocket. 
  *
  * The demo application is composed of two sections :

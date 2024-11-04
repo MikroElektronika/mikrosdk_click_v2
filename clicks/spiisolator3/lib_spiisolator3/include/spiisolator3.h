@@ -176,7 +176,7 @@ typedef enum
 
 /**
  * @brief SPI Isolator 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #spiisolator3_cfg_t object definition for detailed explanation.
@@ -188,7 +188,7 @@ void spiisolator3_cfg_setup ( spiisolator3_cfg_t *cfg );
 /**
  * @brief SPI Isolator 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #spiisolator3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -204,7 +204,7 @@ err_t spiisolator3_init ( spiisolator3_t *ctx, spiisolator3_cfg_t *cfg );
 /**
  * @brief SPI Isolator 3 default configuration function.
  * @details This function executes a default configuration of SPI Isolator 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #spiisolator3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -253,7 +253,7 @@ err_t spiisolator3_generic_read ( spiisolator3_t *ctx, uint8_t reg, uint8_t *dat
 /**
  * @brief SPI Isolator 3 set side A active function.
  * @details This function set state of the side A by set state of the SAA ( AN ) pin
- * of the SPI Isolator 3 click board™.
+ * of the SPI Isolator 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #spiisolator3_t object definition for detailed explanation.
  * @param[in] saa_state : SAA pin state.
@@ -266,7 +266,7 @@ void spiisolator3_set_side_a_active ( spiisolator3_t *ctx, uint8_t saa_state );
 /**
  * @brief SPI Isolator 3 set SDO enable function.
  * @details This function set state of the SDO enable by set state of the OEN ( RST ) pin
- * of the SPI Isolator 3 click board™.
+ * of the SPI Isolator 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #spiisolator3_t object definition for detailed explanation.
  * @param[in] sdo_state : OEN pin state.
@@ -279,7 +279,7 @@ void spiisolator3_set_sdo_enable ( spiisolator3_t *ctx, uint8_t sdo_state );
 /**
  * @brief SPI Isolator 3 set AUX function.
  * @details This function set state of the AUX by set state of the AUX ( PWM ) pin
- * of the SPI Isolator 3 click board™.
+ * of the SPI Isolator 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #spiisolator3_t object definition for detailed explanation.
  * @param[in] sdo_state : OEN pin state.
@@ -292,7 +292,7 @@ void spiisolator3_set_aux ( spiisolator3_t *ctx, uint8_t aux_state );
 /**
  * @brief SPI Isolator 3 get fault state function.
  * @details This function get fault state
- * of the SPI Isolator 3 click board™.
+ * of the SPI Isolator 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #spiisolator3_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

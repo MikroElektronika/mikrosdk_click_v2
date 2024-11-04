@@ -3,8 +3,8 @@
  * \brief Audio Xover Click example
  * 
  * # Description
- * This example demonstrates the use of the Audio Xover click board. 
- * The click is an analog active crossover solution for two-way loudspeakers. 
+ * This example demonstrates the use of the Audio Xover Click board. 
+ * The Click is an analog active crossover solution for two-way loudspeakers. 
  * The primary purpose of the crossover circuit in a loudspeaker is to split 
  * an incoming audio signal into frequency bands that are passed to 
  * the speaker best suited.
@@ -15,11 +15,11 @@
  * This function initializes the driver and makes an initial log.
  * 
  * ## Application Task  
- * This function enables and disables the click board every 10 seconds,
+ * This function enables and disables the Click board every 10 seconds,
  * and logs an appropriate message on the USB UART.
  * 
  * @note
- * The hardware revision v100 of the click board works only with MCUs that operates
+ * The hardware revision v100 of the Click board works only with MCUs that operates
  * at 5V operating voltage level.
  * 
  * \author MikroE Team

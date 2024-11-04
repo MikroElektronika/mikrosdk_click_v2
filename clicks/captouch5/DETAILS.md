@@ -1,7 +1,7 @@
 
 
 ---
-# Cap Touch 5 click
+# Cap Touch 5 Click
 
 Cap Touch 5 Click is a capacitive touch sensing Click board™ which features the CY8CMBR3106S-LQXI CapSense® Express™ controller which enables advanced, yet easy-to-implement, capacitive touch sensing user interface solutions.
 
@@ -10,7 +10,7 @@ Cap Touch 5 Click is a capacitive touch sensing Click board™ which features th
 </p>
 
 
-[click Product page](https://www.mikroe.com/cap-touch-5-click)
+[Click Product page](https://www.mikroe.com/cap-touch-5-click)
 
 ---
 
@@ -155,7 +155,7 @@ void application_task ( void )
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

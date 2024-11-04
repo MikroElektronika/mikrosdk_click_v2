@@ -3,7 +3,7 @@
  * @brief TouchPad5 Click example
  *
  * # Description
- * This example demonstrates the use of Touchpad 5 click board by utilizing the touchpad XY
+ * This example demonstrates the use of Touchpad 5 Click board by utilizing the touchpad XY
  * and snap functionalities.
  *
  * The demo application is composed of two sections :

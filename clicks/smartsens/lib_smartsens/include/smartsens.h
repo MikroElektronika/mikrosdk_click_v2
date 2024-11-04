@@ -640,7 +640,7 @@ typedef enum
 
 /**
  * @brief Smart Sens configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #smartsens_cfg_t object definition for detailed explanation.
@@ -652,7 +652,7 @@ void smartsens_cfg_setup ( smartsens_cfg_t *cfg );
 /**
  * @brief Smart Sens driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #smartsens_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -668,7 +668,7 @@ void smartsens_drv_interface_selection ( smartsens_cfg_t *cfg, smartsens_drv_t d
 /**
  * @brief Smart Sens initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #smartsens_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -684,7 +684,7 @@ err_t smartsens_init ( smartsens_t *ctx, smartsens_cfg_t *cfg );
 /**
  * @brief Smart Sens default configuration function.
  * @details This function executes a default configuration of Smart Sens
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartsens_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

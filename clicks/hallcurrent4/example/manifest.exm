@@ -1,8 +1,8 @@
 {
     "name": "Hall Current 4 Click",
-    "description": "The Hall Current 4 click is designed to measure relatively high current by using the integrated ACS70331 sensor.",
+    "description": "The Hall Current 4 Click is designed to measure relatively high current by using the integrated ACS70331 sensor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","ACS70331","MCP3221"],
+    "hw" : ["Click","ACS70331","MCP3221"],
     "category" : ["Rotary encoder"] 
 }

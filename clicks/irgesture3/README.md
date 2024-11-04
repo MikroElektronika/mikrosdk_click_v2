@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# IR Gesture 3 click
+# IR Gesture 3 Click
 
 > IR Gesture 3 Click is a compact add-on board that provides contactless gesture recognition. This board features the ADPD1080, a photometric front-end from Analog Devices. The IR Gesture 3 Click allows gesture recognition in two dimensions, with a built-in optical filter and a sharp visible light cutoff. It eliminates the need for external lenses and preserves the dynamic range of the sensor when placed under sunlight or indoor lighting. It does not require a precise alignment because its sensor maintains a linear response within the ±35° angular field of view.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irgesture3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-gesture-3-click)
+[Click Product page](https://www.mikroe.com/ir-gesture-3-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t irgesture3_get_gesture ( irgesture3_t *ctx, uint8_t *gesture );
 
 ## Example Description
 
-> This example demonstrates the use of IR Gesture 3 click board by processing the incoming gestures and displaying them on the USB UART.
+> This example demonstrates the use of IR Gesture 3 Click board by processing the incoming gestures and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

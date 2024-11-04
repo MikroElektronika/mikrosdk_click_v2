@@ -217,7 +217,7 @@ typedef enum
 
 /**
  * @brief USB-C Sink 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #usbcsink2_cfg_t object definition for detailed explanation.
@@ -229,7 +229,7 @@ void usbcsink2_cfg_setup ( usbcsink2_cfg_t *cfg );
 /**
  * @brief USB-C Sink 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -244,7 +244,7 @@ err_t usbcsink2_init ( usbcsink2_t *ctx, usbcsink2_cfg_t *cfg );
 /**
  * @brief USB-C Sink 2 default configuration function.
  * @details This function executes a default configuration of USB-C Sink 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -259,7 +259,7 @@ err_t usbcsink2_default_cfg ( usbcsink2_t *ctx );
  * @brief USB-C Sink 2 data writing function.
  * @details This function writes a desired number of data bytes starting using desired command
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -276,7 +276,7 @@ err_t usbcsink2_generic_write ( usbcsink2_t *ctx, uint8_t cmd, uint8_t *data_in,
  * @brief USB-C Sink 2 data reading function.
  * @details This function reads a desired number of data bytes using desired command
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[in] cmd : Desired command.
@@ -317,7 +317,7 @@ err_t usbcsink2_read_voltage ( usbcsink2_t *ctx, float *voltage );
 
 /**
  * @brief USB-C Sink 2 set vref function.
- * @details This function sets the voltage reference for USB-C Sink 2 click driver.
+ * @details This function sets the voltage reference for USB-C Sink 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).
@@ -333,7 +333,7 @@ err_t usbcsink2_set_vref ( usbcsink2_t *ctx, float vref );
  * @details This function reads a source power delivery data of 28 bytes
  * and used to expose PD Source (SRC) power capabilities
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] pdo :  Source Power Data Object.
@@ -348,7 +348,7 @@ err_t usbcsink2_read_pdo ( usbcsink2_t *ctx, uint8_t *pdo );
  * @brief USB-C Sink 2 PDO number reading function.
  * @details This function reads the total number of valid PDOs
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] pdo_num : Total number of valid PDOs.
@@ -363,7 +363,7 @@ err_t usbcsink2_get_pdo_num ( usbcsink2_t *ctx, uint8_t *pdo_num );
  * @brief USB-C Sink 2 status reading function.
  * @details This function reads the status data to reports the Sink Controller’s
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] status : Status data.
@@ -378,7 +378,7 @@ err_t usbcsink2_read_status ( usbcsink2_t *ctx, uint8_t *status );
  * @brief USB-C Sink 2 wait RDO request function.
  * @details This function waith a successful RDO request
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] status : Status data.
@@ -393,7 +393,7 @@ err_t usbcsink2_wait_rdo_req_success ( usbcsink2_t *ctx );
  * @brief USB-C Sink 2 get the voltage function.
  * @details This function reads the PDO voltage measured
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] voltage_mv : Voltage [mV].
@@ -408,7 +408,7 @@ err_t usbcsink2_get_pdo_voltage ( usbcsink2_t *ctx, float *voltage_mv );
  * @brief USB-C Sink 2 get the current function.
  * @details This function reads the PDO current measured
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] voltage_mv : Current [mA].
@@ -423,7 +423,7 @@ err_t usbcsink2_get_pdo_current ( usbcsink2_t *ctx, float *current_ma );
  * @brief USB-C Sink 2 get the temperature function.
  * @details This function reads the temperature
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] temperature : Temperature [degree Celsius].
@@ -439,7 +439,7 @@ err_t usbcsink2_get_temperature ( usbcsink2_t *ctx, uint8_t *temperature );
  * @details This function PDO request negotiation procedure, 
  * 4-byte data is written to RDO (Request Data Object)
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] rdo : Request Data Object.
@@ -454,7 +454,7 @@ err_t usbcsink2_write_rdo ( usbcsink2_t *ctx, uint8_t *rdo );
  * @brief USB-C Sink 2 hard reset the RDO function.
  * @details This function is used to reset by writing RDO register with all-zero data
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @param[out] rdo : Request Data Object.
@@ -469,7 +469,7 @@ err_t usbcsink2_reset ( usbcsink2_t *ctx );
  * @brief USB-C Sink 2 get interrupt function.
  * @details This function get states of the Interrupt ( INT ) pin
  * of the AP33772, High-Performance USB PD Sink Controller
- * on the USB-C Sink 2 click board™. 
+ * on the USB-C Sink 2 Click board™. 
  * @param[in] ctx : Click context object.
  * See #usbcsink2_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

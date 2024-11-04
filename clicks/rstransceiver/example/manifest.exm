@@ -3,6 +3,6 @@
     "description": "RS Transceiver is a compact add-on board that offers an interface between the TTL level UART and RS-232/RS-422/RS-485 communication buses. This board features the XR34350, an RS-232/RS-422/RS-485 serial transceiver with internal termination and wide output swing from MaxLinear. Integrated cable termination and four configuration modes allow all three protocols to be used interchangeably over a single cable over the DE-9 connector. All transmitter outputs and receiver inputs feature robust ESD protection and HBM up to ±15kV.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","XR34350ILTR"],
+    "hw" : ["Click","XR34350ILTR"],
     "category" : ["Click Boards > Interface > RS485"]
 }

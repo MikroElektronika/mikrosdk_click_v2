@@ -1,6 +1,6 @@
 
 ---
-# Ambient 17 click
+# Ambient 17 Click
 
 > Ambient 17 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the TSL2572, a digital-output ambient light sensor with an I2C interface from ams AG. The TSL2572 can detect a wide range of illuminance up to 60klx and provides excellent responsivity close to the human eyes' response. It is designed to control the brightness in various applications based on ambient light availability, brightness for optimum visibility, and energy efficiency. Operation in a temperature range of -30°C to 70°C ensures stable operation under extreme conditions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient17_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-17-click)
+[Click Product page](https://www.mikroe.com/ambient-17-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t ambient17_measure_light_level ( ambient17_t *ctx, uint16_t *lux );
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 17 click board by measuring the ambient light level in Lux.
+> This example demonstrates the use of Ambient 17 Click board by measuring the ambient light level in Lux.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

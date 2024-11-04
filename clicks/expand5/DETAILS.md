@@ -1,6 +1,6 @@
 
 ---
-# Expand 5 click
+# Expand 5 Click
 
 EXPAND 5 Click features a low-voltage 24-bit I2C and SMBus I/O expander. This 24-bit I/O expander is designed to provide general-purpose remote I/O expansion for most microcontroller families via the I2C serial interface. This Click board™ features the TCA6424A from Texas Instruments, and it operates over a power supply voltage range of 1.65V to 5.5V. 
 
@@ -9,7 +9,7 @@ EXPAND 5 Click features a low-voltage 24-bit I2C and SMBus I/O expander. This 24
 </p>
 
 
-[click Product page](https://www.mikroe.com/expand-5-click)
+[Click Product page](https://www.mikroe.com/expand-5-click)
 
 ---
 
@@ -92,7 +92,7 @@ void application_init ( void )
     Delay_ms ( 100 );
 
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, "   EXPAND 5 click   \r\n" );
+    log_printf( &logger, "   EXPAND 5 Click   \r\n" );
     log_printf( &logger, "------------------- \r\n" );
     expand5_reset( &expand5 );
     expand5_set_all_dir( &expand5, bank_out, bank_out, bank_out );
@@ -106,7 +106,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example shows the capabilities of the EXPAND 5 click by toggling each of the 24 available pins.
+> This example shows the capabilities of the EXPAND 5 Click by toggling each of the 24 available pins.
 
 ```c
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

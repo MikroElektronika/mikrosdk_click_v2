@@ -345,7 +345,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void fm_cfg_setup ( fm_cfg_t *cfg );
@@ -356,7 +356,7 @@ void fm_cfg_setup ( fm_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FM_RETVAL fm_init ( fm_t *ctx, fm_cfg_t *cfg );
 
@@ -365,7 +365,7 @@ FM_RETVAL fm_init ( fm_t *ctx, fm_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Fm click.
+ * @description This function executes default configuration for Fm Click.
  */
 void fm_default_cfg ( fm_t *ctx );
 
@@ -720,6 +720,6 @@ uint8_t fm_get_an_pin ( fm_t *ctx );
 #endif  // _FM_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

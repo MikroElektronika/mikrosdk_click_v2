@@ -1,6 +1,6 @@
 
 ---
-# Hall Current 16 click
+# Hall Current 16 Click
 
 > Hall Current 16 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. 
 > This board features the ACS37002, a 400kHz high-accuracy current sensor from Allegro Microsystems. 
@@ -12,7 +12,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-16-click)
+[Click Product page](https://www.mikroe.com/hall-current-16-click)
 
 ---
 
@@ -73,7 +73,7 @@ uint8_t hallcurrent16_get_ovc_fault ( hallcurrent16_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Hall Current 16 click board 
+> This example demonstrates the use of Hall Current 16 Click board 
 > by reading and displaying the current measurements.
 
 **The demo application is composed of two sections :**
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

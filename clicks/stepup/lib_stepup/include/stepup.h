@@ -179,7 +179,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void stepup_cfg_setup ( stepup_cfg_t *cfg );
@@ -189,7 +189,7 @@ void stepup_cfg_setup ( stepup_cfg_t *cfg );
  * @param stepup Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 STEPUP_RETVAL stepup_init ( stepup_t *ctx, stepup_cfg_t *cfg );
 
@@ -199,7 +199,7 @@ STEPUP_RETVAL stepup_init ( stepup_t *ctx, stepup_cfg_t *cfg );
  * @param ctx           Click object.
  * @param out_value     Output value (range : 0 to 4095)
  *
- * @description This function executes default configuration for Step Up click.
+ * @description This function executes default configuration for Step Up Click.
  */
 void stepup_default_cfg ( stepup_t *ctx );
 
@@ -230,7 +230,7 @@ void stepup_en_set ( stepup_t *ctx, uint8_t pin_state );
  * @param ctx  Click object.
  * @param cfg  DAC configuration structure.
  *
- * @description This function performs the setup of the DAC converter of the Step up click.
+ * @description This function performs the setup of the DAC converter of the Step up Click.
  */
 void stepup_dac_setup ( stepup_t *ctx, stepup_dac_cfg_t *cfg );
 
@@ -265,6 +265,6 @@ err_t stepup_set_percentage ( stepup_t *ctx, float percentage );
 #endif  // _STEPUP_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

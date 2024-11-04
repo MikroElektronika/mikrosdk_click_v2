@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes driver and logger, then enables the click board and reads 
+ * Initializes driver and logger, then enables the Click board and reads 
  * the device product, firmware and eeprom versions.
  *
  * ## Application Task

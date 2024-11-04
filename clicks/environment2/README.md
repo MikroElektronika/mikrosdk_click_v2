@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Environment 2 click
+# Environment 2 Click
 
 Environment 2 Click is a compact add-on board containing best-in-class SHT humidity and SGP air-quality sensing solutions from Sensirion. This board features SHT40 and SGP40, a high-accuracy ultra-low-power relative humidity, and a temperature sensor combined with MOx based gas sensor. The SHT40 sensor offers linearized digital output, provides constant temperature accuracy, up to 0.1°C, and shows the best performance when operated within the temperature and humidity range of 5-60°C and 20-80%RH, while the SGP40, a digital gas sensor, features a temperature-controlled micro hot-plate providing a humidity-compensated VOC-based indoor air quality signal. This Click board™ is suitable for indoor air quality and various temperature and humidity-related applications
 
@@ -9,7 +9,7 @@ Environment 2 Click is a compact add-on board containing best-in-class SHT humid
   <img src="https://download.mikroe.com/images/click_for_ide/environment2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/environment-2-click)
+[Click Product page](https://www.mikroe.com/environment-2-click)
 
 ---
 
@@ -176,7 +176,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

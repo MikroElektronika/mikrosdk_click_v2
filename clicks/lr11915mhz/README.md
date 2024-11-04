@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LR 11 915MHz click
+# LR 11 915MHz Click
 
 > LR 11 Click - 915MHz is a compact add-on board for long-range, low-power wireless communication in IoT applications. This board features the 453-00139R, an ultra-low power LoraWAN module Ezurio (part of the RM126x series), integrating the Silicon Labs EFR32 SoC and the Semtech SX1262 radio. It supports LoRaWAN classes A, B, and C, offering secure, scalable, and bi-directional communication. It operates in the 902-928MHz frequency range with a typical transmit power of up to 22dBm and a communication range of up to 15km.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lr11915mhz_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lr-11-click-915mhz)
+[Click Product page](https://www.mikroe.com/lr-11-click-915mhz)
 
 ---
 
@@ -53,19 +53,19 @@ err_t lr11915mhz_init ( lr11915mhz_t *ctx, lr11915mhz_cfg_t *cfg );
 void lr11915mhz_reset_device ( lr11915mhz_t *ctx );
 ```
 
-- `lr11915mhz_cmd_run` This function sends a specified command with or without parameters to the click module.
+- `lr11915mhz_cmd_run` This function sends a specified command with or without parameters to the Click module.
 ```c
 void lr11915mhz_cmd_run ( lr11915mhz_t *ctx, uint8_t *cmd, uint8_t *param );
 ```
 
-- `lr11915mhz_cmd_set` This function sets a value to a specified command parameter of the click module.
+- `lr11915mhz_cmd_set` This function sets a value to a specified command parameter of the Click module.
 ```c
 void lr11915mhz_cmd_set ( lr11915mhz_t *ctx, uint8_t *cmd, uint8_t *param_id, uint8_t *value );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of LR 11 915MHz click board by showing the communication between two click boards configured in P2P network mode.
+> This example demonstrates the use of LR 11 915MHz Click board by showing the communication between two Click boards configured in P2P network mode.
 
 **The demo application is composed of two sections :**
 
@@ -118,7 +118,7 @@ void application_init ( void )
  - LR11915MHZ_CONFIG_EXAMPLE: 
    > Configures device for the LoRa P2P network mode.
  - LR11915MHZ_EXAMPLE:
-   > Performs a LoRa P2P example by exchanging messages with another LR 11 915MHz click board.
+   > Performs a LoRa P2P example by exchanging messages with another LR 11 915MHz Click board.
 > One device should be set to NODE_0_ADDRESS, and the other to NODE_1_ADDRESS.
 
 ```c
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

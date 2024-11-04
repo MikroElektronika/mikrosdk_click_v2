@@ -35,7 +35,7 @@
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
-#define TEXT_TO_SEND "MIKROE - RS485 Isolator click\r\n"
+#define TEXT_TO_SEND "MIKROE - RS485 Isolator Click\r\n"
 
 #define PROCESS_RX_BUFFER_SIZE 100
 

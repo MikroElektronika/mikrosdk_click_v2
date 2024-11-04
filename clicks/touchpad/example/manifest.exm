@@ -1,8 +1,8 @@
 {
     "name": "Touchpad Click",
-    "description": "Touchpad click is a capacitive touch input device driven by Microchip’s low-powered MTCH6102 controller.",
+    "description": "Touchpad Click is a capacitive touch input device driven by Microchip’s low-powered MTCH6102 controller.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MTCH6102"],
+    "hw" : ["Click","MTCH6102"],
     "category" : ["Capacitive"] 
 }

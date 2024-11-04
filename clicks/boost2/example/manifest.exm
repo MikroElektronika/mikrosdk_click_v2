@@ -1,8 +1,8 @@
 {
     "name": "Boost 2 Click",
-    "description": "BOOST 2 click is a DC-DC step-up (boost) regulator that has a fixed 5V output, which can be obtained from any low voltage input - such as NiCd, NiMH or one cell Li-Po/Li-Ion batteries.",
+    "description": "BOOST 2 Click is a DC-DC step-up (boost) regulator that has a fixed 5V output, which can be obtained from any low voltage input - such as NiCd, NiMH or one cell Li-Po/Li-Ion batteries.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP1642B-ADJ"],
+    "hw" : ["Click","MCP1642B-ADJ"],
     "category" : ["Boost"] 
 }

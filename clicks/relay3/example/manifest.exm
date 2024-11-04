@@ -1,8 +1,8 @@
 {
     "name": "Relay 3 Click",
-    "description": "Relay click 3 is a dual relay Click board, featuring two single-pole double-throw relays which can be operated by output pins of the host microcontroller (MCU). It offers an elegant and easy solution for controlling a wide range of power applications.",
+    "description": "Relay Click 3 is a dual relay Click board, featuring two single-pole double-throw relays which can be operated by output pins of the host microcontroller (MCU). It offers an elegant and easy solution for controlling a wide range of power applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SRD-05VDC-SL-C"],
+    "hw" : ["Click","SRD-05VDC-SL-C"],
     "category" : ["Relay"] 
 }

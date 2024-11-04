@@ -1,8 +1,8 @@
 {
     "name": "Touchkey 2 Click",
-    "description": "TouchKey 2 click has four capacitive pads powered by Microchip's ATtiny817 which has an integrated touch QTouch® controller.",
+    "description": "TouchKey 2 Click has four capacitive pads powered by Microchip's ATtiny817 which has an integrated touch QTouch® controller.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","ATtiny817"],
+    "hw" : ["Click","ATtiny817"],
     "category" : ["Capacitive"] 
 }

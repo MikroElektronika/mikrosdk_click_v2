@@ -3,7 +3,7 @@
  * @brief Volume2 Click example
  *
  * # Description
- * This example shows how Volume 2 click board can be used
+ * This example shows how Volume 2 Click board can be used
  * for controlling the audio channels. Thanks to this, a
  * simple audio effect is created by switching volume from
  * right to left and vice versa.

@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# LED driver 6 click
+# LED driver 6 Click
 
 LED driver 6 Click is a high brightness LED or LED strip driver, designed to be used in tunable Smart Connected Lighting (SCL) applications. It is based on the AL1781, a single-channel PWM dimmable linear LED driver.
 
@@ -9,7 +9,7 @@ LED driver 6 Click is a high brightness LED or LED strip driver, designed to be 
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-6-click)
+[Click Product page](https://www.mikroe.com/led-driver-6-click)
 
 ---
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

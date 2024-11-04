@@ -3,13 +3,13 @@
  * \brief Charger 5 Click example
  *
  * # Description
- * This example demonstrates the use of the Charger 5 click board.
+ * This example demonstrates the use of the Charger 5 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes peripherals and pins used for the Charger 5 click and prepares
- * the Charger 5 click for properly working.
+ * Initializes peripherals and pins used for the Charger 5 Click and prepares
+ * the Charger 5 Click for properly working.
  *
  * ## Application Task
  * Demonstrates the use of driver functions. It will set charging current to

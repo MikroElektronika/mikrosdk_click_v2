@@ -1,14 +1,14 @@
 
 ---
-# MIC24045 click
+# MIC24045 Click
 
-MIC24045 click carries MIC24045 I2C-programmable, high-efficiency, wide input range, 5A synchronous step-down regulator from Microchip.
+MIC24045 Click carries MIC24045 I2C-programmable, high-efficiency, wide input range, 5A synchronous step-down regulator from Microchip.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mic24045_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mic24045-click)
+[Click Product page](https://www.mikroe.com/mic24045-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of MIC24045 click board.
+> This example demonstrates the use of MIC24045 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

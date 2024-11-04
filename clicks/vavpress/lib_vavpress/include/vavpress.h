@@ -188,7 +188,7 @@ typedef struct
 
 /**
  * @brief VAV Press configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #vavpress_cfg_t object definition for detailed explanation.
@@ -202,7 +202,7 @@ void vavpress_cfg_setup ( vavpress_cfg_t *cfg );
 /**
  * @brief VAV Press initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #vavpress_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -220,7 +220,7 @@ err_t vavpress_init ( vavpress_t *ctx, vavpress_cfg_t *cfg );
 /**
  * @brief VAV Press default configuration function.
  * @details This function executes a default configuration of VAV Press
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #vavpress_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -294,7 +294,7 @@ err_t vavpress_generic_read ( vavpress_t *ctx, uint8_t *rx_buf, uint8_t rx_len )
  * @brief VAV Press set default sensor parameter function.
  * @details This function set default sensor parameter data of the 
  * LMIS025BB3, digital low differential pressure sensors on the 
- * Vav Press click board™.
+ * Vav Press Click board™.
  * @param[in] ctx : Click context object.
  * See #vavpress_t object definition for detailed explanation.
  * @param[in] vavpress_sensor_param_data_t : Pointer to the memory location of the structure where data be stored.
@@ -312,7 +312,7 @@ err_t vavpress_set_default_sensor_param ( vavpress_t *ctx, vavpress_sensor_param
  * @brief VAV Press get data readout function.
  * @details This function get differential pressure and temperature data of the 
  * LMIS025BB3, digital low differential pressure sensors on the 
- * Vav Press click board™.
+ * Vav Press Click board™.
  * @param[in] ctx : Click context object.
  * See #vavpress_t object definition for detailed explanation.
  * @param[out] press_data : Pressure signed 15-bit value.
@@ -331,7 +331,7 @@ err_t vavpress_get_readout_data ( vavpress_t *ctx, int16_t *press_data, int16_t 
  * @brief VAV Press get differential pressure and temperature function.
  * @details This function get differential pressure [ Pa ] and temperature [ degree Celsius ] data of the 
  * LMIS025BB3, digital low differential pressure sensors on the 
- * Vav Press click board™.
+ * Vav Press Click board™.
  * @param[in] ctx : Click context object.
  * See #vavpress_t object definition for detailed explanation.
  * @param[in] param_data : Pointer to the memory location of the structure where data be stored.
@@ -351,7 +351,7 @@ err_t vavpress_get_dif_press_and_temp ( vavpress_t *ctx, vavpress_sensor_param_d
  * @brief VAV Press retrieve electronic signature function.
  * @details This function retrieve the electronic signature data of the 
  * LMIS025BB3, digital low differential pressure sensors on the 
- * Vav Press click board™.
+ * Vav Press Click board™.
  * @param[in] ctx : Click context object.
  * See #vavpress_t object definition for detailed explanation.
  * @param[out] vavpress_el_signature_data_t : Pointer to the memory location of the structure where data be stored.

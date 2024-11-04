@@ -3,6 +3,6 @@
     "description": "Buzz 3 Click is a compact add-on board that contains a sounder driver that produces higher volume with a lower current. This board features the PAM8904, a piezo-sounder driver with an integrated Multi-Mode charge pump boost converter from Diodes Incorporated.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","PAM8904"],
+    "hw" : ["Click","PAM8904"],
     "category" : ["Speakers"]
 }

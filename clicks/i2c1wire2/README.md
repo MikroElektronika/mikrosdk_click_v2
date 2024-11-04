@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# I2C 1-Wire 2  click
+# I2C 1-Wire 2  Click
 
 > I2C 1-Wire 2 Click is a compact add-on board bridging I2C master interfaces with 1-Wire slave devices, ideal for simplifying complex communication protocols. This board features the DS2485, an advanced 1-Wire master with memory from Analog Devices. It features adjustable internal timers for precise 1-Wire signal management, relieving the host processor of timing-sensitive operations, and supports standard and overdrive communication speeds.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2c1wire2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-1-wire-2-click)
+[Click Product page](https://www.mikroe.com/i2c-1-wire-2-click)
 
 ---
 
@@ -176,7 +176,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

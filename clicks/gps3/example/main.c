@@ -3,7 +3,7 @@
  * @brief GPS 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of GPS 3 click by reading and displaying
+ * This example demonstrates the use of GPS 3 Click by reading and displaying
  * the GPS coordinates.
  *
  * The demo application is composed of two sections :

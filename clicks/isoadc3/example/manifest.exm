@@ -3,6 +3,6 @@
     "description": "ISO ADC 3 Click is a compact add-on board that contains a single-channel precision isolation amplifier. This board features the AMC1100, a precision isolation amplifier with an output separated from the input circuitry by a silicon dioxide barrier that is highly resistant to magnetic interference from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AMC1100"],
+    "hw" : ["Click","AMC1100"],
     "category" : ["ADC"]
 }

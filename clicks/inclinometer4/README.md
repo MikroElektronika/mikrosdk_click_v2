@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Inclinometer 4 click
+# Inclinometer 4 Click
 
 > Inclinometer 4 Click is a compact add-on board designed to measure angles of slope or elevation of an object concerning gravity's direction. This board features the FXLS8971CF, a 3-axis low-g MEMS accelerometer from NXP Semiconductor. The FXLS8971CF offers high-performance and low-power modes, with selectable full-scale ranges of ±2/4/8/16g and features such as selectable output data rates, motion detection, and a 144-byte output data buffer.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/inclinometer4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/inclinometer-4-click)
+[Click Product page](https://www.mikroe.com/inclinometer-4-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t inclinometer4_set_mode ( inclinometer4_t *ctx, uint8_t mode );
 
 ## Example Description
 
-> This example demonstrates the use of Inclinometer 4 click board by reading and displaying accel data (X, Y, and Z axis) as well as temperature measurements on the USB UART.
+> This example demonstrates the use of Inclinometer 4 Click board by reading and displaying accel data (X, Y, and Z axis) as well as temperature measurements on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which enables data ready interrupt on INT2 pin and sets full scale range to +/-2G and output data rate to 160ms.
+> Initializes the driver and performs the Click default configuration which enables data ready interrupt on INT2 pin and sets full scale range to +/-2G and output data rate to 160ms.
 
 ```c
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

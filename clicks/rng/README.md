@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# RNG click
+# RNG Click
 
 RNG Click is a random number generator (RNG) is a device that generates a sequence of numbers or symbols that cannot be reasonably predicted better than by a random chance. This Click board™ is true hardware random-number generator (HRNG), which generate genuinely random numbers.
 
@@ -10,7 +10,7 @@ RNG Click is a random number generator (RNG) is a device that generates a sequen
 </p>
 
 
-[click Product page](https://www.mikroe.com/rng-click)
+[Click Product page](https://www.mikroe.com/rng-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click is a random number generator. The device contain potentiometer which control voltage
+> This Click is a random number generator. The device contain potentiometer which control voltage
 > so it generates a sequence of numbers or symbols that cannot be reasonably predicted better 
 > by a random chance. Random number generators have applications in gambling, statistical sampling,
 > computer simulation, cryptography, completely randomized design, and various other areas. 
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

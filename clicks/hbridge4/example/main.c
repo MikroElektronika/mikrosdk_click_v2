@@ -11,7 +11,7 @@
  * Initialization driver enables GPIO and also starts write log.
  * 
  * ## Application Task  
- * This example demonstrates the use of H-Bridge 4 click board by putting A motor
+ * This example demonstrates the use of H-Bridge 4 Click board by putting A motor
  * in standby mode, then spining it in clockwise direction and applying brake function, and then
  * spining it in counter-clockwise direction and applying brake function again.
  * 
@@ -58,7 +58,7 @@ void application_init ( void )
     hbridge4_enable( &hbridge4, 1 );
     Delay_ms ( 100 );
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, " H-Bridge 4 click \r\n" );
+    log_printf( &logger, " H-Bridge 4 Click \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
 

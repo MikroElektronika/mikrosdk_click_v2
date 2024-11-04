@@ -1,6 +1,6 @@
 
 ---
-# Waveform 2 click
+# Waveform 2 Click
 
 > Waveform 2 Click is a compact add-on board that contains a direct digital synthesis device for waveform generator applications. This board features the AD9834, a 75 MHz low power DDS device capable of producing high-performance sine/triangle/square outputs from Analog Devices. It provides the capability for phase and frequency modulation and has an on-board comparator that allows the production of a square wave signal for clock generation.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/waveform2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/waveform-2-click)
+[Click Product page](https://www.mikroe.com/waveform-2-click)
 
 ---
 
@@ -75,7 +75,7 @@ void waveform2_sine_output ( waveform2_t *ctx );
 
 ### Application Init
 
-> Initialize the communication interface, preforming hardware reset, and configure the click board.
+> Initialize the communication interface, preforming hardware reset, and configure the Click board.
 
 ```c
 
@@ -191,7 +191,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

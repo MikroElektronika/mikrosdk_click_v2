@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Current Limit 10 click
+# Current Limit 10 Click
 
 > Current Limit 10 Click is a compact add-on board representing a current-limiting solution for your application. This board features the HS2950P, a load protection HotSwitch from Semtech. It features a wide input voltage range of 2.7V up to 29V and can provide up to 5A output current. The HS2950P features an adjustable current limit, over-voltage protection, automatic output discharge, and soft start. It automatically restarts from all faults except OVP and UVLO.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/currentlimit10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-limit-10-click)
+[Click Product page](https://www.mikroe.com/current-limit-10-click)
 
 ---
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

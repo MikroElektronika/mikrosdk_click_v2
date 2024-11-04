@@ -1,6 +1,6 @@
 
 ---
-# DAQ 3 click
+# DAQ 3 Click
 
 DAQ 3 Click is a compact add-on board representing a precision data acquisition solution. This board features the ADAQ4003, fast and precise μModule precision data acquisition (DAQ) signal chain solution from Analog Devices. Using SIP technology, the ADAQ4003 reduces end system component count by combining multiple standard signal processing and conditioning blocks into a single device. These blocks include a high-resolution 18-bit, 2 MSPS successive approximation register ADC, fully differential ADC driver amplifier, and a stable reference buffer along with selectable gain options. This Click board™ is suitable for process control and machine automation applications, as automatic test equipment, digital control loops, and more.
 
@@ -8,7 +8,7 @@ DAQ 3 Click is a compact add-on board representing a precision data acquisition 
   <img src="https://download.mikroe.com/images/click_for_ide/daq3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/daq-3-click)
+[Click Product page](https://www.mikroe.com/daq-3-click)
 
 ---
 
@@ -115,17 +115,17 @@ void application_init ( void ) {
     Delay_ms ( 100 );
     daq3_get_voltage( &daq3 );
     log_printf( &logger, "---------------------------\r\n" );
-    log_printf( &logger, "         DAQ 3 click       \r\n" );
+    log_printf( &logger, "         DAQ 3 Click       \r\n" );
     log_printf( &logger, "---------------------------\r\n" );
 }
 ```
 
 ### Application Task
 
-This is an example that demonstrates the use of the DAQ 3 click board.
+This is an example that demonstrates the use of the DAQ 3 Click board.
 In this example, we read ADC value, calculate and display the voltage ( mV ) data.
 The maximum output voltage ( Vout ) is 4V and 
-depends on the gain that is set at the click.
+depends on the gain that is set at the Click.
 The formula used to calculate is Vin = Vout / gain. 
 Keep in mind that Vout should not exceed 4V.
 For example, if the gain is set to 2 the maximum Vin is 2V ( 2V = 4V / 2 ). 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

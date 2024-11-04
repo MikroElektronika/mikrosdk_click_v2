@@ -10,7 +10,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules. Default settings
+ * This function initializes and configures the logger and Click modules. Default settings
  * are written to three control/configuration registers in the default_cfg(...) function.
  * 
  * ## Application Task  

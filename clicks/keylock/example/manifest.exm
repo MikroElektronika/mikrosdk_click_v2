@@ -1,8 +1,8 @@
 {
     "name": "Keylock Click",
-    "description": "Keylock click carries a processed sealed key lock mechanism that can be set in three different positions. The click is designed to run on either 3.3V or 5V power supply. ",
+    "description": "Keylock Click carries a processed sealed key lock mechanism that can be set in three different positions. The Click is designed to run on either 3.3V or 5V power supply. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","Keylock switch with 3 positions"],
+    "hw" : ["Click","Keylock switch with 3 positions"],
     "category" : ["Pushbutton/Switches"] 
 }

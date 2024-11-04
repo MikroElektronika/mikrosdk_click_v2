@@ -214,7 +214,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void boostinv_cfg_setup ( boostinv_cfg_t *cfg );
@@ -224,7 +224,7 @@ void boostinv_cfg_setup ( boostinv_cfg_t *cfg );
  * @param boostinv Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BOOSTINV_RETVAL boostinv_init ( boostinv_t *ctx, boostinv_cfg_t *cfg );
 
@@ -233,7 +233,7 @@ BOOSTINV_RETVAL boostinv_init ( boostinv_t *ctx, boostinv_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for BoostInv click.
+ * @description This function executes default configuration for BoostInv Click.
  * 
  * @note
  *    Click default configuration:
@@ -290,7 +290,7 @@ uint8_t boostinv_generic_read ( boostinv_t *ctx, uint8_t reg_addr );
  *
  * @param ctx          Click object.
  *
- * @description This function enable chip device for Boost INV click.
+ * @description This function enable chip device for Boost INV Click.
  */
 void boostinv_enable ( boostinv_t *ctx );
 
@@ -322,6 +322,6 @@ void boostinv_set_negative_voltage ( boostinv_t *ctx, int16_t voltage );
 #endif  // _BOOSTINV_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

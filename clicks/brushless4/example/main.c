@@ -3,7 +3,7 @@
  * @brief Brushless 4 Click example
  * 
  * # Description
- * This click has many features for driving a wide range of small to medium BLDC motors.
+ * This Click has many features for driving a wide range of small to medium BLDC motors.
  * It provides the rotor position digital output, via the FG pin, routed to the mikroBUS INT pin. 
  * 
  * The demo application is composed of two sections :

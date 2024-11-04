@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BATT-MON 4 click
+# BATT-MON 4 Click
 
 > BATT-MON 4 Click is a compact add-on board representing an advanced battery monitoring solution. This board features the LTC3337, a primary battery state of health (SOH) monitor with a built-in precision coulomb counter from Analog Devices. The LTC3337 is designed to be placed in series with a primary battery with minimal associated series voltage drop. The patented infinite dynamic range coulomb counter tallies all accumulated battery discharge and stores it in an internal register accessible via an I2C interface. In addition, this Click board™ also can set the input current limit and has an additional discharge alarm interrupt and SOH monitoring which measures and reports via an I2C interface.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/battmon4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/batt-mon-4-click)
+[Click Product page](https://www.mikroe.com/batt-mon-4-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t battmon4_get_batt_out_voltage ( battmon4_t *ctx, float *v_ipeak_on, float 
 
 ## Example Description
 
-> This example demonstrates the use of BATT-MON 4 click board by reading the battery voltage and the chip internal temperature.
+> This example demonstrates the use of BATT-MON 4 Click board by reading the battery voltage and the chip internal temperature.
 
 **The demo application is composed of two sections :**
 
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

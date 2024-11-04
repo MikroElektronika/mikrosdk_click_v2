@@ -1,15 +1,15 @@
 
 ---
-# Step Down 2 click
+# Step Down 2 Click
 
-The Step Down 2 click is a Click board™ equipped with the L6986HTR, a synchronous step-down switching regulator with operating input voltages from 4V to 38V and output voltage adjustability ranges from 0.85 V to VIN. Because of the main possibilities its features offer, the Step Down 2 click is ideally used for programmable logic controllers (PLCs), decentralized intelligent nodes, sensors, and low noise applications (LNM).
+The Step Down 2 Click is a Click board™ equipped with the L6986HTR, a synchronous step-down switching regulator with operating input voltages from 4V to 38V and output voltage adjustability ranges from 0.85 V to VIN. Because of the main possibilities its features offer, the Step Down 2 Click is ideally used for programmable logic controllers (PLCs), decentralized intelligent nodes, sensors, and low noise applications (LNM).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/stepdown2_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/step-down-2-click)
+[Click Product page](https://www.mikroe.com/step-down-2-click)
 
 ---
 
@@ -54,14 +54,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to initialize and use the Step Down 2 click. The click is a 
+> This example showcases how to initialize and use the Step Down 2 Click. The Click is a 
   step-down monolithic switching regulator able to deliver up to 2 A (DC). 
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the logger and click modules. 
+> This function initializes and configures the logger and Click modules. 
 
 ```c
 
@@ -129,7 +129,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

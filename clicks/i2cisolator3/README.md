@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# I2C Isolator 3 click
+# I2C Isolator 3 Click
 
 > I2C Isolator 3 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the CPC5902, a dual optically isolated bidirectional logic-bus repeater from IXYS Integrated Circuits Division. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-isolator-3-click)
+[Click Product page](https://www.mikroe.com/i2c-isolator-3-click)
 
 ---
 
@@ -48,31 +48,31 @@ err_t i2cisolator3_init ( i2cisolator3_t *ctx, i2cisolator3_cfg_t *cfg );
 
 #### Example key functions :
 
-- `i2cisolator3_send_cmd` The function sends the desired command to a remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+- `i2cisolator3_send_cmd` The function sends the desired command to a remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
 ```c
 void i2cisolator3_send_cmd ( i2cisolator3_t *ctx, uint8_t command );
 ```
 
-- `i2cisolator3_write_byte` The function writes the byte of data to the targeted 8-bit register address of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+- `i2cisolator3_write_byte` The function writes the byte of data to the targeted 8-bit register address of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
 ```c
 void i2cisolator3_write_byte ( i2cisolator3_t *ctx, uint8_t reg, uint8_t tx_data );
 ```
 
-- `i2cisolator3_read_byte` The function read a the byte of data from the targeted 8-bit register address of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 click board.
+- `i2cisolator3_read_byte` The function read a the byte of data from the targeted 8-bit register address of the remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
 ```c
 uint8_t i2cisolator3_read_byte ( i2cisolator3_t *ctx, uint8_t reg );
 ```
 
 ## Example Description
 
->  This is an example that demonstrates the use of the I2C Isolator 3 click board. In this example, we measure temperature
-from the Thermo 20 click connected to the I2C Isolator 3 click board. 
+>  This is an example that demonstrates the use of the I2C Isolator 3 Click board. In this example, we measure temperature
+from the Thermo 20 Click connected to the I2C Isolator 3 Click board. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
->  Initializes I2C and start to write log. Initialization driver enables - I2C, set I2C slave address of the Thermo 20 click, performs software reset, also write log.
+>  Initializes I2C and start to write log. Initialization driver enables - I2C, set I2C slave address of the Thermo 20 Click, performs software reset, also write log.
 
 ```c
 
@@ -106,7 +106,7 @@ void application_init ( void ) {
     }
     log_printf( &logger, "  Driver Init. Done  \r\n" );
     log_printf( &logger, "  Set I2C Slave Address   \r\n" );
-    log_printf( &logger, "  of the Thermo 20 click   \r\n" );
+    log_printf( &logger, "  of the Thermo 20 Click   \r\n" );
     Delay_ms ( 100 );
     
     log_printf( &logger, "--------------------------\r\n" );
@@ -126,7 +126,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> In this example via Thermo 20 click we get the data processed by the function. When the function processes the data, we get
+> In this example via Thermo 20 Click we get the data processed by the function. When the function processes the data, we get
 the temperature information. All data logs write on USB UART changes every 3 sec.
 
 ```c
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

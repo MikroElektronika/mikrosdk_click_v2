@@ -11,7 +11,7 @@
  * Initalizes device.
  * 
  * ## Application Task  
- * This is an example that shows the most important functions that Thermo 5 click has.
+ * This is an example that shows the most important functions that Thermo 5 Click has.
  *
  * \author MikroE Team
  *
@@ -53,7 +53,7 @@ void application_init ( void )
     THERMO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thermo5_init( &thermo5, &cfg );
     Delay_ms ( 500 );
-    log_printf( &logger, " Thermo 5 click ready! \r\n" );
+    log_printf( &logger, " Thermo 5 Click ready! \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms ( 100 );
 }

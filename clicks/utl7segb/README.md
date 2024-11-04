@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# UT-L 7-SEG B click
+# UT-L 7-SEG B Click
 
 > UT-L 7-SEG B Click is a compact add-on board that presents an easy solution for adding a numeric or hexadecimal display to your application. This board features two blue JSS-5611BUB-21s, ultra-thin single-digit numeric displays from Ningbo Junsheng Electronics. The displays are medium (0.56 inches in height) and can display letters, numbers, and symbols in a highly readable form. The host MCU can control the light intensity of the red segments of the display.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/utl7segb_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ut-l-7-seg-b-click)
+[Click Product page](https://www.mikroe.com/ut-l-7-seg-b-click)
 
 ---
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

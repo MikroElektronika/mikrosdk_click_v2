@@ -3,6 +3,6 @@
     "description": "Tilt 3 Click is a compact add-on board used for measuring the tilt in multiple axes in relation to an absolute level plane. This board features the DSBA1P, a tilt sensor switch that breaks the circuit when tilted to an angle from ±30° to ±60° from NKK Switches.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DSBA1P"],
+    "hw" : ["Click","DSBA1P"],
     "category" : ["Motion"]
 }

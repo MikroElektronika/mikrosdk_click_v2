@@ -3,14 +3,14 @@
  * @brief ADAC 2 Click example
  *
  * # Description
- * This example demonstrates the use of ADAC 2 click board by setting the DAC output (CIO)
+ * This example demonstrates the use of ADAC 2 Click board by setting the DAC output (CIO)
  * and reading the ADC results from a single-ended channel (AI4) and from a differential
  * channel (AI5+, AI6-) as well as toggling all GPIO pins.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which enables
+ * Initializes the driver and performs the Click default configuration which enables
  * DAC voltage output, sets the analog input mode to single-ended for AI4 and 
  * differential (AI5+, AI6-), and enables all GPIOs as output.
  *

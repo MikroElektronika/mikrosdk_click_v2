@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 24 click
+# Accel 24 Click
 
 > Accel 24 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC6655XA, a 12-bit three-axis accelerometer from MEMSIC. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, or ±8g in three axes with a compatible I2C serial interface with 400KHz fast mode operation. Alongside low offset and temperature signal with high accuracy, the MXC6655XA also detects six orientation positions, X/Y shake, and shake directions with an appropriate interrupt signal for these states.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel24_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-24-click)
+[Click Product page](https://www.mikroe.com/accel-24-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t accel24_set_full_scale_range ( accel24_t *ctx, uint8_t fsr );
 
 ## Example Description
 
-> This example demonstrates the use of Accel 24 click board by reading and displaying accel data (X, Y, and Z axis) as well as temperature measurements on the USB UART.
+> This example demonstrates the use of Accel 24 Click board by reading and displaying accel data (X, Y, and Z axis) as well as temperature measurements on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

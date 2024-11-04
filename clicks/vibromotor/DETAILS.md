@@ -1,14 +1,14 @@
 
 ---
-# Vibro Motor click
+# Vibro Motor Click
 
-Vibro Motor click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as C1026B002F. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. This motor contains a small eccentric weight on its rotor, so while rotating it also produces vibration effect. This kind of motors is sometimes referred to as coin motors, due to its shape.
+Vibro Motor Click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as C1026B002F. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. This motor contains a small eccentric weight on its rotor, so while rotating it also produces vibration effect. This kind of motors is sometimes referred to as coin motors, due to its shape.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/vibromotor_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vibro-motor-click)
+[Click Product page](https://www.mikroe.com/vibro-motor-click)
 
 ---
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

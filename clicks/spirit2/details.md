@@ -1,6 +1,6 @@
 
 ---
-# SPIRIT 2 click
+# SPIRIT 2 Click
 
 SPIRIT 2 Click features the SP1ML-915, an ultra-low power, fully integrated RF module, which operates at 915 MHz ISM band. This Click board™ can be used to add wireless connectivity to any application, requiring no extensive RF communication experience. The module integrates all the required components, including the 32-bit STM32L1 MCU, a compact chip antenna, and accompanying circuitry. The SP1ML-915 module supports several types of modulation schemes, including 2-FSK, GFSK, GMSK, OOK, and ASK, allowing it to fulfill different RF transmission requirements.
 
@@ -8,7 +8,7 @@ SPIRIT 2 Click features the SP1ML-915, an ultra-low power, fully integrated RF m
   <img src="https://download.mikroe.com/images/click_for_ide/spirit2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spirit-2-click)
+[Click Product page](https://www.mikroe.com/spirit-2-click)
 
 ---
 
@@ -47,17 +47,17 @@ err_t spirit2_init ( spirit2_t *ctx, spirit2_cfg_t *cfg );
 
 #### Example key functions :
 
-- `spirit2_power_module` Function for power mode of SPIRIT 2 click.
+- `spirit2_power_module` Function for power mode of SPIRIT 2 Click.
 ```c
 void spirit2_power_module ( spirit2_t *ctx, uint8_t power_state );
 ```
 
-- `spirit2_reset` Function for reseting SPIRIT 2 click.
+- `spirit2_reset` Function for reseting SPIRIT 2 Click.
 ```c
 void spirit2_reset ( spirit2_t *ctx );
 ```
 
-- `spirit2_set_mode` Function for setting mode of SPIRIT 2 click.
+- `spirit2_set_mode` Function for setting mode of SPIRIT 2 Click.
 ```c
 void spirit2_set_mode ( spirit2_t *ctx, uint8_t mode );
 ```
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

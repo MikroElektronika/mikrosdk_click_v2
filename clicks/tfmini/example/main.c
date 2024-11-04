@@ -3,13 +3,13 @@
  * @brief TFmini Click Example.
  *
  * # Description
- * This example demonstrates the use of TFmini click board by reading the measurements
+ * This example demonstrates the use of TFmini Click board by reading the measurements
  * from the attached TFmini-S or TFmini Plus sensors.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and the click board, and reads the firmware version of the attached sensor.
+ * Initializes the driver and the Click board, and reads the firmware version of the attached sensor.
  *
  * ## Application Task
  * Reads the target distance, signal strength and the internal sensor temperature every 100ms approximately,

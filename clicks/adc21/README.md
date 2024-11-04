@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ADC 21 click
+# ADC 21 Click
 
 > ADC 21 Click is a compact add-on board that converts an analog voltage into a digital representation. This board features the ADC1283, a low-power, eight-channel pure CMOS 12-bit analog-to-digital converter from STMicroelectronics. The ADC1283 is specified for conversion from 50ksps to 200ksps. Its architecture is based on a successive approximation register with an internal track-and-hold cell. It features eight single-ended multiplexed inputs, where the output serial data is straight binary and SPI-compatible.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adc21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-21-click)
+[Click Product page](https://www.mikroe.com/adc-21-click)
 
 ---
 
@@ -60,7 +60,7 @@ err_t adc21_read_voltage ( adc21_t *ctx, uint8_t channel, float avcc, float *vol
 
 ## Example Description
 
-> This example demonstrates the use of ADC 21 click board by reading and displaying the voltage levels from 8 analog input channels.
+> This example demonstrates the use of ADC 21 Click board by reading and displaying the voltage levels from 8 analog input channels.
 
 **The demo application is composed of two sections :**
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# Brushless 25 click
+# Brushless 25 Click
 
 > Brushless 25 Click is a compact add-on board that controls brushless DC (three-phase BLDC) motors with any MCU. This board features the MCT8316A, a high-speed sensorless trapezoidal control integrated FET BLDC driver from Texas Instruments. It provides three individually controllable drivers intended to drive a three-phase BLDC motor, solenoids, or other loads.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless25_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-25-click)
+[Click Product page](https://www.mikroe.com/brushless-25-click)
 
 ---
 
@@ -231,7 +231,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

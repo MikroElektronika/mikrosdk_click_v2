@@ -4,14 +4,14 @@
  *
  * # Description
  * This app demonstrates the configuration and control
- * of the LED Driver 9 click board resulting in a nice
+ * of the LED Driver 9 Click board resulting in a nice
  * breathing effect.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * The initialization configures the UART LOG and I2C
- * drivers and adjusts the Led Driver 9 click general
+ * drivers and adjusts the Led Driver 9 Click general
  * register settings.
  *
  * ## Application Task

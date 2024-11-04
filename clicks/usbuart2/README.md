@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# USB UART 2 click
+# USB UART 2 Click
 
-USB UART 2 click provides USB isolation and carries the ADUM4160BRWZ USB port isolator. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over UART interface, with additional functionality provided the following pins on the mikroBUS™ line: RST, CS, PWM, INT.
+USB UART 2 Click provides USB isolation and carries the ADUM4160BRWZ USB port isolator. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over UART interface, with additional functionality provided the following pins on the mikroBUS™ line: RST, CS, PWM, INT.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/usbuart2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/usb-uart-2-click)
+[Click Product page](https://www.mikroe.com/usb-uart-2-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t usbuart2_init ( usbuart2_t *ctx, usbuart2_cfg_t *cfg );
 
 #### Example key functions :
 
-- `usbuart2_pwr_ctrl` This function sets the click turns click on.
+- `usbuart2_pwr_ctrl` This function sets the Click turns Click on.
 ```c
 void usbuart2_pwr_ctrl ( usbuart2_t *ctx, uint8_t state );
 ```
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

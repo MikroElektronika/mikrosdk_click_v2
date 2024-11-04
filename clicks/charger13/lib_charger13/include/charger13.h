@@ -128,7 +128,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void charger13_cfg_setup ( charger13_cfg_t *cfg );
@@ -138,7 +138,7 @@ void charger13_cfg_setup ( charger13_cfg_t *cfg );
  * @param charger13 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CHARGER13_RETVAL charger13_init ( charger13_t *ctx, charger13_cfg_t *cfg );
 
@@ -149,7 +149,7 @@ CHARGER13_RETVAL charger13_init ( charger13_t *ctx, charger13_cfg_t *cfg );
  *
  * @description This function enable battery charging
  * by cleared to LOW state of the EN ( PWM ) pin
- * of the Charger 13 click board.
+ * of the Charger 13 Click board.
  */
 void charger13_enable ( charger13_t *ctx );
 
@@ -160,7 +160,7 @@ void charger13_enable ( charger13_t *ctx );
  *
  * @description This function disable battery charging
  * by sets to HIGH state of the EN ( PWM ) pin
- * of the Charger 13 click board.
+ * of the Charger 13 Click board.
  */
 void charger13_disable ( charger13_t *ctx );
 
@@ -170,7 +170,7 @@ void charger13_disable ( charger13_t *ctx );
  * @param ctx  Click object.
  *
  * @description This function check if the battery is charging
- * of the Charger 13 click board.
+ * of the Charger 13 Click board.
  */
 uint8_t charger13_check ( charger13_t *ctx );
 
@@ -180,6 +180,6 @@ uint8_t charger13_check ( charger13_t *ctx );
 #endif  // _CHARGER13_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

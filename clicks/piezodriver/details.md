@@ -1,6 +1,6 @@
 
 ---
-# Piezo Driver click
+# Piezo Driver Click
 
 > Piezo Driver Click is a compact add-on board that allows you easy system configuration for driving a two-terminal or three-terminal piezo sounder with few external components. This board features the PAM8906, a piezo sounder driver with self-excitation mode from Diodes Incorporated. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/piezodriver_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/piezo-driver-click)
+[Click Product page](https://www.mikroe.com/piezo-driver-click)
 
 ---
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

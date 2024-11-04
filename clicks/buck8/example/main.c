@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configures the driver and enables the click board.
+ * Configures the driver and enables the Click board.
  * 
  * ## Application Task  
  * Reads the VOUT state and parses it on USB UART.

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Opto Encoder 4 click
+# Opto Encoder 4 Click
 
 > Opto Encoder 4 Click is a compact add-on board that contains an optical sensor/encoder that can be used for movement or rotation encoding. This board features the EE-SX4330, a transmissive photo-microsensor from OMRON. It is intended to be used with an encoder disk or similar device that will act as a barrier between the emitter and detector of the sensor. Usually, it will be the disk with perforations, which is commonly used to detect the rotation speed.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/optoencoder4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/opto-encoder-4-click)
+[Click Product page](https://www.mikroe.com/opto-encoder-4-click)
 
 ---
 
@@ -60,7 +60,7 @@ uint8_t optoencoder4_get_our_pin ( optoencoder4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Opto Encoder 4 click board by processing
+> This example demonstrates the use of Opto Encoder 4 Click board by processing
 the encoder output pin state and incrementing the step counter on falling edge.
 
 **The demo application is composed of two sections :**
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

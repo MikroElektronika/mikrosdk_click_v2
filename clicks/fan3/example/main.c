@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the click device.
+ * Initializes the Click device.
  * 
  * ## Application Task  
  * Cycles through different fan speeds, including 0 - stopped.

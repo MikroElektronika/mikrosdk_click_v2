@@ -141,7 +141,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermo16_cfg_setup ( thermo16_cfg_t *cfg );
@@ -152,7 +152,7 @@ void thermo16_cfg_setup ( thermo16_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMO16_RETVAL thermo16_init ( thermo16_t *ctx, thermo16_cfg_t *cfg );
 
@@ -184,6 +184,6 @@ float thermo16_get_temperature ( thermo16_t *ctx, uint8_t temp_format );
 #endif  // _THERMO16_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

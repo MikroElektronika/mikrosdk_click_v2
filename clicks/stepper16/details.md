@@ -1,6 +1,6 @@
 
 ---
-# Stepper 16 click
+# Stepper 16 Click
 
 Stepper 16 Click is a compact add-on board that contains a micro-stepping stepper motor driver. This board features the NCV70517, an SPI and I/O configurable motor driver for bipolar stepper motors from ON Semiconductor.
 
@@ -8,7 +8,7 @@ Stepper 16 Click is a compact add-on board that contains a micro-stepping steppe
   <img src="https://download.mikroe.com/images/click_for_ide/stepper_16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-16-click)
+[Click Product page](https://www.mikroe.com/stepper-16-click)
 
 ---
 
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

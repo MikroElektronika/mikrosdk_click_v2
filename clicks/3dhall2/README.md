@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# 3D Hall 2 click
+# 3D Hall 2 Click
 
-3D Hall 2 click is a very accurate magnetic field sensing Click board™, used to sense the magnetic field strength in three perpendicular axes. It relies on a TLV493D-A1B6, a low power 3D magnetic sensor from Infineon. 
+3D Hall 2 Click is a very accurate magnetic field sensing Click board™, used to sense the magnetic field strength in three perpendicular axes. It relies on a TLV493D-A1B6, a low power 3D magnetic sensor from Infineon. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/3d-hall-2-click)
+[Click Product page](https://www.mikroe.com/3d-hall-2-click)
 
 ---
 
@@ -76,7 +76,7 @@ err_t c3dhall2_configuration ( c3dhall2_t *ctx, uint8_t settings1, uint8_t setti
 
 ### Application Init 
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

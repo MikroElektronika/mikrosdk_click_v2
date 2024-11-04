@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "TouchKey 3 click",
+    "display_name": "TouchKey 3 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.touchkey3",
     "product_link": "https://www.mikroe.com/touchkey-3-click",
-    "short_description": "There are many kinds of touch sensors on the market, but every one of them has some unique features that make it stand out from the crowd. TouchKey 3 click is equipped with seven advanced capacitive sensors, based on the proprietary QTouch® technology. Besides quite a large number of QTouch® capacitive sensor channels, TouchKey 3 click also offers some additional features, such as the Adjacent Key Suppression (AKS®), a technology that ensures correct button press, even when the touch sensing pads are placed close to each other.",
+    "short_description": "There are many kinds of touch sensors on the market, but every one of them has some unique features that make it stand out from the crowd. TouchKey 3 Click is equipped with seven advanced capacitive sensors, based on the proprietary QTouch® technology. Besides quite a large number of QTouch® capacitive sensor channels, TouchKey 3 Click also offers some additional features, such as the Adjacent Key Suppression (AKS®), a technology that ensures correct button press, even when the touch sensing pads are placed close to each other.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2270
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.TouchKey3",
     "subdir_name": "lib_touchkey3"
 }
+
 
 
 

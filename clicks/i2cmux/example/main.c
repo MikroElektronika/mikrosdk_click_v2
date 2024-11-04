@@ -12,7 +12,7 @@
  * makes an initial log.
  * 
  * ## Application Task  
- * Reads the device ID of a Spectrometer click (dev ID: 0x24) and displays it 
+ * Reads the device ID of a Spectrometer Click (dev ID: 0x24) and displays it 
  * on the USB UART each second.
  * 
  * \author MikroE Team
@@ -59,7 +59,7 @@ void application_init ( void )
     Delay_ms ( 100 );
     
     i2cmux_set_channel( &i2cmux, I2CMUX_CMD_SET_CH_0, 0x39 );
-    log_printf( &logger, " Please connect a Spectrometer click to channel 0\r\n" );
+    log_printf( &logger, " Please connect a Spectrometer Click to channel 0\r\n" );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -70,7 +70,7 @@ void application_task ( void )
     uint8_t rx_data;
     
     i2cmux_generic_read( &i2cmux, 0x92, &rx_data, 1 );
-    log_printf( &logger, " The click device ID is:  0x%.2X\r\n", ( uint16_t ) rx_data );
+    log_printf( &logger, " The Click device ID is:  0x%.2X\r\n", ( uint16_t ) rx_data );
     log_printf( &logger, "-------------------------------\r\n" );
     Delay_ms ( 1000 );
 }

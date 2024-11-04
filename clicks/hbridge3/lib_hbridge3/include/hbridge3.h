@@ -191,7 +191,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void hbridge3_cfg_setup ( hbridge3_cfg_t *cfg );
@@ -202,7 +202,7 @@ void hbridge3_cfg_setup ( hbridge3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HBRIDGE3_RETVAL hbridge3_init ( hbridge3_t *ctx, hbridge3_cfg_t *cfg );
 
@@ -211,7 +211,7 @@ HBRIDGE3_RETVAL hbridge3_init ( hbridge3_t *ctx, hbridge3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for HBridge3 click.
+ * @description This function executes default configuration for HBridge3 Click.
  */
 void hbridge3_default_cfg ( hbridge3_t *ctx, float duty_cycle );
 
@@ -293,6 +293,6 @@ uint8_t hbridge3_spi ( hbridge3_t *ctx, uint8_t spi_command );
 #endif  // _HBRIDGE3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,7 +1,7 @@
 
 
 ---
-# Accel 8 click
+# Accel 8 Click
 
 Accel 8 Click is an advanced 6-axis motion tracking Click board™, which utilizes the MPU6050, a very popular motion sensor IC, equipped with a 3-axis gyroscope and 3-axis accelerometer. 
 
@@ -9,7 +9,7 @@ Accel 8 Click is an advanced 6-axis motion tracking Click board™, which utiliz
   <img src="https://download.mikroe.com/images/click_for_ide/accel8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-8-click)
+[Click Product page](https://www.mikroe.com/accel-8-click)
 
 ---
 
@@ -135,7 +135,7 @@ void application_task ( void )
     
     // LOGS DATA
 
-    log_printf( &logger, "________________ Accel 8 click _________________\r\n" );
+    log_printf( &logger, "________________ Accel 8 Click _________________\r\n" );
     log_printf( &logger, "|  Data   | X axis | Y axis | Z axis |  Range  |\r\n" );
     log_printf( &logger, "|_________|________|________|________|_________|\r\n" );
     log_printf( &logger, "|  Accel  | %d  | %d  | %d  | %dg |\r\n", x_accel_axis, y_accel_axis, z_accel_axis, accel_range );
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

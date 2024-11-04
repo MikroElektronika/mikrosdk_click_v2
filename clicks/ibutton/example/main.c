@@ -3,7 +3,7 @@
  * @brief iButton Click Example.
  *
  * # Description
- * This example demonstrates the use of the iButton click boards by registering a DS1990A Serial Number iButton
+ * This example demonstrates the use of the iButton Click boards by registering a DS1990A Serial Number iButton
  * key and then waiting until a key is detected on the reader and identifying if the key matches one of
  * those stored in RAM.
  *
@@ -191,7 +191,7 @@ static void ibutton_register_keys ( ibutton_t *ctx, uint8_t num_keys )
     {
         ibutton_led_indication ( &ibutton, IBUTTON_LED_DISABLE );
         log_printf( &logger, " >>> Registering key %u of %u <<<\r\n", ( uint16_t ) key_cnt, ( uint16_t ) num_keys );
-        log_printf( &logger, " Insert a DS1990A Serial Number iButton to click board reader plate\r\n" );
+        log_printf( &logger, " Insert a DS1990A Serial Number iButton to Click board reader plate\r\n" );
         do
         {
             ibutton_led_indication ( &ibutton, IBUTTON_LED_WAIT_KEY );

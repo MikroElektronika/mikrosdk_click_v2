@@ -3,15 +3,15 @@
  * \brief DIGIPOT6 Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the DIGI POT 6 click module. The
- * click is a digital potentiometer. The potentiometer has a programmable wiper which controls 
+ * This example showcases how to initialize, configure and use the DIGI POT 6 Click module. The
+ * Click is a digital potentiometer. The potentiometer has a programmable wiper which controls 
  * the resistance between P0W-POA and POW-POB. An external power supply is required for this example.  
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules. This function also sets
- * the click default configuration.
+ * This function initializes and configures the logger and Click modules. This function also sets
+ * the Click default configuration.
  * 
  * ## Application Task  
  * This function programs the wiper position and shows the current wiper position in the UART

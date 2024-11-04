@@ -217,7 +217,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void brushless3_cfg_setup ( brushless3_cfg_t *cfg );
@@ -228,7 +228,7 @@ void brushless3_cfg_setup ( brushless3_cfg_t *cfg );
  * @param brushless3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t brushless3_init ( brushless3_t *ctx, brushless3_cfg_t *cfg );
 
@@ -240,7 +240,7 @@ err_t brushless3_init ( brushless3_t *ctx, brushless3_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @description This function executes default configuration for Brushless3 click.
+ * @description This function executes default configuration for Brushless3 Click.
  */
 err_t brushless3_default_cfg ( brushless3_t *ctx );
 
@@ -282,7 +282,7 @@ err_t brushless3_read_data ( brushless3_t *ctx, uint8_t reg_addr, uint8_t *read_
  * See #err_t definition for detailed explanation.
  * @description Function set default parameter by write the default data to the
  * a few target 8-bit register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_set_default_param ( brushless3_t *ctx );
 
@@ -296,7 +296,7 @@ err_t brushless3_set_default_param ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function set PWM mode by set bit1 to the
  * target SysOpt9 register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_set_pwm_mode ( brushless3_t *ctx );
 
@@ -310,7 +310,7 @@ err_t brushless3_set_pwm_mode ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function set Analog mode by clear bit1 to the
  * target SysOpt9 register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_set_an_mode ( brushless3_t *ctx );
 
@@ -324,7 +324,7 @@ err_t brushless3_set_an_mode ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function set Analog mode by set bit7 to the
  * target EECtrl register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_dis_sleep_mode ( brushless3_t *ctx );
 
@@ -338,7 +338,7 @@ err_t brushless3_dis_sleep_mode ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function enable the writing to the configuration registers by set bit6 to the
  * target EECtrl register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_en_config ( brushless3_t *ctx );
 
@@ -352,7 +352,7 @@ err_t brushless3_en_config ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function enable the writing to the configuration registers by clear bit6 to the
  * target EECtrl register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_dis_config ( brushless3_t *ctx );
 
@@ -366,7 +366,7 @@ err_t brushless3_dis_config ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function copy EEPROM data to register by set bit5 to the
  * target EECtrl register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_copy_eeprom ( brushless3_t *ctx );
 
@@ -380,7 +380,7 @@ err_t brushless3_copy_eeprom ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function enable the writing to the EEPROM registers by set bit4 to the
  * target EECtrl register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_en_write_eeprom ( brushless3_t *ctx );
 
@@ -394,7 +394,7 @@ err_t brushless3_en_write_eeprom ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function disable the writing to the EEPROM registers by clear bit4 to the
  * target EECtrl register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_dis_write_eeprom ( brushless3_t *ctx );
 
@@ -409,7 +409,7 @@ err_t brushless3_dis_write_eeprom ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function check indicate device temperature is over its limits by check bit7 
  * from the target Status register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_check_over_temp ( brushless3_t *ctx, uint8_t *over_temp );
 
@@ -425,7 +425,7 @@ err_t brushless3_check_over_temp ( brushless3_t *ctx, uint8_t *over_temp );
  * See #err_t definition for detailed explanation.
  * @description Function check indicate device went into sleep or standby mode by check bit6 
  * from the target Status register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_check_sleep_mode ( brushless3_t *ctx, uint8_t *sleep_mode );
 
@@ -441,7 +441,7 @@ err_t brushless3_check_sleep_mode ( brushless3_t *ctx, uint8_t *sleep_mode );
  * See #err_t definition for detailed explanation.
  * @description Function check indicate that the motor is locked by check bit4 from the
  * target Status register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_check_motor_lock ( brushless3_t *ctx, uint8_t *motor_lock );
 
@@ -457,7 +457,7 @@ err_t brushless3_check_motor_lock ( brushless3_t *ctx, uint8_t *motor_lock );
  * See #err_t definition for detailed explanation.
  * @description Function get the supply voltage by read the value from the
  * target Supply Voltage register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_get_supply_voltage ( brushless3_t *ctx, float *voltage );
 
@@ -473,7 +473,7 @@ err_t brushless3_get_supply_voltage ( brushless3_t *ctx, float *voltage );
  * See #err_t definition for detailed explanation.
  * @description Function get the speed command ( % ) based on analog or PWM or I2C 
  *              by read the value from the target Speed CMD register address of DRV10983 
- *              sensorless BLDC motor driver on Brushless 3 click board.
+ *              sensorless BLDC motor driver on Brushless 3 Click board.
  */
 err_t brushless3_get_speed_cmd ( brushless3_t *ctx, float *speed_cmd );
 
@@ -498,7 +498,7 @@ err_t brushless3_get_speed_cmd ( brushless3_t *ctx, float *speed_cmd );
  * See #err_t definition for detailed explanation.
  * @description Function check fault code by read 8-bit value from the
  * target Fault Code register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_check_fault_code ( brushless3_t *ctx, uint8_t *fault_code );
 
@@ -514,7 +514,7 @@ err_t brushless3_check_fault_code ( brushless3_t *ctx, uint8_t *fault_code );
  * See #err_t definition for detailed explanation.
  * @description Function get speed by read value from the
  * two target Motor Speed 1 and 2 register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_get_speed ( brushless3_t *ctx, float *speed );
 
@@ -529,7 +529,7 @@ err_t brushless3_get_speed ( brushless3_t *ctx, float *speed );
  * See #err_t definition for detailed explanation.
  * @description Function set speed by write the desired value to the
  * two target Speed Ctrl 1 and 2 register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_set_speed ( brushless3_t *ctx, uint16_t motor_speed_hz );
 
@@ -544,7 +544,7 @@ err_t brushless3_set_speed ( brushless3_t *ctx, uint16_t motor_speed_hz );
  * See #err_t definition for detailed explanation.
  * @description Function set speed by write the desired value to the
  * two target Speed Ctrl 1 and 2 register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_set_speed_pwm ( brushless3_t *ctx, uint16_t motor_speed_hz );
 
@@ -560,7 +560,7 @@ err_t brushless3_set_speed_pwm ( brushless3_t *ctx, uint16_t motor_speed_hz );
  * See #err_t definition for detailed explanation.
  * @description Function get motor period by read value from the
  * two target Motor Period 1 and 2 register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_get_period ( brushless3_t *ctx, float *period );
 
@@ -574,7 +574,7 @@ err_t brushless3_get_period ( brushless3_t *ctx, float *period );
  * See #err_t definition for detailed explanation.
  * @description Function set prog key by write value of 0xB6 from the
  * target Dev CTRL register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_en_prog_eeprom ( brushless3_t *ctx );
 
@@ -590,7 +590,7 @@ err_t brushless3_en_prog_eeprom ( brushless3_t *ctx );
  * See #err_t definition for detailed explanation.
  * @description Function get measured velocity constant by read value from the
  * two target Motor KT 1 and 2 register address of DRV10983 sensorless BLDC motor driver
- * on Brushless 3 click board.
+ * on Brushless 3 Click board.
  */
 err_t brushless3_get_vel_const ( brushless3_t *ctx, float *velocity );
 
@@ -669,6 +669,6 @@ err_t brushless3_pwm_start ( brushless3_t *ctx );
 #endif  // _BRUSHLESS3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

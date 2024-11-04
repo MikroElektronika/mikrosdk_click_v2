@@ -1,14 +1,14 @@
 
 ---
-# Flash 4 click
+# Flash 4 Click
 
-Flash 4 click is a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Flash 4 click can also be used for the code shadowing, execute-in-place (XIP), and data storage.
+Flash 4 Click is a perfect solution for the mass storage option in various embedded applications. With fast performance being one of its key features, Flash 4 Click can also be used for the code shadowing, execute-in-place (XIP), and data storage.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/flash4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-4-click)
+[Click Product page](https://www.mikroe.com/flash-4-click)
 
 ---
 
@@ -64,7 +64,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and enables the click board, then checks the communication by reading the device and manufacturer IDs.
+> Initializes the driver and enables the Click board, then checks the communication by reading the device and manufacturer IDs.
 
 ```c
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -188,7 +188,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void charger12_cfg_setup ( charger12_cfg_t *cfg );
@@ -199,7 +199,7 @@ void charger12_cfg_setup ( charger12_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CHARGER12_RETVAL charger12_init ( charger12_t *ctx, charger12_cfg_t *cfg );
 
@@ -294,6 +294,6 @@ void charger12_generic_transfer ( charger12_t *ctx, uint8_t *data_in, uint8_t *d
 #endif  // _CHARGER12_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

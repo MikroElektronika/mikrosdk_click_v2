@@ -12,7 +12,7 @@
  * INT pins as output and start to write log.
  *
  * ## Application Task
- * Demonstrates use of the H-Bridge Driver click board by turning connected MOSFETs 
+ * Demonstrates use of the H-Bridge Driver Click board by turning connected MOSFETs 
  * gates high or low in order to drive the motor forward, in reverse, brake or coast.
  *
  * @author Stefan Ilic

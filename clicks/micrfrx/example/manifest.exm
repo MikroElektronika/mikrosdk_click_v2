@@ -3,6 +3,6 @@
     "description": "MICRF RX Click is a compact add-on board for high-sensitivity applications, including remote keyless entry, tire pressure monitoring systems, and remote actuation systems. This board features the MICRF220, an ASK/OOK 315MHz receiver with RSSI and squelch capabilities from Microchip to offer top-notch RF performance. This super-heterodyne, image-reject RF receiver provides a -110dBm sensitivity at 1kbps and a 0.1% Bit Error Rate (BER), supporting adjustable demodulator filter bandwidths for bit rates up to 14.4kbps.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MICRF220"],
+    "hw" : ["Click","MICRF220"],
     "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
 }

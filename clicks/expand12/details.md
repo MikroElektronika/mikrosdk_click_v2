@@ -1,6 +1,6 @@
 
 ---
-# Expand 12 click
+# Expand 12 Click
 
 > Expand 12 Click is a compact add-on board that contains a multi-port I/O expander. This board features the MAX7300, a general-purpose I/O expander providing remote I/O expansion for most MCU’s families from Maxim Integrated, now part of Analog Devices. The MAX7300 comes in a 28-port configuration and allows easy addition of I/O through a standard I2C serial interface. Each port is user-configurable to either a logic input or logic output, capable of sinking 10mA and sourcing 4.5mA.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-12-click)
+[Click Product page](https://www.mikroe.com/expand-12-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t expand12_read_all_pins_value ( expand12_t *ctx, uint32_t *pins_value );
 
 ## Example Description
 
-> This example demonstrates the use of Expand 12 click board.
+> This example demonstrates the use of Expand 12 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets 
+> Initializes the driver and performs the Click default configuration which sets 
 > the first three ports (pins 4-23) as output and the fourth port (pins 24-31) as input with pull-ups.
 
 ```c
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

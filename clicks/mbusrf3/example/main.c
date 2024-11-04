@@ -3,13 +3,13 @@
  * @brief M-BUS RF 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of M-BUS RF 3 click board by processing
+ * This example demonstrates the use of M-BUS RF 3 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click configuration depending on selected DEMO_EXAMPLE macro.
+ * Initializes the driver and performs the Click configuration depending on selected DEMO_EXAMPLE macro.
  *
  * ## Application Task
  * This example contains two examples depending on selected DEMO_EXAMPLE macro:

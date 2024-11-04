@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LTE IoT 11 click
+# LTE IoT 11 Click
 
 > LTE IoT 11 Click is a compact add-on board with an optimized global coverage module, as it supports a comprehensive set of bands required for global deployment. This board features the TX62-W, a global MTC module from Thales. It delivers global LTE-M, NB-IoT (NB1 and NB2) connectivity from a single SKU, and it is the first Thales product to adopt a revolutionary “Things” footprint. Besides, it integrates an embedded GNSS multi-constellation, state-of-the-art secure services, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lteiot11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-iot-11-click)
+[Click Product page](https://www.mikroe.com/lte-iot-11-click)
 
 ---
 
@@ -203,7 +203,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

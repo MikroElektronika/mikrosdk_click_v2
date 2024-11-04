@@ -141,7 +141,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void fiberopt_cfg_setup ( fiberopt_cfg_t *cfg );
@@ -151,7 +151,7 @@ void fiberopt_cfg_setup ( fiberopt_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t fiberopt_init ( fiberopt_t *ctx, fiberopt_cfg_t *cfg );
 
@@ -187,6 +187,6 @@ err_t fiberopt_generic_read ( fiberopt_t *ctx, uint8_t *data_buf, uint16_t len )
 #endif  // _FIBEROPT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

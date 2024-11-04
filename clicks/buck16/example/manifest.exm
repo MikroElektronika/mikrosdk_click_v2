@@ -3,6 +3,6 @@
     "description": "Buck 16 Click is a compact add-on board that contains a DC-DC power converter that steps down the voltage from its input to its output. This board features the TPS62912, a high-efficiency, low noise, and low ripple current-mode synchronous buck converter from Texas Instruments.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP4161","TPS62912RPUR"],
+    "hw" : ["Click","MCP4161","TPS62912RPUR"],
     "category" : ["Buck"]
 }

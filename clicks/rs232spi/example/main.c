@@ -3,14 +3,14 @@
  * \brief Rs232Spi Click example
  * 
  * # Description
- * This example showcases how to initialize and use the RS232 SPI click. The click has a uni-
+ * This example showcases how to initialize and use the RS232 SPI Click. The Click has a uni-
  * versal asynchronous transceiver which uses a SPI serial interface to communicate with the 
  * MCU. In order for this example to work, 2 clicks are needed - a receiver and a transmitter.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules. Additional configura-
+ * This function initializes and configures the logger and Click modules. Additional configura-
  * ting is done in the default_cfg(...) function.
  * 
  * ## Application Task  

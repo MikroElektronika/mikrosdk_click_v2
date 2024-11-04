@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Motion 3 click
+# Motion 3 Click
 
 Motion 3 Click is a Click board™ based on EKMC1606112, PIR motion sensor from Panasonic Corporation that's used as human motion detector. Also featured on Motion 3 Click bord is TLP241A photorelay from Toshiba that is used to provide a reinforced galvanic isolation for the external signals used to drive some external high power electronic equipment when motion is detected. It's allowing up to 40V between the SSR contacts in OFF state, and currents up to 2A while in ON state, thanks to a very low ON-state resistance. Motion 3 Click board™ is supported by a mikroSDK compliant library, which includes functions that simplify software development. This Click board™ comes as a fully tested product, ready to be used on a system equipped with the mikroBUS™ socket.
 
@@ -9,7 +9,7 @@ Motion 3 Click is a Click board™ based on EKMC1606112, PIR motion sensor from 
   <img src="https://download.mikroe.com/images/click_for_ide/motion3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/motion-3-click)
+[Click Product page](https://www.mikroe.com/motion-3-click)
 
 ---
 
@@ -60,7 +60,7 @@ uint8_t motion3_detect_state ( motion3_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Motion 3 click boards.
+> This example demonstrates the use of Motion 3 Click boards.
 
 **The demo application is composed of two sections :**
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

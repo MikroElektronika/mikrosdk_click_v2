@@ -1,6 +1,6 @@
 
 ---
-# Terminal 2 click
+# Terminal 2 Click
 
 > Terminal 2 Click is an adapter Click board™ used as a mikroBUS™ socket expansion board. It provides an easy and elegant solution for adding the external connection capability to the Click board™, plugged on a mikroBUS™ socket. Featuring two 9-position 2.54mm pitch terminal blocks makes it an easy way to expand the development system's connectivity with the mikroBUS™ socket while keeping the bus free to use with any Click board™.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/terminal2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/terminal-2-click)
+[Click Product page](https://www.mikroe.com/terminal-2-click)
 
 ---
 
@@ -64,7 +64,7 @@ void terminal2_toggle_pin ( digital_out_t *pin );
 
 ## Example Description
 
-> This example demonstates the use of Terminal 2 click board by toggling all its pins.
+> This example demonstates the use of Terminal 2 Click board by toggling all its pins.
 
 **The demo application is composed of two sections :**
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

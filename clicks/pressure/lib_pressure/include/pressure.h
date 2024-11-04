@@ -333,7 +333,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to
+ * @description This function initializes Click configuration structure to
  * initial state.
  * @note All used pins will be set to unconnected state.
  */
@@ -350,7 +350,7 @@ pressure_cfg_setup( pressure_cfg_t *cfg );
  *          0xFD - Driver init error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  * @note All configuration settings will be entered from the configuration
  *       structure.
  */
@@ -362,8 +362,8 @@ pressure_init( pressure_t *ctx, pressure_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Pressure click.
- * @note Pressure click will be set to work in the default normal mode.
+ * @description This function executes default configuration for Pressure Click.
+ * @note Pressure Click will be set to work in the default normal mode.
  */
 void
 pressure_default_cfg( pressure_t *ctx );

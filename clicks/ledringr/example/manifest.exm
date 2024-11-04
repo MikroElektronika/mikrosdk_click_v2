@@ -1,8 +1,8 @@
 {
     "name": "Led ring R  Click",
-    "description": "LED ring  R click is a mikroBUS™ add-on board with a ring of 32 red LEDs driven by four 74HC595 serial-in, parallel-out shift registers.",
+    "description": "LED ring  R Click is a mikroBUS™ add-on board with a ring of 32 red LEDs driven by four 74HC595 serial-in, parallel-out shift registers.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","8-bit 74HC595"],
+    "hw" : ["Click","8-bit 74HC595"],
     "category" : ["LED Matrix"] 
 }

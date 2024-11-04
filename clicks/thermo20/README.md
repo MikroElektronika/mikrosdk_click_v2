@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Thermo 20 click
+# Thermo 20 Click
 
 > Thermo 20 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TSYS03, a miniature digital temperature sensor that comes up with factory calibrated, highly accurate temperature data from TE Connectivity.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-20-click)
+[Click Product page](https://www.mikroe.com/thermo-20-click)
 
 ---
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

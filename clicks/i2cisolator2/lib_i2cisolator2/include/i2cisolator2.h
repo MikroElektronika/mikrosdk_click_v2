@@ -144,7 +144,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void i2cisolator2_cfg_setup ( i2cisolator2_cfg_t *cfg );
@@ -158,7 +158,7 @@ void i2cisolator2_cfg_setup ( i2cisolator2_cfg_t *cfg );
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t i2cisolator2_init ( i2cisolator2_t *ctx, i2cisolator2_cfg_t *cfg );
 
@@ -237,6 +237,6 @@ err_t i2cisolator2_set_slave_address ( i2cisolator2_t *ctx, uint8_t slave_addr )
 #endif  // _I2CISOLATOR2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

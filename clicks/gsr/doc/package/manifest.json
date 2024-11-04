@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "GSR click",
+    "display_name": "GSR Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.gsr",
     "product_link": "https://www.mikroe.com/gsr-click",
-    "short_description": "GSR click can be used to measure the electrodermal activity (EDA) of the human body, also known as the galvanic skin response (GSR). ",
+    "short_description": "GSR Click can be used to measure the electrodermal activity (EDA) of the human body, also known as the galvanic skin response (GSR). ",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2224
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Gsr",
     "subdir_name": "lib_gsr"
 }
+
 
 
 

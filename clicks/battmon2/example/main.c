@@ -3,7 +3,7 @@
  * @brief BATTMON2 Click example
  *
  * # Description
- * This example demonstrates the use of BATT-MON 2 click board by monitoring
+ * This example demonstrates the use of BATT-MON 2 Click board by monitoring
  * the measurements of battery voltage, current, capacity, percentage, time-to-empty or time-to-full,
  * as well as the chip internal temperature.
  *

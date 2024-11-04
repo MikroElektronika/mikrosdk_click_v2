@@ -127,7 +127,7 @@ typedef enum
 
 /**
  * @brief Power MUX 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #powermux2_cfg_t object definition for detailed explanation.
@@ -139,7 +139,7 @@ void powermux2_cfg_setup ( powermux2_cfg_t *cfg );
 /**
  * @brief Power MUX 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #powermux2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -171,7 +171,7 @@ err_t powermux2_generic_write ( powermux2_t *ctx, uint8_t data_in );
  * @brief Power MUX 2 set resistance function.
  * @details This function set resistance for the desired current limit 
  * of the TPS212x 2.8-V to 22-V Priority Power MUX with Seamless Switchover
- * on the the Power MUX 2 click board™.
+ * on the the Power MUX 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #powermux2_t object definition for detailed explanation.
  * @param[in] resistance : Resistance [ kOhm ] from 18 kOhm to 100 kOhm.

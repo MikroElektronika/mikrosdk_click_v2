@@ -157,7 +157,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adc2_cfg_setup ( adc2_cfg_t *cfg );
@@ -168,7 +168,7 @@ void adc2_cfg_setup ( adc2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADC2_RETVAL adc2_init ( adc2_t *ctx, adc2_cfg_t *cfg );
 
@@ -199,6 +199,6 @@ void adc2_set_vref ( adc2_t *ctx, float vref );
 #endif  // _ADC2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

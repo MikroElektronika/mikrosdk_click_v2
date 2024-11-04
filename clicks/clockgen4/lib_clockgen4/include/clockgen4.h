@@ -292,7 +292,7 @@ typedef enum
 
 /**
  * @brief Clock Gen 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #clockgen4_cfg_t object definition for detailed explanation.
@@ -304,7 +304,7 @@ void clockgen4_cfg_setup ( clockgen4_cfg_t *cfg );
 /**
  * @brief Clock Gen 4 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #clockgen4_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -320,7 +320,7 @@ void clockgen4_drv_interface_selection ( clockgen4_cfg_t *cfg, clockgen4_drv_t d
 /**
  * @brief Clock Gen 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #clockgen4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -336,7 +336,7 @@ err_t clockgen4_init ( clockgen4_t *ctx, clockgen4_cfg_t *cfg );
 /**
  * @brief Clock Gen 4 default configuration function.
  * @details This function executes a default configuration of Clock Gen 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #clockgen4_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -60,7 +60,7 @@ void application_init ( void )
     LINHALL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     linhall_init( &linhall, &cfg );
     
-    log_printf( &logger, "  Lin Hall click  \r\n" );
+    log_printf( &logger, "  Lin Hall Click  \r\n" );
     log_printf( &logger, "------------------\r\n" );
     Delay_ms ( 100 );
     

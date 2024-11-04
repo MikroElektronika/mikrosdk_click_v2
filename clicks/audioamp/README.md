@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# AudioAmp click
+# AudioAmp Click
 
 > AudioAmp Click is a compact add-on board that can add a mono audio amplifier function to your application. This board features the LM48100Q-Q1, a Boomer™ mono 1.3W audio power amplifier with output fault detection and volume control from Texas Instruments. The AudioAmp Click has one dual 3.5mm audio input jack and, next to it, a screw terminal for connecting output wires to a 1.3W, 8 Ohm passive speaker. Each input has its own independent 32-step volume control.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/audioamp-click)
+[Click Product page](https://www.mikroe.com/audioamp-click)
 
 ---
 
@@ -53,7 +53,7 @@ err_t audioamp_init ( audioamp_t *ctx, audioamp_cfg_t *cfg );
 err_t audioamp_set_volume ( audioamp_t *ctx, uint8_t in_sel, uint8_t volume_level );
 ```
 
-- `audioamp_power_on` Turn on the Audio Amp click function.
+- `audioamp_power_on` Turn on the Audio Amp Click function.
 ```c
 err_t audioamp_power_on ( audioamp_t *ctx );
 ```
@@ -65,7 +65,7 @@ err_t audioamp_mute ( audioamp_t *ctx );
 
 ## Examples Description
 
-> AudioAmp Click is a stereo audio amplifier which can be controlled by using this click driver.
+> AudioAmp Click is a stereo audio amplifier which can be controlled by using this Click driver.
 
 **The demo application is composed of two sections :**
 
@@ -179,7 +179,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

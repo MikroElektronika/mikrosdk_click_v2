@@ -12,7 +12,7 @@
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of Thermo J Click board.
- * Measured temperature data from the MCP9600 sensor on Thermo J click board.
+ * Measured temperature data from the MCP9600 sensor on Thermo J Click board.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 
  * \author MikroE Team

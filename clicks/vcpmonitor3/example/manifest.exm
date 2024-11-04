@@ -3,6 +3,6 @@
     "description": "VCP Monitor 3 Click is a high precision Voltage, Current and Power measurement Click board™ with an input capable of taking up to 15V. It features the LTC2947, from Analog Devices, a high precision power and energy monitor with an internal sense resistor supporting up to ±30A.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LTC2947"],
+    "hw" : ["Click","LTC2947"],
     "category" : ["Current sensor"]
 }

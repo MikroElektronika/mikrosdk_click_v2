@@ -3,12 +3,12 @@
  * @brief Proximity15 Click example
  *
  * # Description
- * This example demonstrates the use of Proximity 15 click board.
+ * This example demonstrates the use of Proximity 15 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which 
+ * Initializes the driver and performs the Click default configuration which 
  * enables the sensor and sets it to long distance mode with 50ms timing budget and 100ms
  * inter measurement periods.
  *

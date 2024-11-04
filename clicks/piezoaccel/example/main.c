@@ -4,14 +4,14 @@
  *
  * # Description
  * This application demonstrates the performance
- * of Piezo Accel click board.
+ * of Piezo Accel Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * The initialization of UART LOG and SPI click drivers.
+ * The initialization of UART LOG and SPI Click drivers.
  * Additionally, a default config is performed for
- * "out of the box" Piezo Accel click settings.
+ * "out of the box" Piezo Accel Click settings.
  * Calibration is optional and is used to correct
  * the power supply offset of the sensor.
  *

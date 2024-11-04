@@ -1,6 +1,6 @@
 
 ---
-# CO2 3 click
+# CO2 3 Click
 
 > CO2 3 Click is a compact add-on board that allows for precise and reliable indoor air quality measurements. 
 > This board features XENSIV™ PASCO2V01BUMA1, a highly accurate CO2 sensor module 
@@ -13,7 +13,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/co23_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/co2-3-click)
+[Click Product page](https://www.mikroe.com/co2-3-click)
 
 ---
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

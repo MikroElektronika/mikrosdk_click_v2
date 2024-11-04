@@ -162,7 +162,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rs232_cfg_setup ( rs232_cfg_t *cfg );
@@ -172,7 +172,7 @@ void rs232_cfg_setup ( rs232_cfg_t *cfg );
  * @param rs232 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RS232_RETVAL rs232_init ( rs232_t *ctx, rs232_cfg_t *cfg );
 
@@ -215,6 +215,6 @@ void rs232_set_rts_state ( rs232_t *ctx, uint8_t state );
 #endif  // _RS232_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

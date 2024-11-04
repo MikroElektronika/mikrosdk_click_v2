@@ -1,6 +1,6 @@
 
 ---
-# Barometer 8 click
+# Barometer 8 Click
 
 > Barometer 8 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the ILPS22QS, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics. The ILPS22QS comprises a sensing element and an IC chip for signal processing in one package, converts pressure into a 24-bit digital value, and sends the information via a configurable host interface that supports SPI and I2C serial communications. It has a selectable dual full-scale absolute pressure range, up to 1260hPa and 4060hPa, with an accuracy of 0.5hPa over a wide operating temperature range.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/barometer8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barometer-8-click)
+[Click Product page](https://www.mikroe.com/barometer-8-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t barometer8_read_data ( barometer8_t *ctx, float *pressure, float *temperat
 
 ## Example Description
 
-> This example demonstrates the use of Barometer 8 click board by reading and displaying the pressure and temperature values.
+> This example demonstrates the use of Barometer 8 Click board by reading and displaying the pressure and temperature values.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

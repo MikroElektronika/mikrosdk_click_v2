@@ -3,7 +3,7 @@
  * @brief MrAngle Click example
  *
  * # Description
- * This library contains API for the MR Angle click driver.
+ * This library contains API for the MR Angle Click driver.
  * This demo application shows an example of angle measurement.
  *
  * The demo application is composed of two sections :
@@ -13,7 +13,7 @@
  * After driver initialization, the app performs default settings.
  *
  * ## Application Task
- * This is an example that shows the use of an MR Angle click board™.
+ * This is an example that shows the use of an MR Angle Click board™.
  * The application task consists of reading the angle measurements in degrees ( 0 - 180 ).
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

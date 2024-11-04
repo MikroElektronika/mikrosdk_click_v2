@@ -152,7 +152,7 @@ extern "C"{
  * @param macaddress Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MACADDRESS_RETVAL macaddress_init ( macaddress_t *ctx, macaddress_cfg_t *cfg );
 
@@ -161,7 +161,7 @@ MACADDRESS_RETVAL macaddress_init ( macaddress_t *ctx, macaddress_cfg_t *cfg );
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void macaddress_cfg_setup ( macaddress_cfg_t *cfg );
@@ -209,6 +209,6 @@ void macaddress_get_mac ( macaddress_t *ctx, uint8_t *read_mac );
 #endif  // _MACADDRESS_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

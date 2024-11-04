@@ -3,16 +3,16 @@
  
 
 ---
-# MCP16331 INV click
+# MCP16331 INV Click
 
-MCP16331 INV click works as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).
+MCP16331 INV Click works as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).
 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mcp16331inv_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mcp16331-inv-click)
+[Click Product page](https://www.mikroe.com/mcp16331-inv-click)
 
 ---
 
@@ -63,13 +63,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application enables usage of this click as a buck-boost voltage regulator.
+> This application enables usage of this Click as a buck-boost voltage regulator.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes click driver and enables VIN Pull Up.
+> Initializes Click driver and enables VIN Pull Up.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

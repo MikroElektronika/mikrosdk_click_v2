@@ -215,7 +215,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void matrixr_cfg_setup ( matrixr_cfg_t *cfg );
@@ -225,7 +225,7 @@ void matrixr_cfg_setup ( matrixr_cfg_t *cfg );
  * @param matrixr Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MATRIXR_RETVAL matrixr_init ( matrixr_t *ctx, matrixr_cfg_t *cfg );
 
@@ -234,7 +234,7 @@ MATRIXR_RETVAL matrixr_init ( matrixr_t *ctx, matrixr_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Matrix RG click.
+ * @description This function executes default configuration for Matrix RG Click.
  */
 void matrixr_default_cfg ( matrixr_t *ctx );
 
@@ -245,7 +245,7 @@ void matrixr_default_cfg ( matrixr_t *ctx );
  * @param left_char    ASCII value for the character printed on the left segment.
  * @param right_char   ASCII value for the character printed on the right segment.
  *
- * @description This function displays the specified characters on the L/R segments of the click.
+ * @description This function displays the specified characters on the L/R segments of the Click.
  */
 void matrixr_display_characters ( matrixr_t *ctx, uint8_t left_char, uint8_t right_char );
 
@@ -284,6 +284,6 @@ void matrixr_set_csn_low ( matrixr_t *ctx );
 #endif  // _MATRIXR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

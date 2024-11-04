@@ -1,8 +1,8 @@
 {
     "name": "Brushless 4 Click",
-    "description": "Brushless 4 click is a 3 phase sensorless BLDC motor driver, which features a 180° sinusoidal drive, providing high efficiency and low acoustic noise. This type of drivers inherently provides higher torque in general, compared to classical 120° BLDC motor drivers. ",
+    "description": "Brushless 4 Click is a 3 phase sensorless BLDC motor driver, which features a 180° sinusoidal drive, providing high efficiency and low acoustic noise. This type of drivers inherently provides higher torque in general, compared to classical 120° BLDC motor drivers. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP8063"],
+    "hw" : ["Click","MCP8063"],
     "category" : ["Brushless"] 
 }

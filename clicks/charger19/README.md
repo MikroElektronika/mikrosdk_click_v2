@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Charger 19 click
+# Charger 19 Click
 
 > Charger 19 Click is a compact add-on board that contains a battery charger. This board features the nPM1100, an integrated power management IC from Nordic Semiconductor. It has a highly efficient DC/DC buck regulator with automatic selection between hysteretic and PWM modes.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/charger19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-19-click)
+[Click Product page](https://www.mikroe.com/charger-19-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t charger19_get_vbat ( charger19_t *ctx, float *vbat );
 
 ## Example Description
 
-> This example demonstrates the use of Charger 19 click board by enabling the device
+> This example demonstrates the use of Charger 19 Click board by enabling the device
   and then reading and displaying the battery voltage.
 
 **The demo application is composed of two sections :**
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

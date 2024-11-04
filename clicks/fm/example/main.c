@@ -3,7 +3,7 @@
  * \brief Fm Click example
  * 
  * # Description
- * This click represent FM radio tuner which supports worldwide FM band (76 – 108 MHz)
+ * This Click represent FM radio tuner which supports worldwide FM band (76 – 108 MHz)
  * and has a set of features such as automatic frequency and gain control, seek tuning and volume control.
  *
  * The demo application is composed of two sections :

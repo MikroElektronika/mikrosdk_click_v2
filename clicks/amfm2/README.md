@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# AM/FM 2 click
+# AM/FM 2 Click
 
 > AM/FM 2 Click is a compact add-on board that can be used to listen to music from the AM and FM radio bands. 
 > This board features the Si4732, a broadcast AM/FM/SE/LW/RDS radio receiver from Skyworks. 
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/amfm2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/amfm-2-click)
+[Click Product page](https://www.mikroe.com/amfm-2-click)
 
 ---
 
@@ -197,7 +197,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

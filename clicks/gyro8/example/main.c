@@ -3,13 +3,13 @@
  * @brief Gyro 8 Click example
  *
  * # Description
- * This example demonstrates the use of Gyro 8 click board by reading and displaying
+ * This example demonstrates the use of Gyro 8 Click board by reading and displaying
  * the temperature and angular rate measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and the click board, and reads the serial ID number which
+ * Initializes the driver and the Click board, and reads the serial ID number which
  * is marked on the sensor lid.
  *
  * ## Application Task

@@ -189,7 +189,7 @@ typedef enum
 
 /**
  * @brief 4G LTE-E configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c4gltee_cfg_t object definition for detailed explanation.
@@ -201,7 +201,7 @@ void c4gltee_cfg_setup ( c4gltee_cfg_t *cfg );
 /**
  * @brief 4G LTE-E initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c4gltee_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -312,7 +312,7 @@ uint8_t c4gltee_get_ring_pin ( c4gltee_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #c4gltee_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -323,7 +323,7 @@ void c4gltee_send_cmd ( c4gltee_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends a command with specified parameter to the click module.
+ * @details This function sends a command with specified parameter to the Click module.
  * @param[in] ctx : Click context object.
  * See #c4gltee_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Sends hal pointers, and initializes click
+ * Sends hal pointers, and initializes Click
  * 
  * ## Application Task  
  * Switches between 5 V and 12 V values

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 2x4 RGB click
+# 2x4 RGB Click
 
 > 2x4 RGB Click is a compact add-on board for dynamic and colorful lighting control. This board features an array of 2x4 RGB LEDs (WL-ICLED 1312121320437) from Würth Elektronik, featuring individual control of each red, green, and blue component via an integrated IC and pulse width modulation (PWM) technology. The board also includes an LSF0102 voltage translator, ensuring seamless operation with both 3.3V and 5V logic systems, and supports MIKROE’s innovative Click Snap feature for flexible installation options. With its precise color control and flexible design, 2x4 RGB Click is ideal for applications such as ambient lighting, displays, and visual indicators in various consumer electronics and industrial environments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/2x4rgb_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/2x4-rgb-click)
+[Click Product page](https://www.mikroe.com/2x4-rgb-click)
 
 ---
 
@@ -63,14 +63,14 @@ void c2x4rgb_set_leds_intensity ( c2x4rgb_t *ctx, uint8_t brightness, uint8_t ga
 void c2x4rgb_set_led_color ( c2x4rgb_t *ctx, uint8_t led_num, uint32_t rgb );
 ```
 
-- `c2x4rgb_write_led_matrix` This function writes the LED matrix data from the click context object.
+- `c2x4rgb_write_led_matrix` This function writes the LED matrix data from the Click context object.
 ```c
 err_t c2x4rgb_write_led_matrix ( c2x4rgb_t *ctx );
 ```
 
 ## Example Description
 
-> This example demonstrates the use of 2x4 RGB click board by cycling through
+> This example demonstrates the use of 2x4 RGB Click board by cycling through
 a set of colors, gradually increasing the brightness of each LED in a sequence,
 and then decreasing the brightness before moving on to the next color in the array.
 
@@ -78,7 +78,7 @@ and then decreasing the brightness before moving on to the next color in the arr
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets
+> Initializes the driver and performs the Click default configuration which sets
 the LEDs brightness and current gain to a minimum and the color to black (all LEDs off).
 
 ```c
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

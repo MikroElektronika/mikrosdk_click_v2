@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Grid Eye click
+# Grid Eye Click
 
-Grid-EYE click is a 8x8 thermal array sensor-detector that carries the AMG8853 infrared array sensor from Panasonic.
+Grid-EYE Click is a 8x8 thermal array sensor-detector that carries the AMG8853 infrared array sensor from Panasonic.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/grideye_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/grid-eye-click)
+[Click Product page](https://www.mikroe.com/grid-eye-click)
 
 ---
 
@@ -99,7 +99,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of Grid-EYE click board by reading full grid and displaying values via USART terminal.
+> This example demonstrates the use of Grid-EYE Click board by reading full grid and displaying values via USART terminal.
 
 ```c
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

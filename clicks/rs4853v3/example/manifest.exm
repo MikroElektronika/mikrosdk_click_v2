@@ -1,8 +1,8 @@
 {
     "name": "RS485 3V3 Click",
-    "description": "RS485 click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. It features a half-duplex communication capability, bus Idle, open and short-circuit detection, glitch free power-up and power-down for hot-plugging applications, thermal shutdown, and more. It is well suited for transmitting data packets over long distances and noisy areas, using the twisted wire bus, which offers good electromagnetic interferences (EMI) immunity. ESD protection of the transceiver IC ensures reliable operation, exceeding 16kV for human body model (HBM).",
+    "description": "RS485 Click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. It features a half-duplex communication capability, bus Idle, open and short-circuit detection, glitch free power-up and power-down for hot-plugging applications, thermal shutdown, and more. It is well suited for transmitting data packets over long distances and noisy areas, using the twisted wire bus, which offers good electromagnetic interferences (EMI) immunity. ESD protection of the transceiver IC ensures reliable operation, exceeding 16kV for human body model (HBM).",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","ADM485"],
+    "hw" : ["Click","ADM485"],
     "category" : ["RS485"]
 }

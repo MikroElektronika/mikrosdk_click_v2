@@ -9,7 +9,7 @@
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Reset device and settings the click in the default configuration.
+ * Reset device and settings the Click in the default configuration.
  * 
  * ## Application Task  
  * It reads the position of the joystick,

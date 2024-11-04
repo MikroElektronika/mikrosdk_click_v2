@@ -3,7 +3,7 @@
  * @brief Ozone3 Click example
  *
  * # Description
- * This library contains API for the Ozone 3 click driver.
+ * This library contains API for the Ozone 3 Click driver.
  * This demo application shows an example of the O3 ppm data measurement.
  *
  * The demo application is composed of two sections :
@@ -13,7 +13,7 @@
  * After driver initialization the app set default settings.
  *
  * ## Application Task
- * This is an example that shows the use of a Ozone 3 click board™.
+ * This is an example that shows the use of a Ozone 3 Click board™.
  * Get and logs O3 ( Trioxygen ) data as ppm value.
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

@@ -1,6 +1,6 @@
 
 ---
-# NTAG 5 Link click
+# NTAG 5 Link Click
 
 > NTAG 5 Link Click is a compact add-on board that acts as a bridge between an NFC-enabled device and any I2C slave, such as a sensor or external memory. This board features the NTA5332, a highly integrated NFC IC which creates a secure standard-based link from the device to the cloud from NXP Semiconductors. Based on the NTAG 5 switch and operating at 13.56MHz, the NTA5332 represents an NFC Forum-compliant contactless tag that can be read and written by an NFC-enabled device at close range and by an ISO/IEC 15693-enabled industrial reader over a more extended range. It also incorporates an I2C interface with an I2C master features and AES mutual authentication, SRAM memory, and energy harvesting possibility, which means it can supply power to other components in the system.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ntag5link_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ntag-5-link-click)
+[Click Product page](https://www.mikroe.com/ntag-5-link-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t ntag5link_read_message_from_memory ( ntag5link_t *ctx, uint16_t block_addr
 
 ## Example Description
 
-> This example demonstrates the use of NTAG 5 Link click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
+> This example demonstrates the use of NTAG 5 Link Click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration which 
+> Initializes the driver and logger and performs the Click default configuration which 
 enables the device and formats its user memory. After that it programs the specified NDEF URI record to the memory.
 
 ```c
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,12 +3,12 @@
  * @brief Thyone-I Click Example.
  *
  * # Description
- * This example demonstrates the use of the Thyone-I click board by sending and receiving data and displaying them on the USB UART.
+ * This example demonstrates the use of the Thyone-I Click board by sending and receiving data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration and setting the MAC addresses and mode.
+ * Initializes the driver and performs the Click default configuration and setting the MAC addresses and mode.
  *
  * ## Application Task
  * Transmitter mode - Sending data to the devices within range ( thyonei_broadcast_data_req ), with same MAC group ( thyonei_multicast_data_req )

@@ -171,7 +171,7 @@ typedef enum
 
 /**
  * @brief PIR 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pir2_cfg_t object definition for detailed explanation.
@@ -183,7 +183,7 @@ void pir2_cfg_setup ( pir2_cfg_t *cfg );
 /**
  * @brief PIR 2 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #pir2_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -199,7 +199,7 @@ void pir2_drv_interface_sel ( pir2_cfg_t *cfg, pir2_drv_t drv_sel );
 /**
  * @brief PIR 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pir2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -239,7 +239,7 @@ err_t pir2_read_voltage ( pir2_t *ctx, float *voltage );
 
 /**
  * @brief PIR 2 set vref function.
- * @details This function sets the voltage reference for PIR 2 click driver.
+ * @details This function sets the voltage reference for PIR 2 Click driver.
  * @param[in] ctx : Click context object.
  * See #pir2_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

@@ -3,7 +3,7 @@
  * @brief DcMotor3 Click example
  * 
  * # Description
- * This click has four operating modes: clockwise, counter-clockwise, short brake and stop. 
+ * This Click has four operating modes: clockwise, counter-clockwise, short brake and stop. 
  * The operating mode is configured through IN1 and IN2 pins.
  *
  * The demo application is composed of two sections :

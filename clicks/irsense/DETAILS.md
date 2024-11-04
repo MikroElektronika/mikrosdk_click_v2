@@ -1,14 +1,14 @@
 
 ---
-# IR SENSE click
+# IR SENSE Click
 
-IR Sense click carries the AK9750 quantum-type IR sensor. The click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over I2C interface, with additional functionality provided by the INT pin on the mikroBUS™ line >
+IR Sense Click carries the AK9750 quantum-type IR sensor. The Click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over I2C interface, with additional functionality provided by the INT pin on the mikroBUS™ line >
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/irsense_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-sense-click)
+[Click Product page](https://www.mikroe.com/ir-sense-click)
 
 ---
 
@@ -44,13 +44,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- Function write the 8-bit data to the target 8-bit register address of AK9750 sensor on IR Sense click board.
+- Function write the 8-bit data to the target 8-bit register address of AK9750 sensor on IR Sense Click board.
 > void irsense_write_byte ( irsense_t *ctx, uint8_t reg_address, uint8_t write_data );
  
-- Function read the 8-bit data from the target 8-bit register address of AK9750 sensor on IR Sense click board.
+- Function read the 8-bit data from the target 8-bit register address of AK9750 sensor on IR Sense Click board.
 > uint8_t irsense_read_byte ( irsense_t *ctx, uint8_t reg_address );
 
-- Function read the 16-bit data from the two target 8-bit register address of AK9750 sensor on IR Sense click board.
+- Function read the 16-bit data from the two target 8-bit register address of AK9750 sensor on IR Sense Click board.
 > uint16_t irsense_read_data ( irsense_t *ctx, uint8_t reg_address_low );
 
 ## Examples Description
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,7 +3,7 @@
  * \brief 7-SEG RGB Click example
  * 
  * # Description
- * This click shows all ten digits on a full-color single 7 segment digit display. 
+ * This Click shows all ten digits on a full-color single 7 segment digit display. 
  * Each segment has R, G, B LEDs that can be adjusted in 255 steps and 
  * the ability to control the brightness of all the LED.
  *
@@ -14,7 +14,7 @@
  * 
  * ## Application Task  
  * This is an example which demonstrates the use of 7-SEG RGB Click board.
- * This simple example shows all ten digits in different colors on 7-SEG RGB click.
+ * This simple example shows all ten digits in different colors on 7-SEG RGB Click.
  * 
  * @note 
  * Make sure the logic delays are defined for your system in the c7segrgb_delays.h file.

@@ -1,6 +1,6 @@
 
 ---
-# POT 4 click
+# POT 4 Click
 
 > POT 4 Click is a compact add-on board with accurate selectable reference voltage output. This board features the PRS11R-425F-S103B1, a high-quality 11mm rotary 10k potentiometer from Bourns. The PRS11R-425F-S103B1 features a small form factor, offers an push-on momentary switch, a flatted shaft style, and a wide operating temperature range. It comes with a high-resolution 12-bit ADC, detecting even the slightest move while digitizing its position, alongside a rail-to-rail buffering operational amplifier, which provides constant input and output impedance. Besides, the user can process the output signal in analog or digital form.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pot4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pot-4-click)
+[Click Product page](https://www.mikroe.com/pot-4-click)
 
 ---
 
@@ -64,7 +64,7 @@ uint8_t pot4_convert_voltage_to_percents ( pot4_t *ctx, float voltage );
 
 ## Example Description
 
-> This example demonstrates the use of POT 4 click board by reading and displaying the potentiometer position.
+> This example demonstrates the use of POT 4 Click board by reading and displaying the potentiometer position.
 
 **The demo application is composed of two sections :**
 
@@ -141,7 +141,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

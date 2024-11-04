@@ -1,6 +1,6 @@
 
 ---
-# ADC 20 click
+# ADC 20 Click
 
 > ADC 20 Click is a compact add-on board with a high-performance data converter. This board features the TLA2518, an SPI-configurable eight-channel 12-bit successive approximation register analog-to-digital converter (SAR ADC) from Texas Instruments. The TLA2518 has an internal oscillator for the ADC conversion and supports averaging multiple data samples with a single conversion start. Also, the built-in programmable averaging filters help reduce noise from the analog inputs and reduce the number of data samples required to be read by the host MCU. All eight channels can be used as analog inputs, with the addition that the four channels can be used as digital inputs or digital outputs.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adc20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-20-click)
+[Click Product page](https://www.mikroe.com/adc-20-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t adc20_read_gpio_value ( adc20_t *ctx, uint8_t *gpio_value );
 
 ## Example Description
 
-> This example demonstrates the use of ADC 20 click board by displaying the state of 8 channels
+> This example demonstrates the use of ADC 20 Click board by displaying the state of 8 channels
 configured as analog inputs (CH2-CH5), digital inputs (CH0-CH1) and digital outputs (CH6-CH7).
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

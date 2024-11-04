@@ -3,7 +3,7 @@
  * @brief Hall Switch 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of Hall Switch 2 click board.
+ * This example demonstrates the use of Hall Switch 2 Click board.
  *
  * The demo application is composed of two sections :
  *

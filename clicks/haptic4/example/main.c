@@ -3,13 +3,13 @@
  * @brief Haptic 4 Click example
  *
  * # Description
- * This example demonstrates the use of Haptic 4 click board by controlling
+ * This example demonstrates the use of Haptic 4 Click board by controlling
  * the attached motor vibration level.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the motor vibration level every 2 seconds between MAX and MIN, 

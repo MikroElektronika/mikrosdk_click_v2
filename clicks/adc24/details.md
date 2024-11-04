@@ -1,6 +1,6 @@
 
 ---
-# ADC 24 click
+# ADC 24 Click
 
 > ADC 24 Click is a compact add-on board for high-speed analog to digital conversion. This board features the AD7490, a 12-bit, 16-channel successive approximation ADC from Analog Devices, optimized for efficient power usage with a consumption of just 2.5mA from a 5V supply while achieving up to 1MSPS throughput rates. The board features 16 single-ended analog inputs with a configurable input range, supported by a channel sequencer for sequential channel conversion and multiple operational modes for flexible power management. This makes ADC 24 Click ideal for extensive system monitoring applications such as multichannel system monitoring, power line monitoring, data acquisition, instrumentation, and process control, serving various industrial and tech applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adc24_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-24-click)
+[Click Product page](https://www.mikroe.com/adc-24-click)
 
 ---
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

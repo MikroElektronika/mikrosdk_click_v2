@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# PCR click
+# PCR Click
 
 > PCR Click is a compact add-on board that allows you to use a pulsed coherent radar (PCR) in your application. This board features the XM125, the Entry+ PCR module from Acconeer. The XM125 uses an Acconeer A121 pulsed coherent radar system based on a patented PCR technology with picosecond time resolution. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pcr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pcr-click)
+[Click Product page](https://www.mikroe.com/pcr-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t pcr_get_distance ( pcr_t *ctx, uint32_t *distance_data );
 
 ## Example Description
 
-> This example demonstrates the use of PCR click board by 
-  reading distance between click board and object. 
+> This example demonstrates the use of PCR Click board by 
+  reading distance between Click board and object. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration.
+> Initializes the driver and logger and performs the Click default configuration.
 
 ```c
 
@@ -121,7 +121,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reading distance between click board and object every 2 seconds and logging it on UART terminal.
+> Reading distance between Click board and object every 2 seconds and logging it on UART terminal.
 
 ```c
 void application_task ( void ) 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

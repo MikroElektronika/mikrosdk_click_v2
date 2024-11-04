@@ -193,7 +193,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pwm2_cfg_setup ( pwm2_cfg_t *cfg );
@@ -204,7 +204,7 @@ void pwm2_cfg_setup ( pwm2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 PWM2_RETVAL pwm2_init ( pwm2_t *ctx, pwm2_cfg_t *cfg );
 
@@ -254,7 +254,7 @@ void pwm2_generic_transfer ( pwm2_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint
  *
  * @param ctx          Click object.
  *
- * @description This function reset the click.
+ * @description This function reset the Click.
  */
  static void send_reset_pulse ( pwm2_t *ctx );
 
@@ -263,7 +263,7 @@ void pwm2_generic_transfer ( pwm2_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint
  *
  * @param ctx          Click object.
  *
- * @description This function set the click.
+ * @description This function set the Click.
  */
 static void send_pulse ( pwm2_t *ctx );
 
@@ -317,7 +317,7 @@ static void send_correction_toggle_frame ( pwm2_t *ctx );
  *
  * @param ctx          Click object.
  *
- * @description This function set the all needed click parameters.
+ * @description This function set the all needed Click parameters.
  */
 static void set_parameters ( pwm2_t *ctx );
 
@@ -357,6 +357,6 @@ void pwm2_default_cfg ( pwm2_t *ctx );
 #endif  // _PWM2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

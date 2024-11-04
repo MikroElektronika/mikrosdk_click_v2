@@ -3,8 +3,8 @@
  * \brief Spiisolator Click example
  * 
  * # Description
- * The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
- * In this example we have used an 8x8 click board connected to a SPI Isolator click board. 
+ * The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
+ * In this example we have used an 8x8 Click board connected to a SPI Isolator Click board. 
  *
  * The demo application is composed of two sections :
  * 
@@ -12,7 +12,7 @@
  * Initialization driver enables - SPI, set default configuration, also write log.
  * 
  * ## Application Task  
- * Controls an 8x8 click board and displays the steps on UART Terminal.
+ * Controls an 8x8 Click board and displays the steps on UART Terminal.
  * 
  * \author MikroE Team
  *

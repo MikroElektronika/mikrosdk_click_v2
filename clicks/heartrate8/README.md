@@ -3,15 +3,15 @@
  
 
 ---
-# Heart Rate 8 click
+# Heart Rate 8 Click
 
-Heart Rate 8 click is an optical biosensor Click board™, designed for heart-rate monitoring (HRM). This Click board™ employs a specialized sensor that incorporates three LED drivers and two photo-sensing elements, sensitive to green and IR light.
+Heart Rate 8 Click is an optical biosensor Click board™, designed for heart-rate monitoring (HRM). This Click board™ employs a specialized sensor that incorporates three LED drivers and two photo-sensing elements, sensitive to green and IR light.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/heart-rate-8-click)
+[Click Product page](https://www.mikroe.com/heart-rate-8-click)
 
 ---
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

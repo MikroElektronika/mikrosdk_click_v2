@@ -3,7 +3,7 @@
  * \brief PWM Click example
  * 
  * # Description
- * This is an example that shows the capability of PWM click.
+ * This is an example that shows the capability of PWM Click.
  *
  * The demo application is composed of two sections :
  * 

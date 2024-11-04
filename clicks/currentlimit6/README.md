@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Current Limit 6 click
+# Current Limit 6 Click
 
 > Current Limit 6 Click is a compact add-on board representing a current-limiting solution. This board features the MAX17608, adjustable overvoltage, and overcurrent protection device from Maxim Integrated, now part of Analog Devices. This Click board™ is ideal for protecting systems with the flexible input overvoltage protection range from 4.5V to 60V, and the adjustable input undervoltage protection range is 4.5V to 59V. Also, the maximum current limit is 1A and can be programmed through a digital potentiometer MAX5401. When the device current reaches the programmed threshold, the device prevents further current increases by modulating the FET resistance.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/currentlimit6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-limit-6-click)
+[Click Product page](https://www.mikroe.com/current-limit-6-click)
 
 ---
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

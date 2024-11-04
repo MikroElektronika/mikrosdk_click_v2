@@ -439,7 +439,7 @@ typedef enum
 
 /**
  * @brief Smart DOF 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #smartdof2_cfg_t object definition for detailed explanation.
@@ -451,7 +451,7 @@ void smartdof2_cfg_setup ( smartdof2_cfg_t *cfg );
 /**
  * @brief Smart DOF 2 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #smartdof2_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -467,7 +467,7 @@ void smartdof2_drv_interface_selection ( smartdof2_cfg_t *cfg, smartdof2_drv_t d
 /**
  * @brief Smart DOF 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -482,7 +482,7 @@ err_t smartdof2_init ( smartdof2_t *ctx, smartdof2_cfg_t *cfg );
 /**
  * @brief Smart DOF 2 default configuration function.
  * @details This function executes a default configuration of Smart DOF 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -529,7 +529,7 @@ err_t smartdof2_generic_read ( smartdof2_t *ctx, uint8_t reg, uint8_t *data_out,
  * @brief Smart DOF 2 get device ID function.
  * @details This function reads a device ID value
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] device_id : Device ID.
@@ -545,7 +545,7 @@ err_t smartdof2_get_device_id ( smartdof2_t *ctx, uint8_t *device_id );
  * @details This function enable automatically incremented during 
  * a multiple byte access with a serial interface
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -560,7 +560,7 @@ err_t smartdof2_enable_auto_increment ( smartdof2_t *ctx );
  * @details This function enable block data, 
  * output registers are not updated until LSB and MSB have been read,
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -574,7 +574,7 @@ err_t smartdof2_enable_block_data_update ( smartdof2_t *ctx );
  * @brief Smart DOF 2 set FIFO mode function.
  * @details This function selects the FIFO mode
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[in] fifo_mode : FIFO mode selection
@@ -596,7 +596,7 @@ err_t smartdof2_set_fifo_mode ( smartdof2_t *ctx, uint8_t fifo_mode );
  * @brief Smart DOF 2 set accel data rate function.
  * @details This function selects the accelerometer data rate
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[in] data_rate : Accelerometer ODR selection
@@ -624,7 +624,7 @@ err_t smartdof2_set_acc_data_rate ( smartdof2_t *ctx, uint8_t data_rate );
  * @brief Smart DOF 2 get full-scale accel range function.
  * @details This function reads selected the full-scale acceleration range
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] data_scale : Accelerometer full-scale selection. 
@@ -639,7 +639,7 @@ err_t smartdof2_get_acc_full_scale ( smartdof2_t *ctx, uint8_t *data_scale );
  * @brief Smart DOF 2 set full-scale accel range function.
  * @details This function selects the full-scale acceleration range
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[in] data_scale : Accelerometer full-scale selection
@@ -658,7 +658,7 @@ err_t smartdof2_set_acc_full_scale ( smartdof2_t *ctx, uint8_t data_scale );
  * @brief Smart DOF 2 set gyro data rate function.
  * @details This function  selects the gyroscope data rate
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[in] data_rate : Accelerometer full-scale selection
@@ -677,7 +677,7 @@ err_t smartdof2_set_gyro_data_rate ( smartdof2_t *ctx, uint8_t data_rate );
  * @brief Smart DOF 2 get full-scale gyro range function.
  * @details This function reads selected the full-scale gyroscope range
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] data_scale : Gyroscope full-scale selection. 
@@ -692,7 +692,7 @@ err_t smartdof2_get_gyro_full_scale ( smartdof2_t *ctx, uint8_t *data_scale );
  * @brief Smart DOF 2 set full-scale gyro range function.
  * @details This function selects the full-scale gyroscope range
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[in] data_scale : Accelerometer full-scale selection
@@ -711,7 +711,7 @@ err_t smartdof2_set_gyro_full_scale ( smartdof2_t *ctx, uint8_t data_scale );
  * @brief Smart DOF 2 get accel data function.
  * @details This function reads the accelerometer raw data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] acc_axis : Accelerometer raw data object.
@@ -726,7 +726,7 @@ err_t smartdof2_get_acc_axis_data ( smartdof2_t *ctx, smartdof2_axis_data_t *acc
  * @brief Smart DOF 2 get gyro data function.
  * @details This function reads the gyroscope raw data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] gyro_axis : Gyroscope raw data object.
@@ -741,7 +741,7 @@ err_t smartdof2_get_gyro_axis_data ( smartdof2_t *ctx, smartdof2_axis_data_t *gy
  * @brief Smart DOF 2 get accel sensitivity function.
  * @details This function reads the accelerometer sensitivity data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] sensitivity : Accelerometer sensitivity data.
@@ -756,7 +756,7 @@ err_t smartdof2_get_acc_sensitivity ( smartdof2_t *ctx, float *sensitivity );
  * @brief Smart DOF 2 get gyro sensitivity function.
  * @details This function reads the gyroscope sensitivity data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] sensitivity : Gyroscope sensitivity data.
@@ -771,7 +771,7 @@ err_t smartdof2_get_gyro_sensitivity ( smartdof2_t *ctx, float *sensitivity );
  * @brief Smart DOF 2 get accel sensor axes function.
  * @details This function reads the accelerometer sensor axes data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] acc_axis : Linear acceleration output data object (mg).
@@ -786,7 +786,7 @@ err_t smartdof2_get_acc_axis ( smartdof2_t *ctx, smartdof2_axis_t *acc_axis );
  * @brief Smart DOF 2 get gyro sensor axes function.
  * @details This function reads the gyroscope sensor axes data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] gyro_axis : Angular rate output data object (dps).
@@ -801,7 +801,7 @@ err_t smartdof2_get_gyro_axis ( smartdof2_t *ctx, smartdof2_axis_t *gyro_axis );
  * @brief Smart DOF 2 get temperature data function.
  * @details This function reads the temperature raw data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] temp_raw : Temperature raw data (16-bit word in two’s complement).
@@ -816,7 +816,7 @@ err_t smartdof2_get_temperature_raw ( smartdof2_t *ctx, int16_t *temp_raw );
  * @brief Smart DOF 2 get temperature function.
  * @details This function reads the temperature data 
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @param[out] temperature : Temperature (degrees Celsius).
@@ -832,7 +832,7 @@ err_t smartdof2_get_temperature ( smartdof2_t *ctx, float *temperature );
  * @brief Smart DOF 2 get interrupt function.
  * @details This function get states of the Interrupt ( INT ) pin
  * of the LSM6DSV16X, High-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, OIS/EIS paths
- * on the Smart DOF 2 click board™.
+ * on the Smart DOF 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof2_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

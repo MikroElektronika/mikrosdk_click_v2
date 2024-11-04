@@ -183,7 +183,7 @@ typedef enum
 
 /**
  * @brief Opto 7 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #opto7_cfg_t object definition for detailed explanation.
@@ -195,7 +195,7 @@ void opto7_cfg_setup ( opto7_cfg_t *cfg );
 /**
  * @brief Opto 7 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #opto7_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -211,7 +211,7 @@ void opto7_drv_interface_selection ( opto7_cfg_t *cfg, opto7_drv_t drv_sel );
 /**
  * @brief Opto 7 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #opto7_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -226,7 +226,7 @@ err_t opto7_init ( opto7_t *ctx, opto7_cfg_t *cfg );
 /**
  * @brief Opto 7 default configuration function.
  * @details This function executes a default configuration of Opto 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #opto7_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

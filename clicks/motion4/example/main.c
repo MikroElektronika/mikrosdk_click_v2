@@ -3,7 +3,7 @@
  * @brief Motion 4 Click Example.
  * 
  * # Description
- * This example demonstrates the use of Motion 4 click boards.
+ * This example demonstrates the use of Motion 4 Click boards.
  * 
  * The demo application is composed of two sections :
  *

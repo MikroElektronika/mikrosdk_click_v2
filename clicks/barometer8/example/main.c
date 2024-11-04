@@ -3,13 +3,13 @@
  * @brief Barometer8 Click example
  *
  * # Description
- * This example demonstrates the use of Barometer 8 click board by reading and
+ * This example demonstrates the use of Barometer 8 Click board by reading and
  * displaying the pressure and temperature values.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and displays the pressure and temperature data on the USB UART every 250ms approximately,

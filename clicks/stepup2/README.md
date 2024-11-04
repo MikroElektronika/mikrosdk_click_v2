@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Step Up 2 click
+# Step Up 2 Click
 
 > Step Up 2 Click is a compact add-on board designed to boost the power capabilities of devices. This board features the TPS61299, a synchronous boost converter from Texas Instruments. This component is renowned for its low quiescent current and high efficiency under light-load conditions. The board distinguishes itself with the ability to adjust output voltage via the integrated MAX5419 digital potentiometer, offering precise control through an I2C interface. It supports external voltages from 0.2V to 5.5V, delivering a regulated output range of 1.8V to 5.5V.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepup2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/step-up-2-click)
+[Click Product page](https://www.mikroe.com/step-up-2-click)
 
 ---
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

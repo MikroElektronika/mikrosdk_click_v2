@@ -270,7 +270,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void expand_cfg_setup ( expand_cfg_t *cfg );
@@ -280,7 +280,7 @@ void expand_cfg_setup ( expand_cfg_t *cfg );
  * @param expand Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EXPAND_RETVAL expand_init ( expand_t *ctx, expand_cfg_t *cfg );
 
@@ -602,7 +602,7 @@ void expand_set_potr_b ( expand_t *ctx, uint8_t position );
  * @param mod_cmd      Module command.
  * @param write_data   Pull up value.
  *
- * @description Function reset Expand 2 click by set RST pin from low to high.
+ * @description Function reset Expand 2 Click by set RST pin from low to high.
  *
  * @note
  * delay is 11ms
@@ -627,6 +627,6 @@ uint8_t expand_get_interrupt( expand_t *ctx );
 #endif  // _EXPAND_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

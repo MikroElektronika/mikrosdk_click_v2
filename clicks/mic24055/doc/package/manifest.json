@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "MIC24055 click",
+    "display_name": "MIC24055 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.mic24055",
     "product_link": "https://www.mikroe.com/mic24055-click",
-    "short_description": "MIC24055 click is the buck regulator that can deliver continuous output current up to 8A and can step down voltages from up to 19V which makes this click board easy to use with many power sources commonly available.",
+    "short_description": "MIC24055 Click is the buck regulator that can deliver continuous output current up to 8A and can step down voltages from up to 19V which makes this Click board easy to use with many power sources commonly available.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2254
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.Mic24055",
     "subdir_name": "lib_mic24055"
 }
+
 
 
 

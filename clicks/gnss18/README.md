@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# GNSS 18 click
+# GNSS 18 Click
 
 > GNSS 18 Click is a compact add-on board designed for high-precision GNSS applications. This board features the SAM-M10Q-00B-00B, M10 standard precision GNSS module from u-blox, known for exceptional sensitivity and rapid acquisition of L1 GNSS signals. It supports concurrent reception of GPS, Galileo, GLONASS, and BeiDou B1C, with additional support for QZSS and SBAS. Featuring u-blox Super-S technology for improved dynamic position accuracy and low power consumption of 37mW in continuous tracking mode, it is ideal for battery-operated devices.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-18-click)
+[Click Product page](https://www.mikroe.com/gnss-18-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t gnss18_parse_gpgga ( uint8_t *rsp_buf, uint8_t gpgga_element, uint8_t *ele
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 18 click by reading and displaying the GNSS coordinates.
+> This example demonstrates the use of GNSS 18 Click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

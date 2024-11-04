@@ -118,7 +118,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void nanopower2_cfg_setup ( nanopower2_cfg_t *cfg );
@@ -128,7 +128,7 @@ void nanopower2_cfg_setup ( nanopower2_cfg_t *cfg );
  * @param nanopower2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t nanopower2_init ( nanopower2_t *ctx, nanopower2_cfg_t *cfg );
 
@@ -137,7 +137,7 @@ err_t nanopower2_init ( nanopower2_t *ctx, nanopower2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function checks the output of the Nano Power 2 click.
+ * @details This function checks the output of the Nano Power 2 Click.
  *
  * @returns Out pin value
  */
@@ -149,6 +149,6 @@ uint8_t nanopower2_check_output ( nanopower2_t* ctx );
 #endif  // _NANOPOWER2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

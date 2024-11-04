@@ -1,8 +1,8 @@
 {
     "name": "LED Driver 3 Click",
-    "description": "LED Driver 3 click is an RGB LED driver, capable of driving RGB LEDs with up to 30mA per segment, via the digital I2C interface.",
+    "description": "LED Driver 3 Click is an RGB LED driver, capable of driving RGB LEDs with up to 30mA per segment, via the digital I2C interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","NCP5623B"],
+    "hw" : ["Click","NCP5623B"],
     "category" : ["	LED Drivers"] 
 }

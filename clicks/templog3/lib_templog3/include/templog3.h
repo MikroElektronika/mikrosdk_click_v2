@@ -250,7 +250,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void templog3_cfg_setup ( templog3_cfg_t *cfg );
@@ -261,7 +261,7 @@ void templog3_cfg_setup ( templog3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TEMPLOG3_RETVAL templog3_init ( templog3_t *ctx, templog3_cfg_t *cfg );
 
@@ -289,7 +289,7 @@ TEMPLOG3_RETVAL templog3_init ( templog3_t *ctx, templog3_cfg_t *cfg );
  *            - -5
  * </pre>
  * 
- * @description This function executes default configuration for TempLog3 click.
+ * @description This function executes default configuration for TempLog3 Click.
  */
 void templog3_default_cfg ( templog3_t *ctx );
 
@@ -453,6 +453,6 @@ uint8_t templog3_eeprom_sequential_read ( templog3_t *ctx, uint8_t reg_addr, uin
 #endif  // _TEMPLOG3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

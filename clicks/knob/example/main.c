@@ -9,7 +9,7 @@
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  * 
  * ## Application Task  
  * The Task application has 3 test modes:

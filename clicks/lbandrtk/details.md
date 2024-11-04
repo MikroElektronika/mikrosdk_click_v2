@@ -1,6 +1,6 @@
 
 ---
-# LBAND RTK click
+# LBAND RTK Click
 
 > LBAND RTK Click is a compact add-on board that provides global and easy access to satellite L-Band GNSS corrections. This board features the NEO-D9S-00B, an professional-grade satellite data receiver for L-band correction broadcast from u-blox. Operating in a frequency range from 1525MHz to 1559MHz, the NEO-D9S-00B decodes the satellite transmission and outputs a correction stream, enabling a high-precision GNSS receiver to reach accuracies down to centimeter level. It can also select the GNSS correction data delivery channel alongside advanced security features such as signature and anti-jamming.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lbandrtk_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lband-rtk-click)
+[Click Product page](https://www.mikroe.com/lband-rtk-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t lbandrtk_read_ubx_frame ( lbandrtk_t *ctx, lbandrtk_ubx_frame_t *frame );
 
 ## Example Description
 
-> This example demonstrates the use of LBAND RTK click by setting the Point to multipoint (PMP)
+> This example demonstrates the use of LBAND RTK Click by setting the Point to multipoint (PMP)
 configuration and waiting for the UBX-RXM-PMP message, then parsing it and displaying on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -262,7 +262,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

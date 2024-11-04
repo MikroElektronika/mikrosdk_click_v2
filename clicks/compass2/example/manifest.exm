@@ -1,8 +1,8 @@
 {
     "name": "Compass 2 Click",
-    "description": "Compass 2 click carries the AK8963 3-axis electronic compass. The AK8963 sensor is based on the Hall effect.",
+    "description": "Compass 2 Click carries the AK8963 3-axis electronic compass. The AK8963 sensor is based on the Hall effect.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AK8963"],
+    "hw" : ["Click","AK8963"],
     "category" : ["Magnetic"] 
 }

@@ -3,7 +3,7 @@
  * \brief PwrMeter Click example
  * 
  * # Description
- * This click is capable of measuring voltage and current through the load, connected to either 
+ * This Click is capable of measuring voltage and current through the load, connected to either 
  * AC or DC power source. It is used to calculate all the measurement parameters, returning 
  * values of multiple power parameters directly, over the UART interface, reducing the processing 
  * load on the host MCU. These parameters include active, reactive, and apparent power, current 
@@ -24,7 +24,7 @@
  * if there's an error occurred in the last response from the module.
  * 
  * ## Note
- * Do not apply higher voltage than 60V to this board! This click is designed for lower voltage 
+ * Do not apply higher voltage than 60V to this board! This Click is designed for lower voltage 
  * monitoring and evaluation of the MCP39F511A and its basic functionalities. 
  * 
  * \author MikroE Team

@@ -3,7 +3,7 @@
  * @brief Opto 7 Click Example.
  *
  * # Description
- * This example demonstrates the use of Opto 7 click board by processing
+ * This example demonstrates the use of Opto 7 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :

@@ -3,12 +3,12 @@
  * \brief Eeprom4 Click example
  * 
  * # Description
- * This click reads and writes memory.
+ * This Click reads and writes memory.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver and configures click that all memory block > is unprotected.
+ * Initializes Click driver and configures Click that all memory block > is unprotected.
  * Also configures that HOLD operation is disabled, and the memory and > status register are writable.
  * 
  * ## Application Task  

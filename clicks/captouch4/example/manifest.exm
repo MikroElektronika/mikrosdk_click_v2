@@ -3,6 +3,6 @@
     "description": "Cap Touch 4 Click is a compact add-on board for wake-on-touch and activation applications. This board features the IQS211B, a single-channel capacitive controller from Azoteq, featuring ProxSense® technology for highly sensitive self-capacitance measurements. The board includes a defined circular touch-sensing area, signal conditioning for parasitic capacitance, and a low-power Sleep mode with wake-up functionality, ensuring efficient energy consumption. It communicates via the I2C interface with a fixed address of 0x47, operates at 3.3V logic, and features the new Click Snap for added flexibility.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr"],
-    "hw" : ["click","IQS211B00000000DNR"],
+    "hw" : ["Click","IQS211B00000000DNR"],
     "category" : ["Click Boards > HMI > Capacitive"]
 }

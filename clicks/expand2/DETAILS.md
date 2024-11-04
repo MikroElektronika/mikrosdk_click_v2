@@ -1,15 +1,15 @@
 
 ---
-# Expand 2 click
+# Expand 2 Click
 
-EXPAND 2 click is an accessory board in mikroBUS form factor. It includes a 16-bit I/O expander MCP23017 with I²C clock speeds up to 10 MHz for higher throughput applications.
+EXPAND 2 Click is an accessory board in mikroBUS form factor. It includes a 16-bit I/O expander MCP23017 with I²C clock speeds up to 10 MHz for higher throughput applications.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/expand2_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/expand-2-click)
+[Click Product page](https://www.mikroe.com/expand-2-click)
 
 ---
 
@@ -59,13 +59,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application demonstrates the use of the Expand 2 click board.
+> This application demonstrates the use of the Expand 2 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and logger, and then sets the click default configuration: PORTA as output, PORTB as input with pull-ups on all pins.
+> Initializes the driver and logger, and then sets the Click default configuration: PORTA as output, PORTB as input with pull-ups on all pins.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

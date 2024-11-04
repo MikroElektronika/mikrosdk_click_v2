@@ -685,7 +685,7 @@ typedef enum
 
 /**
  * @brief Accel 15 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #accel15_cfg_t object definition for detailed explanation.
@@ -697,7 +697,7 @@ void accel15_cfg_setup ( accel15_cfg_t *cfg );
 /**
  * @brief Accel 15 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #accel15_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -713,7 +713,7 @@ void accel15_drv_interface_selection ( accel15_cfg_t *cfg, accel15_drv_t drv_sel
 /**
  * @brief Accel 15 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -729,7 +729,7 @@ err_t accel15_init ( accel15_t *ctx, accel15_cfg_t *cfg );
 /**
  * @brief Accel 15 default configuration function.
  * @details This function executes a default configuration of Accel 15
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -778,7 +778,7 @@ err_t accel15_generic_read ( accel15_t *ctx, uint8_t reg, uint8_t *data_out, uin
  * @brief Accel 15 soft reset function.
  * @details This function executes a software reset 
  * of the BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return Nothing.
@@ -791,7 +791,7 @@ void accel15_soft_reset ( accel15_t *ctx );
  * @brief Accel 15 check ID function.
  * @details This function check ID and communication of the
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return @li @c  0 - Communication OK,
@@ -806,7 +806,7 @@ err_t accel15_check_id ( accel15_t *ctx );
  * @brief Accel 15 get error function.
  * @details This function get internal error flags of the
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return Internal error flags.
@@ -819,7 +819,7 @@ uint8_t accel15_get_error ( accel15_t *ctx );
  * @brief Accel 15 status function.
  * @details This function get sensor status flags of the
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return Sensor status flags.
@@ -832,7 +832,7 @@ uint8_t accel15_get_status ( accel15_t *ctx );
  * @brief Accel 15 enable accel function.
  * @details This function enable accelerometer data of the
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return Nothing.
@@ -845,7 +845,7 @@ void accel15_enable_accel ( accel15_t *ctx );
  * @brief Accel 15 config accel function.
  * @details This function executes a configuration of the accelerometer data 
  * of the BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @param[in] acc_odr : 
@@ -872,7 +872,7 @@ void accel15_cfg_accel ( accel15_t *ctx, uint8_t acc_odr, uint8_t g_range );
  * @brief Accel 15 internal status function.
  * @details This function get internal status message of the
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return Internal status message.
@@ -885,7 +885,7 @@ uint8_t accel15_get_internal_status ( accel15_t *ctx );
  * @brief Accel 15 get accelerometer axis function.
  * @details This function get accelerometer data of the
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @param[in] axis : An object that contains X , Y and Z axis data.
@@ -900,7 +900,7 @@ err_t accel15_get_axis_data ( accel15_t *ctx, accel15_axis_t *axis );
  * @brief Accel 15 get Interrupt 1 function.
  * @details This function get states of the Interrupt 1 ( INT pin )
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -914,7 +914,7 @@ uint8_t accel15_get_int_1 ( accel15_t *ctx );
  * @brief Accel 15 get Interrupt 1 function.
  * @details This function get states of the Interrupt 2 ( AN pin )
  * BMA490L High-performance longevity acceleration sensor
- * on the Accel 15 click board.
+ * on the Accel 15 Click board.
  * @param[in] ctx : Click context object.
  * See #accel15_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

@@ -1,14 +1,14 @@
 
 ---
-# Buck-Boost  click
+# Buck-Boost  Click
 
-Buck-Boost click™ features LTC3129-1, a buck-boost DC/DC conversion integrated circuit. The click supports a wide input voltage range and can output eight discrete regulated output voltage levels, selectable by the digital output voltage selection pins, ranging from 2.5V to 15V. 
+Buck-Boost Click™ features LTC3129-1, a buck-boost DC/DC conversion integrated circuit. The Click supports a wide input voltage range and can output eight discrete regulated output voltage levels, selectable by the digital output voltage selection pins, ranging from 2.5V to 15V. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/buckboost_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-boost-click)
+[Click Product page](https://www.mikroe.com/buck-boost-click)
 
 ---
 
@@ -198,7 +198,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

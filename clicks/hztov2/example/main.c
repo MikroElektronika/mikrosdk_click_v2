@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and the click board.
+ * This function initializes and configures the logger and the Click board.
  * 
  * ## Application Task  
  * Sets the PWM frequency then reads the voltage from VO pin and logs all data on USB UART.

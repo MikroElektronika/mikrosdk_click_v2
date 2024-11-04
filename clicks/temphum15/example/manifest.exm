@@ -3,6 +3,6 @@
     "description": "Temp&Hum 15 Click is a compact add-on board that contains the 4th generation of best-in-class SHT humidity sensing solution from Sensirion. This board features the SHT40, a high-accuracy ultra-low-power 16-bit relative humidity, and temperature sensor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SHT40"],
+    "hw" : ["Click","SHT40"],
     "category" : ["Temperature & humidity"]
 }

@@ -3,13 +3,13 @@
  * \brief Force Click example
  * 
  * # Description
- * This example showcases how to initialize and configure the logger and click modules and 
+ * This example showcases how to initialize and configure the logger and Click modules and 
  * read and display ADC voltage data read from the analog pin.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function reads and displays ADC voltage data from the analog pin every second. 
@@ -49,7 +49,7 @@ void application_init ( )
     log_info( &logger, "---- Application Init ----" );
 
     log_printf( &logger, "--------------------\r\n" );
-    log_printf( &logger, "    Force  click    \r\n" );
+    log_printf( &logger, "    Force  Click    \r\n" );
     log_printf( &logger, "--------------------\r\n\r\n" );
 
     //  Click initialization.

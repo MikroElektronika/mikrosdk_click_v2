@@ -3,13 +3,13 @@
  * \brief OneShot Click example
  * 
  * # Description
- * This example shows the user how to configure and use the One Shot click. The click has a 
+ * This example shows the user how to configure and use the One Shot Click. The Click has a 
  * monostable monovibrator which cam generate a pulse of width between 1μs and 33.6 seconds. 
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules. Resistance data,
+ * This function initializes and configures the logger and Click modules. Resistance data,
  * acquired from the AD5241, is displayed at the end of the initialization process. 
  * 
  * ## Application Task  

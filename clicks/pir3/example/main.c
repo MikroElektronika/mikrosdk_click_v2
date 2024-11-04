@@ -3,13 +3,13 @@
  * @brief PIR 3 Click example
  *
  * # Description
- * This example demonstrates the use of PIR 3 click board by reading and displaying
+ * This example demonstrates the use of PIR 3 Click board by reading and displaying
  * the peak hold tracking data.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the peak hold tracking data every 100ms and displays the results on the USB UART.

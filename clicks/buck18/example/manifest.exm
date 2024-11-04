@@ -3,6 +3,6 @@
     "description": "Buck 18 Click is a compact add-on board for step-down voltage conversion in power-sensitive applications. This board features the MAXM38643, an ultra-low-IQ nanoPower buck module from Analog Devices, providing highly efficient voltage regulation with minimal power consumption. The board supports input voltages from 1.8V to 5.5V, converting them to output voltages between 0.7V and 3.3V. Users can manually adjust the output voltage through an onboard TRIM trimmer or digitally via the AD5171 digital potentiometer controlled through an I2C interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAXM38643AEMB+"],
+    "hw" : ["Click","MAXM38643AEMB+"],
     "category" : ["Click Boards > Power management > Buck"]
 }

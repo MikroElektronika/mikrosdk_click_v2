@@ -3,13 +3,13 @@
  * @brief TempHum21 Click example
  *
  * # Description
- * This example demonstrates the use of Temp & Hum 21 click board by reading
+ * This example demonstrates the use of Temp & Hum 21 Click board by reading
  * the temperature and humidity data.
  * 
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the temperature (Celsius) and humidity (Percents) data and displays the

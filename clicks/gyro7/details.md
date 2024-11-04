@@ -1,6 +1,6 @@
 
 ---
-# Gyro 7 click
+# Gyro 7 Click
 
 > Gyro 7 Click is a compact add-on board that contains a high-performance gyroscope. This board features the ICG-1020S, a dual-axis MEMS angular rate sensor (gyroscope) from TDK InvenSense. The ICG-1020S provides extremely low RMS noise as well as noise density. The high-resolution gyroscope supports a full-scale programmable range of ±46.5dps to ±374dps, a fast sample rate at up to 32kHz, an SPI serial interface, and extremely low power consumption. This Click board™ is designed for optical image stabilization (OIS) applications.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gyro7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gyro-7-click)
+[Click Product page](https://www.mikroe.com/gyro-7-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t gyro7_read_temperature ( gyro7_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Gyro 7 click board by reading and displaying
+> This example demonstrates the use of Gyro 7 Click board by reading and displaying
 the values of X and Y axis in degrees per second and the chip internal temperature in Celsius.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the sample rate
+> Initializes the driver and performs the Click default configuration which sets the sample rate
 to 40 Hz, gyroscope resolution to 374 dps, and enables the data ready interrupt.
 
 ```c
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

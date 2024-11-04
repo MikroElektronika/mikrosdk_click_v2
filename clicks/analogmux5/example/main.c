@@ -3,7 +3,7 @@
  * @brief Analog MUX 5 Click Example.
  *
  * # Description
- * This example showcases how to initialize, configure and use the Analog MUX 5 click module.
+ * This example showcases how to initialize, configure and use the Analog MUX 5 Click module.
  *
  * The demo application is composed of two sections :
  *
@@ -11,7 +11,7 @@
  * Initializes the driver and enables the analog inputs.
  *
  * ## Application Task
- * This is an example that shows the use of a Analog MUX 5 click board.
+ * This is an example that shows the use of a Analog MUX 5 Click board.
  * In this example, we switch from channel AN1 to channel AN4, 
  * read and display the voltage on the active channel.
  * Results are being sent to the Usart Terminal where you can track their changes.

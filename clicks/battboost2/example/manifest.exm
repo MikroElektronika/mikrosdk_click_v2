@@ -3,6 +3,6 @@
     "description": "BATT Boost 2 Click is a compact add-on board designed to extend the battery life of non-rechargeable, primary batteries in low-voltage, low-power applications. This board features the NBM7100A, a coin-cell battery-life booster with adaptive power optimization from Nexperia. The NBM7100A integrates two high-efficiency DC-DC conversion stages and an intelligent learning algorithm to optimize energy usage, allowing it to handle bursts of current up to 200mA without depleting the battery. It features two output terminals: VDH for high pulse load applications and VDP for powering 'Always-ON' components. Communication with the host MCU is achieved via the I2C interface, supporting up to 1MHz clock frequencies.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","NBM7100ABQX"],
+    "hw" : ["Click","NBM7100ABQX"],
     "category" : ["Click Boards > Power management > Boost"]
 }

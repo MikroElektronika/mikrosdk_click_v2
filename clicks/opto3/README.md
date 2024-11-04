@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Opto 3 click
+# Opto 3 Click
 
-> Opto 3 click is a relay Click board™, equipped with two pairs of optically isolated solid-state relays (SSR).
+> Opto 3 Click is a relay Click board™, equipped with two pairs of optically isolated solid-state relays (SSR).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/opto3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/opto-3-click)
+[Click Product page](https://www.mikroe.com/opto-3-click)
 
 ---
 
@@ -65,7 +65,7 @@ void opto3_set_out1 ( opto3_t *ctx, uint8_t state );
 
 ## Examples Description
 
-> Opto 3 click to be used in applications that require reinforced galvanic 
+> Opto 3 Click to be used in applications that require reinforced galvanic 
 > isolation for both their input and output stages.
 
 **The demo application is composed of two sections :**
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -212,7 +212,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void magneto7_cfg_setup ( magneto7_cfg_t *cfg );
@@ -222,7 +222,7 @@ void magneto7_cfg_setup ( magneto7_cfg_t *cfg );
  * @param magneto7 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MAGNETO7_RETVAL magneto7_init ( magneto7_t *ctx, magneto7_cfg_t *cfg );
 
@@ -231,7 +231,7 @@ MAGNETO7_RETVAL magneto7_init ( magneto7_t *ctx, magneto7_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Magneto7 click.
+ * @description This function executes default configuration for Magneto7 Click.
  */
 uint8_t magneto7_default_cfg ( magneto7_t *ctx );
 
@@ -366,6 +366,6 @@ void magneto7_get_gain_para ( magneto7_t *ctx, uint16_t *x_axis, uint16_t *y_axi
 #endif  // _MAGNETO7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

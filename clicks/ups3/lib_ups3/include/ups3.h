@@ -209,7 +209,7 @@ typedef struct
 
 /**
  * @brief UPS 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ups3_cfg_t object definition for detailed explanation.
@@ -221,7 +221,7 @@ void ups3_cfg_setup ( ups3_cfg_t *cfg );
 /**
  * @brief UPS 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -237,7 +237,7 @@ err_t ups3_init ( ups3_t *ctx, ups3_cfg_t *cfg );
 /**
  * @brief UPS 3 default configuration function.
  * @details This function executes a default configuration of UPS 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -252,7 +252,7 @@ err_t ups3_default_cfg ( ups3_t *ctx );
 /**
  * @brief UPS 3 get error function.
  * @details This function reads the state of the ERR ( AN ) pin of UPS 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @return @li @c 0 - CMPIN pin voltage is above the comparator rising threshold,
@@ -265,7 +265,7 @@ uint8_t ups3_get_error ( ups3_t *ctx );
 /**
  * @brief UPS 3 pin get capacitor ok function.
  * @details This function reads the state of the COK ( RST ) pin of UPS 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @return @li @c 0 - FBVcap voltage is lower than falling threshold,
@@ -278,7 +278,7 @@ uint8_t ups3_get_cap_ok ( ups3_t *ctx );
 /**
  * @brief UPS 3 get charge/backup mode function.
  * @details This function reads the state of the INT pin of UPS 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @return @li @c 0 - Regulator is in charge mode,
@@ -291,7 +291,7 @@ uint8_t ups3_get_chrg ( ups3_t *ctx );
 /**
  * @brief UPS 3 pin select direction of the operation modes function.
  * @details This function sets the DIR ( CS ) pin on the low or high level of
- * UPS 3 click board.
+ * UPS 3 Click board.
  * @param[in] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @param[in] dir_mode : Direction of the operation modes.
@@ -308,7 +308,7 @@ err_t ups3_select_dir_mode ( ups3_t *ctx, uint8_t dir_mode );
 /**
  * @brief UPS 3 enable device function.
  * @details This function sets the EN ( PWM ) pin on the low or high level of
- * UPS 3 click board.
+ * UPS 3 Click board.
  * @param[in] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @param[in] enable : Logic-Controlled Shutdown.
@@ -325,7 +325,7 @@ err_t ups3_set_enable ( ups3_t *ctx, uint8_t enable );
 /**
  * @brief UPS 3 reset the device function.
  * @details This function executes a hardware reset of
- * UPS 3 click board.
+ * UPS 3 Click board.
  * @param[in] ctx : Click context object.
  * See #ups3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

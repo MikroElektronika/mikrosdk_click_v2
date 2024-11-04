@@ -3,6 +3,6 @@
     "description": "NanoBeacon Click is a compact add-on board that provides a powerful and efficient Bluetooth beacon solution. This board features the IN100, an ultra-low power Bluetooth 5.3 Beacon SoC from InPlay, that sets a new standard in beacon technology. Its ultra-low power consumption, enhanced privacy mode, and three beacon modes offer seamless compatibility with no Bluetooth programming required - plug and play. Its compact design houses two types of built-in memory (4Kb OTP and 4KB SRAM), UART and I2C interfaces, and a hardware security engine.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","IN100"],
+    "hw" : ["Click","IN100"],
     "category" : ["Click Boards > Wireless connectivity > BT/BLE"]
 }

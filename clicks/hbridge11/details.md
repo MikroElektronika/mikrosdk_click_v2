@@ -1,6 +1,6 @@
 
 ---
-# H-Bridge 11 click
+# H-Bridge 11 Click
 
 > H-Bridge 11 Click is a compact add-on board that allows a voltage to be applied across a load in either direction. This board features the MAX22200, an octal serial-controlled solenoid and motor driver from Analog Devices. The MAX22200 is SPI-configurable and rated for an operating voltage range from 4.5V to 36V. Each channel features a low impedance push-pull output stage with sink-and-source driving capability up to 1A RMS driving current. Its internal half-bridges can be configured as low-side or high-side drivers, supports two control methods (voltage and current drive regulation), and features a full set of protections and diagnostic functions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-11-click)
+[Click Product page](https://www.mikroe.com/h-bridge-11-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t hbridge11_set_motor_state ( hbridge11_t *ctx, uint8_t motor, uint8_t state
 
 ## Example Description
 
-> This example demonstrates the use of the H-Bridge 11 click board by driving the DC motors connected between OUT0-OUT1 and OUT2-OUT3 in both directions. 
+> This example demonstrates the use of the H-Bridge 11 Click board by driving the DC motors connected between OUT0-OUT1 and OUT2-OUT3 in both directions. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

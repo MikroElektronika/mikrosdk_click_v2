@@ -263,7 +263,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gsmgnss_cfg_setup ( gsmgnss_cfg_t *cfg );
@@ -273,7 +273,7 @@ void gsmgnss_cfg_setup ( gsmgnss_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 GSMGNSS_RETVAL gsmgnss_init ( gsmgnss_t *ctx, gsmgnss_cfg_t *cfg );
 
@@ -323,7 +323,7 @@ uint8_t gsmgnss_get_cts ( gsmgnss_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #gsmgnss_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -334,7 +334,7 @@ void gsmgnss_send_cmd ( gsmgnss_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #gsmgnss_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.
@@ -425,6 +425,6 @@ gsmgnss_error_t gsmgnss_generic_parser
 #endif  // _GSMGNSS_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,6 +1,6 @@
 
 ---
-# Joystick 3 click
+# Joystick 3 Click
 
 > Joystick 3 Click is a compact add-on board that can fulfill your directional analog input needs. This board features 2765, a high-quality mini 2-axis analog output thumbstick from Adafruit Industries. This small joystick is a 'self-centering' analog-type with a black rocker cap similar to the PSP joysticks. It comprises two 10kΩ potentiometers, one for up/down and another for left/right direction. Knowing that this joystick represents an analog type, it connects with mikroBUS™ through the SPI interface through the MCP3204 12-bit A/D converter.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/joystick3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/joystick-3-click)
+[Click Product page](https://www.mikroe.com/joystick-3-click)
 
 ---
 
@@ -69,7 +69,7 @@ uint8_t joystick3_get_position ( uint16_t raw_x, uint16_t raw_y );
 
 ## Example Description
 
-> This example demonstrates the use of the joystick 3 click board by reading
+> This example demonstrates the use of the joystick 3 Click board by reading
 and displaying the raw ADC for X and Y axis, as well as the joystick angle and position
 calculated from those ADC readings.
 
@@ -197,7 +197,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

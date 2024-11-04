@@ -186,7 +186,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void i2cmux4_cfg_setup ( i2cmux4_cfg_t *cfg );
@@ -196,7 +196,7 @@ void i2cmux4_cfg_setup ( i2cmux4_cfg_t *cfg );
  * @param i2cmux4 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 I2CMUX4_RETVAL i2cmux4_init ( i2cmux4_t *ctx, i2cmux4_cfg_t *cfg );
 
@@ -230,7 +230,7 @@ void i2cmux4_generic_read ( i2cmux4_t *ctx, uint8_t reg, uint8_t *data_buf, uint
  *
  * @param ctx          Click object.
  * 
- * @description The function enable or disable the I2C MUX 4 click board
+ * @description The function enable or disable the I2C MUX 4 Click board
  * by set to '1' or cleared to '0' state of the RST pin.
 **/
 void i2cmux4_power_on ( i2cmux4_t *ctx, uint8_t enable );
@@ -240,7 +240,7 @@ void i2cmux4_power_on ( i2cmux4_t *ctx, uint8_t enable );
  *
  * @param ctx          Click object.
  * 
- * @description The function hardware reset I2C MUX 4 click board
+ * @description The function hardware reset I2C MUX 4 Click board
  * by cleared to '0' state of the RST pin,
  * wait the 100 ms, sets to '1' state of the RST pin
  * and wait another the 100 ms.
@@ -256,7 +256,7 @@ void i2cmux4_hw_reset ( i2cmux4_t *ctx );
  *
  * @description The function executes writes command to the
  * TCA9543A Low Voltage 2-Channel I2C Bus Switch With Interrupt Logic And Reset
- * on the I2C MUX 4 click board.
+ * on the I2C MUX 4 Click board.
 **/
 void i2cmux4_write_cmd ( i2cmux4_t *ctx, uint8_t cmd_data );
 
@@ -270,7 +270,7 @@ void i2cmux4_write_cmd ( i2cmux4_t *ctx, uint8_t cmd_data );
  *
  * Function executes read command from the
  * TCA9543A Low Voltage 2-Channel I2C Bus Switch With Interrupt Logic And Reset
- * on the I2C MUX 4 click board.
+ * on the I2C MUX 4 Click board.
 **/
 uint8_t i2cmux4_read_cmd ( i2cmux4_t *ctx );
 
@@ -292,7 +292,7 @@ uint8_t i2cmux4_read_cmd ( i2cmux4_t *ctx );
  *
  * @description The function sets channel and slave address of the 
  * device connected to the selected channel 
- * of the I2C MUX 4 click board.
+ * of the I2C MUX 4 Click board.
 **/
 void i2cmux4_set_channel ( i2cmux4_t *ctx, uint8_t sel_ch, uint8_t ch_slave_addr );
 
@@ -305,7 +305,7 @@ void i2cmux4_set_channel ( i2cmux4_t *ctx, uint8_t sel_ch, uint8_t ch_slave_addr
  * channel interrupt bit
  *
  * @description The function get channel interrupt
- * of the I2C MUX 4 click board.
+ * of the I2C MUX 4 Click board.
 **/
 uint8_t i2cmux4_get_ch_interrupt ( i2cmux4_t *ctx );
 
@@ -325,7 +325,7 @@ uint8_t i2cmux4_get_ch_interrupt ( i2cmux4_t *ctx );
  * @description The function writes a sequential data starting 
  * to the targeted 8-bit
  * register address of the device connected to the desired channel
- * of the I2C MUX 4 click board.
+ * of the I2C MUX 4 Click board.
  */
 void i2cmux4_rmt_write_bytes ( i2cmux4_t *ctx, uint8_t reg, uint8_t *p_tx_data, uint8_t n_bytes );
 
@@ -345,7 +345,7 @@ void i2cmux4_rmt_write_bytes ( i2cmux4_t *ctx, uint8_t reg, uint8_t *p_tx_data, 
  * @description The function read a sequential data starting
  * from the targeted 8-bit register address of
  * register address of the device connected to the desired channel
- * of the I2C MUX 4 click board.
+ * of the I2C MUX 4 Click board.
  */
 void i2cmux4_rmt_read_bytes ( i2cmux4_t *ctx, uint8_t reg, uint8_t *p_rx_data, uint8_t n_bytes );
 
@@ -358,7 +358,7 @@ void i2cmux4_rmt_read_bytes ( i2cmux4_t *ctx, uint8_t reg, uint8_t *p_rx_data, u
  * state of the INT pin.
  *
  * @description The function get INT pin state
- * of I2C MUX 4 click board.
+ * of I2C MUX 4 Click board.
 **/
 uint8_t i2cmux4_check_int ( i2cmux4_t *ctx );
 
@@ -368,6 +368,6 @@ uint8_t i2cmux4_check_int ( i2cmux4_t *ctx );
 #endif  // _I2CMUX4_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

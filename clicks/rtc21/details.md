@@ -1,6 +1,6 @@
 
 ---
-# RTC 21 click
+# RTC 21 Click
 
 > RTC 21 Click is a compact add-on board that accurately keeps the time of the day. This board features the PT7C4311, an I2C-configurable real-time clock module with programmable square-wave output from Diodes Incorporated. The PT7C4311 includes time and calendar functions providing various information such as hour, minute, second, day, date, month, year, and century. It operates in a 24-hour format indicator, has automatic leap year compensation, and low power consumption, allowing it to be used with a single button cell battery for an extended period.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtc21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-21-click)
+[Click Product page](https://www.mikroe.com/rtc-21-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t rtc21_read_time ( rtc21_t *ctx, rtc21_time_t *time );
 
 ## Example Description
 
-> This example demonstrates the use of RTC 21 click board by reading and displaying the time and date values.
+> This example demonstrates the use of RTC 21 Click board by reading and displaying the time and date values.
 
 **The demo application is composed of two sections :**
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

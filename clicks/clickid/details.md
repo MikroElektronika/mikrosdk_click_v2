@@ -57,7 +57,7 @@ err_t clickid_check_communication ( clickid_t *ctx );
 err_t clickid_read_memory ( clickid_t *ctx, uint16_t address, uint8_t *data_out, uint16_t len );
 ```
 
-- `clickid_read_information` This function reads the click board information from the permanent data memory.
+- `clickid_read_information` This function reads the Click board information from the permanent data memory.
 ```c
 err_t clickid_read_information ( clickid_t *ctx, clickid_information_t *info );
 ```
@@ -70,7 +70,7 @@ err_t clickid_read_information ( clickid_t *ctx, clickid_information_t *info );
 
 ### Application Init
 
-> Initializes the driver and checks the communication with the click board.
+> Initializes the driver and checks the communication with the Click board.
 
 ```c
 
@@ -104,7 +104,7 @@ void application_init ( void )
     if ( CLICKID_ERROR == clickid_check_communication ( &clickid ) )
     {
         log_error( &logger, " Communication fail." );
-        log_printf( &logger, "Check if the click is attached to the correct " );
+        log_printf( &logger, "Check if the Click is attached to the correct " );
         log_printf( &logger, "MIKROBUS socket, and try again.\r\n" );
         for ( ; ; );
     }
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,7 +3,7 @@
  * \brief Adc9 Click example
  * 
  * # Description
- * This click is 8th channel analog to digital converter expansion board, usefull for projects 
+ * This Click is 8th channel analog to digital converter expansion board, usefull for projects 
  * where we have demand for multi channel ADC conversion such as microcontrollers with small 
  * number or none analog inputs. It offers integrated features, such as internal oscillator, 
  * temperature sensor and burnout sensor detection, in order to reduce system component count 
@@ -15,7 +15,7 @@
  * Initalizes SPI driver, resets and starts the device, and makes an initial log.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the ADC 9 click by calculating voltage level 
+ * This is an example that shows the capabilities of the ADC 9 Click by calculating voltage level 
  * based on ADC from channels 0(positive) and 1(negative), and logs the result.
  * 
  * ## Additional Function
@@ -24,7 +24,7 @@
  * from channels 0 (positive) and 1 (negative) with default data format, gain, boost and internal clock.
  * 
  * ## NOTE
- * Depending on the VOLT SEL jumper position on the click board the user needs to set VREF 
+ * Depending on the VOLT SEL jumper position on the Click board the user needs to set VREF 
  * macro value (mV) in the code.
  * 
  * \author MikroE Team

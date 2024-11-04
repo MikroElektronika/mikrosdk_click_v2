@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Silent Step 2 click
+# Silent Step 2 Click
 
 > Silent Step 2 Click is a compact add-on board that allows extremely smooth and silent operation of the connected motor. This board features the TMC2130, a high-performance two-phase stepper motor driver from Analog Devices. The driver uses an external motor power supply of 4.75 up to 43V to power a 2-phase stepper motor up to 2A coil current (2.5A peak).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/silentstep2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/silent-step-2-click)
+[Click Product page](https://www.mikroe.com/silent-step-2-click)
 
 ---
 
@@ -197,7 +197,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

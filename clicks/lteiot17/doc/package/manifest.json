@@ -1,0 +1,38 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > LTE IoT",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LTE IoT 17 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lteiot17",
+    "product_link": "https://www.mikroe.com/lte-iot-17-click",
+    "short_description": "LTE IoT 17 Click is a compact add-on board designed for low-power, long-range cellular communication in IoT applications. This board features the SIM7070E, a multi-band LTE module from SIMCom that supports the European/Australian region's Cat-M, Cat-NB, and GSM modes. Key features include a maximum 589kbps downlink and 1.1Mbps uplink rate, support of multiple LTE bands and optional multi-constellation GNSS, a micro SIM card holder, AT command communication, firmware upgrades, power management options, and visual indicators for network and power status.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.LTEIoT17",
+    "subdir_name": "lib_lteiot17"
+}
+
+
+

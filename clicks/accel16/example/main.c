@@ -3,7 +3,7 @@
  * @brief Accel16 Click example
  *
  * # Description
- * This showcases ability of the click board to 
+ * This showcases ability of the Click board to 
  * read x, y, and z axes data in different resolution,
  * read IC temperature and also have additional functionality
  * to read ADC data. Device also has ability to store data 

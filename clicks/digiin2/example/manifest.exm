@@ -3,6 +3,6 @@
     "description": "DIGI IN 2 Click is a compact add-on board designed for converting high-voltage industrial signals into logic-level outputs, ideal for enhancing industrial control systems. This board features the MAX22196, a high-performance octal industrial sink/source digital input IC from Analog Devices. This Click board™ stands out for its ability to interface eight industrial inputs (8V-24V) via SPI, configurable as either sinking or sourcing with built-in current limiters, ensuring adherence to IEC 61131-2 standards.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX22196ATJ+"],
+    "hw" : ["Click","MAX22196ATJ+"],
     "category" : ["Click Boards > Mixed signal > DAC"]
 }

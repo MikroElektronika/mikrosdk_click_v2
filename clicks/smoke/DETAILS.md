@@ -1,15 +1,15 @@
  
 ---
-# Smoke click
+# Smoke Click
 
-Smoke click carries the MAX30105 high-sensitivity optical sensor for smoke detection. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface with additional functionality provided by the INT pin on the mikroBUS™ line.
+Smoke Click carries the MAX30105 high-sensitivity optical sensor for smoke detection. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface with additional functionality provided by the INT pin on the mikroBUS™ line.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/smoke_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/smoke-click)
+[Click Product page](https://www.mikroe.com/smoke-click)
 
 ---
 
@@ -59,7 +59,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
->  This click includes internal LEDs, photodetectors, optical elements, and low-noise electronics 
+>  This Click includes internal LEDs, photodetectors, optical elements, and low-noise electronics 
 > with ambient light rejection. The sensor can detect a wide variety of smoke particle sizes. 
 > It also has an on-chip temperature sensor for calibrating the temperature dependence of the 
 > particle sensing subsystem. The temperature sensor has an inherent resolution 0.0625°C.
@@ -148,7 +148,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

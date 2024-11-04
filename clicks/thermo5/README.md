@@ -3,15 +3,15 @@
  
 
 ---
-# THERMO 5 click
+# THERMO 5 Click
 
-THERMO 5 click measures temperature in default range of 0°C to 127°C and extended range of -64°C to 191°C with ±1°C accuracy.
+THERMO 5 Click measures temperature in default range of 0°C to 127°C and extended range of -64°C to 191°C with ±1°C accuracy.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/thermo5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-5-click)
+[Click Product page](https://www.mikroe.com/thermo-5-click)
 
 ---
 
@@ -95,7 +95,7 @@ void application_init ( void )
     THERMO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     thermo5_init( &thermo5, &cfg );
     Delay_ms ( 500 );
-    log_printf( &logger, " Thermo 5 click ready! \r\n" );
+    log_printf( &logger, " Thermo 5 Click ready! \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms ( 100 );
 }
@@ -104,7 +104,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the most important functions that Thermo 5 click has.
+> This is an example that shows the most important functions that Thermo 5 Click has.
 
 ```c
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,13 +3,13 @@
  * @brief PAC1720 Click example
  *
  * # Description
- * This example demonstrates the use of PAC1720 click board by reading the voltage, 
+ * This example demonstrates the use of PAC1720 Click board by reading the voltage, 
  * current, and power from both available channels.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the voltage, current, and power from both channels and displays 

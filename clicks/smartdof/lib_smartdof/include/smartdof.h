@@ -427,7 +427,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void smartdof_cfg_setup ( smartdof_cfg_t *cfg );
@@ -438,7 +438,7 @@ void smartdof_cfg_setup ( smartdof_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SMARTDOF_RETVAL smartdof_init ( smartdof_t *ctx, smartdof_cfg_t *cfg );
 
@@ -447,7 +447,7 @@ SMARTDOF_RETVAL smartdof_init ( smartdof_t *ctx, smartdof_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for SmartDof click.
+ * @description This function executes default configuration for SmartDof Click.
  */
 uint8_t smartdof_default_cfg ( smartdof_t *ctx );
 
@@ -854,6 +854,6 @@ uint8_t smartdof_flush_completed ( smartdof_t *ctx, uint8_t * sensor_id );
 #endif  // _SMARTDOF_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

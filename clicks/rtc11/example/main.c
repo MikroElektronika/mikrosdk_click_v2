@@ -3,7 +3,7 @@
  * @brief RTC11 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the RTC 11 click board™.
+ * This is an example that demonstrates the use of the RTC 11 Click board™.
  *
  * The demo application is composed of two sections :
  *
@@ -12,7 +12,7 @@
  * system time and date, and starts clocking system.
  *
  * ## Application Task
- * Demonstrates use of RTC 11 click board by reading and
+ * Demonstrates use of RTC 11 Click board by reading and
  * displaying time and date via USART terminal.
  * 
  * Additional Functions :

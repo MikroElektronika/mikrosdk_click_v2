@@ -1,6 +1,6 @@
 
 ---
-# Current 7 click
+# Current 7 Click
 
 > Current 7 Click is a compact add-on board providing a precise and accurate current sensing solution. This board features the INA282, a wide common-mode range, bidirectional, high-accuracy current shunt monitor from Texas Instruments. The INA282 represents a voltage output current shunt monitor that can sense drops across shunts at common-mode voltages from –14 V to +80 V, independent of the supply voltage, which operates in a range from 2.7V up to 18V supply. The zero-drift topology enables high-precision measurements with maximum input offset voltages as low as 70μV. Also, the user is allowed to process the output signal in analog or digital form.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/current7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-7-click)
+[Click Product page](https://www.mikroe.com/current-7-click)
 
 ---
 
@@ -57,7 +57,7 @@ err_t current7_read_voltage ( current7_t *ctx, float *voltage );
 err_t current7_get_current ( current7_t *ctx, float *current );
 ```
 
-- `current7_set_vref` This function sets the voltage reference for Current 7 click driver.
+- `current7_set_vref` This function sets the voltage reference for Current 7 Click driver.
 ```c
 err_t current7_set_vref ( current7_t *ctx, float vref );
 ```
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

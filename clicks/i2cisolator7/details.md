@@ -1,6 +1,6 @@
 
 ---
-# I2C Isolator 7 click
+# I2C Isolator 7 Click
 
 > I2C Isolator 7 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the ADuM1252, an ultra-low power, bidirectional I2C isolator from Analog Devices. It can isolate I2C bidirectional data transfer of up to 2MHz SCL and bidirectional SCL for advanced bus topologies, and it supports clock stretching and multiple controllers across the isolation barrier. It also features the enhanced hot-swappable side 2 IO.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-isolator-7-click)
+[Click Product page](https://www.mikroe.com/i2c-isolator-7-click)
 
 ---
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

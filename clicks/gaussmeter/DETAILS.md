@@ -1,14 +1,14 @@
 
 ---
-# Gaussmeter click
+# Gaussmeter Click
 
-Gaussmeter click is a device that is used for measuring the magnetic field in X, Y and Z axes. This Click board™ features the MLX90393, a micropower magnetometer based on the proprietary Triaxis® technology, from Melexis.>
+Gaussmeter Click is a device that is used for measuring the magnetic field in X, Y and Z axes. This Click board™ features the MLX90393, a micropower magnetometer based on the proprietary Triaxis® technology, from Melexis.>
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gaussmeter_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gaussmeter-click)
+[Click Product page](https://www.mikroe.com/gaussmeter-click)
 
 ---
 
@@ -55,15 +55,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to configure and use the Gaussmeter click. This click measures
+> This example showcases how to configure and use the Gaussmeter Click. This Click measures
 > magnetic fields around the device using a 3 axis measurement system. Alongside the magnetometer,
-> the click contains an integrated temperature sensor which provides data for the thermal compensation.
+> the Click contains an integrated temperature sensor which provides data for the thermal compensation.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. 
+> This function initializes and configures the Click and logger modules. 
 > Additional configuring is done in the default_cfg(...) function.
 
 ```c
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

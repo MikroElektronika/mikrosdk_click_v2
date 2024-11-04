@@ -1,6 +1,6 @@
 
 ---
-# Headphone AMP click
+# Headphone AMP Click
 
 Headphone Amp Click is a compact add-on board that contains a stereo headphone amplifier. This board features the LM4811, Boomer® audio power amplifier capable of delivering 105mW per channel with digital volume control from Texas Instruments. The Boomer® amplifiers are specifically designed to provide high-quality output power with a minimal amount of external components. Since the LM4811 does not require bootstrap capacitors or snubber networks, it is optimally suited for low-power portable systems. It features a digital volume control that sets the amplifier's gain from +12dB to −33dB in 16 discrete steps, in addition to a micro-power consumption Shutdown mode.
 
@@ -8,7 +8,7 @@ Headphone Amp Click is a compact add-on board that contains a stereo headphone a
   <img src="https://download.mikroe.com/images/click_for_ide/headphoneamp_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/headphone-amp-click)
+[Click Product page](https://www.mikroe.com/headphone-amp-click)
 
 ---
 
@@ -69,8 +69,8 @@ HEADPHONEAMP_RETVAL headphoneamp_volume_down ( headphoneamp_t *ctx );
 
 ## Example Description
 
-> This library contains API for the Headphone AMP click driver.
-> This demo application shows use of a Headphone AMP click board™.
+> This library contains API for the Headphone AMP Click driver.
+> This demo application shows use of a Headphone AMP Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -135,7 +135,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of Headphone AMP click board™.
+> This is an example that shows the use of Headphone AMP Click board™.
 > The app performs circles the volume from -12 dB to 3 dB back and forth,
 > increase/decrement by 3dB.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -186,7 +186,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -224,7 +224,7 @@ typedef enum
 
 /**
  * @brief TFmini configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #tfmini_cfg_t object definition for detailed explanation.
@@ -236,7 +236,7 @@ void tfmini_cfg_setup ( tfmini_cfg_t *cfg );
 /**
  * @brief TFmini driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #tfmini_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -252,7 +252,7 @@ void tfmini_drv_interface_selection ( tfmini_cfg_t *cfg, tfmini_drv_t drv_sel );
 /**
  * @brief TFmini initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #tfmini_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -268,7 +268,7 @@ err_t tfmini_init ( tfmini_t *ctx, tfmini_cfg_t *cfg );
 /**
  * @brief TFmini default configuration function.
  * @details This function executes a default configuration of TFmini
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #tfmini_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -366,7 +366,7 @@ err_t tfmini_set_frame_rate ( tfmini_t *ctx, uint16_t frame_rate );
  * See #err_t definition for detailed explanation.
  * @note A tfmini_save_settings command must be executed after this function call in order for the changes
  * to take efect. After changing the communication interface reprogram the board with a properly interface
- * selected using tfmini_drv_interface_selection function, and make sure to set the click onboard switch for
+ * selected using tfmini_drv_interface_selection function, and make sure to set the Click onboard switch for
  * the proper communication interface.
  */
 err_t tfmini_change_interface ( tfmini_t *ctx, tfmini_drv_t drv_sel );

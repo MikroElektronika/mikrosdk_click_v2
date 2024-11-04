@@ -168,7 +168,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void rs4854_cfg_setup ( rs4854_cfg_t *cfg );
@@ -178,7 +178,7 @@ void rs4854_cfg_setup ( rs4854_cfg_t *cfg );
  * @param rs4854 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 RS4854_RETVAL rs4854_init ( rs4854_t *ctx, rs4854_cfg_t *cfg );
 
@@ -260,6 +260,6 @@ void rs4854_de_pin_set ( rs4854_t *ctx,  uint8_t pin_state );
 #endif  // _RS4854_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -179,7 +179,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dualee_cfg_setup ( dualee_cfg_t *cfg );
@@ -190,7 +190,7 @@ void dualee_cfg_setup ( dualee_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DUALEE_RETVAL dualee_init ( dualee_t *ctx, dualee_cfg_t *cfg );
 
@@ -249,6 +249,6 @@ uint8_t dualee_read ( dualee_t *ctx, uint32_t reg_address, uint8_t *data_buff, u
 #endif  // _DUALEE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

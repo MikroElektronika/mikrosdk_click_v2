@@ -3,8 +3,8 @@
  * @brief LR 11 915MHz Click Example.
  *
  * # Description
- * This example demonstrates the use of LR 11 915MHz click board by showing
- * the communication between two click boards configured in P2P network mode.
+ * This example demonstrates the use of LR 11 915MHz Click board by showing
+ * the communication between two Click boards configured in P2P network mode.
  *
  * The demo application is composed of two sections :
  *
@@ -18,7 +18,7 @@
  *  - LR11915MHZ_CONFIG_EXAMPLE:
  * Configures device for the LoRa P2P network mode.
  *  - LR11915MHZ_EXAMPLE:
- * Performs a LoRa P2P example by exchanging messages with another LR 11 915MHz click board.
+ * Performs a LoRa P2P example by exchanging messages with another LR 11 915MHz Click board.
  * One device should be set to NODE_0_ADDRESS, and the other to NODE_1_ADDRESS.
  *
  * ## Additional Function
@@ -46,7 +46,7 @@
 #define NODE_ADDRESS        NODE_0_ADDRESS
 
 // Text message for transmittion
-#define DEMO_TEXT_MESSAGE   "MIKROE - LR 11 915MHz click board"
+#define DEMO_TEXT_MESSAGE   "MIKROE - LR 11 915MHz Click board"
 
 static lr11915mhz_t lr11915mhz;
 static log_t logger;
@@ -138,7 +138,7 @@ static err_t lr11915mhz_config_example ( lr11915mhz_t *ctx );
 
 /**
  * @brief LR 11 915MHz example function.
- * @details This function performs a LoRa P2P example by exchanging messages with another LR 11 915MHz click board.
+ * @details This function performs a LoRa P2P example by exchanging messages with another LR 11 915MHz Click board.
  * @param[in] ctx : Click context object.
  * See #lr11915mhz_t object definition for detailed explanation.
  * @return @li @c    0 - OK.

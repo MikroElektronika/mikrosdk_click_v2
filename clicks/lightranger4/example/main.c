@@ -3,13 +3,13 @@
  * \brief LightRanger4 Click example
  * 
  * # Description
- * Demo application is used to shows basic controls LightRanger 4 click
+ * Demo application is used to shows basic controls LightRanger 4 Click
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Settings the click in the default configuration,
+ * Settings the Click in the default configuration,
  * adjusts the LONG mode (distance measurement up to 4 meters),
  * sets the time budget and start measurement with the adjustment of inter measurements period.
  * 

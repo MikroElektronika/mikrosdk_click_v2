@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Ambient 19 click
+# Ambient 19 Click
 
 > Ambient 19 Click is a compact add-on board used to measure the amount of the present ambient light. This board features the APM-16D24-310-DF8/TR8, a digital output ambient light and proximity sensor with an I2C interface and interrupt from Everlight Electronics. It has a flexible and wide operating range for the ambient light sensor with a maximum resolution of 0.0023Lux/count and full detectable illumination of 57880Lux. The proximity function has an adjustable number of IR pulses from 1 to 256, and a flexible IR LED driving current to meet different application requirements. It is also equipped with an integrated filter to reduce unwanted IR signals and noise from the environment.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ambient19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ambient-19-click)
+[Click Product page](https://www.mikroe.com/ambient-19-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t ambient19_clear_interrupts ( ambient19_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Ambient 19 click board by measuring the ambient light level in Lux.
+> This example demonstrates the use of Ambient 19 Click board by measuring the ambient light level in Lux.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

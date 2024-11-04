@@ -1,6 +1,6 @@
 
 ---
-# Buck n Boost click
+# Buck n Boost Click
 
 Buck & Boost Click is a compact add-on board that contains a configurable power management device. This board features the MIC7401, a highly-integrated power-management IC featuring five synchronous buck regulators, one boost regulator, and a high-speed I2C interface with an internal EEPROM memory from Microchip.
 
@@ -8,7 +8,7 @@ Buck & Boost Click is a compact add-on board that contains a configurable power 
   <img src="https://download.mikroe.com/images/click_for_ide/bucknboost_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-and-boost-click)
+[Click Product page](https://www.mikroe.com/buck-and-boost-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t bucknboost_get_status ( bucknboost_t *ctx, bucknboost_status_t *st_data );
 
 ## Example Description
 
-> This application demonstrates the use of Buck n Boost click board.
+> This application demonstrates the use of Buck n Boost Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and sets the click default configuration.
-> The default config enables the click board and limits the current of all outputs to 1100mA.
+> Initializes the driver and sets the Click default configuration.
+> The default config enables the Click board and limits the current of all outputs to 1100mA.
 > It also sets the default voltages of all channels which are the following:
 > OUT1 - 1.8V, OUT2 - 1.1V, OUT3 - 1.8V, OUT4 - 1.05V, OUT5 - 1.25V, OUT6 - 12V 
 
@@ -198,7 +198,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

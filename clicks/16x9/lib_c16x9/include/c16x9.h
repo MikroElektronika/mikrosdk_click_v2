@@ -334,7 +334,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c16x9_cfg_setup ( c16x9_cfg_t *cfg );
@@ -345,7 +345,7 @@ void c16x9_cfg_setup ( c16x9_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C16X9_RETVAL c16x9_init ( c16x9_t *ctx, c16x9_cfg_t *cfg );
 
@@ -440,6 +440,6 @@ uint8_t c16x9_get_interrupt_state( c16x9_t *ctx );
 #endif  // _C16X9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

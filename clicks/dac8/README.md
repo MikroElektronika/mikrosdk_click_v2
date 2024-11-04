@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# DAC 8 click
+# DAC 8 Click
 
 DAC 8 Click is a compact add-on board that contains a fully-featured, general-purpose voltage-output digital-to-analog converter. 
 
@@ -10,7 +10,7 @@ DAC 8 Click is a compact add-on board that contains a fully-featured, general-pu
 </p>
 
 
-[click Product page](https://www.mikroe.com/dac-8-click)
+[Click Product page](https://www.mikroe.com/dac-8-click)
 
 ---
 
@@ -62,7 +62,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click carries 12-bit buffered Digital-to-Analog Converter. It converts digital value to 
+> This Click carries 12-bit buffered Digital-to-Analog Converter. It converts digital value to 
 > the corresponding voltage level using external voltage reference. 
 
 **The demo application is composed of two sections :**
@@ -247,7 +247,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

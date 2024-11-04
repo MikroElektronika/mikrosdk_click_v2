@@ -1,6 +1,6 @@
 
 ---
-# Brushless 15 click
+# Brushless 15 Click
 
 > Brushless 15 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TB9061AFNG, an automotive pre-driver that incorporates a sensorless controller for driving a 3-phase full-wave brushless DC motor from Toshiba Semiconductor. The TB9061AFNG achieves 120° rectangular wave motor control by using an input signal line that measures the induced voltage of the motors and three-phase motor output without using Hall sensors, rated for an operating voltage range of 6 to 18V. Motor rotation can be controlled by either the DC or the PWM input signal. Besides, it features several diagnostic circuits and drive-control functions such as motor lock detection, step-out detection, over-current/over-temperature detection, and many more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/brushless15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-15-click)
+[Click Product page](https://www.mikroe.com/brushless-15-click)
 
 ---
 
@@ -69,13 +69,13 @@ void brushless15_switch_direction ( brushless15_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the Brushless 15 click board by driving the motor in both directions at different speeds.
+> This example demonstrates the use of the Brushless 15 Click board by driving the motor in both directions at different speeds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -150,7 +150,7 @@ void application_task ( void )
 
 ## Note
 
-> The maximal PWM Clock frequency for this click board is 1 kHz. 
+> The maximal PWM Clock frequency for this Click board is 1 kHz. 
 > So, depending on the selected setup the user will need to lower the MCU's main clock frequency 
 > in the setup in order to get the PWM clock frequency down to 1 kHz.
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

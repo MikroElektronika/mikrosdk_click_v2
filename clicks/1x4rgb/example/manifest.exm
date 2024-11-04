@@ -3,6 +3,6 @@
     "description": "1x4 RGB Click is a compact add-on board that creates vivid and dynamic lighting effects. This board features the LP5812, an advanced RGB LED driver from Texas Instruments. It features ultra-low operation current, an autonomous animation engine, and support for both analog and PWM dimming. The board operates with 3.3V or 5V logic voltage levels and communicates with the host MCU via a standard 2-wire I2C interface. It is suitable for portable and wearable electronics, gaming, home entertainment, IoT, networking, industrial HMI, and many more.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","LP5812ADSDR"],
+    "hw" : ["Click","LP5812ADSDR"],
     "category" : ["Click Boards > Display & LED > LED matrix"]
 }

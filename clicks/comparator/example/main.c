@@ -12,7 +12,7 @@
  * Application Init performs Logger and Click initialization.
  * 
  * ## Application Task  
- * Comparator click checks state of the O1 and O2 pins. 
+ * Comparator Click checks state of the O1 and O2 pins. 
  * Results are being sent to the UART Terminal 
  * where you can track their changes. 
  * All data logs write on USB UART and changes for every 1 sec.

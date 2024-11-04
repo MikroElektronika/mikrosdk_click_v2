@@ -228,7 +228,7 @@ typedef enum
 
 /**
  * @brief EEPROM 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #eeprom5_cfg_t object definition for detailed explanation.
@@ -240,7 +240,7 @@ void eeprom5_cfg_setup ( eeprom5_cfg_t *cfg );
 /**
  * @brief EEPROM 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -316,7 +316,7 @@ void eeprom5_set_write_protect ( eeprom5_t *ctx, uint8_t en_wr_prot );
  * @brief Send command function.
  * @details The function sends the desired command
  * to the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] cmd : 8-bit commands instruction.
@@ -329,7 +329,7 @@ void eeprom5_send_cmd ( eeprom5_t *ctx, uint8_t cmd );
  * @brief Enable memory write function.
  * @details The function enable write depending on the function argument
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] en_wr_mem : Write enabled or disabled.
@@ -342,7 +342,7 @@ void eeprom5_enable_memory_write ( eeprom5_t *ctx, uint8_t en_wr_mem );
  * @brief Get status function.
  * @details The function read status data
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[out] stat_data : Pointer to the memory location where status data be stored.
@@ -355,7 +355,7 @@ void eeprom5_get_status ( eeprom5_t *ctx, status_data_t *stat_data );
  * @brief Set status function.
  * @details The function write status data
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[out] stat_data : Pointer to the memory location where status data be stored.
@@ -369,7 +369,7 @@ void eeprom5_set_status ( eeprom5_t *ctx, status_data_t stat_data );
  * @details The function read a sequential data starting
  * from the targeted 19-bit register address
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] addr : 19-bit memory address.
@@ -385,7 +385,7 @@ void eeprom5_read_memory ( eeprom5_t *ctx, uint32_t addr, uint8_t *p_rx_data, ui
  * @details The function writes a sequential data starting
  * of the targeted 19-bit register address
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] addr : 19-bit memory address.
@@ -400,7 +400,7 @@ void eeprom5_write_memory ( eeprom5_t *ctx, uint32_t addr, uint8_t *p_tx_data, u
  * @brief Read identification page function.
  * @details The function read the identification page
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] addr : 9-bit register address.
@@ -414,7 +414,7 @@ uint8_t eeprom5_read_ident_page ( eeprom5_t *ctx, uint16_t addr );
  * @brief Write dentification page function.
  * @details The function writes the identification page
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] addr : 19-bit register address.
@@ -428,7 +428,7 @@ void eeprom5_write_ident_page ( eeprom5_t *ctx, uint16_t addr, uint8_t ident_dat
  * @brief Reads the identification page lock status function.
  * @details The function read the the identification page lock status
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * 
@@ -441,7 +441,7 @@ uint8_t eeprom5_read_lock_status ( eeprom5_t *ctx );
  * @details The function lock ID instruction
  * permanently locks the Identification page in read-only mode
  * of the M95M04-DR, 4-Mbit serial SPI bus EEPROM
- * on EEPROM 5 click board.
+ * on EEPROM 5 Click board.
  * @param[in] ctx : Click context object.
  * See #eeprom5_t object definition for detailed explanation.
  * @param[in] lock_id : 8-bit data to be written.

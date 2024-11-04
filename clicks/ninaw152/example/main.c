@@ -40,7 +40,7 @@
  *
  * @note
  * For the BT example, we have used the Serial Bluetooth Terminal smartphone application for the test. 
- * A smartphone and the click board must be paired to exchange messages.
+ * A smartphone and the Click board must be paired to exchange messages.
  *
  * @author Stefan Filipovic
  *
@@ -64,7 +64,7 @@
 #define REMOTE_PORT             "51111"         // TCP/UDP echo server port
 
 // Message content
-#define MESSAGE_CONTENT         "NINA-W152 click board - demo example."
+#define MESSAGE_CONTENT         "NINA-W152 Click board - demo example."
 
 // Application buffer size
 #define APP_BUFFER_SIZE         600
@@ -610,7 +610,7 @@ static err_t ninaw152_example ( ninaw152_t *ctx )
     #define TERMINATION_TIMEOUT         "Timeout, closing the connection in a few seconds."
     #define NEW_LINE_STRING             "\r\n"
 
-    log_printf( &logger, ">>> Waiting for a BT peer to establish connection with the click board...\r\n" );
+    log_printf( &logger, ">>> Waiting for a BT peer to establish connection with the Click board...\r\n" );
     while ( NINAW152_OK != ninaw152_read_response( ctx, NINAW152_URC_PEER_CONNECTED ) );
 
     urc_buf_ptr = strstr( app_buf, NINAW152_URC_PEER_CONNECTED ) + strlen ( NINAW152_URC_PEER_CONNECTED );
@@ -621,7 +621,7 @@ static err_t ninaw152_example ( ninaw152_t *ctx )
     error_flag |= ninaw152_read_response( ctx, NINAW152_RSP_OK );
 
     log_printf( &logger, ">>> Waiting for data (up to 60 seconds)...\r\n" );
-    log_printf( &logger, ">>> Connection will be terminated if the click receives an \"END\" string.\r\n" );
+    log_printf( &logger, ">>> Connection will be terminated if the Click receives an \"END\" string.\r\n" );
     for ( ; ; )
     {
         ninaw152_clear_app_buf( );

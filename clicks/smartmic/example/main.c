@@ -3,14 +3,14 @@
  * @brief SmartMic Click example
  *
  * # Description
- * This example demonstrates the use of Smart Mic click board by programming 
+ * This example demonstrates the use of Smart Mic Click board by programming 
  * it with 4 different keywords, and then waiting for a keyword event, 
  * parsing it and displaying on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration 
+ * Initializes the driver and performs the Click default configuration 
  * which programs the device with system config, firmware, and 4 keywords 
  * ("Hello VoiceQ","Switch The Light","Next Song","Baidu Yixia") binaries.
  *

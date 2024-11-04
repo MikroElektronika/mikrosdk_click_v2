@@ -1,6 +1,6 @@
 
 ---
-# USB-C Source click
+# USB-C Source Click
 
 > USB-C Source Click is a compact add-on board that contains a standalone autonomous USB power delivery controller. This board features the STUSB4700, an independent USB power delivery controller optimized as a provider to negotiate a given amount of power to be sourced to an inquiring consumer device from STMicroelectronics.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/usbcsource_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/usb-c-source-click)
+[Click Product page](https://www.mikroe.com/usb-c-source-click)
 
 ---
 
@@ -183,7 +183,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

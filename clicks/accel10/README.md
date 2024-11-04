@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Accel 10 click
+# Accel 10 Click
 
 Accel 10 Click features an ultra-low power triaxial "femto" accelerometer sensor with embedded intelligence, labeled as the LIS2DW12TR. This Click board™ allows linear motion and gravitational force measurements in ranges of ±2 g, ±4 g, ±8, and ±16 g in three perpendicular axes. 
 
@@ -9,7 +9,7 @@ Accel 10 Click features an ultra-low power triaxial "femto" accelerometer sensor
   <img src="https://download.mikroe.com/images/click_for_ide/accel10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-10-click)
+[Click Product page](https://www.mikroe.com/accel-10-click)
 
 ---
 
@@ -59,14 +59,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of Accel 10 click board.
+> This example demonstrates the use of Accel 10 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
 > Initializes the driver and checks the communication by reading the device ID.
-> After that, performs the click default configuration.
+> After that, performs the Click default configuration.
 
 ```c
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

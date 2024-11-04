@@ -3,14 +3,14 @@
  * @brief CDC Click example
  *
  * # Description
- * This example demonstrates the use of CDC click board by reading capacitance
+ * This example demonstrates the use of CDC Click board by reading capacitance
  * measurements from C3/C2 and C5/C4 ports calculated from pure capacitance ratio
  * between those ports and port C1/C0 which is used as external C reference.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Starts measurement and reads the results. The results data is displayed on the USB UART.

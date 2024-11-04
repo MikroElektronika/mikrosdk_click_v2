@@ -182,7 +182,7 @@ typedef enum
 
 /**
  * @brief USB UART 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #usbuart2_cfg_t object definition for detailed explanation.
@@ -194,7 +194,7 @@ void usbuart2_cfg_setup ( usbuart2_cfg_t *cfg );
 /**
  * @brief USB UART 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #usbuart2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -239,7 +239,7 @@ uint32_t usbuart2_generic_read ( usbuart2_t *ctx, char *data_buf, uint16_t max_l
 
 /**
  * @brief Power control.
- * @details This function sets the click turns click on.
+ * @details This function sets the Click turns Click on.
  * @param[out] ctx : Click context object.
  * See #usbuart2_t object definition for detailed explanation.
  * @param[in] state : PWR pin state

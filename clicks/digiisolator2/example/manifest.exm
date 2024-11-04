@@ -3,6 +3,6 @@
     "description": "DIGI Isolator 2 Click is a compact add-on board that provides isolated digital input signals to your application. This board features the ISO1228, an eight-channel isolated digital input from Texas Instruments. It comes with 8-channel isolated 24V digital input receivers, with a current limit and diagnostics. The device also provides a field-side input-current-powered LED indication to reduce system power dissipation and reduce the board temperatures.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","XISO1228DFBR"],
+    "hw" : ["Click","XISO1228DFBR"],
     "category" : ["Click Boards > Interface > Port expander"]
 }

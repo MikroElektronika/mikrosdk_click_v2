@@ -1,16 +1,16 @@
 \mainpage Main Page
  
 ---
-# Pedometer 3 click
+# Pedometer 3 Click
 
-> Pedometer 3 click is a three-axis acceleration sensing Click board
+> Pedometer 3 Click is a three-axis acceleration sensing Click board
 which utilizes the KX126-1063. An advanced tri-axis acceleration sensor, KX126-1063 includes the pedometer algorithm support.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pedometer3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pedometer-3-click)
+[Click Product page](https://www.mikroe.com/pedometer-3-click)
 
 ---
 
@@ -80,7 +80,7 @@ uint16_t pedometer3_get_step_counter ( pedometer3_t *ctx );
 ### Application Init 
 
 > Configuring clicks and log objects.
-> Settings the click in the default configuration.
+> Settings the Click in the default configuration.
 
 ```c
 void application_init ( void )
@@ -107,7 +107,7 @@ void application_init ( void )
     PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pedometer3_init( &pedometer3, &cfg );
 
-    // Default click configurations
+    // Default Click configurations
     pedometer3_default_cfg( &pedometer3 );
 
     tmp = PEDOMETER3_CNTL1_MODE_LOW_POWER | PEDOMETER3_CNTL1_MODE_LOW_POWER |
@@ -136,7 +136,7 @@ void application_task ( void )
     pedometer3_get_hp_accel_axis( &pedometer3, &highpass_axis );
     ped_step += pedometer3_get_step_counter( &pedometer3 );
 
-    log_printf( &logger, "___________ Pedometer 3 click _____________\r\n");
+    log_printf( &logger, "___________ Pedometer 3 Click _____________\r\n");
 
     log_printf( &logger, "--  Accel : [ X ]: %d / [ Y ]: %d / [ Z ]: %d \r\n", 
                 accel_axis.x, accel_axis.y, accel_axis.z );
@@ -196,7 +196,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

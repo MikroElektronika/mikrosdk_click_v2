@@ -215,7 +215,7 @@ extern "C"{
 
 /**
  * @brief LTE IoT 6 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #lteiot6_cfg_t object definition for detailed explanation.
@@ -227,7 +227,7 @@ void lteiot6_cfg_setup ( lteiot6_cfg_t *cfg );
 /**
  * @brief LTE IoT 6 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #lteiot6_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -272,7 +272,7 @@ err_t lteiot6_generic_read ( lteiot6_t *ctx, char *data_buf, uint16_t max_len );
 
 /**
  * @brief LTE IoT 6 power on.
- * @details This function powers on the chip on LTE IoT 6 click.
+ * @details This function powers on the chip on LTE IoT 6 Click.
  * @param[in] ctx : Click context object.
  * See #lteiot6_t object definition for detailed explanation.
  * @return Nothing.
@@ -281,7 +281,7 @@ void lteiot6_power_on ( lteiot6_t *ctx );
 
 /**
  * @brief LTE IoT 6 power on.
- * @details This function resets the chip on LTE IoT 6 click.
+ * @details This function resets the chip on LTE IoT 6 Click.
  * @param[in] ctx : Click context object.
  * See #lteiot6_t object definition for detailed explanation.
  * @return Nothing.
@@ -340,7 +340,7 @@ uint8_t lteiot6_get_cts ( lteiot6_t *ctx );
 
 /**
  * @brief Send command function.
- * @details This function sends the specified command to the click module.
+ * @details This function sends the specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot6_t object definition for detailed explanation.
  * @param[in] cmd  Command variable.
@@ -353,7 +353,7 @@ void lteiot6_send_cmd ( lteiot6_t *ctx, char *cmd );
 
 /**
  * @brief Send command function with parameter.
- * @details This function sends commands to the click module.
+ * @details This function sends commands to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot6_t object definition for detailed explanation.
  * @param[in] at_cmd_buf  Command buffer.

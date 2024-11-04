@@ -8,13 +8,13 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * SPI driver and click initialization.
+ * SPI driver and Click initialization.
  * 
  * ## Application Task  
  * Reads the value of AC current and displays it on the USB UART.
  * 
  * ## NOTE
- * An appropriate AC Current sensor needs to be connected to the click board.
+ * An appropriate AC Current sensor needs to be connected to the Click board.
  * 
  * \author MikroE Team
  *

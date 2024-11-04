@@ -10,7 +10,7 @@
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Software reset and settings the click in the default configuration.
+ * Software reset and settings the Click in the default configuration.
  * 
  * ## Application Task  
  * Reads temperature data, outputs current of IR Sensor and checks for human approach.

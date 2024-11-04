@@ -3,7 +3,7 @@
  * \brief 16x9 Click example
  * 
  * # Description
- * Demo application is used to shows basic controls 16x9 click
+ * Demo application is used to shows basic controls 16x9 Click
  *
  * The demo application is composed of two sections :
  * 

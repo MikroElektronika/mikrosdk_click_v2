@@ -3,16 +3,16 @@
  * @brief PCR Click example
  *
  * # Description
- * This example demonstrates the use of PCR click board by 
- * reading distance between click board and object. 
+ * This example demonstrates the use of PCR Click board by 
+ * reading distance between Click board and object. 
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger and performs the click default configuration.
+ * Initializes the driver and logger and performs the Click default configuration.
  *
  * ## Application Task
- * Reading distance between click board and object every 2 seconds and logging it on UART terminal.
+ * Reading distance between Click board and object every 2 seconds and logging it on UART terminal.
  *
  * @author Stefan Ilic
  *

@@ -1,6 +1,6 @@
 
 ---
-# DC Motor 21 click
+# DC Motor 21 Click
 
 > DC Motor 21 Click is a compact add-on board that contains a brushed DC motor driver. This board features the A3910, a DC motor driver designed for low voltage power applications from Allegro Microsystems. It is controlled via several GPIO pins and has a wide operating voltage range with an output current capacity of 500mA. In addition to the possibility to be used in the full-bridge configuration to drive a single bidirectional DC motor, it can also be used as a dual half-bridge to drive dual DC motors.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-21-click)
+[Click Product page](https://www.mikroe.com/dc-motor-21-click)
 
 ---
 
@@ -64,13 +64,13 @@ void dcmotor21_set_out_2 ( dcmotor21_t *ctx, uint8_t state );
 
 ## Example Description
 
-> This example demonstrates the use of DC Motor 21 click board.
+> This example demonstrates the use of DC Motor 21 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

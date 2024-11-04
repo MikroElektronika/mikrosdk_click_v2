@@ -200,7 +200,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermostat3_cfg_setup ( thermostat3_cfg_t *cfg );
@@ -210,7 +210,7 @@ void thermostat3_cfg_setup ( thermostat3_cfg_t *cfg );
  * @param thermostat3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMOSTAT_RETVAL thermostat3_init ( thermostat3_t *ctx, thermostat3_cfg_t *cfg );
 
@@ -220,7 +220,7 @@ void thermostat3_generic_read ( thermostat3_t *ctx, uint8_t *read_buff );
  * @brief Thermostat Process Read data
  *
  * @param ctx        Click object.
- * @param tmp        Temperature click object
+ * @param tmp        Temperature Click object
  * 
  * @description This function must be constantly called in the task. 
  * The function continuously reads data from the SPI lines and parses the read data.
@@ -279,6 +279,6 @@ void thermostat3_relay_control ( thermostat3_t *ctx, uint8_t relay_pos );
 #endif  // _THERMOSTAT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

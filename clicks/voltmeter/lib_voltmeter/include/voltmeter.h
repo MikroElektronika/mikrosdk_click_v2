@@ -152,7 +152,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void voltmeter_cfg_setup ( voltmeter_cfg_t *cfg );
@@ -162,7 +162,7 @@ void voltmeter_cfg_setup ( voltmeter_cfg_t *cfg );
  * @param voltmeter Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t voltmeter_init ( voltmeter_t *ctx, voltmeter_cfg_t *cfg );
 
@@ -192,6 +192,6 @@ float voltmeter_calculate_voltage ( voltmeter_t *ctx, int16_t raw_adc, uint8_t i
 #endif  // _VOLTMETER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

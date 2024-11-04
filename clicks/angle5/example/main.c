@@ -3,7 +3,7 @@
  * \brief Angle5 Click example
  * 
  * # Description
- * Angle 5 click is a magnetic rotational sensor. 
+ * Angle 5 Click is a magnetic rotational sensor. 
  * It communicates with the target microcontroller over SPI interface.
  *
  * The demo application is composed of two sections :

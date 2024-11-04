@@ -1,6 +1,6 @@
 
 ---
-# Buck 18 click
+# Buck 18 Click
 
 > Buck 18 Click is a compact add-on board for step-down voltage conversion in power-sensitive applications. This board features the MAXM38643, an ultra-low-IQ nanoPower buck module from Analog Devices, providing highly efficient voltage regulation with minimal power consumption. The board supports input voltages from 1.8V to 5.5V, converting them to output voltages between 0.7V and 3.3V. Users can manually adjust the output voltage through an onboard TRIM trimmer or digitally via the AD5171 digital potentiometer controlled through an I2C interface.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buck18_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-18-click)
+[Click Product page](https://www.mikroe.com/buck-18-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

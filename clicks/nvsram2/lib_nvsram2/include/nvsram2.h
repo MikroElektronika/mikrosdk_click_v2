@@ -212,7 +212,7 @@ typedef enum
 
 /**
  * @brief nvSRAM 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nvsram2_cfg_t object definition for detailed explanation.
@@ -224,7 +224,7 @@ void nvsram2_cfg_setup ( nvsram2_cfg_t *cfg );
 /**
  * @brief nvSRAM 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -240,7 +240,7 @@ err_t nvsram2_init ( nvsram2_t *ctx, nvsram2_cfg_t *cfg );
 /**
  * @brief nvSRAM 2 default configuration function.
  * @details This function executes a default configuration of nvSRAM 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -303,7 +303,7 @@ void nvsram2_hold ( nvsram2_t *ctx, uint8_t en_hold );
 /**
  * @brief nvSRAM 2 send command function.
  * @details The function sends desired command to the CY14B101Q2A 
- * memory on nvSRAM 2 click board.
+ * memory on nvSRAM 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @param[in] cmd : 8-bit command.
@@ -317,7 +317,7 @@ void nvsram2_set_cmd ( nvsram2_t *ctx, uint8_t cmd );
 /**
  * @brief nvSRAM 2 read status register function.
  * @details The function reads status register from 
- * the CY14B101Q2A memory on nvSRAM 2 click board.
+ * the CY14B101Q2A memory on nvSRAM 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @return 8-bit status.
@@ -330,7 +330,7 @@ uint8_t nvsram2_read_status ( nvsram2_t *ctx );
 /**
  * @brief nvSRAM 2 fast read status register function.
  * @details The function reads status register for faster SPI speeds
- * from the CY14B101Q2A memory on nvSRAM 2 click board.
+ * from the CY14B101Q2A memory on nvSRAM 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @return 8-bit status.
@@ -343,7 +343,7 @@ uint8_t nvsram2_fast_read_status ( nvsram2_t *ctx );
 /**
  * @brief nvSRAM 2 write status register function.
  * @details The function writes status data 
- * to the CY14B101Q2A memory on nvSRAM 2 click board.
+ * to the CY14B101Q2A memory on nvSRAM 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @param[in] data_byte : 8-bit write status data.
@@ -357,7 +357,7 @@ void nvsram2_write_status ( nvsram2_t *ctx, uint8_t data_byte );
 /**
  * @brief nvSRAM 2 burst read function.
  * @details The function reads a sequential data starting from the targeted 
- * 17-bit register address of the CY14B101Q2A memory on nvSRAM 2 click board.
+ * 17-bit register address of the CY14B101Q2A memory on nvSRAM 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @param[in] mem_addr : 17-bit memory address.
@@ -373,7 +373,7 @@ void nvsram2_burst_read ( nvsram2_t *ctx, uint32_t mem_addr, uint8_t *p_rx_data,
 /**
  * @brief nvSRAM 2 burst write function.
  * @details The function writes a sequential data starting from the targeted 
- * 17-bit register address of the CY14B101Q2A memory on nvSRAM 2 click board.
+ * 17-bit register address of the CY14B101Q2A memory on nvSRAM 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @param[in] mem_addr : 17-bit memory address.
@@ -389,7 +389,7 @@ void nvsram2_burst_write ( nvsram2_t *ctx, uint32_t mem_addr, uint8_t *p_tx_data
 /**
  * @brief nvSRAM 2 read ID function.
  * @details The function performs the device ID read of the CY14B101Q2A 
- * memory on nvSRAM 2 click board.
+ * memory on nvSRAM 2 Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram2_t object definition for detailed explanation.
  * @return 32-bit device ID.

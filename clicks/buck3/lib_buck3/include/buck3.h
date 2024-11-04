@@ -136,7 +136,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void buck3_cfg_setup ( buck3_cfg_t *cfg );
@@ -146,7 +146,7 @@ void buck3_cfg_setup ( buck3_cfg_t *cfg );
  * @param buck3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BUCK3_RETVAL buck3_init ( buck3_t *ctx, buck3_cfg_t *cfg );
 
@@ -155,7 +155,7 @@ BUCK3_RETVAL buck3_init ( buck3_t *ctx, buck3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Buck 3 click.
+ * @description This function executes default configuration for Buck 3 Click.
  * @note Default configuration contains:
  * <pre>
  *    - Power mode (Device actiive)
@@ -197,6 +197,6 @@ void buck3_set_device_state ( buck3_t *ctx, uint8_t state );
 #endif  // _BUCK3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

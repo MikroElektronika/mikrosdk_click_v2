@@ -3,8 +3,8 @@
  * @brief Load Cell 8 Click example
  *
  * # Description
- * This example demonstrates the use of Load Cell 8 click by measuring the weight
- * in grams of the goods from the load cell sensor connected to the click board.
+ * This example demonstrates the use of Load Cell 8 Click by measuring the weight
+ * in grams of the goods from the load cell sensor connected to the Click board.
  *
  * The demo application is composed of two sections :
  *

@@ -200,7 +200,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void thermoj_cfg_setup ( thermoj_cfg_t *cfg );
@@ -211,7 +211,7 @@ void thermoj_cfg_setup ( thermoj_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 THERMOJ_RETVAL thermoj_init ( thermoj_t *ctx, thermoj_cfg_t *cfg );
 
@@ -247,7 +247,7 @@ void thermoj_generic_read ( thermoj_t *ctx, uint8_t reg, uint8_t *data_buf, uint
  * @param write_data     Byte of data to write.
  *
  * @description This function write the 8-bit of data to the
- * target 8-bit register address of MCP9600 sensor on Thermo J click board.
+ * target 8-bit register address of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_write_byte ( thermoj_t *ctx, uint8_t reg_address, uint8_t write_data );
 
@@ -258,7 +258,7 @@ void thermoj_write_byte ( thermoj_t *ctx, uint8_t reg_address, uint8_t write_dat
  * @param reg_address    Register address.
  *
  * @description This function read the 8-bit of data from the
- * target 8-bit register address of MCP9600 sensor on Thermo J click board.
+ * target 8-bit register address of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_read_byte ( thermoj_t *ctx, uint8_t reg_address );
 
@@ -268,7 +268,7 @@ uint8_t thermoj_read_byte ( thermoj_t *ctx, uint8_t reg_address );
  * @param ctx            Click object.
  *
  * @description This function read the 8-bit status data from the
- * target status register of MCP9600 sensor on Thermo J click board.
+ * target status register of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_get_status ( thermoj_t *ctx );
 
@@ -278,7 +278,7 @@ uint8_t thermoj_get_status ( thermoj_t *ctx );
  * @param ctx            Click object.
  *
  * @description This function check the status of burst complete data from the
- * target status register of MCP9600 sensor on Thermo J click board.
+ * target status register of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_check_burst_complete ( thermoj_t *ctx );
 
@@ -288,7 +288,7 @@ uint8_t thermoj_check_burst_complete ( thermoj_t *ctx );
  * @param ctx            Click object.
  *
  * @description This function check the status of data ready data from the
- * target status register of MCP9600 sensor on Thermo J click board.
+ * target status register of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_check_data_ready ( thermoj_t *ctx );
 
@@ -298,7 +298,7 @@ uint8_t thermoj_check_data_ready ( thermoj_t *ctx );
  * @param ctx            Click object.
  *
  * @description This function check the status of data ready data from the
- * target status register of MCP9600 sensor on Thermo J click board.
+ * target status register of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_check_over_voltage ( thermoj_t *ctx );
 
@@ -312,7 +312,7 @@ uint8_t thermoj_check_over_voltage ( thermoj_t *ctx );
  * @param alert_4     Pointer of alert 4 status.
  *
  * @description This function check status of alerts from the
- * target status register of MCP9600 sensor on Thermo J click board.
+ * target status register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_check_alert_status ( thermoj_t *ctx, uint8_t *alert_1, uint8_t *alert_2, uint8_t *alert_3, uint8_t *alert_4 );
 
@@ -323,7 +323,7 @@ void thermoj_check_alert_status ( thermoj_t *ctx, uint8_t *alert_1, uint8_t *ale
  * @param config_val    8-bit configuration value.
  *
  * @description This function write sensor configuration data to the
- * target sensor configuration register of MCP9600 sensor on Thermo J click board.
+ * target sensor configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_sensor_config ( thermoj_t *ctx, uint8_t config_val );
 
@@ -334,7 +334,7 @@ void thermoj_set_sensor_config ( thermoj_t *ctx, uint8_t config_val );
  * @param thermocouple_type    Thermocouple type value.
  *
  * @description This function write thermocouple type sensor configuration data to the
- * target sensor configuration register of MCP9600 sensor on Thermo J click board.
+ * target sensor configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_thermocouple_type ( thermoj_t *ctx, uint8_t thermocouple_type );
 
@@ -345,7 +345,7 @@ void thermoj_set_thermocouple_type ( thermoj_t *ctx, uint8_t thermocouple_type )
  * @param filter_coeff    Filter coefficient value.
  *
  * @description This function write filter coefficient sensor configuration data to the
- * target sensor configuration register of MCP9600 sensor on Thermo J click board.
+ * target sensor configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_filter_coefficient ( thermoj_t *ctx, uint8_t filter_coeff );
 
@@ -355,7 +355,7 @@ void thermoj_set_filter_coefficient ( thermoj_t *ctx, uint8_t filter_coeff );
  * @param ctx            Click object.
  *
  * @description This function read sensor configuration data from the
- * target sensor configuration register of MCP9600 sensor on Thermo J click board.
+ * target sensor configuration register of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_get_sensor_config ( thermoj_t *ctx );
 
@@ -366,7 +366,7 @@ uint8_t thermoj_get_sensor_config ( thermoj_t *ctx );
  * @param config_val      Config value.
  *
  * @description This function write configuration data to the
- * target device configuration register of MCP9600 sensor on Thermo J click board.
+ * target device configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_config ( thermoj_t *ctx, uint8_t config_val );
 
@@ -377,7 +377,7 @@ void thermoj_set_config ( thermoj_t *ctx, uint8_t config_val );
  * @param cj_res      Cold-junction resolution.
  *
  * @description This function write cold-junction resolution data to the
- * target device configuration register of MCP9600 sensor on Thermo J click board.
+ * target device configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_cold_junction_resolution ( thermoj_t *ctx, uint8_t cj_res );
 
@@ -388,7 +388,7 @@ void thermoj_set_cold_junction_resolution ( thermoj_t *ctx, uint8_t cj_res );
  * @param adc_res     ADC measurement resolution.
  *
  * @description This function write ADC measurement resolution data to the
- * target device configuration register of MCP9600 sensor on Thermo J click board.
+ * target device configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_adc_resolution ( thermoj_t *ctx, uint8_t adc_res );
 
@@ -399,7 +399,7 @@ void thermoj_set_adc_resolution ( thermoj_t *ctx, uint8_t adc_res );
  * @param num_temp_samp     Number of Temperature Samples.
  *
  * @description This function write number of temperature samples data to the
- * target device configuration register of MCP9600 sensor on Thermo J click board.
+ * target device configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_number_of_temperature_samples ( thermoj_t *ctx, uint8_t num_temp_samp );
 
@@ -410,7 +410,7 @@ void thermoj_set_number_of_temperature_samples ( thermoj_t *ctx, uint8_t num_tem
  * @param sd_mod     ADC measurement resolution.
  *
  * @description This function write shutdown modes data to the
- * target device configuration register of MCP9600 sensor on Thermo J click board.
+ * target device configuration register of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_shutdown_modes ( thermoj_t *ctx, uint8_t sd_mod );
 
@@ -422,7 +422,7 @@ void thermoj_set_shutdown_modes ( thermoj_t *ctx, uint8_t sd_mod );
  * @param write_data      16-bit data to write.
  *
  * @description This function write the 16-bit of data to the
- * target 8-bit register address of MCP9600 sensor on Thermo J click board.
+ * target 8-bit register address of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_write_data ( thermoj_t *ctx, uint8_t reg_address, uint16_t write_data );
 
@@ -433,7 +433,7 @@ void thermoj_write_data ( thermoj_t *ctx, uint8_t reg_address, uint16_t write_da
  * @param reg_address     Register address.
  *
  * @description This function read the 16-bit of data from the
- * target 8-bit register address of MCP9600 sensor on Thermo J click board.
+ * target 8-bit register address of MCP9600 sensor on Thermo J Click board.
  */
 uint16_t thermoj_read_data ( thermoj_t *ctx, uint8_t reg_address );
 
@@ -443,7 +443,7 @@ uint16_t thermoj_read_data ( thermoj_t *ctx, uint8_t reg_address );
  * @param ctx             Click object.
  *
  * @description This function read the device ID data from the
- * target 8-bit register address of MCP9600 sensor on Thermo J click board.
+ * target 8-bit register address of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_get_device_id ( thermoj_t *ctx );
 
@@ -453,7 +453,7 @@ uint8_t thermoj_get_device_id ( thermoj_t *ctx );
  * @param ctx             Click object.
  *
  * @description This function get value of temperature [ �C ] from the
- * target temperature register address of MCP9600 sensor on Thermo J click board.
+ * target temperature register address of MCP9600 sensor on Thermo J Click board.
  */
 float thermoj_get_temperature ( thermoj_t *ctx );
 
@@ -463,7 +463,7 @@ float thermoj_get_temperature ( thermoj_t *ctx );
  * @param ctx             Click object.
  *
  * @description This function get value of temperature [ �F ] from the
- * target temperature register address of MCP9600 sensor on Thermo J click board.
+ * target temperature register address of MCP9600 sensor on Thermo J Click board.
  */
 float thermoj_get_temperature_fahrenheit ( thermoj_t *ctx );
 
@@ -473,7 +473,7 @@ float thermoj_get_temperature_fahrenheit ( thermoj_t *ctx );
  * @param ctx             Click object.
  *
  * @description This function get temperature alert 1 status
- * of INT pin of MCP9600 sensor on Thermo J click board.
+ * of INT pin of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_get_alert_1 ( thermoj_t *ctx );
 
@@ -483,7 +483,7 @@ uint8_t thermoj_get_alert_1 ( thermoj_t *ctx );
  * @param ctx             Click object.
  *
  * @description This function get temperature alert 2 status
- * of INT pin of MCP9600 sensor on Thermo J click board.
+ * of INT pin of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_get_alert_2 ( thermoj_t *ctx );
 
@@ -493,7 +493,7 @@ uint8_t thermoj_get_alert_2 ( thermoj_t *ctx );
  * @param ctx             Click object.
  *
  * @description This function get temperature alert 3 status
- * of INT pin of MCP9600 sensor on Thermo J click board.
+ * of INT pin of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_get_alert_3 ( thermoj_t *ctx );
 
@@ -503,7 +503,7 @@ uint8_t thermoj_get_alert_3 ( thermoj_t *ctx );
  * @param ctx             Click object.
  *
  * @description This function get temperature alert 4 status
- * of INT pin of MCP9600 sensor on Thermo J click board.
+ * of INT pin of MCP9600 sensor on Thermo J Click board.
  */
 uint8_t thermoj_get_alert_4 ( thermoj_t *ctx );
 
@@ -516,7 +516,7 @@ uint8_t thermoj_get_alert_4 ( thermoj_t *ctx );
  *
  * @description This function set temperature alert limits data to the
  * target temperature alert 1, 2, 3 or 4 limits register address
- * of MCP9600 sensor on Thermo J click board.
+ * of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_alerts_limits ( thermoj_t *ctx, uint8_t pos_alert, float temp_alert_limit );
 
@@ -529,7 +529,7 @@ void thermoj_set_alerts_limits ( thermoj_t *ctx, uint8_t pos_alert, float temp_a
  *
  * @description This function set temperature alert limits data to the
  * target alert 1, 2, 3 or 4 configuration registers address
- * of MCP9600 sensor on Thermo J click board.
+ * of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_set_alert_config ( thermoj_t *ctx, uint8_t pos_alert, uint8_t alert_config );
 
@@ -541,7 +541,7 @@ void thermoj_set_alert_config ( thermoj_t *ctx, uint8_t pos_alert, uint8_t alert
  *
  * @description This function enable alert by set alert bits in the
  * target alert 1, 2, 3 or 4 configuration registers address
- * of MCP9600 sensor on Thermo J click board.
+ * of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_enable_alert ( thermoj_t *ctx, uint8_t pos_alert );
 
@@ -553,7 +553,7 @@ void thermoj_enable_alert ( thermoj_t *ctx, uint8_t pos_alert );
  *
  * @description This function disable alert by clear alert bits in the
  * target alert 1, 2, 3 or 4 configuration registers address
- * of MCP9600 sensor on Thermo J click board.
+ * of MCP9600 sensor on Thermo J Click board.
  */
 void thermoj_disable_alert ( thermoj_t *ctx, uint8_t pos_alert );
 
@@ -563,6 +563,6 @@ void thermoj_disable_alert ( thermoj_t *ctx, uint8_t pos_alert );
 #endif  // _THERMOJ_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

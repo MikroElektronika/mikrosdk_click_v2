@@ -4,7 +4,7 @@
  *
  * # Description
  * This application is showcasing basic functionality of Plug&Trust
- * click board. It gets identify data from device, selects card 
+ * Click board. It gets identify data from device, selects card 
  * manager and applet. Then checks free memory, reads all objects and 
  * deletes not reserved ones. After that showcases a few of functionality: 
  *      - Generating random data, 

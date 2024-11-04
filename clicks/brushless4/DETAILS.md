@@ -1,14 +1,14 @@
 
 ---
-# Brushless 4 click
+# Brushless 4 Click
 
-Brushless 4 click is a 3 phase sensorless BLDC motor driver, which features a 180° sinusoidal drive, providing high efficiency and low acoustic noise. This type of drivers inherently provides higher torque in general, compared to classical 120° BLDC motor drivers. 
+Brushless 4 Click is a 3 phase sensorless BLDC motor driver, which features a 180° sinusoidal drive, providing high efficiency and low acoustic noise. This type of drivers inherently provides higher torque in general, compared to classical 120° BLDC motor drivers. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/brushless4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-4-click)
+[Click Product page](https://www.mikroe.com/brushless-4-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click has many features for driving a wide range of small to medium BLDC motors.
+> This Click has many features for driving a wide range of small to medium BLDC motors.
 > It provides the rotor position digital output, via the FG pin, routed to the mikroBUS INT pin. 
 
 **The demo application is composed of two sections :**
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

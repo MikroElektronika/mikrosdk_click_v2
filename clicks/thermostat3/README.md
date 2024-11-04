@@ -3,7 +3,7 @@
  
 
 ---
-# Thermostat 3 click
+# Thermostat 3 Click
 
 Thermostat 3 Click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the MAX31855 sensor design.
 
@@ -11,7 +11,7 @@ Thermostat 3 Click is a general-purpose thermostat Click board™ designed to be
   <img src="https://download.mikroe.com/images/click_for_ide/thermostat3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermostat-3-click)
+[Click Product page](https://www.mikroe.com/thermostat-3-click)
 
 ---
 
@@ -61,7 +61,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application enables usage of the general purpose Thermostat click 
+> This application enables usage of the general purpose Thermostat Click 
 > to be used with temperature sensors.
 
 **The demo application is composed of two sections :**
@@ -194,7 +194,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -3,12 +3,12 @@
  * @brief PAC1954 Click example
  *
  * # Description
- * This example demonstrates the use of PAC1954 click board.
+ * This example demonstrates the use of PAC1954 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the voltage, current, and power from Channel 1 and displays all 

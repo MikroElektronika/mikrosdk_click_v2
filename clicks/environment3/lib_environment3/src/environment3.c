@@ -146,7 +146,7 @@ static err_t environment3_spi_read ( environment3_t *ctx, uint8_t reg, uint8_t *
 /**
  * @brief Environment 3 get data function.
  * @details This function the pressure, temperature, humidity and gas data
- * from the sensor, compensates the data and store it in the click object f_data structure.
+ * from the sensor, compensates the data and store it in the Click object f_data structure.
  * @param[in] ctx : Click context object.
  * See #environment3_t object definition for detailed explanation.
  * @return @li @c  2 - No new data.
@@ -187,7 +187,7 @@ static int8_t environment3_set_mem_page ( environment3_t *ctx, uint8_t reg );
 /**
  * @brief Environment 3 get SPI memory page function.
  * @details This function gets the currently set SPI memory page and stores it in 
- * the click object structure, device_mem_page variable.
+ * the Click object structure, device_mem_page variable.
  * @param[in] ctx : Click context object.
  * See #environment3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -306,7 +306,7 @@ static int8_t environment3_read_field_data ( environment3_t *ctx, environment3_f
 /**
  * @brief Environment 3 get calibration data function.
  * @details This function reads all the calibration coefficients and stores it in 
- * the click object calib structure.
+ * the Click object calib structure.
  * @param[in] ctx : Click context object.
  * See #environment3_t object definition for detailed explanation.
  * @return None.
@@ -317,7 +317,7 @@ static void environment3_get_calibration_data ( environment3_t *ctx );
 /**
  * @brief Environment 3 read variant ID function.
  * @details This function reads variant ID information register status and stores it in
- * the click object, device_variant_id variable.
+ * the Click object, device_variant_id variable.
  * @param[in] ctx : Click context object.
  * See #environment3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -3,15 +3,15 @@
  
 
 ---
-# HTU21D click
+# HTU21D Click
 
-HTU21D click carries a high-precision, easy-to-use relative humidity sensor with temperature output.
+HTU21D Click carries a high-precision, easy-to-use relative humidity sensor with temperature output.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/htu21d_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/htu21d-click)
+[Click Product page](https://www.mikroe.com/htu21d-click)
 
 ---
 
@@ -50,10 +50,10 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function initializes click configuration structure to init state.
+- This function initializes Click configuration structure to init state.
 > void htu21d_cfg_setup ( htu21d_cfg_t *cfg );
 
-- This function initializes all necessary pins and peripherals used for this click.
+- This function initializes all necessary pins and peripherals used for this Click.
 > HTU21D_RETVAL htu21d_init ( htu21d_t *ctx, htu21d_cfg_t *cfg );
 
 - This function writes data to the desired register.
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

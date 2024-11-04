@@ -14,7 +14,7 @@
  *
  * ## Application Task
  * Any data which the host PC sends via HidUartExample 
- * will be sent over USB to the click board and then it will be read and 
+ * will be sent over USB to the Click board and then it will be read and 
  * echoed back by the MCU to the PC where the terminal program will display it.
  * Results are being sent to the UART Terminal, where you can track their changes.
  *

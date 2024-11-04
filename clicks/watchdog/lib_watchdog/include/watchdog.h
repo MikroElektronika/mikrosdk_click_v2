@@ -144,7 +144,7 @@ typedef enum
 
 /**
  * @brief Watchdog configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #watchdog_cfg_t object definition for detailed explanation.
@@ -156,7 +156,7 @@ void watchdog_cfg_setup ( watchdog_cfg_t *cfg );
 /**
  * @brief Watchdog initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -171,7 +171,7 @@ err_t watchdog_init ( watchdog_t *ctx, watchdog_cfg_t *cfg );
 /**
  * @brief Watchdog default configuration function.
  * @details This function executes a default configuration of Watchdog
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -189,7 +189,7 @@ err_t watchdog_default_cfg ( watchdog_t *ctx );
  * @details The function set the state of the S0 ( RST ) 
  * to configure a valid window watchdog ratio
  * of the TPS3430 Window Watchdog Timer with Programmable Reset Delay
- * on the Watchdog click board.
+ * on the Watchdog Click board.
  * @param[out] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @param set0_state
@@ -205,7 +205,7 @@ void watchdog_set_set0 ( watchdog_t *ctx, uint8_t set0_state );
  * @details The function set the state of the S1 ( CS )
  * to configure a valid window watchdog ratio
  * of the TPS3430 Window Watchdog Timer with Programmable Reset Delay
- * on the Watchdog click board.
+ * on the Watchdog Click board.
  * @param[out] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @param set1_state
@@ -221,7 +221,7 @@ void watchdog_set_set1 ( watchdog_t *ctx, uint8_t set1_state );
  * @details The function set the state of the WDI ( PWM )
  * which is used to send a pulse
  * to the TPS3430 Window Watchdog Timer with Programmable Reset Delay
- * on the Watchdog click board.
+ * on the Watchdog Click board.
  * @param[out] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @param wdi_state
@@ -237,7 +237,7 @@ void watchdog_set_wdi ( watchdog_t *ctx, uint8_t wdi_state );
  * @details The function check the state of the WDO ( INT )
  * which is the pulse sending indicator in the watchdog timeout occurs
  * to the TPS3430 Window Watchdog Timer with Programmable Reset Delay
- * on the Watchdog click board.
+ * on the Watchdog Click board.
  * @param[in] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @return @li @c 0 - Fault,
@@ -249,7 +249,7 @@ uint8_t watchdog_get_wdo ( watchdog_t *ctx );
  * @brief Send pulse function.
  * @details The function sends a pulse with the desired pulse duration
  * to the TPS3430 Window Watchdog Timer with Programmable Reset Delay
- * on the Watchdog click board.
+ * on the Watchdog Click board.
  * @param[in] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @param[in] p_duration_ms : The desired pulse duration time in milliseconds.
@@ -263,7 +263,7 @@ void watchdog_send_pulse ( watchdog_t *ctx, uint16_t p_duration_ms );
  * @brief Set the watchdog time function.
  * @details The function set the desired watchdog operating mode
  * of the TPS3430 Window Watchdog Timer with Programmable Reset Delay
- * on the Watchdog click board.
+ * on the Watchdog Click board.
  * @param[in] ctx : Click context object.
  * See #watchdog_t object definition for detailed explanation.
  * @param[in] setup_time_mode : Mode in witch Watchdog Click bord is working.  

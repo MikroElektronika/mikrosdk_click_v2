@@ -3,13 +3,13 @@
  * \brief DMX Click example
  * 
  * # Description
- * This example demonstrates the use of the DMX click board by showcasing
+ * This example demonstrates the use of the DMX Click board by showcasing
  * the control for a 6-channel DMX RGB LED reflector connected to it.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  * 
  * ## Application Task  
  * Performs the LEDs dimming control on a 6-channel DMX RGB LED reflector.

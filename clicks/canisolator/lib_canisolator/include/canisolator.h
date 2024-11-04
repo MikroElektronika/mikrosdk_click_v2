@@ -160,7 +160,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void canisolator_cfg_setup ( canisolator_cfg_t *cfg );
@@ -170,7 +170,7 @@ void canisolator_cfg_setup ( canisolator_cfg_t *cfg );
  * @param canisolator Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CANISOLATOR_RETVAL canisolator_init ( canisolator_t *ctx, canisolator_cfg_t *cfg );
 
@@ -223,6 +223,6 @@ void canisolator_generic_single_write ( canisolator_t *ctx, char tx_data );
 #endif  // _CANISOLATOR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

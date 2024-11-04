@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# FRAM 6 click
+# FRAM 6 Click
 
 > FRAM 6 Click is a compact add-on board that contains highly reliable ferroelectric random access memory. This board features the CY15B102Q, a 2Mbit nonvolatile memory employing an advanced ferroelectric process organized as 256K words of 8 bits each from Cypress Semiconductor, now part of Infineon.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/fram6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fram-6-click)
+[Click Product page](https://www.mikroe.com/fram-6-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t fram6_set_block_protection ( fram6_t *ctx, uint8_t block_protect );
 
 ## Example Description
 
-> This example demonstrates the use of FRAM 6 click board.
+> This example demonstrates the use of FRAM 6 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

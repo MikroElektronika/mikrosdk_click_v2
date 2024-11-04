@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Configures the microcontroller for communication and initializes the click
+ * Configures the microcontroller for communication and initializes the Click
  * board to default state.
  *
  * ## Application Task
@@ -65,7 +65,7 @@ void application_task ( void )
     Delay_ms ( 100 );
 
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 0, 0, "     MIKROE     " );
-    oledb_write_string( &oledb, OLEDB_FONT_6X8, 1, 0, "  OLED B click  " );
+    oledb_write_string( &oledb, OLEDB_FONT_6X8, 1, 0, "  OLED B Click  " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 2, 0, "  with SSD1306  " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 3, 0, "   controller   " );
     oledb_write_string( &oledb, OLEDB_FONT_6X8, 4, 0, "  TEST EXAMPLE  " );

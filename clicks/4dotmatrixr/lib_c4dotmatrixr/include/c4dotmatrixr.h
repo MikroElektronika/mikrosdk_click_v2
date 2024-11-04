@@ -173,7 +173,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c4dotmatrixr_cfg_setup ( c4dotmatrixr_cfg_t *cfg );
@@ -183,7 +183,7 @@ void c4dotmatrixr_cfg_setup ( c4dotmatrixr_cfg_t *cfg );
  * @param c4dotmatrixr Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C4DOTMATRIXR_RETVAL c4dotmatrixr_init ( c4dotmatrixr_t *ctx, c4dotmatrixr_cfg_t *cfg );
 
@@ -192,7 +192,7 @@ C4DOTMATRIXR_RETVAL c4dotmatrixr_init ( c4dotmatrixr_t *ctx, c4dotmatrixr_cfg_t 
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for c4dotmatrixr click.
+ * @description This function executes default configuration for c4dotmatrixr Click.
  */
 void c4dotmatrixr_default_cfg ( c4dotmatrixr_t *ctx );
 
@@ -395,6 +395,6 @@ void c4dot_clear_display ( c4dotmatrixr_t *ctx );
 #endif  // _C4DOTMATRIXR_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

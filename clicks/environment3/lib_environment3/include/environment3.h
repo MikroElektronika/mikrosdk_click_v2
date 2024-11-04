@@ -526,7 +526,7 @@ typedef enum
 
 /**
  * @brief Environment 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #environment3_cfg_t object definition for detailed explanation.
@@ -538,7 +538,7 @@ void environment3_cfg_setup ( environment3_cfg_t *cfg );
 /**
  * @brief Environment 3 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #environment3_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -554,7 +554,7 @@ void environment3_drv_interface_selection ( environment3_cfg_t *cfg, environment
 /**
  * @brief Environment 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #environment3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -570,7 +570,7 @@ err_t environment3_init ( environment3_t *ctx, environment3_cfg_t *cfg );
 /**
  * @brief Environment 3 default configuration function.
  * @details This function executes a default configuration of Environment 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #environment3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

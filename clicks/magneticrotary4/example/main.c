@@ -3,7 +3,7 @@
  * @brief MagneticRotary4 Click example
  *
  * # Description
- * This example demonstrates the use of Magnetic Rotary 4 click board by reading 
+ * This example demonstrates the use of Magnetic Rotary 4 Click board by reading 
  * and displaying the magnet (potentiometer) angular position in degrees.
  *
  * The demo application is composed of two sections :

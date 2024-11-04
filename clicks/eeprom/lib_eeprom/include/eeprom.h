@@ -163,7 +163,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  */
 void eeprom_cfg_setup( eeprom_cfg_t *cfg );
 
@@ -175,7 +175,7 @@ void eeprom_cfg_setup( eeprom_cfg_t *cfg );
  *
  * @returns 0x00 - Ok, 0xFE - Driver init error.
  *
- * @description This function initializes peripherals and pins used by EEPROM click.
+ * @description This function initializes peripherals and pins used by EEPROM Click.
  */
 eeprom_retval_t eeprom_init( eeprom_t *context, eeprom_cfg_t *cfg );
 

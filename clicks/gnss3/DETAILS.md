@@ -1,14 +1,14 @@
  
 ---
-# GNSS3 click
+# GNSS3 Click
 
-GNSS3 click carries SIMCom’s SIM33ELA standalone GNSS module with an integrated antenna (and a connector for an external one).
+GNSS3 Click carries SIMCom’s SIM33ELA standalone GNSS module with an integrated antenna (and a connector for an external one).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/gnss3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-3-click)
+[Click Product page](https://www.mikroe.com/gnss-3-click)
 
 ---
 
@@ -54,13 +54,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of GNSS 3 click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of GNSS 3 Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and resets the click board.
+> Initializes the driver and resets the Click board.
 
 ```c
 
@@ -114,7 +114,7 @@ void application_task ( void )
 ## Note
 
 > The default baud rate for communication UART is set to 9600. If you receive
-a click board on which the default baud rate for UART is set differently,
+a Click board on which the default baud rate for UART is set differently,
 you will need to change the setting in the gnss13_setup_cfg function.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
@@ -128,7 +128,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -4,13 +4,13 @@
  *
  * # Description
  * This example demonstrates a basic file system functionality and operations with files
- * and directories using a microSD click board.
+ * and directories using a microSD Click board.
  * 
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Initializes the driver and logger and performs a several operations with file system
- * that demonstrates the basic usage of microSD click board.
+ * that demonstrates the basic usage of microSD Click board.
  *
  * ## Application Task
  * Reads and displays on the USB UART the contents of all directories created
@@ -47,7 +47,7 @@ static log_t logger;
 /**
  * @brief microSD check card detection function.
  * @details This function checks and waits for a microSD card to be inserted
- * to the click board.
+ * to the Click board.
  * @param[in] ctx : Click context object.
  * See #microsd_t object definition for detailed explanation.
  * @return None.

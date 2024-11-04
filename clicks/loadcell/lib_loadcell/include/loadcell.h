@@ -227,7 +227,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void loadcell_cfg_setup ( loadcell_cfg_t *cfg );
@@ -237,7 +237,7 @@ void loadcell_cfg_setup ( loadcell_cfg_t *cfg );
  * @param loadcell Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LOADCELL_RETVAL loadcell_init ( loadcell_t *ctx, loadcell_cfg_t *cfg );
 
@@ -246,7 +246,7 @@ LOADCELL_RETVAL loadcell_init ( loadcell_t *ctx, loadcell_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Load cell click.
+ * @description This function executes default configuration for Load cell Click.
  */
 void loadcell_default_cfg ( loadcell_t *ctx );
 
@@ -264,7 +264,7 @@ uint8_t loadcell_check_out ( loadcell_t *ctx );
  * @param loadcell Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function read result for this click.
+ * @description This function read result for this Click.
  */
 uint8_t loadcell_read_results ( loadcell_t *ctx, uint8_t input_sel, uint32_t *data_out );
 
@@ -329,6 +329,6 @@ float loadcell_get_weight ( loadcell_t *ctx, uint8_t input_sel, loadcell_data_t 
 #endif  // _LOADCELL_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

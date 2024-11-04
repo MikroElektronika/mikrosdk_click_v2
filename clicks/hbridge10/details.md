@@ -1,6 +1,6 @@
 
 ---
-# H-Bridge 10 click
+# H-Bridge 10 Click
 
 > H-Bridge 10 Click is a compact add-on board containing H-bridge outputs that let you control a DC motor to go backward or forward. This board features the MP6523, a triple, half-bridge, DMOS, output driver with integrated power MOSFETs that can drive up to three different loads from Monolithic Power Systems (MPS). The MP6523 is rated for an operating voltage range from 7V to 28V. It is SPI-configurable and has various diagnostic functions. Complete protection features include short-circuit protection (SCP), under-voltage protection (UVP), and thermal shutdown, alongside an onboard power supply existence-check circuit. This Click board™ is suitable as a multiple brushed DC motor driver for driving various loads in automotive and industrial applications, and more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-10-click)
+[Click Product page](https://www.mikroe.com/h-bridge-10-click)
 
 ---
 
@@ -69,13 +69,13 @@ uint8_t hbridge10_get_fault_pin ( hbridge10_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of the H-Bridge 10 click board by driving the motors connected between OUT1-OUT2 and OUT2-OUT3 in both directions. 
+> This example demonstrates the use of the H-Bridge 10 Click board by driving the motors connected between OUT1-OUT2 and OUT2-OUT3 in both directions. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

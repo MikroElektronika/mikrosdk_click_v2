@@ -1,6 +1,6 @@
 
 ---
-# VAV Press click
+# VAV Press Click
 
 VAV Press Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LMIS025B, a low differential pressure sensor from First Sensor (part of TE Connectivity). It is based on thermal flow measurement of gas through a micro-flow channel integrated within the sensor chip. The innovative LMI technology features superior sensitivity, especially for ultra-low pressures ranging from 0 to 25Pa. The extremely low gas flow through the sensor ensures high immunity to dust contamination, humidity, and long tubing compared to other flow-based pressure sensors.
 
@@ -8,7 +8,7 @@ VAV Press Click is a compact add-on board that contains a board-mount pressure s
   <img src="https://download.mikroe.com/images/click_for_ide/vav_press_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vav-press-click)
+[Click Product page](https://www.mikroe.com/vav-press-click)
 
 ---
 
@@ -69,7 +69,7 @@ VAVPRESS_RETVAL vavpress_retrieve_electronic_signature ( vavpress_t *ctx, vavpre
 
 ## Example Description
 
-> This library contains API for the Vav Press click driver.
+> This library contains API for the Vav Press Click driver.
 > This demo application shows an example of 
 > differential pressure and temperature measurement.
 
@@ -147,7 +147,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of a Vav Press click board™.
+> This is an example that shows the use of a Vav Press Click board™.
 > Logs pressure difference value [ Pa ] and temperature [ degree Celsius ] value.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

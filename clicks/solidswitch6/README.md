@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# SolidSwitch 6 click
+# SolidSwitch 6 Click
 
 > SolidSwitch 6 Click is a compact add-on board for reliable load management in automotive power distribution systems. This board features the VNF1048F, a high-side switch controller with intelligent e-fuse protection from STMicroelectronics. This board supports an input voltage range of 6V to 48V, controls external MOSFET, and offers essential protection features such as overcurrent, under-voltage, and thermal shutdown, with diagnostic feedback via SPI. It also includes an NTC resistor for monitoring MOSFET temperature and operates with either 3.3V or 5V logic levels.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/solidswitch6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/solidswitch-6-click)
+[Click Product page](https://www.mikroe.com/solidswitch-6-click)
 
 ---
 
@@ -170,7 +170,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

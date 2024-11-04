@@ -1,6 +1,6 @@
 
 ---
-# H-Bridge 7 click
+# H-Bridge 7 Click
 
 H-Bridge 7 Click features flexible motor driver IC for a wide variety of applications, labeled as the DRV8876N. This Click board™ integrates an N-channel H-bridge, charge pump regulator, and protection circuitry. The charge pump improves efficiency by allowing for both high-side and low-side N-channels MOSFETs and 100% duty cycle support. This IC allows the H-Bridge 7 Click to achieve ultra-low quiescent current draw by shutting down most of the internal circuitry with his low-power sleep mode.
 
@@ -8,7 +8,7 @@ H-Bridge 7 Click features flexible motor driver IC for a wide variety of applica
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-7-click)
+[Click Product page](https://www.mikroe.com/h-bridge-7-click)
 
 ---
 
@@ -52,7 +52,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of H-Bridge 7 click board.
+> This example demonstrates the use of H-Bridge 7 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,8 +1,8 @@
 {
   "name": "ADC 6 Click",
-  "description": "ADC 6 click is an advanced 24bit multichannel analog to digital converter (ADC), with 8 fully differential or 15 single ended/pseudo differential sampling inputs, and very flexible routing capabilities. The click board� has two 2x10 pin headers, used both to configure the device and connect the input channels. ",
+  "description": "ADC 6 Click is an advanced 24bit multichannel analog to digital converter (ADC), with 8 fully differential or 15 single ended/pseudo differential sampling inputs, and very flexible routing capabilities. The Click board� has two 2x10 pin headers, used both to configure the device and connect the input channels. ",
   "image": "../../Resources/click_icon.png",
   "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-  "hw": [ "click", "AD7124-8 ADC" ],
+  "hw": [ "Click", "AD7124-8 ADC" ],
   "category": [ "ADC" ]
 }

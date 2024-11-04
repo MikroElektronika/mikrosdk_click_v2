@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Pressure 15 click
+# Pressure 15 Click
 
 > Pressure 15 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LPS27HHW, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/pressure_15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-15-click)
+[Click Product page](https://www.mikroe.com/pressure-15-click)
 
 ---
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

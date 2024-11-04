@@ -343,7 +343,7 @@ typedef enum
 
 /**
  * @brief Load Cell 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #loadcell5_cfg_t object definition for detailed explanation.
@@ -355,7 +355,7 @@ void loadcell5_cfg_setup ( loadcell5_cfg_t *cfg );
 /**
  * @brief Load Cell 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #loadcell5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -371,7 +371,7 @@ err_t loadcell5_init ( loadcell5_t *ctx, loadcell5_cfg_t *cfg );
 /**
  * @brief Load Cell 5 default configuration function.
  * @details This function executes a default configuration of Load Cell 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #loadcell5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -533,7 +533,7 @@ float loadcell5_get_weight ( loadcell5_t *ctx, loadcell5_data_t *cell_data );
 /**
  * @brief Load Cell 5 get error function.
  * @details This function reads the state of the RDY ( INT ) pin of Load Cell 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #loadcell5_t object definition for detailed explanation.
  * @return @li @c 0 - INT pin state low,

@@ -1,14 +1,14 @@
  
 ---
-# Temp Log 6 click
+# Temp Log 6 Click
 
-Temp-Log 6 click is a temperature sensing Click board™, which features the MAX6642, a specifically designed IC, capable of measuring its own die temperature, as well as a temperature at a remote PN junction. This option makes Temp-Log 6 click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the PN junction is typically a substrate PNP transistor on the die of the measured IC.
+Temp-Log 6 Click is a temperature sensing Click board™, which features the MAX6642, a specifically designed IC, capable of measuring its own die temperature, as well as a temperature at a remote PN junction. This option makes Temp-Log 6 Click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the PN junction is typically a substrate PNP transistor on the die of the measured IC.
  
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/templog6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temp-log-6-click)
+[Click Product page](https://www.mikroe.com/temp-log-6-click)
 
 ---
 
@@ -58,13 +58,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
  
-> The example starts off with the initialization and configuration of the click and logger modules, tests the communication channel and reads and displays local and remote temperature values every second.
+> The example starts off with the initialization and configuration of the Click and logger modules, tests the communication channel and reads and displays local and remote temperature values every second.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes and configures the click and logger modules and tests the communication for errors.
+> Initializes and configures the Click and logger modules and tests the communication for errors.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

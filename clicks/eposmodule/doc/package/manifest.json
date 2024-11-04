@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "EPOS Module click",
+    "display_name": "EPOS Module Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.EPOSModule",
     "subdir_name": "lib_eposmodule"
 }
+
 

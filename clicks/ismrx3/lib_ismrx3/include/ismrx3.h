@@ -246,7 +246,7 @@ typedef enum
 
 /**
  * @brief ISM RX 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ismrx3_cfg_t object definition for detailed explanation.
@@ -258,7 +258,7 @@ void ismrx3_cfg_setup ( ismrx3_cfg_t *cfg );
 /**
  * @brief ISM RX 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ismrx3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -273,7 +273,7 @@ err_t ismrx3_init ( ismrx3_t *ctx, ismrx3_cfg_t *cfg );
 /**
  * @brief ISM RX 3 default configuration function.
  * @details This function executes a default configuration of ISM RX 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ismrx3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -285,7 +285,7 @@ typedef enum
 
 /**
  * @brief ISM configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ism_cfg_t object definition for detailed explanation.
@@ -297,7 +297,7 @@ void ism_cfg_setup ( ism_cfg_t *cfg );
 /**
  * @brief ISM initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -311,7 +311,7 @@ err_t ism_init ( ism_t *ctx, ism_cfg_t *cfg );
 
 /**
  * @brief ISM default configuration function.
- * @details This function executes a default configuration of ISM click board™.
+ * @details This function executes a default configuration of ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return None.
@@ -370,7 +370,7 @@ err_t ism_set_cmd ( ism_t *ctx, uint8_t cmd, uint8_t cmd_data );
  * @brief ISM set chip enable function.
  * @details This function set chip enable of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return Noting
@@ -382,7 +382,7 @@ void ism_chip_enable ( ism_t *ctx );
  * @brief ISM set chip disable function.
  * @details This function set chip disable of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return Nothing.
@@ -394,7 +394,7 @@ void ism_chip_disable ( ism_t *ctx );
  * @brief ISM RL pin setting function.
  * @details This function sets the RL pin state to the desired level of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @param[in] rt_pin_state : 
@@ -409,7 +409,7 @@ void ism_set_rl_pin_state ( ism_t *ctx, uint8_t rt_pin_state );
  * @brief ISM TL pin setting function.
  * @details This function sets the TL pin state to the desired level of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @param[in] tl_pin_state : 
@@ -424,7 +424,7 @@ void ism_set_tl_pin_state ( ism_t *ctx, uint8_t tl_pin_state );
  * @brief ISM check interrupt request function.
  * @details This function check interrupt request, get states of the IRQ ( INT ) pin of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -437,7 +437,7 @@ uint8_t ism_check_interrupt_request ( ism_t *ctx );
  * @brief ISM switch bank function.
  * @details This function switch to the desire register bank of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @param[in] bank_sel : Bank selection
@@ -454,7 +454,7 @@ err_t ism_switch_bank ( ism_t *ctx, uint8_t bank_sel );
  * @brief ISM switch RX mode function.
  * @details This function switch to RX mode of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -468,7 +468,7 @@ err_t ism_switch_rx_mode ( ism_t *ctx );
  * @brief ISM switch TX mode function.
  * @details This function switch to TX mode of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -482,7 +482,7 @@ err_t ism_switch_tx_mode ( ism_t *ctx );
  * @brief ISM device configuration function.
  * @details This function performs configuration of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -496,7 +496,7 @@ err_t ism_device_config ( ism_t *ctx );
  * @brief ISM receive packet function.
  * @details This function receive packet of data of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @param[out] rx_data : Pointer to the memory location where receive data be stored.
@@ -511,7 +511,7 @@ err_t ism_receive_packet ( ism_t *ctx, uint8_t *rx_data );
  * @brief ISM transmit package function.
  * @details This function transmit the package of data of the 
  * RFM75, Low Power High Performance 2.4 GHz GFSK Transceiver on the 
- * ISM click board™.
+ * ISM Click board™.
  * @param[in] ctx : Click context object.
  * See #ism_t object definition for detailed explanation.
  * @param[in] type : Transmission type.

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# AMR Angle click
+# AMR Angle Click
 
 AMR Angle Click is a compact add-on board containing an anisotropic magnetoresistive measurement solution ideal for either angle or linear position measurements. This board features the ADA4571, an AMR sensor with clean and amplified cosine and sine output signals related to a rotating magnetic field angle from Analog Devices.
 
@@ -9,7 +9,7 @@ AMR Angle Click is a compact add-on board containing an anisotropic magnetoresis
   <img src="https://download.mikroe.com/images/click_for_ide/amr_angle_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/amr-angle-click)
+[Click Product page](https://www.mikroe.com/amr-angle-click)
 
 ---
 
@@ -70,7 +70,7 @@ void amrangle_gain_control_mode ( amrangle_t *ctx, uint8_t gain_control );
 
 ## Example Description
 
-> This demo application shows the performance of AMR Angle click by reading and presenting the temperature and angle results on the UART log.
+> This demo application shows the performance of AMR Angle Click by reading and presenting the temperature and angle results on the UART log.
 
 **The demo application is composed of two sections :**
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART Click](https://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

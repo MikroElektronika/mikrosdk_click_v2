@@ -202,7 +202,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure
+ * @description This function initializes Click configuration structure
  * to init state.
  * @note All used pins will be set to unconnected state.
  */
@@ -215,7 +215,7 @@ void ambient5_cfg_setup ( ambient5_cfg_t *cfg );
  * @param cfg Click configuration structure.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 AMBIENT5_RETVAL ambient5_init ( ambient5_t *ctx, ambient5_cfg_t *cfg );
 
@@ -344,6 +344,6 @@ uint8_t ambient5_checkIntPin ( ambient5_t* ctx );
 #endif  // _AMBIENT5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------- END

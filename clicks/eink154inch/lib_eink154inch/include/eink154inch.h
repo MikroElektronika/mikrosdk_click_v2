@@ -262,7 +262,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void eink154inch_cfg_setup ( eink154inch_cfg_t *cfg );
@@ -273,7 +273,7 @@ void eink154inch_cfg_setup ( eink154inch_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t eink154inch_init ( eink154inch_t *ctx, eink154inch_cfg_t *cfg );
 
@@ -397,6 +397,6 @@ void eink154inch_set_font ( eink154inch_t *ctx, eink154inch_font_t *cfg_font );
 #endif  // _EINK154INCH_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

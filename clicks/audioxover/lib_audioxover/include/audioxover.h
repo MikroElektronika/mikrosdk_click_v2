@@ -129,7 +129,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void audioxover_cfg_setup ( audioxover_cfg_t *cfg );
@@ -139,7 +139,7 @@ void audioxover_cfg_setup ( audioxover_cfg_t *cfg );
  * @param audioxover Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AUDIOXOVER_RETVAL audioxover_init ( audioxover_t *ctx, audioxover_cfg_t *cfg );
 
@@ -148,7 +148,7 @@ AUDIOXOVER_RETVAL audioxover_init ( audioxover_t *ctx, audioxover_cfg_t *cfg );
  *
  * @param ctx  Click object.
  * 
- * @description This function enables the click board by setting SDN pin to HIGH logic state.
+ * @description This function enables the Click board by setting SDN pin to HIGH logic state.
  */
 void audioxover_power_on ( audioxover_t *ctx );
 
@@ -157,7 +157,7 @@ void audioxover_power_on ( audioxover_t *ctx );
  *
  * @param ctx  Click object.
  * 
- * @description This function disables the click board by setting SDN pin to LOW logic state.
+ * @description This function disables the Click board by setting SDN pin to LOW logic state.
  */
 void audioxover_shut_down ( audioxover_t *ctx );
 
@@ -167,6 +167,6 @@ void audioxover_shut_down ( audioxover_t *ctx );
 #endif  // _AUDIOXOVER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

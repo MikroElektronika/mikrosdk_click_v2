@@ -1,6 +1,6 @@
 
 ---
-# Stepper 10 click
+# Stepper 10 Click
 
 > Stepper 10 Click is a two-phase bipolar stepping motor driver capable of controlling one stepper motor with PWM constant current drive. Click's featured chip TB67S128FTG, from Toshiba Semiconductor, fabricated with BiCD process with an output rating of 50V/5A and a built-in decoder can supply the motor with voltage of up to 44V. Toshiba's innovative technology process results in low-power consumption with low on-resistance (0.25Ω) on the integrated MOSFET output stage. The stepper motor can be driven in both directions from full step to 1/128 micro-steps.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepper10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-10-click)
+[Click Product page](https://www.mikroe.com/stepper-10-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t stepper10_drive_motor ( stepper10_t *ctx, uint32_t steps, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 10 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 10 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

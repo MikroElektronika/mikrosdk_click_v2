@@ -133,7 +133,7 @@ typedef enum
 
 /**
  * @brief Battery Source configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #batterysource_cfg_t object definition for detailed explanation.
@@ -145,7 +145,7 @@ void batterysource_cfg_setup ( batterysource_cfg_t *cfg );
 /**
  * @brief Battery Source initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #batterysource_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -160,7 +160,7 @@ err_t batterysource_init ( batterysource_t *ctx, batterysource_cfg_t *cfg );
 /**
  * @brief Battery Source set output state function.
  * @details This function is used to set output state of
- * Battery Source click board.
+ * Battery Source Click board.
  * @param[in] ctx : Click context object.
  * See #batterysource_t object definition for detailed explanation.
  * @param[in] output_state : State of the output.

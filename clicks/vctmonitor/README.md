@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# VCT Monitor click
+# VCT Monitor Click
 
 > VCT Monitor Click is a compact add-on board that contains a highly integrated monitoring solution without compromising accuracy. This board features the LTC2990, an I2C configurable high-performance temperature, voltage, and current monitor from Analog Devices.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vctmonitor_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vct-monitor-click)
+[Click Product page](https://www.mikroe.com/vct-monitor-click)
 
 ---
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# AccelPressure click
+# AccelPressure Click
 
 > Accel&Pressure Click is a compact add-on board representing a rate-of-climb sensing solution for your application. This board features the FXLS8974CF, a 3-axis low-g accelerometer, and the MPL3115A2, a precision pressure sensor with altimetry, both from NXP Semiconductor. Those two sensors are high-performance, low-power devices covering all of Earth's surface elevations. By combining the acceleration and the barometric pressure data, you can easily determine the vertical velocity (the rate of climb) of the device on which the Accel&Pressure Click is integrated.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accelpressure_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accelpressure-click)
+[Click Product page](https://www.mikroe.com/accelpressure-click)
 
 ---
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# IR Grid 4 click
+# IR Grid 4 Click
 
 > IR Grid 4 Click is a compact add-on board for high-precision, non-contact temperature measurement and thermal imaging. This board is based on the MLX90641, a fully calibrated thermal IR array from Melexis. It captures temperature data across a 16x12 matrix (192 pixels) and accurately measures temperatures from -40°C to +300°C with a typical accuracy of 1°C. The board supports the innovative 'Click Snap' feature, allowing the sensor area to be detached for flexible positioning.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irgrid4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-grid-4-click)
+[Click Product page](https://www.mikroe.com/ir-grid-4-click)
 
 ---
 
@@ -69,14 +69,14 @@ void irgrid4_enable_led1 ( irgrid4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of IR Grid 4 click by reading and displaying
+> This example demonstrates the use of IR Grid 4 Click by reading and displaying
 the ambient and object temperature measurements in a 16x12 pixels grid format.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -161,7 +161,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void buck_cfg_setup ( buck_cfg_t *cfg );
@@ -171,7 +171,7 @@ void buck_cfg_setup ( buck_cfg_t *cfg );
  * @param buck Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BUCK_RETVAL buck_init ( buck_t *ctx, buck_cfg_t *cfg );
 
@@ -180,7 +180,7 @@ BUCK_RETVAL buck_init ( buck_t *ctx, buck_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for BUCK click.
+ * @description This function executes default configuration for BUCK Click.
  * 
  * @note Default module configuration:
  * <pre>
@@ -256,6 +256,6 @@ void buck_switch_frequency ( buck_t *ctx, uint8_t frequency );
 #endif  // _BUCK_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

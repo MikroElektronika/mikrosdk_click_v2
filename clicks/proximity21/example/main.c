@@ -3,13 +3,13 @@
  * @brief Proximity 21 Click example
  *
  * # Description
- * This example demonstrates the use of Proximity 21 click board by reading and displaying
+ * This example demonstrates the use of Proximity 21 Click board by reading and displaying
  * the target distance in millimeters on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for a data ready interrupt, then reads the measurement results and logs

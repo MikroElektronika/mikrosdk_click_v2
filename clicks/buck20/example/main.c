@@ -3,7 +3,7 @@
  * @brief Buck 20 Click example
  *
  * # Description
- * This example demonstrates the use of Buck 20 click by changing the output voltage.
+ * This example demonstrates the use of Buck 20 Click by changing the output voltage.
  *
  * The demo application is composed of two sections :
  *

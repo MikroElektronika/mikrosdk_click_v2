@@ -3,7 +3,7 @@
  * @brief MUX 9 Click example
  *
  * # Description
- * This example demonstrates the use of MUX 9 click board™.
+ * This example demonstrates the use of MUX 9 Click board™.
  *
  * The demo application is composed of two sections :
  *
@@ -11,7 +11,7 @@
  * Initializes the driver and performs the reset.
  *
  * ## Application Task
- * This is an example that shows the use of a MUX 9 click board™.
+ * This is an example that shows the use of a MUX 9 Click board™.
  * This example shows switching channels (from CH 1 to CH 8) on and off.
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

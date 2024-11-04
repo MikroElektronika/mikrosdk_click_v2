@@ -1,14 +1,14 @@
 
 ---
-# Color 8 click
+# Color 8 Click
 
-Color 8 click is a color-sensing Click board™, a part of our sensor Click board™ line. Sensing the color by utilizing ROHM’s BH1749NUC, an integrated color sensor IC, it comes in the package which also includes the mikroSDK™ software, a library with all the functions.
+Color 8 Click is a color-sensing Click board™, a part of our sensor Click board™ line. Sensing the color by utilizing ROHM’s BH1749NUC, an integrated color sensor IC, it comes in the package which also includes the mikroSDK™ software, a library with all the functions.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/color8_click.png" height=300px>
 </p>>
 
-[click Product page](https://www.mikroe.com/color-8-click)
+[Click Product page](https://www.mikroe.com/color-8-click)
 
 ---
 
@@ -190,7 +190,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

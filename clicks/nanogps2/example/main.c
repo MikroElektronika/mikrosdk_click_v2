@@ -3,7 +3,7 @@
  * \brief NanoGps2 Click example
  * 
  * # Description
- * This example reads and processes data from Nano GPS 2 click.
+ * This example reads and processes data from Nano GPS 2 Click.
  *
  * The demo application is composed of two sections :
  * 

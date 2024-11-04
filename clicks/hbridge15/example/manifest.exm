@@ -3,6 +3,6 @@
     "description": "H-Bridge 15 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8834, a dual-bridge stepper or DC motor driver from Texas Instruments. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","DRV8834RGER"],
+    "hw" : ["Click","DRV8834RGER"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

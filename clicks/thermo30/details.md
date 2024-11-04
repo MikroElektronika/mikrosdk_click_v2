@@ -1,6 +1,6 @@
 
 ---
-# Thermo 30 click
+# Thermo 30 Click
 
 > Thermo 30 Click is a compact add-on board that accurately measures temperature. This board features the STS32-DIS-10KS, a third-generation, high-reliability, certified digital temperature sensor from Sensirion. It is a digitally calibrated and ISO17025-certified temperature sensor with an operating temperature range of -40 to 125°C. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo30_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-30-click)
+[Click Product page](https://www.mikroe.com/thermo-30-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t thermo30_read_temperature ( thermo30_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo 30 click board by reading and displaying
+> This example demonstrates the use of Thermo 30 Click board by reading and displaying
   the temperature measurements.
 
 **The demo application is composed of two sections :**
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

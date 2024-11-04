@@ -3,7 +3,7 @@
  * @brief HallCurrent7 Click example
  *
  * # Description
- * This example shows the capabilities of the Hall Current 7 click board.
+ * This example shows the capabilities of the Hall Current 7 Click board.
  *
  * The demo application is composed of two sections :
  *

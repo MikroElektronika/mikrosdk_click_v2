@@ -130,7 +130,7 @@ typedef enum
 
 /**
  * @brief Water Detect 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #waterdetect2_cfg_t object definition for detailed explanation.
@@ -142,7 +142,7 @@ void waterdetect2_cfg_setup ( waterdetect2_cfg_t *cfg );
 /**
  * @brief Water Detect 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #waterdetect2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -157,7 +157,7 @@ err_t waterdetect2_init ( waterdetect2_t *ctx, waterdetect2_cfg_t *cfg );
 /**
  * @brief Water Detect 2 default configuration function.
  * @details This function executes a default configuration of Water Detect 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #waterdetect2_t object definition for detailed explanation.
  * @return Nothing.
@@ -169,7 +169,7 @@ void waterdetect2_default_cfg ( waterdetect2_t *ctx );
 /**
  * @brief Water Detect 2 enable function.
  * @details This function sets the ON (PWM) pin on the high level 
- * to enable water detection of the Water Detect 2 click board™.
+ * to enable water detection of the Water Detect 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #waterdetect2_t object definition for detailed explanation.
  * @return Nothing.
@@ -180,7 +180,7 @@ void waterdetect2_enable ( waterdetect2_t *ctx );
 /**
  * @brief Water Detect 2 disable function.
  * @details This function clears the ON (PWM) pin on the low level 
- * to disable water detection of the Water Detect 2 click board™.
+ * to disable water detection of the Water Detect 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #waterdetect2_t object definition for detailed explanation.
  * @return Nothing.
@@ -191,7 +191,7 @@ void waterdetect2_disable ( waterdetect2_t *ctx );
 /**
  * @brief Water Detect 2 get fluid status function.
  * @details This function reads the fluid presence status
- * of the Water Detect 2 click board™.
+ * of the Water Detect 2 Click board™.
  * @param[in] ctx : Click context object.
  * See #waterdetect2_t object definition for detailed explanation.
  * @return @li @c 0 - Fluid is present,

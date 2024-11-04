@@ -3,13 +3,13 @@
  * @brief BATTMON3 Click example
  *
  * # Description
- * This example demonstrates the use of BATT-MON 3 click by measuring the battery
+ * This example demonstrates the use of BATT-MON 3 Click by measuring the battery
  * voltage, current and used capacity, as well as the chip internal temperature.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialized the driver and performs the click default configuration.
+ * Initialized the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads the battery voltage (mV), current (mA), used capacity (mAh) and the chip internal 

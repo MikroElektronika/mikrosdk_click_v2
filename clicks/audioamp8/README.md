@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# AudioAmp 8 click
+# AudioAmp 8 Click
 
 > AudioAmp 8 Click is a compact add-on board that reproduces input audio signal at sound-producing output elements, with desired volume and power levels. This board features the MA12070, a super-efficient audio power amplifier from Infineon Technologies. This I2C configurable audio amplifier is based on proprietary multi-level switching technology, enabling low power loss during operation. It supports a supply voltage range from 4 to 26V, allowing it to be used in many applications. Besides, it is equipped with protection features, allowing a reliable operation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/audioamp8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/audioamp-8-click)
+[Click Product page](https://www.mikroe.com/audioamp-8-click)
 
 ---
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

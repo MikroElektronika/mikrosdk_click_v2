@@ -275,7 +275,7 @@ typedef enum
 
 /**
  * @brief PCR configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pcr_cfg_t object definition for detailed explanation.
@@ -287,7 +287,7 @@ void pcr_cfg_setup ( pcr_cfg_t *cfg );
 /**
  * @brief PCR initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -302,7 +302,7 @@ err_t pcr_init ( pcr_t *ctx, pcr_cfg_t *cfg );
 /**
  * @brief PCR default configuration function.
  * @details This function executes a default configuration of PCR
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -348,7 +348,7 @@ err_t pcr_generic_read ( pcr_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len
 /**
  * @brief PCR set wake up pin state function.
  * @details This function is used to set wake up pin state of PCR
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @param[in] pin_state : State of the pin.
@@ -360,7 +360,7 @@ void pcr_set_wup_pin ( pcr_t *ctx, uint8_t pin_state );
 /**
  * @brief PCR set reset pin state function.
  * @details This function is used to set reset pin state of PCR
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @param[in] pin_state : State of the pin.
@@ -372,7 +372,7 @@ void pcr_set_rst_pin ( pcr_t *ctx, uint8_t pin_state );
 /**
  * @brief PCR get interrupt pin state function.
  * @details This function is used to read interrupt pin state of PCR
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @return State of the interrupt pin.
@@ -383,7 +383,7 @@ uint8_t pcr_get_int_pin ( pcr_t *ctx );
 /**
  * @brief PCR hardware reset function.
  * @details This function is used to perform hardware reset of PCR
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @return Nothing.
@@ -424,7 +424,7 @@ err_t pcr_read_reg ( pcr_t *ctx, uint16_t reg, uint32_t *data_out );
 /**
  * @brief PCR get status function.
  * @details This function is used to read status register of the PCR
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @param[out] status : Read status data.
@@ -438,7 +438,7 @@ err_t pcr_get_status ( pcr_t *ctx, uint32_t *status );
 /**
  * @brief PCR check if device is busy function.
  * @details This function is used to check if the PCR
- * click board is busy.
+ * Click board is busy.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @return @li @c 0 - Success device not busy,
@@ -464,7 +464,7 @@ err_t pcr_check_if_ok ( pcr_t *ctx );
 /**
  * @brief PCR read distance function.
  * @details This function is used to read distance from the PCR
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #pcr_t object definition for detailed explanation.
  * @param[out] distance_data : Read distance data.

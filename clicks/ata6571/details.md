@@ -1,6 +1,6 @@
 
 ---
-# ATA6571 click
+# ATA6571 Click
 
 ATA6571 Click is a compact add-on board that contains a transceiver designed for high-speed CAN applications. This board features the ATA6571, a standalone high-speed CAN FD transceiver that interfaces a CAN protocol controller and the physical two-wire CAN bus from Microchip.
 
@@ -8,7 +8,7 @@ ATA6571 Click is a compact add-on board that contains a transceiver designed for
   <img src="https://download.mikroe.com/images/click_for_ide/ata6571_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ata6571-click)
+[Click Product page](https://www.mikroe.com/ata6571-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t ata6571_generic_read ( ata6571_t *ctx, char *data_buf, uint16_t max_len );
 
 ## Example Description
 
-> This example reads and processes data from ATA6571 clicks.
+> This example reads and processes data from ATA6571 Clicks.
 
 **The demo application is composed of two sections :**
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

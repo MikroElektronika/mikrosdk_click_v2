@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Pixi click
+# Pixi Click
 
-PIXI™ click is equipped with MAX11300 IC from Maxim Integrated, which features Maxim Integrated's versatile, proprietary PIXI™ technology - it is the industry's first configurable 20-channel mixed-signal data converter. Besides the 12bit multichannel SAR ADC and buffered DAC, it also features one internal and two external temperature sensors for tracking the junction and the environmental temperatures.
+PIXI™ Click is equipped with MAX11300 IC from Maxim Integrated, which features Maxim Integrated's versatile, proprietary PIXI™ technology - it is the industry's first configurable 20-channel mixed-signal data converter. Besides the 12bit multichannel SAR ADC and buffered DAC, it also features one internal and two external temperature sensors for tracking the junction and the environmental temperatures.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pixi_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pixi-click)
+[Click Product page](https://www.mikroe.com/pixi-click)
 
 ---
 
@@ -48,15 +48,15 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function writes data to the click module.
+- This function writes data to the Click module.
 > uint8_t pixi_write_reg ( pixi_t *ctx, const uint8_t reg_addr, uint32_t reg_data );
  
-- This function reads data from the click module.
+- This function reads data from the Click module.
 > uint8_t pixi_read_reg ( pixi_t *ctx, const uint8_t reg_addr, uint32_t *reg_data );
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the Pixi click moduel. The click
+> This example showcases how to initialize, configure and use the Pixi Click moduel. The Click
   features Maxim Integrated's versatile, proprietary PIXI™ technology - the industry's first
   configurable 20-channel mixed-signal data converter. 
 
@@ -64,7 +64,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the click and logger modules. After the initial setup
+> This function initializes and configures the Click and logger modules. After the initial setup
   a device id check is performed which will stop the module if the check fails. Additional con-
   figurating is done in the default_cfg(...) function. 
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

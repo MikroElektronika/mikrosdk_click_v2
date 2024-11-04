@@ -569,7 +569,7 @@ static void bletiny_i2c_example ( void )
         case BLETINY_EXAMPLE:
         {
             char mem_value[ 16 ] = "MikroE";
-            log_printf ( &logger, "Writing Mikroe to EEPROM click\r\n" );
+            log_printf ( &logger, "Writing Mikroe to EEPROM Click\r\n" );
             for ( uint8_t cnt = 0; cnt < 6; cnt++ )
             {
                 bletiny_i2c_write( &bletiny, 0x50, cnt + 1, mem_value[ cnt ] );
@@ -617,7 +617,7 @@ static void bletiny_spi_example ( void )
         {
             uint8_t buf[ 10 ] = { 0x02, 0x00, 0x00, 0x01, 'M', 'i', 'k', 'r', 'o', 'E' };
             bletiny_spi_write ( &bletiny, buf, 10 );
-            log_printf ( &logger, "Writing Mikroe to EEPROM 2 click\r\n" );
+            log_printf ( &logger, "Writing Mikroe to EEPROM 2 Click\r\n" );
             Delay_ms ( 1000 );
 
             uint8_t data_in[ 4 ] = { 0x03, 0x00, 0x00, 0x01 };

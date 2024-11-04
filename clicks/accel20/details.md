@@ -1,6 +1,6 @@
 
 ---
-# Accel 20 click
+# Accel 20 Click
 
 > Accel 20 Click is a compact add-on board that contains an acceleration sensor. This board features the KX134-1211, a digital output 3-axis accelerometer optimized for machine condition monitoring from Rohm Semiconductor. It allows selectable full-scale acceleration measurements in ranges of ±8g, ±16g, ±32g, or ±64g in three axes with a configurable host interface that supports both SPI and I2C serial communication. It also features an Advanced Data Path (ADP) technology which allows noise filtering and sensor signal processing, usually carried out by the MCU, to be performed by the accelerometer. They contribute to reducing MCU load and power consumption together with improved application performance.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-20-click)
+[Click Product page](https://www.mikroe.com/accel-20-click)
 
 ---
 
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,14 +3,14 @@
  * @brief 3DHall10 Click example
  *
  * # Description
- * This example demonstrates the use of 3D Hall 10 click board by reading the magnetic
+ * This example demonstrates the use of 3D Hall 10 Click board by reading the magnetic
  * flux density from 3 axes, and the angle and magnitude between X and Y axes  
  * as well as the sensor internal temperature.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the conversion complete interrupt and then reads the new data from the sensor 

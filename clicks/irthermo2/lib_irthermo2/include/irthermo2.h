@@ -216,7 +216,7 @@ typedef enum
 
 /**
  * @brief Config Object Initialization function.
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @param[out] cfg : Click configuration structure.
  * See #irthermo2_cfg_t object definition for detailed explanation.
  * @return Nothing.
@@ -227,7 +227,7 @@ void irthermo2_cfg_setup ( irthermo2_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  * @param[out] ctx : Click context object.
  * See #irthermo2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -241,7 +241,7 @@ err_t irthermo2_init ( irthermo2_t *ctx, irthermo2_cfg_t *cfg );
 
 /**
  * @brief Click Default Configuration function.
- * @details This function executes default configuration for IrThermo2 click.
+ * @details This function executes default configuration for IrThermo2 Click.
  * @param[out] ctx : Click context object.
  * See #irthermo2_t object definition for detailed explanation.
  * @return Nothing.

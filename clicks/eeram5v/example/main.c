@@ -3,7 +3,7 @@
  * @brief EERAM5V Click example
  *
  * # Description
- * This example show using EERAM click to store the data to the SRAM ( static RAM ) memory.
+ * This example show using EERAM Click to store the data to the SRAM ( static RAM ) memory.
  * The data is read and written by the I2C serial communication bus, and the memory cells 
  * are organized into 2048 bytes, each 8bit wide.
  * 
@@ -13,7 +13,7 @@
  * EERAM driver initialization.
  *
  * ## Application Task
- * Writing data to click memory and displaying the read data via UART. 
+ * Writing data to Click memory and displaying the read data via UART. 
  *
  * @author Jelena Milosavljevic
  *

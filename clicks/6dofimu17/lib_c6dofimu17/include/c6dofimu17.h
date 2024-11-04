@@ -481,7 +481,7 @@ typedef struct
 
 /**
  * @brief 6DOF IMU 17 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c6dofimu17_cfg_t object definition for detailed explanation.
@@ -493,7 +493,7 @@ void c6dofimu17_cfg_setup ( c6dofimu17_cfg_t *cfg );
 /**
  * @brief 6DOF IMU 17 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #c6dofimu17_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -509,7 +509,7 @@ void c6dofimu17_drv_interface_selection ( c6dofimu17_cfg_t *cfg, c6dofimu17_drv_
 /**
  * @brief 6DOF IMU 17 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -525,7 +525,7 @@ err_t c6dofimu17_init ( c6dofimu17_t *ctx, c6dofimu17_cfg_t *cfg );
 /**
  * @brief 6DOF IMU 17 default configuration function.
  * @details This function executes a default configuration of 6DOF IMU 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -575,7 +575,7 @@ err_t c6dofimu17_generic_read ( c6dofimu17_t *ctx, uint8_t reg, uint8_t *data_ou
  * @brief 6DOF IMU 17 bank selection function.
  * @details This function accessible from all register bank 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[in] bank_sel : 
@@ -596,7 +596,7 @@ err_t c6dofimu17_bank_selection ( c6dofimu17_t *ctx, uint8_t bank_sel );
  * @brief 6DOF IMU 17 get interrupt function.
  * @details This function get states of the INT pin
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @return INT pin state.
@@ -609,7 +609,7 @@ uint8_t c6dofimu17_get_interrupt ( c6dofimu17_t *ctx );
  * @brief 6DOF IMU 17 get device ID function.
  * @details This function get device ID
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[out] device_id : device ID
@@ -625,7 +625,7 @@ err_t c6dofimu17_get_device_id ( c6dofimu17_t *ctx, uint8_t *device_id );
  * @brief 6DOF IMU 17 temperature enable function.
  * @details This function enable temperature data
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -640,7 +640,7 @@ err_t c6dofimu17_temperature_enable ( c6dofimu17_t *ctx );
  * @brief 6DOF IMU 17 gyroscope enable function.
  * @details This function enable gyroscope data
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -655,7 +655,7 @@ err_t c6dofimu17_gyro_enable ( c6dofimu17_t *ctx );
  * @brief 6DOF IMU 17 accelerometer enable function.
  * @details This function enable accelerometer data
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -670,7 +670,7 @@ err_t c6dofimu17_accel_enable ( c6dofimu17_t *ctx );
  * @brief 6DOF IMU 17 set config gyroscope function.
  * @details This function set gyroscope configuration 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[in] gyro_cfg : Gyro configuration structure object.
@@ -686,7 +686,7 @@ err_t c6dofimu17_set_config_gyro ( c6dofimu17_t *ctx, c6dofimu17_gyro_cfg_t gyro
  * @brief 6DOF IMU 17 get config gyroscope function.
  * @details This function get gyroscope configuration 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[out] gyro_cfg : Gyro configuration structure object.
@@ -702,7 +702,7 @@ err_t c6dofimu17_get_config_gyro ( c6dofimu17_t *ctx, c6dofimu17_gyro_cfg_t *gyr
  * @brief 6DOF IMU 17 set config accelerometer function.
  * @details This function set accelerometer configuration 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[in] accel_cfg : Gyro configuration structure object.
@@ -718,7 +718,7 @@ err_t c6dofimu17_set_config_accel ( c6dofimu17_t *ctx, c6dofimu17_accel_cfg_t ac
  * @brief 6DOF IMU 17 get config accelerometer function.
  * @details This function get accelerometer configuration 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[out] accel_cfg : Gyro configuration structure object.
@@ -734,7 +734,7 @@ err_t c6dofimu17_get_config_accel ( c6dofimu17_t *ctx, c6dofimu17_accel_cfg_t *a
  * @brief 6DOF IMU 17 soft reset function.
  * @details This function performs a software reset  
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -749,7 +749,7 @@ err_t c6dofimu17_soft_reset ( c6dofimu17_t *ctx );
  * @brief 6DOF IMU 17 get accel data function.
  * @details This function get accelerometer data 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[out] accel_data : An object that contains X , Y and Z axis data.
@@ -765,7 +765,7 @@ err_t c6dofimu17_get_accel_data ( c6dofimu17_t *ctx, c6dofimu17_axis_t *accel_da
  * @brief 6DOF IMU 17 get gyroscope data function.
  * @details This function get gyroscope data 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[out] gyro_data : Gyroscope configuration structure object.
@@ -781,7 +781,7 @@ err_t c6dofimu17_get_gyro_data ( c6dofimu17_t *ctx, c6dofimu17_axis_t *gyro_data
  * @brief 6DOF IMU 17 get temperature data function.
  * @details This function get temperature data 
  * of the IIM-42652 High-performance 6-Axis SmartIndustrial™ MotionTracking MEMS Device
- * on the 6DOF IMU 17 click board™. 
+ * on the 6DOF IMU 17 Click board™. 
  * @param[in] ctx : Click context object.
  * See #c6dofimu17_t object definition for detailed explanation.
  * @param[out] temperature : Temperature in degrees Celsius

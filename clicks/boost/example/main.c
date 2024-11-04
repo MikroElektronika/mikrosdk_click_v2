@@ -3,7 +3,7 @@
  * \brief Boost Click example
  *
  * # Description
- * Boost click provides an adjustable output voltage through the onboard DAC that drives the FB 
+ * Boost Click provides an adjustable output voltage through the onboard DAC that drives the FB 
  * pin of the MIC2606 to set desired output voltage.
  *
  * The demo application is composed of two sections :

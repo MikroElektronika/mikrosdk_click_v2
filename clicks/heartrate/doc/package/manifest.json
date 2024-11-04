@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Heart Rate click",
+    "display_name": "Heart Rate Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.heartrate",
     "product_link": "https://www.mikroe.com/heart-rate-click",
-    "short_description": "Heart Rate click is a heart rate monitoring and pulse oximetry measuring Click board™. It features an advanced oximeter and heart rate monitoring sensor, which relies on two integrated LEDs, a photosensitive element, and a very accurate and advanced low noise analog front end, to provide clean and accurate readings.",
+    "short_description": "Heart Rate Click is a heart rate monitoring and pulse oximetry measuring Click board™. It features an advanced oximeter and heart rate monitoring sensor, which relies on two integrated LEDs, a photosensitive element, and a very accurate and advanced low noise analog front end, to provide clean and accurate readings.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1587
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.HeartRate",
     "subdir_name": "lib_heartrate"
 }
+
 
 
 

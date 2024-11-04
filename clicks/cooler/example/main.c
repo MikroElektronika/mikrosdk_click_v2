@@ -3,7 +3,7 @@
  * @brief Cooler Click Example.
  *
  * # Description
- * This example demonstrates the use of the Cooler click board 
+ * This example demonstrates the use of the Cooler Click board 
  * by reading the target object temperature and controlling the cooler.
  *
  * The demo application is composed of two sections :

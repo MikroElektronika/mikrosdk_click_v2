@@ -1,6 +1,6 @@
 
 ---
-# Cap Touch 6 click
+# Cap Touch 6 Click
 
 > Cap Touch 6 Click is a compact add-on board that easily integrates projected capacitive touch into users' applications. This board features the IQS227D, a single-channel capacitive controller with an internal voltage regular and reference capacitor from Azoteq. Besides the capacitive sensing area, this board also has output pins for proximity and touch events with their corresponding LED indicators. The IQS227D automatically tracks slow varying environmental changes via various filters.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/captouch6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/cap-touch-6-click)
+[Click Product page](https://www.mikroe.com/cap-touch-6-click)
 
 ---
 
@@ -59,7 +59,7 @@ uint8_t captouch6_get_pout_pin ( captouch6_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Cap Touch 6 click board by reading and displaying the touch and proximity events.
+> This example demonstrates the use of Cap Touch 6 Click board by reading and displaying the touch and proximity events.
 
 **The demo application is composed of two sections :**
 
@@ -131,7 +131,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -8,8 +8,8 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Configuring Clicks and log objects.
+ * Settings the Click in the default configuration.
  * Call the procedure the wakeup function of the chip.
  * 
  * ## Application Task  
@@ -55,7 +55,7 @@ void application_init ( void )
     AIRQUALITY3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     airquality3_init( &airquality3, &cfg );
 
-    // Wake-up click procedure
+    // Wake-up Click procedure
 
     airquality3_set_power( &airquality3, AIRQUALITY3_POWER_STATE_ON );
     airquality3_hardware_reset( &airquality3 );

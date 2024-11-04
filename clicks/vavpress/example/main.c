@@ -3,7 +3,7 @@
  * @brief VavPress Click example
  *
  * # Description
- * This library contains API for the Vav Press click driver.
+ * This library contains API for the Vav Press Click driver.
  * This demo application shows an example of 
  * differential pressure and temperature measurement.
  *
@@ -16,7 +16,7 @@
  * and set the sensor parameters data.
  *
  * ## Application Task
- * This is an example that shows the use of a Vav Press click board™.
+ * This is an example that shows the use of a Vav Press Click board™.
  * Logs pressure difference value [ Pa ] and temperature [ degree Celsius ] value.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 

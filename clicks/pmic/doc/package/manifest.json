@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "PMIC click",
+    "display_name": "PMIC Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,9 +28,10 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
+    "version": "2.1.0.2",
     "cmake": true,
     "alias": "Click.PMIC",
     "subdir_name": "lib_pmic"
 }
+
 

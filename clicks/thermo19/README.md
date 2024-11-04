@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Thermo 19 click
+# Thermo 19 Click
 
 > Thermo 19 Click is a compact add-on board that provides an accurate temperature measurement. This board features the MAX31825, a temperature sensor that provides 8-bit to 12-bit Celsius temperature measurements with better than ±1.75°C from -45°C to +145°C from Analog Devices. It has a unique 64-bit serial code stored in an on-chip ROM, an alarm output for detection of temperature faults, temperature resolution selection from 8 to 12 bits, and it allows temperature conversion to 10-bit digital word in a period of 80ms (max).
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermo19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-19-click)
+[Click Product page](https://www.mikroe.com/thermo-19-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t thermo19_read_temperature ( thermo19_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo 19 click board by reading and displaying the temperature in Celsius.
+> This example demonstrates the use of Thermo 19 Click board by reading and displaying the temperature in Celsius.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -120,7 +120,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads and displays the temperature measured by the click board on the USB UART
+> Reads and displays the temperature measured by the Click board on the USB UART
 approximately every 400ms as this matches the required conversion time for 12-bit temperature resolution.
 
 ```c
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

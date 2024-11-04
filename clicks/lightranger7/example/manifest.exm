@@ -3,6 +3,6 @@
     "description": "LightRanger 7 Click is a compact add-on board capable of precise distance measurement and motion tracking. This board features the AFBR-S50, a medium-range 3D multipixel Time-of-Flight (ToF) sensor from Broadcom. Besides a VCSEL-based ToF sensor (Laser Class 1 eye safety), optimized to measure various distances working equally well on white, black, colored, and metallic reflective surfaces, this board also includes a 32-bit MCU, RA4M2 group of Renesas MCU with Arm® Cortex®-M33 core, alongside a 4-pin standard CAN connections compatible with Pixhawk®, a popular general-purpose flight controller.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","R7FA4M2AD3CFL","AFBR-S50MV85G"],
+    "hw" : ["Click","R7FA4M2AD3CFL","AFBR-S50MV85G"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

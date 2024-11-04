@@ -3,7 +3,7 @@
  * @brief ISOADC5 Click example
  *
  * # Description
- * This example demonstrates the use of ISO ADC 5 click board.
+ * This example demonstrates the use of ISO ADC 5 Click board.
  *
  * The demo application is composed of two sections :
  *

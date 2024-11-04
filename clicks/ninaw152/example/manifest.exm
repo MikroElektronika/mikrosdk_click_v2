@@ -3,6 +3,6 @@
     "description": "NINA-W152 Click is a compact add-on board designed for seamless integration of Wi-Fi and Bluetooth communication into your projects. Based on the NINA-W152 multi-radio module from u-blox, this Click board™ provides dual-mode wireless connectivity, including Wi-Fi 802.11b/g/n and Bluetooth BR/EDR v4.2+EDR and Bluetooth Low Energy v4.2. It features an internal PIFA antenna for optimal performance and supports communication through UART and SPI interfaces, with secure boot and enterprise-level security protocols (WPA2/WPA3) ensuring reliable operation.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","NINA-W152-04B"],
+    "hw" : ["Click","NINA-W152-04B"],
     "category" : ["Click Boards > Wireless connectivity > WiFi+BLE"]
 }

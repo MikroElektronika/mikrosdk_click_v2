@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "DC Motor 17 click",
+    "display_name": "DC Motor 17 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,11 +28,12 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "_type": "mikroSDK Library",
     "type": "Library",
-    "version": "2.1.0.33",
+    "version": "2.1.0.34",
     "cmake": true,
     "alias": "Click.DcMotor17",
     "subdir_name": "lib_dcmotor17"
 }
+
 
 
 

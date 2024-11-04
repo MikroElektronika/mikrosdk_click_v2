@@ -122,7 +122,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void waterdetect_cfg_setup ( waterdetect_cfg_t *cfg );
@@ -132,7 +132,7 @@ void waterdetect_cfg_setup ( waterdetect_cfg_t *cfg );
  * @param waterdetect Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 WATERDETECT_RETVAL waterdetect_init ( waterdetect_t *ctx, waterdetect_cfg_t *cfg );
 
@@ -141,7 +141,7 @@ WATERDETECT_RETVAL waterdetect_init ( waterdetect_t *ctx, waterdetect_cfg_t *cfg
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Water Detect click.
+ * @description This function executes default configuration for Water Detect Click.
  */
 void waterdetect_default_cfg ( waterdetect_t *ctx );
 
@@ -165,6 +165,6 @@ uint8_t waterdetect_get_status ( waterdetect_t *ctx );
 #endif  // _WATERDETECT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

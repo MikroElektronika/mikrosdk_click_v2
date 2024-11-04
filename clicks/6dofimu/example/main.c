@@ -3,14 +3,14 @@
  * \brief 6DofImu Click example
  * 
  * # Description
- * This example showcases how to initalize and use the 6DOF IMU click. The click contains a 
- * 6-axis inertial measurement unit ( accelerometer + gyroscope ). After configuring the click
+ * This example showcases how to initalize and use the 6DOF IMU Click. The Click contains a 
+ * 6-axis inertial measurement unit ( accelerometer + gyroscope ). After configuring the Click
  * module for proper use, axis and temperature data will be measured every second.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules. In order for the 
+ * This function initializes and configures the Click and logger modules. In order for the 
  * device to work well, proper data needs to be written to the measurement control
  * registers as is done in the default_cfg(...) function.
  * 

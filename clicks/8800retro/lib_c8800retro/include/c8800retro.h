@@ -289,7 +289,7 @@ typedef enum
 
 /**
  * @brief 8800 Retro configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #c8800retro_cfg_t object definition for detailed explanation.
@@ -301,7 +301,7 @@ void c8800retro_cfg_setup ( c8800retro_cfg_t *cfg );
 /**
  * @brief 8800 Retro initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #c8800retro_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -317,7 +317,7 @@ err_t c8800retro_init ( c8800retro_t *ctx, c8800retro_cfg_t *cfg );
 /**
  * @brief 8800 Retro default configuration function.
  * @details This function executes a default configuration of 8800 Retro
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #c8800retro_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -3,7 +3,7 @@
  * \brief Vreg Click example
  * 
  * # Description
- * This is an example that demonstrates the use of VREG click board.
+ * This is an example that demonstrates the use of VREG Click board.
  *
  * The demo application is composed of two sections :
  * 

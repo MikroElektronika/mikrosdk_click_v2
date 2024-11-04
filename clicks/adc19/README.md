@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ADC 19 click
+# ADC 19 Click
 
 > ADC 19 Click is a compact add-on board that contains a high-performance data converter. This board features the ADC122S101, a low-power two-channel CMOS 12-bit analog-to-digital converter from Texas Instruments. This SPI configurable analog-to-digital converter (ADC) is fully specified over a sample rate range of 500ksps to 1Msps, offering high reliability and performance. The converter is based on a successive-approximation register architecture with an internal track-and-hold circuit configurable to accept one or two input signals at its input channels.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/adc19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-19-click)
+[Click Product page](https://www.mikroe.com/adc-19-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t adc19_get_voltage ( adc19_t *ctx, float *voltage );
 
 ## Example Description
 
-> This example demonstrates the use of ADC 19 click board by reading the voltage from the two analog input channels.
+> This example demonstrates the use of ADC 19 Click board by reading the voltage from the two analog input channels.
 
 **The demo application is composed of two sections :**
 
@@ -146,7 +146,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

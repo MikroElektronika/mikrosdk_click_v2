@@ -252,7 +252,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ccrf_cfg_setup ( ccrf_cfg_t *cfg );
@@ -263,7 +263,7 @@ void ccrf_cfg_setup ( ccrf_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t ccrf_init ( ccrf_t *ctx, ccrf_cfg_t *cfg );
 
@@ -272,7 +272,7 @@ err_t ccrf_init ( ccrf_t *ctx, ccrf_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for ccRF click.
+ * @details This function executes default configuration for ccRF Click.
  */
 void ccrf_default_cfg ( ccrf_t *ctx );
 
@@ -1355,6 +1355,6 @@ uint8_t ccrf_get_rc_osc_cal_result ( ccrf_t *ctx );
 #endif  // CCRF_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

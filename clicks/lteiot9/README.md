@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LTE IoT 9 click
+# LTE IoT 9 Click
 
 > LTE IoT 9 Click is a compact add-on board containing a cellular IoT Module that supports 3GPP Release 14 and all LTE bands.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lte_iot_9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lte-iot-9-click)
+[Click Product page](https://www.mikroe.com/lte-iot-9-click)
 
 ---
 
@@ -58,7 +58,7 @@ void lteiot9_default_cfg ( lteiot9_t *ctx );
 err_t lteiot9_generic_read ( lteiot9_t *ctx, char *data_buf, uint16_t max_len );
 ```
 
-- `lteiot9_send_cmd` Function sends the specified command to the click module.
+- `lteiot9_send_cmd` Function sends the specified command to the Click module.
 ```c
 void lteiot9_send_cmd ( lteiot9_t *ctx, char *cmd );
 ```
@@ -70,7 +70,7 @@ void lteiot9_set_sim_apn ( lteiot9_t *ctx, char *sim_apn );
 
 ## Example Description
 
->  This application shows capability of LTE IoT 9 click board.
+>  This application shows capability of LTE IoT 9 Click board.
  It connects to network with standard "AT" commands, then
  sends SMS whit SIM card, and then logs GNNS data.
 
@@ -222,7 +222,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

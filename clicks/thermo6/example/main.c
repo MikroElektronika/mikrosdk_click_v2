@@ -3,13 +3,13 @@
  * \brief Thermo6 Click example
  * 
  * # Description
- * Demo application shows ambient temperature reading using Thermo 6 click.
+ * Demo application shows ambient temperature reading using Thermo 6 Click.
  * 
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Setting the click in the default configuration to start the measurement.
+ * Setting the Click in the default configuration to start the measurement.
  * 
  * ## Application Task  
  *  It measures the temperature and logs a message about the current temperature.

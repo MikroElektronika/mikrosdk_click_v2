@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "GPS 3 click",
+    "display_name": "GPS 3 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.gps3",
     "product_link": "https://www.mikroe.com/gps-3-click",
-    "short_description": "GPS3 click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS module with a patch antenna.",
+    "short_description": "GPS3 Click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS module with a patch antenna.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1147
     ],
-    "version": "2.1.0.17",
+    "version": "2.1.0.18",
     "cmake": true,
     "alias": "Click.Gps3",
     "subdir_name": "lib_gps3"
 }
+
 
 
 

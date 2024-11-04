@@ -352,7 +352,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pressure9_cfg_setup ( pressure9_cfg_t *cfg );
@@ -363,7 +363,7 @@ void pressure9_cfg_setup ( pressure9_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t pressure9_init ( pressure9_t *ctx, pressure9_cfg_t *cfg );
 
@@ -372,7 +372,7 @@ err_t pressure9_init ( pressure9_t *ctx, pressure9_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Pressure9 click.
+ * @details This function executes default configuration for Pressure9 Click.
  */
 void pressure9_default_cfg ( pressure9_t *ctx );
 
@@ -469,6 +469,6 @@ float pressure9_get_temperature_data ( pressure9_t *ctx );
 #endif  // _PRESSURE9_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

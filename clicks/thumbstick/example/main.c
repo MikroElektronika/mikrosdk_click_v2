@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initialization of click board's and log's objects.
+ * Initialization of Click board's and log's objects.
  * 
  * ## Application Task  
  * It reads the position of the thumbstick,

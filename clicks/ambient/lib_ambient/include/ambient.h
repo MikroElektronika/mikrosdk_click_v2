@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ambient_cfg_setup ( ambient_cfg_t *cfg );
@@ -145,7 +145,7 @@ void ambient_cfg_setup ( ambient_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t ambient_init ( ambient_t *ctx, ambient_cfg_t *cfg );
 
@@ -184,7 +184,7 @@ err_t ambient_read_an_pin_voltage ( ambient_t *ctx, float *data_out );
  * @return Light intensity value.
  *
  * @details Calculates the light intensity from analog voltage measurement
- * of the Melexis MLX75305 IC on Ambient click board.
+ * of the Melexis MLX75305 IC on Ambient Click board.
  */
 uint16_t ambient_get_light_intensity ( ambient_t *ctx );
 
@@ -194,6 +194,6 @@ uint16_t ambient_get_light_intensity ( ambient_t *ctx );
 #endif  // _AMBIENT_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------ END

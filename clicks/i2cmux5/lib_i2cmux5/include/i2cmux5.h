@@ -294,7 +294,7 @@ typedef struct
 
 /**
  * @brief I2C MUX 5 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #i2cmux5_cfg_t object definition for detailed explanation.
@@ -308,7 +308,7 @@ void i2cmux5_cfg_setup ( i2cmux5_cfg_t *cfg );
 /**
  * @brief I2C MUX 5 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #i2cmux5_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -326,7 +326,7 @@ err_t i2cmux5_init ( i2cmux5_t *ctx, i2cmux5_cfg_t *cfg );
 /**
  * @brief I2C MUX 5 default configuration function.
  * @details This function executes a default configuration of I2C MUX 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #i2cmux5_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -343,7 +343,7 @@ void i2cmux5_default_cfg ( i2cmux5_t *ctx );
 /**
  * @brief I2C MUX 5 HW reset function.
  * @details This function executes a hardware reset of I2C MUX 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #i2cmux5_t object definition for detailed explanation.
  *
@@ -355,7 +355,7 @@ void i2cmux5_hw_reset ( i2cmux5_t *ctx );
  * @brief I2C MUX 5 enable the device function.
  * @details This function executes power-up of the device and 
  * enables I2C communication of I2C MUX 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #i2cmux5_t object definition for detailed explanation.
  *
@@ -366,7 +366,7 @@ void i2cmux5_dev_enable ( i2cmux5_t *ctx );
 /**
  * @brief I2C MUX 5 check rdy function.
  * @details This function check connection ready digital output of I2C MUX 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #i2cmux5_t object definition for detailed explanation.
  * @return @li @c  0 - None of the downstream channels is connected,
@@ -379,7 +379,7 @@ uint8_t i2cmux5_check_rdy ( i2cmux5_t *ctx );
 /**
  * @brief I2C MUX 5 check alert function.
  * @details This function check fault alert output of I2C MUX 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #i2cmux5_t object definition for detailed explanation.
  * @return @li @c  0 - A fault occurs to alert the host controller,
@@ -430,7 +430,7 @@ err_t i2cmux5_generic_read ( i2cmux5_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8
 /**
  * @brief I2C MUX 5 check channel alert function.
  * @details This function reads a desired channel alert status of I2C MUX 5
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #i2cmux5_t object definition for detailed explanation.
  * @param[in] ch_numb : The number of the desired channel ( from 1 to 4 ).

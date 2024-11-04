@@ -1,8 +1,8 @@
 {
     "name": "SPIRIT Click",
-    "description": "SPIRIT click carries the SP1ML 868MHz ultra low-power RF module. The board is designed to use 3.3V power supply and 3.3V or 5V I/O voltage levels. It communicates with the target MCU over UART interface, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, RST, CS.",
+    "description": "SPIRIT Click carries the SP1ML 868MHz ultra low-power RF module. The board is designed to use 3.3V power supply and 3.3V or 5V I/O voltage levels. It communicates with the target MCU over UART interface, with additional functionality provided by the following pins on the mikroBUS™ line: PWM, RST, CS.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","SP1ML 868"],
+    "hw" : ["Click","SP1ML 868"],
     "category" : ["Sub-1 GHz Transceivers"]
 }

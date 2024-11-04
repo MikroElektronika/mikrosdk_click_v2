@@ -3,18 +3,18 @@
  * @brief UNIQUE ID Click example.
  *
  * # Description
- * This example demonstrates the use of UNIQUE ID click board by reading and 
+ * This example demonstrates the use of UNIQUE ID Click board by reading and 
  * displaying Family Code and Serial Number on the UART Terminal.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
  * Initializes both logger config object and 
- * click config object.
+ * Click config object.
  *
  * ## Application Task
  * Demonstrates the usage of uniqueid_read_id function,
- * which stores the Family Code and Serial Number of the click in 
+ * which stores the Family Code and Serial Number of the Click in 
  * family_code and serial_num variables. Both values will be displayed 
  * on the UART Terminal.
  *

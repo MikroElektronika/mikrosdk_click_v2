@@ -149,7 +149,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void motion_cfg_setup ( motion_cfg_t *cfg );
@@ -159,7 +159,7 @@ void motion_cfg_setup ( motion_cfg_t *cfg );
  * @param motion Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MOTION_RETVAL motion_init ( motion_t *ctx, motion_cfg_t *cfg );
 
@@ -169,7 +169,7 @@ MOTION_RETVAL motion_init ( motion_t *ctx, motion_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Motion click.
+ * @description This function executes default configuration for Motion Click.
  * @note Places the sensor in detection mode.
  */
 void motion_default_cfg ( motion_t *ctx );
@@ -185,7 +185,7 @@ void motion_default_cfg ( motion_t *ctx );
  * </pre>
  *
  * @description This function sets states of the EN ( RST ) pin
- * for Motion click.
+ * for Motion Click.
  * @note Places the sensor in detection mode.
  */
 void motion_set_en_pin (  motion_t *ctx, motion_pin_state_t en_state );
@@ -212,6 +212,6 @@ motion_detect_state_t motion_get_detected ( motion_t *ctx );
 #endif  // _MOTION_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -265,7 +265,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void capwheel_cfg_setup ( capwheel_cfg_t *cfg );
@@ -275,7 +275,7 @@ void capwheel_cfg_setup ( capwheel_cfg_t *cfg );
  * @param capwheel Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CAPWHEEL_RETVAL capwheel_init ( capwheel_t *ctx, capwheel_cfg_t *cfg );
 
@@ -284,7 +284,7 @@ CAPWHEEL_RETVAL capwheel_init ( capwheel_t *ctx, capwheel_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for CapWheel click.
+ * @description This function executes default configuration for CapWheel Click.
  */
 void capwheel_default_cfg ( capwheel_t *ctx );
 
@@ -415,6 +415,6 @@ void capwheel_reset ( capwheel_t *ctx );
 #endif  // _CAPWHEEL_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

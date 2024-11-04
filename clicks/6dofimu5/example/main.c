@@ -3,7 +3,7 @@
  * \brief C6DofImu5 Click example
  * 
  * # Description
- * This example demonstrates the use of 6DOF IMU 5 click board.
+ * This example demonstrates the use of 6DOF IMU 5 Click board.
  *
  * The demo application is composed of two sections :
  * 
@@ -60,7 +60,7 @@ void application_init ( void )
     if ( id_val == C6DOFIMU5_WHO_AM_I_VAL )
     {
         log_printf( &logger, "-------------------------\r\n " );
-        log_printf( &logger, "   6DOF  IMU  5  click   \r\n " );
+        log_printf( &logger, "   6DOF  IMU  5  Click   \r\n " );
         log_printf( &logger, "-------------------------\r\n " );
         c6dofimu5_power ( &c6dofimu5, C6DOFIMU5_POWER_ON );
     }

@@ -1,6 +1,6 @@
 
 ---
-# Magneto 11 click
+# Magneto 11 Click
 
 > Magneto 11 Click is a compact add-on board that contains an accurate and reliable magnetic sensing device. This board features the AS5510, a linear hall sensor with 10-bit resolution, and an I2C interface from ams AG. It can measure the absolute position of lateral movement of a simple 2-pole magnet. A lateral stroke of 0.5mm ~ 2mm can be measured with air gaps around 1.0mm, depending on the magnet size. The AS5510 may be switched to a Power-Down state when it is not used to conserve power. This Click board™ is suitable for position sensing applications requiring a small magnetic range where noise is a critical design parameter.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/magneto11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/magneto-11-click)
+[Click Product page](https://www.mikroe.com/magneto-11-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t magneto11_set_config ( magneto11_t *ctx, uint8_t config );
 
 ## Example Description
 
-> This example demonstrates the use of Magneto 11 click board by reading and displaying the magnetic field strength value.
+> This example demonstrates the use of Magneto 11 Click board by reading and displaying the magnetic field strength value.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -144,7 +144,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

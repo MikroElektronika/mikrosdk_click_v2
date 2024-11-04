@@ -1,9 +1,9 @@
 
 
 ---
-# Thumbstick click
+# Thumbstick Click
 
-Thumbstick click is a high precision input device. It features a dual axis, spring return, pushbutton enabled joystick (similar to the ones used on joypads on popular gaming consoles), and a MCP3204 12-bit A/D converter.
+Thumbstick Click is a high precision input device. It features a dual axis, spring return, pushbutton enabled joystick (similar to the ones used on joypads on popular gaming consoles), and a MCP3204 12-bit A/D converter.
 
 It features a dual axis, spring return, pushbutton enabled joystick, and a MCP3204 12-bit A/D converter.
 
@@ -11,7 +11,7 @@ It features a dual axis, spring return, pushbutton enabled joystick, and a MCP32
   <img src="https://download.mikroe.com/images/click_for_ide/thumbstick_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thumbstick-click)
+[Click Product page](https://www.mikroe.com/thumbstick-click)
 
 ---
 
@@ -62,7 +62,7 @@ uint16_t thumbstick_read_rawadc ( thumbstick_t *ctx, uint8_t type, uint8_t chann
 
 ### Application Init 
 
-> Initialization of click board's and log's objects.
+> Initialization of Click board's and log's objects.
 
 ```c
 void application_init ( void )
@@ -184,7 +184,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

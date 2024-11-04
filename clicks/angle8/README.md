@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Angle 8 click
+# Angle 8 Click
 
 > Angle 8 Click is a compact add-on board that detects the absolute angular position of a permanent magnet. This board features the MA782GGU, a low-power angle sensor with integrated wake-up angle detection from Monolithic Power Systems. With its power cycling ability, the MA782GGU can be optimized for applications that require low average power. It supports a wide range of magnetic field strengths and spatial configurations, with both end-of-shaft and off-axis (side-shaft mounting), supported configurations. Fast data acquisition and processing provides accurate angle measurement at an applied magnetic field of 60mT, alongside magnetic field strength detection with programmable thresholds. This Click board™ is suitable for general-purpose angle measurements, in embedded motion control applications, as a power/speed control trigger solution, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/angle8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/angle-8-click)
+[Click Product page](https://www.mikroe.com/angle-8-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t angle8_read_angle ( angle8_t *ctx, float *angle );
 
 ## Example Description
 
-> This example demonstrates the use of Angle 8 click board by reading and displaying the magnet's angular position in degrees.
+> This example demonstrates the use of Angle 8 Click board by reading and displaying the magnet's angular position in degrees.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the clockwise rotation direction and cycle time to 100ms.
+> Initializes the driver and performs the Click default configuration which sets the clockwise rotation direction and cycle time to 100ms.
 
 ```c
 
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

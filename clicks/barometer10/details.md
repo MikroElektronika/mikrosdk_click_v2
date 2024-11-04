@@ -1,6 +1,6 @@
 
 ---
-# Barometer 10 click
+# Barometer 10 Click
 
 > Barometer 10 Click is a compact add-on board that measures air pressure in a specific environment. 
 > This board features the LPS28DFW, an ultra-compact piezoresistive absolute pressure sensor 
@@ -14,7 +14,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/barometer10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/barometer-10-click)
+[Click Product page](https://www.mikroe.com/barometer-10-click)
 
 ---
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

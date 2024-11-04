@@ -1,15 +1,15 @@
 
 ---
-# TouchKey 3 click
+# TouchKey 3 Click
 
-There are many kinds of touch sensors on the market, but every one of them has some unique features that make it stand out from the crowd. TouchKey 3 click is equipped with seven advanced capacitive sensors, based on the proprietary QTouch® technology. Besides quite a large number of QTouch® capacitive sensor channels, TouchKey 3 click also offers some additional features, such as the Adjacent Key Suppression (AKS®), a technology that ensures correct button press, even when the touch sensing pads are placed close to each other.
+There are many kinds of touch sensors on the market, but every one of them has some unique features that make it stand out from the crowd. TouchKey 3 Click is equipped with seven advanced capacitive sensors, based on the proprietary QTouch® technology. Besides quite a large number of QTouch® capacitive sensor channels, TouchKey 3 Click also offers some additional features, such as the Adjacent Key Suppression (AKS®), a technology that ensures correct button press, even when the touch sensing pads are placed close to each other.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/touchkey3_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/touchkey-3-click)
+[Click Product page](https://www.mikroe.com/touchkey-3-click)
 
 ---
 
@@ -59,13 +59,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click uses 7 capacitive sensing channels, with the #CHANGE pin routed to the INT pin of the mikroBUS™, so that an interrupt can be triggered if any of the sensors detect a touch event. This can be used to trigger an SPI read cycle only when the key is actually pressed, avoiding the need for constant polling of the sensor registers.
+> This Click uses 7 capacitive sensing channels, with the #CHANGE pin routed to the INT pin of the mikroBUS™, so that an interrupt can be triggered if any of the sensors detect a touch event. This can be used to trigger an SPI read cycle only when the key is actually pressed, avoiding the need for constant polling of the sensor registers.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes click driver and performs a soft reset of the click.
+> Initializes Click driver and performs a soft reset of the Click.
 
 ```c
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

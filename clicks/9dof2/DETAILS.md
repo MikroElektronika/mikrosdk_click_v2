@@ -1,6 +1,6 @@
 
 ---
-# 9DOF 2 click
+# 9DOF 2 Click
 
 9DOF 2 Click is a compact add-on board for applications which require lowest power motion tracking and magnetometer functionality. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/9dof2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/9dof-2-click)
+[Click Product page](https://www.mikroe.com/9dof-2-click)
 
 ---
 
@@ -100,7 +100,7 @@ void application_init ( void )
     if ( id_val == C9DOF2_WHO_AM_I_ICM20948_VAL )
     {
         log_printf( &logger, "--------------------\r\n" );
-        log_printf( &logger, "   9DOF  2  click   \r\n" );
+        log_printf( &logger, "   9DOF  2  Click   \r\n" );
         log_printf( &logger, "--------------------\r\n" );
         c9dof2_power ( &c9dof2, C9DOF2_POWER_ON );
     }
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

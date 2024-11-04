@@ -3,13 +3,13 @@
  * @brief DC Motor 12 Click example
  *
  * # Description
- * This example demonstrates the use of DC Motor 12 click board by controlling the speed
+ * This example demonstrates the use of DC Motor 12 Click board by controlling the speed
  * of DC motor over PWM duty cycle as well as displaying the motor current consumption.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the operation mode and motor speed by setting the PWM duty cycle and then calculates
@@ -17,8 +17,8 @@
  * where you can track changes.
  *
  * @note
- * The click board swiches should be set as follows: SW 1-2-3-4 : H-H-L-L
- * This sets the click board as a SPI controlled single-channel device so 
+ * The Click board swiches should be set as follows: SW 1-2-3-4 : H-H-L-L
+ * This sets the Click board as a SPI controlled single-channel device so 
  * the motor should be connected to OUT1/2 and OUT3/4.
  *
  * @author Stefan Filipovic

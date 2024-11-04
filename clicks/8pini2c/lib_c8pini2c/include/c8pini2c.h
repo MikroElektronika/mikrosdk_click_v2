@@ -129,7 +129,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c8pini2c_cfg_setup ( c8pini2c_cfg_t *cfg );
@@ -139,7 +139,7 @@ void c8pini2c_cfg_setup ( c8pini2c_cfg_t *cfg );
  * @param c8pini2c Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 C8PINI2C_RETVAL c8pini2c_init ( c8pini2c_t *ctx, c8pini2c_cfg_t *cfg );
 
@@ -176,6 +176,6 @@ void c8pini2c_generic_read ( c8pini2c_t *ctx, uint8_t slave_addr, uint8_t reg, u
 #endif  // _C8PINI2C_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

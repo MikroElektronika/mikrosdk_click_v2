@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Piezo Accel click
+# Piezo Accel Click
 
 Piezo Accel Click is a compact add-on board containing an acceleration sensor based on PE technology. This board features the 820M1-0025, a piezoelectric accelerometer designed for embedded monitoring and preventive maintenance applications from TE Connectivity.
 
@@ -9,7 +9,7 @@ Piezo Accel Click is a compact add-on board containing an acceleration sensor ba
   <img src="https://download.mikroe.com/images/click_for_ide/piezo_accel_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/piezo-accel-click)
+[Click Product page](https://www.mikroe.com/piezo-accel-click)
 
 ---
 
@@ -70,15 +70,15 @@ float piezoaccel_g_unit_read ( piezoaccel_t *ctx, piezoaccel_setup_t *cfg_data )
 
 ## Example Description
 
-> This application demonstrates the performance of Piezo Accel click board.
+> This application demonstrates the performance of Piezo Accel Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
->  The initialization of UART LOG and SPI click drivers.
+>  The initialization of UART LOG and SPI Click drivers.
 Additionally, a default config is performed for
-"out of the box" Piezo Accel click settings.
+"out of the box" Piezo Accel Click settings.
 Calibration is optional and is used to correct
 the power supply offset of the sensor.
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

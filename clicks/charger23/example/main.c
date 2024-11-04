@@ -3,7 +3,7 @@
  * @brief Charger 23 Click Example.
  *
  * # Description
- * This example demonstrates the use of Charger 23 click board by enabling the device
+ * This example demonstrates the use of Charger 23 Click board by enabling the device
  * and then reading and displaying the charger status.
  *
  * The demo application is composed of two sections :
@@ -15,7 +15,7 @@
  * Reads the charger state and displays it on the USB UART on change.
  *
  * @note
- * Depending on the CURR SEL onboard jumper position this click board is able to
+ * Depending on the CURR SEL onboard jumper position this Click board is able to
  * charge batteries of 250mAh or 500mAh rated capacity.
  *
  * @author Stefan Filipovic

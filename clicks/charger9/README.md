@@ -3,15 +3,15 @@
  
 
 ---
-# Charger 9 click
+# Charger 9 Click
 
-Charger 9 click is a Li-Ion (Li+, Li-Po) battery charger, capable of charging one, two or three battery cells. It is based on the MAX1757, an integrated Li+ battery charger with many features that allow safe and reliable charging.
+Charger 9 Click is a Li-Ion (Li+, Li-Po) battery charger, capable of charging one, two or three battery cells. It is based on the MAX1757, an integrated Li+ battery charger with many features that allow safe and reliable charging.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/charger9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/charger-9-click)
+[Click Product page](https://www.mikroe.com/charger-9-click)
 
 ---
 
@@ -175,7 +175,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

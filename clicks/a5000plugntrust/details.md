@@ -1,6 +1,6 @@
 
 ---
-# A5000 Plug n Trust click
+# A5000 Plug n Trust Click
 
 > A5000 Plug&Trust Click is a compact add-on board representing a ready-to-use secure IoT authenticator. This board features the A5000, an Edge Lock® Secure Authenticator from NXP Semiconductors. The A5000 provides a root of trust at the IC level, giving an IoT authentication system state-of-the-art security capability. It allows for securely storing and provisioning credentials and performing cryptographic operations for security-critical communication and authentication functions. It has an independent Common Criteria EAL 6+ security certification up to OS level and supports ECC asymmetric cryptographic and AES/3DES symmetric algorithms.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/a5000plugntrust_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/a5000-plugtrust-click)
+[Click Product page](https://www.mikroe.com/a5000-plugtrust-click)
 
 ---
 
@@ -64,7 +64,7 @@ err_t a5000plugntrust_apdu_transfer ( a5000plugntrust_t *ctx, a5000plugntrust_fr
 
 ## Example Description
 
-> This application is showcasing basic functionality of A5000 Plug&Trust click board.
+> This application is showcasing basic functionality of A5000 Plug&Trust Click board.
 It gets identify data from device, selects card manager and applet.
 Then checks free memory, reads all objects and deletes not reserved ones.
 After that showcases a few of functionality:
@@ -289,7 +289,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

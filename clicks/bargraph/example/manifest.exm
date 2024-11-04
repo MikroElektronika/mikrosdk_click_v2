@@ -1,8 +1,8 @@
 {
     "name": "BarGraph Click",
-    "description": "BarGraph click is a 10-segment bar graph display click, which uses a high-quality bar graph LED display. The bar graph display is a very popular device for displaying various properties, whether it be an audio level, current/voltage level, the position of the encoder, or any other property that can be displayed in a form of a bar graph.",
+    "description": "BarGraph Click is a 10-segment bar graph display Click, which uses a high-quality bar graph LED display. The bar graph display is a very popular device for displaying various properties, whether it be an audio level, current/voltage level, the position of the encoder, or any other property that can be displayed in a form of a bar graph.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","74HC595"],
+    "hw" : ["Click","74HC595"],
     "category" : ["LED Segment,Bargraph"] 
 }

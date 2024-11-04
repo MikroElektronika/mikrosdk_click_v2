@@ -3,14 +3,14 @@
  * @brief Brushless8 Click example
  *
  * # Description
- * This example showcases how to initialize and use the Brushless 8 click. 
+ * This example showcases how to initialize and use the Brushless 8 Click. 
  * This application is a schowcase of controlling speed 
  * and direction of brushless motor with hall sesnor.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init 
- * Initializes the click board to appropriate settings based on selected mode.
+ * Initializes the Click board to appropriate settings based on selected mode.
  * Initialization settings are sent through I2C bus and the motor itself is
  * controlled via PWM or DAC over I2C.
  * Modes:
@@ -18,13 +18,13 @@
  *     - BRUSHLESS8_DAC
  *
  * ## Application Task  
- * This example demonstrates the use of Brushless 8 click board.
- * Brushless 8 click communicates with the device via I2C driver in order to 
+ * This example demonstrates the use of Brushless 8 Click board.
+ * Brushless 8 Click communicates with the device via I2C driver in order to 
  * set adequate voltage level for connected motor.
  * Current PWM/DAC settings being output are sent via logger.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * 
- * @note Take into consideration that the jumper on Brushless 8 click board
+ * @note Take into consideration that the jumper on Brushless 8 Click board
  * has to be set adequately for selected mode ( @b VSPSEL ).
  *
  * @author Nikola Peric

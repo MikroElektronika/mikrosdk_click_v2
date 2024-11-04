@@ -177,7 +177,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void clockgen3_cfg_setup ( clockgen3_cfg_t *cfg );
@@ -191,7 +191,7 @@ void clockgen3_cfg_setup ( clockgen3_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t clockgen3_init ( clockgen3_t *ctx, clockgen3_cfg_t *cfg );
 
@@ -257,6 +257,6 @@ void clockgen3_set_freq ( clockgen3_t *ctx, float freq );
 #endif  // _CLOCKGEN3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

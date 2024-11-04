@@ -3,15 +3,15 @@
  
 
 ---
-# Pac1934 click
+# Pac1934 Click
 
-PAC1934 click carries the PAC1934 four channel DC power/energy monitor from Microchip. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over an I2C interface.
+PAC1934 Click carries the PAC1934 four channel DC power/energy monitor from Microchip. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over an I2C interface.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/pac1934_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/pac1934-click)
+[Click Product page](https://www.mikroe.com/pac1934-click)
 
 ---
 
@@ -97,7 +97,7 @@ void application_init ( void )
 ### Application Task
 
 > This is an example that shows the most important
-> functions that PAC1934 click has, it mesures voltage, current, power and energy.
+> functions that PAC1934 Click has, it mesures voltage, current, power and energy.
 
 ```c
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

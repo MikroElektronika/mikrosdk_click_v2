@@ -3,7 +3,7 @@
  * \brief Rtc3 Click example
  * 
  * # Description
- * This example demonstrates the use of RTC 3 click board by reading and displaying
+ * This example demonstrates the use of RTC 3 Click board by reading and displaying
  * the time and date values.
  *
  * The demo application is composed of two sections :

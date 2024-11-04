@@ -3,6 +3,6 @@
     "description": "Expand 17 Click is a compact add-on board designed to expand the number of input/output pins in your system. This board features the TCAL6408, an 8-bit I/O expander from Texas Instruments, which communicates via the I2C protocol. The TCAL6408 features programmable output drive strength, latchable inputs, pull-up/pull-down resistors, and configurable open-drain or push-pull outputs, offering flexible and enhanced I/O performance with minimal power consumption and reduced EMI.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TCAL6408RSVR"],
+    "hw" : ["Click","TCAL6408RSVR"],
     "category" : ["Click Boards > Interface > Port expander"]
 }

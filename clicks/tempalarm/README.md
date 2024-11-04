@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Temp Alarm click
+# Temp Alarm Click
 
 > Temp Alarm Click is a compact add-on board that adds temperature alarm functionalities to your project. This board features the PTMP4718, a high-accuracy remote and local temperature sensor from Texas Instruments. This temperature sensor has pin-programmable alert thresholds, with a fault queue for debounce.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/tempalarm_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temp-alarm-click)
+[Click Product page](https://www.mikroe.com/temp-alarm-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t tempalarm_set_alarm_high_limit ( tempalarm_t *ctx, float max_temperature )
 
 ## Example Description
 
-> This example demonstrates the use of Temp Alarm click board by reading and displaying
+> This example demonstrates the use of Temp Alarm Click board by reading and displaying
   the temperature measurements and monitoring it.
 
 **The demo application is composed of two sections :**
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

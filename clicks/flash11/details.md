@@ -1,6 +1,6 @@
 
 ---
-# Flash 11 click
+# Flash 11 Click
 
 > Flash 11 Click is a compact add-on board representing a highly reliable memory solution. 
 > This board features the AT25SF321B, a 32-Mbit SPI serial Flash memory with Dual I/O 
@@ -15,7 +15,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/flash11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/flash-11-click)
+[Click Product page](https://www.mikroe.com/flash-11-click)
 
 ---
 
@@ -76,7 +76,7 @@ err_t flash11_block_erase ( flash11_t *ctx, uint8_t cmd_block_erase, uint32_t me
 
 ## Example Description
 
-> This example demonstrates the use of Flash 11 click board 
+> This example demonstrates the use of Flash 11 Click board 
 > The demo app writes specified data to the memory and reads it back.
 
 **The demo application is composed of two sections :**
@@ -196,7 +196,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

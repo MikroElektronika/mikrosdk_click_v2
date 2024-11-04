@@ -259,7 +259,7 @@ typedef enum
 
 /**
  * @brief GNSS ZOE configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #gnsszoe_cfg_t object definition for detailed explanation.
@@ -271,7 +271,7 @@ void gnsszoe_cfg_setup ( gnsszoe_cfg_t *cfg );
 /**
  * @brief GNSS ZOE driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #gnsszoe_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -287,7 +287,7 @@ void gnsszoe_drv_interface_selection ( gnsszoe_cfg_t *cfg, gnsszoe_drv_t drv_sel
 /**
  * @brief GNSS ZOE initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #gnsszoe_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

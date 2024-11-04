@@ -1,8 +1,8 @@
 {
   "name": "${Nano Power 2} Click",
-  "description": "Nano Power 2 click is a very low power voltage comparator, aimed at portable and battery-powered applications. It allows detecting a difference of two voltage potentials, applied on two input pins.",
+  "description": "Nano Power 2 Click is a very low power voltage comparator, aimed at portable and battery-powered applications. It allows detecting a difference of two voltage potentials, applied on two input pins.",
   "image": "../../Resources/click_icon.png",
   "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-  "hw": [ "click", "MAX40000" ],
+  "hw": [ "Click", "MAX40000" ],
   "category": [ "Linear" ]
 }

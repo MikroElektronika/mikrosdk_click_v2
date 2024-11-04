@@ -1,8 +1,8 @@
 {
     "name": "EMG Click",
-    "description": "EMG click measures the electrical activity produced by the skeletal muscles. It carries MCP609 operational amplifier and MAX6106 micropower voltage reference.",
+    "description": "EMG Click measures the electrical activity produced by the skeletal muscles. It carries MCP609 operational amplifier and MAX6106 micropower voltage reference.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP609"],
+    "hw" : ["Click","MCP609"],
     "category" : ["Biometrics"]
 }

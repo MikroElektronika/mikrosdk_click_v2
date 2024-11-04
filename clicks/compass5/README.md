@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Compass 5 click
+# Compass 5 Click
 
 > Compass 5 Click is a compact add-on board that contains a 3-axis magnetometer device suitable for compass application. This board features the AK09918C, a 3-axis electronic compass with high sensitive Hall sensor technology from AKM Semiconductor.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/compass5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/compass-5-click)
+[Click Product page](https://www.mikroe.com/compass-5-click)
 
 ---
 
@@ -111,7 +111,7 @@ void application_init ( void ) {
     
     if  ( ( company_id == COMPASS5_COMPANI_ID_NUM ) && ( device_id == COMPASS5_DEVICE_ID_NUM ) ) {
         log_printf( &logger, "--------------------\r\n" );
-        log_printf( &logger, "  Compass 3 click   \r\n" );
+        log_printf( &logger, "  Compass 3 Click   \r\n" );
         log_printf( &logger, "--------------------\r\n" );
     }
     else {
@@ -141,7 +141,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> When Compass 5 click is connected to a mikroBUS, this example collects data on the current position of the X, 
+> When Compass 5 Click is connected to a mikroBUS, this example collects data on the current position of the X, 
 Y and Z axes via I2C communication, processes and displays the data via the UART terminal. All axis data is printed every 2 seconds.
 
 ```c
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

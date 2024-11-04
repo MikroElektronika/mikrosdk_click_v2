@@ -541,7 +541,7 @@ typedef enum
 
 /**
  * @brief BT Audio 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #btaudio2_cfg_t object definition for detailed explanation.
@@ -553,7 +553,7 @@ void btaudio2_cfg_setup ( btaudio2_cfg_t *cfg );
 /**
  * @brief BT Audio 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #btaudio2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -568,7 +568,7 @@ err_t btaudio2_init ( btaudio2_t *ctx, btaudio2_cfg_t *cfg );
 /**
  * @brief BT Audio 2 default configuration function.
  * @details This function executes a default configuration of BT Audio 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #btaudio2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -656,7 +656,7 @@ void btaudio2_reset_device ( btaudio2_t *ctx );
 
 /**
  * @brief BT Audio 2 send command function.
- * @details This function sends a desired command from the click context object.
+ * @details This function sends a desired command from the Click context object.
  * @param[in] ctx : Click context object.
  * See #btaudio2_t object definition for detailed explanation.
  * @return None.
@@ -666,7 +666,7 @@ void btaudio2_send_cmd ( btaudio2_t *ctx );
 
 /**
  * @brief BT Audio 2 send command with ack check function.
- * @details This function sends a desired command from the click context object, and waits for
+ * @details This function sends a desired command from the Click context object, and waits for
  * the command acknowledge event, if there's no ACK event received it resends the command once again.
  * @param[in] ctx : Click context object.
  * See #btaudio2_t object definition for detailed explanation.
@@ -679,7 +679,7 @@ err_t btaudio2_send_cmd_with_ack ( btaudio2_t *ctx );
 
 /**
  * @brief BT Audio 2 read event function.
- * @details This function reads an event from the ring buffer and stores it in the click context object.
+ * @details This function reads an event from the ring buffer and stores it in the Click context object.
  * It waits 200ms for an event, and if there's no event received it returns an error.
  * @param[in] ctx : Click context object.
  * See #btaudio2_t object definition for detailed explanation.
@@ -692,7 +692,7 @@ err_t btaudio2_read_event ( btaudio2_t *ctx );
 
 /**
  * @brief BT Audio 2 wait for event function.
- * @details This function waits for the desired event to occur and stores it in the click context object.
+ * @details This function waits for the desired event to occur and stores it in the Click context object.
  * @param[in] ctx : Click context object.
  * See #btaudio2_t object definition for detailed explanation.
  * @param[in] opcode : Expected event opcode.
@@ -705,7 +705,7 @@ err_t btaudio2_wait_for_event ( btaudio2_t *ctx, uint8_t opcode );
 /**
  * @brief BT Audio 2 clear events function.
  * @details This function clears all events from the ring buffer. The last cleared event will be stored in the
- * click context object.
+ * Click context object.
  * @param[in] ctx : Click context object.
  * See #btaudio2_t object definition for detailed explanation.
  * @return None.

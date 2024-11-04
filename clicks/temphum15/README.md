@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Temp&Hum 15 click
+# Temp&Hum 15 Click
 
 > Temp&Hum 15 Click is a compact add-on board that contains the 4th generation of best-in-class SHT humidity sensing solution from Sensirion. This board features the SHT40, a high-accuracy ultra-low-power 16-bit relative humidity, and temperature sensor.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/blog/temphum-15-click)
+[Click Product page](https://www.mikroe.com/blog/temphum-15-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t temphum15_read_serial ( temphum15_t *ctx, uint32_t *serial_number );
 
 ## Example Description
 
-> This demo app represents the performance of the Temp&Hum 15 click board. The log displays the temperature and humidity obtained from the sensor.
+> This demo app represents the performance of the Temp&Hum 15 Click board. The log displays the temperature and humidity obtained from the sensor.
 
 **The demo application is composed of two sections :**
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -248,7 +248,7 @@ typedef enum
 
 /**
  * @brief Ozone 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ozone3_cfg_t object definition for detailed explanation.
@@ -262,7 +262,7 @@ void ozone3_cfg_setup ( ozone3_cfg_t *cfg );
 /**
  * @brief Ozone 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -280,7 +280,7 @@ err_t ozone3_init ( ozone3_t *ctx, ozone3_cfg_t *cfg );
 /**
  * @brief Ozone 3 default configuration function.
  * @details This function executes a default configuration of Ozone 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -335,7 +335,7 @@ err_t ozone3_generic_read ( ozone3_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t
 /**
  * @brief Ozone 3 enable function.
  * @details This function enable set state of the RST pin 
- * on the Ozone 3 click board™. 
+ * on the Ozone 3 Click board™. 
  * @param[in] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @param[in] state : State of the RST.
@@ -353,7 +353,7 @@ err_t ozone3_enable ( ozone3_t *ctx, uint8_t state );
  * @brief Ozone 3 write byte function.
  * @details This function writes a byte of data to
  * the selected register by using I2C serial interface 
- * on the Ozone 3 click board™.
+ * on the Ozone 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @param[in] reg : Register address.
@@ -372,7 +372,7 @@ err_t ozone3_write_byte ( ozone3_t *ctx, uint8_t reg, uint8_t dev_data );
  * @brief Ozone 3 read byte function.
  * @details This function read a byte of data from
  * the selected register by using I2C serial interface 
- * on the Ozone 3 click board™.
+ * on the Ozone 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @param[in] reg : Register address.
@@ -388,7 +388,7 @@ uint8_t ozone3_read_byte ( ozone3_t *ctx, uint8_t reg );
 /**
  * @brief Ozone 3 read ADC function.
  * @details This function read the ADC data from
- * by using I2C serial interface on the Ozone 3 click board™.
+ * by using I2C serial interface on the Ozone 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @param[in] reg : Register address.
@@ -404,7 +404,7 @@ uint16_t ozone3_read_adc ( ozone3_t *ctx );
 /**
  * @brief Ozone 3 get O3 ppm function.
  * @details This function get O3 ppm data 
- * by using I2C serial interface on the Ozone 3 click board™.
+ * by using I2C serial interface on the Ozone 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @return O3 ppm data.
@@ -419,7 +419,7 @@ float ozone3_get_o3_ppm ( ozone3_t *ctx );
 /**
  * @brief Ozone 3 wait ready function.
  * @details This function wait data ready
- * by using I2C serial interface on the Ozone 3 click board™.
+ * by using I2C serial interface on the Ozone 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #ozone3_t object definition for detailed explanation.
  * @return O3 ppm data.

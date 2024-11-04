@@ -3,7 +3,7 @@
  * \brief Dac8 Click example
  * 
  * # Description
- * This click carries 12-bit buffered Digital-to-Analog Converter. It converts digital value to 
+ * This Click carries 12-bit buffered Digital-to-Analog Converter. It converts digital value to 
  * the corresponding voltage level using external voltage reference. 
  *
  * The demo application is composed of two sections :

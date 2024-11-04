@@ -1,6 +1,6 @@
 
 ---
-# BM78 click
+# BM78 Click
 
 > BM78 Click is a compact add-on board designed to integrate dual-mode Bluetooth wireless capability into various projects. This board features the BM78, a fully certified 2.4GHz Bluetooth (BR/EDR/LE) wireless module from Microchip. The BM78 module includes an on-board Bluetooth stack, power management subsystem, 2.4GHz transceiver, and RF power amplifier. It supports GAP, SDP, SPP, and GATT profiles, with data transfer facilitated through transparent UART mode. It features a MODE SEL switch for operational modes, a reset pin, status indicators, a software power button, and a WAKE button.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/bm78_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/bm78-click)
+[Click Product page](https://www.mikroe.com/bm78-click)
 
 ---
 
@@ -64,14 +64,14 @@ err_t bm78_flash_eeprom ( bm78_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of BM78 click board by processing
+> This example demonstrates the use of BM78 Click board by processing
  the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration by writing it into the EEPROM.
+> Initializes the driver and performs the Click default configuration by writing it into the EEPROM.
 
 ```c
 
@@ -183,7 +183,7 @@ void application_task ( void )
 ## Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
-  A smartphone and the click board must be paired in order to exchange messages with each other.
+  A smartphone and the Click board must be paired in order to exchange messages with each other.
 
 The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
@@ -196,7 +196,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

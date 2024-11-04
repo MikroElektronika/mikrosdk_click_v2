@@ -1,6 +1,6 @@
 
 ---
-# Accel 28 click
+# Accel 28 Click
 
 > Accel 28 Click is a compact add-on board that contains an acceleration sensor. This board features the LIS2HH12TR, an ultra-low-power high-performance three-axis accelerometer from STMicroelectronics. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, and ±8g in three axes with a configurable host interface that supports both SPI and I2C serial communication. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel28_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-28-click)
+[Click Product page](https://www.mikroe.com/accel-28-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t accel28_sw_reset ( accel28_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Accel 28 click board by reading and
+> This example demonstrates the use of Accel 28 Click board by reading and
   displaying the accelerometer data (X, Y, and Z axis).
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration.
+> Initializes the driver, performs the Click default configuration.
 
 ```c
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

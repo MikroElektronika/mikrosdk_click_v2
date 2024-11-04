@@ -310,7 +310,7 @@ typedef struct
 
 /**
  * @brief BT configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #bt_cfg_t object definition for detailed explanation.
@@ -322,7 +322,7 @@ void bt_cfg_setup ( bt_cfg_t *cfg );
 /**
  * @brief BT initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #bt_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -338,7 +338,7 @@ err_t bt_init ( bt_t *ctx, bt_cfg_t *cfg );
 /**
  * @brief BT default configuration function.
  * @details This function executes a default configuration of BT
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #bt_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -436,7 +436,7 @@ uint8_t bt_get_rts_pin ( bt_t *ctx );
 
 /**
  * @brief BT send package function.
- * @details This function sends a data package to the click board.
+ * @details This function sends a data package to the Click board.
  * @param[in] ctx : Click context object.
  * See #bt_t object definition for detailed explanation.
  * @param[in] pkg : Data package to be written.

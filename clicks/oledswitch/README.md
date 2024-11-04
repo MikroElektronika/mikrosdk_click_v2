@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# OLED Switch click
+# OLED Switch Click
 
-If you are building any type of human machine interface, OLED Switch click can help you keep the design simple, clear and interactive. It can be used in designing a control panel for an industrial machine… or a DIY arcade.
+If you are building any type of human machine interface, OLED Switch Click can help you keep the design simple, clear and interactive. It can be used in designing a control panel for an industrial machine… or a DIY arcade.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/oledswitch_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/oled-switch-click)
+[Click Product page](https://www.mikroe.com/oled-switch-click)
 
 ---
 
@@ -58,7 +58,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example showcases how to configure and use the OLED Switch click. This click is a 
+> This example showcases how to configure and use the OLED Switch Click. This Click is a 
 > combination of a button and a full color organic LED display. Displays settings are first
 > loaded onto the chip and after that you can show any 64x48 pixel image on the display. 
 
@@ -66,8 +66,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> This function initializes and configures the click modules. In order for the
-> click to work properly, you need to configure display and power settings. 
+> This function initializes and configures the Click modules. In order for the
+> Click to work properly, you need to configure display and power settings. 
 > The full initialization of the chip is done in the default_cfg(...) function.
 
 ```c
@@ -124,7 +124,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

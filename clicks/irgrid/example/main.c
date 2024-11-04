@@ -3,7 +3,7 @@
  * @brief IRGrid Click example
  *
  * # Description
- * IR Grid click is a thermal imaging sensor. It has an array of 64 very sensitive factory 
+ * IR Grid Click is a thermal imaging sensor. It has an array of 64 very sensitive factory 
  * calibrated IR elements (pixels), arranged in 4 rows of 16 pixels, each measuring an 
  * object temperature up to 300˚C.
  *

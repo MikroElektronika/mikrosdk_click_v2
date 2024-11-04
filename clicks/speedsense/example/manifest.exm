@@ -3,6 +3,6 @@
     "description": "Speed Sense Click is a compact add-on board that allows you to measure the speed and rotation of a spinning object. This board features the A17501, a dual output differential speed and direction sensor from Allegro Microsystems. It has a high-speed switching bandwidth of up to 40kHz for two different signals. The sensor has two independent output channels with options for high-resolution XOR speed, pulse, and direction protocol.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","A17501POKATN-SDFUYJE"],
+    "hw" : ["Click","A17501POKATN-SDFUYJE"],
     "category" : ["Click Boards > Sensors > Magnetic"]
 }

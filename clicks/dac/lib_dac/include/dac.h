@@ -171,7 +171,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure 
+ * @description This function initializes Click configuration structure 
  * to init state.
  * @note All used pins will be set to unconnected state.
  */
@@ -183,7 +183,7 @@ void dac_cfg_setup ( dac_cfg_t *cfg );
  * @param cfg Click configuration structure.
  * 
  * @description This function initializes all necessary pins and peripherals 
- * used for this click.
+ * used for this Click.
  */
 DAC_RETVAL dac_init ( dac_t *ctx, dac_cfg_t *cfg );
 
@@ -214,6 +214,6 @@ void dac_set_voltage_pct ( dac_t *ctx, uint8_t v_out_pct );
 #endif  // _DAC_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

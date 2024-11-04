@@ -159,7 +159,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void vreg_cfg_setup ( vreg_cfg_t *cfg );
@@ -169,7 +169,7 @@ void vreg_cfg_setup ( vreg_cfg_t *cfg );
  * @param vreg Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 VREG_RETVAL vreg_init ( vreg_t *ctx, vreg_cfg_t *cfg );
 
@@ -203,7 +203,7 @@ void vreg_generic_transfer
  * 12-bit ADC value reading from designated channel
  *
  * @description This function reads 2-bit ADC value from designated channel
- * of MCP3204 4-Channel 12-Bit A/D Converters on VREG click board.
+ * of MCP3204 4-Channel 12-Bit A/D Converters on VREG Click board.
 **/
 uint16_t vreg_get_adc ( vreg_t *ctx, uint8_t channel );
 
@@ -214,7 +214,7 @@ uint16_t vreg_get_adc ( vreg_t *ctx, uint8_t channel );
  * @param value_dac 12-bit DAC value
  *
  * @description This function set DAC increments 12-bit data ( 0..4095 ) --> output voltage ( 0..Vref [mV] )
- * of 12-Bit Voltage Output Digital-to-Analog Converter on VREG click board.
+ * of 12-Bit Voltage Output Digital-to-Analog Converter on VREG Click board.
 **/
 void vreg_set_out_voltage ( vreg_t *ctx, uint16_t value_dac );
 
@@ -225,7 +225,7 @@ void vreg_set_out_voltage ( vreg_t *ctx, uint16_t value_dac );
  * @param value_dac_pct 8-bit data procentage value ( 0..100 [%] ) 
  *
  * @description This function set DAC increments procentage ( 0..100 [%] ) --> output voltage ( 0..Vref [mV] )
- * of 12-Bit Voltage Output Digital-to-Analog Converter on VREG click board.
+ * of 12-Bit Voltage Output Digital-to-Analog Converter on VREG Click board.
 **/
 void vreg_set_output_voltage_procentage ( vreg_t *ctx, uint8_t value_dac_pct );
 
@@ -233,7 +233,7 @@ void vreg_set_output_voltage_procentage ( vreg_t *ctx, uint8_t value_dac_pct );
  * @brief Start the measuring function
  *
  * @description This function start the measuring by
- * set state of PWM pin of VREG click board.
+ * set state of PWM pin of VREG Click board.
 **/
 void vreg_start_measuring ( vreg_t *ctx );
 
@@ -243,7 +243,7 @@ void vreg_start_measuring ( vreg_t *ctx );
  * @param ctx          Click object.
  * 
  * @description This function Function stop the measuring by
- * clear state of PWM pin of VREG click board.
+ * clear state of PWM pin of VREG Click board.
 **/
 void vreg_stop_measuring ( vreg_t *ctx );
 
@@ -253,6 +253,6 @@ void vreg_stop_measuring ( vreg_t *ctx );
 #endif  // _VREG_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

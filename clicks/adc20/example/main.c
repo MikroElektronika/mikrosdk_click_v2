@@ -3,13 +3,13 @@
  * @brief ADC 20 Click example
  *
  * # Description
- * This example demonstrates the use of ADC 20 click board by displaying the state of 8 channels
+ * This example demonstrates the use of ADC 20 Click board by displaying the state of 8 channels
  * configured as analog inputs (CH2-CH5), digital inputs (CH0-CH1) and digital outputs (CH6-CH7).
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Starts the auto sequence mode, reads the 12bit ADC value from analog input channels (CH2-CH5) and

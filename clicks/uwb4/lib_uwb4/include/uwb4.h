@@ -197,7 +197,7 @@ typedef enum
 
 /**
  * @brief UWB 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #uwb4_cfg_t object definition for detailed explanation.
@@ -209,7 +209,7 @@ void uwb4_cfg_setup ( uwb4_cfg_t *cfg );
 /**
  * @brief UWB 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #uwb4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -282,7 +282,7 @@ uint8_t uwb4_get_btn_pin ( uwb4_t *ctx );
 
 /**
  * @brief UWB 4 cmd run function.
- * @details This function sends a specified command to the click module.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #uwb4_t object definition for detailed explanation.
  * @param[in] cmd : Command string.
@@ -293,7 +293,7 @@ void uwb4_cmd_run ( uwb4_t *ctx, uint8_t *cmd );
 
 /**
  * @brief UWB 4 cmd set function.
- * @details This function sets a value to a specified command of the click module.
+ * @details This function sets a value to a specified command of the Click module.
  * @param[in] ctx : Click context object.
  * See #uwb4_t object definition for detailed explanation.
  * @param[in] cmd : Command string.

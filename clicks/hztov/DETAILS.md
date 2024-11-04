@@ -1,14 +1,14 @@
 
 ---
-# Hz to V click
+# Hz to V Click
 
-HZ to V click is a device that can converts input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency. It has a linear response, and by applying a signal with the frequency between 1kHz to 10kHz on its input, the Click board™ will generate a DC voltage, ranging from 0.33V to 3.3V.
+HZ to V Click is a device that can converts input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency. It has a linear response, and by applying a signal with the frequency between 1kHz to 10kHz on its input, the Click board™ will generate a DC voltage, ranging from 0.33V to 3.3V.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/hztov_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hz-to-v-click)
+[Click Product page](https://www.mikroe.com/hz-to-v-click)
 
 ---
 
@@ -55,13 +55,13 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of Hz to V click board.
+> This example demonstrates the use of Hz to V Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and enables the click board.
+> Initializes the driver and enables the Click board.
 
 ```c
 
@@ -129,7 +129,7 @@ void application_task ( void )
 ## Note
 
 > In order to set PWM frequency down to 1 kHz, the user will probably need to lower the main MCU clock frequency.
-> The output voltage may vary, depending on the offset potentiometer setting on the click.
+> The output voltage may vary, depending on the offset potentiometer setting on the Click.
 
 The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
 
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

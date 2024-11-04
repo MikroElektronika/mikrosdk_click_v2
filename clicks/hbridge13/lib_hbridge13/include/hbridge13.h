@@ -242,7 +242,7 @@ typedef enum
 
 /**
  * @brief H-Bridge 13 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #hbridge13_cfg_t object definition for detailed explanation.
@@ -254,7 +254,7 @@ void hbridge13_cfg_setup ( hbridge13_cfg_t *cfg );
 /**
  * @brief H-Bridge 13 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #hbridge13_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -269,7 +269,7 @@ err_t hbridge13_init ( hbridge13_t *ctx, hbridge13_cfg_t *cfg );
 /**
  * @brief H-Bridge 13 default configuration function.
  * @details This function executes a default configuration of H-Bridge 13
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #hbridge13_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -459,7 +459,7 @@ err_t hbridge13_read_voltage ( hbridge13_t *ctx, float *voltage );
 
 /**
  * @brief H-Bridge 13 set vref function.
- * @details This function sets the voltage reference for H-Bridge 13 click driver.
+ * @details This function sets the voltage reference for H-Bridge 13 Click driver.
  * @param[in] ctx : Click context object.
  * See #hbridge13_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).
@@ -472,7 +472,7 @@ err_t hbridge13_set_vref ( hbridge13_t *ctx, float vref );
 
 /**
  * @brief H-Bridge 13 get xIPROPI voltage function.
- * @details This function is used to get xIPROPI voltage of H-Bridge 13 click driver.
+ * @details This function is used to get xIPROPI voltage of H-Bridge 13 Click driver.
  * @param[in] ctx : Click context object.
  * See #hbridge13_t object definition for detailed explanation.
  * @param[out] voltage : Output voltage.
@@ -486,7 +486,7 @@ err_t hbridge13_get_an_voltage ( hbridge13_t *ctx, float *voltage, uint8_t an_se
 
 /**
  * @brief H-Bridge 13 get nFAULT state function.
- * @details This function is used to get state of the nFAULT pin of H-Bridge 13 click driver.
+ * @details This function is used to get state of the nFAULT pin of H-Bridge 13 Click driver.
  * @param[in] ctx : Click context object.
  * See #hbridge13_t object definition for detailed explanation.
  * @param[out] pin_state : nFAULT pin state.

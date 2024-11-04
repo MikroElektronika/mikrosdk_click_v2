@@ -3,14 +3,14 @@
  * @brief Spectrometer2 Click example
  *
  * # Description
- * This example demonstrates the use of Spectrometer 2 click board by reading data
+ * This example demonstrates the use of Spectrometer 2 Click board by reading data
  * from 6 ALS channels and converting them to HSL color and displaying those data as 
  * well as the detected color name on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Waits for the data ready interrupt, then reads the values of all ALS channels and converts

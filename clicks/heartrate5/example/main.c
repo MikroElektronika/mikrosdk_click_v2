@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Configures the micro controller for communication and initializes the click board. 
+ * Configures the micro controller for communication and initializes the Click board. 
  *
  * ## Application Task
  * This section shows how the data is processed and sent to the MikroPlot application.

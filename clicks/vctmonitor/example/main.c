@@ -14,7 +14,7 @@
  * Reads temperature, current value, and differential voltage every 4 seconds.
  *
  * @note
- * The click has been tested using the following:
+ * The Click has been tested using the following:
  *       - Power supply - 4V
  *       - Current (Load) - 0A to 3A
  *       - External MMBT3904 temperature sensor

@@ -1,6 +1,6 @@
 
 ---
-# Fan 5 click
+# Fan 5 Click
 
 > Fan 5 Click is a compact add-on board specially designed for fan speed management. This board features Microchip’s TC654, a PWM mode fan speed controller with FanSense™ technology suitable for brushless DC fans.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/fan5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fan-5-click)
+[Click Product page](https://www.mikroe.com/fan-5-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t fan5_turn_on_fans ( fan5_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of FAN 5 click board by controlling and regulating the fan motors speed.
+> This example demonstrates the use of FAN 5 Click board by controlling and regulating the fan motors speed.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration, reads 
+> Initializes the driver, performs the Click default configuration, reads 
   manufacturer id and sets configuration in correspondence to user-selected mode.
 
 ```c
@@ -195,7 +195,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

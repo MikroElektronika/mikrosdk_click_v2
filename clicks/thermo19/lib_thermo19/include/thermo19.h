@@ -247,7 +247,7 @@ typedef enum
 
 /**
  * @brief Thermo 19 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #thermo19_cfg_t object definition for detailed explanation.
@@ -259,7 +259,7 @@ void thermo19_cfg_setup ( thermo19_cfg_t *cfg );
 /**
  * @brief Thermo 19 driver interface setup function.
  * @details This function sets a communication GPIO pin which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #thermo19_cfg_t object definition for detailed explanation.
  * @param[in] gpio_sel : GPIO pin selection.
@@ -275,7 +275,7 @@ void thermo19_gpio_selection ( thermo19_cfg_t *cfg, thermo19_gpio_sel_t gpio_sel
 /**
  * @brief Thermo 19 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #thermo19_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -291,7 +291,7 @@ err_t thermo19_init ( thermo19_t *ctx, thermo19_cfg_t *cfg );
 /**
  * @brief Thermo 19 default configuration function.
  * @details This function executes a default configuration of Thermo 19
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thermo19_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -3,14 +3,14 @@
  * \brief Shuttle Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the Terminal click. It is a simple
- * GPIO click which uses high-quality PCB design, four ICD BOX headers and flat ribbon cables to
- * enable stable communication and easy stacking of other click modules.
+ * This example showcases how to initialize, configure and use the Terminal Click. It is a simple
+ * GPIO Click which uses high-quality PCB design, four ICD BOX headers and flat ribbon cables to
+ * enable stable communication and easy stacking of other Click modules.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules.
+ * This function initializes and configures the Click and logger modules.
  * 
  * ## Application Task  
  * This function sets the output on all the pins (one by one) on the left side to high, going

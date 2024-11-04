@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Stepper 21 click
+# Stepper 21 Click
 
 > Stepper 21 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the DRV8825, a stepper motor controller integral circuit from Texas Instruments. It is a PWM micro-stepping stepper motor driver with up to 1/32 micro-stepping resolution and a built-in micro-stepper indexer. The driver has two H-bridge drivers and is intended to drive a bipolar stepper motor in a voltage supply operating range of 8.2V up to 45V.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepper21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/stepper-21-click)
+[Click Product page](https://www.mikroe.com/stepper-21-click)
 
 ---
 
@@ -70,13 +70,13 @@ void stepper21_drive_motor ( stepper21_t *ctx, uint32_t steps, uint8_t speed );
 
 ## Example Description
 
-> This example demonstrates the use of the Stepper 21 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Stepper 21 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

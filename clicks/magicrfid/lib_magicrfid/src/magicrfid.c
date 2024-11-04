@@ -64,7 +64,7 @@ static uint16_t magicrfid_calculate_crc ( uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Magic RFID device delay function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[in] time_ms : Duration of the delay.
  */

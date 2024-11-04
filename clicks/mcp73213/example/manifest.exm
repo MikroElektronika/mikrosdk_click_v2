@@ -1,8 +1,8 @@
 {
     "name": "MCP73213 Click",
-    "description": "MCP73213 click carries the MCP73213 dual-cell Li-Ion/Li-Polymer battery charge management controller with input overvoltage protection from Microchip.",
+    "description": "MCP73213 Click carries the MCP73213 dual-cell Li-Ion/Li-Polymer battery charge management controller with input overvoltage protection from Microchip.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP73213"],
+    "hw" : ["Click","MCP73213"],
     "category" : ["Battery charger"] 
 }

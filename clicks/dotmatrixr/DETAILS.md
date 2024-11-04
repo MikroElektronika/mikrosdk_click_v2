@@ -1,6 +1,6 @@
 
 ---
-# Dot-Matrix R click
+# Dot-Matrix R Click
 
 Dot Matrix R Click is a display device Click board™ based on a four-digit dot matrix display module, labeled as HCMS-3906 from a company Avago (Broadcom Inc).
 
@@ -8,7 +8,7 @@ Dot Matrix R Click is a display device Click board™ based on a four-digit dot 
   <img src="https://download.mikroe.com/images/click_for_ide/dotmatrixr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dot-matrix-r-click)
+[Click Product page](https://www.mikroe.com/dot-matrix-r-click)
 
 ---
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

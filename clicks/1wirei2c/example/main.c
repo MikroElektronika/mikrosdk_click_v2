@@ -3,16 +3,16 @@
  * @brief 1-Wire I2C Click Example.
  *
  * # Description
- * This example demonstrates the use of 1-Wire I2C click board by reading
- * the temperature measurement from connected Thermo 4 click board.
+ * This example demonstrates the use of 1-Wire I2C Click board by reading
+ * the temperature measurement from connected Thermo 4 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
- * Reads the temperature measurement from connected Thermo 4 click board and
+ * Reads the temperature measurement from connected Thermo 4 Click board and
  * displays the results on the USB UART once per second.
  *
  * @author Stefan Filipovic
@@ -24,7 +24,7 @@
 #include "c1wirei2c.h"
 
 // Thermo 4 device settings
-#define DEVICE_NAME                "Thermo 4 click"
+#define DEVICE_NAME                "Thermo 4 Click"
 #define DEVICE_SLAVE_ADDRESS       0x48
 #define DEVICE_REG_TEMPERATURE     0x00
 #define DEVICE_TEMPERATURE_RES     0.125f

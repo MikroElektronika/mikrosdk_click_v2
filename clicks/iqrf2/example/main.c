@@ -29,7 +29,7 @@
 
 #define PROCESS_RX_BUFFER_SIZE 500
 
-#define TEXT_TO_SEND "MikroE - iqRF 2 click board\r\n"
+#define TEXT_TO_SEND "MikroE - iqRF 2 Click board\r\n"
 
 #define DEMO_APP_RECEIVER
 // #define DEMO_APP_TRANSMITTER

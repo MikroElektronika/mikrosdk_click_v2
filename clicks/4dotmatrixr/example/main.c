@@ -3,15 +3,15 @@
  * \brief c4dotmatrixr Click example
  * 
  * # Description
- * This example demonstrates the use of 4Dot-Matrix R click board.
+ * This example demonstrates the use of 4Dot-Matrix R Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  * 
  * ## Application Task  
- * Displays a desired text message and then numbers from -20 to 20 on the click board.
+ * Displays a desired text message and then numbers from -20 to 20 on the Click board.
  * Each step will be logged on the USB UART where you can track the program flow.
  *  
  * \author MikroE Team
@@ -65,7 +65,7 @@ void application_task ( void )
 {
     int8_t i;
     log_printf( &logger, "------------------------------------\r\n" );
-    log_printf( &logger, "Displaying \"Mikroelektronika\" on the click board...\r\n" );
+    log_printf( &logger, "Displaying \"Mikroelektronika\" on the Click board...\r\n" );
     for ( i = 0; i < 20; i++ )
     {
         c4dot_write_text(  &c4dotmatrixr, text + i );
@@ -76,7 +76,7 @@ void application_task ( void )
     c4dot_clear_display( &c4dotmatrixr );
     Delay_ms ( 500 );
         
-    log_printf( &logger, "Displaying all integer numbers from -20 to 20 on the click board...\r\n" );
+    log_printf( &logger, "Displaying all integer numbers from -20 to 20 on the Click board...\r\n" );
     // Write some numbers on the display.
     for ( i = -20; i <= 20; i++ )
     {

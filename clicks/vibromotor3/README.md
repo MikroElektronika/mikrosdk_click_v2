@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Vibro Motor 3 click
+# Vibro Motor 3 Click
 
 > Vibro Motor 3 Click is a compact add-on board that makes an ideal solution for adding simple haptic feedback in any design. This board features the G0832022D, a coin-sized linear resonant actuator (LRA) that generates vibration/haptic feedback in the Z plane, perpendicular to the motor's surface from Jinlong Machinery & Electronics, Inc.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vibromotor3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vibro-motor-3-click)
+[Click Product page](https://www.mikroe.com/vibro-motor-3-click)
 
 ---
 
@@ -70,13 +70,13 @@ void vibromotor3_write_byte ( vibromotor3_t *ctx, uint8_t reg, uint8_t wr_data )
 
 ## Example Description
 
-> This example shows the capabilities of the Vibro Motor 3 click board 
+> This example shows the capabilities of the Vibro Motor 3 Click board 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initalizes I2C driver, PWM driver and configures Vibro Motor 3 click board.
+> Initalizes I2C driver, PWM driver and configures Vibro Motor 3 Click board.
 
 ```c
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

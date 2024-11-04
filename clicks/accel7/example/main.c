@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This is where the logger and the click modules get initialised and configured.
+ * This is where the logger and the Click modules get initialised and configured.
  * 
  * ## Application Task  
  * This is where the data gets collected, processed and printed out.

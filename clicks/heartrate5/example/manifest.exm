@@ -1,8 +1,8 @@
 {
     "name": "Heart Rate 5 Click",
-    "description": "Heart Rate 5 click is the optical biosensor Click board™ which can be used for the heart-rate monitoring (HRM), as well as the peripheral capillary oxygen saturation monitoring (SpO2). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. ",
+    "description": "Heart Rate 5 Click is the optical biosensor Click board™ which can be used for the heart-rate monitoring (HRM), as well as the peripheral capillary oxygen saturation monitoring (SpO2). This Click board™ employs a very sensitive analog front-end IC with high dynamic range, which ensures accurate and reliable readings. ",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AFE4404"],
+    "hw" : ["Click","AFE4404"],
     "category" : ["Biometrics"]
 }

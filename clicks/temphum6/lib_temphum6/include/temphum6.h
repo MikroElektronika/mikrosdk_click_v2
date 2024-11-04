@@ -224,7 +224,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void temphum6_cfg_setup ( temphum6_cfg_t *cfg );
@@ -235,7 +235,7 @@ void temphum6_cfg_setup ( temphum6_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TEMPHUM6_RETVAL temphum6_init ( temphum6_t *ctx, temphum6_cfg_t *cfg );
 
@@ -325,6 +325,6 @@ float temphum6_read_relative_huminidy( temphum6_t *ctx );
 #endif  // _TEMPHUM6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

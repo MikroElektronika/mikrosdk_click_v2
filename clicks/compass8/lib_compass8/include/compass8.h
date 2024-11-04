@@ -257,7 +257,7 @@ typedef enum
 
 /**
  * @brief Compass 8 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #compass8_cfg_t object definition for detailed explanation.
@@ -269,7 +269,7 @@ void compass8_cfg_setup ( compass8_cfg_t *cfg );
 /**
  * @brief Compass 8 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #compass8_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -284,7 +284,7 @@ err_t compass8_init ( compass8_t *ctx, compass8_cfg_t *cfg );
 /**
  * @brief Compass 8 default configuration function.
  * @details This function executes a default configuration of Compass 8
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #compass8_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

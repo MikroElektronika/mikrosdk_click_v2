@@ -3,13 +3,13 @@
  * @brief Accel 28 Click example
  *
  * # Description
- * This example demonstrates the use of Accel 28 click board by reading and
+ * This example demonstrates the use of Accel 28 Click board by reading and
  * displaying the accelerometer data (X, Y, and Z axis).
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration.
+ * Initializes the driver, performs the Click default configuration.
  *
  * ## Application Task
  * Reads and displays on the USB UART the accelerometer data (X, Y, and Z axis)

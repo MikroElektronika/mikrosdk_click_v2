@@ -3,6 +3,6 @@
     "description": "Brushless 25 Click is a compact add-on board that controls brushless DC (three-phase BLDC) motors with any MCU. This board features the MCT8316A, a high-speed sensorless trapezoidal control integrated FET BLDC driver from Texas Instruments. It provides three individually controllable drivers intended to drive a three-phase BLDC motor, solenoids, or other loads.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCT8316A1VRGFR"],
+    "hw" : ["Click","MCT8316A1VRGFR"],
     "category" : ["Click Boards > Motor control > Brushless"]
 }

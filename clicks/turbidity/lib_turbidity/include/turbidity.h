@@ -148,7 +148,7 @@ typedef enum
 
 /**
  * @brief Turbidity configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #turbidity_cfg_t object definition for detailed explanation.
@@ -160,7 +160,7 @@ void turbidity_cfg_setup ( turbidity_cfg_t *cfg );
 /**
  * @brief Turbidity initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #turbidity_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -176,7 +176,7 @@ err_t turbidity_init ( turbidity_t *ctx, turbidity_cfg_t *cfg );
 /**
  * @brief Turbidity default configuration function.
  * @details This function executes a default configuration of Turbidity
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #turbidity_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -207,7 +207,7 @@ err_t turbidity_generic_read ( turbidity_t *ctx, uint8_t *rx_buf, uint8_t rx_len
 /**
  * @brief Turbidity read ADC function.
  * @details This function reads 12-bit ADC data of the 
- * TSD-10 Turbidity Sensor on the Turbidity click board™.
+ * TSD-10 Turbidity Sensor on the Turbidity Click board™.
  * @param[in] ctx : Click context object.
  * See #turbidity_t object definition for detailed explanation.
  * @param[out] adc_val : Output 12-bit ADC data.
@@ -222,7 +222,7 @@ err_t turbidity_read_adc ( turbidity_t *ctx, uint16_t *adc_val );
 /**
  * @brief Turbidity get voltage function.
  * @details This function reads 12-bit ADC data and calculate the voltage of the 
- * TSD-10 Turbidity Sensor on the Turbidity click board™.
+ * TSD-10 Turbidity Sensor on the Turbidity Click board™.
  * @param[in] ctx : Click context object.
  * See #turbidity_t object definition for detailed explanation.
  * @param[out] voltage : Voltage ( mV ).
@@ -238,7 +238,7 @@ err_t turbidity_get_adc_voltage ( turbidity_t *ctx, float *voltage );
  * @brief Turbidity get NTU function.
  * @details This function reads 12-bit ADC data and 
  * calculate the Nephelometric Turbidity Units ( NTU ) of the 
- * TSD-10 Turbidity Sensor on the Turbidity click board™.
+ * TSD-10 Turbidity Sensor on the Turbidity Click board™.
  * @param[in] ctx : Click context object.
  * See #turbidity_t object definition for detailed explanation.
  * @param[out] ntu : NTU data ( from 0 to 4000 ).

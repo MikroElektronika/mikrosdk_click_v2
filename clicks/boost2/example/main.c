@@ -8,11 +8,11 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click driver.
+ * Initializes Click driver.
  * 
  * ## Application Task  
- * Demonstrates the use of the click drivers function. It
-shows how to enable or disable click operation, and how to check if supplied
+ * Demonstrates the use of the Click drivers function. It
+shows how to enable or disable Click operation, and how to check if supplied
 voltage is good.
  * 
  * \author MikroE Team
@@ -58,7 +58,7 @@ void application_init ( void )
 
 void application_task ( void )
 {
-    log_printf( &logger, "Enabling click operation... \r\n" );
+    log_printf( &logger, "Enabling Click operation... \r\n" );
     boost2_set_en_pin( &boost2, 1 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -78,7 +78,7 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     
-    log_printf( &logger, "Disabling click operation... \r\n" );
+    log_printf( &logger, "Disabling Click operation... \r\n" );
     boost2_set_en_pin( &boost2, 0 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );

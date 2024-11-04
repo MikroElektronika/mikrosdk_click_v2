@@ -3,13 +3,13 @@
  * @brief EZO Carrier DO Click Example.
  *
  * # Description
- * This example demonstrates the use of EZO Carrier DO click board by processing
+ * This example demonstrates the use of EZO Carrier DO Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default factory reset, and high point calibration.
+ * Initializes the driver, performs the Click default factory reset, and high point calibration.
  *
  * ## Application Task
  * Reads and processes all incoming dissolved oxygen data from the probe, and displays them on the USB UART in mg/L.

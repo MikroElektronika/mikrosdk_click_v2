@@ -169,7 +169,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void monarchadapter_cfg_setup ( monarchadapter_cfg_t *cfg );
@@ -179,13 +179,13 @@ void monarchadapter_cfg_setup ( monarchadapter_cfg_t *cfg );
  * @param monarchadapter Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MONARCHADAPTER_RETVAL monarchadapter_init ( monarchadapter_t *ctx, monarchadapter_cfg_t *cfg );
 
 /**
  * @brief Monarch Adapter power on.
- * @details This function resets the chip on Monarch Adapter click.
+ * @details This function resets the chip on Monarch Adapter Click.
  * @param[in] ctx : Click context object.
  * See #monarchadapter_t object definition for detailed explanation.
  * @return Nothing.
@@ -257,6 +257,6 @@ void monarchadapter_send_command ( monarchadapter_t *ctx, char *command );
 #endif  // _MONARCHADAPTER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

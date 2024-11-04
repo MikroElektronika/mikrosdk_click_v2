@@ -3,7 +3,7 @@
  * @brief UvcLight Click example
  * 
  * # Description
- * This click has ultraviolet LEDs with 275nm wavelength. UVC radiation refers to wavelengths 
+ * This Click has ultraviolet LEDs with 275nm wavelength. UVC radiation refers to wavelengths 
  * shorter than 280 nm. Because of the spectral sensitivity of DNA, only the UVC region 
  * demonstrates significant germicidal properties.
  *

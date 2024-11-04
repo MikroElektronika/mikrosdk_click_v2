@@ -1,6 +1,6 @@
 
 ---
-# I2C Extend 2 click
+# I2C Extend 2 Click
 
 > I2C Extend 2 Click is a compact add-on board suitable for I2C communication bus extension. This board features the PCA9615, a 2-channel multipoint differential I2C bus buffer with hot-swap logic from NXP Semiconductors. The PCA9615 converts the two default I2C signals into four differential signals, two for SCL and two for SDA.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cextend2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-extend-2-click)
+[Click Product page](https://www.mikroe.com/i2c-extend-2-click)
 
 ---
 
@@ -178,7 +178,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

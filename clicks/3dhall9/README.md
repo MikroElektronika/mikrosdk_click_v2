@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 3D Hall 9 click
+# 3D Hall 9 Click
 
 > 3D Hall 9 Click is a compact add-on board used to detect the strength of a magnetic field in all three dimensions. This board features the ALS31300, a 3D linear Hall-effect sensor with digital output and advanced low power management from Allegro Microsystems. The ALS31300 features an I2C interface, enabling it to be easily configured by MCU with the measurement data provided in digital format of 12-bits corresponding to the magnetic field measured in each X, Y, and Z axes.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/3dhall9_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/3d-hall-9-click)
+[Click Product page](https://www.mikroe.com/3d-hall-9-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t c3dhall9_read_data ( c3dhall9_t *ctx, c3dhall9_data_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of 3D Hall 9 click board by reading the magnetic
+> This example demonstrates the use of 3D Hall 9 Click board by reading the magnetic
 flux density from 3 axes as well as the angles between axes and the sensor temperature.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and the click board.
+> Initializes the driver and the Click board.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

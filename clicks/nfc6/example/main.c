@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and logger, performs the click default configuration and
+ * Initializes the driver and logger, performs the Click default configuration and
  * reads the device ID.
  *
  * ## Application Task

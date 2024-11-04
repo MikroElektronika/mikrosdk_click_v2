@@ -1,6 +1,6 @@
 
 ---
-# Thermo K 3 click
+# Thermo K 3 Click
 
 > Thermo K 3 Click is a compact add-on board that provides accurate temperature measurements with a thermocouple probe. This board features the MAX6675, a cold-junction-compensated K-thermocouple-to-digital converter from Analog Devices. With the versatile type-K probe, this board enables precise temperature measurements of up to +700°C in 12-bit (0.25°C) resolution. This board can measure temperatures as high as +1024°C but with less precision. It features cold-junction compensation sensing and correction and open thermocouple detection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/thermok3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/thermo-k-3-click)
+[Click Product page](https://www.mikroe.com/thermo-k-3-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t thermok3_read_temperature ( thermok3_t *ctx, float *temperature );
 
 ## Example Description
 
-> This example demonstrates the use of Thermo K 3 click board by reading and displaying the temperature measurements.
+> This example demonstrates the use of Thermo K 3 Click board by reading and displaying the temperature measurements.
 
 **The demo application is composed of two sections :**
 
@@ -134,7 +134,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

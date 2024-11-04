@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Mosaic click
+# Mosaic Click
 
 > Mosaic Click is a compact add-on board for precision navigation and location-based applications. This board features the Mosaic-X5, a compact global navigation satellite system (GNSS) receiver from Septentrio. The Mosaic-X5 stands out for its multi-band and multi-constellation tracking ability, ensuring robust and comprehensive global coverage. It features Septentrio's AIM+ technology for superior interference mitigation, enabling it to counteract a wide range of signal disruptions.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/mosaic_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mosaic-click)
+[Click Product page](https://www.mikroe.com/mosaic-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t mosaic_parse_gga ( uint8_t *rsp_buf, uint8_t gga_element, uint8_t *element
 
 ## Example Description
 
-> This example demonstrates the use of Mosaic click by reading and displaying the GNSS coordinates.
+> This example demonstrates the use of Mosaic Click by reading and displaying the GNSS coordinates.
 
 **The demo application is composed of two sections :**
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

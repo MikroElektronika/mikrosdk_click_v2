@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# RTC 8 click
+# RTC 8 Click
 
-> RTC 8 click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time. 
+> RTC 8 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rtc8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-8-click)
+[Click Product page](https://www.mikroe.com/rtc-8-click)
 
 ---
 
@@ -77,7 +77,7 @@ err_t rtx8_get_time_and_date ( rtc8_t *ctx, rtc8_time_t *time_s, rtc8_date_t *da
 ### Application Init 
 
 > Configuring clicks and log objects.
-> Settings the click in the default configuration.
+> Settings the Click in the default configuration.
 > Sets new: Time, Date, UNIX time and alarm data.
 
 ```c
@@ -194,7 +194,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

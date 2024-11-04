@@ -3,14 +3,14 @@
  * \brief NfcTag4 Click example
  * 
 * # Description
- * This example showcases how to configure and use the NFC Tag 4 click. The click is an NFC tag 
+ * This example showcases how to configure and use the NFC Tag 4 Click. The Click is an NFC tag 
  * interface which uses the I2C serial interface and an RF link interface in order to communicate.
  * The example requires the ST25 NFC Tap application which can be downloaded to your phone.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function waits for the interrupt signal, after which it expects data transfers. Once

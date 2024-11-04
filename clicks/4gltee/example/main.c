@@ -3,7 +3,7 @@
  * @brief 4G LTE-E Click Example.
  *
  * # Description
- * This example reads and processes data from 4G LTE-E click.
+ * This example reads and processes data from 4G LTE-E Click.
  *
  * The demo application is composed of two sections :
  * 
@@ -52,7 +52,7 @@
 #define SIM_APN                             ""  // Set valid SIM APN        
 #define SIM_SMSC                            ""  // Set valid SMS Service Center Address - only in PDU mode   
 #define PHONE_NUMBER_TO_MESSAGE             ""  // Set Phone number to message
-#define MESSAGE_CONTENT                     "4G LTE-E click board - demo example."   // Message content 
+#define MESSAGE_CONTENT                     "4G LTE-E Click board - demo example."   // Message content 
 
 #define PROCESS_BUFFER_SIZE                 256
 

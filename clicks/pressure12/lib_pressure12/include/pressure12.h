@@ -118,7 +118,7 @@ extern "C"{
  *
  * @param cfg Click configuration structure.
  *
- * @description This function initializes click configuration structure to init
+ * @description This function initializes Click configuration structure to init
  * state.
  * @note All used pins will be set to unconnected state.
  */
@@ -135,7 +135,7 @@ void pressure12_cfg_setup ( pressure12_cfg_t *cfg );
  *          (-1) - Error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 err_t pressure12_init ( pressure12_t *ctx, pressure12_cfg_t *cfg );
 
@@ -172,7 +172,7 @@ err_t pressure12_read_pin_voltage ( pressure12_t *ctx, float *data_out );
  * @return See #err_t definition of data type.
  *
  * @description This function calculates pressure value detected on the
- * Pressure 12 click board.
+ * Pressure 12 Click board.
  */
 err_t pressure12_get_pressure ( pressure12_t *ctx, uint16_t *data_out );
 
@@ -182,6 +182,6 @@ err_t pressure12_get_pressure ( pressure12_t *ctx, uint16_t *data_out );
 #endif  // _PRESSURE12_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------ END

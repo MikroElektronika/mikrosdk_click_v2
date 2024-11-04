@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# SWI EEPROM click
+# SWI EEPROM Click
 
 > SWI EEPROM Click is a compact add-on board that provides a highly reliable memory solution. This board features the AT21CS01, a single-wire serial EEPROM with a unique, factory-programmed 64-bit serial number from Microchip Technology. The AT21CS01 has an ultra-high write endurance capability allowing more than one million cycles for each memory location to meet the requirements for today's high-write endurance applications. It is internally as 128 words of 8 bits each with achieved communication through a single I/O pin with Standard-Speed and High-Speed mode options. Also, it offers a security register with a factory-programmed serial number, which makes it the easiest way to add identification to various accessories and consumables.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/swi_eeprom_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/swi-eeprom-click)
+[Click Product page](https://www.mikroe.com/swi-eeprom-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t swieeprom_mem_clear ( swieeprom_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of SWI EEPROM click board by writing specified data to the memory and reading it back.
+> This example demonstrates the use of SWI EEPROM Click board by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
 
@@ -179,7 +179,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

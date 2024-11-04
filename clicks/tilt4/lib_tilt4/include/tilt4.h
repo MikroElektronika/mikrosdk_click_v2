@@ -139,7 +139,7 @@ typedef enum
 
 /**
  * @brief Tilt 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #tilt4_cfg_t object definition for detailed explanation.
@@ -151,7 +151,7 @@ void tilt4_cfg_setup ( tilt4_cfg_t *cfg );
 /**
  * @brief Tilt 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #tilt4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -166,7 +166,7 @@ err_t tilt4_init ( tilt4_t *ctx, tilt4_cfg_t *cfg );
 /**
  * @brief Tilt 4 Interrupt pin reading function.
  * @details This function reads the state of the interrupt pin of Tilt 4
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #tilt4_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -178,7 +178,7 @@ uint8_t tilt4_read_int_state ( tilt4_t *ctx );
 /**
  * @brief Tilt 4 LED pin setting function.
  * @details This function sets the LED pin on the selected level level of
- * Tilt 4 click board.
+ * Tilt 4 Click board.
  * @param[in] ctx : Click context object.
  * See #tilt4_t object definition for detailed explanation.
  * @param[in] pin_state : State of the LED pin.

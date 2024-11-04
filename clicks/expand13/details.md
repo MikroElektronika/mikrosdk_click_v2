@@ -1,6 +1,6 @@
 
 ---
-# Expand 13 click
+# Expand 13 Click
 
 > Expand 13 Click is a compact add-on board that contains a multi-port I/O expander. This board features the PI4IOE5V96248, a 48-bit general-purpose I/O expander providing remote I/O expansion for most MCU’s families from Diodes Incorporated. The PI4IOE5V96248 comes in a 6-channel configuration and allows easy addition of I/O through a standard I2C serial interface. It has a built-in level shifting feature that makes it highly flexible in power supply systems where communication between incompatible I/O voltages is required.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-13-click)
+[Click Product page](https://www.mikroe.com/expand-13-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t expand13_read_all_ports ( expand13_t *ctx, uint8_t *ports );
 
 ## Example Description
 
-> This example demonstrates the use of Expand 13 click board, by writing data to all six ports and then reading back the status of the ports. 
+> This example demonstrates the use of Expand 13 Click board, by writing data to all six ports and then reading back the status of the ports. 
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and enables the click board.
+> Initializes the driver and enables the Click board.
 
 ```c
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,6 +3,6 @@
     "description": "LR Click is a compact add-on board that contains a low-power, long-range transceiver. This board features the RN2483, RF technology-based SRD transceiver, which operates at a frequency of 433/868MHz from Microchip Technology. This Click board™ features an embedded LoRaWAN Class A compliant stack, providing a long-range spread spectrum communication with high interference immunity. The RN2483 module is a fully certified 433/868MHz European R&TTE directive assessed radio modem combined with the advanced and straightforward command interface.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","RN2483"],
+    "hw" : ["Click","RN2483"],
     "category" : ["LoRa"]
 }

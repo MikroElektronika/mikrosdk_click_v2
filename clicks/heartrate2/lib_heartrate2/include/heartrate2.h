@@ -659,7 +659,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void heartrate2_cfg_setup ( heartrate2_cfg_t *cfg );
@@ -670,7 +670,7 @@ void heartrate2_cfg_setup ( heartrate2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 HEARTRATE2_RETVAL heartrate2_init ( heartrate2_t *ctx, heartrate2_cfg_t *cfg );
 
@@ -683,7 +683,7 @@ HEARTRATE2_RETVAL heartrate2_init ( heartrate2_t *ctx, heartrate2_cfg_t *cfg );
  *                  ( HEARTRATE2_CONFIG_GREEN or HEARTRATE2_CONFIG_IR or
  *                    HEARTRATE2_CONFIG_RED )
  *
- * @description This function executes default configuration for HeartRate2 click.
+ * @description This function executes default configuration for HeartRate2 Click.
  */
 void heartrate2_default_cfg ( heartrate2_t *ctx, uint8_t cfg_led );
 
@@ -852,6 +852,6 @@ void heartrate2_set_en ( heartrate2_t *ctx, uint8_t state );
 #endif  // _HEARTRATE2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

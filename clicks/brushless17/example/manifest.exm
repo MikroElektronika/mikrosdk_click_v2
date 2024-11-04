@@ -3,6 +3,6 @@
     "description": "Brushless 17 Click is a compact add-on board suitable for controlling brushless DC (BLDC) motors with any MCU. This board features the L6229Q, DMOS fully integrated three-phase BLDC motor driver with overcurrent protection from STMicroelectronics. This motor driver combines isolated DMOS power transistors with CMOS and bipolar circuits on the same chip, realized in BCD (Bipolar-CMOS-DMOS) multipower technology. It includes all the circuitry for a three-phase BLDC motor drive, including a three-phase DMOS bridge, a constant off-time PWM current controller, and the decoding logic for single-ended hall sensors that generate the required sequence for the power stage.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","L6229QTR"],
+    "hw" : ["Click","L6229QTR"],
     "category" : ["Brushless"]
 }

@@ -11,7 +11,7 @@
  * Initializes device.
  * 
  * ## Application Task  
- * Waits user to press top and bottom button to turn click's LEDs ON or OFF.
+ * Waits user to press top and bottom button to turn Click's LEDs ON or OFF.
  * User can swipe slider to send log to the UART where one can track their changes.
  * 
  * 

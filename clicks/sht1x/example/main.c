@@ -3,7 +3,7 @@
  * \brief SHT1x Click example
  * 
  * # Description
- * This click measures temperature and humidity.
+ * This Click measures temperature and humidity.
  *
  * The demo application is composed of two sections :
  * 

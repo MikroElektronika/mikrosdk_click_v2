@@ -3,22 +3,22 @@
  * @brief Thunder EMU Click example
  *
  * # Description
- * This example demonstrates the use of Thunder EMU click board by generating
- * CLOSE, MID, or FAR range thunder signal depending on the click push-buttons state.
+ * This example demonstrates the use of Thunder EMU Click board by generating
+ * CLOSE, MID, or FAR range thunder signal depending on the Click push-buttons state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
- * Checks if any of the click board buttons are pressed and then generates a thunder
+ * Checks if any of the Click board buttons are pressed and then generates a thunder
  * signal related to the pressed button and displays an appropriate message on the USB UART.
  * 
  * @note
- * Thunder EMU click should be used in combination with a Thunder click which detects
+ * Thunder EMU Click should be used in combination with a Thunder Click which detects
  * a lightning presence. The emulator is calibrated for ranges of up to 15cm from the sensor board.
- * It's recommended to distant both click boards from their development boards using a Shuttle click
+ * It's recommended to distant both Click boards from their development boards using a Shuttle Click
  * to reduce the board noise that can affect the sensor and emulator performance.
  * 
  * @author Stefan Filipovic

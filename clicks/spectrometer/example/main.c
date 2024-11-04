@@ -15,7 +15,7 @@
  * Initalizes I2C driver, performs safety check and makes an initial log.
  * 
  * ## Application Task  
- * This example shows the capabilities of the Spectrometer click
+ * This example shows the capabilities of the Spectrometer Click
  * by reading out channels with SMUX configrations 1 and 2, detecting 
  * flicker for 100 and 120 Hz and displaying data via USART terminal.
  * 
@@ -74,7 +74,7 @@ void application_init ( void )
     if ( id_val == SPECTROMETER_ID_VALUE )
     {
         log_printf( &logger, "-------------------------\r\n" );
-        log_printf( &logger, "   Spectrometer  click   \r\n" );
+        log_printf( &logger, "   Spectrometer  Click   \r\n" );
         log_printf( &logger, "-------------------------\r\n" );
     }
     else

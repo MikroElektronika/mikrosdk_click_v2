@@ -313,7 +313,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void irgesture_cfg_setup ( irgesture_cfg_t *cfg );
@@ -323,7 +323,7 @@ void irgesture_cfg_setup ( irgesture_cfg_t *cfg );
  * @param irgesture Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 IRGESTURE_RETVAL irgesture_init ( irgesture_t *ctx, irgesture_cfg_t *cfg );
 
@@ -332,7 +332,7 @@ IRGESTURE_RETVAL irgesture_init ( irgesture_t *ctx, irgesture_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for IrGesture click.
+ * @description This function executes default configuration for IrGesture Click.
  */
 void irgesture_default_cfg ( irgesture_t *ctx );
 
@@ -714,6 +714,6 @@ uint8_t irgesture_read_proximity_data ( irgesture_t *ctx );
 #endif  // _IRGESTURE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

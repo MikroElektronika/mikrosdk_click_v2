@@ -9,7 +9,7 @@
  *
  * ## Application Init
  * Initializes SPI and UART communication, configures INT pin as INPUT, RST pin as OUTPUT, CS pin as 
- * OUTPUT and PWM pin as OUTPUT. Initializes SPI driver, initializes ECG2 click, sends START and 
+ * OUTPUT and PWM pin as OUTPUT. Initializes SPI driver, initializes ECG2 Click, sends START and 
  * RDATAC opcodes.
  *
  * ## Application Task

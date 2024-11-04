@@ -3,6 +3,6 @@
     "description": "Thermo 25 Click is a compact add-on board that accurately measures temperature. This board features the TMP127-Q1, a high-precision digital temperature sensor from Texas Instruments. This SPI-configurable factory-calibrated temperature sensor has a high accuracy of 0.8°C, supporting an ambient temperature range from -55°C to 175°C. It features a 14-bit signed temperature resolution (0.03125 °C per LSB) while operating over a supply range.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TMP127EDBVRQ1"],
+    "hw" : ["Click","TMP127EDBVRQ1"],
     "category" : ["Click Boards > Sensors > Temperature & humidity"]
 }

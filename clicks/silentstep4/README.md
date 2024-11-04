@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Silent Step 4 click
+# Silent Step 4 Click
 
 > Silent Step 4 Click is a compact add-on board representing a completely integrated step motor driver solution. This board features the TMC2240, a smart integrated stepper driver from Analog Devices. The driver is based on a 256 micro-steps built-in indexer, two fully integrated H-Bridges, and non-dissipative integrated current sensing (ICS). The two H-Bridges can drive motors of up to 36V and 3A at max.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/silentstep4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/silent-step-4-click)
+[Click Product page](https://www.mikroe.com/silent-step-4-click)
 
 ---
 
@@ -70,13 +70,13 @@ void silentstep4_drive_motor ( silentstep4_t *ctx, uint32_t steps, uint8_t speed
 
 ## Example Description
 
-> This example demonstrates the use of the Silent Step 4 click board by driving the motor in both directions for a desired number of steps.
+> This example demonstrates the use of the Silent Step 4 Click board by driving the motor in both directions for a desired number of steps.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

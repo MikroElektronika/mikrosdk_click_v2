@@ -210,7 +210,7 @@ extern "C"{
  *
  * @param cfg          Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void adc3_cfg_setup ( adc3_cfg_t *cfg );
@@ -221,7 +221,7 @@ void adc3_cfg_setup ( adc3_cfg_t *cfg );
  * @param ctx         Click object.
  * @param cfg          Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ADC3_RETVAL adc3_init ( adc3_t *ctx, adc3_cfg_t *cfg );
 
@@ -230,7 +230,7 @@ ADC3_RETVAL adc3_init ( adc3_t *ctx, adc3_cfg_t *cfg );
  *
  * @param ctx          Click object.
  *
- * @description This function executes default configuration for Adc3 click.
+ * @description This function executes default configuration for Adc3 Click.
  */
 void adc3_default_cfg ( adc3_t *ctx );
 
@@ -325,6 +325,6 @@ float adc3_read_voltage ( adc3_t *ctx, uint8_t channel, uint8_t resolution, uint
 #endif  // _ADC3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

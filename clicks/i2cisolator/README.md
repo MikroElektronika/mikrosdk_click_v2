@@ -3,15 +3,15 @@
  
 
 ---
-# I2C isolator click
+# I2C isolator Click
 
-I2C Isolator click carries ISO1540, a low-power, bidirectional isolator compatible with I2C interfaces. On the board, the Texas Instruments chip is connected to two sets of I2C pins, one on the mikroBUS connector (SDA, SCL), the other on the upper edge of the board (SCL2, SDL2).
+I2C Isolator Click carries ISO1540, a low-power, bidirectional isolator compatible with I2C interfaces. On the board, the Texas Instruments chip is connected to two sets of I2C pins, one on the mikroBUS connector (SDA, SCL), the other on the upper edge of the board (SCL2, SDL2).
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-isolator-click)
+[Click Product page](https://www.mikroe.com/i2c-isolator-click)
 
 ---
 
@@ -64,7 +64,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 >
 > Initialization driver enables - I2C,
-> sets configuration of TMP007 sensor on IrThermo 2 click and start to write log.
+> sets configuration of TMP007 sensor on IrThermo 2 Click and start to write log.
 > 
 
 ```c
@@ -119,7 +119,7 @@ void application_init ( void )
 ### Application Task
 
 >
-> In this example we use IrThermo 2 click, measures the temperature with,
+> In this example we use IrThermo 2 Click, measures the temperature with,
 > and calculate the temperature in degrees Celsius [ C ].
 > Results are being sent to the USART Terminal where you can track their changes.
 > All data logs on usb uart each second.
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

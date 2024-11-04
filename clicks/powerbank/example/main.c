@@ -12,7 +12,7 @@
  * 
  * ## Application Task  
  * This example shows the capabilities of the 
- * PowerBank click by measuring voltage of the connected
+ * PowerBank Click by measuring voltage of the connected
  * battery. In order to get correct calculations user should
  * change "v_ref" value to his own power supply voltage.
  * 
@@ -57,7 +57,7 @@ void application_init ( void )
 
     Delay_ms ( 100 );
     log_printf( &logger, "------------------------\r\n" );
-    log_printf( &logger, "     PowerBank click    \r\n" );
+    log_printf( &logger, "     PowerBank Click    \r\n" );
     log_printf( &logger, "------------------------\r\n" );
 }
 

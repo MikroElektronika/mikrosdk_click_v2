@@ -3,15 +3,15 @@
  
 
 ---
-# Air quality 3 click
+# Air quality 3 Click
 
-Air quality 3 click is the air quality measurement device, which is able to output both equivalent CO2 levels and total volatile organic compounds (TVOC) concentration in the indoor environment. 
+Air quality 3 Click is the air quality measurement device, which is able to output both equivalent CO2 levels and total volatile organic compounds (TVOC) concentration in the indoor environment. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/airquality3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/air-quality-3-click)
+[Click Product page](https://www.mikroe.com/air-quality-3-click)
 
 ---
 
@@ -67,8 +67,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Configuring clicks and log objects.
-> Settings the click in the default configuration.
+> Configuring Clicks and log objects.
+> Settings the Click in the default configuration.
 > Call the procedure the wakeup function of the chip.
 
 ```c
@@ -96,7 +96,7 @@ void application_init ( void )
     AIRQUALITY3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     airquality3_init( &airquality3, &cfg );
 
-    // Wake-up click procedure
+    // Wake-up Click procedure
 
     airquality3_set_power( &airquality3, AIRQUALITY3_POWER_STATE_ON );
     airquality3_hardware_reset( &airquality3 );
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

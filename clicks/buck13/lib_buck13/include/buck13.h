@@ -154,7 +154,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void buck13_cfg_setup ( buck13_cfg_t *cfg );
@@ -165,7 +165,7 @@ void buck13_cfg_setup ( buck13_cfg_t *cfg );
  * @param cfg    Click configuration structure.
  * 
  * @returns      Initialization response.  
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BUCK13_RETVAL buck13_init ( buck13_t *ctx, buck13_cfg_t *cfg );
 
@@ -174,7 +174,7 @@ BUCK13_RETVAL buck13_init ( buck13_t *ctx, buck13_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Buck 13 click.
+ * @description This function executes default configuration for Buck 13 Click.
  * 
  * @note Default Configuration
  * <pre>
@@ -239,6 +239,6 @@ uint16_t buck13_get_voltage( buck13_t *ctx );
 #endif  // _BUCK13_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -1,6 +1,6 @@
 
 ---
-# Diff Press 2 click
+# Diff Press 2 Click
 
 > Diff Press 2 Click is a compact add-on board that contains Sensirion’s differential pressure sensor. This board features the SDP31-500PA, a small differential pressure sensor designed for high-volume applications. The SDP31-500PA comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from -500Pa up to +500Pa with an accuracy of 3%. It comes as calibrated and temperature compensated with high reliability/long-term stability, has the best signal-to-noise ratio. It operates in a temperature range of -40°C to 85°C, ensuring stable operation under extreme conditions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/diffpress2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/diff-press-2-click)
+[Click Product page](https://www.mikroe.com/diff-press-2-click)
 
 ---
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

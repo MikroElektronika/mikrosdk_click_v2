@@ -73,7 +73,7 @@ extern "C"{
 
 /**
  * @brief 6DOF IMU 11 description register.
- * @details Specified register for description of I2C 6DOF IMU 11 click.
+ * @details Specified register for description of I2C 6DOF IMU 11 Click.
  */
 #define C6DOFIMU11_REG_WHO_AM_I                                     0x00
 #define C6DOFIMU11_REG_CNTL2                                        0x3A
@@ -113,7 +113,7 @@ extern "C"{
 
 /**
  * @brief 6DOF IMU 11 bit mask.
- * @details Bit mask of 6DOF IMU 11 click driver.
+ * @details Bit mask of 6DOF IMU 11 Click driver.
  */
 #define C6DOFIMU11_CNTL2_TEMP_EN_STANDBY_MODE                       0x00
 #define C6DOFIMU11_CNTL2_MAG_EN_STANDBY_MODE                        0x00
@@ -129,7 +129,7 @@ extern "C"{
 /**
  * @brief 6DOF IMU 11 device address setting.
  * @details Specified setting for device slave address selection of
- * 6DOF IMU 11 click driver.
+ * 6DOF IMU 11 Click driver.
  */
 #define C6DOFIMU11_I2C_SLAVE_ADDRESS_GND                            0x0E
 #define C6DOFIMU11_I2C_SLAVE_ADDRESS_VCC                            0x0F
@@ -210,7 +210,7 @@ typedef enum
 
 /**
  * @brief I2C Extend 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #i2cextend2_cfg_t object definition for detailed explanation.
@@ -222,7 +222,7 @@ void i2cextend2_cfg_setup ( i2cextend2_cfg_t *cfg );
 /**
  * @brief I2C Extend 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #i2cextend2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -237,8 +237,8 @@ err_t i2cextend2_init ( i2cextend2_t *ctx, i2cextend2_cfg_t *cfg );
 /**
  * @brief Generic write data in Remote Mode function.
  * @details Function writes a the byte of data to the targeted 8-bit
- * register address of the click board connected 
- * to the I2c Extend 2 click in Remote Mode.
+ * register address of the Click board connected 
+ * to the I2c Extend 2 Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -250,8 +250,8 @@ void i2cextend2_rmt_write ( i2cextend2_t *ctx, uint8_t reg, uint8_t tx_data );
 /**
  * @brief Generic read data in Remote Mode function.
  * @details Function read a the byte of data from the targeted 8-bit
- * register address of the click board connected
- * to the I2c Extend 2 click in Remote Mode.
+ * register address of the Click board connected
+ * to the I2c Extend 2 Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -262,8 +262,8 @@ uint8_t i2cextend2_rmt_read ( i2cextend2_t *ctx, uint8_t reg );
 /**
  * @brief Generic multi write data in Remote Mode function.
  * @details Function writes a sequential data starting 
- * to the targeted register address of the click board connected
- * to the I2c Extend 2 click in Remote Mode.
+ * to the targeted register address of the Click board connected
+ * to the I2c Extend 2 Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -276,8 +276,8 @@ void i2cextend2_rmt_multi_write ( i2cextend2_t *ctx, uint8_t reg, uint8_t *p_tx_
 /**
  * @brief Generic multi read data in Remote Mode function.
  * @details Function read a sequential data starting
- * from the targeted register address of the click board connected
- * to the I2c Extend 2 click in Remote Mode.
+ * from the targeted register address of the Click board connected
+ * to the I2c Extend 2 Click in Remote Mode.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -293,7 +293,7 @@ void i2cextend2_rmt_multi_read ( i2cextend2_t *ctx, uint8_t reg, uint8_t *p_rx_d
  * by the set state of the CS ( logic '1' ) 
  * and disable by the clear state of the CS ( logic '0' ) 
  * of PCA9615 2-channel multipoint Fast-mode Plus differential I2C-bus
- * buffer with hot-swap logic on the I2C Extend 2 click.
+ * buffer with hot-swap logic on the I2C Extend 2 Click.
  * @param[in] ctx : Click context object.
  * See #i2cextend_t object definition for detailed explanation.
  * @param[in] en_extend : CS pin state.

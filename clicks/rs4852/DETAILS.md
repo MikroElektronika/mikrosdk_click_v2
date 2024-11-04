@@ -1,14 +1,14 @@
 
 ---
-# RS485 2 click
+# RS485 2 Click
 
-RS485 2 click is an RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. 
+RS485 2 Click is an RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/rs4852_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rs485-2-click)
+[Click Product page](https://www.mikroe.com/rs485-2-click)
 
 ---
 
@@ -137,7 +137,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

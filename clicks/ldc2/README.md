@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LDC 2 click
+# LDC 2 Click
 
 > LDC 2 Click is a compact add-on board that measures inductance change which a conductive target causes when it moves into the inductor's AC magnetic field. This board features the LDC1041, inductance-to-digital converter (LDC) for inductive sensing solutions from Texas Instruments.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ldc2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ldc-2-click)
+[Click Product page](https://www.mikroe.com/ldc-2-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t ldc2_get_sensor_frequency ( ldc2_t *ctx, float *freq );
 
 ## Example Description
 
-> This example demonstrates the use of LDC 2 click board.
+> This example demonstrates the use of LDC 2 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board.
+> Initializes the driver and configures the Click board.
 
 ```c
 
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

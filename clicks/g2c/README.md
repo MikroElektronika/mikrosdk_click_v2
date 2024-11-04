@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# G2C click
+# G2C Click
 
-> Go to Cloud (G2C) click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform, a cloud-based rapid prototyping environment, hosted by MikroElektronika. Go to Cloud (G2C) click offers an unprecedented simplicity for adding Click Cloud connectivity to any embedded application, by utilizing the simple UART interface: it can be configured and managed using a minimal set of well-documented AT commands.
+> Go to Cloud (G2C) Click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform, a cloud-based rapid prototyping environment, hosted by MikroElektronika. Go to Cloud (G2C) Click offers an unprecedented simplicity for adding Click Cloud connectivity to any embedded application, by utilizing the simple UART interface: it can be configured and managed using a minimal set of well-documented AT commands.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/g2c_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/g2c-click)
+[Click Product page](https://www.mikroe.com/g2c-click)
 
 ---
 
@@ -202,7 +202,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

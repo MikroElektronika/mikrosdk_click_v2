@@ -1,6 +1,6 @@
 
 ---
-# H-Bridge 4 click
+# H-Bridge 4 Click
 
 H-Bridge 4 Click is a Click board™ that contains the AP1010AEN, which is a two channel H-Bridge motor driver compatible with a motor operating voltage up to 18V and can drive two DC motors or one stepper motor.
 
@@ -8,7 +8,7 @@ H-Bridge 4 Click is a Click board™ that contains the AP1010AEN, which is a two
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-4-click)
+[Click Product page](https://www.mikroe.com/h-bridge-4-click)
 
 ---
 
@@ -91,7 +91,7 @@ void application_init ( void )
     hbridge4_enable( &hbridge4, 1 );
     Delay_ms ( 100 );
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, " H-Bridge 4 click \r\n" );
+    log_printf( &logger, " H-Bridge 4 Click \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
   
@@ -99,7 +99,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of H-Bridge 4 click board by putting A motor
+> This example demonstrates the use of H-Bridge 4 Click board by putting A motor
 > in standby mode, then spining it in clockwise direction and applying brake function, and then
 > spining it in counter-clockwise direction and applying brake function again.
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

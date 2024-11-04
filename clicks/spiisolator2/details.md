@@ -1,6 +1,6 @@
 
 ---
-# SPI Isolator 2 click
+# SPI Isolator 2 Click
 
 > SPI Isolator 2 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the ISO7741, a high-performance quad-channel digital isolator with a double capacitive silicon dioxide insulation barrier capable of galvanic isolation up to 5000Vrms from Texas Instruments. The ISO7741 provides high electromagnetic immunity and low emissions at low power consumption while isolating digital I/Os. It has three forward and one reverse-direction channel with enable pins that can be used to put the respective outputs in Hi-Z state. This Click board™ provides a simple, compact solution for isolated SPI data communication.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/spiisolator2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/spi-isolator-2-click)
+[Click Product page](https://www.mikroe.com/spi-isolator-2-click)
 
 ---
 
@@ -47,27 +47,27 @@ err_t spiisolator2_init ( spiisolator2_t *ctx, spiisolator2_cfg_t *cfg );
 
 #### Example key functions :
 
-- `spiisolator2_output_enable` The function enable or disable output ( isolation ) of the ISO7741DWR High-Speed, Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+- `spiisolator2_output_enable` The function enable or disable output ( isolation ) of the ISO7741DWR High-Speed, Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
 ```c
 void spiisolator2_output_enable( spiisolator2_t *ctx, uint8_t en_out );
 ```
 
-- `spiisolator2_set_cmd` The function sends the desired command to the ISO7741DWR High-Speed, Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+- `spiisolator2_set_cmd` The function sends the desired command to the ISO7741DWR High-Speed, Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
 ```c
 void spiisolator2_set_cmd ( spiisolator2_t *ctx, uint8_t cmd );
 ```
 
-- `spiisolator2_write_byte` The function writes the byte of data to the targeted 8-bit register address of the ISO7741DWR High-Speed, Robust-EMC Reinforcedand Basic Quad-Channel Digital Isolators on SPI Isolator 2 click board.
+- `spiisolator2_write_byte` The function writes the byte of data to the targeted 8-bit register address of the ISO7741DWR High-Speed, Robust-EMC Reinforcedand Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
 ```c
 void spiisolator2_write_byte ( spiisolator2_t *ctx, uint8_t reg, uint8_t tx_data );
 ```
 
 ## Example Description
 
-> This is an example that demonstrates the use of the SPI Isolator 2 click board.
+> This is an example that demonstrates the use of the SPI Isolator 2 Click board.
 This board uses the ISO7741 which provides high electromagnetic immunity and low
 emissions at low power consumption while isolating digital I/Os. In this example,
-we write and then read data from the connected EEPROM 5 click to the SPI Isolator 2
+we write and then read data from the connected EEPROM 5 Click to the SPI Isolator 2
 click board.
 
 **The demo application is composed of two sections :**
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

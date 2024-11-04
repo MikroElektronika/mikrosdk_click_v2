@@ -3,6 +3,6 @@
     "description": "Stepper 9 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S581FNG, a two-phase bipolar stepping motor driver from Toshiba Semiconductor. Fabricated with the BiCD process, it supports a PWM constant-current control drive and steps resolution from full to 1/32 for less motor noise and smoother control. It has a wide operating voltage range of 8.2V to 44V with a maximum output current capacity of 2A, decay modes selection function, protection, and several anomaly detection indicators.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB67S581FNG","PCA9538ABS"],
+    "hw" : ["Click","TB67S581FNG","PCA9538ABS"],
     "category" : ["Click Boards > Motor control > Stepper"]
 }

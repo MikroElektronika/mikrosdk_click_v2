@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "LED Flash click",
+    "display_name": "LED Flash Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.ledflash",
     "product_link": "https://www.mikroe.com/led-flash-click",
-    "short_description": "LED Flash click functions as a high power LED flash, and carries the CAT3224 flash LED driver.",
+    "short_description": "LED Flash Click functions as a high power LED flash, and carries the CAT3224 flash LED driver.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2079
     ],
-    "version": "2.1.0.15",
+    "version": "2.1.0.16",
     "cmake": true,
     "alias": "Click.LedFlash",
     "subdir_name": "lib_ledflash"
 }
+
 
 
 

@@ -3,14 +3,14 @@
  * \brief Pixi Click example
  * 
  * # Description
- * This example showcases how to initialize, configure and use the Pixi click moduel. The click
+ * This example showcases how to initialize, configure and use the Pixi Click moduel. The Click
  * features Maxim Integrated's versatile, proprietary PIXI™ technology - the industry's first
  * configurable 20-channel mixed-signal data converter. 
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules. After the initial setup
+ * This function initializes and configures the Click and logger modules. After the initial setup
  * a device id check is performed which will stop the module if the check fails. Additional con-
  * figurating is done in the default_cfg(...) function.
  * 

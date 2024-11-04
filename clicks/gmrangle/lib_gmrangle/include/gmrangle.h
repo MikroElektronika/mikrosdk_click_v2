@@ -230,7 +230,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void gmrangle_cfg_setup ( gmrangle_cfg_t *cfg );
@@ -241,7 +241,7 @@ void gmrangle_cfg_setup ( gmrangle_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t gmrangle_init ( gmrangle_t *ctx, gmrangle_cfg_t *cfg );
 
@@ -255,7 +255,7 @@ err_t gmrangle_init ( gmrangle_t *ctx, gmrangle_cfg_t *cfg );
  *
  * @details This function read 16-bit data 
  * from the targeted 6-bit register address of the
- * TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 uint16_t gmrangle_read_data ( gmrangle_t *ctx, uint8_t reg );
 
@@ -268,7 +268,7 @@ uint16_t gmrangle_read_data ( gmrangle_t *ctx, uint8_t reg );
  *
  * @details This function write the 16-bit data 
  * to the targeted 6-bit register address of the
- * TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 void gmrangle_write_data ( gmrangle_t *ctx, uint8_t reg, uint16_t tx_data );
 
@@ -323,7 +323,7 @@ void gmrangle_write_data ( gmrangle_t *ctx, uint8_t reg, uint16_t tx_data );
  *
  * @details This function read 16-bit status data 
  * from the 6-bit register address ( GMRANGLE_REG_STAT )
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 uint16_t gmrangle_get_status ( gmrangle_t *ctx );
 
@@ -361,7 +361,7 @@ uint16_t gmrangle_get_status ( gmrangle_t *ctx );
  *
  * @details This function write 16-bit a_data data
  * to the 6-bit register address ( GMRANGLE_REG_ACSTAT )
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 void gmrangle_set_act_status ( gmrangle_t *ctx, uint16_t a_data );
 
@@ -374,7 +374,7 @@ void gmrangle_set_act_status ( gmrangle_t *ctx, uint16_t a_data );
  *
  * @details This function read 16-bit signed angle speed value 
  * from the 6-bit register address ( GMRANGLE_REG_ASPD )
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 int16_t gmrangle_get_angle_speed_value ( gmrangle_t *ctx );
 
@@ -387,7 +387,7 @@ int16_t gmrangle_get_angle_speed_value ( gmrangle_t *ctx );
  *
  * @details This function get the angle speed 
  * by read from the from the 6-bit register address ( GMRANGLE_REG_ASPD )
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 void gmrangle_get_angle_speed ( gmrangle_t *ctx, float *final_angle_speed, int16_t *angle_speed_val );
 
@@ -400,7 +400,7 @@ void gmrangle_get_angle_speed ( gmrangle_t *ctx, float *final_angle_speed, int16
  *
  * @details This function read value of the angle range 
  * from the 6-bit register address ( GMRANGLE_REG_MOD_2 )
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 float gmrangle_get_angle_range ( gmrangle_t *ctx );
 
@@ -413,7 +413,7 @@ float gmrangle_get_angle_range ( gmrangle_t *ctx );
  *
  * @details This function read the number of the revolutions 
  * from the 6-bit register address ( GMRANGLE_REG_AREV )
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 int16_t gmrangle_get_num_revolutions ( gmrangle_t *ctx );
 
@@ -426,7 +426,7 @@ int16_t gmrangle_get_num_revolutions ( gmrangle_t *ctx );
  *
  * @details This function read the 16-bit signed value of the angle 
  * from the 6-bit register address ( GMRANGLE_REG_AVAL )
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 uint16_t gmrangle_get_angle_value ( gmrangle_t *ctx );
 
@@ -439,7 +439,7 @@ uint16_t gmrangle_get_angle_value ( gmrangle_t *ctx );
  *
  * @details This function calculate the float value 
  * of the angle in degree
- * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle click board.
+ * of the TLE5012 GMR-Based Angular Sensor on the GMR Angle Click board.
  */
 float gmrangle_calculate_angle ( gmrangle_t *ctx );
 
@@ -449,6 +449,6 @@ float gmrangle_calculate_angle ( gmrangle_t *ctx );
 #endif  // _GMRANGLE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -3,13 +3,13 @@
  * @brief Wireless SUN Click Example.
  *
  * # Description
- * This example demonstrates the use of Wireless SUN click board by showing
- * the communication between the two click boards configured as BORDER and ROUTER.
+ * This example demonstrates the use of Wireless SUN Click board by showing
+ * the communication between the two Click boards configured as BORDER and ROUTER.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board by performing a hardware reset
+ * Initializes the driver and configures the Click board by performing a hardware reset
  * and a clear parameters feature, and setting the device network name, device role to
  * BORDER or ROUTER depending on the application mode. In the end, it saves settings and
  * reboots device.
@@ -44,10 +44,10 @@
 #define DEMO_APP_BORDER
 
 // Device network name.
-#define DEVICE_NETWORK_NAME         "\"Wireless SUN click\""
+#define DEVICE_NETWORK_NAME         "\"Wireless SUN Click\""
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MikroE - Wireless SUN click board"
+#define DEMO_TEXT_MESSAGE           "MikroE - Wireless SUN Click board"
 
 #define PROCESS_BUFFER_SIZE         600
 

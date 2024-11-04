@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DRAM click
+# DRAM Click
 
 > DRAM Click is a compact add-on board representing a dynamic random-access memory solution. This board features the APS6404L-3SQR, 64Mb high-performance SPI/QPI PSRAM memory organized as 8M x 8 bits each from AP Memory. This Pseudo-SRAM device features a high speed, low pin count interface and incorporates a seamless self-managed refresh mechanism to maximize the performance of memory read operation. It has 4 SDR I/O pins and operates in SPI or QPI (quad peripheral interface) mode with frequencies up to 133 MHz.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dram_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dram-click)
+[Click Product page](https://www.mikroe.com/dram-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t dram_memory_read_fast ( dram_t *ctx, uint32_t address, uint8_t *data_out, 
 
 ## Example Description
 
-> This example demonstrates the use of DRAM click board by writing specified data to the memory and reading it back.
+> This example demonstrates the use of DRAM Click board by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

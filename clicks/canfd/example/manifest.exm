@@ -3,6 +3,6 @@
     "description": "CAN FD Click is a add-on board based on TLE9252V CAN network transceiver, designed for HS CAN networks up to 5 Mbit/s in automotive and industrial applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","TLE9252V"],
+    "hw" : ["Click","TLE9252V"],
     "category" : ["CAN"] 
 }

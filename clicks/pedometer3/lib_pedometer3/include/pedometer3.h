@@ -721,7 +721,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void pedometer3_cfg_setup ( pedometer3_cfg_t *cfg );
@@ -732,7 +732,7 @@ void pedometer3_cfg_setup ( pedometer3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  *
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t pedometer3_init ( pedometer3_t *ctx, pedometer3_cfg_t *cfg );
 
@@ -741,7 +741,7 @@ err_t pedometer3_init ( pedometer3_t *ctx, pedometer3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for Pedometer3 click.
+ * @details This function executes default configuration for Pedometer3 Click.
  * @note Functions and setups that are included in the device's start configuration
  * <pre>
  *   PEDOMETER3_REG_CONTROL_1
@@ -987,6 +987,6 @@ uint8_t pedometer3_get_trigger_int ( pedometer3_t *ctx );
 #endif  // _PEDOMETER3_H_
 
 /** \} */ // End varialbles group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -3,7 +3,7 @@
  * @brief MRAM 4 Click example
  *
  * # Description
- * This example demonstrates the use of MRAM 4 click board.
+ * This example demonstrates the use of MRAM 4 Click board.
  * The demo app writes specified data to the memory and reads it back.
  *
  * The demo application is composed of two sections :

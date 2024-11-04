@@ -1,8 +1,8 @@
 {
     "name": "BUZZ 2 Click",
-    "description": "BUZZ 2 click carries the CMT-8540S-SMT magnetic buzzer transducer. The buzzer’s resonant frequency is 4kHz. The click is designed to run on either 3.3V or 5V power supply.",
+    "description": "BUZZ 2 Click carries the CMT-8540S-SMT magnetic buzzer transducer. The buzzer’s resonant frequency is 4kHz. The Click is designed to run on either 3.3V or 5V power supply.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","CMT-8540S-SMT"],
+    "hw" : ["Click","CMT-8540S-SMT"],
     "category" : ["Speakers"]
 }

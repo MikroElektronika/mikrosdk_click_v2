@@ -1,6 +1,6 @@
 
 ---
-# UART I2C/SPI click
+# UART I2C/SPI Click
 
 UART I2C/SPI Click is an all-in-one solution which allows ESD-protected RS-232 connectivity to any embedded application while bridging the UART and I2C/SPI interfaces at the same time. It is equipped with the DE-9 connector, so it can be easily connected.
 
@@ -9,7 +9,7 @@ UART I2C/SPI Click is an all-in-one solution which allows ESD-protected RS-232 c
 </p>
 
 
-[click Product page](https://www.mikroe.com/uart-i2cspi-click)
+[Click Product page](https://www.mikroe.com/uart-i2cspi-click)
 
 ---
 
@@ -54,14 +54,14 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 - Uart write text function.
 > void uarti2cspi_uart_write_text ( uarti2cspi_t *ctx, uint8_t *w_text );
 
-- This function reads one byte from the click module.
+- This function reads one byte from the Click module.
 > uint8_t uarti2cspi_uart_read ( uarti2cspi_t *ctx );
 
 ## Examples Description
 
-> This example showcases how to initialize, configure and use the UART I2C/SPI click module. 
-> The click is a I2C/SPI to UART bridge interface. It requires a RS232/485 cable in order to be 
-> connected to other click module or an adapter.
+> This example showcases how to initialize, configure and use the UART I2C/SPI Click module. 
+> The Click is a I2C/SPI to UART bridge interface. It requires a RS232/485 cable in order to be 
+> connected to other Click module or an adapter.
 
 **The demo application is composed of two sections :**
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

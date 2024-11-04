@@ -1,6 +1,6 @@
 
 ---
-# UT-S 7-SEG R click
+# UT-S 7-SEG R Click
 
 7-segment LED display is the most commonly used type of display to represent changing numerical values. The principle is very simple - seven LED segments are positioned in a certain shape and by turning specific segments on or off, the shape that resembles a specific number is lit. This method of displaying numbers was first used in the beginning of the 20th century, but after the invention of the LED in ‘70, it is the most commonly used method to display numbers. It utilizes a fairly simple and cheap design with the numbers clearly visible.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uts7segr_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ut-s-7-seg-r-click)
+[Click Product page](https://www.mikroe.com/ut-s-7-seg-r-click)
 
 ---
 
@@ -75,7 +75,7 @@ err_t uts7segr_display_number ( uts7segr_t *ctx, uint8_t number, uint8_t dot_pos
 
 ### Application Init
 
-> Configuring clicks and log objects. Settings the click in the default configuration.
+> Configuring clicks and log objects. Settings the Click in the default configuration.
 
 ```c
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

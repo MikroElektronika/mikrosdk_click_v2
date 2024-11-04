@@ -1,6 +1,6 @@
 #include "c10x10rgb2_resources.h"
 /**
- * @brief Memory buffers for 10x10 RGB 2 click.
+ * @brief Memory buffers for 10x10 RGB 2 Click.
  */
  
 // 'MIKROE' image, 10x10px

@@ -1,6 +1,6 @@
 
 ---
-# LED Driver 13 click
+# LED Driver 13 Click
 
 > LED Driver 13 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the A80604-1, a 4-channel LED driver designed at a switching frequency of 400kHz that provides 150mA per channel from Allegro Microsystems. It is powered by an external power supply in the range of 6V to 18V, providing an output voltage of approximately 26V, which is used to power LEDs connected to LED channels. On the logical side, this board uses both 3V3 and 5V with mikroBUS™ power rails and communicates with the MCU via GPIO pins. In addition, the user is given the option of analog or digital LED dimming selection, using a PWM pin from the mikroBUS™ socket or via an onboard potentiometer/external PWM signal.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/leddriver13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/led-driver-13-click)
+[Click Product page](https://www.mikroe.com/led-driver-13-click)
 
 ---
 
@@ -75,7 +75,7 @@ err_t leddriver13_set_duty_cycle ( leddriver13_t *ctx, float duty_cycle );
 
 ### Application Init
 
-> Initializes the driver and executes the click default configuration which
+> Initializes the driver and executes the Click default configuration which
 > starts the PWM module and sets the LEDs current to minimum.
 
 ```c
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

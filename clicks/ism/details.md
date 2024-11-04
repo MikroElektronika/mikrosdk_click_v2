@@ -1,6 +1,6 @@
 
 ---
-# ISM click
+# ISM Click
 
 > ISM Click is a compact add-on board that contains a complete wireless RF digital data transceiver. This board features the RFM75, a low-power, high-performance 2.4GHz GFSK transceiver from RF Solutions. The RFM75 transceiver is configurable through SPI serial interface and operates with only 3.3V in the worldwide ISM frequency band from 2400MHz up to 2527MHz. The embedded packet processing engines enable their entire operation with a simple MCU as a radio system. Burst mode transmission and up to 2Mbps air data rate make it suitable for applications requiring ultra-low power consumption.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ism_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ism-click)
+[Click Product page](https://www.mikroe.com/ism-click)
 
 ---
 
@@ -166,7 +166,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

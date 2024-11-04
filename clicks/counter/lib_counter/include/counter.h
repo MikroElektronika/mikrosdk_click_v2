@@ -95,7 +95,7 @@
 /** \} */
 
 /**
- * \defgroup counter_click_registers Counter click registers
+ * \defgroup counter_click_registers Counter Click registers
  * \{
  */
 #define COUNTER_MDR0                  0x08    
@@ -254,7 +254,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void counter_cfg_setup ( counter_cfg_t *cfg );
@@ -264,7 +264,7 @@ void counter_cfg_setup ( counter_cfg_t *cfg );
  * @param counter Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COUNTER_RETVAL counter_init ( counter_t *ctx, counter_cfg_t *cfg );
 
@@ -273,7 +273,7 @@ COUNTER_RETVAL counter_init ( counter_t *ctx, counter_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Counter click.
+ * @description This function executes default configuration for Counter Click.
  */
 void counter_default_cfg ( counter_t *ctx );
 
@@ -306,7 +306,7 @@ void counter_generic_transfer
  * @note The MDR0 (Mode Register 0) is an 8-bit read/write register that sets up the
  * operating mode for the LS7366. Upon power up MDR0 is cleared to zero.
  *
- * @description This function writes data into MDR0, using click object.
+ * @description This function writes data into MDR0, using Click object.
  */
 void counter_write_mdr0 ( counter_t *ctx, uint8_t settings );
 
@@ -319,7 +319,7 @@ void counter_write_mdr0 ( counter_t *ctx, uint8_t settings );
  * @note The MDR1 (Mode Register 1) is an 8-bit read/write register which is appended
  * to MDR0 for additional modes. Upon power-up MDR1 is cleared to zero.
  *
- * @description This function writes data into MDR1, using click object.
+ * @description This function writes data into MDR1, using Click object.
  */
 void counter_write_mdr1 ( counter_t *ctx, uint8_t settings );
 
@@ -334,7 +334,7 @@ void counter_write_mdr1 ( counter_t *ctx, uint8_t settings );
  * can be transferred into the 32-bit counter (CNTR) under program control or
  * by hardware index signal.
  *
- * @description This function writes data into DTR, using click object.
+ * @description This function writes data into DTR, using Click object.
  */
 void counter_write_dtr ( counter_t *ctx, uint8_t* buffer );
 
@@ -348,7 +348,7 @@ void counter_write_dtr ( counter_t *ctx, uint8_t* buffer );
  * A and B inputs, or alternatively, in non-quadrature mode, pulses applied at
  * the A input.
  *
- * @description This function loads CNTR from DTR, using click object.
+ * @description This function loads CNTR from DTR, using Click object.
  */
 void counter_load_cntr ( counter_t *ctx );
 
@@ -363,7 +363,7 @@ void counter_load_cntr ( counter_t *ctx );
  * dump site for instantaneous CNTR data which can then be read without
  * interfering with the counting process.
  * 
- * @description This function loads OTR from CNTR, using click object.
+ * @description This function loads OTR from CNTR, using Click object.
  */
 void counter_load_otr ( counter_t *ctx );
 
@@ -373,7 +373,7 @@ void counter_load_otr ( counter_t *ctx );
  * @param ctx          Click object.
  * @returns            Data from MDR0.
  * 
- * @description This function reads MDR0, using click object.
+ * @description This function reads MDR0, using Click object.
  */
 uint8_t counter_read_mdr0 ( counter_t *ctx );
 
@@ -383,7 +383,7 @@ uint8_t counter_read_mdr0 ( counter_t *ctx );
  * @param ctx          Click object.
  * @returns            Data from MDR1.
  * 
- * @description This function reads MDR1, using click object.
+ * @description This function reads MDR1, using Click object.
  */
 uint8_t counter_read_mdr1 ( counter_t *ctx );
 
@@ -393,7 +393,7 @@ uint8_t counter_read_mdr1 ( counter_t *ctx );
  * @param ctx          Click object.
  * @returns            OTR register data.
  * 
- * @description This function reads OTR, using click object.
+ * @description This function reads OTR, using Click object.
  */
 int32_t counter_read_otr ( counter_t *ctx );
 
@@ -403,7 +403,7 @@ int32_t counter_read_otr ( counter_t *ctx );
  * @param ctx          Click object.
  * @returns            CNTR register data.
  * 
- * @description This function reads CNTR, using click object.
+ * @description This function reads CNTR, using Click object.
  */
 int32_t counter_read_cntr ( counter_t *ctx );
 
@@ -413,7 +413,7 @@ int32_t counter_read_cntr ( counter_t *ctx );
  * @param ctx          Click object.
  * @returns            DTR register data.
  * 
- * @description This function reads DTR, using click object.
+ * @description This function reads DTR, using Click object.
  */
 int32_t counter_read_dtr ( counter_t *ctx );
 
@@ -438,7 +438,7 @@ int32_t counter_read_dtr ( counter_t *ctx );
  * B7 - Carry (CNTR overflow) latch
  * </pre>
  * 
- * @description This function reads STR, using click object.
+ * @description This function reads STR, using Click object.
  */
 uint8_t counter_read_str ( counter_t *ctx );
 
@@ -491,7 +491,7 @@ void counter_clear_cntr ( counter_t *ctx );
 void counter_clear_str ( counter_t *ctx );
 
 /**
- * @brief Initialisation of click board with default settings.
+ * @brief Initialisation of Click board with default settings.
  *
  * @param ctx          Click object.
  * 
@@ -509,18 +509,18 @@ void counter_clear_str ( counter_t *ctx );
  *      Flags disabled
  * </pre>
  * 
- * @description This function initialize of click board with default settings.
+ * @description This function initialize of Click board with default settings.
  */
 void counter_initialisation ( counter_t *ctx );
 
 /**
- * @brief Initialisation of click board with specific settings.
+ * @brief Initialisation of Click board with specific settings.
  *
  * @param ctx          Click object.
  * @param mdr0_set     Settings for mdr0.
  * @param mdr1_set     Settings for mdr1.
  * 
- * @description This function initialize of click board with specific settings.
+ * @description This function initialize of Click board with specific settings.
  */
 void counter_init_advanced ( counter_t *ctx, uint8_t mdr0_set, uint8_t mdr1_set );
 
@@ -577,6 +577,6 @@ uint8_t get_int_state ( counter_t *ctx );
 #endif  // _COUNTER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

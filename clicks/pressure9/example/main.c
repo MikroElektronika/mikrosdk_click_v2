@@ -4,12 +4,12 @@
  * 
  * # Description
  * The demo application displays the pressure and temperature 
- * measurement using Pressure 9 click.
+ * measurement using Pressure 9 Click.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization the driver, test comunication, and performs the click
+ * Initialization the driver, test comunication, and performs the Click
  * default configuration.
  *
  * ## Application Task

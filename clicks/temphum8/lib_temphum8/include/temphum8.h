@@ -179,7 +179,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void temphum8_cfg_setup ( temphum8_cfg_t *cfg );
@@ -190,7 +190,7 @@ void temphum8_cfg_setup ( temphum8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TEMPHUM8_RETVAL temphum8_init ( temphum8_t *ctx, temphum8_cfg_t *cfg );
 
@@ -199,7 +199,7 @@ TEMPHUM8_RETVAL temphum8_init ( temphum8_t *ctx, temphum8_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for TempHum8 click.
+ * @description This function executes default configuration for TempHum8 Click.
  *
  * @note Default configuration of the chip contains the settings :
  *    - Measurement resolution (Temp/Hum - 14bit/12bit)
@@ -279,6 +279,6 @@ float temphum8_get_humidity_data ( temphum8_t *ctx );
 #endif  // _TEMPHUM8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

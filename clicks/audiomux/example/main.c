@@ -3,14 +3,14 @@
  * \brief AudioMUX Click example
  * 
  * # Description
- * The following demo shows basic click functionality:
+ * The following demo shows basic Click functionality:
  * Initializes AudioMUX device to work with the desired configurations and
  * shows a message on uart when playing is started.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes click and logger.
+ * Initializes Click and logger.
  * 
  * ## Application Task  
  * Every 4 seconds shows a message on uart until 5 messages has been

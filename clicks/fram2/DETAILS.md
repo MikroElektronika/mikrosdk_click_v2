@@ -1,15 +1,15 @@
 
 
 ---
-# FRAM 2 click
+# FRAM 2 Click
 
-FRAM 2 click carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics comparable to much faster DRAM memory modules. It offers much faster alternative to common serial FLASH and EEPROM modules, which use the conventional technologies.
+FRAM 2 Click carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics comparable to much faster DRAM memory modules. It offers much faster alternative to common serial FLASH and EEPROM modules, which use the conventional technologies.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/fram2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fram-2-click)
+[Click Product page](https://www.mikroe.com/fram-2-click)
 
 ---
 
@@ -138,7 +138,7 @@ they are declared as global in main.c file.
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

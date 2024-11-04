@@ -1,14 +1,14 @@
 
 ---
-# 1-Wire I2C click
+# 1-Wire I2C Click
 
-> 1-Wire I2C click carries DS28E17 1-Wire-to-I2C master bridge from Analog Devices.
+> 1-Wire I2C Click carries DS28E17 1-Wire-to-I2C master bridge from Analog Devices.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/1wirei2c_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/1-wire-i2c-click)
+[Click Product page](https://www.mikroe.com/1-wire-i2c-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t c1wirei2c_read_data_stop ( c1wirei2c_t *ctx, uint8_t slave_addr, uint8_t *
 
 ## Example Description
 
-> This example demonstrates the use of 1-Wire I2C click board by reading the temperature measurement from connected Thermo 4 click board.
+> This example demonstrates the use of 1-Wire I2C Click board by reading the temperature measurement from connected Thermo 4 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -119,7 +119,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the temperature measurement from connected Thermo 4 click board and displays the results on the USB UART once per second.
+> Reads the temperature measurement from connected Thermo 4 Click board and displays the results on the USB UART once per second.
 
 ```c
 void application_task ( void )
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

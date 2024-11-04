@@ -3,7 +3,7 @@
  * @brief Humidity Click example
  *
  * # Description
- * This example demonstrates the use of Humidity click board.
+ * This example demonstrates the use of Humidity Click board.
  *
  * The demo application is composed of two sections :
  *

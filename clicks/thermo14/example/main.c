@@ -11,7 +11,7 @@
  * Initalizes I2C driver, sets up the device.
  * 
  * ## Application Task  
- * This example shows capabilities of Thermo 14 click by measuring
+ * This example shows capabilities of Thermo 14 Click by measuring
    temperature every 3 seconds and displaying temperature in degrres Celsius via USART terminal.
  * 
  * 

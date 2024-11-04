@@ -1,6 +1,6 @@
 
 ---
-# Proximity 21 click
+# Proximity 21 Click
 
 > Proximity 21 Click is a compact add-on board for high-precision proximity sensing and short-range distance measurements. This board features the VL53L4ED, a Time-of-Flight (ToF) proximity sensor from STMicroelectronics, known for its extended temperature capability and accuracy. This sensor provides a field of view (FoV) of 18°, measuring distances from 1mm up to 1300mm in standard conditions and up to 1150mm in extended temperature environments, with reliable performance even in ambient light conditions up to 5klx. The Click board™ features a unique Click Snap design, making the main IC area movable for versatile implementation.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/proximity21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-21-click)
+[Click Product page](https://www.mikroe.com/proximity-21-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t proximity21_clear_interrupt ( proximity21_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Proximity 21 click board by reading and displaying the target distance in millimeters on the USB UART.
+> This example demonstrates the use of Proximity 21 Click board by reading and displaying the target distance in millimeters on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

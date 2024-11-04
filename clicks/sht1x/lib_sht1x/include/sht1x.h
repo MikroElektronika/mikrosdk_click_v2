@@ -176,7 +176,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void sht1x_cfg_setup ( sht1x_cfg_t *cfg );
@@ -186,7 +186,7 @@ void sht1x_cfg_setup ( sht1x_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SHT1X_RETVAL sht1x_init ( sht1x_t *ctx, sht1x_cfg_t *cfg );
 
@@ -290,6 +290,6 @@ float sht1x_calc_humi ( sht1x_t *ctx, uint16_t h, uint16_t t );
 #endif  // _SHT1X_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -9,7 +9,7 @@
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Settings the click in the default configuration.
+ * Settings the Click in the default configuration.
  * 
  * ## Application Task  
  * Shows one byte, then scrolls the string and image, every 1 sec.

@@ -3,7 +3,7 @@
  * \brief Slider2 Click example
  * 
  * # Description
- * This click utilizes potentiometer with long travel distance of the wiper 
+ * This Click utilizes potentiometer with long travel distance of the wiper 
  * witch allows more accurate movements and combined with the high-quality 
  * manufacturing process it allows to dial-in the desired voltage with ease.
  * Its wiper terminal outputs voltage in the range from 0 to 4.096V. 

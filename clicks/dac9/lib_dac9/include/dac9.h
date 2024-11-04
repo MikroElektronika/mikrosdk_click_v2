@@ -245,7 +245,7 @@ typedef enum
 
 /**
  * @brief DAC 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #dac9_cfg_t object definition for detailed explanation.
@@ -257,7 +257,7 @@ void dac9_cfg_setup ( dac9_cfg_t *cfg );
 /**
  * @brief DAC 9 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #dac9_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -273,7 +273,7 @@ void dac9_drv_interface_selection ( dac9_cfg_t *cfg, dac9_drv_t drv_sel );
 /**
  * @brief DAC 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #dac9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

@@ -3,7 +3,7 @@
  * @brief Buzz2 Click example
  *
  * # Description
- * This example demonstrates the use of Buzz 2 click boards.
+ * This example demonstrates the use of Buzz 2 Click boards.
  *
  * The demo application is composed of two sections :
  *

@@ -11,7 +11,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  *
  * ## Application Task
  * This example first increases the backlight on the button and then decreases the intensity of backlight. When the button is pressed,

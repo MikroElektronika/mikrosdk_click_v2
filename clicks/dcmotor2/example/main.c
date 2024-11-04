@@ -4,14 +4,14 @@
  * 
  * # Description
  * This library contains API for the DC Motor 2 Click driver.
- * This example showcases how to initialize and use the DC Motor 2 click. The click contains a 
+ * This example showcases how to initialize and use the DC Motor 2 Click. The Click contains a 
  * Driver IC for DC motors which can spin the motor clockwise, counter-clockwise, break it and
  * completely stop the motor. The example needs a DC motor and a power supply in order to work.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This is an example that demonstrates the use of the DC Motor 2 Click board.

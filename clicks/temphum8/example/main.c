@@ -3,13 +3,13 @@
  * \brief TempHum8 Click example
  * 
  * # Description
- * This demo-app shows the temperature measurement procedure using Temp&Hum 8 click.
+ * This demo-app shows the temperature measurement procedure using Temp&Hum 8 Click.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects. 
- * Setting the click in the default configuration to start the measurement, 
+ * Setting the Click in the default configuration to start the measurement, 
  * and before that call function software_reset().
  * 
  * ## Application Task  

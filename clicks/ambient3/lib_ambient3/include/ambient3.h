@@ -300,7 +300,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ambient3_cfg_setup ( ambient3_cfg_t *cfg );
@@ -311,7 +311,7 @@ void ambient3_cfg_setup ( ambient3_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 AMBIENT3_RETVAL ambient3_init ( ambient3_t *ctx, ambient3_cfg_t *cfg );
 
@@ -320,7 +320,7 @@ AMBIENT3_RETVAL ambient3_init ( ambient3_t *ctx, ambient3_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  */
 void ambient3_default_cfg ( ambient3_t *ctx );
 
@@ -402,6 +402,6 @@ uint8_t ambient3_get_interrupt ( ambient3_t *ctx );
 #endif  // _AMBIENT3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

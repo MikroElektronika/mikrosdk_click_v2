@@ -357,7 +357,7 @@ typedef enum
 
 /**
  * @brief Brushless 10 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #brushless10_cfg_t object definition for detailed explanation.
@@ -369,7 +369,7 @@ void brushless10_cfg_setup ( brushless10_cfg_t *cfg );
 /**
  * @brief Brushless 10 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #brushless10_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -384,7 +384,7 @@ err_t brushless10_init ( brushless10_t *ctx, brushless10_cfg_t *cfg );
 /**
  * @brief Brushless 10 default configuration function.
  * @details This function executes a default configuration of Brushless 10
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #brushless10_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -542,7 +542,7 @@ err_t brushless10_dac_sw_reset ( brushless10_t *ctx );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note The channels 4-7 are disconnected by default on the click board. Refer to the click board schematic.
+ * @note The channels 4-7 are disconnected by default on the Click board. Refer to the Click board schematic.
  */
 err_t brushless10_dac_set_data ( brushless10_t *ctx, uint8_t channel, uint8_t data_in );
 
@@ -564,7 +564,7 @@ err_t brushless10_dac_set_data ( brushless10_t *ctx, uint8_t channel, uint8_t da
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note The channels 4-7 are disconnected by default on the click board. Refer to the click board schematic.
+ * @note The channels 4-7 are disconnected by default on the Click board. Refer to the Click board schematic.
  */
 err_t brushless10_dac_set_vout ( brushless10_t *ctx, uint8_t channel, uint16_t vout_mv );
 

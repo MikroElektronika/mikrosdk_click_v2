@@ -9,7 +9,7 @@
  * 
  * ## Application Init 
  * Configures the micro controller for communication
- * and initializes the click board. 
+ * and initializes the Click board. 
  * 
  * ## Application Task  
  * The proximity data is read from the sensor and it is printed

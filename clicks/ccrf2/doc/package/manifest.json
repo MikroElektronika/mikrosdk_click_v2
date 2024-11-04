@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "ccRF 2 click",
+    "display_name": "ccRF 2 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.ccrf2",
     "product_link": "https://www.mikroe.com/ccrf-2-click",
-    "short_description": "ccRF2 click carries CC1120, the fully integrated, high-performance single-chip radio transceiver with extremely low power consumption.",
+    "short_description": "ccRF2 Click carries CC1120, the fully integrated, high-performance single-chip radio transceiver with extremely low power consumption.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         1166
     ],
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.ccRf2",
     "subdir_name": "lib_ccrf2"
 }
+
 
 
 

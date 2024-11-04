@@ -3,13 +3,13 @@
  * @brief DAC 16 Click example
  *
  * # Description
- * This example demonstrates the use of DAC 16 click board by changing the voltage level
+ * This example demonstrates the use of DAC 16 Click board by changing the voltage level
  * on the OUT0 as well as the waveform signals from a function generator on the OUT1.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Changes the voltage level on the OUT0 as well as the waveform signals from a function

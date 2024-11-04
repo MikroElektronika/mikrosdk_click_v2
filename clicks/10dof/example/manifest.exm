@@ -1,8 +1,8 @@
 {
     "name": "10DOF Click",
-    "description": "10DOF click is a mikroBUS add-on board for enhancing hardware prototypes with 10DOF functionality (10 degrees of freedom).",
+    "description": "10DOF Click is a mikroBUS add-on board for enhancing hardware prototypes with 10DOF functionality (10 degrees of freedom).",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","BNO055"],
+    "hw" : ["Click","BNO055"],
     "category" : ["Motion"] 
 }

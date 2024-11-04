@@ -3,7 +3,7 @@
  * @brief VtoHz3 Click example
  *
  * # Description
- * This example demonstrates the use of the V to Hz 3 click board by calculating
+ * This example demonstrates the use of the V to Hz 3 Click board by calculating
  * the estimated output frequency from the input voltage.
  *
  * The demo application is composed of two sections :

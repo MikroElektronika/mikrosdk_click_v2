@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "BATT-MAN click",
+    "display_name": "BATT-MAN Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.battman",
     "product_link": "https://www.mikroe.com/batt-man-click",
-    "short_description": "BATT-MAN click is a very versatile battery operated power manager. When powered via mikroBUS™, it will charge the connected Li-Ion/Li-Po 3.7V battery, while providing the output voltage on all its outputs at the same time. The interesting feature of this device is that it can provide additional current to the connected load if the current provided from the mikroBUS™ socket is not enough.",
+    "short_description": "BATT-MAN Click is a very versatile battery operated power manager. When powered via mikroBUS™, it will charge the connected Li-Ion/Li-Po 3.7V battery, while providing the output voltage on all its outputs at the same time. The interesting feature of this device is that it can provide additional current to the connected load if the current provided from the mikroBUS™ socket is not enough.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2280
     ],
-    "version": "2.1.0.14",
+    "version": "2.1.0.15",
     "cmake": true,
     "alias": "Click.BattMan",
     "subdir_name": "lib_battman"
 }
+
 
 
 

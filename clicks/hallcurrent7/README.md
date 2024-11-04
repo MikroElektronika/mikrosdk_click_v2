@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Hall Current 7 click
+# Hall Current 7 Click
 
 > Hall Current 7 Click is a compact add-on board that provides economical and precise solutions for AC or DC current sensing. This board features the ACS770, a thermally enhanced, fully integrated, Hall effect-based high precision linear current sensor with 100µΩ current conductor from Allegro MicroSystems. Applied current flows directly into the integrated conductor generating a magnetic field, and an integrated low-hysteresis core concentrates the magnetic field sensed by the Hall element with a typical accuracy of ±1% and 120 kHz bandwidth.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/hall-current-7-click)
+[Click Product page](https://www.mikroe.com/hall-current-7-click)
 
 ---
 
@@ -65,7 +65,7 @@ int16_t hallcurrent7_avg_current ( hallcurrent7_t *ctx, uint16_t v_ref );
 
 ## Example Description
 
-> This example shows the capabilities of the Hall Current 7 click board.
+> This example shows the capabilities of the Hall Current 7 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,13 +3,13 @@
  * @brief ANNA-B412 Click Example.
  *
  * # Description
- * This example demonstrates the use of ANNA-B412 click board by processing
+ * This example demonstrates the use of ANNA-B412 Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and processes all incoming data and displays them on the USB UART.

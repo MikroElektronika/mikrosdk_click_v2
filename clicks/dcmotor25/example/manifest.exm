@@ -3,6 +3,6 @@
     "description": "DC Motor 25 Click is a compact add-on board with a brushed DC motor driver. This board features the A3908, a low-voltage bidirectional DC motor driver from Allegro Microsystems. The A3908 is rated for an operating voltage range compatible with mikroBUS™ power rails and output currents up to 500mA. The unique output full-bridge incorporates source-side linear operation to allow a constant voltage across the motor coil. Logic input pins are provided to control the motor direction of rotation, brake, and standby modes. It also has complete protection capabilities supporting robust and reliable operation.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","A3908"],
+    "hw" : ["Click","A3908"],
     "category" : ["Click Boards > Motor control > Brushed"]
 }

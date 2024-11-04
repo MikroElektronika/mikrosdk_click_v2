@@ -3,16 +3,16 @@
  
 
 ---
-# 7seg click
+# 7seg Click
 
-7seg click is an accessory board in mikroBUS form factor. 
+7seg Click is an accessory board in mikroBUS form factor. 
 It’s a compact and easy solution for adding 2-digit seven-segment display to your device.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/7seg_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/7seg-click)
+[Click Product page](https://www.mikroe.com/7seg-click)
 
 ---
 
@@ -50,7 +50,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function sets display state for 7seg click.
+- This function sets display state for 7seg Click.
 > void c7seg_display_mode ( c7seg_t *ctx, uint8_t display_mode );
  
 - This function writes left and right number on 7seg display.
@@ -110,7 +110,7 @@ void application_init ( void )
 ### Application Task
 
 >
-> Application Task shows functionality of the 7seg click,
+> Application Task shows functionality of the 7seg Click,
 > shows number or character on left and right display.
 > 
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

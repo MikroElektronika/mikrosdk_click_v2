@@ -150,7 +150,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void leddriver5_cfg_setup ( leddriver5_cfg_t *cfg );
@@ -160,7 +160,7 @@ void leddriver5_cfg_setup ( leddriver5_cfg_t *cfg );
  * @param leddriver5 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LEDDRIVER5_RETVAL leddriver5_init ( leddriver5_t *ctx, leddriver5_cfg_t *cfg );
 
@@ -169,7 +169,7 @@ LEDDRIVER5_RETVAL leddriver5_init ( leddriver5_t *ctx, leddriver5_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for LedDriver5 click.
+ * @description This function executes default configuration for LedDriver5 Click.
  */
 void leddriver5_default_cfg ( leddriver5_t *ctx );
 
@@ -208,6 +208,6 @@ void leddriver5_pwm_start ( leddriver5_t *ctx );
 #endif  // _LEDDRIVER5_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

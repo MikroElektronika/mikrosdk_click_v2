@@ -1,6 +1,6 @@
 
 ---
-# RTC 20 click
+# RTC 20 Click
 
 > RTC 20 Click is a compact add-on board that measures the passage of real-time. 
 > This board features the AB0805, an I2C-configurable real-time clock 
@@ -15,7 +15,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtc20_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-20-click)
+[Click Product page](https://www.mikroe.com/rtc-20-click)
 
 ---
 
@@ -71,7 +71,7 @@ err_t rtc20_get_time ( rtc20_t *ctx, rtc20_time_t *rtc_time );
 
 ## Example Description
 
-> This example demonstrates the use of the RTC 20 click board™
+> This example demonstrates the use of the RTC 20 Click board™
 > by reading and displaying the RTC time and date values.
 
 **The demo application is composed of two sections :**
@@ -176,7 +176,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -305,7 +305,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void loadcell2_cfg_setup ( loadcell2_cfg_t *cfg );
@@ -316,7 +316,7 @@ void loadcell2_cfg_setup ( loadcell2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 LOADCELL2_RETVAL loadcell2_init ( loadcell2_t *ctx, loadcell2_cfg_t *cfg );
 
@@ -325,7 +325,7 @@ LOADCELL2_RETVAL loadcell2_init ( loadcell2_t *ctx, loadcell2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for LoadCell2 click.
+ * @description This function executes default configuration for LoadCell2 Click.
  * 
  * @note
  * - set LDO Voltage of 3.3V and internal LDO
@@ -536,6 +536,6 @@ uint8_t loadcell2_check_drdy ( loadcell2_t *ctx );
 #endif  // _LOADCELL2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

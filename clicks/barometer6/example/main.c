@@ -11,7 +11,7 @@
  * Initalizes SPI or I2C driver, applies default settings and reads Chip ID.
  *
  * ## Application Task
- * Demonstrates use of Barometer 6 click board by reading pressure and temperature data seconds 
+ * Demonstrates use of Barometer 6 Click board by reading pressure and temperature data seconds 
  * and logging it on the UART terminal.
  *
  * @author Stefan Ilic

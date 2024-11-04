@@ -163,7 +163,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void spectral3_cfg_setup ( spectral3_cfg_t *cfg );
@@ -174,7 +174,7 @@ void spectral3_cfg_setup ( spectral3_cfg_t *cfg );
  * @param spectral3 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SPECTRAL3_RETVAL spectral3_init ( spectral3_t *ctx, spectral3_cfg_t *cfg );
 
@@ -235,6 +235,6 @@ void spectral3_get_data ( char *rsp, uint16_t *c_data );
 #endif  // _SPECTRAL3_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

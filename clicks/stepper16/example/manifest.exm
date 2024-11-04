@@ -3,6 +3,6 @@
     "description": "Stepper 16 Click is a compact add-on board that contains a micro-stepping stepper motor driver. This board features the NCV70517, an SPI and I/O configurable motor driver for bipolar stepper motors from ON Semiconductor.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","NCV70517"],
+    "hw" : ["Click","NCV70517"],
     "category" : ["Stepper"]
 }

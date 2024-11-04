@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Index Counter click
+# Index Counter Click
 
 Index Counter Click is a simple prototyping high precision Hall-Effect switch solution with direction detection.
 
@@ -10,7 +10,7 @@ Index Counter Click is a simple prototyping high precision Hall-Effect switch so
 </p>
 
 
-[click Product page](https://www.mikroe.com/index-counter-click)
+[Click Product page](https://www.mikroe.com/index-counter-click)
 
 ---
 
@@ -57,7 +57,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This application enables usage of Index counter click board which can be used to measure rotational speed.
+> This application enables usage of Index counter Click board which can be used to measure rotational speed.
 
 **The demo application is composed of two sections :**
 
@@ -96,7 +96,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example which demonstrates the use of the Index Counter click board.
+> This is an example which demonstrates the use of the Index Counter Click board.
 > This example shows the direction of movement, Rotations Per Minute ( RPM or speed )
 > of the three pairs of rotating poles positioned in the sensor operating range.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -149,7 +149,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

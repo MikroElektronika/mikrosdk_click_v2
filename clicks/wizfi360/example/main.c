@@ -3,7 +3,7 @@
  * @brief WIZFI360 Click Example.
  *
  * # Description
- * This example demonstrates the use of the WIZFI360 click board 
+ * This example demonstrates the use of the WIZFI360 Click board 
  * by processing the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :

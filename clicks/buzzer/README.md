@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Buzzer click
+# Buzzer Click
 
 > Buzzer Click is a compact add-on board for generating sound signals in various electronic applications. This board features the CPT-7502-65-SMT-TR, a piezoelectric buzzer transducer from CUI Devices, known for its efficient sound output and compact surface-mount design. The buzzer offers a sound pressure level of 65dB and consumes only 1mA of current, making it ideal for battery-powered devices. The board also features the MIKROE 'Click Snap' function, allowing for flexible installation and autonomous operation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/buzzer_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buzzer-click)
+[Click Product page](https://www.mikroe.com/buzzer-click)
 
 ---
 
@@ -55,7 +55,7 @@ err_t buzzer_play_sound ( buzzer_t *ctx, uint16_t freq, uint8_t level, uint16_t 
 
 ## Example Description
 
-> This example demonstrates the use of Buzzer click board by playing the Imperial March melody on the buzzer.
+> This example demonstrates the use of Buzzer Click board by playing the Imperial March melody on the buzzer.
 
 **The demo application is composed of two sections :**
 
@@ -129,7 +129,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

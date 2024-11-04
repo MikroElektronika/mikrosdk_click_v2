@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs click default configuration.
+ * Initializes the driver and performs Click default configuration.
  *
  * ## Application Task
  * Changes the output channels voltage level starting from full scale ( REF voltage ),  

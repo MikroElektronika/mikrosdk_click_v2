@@ -3,7 +3,7 @@
  * @brief LightHz Click Example.
  *
  * # Description
- * This example demonstrates the use of LightHz click board by measuring and displaying
+ * This example demonstrates the use of LightHz Click board by measuring and displaying
  * the frequency of clock output signal. The higher the light intensity the higher the frequency.
  *
  * The demo application is composed of two sections :

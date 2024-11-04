@@ -122,7 +122,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void tamper_cfg_setup ( tamper_cfg_t *cfg );
@@ -132,7 +132,7 @@ void tamper_cfg_setup ( tamper_cfg_t *cfg );
  * @param tamper Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TAMPER_RETVAL tamper_init ( tamper_t *ctx, tamper_cfg_t *cfg );
 
@@ -157,6 +157,6 @@ uint8_t tamper_state ( tamper_t *ctx );
 #endif  // _TAMPER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configures the click board in Audio-to-Vibe mode.
+ * Configures the Click board in Audio-to-Vibe mode.
  * 
  * ## Application Task  
  * An infinite loop.
@@ -51,7 +51,7 @@ void application_init ( void )
     HAPTIC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     haptic_init( &haptic, &cfg );
 
-    log_printf( &logger, " Configuring the click board...\r\n" );
+    log_printf( &logger, " Configuring the Click board...\r\n" );
     log_printf( &logger, "----------------------- \r\n" );
     
     haptic_enable( &haptic );
@@ -63,7 +63,7 @@ void application_init ( void )
     haptic_enable_ac_coulping( &haptic );
     haptic_set_input_to_analog( &haptic );
     
-    log_printf( &logger, " The click board is configured in Audio-to-Vibe mode...\r\n" );
+    log_printf( &logger, " The Click board is configured in Audio-to-Vibe mode...\r\n" );
 }
 
 void application_task ( void )

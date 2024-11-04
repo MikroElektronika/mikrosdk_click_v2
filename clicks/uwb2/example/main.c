@@ -3,13 +3,13 @@
  * @brief UWB 2 Click example
  *
  * # Description
- * This example demonstrates the use of an UWB 2 click board by showing
- * the communication between the two click boards.
+ * This example demonstrates the use of an UWB 2 Click board by showing
+ * the communication between the two Click boards.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration, then reads
+ * Initializes the driver, performs the Click default configuration, then reads
  * and displays the device ID number.
  *
  * ## Application Task
@@ -28,7 +28,7 @@
 #define DEMO_APP_TRANSMITTER
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MIKROE - UWB 2 click board\0"
+#define DEMO_TEXT_MESSAGE           "MIKROE - UWB 2 Click board\0"
 
 static uwb2_t uwb2;
 static log_t logger;

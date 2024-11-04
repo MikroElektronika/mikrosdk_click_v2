@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Boost-INV 3 click
+# Boost-INV 3 Click
 
 > Boost-INV 3 Click is a compact add-on board designed to supply positive/negative-driven applications. This board features the TPS65132, a dual-output power supply from Texas Instruments. The TPS65132 uses a single inductor scheme for both outputs to provide the user with the smallest solution size and high efficiency. 
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/boostinv3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/boost-inv-3-click)
+[Click Product page](https://www.mikroe.com/boost-inv-3-click)
 
 ---
 
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

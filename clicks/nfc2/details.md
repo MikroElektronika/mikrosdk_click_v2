@@ -1,6 +1,6 @@
 
 ---
-# NFC 2 click
+# NFC 2 Click
 
 > NFC 2 Click is a compact add-on board that contains a highly integrated NFC transceiver for contactless communication. This board features the PN7150, the best plug&play high-performance full NFC solution with integrated firmware and NCI interface designed for contactless communication at 13.56 MHz from NXP USA Inc.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nfc2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nfc-2-click)
+[Click Product page](https://www.mikroe.com/nfc-2-click)
 
 ---
 
@@ -205,7 +205,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

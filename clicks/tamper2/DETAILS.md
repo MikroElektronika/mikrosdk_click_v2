@@ -1,15 +1,15 @@
 
 ---
-# Tamper 2 click
+# Tamper 2 Click
 
-Tamper 2 click contains a levered D2HW-A221D switch by Omron, which outputs signal in both positions - pressed and released.
+Tamper 2 Click contains a levered D2HW-A221D switch by Omron, which outputs signal in both positions - pressed and released.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/tamper2_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/tamper-2-click)
+[Click Product page](https://www.mikroe.com/tamper-2-click)
 
 ---
 
@@ -90,7 +90,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Detects whether the state of switch on Tamper 2 click is ON or OFF.
+> Detects whether the state of switch on Tamper 2 Click is ON or OFF.
 
 ```c
 void application_task ( )
@@ -103,13 +103,13 @@ void application_task ( )
 
     if ( on_state == 1 )
     {
-        log_printf( &logger, "Tamper 2 click is in ON state.\r\n" );
+        log_printf( &logger, "Tamper 2 Click is in ON state.\r\n" );
 		
     }
 
     if ( off_state == 1 )
     {
-       log_printf( &logger, "Tamper 2 click is in OFF state.\r\n" );
+       log_printf( &logger, "Tamper 2 Click is in OFF state.\r\n" );
 		
     }
 
@@ -128,7 +128,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Brushless 3 click
+# Brushless 3 Click
 
-Brushless 3 click carries the DRV10983, a three-phase sensorless motor driver with integrated power MOSFETs. When an external power supply is applied, you can drive a brushless DC motor through the PWM pin, AN pin or I2C interface.
+Brushless 3 Click carries the DRV10983, a three-phase sensorless motor driver with integrated power MOSFETs. When an external power supply is applied, you can drive a brushless DC motor through the PWM pin, AN pin or I2C interface.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/brushless3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/brushless-3-click)
+[Click Product page](https://www.mikroe.com/brushless-3-click)
 
 ---
 
@@ -70,7 +70,7 @@ void brushless3_forward_direction ( brushless3_t *ctx );
 
 ## Examples Description
 
-> This click has three-phase sensorless motor driver and with an external power supply it drives a brushless DC motor. 
+> This Click has three-phase sensorless motor driver and with an external power supply it drives a brushless DC motor. 
 
 **The demo application is composed of two sections :**
 
@@ -116,7 +116,7 @@ void application_init ( void )
 
 > This is an example which demonstrates the use of Brushless 3 Click board.
 > Read and display float motor frequency value from the DRV10983 sensorless 
-> BLDC motor driver on Brushless 3 click board. Results are being sent to 
+> BLDC motor driver on Brushless 3 Click board. Results are being sent to 
 > the Usart Terminal where you can track their changes. 
 
 ```c
@@ -161,7 +161,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

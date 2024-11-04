@@ -229,7 +229,7 @@ typedef enum
 
 /**
  * @brief DC Motor 13 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #dcmotor13_cfg_t object definition for detailed explanation.
@@ -241,7 +241,7 @@ void dcmotor13_cfg_setup ( dcmotor13_cfg_t *cfg );
 /**
  * @brief DC Motor 13 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #dcmotor13_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -256,7 +256,7 @@ err_t dcmotor13_init ( dcmotor13_t *ctx, dcmotor13_cfg_t *cfg );
 /**
  * @brief DC Motor 13 default configuration function.
  * @details This function executes a default configuration of DC Motor 13
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #dcmotor13_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

@@ -1,16 +1,16 @@
 \mainpage Main Page
   
 ---
-# Buck 8 click
+# Buck 8 Click
 
-Buck 8 click is a high efficiency, wide voltage range, and high current synchronous step down (buck) DC-DC converter, featuring two enhanced modes that can be used to drive lighter loads with increased efficiency. 
+Buck 8 Click is a high efficiency, wide voltage range, and high current synchronous step down (buck) DC-DC converter, featuring two enhanced modes that can be used to drive lighter loads with increased efficiency. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/buck8_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/buck-8-click)
+[Click Product page](https://www.mikroe.com/buck-8-click)
 
 ---
 
@@ -63,7 +63,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Configures the driver and enables the click board.
+> Configures the driver and enables the Click board.
 
 ```c
 void application_init ( void )
@@ -129,7 +129,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

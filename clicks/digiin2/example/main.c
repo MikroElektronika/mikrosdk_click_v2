@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration.
+ * Initializes the driver, performs the Click default configuration.
  *
  * ## Application Task
  * Reads and displays on the USB UART the channel state every second.

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# XBEE 3 click
+# XBEE 3 Click
 
 > Xbee 3 Click is a compact add-on board suitable for mission-critical wireless applications. This board features the XB8X-DMUS-001, a low-power CE/RED certified Digi Xbee® RF module delivering superior performance and interference immunity from Digi International. The module can run either a proprietary DigiMesh® or point-to-multipoint networking protocol utilizing a low-power Silicon Labs MCU and an ADF7023 transceiver, along with an integrated SAW filter that offers industry-leading interference blocking. Operating between 863MHz and 870MHz (868MHz), it allows use in several regions, including approved European countries.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/xbee3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/xbee-3-click)
+[Click Product page](https://www.mikroe.com/xbee-3-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t xbee3_set_destination_address ( xbee3_t *ctx, char *dest_addr_high, char *
 
 ## Example Description
 
-> This example demonstrates the use of an XBEE 3 click board by showing the communication between the two click boards configured in transparent mode.
+> This example demonstrates the use of an XBEE 3 Click board by showing the communication between the two Click boards configured in transparent mode.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board by performing a factory reset, and setting the device name, destination address, and api mode to transparent.
+> Initializes the driver and configures the Click board by performing a factory reset, and setting the device name, destination address, and api mode to transparent.
 
 ```c
 
@@ -200,7 +200,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

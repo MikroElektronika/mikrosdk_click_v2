@@ -180,7 +180,7 @@ typedef enum
 
 /**
  * @brief Bluetooth2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #bluetooth2_cfg_t object definition for detailed explanation.
@@ -192,7 +192,7 @@ void bluetooth2_cfg_setup ( bluetooth2_cfg_t *cfg );
 /**
  * @brief Bluetooth2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -208,7 +208,7 @@ err_t bluetooth2_init ( bluetooth2_t *ctx, bluetooth2_cfg_t *cfg );
 /**
  * @brief Bluetooth2 default configuration function.
  * @details This function executes a default configuration of Bluetooth2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #bluetooth2_t object definition for detailed explanation.
  * @return None.

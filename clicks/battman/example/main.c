@@ -3,14 +3,14 @@
  * \brief BATT-MAN Click example
  * 
  * # Description
- * BATT-MAN click is a very versatile battery operated power manager. When powered via mikroBUS,
+ * BATT-MAN Click is a very versatile battery operated power manager. When powered via mikroBUS,
  * it will charge the connected Li-Ion/Li-Po 3.7V battery, while providing the output voltage 
  * on all its outputs at the same time.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the click driver and logger utility and enables the click board.
+ * Initializes the Click driver and logger utility and enables the Click board.
  * 
  * ## Application Task  
  * Checks the charging indicator status, and in relation to its state 
@@ -58,7 +58,7 @@ void application_init ( void )
     battman_init( &battman, &cfg );
     
     battman_set_enable( &battman, 1 );
-    log_printf( &logger, "BATT-MAN click enabled.\r\n" );
+    log_printf( &logger, "BATT-MAN Click enabled.\r\n" );
     chg_flag = 0;
 }
 

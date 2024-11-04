@@ -352,7 +352,7 @@ typedef enum
 
 /**
  * @brief NTAG 5 Link configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ntag5link_cfg_t object definition for detailed explanation.
@@ -364,7 +364,7 @@ void ntag5link_cfg_setup ( ntag5link_cfg_t *cfg );
 /**
  * @brief NTAG 5 Link initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ntag5link_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -380,7 +380,7 @@ err_t ntag5link_init ( ntag5link_t *ctx, ntag5link_cfg_t *cfg );
 /**
  * @brief NTAG 5 Link default configuration function.
  * @details This function executes a default configuration of NTAG 5 Link
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #ntag5link_t object definition for detailed explanation.
  * @return @li @c  0 - Success,

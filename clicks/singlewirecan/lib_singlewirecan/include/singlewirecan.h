@@ -180,7 +180,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  *
  * @note All used pins will be set to unconnected state.
  */
@@ -192,7 +192,7 @@ void singlewirecan_cfg_setup ( singlewirecan_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SINGLEWIRECAN_RETVAL singlewirecan_init ( singlewirecan_t *ctx, singlewirecan_cfg_t *cfg );
 
@@ -263,6 +263,6 @@ void singlewirecan_set_operating_mode ( singlewirecan_t *ctx, uint8_t op_mode );
 #endif  // _SINGLEWIRECAN_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

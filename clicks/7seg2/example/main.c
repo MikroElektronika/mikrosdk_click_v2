@@ -3,7 +3,7 @@
  * @brief 7-SEG 2 Click example
  *
  * # Description
- * The example demonstrates the use of the 7-SEG 2 click board by displaying
+ * The example demonstrates the use of the 7-SEG 2 Click board by displaying
  * a counter number [0.00-9.99] which is incremented by 0.01 at a desired rate.
  *
  * The demo application is composed of two sections :

@@ -1,6 +1,6 @@
 
 ---
-# FRAM 5 click
+# FRAM 5 Click
 
 > FRAM 5 Click is a compact add-on board representing a highly reliable ferroelectric random access memory solution. This board features the FM24V10, a 1Mbit nonvolatile memory employing an advanced ferroelectric process organized as 128K words of 8 bits each from Infineon. This I2C configurable FRAM performs read and write operations similar to a RAM providing reliable data retention for 151 years while eliminating the complexities, overhead, and system-level reliability problems caused by EEPROM and other nonvolatile memories.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/fram5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/fram-5-click)
+[Click Product page](https://www.mikroe.com/fram-5-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t fram5_memory_read ( fram5_t *ctx, uint32_t address, uint8_t *data_out, uin
 
 ## Example Description
 
-> This example demonstrates the use of FRAM 5 click board by writing specified data to the memory and reading it back.
+> This example demonstrates the use of FRAM 5 Click board by writing specified data to the memory and reading it back.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and checks the communication with the click board.
+> Initializes the driver and checks the communication with the Click board.
 
 ```c
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

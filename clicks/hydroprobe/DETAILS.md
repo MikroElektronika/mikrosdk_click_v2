@@ -1,6 +1,6 @@
 
 ---
-# Hydro Probe click
+# Hydro Probe Click
 
 Hydro Probe Click is a capacitive soil moisture sensor based on capacitive changes that are used to detect the volumetric water content in the soil. Water detection is achieved by using function oscillator MIC1557 and ADC converter MCP3221 from Microchip, which allow you to convert moisture presents to the digital value. Compared to resistant soil moisture sensors, its capacitive style reduces electrode erosion making it corrosion resistant and a better choice for applications such as soil moisture detection and automatic plant watering.
 
@@ -9,7 +9,7 @@ Hydro Probe Click is a capacitive soil moisture sensor based on capacitive chang
 </p>
 
 
-[click Product page](https://www.mikroe.com/hydro-probe-click)
+[Click Product page](https://www.mikroe.com/hydro-probe-click)
 
 ---
 
@@ -92,7 +92,7 @@ void application_init ( void )
     Delay_ms ( 100 );
 
     log_printf( &logger, "---------------------\r\n" );
-    log_printf( &logger, "  Hydro Probe click  \r\n" );
+    log_printf( &logger, "  Hydro Probe Click  \r\n" );
     log_printf( &logger, "---------------------\r\n" );
     hydroprobe_calib( );
     log_printf( &logger, "     Calibrated      \r\n" );
@@ -106,7 +106,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example shows the capabilities of the Hydro Probe click by measuring 
+> This example shows the capabilities of the Hydro Probe Click by measuring 
 > environment moisture content and displaying it in percent via USB UART.
 
 ```c
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

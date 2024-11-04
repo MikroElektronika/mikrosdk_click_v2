@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# RTC 12 click
+# RTC 12 Click
 
 RTC 12 Click is a compact add-on board that measures the passage of time. This board features the DS1343, a low-current SPI-configurable real-time clock (RTC) from Maxim Integrated. This timekeeping device provides an extremely low standby current permitting longer life from a backup supply source. Its clock/calendar feature provides seconds, minutes, hours, day, date, month, and year information.
 
@@ -9,7 +9,7 @@ RTC 12 Click is a compact add-on board that measures the passage of time. This b
   <img src="https://download.mikroe.com/images/click_for_ide/rtc_12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-12-click)
+[Click Product page](https://www.mikroe.com/rtc-12-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t rtc12_get_date ( rtc12_t *ctx, rtc12_date_t *rtc_date );
 
 ## Example Description
 
-> This is an example that demonstrates the use of the RTC 12 click board™.
+> This is an example that demonstrates the use of the RTC 12 Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -133,7 +133,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> This is an example that shows the use of a RTC 12 click board™.
+> This is an example that shows the use of a RTC 12 Click board™.
 > In this example, we read and display the current time and date, 
 > which we also previously set.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -169,7 +169,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

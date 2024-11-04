@@ -222,7 +222,7 @@ typedef enum
 
 /**
  * @brief Expand 17 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #expand17_cfg_t object definition for detailed explanation.
@@ -234,7 +234,7 @@ void expand17_cfg_setup ( expand17_cfg_t *cfg );
 /**
  * @brief Expand 17 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #expand17_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -249,7 +249,7 @@ err_t expand17_init ( expand17_t *ctx, expand17_cfg_t *cfg );
 /**
  * @brief Expand 17 default configuration function.
  * @details This function executes a default configuration of Expand 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #expand17_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -295,7 +295,7 @@ err_t expand17_generic_read ( expand17_t *ctx, uint8_t reg, uint8_t *data_out, u
 /**
  * @brief Expand 17 set reset pin state function.
  * @details This function is used to set state of the reset pin of Expand 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #expand17_t object definition for detailed explanation.
  * @param[in] pin_state : State of the reset pin.
@@ -307,7 +307,7 @@ void expand17_set_rst_pin ( expand17_t *ctx, uint8_t pin_state );
 /**
  * @brief Expand 17 get interrupt pin state function.
  * @details This function is used to get state of the interrupt pin of Expand 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #expand17_t object definition for detailed explanation.
  * @return State of the INT pin.
@@ -318,7 +318,7 @@ uint8_t expand17_get_int_pin ( expand17_t *ctx );
 /**
  * @brief Expand 17 hardware reset function.
  * @details This function is used to perform the hardware reset of Expand 17
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #expand17_t object definition for detailed explanation.
  * @return Nothing.

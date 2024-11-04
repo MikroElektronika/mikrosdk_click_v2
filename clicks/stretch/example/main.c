@@ -59,7 +59,7 @@ void application_init ( void )
     Delay_100ms();
 
     log_printf( &logger, "------------------- \r\n" );
-    log_printf( &logger, "  Stretch  click  "  );
+    log_printf( &logger, "  Stretch  Click  "  );
     log_printf( &logger, "-------------------\r\n" );
 
     stretch_turn_off_led( &stretch );

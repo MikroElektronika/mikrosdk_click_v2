@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LightRanger 8 click
+# LightRanger 8 Click
 
 > LightRanger 8 Click is a compact add-on board that contains a ranging sensor with multi-target detection. This board features the VL53L3CX, the latest Time-of-Flight (ToF) product that embeds third-generation FlightSense patented technology from STMicroelectronics.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lightranger8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lightranger-8-click)
+[Click Product page](https://www.mikroe.com/lightranger-8-click)
 
 ---
 
@@ -190,7 +190,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

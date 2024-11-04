@@ -166,7 +166,7 @@ typedef enum
 
 /**
  * @brief Ambient 10 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #ambient10_cfg_t object definition for detailed explanation.
@@ -178,7 +178,7 @@ void ambient10_cfg_setup ( ambient10_cfg_t *cfg );
 /**
  * @brief Ambient 10 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #ambient10_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -252,7 +252,7 @@ err_t ambient10_read_adc_voltage ( ambient10_t *ctx, float *voltage );
 
 /**
  * @brief Ambient 10 set vref function.
- * @details This function sets the voltage reference for Ambient 10 click driver.
+ * @details This function sets the voltage reference for Ambient 10 Click driver.
  * @param[in] vref : Reference voltage (volts).
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.

@@ -10,7 +10,7 @@
     ],
     "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Inclinometer 3 click",
+    "display_name": "Inclinometer 3 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -28,10 +28,11 @@
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
+    "version": "2.1.0.3",
     "cmake": true,
     "alias": "Click.Inclinometer3",
     "subdir_name": "lib_inclinometer3"
 }
+
 
 

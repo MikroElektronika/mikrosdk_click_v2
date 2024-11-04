@@ -3,7 +3,7 @@
  * @brief SRAM3 Click example
  *
  * # Description
- * This is an example that shows the use of SRAM memory, using SRAM 3 click. SRAM 3 click is based on ANV32AA1W, 
+ * This is an example that shows the use of SRAM memory, using SRAM 3 Click. SRAM 3 Click is based on ANV32AA1W, 
  * and ANV32AA1W is a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell, 
  * organized as 128k words of 8 bits each. The devices are accessed by a high speed SPI-compatible bus. 
  * Specifically in this example, we used the high-speed SPI communication characteristics to write data to a specific 
@@ -12,7 +12,7 @@
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization SPI module, logger initalization and click initialization.
+ * Initialization SPI module, logger initalization and Click initialization.
  *
  * ## Application Task
  * First, we write the data to the registry address 0x00, and then we read the data from 0x00 address.

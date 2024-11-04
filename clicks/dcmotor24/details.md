@@ -1,6 +1,6 @@
 
 ---
-# DC Motor 24 click
+# DC Motor 24 Click
 
 > DC Motor 24 Click is a compact add-on board with a brushed DC motor driver. This board features the L9958, an SPI-controlled H-bridge from STMicroelectronics. The L9958 is rated for an operating voltage range from 4V to 28V, with direct PWM motor control and current regulation threshold set by the SPI interface from 2.5A to 8.6A. It also has complete diagnostic and protection capabilities supporting the robust and reliable operation.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor24_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-24-click)
+[Click Product page](https://www.mikroe.com/dc-motor-24-click)
 
 ---
 
@@ -75,7 +75,7 @@ err_t dcmotor24_set_duty_cycle ( dcmotor24_t *ctx, float duty_cycle );
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -164,7 +164,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,6 +1,6 @@
 
 ---
-# Ai-WB2-12F click
+# Ai-WB2-12F Click
 
 > Ai-WB2-12F Click is a compact add-on board for easy integration into the Internet of Things (IoT) and smart home applications. This board features the Ai-WB2-12F, a WiFi and BLE module from Ai-Thinker Technology, powered by the BL602 chip supporting WiFi 802.11b/g/n and BLE 5.0 protocols.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/aiwb212f_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ai-wb2-12f-click)
+[Click Product page](https://www.mikroe.com/ai-wb2-12f-click)
 
 ---
 
@@ -64,7 +64,7 @@ void aiwb212f_send_cmd_check ( aiwb212f_t *ctx, uint8_t *at_cmd_buf );
 
 ## Example Description
 
-> This example demonstrates the use of Ai-WB2-12F click board by processing
+> This example demonstrates the use of Ai-WB2-12F Click board by processing
   the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

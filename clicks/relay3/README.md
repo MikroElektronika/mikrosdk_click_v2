@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Relay 3 click
+# Relay 3 Click
 
-Relay click 3 is a dual relay Click board, featuring two single-pole double-throw relays which can be operated by output pins of the host microcontroller (MCU). It offers an elegant and easy solution for controlling a wide range of power applications. 
+Relay Click 3 is a dual relay Click board, featuring two single-pole double-throw relays which can be operated by output pins of the host microcontroller (MCU). It offers an elegant and easy solution for controlling a wide range of power applications. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/relay3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/relay-3-click)
+[Click Product page](https://www.mikroe.com/relay-3-click)
 
 ---
 
@@ -43,22 +43,22 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 #### Example key functions :
 
-- This function turns on either the 1st or the 2nd relay on the click.
+- This function turns on either the 1st or the 2nd relay on the Click.
 > void relay3_relay_on ( uint8_t relay );
  
-- This function turns off either the 1st or the 2nd relay on the click.
+- This function turns off either the 1st or the 2nd relay on the Click.
 > relay3_relay_off ( uint8_t relay );
 
 ## Examples Description
 
-> This example starts off with the initialization and configuration of the click and logger
+> This example starts off with the initialization and configuration of the Click and logger
   modules and later on showcases how to turn specified relays ON/OFF using the output pins.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> This function initialises and configures the logger and click modules.
+> This function initialises and configures the logger and Click modules.
 
 ```c
 
@@ -120,7 +120,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

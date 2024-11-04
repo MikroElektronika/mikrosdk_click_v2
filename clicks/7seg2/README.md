@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# 7-SEG 2 click
+# 7-SEG 2 Click
 
 > 7-SEG 2 Click is a compact add-on board that represents an easy solution for adding a numeric or hexadecimal display to your application. This board features the LDT-M2804RI, a three-digit seven-segment display from Lumex. The display has a 0.28” height, red LED segments, gray faces, and white diffused segments. All three digits come with a following dot point that can be used as a decimal point in displaying the number values.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/7seg2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/7-seg-2-click)
+[Click Product page](https://www.mikroe.com/7-seg-2-click)
 
 ---
 
@@ -70,7 +70,7 @@ err_t c7seg2_write_number ( c7seg2_t *ctx, uint16_t number, uint8_t dpt );
 
 ## Example Description
 
-> The example demonstrates the use of the 7-SEG 2 click board by displaying a counter number [0.00-9.99] which is incremented by 0.01 at a desired rate.
+> The example demonstrates the use of the 7-SEG 2 Click board by displaying a counter number [0.00-9.99] which is incremented by 0.01 at a desired rate.
 
 **The demo application is composed of two sections :**
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

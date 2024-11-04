@@ -247,7 +247,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void eink213inch_cfg_setup ( eink213inch_cfg_t *cfg );
@@ -258,7 +258,7 @@ void eink213inch_cfg_setup ( eink213inch_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t eink213inch_init ( eink213inch_t *ctx, eink213inch_cfg_t *cfg );
 
@@ -383,6 +383,6 @@ void eink213inch_set_font ( eink213inch_t *ctx, eink213inch_font_t *cfg_font );
 #endif  // _EINK213INCH_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

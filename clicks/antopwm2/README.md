@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# AN to PWM 2 click
+# AN to PWM 2 Click
 
 > AN to PWM 2 Click is a compact add-on board that contains an easy-to-use component that converts the value of the input analog signal to a fixed frequency PWM voltage output, with a duty cycle proportional to the input voltage. This board features the LTC6992CS6, a silicon oscillator with an easy-to-use analog voltage-controlled pulse width modulation (PWM) capability from Analog Devices. It features the PWM signal controlled by analog input in range of -2.5V to 2.5V, frequency range up to 1 MHz, frequency error less than 1.7%, and it has good temperature stability. It has many features that make it well suited for heater control, PWM servo loops, LED dimming, signal isolation, and other duty cycle control applications.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/antopwm2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/an-to-pwm-2-click)
+[Click Product page](https://www.mikroe.com/an-to-pwm-2-click)
 
 ---
 
@@ -60,7 +60,7 @@ err_t antopwm2_set_frequency_otp ( antopwm2_t *ctx, uint32_t freq );
 
 ## Example Description
 
-> This example demonstrates the use of AN to PWM 2 click board by changing the PWM output frequency from 500kHz to 1MHz in steps of 50kHz.
+> This example demonstrates the use of AN to PWM 2 Click board by changing the PWM output frequency from 500kHz to 1MHz in steps of 50kHz.
 
 **The demo application is composed of two sections :**
 
@@ -142,7 +142,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

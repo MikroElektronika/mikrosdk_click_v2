@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# LightHz click
+# LightHz Click
 
 > LightHz Click is a compact add-on board that effectively measures ambient light intensity. This board features the TL2L30BR, a programmable light-to-frequency converter from ams. The sensor outputs either a pulse train or a square wave (50% duty cycle) with a frequency directly proportional to light intensity (irradiance). It has programmable sensitivity and full-scale output frequency and could be used as a rough color detector with a selectable frequency range.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/lighthz_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/lighthz-click)
+[Click Product page](https://www.mikroe.com/lighthz-click)
 
 ---
 
@@ -65,7 +65,7 @@ uint8_t lighthz_get_freq_pin ( lighthz_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of LightHz click board by measuring and displaying the frequency of clock output signal.
+> This example demonstrates the use of LightHz Click board by measuring and displaying the frequency of clock output signal.
 The higher the light intensity the higher the frequency.
 
 **The demo application is composed of two sections :**
@@ -163,7 +163,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

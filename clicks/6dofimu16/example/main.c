@@ -3,13 +3,13 @@
  * @brief 6DOF IMU 16 Click example
  *
  * # Description
- * This example demonstrates the use of 6DOF IMU 16 click board by reading and displaying 
+ * This example demonstrates the use of 6DOF IMU 16 Click board by reading and displaying 
  * the accelerometer and gyroscope data (X, Y, and Z axis).
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver performs the click default configuration, 
+ * Initializes the driver performs the Click default configuration, 
  * and checks communication by reading device ID.
  *
  * ## Application Task

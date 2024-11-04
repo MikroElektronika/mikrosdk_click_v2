@@ -134,7 +134,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void buckboost_cfg_setup ( buckboost_cfg_t *cfg );
@@ -144,7 +144,7 @@ void buckboost_cfg_setup ( buckboost_cfg_t *cfg );
  * @param buckboost Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BUCKBOOST_RETVAL buckboost_init ( buckboost_t *ctx, buckboost_cfg_t *cfg );
 
@@ -153,7 +153,7 @@ BUCKBOOST_RETVAL buckboost_init ( buckboost_t *ctx, buckboost_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Buck-Boost  click.
+ * @description This function executes default configuration for Buck-Boost  Click.
  */
 void buckboost_default_cfg ( buckboost_t *ctx );
 
@@ -317,6 +317,6 @@ void buckboost_set_15000mv ( buckboost_t *ctx );
 #endif  // _BUCKBOOST_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

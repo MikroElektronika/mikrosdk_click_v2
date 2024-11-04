@@ -1,6 +1,6 @@
 
 ---
-# UWB 4 click
+# UWB 4 Click
 
 > UWB 4 Click is a compact add-on board for precise indoor positioning and location-based applications. This board features the Sera NX040 (453-00174C) from Ezurio, featuring NXP's SR040 chipset for ultra-wideband (UWB) and Nordic Semiconductor's nRF52833 for Bluetooth LE. The module supports IEEE 802.15.4/4z HPR UWB operations, providing exceptional ranging accuracy of less than ±10 cm with a typical receiver sensitivity of -92 dBm.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uwb4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/uwb-4-click)
+[Click Product page](https://www.mikroe.com/uwb-4-click)
 
 ---
 
@@ -47,12 +47,12 @@ err_t uwb4_init ( uwb4_t *ctx, uwb4_cfg_t *cfg );
 
 #### Example key functions :
 
-- `uwb4_cmd_run` This function sends a specified command to the click module.
+- `uwb4_cmd_run` This function sends a specified command to the Click module.
 ```c
 void uwb4_cmd_run ( uwb4_t *ctx, uint8_t *cmd );
 ```
 
-- `uwb4_cmd_set` This function sets a value to a specified command of the click module.
+- `uwb4_cmd_set` This function sets a value to a specified command of the Click module.
 ```c
 void uwb4_cmd_set ( uwb4_t *ctx, uint8_t *cmd, uint8_t *value );
 ```
@@ -64,7 +64,7 @@ void uwb4_reset_device ( uwb4_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of UWB 4 click board by showing the UWB ranging between two click boards configured as initiator and responder.
+> This example demonstrates the use of UWB 4 Click board by showing the UWB ranging between two Click boards configured as initiator and responder.
 
 **The demo application is composed of two sections :**
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

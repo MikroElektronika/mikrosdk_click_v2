@@ -1,14 +1,14 @@
 
 ---
-# Buck 10 click
+# Buck 10 Click
 
-Buck 10 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 18V. The regulated output voltage can be selected between two values: 3.3V and 5V. These are voltage values ​​that are most commonly used in many embedded designs. This click is based around an integrated DC-DC converter, labeled as MPM3632C.
+Buck 10 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 18V. The regulated output voltage can be selected between two values: 3.3V and 5V. These are voltage values ​​that are most commonly used in many embedded designs. This Click is based around an integrated DC-DC converter, labeled as MPM3632C.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/buck10_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-10-click)
+[Click Product page](https://www.mikroe.com/buck-10-click)
 
 ---
 
@@ -47,20 +47,20 @@ err_t buck10_init ( buck10_t *ctx, buck10_cfg_t *cfg );
 
 #### Example key functions :
 
-- `buck10_set_device_mode` This function enables and disables output of this click board.
+- `buck10_set_device_mode` This function enables and disables output of this Click board.
 ```c
 void buck10_set_device_mode ( buck10_t *ctx, uint8_t mode);
 ```
 
 ## Example Description
 
-> Demo application shows basic usage of Buck 10 click.
+> Demo application shows basic usage of Buck 10 Click.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Configuring clicks and log objects. Settings the click in the default configuration.
+> Configuring clicks and log objects. Settings the Click in the default configuration.
 
 ```c
 
@@ -139,7 +139,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# IR 2 click
+# IR 2 Click
 
 > IR 2 Click is a compact add-on board representing a compact and easy solution for adding infrared (IR) remote control to your design. This board features the TSMP58138, a miniaturized sensor for receiving the modulated signal of QEE113 IR emitting diode from Vishay Semiconductors. This IR sensor module consists of a photodetector, pre-amplifier, and automatic gain control to surpass ambient noise with signals transmitted to it in the near-infrared range with a wavelength of 940nm. It also communicates with the target MCU via selectable GPIO lines.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ir2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-2-click)
+[Click Product page](https://www.mikroe.com/ir-2-click)
 
 ---
 
@@ -65,8 +65,8 @@ err_t ir2_nec_read_data ( ir2_t *ctx, uint8_t *address, uint8_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of an IR 2 click board by showing
-the communication between the two click boards configured as a receiver and transmitter using the NEC protocol.
+> This example demonstrates the use of an IR 2 Click board by showing
+the communication between the two Click boards configured as a receiver and transmitter using the NEC protocol.
 
 **The demo application is composed of two sections :**
 
@@ -159,7 +159,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

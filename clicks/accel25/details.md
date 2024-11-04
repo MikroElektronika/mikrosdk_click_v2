@@ -1,6 +1,6 @@
 
 ---
-# Accel 25 click
+# Accel 25 Click
 
 > Accel 25 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC4005XC, a 12-bit three-axis thermal accelerometer from MEMSIC. It allows selectable full-scale acceleration measurements of ±2g, ±4g, or ±8g in three axes with a compatible I2C serial interface with 400KHz fast mode operation. 
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel25_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-25-click)
+[Click Product page](https://www.mikroe.com/accel-25-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t accel25_read_data ( accel25_t *ctx, accel25_data_t *data_out );
 
 ## Example Description
 
-> This example demonstrates the use of Accel 25 click board by reading and displaying 
+> This example demonstrates the use of Accel 25 Click board by reading and displaying 
  accel data (X, Y, and Z axis) as well as temperature measurements on the USB UART.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -154,7 +154,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

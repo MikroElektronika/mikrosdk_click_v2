@@ -4,13 +4,13 @@
  * 
  * # Description
  * This is an example that shows the most important
- * functions that Proximity 2 click has.
+ * functions that Proximity 2 Click has.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
  * Configuring clicks and log objects.
- * Setting the click in the default configuration.
+ * Setting the Click in the default configuration.
  * 
  * ## Application Task  
  * Shows the most important proximity and ambient value.

@@ -3,6 +3,6 @@
     "description": "Diff Press 4 Click is a compact add-on board that can measure differential pressure. This board features the SM9336-BCE-S-250-000, a digital pressure and altimeter sensor module from TE Connectivity. The SM9336-BCE-S-250-000 has a configurable host interface that supports I2C serial communication and measures pressure in a wide range with an accuracy of 3%. It comes as calibrated and temperature-compensated with high reliability/long-term stability. It operates in a compensated temperature range of -20°C to 85°C, ensuring stable operation under extreme conditions.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","SM9336-BCE-S-250-000"],
+    "hw" : ["Click","SM9336-BCE-S-250-000"],
     "category" : ["Click Boards > Sensors > Pressure"]
 }

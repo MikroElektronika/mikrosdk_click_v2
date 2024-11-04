@@ -3,6 +3,6 @@
     "description": "pH 2 Click is a compact add-on board used to determine the alkalinity or acidity of a sample. This board features the MCP607, a low-bias current Op Amp from Microchip, performing level shifting and high-input impedance buffering in a single-supply pH-electrode circuit.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MCP607 - TLC4502IDR"],
+    "hw" : ["Click","MCP607 - TLC4502IDR"],
     "category" : ["Click Boards > Sensors > Environmental"]
 }

@@ -1,6 +1,6 @@
 
 ---
-# TempHum 21 click
+# TempHum 21 Click
 
 > Temp&Hum 21 Click is a compact add-on board representing temperature and humidity sensing solution. This board features the HIH8130-021-001, a highly accurate, fully-calibrated digital humidity and temperature sensor from Honeywell Sensing and Productivity Solutions. This sensor, characterized by its high accuracy (±2% RH and ±0.5°C over a wide operating temperature range) and high resolution, provides factory-calibrated 14-bit data to the host controller with a configurable I2C interface. It also comes with alarm features with selectable alarm thresholds by an MCU or externally.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum21_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-21-click)
+[Click Product page](https://www.mikroe.com/temphum-21-click)
 
 ---
 
@@ -64,13 +64,13 @@ uint8_t temphum21_get_alh_pin ( temphum21_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Temp & Hum 21 click board by reading the temperature and humidity data.
+> This example demonstrates the use of Temp & Hum 21 Click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

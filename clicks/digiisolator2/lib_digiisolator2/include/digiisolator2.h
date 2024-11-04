@@ -231,7 +231,7 @@ typedef enum
 
 /**
  * @brief DIGI Isolator 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #digiisolator2_cfg_t object definition for detailed explanation.
@@ -243,7 +243,7 @@ void digiisolator2_cfg_setup ( digiisolator2_cfg_t *cfg );
 /**
  * @brief DIGI Isolator 2 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #digiisolator2_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -259,7 +259,7 @@ void digiisolator2_drv_interface_sel ( digiisolator2_cfg_t *cfg, digiisolator2_d
 /**
  * @brief DIGI Isolator 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #digiisolator2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

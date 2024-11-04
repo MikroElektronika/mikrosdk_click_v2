@@ -3,13 +3,13 @@
 ---
 # eINK 2.13 inch display
 
-eINK click is an adapter Click board™, used to interface a compatible eINK display with the host MCU. 
+eINK Click is an adapter Click board™, used to interface a compatible eINK display with the host MCU. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/eink_click_bundle213inch.png">
 </p>
 
-[click Product page](https://www.mikroe.com/e-paper-bundle-2)
+[Click Product page](https://www.mikroe.com/e-paper-bundle-2)
 
 ---
 
@@ -65,13 +65,13 @@ void eink213inch_display_image ( eink213inch_t *ctx, const uint8_t* image_buffer
 
 ## Examples Description
 
-> This application demonstrates the use of eINK click board.
+> This application demonstrates the use of eINK Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the driver and configures the click board for 2.13 inch eINK display.
+> Initializes the driver and configures the Click board for 2.13 inch eINK display.
 > After that, if the TEXT mode is supported, shows a desired text messages on the display.
 
 ```c
@@ -162,7 +162,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

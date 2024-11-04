@@ -276,7 +276,7 @@ typedef enum
 
 /**
  * @brief Fan 9 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #fan9_cfg_t object definition for detailed explanation.
@@ -288,7 +288,7 @@ void fan9_cfg_setup ( fan9_cfg_t *cfg );
 /**
  * @brief Fan 9 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -303,7 +303,7 @@ err_t fan9_init ( fan9_t *ctx, fan9_cfg_t *cfg );
 /**
  * @brief Fan 9 default configuration function.
  * @details This function executes a default configuration of Fan 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -349,7 +349,7 @@ err_t fan9_generic_read ( fan9_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t l
 /**
  * @brief Fan 9 get RD pin state function.
  * @details This function is used to get RD pin state of Fan 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @return RD pin state.
@@ -360,7 +360,7 @@ uint8_t fan9_get_rd_pin ( fan9_t *ctx );
 /**
  * @brief Fan 9 get FLT pin state function.
  * @details This function is used to get FLT pin state of Fan 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @return FLT pin state.
@@ -371,7 +371,7 @@ uint8_t fan9_get_flt_pin ( fan9_t *ctx );
 /**
  * @brief Fan 9 set direction function.
  * @details This function is used to set direction of Fan 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @param[in] dir : Selected direction.
@@ -383,7 +383,7 @@ void fan9_set_direction ( fan9_t *ctx, uint8_t dir );
 /**
  * @brief Fan 9 set brake state function.
  * @details This function is used to set brake state of Fan 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @param[in] brake_state : Brake state.
@@ -425,7 +425,7 @@ err_t fan9_read_reg ( fan9_t *ctx, uint8_t reg, uint16_t *data_out );
 /**
  * @brief Fan 9 set PWM value function.
  * @details This function is used to set PWM value of Fan 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @param[in] pwm_val : PWM Value.
@@ -439,7 +439,7 @@ err_t fan9_set_pwm ( fan9_t *ctx, uint8_t pwm_val );
 /**
  * @brief Fan 9 get PWM value function.
  * @details This function is used to get PWM value of Fan 9
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #fan9_t object definition for detailed explanation.
  * @param[out] pwm_val : PWM Value.

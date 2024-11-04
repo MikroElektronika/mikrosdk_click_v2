@@ -1,15 +1,15 @@
 
 ---
-# RadioStation click
+# RadioStation Click
 
-RadioStation click is a unique click board™ that can be used to broadcast the music via the FM radio band. It features the Si4713-B30 from Silicon Labs, the best in class integrated FM broadcast stereo transmitter, which operates in the frequency range of 76MHz to 108MHz. It can also broadcast RDS/RDBS data. The click board™ can be equipped with a small FM antenna, which is used to extend the broadcasting range.
+RadioStation Click is a unique Click board™ that can be used to broadcast the music via the FM radio band. It features the Si4713-B30 from Silicon Labs, the best in class integrated FM broadcast stereo transmitter, which operates in the frequency range of 76MHz to 108MHz. It can also broadcast RDS/RDBS data. The Click board™ can be equipped with a small FM antenna, which is used to extend the broadcasting range.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/radiostation_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/radiostation-click)
+[Click Product page](https://www.mikroe.com/radiostation-click)
 
 ---
 
@@ -60,7 +60,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> RadioStation click can be used to broadcast the music via the FM radio band 
+> RadioStation Click can be used to broadcast the music via the FM radio band 
 > ( which operates in the frequency range of 76MHz to 108MHz ).
 
 **The demo application is composed of two sections :**
@@ -130,7 +130,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

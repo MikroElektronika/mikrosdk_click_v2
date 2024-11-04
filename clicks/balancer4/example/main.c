@@ -3,13 +3,13 @@
  * @brief Balancer4 Click example
  *
  * # Description
- * This example demonstrates the use of Balancer 4 click board by configuring
- * the click board for charging and then reading the status and fault registers.
+ * This example demonstrates the use of Balancer 4 Click board by configuring
+ * the Click board for charging and then reading the status and fault registers.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board for charging.
+ * Initializes the driver and configures the Click board for charging.
  *
  * ## Application Task
  * Reads and displays the status and fault registers on the USB UART every 500ms approximately.

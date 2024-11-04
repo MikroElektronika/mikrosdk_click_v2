@@ -3,6 +3,6 @@
     "description": "Accel 8 Click is an advanced 6-axis motion tracking Click board™, which utilizes the MPU6050, a very popular motion sensor IC, equipped with a 3-axis gyroscope and 3-axis accelerometer.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MPU6050","MEMS MotionTracking™ IC"],
+    "hw" : ["Click","MPU6050","MEMS MotionTracking™ IC"],
     "category" : ["Acceleration"] 
 }

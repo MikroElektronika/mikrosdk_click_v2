@@ -1,6 +1,6 @@
 
 ---
-# Load Cell 6 click
+# Load Cell 6 Click
 
 > Load Cell 6 Click is a compact add-on board representing a weigh scale solution. This board features the MAX11270, a high-performance 24-bit delta-sigma ADC that achieves excellent 130dB SNR while dissipating an ultra-low 10mW from Maxim Integrated, now part of Analog Devices. This SPI-configurable ADC sample rates up to 64ksps allow precision DC and AC measurements, with integral non-linearity guaranteed to 4ppm maximum. The MAX11270 offers a 6.5nV/√Hz noise programmable gain amplifier with gain settings between 1x to 128x. Optional buffers are also included to isolate the signal inputs from the switched capacitor sampling network, which allows the MAX11270 to be used with high-impedance sources without compromising the available dynamic range.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/loadcell6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/load-cell-6-click)
+[Click Product page](https://www.mikroe.com/load-cell-6-click)
 
 ---
 
@@ -198,8 +198,8 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Load Cell 6 click board™.
-> The Load Cell 6 click board™ can be used to measure weight and
+> This is an example that demonstrates the use of the Load Cell 6 Click board™.
+> The Load Cell 6 Click board™ can be used to measure weight and
 > shows the measurement of scales in grams [ g ].
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -228,7 +228,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

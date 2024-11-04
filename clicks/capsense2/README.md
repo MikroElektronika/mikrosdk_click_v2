@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# CapSense 2 click
+# CapSense 2 Click
 
 > CapSense 2 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the CAP1114, a multi-channel capacitive touch sensor that takes human body capacitance as an input and directly provides the real-time sensor information via the I2C serial interface from Microchip. This board contains capacitive sensing elements, a 7-segment slider, two buttons, and four LED indicators that visually detect the activation on some of these parts. This Click board™ offers reliable and accurate sensing for any application that uses capacitive touch sensing functions.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/capsense2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/capsense-2-click)
+[Click Product page](https://www.mikroe.com/capsense-2-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t capsense2_clear_interrupt ( capsense2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of CapSense 2 click board by reading and displaying the sensor's events.
+> This example demonstrates the use of CapSense 2 Click board by reading and displaying the sensor's events.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration
-which resets the click board and links the desired LEDs to buttons and swipe sensors.
+> Initializes the driver and performs the Click default configuration
+which resets the Click board and links the desired LEDs to buttons and swipe sensors.
 
 ```c
 
@@ -214,7 +214,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

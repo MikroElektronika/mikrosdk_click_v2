@@ -3,15 +3,15 @@
  
 
 ---
-# MIC33153 click
+# MIC33153 Click
 
-MIC33153 click is a DC-DC adjustable step-down (buck) converter that is designed to deliver a substantial amount of current to very demanding loads, with the voltage output up to 3.5V.
+MIC33153 Click is a DC-DC adjustable step-down (buck) converter that is designed to deliver a substantial amount of current to very demanding loads, with the voltage output up to 3.5V.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/mic33153_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/mic33153-click)
+[Click Product page](https://www.mikroe.com/mic33153-click)
 
 ---
 
@@ -68,7 +68,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes click driver.
+> Initializes Click driver.
 
 ```c
 
@@ -157,7 +157,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

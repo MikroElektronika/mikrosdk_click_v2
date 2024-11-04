@@ -270,7 +270,7 @@ typedef struct
 
 /**
  * @brief Thermo 28 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #thermo28_cfg_t object definition for detailed explanation.
@@ -282,7 +282,7 @@ void thermo28_cfg_setup ( thermo28_cfg_t *cfg );
 /**
  * @brief Thermo 28 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #thermo28_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -297,7 +297,7 @@ err_t thermo28_init ( thermo28_t *ctx, thermo28_cfg_t *cfg );
 /**
  * @brief Thermo 28 default configuration function.
  * @details This function executes a default configuration of Thermo 28
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #thermo28_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -370,7 +370,7 @@ err_t thermo28_set_alert_limits ( thermo28_t *ctx, float alert_min, float alert_
 /**
  * @brief Thermo 28 set configuration function.
  * @details This function executes a configuration of the AS6221 Digital Temperature Sensor
- * on the Thermo 28 click board™.
+ * on the Thermo 28 Click board™.
  * @param[in] ctx : Click context object.
  * See #thermo28_t object definition for detailed explanation.
  * @param[in] config : Device configuration object object.
@@ -384,7 +384,7 @@ err_t thermo28_set_config ( thermo28_t *ctx, thermo28_config_t config );
 /**
  * @brief Thermo 28 set continuous conversion function.
  * @details This function executes a configuration of the continuous conversion
- * on the Thermo 28 click board™.
+ * on the Thermo 28 Click board™.
  * @param[in] ctx : Click context object.
  * See #thermo28_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -397,7 +397,7 @@ err_t thermo28_set_continuous_conversion ( thermo28_t *ctx );
 /**
  * @brief Thermo 28 set device working mode function.
  * @details This function executes a configuration of the device's working mode
- * on the Thermo 28 click board™.
+ * on the Thermo 28 Click board™.
  * @param[in] ctx : Click context object.
  * See #thermo28_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -410,7 +410,7 @@ err_t thermo28_set_sleep_mode ( thermo28_t *ctx );
 /**
  * @brief Thermo 28 set trigger single-shot function.
  * @details This function executes a trigger single-shot mode
- * on the Thermo 28 click board™.
+ * on the Thermo 28 Click board™.
  * @param[in] ctx : Click context object.
  * See #thermo28_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -423,7 +423,7 @@ err_t thermo28_set_trigger_single_shot ( thermo28_t *ctx );
 /**
  * @brief Thermo 28 set alert status function.
  * @details This function gets alert status by reading the states of the INT pin
- * of the Thermo 28 click board™.
+ * of the Thermo 28 Click board™.
  * @param[in] ctx : Click context object.
  * See #thermo28_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

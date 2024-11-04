@@ -3,7 +3,7 @@
  * @brief LDCTouch Click example
  *
  * # Description
- * This example demonstrates the use of LDC Touch click board by configuring 
+ * This example demonstrates the use of LDC Touch Click board by configuring 
  * the buttons to trigger on finger press, and reading the buttons state in the loop.
  *
  * The demo application is composed of two sections :

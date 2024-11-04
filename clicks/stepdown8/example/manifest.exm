@@ -3,6 +3,6 @@
     "description": "Step Down 8 Click is a compact add-on board that converts higher voltages into a lower voltage level. This board features the MAX25232, a mini buck converter from Analog Devices. It is designed to deliver up to 3A with 3.5V to 36V input voltages while using only 3.5μA quiescent current at no load.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","MAX25232ATCF/V+"],
+    "hw" : ["Click","MAX25232ATCF/V+"],
     "category" : ["Click Boards > Power management > Buck"]
 }

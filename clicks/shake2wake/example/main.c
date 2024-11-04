@@ -3,7 +3,7 @@
  * \brief Shake2Wake Click example
  * 
  * # Description
- * This app shows the capabilities of the Shake2Wake click by
+ * This app shows the capabilities of the Shake2Wake Click by
  * reading values of an accelerometer.
  *
  * The demo application is composed of two sections :
@@ -12,7 +12,7 @@
  * Initalizes device and applies default settings.
  * 
  * ## Application Task  
- * This is an example that shows the capabilities of the Shake2Wake click by
+ * This is an example that shows the capabilities of the Shake2Wake Click by
  * reading values of an accelerometer and logging them on USART terminal and,
  * in case of an interrupt, it raises voltage on the connector.
  * 

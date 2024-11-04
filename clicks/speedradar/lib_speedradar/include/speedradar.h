@@ -355,7 +355,7 @@ typedef enum
 
 /**
  * @brief Speed Radar configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #speedradar_cfg_t object definition for detailed explanation.
@@ -367,7 +367,7 @@ void speedradar_cfg_setup ( speedradar_cfg_t *cfg );
 /**
  * @brief Speed Radar initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #speedradar_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -382,7 +382,7 @@ err_t speedradar_init ( speedradar_t *ctx, speedradar_cfg_t *cfg );
 /**
  * @brief Speed Radar default configuration function.
  * @details This function executes a default configuration of Speed Radar
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #speedradar_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -424,7 +424,7 @@ err_t speedradar_generic_read ( speedradar_t *ctx, uint8_t *data_out, uint16_t l
 /**
  * @brief Speed Radar send command function.
  * @details This function sends a desired command 
- * of the K-LD2, radar transceiver on the Speed Radar click board™. 
+ * of the K-LD2, radar transceiver on the Speed Radar Click board™. 
  * @param[in] ctx : Click context object.
  * See #speedradar_t object definition for detailed explanation.
  * @param[in] cmd : Command data array.
@@ -439,7 +439,7 @@ err_t speedradar_send_command ( speedradar_t *ctx, uint8_t *cmd );
 /**
  * @brief Speed Radar send command function.
  * @details This function sends a desired command 
- * of the K-LD2, radar transceiver on the Speed Radar click board™. 
+ * of the K-LD2, radar transceiver on the Speed Radar Click board™. 
  * @param[in] ctx : Click context object.
  * See #speedradar_t object definition for detailed explanation.
  * @param[in] cmd : Command data array.
@@ -455,7 +455,7 @@ err_t speedradar_send_command_value ( speedradar_t *ctx, uint8_t *cmd, uint8_t *
 /**
  * @brief Speed Radar get direction function.
  * @details This function return state of the direction of a movement
- * of the K-LD2, radar transceiver on the Speed Radar click board™. 
+ * of the K-LD2, radar transceiver on the Speed Radar Click board™. 
  * @param[in] ctx : Click context object.
  * See #speedradar_t object definition for detailed explanation.
  * @return @li @c 0 - Backward/receding movement,
@@ -473,7 +473,7 @@ uint8_t speedradar_get_direction ( speedradar_t *ctx );
 /**
  * @brief Speed Radar get detection function.
  * @details This function return state of the detection of a movement
- * of the K-LD2, radar transceiver on the Speed Radar click board™. 
+ * of the K-LD2, radar transceiver on the Speed Radar Click board™. 
  * @param[in] ctx : Click context object.
  * See #speedradar_t object definition for detailed explanation.
  * @return @li @c 0 - No detection,

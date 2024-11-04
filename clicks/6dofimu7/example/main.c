@@ -3,13 +3,13 @@
  * \brief 6DofImu7 Click example
  * 
  * # Description
- * This example showcases how to initialize and configure the logger and click modules and read
+ * This example showcases how to initialize and configure the logger and Click modules and read
  * and display temperature measurements and axis data from the gyroscope and accelerometer.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function reads and displays accelerometer, gyroscope and temperature data every second.

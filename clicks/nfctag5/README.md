@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# NFC Tag 5 click
+# NFC Tag 5 Click
 
 > NFC Tag 5 Click is a compact add-on board that contains a compact NFC tag IC. This board features the M24LR64E-R, a dynamic NFC/RFID tag IC with a dual interface 64-Kbit EEPROM from STMicroelectronics. It features an I2C interface alongside an RF contactless interface operating at 13.56MHz, organized as 8192×8 bits in the I2C mode and 2048×32 bits in the ISO 15693 and ISO 18000-3 mode 1 RF mode. The M24LR64E-R also features an energy harvesting analog output and a user-configurable digital output pin, used as an interrupt, toggling during either RF write in progress or RF busy mode.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/nfctag5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nfc-tag-5-click)
+[Click Product page](https://www.mikroe.com/nfc-tag-5-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t nfctag5_read_message_from_memory ( nfctag5_t *ctx, uint16_t block_addr, ui
 
 ## Example Description
 
-> This example demonstrates the use of NFC Tag 5 click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
+> This example demonstrates the use of NFC Tag 5 Click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger and performs the click default configuration which formats its user memory. After that it programs the specified NDEF URI record to the memory.
+> Initializes the driver and logger and performs the Click default configuration which formats its user memory. After that it programs the specified NDEF URI record to the memory.
 
 ```c
 
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

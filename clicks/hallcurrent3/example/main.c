@@ -3,13 +3,13 @@
  * \brief HallCurrent3 Click example
  * 
  * # Description
- * The example starts off with the logger and click modules and then starts measuring and
+ * The example starts off with the logger and Click modules and then starts measuring and
  * displaying current values.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes and configures the logger and click modules.
+ * Initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * Reads and displays current values every second.

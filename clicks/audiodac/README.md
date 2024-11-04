@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Audio DAC click
+# Audio DAC Click
 
 > Audio DAC Click is a compact add-on board perfect for upgrading your audio equipment. This board features the PCM5142, a 32-bit 384kHz audio stereo DAC with the DIR9001 digital audio receiver from Texas Instruments. The DIR9001 can receive 24-bit/96kHz signals at the highest via S/PDIF optical cable and complies with various digital audio standards, like IEC60958-3, JEITA CPR-1205, AES3, and EBUtech3250. The DIR9001's output is then processed via a stereo audio DAC, the PCM5142, with the latest generation of TI's advanced segment-DAC architecture to achieve excellent dynamic performance, detailed heights, and an exceptionally good sound stage.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/audiodac_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/audio-dac-click)
+[Click Product page](https://www.mikroe.com/audio-dac-click)
 
 ---
 
@@ -65,13 +65,13 @@ err_t audiodac_volume_control ( audiodac_t *ctx, uint8_t channel, uint8_t volume
 
 ## Example Description
 
-> This example demonstrates the use of Audio DAC click board by controling the volume level of both output channels.
+> This example demonstrates the use of Audio DAC Click board by controling the volume level of both output channels.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -170,7 +170,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,8 +1,8 @@
 {
     "name": "GNSS Click",
-    "description": "GNSS click carries Quectel’s L86 GNSS module with a patch antenna along with an external antenna connector.",
+    "description": "GNSS Click carries Quectel’s L86 GNSS module with a patch antenna along with an external antenna connector.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","L86 GNSS"],
+    "hw" : ["Click","L86 GNSS"],
     "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"] 
 }

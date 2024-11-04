@@ -205,7 +205,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void evc_cfg_setup ( evc_cfg_t *cfg );
@@ -216,7 +216,7 @@ void evc_cfg_setup ( evc_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 EVC_RETVAL evc_init ( evc_t *ctx, evc_cfg_t *cfg );
 
@@ -225,7 +225,7 @@ EVC_RETVAL evc_init ( evc_t *ctx, evc_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for EVC click.
+ * @description This function executes default configuration for EVC Click.
  * @note Calling this function clears all registers, sets each channel to 0dB and unmutes the sound.
  * Contains additional initialization settings.
  */
@@ -307,6 +307,6 @@ void evc_mute ( evc_t *ctx, uint8_t mute );
 #endif  // _EVC_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

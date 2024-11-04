@@ -3,7 +3,7 @@
  * @brief MagneticRotary3 Click example
  *
  * # Description
- * This example demonstrates the use of Magnetic Rotary 3 click board by reading and displaying
+ * This example demonstrates the use of Magnetic Rotary 3 Click board by reading and displaying
  * the magnet's angular position in degrees.
  *
  * The demo application is composed of two sections :

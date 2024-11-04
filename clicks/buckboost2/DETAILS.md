@@ -1,15 +1,15 @@
  
 
 ---
-# Buck Boost 2 click
+# Buck Boost 2 Click
 
-Buck-Boost 2 click is an advanced DC-DC step-down/step-up regulator (buck/boost), which is able to provide regulated 5V on its output, regardless of the input voltage.
+Buck-Boost 2 Click is an advanced DC-DC step-down/step-up regulator (buck/boost), which is able to provide regulated 5V on its output, regardless of the input voltage.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/buckboost2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buck-boost-2-click)
+[Click Product page](https://www.mikroe.com/buck-boost-2-click)
 
 ---
 
@@ -101,7 +101,7 @@ void application_init ( void )
 
 ### Application Task
 
-> The click has a constant output voltage of 5V, no additional settings are required. 
+> The Click has a constant output voltage of 5V, no additional settings are required. 
 
 ```c
 
@@ -125,7 +125,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

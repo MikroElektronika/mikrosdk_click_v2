@@ -2,7 +2,7 @@
 
 ---
 
-# Brushless 8  click
+# Brushless 8  Click
 
 > Brushless 8 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B042FTG, a sine-wave PWM drive three-phase full-wave brushless motor controller from Toshiba Semiconductor.
 
@@ -11,7 +11,7 @@
 </p>
 
 
-[click Product page](https://www.mikroe.com/brushless-8-click)
+[Click Product page](https://www.mikroe.com/brushless-8-click)
 
 ---
 
@@ -48,24 +48,24 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 #### Example key functions :
 
-- `brushless8_cfg_setup` function initializes click configuration structure to initial values.
+- `brushless8_cfg_setup` function initializes Click configuration structure to initial values.
 ```c
 brushless8_cfg_setup( &brushless8_cfg );
 ```
 
-- `brushless8_init` function initializes all necessary pins and peripherals used for this click board.
+- `brushless8_init` function initializes all necessary pins and peripherals used for this Click board.
 ```c
 BRUSHLESS8_RETVAL init_flag = brushless8_init( &brushless8, &brushless8_cfg );
 ```
 
-- `brushless8_default_cfg` function executes a default configuration of Brushless 8 click board.
+- `brushless8_default_cfg` function executes a default configuration of Brushless 8 Click board.
 ```c
 brushless8_default_cfg ( &brushless8 );
 ```
 
 ## Examples Description
 
->  This example showcases how to initialize and use the Brushless 8 click. 
+>  This example showcases how to initialize and use the Brushless 8 Click. 
 >  This application is a schowcase of controlling speed 
 >  and direction of brushless motor with hall sesnor.
 
@@ -73,7 +73,7 @@ brushless8_default_cfg ( &brushless8 );
 
 ### Application Init
 
-> Initializes the click board to appropriate settings based on selected mode.
+> Initializes the Click board to appropriate settings based on selected mode.
 > Initialization settings are sent through I2C bus and the motor itself is
 > controlled via PWM or DAC over I2C.
 > * Modes:
@@ -137,8 +137,8 @@ void application_init ( void )
 
 ### Application Task
 
->  This example demonstrates the use of Brushless 8 click board.
->  Brushless 8 click communicates with the device via I2C driver in order to 
+>  This example demonstrates the use of Brushless 8 Click board.
+>  Brushless 8 Click communicates with the device via I2C driver in order to 
 >  set adequate voltage level for connected motor.
 >  Current PWM/DAC settings being output are sent via logger.
 >  Results are being sent to the Usart Terminal where you can track their changes.
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART Click](https://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

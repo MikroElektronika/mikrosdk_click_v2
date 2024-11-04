@@ -1,7 +1,7 @@
 \mainpage Main Page
  
 ---
-# Pressure 10 click
+# Pressure 10 Click
 
 Pressure 10 Click features a digital interface barometric pressure sensor, based on piezoresistive bridge, labeled as HSPPAD042A, from ALPS Electric. It can use both SPI and I2C communication protocols, allowing it to be interfaced with a broad range of MCUs. Besides the pressure readings, this Click board™ also offers very accurate temperature reading, which is required for the pressure readings compensation and can be used in a wide range of battery-powered and portable applications thanks to its very low power consumption. 
 
@@ -9,7 +9,7 @@ Pressure 10 Click features a digital interface barometric pressure sensor, based
   <img src="https://download.mikroe.com/images/click_for_ide/pressure10_click.png">
 </p>
 
-[click Product page](https://www.mikroe.com/pressure-10-click)
+[Click Product page](https://www.mikroe.com/pressure-10-click)
 
 ---
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

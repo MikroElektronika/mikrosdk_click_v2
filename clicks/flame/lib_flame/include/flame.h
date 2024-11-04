@@ -127,7 +127,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void flame_cfg_setup ( flame_cfg_t *cfg );
@@ -137,7 +137,7 @@ void flame_cfg_setup ( flame_cfg_t *cfg );
  * @param ctx  Click object.
  * @param cfg  Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 FLAME_RETVAL flame_init ( flame_t *ctx, flame_cfg_t *cfg );
 
@@ -145,7 +145,7 @@ FLAME_RETVAL flame_init ( flame_t *ctx, flame_cfg_t *cfg );
  * @brief Check the flame status function.
  * @param ctx  Click object.
  * 
- * @description This function will return 1 if a flame is detected and 0 if flame is not detectedfunction initializes all necessary pins and peripherals used for this click.
+ * @description This function will return 1 if a flame is detected and 0 if flame is not detectedfunction initializes all necessary pins and peripherals used for this Click.
  */
 uint8_t flame_check_status ( flame_t *ctx );
 
@@ -164,6 +164,6 @@ uint8_t flame_get_interrupt ( flame_t *ctx );
 #endif  // _FLAME_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

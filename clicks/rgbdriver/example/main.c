@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes driver and logger, and configures the click board.
+ * Initializes driver and logger, and configures the Click board.
  * 
  * ## Application Task  
- * Changes the color of RGB LED tape connected to the click board every 2 seconds.
+ * Changes the color of RGB LED tape connected to the Click board every 2 seconds.
  * The name of the selected color will be displayed on USB UART.
  * 
  * \author MikroE Team

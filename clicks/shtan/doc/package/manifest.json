@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "SHT AN click",
+    "display_name": "SHT AN Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -31,11 +31,12 @@
     "related_projects": [
         3188
     ],
-    "version": "2.1.0.23",
+    "version": "2.1.0.24",
     "cmake": true,
     "alias": "Click.ShtAn",
     "subdir_name": "lib_shtan"
 }
+
 
 
 

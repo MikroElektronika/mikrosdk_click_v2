@@ -3,6 +3,6 @@
     "description": "Illuminance Click is a compact add-on board that mimics how humans perceive light. This board features ams AG’s TSL2583, a very-high sensitivity light-to-digital converter that transforms light intensity to a digital signal output capable of the direct I2C interface. It combines one broadband photodiode (visible plus infrared) and one infrared-responding photodiode on a single CMOS integrated circuit capable of providing a near-photopic response over an effective 16-bit dynamic range (16-bit resolution).",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TSL2583"],
+    "hw" : ["Click","TSL2583"],
     "category" : ["Optical"]
 }

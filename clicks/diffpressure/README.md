@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# Diff pressure click
+# Diff pressure Click
 
-> Diff pressure click carries NXP’s MPXV5010DP signal conditioned, temperature compensated and calibrated pressure sensor with two axial ports to accommodate industrial grade tubing. 
+> Diff pressure Click carries NXP’s MPXV5010DP signal conditioned, temperature compensated and calibrated pressure sensor with two axial ports to accommodate industrial grade tubing. 
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/diffpressure_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/diff-pressure-click)
+[Click Product page](https://www.mikroe.com/diff-pressure-click)
 
 ---
 
@@ -48,7 +48,7 @@ err_t diffpressure_init ( diffpressure_t *ctx, diffpressure_cfg_t *cfg );
 
 #### Example key functions :
 
-- `diffpressure_read_adc_voltage` This function read ADC voltage value from Diff Pressure click.
+- `diffpressure_read_adc_voltage` This function read ADC voltage value from Diff Pressure Click.
 ```c
 float diffpressure_read_adc_voltage ( diffpressure_t *ctx );
 ```
@@ -104,7 +104,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example which demonstrates the use of Diff Pressure click board.
+> This is an example which demonstrates the use of Diff Pressure Click board.
 The example reads the values of ADC module (MPC3551) 22-bit register value
 converted to voltage and the pressure difference [ Pa ] and displays
 those values on the USB UART.
@@ -138,7 +138,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

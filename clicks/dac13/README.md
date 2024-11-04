@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DAC 13 click
+# DAC 13 Click
 
 > DAC 13 Click is a compact add-on board providing a highly accurate digital-to-analog conversion. This board features the AD3541R, a low drift, single channel, 16-bit accuracy, voltage output digital-to-analog converter (DAC) from Analog Devices. The AD3542R operates with a fixed 2.5V reference, communicates with the host MCU through the SPI interface, and can be configurable in multiple voltage span ranges. Also, it provides the possibility to select the power supply of the internal trans-impedance amplifier as well as its gain, which scales the output voltage.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dac13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dac-13-click)
+[Click Product page](https://www.mikroe.com/dac-13-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t dac13_set_output_voltage ( dac13_t *ctx, float voltage );
 
 ## Example Description
 
-> This example demonstrates the use of DAC 13 click board by changing the outputs voltage level every 2 seconds.
+> This example demonstrates the use of DAC 13 Click board by changing the outputs voltage level every 2 seconds.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

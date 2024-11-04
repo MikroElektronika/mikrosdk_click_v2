@@ -189,7 +189,7 @@ typedef enum
 
 /**
  * @brief Timer Relay configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #timerrelay_cfg_t object definition for detailed explanation.
@@ -201,7 +201,7 @@ void timerrelay_cfg_setup ( timerrelay_cfg_t *cfg );
 /**
  * @brief Timer Relay initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #timerrelay_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -216,7 +216,7 @@ err_t timerrelay_init ( timerrelay_t *ctx, timerrelay_cfg_t *cfg );
 /**
  * @brief Timer Relay default configuration function.
  * @details This function executes a default configuration of Timer Relay
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #timerrelay_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -258,7 +258,7 @@ void timerrelay_set_vcc_sel ( timerrelay_t *ctx, uint8_t vcc_sel );
 /**
  * @brief Timer Relay set wiper position function.
  * @details This function is used to set wiper position of Timer Relay
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #timerrelay_t object definition for detailed explanation.
  * @param[in] wiper_pos : Wiper position to be set.
@@ -283,7 +283,7 @@ err_t timerrelay_set_delay ( timerrelay_t *ctx, uint8_t delay );
 /**
  * @brief Timer Relay set RST pin state function.
  * @details This function is used to set state of the RST pin of Timer Relay
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #timerrelay_t object definition for detailed explanation.
  * @param[in] pin_state : State of the RST pin.
@@ -295,7 +295,7 @@ void timerrelay_set_rst_pin ( timerrelay_t *ctx, uint8_t pin_state );
 /**
  * @brief Timer Relay set TRG pin state function.
  * @details This function is used to set state of the TRG pin of Timer Relay
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #timerrelay_t object definition for detailed explanation.
  * @param[in] pin_state : State of the TRG pin.
@@ -307,7 +307,7 @@ void timerrelay_set_trg_pin ( timerrelay_t *ctx, uint8_t pin_state );
 /**
  * @brief Timer Relay reset timer function.
  * @details This function is used to reset timer of Timer Relay
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #timerrelay_t object definition for detailed explanation.
  * @return Nothing.
@@ -318,7 +318,7 @@ void timerrelay_activate_reset ( timerrelay_t *ctx );
 /**
  * @brief Timer Relay activate trigger function.
  * @details This function is used to activate trigger of Timer Relay
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #timerrelay_t object definition for detailed explanation.
  * @return Nothing.

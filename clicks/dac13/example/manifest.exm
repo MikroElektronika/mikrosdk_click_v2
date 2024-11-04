@@ -3,6 +3,6 @@
     "description": "DAC 13 Click is a compact add-on board providing a highly accurate digital-to-analog conversion. This board features the AD3541R, a low drift, single channel, 16-bit accuracy, voltage output digital-to-analog converter (DAC) from Analog Devices. The AD3542R operates with a fixed 2.5V reference, communicates with the host MCU through the SPI interface, and can be configurable in multiple voltage span ranges. Also, it provides the possibility to select the power supply of the internal trans-impedance amplifier as well as its gain, which scales the output voltage.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","AD3541RBCPZ16"],
+    "hw" : ["Click","AD3541RBCPZ16"],
     "category" : ["Click Boards > Mixed signal > DAC"]
 }

@@ -219,7 +219,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void matrixrgb_cfg_setup ( matrixrgb_cfg_t *cfg );
@@ -229,7 +229,7 @@ void matrixrgb_cfg_setup ( matrixrgb_cfg_t *cfg );
  * @param matrixrgb Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MATRIXRGB_RETVAL matrixrgb_init ( matrixrgb_t *ctx, matrixrgb_cfg_t *cfg );
 
@@ -240,7 +240,7 @@ MATRIXRGB_RETVAL matrixrgb_init ( matrixrgb_t *ctx, matrixrgb_cfg_t *cfg );
  * @param pattern_type      Pattern type of display. 
  * @param pattern_delay_us  Choose time for delay.
  * 
- * @description This function executes default configuration for Matrix RGB click.
+ * @description This function executes default configuration for Matrix RGB Click.
  */
 void matrixrgb_pattern_settings ( matrixrgb_t *ctx, uint8_t pattern_type, uint16_t pattern_delay_us );
 
@@ -265,7 +265,7 @@ void matrixrgb_generic_transfer
 );
 
 /**
- * @brief Hard reset of the Matrix RGB click
+ * @brief Hard reset of the Matrix RGB Click
  *
  * @param ctx          Click object.
  *
@@ -376,6 +376,6 @@ uint8_t matrixrgb_write_text ( matrixrgb_t *ctx, char *text, uint16_t x, uint16_
 #endif  // _MATRIXRGB_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

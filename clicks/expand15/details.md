@@ -1,6 +1,6 @@
 
 ---
-# Expand 15 click
+# Expand 15 Click
 
 > Expand 15 Click is a compact add-on board that contains a multi-channel I/O expander. This board features the TCAL6416, a general-purpose I/O expansion for most microcontroller families from Texas Instruments.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/expand15_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/expand-15-click)
+[Click Product page](https://www.mikroe.com/expand-15-click)
 
 ---
 
@@ -69,14 +69,14 @@ err_t expand15_set_out_pin_state ( expand15_t *ctx, uint8_t port, uint8_t pin_st
 
 ## Example Description
 
-> This example demonstrates the use of Expand 15 click board by setting and reading 
+> This example demonstrates the use of Expand 15 Click board by setting and reading 
  the ports state.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets 
+> Initializes the driver and performs the Click default configuration which sets 
   half of the port 0 and port 1 pins as output ( P00, P02, P04, P06, P10, P12, P14 and P16) and the 
   half of the port 0 and port 1 pins as inputs ( P01, P03, P05, P07, P11, P13, P15 and P17).
 
@@ -214,7 +214,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -216,7 +216,7 @@ typedef enum
 
 /**
  * @brief nvSRAM configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #nvsram_cfg_t object definition for detailed explanation.
@@ -228,7 +228,7 @@ void nvsram_cfg_setup ( nvsram_cfg_t *cfg );
 /**
  * @brief nvSRAM initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -279,7 +279,7 @@ err_t nvsram_generic_read ( nvsram_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t
  * @brief Generic write the byte of data function.
  * @details The function writes the byte of data to the targeted 8-bit
  * register address of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -294,7 +294,7 @@ void nvsram_reg_write ( nvsram_t *ctx, uint8_t reg, uint8_t tx_data );
  * @brief Generic read the byte of data function.
  * @details The function read a the byte of data from the targeted 8-bit
  * register address of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -309,7 +309,7 @@ uint8_t nvsram_reg_read ( nvsram_t *ctx, uint8_t reg );
  * @details The function writes a sequential data starting
  * of the targeted 8-bit register address
  * of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -326,7 +326,7 @@ void nvsram_burst_reg_write ( nvsram_t *ctx, uint8_t reg, uint8_t *p_tx_data, ui
  * @details The function read a sequential data starting
  * from the targeted 8-bit register address
  * of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] reg : Start register address.
@@ -342,7 +342,7 @@ void nvsram_burst_reg_read ( nvsram_t *ctx, uint8_t reg, uint8_t *p_rx_data, uin
  * @brief Send command function.
  * @details The function sends the desired command
  * to the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] cmd : Command that is being sent.
@@ -356,7 +356,7 @@ void nvsram_send_cmd ( nvsram_t *ctx, uint8_t cmd );
  * @brief Read device ID function.
  * @details The function read a device ID
  * of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @return 32-bit read device ID.
@@ -370,7 +370,7 @@ uint32_t nvsram_read_dev_id ( nvsram_t *ctx );
  * @details The function writes a sequential data starting
  * of the targeted 17-bit memory address
  * of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] mem_adr : 17-bit start memory address.
@@ -387,7 +387,7 @@ void nvsram_memory_write ( nvsram_t *ctx, uint32_t mem_adr, uint8_t *p_tx_data, 
  * @details The function read a sequential data starting
  * from the targeted 17-bit memory address
  * of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] mem_adr : 17-bit start memory address.
@@ -403,7 +403,7 @@ void nvsram_memory_read ( nvsram_t *ctx, uint32_t mem_adr, uint8_t *p_rx_data, u
  * @brief Enable memory write function.
  * @details The function enable write depending on the function argument
  * of the CY14B101J2 1-Mbit (128K � 8) Serial (I2C) nvSRAM
- * on nvSRAM click board.
+ * on nvSRAM Click board.
  * @param[in] ctx : Click context object.
  * See #nvsram_t object definition for detailed explanation.
  * @param[in] en_wr_mem : Write enable or disable.

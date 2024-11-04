@@ -3,7 +3,7 @@
  * \brief Angle2 Click example
  * 
  * # Description
- * This example showcases how to configure and use the Angle 2 click. This click senses
+ * This example showcases how to configure and use the Angle 2 Click. This Click senses
  * the magnetic field along the horizontal plane using an array of Hal effect sensors.
  * The module uses advanced Spinaxis technology based on a direct angle sampling app-
  * roach in order to provide reliable data quickly.                                         
@@ -11,11 +11,11 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the click and logger modules. Additional con-
+ * This function initializes and configures the Click and logger modules. Additional con-
  * figuring is done in the default_cfg(...) function.
  * 
  * ## Application Task  
- * This function reads angle data from the click module and displays that data using the
+ * This function reads angle data from the Click module and displays that data using the
  * UART console every 200 miliseconds.
  * 
  * \author MikroE Team

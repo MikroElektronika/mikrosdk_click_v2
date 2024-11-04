@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# UPS 3 click
+# UPS 3 Click
 
 UPS 3 Click is a compact add-on board that represents a bidirectional active charge/balancing solution. This board features the LTC3110, a bidirectional buck-boost DC/DC regulator/charger combination with selectable operation modes for charging and system backup from Analog Devices. It can autonomously transition from Charge to Backup mode or switch modes based on an external command. A proprietary low noise switching algorithm optimizes efficiency with capacitor/battery voltages above, below, or equal to the system output voltage. Additional features include voltage supervisors for direction control and end of a charge and a general-purpose comparator with open-collector output for interfacing with MCU. This Click board™ is suitable for a backup power source for a wide range of battery-operated embedded applications.
 
@@ -9,7 +9,7 @@ UPS 3 Click is a compact add-on board that represents a bidirectional active cha
   <img src="https://download.mikroe.com/images/click_for_ide/ups3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ups-3)
+[Click Product page](https://www.mikroe.com/ups-3)
 
 ---
 
@@ -72,7 +72,7 @@ uint8_t ups3_get_chrg ( ups3_t *ctx );
 
 ## Examples Description
 
-> This application demonstrates the use of UPS 3 click board. 
+> This application demonstrates the use of UPS 3 Click board. 
 
 **The demo application is composed of two sections :**
 
@@ -173,7 +173,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

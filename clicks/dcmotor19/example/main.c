@@ -3,13 +3,13 @@
  * @brief DC Motor 19 Click Example.
  *
  * # Description
- * This example demonstrates the use of DC Motor 19 click board by driving the motors
+ * This example demonstrates the use of DC Motor 19 Click board by driving the motors
  * in both direction in the span of 14 seconds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and enables the click by disabling the standby mode.
+ * Initializes the driver and enables the Click by disabling the standby mode.
  *
  * ## Application Task
  * Drives the motors in the forward direction for 5 seconds, then pulls brake for 2 seconds, 

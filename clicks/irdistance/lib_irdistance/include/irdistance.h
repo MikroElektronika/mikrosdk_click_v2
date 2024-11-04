@@ -123,7 +123,7 @@ extern "C"{
  *
  * @param cfg Click configuration structure.
  *
- * @description This function initializes click configuration structure to init
+ * @description This function initializes Click configuration structure to init
  * state.
  * @note All used pins will be set to unconnected state.
  */
@@ -140,7 +140,7 @@ void irdistance_cfg_setup ( irdistance_cfg_t *cfg );
  *          (-1) - Error.
  *
  * @description This function initializes all necessary pins and peripherals
- * used for this click.
+ * used for this Click.
  */
 err_t irdistance_init ( irdistance_t *ctx, irdistance_cfg_t *cfg );
 
@@ -150,7 +150,7 @@ err_t irdistance_init ( irdistance_t *ctx, irdistance_cfg_t *cfg );
  * @param ctx Click object.
  *
  * @description Function enables distance measuring on the sensor by setting EN
- * pin on the IR distance click board.
+ * pin on the IR distance Click board.
  */
 void irdistance_enable_device ( irdistance_t *ctx );
 
@@ -160,7 +160,7 @@ void irdistance_enable_device ( irdistance_t *ctx );
  * @param ctx Click object.
  *
  * @description Function disables distance measuring on the sensor by clearing
- * EN pin on the IR distance click board.
+ * EN pin on the IR distance Click board.
 */
 void irdistance_disable_device ( irdistance_t *ctx );
 
@@ -194,6 +194,6 @@ err_t irdistance_get_pin_voltage ( irdistance_t *ctx, float *data_out );
 #endif  // _IRDISTANCE_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------- END

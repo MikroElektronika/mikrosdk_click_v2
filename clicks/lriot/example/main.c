@@ -3,14 +3,14 @@
  * @brief LR IoT Click example
  *
  * # Description
- * This example demonstrates the use of LR IoT click board by reading a GNSS and WiFi 
+ * This example demonstrates the use of LR IoT Click board by reading a GNSS and WiFi 
  * scanning results and displaying it on the USB UART. In the case of a tranceive firmware
  * the communication between two devices over LoRa will be demonstrated as well.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver, performs the click default configuration, and after that reads
+ * Initializes the driver, performs the Click default configuration, and after that reads
  * and displays the chip's firmware information. In the case you need to update or change the default
  * firmware refer to the @b LRIOT_UPDATE_FIRMWARE and @b LRIOT_FIRMWARE_SELECTOR macro definition.
  *

@@ -3,13 +3,13 @@
  * @brief XBEE 2 Click Example.
  *
  * # Description
- * This example demonstrates the use of an XBEE 2 click board by showing
- * the communication between the two click boards configured in transparent mode.
+ * This example demonstrates the use of an XBEE 2 Click board by showing
+ * the communication between the two Click boards configured in transparent mode.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and configures the click board by performing a factory reset, 
+ * Initializes the driver and configures the Click board by performing a factory reset, 
  * and setting the device name, destination address, api mode to transparent, 
  * and a device role to join or form network depending on the application mode.
  *
@@ -42,7 +42,7 @@
 #define DEMO_APP_TRANSMITTER
 
 // Text message to send in the transmitter application mode
-#define DEMO_TEXT_MESSAGE           "MikroE - XBEE 2 click board\r\n"
+#define DEMO_TEXT_MESSAGE           "MikroE - XBEE 2 Click board\r\n"
 
 // Application process buffer size
 #define PROCESS_BUFFER_SIZE         200

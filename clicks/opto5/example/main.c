@@ -3,7 +3,7 @@
  * @brief Opto 5 Click Example.
  *
  * # Description
- * This example demonstrates the use of Opto 5 click board.
+ * This example demonstrates the use of Opto 5 Click board.
  *
  * The demo application is composed of two sections :
  *

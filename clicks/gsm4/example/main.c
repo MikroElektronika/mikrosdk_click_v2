@@ -75,7 +75,7 @@
 #define REMOTE_PORT                         "51111"         // TCP/UDP echo server port
 
 // Message content
-#define MESSAGE_CONTENT                     "GSM 4 click board - demo example."
+#define MESSAGE_CONTENT                     "GSM 4 Click board - demo example."
 
 // Application buffer size
 #define APP_BUFFER_SIZE                     256

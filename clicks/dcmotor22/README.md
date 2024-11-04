@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# DC Motor 22 click
+# DC Motor 22 Click
 
 > DC Motor 22 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TMC7300, a low voltage driver for one or two DC motors from TRINAMIC Motion Control. The TMC7300 is rated for an operating voltage range from 2V to 11V and operates up to two DC motors via simple UART control for direction, velocity, and torque. It also has a complete set of diagnostic and protection capabilities that supports robust and reliable operation, like short to ground protection, short to power supply protection and undervoltage detection.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor22_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-22-click)
+[Click Product page](https://www.mikroe.com/dc-motor-22-click)
 
 ---
 
@@ -70,13 +70,13 @@ void dcmotor22_reset_device ( dcmotor22_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of DC Motor 22 click board by controlling the speed of both motors over PWM duty cycle as well as displaying the motors current consumption.
+> This example demonstrates the use of DC Motor 22 Click board by controlling the speed of both motors over PWM duty cycle as well as displaying the motors current consumption.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -174,7 +174,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

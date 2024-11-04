@@ -3,7 +3,7 @@
  * @brief SpeakUp 3 Click Example.
  *
  * # Description
- * This example demonstrates the use of the SpeakUp 3 click board by reading
+ * This example demonstrates the use of the SpeakUp 3 Click board by reading
  * and displaying the voice commands reply messages.
  *
  * The demo application is composed of two sections :

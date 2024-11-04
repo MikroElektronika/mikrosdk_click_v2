@@ -1,6 +1,6 @@
 
 ---
-# RTC 13 click
+# RTC 13 Click
 
 > RTC 13 Click is a compact add-on board that accurately keeps the time of a day. This board features the PCF2123, an SPI configurable real-time clock/calendar optimized for low power operations from NXP Semiconductors. The PCF2123 provides year, month, day, weekday, hours, minutes, and seconds based on a 32.768kHz quartz crystal. Data is transferred serially via an SPI interface with a maximum data rate of 6.25 Mbit/s. An alarm and timer function is also available, providing the possibility to generate a wake-up signal on an interrupt line, in addition to a programmable square-wave clock output.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/rtc13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/rtc-13-click)
+[Click Product page](https://www.mikroe.com/rtc-13-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t rtc13_get_date ( rtc13_t *ctx, rtc13_date_t *rtc_date );
 
 ## Example Description
 
-> This is an example that demonstrates the use of the RTC 13 click board™.
+> This is an example that demonstrates the use of the RTC 13 Click board™.
 
 **The demo application is composed of two sections :**
 
@@ -134,7 +134,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of a RTC 13 click board™.
+> This is an example that shows the use of a RTC 13 Click board™.
 > In this example, we read and display the current time and date, 
 > which we also previously set.
 > Results are being sent to the Usart Terminal where you can track their changes.
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# NFC 3 click
+# NFC 3 Click
 
 NFC 3 Click is a compact add-on board that contains an NFC transceiver for contactless communication at 13.56MHz. This board features the PN5180A0HN, a highly integrated high-performance full NFC Forum-compliant frontend from NXP Semiconductors. The PN5180A0HN utilizes an outstanding modulation and demodulation concept for different contactless communication methods and protocols. It is fully compliant with many Reader/Writer standards (ISO 14443A/B, ISO 15693, ISO 18092, and more), alongside support for reading all NFC tag types (type 1, 2, 3, 4A, and 4B). Besides the SPI host interface, it also features high RF output power to drive an antenna etched on the PCB directly, besides its tuning circuit, at high efficiency.
 
@@ -9,7 +9,7 @@ NFC 3 Click is a compact add-on board that contains an NFC transceiver for conta
   <img src="https://download.mikroe.com/images/click_for_ide/nfc3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/nfc-3-click)
+[Click Product page](https://www.mikroe.com/nfc-3-click)
 
 ---
 
@@ -76,7 +76,7 @@ err_t nfc3_read_eeprom_version ( nfc3_t *ctx, uint16_t *data_out );
 
 ### Application Init
 
-> Initializes driver and logger, then enables the click board and reads the device product, firmware and eeprom versions.
+> Initializes driver and logger, then enables the Click board and reads the device product, firmware and eeprom versions.
 
 ```c
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://shop.mikroe.com/usb-uart-click),
+[USB UART Click](https://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "IrThermo 3V3 click",
+    "display_name": "IrThermo 3V3 Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.irthermo3v3",
     "product_link": "https://www.mikroe.com/irthermo-33v-click",
-    "short_description": "IrThermo click 3.3V is a contactless temperature measurement device that relies on the accurate thermopile sensor chip, which encompasses both the thermopile sensor element and the ASSP. The ASSP - signal conditioning circuitry features 17bit ADC and powerful DSP which allow high degree of accuracy and wide temperature measurement range. The IrThermo click is equipped with both the 10bit PWM interface and the SMBus/I2C interface.",
+    "short_description": "IrThermo Click 3.3V is a contactless temperature measurement device that relies on the accurate thermopile sensor chip, which encompasses both the thermopile sensor element and the ASSP. The ASSP - signal conditioning circuitry features 17bit ADC and powerful DSP which allow high degree of accuracy and wide temperature measurement range. The IrThermo Click is equipped with both the 10bit PWM interface and the SMBus/I2C interface.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "related_projects": [
         495
     ],
     "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
+    "version": "2.1.0.14",
     "cmake": true,
     "alias": "Click.IrThermo3V3",
     "subdir_name": "lib_irthermo3v3"
 }
+
 
 
 

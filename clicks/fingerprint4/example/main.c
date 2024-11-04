@@ -3,7 +3,7 @@
  * @brief Fingerprint 4 Click example
  *
  * # Description
- * This example demonstrates the use of the Fingerprint 4 click boards by registering 3 fingerprints and
+ * This example demonstrates the use of the Fingerprint 4 Click boards by registering 3 fingerprints and
  * then waiting until a finger is detected on the sensor and identifying if the fingerprint matches one of
  * those stored in the Flash storage.
  *

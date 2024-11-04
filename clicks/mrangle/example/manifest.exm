@@ -3,6 +3,6 @@
     "description": "MR Angle Click is a compact add-on board that contains a magnetoresistive sensor with an integrated amplifier. This board features the KMZ60, a high precision sensor for magnetic angle measurement with single-ended cosine and sine outputs from NXP Semiconductors. The MR sensor element comes with two Wheatstone bridges for cosine and sine signals, supports functions for control circuit and signal amplification, and enables angular measurements with high accuracy by an excellent linearity and temperature drift behavior. The KMZ60 is fully automotive qualified as well as applicable for industrial and consumer applications.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","KMZ60"],
+    "hw" : ["Click","KMZ60"],
     "category" : ["Magnetic"]
 }

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# ADC 13 click
+# ADC 13 Click
 
 ADC 13 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS1262, a 32-bit, high precision, 38-kSPS, analog-to-digital converter with programmable gain amplifier and voltage reference from Texas Instruments.
 
@@ -9,7 +9,7 @@ ADC 13 Click is a compact add-on board that contains a high-performance data con
   <img src="https://download.mikroe.com/images/click_for_ide/adc_13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/adc-13-click)
+[Click Product page](https://www.mikroe.com/adc-13-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t adc13_set_input_channel ( adc13_t *ctx, uint8_t pos, uint8_t neg );
 
 ## Example Description
 
-> This example demonstrates the use of ADC 13 click board.
+> This example demonstrates the use of ADC 13 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](http://shop.mikroe.com/usb-uart-click),
+[USB UART Click](http://shop.mikroe.com/usb-uart-click),
 [USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
 [RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. The

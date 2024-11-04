@@ -1,6 +1,6 @@
 
 ---
-# DIGI POT 7 click
+# DIGI POT 7 Click
 
 DIGI POT 7 Click is a compact add-on board used as a digitally controlled potentiometer. This board features the AD5175, a single-channel 1024-position digital rheostat with less than ±1% end-to-end resistor tolerance error and 50-time programmable wiper memory from Analog Devices. This I2C configurable IC is designed to operate as a variable resistor for analog signals, within the voltage range of single-supply operation at 2.7 V to 5.5 V.
 
@@ -8,7 +8,7 @@ DIGI POT 7 Click is a compact add-on board used as a digitally controlled potent
   <img src="https://download.mikroe.com/images/click_for_ide/digipot7_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-pot-7-click)
+[Click Product page](https://www.mikroe.com/digi-pot-7-click)
 
 ---
 
@@ -64,7 +64,7 @@ void digipot7_write_rdac ( digipot7_t *ctx, uint16_t rdac_data );
 
 ## Example Description
 
-> This is an example that demonstrate the use of the DIGI POT 7 click board.
+> This is an example that demonstrate the use of the DIGI POT 7 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -181,7 +181,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

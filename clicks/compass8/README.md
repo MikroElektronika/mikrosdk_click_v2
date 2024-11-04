@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Compass 8 click
+# Compass 8 Click
 
 > Compass 8 Click is a compact add-on board designed for precise compass applications. This board features the AK09919, a 3-axis electronic compass IC from AKM Semiconductor. The AK09919 is based on high-sensitivity Hall sensor technology for detecting terrestrial magnetism across the X, Y, and Z axes, has multiple operational modes, a built-in oscillator, and a Power On Reset circuit. It also includes a magnetic sensor overflow monitor and a 16-sample FIFO data buffer for efficient data handling.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/compass8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/compass-8-click)
+[Click Product page](https://www.mikroe.com/compass-8-click)
 
 ---
 
@@ -152,7 +152,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

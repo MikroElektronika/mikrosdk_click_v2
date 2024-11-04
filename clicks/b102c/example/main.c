@@ -3,7 +3,7 @@
  * @brief B102C Click Example.
  *
  * # Description
- * This example demonstrates the use of B102C click board by processing
+ * This example demonstrates the use of B102C Click board by processing
  * the incoming data and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
@@ -22,7 +22,7 @@
  * - static void b102c_error_check( err_t error_flag )
  *
  * @note
- * For communication with B102C click use the android application on the link:
+ * For communication with B102C Click use the android application on the link:
  * https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner
  *   
  * @author Stefan Ilic

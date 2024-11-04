@@ -3,13 +3,13 @@
  * @brief IR Gesture 3 Click example
  *
  * # Description
- * This example demonstrates the use of IR Gesture 3 click board by processing
+ * This example demonstrates the use of IR Gesture 3 Click board by processing
  * the incoming gestures and displaying them on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Reads and processes all the incoming gestures and displays them on the USB UART.

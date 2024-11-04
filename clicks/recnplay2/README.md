@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Rec N Play 2 click
+# Rec N Play 2 Click
 
 > Rec&Play 2 Click is a compact add-on board for voice recording and playback applications. It is based on the ISD1616B, a single-message voice record and playback IC from Nuvoton. The board features an on-chip oscillator, a microphone preamplifier with Automatic Gain Control (AGC), an omnidirectional microphone, and a speaker driver for high-quality audio recording and playback. Voice data is stored in onboard Flash memory without digital compression, ensuring clear and reliable sound. It supports both manual and digital control, as well as flexible message durations from 10 to 26 seconds.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/recplay2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/recplay-2-click)
+[Click Product page](https://www.mikroe.com/recplay-2-click)
 
 ---
 
@@ -53,17 +53,17 @@ void recnplay2_default_cfg ( recnplay2_t *ctx );
 
 #### Example key functions :
 
-- `recnplay2_set_pl_pin` This function sets the PL pin on the selected level of Rec N Play 2 click board.
+- `recnplay2_set_pl_pin` This function sets the PL pin on the selected level of Rec N Play 2 Click board.
 ```c
 void recnplay2_set_pl_pin ( recnplay2_t *ctx, uint8_t pin_state );
 ```
 
-- `recnplay2_record_sound` This function is used to record sound with Rec N Play 2 click board.
+- `recnplay2_record_sound` This function is used to record sound with Rec N Play 2 Click board.
 ```c
 err_t recnplay2_record_sound ( recnplay2_t *ctx, uint16_t rec_len );
 ```
 
-- `recnplay2_play_sound` This function is used to play recorded sounds with Rec N Play 2 click board.
+- `recnplay2_play_sound` This function is used to play recorded sounds with Rec N Play 2 Click board.
 ```c
 err_t recnplay2_play_sound ( recnplay2_t *ctx, uint16_t play_len );
 ```
@@ -77,7 +77,7 @@ err_t recnplay2_play_sound ( recnplay2_t *ctx, uint16_t play_len );
 
 ### Application Init
 
-> Initializes the driver, performs the click default configuration.
+> Initializes the driver, performs the Click default configuration.
 
 ```c
 
@@ -143,7 +143,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

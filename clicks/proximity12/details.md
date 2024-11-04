@@ -1,6 +1,6 @@
 
 ---
-# Proximity 12 click
+# Proximity 12 Click
 
 Proximity 12 Click is a compact add-on board that contains a high-performance light and proximity sensing solution. This board features the TMD3719, an optical sensor that integrates ambient light sensing, proximity detection, and flicker detection sensing from AMS-AG.
 
@@ -8,7 +8,7 @@ Proximity 12 Click is a compact add-on board that contains a high-performance li
   <img src="https://download.mikroe.com/images/click_for_ide/proximity12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/proximity-12-click)
+[Click Product page](https://www.mikroe.com/proximity-12-click)
 
 ---
 
@@ -52,12 +52,12 @@ err_t proximity12_default_cfg ( proximity12_t *ctx );
 
 #### Example key functions :
 
-- `proximity12_read_proximity` This function reads the raw proximity value measured by the click board.
+- `proximity12_read_proximity` This function reads the raw proximity value measured by the Click board.
 ```c
 err_t proximity12_read_proximity ( proximity12_t *ctx, uint16_t *prox_data );
 ```
 
-- `proximity12_read_als` This function reads all als data measured by the click board.
+- `proximity12_read_als` This function reads all als data measured by the Click board.
 ```c
 err_t proximity12_read_als ( proximity12_t *ctx, proximity12_als_data_t *als );
 ```
@@ -69,13 +69,13 @@ err_t proximity12_set_led_isink ( proximity12_t *ctx, uint8_t scaler, uint8_t cu
 
 ## Example Description
 
-> This function demonstrates the use of Proximity 12 click board.
+> This function demonstrates the use of Proximity 12 Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -168,7 +168,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

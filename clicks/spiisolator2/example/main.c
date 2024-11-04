@@ -3,11 +3,11 @@
  * @brief SPIIsolator2 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the SPI Isolator 2 click board.
+ * This is an example that demonstrates the use of the SPI Isolator 2 Click board.
  * This board uses the ISO7741 which provides high electromagnetic immunity and low
  * emissions at low power consumption while isolating digital I/Os. In this example,
- * we write and then read data from the connected EEPROM 5 click to the SPI Isolator 2
- * click board.
+ * we write and then read data from the connected EEPROM 5 Click to the SPI Isolator 2
+ * Click board.
  *
  * The demo application is composed of two sections :
  *

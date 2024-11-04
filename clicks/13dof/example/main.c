@@ -3,7 +3,7 @@
  * \brief c13DOF Click example
  * 
  * # Description
- * This example displays values registered by sensors on click board.
+ * This example displays values registered by sensors on Click board.
  * 
  * The demo application is composed of two sections :
  * 

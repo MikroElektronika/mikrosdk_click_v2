@@ -10,7 +10,7 @@
     ],
 "dependency_list": [],
     "details": "Resources/DETAILS.md",
-    "display_name": "Environment click",
+    "display_name": "Environment Click",
     "example_list": [
         {
             "project_path": "Examples/example"
@@ -24,18 +24,19 @@
     },
     "name": "mikroe.click.environment ",
     "product_link": "https://www.mikroe.com/environment-click",
-    "short_description": "Environment click measures temperature, relative humidity, pressure and VOC (Volatile Organic compounds gases). The click carries the BME680 environmental sensor from Bosch.",
+    "short_description": "Environment Click measures temperature, relative humidity, pressure and VOC (Volatile Organic compounds gases). The Click carries the BME680 environmental sensor from Bosch.",
     "supported_compiler": "mikroC AI|GCC|Clang|XC",
     "type": "Library",
     "_type": "mikroSDK Library",
     "related_projects": [
         2148
     ],
-    "version": "2.1.0.18",
+    "version": "2.1.0.19",
     "cmake": true,
     "alias": "Click.Environment",
     "subdir_name": "lib_environment"
 }
+
 
 
 

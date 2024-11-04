@@ -1,6 +1,6 @@
 
 ---
-# Tilt 3 click
+# Tilt 3 Click
 
 > Tilt 3 Click is a compact add-on board used for measuring the tilt in multiple axes in relation to an absolute level plane. This board features the DSBA1P, a tilt sensor switch that breaks the circuit when tilted to an angle from ±30° to ±60° from NKK Switches.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/tilt3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/tilt-3-click)
+[Click Product page](https://www.mikroe.com/tilt-3-click)
 
 ---
 
@@ -64,7 +64,7 @@ uint8_t tilt3_get_switch_state ( tilt3_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Tilt 3 click board.
+> This example demonstrates the use of Tilt 3 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -153,7 +153,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

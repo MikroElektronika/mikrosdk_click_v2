@@ -1,6 +1,6 @@
 
 ---
-# DIGI POT 11 click
+# DIGI POT 11 Click
 
 > DIGI POT 11 Click is a compact add-on board representing a digitally controlled potentiometer. This board features a double pack of the MAX5387, a dual, 256-tap, volatile, low-voltage linear taper digital potentiometer from Analog Devices. This way, four digitally I2C-controlled potentiometers are realized with end-to-end resistance values of 50kΩ. Operating from a single +3.3V power supply, this device provides a low 35ppm/ºC end-to-end temperature coefficient.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/digipot11_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/digi-pot-11-click)
+[Click Product page](https://www.mikroe.com/digi-pot-11-click)
 
 ---
 
@@ -59,7 +59,7 @@ err_t digipot11_set_u2_wiper ( digipot11_t *ctx, uint8_t wiper_sel, uint8_t data
 
 ## Example Description
 
-> This example demonstrates the use of DIGI POT 11 click board by changing the wipers position of both U1 and U2 devices.
+> This example demonstrates the use of DIGI POT 11 Click board by changing the wipers position of both U1 and U2 devices.
 
 **The demo application is composed of two sections :**
 
@@ -135,7 +135,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,13 +3,13 @@
  * \brief Relay 3 Click example
  * 
  * # Description
- * This example starts off with the initialization and configuration of the click and logger
+ * This example starts off with the initialization and configuration of the Click and logger
  * modules and later on showcases how to turn specified relays ON/OFF using the output pins. 
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initialises and configures the logger and click modules.
+ * This function initialises and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function turns on the 1st and the 2nd relay and then turns them both off.

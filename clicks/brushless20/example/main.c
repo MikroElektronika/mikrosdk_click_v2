@@ -3,13 +3,13 @@
  * @brief Brushless 20 Click example
  *
  * # Description
- * This example demonstrates the use of the Brushless 20 click board by driving the 
+ * This example demonstrates the use of the Brushless 20 Click board by driving the 
  * motor in both directions at different speeds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Drives the motor in both directions and changes the motor speed every 3 seconds approximately.

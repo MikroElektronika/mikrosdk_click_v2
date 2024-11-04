@@ -212,7 +212,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void spectral2_cfg_setup ( spectral2_cfg_t *cfg );
@@ -223,7 +223,7 @@ void spectral2_cfg_setup ( spectral2_cfg_t *cfg );
  * @param ctx  Click object.
  * @param cfg  Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 SPECTRAL2_RETVAL spectral2_init ( spectral2_t *ctx, spectral2_cfg_t *cfg );
 
@@ -232,7 +232,7 @@ SPECTRAL2_RETVAL spectral2_init ( spectral2_t *ctx, spectral2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Spectral2 click.
+ * @description This function executes default configuration for Spectral2 Click.
  */
 
 /**
@@ -358,6 +358,6 @@ int32_t spectral2_get_calibrated_data ( spectral2_t *ctx, uint8_t data_reg );
 #endif  // SPECTRAL2_H
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group
+/// \}    // End Click Driver group
 /*! @} */
 // ------------------------------------------------------------------------ END

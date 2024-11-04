@@ -3,7 +3,7 @@
  * @brief Rotary G Click example
  *
  * # Description
- * The demo application controls led on click with rotary on board.
+ * The demo application controls led on Click with rotary on board.
  *
  * The demo application is composed of two sections :
  *

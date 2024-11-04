@@ -3,13 +3,13 @@
  * @brief Expand 16 Click example
  *
  * # Description
- * This example demonstrates the use of Expand 16 click board by setting and reading 
+ * This example demonstrates the use of Expand 16 Click board by setting and reading 
  * the ports state.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets 
+ * Initializes the driver and performs the Click default configuration which sets 
  * half of the pins as output ( GPIO4, GPIO5, GPIO6 and GPIO7 ) and the 
  * other half of the pins as inputs ( GPIO0, GPIO1, GPIO2 and GPIO3 ).
  *

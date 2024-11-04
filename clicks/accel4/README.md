@@ -2,7 +2,7 @@
 
 
 ---
-# Accel 4 click
+# Accel 4 Click
 
 > Accel 4 Click is a compact add-on board that contains an acceleration sensor. This board features the FXLS8964AF, a 12-bit three-axis accelerometer from NXP Semiconductors. It allows selectable full-scale acceleration measurements in ranges of �2g, �4g, �8g, or �16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. The FXLS8964AF supports both high-performance and low-power operating modes, allowing maximum flexibility to meet the resolution and power needs for various unique use cases.
 
@@ -10,7 +10,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/accel4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/accel-4-click)
+[Click Product page](https://www.mikroe.com/accel-4-click)
 
 ---
 
@@ -177,7 +177,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

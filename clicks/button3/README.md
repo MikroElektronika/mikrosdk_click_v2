@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Button 3 click
+# Button 3 Click
 
 > Button 3 Click is a compact add-on board for precise and reliable tactile input detection. This board features three TL3215 series tactile switches from E-Switch, known for their high reliability and consistent performance. Each switch has a 2mm actuator, 160gf actuation force, and a silver contact material for excellent conductivity and durability. The integrated LED provides clear visual feedback, and the board supports the new Click Snap feature, allowing the main sensor area to become movable by breaking the PCB for flexible implementation.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/button3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/button-3-click)
+[Click Product page](https://www.mikroe.com/button-3-click)
 
 ---
 
@@ -70,13 +70,13 @@ err_t button3_toggle_blue_led ( button3_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Button 3 click board by toggling a button LED and its switch state on a button press.
+> This example demonstrates the use of Button 3 Click board by toggling a button LED and its switch state on a button press.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -194,7 +194,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

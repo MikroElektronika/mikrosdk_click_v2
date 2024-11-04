@@ -3,6 +3,6 @@
     "description": "DC Motor 13 Click is a compact add-on board with a brushed DC motor driver. This board features the TB67H481FNG, a dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor that uses the PWM IN interface to control the DC motor outputs. Fabricated with the BiCD process (DMOSFET is used for output power transistor), it covers a wide operating voltage range of 8.2V to 44V with a maximum output current capacity of 2A. It also offers helpful features like a robust and reliable operation, like the decay modes selection function, PWM constant-current drive, torque settings, protection features, and one anomaly detection indicator.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TB67H481FNG","PCA9538ABSHP"],
+    "hw" : ["Click","TB67H481FNG","PCA9538ABSHP"],
     "category" : ["Brushed"]
 }

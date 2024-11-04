@@ -1,15 +1,15 @@
 
 ---
-# Adapter click
+# Adapter Click
 
-Adapter click™ is a breakout board which simplifies connection of add-on boards with IDC10 headers to mikroBUS™ socket. There are two ways of establishing connection: using male or female IDC10 connectors.
+Adapter Click™ is a breakout board which simplifies connection of add-on boards with IDC10 headers to mikroBUS™ socket. There are two ways of establishing connection: using male or female IDC10 connectors.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/adapter_click.png" height=300px>
 </p>
 
 
-[click Product page](https://www.mikroe.com/adapter-click)
+[Click Product page](https://www.mikroe.com/adapter-click)
 
 ---
 
@@ -54,7 +54,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> Adapter click is a breakout board which simplifies connection of add-on boards. 
+> Adapter Click is a breakout board which simplifies connection of add-on boards. 
 > There are two ways of establishing connection: using male or female IDC10 connectors. 
 > Male header must be soldered on the top side of Adapter Click to connect the add-on board 
 > directly or via flat cable. Female header can be soldered either on the top, or the bottom 
@@ -98,9 +98,9 @@ void application_init ( void )
 
 ### Application Task
 
-> This is an example that shows the use of the Adapter click board (SPI mode -  set as default). 
-> In I2C mode we are reading internal temperature from another device (THERMO 5 click board).
-> In SPI mode example we are writing "mikroElektronika" on SRAM click board, 
+> This is an example that shows the use of the Adapter Click board (SPI mode -  set as default). 
+> In I2C mode we are reading internal temperature from another device (THERMO 5 Click board).
+> In SPI mode example we are writing "mikroElektronika" on SRAM Click board, 
 > and than reading from the same memory location.
 
 ```c
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

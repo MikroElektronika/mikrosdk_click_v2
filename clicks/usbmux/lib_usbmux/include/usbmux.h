@@ -138,7 +138,7 @@ typedef enum
 
 /**
  * @brief USB MUX configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #usbmux_cfg_t object definition for detailed explanation.
@@ -150,7 +150,7 @@ void usbmux_cfg_setup ( usbmux_cfg_t *cfg );
 /**
  * @brief USB MUX initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #usbmux_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -165,7 +165,7 @@ err_t usbmux_init ( usbmux_t *ctx, usbmux_cfg_t *cfg );
 /**
  * @brief USB MUX default configuration function.
  * @details This function executes a default configuration of USB MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbmux_t object definition for detailed explanation.
  * @return Nothing.
@@ -177,7 +177,7 @@ void usbmux_default_cfg ( usbmux_t *ctx );
 /**
  * @brief USB MUX set OE pin output function.
  * @details This function is used to set output level of the OE pin of USB MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbmux_t object definition for detailed explanation.
  * @param[in] pin_state : Output pin level.
@@ -189,7 +189,7 @@ void usbmux_set_oe_pin ( usbmux_t *ctx, uint8_t pin_state );
 /**
  * @brief USB MUX set SEL pin output function.
  * @details This function is used to set output level of the SEL pin of USB MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbmux_t object definition for detailed explanation.
  * @param[in] pin_state : Output pin level.
@@ -201,7 +201,7 @@ void usbmux_set_sel_pin ( usbmux_t *ctx, uint8_t pin_state );
 /**
  * @brief USB MUX enable output function.
  * @details This function is used to enable output of USB MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbmux_t object definition for detailed explanation.
  * @return Nothing.
@@ -212,7 +212,7 @@ void usbmux_enable_output ( usbmux_t *ctx );
 /**
  * @brief USB MUX disable output function.
  * @details This function is used to disable output of USB MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbmux_t object definition for detailed explanation.
  * @return Nothing.
@@ -223,7 +223,7 @@ void usbmux_disable_output ( usbmux_t *ctx );
 /**
  * @brief USB MUX select output function.
  * @details This function is used to select output of USB MUX
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #usbmux_t object definition for detailed explanation.
  * @param[in] out_sel : Output selection.

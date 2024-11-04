@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Vibra Sense 2 click
+# Vibra Sense 2 Click
 
 > Vibra Sense 2 Click is a compact add-on board that contains a piezo sensor suitable for vibration measurements. This board features the LDT0-028K, a flexible 28 μm thick piezoelectric PVDF polymer film with screen-printed silver ink electrodes, laminated to a 0.125 mm polyester substrate, and fitted with two crimped contacts from TE Connectivity.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/vibrasense2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vibra-sense-2-click)
+[Click Product page](https://www.mikroe.com/vibra-sense-2-click)
 
 ---
 
@@ -65,7 +65,7 @@ int8_t vibrasense2_vibration_level ( vibrasense2_t *ctx );
 
 ## Example Description
 
-> This example shows capabilities of Vibra Sense 2 click board.
+> This example shows capabilities of Vibra Sense 2 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -112,7 +112,7 @@ void application_init ( void ) {
 
 ### Application Task
 
-> Demonstrates use of Vibra Sense 2 click board by checking vibration levels and displaying changes via USART terminal.
+> Demonstrates use of Vibra Sense 2 Click board by checking vibration levels and displaying changes via USART terminal.
 
 ```c
 
@@ -179,7 +179,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

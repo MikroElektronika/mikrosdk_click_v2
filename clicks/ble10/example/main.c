@@ -23,7 +23,7 @@
  * @note
  * We have used the nRF Connect smartphone application for the test.
  * Make sure to configure the GATT Server properly in the nRF Connect application, then you
- * will be able to send a desired command from it, once you connect to the click board.
+ * will be able to send a desired command from it, once you connect to the Click board.
  * You can use the Sample configuration for GATT Server which comes with the application installation
  * and then send a command via Test Service from the Server.
  *

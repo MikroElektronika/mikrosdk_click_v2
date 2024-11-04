@@ -3,13 +3,13 @@
  * \brief Step Down 2 Click example
  * 
  * # Description
- * This example showcases how to initialize and use the Step Down 2 click. The click is a 
+ * This example showcases how to initialize and use the Step Down 2 Click. The Click is a 
  * step-down monolithic switching regulator able to deliver up to 2 A (DC).
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function checks error input on the RST pin and reports if the device is working properly

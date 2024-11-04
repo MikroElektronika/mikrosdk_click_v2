@@ -156,7 +156,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void dcmotor8_cfg_setup ( dcmotor8_cfg_t *cfg );
@@ -167,7 +167,7 @@ void dcmotor8_cfg_setup ( dcmotor8_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 DCMOTOR8_RETVAL dcmotor8_init ( dcmotor8_t *ctx, dcmotor8_cfg_t *cfg );
 
@@ -215,6 +215,6 @@ void dcmotor8_enable ( dcmotor8_t *ctx, uint8_t state );
 #endif  // _DCMOTOR8_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

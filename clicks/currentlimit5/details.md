@@ -1,6 +1,6 @@
 
 ---
-# Current Limit 5 click
+# Current Limit 5 Click
 
 > Current Limit 5 Click is a compact add-on board representing a current-limiting solution. This board features the MIC2099, a current-limit power distribution switch from Microchip Technology. This Click board™ represents a programmable current limit solution with various protection features and fault indication, which operates from a 2.5V to 5.5V input voltage range. Also, the current limit is adjustable from 100mA up to 1.05A programmed through the MCP4561 digital potentiometer. This Click board™ is suitable for applications in portable equipment and condition monitoring or power supplies, protecting them in short circuits or other overload conditions.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/currentlimit5_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/current-limit-5-click)
+[Click Product page](https://www.mikroe.com/current-limit-5-click)
 
 ---
 
@@ -64,14 +64,14 @@ void currentlimit5_enable_limit ( currentlimit5_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Current Limit 5 click board by limiting
+> This example demonstrates the use of Current Limit 5 Click board by limiting
 the current to a certain value and displaying an appropriate message when the current reaches the limit.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration which sets the current limit to 200mA.
+> Initializes the driver and performs the Click default configuration which sets the current limit to 200mA.
 
 ```c
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,14 +1,14 @@
 
 ---
-# DC Motor 8 click
+# DC Motor 8 Click
 
-DC Motor 8 click is a DC motor driver. It can drive simple DC motors with brushes, providing them with a significant amount of current and voltage up to 40V. The click has one control input, that uses the PWM signal from the host MCU. It uses the half-bridge topology to regulate the speed of the motor rotation, employs advanced dead-time circuitry that monitors the output stage, providing maximum switching efficiency and features an advanced technique to avoid shoot-through currents.
+DC Motor 8 Click is a DC motor driver. It can drive simple DC motors with brushes, providing them with a significant amount of current and voltage up to 40V. The Click has one control input, that uses the PWM signal from the host MCU. It uses the half-bridge topology to regulate the speed of the motor rotation, employs advanced dead-time circuitry that monitors the output stage, providing maximum switching efficiency and features an advanced technique to avoid shoot-through currents.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/dcmotor8_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/dc-motor-8-click)
+[Click Product page](https://www.mikroe.com/dc-motor-8-click)
 
 ---
 
@@ -55,8 +55,8 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This click can drive simple DC motors with brushes, providing them with a significant amount 
-> of current and voltage up to 40V. The click has one control input, that uses the PWM signal 
+> This Click can drive simple DC motors with brushes, providing them with a significant amount 
+> of current and voltage up to 40V. The Click has one control input, that uses the PWM signal 
 > from the host MCU. It uses the half-bridge topology to regulate the speed of the motor 
 > rotation, employs advanced dead-time circuitry that monitors the output stage, providing 
 > maximum switching efficiency and features an advanced technique to avoid shoot-through 
@@ -66,7 +66,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ### Application Init 
 
-> Initializes the driver and enables the click board.
+> Initializes the driver and enables the Click board.
 
 ```c
 
@@ -105,7 +105,7 @@ void application_init ( void )
 
 ### Application Task
 
->  This is an example that demonstrates the use of DC Motor 8 click
+>  This is an example that demonstrates the use of DC Motor 8 Click
 >  board by increasing and decreasing the motor speed.
 >  DC Motor 8 Click communicates with the register via the PWM interface.
 >  Results are being sent to the Usart Terminal where you can track their changes.
@@ -147,7 +147,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

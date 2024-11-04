@@ -3,13 +3,13 @@
  * @brief MUX 5 Click example
  *
  * # Description
- * This example demonstrates the use of MUX 5 click board by mapping the common connection
+ * This example demonstrates the use of MUX 5 Click board by mapping the common connection
  * A and B to different channels every 5 seconds.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
  * Maps the common connection A and B to different channels every 5 seconds, and displays

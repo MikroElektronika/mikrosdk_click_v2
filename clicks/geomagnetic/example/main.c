@@ -3,13 +3,13 @@
  * \brief Geomagnetic Click example
  * 
  * # Description
- * This example showcases how to initialize and configure the logger and click modules and
+ * This example showcases how to initialize and configure the logger and Click modules and
  * measure and display the data later on.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * This function initializes and configures the logger and click modules.
+ * This function initializes and configures the logger and Click modules.
  * 
  * ## Application Task  
  * This function first checks whether the device is ready to start measuring and after that
@@ -17,8 +17,8 @@
  * 
  * *note:* 
  * The Geomagnetic Click needs to initialize the SPI communication module first, because the
- * communication interface selection ( on the click ) is locked on to SPI and we need to write
- * some data to the registers in order to configure the click module.
+ * communication interface selection ( on the Click ) is locked on to SPI and we need to write
+ * some data to the registers in order to configure the Click module.
  * 
  * 
  * \author MikroE Team

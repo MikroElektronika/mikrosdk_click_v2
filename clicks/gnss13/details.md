@@ -1,6 +1,6 @@
 
 ---
-# GNSS 13 click
+# GNSS 13 Click
 
 > GNSS 13 Click is a compact add-on board that provides positioning, navigation, and timing services. This board features the LG77LICMD, a global-region standard-precision GNSS module from Quectel Wireless Solutions. This module utilizes concurrent reception of up to three GNSS systems (GPS, GLONASS (or BeiDou), and Galileo), maximizing position availability, especially under challenging conditions such as deep urban canyons. By combining EASY™ (Embedded Assist System), an advanced AGNSS feature, with GLP (GNSS Low Power), a low-power mode, the LG77LICMD module achieves high performance, low power consumption, and fully meets industrial standards. It also has a configurable host interface, anti-jamming technology, and a multi-tone active interference canceller.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/gnss13_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/gnss-13-click)
+[Click Product page](https://www.mikroe.com/gnss-13-click)
 
 ---
 
@@ -64,7 +64,7 @@ void gnss13_clear_ring_buffers ( gnss13_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of GNSS 13 click by reading and displaying the GPS coordinates.
+> This example demonstrates the use of GNSS 13 Click by reading and displaying the GPS coordinates.
 
 **The demo application is composed of two sections :**
 
@@ -133,7 +133,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -3,6 +3,6 @@
     "description": "Bluetooth 2 Click features WT41u, a long range class 1, Bluetooth® 2.1 + EDR module from Silicon Labs. WT41u is a highly integrated and sophisticated Bluetooth® module, containing all the necessary elements from Bluetooth® radio and a fully implemented protocol stack. Therefore WT41u provides an ideal solution for developers who want to integrate Bluetooth® wireless technology into their design with limited knowledge of Bluetooth® and RF technologies. WT41u optimized for long range applications is available with an integrated chip antenna.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["click","WT41u"],
+    "hw" : ["Click","WT41u"],
     "category" : ["BT/BLE"]
 }

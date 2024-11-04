@@ -130,7 +130,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void tilt2_cfg_setup ( tilt2_cfg_t *cfg );
@@ -140,7 +140,7 @@ void tilt2_cfg_setup ( tilt2_cfg_t *cfg );
  * @param tilt2 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 TILT2_RETVAL tilt2_init ( tilt2_t *ctx, tilt2_cfg_t *cfg );
 
@@ -159,6 +159,6 @@ uint8_t tilt2_tilt_detection ( tilt2_t *ctx );
 #endif  // _TILT2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

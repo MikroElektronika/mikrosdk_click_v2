@@ -1,6 +1,6 @@
 
 ---
-# XBEE 2 click
+# XBEE 2 Click
 
 > Xbee 2 Click is a compact add-on board providing wireless end-point connectivity to other devices. This board features the XB3-24Z8UM, a Digi XBee® 3 transceiver module offering a fully interoperable ecosystem covering all vertical markets from Digi International. Building on industry-leading technology, the pre-certified Digi XBee® 3 module delivers the flexibility to switch between multiple frequencies and wireless protocols as needed (Zigbee, 802.15.4, DigiMesh® and BLE). It can be easily configured and controlled from a simple, central platform and comes with built-in Digi TrustFence® security, identity, and data privacy features which use more than 175 controls to protect against new and evolving cyber threats.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/xbee2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/xbee-2-click)
+[Click Product page](https://www.mikroe.com/xbee-2-click)
 
 ---
 
@@ -64,13 +64,13 @@ err_t xbee2_set_destination_address ( xbee2_t *ctx, char *dest_addr_high, char *
 
 ## Example Description
 
-> This example demonstrates the use of an XBEE 2 click board by showing the communication between the two click boards configured in transparent mode.
+> This example demonstrates the use of an XBEE 2 Click board by showing the communication between the two Click boards configured in transparent mode.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and configures the click board by performing a factory reset, and setting the device name, destination address, api mode to transparent,
+> Initializes the driver and configures the Click board by performing a factory reset, and setting the device name, destination address, api mode to transparent,
 and a device role to join or form network depending on the application mode.
 
 ```c
@@ -209,7 +209,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

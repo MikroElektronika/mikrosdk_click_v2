@@ -3,8 +3,8 @@
  * @brief NanoBeacon Click Example.
  *
  * # Description
- * This example demonstrates the use of NanoBeacon click board by setting
- * the Eddystone URI advertisement to click boards webpage.
+ * This example demonstrates the use of NanoBeacon Click board by setting
+ * the Eddystone URI advertisement to Click boards webpage.
  *
  * The demo application is composed of two sections :
  *
@@ -13,10 +13,10 @@
  *
  * ## Application Task
  * Every 10 seconds, it restarts and configures the device for advertisement
- * with the Eddystone URI beacon format set to click boards webpage: https://www.mikroe.com/click
+ * with the Eddystone URI beacon format set to Click boards webpage: https://www.mikroe.com/click
  * 
  * @note
- * During advertising, the click board should appear as an Eddystone URI beacon on
+ * During advertising, the Click board should appear as an Eddystone URI beacon on
  * the BLE Scanner application.
  *
  * @author Stefan Filipovic

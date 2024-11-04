@@ -183,7 +183,7 @@ typedef enum
 
 /**
  * @brief IrDA 2 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #irda2_cfg_t object definition for detailed explanation.
@@ -195,7 +195,7 @@ void irda2_cfg_setup ( irda2_cfg_t *cfg );
 /**
  * @brief IrDA 2 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #irda2_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -210,7 +210,7 @@ err_t irda2_init ( irda2_t *ctx, irda2_cfg_t *cfg );
 /**
  * @brief IrDA 2 default configuration function.
  * @details This function executes a default configuration of IrDA 2
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #irda2_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -223,7 +223,7 @@ void irda2_default_cfg ( irda2_t *ctx );
 
 /**
  * @brief Mode Setup function.
- * @details This function allows IrDA 2 click mode to be set.
+ * @details This function allows IrDA 2 Click mode to be set.
  * @param ctx  Click object.
  * @param state  0 - Command mode,
  *               1 - Data mode.
@@ -234,7 +234,7 @@ void irda2_mode_setup( irda2_t *ctx, irda2_mode_t state );
 
 /**
  * @brief Power Setup function.
- * @details This function allows IrDA 2 click power mode to be set.
+ * @details This function allows IrDA 2 Click power mode to be set.
  * @param ctx  Click object.
  * @param state  0 - Power off,
  *               1 - Power on.

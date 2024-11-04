@@ -3,7 +3,7 @@
  * @brief RTC14 Click example
  *
  * # Description
- * This is an example that demonstrates the use of the RTC 14 click board™.
+ * This is an example that demonstrates the use of the RTC 14 Click board™.
  *
  * The demo application is composed of two sections :
  *
@@ -14,7 +14,7 @@
  * and set date to Thursday 05.08.2021.
  *
  * ## Application Task
- * This is an example that shows the use of a RTC 14 click board™.
+ * This is an example that shows the use of a RTC 14 Click board™.
  * In this example, we read and display the current time ( AM or PM ) 
  * and date ( day of the week ), which we also previously set.
  * Results are being sent to the Usart Terminal where you can track their changes.

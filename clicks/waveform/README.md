@@ -2,7 +2,7 @@
  
 
 ---
-# Waveform  click
+# Waveform  Click
 
 > Waveform Click is a precise sine/triangle/square waveform generator, capable of reproducing frequencies up to 12MHz.
 
@@ -10,7 +10,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/waveform_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/waveform-click)
+[Click Product page](https://www.mikroe.com/waveform-click)
 
 ---
 
@@ -66,13 +66,13 @@ void waveform_square_output ( waveform_t *ctx, uint32_t freq );
 
 ## Examples Description
 
-> This example demonstrates the use of Waveform click board.
+> This example demonstrates the use of Waveform Click board.
 
 **The demo application is composed of two sections :**
 
 ### Application Init 
 
-> Initializes the communication interface and configures the click board.
+> Initializes the communication interface and configures the Click board.
 
 ```c
 
@@ -140,7 +140,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

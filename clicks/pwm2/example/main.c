@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configures the click board and sets all PWM channels on the click board to
+ * Configures the Click board and sets all PWM channels on the Click board to
  * 50% duty cycle with the phase shift enabled.
  * 
  * ## Application Task  
@@ -43,7 +43,7 @@ void application_init ( void )
     pwm2_default_cfg( &pwm2 );
     pwm2_toggle_phase_shift( &pwm2 );
 
-    //setting all 48 PWM channels of the PWM2 click to 50% duty
+    //setting all 48 PWM channels of the PWM2 Click to 50% duty
     for( uint8_t cnt = 1; cnt < 49; cnt++ ) 
     {
         pwm2_set_channel( &pwm2, cnt, PWM2_50_PERCENT_DUTY, PWM2_NO_CORRECTION );

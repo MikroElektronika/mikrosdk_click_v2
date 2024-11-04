@@ -554,7 +554,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void c6dofimu10_cfg_setup ( c6dofimu10_cfg_t *cfg );
@@ -564,7 +564,7 @@ void c6dofimu10_cfg_setup ( c6dofimu10_cfg_t *cfg );
  * @param c6dofimu10 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 c6DOFIMU10_RETVAL c6dofimu10_init ( c6dofimu10_t *ctx, c6dofimu10_cfg_t *cfg );
 
@@ -573,7 +573,7 @@ c6DOFIMU10_RETVAL c6dofimu10_init ( c6dofimu10_t *ctx, c6dofimu10_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for c6DofImu10 click.
+ * @description This function executes default configuration for c6DofImu10 Click.
  */
 void c6dofimu10_default_cfg ( c6dofimu10_t *ctx );
 
@@ -716,6 +716,6 @@ uint8_t c6dofimu10_get_interrupt ( c6dofimu10_t *ctx, uint8_t int_pin );
 #endif  // _c6DOFIMU10_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

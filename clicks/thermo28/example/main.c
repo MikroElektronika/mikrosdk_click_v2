@@ -3,16 +3,16 @@
  * @brief Thermo 28 Click example
  *
  * # Description
- * This example demonstrates the use of Thermo 28 click board™ 
+ * This example demonstrates the use of Thermo 28 Click board™ 
  * by reading and displaying the temperature measurements.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration.
+ * Initializes the driver and performs the Click default configuration.
  *
  * ## Application Task
- * This is an example that shows the use of a Thermo 28 click board™.
+ * This is an example that shows the use of a Thermo 28 Click board™.
  * Reads the temperature measurement in degree Celsius and displays the results.
  * Results are being sent to the Usart Terminal where you can track their changes.
  *

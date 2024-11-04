@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# TempHum 14 click
+# TempHum 14 Click
 
 Temp & Hum 14 Click is a compact add-on board that contains one of the smallest and most accurate humidity and temperature sensors on the market. This board features the HTU31D, a highly accurate digital relative humidity sensor with temperature output from TE Connectivity. With power consumption down to 3.78μW and accuracy of ±2%RH and ±0.2°C, this Click board™ provides fast response time, precision measurement, low hysteresis, and sustained performance even when exposed to extreme temperature up to 125°C and humidity environments.
 
@@ -9,7 +9,7 @@ Temp & Hum 14 Click is a compact add-on board that contains one of the smallest 
   <img src="https://download.mikroe.com/images/click_for_ide/temphum14_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-14-click)
+[Click Product page](https://www.mikroe.com/temphum-14-click)
 
 ---
 
@@ -48,17 +48,17 @@ err_t temphum14_init ( temphum14_t *ctx, temphum14_cfg_t *cfg );
 
 #### Example key functions :
 
-- `temphum14_set_conversion` The function set conversion a single temperature and humidity conversion and select data resolution to the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with Temperature output on the Temp-Hum 14 click board.
+- `temphum14_set_conversion` The function set conversion a single temperature and humidity conversion and select data resolution to the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with Temperature output on the Temp-Hum 14 Click board.
 ```c
 void temphum14_set_conversion ( temphum14_t *ctx, uint8_t hum_osr, uint8_t temp_osr );
 ```
 
-- `temphum14_read_t_and_rh` The function read temperature and humidity data of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with Temperature output on the Temp-Hum 14 click board.
+- `temphum14_read_t_and_rh` The function read temperature and humidity data of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with Temperature output on the Temp-Hum 14 Click board.
 ```c
 void temphum14_read_t_and_rh ( temphum14_t *ctx, uint8_t *p_rx_data );
 ```
 
-- `temphum14_get_temp_and_hum` The function get temperature and humidity value of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with Temperature output on the Temp-Hum 14 click board.
+- `temphum14_get_temp_and_hum` The function get temperature and humidity value of the HTU31D RH/T SENSOR IC Digital Relative Humidity sensor with Temperature output on the Temp-Hum 14 Click board.
 ```c
 void temphum14_get_temp_and_hum ( temphum14_t *ctx, float *temp, float *hum );
 ```
@@ -165,7 +165,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BLE 12 click
+# BLE 12 Click
 
 > BLE 12 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the BM832A, a powerful and highly flexible, ultra low power Bluetooth Low Energy (BLE) module from Fanstel. Based on the Nordic nRF52 SoC, the BM832A supports Bluetooth 5.0 Low-Energy (BLE) connectivity while delivering RF range and performance, debugging and enhanced security features, and low power consumption. It also comes with an ARM Cortex™ M4(F) MCU up to 192kB flash and 24kB RAM, embedded 2.4GHz multi-protocol transceiver, and an integrated PCB trace antenna. This Click board™ is suitable for low-cost Bluetooth low energy applications such as building automation and sensor networks, portable medical, connected home, and more.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ble12_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ble-12-click)
+[Click Product page](https://www.mikroe.com/ble-12-click)
 
 ---
 
@@ -223,7 +223,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

@@ -390,7 +390,7 @@ typedef enum
 
 /**
  * @brief Smart DOF 3 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #smartdof3_cfg_t object definition for detailed explanation.
@@ -402,7 +402,7 @@ void smartdof3_cfg_setup ( smartdof3_cfg_t *cfg );
 /**
  * @brief Smart DOF 3 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #smartdof3_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -418,7 +418,7 @@ void smartdof3_drv_interface_selection ( smartdof3_cfg_t *cfg, smartdof3_drv_t d
 /**
  * @brief Smart DOF 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -433,7 +433,7 @@ err_t smartdof3_init ( smartdof3_t *ctx, smartdof3_cfg_t *cfg );
 /**
  * @brief Smart DOF 3 default configuration function.
  * @details This function executes a default configuration of Smart DOF 3
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -480,7 +480,7 @@ err_t smartdof3_generic_read ( smartdof3_t *ctx, uint8_t reg, uint8_t *data_out,
  * @brief Smart DOF 3 get device ID function.
  * @details This function reads a device ID value
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] device_id : Device ID.
@@ -495,7 +495,7 @@ err_t smartdof3_get_device_id ( smartdof3_t *ctx, uint8_t *device_id );
  * @brief Smart DOF 3 software reset function.
  * @details This function perform a software reset
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -510,7 +510,7 @@ err_t smartdof3_soft_reset ( smartdof3_t *ctx );
  * @details This function enable automatically incremented 
  * during a multiple byte access with a serial interface
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -525,7 +525,7 @@ err_t smartdof3_en_auto_incr ( smartdof3_t *ctx );
  * @details This function enable block data, 
  * output registers are not updated until LSB and MSB have been read,
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -539,7 +539,7 @@ err_t smartdof3_en_block_data_upd ( smartdof3_t *ctx );
  * @brief Smart DOF 3 sets the operation mode function.
  * @details This function sets the desired operation mode
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[in] acc_op_mode : Accel operation mode (high-performance enable/disable).
@@ -555,7 +555,7 @@ err_t smartdof3_set_op_mode ( smartdof3_t *ctx, uint8_t acc_op_mode, uint8_t gyr
  * @brief Smart DOF 3 sets the accel data rate function.
  * @details This function select the accelerometer data rate
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[in] data_rate : Accelerometer ODR selection
@@ -581,7 +581,7 @@ err_t smartdof3_set_acc_data_rate ( smartdof3_t *ctx, uint8_t data_rate );
  * @brief Smart DOF 3 sets the accel full-scale range function.
  * @details This function selects the full-scale acceleration range
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[in] data_scale : Accelerometer full-scale selection
@@ -600,7 +600,7 @@ err_t smartdof3_set_acc_full_scale ( smartdof3_t *ctx, uint8_t data_scale );
  * @brief Smart DOF 3 get the accel full-scale range function.
  * @details This function reads selected the full-scale acceleration range
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] data_scale : Accelerometer full-scale selection. 
@@ -615,7 +615,7 @@ err_t smartdof3_get_acc_full_scale ( smartdof3_t *ctx, uint8_t *data_scale );
  * @brief Smart DOF 3 get the accel sensitivity function.
  * @details This function reads the accelerometer sensitivity data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] sensitivity : Accelerometer sensitivity data.
@@ -630,7 +630,7 @@ err_t smartdof3_get_acc_sensitivity ( smartdof3_t *ctx, float *sensitivity );
  * @brief Smart DOF 3 sets the gyro data rate function.
  * @details This function select the gyroscope data rate
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[in] data_rate : Gyroscope ODR selection
@@ -656,7 +656,7 @@ err_t smartdof3_set_gyro_data_rate ( smartdof3_t *ctx, uint8_t data_rate );
  * @brief Smart DOF 3 sets the gyro full-scale range function.
  * @details This function selects the full-scale gyroscope range
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[in] data_scale : Gyroscope full-scale selection
@@ -676,7 +676,7 @@ err_t smartdof3_set_gyro_full_scale ( smartdof3_t *ctx, uint8_t data_scale );
  * @brief Smart DOF 3 get the gyro full-scale range function.
  * @details This function reads selected the full-scale gyroscope range
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] data_scale : Gyroscope full-scale selection. 
@@ -691,7 +691,7 @@ err_t smartdof3_get_gyro_full_scale ( smartdof3_t *ctx, uint8_t *data_scale );
  * @brief Smart DOF 3 get the status function.
  * @details This function reads status data
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] status : Sensor status object. 
@@ -706,7 +706,7 @@ err_t smartdof3_get_status ( smartdof3_t *ctx, smartdof3_status_t *status );
  * @brief Smart DOF 3 get the gyro sensitivity function.
  * @details This function reads the gyroscope sensitivity data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] sensitivity : Gyroscope sensitivity data.
@@ -722,7 +722,7 @@ err_t smartdof3_get_gyro_sensitivity ( smartdof3_t *ctx, float *sensitivity );
  * @brief Smart DOF 3 get the accel data function.
  * @details This function reads the accelerometer raw data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] acc_axis : Accelerometer raw data object.
@@ -738,7 +738,7 @@ err_t smartdof3_get_acc_axis_data ( smartdof3_t *ctx, smartdof3_axis_data_t *acc
  * @brief Smart DOF 3 get the gyro data function.
  * @details This function reads the gyroscope raw data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] gyro_axis : Gyroscope raw data object.
@@ -754,7 +754,7 @@ err_t smartdof3_get_gyro_axis_data ( smartdof3_t *ctx, smartdof3_axis_data_t *gy
  * @brief Smart DOF 3 get the accel sensor axes function.
  * @details This function reads the accelerometer sensor axes data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] acc_axis : Linear acceleration output data object (mg).
@@ -770,7 +770,7 @@ err_t smartdof3_get_acc_axis ( smartdof3_t *ctx, smartdof3_axis_t *acc_axis );
  * @brief Smart DOF 3 get the gyro sensor axes function.
  * @details This function reads the gyroscope sensor axes data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] gyro_axis : Angular rate output data object (dps).
@@ -786,7 +786,7 @@ err_t smartdof3_get_gyro_axis ( smartdof3_t *ctx, smartdof3_axis_t *gyro_axis );
  * @brief Smart DOF 3 enable the temperature function.
  * @details This function enable the temperature data output
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -800,7 +800,7 @@ err_t smartdof3_enable_temperature ( smartdof3_t *ctx );
  * @brief Smart DOF 3 get the temperature data function.
  * @details This function reads the temperature raw data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] temp_raw : Temperature raw data (16-bit word in two’s complement).
@@ -815,7 +815,7 @@ err_t smartdof3_get_temperature_raw ( smartdof3_t *ctx, int16_t *temp_raw );
  * @brief Smart DOF 3 get the temperature function.
  * @details This function reads the temperature data 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @param[out] temperature : Temperature (degrees Celsius).
@@ -830,7 +830,7 @@ err_t smartdof3_get_temperature ( smartdof3_t *ctx, float *temperature );
  * @brief Smart DOF 3 get interrupt 1 function.
  * @details This function gets states of the Interrupt 1 ( IT1-INT ) pin 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,
@@ -843,7 +843,7 @@ uint8_t smartdof3_get_in1_pin ( smartdof3_t *ctx );
  * @brief Smart DOF 3 get interrupt 2 function.
  * @details This function gets states of the Interrupt 2 ( IT2-AN ) pin 
  * of the ISM330IS, iNEMO inertial module: always-on 3-axis accelerometer and 3-axis gyroscope
- * on the Smart DOF 3 click board™.
+ * on the Smart DOF 3 Click board™.
  * @param[in] ctx : Click context object.
  * See #smartdof3_t object definition for detailed explanation.
  * @return @li @c 0 - Low pin state,

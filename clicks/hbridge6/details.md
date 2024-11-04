@@ -1,6 +1,6 @@
 
 ---
-# H-Bridge 6 click
+# H-Bridge 6 Click
 
 > H-Bridge 6 Click is a compact add-on board that contains a DC motor driver for automotive applications. This board features the VNHD7008AY, an H-bridge motor driver for automotive DC motor driving from STMicroelectronics. The VNHD7008AY, features an undervoltage shutdown, load current limitation, overload active power limitation, overtemperature shutdown, and more.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-6-click)
+[Click Product page](https://www.mikroe.com/h-bridge-6-click)
 
 ---
 
@@ -183,7 +183,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

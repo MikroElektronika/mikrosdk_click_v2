@@ -3,12 +3,12 @@
  * @brief Expand10 Click example
  *
  * # Description
- * This example demonstrates the use of Expand 10 click board.
+ * This example demonstrates the use of Expand 10 Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and performs the click default configuration which sets the first two ports
+ * Initializes the driver and performs the Click default configuration which sets the first two ports
  * as output and the third port as input with pull-down enabled.
  *
  * ## Application Task

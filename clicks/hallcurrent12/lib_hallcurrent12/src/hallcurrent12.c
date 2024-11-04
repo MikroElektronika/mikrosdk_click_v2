@@ -64,7 +64,7 @@ static err_t hallcurrent12_read_adc_value ( hallcurrent12_t *ctx, uint16_t *read
 /**
  * @brief Hall Current 12 measurement delay function.
  * @details This function executes a measurement delay of the 1 milliseconds 
- * of Hall Current 12 click board™.
+ * of Hall Current 12 Click board™.
  * @return Nothing.
  *
  * @note None.

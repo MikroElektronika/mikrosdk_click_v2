@@ -167,7 +167,7 @@ typedef enum
 
 /**
  * @brief eFuse 7 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #efuse7_cfg_t object definition for detailed explanation.
@@ -179,7 +179,7 @@ void efuse7_cfg_setup ( efuse7_cfg_t *cfg );
 /**
  * @brief eFuse 7 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -194,7 +194,7 @@ err_t efuse7_init ( efuse7_t *ctx, efuse7_cfg_t *cfg );
 /**
  * @brief eFuse 7 default configuration function.
  * @details This function executes a default configuration of eFuse 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -208,7 +208,7 @@ err_t efuse7_default_cfg ( efuse7_t *ctx );
 /**
  * @brief eFuse 7 output enable function.
  * @details This function enables output of eFuse 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @return Nothing.
@@ -219,7 +219,7 @@ void efuse7_enable_output ( efuse7_t *ctx );
 /**
  * @brief eFuse 7 output disable function.
  * @details This function disables output of eFuse 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @return Nothing.
@@ -230,7 +230,7 @@ void efuse7_disable_output ( efuse7_t *ctx );
 /**
  * @brief eFuse 7 wiper position increase function.
  * @details This function increases wiper position of eFuse 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @param[in] inc_num : Wiper position increases.
@@ -242,7 +242,7 @@ void efuse7_wiper_inc ( efuse7_t *ctx, uint8_t inc_num );
 /**
  * @brief eFuse 7 wiper position decrease function.
  * @details This function decreases wiper position of eFuse 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @param[in] dec_num : Wiper position decreases.
@@ -254,7 +254,7 @@ void efuse7_wiper_dec ( efuse7_t *ctx, uint8_t dec_num );
 /**
  * @brief eFuse 7 set digital potentiometer resistance function.
  * @details This function sets digital potentiometer resistance of eFuse 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @param[in] resistance : Digital potentiometer resistance in ohms.
@@ -268,7 +268,7 @@ err_t efuse7_set_resistance ( efuse7_t *ctx, uint16_t resistance );
 /**
  * @brief eFuse 7 set current limit function.
  * @details This function sets current limit of eFuse 7
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse7_t object definition for detailed explanation.
  * @param[in] set_current : Specific eFuse current limit.

@@ -535,7 +535,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void accel11_cfg_setup ( accel11_cfg_t *cfg );
@@ -545,7 +545,7 @@ void accel11_cfg_setup ( accel11_cfg_t *cfg );
  * @param accel11 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 ACCEL11_RETVAL accel11_init ( accel11_t *ctx, accel11_cfg_t *cfg );
 
@@ -554,7 +554,7 @@ ACCEL11_RETVAL accel11_init ( accel11_t *ctx, accel11_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Accel 11 click.
+ * @description This function executes default configuration for Accel 11 Click.
  */
 void accel11_default_cfg ( accel11_t *ctx );
 
@@ -655,6 +655,6 @@ int8_t accel11_get_temperature ( accel11_t *ctx );
 #endif  // _ACCEL11_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

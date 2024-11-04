@@ -1,6 +1,6 @@
 
 ---
-# Step Down 3 click
+# Step Down 3 Click
 
 > Step Down 3 Click is a compact add-on board that steps down the voltage from its input to its output. This board features the ST1PS03, a nano-quiescent miniaturized synchronous step-down converter with a load switch from STMicroelectronics. The ST1PS03 can provide up to 400mA output current with an input voltage ranging from 1.8V to 5.5V, specifically designed for applications where high efficiency is crucial. It also embeds a controlled switch accessible from auxiliary channel input to supply a subsystem, output voltage from 1.6V to 3.3V set using three digital control inputs, and a Power Good signal to indicate stabilized output voltages.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/stepdown3_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/step-down-3-click)
+[Click Product page](https://www.mikroe.com/step-down-3-click)
 
 ---
 
@@ -64,13 +64,13 @@ void stepdown3_set_output_voltage ( stepdown3_t *ctx, uint8_t vout );
 
 ## Example Description
 
-> This example demonstrates the use of Step Down 3 click board by iterating through the entire output voltage range.
+> This example demonstrates the use of Step Down 3 Click board by iterating through the entire output voltage range.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and logger, then enables the click board and disables the auxiliary output.
+> Initializes the driver and logger, then enables the Click board and disables the auxiliary output.
 
 ```c
 
@@ -182,7 +182,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

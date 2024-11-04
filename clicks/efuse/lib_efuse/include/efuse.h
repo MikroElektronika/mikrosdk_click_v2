@@ -117,7 +117,7 @@ typedef enum
 
 /**
  * @brief eFuse configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #efuse_cfg_t object definition for detailed explanation.
@@ -129,7 +129,7 @@ void efuse_cfg_setup ( efuse_cfg_t *cfg );
 /**
  * @brief eFuse initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #efuse_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -145,7 +145,7 @@ err_t efuse_init ( efuse_t *ctx, efuse_cfg_t *cfg );
 /**
  * @brief eFuse default configuration function.
  * @details This function executes a default configuration of eFuse
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #efuse_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -160,7 +160,7 @@ err_t efuse_default_cfg ( efuse_t *ctx );
 /**
  * @brief eFuse enable the device function.
  * @details This function performs enable the device by sets the EN pin on the high level of
- * eFuse click board.
+ * eFuse Click board.
  * @param[in] ctx : Click context object.
  * See #efuse_t object definition for detailed explanation.
  * @return Nothing.
@@ -171,7 +171,7 @@ void efuse_enable_device ( efuse_t *ctx );
 /**
  * @brief eFuse disable the device function.
  * @details This function performs disable the device by clears the EN pin on the low level of
- * eFuse click board.
+ * eFuse Click board.
  * @param[in] ctx : Click context object.
  * See #efuse_t object definition for detailed explanation.
  * @return Nothing.
@@ -182,7 +182,7 @@ void efuse_disable_device ( efuse_t *ctx );
 /**
  * @brief eFuse enable PWM function.
  * @details This function performs enable PWM by clears the PWM pin on the low level of
- * eFuse click board.
+ * eFuse Click board.
  * @param[in] ctx : Click context object.
  * See #efuse_t object definition for detailed explanation.
  * @return Nothing.
@@ -193,7 +193,7 @@ void efuse_enable_pwm ( efuse_t *ctx );
 /**
  * @brief eFuse disable the device function.
  * @details This function performs disable the device by sets the PWM pin on the high level of
- * eFuse click board.
+ * eFuse Click board.
  * @param[in] ctx : Click context object.
  * See #efuse_t object definition for detailed explanation.
  * @return Nothing.

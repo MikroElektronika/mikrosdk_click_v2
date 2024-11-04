@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# BUZZ 2 click
+# BUZZ 2 Click
 
-BUZZ 2 click carries the CMT-8540S-SMT magnetic buzzer transducer. The buzzer’s resonant frequency is 4kHz. The click is designed to run on either 3.3V or 5V power supply.
+BUZZ 2 Click carries the CMT-8540S-SMT magnetic buzzer transducer. The buzzer’s resonant frequency is 4kHz. The Click is designed to run on either 3.3V or 5V power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/buzz2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/buzz-2-click)
+[Click Product page](https://www.mikroe.com/buzz-2-click)
 
 ---
 
@@ -65,7 +65,7 @@ err_t buzz2_pwm_start ( buzz2_t *ctx );
 
 ## Example Description
 
-> This example demonstrates the use of Buzz 2 click boards.
+> This example demonstrates the use of Buzz 2 Click boards.
 
 **The demo application is composed of two sections :**
 
@@ -156,7 +156,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

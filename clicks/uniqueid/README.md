@@ -1,15 +1,15 @@
 \mainpage Main Page
 
 ---
-# UNIQUE ID click
+# UNIQUE ID Click
 
-> Unique ID click carries DS2401, an enhanced silicon serial number IC. It’s a low cost solution for providing a unique registration number to your design. The chip consists of a factory-lasered 64-bit ROM that includes a uniques a 48-bit serial number, an 8-bit CRC, and an 8-bit family code. It uses 1-wire communications for interfacing with the target board microcontroller, either through a GP1 or GP0 pin (here in place of the default AN and PWM mikroBUS pins). The board is designed to use either a 3.3V or 5V power supply.
+> Unique ID Click carries DS2401, an enhanced silicon serial number IC. It’s a low cost solution for providing a unique registration number to your design. The chip consists of a factory-lasered 64-bit ROM that includes a uniques a 48-bit serial number, an 8-bit CRC, and an 8-bit family code. It uses 1-wire communications for interfacing with the target board microcontroller, either through a GP1 or GP0 pin (here in place of the default AN and PWM mikroBUS pins). The board is designed to use either a 3.3V or 5V power supply.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/uniqueid_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/unique-id-click)
+[Click Product page](https://www.mikroe.com/unique-id-click)
 
 ---
 
@@ -23,7 +23,7 @@
 
 # Software Support
 
-We provide a library for the UNIQUE ID click
+We provide a library for the UNIQUE ID Click
 as well as a demo application (example), developed using MikroElektronika
 [compilers](https://www.mikroe.com/necto-studio).
 The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
@@ -32,7 +32,7 @@ Package can be downloaded/installed directly from *NECTO Studio Package Manager*
 
 ## Library Description
 
-> This library contains API for UNIQUE ID click driver.
+> This library contains API for UNIQUE ID Click driver.
 
 #### Standard key functions :
 
@@ -55,13 +55,13 @@ err_t uniqueid_read_id ( uniqueid_t *ctx, uint8_t *family, uint8_t *serial_num )
 
 ## Example Description
 
-> This example demonstrates the use of UNIQUE ID click board by reading and displaying Family Code and Serial Number on the UART Terminal.
+> This example demonstrates the use of UNIQUE ID Click board by reading and displaying Family Code and Serial Number on the UART Terminal.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initionalizes both logger config object and click config object. 
+> Initionalizes both logger config object and Click config object. 
 
 ```c
 
@@ -100,7 +100,7 @@ void application_init ( void )
 ### Application Task
 
 > Demonstrates the usage of uniqueid_read_id function,
-which stores the Family Code and Serial Number of the click in 
+which stores the Family Code and Serial Number of the Click in 
 family_code and serial_num variables. Both values will be displayed 
 on the UART Terminal.
 
@@ -136,7 +136,7 @@ The full application code and ready to use projects can be installed directly fr
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

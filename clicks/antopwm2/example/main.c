@@ -3,7 +3,7 @@
  * @brief AN to PWM 2 Click example
  *
  * # Description
- * This example demonstrates the use of AN to PWM 2 click board by changing the PWM output
+ * This example demonstrates the use of AN to PWM 2 Click board by changing the PWM output
  * frequency from 500kHz to 1MHz in steps of 50kHz.
  *
  * The demo application is composed of two sections :

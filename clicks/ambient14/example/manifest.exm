@@ -3,6 +3,6 @@
     "description": "Ambient 14 Click is a compact add-on board for ambient light and proximity detection applications. This board features the TMD2755, an advanced sensor from ams OSRAM, which combines ambient light sensing (ALS) and proximity detection in a single, compact module. The TMD2755 features an integrated infrared VCSEL and driver and a proximity engine that includes offset adjustment and ambient light subtraction for enhanced accuracy. It provides 16-bit data output for ALS and proximity detection, allowing precise control of backlight brightness in devices.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","TMD27553M"],
+    "hw" : ["Click","TMD27553M"],
     "category" : ["Click Boards > Sensors > Optical"]
 }

@@ -1,6 +1,6 @@
 
 ---
-# IR Gesture 2 click
+# IR Gesture 2 Click
 
 > IR Gesture 2 Click is a compact add-on board that provides contactless gesture recognition. This board features the MAX25405, a data-acquisition system for the gesture and proximity sensing from Analog Devices. Detection distance is improved by integrating a complete optical system with a lens, aperture, visible light filter, and a 6x10 photodetector array. The proximity, hand detection, and gesture recognition functions of the MAX25405 operate by detecting the light reflected from the controlled IR-LED light sources driven directly from the MAX25405. It can also detect these gestures even when exposed to bright ambient light and process data from the sensor through an SPI interface.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/irgesture2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ir-gesture-2-click)
+[Click Product page](https://www.mikroe.com/ir-gesture-2-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t irgesture2_write_register ( irgesture2_t *ctx, uint8_t reg, uint8_t data_i
 
 ## Example Description
 
-> This example demonstrates the use of IR Gesture 2 click board by reading and displaying the raw ADC values of entire 60-pixel IR photodiode array.
+> This example demonstrates the use of IR Gesture 2 Click board by reading and displaying the raw ADC values of entire 60-pixel IR photodiode array.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -155,7 +155,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

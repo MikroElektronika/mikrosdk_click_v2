@@ -223,7 +223,7 @@ typedef enum
 
 /**
  * @brief AWS IoT configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #awsiot_cfg_t object definition for detailed explanation.
@@ -235,7 +235,7 @@ void awsiot_cfg_setup ( awsiot_cfg_t *cfg );
 /**
  * @brief AWS IoT initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #awsiot_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.

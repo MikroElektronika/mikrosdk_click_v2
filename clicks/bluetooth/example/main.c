@@ -17,7 +17,7 @@
  * - bluetooth_process ( ) - Logs all received messages on UART, and sends the certain message back to the connected device.
  * 
  * *note:* 
- * Before starting to use this click, it must be paired with other device.
+ * Before starting to use this Click, it must be paired with other device.
  * 
  * \author MikroE Team
  *

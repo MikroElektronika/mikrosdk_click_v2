@@ -3,7 +3,7 @@
  * @brief Relay 4 Click Example.
  *
  * # Description
- * This example demonstrates the use of Relay 4 click board by toggling the relays state.
+ * This example demonstrates the use of Relay 4 Click board by toggling the relays state.
  *
  * The demo application is composed of two sections :
  *

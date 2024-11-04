@@ -3,12 +3,12 @@
  * \brief SingleWireCan Click example
  * 
  * # Description
- * This example demonstrate the use of Single Wire CAN click board.
+ * This example demonstrate the use of Single Wire CAN Click board.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the driver and configures the click for the normal operation mode.
+ * Initializes the driver and configures the Click for the normal operation mode.
  * 
  * ## Application Task  
  * Depending on the selected mode, it reads all the received data or sends the desired message

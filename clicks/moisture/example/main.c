@@ -3,7 +3,7 @@
  * \brief Moisture Click example
  * 
  * # Description
- * The demo application displays relative moisture measurement using Moisture click.
+ * The demo application displays relative moisture measurement using Moisture Click.
  *
  * The demo application is composed of two sections :
  *

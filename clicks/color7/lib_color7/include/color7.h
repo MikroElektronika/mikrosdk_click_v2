@@ -260,7 +260,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void color7_cfg_setup ( color7_cfg_t *cfg );
@@ -270,7 +270,7 @@ void color7_cfg_setup ( color7_cfg_t *cfg );
  * @param color7 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 COLOR7_RETVAL color7_init ( color7_t *ctx, color7_cfg_t *cfg );
 
@@ -279,9 +279,9 @@ COLOR7_RETVAL color7_init ( color7_t *ctx, color7_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Color7 click.
+ * @description This function executes default configuration for Color7 Click.
  *
- * @note The default click set contains:
+ * @note The default Click set contains:
  * <pre>
  *    -  Register enable
  *         ** COLOR7_ENABLE_RGBC_INTERRUPT
@@ -375,6 +375,6 @@ uint8_t color7_get_interrupt_state ( color7_t *ctx );
 #endif  // _COLOR7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

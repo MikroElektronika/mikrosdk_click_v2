@@ -11,7 +11,7 @@
  * Initializes the driver and logger.
  * 
  * ## Application Task  
- * This is an example which demonstrates the use of Diff Pressure click board.
+ * This is an example which demonstrates the use of Diff Pressure Click board.
  * The example reads the values of ADC module (MPC3551) 22-bit register value
  * converted to voltage and the pressure difference [ Pa ] and displays
  * those values on the USB UART.

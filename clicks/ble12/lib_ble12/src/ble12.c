@@ -33,7 +33,7 @@
 /**
  * @brief BLE 12 start-up configuration delay function.
  * @details This function executes a start-up configuration delay 
- * of the 1 milliseconds of BLE 12 click board™.
+ * of the 1 milliseconds of BLE 12 Click board™.
  * @return Nothing.
  *
  * @note None.
@@ -43,7 +43,7 @@ static void dev_startup_cfg_delay ( void );
 /**
  * @brief BLE 12 device configuration delay function.
  * @details This function executes a device configuration delay 
- * of the 100 milliseconds of BLE 12 click board™.
+ * of the 100 milliseconds of BLE 12 Click board™.
  * @return Nothing.
  *
  * @note None.

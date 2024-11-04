@@ -322,7 +322,7 @@ typedef enum
 
 /**
  * @brief SPI Extend configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #spiextend_cfg_t object definition for detailed explanation.
@@ -334,7 +334,7 @@ void spiextend_cfg_setup ( spiextend_cfg_t *cfg );
 /**
  * @brief SPI Extend initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -350,7 +350,7 @@ err_t spiextend_init ( spiextend_t *ctx, spiextend_cfg_t *cfg );
 /**
  * @brief SPI Extend default configuration function.
  * @details This function executes a default configuration of SPI Extend
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -395,7 +395,7 @@ err_t spiextend_generic_read ( spiextend_t *ctx, uint8_t reg, uint8_t *data_out 
 /**
  * @brief SPI Extend get the configuration function.
  * @details Function get configuration of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[out] config_data : structure where data be stored.
@@ -406,7 +406,7 @@ void spiextend_get_config ( spiextend_t *ctx, spiextend_config_data_t *config_da
 /**
  * @brief SPI Extend set the configuration function.
  * @details Function set configuration of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] config_data : Structure where data be stored.
@@ -417,7 +417,7 @@ void spiextend_set_config ( spiextend_t *ctx, spiextend_config_data_t config_dat
 /**
  * @brief SPI Extend get the status function.
  * @details Function set configuration of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[out] status_data : Pointer to the memory location where data be stored.
@@ -428,7 +428,7 @@ void spiextend_get_status ( spiextend_t *ctx, spiextend_status_data_t *status_da
 /**
  * @brief SPI Extend get the event function.
  * @details Function get events of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[out] event_data : Pointer to the memory location where data be stored.
@@ -440,7 +440,7 @@ void spiextend_get_event ( spiextend_t *ctx, spiextend_event_data_t *event_data 
 /**
  * @brief SPI Extend clear the event function.
  * @details Function clear events of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @return Nothing.
@@ -450,7 +450,7 @@ void spiextend_clear_event ( spiextend_t *ctx );
 /**
  * @brief SPI Extend enable int function.
  * @details Function enable int of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] event_data : Memory location where data be stored.
@@ -461,7 +461,7 @@ void spiextend_enable_int ( spiextend_t *ctx, spiextend_event_data_t event_data 
 /**
  * @brief SPI Extend get the fault state function.
  * @details Function read fault register and update fault state data structe of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[out] fault_data : Pointer to the memory location where data be stored.
@@ -472,7 +472,7 @@ void spiextend_get_fault ( spiextend_t *ctx, spiextend_fault_data_t *fault_data 
 /**
  * @brief SPI Extend get the word length function.
  * @details Function read word length register and return word length data of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @return 8-bit word length.
@@ -482,7 +482,7 @@ uint8_t spiextend_get_word_length ( spiextend_t *ctx );
 /**
  * @brief SPI Extend set the word length function.
  * @details Function read fault register and update fault state data structe of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] word_length : 8-bit word length ( from 8 to 32 ).
@@ -493,7 +493,7 @@ void spiextend_set_word_length ( spiextend_t *ctx, uint8_t word_length );
 /**
  * @brief SPI Extend get scratch function.
  * @details Function read scratch register and return scratch data of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @return 8-bit scratch data.
@@ -503,7 +503,7 @@ uint8_t spiextend_get_scratch (  spiextend_t *ctx );
 /**
  * @brief SPI Extend set scratch function.
  * @details Function set scratch data of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] scratch : 8-bit scratch data.
@@ -514,7 +514,7 @@ void spiextend_set_scratch ( spiextend_t *ctx, uint8_t scratch );
 /**
  * @brief SPI Extend set SS1 pin state function.
  * @details Function set SS1 pin state of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] en_cs : SS1 pin state.
@@ -525,7 +525,7 @@ void spiextend_set_ss1 ( spiextend_t *ctx, uint8_t en_cs );
 /**
  * @brief SPI Extend set SS2 pin state function.
  * @details Function set SS2 pin state of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] en_rst : SS2 pin state.
@@ -536,7 +536,7 @@ void spiextend_set_ss2 ( spiextend_t *ctx, uint8_t en_rst );
 /**
  * @brief SPI Extend set SS3 pin state function.
  * @details Function set SS3 pin state of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] en_an : SS3 pin state.
@@ -547,7 +547,7 @@ void spiextend_set_ss3 ( spiextend_t *ctx, uint8_t en_an );
 /**
  * @brief SPI Extend check interrupt status function.
  * @details Function check interrupt state by return state of the INT pin of the LTC4332 SPI Extender Over Rugged
- * Differential Link on the SPI Extend click board.
+ * Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @return @li @c  0 - State high,
@@ -557,8 +557,8 @@ uint8_t spiextend_check_int ( spiextend_t *ctx );
 
 /**
  * @brief SPI Extend generic SPI write data in Remote Mode function.
- * @details Function SPI writes a the byte of data to the targeted 8-bit register address of the click board
- * connected to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+ * @details Function SPI writes a the byte of data to the targeted 8-bit register address of the Click board
+ * connected to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] p_tx_data : Pointer to the memory location where data be stored.
@@ -569,8 +569,8 @@ void spiextend_rmt_spi_write ( spiextend_t *ctx, uint8_t *p_tx_data, uint16_t n_
 
 /**
  * @brief SPI Extend generic SPI read data in Remote Mode function.
- * @details Function SPI read a the byte of data to the targeted 8-bit register address of the click board connected
- * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+ * @details Function SPI read a the byte of data to the targeted 8-bit register address of the Click board connected
+ * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[out] p_rx_data : Pointer to the memory location where data be stored.
@@ -581,8 +581,8 @@ void spiextend_rmt_spi_read ( spiextend_t *ctx, uint8_t *p_rx_data, uint16_t n_b
 
 /**
  * @brief SPI Extend generic write data in Remote Mode function.
- * @details Function writes a the byte of data to the targeted 8-bit register address of the click board connected
- * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+ * @details Function writes a the byte of data to the targeted 8-bit register address of the Click board connected
+ * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -594,8 +594,8 @@ void spiextend_rmt_write ( spiextend_t *ctx, uint8_t reg, uint8_t tx_data, uint8
 
 /**
  * @brief SPI Extend generic read data in Remote Mode function.
- * @details Function read a the byte of data from the targeted 8-bit register address of the click board connected
- * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+ * @details Function read a the byte of data from the targeted 8-bit register address of the Click board connected
+ * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -606,8 +606,8 @@ uint8_t spiextend_rmt_read ( spiextend_t *ctx, uint8_t reg, uint8_t sel_slave );
 
 /**
  * @brief SPI Extend generic multi write data in Remote Mode function.
- * @details Function writes a the byte of data to the targeted 8-bit register address of the click board connected
- * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+ * @details Function writes a the byte of data to the targeted 8-bit register address of the Click board connected
+ * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.
@@ -620,8 +620,8 @@ void spiextend_rmt_multi_write ( spiextend_t *ctx, uint8_t reg, uint8_t *p_tx_da
 
 /**
  * @brief SPI Extend generic multi read data in Remote Mode function.
- * @details Function multi read a the byte of data to the targeted 8-bit register address of the click board connected
- * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend click board.
+ * @details Function multi read a the byte of data to the targeted 8-bit register address of the Click board connected
+ * to the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
  * @param[in] ctx : Click context object.
  * See #spiextend_t object definition for detailed explanation.
  * @param[in] reg : 8-bit register address.

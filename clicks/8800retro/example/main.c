@@ -3,12 +3,12 @@
  * @brief 8800Retro Click example
  *
  * # Description
- * This example demonstrates the use of 8800 Retro click board.
+ * This example demonstrates the use of 8800 Retro Click board.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initializes the driver and issues the click default configuration, 
+ * Initializes the driver and issues the Click default configuration, 
  * then asks the user to select the demo example using the on-board KeyPad.
  *
  * ## Application Task

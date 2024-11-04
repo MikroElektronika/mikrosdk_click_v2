@@ -3,7 +3,7 @@
  * @brief VibraSense2 Click example
  *
  * # Description
- * This example shows capabilities of Vibra Sense 2 click board.
+ * This example shows capabilities of Vibra Sense 2 Click board.
  *
  * The demo application is composed of two sections :
  *
@@ -11,7 +11,7 @@
  * Initalizes I2C driver and makes an initial log.
  *
  * ## Application Task
- * Demonstrates use of Vibra Sense 2 click board by checking
+ * Demonstrates use of Vibra Sense 2 Click board by checking
  * vibration levels and displaying changes via USART terminal.
  *
  * @author Stefan Ilic

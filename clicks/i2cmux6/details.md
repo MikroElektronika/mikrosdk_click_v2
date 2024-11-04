@@ -1,6 +1,6 @@
 
 ---
-# I2C MUX 6 click
+# I2C MUX 6 Click
 
 > I2C MUX 6 Click is a compact add-on board representing a bidirectional selector dedicated to I2C slave address conflicts applications. This board features the PCA9518, an expandable five-channel bidirectional buffer controlled by the I2C-bus from Texas Instruments. The PCA9518 overcomes the restriction of maximum bus capacitance by separating and buffering the I2C data (SDA) and clock (SCL) lines into multiple groups of 400pF I2C channels. It provides activation of the desired channel via a given Enable pin and permits extension of the I2C-bus, through an onboard expansion header, by buffering both the data (SDA) and the clock (SCL) lines enabling virtually an unlimited number of buses of 400pF.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/i2cmux6_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/i2c-mux-6-click)
+[Click Product page](https://www.mikroe.com/i2c-mux-6-click)
 
 ---
 
@@ -69,7 +69,7 @@ err_t i2cmux6_generic_read ( i2cmux6_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8
 
 ## Example Description
 
-> This example demonstrates the use of I2C MUX 6 click board by reading the device ID of a 6DOF IMU 11 and Compass 3 click boards connected to the channels 1 and 4 respectfully.
+> This example demonstrates the use of I2C MUX 6 Click board by reading the device ID of a 6DOF IMU 11 and Compass 3 Click boards connected to the channels 1 and 4 respectfully.
 
 **The demo application is composed of two sections :**
 
@@ -113,9 +113,9 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the device ID of the connected click boards.
-Channel 1 : 6DOF IMU 11 click [slave address: 0x0E; reg: 0x00; id: 0x2D],
-Channel 4 : Compass 3 click   [slave address: 0x30; reg: 0x2F; id: 0x0C].
+> Reads the device ID of the connected Click boards.
+Channel 1 : 6DOF IMU 11 Click [slave address: 0x0E; reg: 0x00; id: 0x2D],
+Channel 4 : Compass 3 Click   [slave address: 0x30; reg: 0x2F; id: 0x0C].
 All data is being logged on the USB UART where you can check the device ID.
 
 ```c
@@ -172,7 +172,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

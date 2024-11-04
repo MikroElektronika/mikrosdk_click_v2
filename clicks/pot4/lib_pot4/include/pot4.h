@@ -183,7 +183,7 @@ typedef enum
 
 /**
  * @brief POT 4 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #pot4_cfg_t object definition for detailed explanation.
@@ -195,7 +195,7 @@ void pot4_cfg_setup ( pot4_cfg_t *cfg );
 /**
  * @brief POT 4 driver interface setup function.
  * @details This function sets a serial driver interface which will be used
- * further in the click driver.
+ * further in the Click driver.
  * @param[out] cfg : Click configuration structure.
  * See #pot4_cfg_t object definition for detailed explanation.
  * @param[in] drv_sel : Driver interface selection.
@@ -211,7 +211,7 @@ void pot4_drv_interface_selection ( pot4_cfg_t *cfg, pot4_drv_t drv_sel );
 /**
  * @brief POT 4 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #pot4_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -251,7 +251,7 @@ err_t pot4_read_voltage ( pot4_t *ctx, float *voltage );
 
 /**
  * @brief POT 4 set vref function.
- * @details This function sets the voltage reference for POT 4 click driver.
+ * @details This function sets the voltage reference for POT 4 Click driver.
  * @param[in] ctx : Click context object.
  * See #pot4_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).

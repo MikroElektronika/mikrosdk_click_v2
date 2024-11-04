@@ -8,10 +8,10 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes the click board for communication.
+ * Initializes the Click board for communication.
  * 
  * ## Application Task  
- * Data sent from the click board is captured and different actions are applied.
+ * Data sent from the Click board is captured and different actions are applied.
  * 
  * \author MikroE Team
  *

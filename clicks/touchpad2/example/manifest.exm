@@ -3,6 +3,6 @@
     "description": "Touchpad 2 Click is a compact add-on board that easily integrates projected capacitive touch into their applications. This board features the IQS525, a projected capacitive touch and proximity trackpad/touchscreen controller from Azoteq. It features best in class sensitivity, signal-to-noise ratio, and automatic tuning of electrodes, in addition to the multi-touch and multi-hover feature. This Click board™ is characterized by embedded gesture engine recognition for simple gestures (tap, swipes, hold), as well as built-in noise detection and filtering.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","IQS550"],
+    "hw" : ["Click","IQS550"],
     "category" : ["Capacitive"]
 }

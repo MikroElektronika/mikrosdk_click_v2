@@ -1,15 +1,15 @@
 \mainpage Main Page
  
 ---
-# Heart rate 4 click
+# Heart rate 4 Click
 
-Heart rate 4 click carries the MAX30101 high-sensitivity pulse oximeter and heart-rate sensor from Maxim Integrated. The click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface, with additional functionality provided by INT pin on the mikroBUS™ line.
+Heart rate 4 Click carries the MAX30101 high-sensitivity pulse oximeter and heart-rate sensor from Maxim Integrated. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface, with additional functionality provided by INT pin on the mikroBUS™ line.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/heartrate4_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/heart-rate-4-click)
+[Click Product page](https://www.mikroe.com/heart-rate-4-click)
 
 ---
 
@@ -59,7 +59,7 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 
 ## Examples Description
 
-> This example demonstrates the use of Heart rate 4 click board.
+> This example demonstrates the use of Heart rate 4 Click board.
 
 **The demo application is composed of two sections :**
 
@@ -151,7 +151,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https://shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,14 +1,14 @@
 
 ---
-# Color 2 click
+# Color 2 Click
 
-Color 2 click carries the ISL29125 RGB color light sensor. It detects red, green and blue in a variety of lighting conditions, outputting 16-bit resolution data in a measuring range from 5.7 m lux to 10,000 lux.
+Color 2 Click carries the ISL29125 RGB color light sensor. It detects red, green and blue in a variety of lighting conditions, outputting 16-bit resolution data in a measuring range from 5.7 m lux to 10,000 lux.
 
 <p align="center">
   <img src="https://download.mikroe.com/images/click_for_ide/color2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/color-2-click)
+[Click Product page](https://www.mikroe.com/color-2-click)
 
 ---
 
@@ -69,7 +69,7 @@ uint8_t color2_get_color ( color2_hsl_t *hsl );
 
 ## Examples Description
 
-> This example demonstrates the use of Color 2 click board by reading data
+> This example demonstrates the use of Color 2 Click board by reading data
 from RGB channels and converting them to HSL color and displaying those data as 
 well as the detected color name on the USB UART.
 
@@ -77,7 +77,7 @@ well as the detected color name on the USB UART.
 
 ### Application Init 
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -205,7 +205,7 @@ The full application code, and ready to use projects can be  installed directly 
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need 
-[USB UART click](https:///shop.mikroe.com/usb-uart-click), 
+[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
 [USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
 [RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
 development systems with no UART to USB interface available on the board. The 

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# BLE TINY click
+# BLE TINY Click
 
 > BLE TINY Click is a compact add-on board that provides BLE connectivity for any embedded application. This board features the DA14531, SmartBond TINY module based on the world’s smallest and lowest power Bluetooth 5.1 System-on-Chip (SoC) from Dialog Semiconductor.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/ble_tiny_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ble-tiny-click)
+[Click Product page](https://www.mikroe.com/ble-tiny-click)
 
 ---
 
@@ -274,7 +274,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

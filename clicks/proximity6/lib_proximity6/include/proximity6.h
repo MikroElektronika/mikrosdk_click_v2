@@ -236,7 +236,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity6_cfg_setup ( proximity6_cfg_t *cfg );
@@ -250,7 +250,7 @@ void proximity6_cfg_setup ( proximity6_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t proximity6_init ( proximity6_t *ctx, proximity6_cfg_t *cfg );
 
@@ -262,7 +262,7 @@ err_t proximity6_init ( proximity6_t *ctx, proximity6_cfg_t *cfg );
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @details This function executes default configuration for Proximity6 click and sets the registers in default state.
+ * @details This function executes default configuration for Proximity6 Click and sets the registers in default state.
  */
 err_t proximity6_default_cfg ( proximity6_t *ctx );
 
@@ -340,6 +340,6 @@ uint8_t proximity6_check_interrupt( proximity6_t *ctx );
 #endif  // _PROXIMITY6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

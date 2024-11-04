@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# H-Bridge 16 click
+# H-Bridge 16 Click
 
 > H-Bridge 16 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8262, a dual H-Bridge motor driver from Texas Instruments. The motor driver is designed for a variety of industrial applications and can drive one or two brushed DC motors, one stepper motor, and one or two thermoelectric coolers (TEC). It can operate in a wide supply voltage range of 4.5V to 65V.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/hbridge16_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/h-bridge-16-click)
+[Click Product page](https://www.mikroe.com/h-bridge-16-click)
 
 ---
 
@@ -70,14 +70,14 @@ err_t hbridge16_set_out_state ( hbridge16_t *ctx, uint8_t out_state );
 
 ## Example Description
 
-> This example demonstrates the use of the H-Bridge 16 click board by
+> This example demonstrates the use of the H-Bridge 16 Click board by
   driving the motor in both directions with braking and freewheeling.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -167,7 +167,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

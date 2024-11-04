@@ -215,7 +215,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void buck6_cfg_setup ( buck6_cfg_t *cfg );
@@ -225,7 +225,7 @@ void buck6_cfg_setup ( buck6_cfg_t *cfg );
  * @param buck6 Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 BUCK6_RETVAL buck6_init ( buck6_t *ctx, buck6_cfg_t *cfg );
 
@@ -293,6 +293,6 @@ void buck6_set_max_voltage( buck6_t *ctx, uint8_t voltage );
 #endif  // _BUCK6_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

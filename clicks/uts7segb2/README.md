@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# UT-S 7-SEG B 2 click
+# UT-S 7-SEG B 2 Click
 
 > UT-S 7-SEG B 2 Click is a compact add-on board that presents an easy solution for adding a numeric or hexadecimal display to your application. This board features the TLC5947, a constant-current sink LED driver from Texas Instruments, alongside six ultra-thin blue single-digit numeric displays, the JSS-3011BUB-21. The displays are small in size (0.39 inches in height) and can display letters, numbers, and symbols in a highly readable form. The host MCU can control the light intensity of the blue segments of the display.
 
@@ -9,7 +9,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/uts7segb2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/ut-s-7-seg-b-2-click)
+[Click Product page](https://www.mikroe.com/ut-s-7-seg-b-2-click)
 
 ---
 
@@ -160,7 +160,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

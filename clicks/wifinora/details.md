@@ -1,6 +1,6 @@
 
 ---
-# WiFi NORA click
+# WiFi NORA Click
 
 > WiFi NORA Click is a compact add-on board that provides WiFi and BLE connectivity for professional-grade applications. This board features the NORA-W366-00B6-00B, a dual-band WiFi module with Bluetooth Low Energy (BLE) from u-blox, offering support for WiFi 4 (802.11a/b/g/n) in both 2.4 and 5GHz bands and Bluetooth v5.3 with peripheral and central roles. It features a UART interface for easy integration with the host MCU, high-level AT command configuration, and robust security protocols, including WPA2/WPA3 and TLS encryption. The board also includes a user-configurable RGB LED indicator and buttons for bootloader and application mode selection.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/wifinora_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/wifi-nora-click)
+[Click Product page](https://www.mikroe.com/wifi-nora-click)
 
 ---
 
@@ -64,7 +64,7 @@ void wifinora_send_cmd_with_par ( wifinora_t *ctx, uint8_t *at_cmd_buf, uint8_t 
 
 ## Example Description
 
-> This example demonstrates the use of WiFi NORA click board by processing
+> This example demonstrates the use of WiFi NORA Click board by processing
   the incoming data and displaying them on the USB UART.
 
 **The demo application is composed of two sections :**
@@ -158,7 +158,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

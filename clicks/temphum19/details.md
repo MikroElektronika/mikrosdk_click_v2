@@ -1,6 +1,6 @@
 
 ---
-# TempHum 19 click
+# TempHum 19 Click
 
 > Temp&Hum 19 Click is a compact add-on board that represents temperature and humidity sensing solution. This board features the BPS240, a highly accurate relative humidity and temperature sensor from Bourns. This sensor, characterized by its high accuracy (±2% from 20% to 80%RH (±4% over entire humidity range)) and high resolution, provides 10-bit data to the host controller with a configurable I2C interface.
 
@@ -8,7 +8,7 @@
   <img src="https://download.mikroe.com/images/click_for_ide/temphum19_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/temphum-19-click)
+[Click Product page](https://www.mikroe.com/temphum-19-click)
 
 ---
 
@@ -69,13 +69,13 @@ err_t temphum19_read_data ( temphum19_t *ctx, float *temperature, float *humidit
 
 ## Example Description
 
-> This example demonstrates the use of Temp & Hum 19 click board by reading the temperature and humidity data.
+> This example demonstrates the use of Temp & Hum 19 Click board by reading the temperature and humidity data.
 
 **The demo application is composed of two sections :**
 
 ### Application Init
 
-> Initializes the driver and performs the click default configuration.
+> Initializes the driver and performs the Click default configuration.
 
 ```c
 
@@ -145,7 +145,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

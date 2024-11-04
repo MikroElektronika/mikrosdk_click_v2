@@ -210,7 +210,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @details This function initializes click configuration structure to init state.
+ * @details This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void osd_cfg_setup ( osd_cfg_t *cfg );
@@ -220,7 +220,7 @@ void osd_cfg_setup ( osd_cfg_t *cfg );
  * @param osd Click object.
  * @param cfg Click configuration structure.
  * 
- * @details This function initializes all necessary pins and peripherals used for this click.
+ * @details This function initializes all necessary pins and peripherals used for this Click.
  */
 err_t osd_init ( osd_t *ctx, osd_cfg_t *cfg );
 
@@ -229,7 +229,7 @@ err_t osd_init ( osd_t *ctx, osd_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @details This function executes default configuration for OSD click.
+ * @details This function executes default configuration for OSD Click.
  */
 void osd_default_cfg  ( osd_t *ctx );
 
@@ -243,7 +243,7 @@ void osd_default_cfg  ( osd_t *ctx );
  * @details This function writes the byte of data to the
  * targeted 8-bit register address of MAX7456 single-channel
  * monochrome OSD with integrated EEPROM memory on OSD 
- * click board.
+ * Click board.
  */
 void osd_write_byte  ( osd_t *ctx, uint8_t reg_address, uint8_t write_data );
 
@@ -284,7 +284,7 @@ void osd_hw_reset ( osd_t *ctx );
  * @details This function enables OSD by set to '1' [ bit 3 ]
  * states to the targeted OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_enable ( osd_t *ctx );
 
@@ -308,7 +308,7 @@ void osd_disable ( osd_t *ctx );
  *
  * @details This function writes character by position to the
  * targeted register address of MAX7456 single-channel monochrome
- * OSD with integrated EEPROM memory on OSD click board.
+ * OSD with integrated EEPROM memory on OSD Click board.
  */
 void osd_write_character ( osd_t *ctx, uint8_t line_pos, uint8_t row_pos, uint8_t symbol );
 
@@ -321,7 +321,7 @@ void osd_write_character ( osd_t *ctx, uint8_t line_pos, uint8_t row_pos, uint8_
  *
  * @details This function writes custom character by
  * position to the targeted register address of MAX7456 single-channel
- * monochrome OSD with integrated EEPROM memory on OSD click board.
+ * monochrome OSD with integrated EEPROM memory on OSD Click board.
  */
 void osd_insert_custom_char ( osd_t *ctx, uint8_t chr_address, uint8_t custom_char );
 
@@ -336,7 +336,7 @@ void osd_insert_custom_char ( osd_t *ctx, uint8_t chr_address, uint8_t custom_ch
  *
  * @details The function clears the character by position to the
  * targeted register address of MAX7456 single-channel monochrome
- * OSD with integrated EEPROM memory on OSD click board.
+ * OSD with integrated EEPROM memory on OSD Click board.
  */
 void osd_clears_char_places ( osd_t *ctx, uint8_t start_x, uint8_t start_y, uint8_t end_x,
                              uint8_t end_y );
@@ -349,7 +349,7 @@ void osd_clears_char_places ( osd_t *ctx, uint8_t start_x, uint8_t start_y, uint
  * @details This function sets NTSC video standard by clear
  * to '0' [ bit 6 ] states to the targeted OSD_VM0_REG register
  * address of MAX7456 single-channel monochrome OSD with integrated
- * EEPROM memory on OSD click board.
+ * EEPROM memory on OSD Click board.
  */                             
 void osd_set_ntsc ( osd_t *ctx );
 
@@ -361,7 +361,7 @@ void osd_set_ntsc ( osd_t *ctx );
  * @details This function sets PAL video standard by set to '1'
  * [ bit 6 ] states to the targeted OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_set_pal ( osd_t *ctx );
 
@@ -375,7 +375,7 @@ void osd_set_pal ( osd_t *ctx );
  * @details This function sets the video sync mode: autosync, external
  * or internal by write sync_mode value to the targeted OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  * @note
  * <pre>
  * sync mode values:
@@ -394,7 +394,7 @@ void osd_set_video_sync_mode ( osd_t *ctx, uint8_t sync_mode );
  * @details This function enables display of OSD image by set to '1' [ bit 3 ] states to the
  * targeted _OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_enable_display_image ( osd_t *ctx );
 
@@ -406,7 +406,7 @@ void osd_enable_display_image ( osd_t *ctx );
  * @details This function disables display of OSD image by clear to '0'
  * [ bit 3 ] states to the targeted OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_disable_display_image ( osd_t *ctx );
 
@@ -419,7 +419,7 @@ void osd_disable_display_image ( osd_t *ctx );
  * @details This function enables vertical synchronization of on-screen
  * data by write vsync value to the targeted OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  *
  * @note
  * <pre>
@@ -435,7 +435,7 @@ void osd_vertical_sync_screen ( osd_t *ctx, uint8_t vsync );
  *
  * @param ctx                       Click object.
  *
- * @details This function performs software reset OSD click by set
+ * @details This function performs software reset OSD Click by set
  * to '1' [ bit 1 ] states to the to the targeted OSD_VM0_REG register
  * address of MAX7456 single-channel monochrome OSD with integrated
  * EEPROM memory.
@@ -456,7 +456,7 @@ void osd_soft_reset ( osd_t *ctx );
  * @details This function enables video buffer by clear to '0'
  * [ bit 0 ] states to the targeted OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_enable_video_buffer ( osd_t *ctx );
 
@@ -468,7 +468,7 @@ void osd_enable_video_buffer ( osd_t *ctx );
  * @details This function disables video buffer by set to '1'
  * [ bit 0 ] states to the targeted OSD_VM0_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_disable_video_buffer ( osd_t *ctx );
 
@@ -518,7 +518,7 @@ void osd_set_background_brightness ( osd_t *ctx, uint8_t brightness );
  * @param ctx                       Click object.
  * @param blinking_time             Blinking time to be set
  *
- * @details This function sets blinking time of the click.
+ * @details This function sets blinking time of the Click.
  *
  * @note
  * <pre>
@@ -540,7 +540,7 @@ void osd_set_blinking_time ( osd_t *ctx, uint8_t blinking_time );
  * @details This function sets blinking duty cycle by write
  * blink_duty_cycle value to the targeted OSD_VM1_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  * @note
  * <pre>
  * Blinking Duty Cycle ( On : Off ):
@@ -643,7 +643,7 @@ void osd_set_local_background_control ( osd_t *ctx, uint8_t lb_mode );
  *
  * @details This function set blinking ON  by set to '1' [ bit 4 ] states to the
  * targeted OSD_DMM_REG register address of MAX7456 single-channel monochrome OSD
- * with integrated EEPROM memory on OSD click board.
+ * with integrated EEPROM memory on OSD Click board.
  */
 void osd_blinking_on ( osd_t *ctx );
 
@@ -655,7 +655,7 @@ void osd_blinking_on ( osd_t *ctx );
  * @details This function sets blinking OFF by clear to '0' [ bit 4 ]
  * states to the targeted OSD_DMM_REG register address of MAX7456
  * single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_blinking_off ( osd_t *ctx );
 
@@ -705,7 +705,7 @@ void osd_clear_display_memory ( osd_t *ctx );
  *
  * @details This function writes array of character by position
  * to the targeted register address of MAX7456 single-channel
- * monochrome OSD with integrated EEPROM memory on OSD click board.
+ * monochrome OSD with integrated EEPROM memory on OSD Click board.
  *
  * @note
  * <pre>
@@ -725,7 +725,7 @@ void osd_write_chars ( osd_t *ctx, uint8_t *symbol_buff, osd_write_chars_t *writ
  *
  * @details This function writes NVM character to the targeted
  * register address of MAX7456 single-channel monochrome OSD with
- * integrated EEPROM memory on OSD click board.
+ * integrated EEPROM memory on OSD Click board.
  */
 void osd_write_nvm_character ( osd_t *ctx, uint8_t v_chars, uint16_t v_index );
 
@@ -755,7 +755,7 @@ void osd_set_character_color_black ( osd_t *ctx );
  * @details This function sets blinking ON by set to '1' [ bit 6 ]
  * states to the targeted OSD_DMDI_REG register address of
  * MAX7456 single-channel monochrome OSD with integrated EEPROM memory
- * on OSD click board.
+ * on OSD Click board.
  */
 void osd_character_blinking_on ( osd_t *ctx );
 
@@ -795,7 +795,7 @@ void osd_normal_pixels_character ( osd_t *ctx );
  * @details This function sets sharpness by write s_data value
  * to the targeted OSD_OSDM_REG register address of MAX7456
  * single-channel monochrome OSD with integrated EEPROM memory on 
- * OSD click board.
+ * OSD Click board.
  *
  * @note
  * <pre>
@@ -827,7 +827,7 @@ void osd_enable_auto_black ( osd_t *ctx );
  * @details This function disables automatic OSD black by set
  * to '1' [ bit 4 ] states to the targeted OSD_OSDBL_REG register
  * address of MAX7456 single-channel monochrome OSD with integrated
- * EEPROM memory on OSD click board.
+ * EEPROM memory on OSD Click board.
  */
 void osd_disable_auto_black ( osd_t *ctx );
 
@@ -840,7 +840,7 @@ void osd_disable_auto_black ( osd_t *ctx );
  *
  * @details This function gets status data by read from the
  * targeted OSD_STAT_REG register address of MAX7456 single-channel
- * monochrome OSD with integrated EEPROM memory on OSD click board.
+ * monochrome OSD with integrated EEPROM memory on OSD Click board.
  * @note
  * <pre>
  * Status data:
@@ -879,7 +879,7 @@ uint8_t osd_get_status ( osd_t *ctx );
  *
  * @details This function gets display memory data out by read from the
  * targeted OSD_DMDO_REG register address of MAX7456 single-channel
- * monochrome OSD with integrated EEPROM memory on OSD click board.
+ * monochrome OSD with integrated EEPROM memory on OSD Click board.
  * @note
  * <pre>
  * status data:
@@ -908,7 +908,7 @@ uint8_t osd_get_display_data_out ( osd_t *ctx );
  *
  * @details This function gets character memory data out by read from the
  * targeted OSD_CMDO_REG register address of MAX7456 single-channel 
- * monochrome OSD with integrated EEPROM memory on OSD click board.
+ * monochrome OSD with integrated EEPROM memory on OSD Click board.
  *
  * @note
  * <pre>
@@ -984,6 +984,6 @@ uint8_t osd_get_hsync ( osd_t *ctx );
 #endif  // _OSD_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

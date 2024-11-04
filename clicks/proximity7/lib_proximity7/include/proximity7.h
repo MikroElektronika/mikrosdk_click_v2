@@ -321,7 +321,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void proximity7_cfg_setup ( proximity7_cfg_t *cfg );
@@ -332,7 +332,7 @@ void proximity7_cfg_setup ( proximity7_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 uint8_t proximity7_init ( proximity7_t *ctx, proximity7_cfg_t *cfg );
 
@@ -341,7 +341,7 @@ uint8_t proximity7_init ( proximity7_t *ctx, proximity7_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for Proximity7 click.
+ * @description This function executes default configuration for Proximity7 Click.
  */
 void proximity7_default_cfg ( proximity7_t *ctx );
 
@@ -537,6 +537,6 @@ void proximity7_set_constants( proximity7_t *ctx, proximity7_const_t *set_const_
 #endif  // _PROXIMITY7_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

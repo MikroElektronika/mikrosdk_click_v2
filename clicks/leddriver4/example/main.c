@@ -3,7 +3,7 @@
  * @brief LedDriver4 Click example
  * 
  * # Description
- * This click has the ability to dim the connected LED array, without producing any noise on the output.
+ * This Click has the ability to dim the connected LED array, without producing any noise on the output.
  *
  * The demo application is composed of two sections :
  * 

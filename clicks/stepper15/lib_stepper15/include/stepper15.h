@@ -441,7 +441,7 @@ typedef enum
 
 /**
  * @brief Stepper 15 configuration object setup function.
- * @details This function initializes click configuration structure to initial
+ * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
  * See #stepper15_cfg_t object definition for detailed explanation.
@@ -453,7 +453,7 @@ void stepper15_cfg_setup ( stepper15_cfg_t *cfg );
 /**
  * @brief Stepper 15 initialization function.
  * @details This function initializes all necessary pins and peripherals used
- * for this click board.
+ * for this Click board.
  * @param[out] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
@@ -469,7 +469,7 @@ err_t stepper15_init ( stepper15_t *ctx, stepper15_cfg_t *cfg );
 /**
  * @brief Stepper 15 default configuration function.
  * @details This function executes a default configuration of Stepper 15
- * click board.
+ * Click board.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
@@ -552,7 +552,7 @@ err_t stepper15_spi_read ( stepper15_t *ctx, uint8_t reg, uint8_t *data_out );
  * @brief Stepper 15 reset function.
  * @details This function performs hardware reset of the
  * PCA9538A, Low-voltage 8-bit I2C-bus I/O port with interrupt and reset
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @return Nothing.
@@ -566,7 +566,7 @@ void stepper15_reset ( stepper15_t *ctx );
  * @details This function performs stop the stepper motor of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @return Nothing.
@@ -580,7 +580,7 @@ void stepper15_motor_stop ( stepper15_t *ctx );
  * @details This function get interrupt flag state of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @return @li @c 0 - INT pin state low,
@@ -595,7 +595,7 @@ uint8_t stepper15_get_interrupt ( stepper15_t *ctx );
  * @details This function performs make one step of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] step_speed : Step speed ( percent from 1 to 100 ( max speed ) ).
@@ -612,7 +612,7 @@ err_t stepper15_make_one_step ( stepper15_t *ctx, uint8_t step_speed );
  * @details This function selects the direction of movement of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] direction : 
@@ -631,7 +631,7 @@ err_t stepper15_set_direction ( stepper15_t *ctx, uint8_t direction );
  * @details This function set the work mode of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] work_mode : 
@@ -650,7 +650,7 @@ err_t stepper15_set_work_mode ( stepper15_t *ctx, uint8_t work_mode );
  * @details This function set the output mode of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] output_mode : 
@@ -670,7 +670,7 @@ err_t stepper15_set_output_mode ( stepper15_t *ctx, uint8_t output_mode );
  * to scale the output current through SPI without needing to scale the Vref of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] trq_data :  
@@ -703,7 +703,7 @@ err_t stepper15_set_torque_dac ( stepper15_t *ctx, uint8_t trq_data );
  * @details This function set the counts of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] counts : Counts 0 - 255.
@@ -720,7 +720,7 @@ err_t stepper15_set_counts ( stepper15_t *ctx, uint8_t counts );
  * @details This function get fault condition of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @return @li @c 0 - Fault condition,
@@ -735,7 +735,7 @@ uint8_t stepper15_get_fault_condition ( stepper15_t *ctx );
  * @details This function turn the stepper motor to the desired angle of the
  * DRV8889A-Q1 Automotive Stepper Driver with Integrated Current
  * Sense, 1/256 Micro-Stepping, and Stall Detection
- * on the Stepper 15 click board™.
+ * on the Stepper 15 Click board™.
  * @param[in] ctx : Click context object.
  * See #stepper15_t object definition for detailed explanation.
  * @param[in] step_speed : Step speed ( percent from 1 to 100 ( max speed ) ).

@@ -1,7 +1,7 @@
 \mainpage Main Page
 
 ---
-# Vibro Motor 2 click
+# Vibro Motor 2 Click
 
 Vibro Motor 2 Click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as Z4FC1B1301781 as well as DMG3420U MOSFET to drive the ERM motor, since the MCU itself cannot provide enough power for the motor driving. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. This motor contains a small eccentric weight on its rotor, so while rotating it also produces vibration effect
 
@@ -9,7 +9,7 @@ Vibro Motor 2 Click features a compact size Eccentric Rotating Mass (ERM) motor,
   <img src="https://download.mikroe.com/images/click_for_ide/vibromotor2_click.png" height=300px>
 </p>
 
-[click Product page](https://www.mikroe.com/vibro-motor-2-click)
+[Click Product page](https://www.mikroe.com/vibro-motor-2-click)
 
 ---
 
@@ -150,7 +150,7 @@ The full application code, and ready to use projects can be installed directly f
 **Additional notes and informations**
 
 Depending on the development board you are using, you may need
-[USB UART click](https://www.mikroe.com/usb-uart-click),
+[USB UART Click](https://www.mikroe.com/usb-uart-click),
 [USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
 [RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
 development systems with no UART to USB interface available on the board. UART

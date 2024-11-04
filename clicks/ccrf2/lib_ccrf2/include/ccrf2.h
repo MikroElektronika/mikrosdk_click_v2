@@ -428,7 +428,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void ccrf2_cfg_setup ( ccrf2_cfg_t *cfg );
@@ -439,7 +439,7 @@ void ccrf2_cfg_setup ( ccrf2_cfg_t *cfg );
  * @param ctx Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 CCRF2_RETVAL ccrf2_init ( ccrf2_t *ctx, ccrf2_cfg_t *cfg );
 
@@ -448,7 +448,7 @@ CCRF2_RETVAL ccrf2_init ( ccrf2_t *ctx, ccrf2_cfg_t *cfg );
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for ccRF2 click.
+ * @description This function executes default configuration for ccRF2 Click.
  */
 void ccrf2_default_cfg ( ccrf2_t *ctx );
 
@@ -691,6 +691,6 @@ uint8_t ccrf2_receive_rx_data ( ccrf2_t *ctx, uint8_t *rx_data );
 #endif  // _CCRF2_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

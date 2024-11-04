@@ -147,7 +147,7 @@ extern "C"{
  *
  * @param cfg  Click configuration structure.
  *
- * @description This function initializes click configuration structure to init state.
+ * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
 void mbusmaster_cfg_setup ( mbusmaster_cfg_t *cfg );
@@ -157,7 +157,7 @@ void mbusmaster_cfg_setup ( mbusmaster_cfg_t *cfg );
  * @param mbusmaster Click object.
  * @param cfg Click configuration structure.
  * 
- * @description This function initializes all necessary pins and peripherals used for this click.
+ * @description This function initializes all necessary pins and peripherals used for this Click.
  */
 MBUSMASTER_RETVAL mbusmaster_init ( mbusmaster_t *ctx, mbusmaster_cfg_t *cfg );
 
@@ -184,6 +184,6 @@ int32_t mbusmaster_generic_read ( mbusmaster_t *ctx, char *data_buf, uint16_t ma
 #endif  // _MBUSMASTER_H_
 
 /** \} */ // End public_function group
-/// \}    // End click Driver group  
+/// \}    // End Click Driver group  
 /*! @} */
 // ------------------------------------------------------------------------- END

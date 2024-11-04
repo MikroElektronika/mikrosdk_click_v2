@@ -3,7 +3,7 @@
  * @brief RTK Rover Click Example.
  *
  * # Description
- * This example demonstrates the use of RTK Rover click by reading and displaying
+ * This example demonstrates the use of RTK Rover Click by reading and displaying
  * the GPS coordinates.
  *
  * The demo application is composed of two sections :
@@ -21,7 +21,7 @@
  * - static void rtkrover_parser_application ( char *rsp )
  *
  * @note
- * The click board comes with the default baud rate of 460800, but the baud rate is set to 115200
+ * The Click board comes with the default baud rate of 460800, but the baud rate is set to 115200
  * in the example due to code portability and speed limitations of some MCUs. So in order to run
  * the example you will need to adjust the baud rate using Quectel QGNSS evaluation software.
  * 

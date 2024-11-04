@@ -3,7 +3,7 @@
  * @brief Charger 27 Click Example.
  *
  * # Description
- * This example demonstrates the use of the Charger 27 click board 
+ * This example demonstrates the use of the Charger 27 Click board 
  * by enabling charge or discharge mode and 
  * indicating valid input supply and charging completion.
  *
@@ -14,7 +14,7 @@
  * After driver initialization, the app sets charge mode.
  *
  * ## Application Task
- * The Charger 27 click board operates as a switching charger to charge a 1S battery 
+ * The Charger 27 Click board operates as a switching charger to charge a 1S battery 
  * from a wide input power range of 5V to 16V, which can cover a USB PD voltage level.
  * The demo application checks and displays the charging completion indicator status.
  * Results are being sent to the UART Terminal, where you can track their changes.

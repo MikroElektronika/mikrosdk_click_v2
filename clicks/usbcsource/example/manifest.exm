@@ -3,6 +3,6 @@
     "description": "USB-C Source Click is a compact add-on board that contains a standalone autonomous USB power delivery controller. This board features the STUSB4700, an independent USB power delivery controller optimized as a provider to negotiate a given amount of power to be sourced to an inquiring consumer device from STMicroelectronics.",
     "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["click","STUSB4700"],
+    "hw" : ["Click","STUSB4700"],
     "category" : ["USB-C PD"]
 }
