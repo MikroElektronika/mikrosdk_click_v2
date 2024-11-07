@@ -1,0 +1,8 @@
+{
+    "name": "Expand 18 Click",
+    "description": "Expand 18 Click is a compact add-on board used for expanding the I/O capabilities of various microcontroller (MCU) systems. This board features the PCAL9714, an ultra-low-voltage 14-bit SPI I/O expander from NXP. This board supports both 3.3V and 5V logic levels, features integrated level shifting for mixed-voltage systems, and operates via a high-speed 5MHz SPI interface. Additionally, it offers Agile I/O capabilities such as programmable output drive strength, latchable inputs, and interrupt management. Expand 18 Click is ideal for interfacing MCUs with sensors, keypads, and push buttons in power-sensitive applications.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","PCAL9714HNMP"],
+    "category" : ["Click Boards > Interface > Port expander"]
+}
