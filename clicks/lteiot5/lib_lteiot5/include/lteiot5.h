@@ -57,70 +57,103 @@ extern "C"{
  */
 
 /**
- * @defgroup lteiot5_reg LTE IoT 5 Commands List
- * @brief List of commands of LTE IoT 5 Click driver.
- */
-
-/**
- * @addtogroup lteiot5_reg
- * @{
- */
-
-/**
- * @brief LTE IoT 5 description register.
- * @details Specified register for description of LTE IoT 5 Click driver.
- */
-// TODO -- dodati makroe koji definisu adrese registara
-
-/*! @} */ // lteiot5_reg
-
-/**
- * @defgroup lteiot5_set LTE IoT 5 Device Settings
+ * @defgroup lteiot5_cmd LTE IoT 5 Device Settings
  * @brief Settings for registers of LTE IoT 5 Click driver.
  */
 
 /**
- * @addtogroup lteiot5_set
+ * @addtogroup lteiot5_cmd
  * @{
  */
 
 /**
- * @brief LTE IoT 5 description setting.
- * @details Specified setting for description of LTE IoT 5 Click driver.
+ * @brief LTE IoT 5 control commands.
+ * @details Specified setting for control commands of LTE IoT 5 Click driver.
  */
-#define LTEIOT5_CMD_AT          "AT"
-#define LTEIOT5_CMD_ATI         "ATI"
-#define LTEIOT5_CMD_CGMR        "AT+CGMR"
+#define LTEIOT5_CMD_AT                              "AT"
+#define LTEIOT5_CMD_GET_MODEL_ID                    "AT+CGMM"
+#define LTEIOT5_CMD_GET_SW_VERSION                  "AT+CGMR"
+#define LTEIOT5_CMD_GET_SERIAL_NUM                  "AT+CGSN"
+#define LTEIOT5_CMD_FACTORY_RESET                   "AT&F"
+#define LTEIOT5_CMD_SET_MODULE_FUNCTIONALITY        "AT+CFUN"
+#define LTEIOT5_CMD_EPS_NETWORK_REGISTRATION        "AT+CEREG"
+#define LTEIOT5_CMD_SIGNAL_QUALITY_REPORT           "AT+CSQ"
+#define LTEIOT5_CMD_OPERATOR_SELECTION              "AT+COPS"
+#define LTEIOT5_CMD_SEND_SMS                        "AT+CMGS"
+#define LTEIOT5_CMD_SELECT_SMS_FORMAT               "AT+CMGF"
+#define LTEIOT5_CMD_DEFINE_PDP_CONTEXT              "AT+CGDCONT"
+#define LTEIOT5_CMD_SHOW_PDP_ADDRESS                "AT+CGPADDR"
+#define LTEIOT5_CMD_ACTIVATE_PDP_CONTEXT            "AT+CGACT"
+#define LTEIOT5_CMD_PSD_CONFIG                      "AT+UPSD"
+#define LTEIOT5_CMD_PSD_ACTION                      "AT+UPSDA"
+#define LTEIOT5_CMD_CREATE_SOCKET                   "AT+USOCR"
+#define LTEIOT5_CMD_CLOSE_SOCKET                    "AT+USOCL"
+#define LTEIOT5_CMD_CONNECT_SOCKET                  "AT+USOCO"
+#define LTEIOT5_CMD_WRITE_SOCKET_DATA               "AT+USOWR"
+#define LTEIOT5_CMD_READ_SOCKET_DATA                "AT+USORD"
+#define LTEIOT5_CMD_GNSS_POWER_MANAGEMENT           "AT+UGPS"
+#define LTEIOT5_CMD_GET_GNSS_FIX_DATA               "AT+UGGGA"
 
-#define LTEIOT5_CMD_CFUN        "AT+CFUN"
-#define LTEIOT5_CMD_CREG        "AT+CREG"
-#define LTEIOT5_CMD_CEREG       "AT+CEREG"
-#define LTEIOT5_CMD_CGDCONT     "AT+CGDCONT"
-#define LTEIOT5_CMD_CIMI        "AT+CIMI"
-#define LTEIOT5_CMD_CGATT       "AT+CGATT"
-#define LTEIOT5_CMD_CSQ         "AT+CSQ"
-#define LTEIOT5_CMD_CESQ        "AT+CESQ"
-#define LTEIOT5_CMD_COPS        "AT+COPS"
-#define LTEIOT5_CMD_URAT        "AT+URAT"
-#define LTEIOT5_CMD_UBANDMASK   "AT+UBANDMASK"
-#define LTEIOT5_CMD_URATCONF    "AT+URATCONF"
-#define LTEIOT5_CMD_UAUTHREQ    "AT+UAUTHREQ"
-#define LTEIOT5_CMD_UUICC       "AT+UUICC"
-#define LTEIOT5_CMD_UCGED       "AT+UCGED"
-#define LTEIOT5_CMD_UCELLINFO   "AT+UCELLINFO"
-#define LTEIOT5_CMD_UANTR       "AT+UANTR"
+/**
+ * @brief LTE IoT 5 device response for AT commands.
+ * @details Device response after commands.
+ */
+#define LTEIOT5_RSP_OK                              "OK"
+#define LTEIOT5_RSP_ERROR                           "ERROR"
 
-// "AT+CGMR"
+/**
+ * @brief LTE IoT 5 device unsolicited response code (URC) settings.
+ * @details Device unsolicited response code (URC) settings.
+ */
+#define LTEIOT5_URC_CREATE_SOCKET                   "+USOCR: "
+#define LTEIOT5_URC_RECEIVED_DATA                   "+UUSORD: "
+
+/**
+ * @brief LTE IoT 5 power state settings.
+ * @details Specified power state settings of LTE IoT 5 Click driver.
+ */
+#define LTEIOT5_POWER_STATE_OFF                     0
+#define LTEIOT5_POWER_STATE_ON                      1
+#define LTEIOT5_POWER_STATE_RESET                   2
+
+/**
+ * @brief LTE IoT 5 response buffer commands.
+ * @details Specified response buffer commands of LTE IoT 5 Click driver.
+ */
+#define LTEIOT5_RSP_START                           "$"
+#define LTEIOT5_RSP_DELIMITER                       ","
+#define LTEIOT5_RSP_END                             "\r\n"
+#define LTEIOT5_RSP_GGA                             "GGA"
+
+/**
+ * @brief LTE IoT 5 GGA command elements.
+ * @details Specified GGA command elements of LTE IoT 5 Click driver.
+ */
+#define LTEIOT5_GGA_ELEMENT_SIZE                    15
+#define LTEIOT5_GGA_TIME                            1
+#define LTEIOT5_GGA_LATITUDE                        2
+#define LTEIOT5_GGA_LATITUDE_SIDE                   3
+#define LTEIOT5_GGA_LONGITUDE                       4
+#define LTEIOT5_GGA_LONGITUDE_SIDE                  5
+#define LTEIOT5_GGA_QUALITY_INDICATOR               6
+#define LTEIOT5_GGA_NUMBER_OF_SATELLITES            7
+#define LTEIOT5_GGA_H_DILUTION_OF_POS               8
+#define LTEIOT5_GGA_ALTITUDE                        9
+#define LTEIOT5_GGA_ALTITUDE_UNIT                   10
+#define LTEIOT5_GGA_GEOIDAL_SEPARATION              11
+#define LTEIOT5_GGA_GEOIDAL_SEPARATION_UNIT         12
+#define LTEIOT5_GGA_TIME_SINCE_LAST_DGPS            13
+#define LTEIOT5_GGA_DGPS_REFERENCE_STATION_ID       14
 
 /**
  * @brief LTE IoT 5 driver buffer size.
  * @details Specified size of driver ring buffer.
  * @note Increase buffer size if needed.
  */
-#define DRV_RX_BUFFER_SIZE                     500
-#define DRV_TX_BUFFER_SIZE                     150
+#define LTEIOT5_TX_DRV_BUFFER_SIZE                  300
+#define LTEIOT5_RX_DRV_BUFFER_SIZE                  300
 
-/*! @} */ // lteiot5_set
+/*! @} */ // lteiot5_cmd
 
 /**
  * @defgroup lteiot5_map LTE IoT 5 MikroBUS Map
@@ -137,12 +170,12 @@ extern "C"{
  * @details Mapping pins of LTE IoT 5 Click to the selected MikroBUS.
  */
 #define LTEIOT5_MAP_MIKROBUS( cfg, mikrobus ) \
-    cfg.tx_pin  = MIKROBUS( mikrobus, MIKROBUS_TX ); \
-    cfg.rx_pin  = MIKROBUS( mikrobus, MIKROBUS_RX ); \
+    cfg.tx_pin = MIKROBUS( mikrobus, MIKROBUS_TX ); \
+    cfg.rx_pin = MIKROBUS( mikrobus, MIKROBUS_RX ); \
     cfg.pwr = MIKROBUS( mikrobus, MIKROBUS_AN ); \
     cfg.rst = MIKROBUS( mikrobus, MIKROBUS_RST ); \
     cfg.rts = MIKROBUS( mikrobus, MIKROBUS_CS ); \
-    cfg.ri = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
+    cfg.ring = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
     cfg.cts = MIKROBUS( mikrobus, MIKROBUS_INT );
 
 /*! @} */ // lteiot5_map
@@ -155,24 +188,21 @@ extern "C"{
 typedef struct
 {
     // Output pins
-
-    digital_out_t pwr;       /**< Description. */
-    digital_out_t rst;     /**< Description. */
-    digital_out_t rts;       /**< Description. */
+    digital_out_t pwr;              /**< Power pin. */
+    digital_out_t rst;              /**< Reset pin. */
+    digital_out_t rts;              /**< UART ready to send pin. */
 
     // Input pins
-
-    digital_in_t ri;       /**< Description. */
-    digital_in_t cts;       /**< Description. */
+    digital_in_t ring;              /**< Ring indicator pin. */
+    digital_in_t cts;               /**< UART clear to send pin. */
 
     // Modules
-
-    uart_t uart;                                    /**< UART driver object. */
+    uart_t uart;                    /**< UART driver object. */
 
     // Buffers
-
-    char uart_rx_buffer[ DRV_RX_BUFFER_SIZE ];         /**< Buffer size. */
-    char uart_tx_buffer[ DRV_TX_BUFFER_SIZE ];         /**< Buffer size. */
+    uint8_t uart_rx_buffer[ LTEIOT5_RX_DRV_BUFFER_SIZE ];  /**< RX Buffer size. */
+    uint8_t uart_tx_buffer[ LTEIOT5_TX_DRV_BUFFER_SIZE ];  /**< TX Buffer size. */
+    uint8_t cmd_buffer[ LTEIOT5_TX_DRV_BUFFER_SIZE ];      /**< Command buffer. */
 
 } lteiot5_t;
 
@@ -183,27 +213,37 @@ typedef struct
 typedef struct
 {
     // Communication gpio pins
-
-    pin_name_t rx_pin;                                  /**< RX pin. */
-    pin_name_t tx_pin;                                  /**< TX pin. */
+    pin_name_t rx_pin;              /**< RX pin. */
+    pin_name_t tx_pin;              /**< TX pin. */
 
     // Additional gpio pins
-
-    pin_name_t pwr;          /**< Description. */
-    pin_name_t rst;        /**< Description. */
-    pin_name_t rts;          /**< Description. */
-    pin_name_t ri;        /**< Description. */
-    pin_name_t cts;        /**< Description. */
+    pin_name_t pwr;                 /**< Power pin. */
+    pin_name_t rst;                 /**< Reset pin. */
+    pin_name_t rts;                 /**< UART ready to send pin. */
+    pin_name_t ring;                /**< Ring indicator pin. */
+    pin_name_t cts;                 /**< UART clear to send pin. */
 
     // Static variable
-
-    uint32_t          baud_rate;                        /**< Clock speed. */
-    bool              uart_blocking;                    /**< Wait for interrupt or not. */
-    uart_data_bits_t  data_bit;                         /**< Data bits. */
-    uart_parity_t     parity_bit;                       /**< Parity bit. */
-    uart_stop_bits_t  stop_bit;                         /**< Stop bits. */
+    uint32_t         baud_rate;     /**< Clock speed. */
+    bool             uart_blocking; /**< Wait for interrupt or not. */
+    uart_data_bits_t data_bit;      /**< Data bits. */
+    uart_parity_t    parity_bit;    /**< Parity bit. */
+    uart_stop_bits_t stop_bit;      /**< Stop bits. */
 
 } lteiot5_cfg_t;
+
+/**
+ * @brief LTE IoT 5 Click return value data.
+ * @details Predefined enum values for driver return values.
+ */
+typedef enum
+{
+    LTEIOT5_OK = 0,
+    LTEIOT5_ERROR = -1,
+    LTEIOT5_ERROR_TIMEOUT = -2,
+    LTEIOT5_ERROR_CMD = -3
+
+} lteiot5_return_value_t;
 
 /*!
  * @addtogroup lteiot5 LTE IoT 5 Click Driver
@@ -232,192 +272,200 @@ void lteiot5_cfg_setup ( lteiot5_cfg_t *cfg );
  * See #lteiot5_cfg_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
- *
  * See #err_t definition for detailed explanation.
  * @note None.
  */
 err_t lteiot5_init ( lteiot5_t *ctx, lteiot5_cfg_t *cfg );
 
 /**
- * @brief LTE IoT 5 default configuration function.
- * @details This function executes a default configuration of LTE IoT 5
- * Click board.
- * @param[in] ctx : Click context object.
- * See #lteiot5_t object definition for detailed explanation.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- *
- * See #err_t definition for detailed explanation.
- * @note This function can consist any necessary configuration or setting to put
- * device into operating mode.
- */
-err_t lteiot5_default_cfg ( lteiot5_t *ctx );
-
-/**
  * @brief LTE IoT 5 data writing function.
  * @details This function writes a desired number of data bytes by using UART serial interface.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] data_buf : Data buffer for sending.
+ * @param[in] data_in : Data buffer for sending.
  * @param[in] len : Number of bytes for sending.
  * @return @li @c  >=0 - Success,
  *         @li @c   <0 - Error.
- *
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t lteiot5_generic_write ( lteiot5_t *ctx, char *data_buf, uint16_t len );
+err_t lteiot5_generic_write ( lteiot5_t *ctx, uint8_t *data_in, uint16_t len );
 
 /**
  * @brief LTE IoT 5 data reading function.
  * @details This function reads a desired number of data bytes by using UART serial interface.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[out] data_buf : Output read data.
- * @param[in] max_len : Number of bytes to be read.
+ * @param[out] data_out : Output read data.
+ * @param[in] len : Number of bytes to be read.
  * @return @li @c  >0 - Number of data bytes read,
  *         @li @c <=0 - Error/Empty Ring buffer.
- *
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t lteiot5_generic_read ( lteiot5_t *ctx, char *data_buf, uint16_t max_len );
+err_t lteiot5_generic_read ( lteiot5_t *ctx, uint8_t *data_out, uint16_t len );
 
 /**
- * @brief LTE IoT 5 power on.
- * @details This function resets the chip on LTE IoT 5 Click.
+ * @brief LTE IoT 5 set PWR pin function.
+ * @details This function sets the PWRKEY pin logic state.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @return Nothing.
+ * @param[in] state : Pin logic state.
+ * @return None.
+ * @note None.
  */
-void lteiot5_power_on ( lteiot5_t *ctx );
+void lteiot5_set_pwr_pin ( lteiot5_t *ctx, uint8_t state );
 
 /**
- * @brief LTE IoT 5 power on.
- * @details This function resets the chip on LTE IoT 5 Click.
+ * @brief LTE IoT 5 set RST pin function.
+ * @details This function sets the RESET pin logic state.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @return Nothing.
+ * @param[in] state : Pin logic state.
+ * @return None.
+ * @note None.
  */
-void lteiot5_reset ( lteiot5_t *ctx );
+void lteiot5_set_rst_pin ( lteiot5_t *ctx, uint8_t state );
 
 /**
- * @brief Sets state of the PWR pin.
- * @details This function sets PWR pin state.
+ * @brief LTE IoT 5 set RTS pin function.
+ * @details This function sets the request to send (RTS) pin logic state.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] state Pin state ( 1 or 0 ).
- * @return Nothing.
+ * @param[in] state : Pin logic state.
+ * @return None.
+ * @note None.
  */
-void lteiot5_set_pwr ( lteiot5_t *ctx, uint8_t state );
+void lteiot5_set_rts_pin ( lteiot5_t *ctx, uint8_t state );
 
 /**
- * @brief Sets state of the RST pin.
- * @details This function sets RST pin state.
+ * @brief LTE IoT 5 get RING pin function.
+ * @details This function returns the ring indication (RING) pin logic state.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] state Pin state ( 1 or 0 ).
- * @return Nothing.
+ * @return Pin logic state.
+ * @note None.
  */
-void lteiot5_set_rst ( lteiot5_t *ctx, uint8_t state );
+uint8_t lteiot5_get_ring_pin ( lteiot5_t *ctx );
 
 /**
- * @brief Sets state of the RTS pin.
- * @details This function sets RTS pin state.
+ * @brief LTE IoT 5 get CTS pin function.
+ * @details This function returns the clear to send (CTS) pin logic state.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] state Pin state ( 1 or 0 ).
- * @return Nothing.
+ * @return Pin logic state.
+ * @note None.
  */
-void lteiot5_set_rts ( lteiot5_t *ctx, uint8_t state );
+uint8_t lteiot5_get_cts_pin ( lteiot5_t *ctx );
 
 /**
- * @brief RI Pin Get function
- * @details This function allows user to check state of the RI pin.
+ * @brief LTE IoT 5 set power state function.
+ * @details This function sets a desired power state by toggling PWR and RST pins with a specific timing.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @return @li @c 0 logical low.
- *         @li @c 1 logical high.
+ * @param[in] state : @li @c 0 - Power OFF,
+ *                    @li @c 1 - Power ON,
+ *                    @li @c 2 - Reset.
+ * @return None.
+ * @note None.
  */
-uint8_t lteiot5_get_ri ( lteiot5_t *ctx );
+void lteiot5_set_power_state ( lteiot5_t *ctx, uint8_t state );
 
 /**
- * @brief CTS Pin Get function
- * @details This function allows user to check state of the CTS pin.
+ * @brief LTE IoT 5 cmd run function.
+ * @details This function sends a specified command to the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @return @li @c 0 logical low.
- *         @li @c 1 logical high.
+ * @param[in] cmd : Command string.
+ * @return None.
+ * @note None.
  */
-uint8_t lteiot5_get_cts ( lteiot5_t *ctx );
+void lteiot5_cmd_run ( lteiot5_t *ctx, uint8_t *cmd );
 
 /**
- * @brief Send command function.
- * @details This function sends the specified command to the Click module.
+ * @brief LTE IoT 5 cmd set function.
+ * @details This function sets a value to a specified command of the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] cmd  Command variable.
- *
- * @return Nothing.
+ * @param[in] cmd : Command string.
+ * @param[in] value : Value string.
+ * @return None.
+ * @note None.
  */
-void lteiot5_send_cmd ( lteiot5_t *ctx, char *cmd );
+void lteiot5_cmd_set ( lteiot5_t *ctx, uint8_t *cmd, uint8_t *value );
 
 /**
- * @brief Send command function with parameter.
- * @details This function sends commands to the Click module.
+ * @brief LTE IoT 5 cmd get function.
+ * @details This function is used to get the value of a given command from the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] at_cmd_buf  Command buffer.
- * @param[in] param_buf  Parameter buffer.
- *
- * @return Nothing.
+ * @param[in] cmd : Command string.
+ * @return None.
+ * @note None.
  */
-void lteiot5_send_cmd_with_parameter ( lteiot5_t *ctx, char *at_cmd_buf, char *param_buf );
+void lteiot5_cmd_get ( lteiot5_t *ctx, uint8_t *cmd );
 
 /**
- * @brief Check the sent command.
- * @details This function checks the command that is sent.
+ * @brief LTE IoT 5 cmd help function.
+ * @details This function provides a short description of the given command of the Click module.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] at_cmd_buf  Command buffer.
- *
- * @return Nothing.
+ * @param[in] cmd : Command string.
+ * @return None.
+ * @note None.
  */
-void lteiot5_send_cmd_check ( lteiot5_t *ctx, char *at_cmd_buf );
-
-/**
- * @brief Check the command parameters.
- * @details This function checks the command that is sent.
- * @param[in] ctx : Click context object.
- * See #lteiot5_t object definition for detailed explanation.
- * @param[in] at_cmd_buf  Command buffer.
- *
- * @return Nothing.
- */
-void lteiot5_send_cmd_parameter_check ( lteiot5_t *ctx, char *at_cmd_buf );
+void lteiot5_cmd_help ( lteiot5_t *ctx, uint8_t *cmd );
 
 /**
  * @brief Set sim card APN.
  * @details This function sets APN for sim card.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] sim_apn  SIM card APN.
- *
+ * @param[in] sim_apn : SIM card APN.
  * @return Nothing.
+ * @note None.
  */
-void lteiot5_set_sim_apn ( lteiot5_t *ctx, char *sim_apn );
+void lteiot5_set_sim_apn ( lteiot5_t *ctx, uint8_t *sim_apn );
 
 /**
- * @brief LTE IoT 5 send text message.
+ * @brief LTE IoT 5 send SMS in text mode.
  * @details This function sends text message to a phone number.
  * @param[in] ctx : Click context object.
  * See #lteiot5_t object definition for detailed explanation.
- * @param[in] phone_number  Phone number to message.
- * @param[in] message_context  Message to be sent.
- *
+ * @param[in] phone_number : Phone number to message.
+ * @param[in] sms_text : Message to be sent.
  * @return Nothing.
+ * @note None.
  */
-void lteiot5_send_text_message ( lteiot5_t *ctx, char *phone_number, char *message_context );
+void lteiot5_send_sms_text ( lteiot5_t *ctx, uint8_t *phone_number, uint8_t *sms_text );
+
+/**
+ * @brief LTE IoT 5 send SMS in PDU mode.
+ * @details This function sends text message to a phone number in PDU mode.
+ * @param[in] ctx : Click context object.
+ * See #lteiot5_t object definition for detailed explanation.
+ * @param[in] service_center_number : SMSC of the SIM card.
+ * @param[in] phone_number : Phone number to message.
+ * @param[in] sms_text : Message to be sent.
+ * @return @li @c  >=0 - Success,
+ *         @li @c   <0 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t lteiot5_send_sms_pdu ( lteiot5_t *ctx, uint8_t *service_center_number, uint8_t *phone_number, uint8_t *sms_text );
+
+/**
+ * @brief LTE IoT 5 parse GGA function.
+ * @details This function parses the GGA data from the read response buffer.
+ * @param[in] rsp_buf : Response buffer.
+ * @param[in] gga_element : GGA element position [1-14].
+ * @param[out] element_data : Element data parsed.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t lteiot5_parse_gga ( uint8_t *rsp_buf, uint8_t gga_element, uint8_t *element_data );
 
 #ifdef __cplusplus
 }

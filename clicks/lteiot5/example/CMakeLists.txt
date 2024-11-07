@@ -13,7 +13,7 @@ endif()
 
 add_executable(example_lteiot5
         main.c
-
+    
 )
 
 

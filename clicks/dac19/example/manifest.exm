@@ -1,0 +1,8 @@
+{
+    "name": "DAC 19 Click",
+    "description": "DAC 19 Click is a compact add-on board designed for high-performance voltage-output applications. This board features the DAC53701-Q1, a 10-bit automotive-grade DAC from Texas Instruments, offering smart functionality through force-sense output, GPI function trigger, PWM output, and integrated nonvolatile memory (NVM). The board supports an internal or power supply reference, provides a full-scale output range, and communicates efficiently with microcontrollers using an I2C interface with up to 1MHz clock speed.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","DAC53701DSGRQ1"],
+    "category" : ["Click Boards > Mixed signal > DAC"]
+}

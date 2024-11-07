@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Interface > RS485",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "RS485 Isolator 4 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.rs485isolator4",
+    "product_link": "https://www.mikroe.com/rs485-isolator-4-click",
+    "short_description": "RS485 Isolator 4 Click is a compact add-on board designed for robust RS-485 and RS-422 half-duplex communication with galvanic isolation. This board features the ISO1450, a 5kVRMS isolated RS-485 transceiver from Texas Instruments. The ISO1450 supports data rates up to 50Mbps and features advanced protection against electrostatic discharge (ESD) and electrical fast transients (EFT), ensuring reliable long-distance communication in industrial environments. It operates over a wide supply voltage range (3V to 5.5V), offering failsafe protection against open, short, and idle bus states.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.RS485Isolator4",
+    "subdir_name": "lib_rs485isolator4"
+}
+
+

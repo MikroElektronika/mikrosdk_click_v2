@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > GSM/LTE",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LTE Cat.1 6 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.ltecat16",
+    "product_link": "https://www.mikroe.com/lte-cat1-6-click",
+    "short_description": "LTE Cat.1 6 Click is a compact add-on board with global coverage for wireless communication over LTE, UMTS, and GSM networks. This board features the SIM7600SA, a LTE Cat 1 module from SIMCom, supporting LTE-TDD/LTE-FDD/HSPA+/GSM/GPRS/EDGE communication modes. Key features include multi-band LTE support, auxiliary diversity, and optional multi-constellation GNSS. It also integrates USB Type C for power and data transfer, a micro SIM card holder, three LED indicators for network status, power, custom notifications, AT command communication, and firmware upgrades.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.LTECat16",
+    "subdir_name": "lib_ltecat16"
+}
+
+

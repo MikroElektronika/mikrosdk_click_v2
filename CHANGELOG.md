@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241107](#20241107)**
 + **[20241104](#20241104)**
 + **[20241024](#20241024)**
 + **[20240926](#20240926)**
@@ -109,6 +110,23 @@
 
 ---
 ---
+---
+
+## `20241107`
+
+*Following click boards have been added:*
+
++ `LTE Cat.1 6`
++ `DAC 19`
++ `RS485 Isolator 4`
++ `Expand 18`
+
+*Following click boards have been modified:*
+
++ `LTE IoT 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241104`
