@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Wireless connectivity > LoRa",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "LR 14 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.lr14",
+    "product_link": "https://www.mikroe.com/lr-14-click",
+    "short_description": "LR 14 Click is a compact add-on board for low-power, long-range wireless communication in IoT networks. This board features the RAK3172, a Class A/B/C LoRaWAN 1.0.3-compliant module from RAKwireless Technology, featuring the STM32WLE5CC ARM Cortex-M4 32-bit chip. This board supports LoRaWAN and LoRa Point-to-Point communication modes and integrates multiple frequency bands for flexibility across various regions. Key features include UART, SPI, and I2C interfaces, a USB Type-C connector for power and configuration, and a rechargeable battery option for standalone operation.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.2",
+    "cmake": true,
+    "alias": "Click.LR14",
+    "subdir_name": "lib_lr14"
+}
+
+

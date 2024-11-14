@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241114](#20241114)**
 + **[20241107](#20241107)**
 + **[20241104](#20241104)**
 + **[20241024](#20241024)**
@@ -110,6 +111,19 @@
 
 ---
 ---
+---
+
+## `20241114`
+
+*Following click boards have been added:*
+
++ `DIGI I/O`
++ `Hall Current 21`
++ `ISO ADC 7`
++ `LR 14`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241107`

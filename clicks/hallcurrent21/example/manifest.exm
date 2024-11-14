@@ -1,0 +1,8 @@
+{
+    "name": "Hall Current 21 Click",
+    "description": "Hall Current 21 Click is a compact add-on board designed for precise current measurement across a wide frequency range, ideal for fast and accurate monitoring applications. This board features the ACS37030, a galvanically-isolated current sensor from Allegro Microsystems. It provides bidirectional current sensing with a range of ±65A and a sensitivity of 20.3mV/A, offering high isolation of 3500VRMS and a working voltage of up to 840VRMS. It also features low noise and a wide operating bandwidth, making it suitable for high-speed switching current and control loop monitoring. This Click board™ is perfect for power supplies in servers, data centers, and solar DC-DC converters.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","ACS37030LLZATR-065B3","ADC122S101CIMM"],
+    "category" : ["Click Boards > Sensors > Current sensor"]
+}

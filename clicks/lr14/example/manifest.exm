@@ -1,0 +1,8 @@
+{
+    "name": "LR 14 Click",
+    "description": "LR 14 Click is a compact add-on board for low-power, long-range wireless communication in IoT networks. This board features the RAK3172, a Class A/B/C LoRaWAN 1.0.3-compliant module from RAKwireless Technology, featuring the STM32WLE5CC ARM Cortex-M4 32-bit chip. This board supports LoRaWAN and LoRa Point-to-Point communication modes and integrates multiple frequency bands for flexibility across various regions. Key features include UART, SPI, and I2C interfaces, a USB Type-C connector for power and configuration, and a rechargeable battery option for standalone operation.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","RAK3172-8-SM-NI"],
+    "category" : ["Click Boards > Wireless connectivity > LoRa"]
+}
