@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Interface > Port expander",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "DIGI IO Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.digiio",
+    "product_link": "https://www.mikroe.com/digi-io-click",
+    "short_description": "DIGI I/O Click is a compact add-on board for flexible industrial digital input and output control. This board features the MAX14906, a quad-channel industrial digital input/output IC from Analog Devices, compliant with IEC 61131-2 standard. Each channel can be individually configured as a high-side switch, push-pull driver, or digital input, supporting various operating modes with current limiting up to 1.2A and fast signal transmission. The board supports 24V operation by default, with options for individual channel power configuration, and includes built-in diagnostics like overvoltage and undervoltage detection, thermal overload, and wire-break detection. DIGI I/O Click is ideal for industrial automation, motor control systems, PLCs, and Distributed Control Systems (DCS).",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.DIGIIO",
+    "subdir_name": "lib_digiio"
+}
+
