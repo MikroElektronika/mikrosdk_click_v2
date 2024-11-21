@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Current sensor",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Current 14 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.current14",
+    "product_link": "https://www.mikroe.com/current-14-click",
+    "short_description": "Current 14 Click is a compact add-on board designed for precise current measurement without direct contact. This board features the BM14270, a magnetic current sensor IC from ROHM Semiconductor. It uses a coreless, non-contact magnetic impedance (MI) sensor, ensuring low power loss and accurate current detection. It communicates through a 2-wire I2C interface, offering a 14-bit digital output with a measurable magnetic range of ±280μT and sensitivity of 0.045μT/LSB. The board includes an alert interrupt pin (ALR) that indicates data readiness, streamlining real-time data acquisition for the host MCU.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.Current14",
+    "subdir_name": "lib_current14"
+}
+

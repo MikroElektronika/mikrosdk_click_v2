@@ -1,0 +1,8 @@
+{
+    "name": "Step Down 12 Click",
+    "description": "Step Down 12 Click is a compact add-on board for reliable DC-DC step-down applications. Based on Texas Instruments' TPS62902 synchronous step-down converter, it features the DCS-Control topology, which combines hysteretic, voltage mode, and current mode control for precision and fast response to voltage changes. Supporting a wide input voltage range of 3V to 17V, it provides stable output voltages with accuracy within ±1% and can enter power save mode for high efficiency under light loads. With 16 configurable output voltages from 0.7V to 5.5V, this Click board™ is ideal for applications in factory automation, building systems, data centers, enterprise computing, and motor drives where efficient, stable power conversion is essential.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TPS62902RPJR","MCP4661T"],
+    "category" : ["Click Boards > Power management > Buck"]
+}
