@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241121](#20241121)**
 + **[20241114](#20241114)**
 + **[20241107](#20241107)**
 + **[20241104](#20241104)**
@@ -111,6 +112,19 @@
 
 ---
 ---
+---
+
+## `20241121`
+
+*Following click boards have been added:*
+
++ `VCP Monitor 5`
++ `Current 14`
++ `Step Down 12`
++ `SolidSwitch 8`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241114`

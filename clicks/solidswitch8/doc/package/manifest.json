@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Miscellaneous > Relay",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "SolidSwitch 8 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.solidswitch8",
+    "product_link": "https://www.mikroe.com/solidswitch-8-click",
+    "short_description": "SolidSwitch 8 Click is a compact add-on board for reliable load control in automotive and industrial applications. This board features the BTS3035EJXUMA1, a smart low-side switch from Infineon. It features a 35mΩ N-channel MOSFET, capable of handling load voltages from 6V to 18V and currents up to 5A, making it suitable for various resistive, inductive, and capacitive loads. The board includes essential protection mechanisms like overtemperature shutdown, overvoltage protection, and current limitation, ensuring reliable operation under demanding conditions. With integrated feedback through an open-drain status pin and a red LED indicator for visual alerts, it enhances diagnostics and safety.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.3",
+    "cmake": true,
+    "alias": "Click.SolidSwitch8",
+    "subdir_name": "lib_solidswitch8"
+}
+

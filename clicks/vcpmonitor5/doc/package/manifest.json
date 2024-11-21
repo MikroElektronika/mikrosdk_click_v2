@@ -1,0 +1,36 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Mixed signal > Measurements",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "VCP Monitor 5 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.vcpmonitor5",
+    "product_link": "https://www.mikroe.com/vcp-monitor-5-click",
+    "short_description": "VCP Monitor 5 Click is a compact add-on board designed for various applications' precise current, voltage, and temperature measurements. This board features the INA700A, a 16-bit digital power monitor from Texas Instruments based on an advanced EZShunt™ technology for high-accuracy sensing. This board handles full-scale current measurements up to ±15.728A, operates within a wide common-mode voltage range of -0.3V to +40V, and offers real-time power, energy, and charge monitoring with ±0.5% accuracy. The onboard temperature sensor is accurate to ±3°C, and adjustable ADC conversion times and sample averaging provide noise reduction and optimized overcurrent detection.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.1",
+    "cmake": true,
+    "alias": "Click.VCPMonitor5",
+    "subdir_name": "lib_vcpmonitor5"
+}
+

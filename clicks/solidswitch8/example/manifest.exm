@@ -1,0 +1,8 @@
+{
+    "name": "SolidSwitch 8 Click",
+    "description": "SolidSwitch 8 Click is a compact add-on board for reliable load control in automotive and industrial applications. This board features the BTS3035EJXUMA1, a smart low-side switch from Infineon. It features a 35mΩ N-channel MOSFET, capable of handling load voltages from 6V to 18V and currents up to 5A, making it suitable for various resistive, inductive, and capacitive loads. The board includes essential protection mechanisms like overtemperature shutdown, overvoltage protection, and current limitation, ensuring reliable operation under demanding conditions. With integrated feedback through an open-drain status pin and a red LED indicator for visual alerts, it enhances diagnostics and safety.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","BTS3035EJXUMA1"],
+    "category" : ["Click Boards > Miscellaneous > Relay"]
+}
