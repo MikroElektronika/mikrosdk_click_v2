@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241128](#20241128)**
 + **[20241121](#20241121)**
 + **[20241114](#20241114)**
 + **[20241107](#20241107)**
@@ -112,6 +113,20 @@
 
 ---
 ---
+---
+
+## `20241128`
+
+*Following click boards have been added:*
+
++ `Light 4`
++ `Accel 31`
++ `Piezo Accel 2 25g`
++ `Piezo Accel 2 50g`
++ `4G LTE 2 Data-NA`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241121`

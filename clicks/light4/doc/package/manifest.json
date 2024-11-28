@@ -1,0 +1,37 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
+    "category": "Click Boards > Sensors > Optical",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Light 4 Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.light4",
+    "product_link": "https://www.mikroe.com/light-4-click",
+    "short_description": "Light 4 Click is a compact add-on board designed for precise ambient light, UV index, and light flicker detection. This board features the TSL2585 sensor from ams OSRAM, which incorporates photopic, infrared (IR), and ultraviolet (UV) photodiodes to enable multiple concurrent sensing functions. The TSL2585 continuously monitors ambient light, calculates irradiance, and detects light flicker using optimized filters and dedicated IR and UV channels. It communicates with the host MCU via a standard I2C interface, includes interrupt-driven events for threshold-based alerts, and operates with 3.3V logic voltage.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.4",
+    "cmake": true,
+    "alias": "Click.Light4",
+    "subdir_name": "lib_light4"
+}
+
+
