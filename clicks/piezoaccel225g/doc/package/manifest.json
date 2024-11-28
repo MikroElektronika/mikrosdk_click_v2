@@ -1,0 +1,35 @@
+{
+    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
+    "category": "Click Boards > Sensors > Motion",
+    "changelog": "Resources/CHANGELOG.md",
+    "contains": [
+        "libraries",
+        "hex_files",
+        "examples",
+        "source_files"
+    ],
+    "dependency_list": [],
+    "details": "Resources/DETAILS.md",
+    "display_name": "Piezo Accel 2 25g Click",
+    "example_list": [
+        {
+            "project_path": "Examples/example"
+        }
+    ],
+    "help": "Help/doc",
+    "icon": "Resources/click_icon.png",
+    "license": {
+        "file_path": "",
+        "id": "46"
+    },
+    "name": "mikroe.click.piezoaccel225g",
+    "product_link": "https://www.mikroe.com/piezo-accel-2-click-25g",
+    "short_description": "Piezo Accel 2 Click - 25g is a compact add-on board for precise vibration and motion monitoring in condition-based maintenance applications. This board features the 830M1-0025, a triaxial piezoelectric accelerometer from TE Connectivity, capable of detecting motion and acceleration along all three axes (X, Y, Z). The 830M1-0025 offers a ±25g range with a sensitivity of 50mV/g, providing reliable and accurate analog voltage outputs. It integrates a built-in RTD temperature sensor for simultaneous vibration and temperature monitoring, and the onboard MCP3562R 24-bit ADC converts these signals into high-resolution digital data. Communication is made through an SPI interface with additional interrupt and clock functionality for easy integration with a host MCU.",
+    "supported_compiler": "mikroC AI|GCC|Clang|XC",
+    "type": "Library",
+    "_type":"mikroSDK Library",
+    "version": "2.1.0.0",
+    "cmake": true,
+    "alias": "Click.PiezoAccel225g",
+    "subdir_name": "lib_piezoaccel225g"
+}

@@ -1,0 +1,8 @@
+{
+    "name": "4G LTE 2 Data-NA Click",
+    "description": "4G LTE 2 Click - Data (for North America) is a compact add-on board providing a secure-cloud multi-band solution offering universal connectivity and reliable performance. This board features the LARA-R6401D, the world’s smallest LTE Cat 1 module from u-blox with coverage for North American region and a built-in MQTT client, representing a data-only solution. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, the LARA-R6401D also has a comprehensive certification scheme, multi-band and multi-mode capabilities providing excellent flexibility, except for the support of voice/audio application.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","LARA-R6401D"],
+    "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
+}

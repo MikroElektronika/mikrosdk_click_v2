@@ -1,0 +1,8 @@
+{
+    "name": "Light 4 Click",
+    "description": "Light 4 Click is a compact add-on board designed for precise ambient light, UV index, and light flicker detection. This board features the TSL2585 sensor from ams OSRAM, which incorporates photopic, infrared (IR), and ultraviolet (UV) photodiodes to enable multiple concurrent sensing functions. The TSL2585 continuously monitors ambient light, calculates irradiance, and detects light flicker using optimized filters and dedicated IR and UV channels. It communicates with the host MCU via a standard I2C interface, includes interrupt-driven events for threshold-based alerts, and operates with 3.3V logic voltage.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TSL25853PM"],
+    "category" : ["Click Boards > Sensors > Optical"]
+}

@@ -1,0 +1,8 @@
+{
+    "name": "Piezo Accel 2 25g Click",
+    "description": "Piezo Accel 2 Click - 25g is a compact add-on board for precise vibration and motion monitoring in condition-based maintenance applications. This board features the 830M1-0025, a triaxial piezoelectric accelerometer from TE Connectivity, capable of detecting motion and acceleration along all three axes (X, Y, Z). The 830M1-0025 offers a ±25g range with a sensitivity of 50mV/g, providing reliable and accurate analog voltage outputs. It integrates a built-in RTD temperature sensor for simultaneous vibration and temperature monitoring, and the onboard MCP3562R 24-bit ADC converts these signals into high-resolution digital data. Communication is made through an SPI interface with additional interrupt and clock functionality for easy integration with a host MCU.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","MCP3562RT-E/NC","830M1-0025"],
+    "category" : ["Click Boards > Sensors > Motion"]
+}

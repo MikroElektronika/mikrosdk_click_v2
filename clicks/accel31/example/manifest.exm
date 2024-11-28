@@ -1,0 +1,8 @@
+{
+    "name": "Accel 31 Click",
+    "description": "Accel 31 Click is a compact add-on board designed for precise motion and orientation detection in space-constrained devices. This board features the BMA580, a triaxial low-g accelerometer from Bosch Sensortec, which offers a 16-bit digital resolution with measurement ranges of ±2, ±4, ±8, and ±16 g, along with flexible output data rates from 1.56Hz to 6.4kHz, enabling high adaptability and accuracy. The BMA580 supports advanced power modes, including high-performance and low-power, self-wake-up functionality, and bone conduction-based voice activity detection.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","BMA580"],
+    "category" : ["Click Boards > Sensors > Motion"]
+}
