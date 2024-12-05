@@ -1,0 +1,8 @@
+{
+    "name": "HW Monitor 3 Click",
+    "description": "HW Monitor 3 Click is a compact add-on board designed for precise voltage monitoring and supervision in critical systems. This board features the TPS389006, a six-channel window voltage supervisor IC from Texas Instruments, offering SIL-3 safety compliance. This board features I2C programmability, ±6mV accuracy, built-in CRC error checking, sequence logging, and an integrated ADC for real-time voltage readouts. It supports fixed window thresholds with fine granularity, undervoltage lockout (UVLO) at 2.48V, and remote sensing to monitor high-current rails accurately.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TPS389006ADJRTER"],
+    "category" : ["Click Boards > Mixed signal > ADC"]
+}

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241205](#20241205)**
 + **[20241128](#20241128)**
 + **[20241121](#20241121)**
 + **[20241114](#20241114)**
@@ -113,6 +114,19 @@
 
 ---
 ---
+---
+
+## `20241205`
+
+*Following click boards have been added:*
+
++ `ML Vibro Sens`
++ `Temp ISO`
++ `HW Monitor 3`
++ `LTE IoT 14`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241128`

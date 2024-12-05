@@ -1,0 +1,8 @@
+{
+    "name": "LTE IoT 14 Click",
+    "description": "LTE IoT 14 Click is a compact add-on board designed for low-latency and low-throughput wireless data communication in IoT applications. This board features the SIM7090G, a multi-band LTE module from SIMCom, supporting Cat-M and Cat-NB communication modes and multi-constellation GNSS (GPS/GLONASS/Galileo/BeiDou) for global connectivity. This board features a UART interface for communication with the host MCU, a USB Type-C port for data transfer and firmware upgrades, as well as visual indicators for real-time network and power status. It also includes test points for easier debugging, dual SMA connectors for LTE and GNSS antennas, and a micro SIM card holder for flexible service provider selection.",
+    "image" : "../../Resources/click_icon.png",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","SIM7090G"],
+    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
+}
