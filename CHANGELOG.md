@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20241212](#20241212)**
 + **[20241205](#20241205)**
 + **[20241128](#20241128)**
 + **[20241121](#20241121)**
@@ -114,6 +115,19 @@
 
 ---
 ---
+---
+
+## `20241212`
+
+*Following click boards have been added:*
+
++ `IPS Display 2`
++ `Rotary Switch`
++ `IPD 2`
++ `6DOF IMU 25`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241205`
