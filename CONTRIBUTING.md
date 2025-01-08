@@ -2,7 +2,7 @@
 
 ---
 
-Welcome, and thank you for showing interest in contributing to MikroElektronika's click boards!
+Welcome, and thank you for showing interest in contributing to MIKROE's Click boards!
 
 There are many ways in which you can contribute, beyond writing code. The goal of this document is to provide a high-level overview of how you can get involved.
 
@@ -10,16 +10,14 @@ There are many ways in which you can contribute, beyond writing code. The goal o
 
 Have a question? Rather than opening an issue, please consider one of the following steps:
 
-1. Check our [Forum](https://forum.mikroe.com/) for more information.
-2. Contact our technical support at [MikroElektronika](https://helpdesk.mikroe.com/conversation/new/3) and adding the tag `Click Board` in the message.
+1. Check our [Forum](https://forum.mikroe.com) for more information.
+2. Contact our technical support at [MIKROE](https://helpdesk.mikroe.com) and adding the tag `Click Board` in the message.
 
 Our capable engineers will be eager to assist you.
 
 ## Providing Feedback
 
 Your comments and feedback are welcome, and the development team can be reached by contacting our technical support.
-
-Technical support can be contacted using already mentioned chat or by submitting a [conversation ticket](https://helpdesk.mikroe.com/conversation/new/3).
 
 ## Reporting Issues
 
@@ -50,7 +48,7 @@ Please include the following with each issue:
 
 * Version of SDK
 
-* Version of click package
+* Version of Click package
   * You can also provided the downloaded package as a file
 
 * Your operating system
@@ -66,12 +64,6 @@ Please include the following with each issue:
 * A code snippet that demonstrates the issue or a link to a code repository the developers can easily pull down to recreate the issue locally
 
   * **Note:** Because the developers need to copy and paste the code snippet, including a code snippet as a media file (i.e. .gif) is not sufficient.
-
-* Errors from the `mikroDap.log` file
-  * File located in:
-    * Windows: `%localappdata%/Mikroe/NectoStudio/log/`
-    * Linux: `~/.Mikroe/NectoStudio/log/`
-    * MacOS: `~/Library/Application Support/Mikroe/NectoStudio/log/`
 
 ### Final Checklist
 
@@ -115,6 +107,6 @@ Your contributions to open source, large or small, make great projects like this
 
 ## Resources
 
-* [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
-* [Using Pull Requests](https://help.github.com/articles/about-pull-requests/)
+* [How to Contribute to Open Source](https://opensource.guide/how-to-contribute)
+* [Using Pull Requests](https://help.github.com/articles/about-pull-requests)
 * [GitHub Help](https://help.github.com)
