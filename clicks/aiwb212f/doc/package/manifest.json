@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > WiFi+BLE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Ai-WB2-12F Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.aiwb212f",
-    "product_link": "https://www.mikroe.com/ai-wb2-12f-click",
-    "short_description": "Ai-WB2-12F Click is a compact add-on board for easy integration into the Internet of Things (IoT) and smart home applications. This board features the Ai-WB2-12F, a WiFi and BLE module from Ai-Thinker Technology, powered by the BL602 chip supporting WiFi 802.11b/g/n and BLE 5.0 protocols.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.AiWB212F",
-    "subdir_name": "lib_aiwb212f"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5983",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ai-WB2-12F Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AiWB212F",
+                "subdir_name": "lib_aiwb212f",
+                "path": "Ai-WB2-12F Click/data/lib_aiwb212f"
+            }
+        ]
+    }
 }
-
-
-

@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Tilt 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.tilt4",
-    "product_link": "https://www.mikroe.com/tilt-4-click",
-    "short_description": "Tilt 4 Click is a compact add-on board designed for reliable tilt detection applications. This board features the RB-231X2, a rolling ball tilt switch from C&K Components, ensuring accurate and safe tilt detection. The RB-231X2 features a compact, shielded design with a detection angle of up to 10° and an operating life of 100,000 cycles. It interfaces with the MCU using only the INT and LED pins, providing real-time interrupt signals and visual tilt indication through a red LED.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Tilt4",
-    "subdir_name": "lib_tilt4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6026",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Tilt 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Tilt4",
+                "subdir_name": "lib_tilt4",
+                "path": "Tilt 4 Click/data/lib_tilt4"
+            }
+        ]
+    }
 }
-
-
-

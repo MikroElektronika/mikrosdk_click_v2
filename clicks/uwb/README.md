@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # UWB Click
 
-> UWB Click is an Ultra-Wideband transceiver Click board™ that can be used in 2-way ranging or TDOA location systems to locate assets to a precision of 10 cm and supports data rates of up to 6.8 Mbps. This Click board™ features the DWM1000 module based on Decawave's DW1000 Ultra-Wideband (UWB) transceiver from Decawave Limited.
+> [UWB Click](https://www.mikroe.com/?pid_product=MIKROE-4199) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/uwb_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4199&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/uwb-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jul 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Uwb Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> UWB Click sends and receive data, depending on the selected device mode.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Uwb Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Uwb
 
-#### Standard key functions :
+### Example Key Functions
 
 - `uwb_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void uwb_cfg_setup ( uwb_cfg_t *cfg );
 ```c
 err_t uwb_init ( uwb_t *ctx, uwb_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `uwb_set_mode` This function set device working mode.
 ```c
@@ -63,18 +58,11 @@ uint8_t uwb_get_transmit_status ( uwb_t *ctx );
 void uwb_start_transceiver ( uwb_t *ctx );
 ```
 
-## Examples Description
-
-> UWB Click sends and receive data, depending on the selected device mode.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and configures the Click board for the selected mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -184,7 +172,6 @@ void application_init ( void )
 > Depending on the selected mode, it reads all the received data or sends the desired message every 2 seconds.
 
 ```c
-
 void application_task ( void )
 {
     dev_status = uwb_get_qint_pin_status( &uwb );
@@ -227,30 +214,22 @@ void application_task ( void )
             Delay_ms ( 1000 );
         }
     }
-} 
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Uwb
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

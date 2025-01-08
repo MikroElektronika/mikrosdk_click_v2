@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Pushbutton/Switches",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Tamper Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.tamper",
-    "product_link": "https://www.mikroe.com/tamper-click",
-    "short_description": "Tamper Click is equipped with SDS001, a low profile side-actuated detect switch, made by C&K company. This is a high-quality, low-current detection switch, which is designed in a form of a push button. The switch itself is very small - only 2mm of switch overtravel length, which coupled with its low actuation force, makes it ideal for using it as a contact detector in various applications - consumer electronics devices, medical devices, smart card detection and similar applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2222
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Tamper",
-    "subdir_name": "lib_tamper"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2551",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Tamper Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Tamper",
+                "subdir_name": "lib_tamper",
+                "path": "Tamper Click/data/lib_tamper"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

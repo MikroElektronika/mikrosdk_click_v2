@@ -1,40 +1,44 @@
-\mainpage Main Page
 
 ---
 # SE051 Plug n Trust Click
 
-> SE051 Plug&Trust Click is a compact add-on board representing a ready-to-use IoT security solution. This board features the SE051C2, an updatable extension of the EdgeLock™ SE050 from NXP Semiconductor, which delivers proven security certified to CC EAL 6+, with AVA_VAN.5up to the OS level. Designed for the latest IoT security requirements, it allows securely storing and provisioning credentials performing cryptographic operations, giving edge-to-cloud security capability right out of the box. It also provides upgrade functionality of the IoT applet while preserving on-device credentials, alongside reconfiguration possibility.
+> [SE051 Plug n Trust Click](https://www.mikroe.com/?pid_product=MIKROE-5392) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/se051plugntrust_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5392&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/se051-plugtrust-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Aug 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the SE051 Plug n Trust Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This application is showcasing basic functionality of SE051 Plug&Trust Click board.
+It gets identify data from device, selects card manager and applet.
+Then checks free memory, reads all objects and deletes not reserved ones.
+After that showcases a few of functionality:
+Generating random data,
+Creating, reading and deleting binary objects,
+Creating AES symmetrical key and cipher with it;
+In the end it is showcasing funcionality in the endless loop.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for SE051 Plug n Trust Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SE051PlugnTrust
 
-#### Standard key functions :
+### Example Key Functions
 
 - `se051plugntrust_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +49,6 @@ void se051plugntrust_cfg_setup ( se051plugntrust_cfg_t *cfg );
 ```c
 err_t se051plugntrust_init ( se051plugntrust_t *ctx, se051plugntrust_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `se051plugntrust_apdu_write` This function writes a @b frame_data to device.
 ```c
@@ -63,19 +65,6 @@ err_t se051plugntrust_apdu_read ( se051plugntrust_t *ctx, se051plugntrust_frame_
 err_t se051plugntrust_apdu_transfer ( se051plugntrust_t *ctx, se051plugntrust_frame_data_t *frame_data );
 ```
 
-## Example Description
-
-> This application is showcasing basic functionality of SE051 Plug&Trust Click board.
-It gets identify data from device, selects card manager and applet.
-Then checks free memory, reads all objects and deletes not reserved ones.
-After that showcases a few of functionality:
-Generating random data,
-Creating, reading and deleting binary objects,
-Creating AES symmetrical key and cipher with it;
-In the end it is showcasing funcionality in the endless loop.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > At the start it sets comunication interface to I2C and resets the chip, 
@@ -89,7 +78,6 @@ it's checked if it still exists. Finally it creates 128AES key (16bytes), encryp
 and then decrypts data with that key, and in the end it deletes that key object.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -166,7 +154,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
@@ -284,26 +271,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > For more information refer to documents from NXP: AN12413 and UM11225.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SE051PlugnTrust
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

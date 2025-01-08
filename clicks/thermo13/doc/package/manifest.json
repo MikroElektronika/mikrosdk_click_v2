@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Thermo 13 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.thermo13",
-    "product_link": "https://www.mikroe.com/thermo-13-click",
-    "short_description": "Thermo 13 Click is a Click board™ equipped with the sensor IC, which can digitize temperature measurements between -30°C and +95°C so that the temperature measurement data can be processed by the host MCU.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2865
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Thermo13",
-    "subdir_name": "lib_thermo13"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3688",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermo 13 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermo13",
+                "subdir_name": "lib_thermo13",
+                "path": "Thermo 13 Click/data/lib_thermo13"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

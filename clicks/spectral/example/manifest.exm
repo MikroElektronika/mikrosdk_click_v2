@@ -1,8 +1,5 @@
 {
     "name": "Spectral Click",
-    "description": "Spectral Click is a multispectral light sensing device, which uses the state-of-the-art sensor IC for a very accurate chromatic white color sensing.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","AT25SF041"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","AT25SF041"]
 }

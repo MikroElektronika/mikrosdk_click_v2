@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
+ * Configuring Clicks and log objects.
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of IR eclipse Click board.

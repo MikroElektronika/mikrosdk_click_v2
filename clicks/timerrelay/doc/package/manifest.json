@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Timer Relay Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.timerrelay",
-    "product_link": "https://www.mikroe.com/timer-relay-click",
-    "short_description": "Timer Relay Click is a compact add-on board that allows you to control the load with a timer. This board features the NE5555, a precision timer from Diodes Incorporated. It is a precision timing circuit capable of producing accurate time delays in a monostable mode of operation.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.TimerRelay",
-    "subdir_name": "lib_timerrelay"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5562",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Timer Relay Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TimerRelay",
+                "subdir_name": "lib_timerrelay",
+                "path": "Timer Relay Click/data/lib_timerrelay"
+            }
+        ]
+    }
 }
-
-
-
-
-

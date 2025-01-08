@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Gyro 4 Click
 
-Gyro 4 Click  is a two-axis MEMS gyroscope for optical image stabilization applications.
+> [Gyro 4 Click](https://www.mikroe.com/?pid_product=MIKROE-3661) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gyro4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3661&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gyro-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Gyro4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Gyro4 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void gyro4_cfg_setup ( gyro4_cfg_t *cfg ); 
- 
-- Initialization function.
-> GYRO4_RETVAL gyro4_init ( gyro4_t *ctx, gyro4_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void gyro4_default_cfg ( gyro4_t *ctx );
-
-
-#### Example key functions :
-
-- Getting register content
-> uint8_t gyro4_spi_get ( gyro4_t *ctx, uint8_t register_address, uint8_t * register_buffer, uint16_t n_registers );
- 
-- Getting die temperature value
-> uint8_t gyro4_get_temperature ( gyro4_t *ctx, float * temperature );
-
-- Getting axes values
-> uint8_t gyro4_get_axes( gyro4_t *ctx, float * x_axis, float * y_axis );
-
-## Examples Description
+## Example Description
 
 > This application is a two-axis MEMS gyroscope for optical image stabilization.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Gyro4
+
+### Example Key Functions
+
+- `gyro4_cfg_setup` Config Object Initialization function. 
+```c
+void gyro4_cfg_setup ( gyro4_cfg_t *cfg );
+``` 
+ 
+- `gyro4_init` Initialization function. 
+```c
+err_t gyro4_init ( gyro4_t *ctx, gyro4_cfg_t *cfg );
+```
+
+- `gyro4_default_cfg` Click Default Configuration function. 
+```c
+void gyro4_default_cfg ( gyro4_t *ctx );
+```
+
+- `gyro4_spi_get` Getting register content. 
+```c
+uint8_t gyro4_spi_get ( gyro4_t *ctx, uint8_t register_address, uint8_t * register_buffer, uint16_t n_registers );
+```
+ 
+- `gyro4_get_temperature` Getting die temperature value. 
+```c
+uint8_t gyro4_get_temperature ( gyro4_t *ctx, float * temperature );
+```
+
+- `gyro4_get_axes` Getting axes values. 
+```c
+uint8_t gyro4_get_axes ( gyro4_t *ctx, float * x_axis, float * y_axis );
+```
+
+### Application Init
 
 > Initializes SPI device
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -107,7 +104,6 @@ void application_init ( void )
         log_printf( &logger, "> App init done \r\n" );
     }
 }
-  
 ```
 
 ### Application Task
@@ -115,7 +111,6 @@ void application_init ( void )
 > Checks for data ready interrupt, gets axes and temperature data and logs those values
 
 ```c
-
 void application_task ( )
 {
     uint8_t int_flag;
@@ -141,28 +136,21 @@ void application_task ( )
 
     Delay_ms ( 500 );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Gyro4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

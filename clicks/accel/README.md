@@ -1,41 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # Accel Click
 
-Accel Click is an accessory board in mikroBUS form factor. It features ADXL345 3-axis accelerometer module with ultra-low power and high resolution (13-bit) measurement.
+> [Accel Click](https://www.mikroe.com/?pid_product=MIKROE-1194) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/accel_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1194&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/accel-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Jovan Stajkovic
 - **Date**          : nov 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Accel Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example demonstrates the use of Accel Click board by reading and displaying the accelerometer data (X, Y, and Z axis).
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Accel Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Accel
 
-#### Standard key functions :
+### Example Key Functions
 
 - `accel_cfg_setup` Config Object Initialization function.
 ```c
@@ -52,8 +48,6 @@ err_t accel_init ( accel_t *ctx, accel_cfg_t *cfg );
 void accel_default_cfg ( accel_t *ctx );
 ```
 
-#### Example key functions :
-
 - `accel_read_x_axis` Function reads X axis value from Accel.
 ```c
 int16_t accel_read_x_axis ( accel_t *ctx );
@@ -69,13 +63,7 @@ int16_t accel_read_y_axis ( accel_t *ctx );
 int16_t accel_read_z_axis ( accel_t *ctx );
 ```
 
-## Examples Description
-
-> This example demonstrates the use of Accel Click board by reading and displaying the accelerometer data (X, Y, and Z axis).
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes SPI/I2C driver and settings data read format, power mode, FIFO control and baud rate ( 100Hz default ).
 
@@ -138,25 +126,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Accel
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

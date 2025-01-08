@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Brushless 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.brushless11",
-    "product_link": "https://www.mikroe.com/brushless-11-click",
-    "short_description": "Brushless 11 Click is a compact add-on board that controls brushless DC motors with any MCU. This board features the A4931, a 3-phase brushless DC motor pre-driver from Allegro Microsystems. It drives six onboard N-channel power MOSFETs and supplies the motor with 8V up to 30V voltages. This pre-driver offers enable, direction, and brake inputs that can control motor functions and logic outputs for measuring motor rotation.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.Brushless11",
-    "subdir_name": "lib_brushless11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5865",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Brushless 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Brushless11",
+                "subdir_name": "lib_brushless11",
+                "path": "Brushless 11 Click/data/lib_brushless11"
+            }
+        ]
+    }
 }
-
-
-
-
-

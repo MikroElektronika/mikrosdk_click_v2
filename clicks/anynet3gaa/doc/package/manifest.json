@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GSM/LTE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "AnyNet 3G-AA Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.anynet3gaa",
-    "product_link": "https://www.mikroe.com/anynet-3g-aa-click",
-    "short_description": "AnyNet 3G-AA Click is a cellular to AWS gateway device, which provides developers with the complete solution for various IoT applications, by using the AWS IoT and Cloud Storage services for the data storage, analyzing and processing. AnyNet Click board™ provides a secure connection with the AWS over the air (OTA), by utilizing the Quectel UG95-AA 3G module,  offering UMTS/HSPA coverage for the North American region, Eseye ES4623 embedded SIM card, that can work with all the major cellular operators within the NA region. The AnyNet 3G Click can be used as an AWS IoT button with almost no configuration.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        2534
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.AnyNet3GAA",
-    "subdir_name": "lib_anynet3gaa"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3145",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "AnyNet 3G-AA Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AnyNet3GAA",
+                "subdir_name": "lib_anynet3gaa",
+                "path": "AnyNet 3G-AA Click/data/lib_anynet3gaa"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

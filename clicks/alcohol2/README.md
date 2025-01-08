@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Alcohol 2 Click
 
-Alcohol 2 Click is a very accurate ethanol gas (alcohol) sensor Click board™, equipped with the SPEC amperometric gas sensor which electrochemically reacts with the ethanol.
+> [Alcohol 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3097) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/alcohol2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3097&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/alcohol-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Alcohol2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Alcohol2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void alcohol2_cfg_setup ( alcohol2_cfg_t *cfg ); 
- 
-- Initialization function.
-> ALCOHOL2_RETVAL alcohol2_init ( alcohol2_t *ctx, alcohol2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void alcohol2_default_cfg ( alcohol2_t *ctx );
-
-
-#### Example key functions :
-
-- This function writes one byte to the register.
-> void alcohol2_write_byte ( alcohol2_t *ctx, uint8_t reg, uint8_t w_data );
- 
-- This function reads one byte from the register.
-> uint8_t alcohol2_read_byte ( alcohol2_t *ctx, uint8_t reg );
-
-- This function reads Alcohol data.
-> uint16_t alcohol2_read_alcohol ( alcohol2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > The demo application gets Alcohol data and logs data to USBUART.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Alcohol2
+
+### Example Key Functions
+
+- `alcohol2_cfg_setup` Config Object Initialization function. 
+```c
+void alcohol2_cfg_setup ( alcohol2_cfg_t *cfg );
+``` 
+ 
+- `alcohol2_init` Initialization function. 
+```c
+err_t alcohol2_init ( alcohol2_t *ctx, alcohol2_cfg_t *cfg );
+```
+
+- `alcohol2_default_cfg` Click Default Configuration function. 
+```c
+void alcohol2_default_cfg ( alcohol2_t *ctx );
+```
+
+- `alcohol2_write_byte` This function writes one byte to the register. 
+```c
+void alcohol2_write_byte ( alcohol2_t *ctx, uint8_t reg, uint8_t w_data );
+```
+ 
+- `alcohol2_read_byte` This function reads one byte from the register. 
+```c
+uint8_t alcohol2_read_byte ( alcohol2_t *ctx, uint8_t reg );
+```
+
+- `alcohol2_read_alcohol` This function reads Alcohol data. 
+```c
+uint16_t alcohol2_read_alcohol ( alcohol2_t *ctx );
+```
+
+### Application Init
 
 > Initializes device configuration.
 
 ```c
-
 oid application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -102,7 +99,6 @@ oid application_init ( void )
     log_printf( &logger, "Alcohol 2 is initialized\r\n");
     Delay_ms ( 300 );
 }
-  
 ```
 
 ### Application Task
@@ -110,35 +106,27 @@ oid application_init ( void )
 > Gets Alcohol (C2H5OH) data and logs data to USBUART every 500ms. 
 
 ```c
-
 void application_task ( void )
 {
     alcohol_value = alcohol2_read_alcohol( &alcohol2 );
     log_printf( &logger, "Alcohol value : %f \r\n",alcohol_value );
     Delay_ms ( 500 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Alcohol2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

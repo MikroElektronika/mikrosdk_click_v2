@@ -1,8 +1,5 @@
 {
     "name": "CAN FD 3 Click",
-    "description": "CAN FD 3 Click is a add-on board based on TLE9251V CAN network transceiver, designed for HS CAN networks up to 5 Mbit/s in automotive and industrial applications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","TLE9251V"],
-    "category" : ["CAN"] 
+    "hw" : ["Click","TLE9251V"]
 }

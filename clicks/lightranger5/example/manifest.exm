@@ -1,8 +1,5 @@
 {
     "name": "LightRanger 5 Click",
-    "description": "LightRanger 5 Click is a compact add-on board that contains a ranging sensor with multi-target detection. This board features the TMF8801, a dToF (direct time of flight) optical distance sensor achieving up to 2500mm target detection distance from company AMS-TAOS. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TMF8801"],
-    "category" : ["Optical"]
+    "hw" : ["Click","TMF8801"]
 }

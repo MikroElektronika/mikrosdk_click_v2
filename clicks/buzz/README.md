@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # BUZZ Click
 
-BUZZ Click is an accessory board in mikroBus™ form factor. Board features a piezo speaker capable of emitting audio signals.Buzzer’s resonant frequency is 3.8kHz (where you can expect it’s best performance).
+> [BUZZ Click](https://www.mikroe.com/?pid_product=MIKROE-945) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/buzz_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-945&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/buzz-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2021.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the BUZZ Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Buzz Click boards.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for BUZZ Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BUZZ
 
-#### Standard key functions :
+### Example Key Functions
 
 - `buzz_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +40,13 @@ void buzz_cfg_setup ( buzz_cfg_t *cfg );
 
 - `buzz_init` Initialization function.
 ```c
-BUZZ_RETVAL buzz_init ( buzz_t *ctx, buzz_cfg_t *cfg );
+err_t buzz_init ( buzz_t *ctx, buzz_cfg_t *cfg );
 ```
 
 - `buzz_default_cfg` Click Default Configuration function.
 ```c
 void buzz_default_cfg ( buzz_t *ctx );
 ```
-
-#### Example key functions :
 
 - `buzz_set_duty_cycle` This function sets the PWM duty cycle in percentages ( Range[ 0..1 ]).
 ```c
@@ -73,19 +68,13 @@ err_t buzz_pwm_start ( buzz_t *ctx );
 void buzz_play_sound ( buzz_t *ctx, uint16_t freq, uint16_t level, uint16_t duration );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Buzz Click boards.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     buzz_cfg_t buzz_cfg;  /**< Click config object. */
 
@@ -119,7 +108,6 @@ void application_init ( void ) {
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -127,8 +115,8 @@ void application_init ( void ) {
 > Plays the Imperial March melody. Also logs an appropriate message on the USB UART.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     log_printf( &logger, "Playing the Imperial March melody ...\r\n" );
     imperial_march( ); 
     Delay_ms ( 1000 );
@@ -142,29 +130,25 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 > The minimal PWM Clock frequency required for this example is the frequency of tone C6 - 1047 Hz. So, in order to run this example and play all tones correctly, the user will need to decrease the MCU's main clock frequency in MCU Settings for the certain architectures in order to get the required PWM clock frequency.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BUZZ
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

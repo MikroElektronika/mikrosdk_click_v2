@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GSM/LTE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LTE Cat.1 3 NAX Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ltecat13nax",
-    "product_link": "https://www.mikroe.com/lte-cat1-3-click-for-north-america",
-    "short_description": "LTE Cat.1 3 Click (for North America) is a compact add-on board for reliable 4G wireless communication. This board features the EG91NAXDGA-128-SGNS, an LTE Cat 1 IoT data-only module that meets the 3GPP Release 11 standard from Quectel. It supports multiple wireless standards, including LTE-FDD and WCDMA, ensuring broad network compatibility. Key features include multi-band LTE support (B2/B4/B5/B12/B13/B25/B26), RX diversity for bands B2, B4, and B5, and multi-constellation GNSS (GPS, GLONASS, BeiDou/Compass, Galileo, QZSS). It also integrates a 16-bit mono audio codec for voice functionality with support for CTIA standard headphones.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.LTECat13NAX",
-    "subdir_name": "lib_ltecat13nax"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6277",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE Cat.1 3 NAX Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTECat13NAX",
+                "subdir_name": "lib_ltecat13nax",
+                "path": "LTE Cat.1 3 NAX Click/data/lib_ltecat13nax"
+            }
+        ]
+    }
 }
-
-
-

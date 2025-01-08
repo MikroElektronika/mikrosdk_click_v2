@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # RS232 to I2C Click
 
-> RS232 to I2C Click is a compact add-on board representing a universal usable RS232 to I2C converter. This board features the ZDU0110RFX, a bridge between a UART port and an I2C bus from Zilog, which at the same time represents the connection between the MCU and the RS232 line driver and receiver, the MAX3232. The ZDU0110RFX provides full-duplex asynchronous communications with a 128 byte FIFO buffer, of which 64 bytes each are allocated to receive and transmit operations. It also contains a 4kbit EEPROM and GPIO with programmable interrupt capability; programmable interrupts and interrupt lines for UART and GPIO notifications.
+> [RS232 to I2C Click](https://www.mikroe.com/?pid_product=MIKROE-5056) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rs232toi2c_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5056&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rs232-to-i2c-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jan 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the RS232 to I2C Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an RS232 to I2C Click board by showing the communication between the two Click board configured as a receiver and transmitter.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for RS232 to I2C Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.RS232toI2C
 
-#### Standard key functions :
+### Example Key Functions
 
 - `rs232toi2c_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t rs232toi2c_init ( rs232toi2c_t *ctx, rs232toi2c_cfg_t *cfg );
 err_t rs232toi2c_default_cfg ( rs232toi2c_t *ctx );
 ```
 
-#### Example key functions :
-
 - `rs232toi2c_write_tx_fifo` This function writes a desired number of data bytes to the TX fifo.
 ```c
 err_t rs232toi2c_write_tx_fifo ( rs232toi2c_t *ctx, uint8_t *data_in, uint8_t data_len );
@@ -68,18 +63,11 @@ err_t rs232toi2c_read_rx_fifo ( rs232toi2c_t *ctx, uint8_t *data_out, uint8_t *d
 uint8_t rs232toi2c_get_int_pin ( rs232toi2c_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an RS232 to I2C Click board by showing the communication between the two Click board configured as a receiver and transmitter.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which sets the default UART configuration with 9600 baud rate.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -125,7 +113,6 @@ void application_init ( void )
 #endif
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -200,22 +187,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.RS232toI2C
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

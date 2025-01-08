@@ -1,76 +1,75 @@
-\mainpage Main Page
- 
+
 ---
 # Ecg 6 Click
 
-ECG 6 Click is a complete solution for the development of ECG and Heart-Rate (HR) applications. It features the MAX86150, a Reflective Heart Rate Monitor and Medical-Grade Pulse Oximeter from Maxim Integrated. The Click board™ contain integrated electrocardiogram, pulse oximeter, heart rate monitor sensor module. The ECG 6 Click can be used for application in Fitness Assistant Devices, Wearable Devices, Smartphones, Tablet.
+> [Ecg 6 Click](https://www.mikroe.com/?pid_product=MIKROE-4061) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ecg3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4061&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ecg-6-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Ecg6 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Ecg6 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void ecg6_cfg_setup ( ecg6_cfg_t *cfg ); 
- 
-- Initialization function.
-> ECG6_RETVAL ecg6_init ( ecg6_t *ctx, ecg6_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void ecg6_default_cfg ( ecg6_t *ctx );
-
-
-#### Example key functions :
-
-- This function gets one sample from FIFO
-> void ecg6_get_sample_data( ecg6_t *ctx, ecg6_element_t *element, uint8_t num_sample );
- 
-- Sends ECG sensor data to SerialPlot
-> static void plot_ecg_data ( uint32_t ecg_data )
-
-- Sends PPG sensor data to SerialPlot
-> static void plot_ppg_data ( uint32_t ir_data, uint32_t red_data )
-
-## Examples Description
+## Example Description
 
 > ECG 6 Click contain integrated electrocardiogram, pulse oximeter, 
 > heart rate monitor sensor module.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ecg6
+
+### Example Key Functions
+
+- `ecg6_cfg_setup` Config Object Initialization function. 
+```c
+void ecg6_cfg_setup ( ecg6_cfg_t *cfg );
+``` 
+ 
+- `ecg6_init` Initialization function. 
+```c
+err_t ecg6_init ( ecg6_t *ctx, ecg6_cfg_t *cfg );
+```
+
+- `ecg6_default_cfg` Click Default Configuration function. 
+```c
+void ecg6_default_cfg ( ecg6_t *ctx );
+```
+
+- `ecg6_get_sample_data` This function gets one sample from FIFO. 
+```c
+void ecg6_get_sample_data ( ecg6_t *ctx, ecg6_element_t *element, uint8_t num_sample );
+```
+ 
+- `plot_ecg_data` Sends ECG sensor data to SerialPlot. 
+```c
+static void plot_ecg_data (  uint32_t ecg_data  );
+```
+
+- `plot_ppg_data` Sends PPG sensor data to SerialPlot. 
+```c
+static void plot_ppg_data (  uint32_t ir_data, uint32_t red_data  );
+```
+
+### Application Init
 
 > Initialize I2C module and all necessary pins. Checking communication accuracy
 > and running default configuration for measurement.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -126,7 +125,6 @@ void application_init ( void )
 
     time_cnt = 0;
 }
-  
 ```
 
 ### Application Task
@@ -134,7 +132,6 @@ void application_init ( void )
 > Measures an ECG signal or PPG sensor and draws a graph on a SerialPlot
 
 ```c
-
 void application_task ( void )
 {
     ecg6_element_t sample;
@@ -153,34 +150,27 @@ void application_task ( void )
             plot_ppg_data( sample.element_1, sample.element_2 );
         }
     }
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > When using ECG measurement - PPG measurement must be switched off ...
 > Drawing speeds vary for PPG and ECG sensor.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ecg6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

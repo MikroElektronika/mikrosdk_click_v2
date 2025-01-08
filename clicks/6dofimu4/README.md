@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # c6DOF IMU 4 Click
 
-6DOF IMU 4 Click is an advanced 6-axis motion tracking Click board™, which utilizes the ICM-20602, a high-performance integrated motion sensor, equipped with a 3-axis gyroscope and a 3-axis accelerometer. 
+> [6DOF IMU 4 Click](https://www.mikroe.com/?pid_product=MIKROE-3410) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/6dofimu4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3410&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/6dof-imu-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the c6DofImu4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for c6DofImu4 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c6dofimu4_cfg_setup ( c6dofimu4_cfg_t *cfg ); 
- 
-- Initialization function.
-> C6DOFIMU4_RETVAL c6dofimu4_init ( c6dofimu4_t *ctx, c6dofimu4_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c6dofimu4_default_cfg ( c6dofimu4_t *ctx );
-
-
-#### Example key functions :
-
-- Sync Pin Setting function
-> void c6dofimu4_set_sync_pin ( c6dofimu4_t *ctx, uint8_t state );
- 
-- Data Get function
-> void c6dofimu4_get_data ( c6dofimu4_t *ctx, c6dofimu4_axis_t *accel_out, c6dofimu4_axis_t *gyro_out, int8_t *temp_out );
-
-- Full Scale Setting function
-> uint8_t c6dofimu4_set_fsr ( c6dofimu4_t *ctx, uint8_t gyro_resol, uint8_t accel_resol );
-
-## Examples Description
+## Example Description
 
 > This application measures gyroscopic, accelerometer, and temperature data.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.6DofImu4
+
+### Example Key Functions
+
+- `c6dofimu4_cfg_setup` Config Object Initialization function. 
+```c
+void c6dofimu4_cfg_setup ( c6dofimu4_cfg_t *cfg );
+``` 
+ 
+- `c6dofimu4_init` Initialization function. 
+```c
+err_t c6dofimu4_init ( c6dofimu4_t *ctx, c6dofimu4_cfg_t *cfg );
+```
+
+- `c6dofimu4_default_cfg` Click Default Configuration function. 
+```c
+void c6dofimu4_default_cfg ( c6dofimu4_t *ctx );
+```
+
+- `c6dofimu4_set_sync_pin` Sync Pin Setting function. 
+```c
+void c6dofimu4_set_sync_pin( c6dofimu4_t *ctx, uint8_t state );
+```
+ 
+- `c6dofimu4_get_data` Data Get function. 
+```c
+void c6dofimu4_get_data( c6dofimu4_t *ctx, c6dofimu4_axis_t *accel_out, c6dofimu4_axis_t *gyro_out, int8_t *temp_out );
+```
+
+- `c6dofimu4_set_fsr` Full Scale Setting function. 
+```c
+uint8_t c6dofimu4_set_fsr( c6dofimu4_t *ctx, uint8_t gyro_resol, uint8_t accel_resol );
+```
+
+### Application Init
 
 > Initializes I2C interface and performs a device reset and configurations.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +98,6 @@ void application_init ( void )
 
     log_printf( &logger, "** 6DOF IMU 4 is initialized **\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +106,6 @@ void application_init ( void )
 > accelerometer, gyroscope and temperature data, and shows results to the uart terminal every 500ms.
 
 ```c
-
 void application_task ( void )
 {
     c6dofimu4_axis_t  accel_data;
@@ -144,29 +139,22 @@ void application_task ( void )
     
     Delay_ms ( 500 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.6DofImu4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

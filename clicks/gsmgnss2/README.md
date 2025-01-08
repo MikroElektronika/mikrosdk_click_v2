@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # GSM/GNSS 2 Click
 
-GSM/GNSS 2 Click combines GPS/GLONASS location tracking with GSM module capability for mobile communication. The Click carries SIM868 quad-band GSM/GPRS module.
+> [GSM GNSS 2 Click](https://www.mikroe.com/?pid_product=MIKROE-2440) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gsmgnss2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2440&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gsmgnss-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Mikroe Team
 - **Date**          : Mar 2022.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the GSM/GNSS 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example reads and processes data from GSM/GNSS 2 Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for GSM/GNSS 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.GSMGNSS2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `gsmgnss2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t gsmgnss2_init ( gsmgnss2_t *ctx, gsmgnss2_cfg_t *cfg );
 void gsmgnss2_module_power ( gsmgnss2_t *ctx, uint8_t state );
 ```
 
-#### Example key functions :
-
 - `gsmgnss2_send_cmd` Send command function.
 ```c
 void gsmgnss2_send_cmd ( gsmgnss2_t *ctx, char *cmd );
@@ -67,12 +62,6 @@ void gsmgnss2_set_sim_apn ( gsmgnss2_t *ctx, char *sim_apn );
 ```c
 err_t gsmgnss2_send_sms_pdu ( gsmgnss2_t *ctx, char *service_center_number, char *phone_number, char *sms_text );
 ```
-
-## Example Description
-
-> This example reads and processes data from GSM/GNSS 2 clicks.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -280,7 +269,7 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > A passive GPS antenna is required for the GNSS to receive the position fix. It may take several minutes for the module to receive the fix.
 > In order for the example to work, user needs to set the phone number to which he wants 
@@ -291,22 +280,19 @@ void application_task ( void )
 > > - SIM_SMSC "+381610401"
 > > - PHONE_NUMBER_TO_MESSAGE "+381659999999"
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.GSMGNSS2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -3,7 +3,7 @@
  * @brief Smoke2 Click example
  *
  * # Description
- * This example is made to see how Smoke 2 clicks work. The purpose of this example is that,
+ * This example is made to see how Smoke 2 Clicks work. The purpose of this example is that,
  * depending on the way we choose, it collects data from the external environment about smoke,
  * processes it, and prints it via the UART terminal.
  *

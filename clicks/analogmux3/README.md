@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Analog MUX 3 Click
 
-Analog MUX 3 Click is a compact add-on board that switches one of the eight inputs to one output. This board features the ADG738, a CMOS analog matrix switch with a serially-controlled SPI interface from Analog Devices. In an active state, the ADG738 conducts equally well in both directions, making it suitable for multiplexing and demultiplexing applications. It can also be configured as a type of switch array where any, all, or none of eight switches may be closed any time. All channels exhibit ‘break-before-make switching action, preventing momentary shorting when switching channels. This Click board™ is suitable for a wide range of applications, from industrial and instrumentation to medical, consumer, communications, and automotive systems.
+> [Analog MUX 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4580) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/analog_mux_3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4580&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/analog-mux-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the AnalogMux3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that demonstrates the use of the Analog MUX 3 Click board.
+> This application controls the multiplexing of a single input channel
+> with an eight-channel matrix switch.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for AnalogMux3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AnalogMux3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `analogmux3_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +42,13 @@ void analogmux3_cfg_setup ( analogmux3_cfg_t *cfg );
 
 - `analogmux3_init` Initialization function.
 ```c
-ANALOGMUX3_RETVAL analogmux3_init ( analogmux3_t *ctx, analogmux3_cfg_t *cfg );
+err_t analogmux3_init ( analogmux3_t *ctx, analogmux3_cfg_t *cfg );
 ```
 
 - `analogmux3_default_cfg` Click Default Configuration function.
 ```c
 void analogmux3_default_cfg ( analogmux3_t *ctx );
 ```
-
-#### Example key functions :
 
 - `analogmux3_generic_write` Analog MUX 3 data writing function.
 ```c
@@ -68,22 +65,14 @@ err_t analogmux3_set_channel ( analogmux3_t *ctx, uint8_t mux_ch );
 err_t analogmux3_read_an_pin_voltage ( analogmux3_t *ctx, float *data_out );
 ```
 
-## Example Description
-
-> This is an example that demonstrates the use of the Analog MUX 3 Click board.
-> This application controls the multiplexing of a single input channel
-> with an eight-channel matrix switch.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes SPI and ADC driver, set Vref, STM32F407ZG - 2.048 V, PIC18F97J94 3.3 V, 
 > set the default configuration and start to write log.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                /**< Logger config object. */
     analogmux3_cfg_t analogmux3_cfg;  /**< Click config object. */
 
@@ -123,7 +112,6 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
@@ -134,8 +122,8 @@ void application_init ( void ) {
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     for ( uint8_t ch_pos = ANALOGMUX3_SET_CHANNEL_0; ch_pos <= ANALOGMUX3_SET_CHANNEL_7; ch_pos++ ) {
         analogmux3_set_channel( &analogmux3, ch_pos );
         Delay_ms ( 1000 );
@@ -156,28 +144,23 @@ void application_task ( void ) {
         }
         
         log_printf( &logger, "-------------------------\r\n" );
-    }   
+    }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AnalogMux3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

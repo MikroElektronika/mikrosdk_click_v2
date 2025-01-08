@@ -1,92 +1,78 @@
-\mainpage Main Page
 
 ---
 # DC Motor 17 Click
 
-DC Motor 17 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TC78H660FTG,
-a dual H Bridge driver for one or two brushed motors that incorporate a DMOS
-with low on-resistance in output transistors from Toshiba Semiconductor.
+> [DC Motor 17 Click](https://www.mikroe.com/?pid_product=MIKROE-4454) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dcmotor17_click.png" height=300px width=auto>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4454&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dc-motor-17-click?adtoken=48b980cc0840208867ff3317ac2fc531db4a1dd7&ad=mikromanage&id_employee=33)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Nov 2020.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the DcMotor17 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
-
-```
-This library contains API for DcMotor17 Click driver.
-```
-
-#### Standard key functions :
-
-> Config Object Initialization function.
-```
-void dcmotor17_cfg_setup ( dcmotor17_cfg_t *cfg );
-```
-
-> Initialization function.
-```
-err_t dcmotor17_init ( dcmotor17_t *ctx, dcmotor17_cfg_t *cfg );
-```
-
-> Click Default Configuration function.
-```
-void dcmotor17_default_cfg ( dcmotor17_t *ctx );
-```
-
-#### Example key functions :
-
-> DC Motor 17 stop motor function.
-```
-dcmotor17_retval_t dcmotor17_stop ( dcmotor17_t *ctx, uint8_t sel_out );
-```
-
-> DC Motor 17 forward function.
-```
-dcmotor17_retval_t dcmotor17_forward ( dcmotor17_t *ctx, uint8_t sel_out );
-```
-
-> DC Motor 17 reverse function.
-```
-dcmotor17_retval_t dcmotor17_reverse ( dcmotor17_t *ctx, uint8_t sel_out );
-```
-
-## Examples Description
+## Example Description
 
 > The library covers all the necessary functions to control DC Motor 17 Click board.
 > Library performs a standard GPIO interface communication.
 > DC Motor 17 Click board is a dual H Bridge driver IC for one or two DC brushed
 > motors which incorporates DMOS with low on-resistance in output transistors.
 
-**The demo application is composed of two sections :**
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DcMotor17
+
+### Example Key Functions
+
+> Config Object Initialization function.
+```c
+void dcmotor17_cfg_setup ( dcmotor17_cfg_t *cfg );
+```
+
+> Initialization function.
+```c
+err_t dcmotor17_init ( dcmotor17_t *ctx, dcmotor17_cfg_t *cfg );
+```
+
+> Click Default Configuration function.
+```c
+void dcmotor17_default_cfg ( dcmotor17_t *ctx );
+```
+
+> DC Motor 17 stop motor function.
+```c
+dcmotor17_retval_t dcmotor17_stop ( dcmotor17_t *ctx, uint8_t sel_out );
+```
+
+> DC Motor 17 forward function.
+```c
+dcmotor17_retval_t dcmotor17_forward ( dcmotor17_t *ctx, uint8_t sel_out );
+```
+
+> DC Motor 17 reverse function.
+```c
+dcmotor17_retval_t dcmotor17_reverse ( dcmotor17_t *ctx, uint8_t sel_out );
+```
 
 ### Application Init
 
 > Initializes GPIO driver, set default configuration and start to write log.
 
-```
-void application_init ( void ) {
+```c
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;              /**< Logger config object. */
     dcmotor17_cfg_t dcmotor17_cfg;  /**< Click config object. */
 
@@ -131,8 +117,9 @@ void application_init ( void ) {
 > In the second part of the example, we control motion B by the same principle.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
-```
-void application_task ( void ) {
+```c
+void application_task ( void ) 
+{
     log_printf( &logger, "----------------------------\r\n" );
     log_printf( &logger, "          Motor A           \r\n" );
     log_printf( &logger, "----------------------------\r\n" );
@@ -199,22 +186,19 @@ void application_task ( void ) {
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DcMotor17
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

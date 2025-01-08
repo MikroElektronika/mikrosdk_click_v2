@@ -1,68 +1,69 @@
-\mainpage Main Page
-  
+
 ---
 # Buck 2 Click
 
-Buck 2 Click is a powerful step down DC-DC switching regulator. It gives a high precision regulated voltage at its output and it can handle an ample amount of current.
+> [Buck 2 Click](https://www.mikroe.com/?pid_product=MIKROE-2911) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/buck2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2911&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/buck-2-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : Katarina Perendic
 - **Date**          : nov 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Buck2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Buck2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void buck2_cfg_setup ( buck2_cfg_t *cfg ); 
- 
-- Initialization function.
-> BUCK2_RETVAL buck2_init ( buck2_t *ctx, buck2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void buck2_default_cfg ( buck2_t *ctx );
-
-
-#### Example key functions :
-
-- Function settings output voltage
-> void buck2_set_output_voltage ( buck2_t *ctx , uint8_t voltage );
- 
-- Function reads state PG pin
-> uint8_t buck2_get_power_good ( buck2_t *ctx  );
-
-- Function settings chip mode
-> void buck2_set_power_mode ( buck2_t *ctx, uint8_t mode );
-
-## Examples Description
+## Example Description
 
 > This application demonstrates the use of Buck 2 Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Buck2
+
+### Example Key Functions
+
+- `buck2_cfg_setup` Config Object Initialization function. 
+```c
+void buck2_cfg_setup ( buck2_cfg_t *cfg );
+``` 
+ 
+- `buck2_init` Initialization function. 
+```c
+err_t buck2_init ( buck2_t *ctx, buck2_cfg_t *cfg );
+```
+
+- `buck2_default_cfg` Click Default Configuration function. 
+```c
+void buck2_default_cfg ( buck2_t *ctx );
+```
+
+- `buck2_set_output_voltage` Function settings output voltage. 
+```c
+void buck2_set_output_voltage( buck2_t *ctx , uint8_t voltage );
+```
+ 
+- `buck2_get_power_good` Function reads state PG pin. 
+```c
+uint8_t buck2_get_power_good( buck2_t *ctx  );
+```
+
+- `buck2_set_power_mode` Function settings chip mode. 
+```c
+void buck2_set_power_mode( buck2_t *ctx, uint8_t mode );
+```
+
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
@@ -158,25 +159,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Buck2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

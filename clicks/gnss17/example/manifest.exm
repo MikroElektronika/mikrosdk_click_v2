@@ -1,8 +1,5 @@
 {
     "name": "GNSS 17 Click",
-    "description": "GNSS 17 Click is a compact add-on board for precise and reliable global navigation and positioning. This board features the M20071, an integrated full-function GNSS receiver module from Antenova, which features the MediaTek AG3335MN flash chip. This module can concurrently track multiple GNSS constellations, including GPS, GLONASS, GALILEO, BEIDOU, and QZSS, ensuring accurate positioning even in dense urban environments. It includes advanced features like multi-path algorithms for enhanced accuracy, a high-performance onboard LNA for weak-signal environments, and power-saving modes to optimize energy consumption.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","M20071"],
-    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+    "hw" : ["Click","M20071"]
 }

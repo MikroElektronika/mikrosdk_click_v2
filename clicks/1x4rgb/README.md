@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # 1x4 RGB Click
 
-> 1x4 RGB Click is a compact add-on board that creates vivid and dynamic lighting effects. This board features the LP5812, an advanced RGB LED driver from Texas Instruments. It features ultra-low operation current, an autonomous animation engine, and support for both analog and PWM dimming. The board operates with 3.3V or 5V logic voltage levels and communicates with the host MCU via a standard 2-wire I2C interface. It is suitable for portable and wearable electronics, gaming, home entertainment, IoT, networking, industrial HMI, and many more.
+> [1x4 RGB Click](https://www.mikroe.com/?pid_product=MIKROE-6240) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/1x4rgb_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6240&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/1x4-rgb-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Feb 2024.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the 1x4 RGB Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the 1x4 RGB Click board
+> by controlling the color of the LEDs [LD1-LD4].
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 1x4 RGB Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.1x4RGB
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c1x4rgb_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t c1x4rgb_init ( c1x4rgb_t *ctx, c1x4rgb_cfg_t *cfg );
 err_t c1x4rgb_default_cfg ( c1x4rgb_t *ctx );
 ```
 
-#### Example key functions :
-
 - `c1x4rgb_set_rgb_color` This function sets the desired values of RGB colors for the selected LED by using the I2C serial interface.
 ```c
 err_t c1x4rgb_set_rgb_color ( c1x4rgb_t *ctx, uint8_t led_pos, uint8_t red, uint8_t green, uint8_t blue );
@@ -67,13 +63,6 @@ err_t c1x4rgb_enable_leds ( c1x4rgb_t *ctx, uint16_t led_bitmask );
 ```c
 err_t c1x4rgb_set_tmc_mode ( c1x4rgb_t *ctx, uint8_t dev_cfg, uint8_t mode );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the 1x4 RGB Click board
-> by controlling the color of the LEDs [LD1-LD4].
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -180,22 +169,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.1x4RGB
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

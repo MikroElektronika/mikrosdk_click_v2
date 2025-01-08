@@ -1,8 +1,5 @@
 {
     "name": "LYRA 24P Click",
-    "description": "LYRA 24P Click is a compact add-on board for high-performance wireless connectivity in IoT devices running on Bluetooth. This board features the LYRA 24P (453-00145R), a secure high-performance wireless module from Ezurio. It features a 32-bit ARM® Cortex®-M33 core at 39MHz, Bluetooth® Low Energy (BLE) 5.3 connectivity, and industry-leading Secure Vault® technology for enhanced security and future-proofing. The module supports 2.4GHz wireless connectivity with a built-in antenna and offers global regulatory certifications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","453-00145R"],
-    "category" : ["Click Boards > Wireless connectivity > BT/BLE"]
+    "hw" : ["Click","453-00145R"]
 }

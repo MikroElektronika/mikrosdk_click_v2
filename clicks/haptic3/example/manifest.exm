@@ -1,8 +1,5 @@
 {
     "name": "HAPTIC 3 Click",
-    "description": "Haptic 3 Click is a compact add-on board that uses advanced vibration patterns and waveforms to convey information to a user. This board features the DA7282, a linear resonant actuator (LRA), and an eccentric rotating mass (ERM) haptic driver from Dialog Semiconductor. The DA7282 features LRA or ERM drive capability with automatic closed-loop LRA resonant frequency tracking, guaranteeing consistency across LRA production tolerances. It also offers wideband operation that fully utilizes the capabilities of newer wideband and multi-directional LRAs, alongside three external general-purpose inputs for triggering up to six independent haptic sequences.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DA7282-00FVC"],
-    "category" : ["Haptic"]
+    "hw" : ["Click","DA7282-00FVC"]
 }

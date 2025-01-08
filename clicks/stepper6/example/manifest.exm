@@ -1,8 +1,5 @@
 {
     "name": "Stepper 6 Click",
-    "description": "Stepper 6 Click is the complete integrated bipolar step motor driver solution. It comes with the abundance of features that allow silent operation and optimal working conditions for the connected motor. A specialized integrated driver chip on this Click board™ far exceeds the capabilities of similar, commonly used step motor drivers. It comes in the package which also includes the mikroSDK™ software, and a library with all the functions.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8886","PCA9538A","MCP4921"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","DRV8886","PCA9538A","MCP4921"]
 }

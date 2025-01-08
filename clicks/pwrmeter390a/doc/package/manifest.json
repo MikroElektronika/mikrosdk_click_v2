@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Measurements",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "PWR Meter 3 90A Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pwrmeter390a",
-    "product_link": "https://www.mikroe.com/pwr-meter-3-click",
-    "short_description": "PWR Meter 3 Click - 90A is a compact add-on board that measures voltage and current through the connected load. This board features the ACS37800KMACLU-090B3-I2C, an I2C-configurable power monitoring solution from Allegro MicroSystems, which simplifies the addition of power monitoring to many AC/DC powered systems. The ACS37800KMACLU-090B3-I2C Hall-effect-based current sensing technology achieves reinforced isolation ratings (4800 VRMS) alongside a reliable ±90A bidirectional current sensing. It also has two LED indicators for the realization of visual detection of some anomalies in operation, such as under/overvoltage and fast overcurrent fault detection.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.PWRMeter390A",
-    "subdir_name": "lib_pwrmeter390a"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5510",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PWR Meter 3 90A Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PWRMeter390A",
+                "subdir_name": "lib_pwrmeter390a",
+                "path": "PWR Meter 3 90A Click/data/lib_pwrmeter390a"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

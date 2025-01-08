@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Buck 9 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.buck9",
-    "product_link": "https://www.mikroe.com/buck-9-click",
-    "short_description": "Buck 9 Click is a high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4V to 36V. The regulated output voltage can be selected between two values: 3.3V and 5V. These are voltage values ​​that are most commonly used in many embedded designs. Buck 9 Click is based around an integrated DC-DC converter, labeled as MP9943. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        2687
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Buck9",
-    "subdir_name": "lib_buck9"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3057",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Buck 9 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Buck9",
+                "subdir_name": "lib_buck9",
+                "path": "Buck 9 Click/data/lib_buck9"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

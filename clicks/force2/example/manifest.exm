@@ -1,8 +1,5 @@
 {
     "name": "Force 2 Click",
-    "description": "Force 2 Click is a mikroBUS™ add-on board with circuitry for implementing Honeywell’s FSS1500NGT Series force sensors into your projects (with a single zone force sensing resistor included with the Click).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","FSS1500NGT"],
-    "category" : ["Force"] 
+    "hw" : ["Click","FSS1500NGT"]
 }

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Magnetic linear Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.magneticlinear",
-    "product_link": "https://www.mikroe.com/magnetic-linear-click",
-    "short_description": "Magnetic linear Click is a very accurate position sensing Click board™ which utilizes the HMC1501, a magnetic field displacement sensor IC.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2654
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Magneticlinear",
-    "subdir_name": "lib_magneticlinear"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3274",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Magnetic linear Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Magneticlinear",
+                "subdir_name": "lib_magneticlinear",
+                "path": "Magnetic linear Click/data/lib_magneticlinear"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

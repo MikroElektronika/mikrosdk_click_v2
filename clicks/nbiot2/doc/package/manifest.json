@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LTE IoT",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "NB IoT 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.nbiot2",
-    "product_link": "https://www.mikroe.com/nb-iot-2-click",
-    "short_description": "NB IoT 2 Click is a compact add-on board that contains a compact LTE Cat NB2 module with ultra-low power consumption. This board features the BC66-NA, a high-performance, multi-band LTE Cat NB2 module with extremely low power consumption from Quectel Wireless Solutions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        3776
-    ],
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.NBIoT2",
-    "subdir_name": "lib_nbiot2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4562",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NB IoT 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NBIoT2",
+                "subdir_name": "lib_nbiot2",
+                "path": "NB IoT 2 Click/data/lib_nbiot2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

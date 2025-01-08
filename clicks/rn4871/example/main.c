@@ -3,7 +3,7 @@
  * \brief Rn4871 Click example
  * 
  * # Description
- * This example reads and processes data from RN4871 clicks.
+ * This example reads and processes data from RN4871 Clicks.
  *
  * The demo application is composed of two sections :
  * 

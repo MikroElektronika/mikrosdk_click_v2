@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Clock Gen 5 Click
 
-> Clock Gen 5 Click is a compact add-on board that contains a digital programmable oscillator solution. This board features the LTC6903, a low-power self-contained digital frequency source providing a precision frequency from 1kHz to 68MHz set through a 3-wire SPI digital interface from Analog Devices. 
+> [Clock Gen 5 Click](https://www.mikroe.com/?pid_product=MIKROE-4413) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/clockgen5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4413&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/clock-gen-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jul 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the ClockGen5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that demonstrates the use of the Clock Gen 5 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ClockGen5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ClockGen5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `clockgen5_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void clockgen5_cfg_setup ( clockgen5_cfg_t *cfg );
 ```c
 err_t clockgen5_init ( clockgen5_t *ctx, clockgen5_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `clockgen5_out_enable` Enable output function.
 ```c
@@ -63,19 +58,13 @@ void clockgen5_set_config ( clockgen5_t *ctx, uint8_t cfg );
 void clockgen5_set_freq ( clockgen5_t *ctx, float freq );
 ```
 
-## Example Description
-
-> This is an example that demonstrates the use of the Clock Gen 5 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver enables - SPI, set output configuration CLK 180, also write log.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     clockgen5_cfg_t clockgen5_cfg;  /**< Click config object. */
 
@@ -115,7 +104,6 @@ void application_init ( void ) {
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -123,8 +111,8 @@ void application_init ( void ) {
 > In this example, we adjusts different frequencies every 3 sec. Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "        12.0 MHz       \r\n" );
     clockgen5_set_freq( &clockgen5, 12000.0 );
@@ -167,27 +155,22 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ClockGen5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

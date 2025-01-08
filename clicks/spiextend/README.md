@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # SPI Extend Click
 
-> SPI Extend Click is a compact add-on board for applications that require extending the SPI communication bus over a long distance. This board features the LTC4332, an SPI slave extender device, from Analog Devices. Using a ±60V fault protected differential transceiver, the LTC4332 can transmit SPI data, including an interrupt signal, up to 2MHz over two twisted-pair cables. 
+> [SPI Extend Click](https://www.mikroe.com/?pid_product=MIKROE-4184) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/spiextend_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4184&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/spi-extend-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jul 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the SPIExtend Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> In this example, if the connection is established, we read Accel axis of the connected Accel 14 Click boards to the SPI Extend Click ( Remote Mode ) which is connected by a LAN cable to 
+SPI Extend Click ( Local Mode ) placed in the mikroBUS 1. Results are being sent to the Usart Terminal where you can track their changes. All data logs write on USB uart changes for every 1 sec.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for SPIExtend Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SPIExtend
 
-#### Standard key functions :
+### Example Key Functions
 
 - `spiextend_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t spiextend_init ( spiextend_t *ctx, spiextend_cfg_t *cfg );
 err_t spiextend_default_cfg ( spiextend_t *ctx );
 ```
 
-#### Example key functions :
-
 - `spiextend_get_config` Function get configuration of the LTC4332 SPI Extender Over Rugged Differential Link on the SPI Extend Click board.
 ```c
 void spiextend_get_config ( spiextend_t *ctx, spiextend_config_data_t *config_data );
@@ -68,21 +64,14 @@ void spiextend_set_config ( spiextend_t *ctx, spiextend_config_data_t config_dat
 void spiextend_get_status ( spiextend_t *ctx, spiextend_status_data_t *status_data );
 ```
 
-## Example Description
-
-> In this example, if the connection is established, we read Accel axis of the connected Accel 14 Click boards to the SPI Extend Click ( Remote Mode ) which is connected by a LAN cable to 
-SPI Extend Click ( Local Mode ) placed in the mikroBUS 1. Results are being sent to the Usart Terminal where you can track their changes. All data logs write on USB uart changes for every 1 sec.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes SPI, sets INT pin as input and AN, RST, CS nad PWM pins as outputs and begins to write log. Also, initialization driver enables - SPI, set default configuration of the Accel 14 Click
 connected to the SPI Extend Click ( Remote Mode ).
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     
     log_cfg_t log_cfg;                /**< Logger config object. */
     spiextend_cfg_t spiextend_cfg;    /**< Click config object. */
@@ -147,7 +136,6 @@ void application_init ( void ) {
     
     log_info( &logger, " Application Task \r\n" );
 }
-
 ```
 
 ### Application Task
@@ -156,8 +144,8 @@ void application_init ( void ) {
 In case an error has occurred, printed "LINK is not established" on UART Terminal.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     
     //  Task implementation.
     
@@ -187,26 +175,21 @@ void application_task ( void ) {
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SPIExtend
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

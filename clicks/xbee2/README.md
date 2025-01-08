@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # XBEE 2 Click
 
-> Xbee 2 Click is a compact add-on board providing wireless end-point connectivity to other devices. This board features the XB3-24Z8UM, a Digi XBee® 3 transceiver module offering a fully interoperable ecosystem covering all vertical markets from Digi International. Building on industry-leading technology, the pre-certified Digi XBee® 3 module delivers the flexibility to switch between multiple frequencies and wireless protocols as needed (Zigbee, 802.15.4, DigiMesh® and BLE). It can be easily configured and controlled from a simple, central platform and comes with built-in Digi TrustFence® security, identity, and data privacy features which use more than 175 controls to protect against new and evolving cyber threats.
+> [XBEE 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5302) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/xbee2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5302&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/xbee-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Aug 2022.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the XBEE 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an XBEE 2 Click board by showing the communication between the two Click boards configured in transparent mode.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for XBEE 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.XBEE2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `xbee2_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void xbee2_cfg_setup ( xbee2_cfg_t *cfg );
 ```c
 err_t xbee2_init ( xbee2_t *ctx, xbee2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `xbee2_get_serial_number` This function sends a get serial number command.
 ```c
@@ -63,19 +58,12 @@ err_t xbee2_set_device_name ( xbee2_t *ctx, char *dev_name );
 err_t xbee2_set_destination_address ( xbee2_t *ctx, char *dest_addr_high, char *dest_addr_low );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an XBEE 2 Click board by showing the communication between the two Click boards configured in transparent mode.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and configures the Click board by performing a factory reset, and setting the device name, destination address, api mode to transparent,
 and a device role to join or form network depending on the application mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -172,7 +160,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -199,22 +186,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.XBEE2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

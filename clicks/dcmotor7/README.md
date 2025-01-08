@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # DC MOTOR 7 Click
 
-DC MOTOR 7 Click is a dual brushed DC motor driving Click board™, featuring the advanced PWM chopper-type integrated DC motor driver, labeled as TB67H400AFTG.
+> [DC MOTOR 7 Click](https://www.mikroe.com/?pid_product=MIKROE-3289) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dcmotor7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3289&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/dc-motor-7-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the DcMotor7 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for DcMotor7 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void dcmotor7_cfg_setup ( dcmotor7_cfg_t *cfg ); 
- 
-- Initialization function.
-> DCMOTOR7_RETVAL dcmotor7_init ( dcmotor7_t *ctx, dcmotor7_cfg_t *cfg );
-
-- Default Configuration 
-> void dcmotor7_default_cfg ( dcmotor7_t *ctx );
-
-#### Example key functions :
-
-- Functions for set port
-> void dcmotor7_set_port ( dcmotor7_t *ctx, uint8_t port, uint8_t value );
- 
-- Function for setting the motor in stand mode
-> void dcmotor7_go_to_stand_by_mode ( dcmotor7_t *ctx, uint8_t motor );
-
-- Function for set PWM value for motor B
-> void dcmotor7_set_pwm_motor_b ( dcmotor7_t *ctx, uint8_t state );
-
-## Examples Description
+## Example Description
 
 > This application is a dual brushed DC motor driving.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DcMotor7
+
+### Example Key Functions
+
+- `dcmotor7_cfg_setup` Config Object Initialization function. 
+```c
+void dcmotor7_cfg_setup ( dcmotor7_cfg_t *cfg );
+``` 
+ 
+- `dcmotor7_init` Initialization function. 
+```c
+err_t dcmotor7_init ( dcmotor7_t *ctx, dcmotor7_cfg_t *cfg );
+```
+
+- `dcmotor7_default_cfg` Default Configuration . 
+```c
+void dcmotor7_default_cfg( dcmotor7_t *ctx );
+```
+
+- `dcmotor7_set_port` Functions for set port. 
+```c
+void dcmotor7_set_port( dcmotor7_t *ctx, uint8_t port, uint8_t value );
+```
+ 
+- `dcmotor7_go_to_stand_by_mode` Function for setting the motor in stand mode. 
+```c
+void dcmotor7_go_to_stand_by_mode( dcmotor7_t *ctx, uint8_t motor );
+```
+
+- `dcmotor7_set_pwm_motor_b` Function for set PWM value for motor B. 
+```c
+void dcmotor7_set_pwm_motor_b( dcmotor7_t *ctx, uint8_t state );
+```
+
+### Application Init
 
 > Initialization driver init, enabled all output port, sets H-Bridge operation mode and Motor Digital tblk
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -97,7 +94,6 @@ void application_init ( void )
 
     dcmotor7_default_cfg( &dcmotor7 );
 }
-  
 ```
 
 ### Application Task
@@ -106,7 +102,6 @@ void application_init ( void )
 > and between the change of direction, the motor stops the motor. 
 
 ```c
-
 void application_task ( void )
 {
     dcmotor7_set_motor( &dcmotor7, DCMOTOR7_MOTOR_A, 0, 1 );
@@ -126,33 +121,26 @@ void application_task ( void )
     dcmotor7_motor_stop( &dcmotor7, DCMOTOR7_MOTOR_B );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > VM input - 10 V (min) to 47 V (max)
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DcMotor7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

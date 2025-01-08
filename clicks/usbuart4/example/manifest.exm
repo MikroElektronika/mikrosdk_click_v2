@@ -1,8 +1,5 @@
 {
     "name": "USB UART 4 Click",
-    "description": "USB UART 4 Click offers a USB to asynchronous serial data (UART) interface, allowing the microcontroller based designs to communicate with the personal computer, in a very simple way. It is equipped with the FT232RL, a very popular USB to UART interface IC, used on many MikroElektronika devices - both for its reliability and simplicity. USB UART Click is used for whenever there is a need to seamlessly and effortlessly interface the UART lines to a personal computer",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","FT232RL"],
-    "category" : ["USB"]
+    "hw" : ["Click","FT232RL"]
 }

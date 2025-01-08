@@ -1,8 +1,5 @@
 {
     "name": "Current 14 Click",
-    "description": "Current 14 Click is a compact add-on board designed for precise current measurement without direct contact. This board features the BM14270, a magnetic current sensor IC from ROHM Semiconductor. It uses a coreless, non-contact magnetic impedance (MI) sensor, ensuring low power loss and accurate current detection. It communicates through a 2-wire I2C interface, offering a 14-bit digital output with a measurable magnetic range of ±280μT and sensitivity of 0.045μT/LSB. The board includes an alert interrupt pin (ALR) that indicates data readiness, streamlining real-time data acquisition for the host MCU.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","BM14270AMUV-LBE2"],
-    "category" : ["Click Boards > Sensors > Current sensor"]
+    "hw" : ["Click","BM14270AMUV-LBE2"]
 }

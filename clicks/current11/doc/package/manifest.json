@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Current 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.current11",
-    "product_link": "https://www.mikroe.com/current-11-click",
-    "short_description": "Current 11 Click is a compact add-on board for industrial and commercial current-sensing applications. This board features the ACS37600K (ACS37600KOKATN-006B5-C), a programmable linear Hall-effect sensor IC from Allegro Microsystems. This sensor features a chopper-stabilized Hall-effect front-end for precise magnetic flux detection, with a sensitivity of 6mV/G and a bidirectional operating range of ±333G.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.Current11",
-    "subdir_name": "lib_current11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6166",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Current 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Current11",
+                "subdir_name": "lib_current11",
+                "path": "Current 11 Click/data/lib_current11"
+            }
+        ]
+    }
 }
-
-

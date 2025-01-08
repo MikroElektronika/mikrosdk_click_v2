@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > LIN",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Dual LIN Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.duallin",
-    "product_link": "https://www.mikroe.com/dual-lin-click",
-    "short_description": "The Dual LIN Click is a Click board™ based on the TLE7268SKXUMA1, a Dual LIN transceiver from Infineon.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2953
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.DualLin",
-    "subdir_name": "lib_duallin"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3870",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Dual LIN Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DualLin",
+                "subdir_name": "lib_duallin",
+                "path": "Dual LIN Click/data/lib_duallin"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

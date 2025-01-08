@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SHT Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.sht",
-    "product_link": "https://www.mikroe.com/sht-click",
-    "short_description": "SHT Click is a temperature and humidity sensing Click board that carries Sensiron’s SHT3x-DIS IC. Compared to its predecessor (SHT11), SHT3x Click has increased reliability and enhanced signal processing features with a high signal-to-noise ratio.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1777
-    ],
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.Sht",
-    "subdir_name": "lib_sht"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2101",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SHT Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Sht",
+                "subdir_name": "lib_sht",
+                "path": "SHT Click/data/lib_sht"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

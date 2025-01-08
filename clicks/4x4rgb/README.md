@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # 4x4 RGB Click
 
-4x4 RGB Click is a matrix of 16 intelligent RGB elements, forming a 4x4 display screen.
+> [4x4 RGB Click](https://www.mikroe.com/?pid_product=MIKROE-1881) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/4x4rgb_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1881&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/4x4-rgb-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the 4x4Rgb Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This application is used for powering 4x4 RGB LED matrix.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 4x4Rgb Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.4x4Rgb
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c4x4rgb_cfg_setup` This function initializes Click configuration structure to init state.
 ```c
@@ -46,8 +43,6 @@ void c4x4rgb_cfg_setup ( c4x4rgb_cfg_t *cfg, drv_logic_t logic_zero, drv_logic_t
 err_t c4x4rgb_init ( c4x4rgb_t *ctx, c4x4rgb_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `c4x4rgb_set_diode` This function allows to set color of one diode.
 ```c
 err_t c4x4rgb_set_diode ( c4x4rgb_t *ctx, uint32_t diode_num, uint32_t diode_color );
@@ -58,18 +53,11 @@ err_t c4x4rgb_set_diode ( c4x4rgb_t *ctx, uint32_t diode_num, uint32_t diode_col
 void c4x4rgb_fill_screen ( c4x4rgb_t *ctx, uint32_t fill_color );
 ```
 
-## Examples Description
-
-> This application is used for powering 4x4 RGB LED matrix.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initialization driver enables - GPIO. 
 
 ```c
-
 void application_init ( void )
 {
     c4x4rgb_cfg_t cfg;
@@ -86,7 +74,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -98,7 +85,6 @@ void application_init ( void )
 > Various colors can be reproduced by mixing the intensity of each LED.
 
 ```c
-
 void application_task ( void )
 {
     c4x4rgb_snake( C4X4RGB_COLOR_BLUE );
@@ -122,32 +108,25 @@ void application_task ( void )
     c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );
     Delay_ms ( 100 ); 
 }
-
 ```
 
-## Note
+### Note
 
 > Make sure the logic delays are defined for your system in the c4x4rgb_delays.h file.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.4x4Rgb
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "ReRAM Click",
-    "description": "ReRAM Click features ReRAM (Resistive Random Access Memory) module which contains the cell array made of 524.288 words x 8 bits, which totals 4 Mbits of data. The used memory module can withstand a large number of write cycles, it has data retention period greater than 10 years and it can read and write to random addresses with no delay.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MB85AS4MT"],
-    "category" : ["ReRAM"] 
+    "hw" : ["Click","MB85AS4MT"]
 }

@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # BATT Boost 2 Click
 
-> BATT Boost 2 Click is a compact add-on board designed to extend the battery life of non-rechargeable, primary batteries in low-voltage, low-power applications. This board features the NBM7100A, a coin-cell battery-life booster with adaptive power optimization from Nexperia. The NBM7100A integrates two high-efficiency DC-DC conversion stages and an intelligent learning algorithm to optimize energy usage, allowing it to handle bursts of current up to 200mA without depleting the battery. It features two output terminals: VDH for high pulse load applications and VDP for powering 'Always-ON' components. Communication with the host MCU is achieved via the I2C interface, supporting up to 1MHz clock frequencies.
+> [BATT Boost 2 Click](https://www.mikroe.com/?pid_product=MIKROE-6098) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/battboost2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6098&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/batt-boost-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Feb 2024.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the BATT Boost 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the BATT Boost 2 Click driver.
+  This driver provides the functions to control battery energy management 
+  device designed to maximize usable capacity from non-rechargeable.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for BATT Boost 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BATTBoost2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `battboost2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t battboost2_init ( battboost2_t *ctx, battboost2_cfg_t *cfg );
 err_t battboost2_default_cfg ( battboost2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `battboost2_set_vset` This function is used to control the output voltage levels of the NBM7100ABQX, Coin cell battery life booster with adaptive power optimization on the BATT Boost 2 Click board. 
 ```c
 err_t battboost2_set_vset ( battboost2_t *ctx, float vset );
@@ -68,14 +65,6 @@ err_t battboost2_high_impedance_mode ( battboost2_t *ctx );
 void battboost2_set_on_pin_state ( battboost2_t *ctx, uint8_t start );
 ```
 
-## Example Description
-
-> This library contains API for the BATT Boost 2 Click driver.
-  This driver provides the functions to control battery energy management 
-  device designed to maximize usable capacity from non-rechargeable.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of I2C module and log UART.
@@ -84,7 +73,6 @@ void battboost2_set_on_pin_state ( battboost2_t *ctx, uint8_t start );
   and early warning voltage to 2.6V.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -189,22 +177,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BATTBoost2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

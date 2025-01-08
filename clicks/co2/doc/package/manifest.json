@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Gas",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "CO2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.co2",
-    "product_link": "https://www.mikroe.com/co2-click",
-    "short_description": "CO2 Click is a compact add-on board that contains Sensirion miniature CO2 sensor. This board features the STC31, a gas concentration sensor designed for high-volume applications. The STC31 utilizes a revolutionized thermal conductivity measurement principle, which results in superior repeatability and long-term stability. The outstanding performance of these sensors is based on Sensirion’s patented CMOSens® sensor technology, which combines the sensor element, signal processing, and digital calibration on a small CMOS chip. It features a digital I2C interface, which makes it easy to connect directly to MCU. This Click board™ represents an ideal choice for health, environmental, industrial, residential monitoring of high CO2 concentrations and applications where reliability is crucial.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.CO2",
-    "subdir_name": "lib_co2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4725",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "CO2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CO2",
+                "subdir_name": "lib_co2",
+                "path": "CO2 Click/data/lib_co2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

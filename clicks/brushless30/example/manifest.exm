@@ -1,8 +1,5 @@
 {
     "name": "Brushless 30 Click",
-    "description": "Brushless 30 Click is a compact add-on board for precise and reliable control of brushless motors. This board features the TB9083FTG, a gate-driver IC from Toshiba Semiconductor, known for its robust performance in automotive environments. It also includes additional header pins for 6 PWM inputs , safety relays and current sense amplifiers. Comprehensive error detection capabilities, as required from automotive devices, are included. Brushless 30 Click is ideal for demanding automotive applications such as electric power steering (EPS), powered brakes, and automotive pumps where high-precision motor control is crucial.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TB9083FTG"],
-    "category" : ["Click Boards > Motor control > Brushless"]
+    "hw" : ["Click","TB9083FTG"]
 }

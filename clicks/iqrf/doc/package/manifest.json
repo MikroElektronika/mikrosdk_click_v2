@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "iqRF Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.iqrf",
-    "product_link": "https://www.mikroe.com/iqrf-click",
-    "short_description": "IQRF Click carries the RF transceiver, operating in the 868/916 MHz frequency.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2075
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.iqRF",
-    "subdir_name": "lib_iqrf"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2586",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "iqRF Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.iqRF",
+                "subdir_name": "lib_iqrf",
+                "path": "iqRF Click/data/lib_iqrf"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

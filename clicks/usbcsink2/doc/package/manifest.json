@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > USB-C PD",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "USB-C Sink 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.usbcsink2",
-    "product_link": "https://www.mikroe.com/usb-c-sink-2-click",
-    "short_description": "USB-C Sink 2 Click is a compact add-on board with a standalone autonomous USB power delivery controller. This board features the AP33772, a high-performance USB PD sink controller from Diodes Incorporated. It supports dead battery mode to allow a system to be powered from an external source directly, establishes a valid source-to-sink connection, and negotiates a USB power delivery (PD) contract with a PD-capable source device. It also supports a flexible PD3.0 and PPS for applications that require direct voltage and current requests, with fine-tuning capabilities.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.USBCSink2",
-    "subdir_name": "lib_usbcsink2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5792",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB-C Sink 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBCSink2",
+                "subdir_name": "lib_usbcsink2",
+                "path": "USB-C Sink 2 Click/data/lib_usbcsink2"
+            }
+        ]
+    }
 }
-
-
-
-
-

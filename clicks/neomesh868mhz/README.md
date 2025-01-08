@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # NeoMesh 868MHz Click
 
-> NeoMesh Click - 868MHz is a compact add-on board with a low-power, long-range transceiver, ideal for Mesh wireless networking. This board features the NC1000C-8, a wireless Mesh network module from NeoCortec. With an additional antenna that MikroE offers connected to the module’s u.Fl connector, you can create a fully functional wireless Mesh network node that will work in the Sub-GHz frequency band of 868MHz. The module has a generic application layer that can configured to suit applications.
+> [NeoMesh 868MHz Click](https://www.mikroe.com/?pid_product=MIKROE-6006) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/neomesh868_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6006&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/neomesh-click-868mhz)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the NeoMesh 868MHz Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of NeoMesh 868MHz Click board by showing the communication between the two Click boards.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for NeoMesh 868MHz Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NeoMesh868MHz
 
-#### Standard key functions :
+### Example Key Functions
 
 - `neomesh868mhz_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void neomesh868mhz_cfg_setup ( neomesh868mhz_cfg_t *cfg );
 ```c
 err_t neomesh868mhz_init ( neomesh868mhz_t *ctx, neomesh868mhz_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `neomesh868mhz_send_aapi_frame` This function sends a desired AAPI frame by using UART serial interface.
 ```c
@@ -63,18 +58,11 @@ err_t neomesh868mhz_read_aapi_frame ( neomesh868mhz_t *ctx, neomesh868mhz_aapi_f
 err_t neomesh868mhz_send_sapi_frame ( neomesh868mhz_t *ctx, neomesh868mhz_sapi_frame_t *frame );
 ```
 
-## Example Description
-
-> This example demonstrates the use of NeoMesh 868MHz Click board by showing the communication between the two Click boards.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and configures the Click board for the selected application mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -177,7 +165,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -222,22 +209,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NeoMesh868MHz
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

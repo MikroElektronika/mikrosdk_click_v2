@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Ozone 3 Click
 
-Ozone 3 Click is a compact add-on board suitable for ozone concentration detection and monitoring. This board features the 110-407, a high-performance ultra-thin electrochemical gas sensor from SPEC Sensors supported by the LMP91000, a high-precision integrated analog front-end IC (AFE) ideal for this sensing application. It provides the reference voltage required by the sensor and offers a choice between the analog output from the AFE IC buffered with the low noise Op-Amp and digital output from the 12-bit SAR A/D converter.
+> [Ozone 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4654) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ozone3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4654&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ozone-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Apr 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Ozone3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the Ozone 3 Click driver.
+> This demo application shows an example of the O3 ppm data measurement.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Ozone3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ozone3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ozone3_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +41,13 @@ void ozone3_cfg_setup ( ozone3_cfg_t *cfg );
 
 - `ozone3_init` Initialization function.
 ```c
-OZONE3_RETVAL ozone3_init ( ozone3_t *ctx, ozone3_cfg_t *cfg );
+err_t ozone3_init ( ozone3_t *ctx, ozone3_cfg_t *cfg );
 ```
 
 - `ozone3_default_cfg` Click Default Configuration function.
 ```c
 void ozone3_default_cfg ( ozone3_t *ctx );
 ```
-
-#### Example key functions :
 
 - `ozone3_read_adc` Ozone 3 read ADC function.
 ```c
@@ -63,21 +59,14 @@ uint16_t ozone3_read_adc ( ozone3_t *ctx );
 float ozone3_get_o3_ppm ( ozone3_t *ctx );
 ```
 
-## Example Description
-
-> This library contains API for the Ozone 3 Click driver.
-> This demo application shows an example of the O3 ppm data measurement.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of I2C module and log UART.
 > After driver initialization the app set default settings.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;        /**< Logger config object. */
     ozone3_cfg_t ozone3_cfg;  /**< Click config object. */
 
@@ -110,41 +99,36 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     Delay_ms ( 300 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a Ozone 3 Click board™.
+> This is an example that shows the use of a Ozone 3 Click board&trade;.
 > Get and logs O3 ( Trioxygen ) data as ppm value.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     float o3_ppm = ozone3_get_o3_ppm( &ozone3 );
     log_printf( &logger, "\tOzone : %.2f ppm \r\n", o3_ppm );
     Delay_ms ( 500 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ozone3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

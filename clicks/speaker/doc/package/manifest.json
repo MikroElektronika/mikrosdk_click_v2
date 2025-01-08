@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Speakers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Speaker Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.speaker",
-    "product_link": "https://www.mikroe.com/speaker-click",
-    "short_description": "Speaker Click is a compact add-on board that contains an audio power amplifier with a high-quality audio reproduction. This board features the MAX9717, a 1.4W mono bridge-tied load (BTL) architecture audio power amplifier from Maxim Integrated.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Speaker",
-    "subdir_name": "lib_speaker"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4662",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Speaker Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Speaker",
+                "subdir_name": "lib_speaker",
+                "path": "Speaker Click/data/lib_speaker"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

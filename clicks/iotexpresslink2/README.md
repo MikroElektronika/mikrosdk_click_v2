@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # IoT ExpressLink 2 Click
 
-> IoT ExpressLink 2 Click is a compact add-on board that allows users to connect to IoT ExpressLink services easily and securely interact with cloud applications and other services. This board features the SARA-R510AWS, an LTE-M AWS IoT EsxpressLink module from u-blox. It supports a comprehensive set of 3GPP Rel. 14 features that are relevant for IoT applications, like improvements to power consumption, coverage, data rate, mobility, and positioning. They are 5G-ready, meaning customers will be able to (software) upgrade their deployed devices once 5G LTE has been fully rolled out by mobile operators, greatly improving end-product scalability and lifetime.
+> [IoT ExpressLink 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5927) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/iotexpresslink2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5927&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/iot-expresslink-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the IoT ExpressLink 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of IoT ExpressLink 2 Click board by connecting
+to the selected AWS account's data endpoint and showcasing the messaging topic model
+through sending and receiving messages to/from AWS IoT console.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for IoT ExpressLink 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.IoTExpressLink2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `iotexpresslink2_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +44,6 @@ void iotexpresslink2_cfg_setup ( iotexpresslink2_cfg_t *cfg );
 ```c
 err_t iotexpresslink2_init ( iotexpresslink2_t *ctx, iotexpresslink2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `iotexpresslink2_power_on` This function performs the power on sequence.
 ```c
@@ -63,14 +60,6 @@ void iotexpresslink2_send_cmd ( iotexpresslink2_t *ctx, uint8_t *cmd );
 err_t iotexpresslink2_generic_read ( iotexpresslink2_t *ctx, uint8_t *data_out, uint16_t len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of IoT ExpressLink 2 Click board by connecting
-to the selected AWS account's data endpoint and showcasing the messaging topic model
-through sending and receiving messages to/from AWS IoT console.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger, powers up the device, reads and displays
@@ -79,7 +68,6 @@ the SIM APN and device endpoint, and attempts to connect to AWS network.
 Finally, it configures the topic name and number and subscribes to it.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -186,7 +174,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -233,7 +220,7 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Steps for the very first connection attempt:
 > 1. During the initial connection attempt, the device responds with: "ERR14 UNABLE TO CONNECT
@@ -243,22 +230,19 @@ void application_task ( void )
 > Detailed steps for registering device are described in the module's application development guide. 
 > 3. After registering the device with your AWS account, restart the system, and it should now successfully connect to the cloud.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.IoTExpressLink2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

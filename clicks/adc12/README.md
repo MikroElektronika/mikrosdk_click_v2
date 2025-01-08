@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # ADC 12 Click
 
-ADC 12 Click is a compact add-on board that contains a fully-featured, general-purpose analog-to-digital converter. This board features the ADS7828, a low-power 12-bit data acquisition device that features a serial I2C interface and an 8-channel multiplexer from Texas Instruments.
+> [ADC 12 Click](https://www.mikroe.com/?pid_product=MIKROE-4376) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/adc12_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4376&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/adc-12-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the ADC12 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of ADC 12 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ADC12 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ADC12
 
-#### Standard key functions :
+### Example Key Functions
 
 - `adc12_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,10 +40,8 @@ void adc12_cfg_setup ( adc12_cfg_t *cfg );
 
 - `adc12_init` Initialization function.
 ```c
-ADC12_RETVAL adc12_init ( adc12_t *ctx, adc12_cfg_t *cfg );
+err_t adc12_init ( adc12_t *ctx, adc12_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `adc12_read_voltage` This function reads the voltage in milivolts from the desired channel.
 ```c
@@ -63,18 +58,11 @@ err_t adc12_read_raw_data ( adc12_t *ctx, uint8_t ch, uint16_t *data_out );
 void adc12_set_sd_mode ( adc12_t *ctx, uint8_t sd_mode );
 ```
 
-## Example Description
-
-> This example demonstrates the use of ADC 12 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and sets the input and power-down modes.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -110,7 +98,6 @@ void application_init ( void )
     adc12_set_pd_mode( &adc12, ADC12_CMD_PD_IRON_ADON );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -119,7 +106,6 @@ void application_init ( void )
 > both values on the USB UART every second.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t raw_adc;
@@ -133,29 +119,25 @@ void application_task ( void )
     log_printf( &logger, " ---------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 > With internal reference voltage set the Click measures up to 2500 mV.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ADC12
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

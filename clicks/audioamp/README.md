@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # AudioAmp Click
 
-> AudioAmp Click is a compact add-on board that can add a mono audio amplifier function to your application. This board features the LM48100Q-Q1, a Boomer™ mono 1.3W audio power amplifier with output fault detection and volume control from Texas Instruments. The AudioAmp Click has one dual 3.5mm audio input jack and, next to it, a screw terminal for connecting output wires to a 1.3W, 8 Ohm passive speaker. Each input has its own independent 32-step volume control.
+> [AudioAmp Click](https://www.mikroe.com/?pid_product=MIKROE-2368) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/audioamp_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2368&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/audioamp-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the AudioAmp Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> AudioAmp Click is a stereo audio amplifier which can be controlled by using this Click driver.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for AudioAmp Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AudioAmp
 
-#### Standard key functions :
+### Example Key Functions
 
 - `audioamp_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void audioamp_cfg_setup ( audioamp_cfg_t *cfg );
 ```c
 err_t audioamp_init ( audioamp_t *ctx, audioamp_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `audioamp_set_volume` Set volume function.
 ```c
@@ -63,18 +58,11 @@ err_t audioamp_power_on ( audioamp_t *ctx );
 err_t audioamp_mute ( audioamp_t *ctx );
 ```
 
-## Examples Description
-
-> AudioAmp Click is a stereo audio amplifier which can be controlled by using this Click driver.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Performs driver and log module initialization, enables I2C, turns on the AudioAmp device and sends a message about init status.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -122,7 +110,6 @@ void application_init ( void )
 > This is a example which demonstrates the use and control of the AudioAmp Click board.
 
 ```c
-
 void application_task ( void )
 {
     log_info( &logger, "---- Volume level control testing... ----" );
@@ -165,28 +152,21 @@ void application_task ( void )
 
     log_info( &logger, "---- Input mute/unmute control test done. ----" );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AudioAmp
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

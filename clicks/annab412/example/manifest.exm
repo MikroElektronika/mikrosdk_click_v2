@@ -1,8 +1,5 @@
 {
     "name": "ANNA-B412 Click",
-    "description": "ANNA-B412 Click is a compact add-on board that provides BT/BLE connectivity for any embedded application. This board features the ANNA-B412, a standalone Bluetooth 5.1 low-energy module from u-blox. It is a System-in-Package (SiP) design with pre-flashed u-connectXpress software, which supports Bluetooth LE Serial port service, GATT client and server, Bluetooth beacons, Bluetooth long-range, NFC, and simultaneous peripheral and central roles. The Bluetooth module in LE mode can achieve up to 2Mbps data rates.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","ANNA-B412"],
-    "category" : ["Click Boards > Wireless connectivity > BT/BLE"]
+    "hw" : ["Click","ANNA-B412"]
 }

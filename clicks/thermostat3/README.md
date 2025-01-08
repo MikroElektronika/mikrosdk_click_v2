@@ -1,77 +1,74 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Thermostat 3 Click
 
-Thermostat 3 Click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the MAX31855 sensor design.
+> [Thermostat 3 Click](https://www.mikroe.com/?pid_product=MIKROE-3724) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/thermostat3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3724&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/thermostat-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Thermostat3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Thermostat3 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void thermostat3_cfg_setup ( thermostat3_cfg_t *cfg ); 
- 
-- Initialization function.
-> THERMOSTAT_RETVAL thermostat3_init ( thermostat3_t *ctx, thermostat3_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void thermostat3_default_cfg ( thermostat3_t *ctx );
-
-
-#### Example key functions :
-
-- This function enables control of the relay.
-> void thermostat3_relay_control ( thermostat3_t *ctx, uint8_t relay_pos );
- 
-- This function returns Fault data Value.
-> uint8_t thermostat3_get_fault_data ( temp_vals_t *tmp, uint8_t err );
-
-- This function returns 14-Bit Thermocouple Temperature Data
-> float thermostat3_get_thermocouple_temperature ( temp_vals_t *tmp, uint8_t temp_in );
-
-## Examples Description
+## Example Description
 
 > This application enables usage of the general purpose Thermostat Click 
 > to be used with temperature sensors.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Thermostat3
+
+### Example Key Functions
+
+- `thermostat3_cfg_setup` Config Object Initialization function. 
+```c
+void thermostat3_cfg_setup ( thermostat3_cfg_t *cfg );
+``` 
+ 
+- `thermostat3_init` Initialization function. 
+```c
+err_t thermostat3_init ( thermostat3_t *ctx, thermostat3_cfg_t *cfg );
+```
+
+- `thermostat3_default_cfg` Click Default Configuration function. 
+```c
+void thermostat3_default_cfg ( thermostat3_t *ctx );
+```
+
+- `thermostat3_relay_control` This function enables control of the relay. 
+```c
+void thermostat3_relay_control ( thermostat3_t *ctx, uint8_t relay_pos );
+```
+ 
+- `thermostat3_get_fault_data` This function returns Fault data Value. 
+```c
+uint8_t thermostat3_get_fault_data ( temp_vals_t *tmp, uint8_t err );
+```
+
+- `thermostat3_get_thermocouple_temperature` This function returns 14-Bit Thermocouple Temperature Data. 
+```c
+float thermostat3_get_thermocouple_temperature ( temp_vals_t *tmp, uint8_t temp_in );
+```
+
+### Application Init
 
 > Initialization driver init
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -102,7 +99,6 @@ void application_init ( void )
     Delay_ms ( 200 );
     log_printf( &logger, "---- Start Thermostat 3 ----\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +106,6 @@ void application_init ( void )
 > Waits for valid user input and executes functions based on set of valid commands
 
 ```c
-
 void application_task ( void )
 {
     //  Task implementation.
@@ -175,33 +170,26 @@ void application_task ( void )
             }
         }
 }
-
 ```
 
-## Note
+### Note
 
 > - Additional Functions :
 >  -void _displayFault( uint8_t f_error )  - Display fault
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Thermostat3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

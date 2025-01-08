@@ -1,8 +1,5 @@
 {
     "name": "Brushless Click",
-    "description": "Brushless Click carries Toshiba's TB6575FNG IC for driving 3-phase full-wave Brushless DC motors — which are ideal for powering flying drones. The Click is able to safely drive external motors with up to 32V/2A. The board features three pairs of onboard screw terminals. VBAT is for connecting an external 7-32V DC power supply.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TB6575FNG"],
-    "category" : ["Brushless"] 
+    "hw" : ["Click","TB6575FNG"]
 }

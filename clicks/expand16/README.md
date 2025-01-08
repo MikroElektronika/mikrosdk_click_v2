@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Expand 16 Click
 
-> Expand 16 Click is a compact add-on board with a multi-port I/O expander. This board features the FLX6408, a fully configurable 8-bit GPIO expander from ON Semiconductor. It brings eight independently configurable input/output ports, with a 6mA output drive, when configured in the output mode. 
+> [Expand 16 Click](https://www.mikroe.com/?pid_product=MIKROE-5939) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/expand16_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5939&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/expand-16-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Oct 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Expand 16 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Expand 16 Click board by setting and reading 
+  the ports state.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Expand 16 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Expand16
 
-#### Standard key functions :
+### Example Key Functions
 
 - `expand16_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t expand16_init ( expand16_t *ctx, expand16_cfg_t *cfg );
 err_t expand16_default_cfg ( expand16_t *ctx );
 ```
 
-#### Example key functions :
-
 - `expand16_write_reg` Expand 16 register write function.
 ```c
 err_t expand16_write_reg ( expand16_t *ctx, uint8_t reg, uint8_t data_in );
@@ -68,13 +64,6 @@ err_t expand16_set_io_dir ( expand16_t *ctx, uint8_t input_pins, uint8_t output_
 err_t expand16_set_output_state ( expand16_t *ctx, uint8_t clr_mask, uint8_t set_mask );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Expand 16 Click board by setting and reading 
-  the ports state.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which sets 
@@ -82,7 +71,6 @@ err_t expand16_set_output_state ( expand16_t *ctx, uint8_t clr_mask, uint8_t set
   other half of the pins as inputs ( GPIO0, GPIO1, GPIO2 and GPIO3 ).
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;              /**< Logger config object. */
@@ -126,7 +114,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -161,27 +148,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > In order for this example to work as intended it is necessary to connect the input and output pins 
   eg. GPIO0 and GPIO4, GPIO1 and GPIO5 etc. Floating input pins will be shown as a low state.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Expand16
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

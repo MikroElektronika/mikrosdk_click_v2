@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # AlphaNum G Click
 
-AlphaNum Click is a simple solution for adding 14-segment alphanumeric display to your device. The board carries two TLC5926 16-bit Constant-Current LED sink Drivers
+> [AlphaNum G Click](https://www.mikroe.com/?pid_product=MIKROE-1851) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/alphanumg_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1851&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/alphanum-g-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the AlphaNumG Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases the initialization and configuration of the logger and Click modules and shows how to display characters and numbers on both LED segments of the Click.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for AlphaNumG Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AlphaNumG
 
-#### Standard key functions :
+### Example Key Functions
 
 - `alphanumg_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +43,6 @@ void alphanumg_cfg_setup ( alphanumg_cfg_t *cfg );
 err_t alphanumg_init ( alphanumg_t *ctx, alphanumg_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `alphanumg_write_character` This function displays characters on the left and right LED segments.
 ```c
 void alphanumg_write_character ( alphanumg_t *ctx, uint8_t left_char, uint8_t right_char );
@@ -58,19 +53,13 @@ void alphanumg_write_character ( alphanumg_t *ctx, uint8_t left_char, uint8_t ri
 void alphanumg_write_number ( alphanumg_t *ctx, uint8_t left_char, uint8_t right_char );
 ```
 
-## Example Description
-
-> This example showcases the initialization and configuration of the logger and Click modules and shows how to display characters and numbers on both LED segments of the Click.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > This function initializes and configures the logger and Click modules.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     alphanumg_cfg_t alphanumg_cfg;  /**< Click config object. */
 
@@ -101,7 +90,6 @@ void application_init ( void ) {
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -109,8 +97,8 @@ void application_init ( void ) {
 > This function sets the time interval at which the symbols are displayed on the LED segments and shows a few characters and numbers.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     alphanumg_set_display_interval( &alphanumg, 1000 );
 
     alphanumg_write_character( &alphanumg, 'M', 'E' );
@@ -121,27 +109,22 @@ void application_task ( void ) {
     alphanumg_write_number( &alphanumg, 2,  3 );
     alphanumg_write_number( &alphanumg, 3,  4 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AlphaNumG
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

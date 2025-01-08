@@ -1,74 +1,69 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Timer Click
 
-Timer Click is a mikroBUS add-on board with Maxim’s DS1682 total elapsed time recorder. The main feature of the IC is its elapsed time counter (ETC) used in conjunction with the ALARM pin.
+> [Timer Click](https://www.mikroe.com/?pid_product=MIKROE-2333) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/timer_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2333&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/timer-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Timer Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Timer Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void timer_cfg_setup ( timer_cfg_t *cfg ); 
- 
-- Initialization function.
-> TIMER_RETVAL timer_init ( timer_t *ctx, timer_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Get elapsed time counter (ETC) data function
-> uint32_t timer_get_etc_data ( timer_t *ctx );
- 
-- Get elapsed time counter (ETC) seconds function
-> uint32_t timer_get_etc_seconds ( timer_t *ctx );
-
-- Set elapsed time counter (ETC) time function
-> void timer_get_time ( timer_t *ctx, uint16_t *time_days, uint8_t *time_hours, uint8_t *time_minutes, uint8_t *time_seconds );
-
-## Examples Description
+## Example Description
 
 > This application is multifunctional 3-axis digital accelerometer that can also be configured as a 45-degree Tilt sensor.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Timer
+
+### Example Key Functions
+
+- `timer_cfg_setup` Config Object Initialization function. 
+```c
+void timer_cfg_setup ( timer_cfg_t *cfg );
+``` 
+ 
+- `timer_init` Initialization function. 
+```c
+err_t timer_init ( timer_t *ctx, timer_cfg_t *cfg );
+```
+
+- `timer_get_etc_data` Get elapsed time counter (ETC) data function. 
+```c
+uint32_t timer_get_etc_data ( timer_t *ctx );
+```
+ 
+- `timer_get_etc_seconds` Get elapsed time counter (ETC) seconds function. 
+```c
+uint32_t timer_get_etc_seconds ( timer_t *ctx );
+```
+
+- `timer_get_time` Set elapsed time counter (ETC) time function. 
+```c
+void timer_get_time ( timer_t *ctx, uint16_t *time_days, uint8_t *time_hours, uint8_t *time_minutes, uint8_t *time_seconds );
+```
+
+### Application Init
 
 > Initialization driver enable's - I2C,
 > soft reset, sets ETC and EC start ( seconds ), hardwere reset and > start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -117,7 +112,6 @@ void application_init ( void )
     log_printf( &logger, "        ETC       \r\n" );
     log_printf( &logger, "------------------\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -131,7 +125,6 @@ void application_init ( void )
 > All data logs write on usb uart changes for every 1 sec.
 
 ```c
-
 void application_task ( )
 {
     static uint8_t time_seconds_new = 0xFF;
@@ -159,25 +152,19 @@ void application_task ( )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Timer
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

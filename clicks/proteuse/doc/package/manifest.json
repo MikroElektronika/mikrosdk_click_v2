@@ -1,0 +1,22 @@
+{
+    "display_name": "Proteus-e Click",
+    "name": "mikroe.click.proteuse",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6429",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Proteus-e Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Proteuse",
+                "subdir_name": "lib_proteuse",
+                "path": "Proteus-e Click/data/lib_proteuse"
+            }
+        ]
+    }
+}

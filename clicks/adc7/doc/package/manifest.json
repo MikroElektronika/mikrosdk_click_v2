@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ADC 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.adc7",
-    "product_link": "https://www.mikroe.com/adc-7-click",
-    "short_description": "ADC 7 Click is an advanced 32-bit analog to digital converter (ADC) which uses the LTC2500-32, a 32-bit oversampling SAR ADC with a configurable digital filter. The filter provides several presets (selectable via the hardware pin), as well as programming of the filtering parameters, via the industry-standard SPI interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2533
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Adc7",
-    "subdir_name": "lib_adc7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3115",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Adc7",
+                "subdir_name": "lib_adc7",
+                "path": "ADC 7 Click/data/lib_adc7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

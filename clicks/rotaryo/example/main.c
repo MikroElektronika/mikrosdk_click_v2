@@ -16,7 +16,7 @@
  * using the SPI interface
  *
  * @note
- * In order to use all of the clicks functionality, pull down INT pin.
+ * In order to use all of the Clicks functionality, pull down INT pin.
  *
  * @author Stefan Ilic
  *

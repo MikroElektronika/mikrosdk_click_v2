@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # MCP73871 Click
 
-MCP73871 Click is a fully integrated solution for system power delivery and Li-Po/Li-Ion battery charge management.
+> [MCP73871 Click](https://www.mikroe.com/?pid_product=MIKROE-2858) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mcp73871_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2858&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/mcp73871-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Mcp73871 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Mcp73871 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void mcp73871_cfg_setup ( mcp73871_cfg_t *cfg ); 
- 
-- Initialization function.
-> MCP73871_RETVAL mcp73871_init ( mcp73871_t *ctx, mcp73871_cfg_t *cfg );
-
-#### Example key functions :
-
-- Enable pin control
-> void mcp73871_enable_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
- 
-- Prog pin control
-> void mcp73871_prog_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
-
-- Timer pin control
-> void mcp73871_timer_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
-
-## Examples Description
+## Example Description
 
 > This application is battery charger.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Mcp73871
+
+### Example Key Functions
+
+- `mcp73871_cfg_setup` Config Object Initialization function. 
+```c
+void mcp73871_cfg_setup ( mcp73871_cfg_t *cfg );
+``` 
+ 
+- `mcp73871_init` Initialization function. 
+```c
+err_t mcp73871_init ( mcp73871_t *ctx, mcp73871_cfg_t *cfg );
+```
+
+- `mcp73871_enable_pin_control` Enable pin control. 
+```c
+void mcp73871_enable_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
+```
+ 
+- `mcp73871_prog_pin_control` Prog pin control. 
+```c
+void mcp73871_prog_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
+```
+
+- `mcp73871_timer_pin_control` Timer pin control. 
+```c
+void mcp73871_timer_pin_control ( mcp73871_t *ctx, uint8_t pin_state );
+```
+
+### Application Init
 
 > Initializes the Click driver, and enables the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -89,7 +87,6 @@ void application_init ( void )
     MCP73871_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     mcp73871_init( &mcp73871, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -99,35 +96,27 @@ void application_init ( void )
 > and enables safety timer.
 
 ```c
-
 void application_task ( void )
 {
     mcp73871_enable_pin_control( &mcp73871, 1 );
     mcp73871_prog_pin_control( &mcp73871, 0 );
     mcp73871_timer_pin_control( &mcp73871, 0 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Mcp73871
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

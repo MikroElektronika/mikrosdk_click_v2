@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Relay Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.relay",
-    "product_link": "https://www.mikroe.com/relay-click",
-    "short_description": "Relay Click is a dual relay Click board, which can be operated by the host MCU. This Click board offers an elegant and easy solution for controlling a wide range of high power applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        526
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Relay",
-    "subdir_name": "lib_relay"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1370",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Relay Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Relay",
+                "subdir_name": "lib_relay",
+                "path": "Relay Click/data/lib_relay"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

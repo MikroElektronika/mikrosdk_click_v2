@@ -1,8 +1,5 @@
 {
     "name": "EERAM 3 Click",
-    "description": "EERAM 3 Click is a compact add-on board that contains EERAM memory designed to retain data during power loss without the aid of external batteries. This board features the 48L256, a serial EERAM with SRAM memory core, including hidden EEPROM backup from Microchip Technology.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","48L256T"],
-    "category" : ["SRAM"]
+    "hw" : ["Click","48L256T"]
 }

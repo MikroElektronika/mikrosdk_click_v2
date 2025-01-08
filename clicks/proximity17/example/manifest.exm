@@ -1,8 +1,5 @@
 {
     "name": "Proximity 17 Click",
-    "description": "Proximity 17 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the TMD2635, a miniature proximity sensor module from ams AG. The TMD2635 features advanced proximity measurement in a tiny and thin optical land grid array module that incorporates a 940nm infrared vertical-cavity surface-emitting laser (IR VCSEL) factory calibrated for IR proximity response. It also offers advanced crosstalk noise cancellation through a wide range of offset adjustments through a digital fast-mode I2C interface to compensate for unwanted IR energy reflection at the sensor. This Click board™ is suitable for consumer and industrial applications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TMD26353M"],
-    "category" : ["Proximity"]
+    "hw" : ["Click","TMD26353M"]
 }

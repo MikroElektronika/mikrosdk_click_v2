@@ -1,41 +1,37 @@
-\mainpage Main Page
- 
 
 ---
 # Waveform  Click
 
-> Waveform Click is a precise sine/triangle/square waveform generator, capable of reproducing frequencies up to 12MHz.
+> [Waveform Click](https://www.mikroe.com/?pid_product=MIKROE-3309) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/waveform_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3309&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/waveform-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Waveform Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example demonstrates the use of Waveform Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Waveform Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Waveform
 
-#### Standard key functions :
+### Example Key Functions
 
 - `waveform_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +42,6 @@ void waveform_cfg_setup ( waveform_cfg_t *cfg );
 ```c
 err_t waveform_init ( waveform_t *ctx, waveform_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `waveform_sine_output` Sinusoide output function
 ```c
@@ -64,18 +58,11 @@ void waveform_triangle_output ( waveform_t *ctx, uint32_t freq );
 void waveform_square_output ( waveform_t *ctx, uint32_t freq );
 ```
 
-## Examples Description
-
-> This example demonstrates the use of Waveform Click board.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the communication interface and configures the Click board.
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -108,7 +95,6 @@ void application_init ( )
     waveform_display_commands ( );
     log_info( &logger, " Application Task " );
 }
-  
 ```
 
 ### Application Task
@@ -117,7 +103,6 @@ void application_init ( )
 > Changes the signal frequency, waveform or amplitude depending on the receiver command.
 
 ```c
-
 void application_task ( )
 {
     uint8_t command = 0;
@@ -126,28 +111,21 @@ void application_task ( )
         waveform_parse_command ( command );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Waveform
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

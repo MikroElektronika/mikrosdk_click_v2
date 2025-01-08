@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # LED Driver 8 Click
 
-LED Driver 8 Click is a compact add-on board optimized for dimming and blinking 32 mA RGBA LEDs. This board features the PCA9957HNMP, 24-channel SPI-compatible constant current LED driver from NXP Semiconductors.
+> [LED Driver 8 Click](https://www.mikroe.com/?pid_product=MIKROE-4268) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/leddriver8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4268&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/led-driver-8-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Sep 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the LedDriver8 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for LedDriver8 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void leddriver8_cfg_setup ( leddriver8_cfg_t *cfg ); 
- 
-- Initialization function.
-> LEDDRIVER8_RETVAL leddriver8_init ( leddriver8_t *ctx, leddriver8_cfg_t *cfg );
-
-#### Example key functions :
-
-- Function for set Brightness
-> void leddriver8_set_brightness ( leddriver8_t *ctx, uint8_t num_led, uint8_t value );
- 
-- Function for set output gain
-> void leddriver8_set_output_gain ( leddriver8_t *ctx, uint8_t num_led, uint8_t value );
-
-- Function for set mode registers
-> void leddriver8_set_mode_register( leddriver8_t *ctx, uint8_t mode_1, uint8_t mode_2 );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of LED Driver 8 Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LedDriver8
+
+### Example Key Functions
+
+- `leddriver8_cfg_setup` Config Object Initialization function. 
+```c
+void leddriver8_cfg_setup ( leddriver8_cfg_t *cfg );
+``` 
+ 
+- `leddriver8_init` Initialization function. 
+```c
+err_t leddriver8_init ( leddriver8_t *ctx, leddriver8_cfg_t *cfg );
+```
+
+- `leddriver8_set_brightness` Function for set Brightness. 
+```c
+void leddriver8_set_brightness ( leddriver8_t *ctx, uint8_t num_led, uint8_t value );
+```
+ 
+- `leddriver8_set_output_gain` Function for set output gain. 
+```c
+void leddriver8_set_output_gain ( leddriver8_t *ctx, uint8_t num_led, uint8_t value );
+```
+
+- `leddriver8_set_mode_register` Function for set mode registers. 
+```c
+void leddriver8_set_mode_register ( leddriver8_t *ctx, uint8_t mode_1, uint8_t mode_2 );
+```
+
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +97,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Task ----" );
     Delay_ms ( 500 );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +105,6 @@ void application_init ( void )
 > Each step will be logged on the USB UART where you can track the program flow.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t cnt;
@@ -131,28 +127,21 @@ void application_task ( void )
        Delay_ms ( 1000 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LedDriver8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,0 +1,22 @@
+{
+    "display_name": "NFC 7 I2C Click",
+    "name": "mikroe.click.nfc7i2c",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6453",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NFC 7 I2C Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NFC7I2C",
+                "subdir_name": "lib_nfc7i2c",
+                "path": "NFC 7 I2C Click/data/lib_nfc7i2c"
+            }
+        ]
+    }
+}

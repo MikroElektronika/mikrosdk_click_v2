@@ -1,8 +1,5 @@
 {
     "name": "Stepper 22 Click",
-    "description": "Stepper 22 Click is a compact add-on board designed for precise motion control of bipolar stepper motors and brushed DC motors. This board features the DRV8711, a bipolar stepper motor gate driver from Texas Instruments, which uses external N-channel MOSFETs to drive motors with up to 5A of output current. The board features a wide range of microstepping options from full-step to 1/256-step, adaptive blanking time, and various current decay modes, ensuring smooth and accurate motor operation. Control is achieved via a standard SPI interface and STEP/DIR inputs, with additional management through an onboard I2C-configurable GPIO expander.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8711DCPR","PCA9538A"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","DRV8711DCPR","PCA9538A"]
 }

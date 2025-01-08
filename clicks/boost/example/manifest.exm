@@ -1,8 +1,5 @@
 {
     "name": "BOOST Click",
-    "description": "Boost Click carries Microchip’s MIC2606, a 2MHz, PWM DC/DC boost switching regulator available in a 2mm x 2mm MLF® package.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MIC2606, MCP3551, MCP4921"],
-    "category" : ["Boost"] 
+    "hw" : ["Click","MIC2606, MCP3551, MCP4921"]
 }

@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > RS232",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RS232 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rs232",
-    "product_link": "https://www.mikroe.com/rs232-click",
-    "short_description": "RS232 Click provides an interface between the TTL/CMOS logic levels commonly used on microcontrollers and the RS-232 bus.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1007
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Rs232",
-    "subdir_name": "lib_rs232"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2897",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RS232 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Rs232",
+                "subdir_name": "lib_rs232",
+                "path": "RS232 Click/data/lib_rs232"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

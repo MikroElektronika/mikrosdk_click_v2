@@ -1,89 +1,77 @@
-\mainpage Main Page
 
 ---
 # Charger 3 Click
 
-> Charger 3 Click is a compact add-on board that represents a standalone battery charger with thermal regulation. This board features the TP4056, a complete constant-current/constant-voltage linear charger for single-cell lithium-ion batteries from NanJing Top Power ASIC Corp.
+> [Charger 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4449) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/charger3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4449&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/charger-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Nikolic
 - **Date**          : nov 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Charger3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the utilization of Charger 3 Click.
 
-## Library Description
+### Example Libraries
 
-```
-This library contains API for Charger3 Click driver.
-```
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Charger3
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-```
+- `charger3_cfg_setup` Config Object Initialization function.
+```c
 void charger3_cfg_setup ( charger3_cfg_t *cfg );
 ```
 
-- Initialization function.
-```
-CHARGER3_RETVAL charger3_init ( charger3_t *ctx, charger3_cfg_t *cfg );
+- `charger3_init` Initialization function.
+```c
+err_t charger3_init ( charger3_t *ctx, charger3_cfg_t *cfg );
 ```
 
-- Click Default Configuration function.
-```
+- `charger3_default_cfg` Click Default Configuration function.
+```c
 void charger3_default_cfg ( charger3_t *ctx );
 ```
 
-#### Example key functions :
-
-- Charger 3 enable write function.
-```
+- `charger3_enable_write` Charger 3 enable write function.
+```c
 void charger3_enable_write ( charger3_t *ctx );
 ```
 
-- Charger 3 set current function.
-```
+- `charger3_set_current` Charger 3 set current function.
+```c
 uint8_t charger3_set_current ( charger3_t *ctx, float curr_value );
 ```
 
-- Charger 3 calculate digipot resistance function.
-```
+- `charger3_calc_digipot_res` Charger 3 calculate digipot resistance function.
+```c
 float charger3_calc_digipot_res ( charger3_t *ctx );
 ```
 
-## Examples Description
-
-This example demonstrates the utilization of Charger 3 Click.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
-The application init sets up the UART LOG and I2C communication
+> The application init sets up the UART LOG and I2C communication
 drivers. The default configuration disables write protection
 and sets the operation mode to charging.
 
-```
-void application_init ( void ) {
+```c
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     charger3_cfg_t charger3_cfg;  /**< Click config object. */
 
@@ -122,14 +110,15 @@ void application_init ( void ) {
 
 ### Application Task
 
-Task consists of two operations. First, the desired battery
+> Task consists of two operations. First, the desired battery
 charging current is set by the user. Since setting the current
 doesn't implicitly reveals the resistance, the value
 of AD5175 digipot is directly read from the RDAC register,
 calculated and displayed on the uart log.
 
-```
-void application_task ( void ) {
+```c
+void application_task ( void ) 
+{
     float result;
     
     charger3_set_current( &charger3, 0.4 );
@@ -145,29 +134,26 @@ void application_task ( void ) {
 }
 ```
 
-## Note
+### Note
 
 While the resistance of the AD5175 can be directly set and read,
 the total resistance value on the PROG pin should be accounted for
 ( this means an additional 1kohm in series ) setting of the
 battery charging current.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Charger3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

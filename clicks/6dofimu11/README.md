@@ -1,89 +1,94 @@
-\mainpage Main Page
- 
- 
+
 ---
 # 6DOF IMU 11 Click
 
-The 6DOF IMU 11 Click is a Click board™ based on the KMX63, a 6 Degrees-of-Freedom inertial sensor system on a single, silicon chip, which is designed to strike a balance between current consumption and noise performance with excellent bias stability over temperature. 
+> [6DOF IMU 11 Click](https://www.mikroe.com/?pid_product=MIKROE-3869) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/6dofimu11_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3869&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/6dof-imu-11-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the 6DofImu11 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for 6DofImu11 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c6dofimu11_cfg_setup ( c6dofimu11_cfg_t *cfg ); 
- 
-- Initialization function.
-> C6DOFIMU11_RETVAL c6dofimu11_init ( c6dofimu11_t *ctx, c6dofimu11_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c6dofimu11_default_cfg ( c6dofimu11_t *ctx );
-
-
-#### Example key functions :
-
-- Configuration Accel function
-> void c6dofimu11_config_accel ( c6dofimu11_t *ctx, uint8_t data_rate, uint8_t data_range, uint8_t data_resolution )
-
-- Configuration Magnetometer function
-> void c6dofimu11_config_mag ( c6dofimu11_t *ctx, uint8_t data_rate, uint8_t data_resolution )
-
-- Get axis data function
-> int16_t c6dofimu11_get_axis ( c6dofimu11_t *ctx, uint8_t reg_add_lsb )
-
-- Read Accel X-axis, Y-axis and Z-axis function
-> void c6dofimu11_get_accel_data ( c6dofimu11_t *ctx, int16_t *accel_x, int16_t *accel_y, int16_t *accel_z )
-
-- Read Magnetometer X-axis, Y-axis and Z-axis function
-> void c6dofimu11_get_mag_data ( c6dofimu11_t *ctx, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z )
-
-- Get Accel range X, Y and Z value ( g ) function
-> void c6dofimu11_read_accel (  c6dofimu11_t *ctx, c6dofimu11_accel_t *accel_data )
-
-- Get Magnetometer magnetic field strength X, Y and Z value ( nT ) function
-> void c6dofimu11_read_mag ( c6dofimu11_t *ctx, c6dofimu11_mag_t *mag_data )
-
-
-## Examples Description
+## Example Description
 
 > Designed to strike a balance between current consumption and noise performance with excellent bias stability over temperature
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.6DofImu11
+
+### Example Key Functions
+
+- `c6dofimu11_cfg_setup` Config Object Initialization function. 
+```c
+void c6dofimu11_cfg_setup ( c6dofimu11_cfg_t *cfg );
+``` 
+ 
+- `c6dofimu11_init` Initialization function. 
+```c
+err_t c6dofimu11_init ( c6dofimu11_t *ctx, c6dofimu11_cfg_t *cfg );
+```
+
+- `c6dofimu11_default_cfg` Click Default Configuration function. 
+```c
+void c6dofimu11_default_cfg ( c6dofimu11_t *ctx );
+```
+
+- `c6dofimu11_config_accel` Configuration Accel function. 
+```c
+void c6dofimu11_config_accel (  c6dofimu11_t *ctx, uint8_t data_rate, uint8_t data_range, uint8_t data_resolution  );
+```
+
+- `c6dofimu11_config_mag` Configuration Magnetometer function. 
+```c
+void c6dofimu11_config_mag (  c6dofimu11_t *ctx, uint8_t data_rate, uint8_t data_resolution  );
+```
+
+- `c6dofimu11_get_axis` Get axis data function. 
+```c
+int16_t c6dofimu11_get_axis (  c6dofimu11_t *ctx, uint8_t reg_add_lsb  );
+```
+
+- `c6dofimu11_get_accel_data` Read Accel X-axis, Y-axis and Z-axis function. 
+```c
+void c6dofimu11_get_accel_data (  c6dofimu11_t *ctx, int16_t *accel_x, int16_t *accel_y, int16_t *accel_z  );
+```
+
+- `c6dofimu11_get_mag_data` Read Magnetometer X-axis, Y-axis and Z-axis function. 
+```c
+void c6dofimu11_get_mag_data (  c6dofimu11_t *ctx, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z  );
+```
+
+- `c6dofimu11_read_accel` Get Accel range X, Y and Z value ( g ) function. 
+```c
+void c6dofimu11_read_accel (   c6dofimu11_t *ctx, c6dofimu11_accel_t *accel_data  );
+```
+
+- `c6dofimu11_read_mag` Get Magnetometer magnetic field strength X, Y and Z value ( nT ) function. 
+```c
+void c6dofimu11_read_mag (  c6dofimu11_t *ctx, c6dofimu11_mag_t *mag_data  );
+```
+
+### Application Init
 
 > Initialization driver enables - I2C, check device ID,
   sets default configuration, also write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -127,7 +132,6 @@ void application_init ( void )
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -138,7 +142,6 @@ void application_init ( void )
 > All data logs write on USB uart changes for every 2 sec. 
 
 ```c
-
 void application_task ( void )
 {
 c6dofimu11_mag_t mag_data;
@@ -169,30 +172,22 @@ c6dofimu11_mag_t mag_data;
     c6dofimu11_uart_sign_print (  );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.6DofImu11
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

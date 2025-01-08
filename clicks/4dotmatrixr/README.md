@@ -1,74 +1,73 @@
-\mainpage Main Page
- 
+
 ---
 # 4Dot-Matrix R Click
 
-4Dot-Matrix R Click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.
+> [4Dot-Matrix R Click](https://www.mikroe.com/?pid_product=MIKROE-2706) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/4dotmatrixr_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2706&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/4dot-matrix-r-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : May 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the c4dotmatrixr Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for c4dotmatrixr Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c4dotmatrixr_cfg_setup ( c4dotmatrixr_cfg_t *cfg ); 
- 
-- Initialization function.
-> C4DOTMATRIXR_RETVAL c4dotmatrixr_init ( c4dotmatrixr_t *ctx, c4dotmatrixr_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c4dotmatrixr_default_cfg ( c4dotmatrixr_t *ctx );
-
-
-#### Example key functions :
-
-- 4DotMatrix Char Write.
-> void c4dot_write_char ( c4dotmatrixr_t *ctx, uint8_t char_num, uint8_t char_value );
- 
-- 4DotMatrix Char 0 Write.
-> void c4dot_write_char0 ( c4dotmatrixr_t *ctx, uint8_t char_value );
-
-- 4DotMatrix Text Write.
-> void c4dot_write_text ( c4dotmatrixr_t *ctx, uint8_t *text_to_write );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of 4Dot-Matrix R Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.4dotmatrixr
+
+### Example Key Functions
+
+- `c4dotmatrixr_cfg_setup` Config Object Initialization function. 
+```c
+void c4dotmatrixr_cfg_setup ( c4dotmatrixr_cfg_t *cfg );
+``` 
+ 
+- `c4dotmatrixr_init` Initialization function. 
+```c
+err_t c4dotmatrixr_init ( c4dotmatrixr_t *ctx, c4dotmatrixr_cfg_t *cfg );
+```
+
+- `c4dotmatrixr_default_cfg` Click Default Configuration function. 
+```c
+void c4dotmatrixr_default_cfg ( c4dotmatrixr_t *ctx );
+```
+
+- `c4dot_write_char` 4DotMatrix Char Write. 
+```c
+void c4dot_write_char ( c4dotmatrixr_t *ctx, uint8_t char_num, uint8_t char_value );
+```
+ 
+- `c4dot_write_char0` 4DotMatrix Char 0 Write. 
+```c
+void c4dot_write_char0 ( c4dotmatrixr_t *ctx, uint8_t char_value );
+```
+
+- `c4dot_write_text` 4DotMatrix Text Write. 
+```c
+void c4dot_write_text ( c4dotmatrixr_t *ctx, uint8_t *text_to_write );
+```
+
+### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -96,7 +95,6 @@ void application_init ( void )
     c4dotmatrixr_default_cfg ( &c4dotmatrixr );
     log_info( &logger, "---- Application Task ----" );
 }
-  
 ```
 
 ### Application Task
@@ -105,7 +103,6 @@ void application_init ( void )
 > Each step will be logged on the USB UART where you can track the program flow.
 
 ```c
-
 void application_task ( void )
 {
     int8_t i;
@@ -132,29 +129,22 @@ void application_task ( void )
     // Clear and delay.
     c4dot_clear_display( &c4dotmatrixr );
     Delay_ms ( 500 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.4dotmatrixr
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

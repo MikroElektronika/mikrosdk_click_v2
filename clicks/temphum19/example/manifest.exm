@@ -1,8 +1,5 @@
 {
     "name": "TempHum 19 Click",
-    "description": "Temp&Hum 19 Click is a compact add-on board that represents temperature and humidity sensing solution. This board features the BPS240, a highly accurate relative humidity and temperature sensor from Bourns. This sensor, characterized by its high accuracy (±2% from 20% to 80%RH (±4% over entire humidity range)) and high resolution, provides 10-bit data to the host controller with a configurable I2C interface.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","BPS240"],
-    "category" : ["Temperature & humidity"]
+    "hw" : ["Click","BPS240"]
 }

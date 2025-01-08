@@ -1,84 +1,80 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Pressure 5 Click
 
-Pressure 5 Click is a barometric pressure measurement Click board™, which features the BMP388, an accurate absolute barometric pressure sensor.
+> [Pressure 5 Click](https://www.mikroe.com/?pid_product=MIKROE-3566) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pressure5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3566&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pressure-5-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Pressure5 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Pressure5 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void pressure5_cfg_setup ( pressure5_cfg_t *cfg ); 
- 
-- Initialization function.
-> PRESSURE5_RETVAL pressure5_init ( pressure5_t *ctx, pressure5_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void pressure5_default_cfg ( pressure5_t *ctx );
-
-
-#### Example key functions :
-
-- This function allows you to update the calibration coefficient.
-> void pressure5_update_coefficient(pressure5_t *ctx);
- 
-- This function gets temperature in Celsius.
-> float pressure5_get_temperature_data(pressure5_t *ctx);
-
-
-- This function gets pressure in mBar.
-> float pressure5_get_pressure_data(pressure5_t *ctx);
-
-## Examples Description
+## Example Description
 
 > This example performs temperature & pressure measurement every 2 seconds.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Pressure5
+
+### Example Key Functions
+
+- `pressure5_cfg_setup` Config Object Initialization function. 
+```c
+void pressure5_cfg_setup ( pressure5_cfg_t *cfg );
+``` 
+ 
+- `pressure5_init` Initialization function. 
+```c
+err_t pressure5_init ( pressure5_t *ctx, pressure5_cfg_t *cfg );
+```
+
+- `pressure5_default_cfg` Click Default Configuration function. 
+```c
+void pressure5_default_cfg ( pressure5_t *ctx );
+```
+
+- `pressure5_update_coefficient` This function allows you to update the calibration coefficient. 
+```c
+void pressure5_update_coefficient ( pressure5_t *ctx );
+```
+ 
+- `pressure5_get_temperature_data` This function gets temperature in Celsius. 
+```c
+float pressure5_get_temperature_data ( pressure5_t *ctx );
+```
+
+- `pressure5_get_pressure_data` This function gets pressure in mBar. 
+```c
+float pressure5_get_pressure_data ( pressure5_t *ctx );
+```
+
+### Application Init
 
 > Initialize driver init, test comunication, software reset, update
 > coefficient and configuration module for start measurement.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
     pressure5_cfg_t cfg;
     uint8_t tmp;
-    PRESSURE5_RETVAL init_ret;
+err_t init_ret;
 
     /** 
      * Logger initialization.
@@ -100,7 +96,6 @@ void application_init ( void )
     pressure5_init( &pressure5, &cfg );
     pressure5_default_cfg( &pressure5 );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +103,6 @@ void application_init ( void )
 > Reads Pressure data in [mBar] and Temperature data in [C] and logs data every seconds.
 
 ```c
-
 void application_task ( void )
 {
     //  Task implementation.
@@ -125,25 +119,19 @@ void application_task ( void )
 
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Pressure5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

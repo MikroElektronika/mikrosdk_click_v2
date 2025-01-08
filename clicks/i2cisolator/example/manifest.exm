@@ -1,8 +1,5 @@
 {
     "name": "I2C Isolator Click",
-    "description": "I2C Isolator Click carries ISO1540, a low-power, bidirectional isolator compatible with I2C interfaces. On the board, the Texas Instruments chip is connected to two sets of I2C pins, one on the mikroBUS connector (SDA, SCL), the other on the upper edge of the board (SCL2, SDL2).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ISO1540"],
-    "category" : ["I2C"] 
+    "hw" : ["Click","ISO1540"]
 }

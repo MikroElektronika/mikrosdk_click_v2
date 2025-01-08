@@ -1,72 +1,69 @@
-\mainpage Main Page
- 
 
 ---
 # DC MOTOR 5 Click
 
-DC MOTOR 5 Click carries the DRV8701 brushed DC motor gate driver from Texas Instruments.
+> [DC Motor 5 Click](https://www.mikroe.com/?pid_product=MIKROE-2699) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dcmotor5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2699&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dc-motor-5-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Nikola Peric
 - **Date**          : Feb 2022.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the DcMotor5 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for DcMotor5 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void dcmotor5_cfg_setup ( dcmotor5_cfg_t *cfg ); 
- 
-- Initialization function.
-> DCMOTOR5_RETVAL dcmotor5_init ( dcmotor5_t *ctx, dcmotor5_cfg_t *cfg );
-
-#### Example key functions :
-
-- Function brakes the engine by setting IN1 ( PWM ) and IN2 ( INT ) pins on DC Motor 5 Click board.
-> void dcmotor5_short_brake ( dcmotor5_t *ctx );
- 
-- Function stops the engine by clearing IN1 ( PWM ) and IN2 ( INT ) pins on DC Motor 5 Click board.
-> void dcmotor5_stop ( dcmotor5_t *ctx );
-
-- Function disables the engine by clearing SLEEP ( RST ) pin on DC Motor 5 Click board.
-> void dcmotor5_enable ( dcmotor5_t *ctx );
-
-## Examples Description
+## Example Description
 
 >  This library contains API for the DC Motor 5 Click driver.
 >  This application enables usage of brushed DC motor 5 gate driver.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DcMotor5
+
+### Example Key Functions
+
+- `dcmotor5_cfg_setup` Config Object Initialization function. 
+```c
+void dcmotor5_cfg_setup ( dcmotor5_cfg_t *cfg );
+``` 
+ 
+- `dcmotor5_init` Initialization function. 
+```c
+err_t dcmotor5_init ( dcmotor5_t *ctx, dcmotor5_cfg_t *cfg );
+```
+
+- `dcmotor5_short_brake` Function brakes the engine by setting IN1 ( PWM ) and IN2 ( INT ) pins on DC Motor 5 Click board. 
+```c
+void dcmotor5_short_brake ( dcmotor5_t *ctx );
+```
+ 
+- `dcmotor5_stop` Function stops the engine by clearing IN1 ( PWM ) and IN2 ( INT ) pins on DC Motor 5 Click board. 
+```c
+void dcmotor5_stop ( dcmotor5_t *ctx );
+```
+
+- `dcmotor5_enable` Function disables the engine by clearing SLEEP ( RST ) pin on DC Motor 5 Click board. 
+```c
+void dcmotor5_enable ( dcmotor5_t *ctx );
+```
+
+### Application Init
 
 > Initializes GPIO, PWM and logger and enables the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +96,6 @@ void application_init ( void )
     log_printf( &logger, "---------------------\r\n" );
     log_info( &logger, "---- Application Task ----" );
 }
-  
 ```
 
 ### Application Task
@@ -111,7 +107,6 @@ void application_init ( void )
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( )
 {    
     static float duty;
@@ -164,29 +159,22 @@ void application_task ( )
     }
         
 }
-
 ```
  
 
-The full application code, and ready to use projects can be installed directly form compilers IDE(recommended) or found on LibStock page or mikroE GitHub account.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DcMotor5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

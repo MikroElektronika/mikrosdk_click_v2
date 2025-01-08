@@ -1,72 +1,68 @@
-\mainpage Main Page
- 
 
 ---
 # Oximeter 2 Click
 
-Oximeter 2 Click is a compact add-on board suitable for measuring blood oxygen saturation.
+> [Oximeter2 Click](https://www.mikroe.com/?pid_product=MIKROE-4292) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/oximeter2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4292&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/oximeter-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Oximeter2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Oximeter2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void oximeter2_cfg_setup ( oximeter2_cfg_t *cfg ); 
- 
-- Initialization function.
-> OXIMETER2_RETVAL oximeter2_init ( oximeter2_t *ctx, oximeter2_cfg_t *cfg );
-
-#### Example key functions :
-
-- Generic read function.
-> uint8_t oximeter2_generic_read ( oximeter2_t *ctx, uint8_t reg );
- 
-- Gets state of the int pin
-> uint8_t oximeter2_get_int_status ( oximeter2_t *ctx );
-
-- Generic function for reading als and proximity values
-> uint16_t oximeter3_read_value ( oximeter3_t *ctx, uint8_t type_macro );
-
-## Examples Description
+## Example Description
 
 > This application collects data from the sensor, calculates it and then logs the result.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Oximeter2
+
+### Example Key Functions
+
+- `oximeter2_cfg_setup` Config Object Initialization function. 
+```c
+void oximeter2_cfg_setup ( oximeter2_cfg_t *cfg );
+``` 
+ 
+- `oximeter2_init` Initialization function. 
+```c
+err_t oximeter2_init ( oximeter2_t *ctx, oximeter2_cfg_t *cfg );
+```
+
+- `oximeter2_generic_read` Generic read function. 
+```c
+uint8_t oximeter2_generic_read ( oximeter2_t *ctx, uint8_t reg );
+```
+ 
+- `oximeter2_get_int_status` Gets state of the int pin. 
+```c
+uint8_t oximeter2_get_int_status ( oximeter2_t *ctx );
+```
+
+- `oximeter3_read_value` Generic function for reading als and proximity values. 
+```c
+uint16_t oximeter3_read_value ( oximeter3_t *ctx, uint8_t type_macro );
+```
+
+### Application Init
 
 > Initializes driver and performs the device configuration which puts Time Slot A and Time Slot B modes to active state. Before the device configuration, the SW reset will be performed, which puts the registers in their initial state.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -92,7 +88,6 @@ void application_init ( void )
     oximeter2_init( &oximeter2, &cfg );
     oximeter2_default_cfg( &oximeter2 );
 }
-  
 ```
 
 ### Application Task
@@ -100,7 +95,6 @@ void application_init ( void )
 > Application measures value of oxygen level in blood of a human. 
 
 ```c
-
 void oximeter2_write_res ( uint32_t data_write )
 {
     log_printf( &logger, "%u\r\n", data_write );
@@ -160,28 +154,21 @@ void application_task ( void )
 {
     oximeter2_logs_results();
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Oximeter2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

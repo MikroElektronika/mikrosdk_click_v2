@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # GNSS 16 Click
 
-> GNSS 16 Click is a compact add-on board that delivers meter-level accuracy in urban environments. This Click board™ features the NEO-F10N-00B, a professional-grade L1/L5 dual-band GNSS receiver from u-blox. It features dual-band multipath mitigation technology to ensure robust signal reception and supports multiple GNSS systems, including GPS, Galileo, and BeiDou. Configurable for specific constellations, it optimizes power consumption while maintaining high performance.
+> [GNSS 16 Click](https://www.mikroe.com/?pid_product=MIKROE-6129) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gnss16_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6129&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gnss-16-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2024.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the GNSS 16 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of GNSS 16 Click board by processing
+> the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for GNSS 16 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.GNSS16
 
-#### Standard key functions :
+### Example Key Functions
 
 - `gnss16_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +44,6 @@ void gnss16_cfg_setup ( gnss16_cfg_t *cfg );
 err_t gnss16_init ( gnss16_t *ctx, gnss16_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `gnss16_parse_gngga` This function parses the GNGGA data from the read response buffer.
 ```c
 err_t gnss16_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_data );
@@ -57,13 +53,6 @@ err_t gnss16_parse_gngga ( char *rsp_buf, uint8_t gngga_element, char *element_d
 ```c
 void gnss16_reset_device ( gnss16_t *ctx );
 ```
-
-## Example Description
-
-> This example demonstrates the use of GNSS 16 Click board by processing
-> the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -117,22 +106,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.GNSS16
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

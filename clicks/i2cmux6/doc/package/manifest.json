@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > I2C",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "I2C MUX 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.i2cmux6",
-    "product_link": "https://www.mikroe.com/i2c-mux-6-click",
-    "short_description": "I2C MUX 6 Click is a compact add-on board representing a bidirectional selector dedicated to I2C slave address conflicts applications. This board features the PCA9518, an expandable five-channel bidirectional buffer controlled by the I2C-bus from Texas Instruments. The PCA9518 overcomes the restriction of maximum bus capacitance by separating and buffering the I2C data (SDA) and clock (SCL) lines into multiple groups of 400pF I2C channels. It provides activation of the desired channel via a given Enable pin and permits extension of the I2C-bus, through an onboard expansion header, by buffering both the data (SDA) and the clock (SCL) lines enabling virtually an unlimited number of buses of 400pF.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.I2CMUX6",
-    "subdir_name": "lib_i2cmux6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5168",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "I2C MUX 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.I2CMUX6",
+                "subdir_name": "lib_i2cmux6",
+                "path": "I2C MUX 6 Click/data/lib_i2cmux6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

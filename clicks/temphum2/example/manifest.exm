@@ -1,8 +1,5 @@
 {
     "name": "TempHum 2 Click",
-    "description": "Temp&Hum 2 Click is a smart temperature and humidity sensor Click board™, packed with features, that allow easy and simple integration into any design that requires accurate and reliable humidity and temperature measurements.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","Si7034"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","Si7034"]
 }

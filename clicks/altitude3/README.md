@@ -1,77 +1,76 @@
-\mainpage Main Page
- 
+
 ---
 # Altitude 3 Click
 
-Altitude 3 Click allows high-resolution barometric pressure measurement, by utilizing the ICP-10100, an integrated barometric pressure and temperature sensor.
+> [Altitude 3 Click](https://www.mikroe.com/?pid_product=MIKROE-3328) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/altitude3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3328&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/altitude-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Altitude3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Altitude3 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void altitude3_cfg_setup ( altitude3_cfg_t *cfg ); 
- 
-- Initialization function.
-> ALTITUDE3_RETVAL altitude3_init ( altitude3_t *ctx, altitude3_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void altitude3_default_cfg ( altitude3_t *ctx );
-
-
-#### Example key functions :
-
-- Function sends a command to perform a SW Reset of the device.
-> void altitude3_soft_reset ( altitude3_t *ctx );
- 
-- Function reads results of AD conversion, which consists of the 16bit temperature and 24bit
-- pressure data in determined order.
-> uint8_t altitude3_read_adc_results ( altitude3_t *ctx, uint8_t read_order );
-
-- Function performs a calibration data reading, only once, and then reads a temperature and pressure
-- data and calculates these values
-- to standard units. Also calculates the altitude depending on the temperature and pressure data.
-> uint8_t altitude3_get_data ( altitude3_t *ctx, uint8_t read_order );
-
-## Examples Description
+## Example Description
 
 > This application enables high-resolution barometric pressure measurement.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Altitude3
+
+### Example Key Functions
+
+- `altitude3_cfg_setup` Config Object Initialization function. 
+```c
+void altitude3_cfg_setup ( altitude3_cfg_t *cfg );
+``` 
+ 
+- `altitude3_init` Initialization function. 
+```c
+err_t altitude3_init ( altitude3_t *ctx, altitude3_cfg_t *cfg );
+```
+
+- `altitude3_default_cfg` Click Default Configuration function. 
+```c
+void altitude3_default_cfg ( altitude3_t *ctx );
+```
+
+- `altitude3_soft_reset` Function sends a command to perform a SW Reset of the device. 
+```c
+void altitude3_soft_reset ( altitude3_t *ctx );
+```
+ 
+- Function reads results of AD conversion, which consists of the 16bit temperature and 24bit
+- `altitude3_read_adc_results` pressure data in determined order. 
+```c
+uint8_t altitude3_read_adc_results ( altitude3_t *ctx, uint8_t read_order );
+```
+
+- Function performs a calibration data reading, only once, and then reads a temperature and pressure
+- data and calculates these values
+- `altitude3_get_data` to standard units. Also calculates the altitude depending on the temperature and pressure data. 
+```c
+uint8_t altitude3_get_data ( altitude3_t *ctx, uint8_t read_order );
+```
+
+### Application Init
 
 > Initializes I2C interface and performs a SW Reset of the device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -100,7 +99,6 @@ void application_init ( void )
 
     log_printf( &logger, "** Altitude 3 Click is initialized **\r\n\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +108,6 @@ void application_init ( void )
 > terminal.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t response;
@@ -131,29 +128,22 @@ void application_task ( void )
 
         Delay_ms ( 400 );
     }
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Altitude3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

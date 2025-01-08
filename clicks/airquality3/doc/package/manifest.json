@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Gas",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Air quality 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.airquality3",
-    "product_link": "https://www.mikroe.com/air-quality-3-click",
-    "short_description": "Air quality 3 Click is the air quality measurement device, which is able to output both equivalent CO2 levels and total volatile organic compounds (TVOC) concentration in the indoor environment. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2302
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.AirQuality3",
-    "subdir_name": "lib_airquality3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2953",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Air quality 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AirQuality3",
+                "subdir_name": "lib_airquality3",
+                "path": "Air quality 3 Click/data/lib_airquality3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

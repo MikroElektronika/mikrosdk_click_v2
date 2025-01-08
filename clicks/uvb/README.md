@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # UVB Click
 
-> UVB Click is ultraviolet sensing board based on GUVB-C31SM sensor from GenUV, capable of measuring UV index between 0 to 16. UVB Click supports integrated functions of ultraviolet light sensors such that can be easily configured and used in user applications. Overexposure to UVB radiation not only can cause sunburn but also some forms of skin cancer, so knowing amount of UVB light can be quite important and this Click board™ is perfect solution for that task.
+> [UVB Click](https://www.mikroe.com/?pid_product=MIKROE-4145) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/UVB_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4145&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/uvb-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Mikroe Team
 - **Date**          : Sep 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the UVB Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This Click is ultraviolet sensing board, capable of measuring UV index between 0 to 16. UVB Click supports integrated functions of ultraviolet light sensors.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for UVB Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.UVB
 
-#### Standard key functions :
+### Example Key Functions
 
 - `uvb_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t uvb_init ( uvb_t *ctx, uvb_cfg_t *cfg );
 err_t uvb_default_cfg ( uvb_t *ctx );
 ```
 
-#### Example key functions :
-
 - `uvb_configuration` Configuration register.
 ```c
 void uvb_configuration ( uvb_t *ctx, uint8_t reg, uint8_t cfg );
@@ -68,18 +63,11 @@ uint8_t uvb_read_byte ( uvb_t *ctx, uint8_t reg );
 uint16_t uvb_get_uv_data ( uvb_t *ctx );
 ```
 
-## Example Description
-
-> This Click is ultraviolet sensing board, capable of measuring UV index between 0 to 16. UVB Click supports integrated functions of ultraviolet light sensors.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver init, check communication and configuration module for measurement.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -113,7 +101,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     log_printf( &logger, "--------------------------\r\n" );
 }
-
 ```
 
 ### Application Task
@@ -121,7 +108,6 @@ void application_init ( void )
 > Reads UVB data and logs to the USBUART every 1500ms.
 
 ```c
-
 void application_task ( void ) 
 {
     uvb_data = uvb_get_uv_data( &uvb );
@@ -132,26 +118,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 500 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.UVB
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

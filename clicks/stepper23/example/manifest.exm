@@ -1,8 +1,5 @@
 {
     "name": "Stepper 23 Click",
-    "description": "Stepper 23 Click is a compact add-on board designed to drive small stepping motors in consumer electronics and industrial equipment applications. This board features the TB67S569FTG, a BiCD constant-current 2-phase bipolar stepping motor driver IC from Toshiba Semiconductor. Key features include a PWM chopper-type 2-phase bipolar drive system, high withstand voltage of up to 34V operating, and a maximum operating current of 1.8A per phase. The board also integrates safety mechanisms such as over-temperature, over-current, and low-supply voltage detection. Additional control is provided by the PCA9555A port expander via I2C, enabling functions like decay and torque modes, step resolution settings, and many more.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TB67S569FTG","PCA9555AHF"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","TB67S569FTG","PCA9555AHF"]
 }

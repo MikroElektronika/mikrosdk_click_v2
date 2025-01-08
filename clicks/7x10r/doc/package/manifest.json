@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED matrix",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "7x10 R Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c7x10r",
-    "product_link": "https://www.mikroe.com/7x10-r-click",
-    "short_description": "7x10 R Click is a LED dot matrix display Click, which can be used to display graphics or letters in a very simple and easy way. The Click board has two LED dot matrix modules with 7x5 stylish, round, dot-like LED elements. These displays produce clean and uniform patterns since the elements are optically isolated from each other and there is no light bleeding between the adjacent LED cells. Additionally, turn-on and turn-off times of the matrix cells are optimized for a clean and fluid display performance, with no flickering or lag.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1582
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.7x10R",
-    "subdir_name": "lib_c7x10r"
+    "name": "mikroe.click.7x10r",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1993",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "7x10 R Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.7x10R",
+                "subdir_name": "lib_c7x10r",
+                "path": "7x10 R Click/data/lib_c7x10r"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "ESP8684 Click",
-    "description": "ESP8664 Click is a compact add-on board that contains a wireless combo module. This board features the ESP8684-MINI-1, a highly integrated WiFi, and a Bluetooth 5 module from Espressif Systems. It simultaneously supports BSS in Station mode, SoftAP mode, Station + SoftAP mode, and promiscuous mode. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","ESP8684"],
-    "category" : ["Click Boards > Wireless connectivity > WIFI"]
+    "hw" : ["Click","ESP8684"]
 }

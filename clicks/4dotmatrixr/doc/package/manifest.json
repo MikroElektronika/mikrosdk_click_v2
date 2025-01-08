@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED matrix",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "4Dot-Matrix R Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c4dotmatrixr",
-    "product_link": "https://www.mikroe.com/4dot-matrix-r-click",
-    "short_description": "4Dot-Matrix R Click is a display device Click board™, which contains a four-digit dot matrix display module, labeled as SLO2016.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2105
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.4dotmatrixr",
-    "subdir_name": "lib_c4dotmatrixr"
+    "name": "mikroe.click.4dotmatrixr",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2706",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4Dot-Matrix R Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.4dotmatrixr",
+                "subdir_name": "lib_c4dotmatrixr",
+                "path": "4Dot-Matrix R Click/data/lib_c4dotmatrixr"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

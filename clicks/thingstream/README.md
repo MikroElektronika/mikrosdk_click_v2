@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # Thingstream Click
 
-> Thingstream Click is an IoT gateway Click board™ with the Thingstream client SDK preinstalled.
+> [Thingstream Click](https://www.mikroe.com/?pid_product=MIKROE-3739) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/thingstream_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3739&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/thingstream-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Thingstream Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from Thingstream Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Thingstream Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Thingstream
 
-#### Standard key functions :
+### Example Key Functions
 
 - `thingstream_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void thingstream_cfg_setup ( thingstream_cfg_t *cfg );
 ```c
 err_t thingstream_init ( thingstream_t *ctx, thingstream_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `thingstream_reset_pin_state` Set RST pin state.
 ```c
@@ -63,18 +58,11 @@ void thingstream_send_command ( thingstream_t *ctx, char *command );
 thingstream_error_t thingstream_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
 ```
 
-## Examples Description
-
-> This example reads and processes data from Thingstream clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes driver and power module.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -135,7 +123,6 @@ void application_init ( void )
 
     log_printf( &logger, " --->>> APP INIT <<<--- \r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -143,40 +130,32 @@ void application_init ( void )
 > Reads the received data and parses it.
 
 ```c
-
 void application_task ( void )
 {
     thingstream_send_command( &thingstream, THINGSTREAM_GPS_INFO );  
     thingstream_process( );
     parser_application( current_parser_buf );
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > The Click board needs to be registered with a redemption code to a Thingstream Domain.
 > For more information please refer to the Thingstream Click user manual available on the product page.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Thingstream
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

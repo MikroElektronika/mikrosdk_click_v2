@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 30 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel30",
-    "product_link": "https://www.mikroe.com/accel-30-click",
-    "short_description": "Accel 30 Click is a compact add-on board that contains an acceleration sensor. This board features the MC3635, an ultra-low power, low-noise, integrated digital output 3-axis accelerometer from MEMSIC. The MC3635 allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, ±12g, or ±16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. It also supports high-resolution, low-power operating modes and interrupt feature for various events allowing maximum flexibility to meet multiple use case needs.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.Accel30",
-    "subdir_name": "lib_accel30"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5550",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 30 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel30",
+                "subdir_name": "lib_accel30",
+                "path": "Accel 30 Click/data/lib_accel30"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

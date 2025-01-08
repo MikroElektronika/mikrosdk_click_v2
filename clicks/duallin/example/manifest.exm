@@ -1,8 +1,5 @@
 {
     "name": "Dual LIN Click",
-    "description": "The Dual LIN Click is a Click board™ based on the TLE7268SKXUMA1, a Dual LIN transceiver from Infineon.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TLE7268SKXUMA1"],
-    "category" : ["LIN"] 
+    "hw" : ["Click","TLE7268SKXUMA1"]
 }

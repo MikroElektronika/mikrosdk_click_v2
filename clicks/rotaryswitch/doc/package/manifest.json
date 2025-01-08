@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Rotary encoder",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Rotary Switch Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rotaryswitch",
-    "product_link": "https://www.mikroe.com/rotary-switch-click",
-    "short_description": "Rotary Switch Click is a compact add-on board for applications requiring precise rotary input. This board is based on the RDS6-16S-1065-1-SMT, a 16-position notched cap surface-mount rotary DIP switch from Same Sky. This switch features continuous 360-degree actuator rotation, a 2.54mm pin pitch, and robust construction with a contact resistance of 80mΩ and a maximum operating torque of 700gf*cm, ensuring reliable operation for up to 10,000 steps. The board supports the innovative Click Snap feature, allowing the rotary switch to operate autonomously when detached, providing flexibility in various implementations.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.RotarySwitch",
-    "subdir_name": "lib_rotaryswitch"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6332",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Rotary Switch Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RotarySwitch",
+                "subdir_name": "lib_rotaryswitch",
+                "path": "Rotary Switch Click/data/lib_rotaryswitch"
+            }
+        ]
+    }
 }
-

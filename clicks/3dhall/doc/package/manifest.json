@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "3D Hall Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c3dhall",
-    "product_link": "https://www.mikroe.com/3d-hall-click",
-    "short_description": "This application use to determine angle position",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1584
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.3DHall",
-    "subdir_name": "lib_c3dhall"
+    "name": "mikroe.click.3dhall",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1987",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3D Hall Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3DHall",
+                "subdir_name": "lib_c3dhall",
+                "path": "3D Hall Click/data/lib_c3dhall"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

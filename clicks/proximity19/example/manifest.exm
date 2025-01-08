@@ -1,8 +1,5 @@
 {
     "name": "Proximity 19 Click",
-    "description": "Proximity 19 Click is a compact add-on board designed for precise proximity sensing in various applications. This board features the RPR-0720, a digital optical proximity sensor from ROHM Semiconductor. The RPR-0720 integrates an infrared VCSEL (IrVCSEL) and an IC with an I2C interface, featuring a detection range adjustable from 1 to 15mm and an ambient light canceling function. The board uses a 2-wire I2C interface for communication, supporting up to 400kHz frequency clock, allowing control over sensor functions such as operating mode, interrupt system, and offset/threshold adjustments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","RPR-0720"],
-    "category" : ["Click Boards > Sensors > Proximity"]
+    "hw" : ["Click","RPR-0720"]
 }

@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # ZigBee Click
 
-> ZigBee Click is a compact add-on board that contains a fully integrated Zigbee transceiver with a 32-bit ARM® Cortex M3TM microprocessor, Flash and RAM memory, and peripherals. This board features the ETRX357, 2.4 GHz Zigbee Radio module from Silicon Labs, which has been designed to be easily integrated and to provide a fast, simple, and low-cost wireless mesh networking interface.
+> [ZigBee Click](https://www.mikroe.com/?pid_product=MIKROE-4277) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/zigbee_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4277&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/zigbee-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Oct 2021.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the ZigBee Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that demonstrates the use of the ZigBee Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ZigBee Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ZigBee
 
-#### Standard key functions :
+### Example Key Functions
 
 - `zigbee_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t zigbee_init ( zigbee_t *ctx, zigbee_cfg_t *cfg );
 err_t zigbee_default_cfg ( zigbee_t *ctx );
 ```
 
-#### Example key functions :
-
 - `zigbee_send_at` Function merges two string and sends it to device.
 ```c
 void zigbee_send_at ( zigbee_t *ctx, uint8_t *at_buf, uint8_t *suffix_buf );
@@ -68,19 +63,12 @@ uint8_t zigbee_resp ( zigbee_t *ctx, char *data_in );
 void zigbee_set_pin_rst ( zigbee_t *ctx, uint8_t status );
 ```
 
-## Example Description
-
-> This is an example that demonstrates the use of the ZigBee Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of driver, UART ISR and then configures device. 
 > Depending on previous selected device mode it creates new PAN network or joins to one.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -183,7 +171,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     log_printf( &logger, "-----------------------------------\r\n", app_buf );
 }
-
 ```
 
 ### Application Task
@@ -192,7 +179,6 @@ void application_init ( void )
 > User mode: Cheks if something is received.
 
 ```c
-
 void application_task ( void ) 
 {
     if ( ZIGBEE_DEV_HOST == dev_mode )
@@ -210,26 +196,21 @@ void application_task ( void )
         log_printf( &logger, "-----------------------------------\r\n", app_buf );
     }
 }
-
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ZigBee
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

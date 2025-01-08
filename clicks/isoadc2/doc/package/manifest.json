@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ISO ADC 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.isoadc2",
-    "product_link": "https://www.mikroe.com/iso-adc-2-click",
-    "short_description": "ISO ADC 2 Click is a compact add-on board that represents a completely isolated 12-bit, 300 kSPS data acquisition system. This board features the AD7091R, successive-approximation analog-to-digital converter (ADC) from Analog Devices. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        3772
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.IsoAdc2",
-    "subdir_name": "lib_isoadc2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4166",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ISO ADC 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IsoAdc2",
+                "subdir_name": "lib_isoadc2",
+                "path": "ISO ADC 2 Click/data/lib_isoadc2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

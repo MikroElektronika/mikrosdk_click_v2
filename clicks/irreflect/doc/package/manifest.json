@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IR reflect Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.irreflect",
-    "product_link": "https://www.mikroe.com/ir-reflect-click",
-    "short_description": "IR reflect Click carries a GP2S700HCP reflective photointerrupter and an onboard potentiometer. On this type of photointerrupter the infrared emitter and receiver are facing the same direction.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1414
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.IrReflect",
-    "subdir_name": "lib_irreflect"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1882",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IR reflect Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IrReflect",
+                "subdir_name": "lib_irreflect",
+                "path": "IR reflect Click/data/lib_irreflect"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

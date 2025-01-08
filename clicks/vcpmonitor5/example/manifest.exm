@@ -1,8 +1,5 @@
 {
     "name": "VCP Monitor 5 Click",
-    "description": "VCP Monitor 5 Click is a compact add-on board designed for various applications' precise current, voltage, and temperature measurements. This board features the INA700A, a 16-bit digital power monitor from Texas Instruments based on an advanced EZShunt™ technology for high-accuracy sensing. This board handles full-scale current measurements up to ±15.728A, operates within a wide common-mode voltage range of -0.3V to +40V, and offers real-time power, energy, and charge monitoring with ±0.5% accuracy. The onboard temperature sensor is accurate to ±3°C, and adjustable ADC conversion times and sample averaging provide noise reduction and optimized overcurrent detection.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","INA700AYWFR"],
-    "category" : ["Click Boards > Mixed signal > Measurements"]
+    "hw" : ["Click","INA700AYWFR"]
 }

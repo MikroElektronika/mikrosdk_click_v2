@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Magnetic Rotary 5 Click
 
-> Magnetic Rotary 5 Click is a compact add-on board for accurate magnet-position sensing. This board features the AS5134, a contactless magnetic rotary encoder from ams AG for accurate angular measurement over a full turn of 360º. It is designed to provide accurate angle measurements with a simple two-pole magnet rotating over the center of the chip, featuring an integrated Hall element, analog front end, and digital signal processing. Offering a high resolution of 8.5 bits, which equates to 360 positions per revolution, it is also capable of high-speed performance, with a maximum RPM of 76875. It can accommodate a wide range of magnetic fields, from 20 to 80mT. It also has an onboard header for incremental and commutation signals of their respective A/B/I and U/V/W signals and pins for Daisy Chain Mode and OTP programming.
+> [Magnetic Rotary 5 Click](https://www.mikroe.com/?pid_product=MIKROE-5691) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/magneticrotary5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5691&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/magnetic-rotary-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2022.
 - **Type**          : ADC/GPIO type
 
-
 # Software Support
 
-We provide a library for the Magnetic Rotary 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Magnetic Rotary 5 Click board by reading and displaying
+the magnet angular position as well as the AGC and multi turn counter values.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Magnetic Rotary 5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MagneticRotary5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `magneticrotary5_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t magneticrotary5_init ( magneticrotary5_t *ctx, magneticrotary5_cfg_t *cfg 
 err_t magneticrotary5_default_cfg ( magneticrotary5_t *ctx );
 ```
 
-#### Example key functions :
-
 - `magneticrotary5_read_angle` This function reads the magnetic angle and automatic gain control (AGC) values measured by the sensor.
 ```c
 err_t magneticrotary5_read_angle ( magneticrotary5_t *ctx, uint8_t *agc, uint16_t *angle );
@@ -68,19 +64,11 @@ err_t magneticrotary5_read_mt_cnt ( magneticrotary5_t *ctx, int16_t *mt_cnt );
 err_t magneticrotary5_read_voltage ( magneticrotary5_t *ctx, float *voltage );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Magnetic Rotary 5 Click board by reading and displaying
-the magnet angular position as well as the AGC and multi turn counter values.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and resets the multi turn counter to zero.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -116,7 +104,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -148,22 +135,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MagneticRotary5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

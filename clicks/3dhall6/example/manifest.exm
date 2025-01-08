@@ -1,8 +1,5 @@
 {
     "name": "3D Hall 6 Click",
-    "description": "3D Hall 6 Click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MLX90380"],
-    "category" : ["Magnetic"] 
+    "hw" : ["Click","MLX90380"]
 }

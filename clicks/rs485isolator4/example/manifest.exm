@@ -1,8 +1,5 @@
 {
     "name": "RS485 Isolator 4 Click",
-    "description": "RS485 Isolator 4 Click is a compact add-on board designed for robust RS-485 and RS-422 half-duplex communication with galvanic isolation. This board features the ISO1450, a 5kVRMS isolated RS-485 transceiver from Texas Instruments. The ISO1450 supports data rates up to 50Mbps and features advanced protection against electrostatic discharge (ESD) and electrical fast transients (EFT), ensuring reliable long-distance communication in industrial environments. It operates over a wide supply voltage range (3V to 5.5V), offering failsafe protection against open, short, and idle bus states.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","ISO1450BDWR"],
-    "category" : ["Click Boards > Interface > RS485"]
+    "hw" : ["Click","ISO1450BDWR"]
 }

@@ -1,8 +1,5 @@
 {
     "name": "Thyone-I Click",
-    "description": "Thyone-I Click is a compact add-on board for wireless communication in various devices like control systems, remote controls, and sensor nodes. This board features the WIRL-PRO2 Thyone-I (2611011021000) module from Würth Elektronik. It operates in the 2.4GHz license-free band, ensuring secure and reliable data transmission in both point-to-point and mesh configurations. It features versatile connectivity options with onboard and external antenna support, a data transmission rate of up to 2Mbit/s, and embedded security with hardware-accelerated encryption.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","Thyone-I"],
-    "category" : ["Click Boards > Wireless connectivity > 2.4 GHz Transceivers"]
+    "hw" : ["Click","Thyone-I"]
 }

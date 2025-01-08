@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Potentiometers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "POT 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pot4",
-    "product_link": "https://www.mikroe.com/pot-4-click",
-    "short_description": "POT 4 Click is a compact add-on board with accurate selectable reference voltage output. This board features the PRS11R-425F-S103B1, a high-quality 11mm rotary 10k potentiometer from Bourns. The PRS11R-425F-S103B1 features a small form factor, offers an push-on momentary switch, a flatted shaft style, and a wide operating temperature range. It comes with a high-resolution 12-bit ADC, detecting even the slightest move while digitizing its position, alongside a rail-to-rail buffering operational amplifier, which provides constant input and output impedance. Besides, the user can process the output signal in analog or digital form.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.POT4",
-    "subdir_name": "lib_pot4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5454",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "POT 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.POT4",
+                "subdir_name": "lib_pot4",
+                "path": "POT 4 Click/data/lib_pot4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

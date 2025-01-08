@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Stepper 20 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepper20",
-    "product_link": "https://www.mikroe.com/stepper-20-click",
-    "short_description": "Stepper 20 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S580FNG, a two-phase bipolar stepping motor driver from Toshiba Semiconductor. Fabricated with the BiCD process, it supports a PWM constant-current control drive and steps resolution from full to 1/32 for less motor noise and smoother control. It has a wide operating voltage range of 8.2V to 44V with a maximum output current capacity of 1.28A, decay modes selection function, protection, and several anomaly detection indicators.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Stepper20",
-    "subdir_name": "lib_stepper20"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5477",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper 20 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper20",
+                "subdir_name": "lib_stepper20",
+                "path": "Stepper 20 Click/data/lib_stepper20"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

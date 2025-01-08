@@ -3,7 +3,7 @@
  * \brief SamlTouch Click example
  * 
  * # Description
- * This example reads and processes data from SAML Touch clicks.
+ * This example reads and processes data from SAML Touch Clicks.
  *
  * The demo application is composed of two sections :
  * 

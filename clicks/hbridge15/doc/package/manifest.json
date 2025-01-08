@@ -1,39 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "H-Bridge 15 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hbridge15",
-    "product_link": "https://www.mikroe.com/h-bridge-15-click",
-    "short_description": "H-Bridge 15 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8834, a dual-bridge stepper or DC motor driver from Texas Instruments. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.HBridge15",
-    "subdir_name": "lib_hbridge15"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5913",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "H-Bridge 15 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HBridge15",
+                "subdir_name": "lib_hbridge15",
+                "path": "H-Bridge 15 Click/data/lib_hbridge15"
+            }
+        ]
+    }
 }
-
-
-
-

@@ -1,0 +1,22 @@
+{
+    "display_name": "Smart DOF 4 Click",
+    "name": "mikroe.click.smartdof4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6369",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart DOF 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartDOF4",
+                "subdir_name": "lib_smartdof4",
+                "path": "Smart DOF 4 Click/data/lib_smartdof4"
+            }
+        ]
+    }
+}

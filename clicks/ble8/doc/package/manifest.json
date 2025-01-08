@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > BT/BLE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BLE 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ble8",
-    "product_link": "https://www.mikroe.com/ble-8-click",
-    "short_description": "BLE 8 Click is fully embedded stand-alone Bluetooth 5.0 Energy connectivity module, equipped with the ANNA-B112, an ultra-small, high-performing, standalone Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. This module combines a high-performance Arm® Cortex®-M4 CPU microprocessor with FPU, and state-of-the-art power performance. Reliable and easy to use, BLE 8 Click is a perfect solution for development of various IoT applications, smart home applications, BLE enabled toys, advanced robotics, and other similar applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2897
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Ble8",
-    "subdir_name": "lib_ble8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3674",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BLE 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ble8",
+                "subdir_name": "lib_ble8",
+                "path": "BLE 8 Click/data/lib_ble8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

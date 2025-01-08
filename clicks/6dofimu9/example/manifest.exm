@@ -1,8 +1,5 @@
 {
     "name": "6DOF IMU 9 Click",
-    "description": "The 6DOF IMU 9 Click is a Click board™ which features the IAM-20680, a 6-axis MotionTracking device that combines a 3-axis gyroscope and a 3-axis accelerometer, from TDK InvenSense.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","IAM-20680"],
-    "category" : ["Motion"] 
+    "hw" : ["Click","IAM-20680"]
 }

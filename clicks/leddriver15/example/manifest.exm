@@ -1,8 +1,5 @@
 {
     "name": "LED Driver 15 Click",
-    "description": "LED Driver 15 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the MP3309C, a fully integrated synchronous boost white LED driver with an I2C interface from Monolithic Power Systems. The MP3309C offers high efficiency, delivers up to 40mA of LED current, and operates from a voltage of mikroBUS™ power rails, supporting up to 8 white LEDs in series. It also features a programmable switching frequency to optimize efficiency, supports analog and PWM dimming, and has multiple built-in protection functions that protect the circuit during abnormalities.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MP3309CGQG-Z"],
-    "category" : ["Click Boards > Display & LED > LED Drivers"]
+    "hw" : ["Click","MP3309CGQG-Z"]
 }

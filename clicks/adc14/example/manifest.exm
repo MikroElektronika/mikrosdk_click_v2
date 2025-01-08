@@ -1,8 +1,5 @@
 {
     "name": "ADC 14 Click",
-    "description": "ADC 14 Click is a compact add-on board with a high-performance data converter. This board features the MAX11108A, a low-power serial ADC from Analog Devices. It includes a high-dynamic range sample-and-hold and a high-speed serial interface. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX11108,MPC1501-20"],
-    "category" : ["Click Boards > Mixed signal > ADC"]
+    "hw" : ["Click","MAX11108,MPC1501-20"]
 }

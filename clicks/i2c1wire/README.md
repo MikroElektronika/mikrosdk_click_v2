@@ -1,41 +1,40 @@
-\mainpage Main Page
- 
+
 ---
 # I2C 1 Wire Click
 
-> I2C 1-Wire Click carries DS2482-800, a bridge device that performs bidirectional conversions between I2C masters and 1-Wire slave devices. These can be EEPROM chips, temperature sensors and similar devices that have momentary high source current modes.
+> [I2C 1-Wire Click](https://www.mikroe.com/?pid_product=MIKROE-1892) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/i2c1wire_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1892&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/i2c-1-wire-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : May 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the I2C1Wire Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example showcases how to initialize, confiure and use the I2C 1-Wire Click. The Click
+  is a I2C (host) to 1-Wire interface (slave). In order for the example to work one or more 
+  1-Wire (GPIO) Click modules are required. Gnd goes to gnd, power goes to power and the cha-
+  nnels are there to read data from connected modules.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for I2C1Wire Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.I2C1Wire
 
-#### Standard key functions :
+### Example Key Functions
 
 - `i2c1wire_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +45,6 @@ void i2c1wire_cfg_setup ( i2c1wire_cfg_t *cfg );
 ```c
 err_t i2c1wire_init ( i2c1wire_t *ctx, i2c1wire_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `i2c1wire_write_byte_one_wire` This function writes one byte to the Click module.
 ```c
@@ -64,21 +61,11 @@ uint8_t i2c1wire_read_byte_one_wire ( i2c1wire_t *ctx );
 void i2c1wire_one_wire_reset ( i2c1wire_t *ctx );
 ```
 
-## Examples Description
-
-> This example showcases how to initialize, confiure and use the I2C 1-Wire Click. The Click
-  is a I2C (host) to 1-Wire interface (slave). In order for the example to work one or more 
-  1-Wire (GPIO) Click modules are required. Gnd goes to gnd, power goes to power and the cha-
-  nnels are there to read data from connected modules.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > This function initializes and configures the logger and Click modules.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -103,7 +90,6 @@ void application_init ( void )
     i2c1wire_init( &i2c1wire, &cfg );
     Delay_1sec( );
 }
-  
 ```
 
 ### Application Task
@@ -112,7 +98,6 @@ void application_init ( void )
   ires from them with a 100 millisecond delay. 
 
 ```c
-
 void application_task ( void )
 {
     uint8_t chan_state = 0;
@@ -162,29 +147,22 @@ void application_task ( void )
     }
 
     log_printf( &logger, "***\r\n" );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.I2C1Wire
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

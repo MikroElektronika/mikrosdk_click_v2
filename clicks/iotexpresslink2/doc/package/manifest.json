@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LTE IoT",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IoT ExpressLink 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.iotexpresslink2",
-    "product_link": "https://www.mikroe.com/iot-expresslink-2-click",
-    "short_description": "IoT ExpressLink 2 Click is a compact add-on board that allows users to connect to IoT ExpressLink services easily and securely interact with cloud applications and other services. This board features the SARA-R510AWS, an LTE-M AWS IoT EsxpressLink module from u-blox. It supports a comprehensive set of 3GPP Rel. 14 features that are relevant for IoT applications, like improvements to power consumption, coverage, data rate, mobility, and positioning. They are 5G-ready, meaning customers will be able to (software) upgrade their deployed devices once 5G LTE has been fully rolled out by mobile operators, greatly improving end-product scalability and lifetime.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.IoTExpressLink2",
-    "subdir_name": "lib_iotexpresslink2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5927",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IoT ExpressLink 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IoTExpressLink2",
+                "subdir_name": "lib_iotexpresslink2",
+                "path": "IoT ExpressLink 2 Click/data/lib_iotexpresslink2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

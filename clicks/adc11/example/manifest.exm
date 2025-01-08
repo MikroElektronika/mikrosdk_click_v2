@@ -1,8 +1,5 @@
 {
     "name": "ADC 11 Click",
-    "description": "ADC 11 Click is a compact add-on board that contains a high-performance data converter. This board features the LTC1864, a 16-bit 250ksps analog-to-digital converter from Analog Devices. With a typical supply current of only 850µA at the maximum sampling frequency, the LTC1864 is among the lowest power consumption ADCs available. After conversion, the LTC1864 goes into a low-power Sleep mode, further reducing the supply current. That’s why it can run at proper micro-power levels in applications that do not require the maximum sampling rate of the LTC1864.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LTC1864"],
-    "category" : ["ADC"]
+    "hw" : ["Click","LTC1864"]
 }

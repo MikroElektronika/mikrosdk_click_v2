@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IR Sense 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.irsense2",
-    "product_link": "https://www.mikroe.com/ir-sense-2-click",
-    "short_description": "IR Sense 2 Click is the infrared sensor Click board™, designed to be used for the short range IR sensing applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2232
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.IrSense2",
-    "subdir_name": "lib_irsense2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2966",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IR Sense 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IrSense2",
+                "subdir_name": "lib_irsense2",
+                "path": "IR Sense 2 Click/data/lib_irsense2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

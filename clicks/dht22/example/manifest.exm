@@ -1,8 +1,5 @@
 {
     "name": "DHT22 Click",
-    "description": "DHT22 Click is a temperature and humidity measurement board carrying the sensor of the same name.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AM2302"],
-    "category" : ["Click Boards > Sensors > Temperature & humidity"] 
+    "hw" : ["Click","AM2302"]
 }

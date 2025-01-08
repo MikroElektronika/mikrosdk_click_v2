@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Temp ISO Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.tempiso",
-    "product_link": "https://www.mikroe.com/temp-iso-click",
-    "short_description": "Temp ISO Click is a compact add-on board for accurate and isolated temperature measurements in high-voltage environments. This board features the ISOTMP35-Q1, an automotive-grade isolated temperature sensor with analog output from Texas Instruments. This sensor integrates a robust isolation barrier with a withstand voltage of up to 3000VRMS, a linear analog output with a 10mV/°C slope, and a wide temperature range of –40°C to 150°C. It delivers high accuracy of ±2.0°C, fast thermal response, and is AEC-Q100 qualified, ensuring long-term reliability in demanding conditions. The board also features Click Snap, enabling flexible sensor placement by detaching the PCB for standalone operation.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.TempISO",
-    "subdir_name": "lib_tempiso"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6417",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Temp ISO Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TempISO",
+                "subdir_name": "lib_tempiso",
+                "path": "Temp ISO Click/data/lib_tempiso"
+            }
+        ]
+    }
 }
-

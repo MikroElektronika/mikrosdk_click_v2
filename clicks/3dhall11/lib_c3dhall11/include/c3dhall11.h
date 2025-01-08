@@ -250,6 +250,7 @@ extern "C"{
  * @brief 3D Hall 11 DEVICE_ID and MANUFACTURER_ID values.
  * @details Specified DEVICE_ID and MANUFACTURER_ID values of 3D Hall 11 Click driver.
  */
+#define C3DHALL11_DEVICE_ID_MASK                    0x03
 #define C3DHALL11_DEVICE_ID                         0x01
 #define C3DHALL11_MANUFACTURER_ID_LSB               0x49
 #define C3DHALL11_MANUFACTURER_ID_MSB               0x54

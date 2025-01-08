@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Potentiometers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Pot 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pot3",
-    "product_link": "https://www.mikroe.com/pot-3-click",
-    "short_description": "POT 3 Click is a Click board� with the accurate selectable reference voltage output. By employing a high-quality 11mm, metal shaft potentiometer, this Click board� can provide very accurate voltage output. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2797
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Pot3",
-    "subdir_name": "lib_pot3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3691",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Pot 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pot3",
+                "subdir_name": "lib_pot3",
+                "path": "Pot 3 Click/data/lib_pot3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

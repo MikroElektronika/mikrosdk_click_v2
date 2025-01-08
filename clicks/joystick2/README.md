@@ -1,73 +1,71 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Joystick 2 Click
 
-Joystick 2 Click is a smart navigation key concept based on SKRHABE010 by Alps, a 4-direction joystick switch with Center-push Function.
+> [Joystick 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3711) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/joystick2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3711&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/joystick-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Katarina Perendic
 - **Date**          : okt 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Joystick2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Joystick2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void joystick2_cfg_setup ( joystick2_cfg_t *cfg ); 
- 
-- Initialization function.
-> JOYSTICK2_RETVAL joystick2_init ( joystick2_t *ctx, joystick2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void joystick2_default_cfg ( joystick2_t *ctx );
-
-
-#### Example key functions :
-
-- Functions for configuration joystick
-> void joystick2_set_cfg_register ( joystick2_t *ctx, uint8_t cfg_data );
- 
-- Functions for get Joystick position
-> uint8_t joystick2_get_position ( joystick2_t *ctx );
-
-- Functions for read interrupt state
-> uint8_t joystick2_get_interrupt_state ( joystick2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > The demo application shows reading the joistick position ..
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Joystick2
 
-> Configuring clicks and log objects.
+### Example Key Functions
+
+- `joystick2_cfg_setup` Config Object Initialization function. 
+```c
+void joystick2_cfg_setup ( joystick2_cfg_t *cfg );
+``` 
+ 
+- `joystick2_init` Initialization function. 
+```c
+err_t joystick2_init ( joystick2_t *ctx, joystick2_cfg_t *cfg );
+```
+
+- `joystick2_default_cfg` Click Default Configuration function. 
+```c
+void joystick2_default_cfg ( joystick2_t *ctx );
+```
+
+- `joystick2_set_cfg_register` Functions for configuration joystick. 
+```c
+void joystick2_set_cfg_register ( joystick2_t *ctx, uint8_t cfg_data );
+```
+ 
+- `joystick2_get_position` Functions for get Joystick position. 
+```c
+uint8_t joystick2_get_position ( joystick2_t *ctx );
+```
+
+- `joystick2_get_interrupt_state` Functions for read interrupt state. 
+```c
+uint8_t joystick2_get_interrupt_state ( joystick2_t *ctx );
+```
+
+### Application Init
+
+> Configuring Clicks and log objects.
 > Reset device and settings the Click in the default configuration.
 
 ```c
@@ -152,25 +150,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Joystick2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

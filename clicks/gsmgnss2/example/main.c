@@ -3,7 +3,7 @@
  * @brief GSM/GNSS 2 Click Example.
  *
  * # Description
- * This example reads and processes data from GSM/GNSS 2 clicks.
+ * This example reads and processes data from GSM/GNSS 2 Clicks.
  *
  * The demo application is composed of two sections :
  *

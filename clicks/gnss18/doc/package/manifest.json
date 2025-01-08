@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GNSS 18 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gnss18",
-    "product_link": "https://www.mikroe.com/gnss-18-click",
-    "short_description": "GNSS 18 Click is a compact add-on board designed for high-precision GNSS applications. This board features the SAM-M10Q-00B-00B, M10 standard precision GNSS module from u-blox, known for exceptional sensitivity and rapid acquisition of L1 GNSS signals. It supports concurrent reception of GPS, Galileo, GLONASS, and BeiDou B1C, with additional support for QZSS and SBAS. Featuring u-blox Super-S technology for improved dynamic position accuracy and low power consumption of 37mW in continuous tracking mode, it is ideal for battery-operated devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.GNSS18",
-    "subdir_name": "lib_gnss18"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6127",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 18 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS18",
+                "subdir_name": "lib_gnss18",
+                "path": "GNSS 18 Click/data/lib_gnss18"
+            }
+        ]
+    }
 }
-
-

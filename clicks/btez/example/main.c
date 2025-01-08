@@ -3,7 +3,7 @@
  * \brief BtEz Click example
  * 
  * # Description
- * This example reads and processes data from BT-EZ clicks.
+ * This example reads and processes data from BT-EZ Clicks.
  *
  * The demo application is composed of two sections :
  * 

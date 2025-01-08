@@ -1,8 +1,5 @@
 {
     "name": "Compass 3 Click",
-    "description": "Compass 3 Click is an expansion board that can measure the three-axis magnetic field which is perfect for implementation in applications such as electric compasses.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MMC5883MA"],
-    "category" : ["Magnetic"] 
+    "hw" : ["Click","MMC5883MA"]
 }

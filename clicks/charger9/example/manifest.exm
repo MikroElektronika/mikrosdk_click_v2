@@ -1,8 +1,5 @@
 {
     "name": "Charger 9 Click",
-    "description": "Charger 9 Click is a Li-Ion (Li+, Li-Po) battery charger, capable of charging one, two or three battery cells.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX1757"],
-    "category" : ["Battery charger"] 
+    "hw" : ["Click","MAX1757"]
 }

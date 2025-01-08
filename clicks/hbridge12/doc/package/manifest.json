@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "H-Bridge 12 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hbridge12",
-    "product_link": "https://www.mikroe.com/h-bridge-12-click",
-    "short_description": "H Bridge 12 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8823, a 4-bridge serial interface motor driver from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.HBridge12",
-    "subdir_name": "lib_hbridge12"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5690",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "H-Bridge 12 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HBridge12",
+                "subdir_name": "lib_hbridge12",
+                "path": "H-Bridge 12 Click/data/lib_hbridge12"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

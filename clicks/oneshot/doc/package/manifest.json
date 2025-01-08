@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Clock & Timing > Clock generator",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "One Shot Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.oneshot",
-    "product_link": "https://www.mikroe.com/one-shot-click",
-    "short_description": "One Shot Click is equipped with the monostable multivibrator (also known as a “one-shot” pulse generator) with a programmable pulse width of 1μs to 33.6 seconds. The used LTC6993-2 is part of the TimerBlox® family of versatile silicon timing devices, from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2959
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.OneShot",
-    "subdir_name": "lib_oneshot"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3877",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "One Shot Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.OneShot",
+                "subdir_name": "lib_oneshot",
+                "path": "One Shot Click/data/lib_oneshot"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

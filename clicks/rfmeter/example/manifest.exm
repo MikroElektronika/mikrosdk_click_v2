@@ -1,8 +1,5 @@
 {
     "name": "RF Meter Click",
-    "description": "RF Meter Click is a radio frequency power measurement device covering a frequency span from 1 MHz to 8 GHz over a 60 dB range (approximately).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AD8318"],
-    "category" : ["RF meter"] 
+    "hw" : ["Click","AD8318"]
 }

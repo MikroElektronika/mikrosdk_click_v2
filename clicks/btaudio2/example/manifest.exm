@@ -1,8 +1,5 @@
 {
     "name": "BT Audio 2 Click",
-    "description": "BT Audio 2 Click is Bluetooth audio stream add on board based on BM62 module from Microchip. It's a Stereo Audio module which is fully qualified Bluetooth v5.0 dual-mode (BDR/EDR/BLE) to be added in any wireless audio and voice application. With features like high resolution up to 24-bit, 96 kHz audio data format, Bluetooth Low Energy data rate up to 1Mbits/s, connection of two hosts with HFP/A2DP profiles simultaneously, seamless serial data over UART interface and many more it's perfect solution for applications like portable speakers and headsets.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","BM62SPKS1MC2-0001AA"],
-    "category" : ["Click Boards > Wireless connectivity > BT/BLE"]
+    "hw" : ["Click","BM62SPKS1MC2-0001AA"]
 }

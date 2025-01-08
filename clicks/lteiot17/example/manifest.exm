@@ -1,8 +1,5 @@
 {
     "name": "LTE IoT 17 Click",
-    "description": "LTE IoT 17 Click is a compact add-on board designed for low-power, long-range cellular communication in IoT applications. This board features the SIM7070E, a multi-band LTE module from SIMCom that supports the European/Australian region's Cat-M, Cat-NB, and GSM modes. Key features include a maximum 589kbps downlink and 1.1Mbps uplink rate, support of multiple LTE bands and optional multi-constellation GNSS, a micro SIM card holder, AT command communication, firmware upgrades, power management options, and visual indicators for network and power status.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","SIM7070E"],
-    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
+    "hw" : ["Click","SIM7070E"]
 }

@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Accel 18 Click
 
-> Accel 18 Click is a compact add-on board that contains an acceleration sensor. This board features the MC3419, a digital output 3-axis accelerometer with a feature set optimized for consumer product motion sensing from MEMSIC. 
+> [Accel 18 Click](https://www.mikroe.com/?pid_product=MIKROE-4826) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/accel_18_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4826&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/accel-18-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Aug 2021.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Accel18 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example application showcases ability of the device
+to read axes values on detected interrupt.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Accel18 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Accel18
 
-#### Standard key functions :
+### Example Key Functions
 
 - `accel18_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t accel18_init ( accel18_t *ctx, accel18_cfg_t *cfg );
 err_t accel18_default_cfg ( accel18_t *ctx );
 ```
 
-#### Example key functions :
-
 - `accel18_read_axes` Accel data reading.
 ```c
 err_t accel18_read_axes ( accel18_t *ctx, accel18_axes_t *axes_data );
@@ -68,13 +64,6 @@ err_t accel18_set_range ( accel18_t *ctx, uint8_t range_macro );
 uint8_t accel18_get_interrupt_1 ( accel18_t *ctx );
 ```
 
-## Example Description
-
-> This example application showcases ability of the device
-to read axes values on detected interrupt.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of comunication modules(SPI/I2C, UART) and additional
@@ -82,7 +71,6 @@ two interrupt pins. Then configures device and sets 8g range and 10 Hz
 data rate, with interrupt enabled.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -122,7 +110,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -131,7 +118,6 @@ void application_init ( void )
 and then reads x, y, and z axes, calculates value and logs result.
 
 ```c
-
 void application_task ( void )
 {
     accel18_axes_t axes_data;
@@ -156,25 +142,21 @@ void application_task ( void )
         }
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Accel18
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

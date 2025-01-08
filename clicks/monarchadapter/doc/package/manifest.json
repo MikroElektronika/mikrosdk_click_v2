@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Interface > Adapter",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Monarch Adapter Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.monarchadapter",
-    "product_link": "https://www.mikroe.com/monarch-adapter-click",
-    "short_description": "The Monarch Adapter Click is used to connect a compatible Monarch Go LTE-M modems from Sequanse to your development board or prototype device.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3811
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.MonarchAdapter",
-    "subdir_name": "lib_monarchadapter"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4057",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Monarch Adapter Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MonarchAdapter",
+                "subdir_name": "lib_monarchadapter",
+                "path": "Monarch Adapter Click/data/lib_monarchadapter"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

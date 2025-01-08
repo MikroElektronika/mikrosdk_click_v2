@@ -3,7 +3,7 @@
  * @brief RFID 2 Click Example.
  *
  * # Description
- * This example reads and processes data from RFID 2 clicks.
+ * This example reads and processes data from RFID 2 Clicks.
  *
  * The demo application is composed of two sections :
  *

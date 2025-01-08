@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Gas",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "CO 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.co_2",
-    "product_link": "https://www.mikroe.com/co-2-click",
-    "short_description": "CO 2 Click is a very accurate, carbon-monoxide-gas-sensor Click board™, equipped with the SPEC amperometric, 3SP CO 1000 gas sensor which electrochemically reacts with the carbon monoxide (CO).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2424
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.CO2",
-    "subdir_name": "lib_co2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3196",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "CO 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CO2",
+                "subdir_name": "lib_co2",
+                "path": "CO 2 Click/data/lib_co2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

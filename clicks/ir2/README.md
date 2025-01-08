@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # IR 2 Click
 
-> IR 2 Click is a compact add-on board representing a compact and easy solution for adding infrared (IR) remote control to your design. This board features the TSMP58138, a miniaturized sensor for receiving the modulated signal of QEE113 IR emitting diode from Vishay Semiconductors. This IR sensor module consists of a photodetector, pre-amplifier, and automatic gain control to surpass ambient noise with signals transmitted to it in the near-infrared range with a wavelength of 940nm. It also communicates with the target MCU via selectable GPIO lines.
+> [IR 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5088) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ir2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5088&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ir-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jan 2022.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the IR 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an IR 2 Click board by showing
+the communication between the two Click boards configured as a receiver and transmitter using the NEC protocol.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for IR 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.IR2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ir2_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +43,6 @@ void ir2_cfg_setup ( ir2_cfg_t *cfg );
 ```c
 err_t ir2_init ( ir2_t *ctx, ir2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `ir2_get_out_pin` This function returns the OUT pin logic state.
 ```c
@@ -63,19 +59,11 @@ void ir2_nec_send_data ( ir2_t *ctx, uint8_t address, uint8_t data_in );
 err_t ir2_nec_read_data ( ir2_t *ctx, uint8_t *address, uint8_t *data_out );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an IR 2 Click board by showing
-the communication between the two Click boards configured as a receiver and transmitter using the NEC protocol.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger and displays the selected application mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -113,7 +101,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -148,22 +135,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.IR2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

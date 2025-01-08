@@ -1,8 +1,5 @@
 {
     "name": "Pressure 9 Click",
-    "description": "Pressure 9 Click is a digital barometric air pressure sensor Click board™. It is equipped with the DPS422, barometric air pressure sensor, based on a capacitive sensor element.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DPS422"],
-    "category" : ["Pressure"] 
+    "hw" : ["Click","DPS422"]
 }

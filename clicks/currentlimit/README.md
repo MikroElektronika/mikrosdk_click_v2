@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Current Limit Click
 
-> Current Limit Click is a compact add-on board that contains a low-voltage, P-channel MOSFET power switch intended for high-side load switching applications. This board features the MAX890L, a low-resistance power switch with the adjustable, accurate current limit system, and thermal shutdown from Maxim Integrated.
+> [Current Limit Click](https://www.mikroe.com/?pid_product=MIKROE-4271) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/currentlimit_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4271&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/current-limit-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jul 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the CurrentLimit Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example shows capabilities of Current Limit Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for CurrentLimit Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CurrentLimit
 
-#### Standard key functions :
+### Example Key Functions
 
 - `currentlimit_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void currentlimit_cfg_setup ( currentlimit_cfg_t *cfg );
 ```c
 err_t currentlimit_init ( currentlimit_t *ctx, currentlimit_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `currentlimit_dev_enable` Device enable function.
 ```c
@@ -63,19 +58,13 @@ void currentlimit_set_limit ( currentlimit_t *ctx, uint8_t lim_val );
 void currentlimit_set_limit_calc ( currentlimit_t *ctx, float lim_val );
 ```
 
-## Example Description
-
-> This example shows capabilities of Current Limit Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initalizes SPI driver and enables the device.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     currentlimit_cfg_t currentlimit_cfg;  /**< Click config object. */
 
@@ -111,7 +100,6 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     display_settings( );
 }
-
 ```
 
 ### Application Task
@@ -119,8 +107,8 @@ void application_init ( void ) {
 > Reading users input from USART terminal and using it as an index for an array of pre-calculated values that define current limit level.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     char inx;
     if ( log_read( &logger, &inx, 1 ) != CURRENTLIMIT_ERROR ) {
         if ( inx >= '1' && inx <= '8' ) {
@@ -137,24 +125,19 @@ void application_task ( void ) {
 }
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CurrentLimit
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

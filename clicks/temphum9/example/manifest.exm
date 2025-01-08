@@ -1,8 +1,5 @@
 {
     "name": "TempHum 9 Click",
-    "description": "Temp-Hum 9 Click is a smart temperature and humidity sensing Click board™, packed with features that allow simple integration into any design.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SHTC3"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","SHTC3"]
 }

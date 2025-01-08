@@ -1,8 +1,5 @@
 {
-    "name": "GSM/GNSS 2 Click",
-    "description": "GSM/GNSS 2 Click combines GPS/GLONASS location tracking with GSM module capability for mobile communication. The Click carries SIM868 quad-band GSM/GPRS module.",
-    "image" : "../../Resources/click_icon.png",
+    "name": "GSM GNSS 2 Click",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","SIM868"],
-    "category" : ["GSM+GPS"]
+    "hw" : ["Click","SIM868"]
 }

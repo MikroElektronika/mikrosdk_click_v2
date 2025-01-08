@@ -1,47 +1,40 @@
-\mainpage Main Page
 
 ---
 # LED Ring 2 Click
 
-> LED Ring 2 Click is a compact add-on board that provides 
-> a circular-shaped electronic lighting solution. 
-> This board features three I2C-configurable high-performance LED matrix drivers, 
-> the LP5862 from Texas Instruments. 
-> The LP5862 integrates 18 constant current sinks for driving 18 yellow LEDs. 
-> With the help of two additional LP5862 drivers, it is possible to realize, 
-> as shown on this board, a solution of 54 yellow LEDs arranged in a circular pattern. 
-> In addition, it also provides excellent PWM dimming effects.
+> [LED Ring 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5634) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ledring2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5634&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/led-ring-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LED Ring 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
+## Example Description
 
 > This library contains API for LED Ring 2 Click driver.
+> The library initializes and defines the I2C bus drivers 
+> to write and read data from registers. 
+> The library also includes a function for controlling LEDs.
 
-#### Standard key functions :
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LEDRing2
+
+### Example Key Functions
 
 - `ledring2_cfg_setup` Config Object Initialization function.
 ```c
@@ -58,8 +51,6 @@ err_t ledring2_init ( ledring2_t *ctx, ledring2_cfg_t *cfg );
 err_t ledring2_default_cfg ( ledring2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `ledring2_set_led_brightness` LED Ring 2 set LED brightness function.
 ```c
 err_t ledring2_set_led_brightness ( ledring2_t *ctx, uint8_t led_pos, uint16_t led_brightness );
@@ -74,15 +65,6 @@ err_t ledring2_set_led_pos_state ( ledring2_t *ctx, uint8_t led_pos, ledring2_le
 ```c
 err_t ledring2_enable ( ledring2_t *ctx );
 ```
-
-## Example Description
-
-> This library contains API for LED Ring 2 Click driver.
-> The library initializes and defines the I2C bus drivers 
-> to write and read data from registers. 
-> The library also includes a function for controlling LEDs.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -131,7 +113,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of the LED Ring 2 Click board™.
+> This example demonstrates the use of the LED Ring 2 Click board&trade;.
 > The demo example controls every LED and changes the LED brightness by PWM,
 > increasing its brightness from LED1 to LED54.
 
@@ -160,22 +142,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LEDRing2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

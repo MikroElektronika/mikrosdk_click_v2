@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Battery Charger",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Charger 23 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.charger23",
-    "product_link": "https://www.mikroe.com/charger-23-click",
-    "short_description": "Charger 23 Click is a compact add-on board providing a single-cell battery charging solution. This board features the ISL78693, a single-cell Li-ion or Li-polymer battery charger from Renesas. The ISL78693 can operate with an input voltage as low as 2.6V and works as a linear charger with the battery charged in a Constant Current/Constant Voltage (CC/CV) profile. The charge current is selectable with an external resistor between 250 and 500mA. Additional features include the preconditioning of an over-discharged battery, an NTC thermistor interface for charging the battery in a safe temperature range, automatic recharge, and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Charger23",
-    "subdir_name": "lib_charger23"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5573",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Charger 23 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Charger23",
+                "subdir_name": "lib_charger23",
+                "path": "Charger 23 Click/data/lib_charger23"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

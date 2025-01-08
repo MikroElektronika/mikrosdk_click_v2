@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Clock & Timing > Clock generator",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Clock Gen 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.clockgen4",
-    "product_link": "https://www.mikroe.com/clock-gen-4-click",
-    "short_description": "Clock Gen 4 Click is a compact add-on board that contains both a clock generator and a multiplier/jitter reduced clock frequency synthesizer. This board features the CS2200-CP, an analog PLL architecture comprised of a Delta-Sigma fractional-N frequency synthesizer from Cirrus Logic. This clocking device utilizes a programmable phase lock loop and allows frequency synthesis and clock generation from a stable reference clock. It generates a low-jitter PLL clock from an external crystal, supports both I²C and SPI for full software control, and also has configurable auxiliary clock output. This Click board™ is suitable for MCU clock source, or in applications like digital effects processors, digital mixing consoles, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3891
-    ],
-    "version": "2.1.0.10",
-    "cmake": true,
-    "alias": "Click.ClockGen4",
-    "subdir_name": "lib_clockgen4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4300",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Clock Gen 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ClockGen4",
+                "subdir_name": "lib_clockgen4",
+                "path": "Clock Gen 4 Click/data/lib_clockgen4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

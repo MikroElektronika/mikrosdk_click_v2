@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ISO ADC 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.isoadc6",
-    "product_link": "https://www.mikroe.com/iso-adc-6-click",
-    "short_description": "ISO ADC 6 Click is a compact add-on board that contains an eight-channel isolated ADC. This board features the AD7124-8, an 8-channel, low noise, low power, 24-bit, sigma-delta ADC from Analog Devices. The ADC has a programmable gain array (PGA) that allows gains of 1, 2, 4, 8, 16, 32, 64, and 128. Additionally, the ADC contains a 2.5V reference, which can be used with reference buffers, along with the externally applied references. The host MCU is isolated from the ADC by the ADuM341E, a 5kVrms quad digital isolator from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.ISOADC6",
-    "subdir_name": "lib_isoadc6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5901",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ISO ADC 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ISOADC6",
+                "subdir_name": "lib_isoadc6",
+                "path": "ISO ADC 6 Click/data/lib_isoadc6"
+            }
+        ]
+    }
 }
-
-
-

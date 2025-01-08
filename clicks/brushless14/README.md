@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Brushless 14 Click
 
-> Brushless 14 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TB67B001FTG, a three-phase, brushless, Hall sensorless driver IC from Toshiba Semiconductor.
+> [Brushless 14 Click](https://www.mikroe.com/?pid_product=MIKROE-4648) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/brushless_14_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4648&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/brushless-14-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Brushless14 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This application example showcases ability of the device to control motor,
+It's speed and rotation direction. Also it gives user ability to change other
+configuration parameters.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Brushless14 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Brushless14
 
-#### Standard key functions :
+### Example Key Functions
 
 - `brushless14_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t brushless14_init ( brushless14_t *ctx, brushless14_cfg_t *cfg );
 err_t brushless14_default_cfg ( brushless14_t *ctx );
 ```
 
-#### Example key functions :
-
 - `brushless14_set_duty_cycle` Sets PWM duty cycle.
 ```c
 err_t brushless14_set_duty_cycle ( brushless14_t *ctx, float duty_cycle );
@@ -68,14 +65,6 @@ err_t brushless14_set_la ( brushless14_t *ctx, uint16_t m_voltage );
 void brushless14_set_dir ( brushless14_t *ctx, uint8_t state );
 ```
 
-## Example Description
-
-> This application example showcases ability of the device to control motor,
-It's speed and rotation direction. Also it gives user ability to change other
-configuration parameters.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of communication modules (I2C, PWM, UART) and additional 
@@ -83,7 +72,6 @@ pins (INT, DIR). It reads ID from DAC ic to confirm communcation. Then
 configures device for control.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -126,7 +114,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -136,7 +123,6 @@ Increment is done by 10% in span of 2 seconds. Whenever application gets
 to 0% duty cycle it chages direction of rotation.
 
 ```c
-
 void application_task ( void ) 
 {
     static int8_t duty_cnt = 1;
@@ -162,25 +148,21 @@ void application_task ( void )
     }
     duty_cnt += duty_inc;
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Brushless14
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

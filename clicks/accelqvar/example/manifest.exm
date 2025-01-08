@@ -1,8 +1,5 @@
 {
     "name": "AccelQvar Click",
-    "description": "Accel&Qvar Click is a compact add-on board for capturing precise acceleration measurements and detecting electric charge variations. This board features the LIS2DUXS12, an ultralow-power accelerometer from STMicroelectronics. Besides low power consumption, it also includes Qvar technology, artificial intelligence, and an anti-aliasing filter. This digital, 3-axis accelerometer has adjustable full scales (±2g to ±16g), output data rates (1.6Hz to 800Hz), and multiple operating modes to serve various applications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LIS2DUXS12TR"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","LIS2DUXS12TR"]
 }

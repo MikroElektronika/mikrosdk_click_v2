@@ -1,71 +1,69 @@
-\mainpage Main Page
- 
- 
 
 ---
 # 13DOF Click
 
-13DOF Click is an advanced 13-axis motion tracking Click board™, which utilizes three different sensor ICs onboard: BME680, a digital gas, humidity, pressure and temperature sensor and BMM150, a geomagnetic sensor and a BMI088, small, versatile 6DoF sensor module. All integrated sensors ICs are made by Bosch Sensortec, featuring the state-of-the-art sensor technology processes, in order to fulfill the requirements for immersive gaming and navigation applications, which require highly accurate sensor data fusion.>
+> [13DOF Click](https://www.mikroe.com/?pid_product=MIKROE-3775) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/13dof_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3775&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/13dof-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the c13DOF Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for c13DOF Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c13dof_cfg_setup ( c13dof_cfg_t *cfg ); 
- 
-- Initialization function.
-> C13DOF_RETVAL c13dof_init ( c13dof_t *ctx, c13dof_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c13dof_default_cfg ( c13dof_t *ctx );
-
-
-#### Example key functions :
-
-- Function reads 16-bit X-axis, Y-axis data and Z-axis data.
-> void c13dof_bmi088_read_accel ( c13dof_t *ctx, int16_t *accel_x, int16_t *accel_y, int16_t *accel_z );
- 
-- Function read a sequential data starting from the targeted 8-bit register address.
-> C13DOF_BMI088_RETVAL_T c13dof_bmi088_accel_read_bytes ( c13dof_t *ctx, uint8_t *data_out, uint8_t reg_address, uint8_t n_bytes );
-
-- Function reads 16-bit X-axis, Y-axis data and Z-axis data of BMM150 sensor on 13DOF Click board.
-> void c13dof_bmi088_read_gyro ( c13dof_t *ctx, int16_t *gyro_x, int16_t *gyro_y, int16_t *gyro_z );
-
-## Examples Description
+## Example Description
 
 > This example displays values registered by sensors on Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.13DOF
+
+### Example Key Functions
+
+- `c13dof_cfg_setup` Config Object Initialization function. 
+```c
+void c13dof_cfg_setup ( c13dof_cfg_t *cfg );
+``` 
+ 
+- `c13dof_init` Initialization function. 
+```c
+err_t c13dof_init ( c13dof_t *ctx, c13dof_cfg_t *cfg );
+```
+
+- `c13dof_default_cfg` Click Default Configuration function. 
+```c
+void c13dof_default_cfg ( c13dof_t *ctx );
+```
+
+- `c13dof_bmi088_read_accel` Function reads 16-bit X-axis, Y-axis data and Z-axis data. 
+```c
+void c13dof_bmi088_read_accel ( c13dof_t *ctx, int16_t *accel_x, int16_t *accel_y, int16_t *accel_z );
+```
+ 
+- `c13dof_bmi088_accel_read_bytes` Function read a sequential data starting from the targeted 8-bit register address. 
+```c
+err_t c13dof_bmi088_accel_read_bytes ( c13dof_t *ctx, uint8_t *data_out, uint8_t reg_address, uint8_t n_bytes );
+```
+
+- `c13dof_bmi088_read_gyro` Function reads 16-bit X-axis, Y-axis data and Z-axis data of BMM150 sensor on 13DOF Click board. 
+```c
+void c13dof_bmi088_read_gyro ( c13dof_t *ctx, int16_t *gyro_x, int16_t *gyro_y, int16_t *gyro_z );
+```
+
+### Application Init
 
 > Initialization driver enables -
 > BME680 Low power gas, pressure, temperature & humidity sensor, 
@@ -73,7 +71,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > BMM150 Geomagnetic Sensor, also write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +96,6 @@ void application_init ( void )
     c13dof_init( &c13dof, &cfg );
     c13dof_default_cfg( &c13dof );
 }
-  
 ```
 
 ### Application Task
@@ -115,7 +111,6 @@ void application_init ( void )
 > All data logs write on usb uart changes for each second.
 
 ```c
-
 void application_task ( void )
 {
     temperature = c13dof_bme680_get_temperature( &c13dof );
@@ -157,29 +152,22 @@ void application_task ( void )
 
     Delay_ms ( 1000 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.13DOF
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

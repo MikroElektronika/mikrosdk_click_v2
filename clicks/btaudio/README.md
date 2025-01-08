@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # BT Audio Click
 
-If you are getting tired of all those cables you need just to listen to your favorite song over speakers.
+> [BT Audio Click](https://www.mikroe.com/?pid_product=MIKROE-2399) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/btaudio_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2399&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/bt-audio-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the BtAudio Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from BT Audio Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for BtAudio Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BtAudio
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void btaudio_cfg_setup ( btaudio_cfg_t *cfg ); 
+- `btaudio_cfg_setup` Config Object Initialization function. 
+```c
+void btaudio_cfg_setup ( btaudio_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> BTAUDIO_RETVAL btaudio_init ( btaudio_t *ctx, btaudio_cfg_t *cfg );
+- `btaudio_init` Initialization function. 
+```c
+err_t btaudio_init ( btaudio_t *ctx, btaudio_cfg_t *cfg );
+```
 
-#### Example key functions :
-
-- Play next track function
-> uint8_t btaudio_next_track ( btaudio_t *ctx );
+- `btaudio_next_track` Play next track function. 
+```c
+uint8_t btaudio_next_track( btaudio_t *ctx );
+```
  
-- Increase volume function
-> uint8_t btaudio_increase_volume ( btaudio_t *ctx );
+- `btaudio_increase_volume` Increase volume function. 
+```c
+uint8_t btaudio_increase_volume( btaudio_t *ctx );
+```
 
-- Decrease volume function
-> uint8_t btaudio_decrease_volume ( btaudio_t *ctx );
+- `btaudio_decrease_volume` Decrease volume function. 
+```c
+uint8_t btaudio_decrease_volume( btaudio_t *ctx );
+```
 
-## Examples Description
-
-> This example reads and processes data from BT Audio clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -107,7 +105,6 @@ void application_init ( void )
     btaudio_set_cmd_mode( &btaudio, 1 );
     btaudio_process( RESPONSE_NULL );
 }
-  
 ```
 
 ### Application Task
@@ -115,15 +112,13 @@ void application_init ( void )
 > Checks if there's any command received, then parses it and performs adequate actions.
 
 ```c
-
 void application_task ( void )
 {
     btaudio_process( RESPONSE_NULL );
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
 > A smartphone and the Click board must be paired in order to exchange messages
@@ -131,25 +126,19 @@ void application_task ( void )
 > connect to it using the Serial Bluetooth Terminal application, then you will be able 
 > to send commands listed below.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BtAudio
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

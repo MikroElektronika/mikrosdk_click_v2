@@ -1,8 +1,5 @@
 {
     "name": "ADC 13 Click",
-    "description": "ADC 13 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS1262, a 32-bit, high precision, 38-kSPS, analog-to-digital converter with programmable gain amplifier and voltage reference from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ADS1262"],
-    "category" : ["ADC"]
+    "hw" : ["Click","ADS1262"]
 }

@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # WIZFI360 Click
 
-> WIZFI360 Click is a compact add-on board for reliable WiFi connectivity in industrial applications. This board features the WIZFI360, a WiFi module from WIZnet, known for its low power consumption and full compliance with IEEE802.11 b/g/n standards. The board supports SoftAP, Station, and SoftAP+Station modes, operates within the frequency range of 2400MHz to 2483.5MHz, and offers a versatile serial port baud rate of up to 2Mbps. It features WPA_PSK and WPA2_PSK encryption for secure communication, configurable operating channels from 1 to 13, and the ability to handle up to 5 simultaneous TCP/UDP links.
+> [WIZFI360 Click](https://www.mikroe.com/?pid_product=MIKROE-6153) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/wizifi360_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6153&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/wizfi360-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2024.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the WIZFI360 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the WIZFI360 Click board 
+> by processing the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for WIZFI360 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.WIZFI360
 
-#### Standard key functions :
+### Example Key Functions
 
 - `wizfi360_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +43,6 @@ void wizfi360_cfg_setup ( wizfi360_cfg_t *cfg );
 ```c
 err_t wizfi360_init ( wizfi360_t *ctx, wizfi360_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `wizfi360_write_command` This function writes a desired command by using the UART serial interface.
 ```c
@@ -62,13 +58,6 @@ err_t wizfi360_write_cmd_param ( wizfi360_t *ctx, uint8_t *command, uint8_t *pre
 ```c
 err_t wizfi360_send_message ( wizfi360_t *ctx, uint8_t *message );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the WIZFI360 Click board 
-> by processing the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -206,27 +195,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > In order for the examples to work without using Planet Debug, 
 > the user needs to set the SSID and password of the target AP.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.WIZFI360
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

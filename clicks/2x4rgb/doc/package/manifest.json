@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V",
-    "category": "Click Boards > Display & LED > LED matrix",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "2x4 RGB Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c2x4rgb",
-    "product_link": "https://www.mikroe.com/2x4-rgb-click",
-    "short_description": "2x4 RGB Click is a compact add-on board for dynamic and colorful lighting control. This board features an array of 2x4 RGB LEDs (WL-ICLED 1312121320437) from Würth Elektronik, featuring individual control of each red, green, and blue component via an integrated IC and pulse width modulation (PWM) technology. The board also includes an LSF0102 voltage translator, ensuring seamless operation with both 3.3V and 5V logic systems, and supports MIKROE’s innovative Click Snap feature for flexible installation options. With its precise color control and flexible design, 2x4 RGB Click is ideal for applications such as ambient lighting, displays, and visual indicators in various consumer electronics and industrial environments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.2x4RGB",
-    "subdir_name": "lib_c2x4rgb"
+    "name": "mikroe.click.2x4rgb",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6378",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "2x4 RGB Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.2x4RGB",
+                "subdir_name": "lib_c2x4rgb",
+                "path": "2x4 RGB Click/data/lib_c2x4rgb"
+            }
+        ]
+    }
 }
-
-

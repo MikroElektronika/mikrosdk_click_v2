@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # SRAM 3 Click
 
-SRAM 3 Click is a compact add-on board that contains a serial non-volatile SRAM with a high storage capacity. This board features the ANV32AA1WDK66, a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell organized as 128k words of 8 bits each from Anvo-System Dresden. The serial SRAM provides fast access & cycle times, high data accuracy, ease of use, and unlimited read & write accessed by a high-speed SPI compatible bus. This Click board™ is suitable to store drive profiles, configurations, and similar data, or for applications such as medical devices, industrial automation (for example, motor control and robotics), smart metering systems, and many others.
+> [SRAM 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4293) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/sram_3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4293&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/sram-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jul 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the SRAM3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that shows the use of SRAM memory, using SRAM 3 Click. SRAM 3 Click is based on ANV32AA1W, and ANV32AA1W is a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell, 
+organized as 128k words of 8 bits each. 
+The devices are accessed by a high speed SPI-compatible bus. Specifically in this example, we used the high-speed SPI communication characteristics to write data to a specific registration address and read it.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for SRAM3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SRAM3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `sram3_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +44,6 @@ void sram3_cfg_setup ( sram3_cfg_t *cfg );
 ```c
 err_t sram3_init ( sram3_t *ctx, sram3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `sram3_enable_write` This function is for enabling writing to memory, status register or user serial.
 ```c
@@ -63,21 +60,13 @@ void sram3_disable_write( sram3_t *ctx );
 void sram3_protect_memory( sram3_t *ctx, uint8_t protect_range );
 ```
 
-## Example Description
-
-> This is an example that shows the use of SRAM memory, using SRAM 3 Click. SRAM 3 Click is based on ANV32AA1W, and ANV32AA1W is a 1Mb serial SRAM with a non-volatile SONOS storage element included with each memory cell, 
-organized as 128k words of 8 bits each. 
-The devices are accessed by a high speed SPI-compatible bus. Specifically in this example, we used the high-speed SPI communication characteristics to write data to a specific registration address and read it.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization SPI module, logger initalization and Click initialization.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;         /**< Logger config object. */
     sram3_cfg_t sram3_cfg;     /**< Click config object. */
 
@@ -108,7 +97,6 @@ void application_init ( void ) {
     sram3_release_hold( &sram3 );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
@@ -116,8 +104,8 @@ void application_init ( void ) {
 > First, we write the data to the registry address 0x00, and then we read the data from 0x00 address.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     char buff_out[ 10 ] = { 0 };
         
     log_printf( &logger, "Writing [ %s ] to memory...\r\n", buf );
@@ -133,26 +121,21 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SRAM3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Boost 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.boost11",
-    "product_link": "https://www.mikroe.com/boost-11-click",
-    "short_description": "Boost 11 Click is a compact add-on board that boosts low input voltages to a stable output. This board features the XCL105B331H2-G, a synchronous step-up DC/DC converter from TOREX Semi. It operates from an input voltage as low as 0.9V, ideal for devices using single Alkaline or Nickel-metal hydride batteries, with an output fixed at 3.3V. It features an EN pin for easy start-up and standby mode and supports both 3.3V and 5V logic levels. This versatility makes Boost 11 Click suitable for industrial equipment, IoT devices, wearables, and applications prioritizing battery life.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Boost11",
-    "subdir_name": "lib_boost11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6061",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Boost 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Boost11",
+                "subdir_name": "lib_boost11",
+                "path": "Boost 11 Click/data/lib_boost11"
+            }
+        ]
+    }
 }
-
-
-

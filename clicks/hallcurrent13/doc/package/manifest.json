@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Hall Current 13 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hallcurrent13",
-    "product_link": "https://www.mikroe.com/hall-current-13-click",
-    "short_description": "Hall Current 13 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the TMCS1107-Q1, a galvanically isolated Hall-effect current sensor capable of DC or AC current measurement with high accuracy, excellent linearity, and temperature stability from Texas Instruments. It enables the lowest drift, <3% full-scale error, and highest accuracy over time and temperature. It also provides a reliable 420V lifetime working voltage and 3kVRMS isolation between the current path and circuitry with uni/bidirectional current sensing. Besides, the user is allowed to process the output signal in analog or digital form.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.HallCurrent13",
-    "subdir_name": "lib_hallcurrent13"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5066",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Current 13 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallCurrent13",
+                "subdir_name": "lib_hallcurrent13",
+                "path": "Hall Current 13 Click/data/lib_hallcurrent13"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

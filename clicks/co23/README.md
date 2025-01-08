@@ -1,45 +1,39 @@
-\mainpage Main Page
 
 ---
 # CO2 3 Click
 
-> CO2 3 Click is a compact add-on board that allows for precise and reliable indoor air quality measurements. 
-> This board features XENSIV™ PASCO2V01BUMA1, a highly accurate CO2 sensor module 
-> from Infineon Technologies that uses photoacoustic spectroscopy technology to measure indoor air quality. 
-> The module comprises a gas measuring cell, an IR emitter, a microphone, and a microcontroller for data processing. 
-> Its key components are developed in-house, ensuring the highest quality and performance. 
-> Other major characteristics include high accuracy, low power consumption, and versatile configuration options.
+> [CO2 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5646) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/co23_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5646&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/co2-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Feb 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the CO2 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
+## Example Description
 
 > This library contains API for CO2 3 Click driver.
+> This driver provides the functions for sensor configuration 
+> and reading the CO2 gas concentration in the air.
 
-#### Standard key functions :
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CO23
+
+### Example Key Functions
 
 - `co23_cfg_setup` Config Object Initialization function.
 ```c
@@ -56,8 +50,6 @@ err_t co23_init ( co23_t *ctx, co23_cfg_t *cfg );
 err_t co23_default_cfg ( co23_t *ctx );
 ```
 
-#### Example key functions :
-
 - `co23_get_co2_ppm` CO2 3 get CO2 concentration function.
 ```c
 err_t co23_get_co2_ppm ( co23_t *ctx, uint16_t *co2_ppm );
@@ -72,14 +64,6 @@ err_t co23_set_meas_cfg ( co23_t *ctx, co23_meas_cfg_t meas_cfg );
 ```c
 err_t co23_set_pressure_ref ( co23_t *ctx, uint16_t pressure_mbar );
 ```
-
-## Example Description
-
-> This library contains API for CO2 3 Click driver.
-> This driver provides the functions for sensor configuration 
-> and reading the CO2 gas concentration in the air.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -130,7 +114,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of the CO2 3 Click board™.
+> This example demonstrates the use of the CO2 3 Click board&trade;.
 > The device starts a single measurement sequence,
 > measures and display air CO2 gas concentration (ppm).
 > Results are being sent to the UART Terminal, where you can track their changes.
@@ -151,22 +135,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CO23
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

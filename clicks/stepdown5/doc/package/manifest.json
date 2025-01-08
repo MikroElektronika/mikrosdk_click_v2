@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Step Down 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepdown5",
-    "product_link": "https://www.mikroe.com/step-down-5-click",
-    "short_description": "Step Down 5 Click is a compact add-on board that converts a higher voltage into a lower voltage level. This board features the TPS628510, a high-efficiency, easy-to-use, synchronous step-down DC/DC converter from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.StepDown5",
-    "subdir_name": "lib_stepdown5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5572",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Step Down 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.StepDown5",
+                "subdir_name": "lib_stepdown5",
+                "path": "Step Down 5 Click/data/lib_stepdown5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

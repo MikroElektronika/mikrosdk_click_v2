@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Battery Charger",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SOLAR ENERGY Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.solarenergy",
-    "product_link": "https://www.mikroe.com/solar-energy-click",
-    "short_description": "This application charge the batery when is empty",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2228
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.SolarEnergy",
-    "subdir_name": "lib_solarenergy"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2814",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SOLAR ENERGY Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SolarEnergy",
+                "subdir_name": "lib_solarenergy",
+                "path": "SOLAR ENERGY Click/data/lib_solarenergy"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -126,7 +126,7 @@ err_t c3dhall11_check_communication ( c3dhall11_t *ctx )
     uint8_t data_buf[ 3 ] = { 0 };
     if ( C3DHALL11_OK == c3dhall11_generic_read( ctx, C3DHALL11_REG_DEVICE_ID, data_buf, 3 ) )
     {
-        if ( ( C3DHALL11_DEVICE_ID == data_buf[ 0 ] ) && 
+        if ( ( C3DHALL11_DEVICE_ID == ( data_buf[ 0 ] & C3DHALL11_DEVICE_ID_MASK ) ) && 
              ( C3DHALL11_MANUFACTURER_ID_LSB == data_buf[ 1 ] ) &&
              ( C3DHALL11_MANUFACTURER_ID_MSB == data_buf[ 2 ] ) )
         {
@@ -139,10 +139,12 @@ err_t c3dhall11_check_communication ( c3dhall11_t *ctx )
 err_t c3dhall11_read_data ( c3dhall11_t *ctx, c3dhall11_data_t *data_out )
 {
     uint8_t data_buf[ 12 ] = { 0 };
+    uint8_t sensor_config[ 2 ] = { 0 };
+    uint8_t temp_config = 0;
+    int16_t raw_data = 0;
     err_t error_flag = c3dhall11_generic_read ( ctx, C3DHALL11_REG_T_MSB_RESULT, data_buf, 12 );
     if ( ( C3DHALL11_OK == error_flag ) && ( data_buf[ 8 ] & C3DHALL11_CONV_STATUS_DATA_READY ) )
     {
-        uint8_t sensor_config[ 2 ] = { 0 };
         error_flag |= c3dhall11_generic_read ( ctx, C3DHALL11_REG_SENSOR_CONFIG_1, sensor_config, 2 );
         if ( sensor_config[ 0 ] & C3DHALL11_MAG_CH_EN_BIT_MASK )
         {
@@ -152,17 +154,19 @@ err_t c3dhall11_read_data ( c3dhall11_t *ctx, c3dhall11_data_t *data_out )
         {
             data_out->angle = ( ( ( uint16_t ) data_buf[ 9 ] << 8 ) | data_buf[ 10 ] ) / C3DHALL11_ANGLE_RESOLUTION;
         }
-        uint8_t temp_config = 0;
         error_flag |= c3dhall11_read_register ( ctx, C3DHALL11_REG_T_CONFIG, &temp_config );
         if ( temp_config & C3DHALL11_T_CH_EN_ENABLE )
         {
-            data_out->temperature = C3DHALL11_TEMP_SENS_T0 + 
-                                    ( ( int16_t ) ( ( ( uint16_t ) data_buf[ 0 ] << 8 ) | data_buf[ 1 ] ) - C3DHALL11_TEMP_ADC_T0 ) 
-                                    / C3DHALL11_TEMP_ADC_RESOLUTION;
+            raw_data = ( ( ( uint16_t ) data_buf[ 0 ] << 8 ) | data_buf[ 1 ] );
+            raw_data -= C3DHALL11_TEMP_ADC_T0;
+            data_out->temperature = C3DHALL11_TEMP_SENS_T0 + raw_data / C3DHALL11_TEMP_ADC_RESOLUTION;
         }
-        data_out->x_axis = ( float ) ( ( ( int16_t ) data_buf[ 2 ] << 8 ) | data_buf[ 3 ] );
-        data_out->y_axis = ( float ) ( ( ( int16_t ) data_buf[ 4 ] << 8 ) | data_buf[ 5 ] );
-        data_out->z_axis = ( float ) ( ( ( int16_t ) data_buf[ 6 ] << 8 ) | data_buf[ 7 ] );
+        raw_data = ( ( int16_t ) data_buf[ 2 ] << 8 ) | data_buf[ 3 ];
+        data_out->x_axis = ( float ) raw_data;
+        raw_data = ( ( int16_t ) data_buf[ 4 ] << 8 ) | data_buf[ 5 ];
+        data_out->y_axis = ( float ) raw_data;
+        raw_data = ( ( int16_t ) data_buf[ 6 ] << 8 ) | data_buf[ 7 ];
+        data_out->z_axis = ( float ) raw_data;
         if ( sensor_config[ 1 ] & C3DHALL11_X_Y_RANGE_80mT )
         {
             data_out->x_axis /= C3DHALL11_XYZ_SENSITIVITY_80mT;

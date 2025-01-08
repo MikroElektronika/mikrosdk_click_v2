@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck-Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Buck-Boost 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.buckboost3",
-    "product_link": "https://www.mikroe.com/buck-boost-3-click",
-    "short_description": "The Buck-Boost 3 Click is a voltage converter regulator, which is able to provide a regulated voltage of 3.3V or 5V on the output, even when the input voltage drops under 3V.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2624
-    ],
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.BuckBoost3",
-    "subdir_name": "lib_buckboost3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3277",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Buck-Boost 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BuckBoost3",
+                "subdir_name": "lib_buckboost3",
+                "path": "Buck-Boost 3 Click/data/lib_buckboost3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

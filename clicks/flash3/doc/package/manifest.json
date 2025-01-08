@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > FLASH",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Flash 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.flash3",
-    "product_link": "https://www.mikroe.com/flash-3-click",
-    "short_description": "Flash 3 Click is a mikroBUS add-on board for adding more Flash Memory to your target board microcontroller. It carries an ISSI IS25LP128 IC with 128 Mbit capacity.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1895
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Flash3",
-    "subdir_name": "lib_flash3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2374",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Flash 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Flash3",
+                "subdir_name": "lib_flash3",
+                "path": "Flash 3 Click/data/lib_flash3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

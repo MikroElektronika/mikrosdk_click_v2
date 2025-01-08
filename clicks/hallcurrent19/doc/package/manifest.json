@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Hall Current 19 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hallcurrent19",
-    "product_link": "https://www.mikroe.com/hall-current-19-click",
-    "short_description": "Hall Current 19 Click is a compact add-on board designed for precise current sensing in various applications. This board features the CZ3AG2, a coreless current sensor from AKM Semiconductor. The CZ3AG2 offers high-accuracy and high-speed current sensing using Hall sensor technology, with features like stray magnetic field reduction and dual overcurrent detection.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.HallCurrent19",
-    "subdir_name": "lib_hallcurrent19"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6097",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Current 19 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallCurrent19",
+                "subdir_name": "lib_hallcurrent19",
+                "path": "Hall Current 19 Click/data/lib_hallcurrent19"
+            }
+        ]
+    }
 }
-
-
-

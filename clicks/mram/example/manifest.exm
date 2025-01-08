@@ -1,8 +1,5 @@
 {
     "name": "MRAM Click",
-    "description": "MRAM Click features MRAM module which contains 262,144 magnetoresistive memory cells, organized into 32,768 bytes of memory. It means that MRAM Click is a memory storage device with 32KB of memory space.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MR25H256A"],
-    "category" : ["MRAM"] 
+    "hw" : ["Click","MR25H256A"]
 }

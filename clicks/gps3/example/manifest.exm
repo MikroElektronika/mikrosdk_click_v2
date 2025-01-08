@@ -1,8 +1,5 @@
 {
     "name": "GPS 3 Click",
-    "description": "GPS3 Click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS module with a patch antenna.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","L80 GPS"],
-    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"] 
+    "hw" : ["Click","L80 GPS"]
 }

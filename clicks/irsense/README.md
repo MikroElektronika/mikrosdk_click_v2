@@ -1,73 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # IR SENSE Click
 
-IR Sense Click carries the AK9750 quantum-type IR sensor. The Click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over I2C interface, with additional functionality provided by the INT pin on the mikroBUS™ line >
+> [IR SENSE Click](https://www.mikroe.com/?pid_product=MIKROE-2677) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/irsense_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2677&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ir-sense-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the IrSense Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for IrSense Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void irsense_cfg_setup ( irsense_cfg_t *cfg ); 
- 
-- Initialization function.
-> IRSENSE_RETVAL irsense_init ( irsense_t *ctx, irsense_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Function write the 8-bit data to the target 8-bit register address of AK9750 sensor on IR Sense Click board.
-> void irsense_write_byte ( irsense_t *ctx, uint8_t reg_address, uint8_t write_data );
- 
-- Function read the 8-bit data from the target 8-bit register address of AK9750 sensor on IR Sense Click board.
-> uint8_t irsense_read_byte ( irsense_t *ctx, uint8_t reg_address );
-
-- Function read the 16-bit data from the two target 8-bit register address of AK9750 sensor on IR Sense Click board.
-> uint16_t irsense_read_data ( irsense_t *ctx, uint8_t reg_address_low );
-
-## Examples Description
+## Example Description
 
 > This application return the temperature of object.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.IrSense
+
+### Example Key Functions
+
+- `irsense_cfg_setup` Config Object Initialization function. 
+```c
+void irsense_cfg_setup ( irsense_cfg_t *cfg );
+``` 
+ 
+- `irsense_init` Initialization function. 
+```c
+err_t irsense_init ( irsense_t *ctx, irsense_cfg_t *cfg );
+```
+
+- `irsense_write_byte` Function write the 8-bit data to the target 8-bit register address of AK9750 sensor on IR Sense Click board. 
+```c
+void irsense_write_byte ( irsense_t *ctx, uint8_t reg_address, uint8_t write_data );
+```
+ 
+- `irsense_read_byte` Function read the 8-bit data from the target 8-bit register address of AK9750 sensor on IR Sense Click board. 
+```c
+uint8_t irsense_read_byte ( irsense_t *ctx, uint8_t reg_address );
+```
+
+- `irsense_read_data` Function read the 16-bit data from the two target 8-bit register address of AK9750 sensor on IR Sense Click board. 
+```c
+uint16_t irsense_read_data ( irsense_t *ctx, uint8_t reg_address_low );
+```
+
+### Application Init
 
 > Initialization driver enables - I2C, enable sensor, set soft reset, set Continuous Mode 0,  also write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -131,7 +126,6 @@ void application_init ( void )
     deg_cel[ 2 ] = 67;
     deg_cel[ 3 ] = 0;
 }
-  
 ```
 
 ### Application Task
@@ -139,7 +133,6 @@ void application_init ( void )
 > This is an example which demonstrates the use of IR Sense Click board. Detects the temperature of objects and detects the motion in observable area of the AK9750 sensor. Results are being sent to the Usart Terminal where you can track their changes. All data logs write on usb uart changes for every 1 sec.
 
 ```c
-
 void application_task ( void )
 {
    if ( irsense_check_available( &irsense ) )
@@ -163,29 +156,22 @@ void application_task ( void )
         irsense_refresh( &irsense );
         Delay_ms ( 1000 );
     }
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.IrSense
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

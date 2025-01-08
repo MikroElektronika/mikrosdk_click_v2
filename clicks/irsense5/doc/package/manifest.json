@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IR Sense 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.irsense5",
-    "product_link": "https://www.mikroe.com/ir-sense-5-click",
-    "short_description": "IR Sense 5 Click is a compact add-on board designed for accurate, non-contact surface temperature measurement. This board features the ZTP-148SRC1, a thermopile IR sensor from Amphenol, with a measurement range from -20 to +100°C, an active area of 0.7x0.7mm², and a typical field of view of 85 degrees. The board also integrates an OPA2365AIDR OpAmp for signal amplification and an MCP3221 analog-to-digital converter for digitizing the output. Additional features include output offset selection and test points for signal monitoring.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.IRSense5",
-    "subdir_name": "lib_irsense5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6093",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IR Sense 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IRSense5",
+                "subdir_name": "lib_irsense5",
+                "path": "IR Sense 5 Click/data/lib_irsense5"
+            }
+        ]
+    }
 }
-
-
-

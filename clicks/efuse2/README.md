@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # eFuse 2 Click
 
-> eFuse 2 Click is a compact add-on board that contains an integrated FET hot-swap device. This board features the TPS259631, a highly integrated circuit protection and power management solution from Texas Instruments. It provides multiple protection modes against overloads, short circuits, voltage surges, and excessive inrush current.
+> [eFuse 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4335) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/efuse2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4335&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/efuse-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Aug 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the eFuse2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that demonstrate the use of the eFuse 2 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for eFuse2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.eFuse2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `efuse2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t efuse2_init ( efuse2_t *ctx, efuse2_cfg_t *cfg );
 err_t efuse2_default_cfg ( efuse2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `efuse2_set_operating_voltage` Set operating voltage function.
 ```c
 err_t efuse2_set_operating_voltage ( efuse2_t *ctx, float voltage, float *min_voltage, float *max_voltage );
@@ -68,12 +63,6 @@ err_t efuse2_set_current_limit ( efuse2_t *ctx, float current );
 uint8_t efuse2_get_fault ( efuse2_t *ctx );
 ```
 
-## Example Description
-
-> This is an example that demonstrate the use of the eFuse 2 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver enables - I2C,  
@@ -82,7 +71,6 @@ uint8_t efuse2_get_fault ( efuse2_t *ctx );
 > Display diagnostic states.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -136,7 +124,6 @@ void application_init ( void )
     log_printf( &logger, "-----------------------------\r\n" );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -145,7 +132,6 @@ void application_init ( void )
 > When one of the fault conditions is met, the microcontroller is notified via INT pin which is checked by the app to initiate a shutdown mode. All data logs write on USB UART changes every 2000 milliseconds.
 
 ```c
-
 void application_task ( void ) 
 {
     if ( EFUSE2_FAULT == efuse2_get_fault( &efuse2 ) ) 
@@ -171,26 +157,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.eFuse2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

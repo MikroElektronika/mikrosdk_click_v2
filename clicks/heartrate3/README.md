@@ -1,41 +1,37 @@
-\mainpage Main Page
- 
 
 ---
 # Heart rate 3 Click
 
-Heart rate 3 Click is a mikroBUS add-on board whose functionality is determined by two components: an OSRAM’s SFH7050 pulse oximetry and heart rate monitoring module, and a TI AFE4404 (analong-front-end) IC specialized for bio-sensing.
+> [Heart rate 3 Click](https://www.mikroe.com/?pid_product=MIKROE-2036) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/heartrate3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2036&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/heart-rate-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Jova Stajkovic
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the HeartRate3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> The demo application shows reflected red, green and ir values.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for HeartRate3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HeartRate3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `heartrate3_cfg_setup` Config Object Initialization function.
 ```c
@@ -52,8 +48,6 @@ err_t heartrate3_init ( heartrate3_t *ctx, heartrate3_cfg_t *cfg );
 err_t heartrate3_default_cfg ( heartrate3_t *ctx );
 ```
 
-#### Example key functions :
-
 - `heartrate3_check_data_ready` Function is used to check data ready flag.
 ```c
 uint8_t heartrate3_check_data_ready ( heartrate3_t *ctx );
@@ -69,18 +63,11 @@ err_t heartrate3_write_data ( heartrate3_t *ctx, uint8_t reg_adr, uint32_t wr_da
 err_t heartrate3_read_24bit ( heartrate3_t *ctx, uint8_t reg_adr, uint32_t *data_out );
 ```
 
-## Examples Description
-
-> The demo application shows reflected red, green and ir values.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initalizes Click driver, resets the device, applies default settings and makes an initial log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -123,7 +110,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -132,7 +118,6 @@ void application_init ( void )
 and reads reflected red, green and ir values and displays the results on USART terminal.
 
 ```c
-
 void application_task ( void )
 {
     err_t error_flag = HEARTRATE3_OK;
@@ -150,33 +135,26 @@ void application_task ( void )
                         led_2, aled_2, led_1, aled_1, led_2_aled_2, led_1_aled_1 );
         }
     }
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > We recommend using the SerialPlot tool for data visualizing.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HeartRate3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

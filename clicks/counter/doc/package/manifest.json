@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Rotary encoder",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Counter Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.counter",
-    "product_link": "https://www.mikroe.com/counter-click",
-    "short_description": "Counter Click carries an LS7366R 32-bit quadrature counter. The top of the board has a pinout for interfacing with incremental encoders. The interface has ENCA and ENCB pins, along with ENCI, which is a programmable index.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1588
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Counter",
-    "subdir_name": "lib_counter"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1917",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Counter Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Counter",
+                "subdir_name": "lib_counter",
+                "path": "Counter Click/data/lib_counter"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

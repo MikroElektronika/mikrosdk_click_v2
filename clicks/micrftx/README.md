@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # MICRF TX Click
 
-> MICRF TX Click is a compact add-on board designed as a powerful RF transmitter for data transmission over the 315MHz frequency band. This board features the MICRF112, a high-performance RF transmitter IC from Microchip, renowned for its efficiency in operation. This Click board™ stands out for its ease of use, requiring only a simple crystal oscillator to set the frequency, and supports both ASK and FSK modulation types with a Phase-Locked Loop (PLL) for stable frequency.
+> [MICRF TX Click](https://www.mikroe.com/?pid_product=MIKROE-6016) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/micrftx_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6016&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/micrf-tx-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Nov 2023.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the MICRF TX Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of MICRF TX Click board by sending a predefined message to the receiver.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for MICRF TX Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MICRFTX
 
-#### Standard key functions :
+### Example Key Functions
 
 - `micrftx_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,25 +43,16 @@ void micrftx_cfg_setup ( micrftx_cfg_t *cfg );
 err_t micrftx_init ( micrftx_t *ctx, micrftx_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `micrftx_send_data` This function builds and sends a packet of data. The packet format is as follows (MSB first, manchester IEEE 802.3): MICRFTX_TRAINING_BYTES, PREABMLE, LEN, DATA_IN, CRC16 (calculated from whole packet excluding training bytes).
 ```c
 static void micrftx_send_data ( micrftx_t *ctx, uint16_t preamble, uint8_t *data_in, uint8_t len );
 ```
-
-## Example Description
-
-> This example demonstrates the use of MICRF TX Click board by sending a predefined message to the receiver.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
 > Initialized the driver and logger.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;          /**< Logger config object. */
@@ -94,7 +82,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -112,7 +99,7 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > The MICRF RX Click board is a compatible receiver for the MICRF TX Click.
 Here are a few steps for troubleshooting if you are experiencing issues running this example:
@@ -120,22 +107,19 @@ Here are a few steps for troubleshooting if you are experiencing issues running 
 > - Check the MCU clock configuration, use an external oscillator instead of the MCU's internal one for better accuracy on manchester data rate delay.
 > - Measure the actual data rate on the data line and adjust the MICRFTX_MAN_BIT_LEN_US value accordingly.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MICRFTX
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

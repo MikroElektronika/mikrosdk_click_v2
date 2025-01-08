@@ -1,8 +1,5 @@
 {
     "name": "USB UART 2 Click",
-    "description": "USB UART 2 Click provides USB isolation and carries the ADUM4160BRWZ USB port isolator. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over UART interface, with additional functionality provided the following pins on the mikroBUS™ line: RST, CS, PWM, INT.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","FT232RL"],
-    "category" : ["USB"]
+    "hw" : ["Click","FT232RL"]
 }

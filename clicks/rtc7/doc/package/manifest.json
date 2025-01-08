@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Clock & Timing > RTC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RTC 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rtc7",
-    "product_link": "https://www.mikroe.com/rtc-7-click",
-    "short_description": "RTC 7 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery or a super capacitor, for an extended period of time. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2406
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.RTC7",
-    "subdir_name": "lib_rtc7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2976",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC7",
+                "subdir_name": "lib_rtc7",
+                "path": "RTC 7 Click/data/lib_rtc7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

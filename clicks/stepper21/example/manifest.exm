@@ -1,8 +1,5 @@
 {
     "name": "Stepper 21 Click",
-    "description": "Stepper 21 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the DRV8825, a stepper motor controller integral circuit from Texas Instruments. It is a PWM micro-stepping stepper motor driver with up to 1/32 micro-stepping resolution and a built-in micro-stepper indexer. The driver has two H-bridge drivers and is intended to drive a bipolar stepper motor in a voltage supply operating range of 8.2V up to 45V.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8825PWPR","PCA9538A"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","DRV8825PWPR","PCA9538A"]
 }

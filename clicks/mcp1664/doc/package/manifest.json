@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED Drivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MCP1664 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mcp1664",
-    "product_link": "https://www.mikroe.com/mcp1664-click",
-    "short_description": "MCP1664 Click contains 4 high-power white LEDs. It carries the MCP1664, a high-voltage step-up LED driver from Microchip.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2072
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Mcp1664",
-    "subdir_name": "lib_mcp1664"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2548",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MCP1664 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mcp1664",
+                "subdir_name": "lib_mcp1664",
+                "path": "MCP1664 Click/data/lib_mcp1664"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

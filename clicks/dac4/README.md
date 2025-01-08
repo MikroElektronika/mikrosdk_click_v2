@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # DAC 4 Click
 
-DAC 4 Click carries Microchip’s MCP4728 IC, a Quad Digital-to-Analog Converter with nonvolatile (EEPROM) Memory. 
+> [DAC 4 Click](https://www.mikroe.com/?pid_product=MIKROE-3707) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dac4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3707&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dac-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Dac4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This application enables usage of digital to analog converter.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Dac4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Dac4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `dac4_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void dac4_cfg_setup ( dac4_cfg_t *cfg );
 ```c
 err_t dac4_init ( dac4_t *ctx, dac4_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `dac4_voltage_reference_set` Setting channel voltage reference values
 ```c
@@ -63,18 +58,11 @@ uint8_t dac4_gain_set ( dac4_t *ctx, uint8_t gain_channel_a, uint8_t gain_channe
 uint8_t dac4_data_report ( dac4_t *ctx, dac_channel_setting_t * channel_buffer );
 ```
 
-## Examples Description
-
-> This application enables usage of digital to analog converter.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes I2C driver, executes general call reset and wake up commands.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -108,7 +96,6 @@ void application_init ( void )
 
     log_printf( &logger, "--- App init done \r\n \r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -116,34 +103,25 @@ void application_init ( void )
 > Changes the output voltage of channels every 3 seconds, and displays the channels status on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     dac4_channel_report( );
-} 
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Dac4
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

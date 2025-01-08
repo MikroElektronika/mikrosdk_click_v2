@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Amplifier",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GainAMP 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gainamp2",
-    "product_link": "https://www.mikroe.com/gainamp-2-click",
-    "short_description": "GainAMP 2 Click is a 6-channel programmable gain amplifier, used to amplify signals on any of the 6 non-inverting input channels up to 32x, in eight discrete steps.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2272
-    ],
-    "version": "2.1.0.20",
-    "cmake": true,
-    "alias": "Click.GainAmp2",
-    "subdir_name": "lib_gainamp2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2859",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GainAMP 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GainAmp2",
+                "subdir_name": "lib_gainamp2",
+                "path": "GainAMP 2 Click/data/lib_gainamp2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

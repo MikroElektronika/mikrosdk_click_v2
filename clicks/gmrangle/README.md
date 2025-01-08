@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # GMR Angle Click
 
-The GMR Angle Click is a Click board™ that features the TLI5012B E1000, which is a pre-calibrated 360° angle sensor that detects the orientation of a magnetic field, made by Infineon. The GMR Angle Click is ideal for angular position sensing in industrial and consumer applications such as electrical commutated motor (e.g. BLDC), fans or pumps.
+> [GMR Angle Click](https://www.mikroe.com/?pid_product=MIKROE-3815) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gmrangle_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3815&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gmr-angle-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the GmrAngle Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This is an example which demonstrates the use of GMR Angle Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for GmrAngle Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.GmrAngle
 
-#### Standard key functions :
+### Example Key Functions
 
 - `gmrangle_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void gmrangle_cfg_setup ( gmrangle_cfg_t *cfg );
 ```c
 err_t gmrangle_init ( gmrangle_t *ctx, gmrangle_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `gmrangle_read_data` Generic read 16-bit data function.
 ```c
@@ -63,18 +58,11 @@ void gmrangle_write_data ( gmrangle_t *ctx, uint8_t reg, uint16_t tx_data );
 float gmrangle_calculate_angle ( gmrangle_t *ctx );
 ```
 
-## Examples Description
-
-> This is an example which demonstrates the use of GMR Angle Click board.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes GPIO pins, SPI and LOG modules.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -107,7 +95,6 @@ void application_init ( void )
     log_printf( &logger, "---------------------\r\n" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -117,35 +104,27 @@ void application_init ( void )
 > All data logs write on USB uart changes for every 300 msec.
 
 ```c
-
 void application_task ( void )
 {
     angle = gmrangle_calculate_angle( &gmrangle );
     log_printf( &logger, " Angle is %.1f\r\n", angle );
     Delay_ms ( 300 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.GmrAngle
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

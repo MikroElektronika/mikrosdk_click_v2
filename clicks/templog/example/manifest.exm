@@ -1,8 +1,5 @@
 {
     "name": "Temp-Log Click",
-    "description": "Temp-Log Click is a precise ambient temperature measurement device, equipped with 8Kbit (1024 bytes) of EEPROM memory, which can be used to permanently store system configuration or log application specific or user preference data. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AT30TSE758A"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","AT30TSE758A"]
 }

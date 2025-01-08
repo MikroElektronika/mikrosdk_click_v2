@@ -1,77 +1,76 @@
-\mainpage Main Page
- 
+
 ---
 # FM Click
 
-FM Click with it’s Si4703 IC is a complete FM radio tuner in the form of add-on board. It supports worldwide FM band (76 – 108 MHz).
+> [FM Click](https://www.mikroe.com/?pid_product=MIKROE-1431) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/fm_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1431&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/fm-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Fm Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Fm Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void fm_cfg_setup ( fm_cfg_t *cfg ); 
- 
-- Initialization function.
-> FM_RETVAL fm_init ( fm_t *ctx, fm_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void fm_default_cfg ( fm_t *ctx );
-
-
-#### Example key functions :
-
-- This function reads recived signal strength indicatior
-> uint8_t fm_get_received_signal_strength_indicator ( fm_t *ctx );
- 
-- This function calculates current channel frequency based on band and space settings
-> float fm_get_channel_frequency ( fm_t *ctx );
-
-- This function reads CHANNEL bits from READCHAN register
-> uint16_t fm_get_channel ( fm_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This Click represent FM radio tuner which supports worldwide FM band (76 – 108 MHz)
 > and has a set of features such as automatic frequency and gain control, seek tuning and volume control.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Fm
+
+### Example Key Functions
+
+- `fm_cfg_setup` Config Object Initialization function. 
+```c
+void fm_cfg_setup ( fm_cfg_t *cfg );
+``` 
+ 
+- `fm_init` Initialization function. 
+```c
+err_t fm_init ( fm_t *ctx, fm_cfg_t *cfg );
+```
+
+- `fm_default_cfg` Click Default Configuration function. 
+```c
+void fm_default_cfg ( fm_t *ctx );
+```
+
+- `fm_get_received_signal_strength_indicator` This function reads recived signal strength indicatior. 
+```c
+uint8_t fm_get_received_signal_strength_indicator ( fm_t *ctx );
+```
+ 
+- `fm_get_channel_frequency` This function calculates current channel frequency based on band and space settings. 
+```c
+float fm_get_channel_frequency ( fm_t *ctx );
+```
+
+- `fm_get_channel` This function reads CHANNEL bits from READCHAN register. 
+```c
+uint16_t fm_get_channel ( fm_t *ctx );
+```
+
+### Application Init
 
 > Initializing I2C driver, powering up device, setting basic settings for Europe, 
 > setting values of seek threshold, volume, snr threshold and impulse detection threshold.
 > Seek and memorize 5 radio stations with a signal strength above the set limit.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -126,7 +125,6 @@ void application_init ( void )
     fm_case_mute( &fm );
     log_printf( &logger, "playing memorized stations...\r\n\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -134,7 +132,6 @@ void application_init ( void )
 > Tunes all memorized stations. Switches the stations each 10 seconds.
 
 ```c
-
 void application_task ( void )
 { 
     fm_case_station_1( &fm );
@@ -197,28 +194,21 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Fm
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

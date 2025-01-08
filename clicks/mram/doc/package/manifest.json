@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > MRAM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MRAM Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mram",
-    "product_link": "https://www.mikroe.com/mram-click",
-    "short_description": "MRAM Click features MRAM module which contains 262,144 magnetoresistive memory cells, organized into 32,768 bytes of memory. It means that MRAM Click is a memory storage device with 32KB of memory space. The used memory module can withstand an unlimited number of write cycles, it has data retention period greater than 20 years and it can read and write to random addresses with no delay.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2279
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.MRAM",
-    "subdir_name": "lib_mram"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2914",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MRAM Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MRAM",
+                "subdir_name": "lib_mram",
+                "path": "MRAM Click/data/lib_mram"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

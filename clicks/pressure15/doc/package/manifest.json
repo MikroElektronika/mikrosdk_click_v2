@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Pressure 15 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pressure15",
-    "product_link": "https://www.mikroe.com/pressure-15-click",
-    "short_description": "Pressure 15 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LPS27HHW, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Pressure15",
-    "subdir_name": "lib_pressure15"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4747",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Pressure 15 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pressure15",
+                "subdir_name": "lib_pressure15",
+                "path": "Pressure 15 Click/data/lib_pressure15"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

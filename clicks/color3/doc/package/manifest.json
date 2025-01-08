@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Color 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.color3",
-    "product_link": "https://www.mikroe.com/color-3-click",
-    "short_description": "This application return the color of object.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1925
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Color3",
-    "subdir_name": "lib_color3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2103",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Color 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Color3",
+                "subdir_name": "lib_color3",
+                "path": "Color 3 Click/data/lib_color3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

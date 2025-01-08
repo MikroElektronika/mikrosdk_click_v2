@@ -3,7 +3,7 @@
  * \brief Rn4870 Click example
  * 
  * # Description
- * This example reads and processes data from RN4870 clicks.
+ * This example reads and processes data from RN4870 Clicks.
  *
  * The demo application is composed of two sections :
  * 

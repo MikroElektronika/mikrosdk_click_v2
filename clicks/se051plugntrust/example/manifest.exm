@@ -1,8 +1,5 @@
 {
     "name": "SE051 Plug n Trust Click",
-    "description": "SE051 Plug&Trust Click is a compact add-on board representing a ready-to-use IoT security solution. This board features the SE051C2, an updatable extension of the EdgeLock™ SE050 from NXP Semiconductor, which delivers proven security certified to CC EAL 6+, with AVA_VAN.5up to the OS level. Designed for the latest IoT security requirements, it allows securely storing and provisioning credentials performing cryptographic operations, giving edge-to-cloud security capability right out of the box. It also provides upgrade functionality of the IoT applet while preserving on-device credentials, alongside reconfiguration possibility.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SE051C2HQ1"],
-    "category" : ["Click Boards > Miscellaneous > Encryption"]
+    "hw" : ["Click","SE051C2HQ1"]
 }

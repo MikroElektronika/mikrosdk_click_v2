@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Amplifier",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EVC Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.evc",
-    "product_link": "https://www.mikroe.com/evc-click",
-    "short_description": "EVC Click is a six-channel digital volume controller, equipped with an integrated electronic volume control circuit, which can be controlled over the I2C interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2691
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.EVC",
-    "subdir_name": "lib_evc"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3358",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EVC Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EVC",
+                "subdir_name": "lib_evc",
+                "path": "EVC Click/data/lib_evc"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

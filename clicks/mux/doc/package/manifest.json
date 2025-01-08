@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > DAC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MUX Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mux",
-    "product_link": "https://www.mikroe.com/mux-click",
-    "short_description": "MUX Click is a Click board™ that switches one of the four differential inputs to one differential output. It employs the MUX509, a modern CMOS analog multiplexing integrated circuit, produced by Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2595
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Mux",
-    "subdir_name": "lib_mux"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3247",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MUX Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mux",
+                "subdir_name": "lib_mux",
+                "path": "MUX Click/data/lib_mux"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

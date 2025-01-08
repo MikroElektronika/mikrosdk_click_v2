@@ -1,8 +1,5 @@
 {
     "name": "Flicker Click",
-    "description": "FLICKER Click is the perfect, simple solution if you need to turn a device on and off at specific time intervals, like blinking LED commercials, alarm system lights, or any other signalling lights.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","NA556"],
-    "category" : ["Relay"] 
+    "hw" : ["Click","NA556"]
 }

@@ -1,50 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > OLED",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "OLED B Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.oledb",
-    "product_link": "https://www.mikroe.com/oled-b-click",
-    "short_description": "OLED B Click carries a 96 x 39px blue monochrome passive matrix OLED display. The display is bright, has a wide viewing angle and low power consumption.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        1111
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.OLEDB",
-    "subdir_name": "lib_oledb"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1650",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "OLED B Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.OLEDB",
+                "subdir_name": "lib_oledb",
+                "path": "OLED B Click/data/lib_oledb"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Fingerprint 4 Click
 
-> Fingerprint 4 Click is an adapter Click board™ used to interface a compatible fingerprint sensor with the host MCU. This board features FINGERPRINTS BM-Lite Module, a complete biometric fingerprint solution ready to be used out-of-the-box. The BM-Lite Module combines superior biometric performance and a high standard of quality components to offer a comprehensive embedded solution for increased security and enhanced user convenience. It uses a 3D pixel sensing technology that can read virtually any finger, dry or wet, alongside simple serial commands with a configurable communication interface to enroll and verify. Its protective coating helps in protection against ESD, scratches, impact, and everyday wear and tear.
+> [Fingerprint 4 Click](https://www.mikroe.com/?pid_product=MIKROE-5465) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/fingerprint4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5465&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/fingerprint-4-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2022.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Fingerprint 4 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the Fingerprint 4 Click boards by registering 3 fingerprints and
+then waiting until a finger is detected on the sensor and identifying if the fingerprint matches one of
+those stored in the Flash storage.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Fingerprint 4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Fingerprint4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `fingerprint4_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +44,6 @@ void fingerprint4_cfg_setup ( fingerprint4_cfg_t *cfg );
 ```c
 err_t fingerprint4_init ( fingerprint4_t *ctx, fingerprint4_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `fingerprint4_version` This function reads out version information from the device. The response contains a variable length string that contains version information of the device.
 ```c
@@ -63,21 +60,12 @@ err_t fingerprint4_identify_finger ( fingerprint4_t *ctx, uint32_t timeout, uint
 err_t fingerprint4_wait_finger_not_present ( fingerprint4_t *ctx, uint32_t timeout );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the Fingerprint 4 Click boards by registering 3 fingerprints and
-then waiting until a finger is detected on the sensor and identifying if the fingerprint matches one of
-those stored in the Flash storage.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and reads the sensor firmware version, then resets the sensor and removes all
 stored fingerprint templates. After that it registers 3 new fingerprint templates and stores them in the Flash storage.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -124,7 +112,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -161,22 +148,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Fingerprint4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

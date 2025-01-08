@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Haptic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "HAPTIC 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.haptic3",
-    "product_link": "https://www.mikroe.com/haptic-3-click",
-    "short_description": "Haptic 3 Click is a compact add-on board that uses advanced vibration patterns and waveforms to convey information to a user. This board features the DA7282, a linear resonant actuator (LRA), and an eccentric rotating mass (ERM) haptic driver from Dialog Semiconductor. The DA7282 features LRA or ERM drive capability with automatic closed-loop LRA resonant frequency tracking, guaranteeing consistency across LRA production tolerances. It also offers wideband operation that fully utilizes the capabilities of newer wideband and multi-directional LRAs, alongside three external general-purpose inputs for triggering up to six independent haptic sequences.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
-    "alias": "Click.HAPTIC3",
-    "cmake": true,
-    "subdir_name": "lib_haptic3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5087",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "HAPTIC 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HAPTIC3",
+                "subdir_name": "lib_haptic3",
+                "path": "HAPTIC 3 Click/data/lib_haptic3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

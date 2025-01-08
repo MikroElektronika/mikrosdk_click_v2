@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Linear",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LDO Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ldo",
-    "product_link": "https://www.mikroe.com/ldo-click",
-    "short_description": "LDO Click is a compact add-on board designed to regulate the output voltage of a power supply to a lower level with a very low dropout voltage. This board features the TPS7A83A, a low-noise, low-dropout linear regulator (LDO) from Texas Instruments capable of sourcing 2A with only 200mV of maximum dropout. The TPS7A8300A has a pin-programmable output voltage from 0.8V-3.95V with a 50mV resolution, or it can be adjustable from 0.8V-5.2V using an external resistor divider.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.LDO",
-    "subdir_name": "lib_ldo"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5645",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LDO Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LDO",
+                "subdir_name": "lib_ldo",
+                "path": "LDO Click/data/lib_ldo"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Storage > microSD",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "microSD Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.microsd",
-    "product_link": "https://www.mikroe.com/microsd-click",
-    "short_description": "Need more additional memory? We've got just the thing for you - microSD Click. It features a microSD card slot for microSD cards used as a mass storage media for portable devices. microSD Click is designed to run on 3.3V power supply. Industry standard SPI interface ensures simple communication at high data rates. Use it for reading or storing data like music, text files, videos and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        201
-    ],
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.microSD",
-    "subdir_name": "lib_microsd"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-924",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "microSD Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.microSD",
+                "subdir_name": "lib_microsd",
+                "path": "microSD Click/data/lib_microsd"
+            }
+        ]
+    }
 }
-
-
-
-
-

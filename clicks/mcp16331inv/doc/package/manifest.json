@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck-Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MCP16331 INV Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mcp16331inv",
-    "product_link": "https://www.mikroe.com/mcp16331-inv-click",
-    "short_description": "MCP16331 INV Click works as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2331
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Mcp16331Inv",
-    "subdir_name": "lib_mcp16331inv"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2917",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MCP16331 INV Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mcp16331Inv",
+                "subdir_name": "lib_mcp16331inv",
+                "path": "MCP16331 INV Click/data/lib_mcp16331inv"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

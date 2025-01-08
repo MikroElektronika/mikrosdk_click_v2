@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # LED Driver 15 Click
 
-> LED Driver 15 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the MP3309C, a fully integrated synchronous boost white LED driver with an I2C interface from Monolithic Power Systems. The MP3309C offers high efficiency, delivers up to 40mA of LED current, and operates from a voltage of mikroBUS™ power rails, supporting up to 8 white LEDs in series. It also features a programmable switching frequency to optimize efficiency, supports analog and PWM dimming, and has multiple built-in protection functions that protect the circuit during abnormalities.
+> [LED Driver 15 Click](https://www.mikroe.com/?pid_product=MIKROE-5583) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/leddriver15_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5583&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/led-driver-15-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jan 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LED Driver 15 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of LED Driver 15 Click board by changing the LEDs dimming level.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LED Driver 15 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LEDDriver15
 
-#### Standard key functions :
+### Example Key Functions
 
 - `leddriver15_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t leddriver15_init ( leddriver15_t *ctx, leddriver15_cfg_t *cfg );
 err_t leddriver15_default_cfg ( leddriver15_t *ctx );
 ```
 
-#### Example key functions :
-
 - `leddriver15_set_i2c_dimming` This function sets the LEDs dimming level in I2C mode.
 ```c
 err_t leddriver15_set_i2c_dimming ( leddriver15_t *ctx, uint8_t dimming );
@@ -68,18 +63,11 @@ void leddriver15_enable_device ( leddriver15_t *ctx );
 void leddriver15_disable_device ( leddriver15_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of LED Driver 15 Click board by changing the LEDs dimming level.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -138,26 +125,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > It is recommended to connect 8 LEDs in series (40mA) to the output connector.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LEDDriver15
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

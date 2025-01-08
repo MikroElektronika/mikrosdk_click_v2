@@ -1,8 +1,5 @@
 {
     "name": "Line Follower Click",
-    "description": "Line Follower Click carries an array of five QRE1113 miniature reflective object sensors. As the name implies, Line Follower Click is best used for line following robots and cars.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","QRE1113"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","QRE1113"]
 }

@@ -1,8 +1,5 @@
 {
     "name": "Oximeter 5 Click",
-    "description": "Oximeter 5 Click is a compact add-on board suitable for measuring blood oxygen saturation. This board features the MAX30102, integrated pulse oximetry, and heart-rate monitor module from Analog Devices. The MAX30102 includes internal LEDs, photodetectors, optical elements, and low-noise electronics with ambient light rejection. It operates on a single 1.8V power supply acquired from both mikroBUS™ power rails for the internal LEDs, communicating through a standard I2C compatible interface. The MAX30102 can be shut down through software with zero standby current, allowing the power rails to remain powered at all times.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX30102"],
-    "category" : ["Biometrics"]
+    "hw" : ["Click","MAX30102"]
 }

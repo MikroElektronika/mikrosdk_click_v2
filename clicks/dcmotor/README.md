@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # DC MOTOR  Click
 
-< DC MOTOR Click is a DC motor driver board in mikroBUS form factor. It features the DRV8833RTYH-Bridge motor driver, 74HC4053 multiplexer and two screw terminals >
+> [DC MOTOR Click](https://www.mikroe.com/?pid_product=MIKROE-1526) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dcmotor_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1526&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dc-motor-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Nikola Peric
 - **Date**          : Feb 2022.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the DcMotor Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for DcMotor Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void dcmotor_cfg_setup ( dcmotor_cfg_t *cfg ); 
- 
-- Initialization function.
-> DCMOTOR_RETVAL dcmotor_init ( dcmotor_t *ctx, dcmotor_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Start PWM module.
-> void dcmotor_pwm_start ( dcmotor_t *ctx );
- 
-- Enable the motor function.
-> void dcmotor_enable ( dcmotor_t *ctx );
-
-- Set sleep mode function.
-> void dcmotor_sleep_mode ( dcmotor_t *ctx );
-## Examples Description
+## Example Description
 
 > This application change the speed and direction of DC Motor.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DcMotor
+
+### Example Key Functions
+
+- `dcmotor_cfg_setup` Config Object Initialization function. 
+```c
+void dcmotor_cfg_setup ( dcmotor_cfg_t *cfg );
+``` 
+ 
+- `dcmotor_init` Initialization function. 
+```c
+err_t dcmotor_init ( dcmotor_t *ctx, dcmotor_cfg_t *cfg );
+```
+
+- `dcmotor_pwm_start` Start PWM module. 
+```c
+void dcmotor_pwm_start ( dcmotor_t *ctx );
+```
+ 
+- `dcmotor_enable` Enable the motor function. 
+```c
+void dcmotor_enable ( dcmotor_t *ctx );
+```
+
+- `dcmotor_sleep_mode` Set sleep mode function. 
+```c
+void dcmotor_sleep_mode ( dcmotor_t *ctx );
+```
+### Application Init
 
 > Initialization driver enable's - GPIO, PWM initialization, set PWM duty cycle and PWM frequency,
 > enable the motor, start PWM and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -96,7 +93,6 @@ void application_init ( void )
     dcmotor_pwm_start( &dcmotor );
     log_printf( &logger, "---------------------\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +104,6 @@ void application_init ( void )
 >  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( )
 {    
     static int8_t duty_cnt = 1;
@@ -154,28 +149,21 @@ void application_task ( )
     duty_cnt += duty_inc;
 
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DcMotor
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

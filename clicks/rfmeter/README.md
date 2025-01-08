@@ -1,71 +1,62 @@
-\mainpage Main Page
- 
- 
 
 ---
 # RF Meter Click
 
-RF Meter Click is a radio frequency power measurement device covering a frequency span from 1 MHz to 8 GHz over a 60 dB range (approximately).
+> [RF Meter Click](https://www.mikroe.com/?pid_product=MIKROE-2034) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rfmeter_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2034&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rf-meter-click-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Jovan Stajkovic
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Rfmeter Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Rfmeter Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void rfmeter_cfg_setup ( rfmeter_cfg_t *cfg ); 
- 
-- Initialization function.
-> RFMETER_RETVAL rfmeter_init ( rfmeter_t *ctx, rfmeter_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Function is used to calculate radio frequency signal strenght in a vicinity.
-> float rfmeter_get_signal_strenght ( rfmeter_t *ctx, float slope, float intercept );
-
-## Examples Description
+## Example Description
 
 > 
 > Demo app measures and displays signal strenght by using RF Meter Click board.
 > 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Rfmeter
+
+### Example Key Functions
+
+- `rfmeter_cfg_setup` Config Object Initialization function. 
+```c
+void rfmeter_cfg_setup ( rfmeter_cfg_t *cfg );
+``` 
+ 
+- `rfmeter_init` Initialization function. 
+```c
+err_t rfmeter_init ( rfmeter_t *ctx, rfmeter_cfg_t *cfg );
+```
+
+- `rfmeter_get_signal_strenght` Function is used to calculate radio frequency signal strenght in a vicinity. 
+```c
+float rfmeter_get_signal_strenght ( rfmeter_t *ctx, float slope, float intercept );
+```
+
+### Application Init
 
 >
 > Initalizes SPI, LOG and Click drivers.
 > 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -93,7 +84,6 @@ void application_init ( void )
     log_printf( &logger, "    RF Meter Click      \r\n" );
     log_printf( &logger, "----------------------- \r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -104,7 +94,6 @@ void application_init ( void )
 > 
 
 ```c
-
 void application_task ( void )
 {
     signal = rfmeter_get_signal_strenght( &rfmeter, RFMETER_DEF_SLOPE, RFMETER_DEF_INTERCEPT );
@@ -113,30 +102,22 @@ void application_task ( void )
     
     Delay_ms ( 1000 );
     log_printf( &logger, "-----------------------\r\n" );
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Rfmeter
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > DAC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DAC 12 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.dac12",
-    "product_link": "https://www.mikroe.com/dac-12-click",
-    "short_description": "DAC 12 Click is a compact add-on board that contains a highly accurate digital-to-analog converter. This board features the DAC60508, a general-purpose octal 12-bit analog voltage-output DAC from Texas Instruments. It includes a 2.5V, 5ppm/Â°C internal reference, eliminating the need for an external precision reference in most applications, and supports the SPI serial interface, which operates at clock rates up to 40MHz. A user interface-selectable gain configuration provides full-scale output voltages of 1.25V, 2.5V, or 5 V. This Click boardâ„¢ represents an excellent choice for digital gain and offset adjustment applications, programmable voltage, and current sources, programmable reference, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "alias": "Click.DAC12",
-    "cmake": true,
-    "subdir_name": "lib_dac12"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5097",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DAC 12 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DAC12",
+                "subdir_name": "lib_dac12",
+                "path": "DAC 12 Click/data/lib_dac12"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

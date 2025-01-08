@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > DAC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DAC 17 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.dac17",
-    "product_link": "https://www.mikroe.com/dac-17-click",
-    "short_description": "DAC 17 Click is a compact add-on board that establishes precise voltage output control in various electronic applications. This board features the DAC7558, a 12-bit, octal-channel voltage output digital-to-analog (DAC) from Texas Instruments. It offers flexible internal or external power options with a voltage range from 2.7V to 5.5V. It features a rapid settling time of 5µs, rail-to-rail output amplifiers, and the ability to simultaneously or sequentially update outputs, ensuring precise and efficient performance.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.DAC17",
-    "subdir_name": "lib_dac17"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6059",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DAC 17 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DAC17",
+                "subdir_name": "lib_dac17",
+                "path": "DAC 17 Click/data/lib_dac17"
+            }
+        ]
+    }
 }
-
-
-

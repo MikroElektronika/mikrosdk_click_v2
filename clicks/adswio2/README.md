@@ -1,40 +1,42 @@
-\mainpage Main Page
- 
+
 ---
 # AD SWIO 2 Click
 
-> AD-SWIO 2 Click is a quad-channel software configurable input/output solution based on AD74413R, for building and process control application. The AD74413R is a quad-channel software configurable input/output solution for building and process control applications. The device provides a fully integrated single chip solution for input and output operation. The AD-SWIO 2 Click contains four 13-bit DACs, one per chanal, and 16-bit Σ-∆ ADC. 
+> [AD SWIO 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3861) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/adswio2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3861&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ad-swio-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jun 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the AdSwio2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This Click is a quad-channel software configurable input/output solution for building 
+> and process control application. The AD-SWIO 2 Click contains four 13-bit DACs, one 
+> per chanal, and 16-bit Σ-∆ ADC. These options give a lot of flexibility in choosing 
+> functionality for analog output, analog input, digital input, resistance temperature 
+> detector (RTD), and thermocouple measurements integrated into a single chip solution 
+> with a serial peripheral interface (SPI). 
 
-## Library Description
+### Example Libraries
 
-> This library contains API for AdSwio2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AdSwio2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `adswio2_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +45,13 @@ void adswio2_cfg_setup ( adswio2_cfg_t *cfg );
 
 - `adswio2_init` Initialization function.
 ```c
-ADSWIO2_RETVAL adswio2_init ( adswio2_t *ctx, adswio2_cfg_t *cfg );
+err_t adswio2_init ( adswio2_t *ctx, adswio2_cfg_t *cfg );
 ```
 
 - `adswio2_default_cfg` Click Default Configuration function.
 ```c
 void adswio2_default_cfg ( adswio2_t *ctx );
 ```
-
-#### Example key functions :
 
 - `adswio2_get_conv_results` This function allows user to get the converted results of the selected channel.
 ```c
@@ -63,25 +63,13 @@ adswio2_err_t adswio2_get_conv_results ( adswio2_t *ctx, uint8_t channel, uint16
 uint8_t adswio2_status_pin_ready ( adswio2_t *ctx );
 ```
 
-## Examples Description
-
-> This Click is a quad-channel software configurable input/output solution for building 
-> and process control application. The AD-SWIO 2 Click contains four 13-bit DACs, one 
-> per chanal, and 16-bit Σ-∆ ADC. These options give a lot of flexibility in choosing 
-> functionality for analog output, analog input, digital input, resistance temperature 
-> detector (RTD), and thermocouple measurements integrated into a single chip solution 
-> with a serial peripheral interface (SPI). 
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Performs a hardware reset of the Click board and
 > executes a default configuration that enables channel A and sets it to measure voltage
 > input in the range from 0V to 10V, with 4800 SPS.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -117,7 +105,6 @@ void application_init ( void )
     log_printf( &logger, " AD-SWIO 2 Click initialization done \r\n");
     log_printf( &logger, "************************************\r\n");
 }
-  
 ```
 
 ### Application Task
@@ -126,7 +113,6 @@ void application_init ( void )
 > and if response is ok, then prints the results on the uart console.
 
 ```c
-
 void application_task ( void )
 {
     timeout = 0;
@@ -164,25 +150,19 @@ void application_task ( void )
 
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AdSwio2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

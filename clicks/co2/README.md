@@ -1,41 +1,39 @@
-\mainpage Main Page
 
 ---
-
 # CO2 Click
 
-CO2 Click is a compact add-on board that contains Sensirion’s miniature CO2 sensor. This board features the STC31, a gas concentration sensor designed for high-volume applications. The STC31 utilizes a revolutionized thermal conductivity measurement principle, which results in superior repeatability and long-term stability. The outstanding performance of these sensors is based on Sensirion’s patented CMOSens® sensor technology, which combines the sensor element, signal processing, and digital calibration on a small CMOS chip. It features a digital I2C interface, which makes it easy to connect directly to MCU. This Click board™ represents an ideal choice for health, environmental, industrial, residential monitoring of high CO2 concentrations and applications where reliability is crucial.
+> [CO2 Click](https://www.mikroe.com/?pid_product=MIKROE-4725) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/CO2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4725&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/co2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Jun 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the CO2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases ability of Click board. It reads ID's 
+configures device for operation work and reads CO2 gas 
+concentration in air and temperature of IC every second.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for CO2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CO2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `co2_cfg_setup` Config Object Initialization function.
 ```c
@@ -52,8 +50,6 @@ err_t co2_init ( co2_t *ctx, co2_cfg_t *cfg );
 err_t co2_default_cfg ( co2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `co2_get_id` Read device and serial ID's.
 ```c
 err_t co2_get_id ( co2_t *ctx );
@@ -69,14 +65,6 @@ err_t co2_set_reference ( co2_t *ctx, uint16_t humidity, uint16_t pressure );
 err_t co2_read_gas ( co2_t *ctx, float *gas_concentration, float *temperature );
 ```
 
-## Example Description
-
-> This example showcases ability of Click board. It reads ID's 
-configures device for operation work and reads CO2 gas 
-concentration in air and temperature of IC every second.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of host communication modules (UART, I2C). 
@@ -85,7 +73,6 @@ configuration function that resets device, self tests it selft
 and configures for measuring CO2 concentration from air.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -146,7 +133,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -156,7 +142,6 @@ temperature in deg Celzius in span of 1 second and logs
 data to UART Terminal.
 
 ```c
-
 void application_task ( void )
 {
     float gas_data = 0;
@@ -171,25 +156,21 @@ void application_task ( void )
     
     Delay_ms ( 1 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CO2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

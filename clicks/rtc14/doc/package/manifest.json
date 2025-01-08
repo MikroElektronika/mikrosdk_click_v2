@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Clock & Timing > RTC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RTC 14 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rtc14",
-    "product_link": "https://www.mikroe.com/rtc-14-click",
-    "short_description": "RTC 14 Click is a compact add-on board that measures the passage of time. This board features the ISL1221, a low-power RTC with battery-backed SRAM and event detection from Renesas. The ISL1221 tracks time with separate registers for hours, minutes, and seconds, operating in normal and battery mode. It also can timestamp an event by either issuing an output signal, containing the second, minute, hour, date, month, and year that the triggering event occurred, or by stopping the RTC registers from advancing at the moment the event occurs. The calendar feature is exceptionally accurate through 2099, with automatic leap year correction. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.RTC14",
-    "subdir_name": "lib_rtc14"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4799",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 14 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC14",
+                "subdir_name": "lib_rtc14",
+                "path": "RTC 14 Click/data/lib_rtc14"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

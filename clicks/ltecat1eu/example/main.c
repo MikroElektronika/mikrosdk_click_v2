@@ -3,7 +3,7 @@
  * @brief LTE Cat.1-EU Click Example.
  *
  * # Description
- * This example reads and processes data from LTE Cat.1-EU clicks.
+ * This example reads and processes data from LTE Cat.1-EU Clicks.
  *
  * The demo application is composed of two sections :
  * 

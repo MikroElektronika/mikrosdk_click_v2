@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "3D Hall 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c3dhall3",
-    "product_link": "https://www.mikroe.com/3d-hall-3-click",
-    "short_description": "3D Hall 3 Click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2648
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.3DHall3",
-    "subdir_name": "lib_c3dhall3"
+    "name": "mikroe.click.3dhall3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3310",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3D Hall 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3DHall3",
+                "subdir_name": "lib_c3dhall3",
+                "path": "3D Hall 3 Click/data/lib_c3dhall3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

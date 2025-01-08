@@ -1,73 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # CHARGER 12 Click
 
-Charger 12 Click is a single lithium-ion (Li+) cell or three-cell NiMH/NiCd battery charger. This Click can be used for Low-Cost Li-Ion battery chargers, or Power Tools, toys, backup energy storage solutions, etc. Charger 12 Click is based on MAX1501 controller which has some extra features enabling charging without too much hassle.
+> [CHARGER 12 Click](https://www.mikroe.com/?pid_product=MIKROE-3744) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/charger12_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3744&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/charger-12-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Charger12 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Charger12 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void charger12_cfg_setup ( charger12_cfg_t *cfg ); 
- 
-- Initialization function.
-> CHARGER12_RETVAL charger12_init ( charger12_t *ctx, charger12_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Generic transfer.
-> void charger12_generic_transfer ( charger12_t *ctx, uint8_t *data_in, uint8_t *data_out, uint8_t tx_len, uint8_t rx_len );
- 
-- Charger mode selection.
-> uint8_t charger12_mode_select ( charger12_t *ctx, uint8_t mode_select );
-
-- This function set spi register.
-> void charger12_spi_set_register( charger12_t *ctx, uint8_t register_address, uint16_t register_value )
-
-## Examples Description
+## Example Description
 
 > This application charges the batery.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Charger12
+
+### Example Key Functions
+
+- `charger12_cfg_setup` Config Object Initialization function. 
+```c
+void charger12_cfg_setup ( charger12_cfg_t *cfg );
+``` 
+ 
+- `charger12_init` Initialization function. 
+```c
+err_t charger12_init ( charger12_t *ctx, charger12_cfg_t *cfg );
+```
+
+- `charger12_generic_transfer` Generic transfer. 
+```c
+void charger12_generic_transfer ( charger12_t *ctx, uint8_t *data_in, uint8_t *data_out, uint8_t tx_len, uint8_t rx_len );
+```
+ 
+- `charger12_mode_select` Charger mode selection. 
+```c
+uint8_t charger12_mode_select ( charger12_t *ctx, uint8_t mode_select );
+```
+
+- `charger12_spi_set_register` This function set spi register. 
+```c
+void charger12_spi_set_register ( charger12_t *ctx, uint8_t register_address, uint16_t register_value  );
+```
+
+### Application Init
 
 > Iniztializes SPI driver.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -97,7 +92,6 @@ void application_init ( void )
     Delay_ms ( 100 );
     log_printf( &logger, "> App init done" );
 }
-  
 ```
 
 ### Application Task
@@ -105,7 +99,6 @@ void application_init ( void )
 > Executes additional functions based on user input.
 
 ```c
-
 void application_task ( void )
 {
     charger12_case_plus( );
@@ -125,11 +118,10 @@ void application_task ( void )
 
     charger12_case_four( );
     Delay_ms ( 1 );
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > Additional Functions :
 
@@ -140,25 +132,19 @@ void application_task ( void )
   - charger12_case_Three() - Selects 3rd mode of operation.
   - charger12_case_Four()  - Selects 4th mode of operation.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Charger12
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

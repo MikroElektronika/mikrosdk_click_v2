@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Altitude 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.altitude6",
-    "product_link": "https://www.mikroe.com/altitude-6-click",
-    "short_description": "Altitude 6 Click is a compact add-on board that allows height measurement of an object or point related to sea level or ground level. This board features the MS5611-01BA03, a high-resolution barometric pressure sensor optimized for altimeter applications with an altitude resolution of 10 cm from TE Connectivity. It consists of a high linearity pressure sensor and an ultra-low power 24 bit ΔΣ ADC with internal factory calibrated coefficients. Also, it provides a precise digital 24-bit pressure and temperature value, different operation modes, and a configurable host interface that supports both SPI and I2C serial communication allowing the user to optimize for conversion speed and current consumption. The high accuracy and stability of both pressure and temperature signal of the MS5611-01BA03 make this Click board™ suitable for height sensing in medical and consumer applications, indoor navigation, mobile altimeter or barometer systems, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Altitude6",
-    "subdir_name": "lib_altitude6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4903",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Altitude 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Altitude6",
+                "subdir_name": "lib_altitude6",
+                "path": "Altitude 6 Click/data/lib_altitude6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

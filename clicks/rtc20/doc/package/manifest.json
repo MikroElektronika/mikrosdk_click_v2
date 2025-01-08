@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Clock & Timing > RTC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RTC 20 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rtc20",
-    "product_link": "https://www.mikroe.com/rtc-20-click",
-    "short_description": "RTC 20 Click is a compact add-on board that measures the passage of real-time. This board features the AB0805, an I2C-configurable real-time clock with a highly sophisticated feature set from Abracon LLC. The AB0805 provides information like seconds, minutes, hours, days, months, years, and dates based on a 32.768kHz quartz crystal through an I2C serial interface to transmit time and calendar data to the MCU. It also has automatic leap year compensation, low power consumption, and full RTC functions such as battery backup, programmable counters, and alarms for timer and watchdog functions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.RTC20",
-    "subdir_name": "lib_rtc20"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5600",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 20 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC20",
+                "subdir_name": "lib_rtc20",
+                "path": "RTC 20 Click/data/lib_rtc20"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

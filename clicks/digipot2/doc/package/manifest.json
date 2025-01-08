@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Digital potentiometer",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DIGI POT 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.digipot2",
-    "product_link": "https://www.mikroe.com/digipot-2-click",
-    "short_description": "DIGI POT 2 Click is a mikroBUS™ add-on board with a single channel digital potentiometer TPL0501 with 256 wiper positions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        1825
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.DigiPot2",
-    "subdir_name": "lib_digipot2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2332",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DIGI POT 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DigiPot2",
+                "subdir_name": "lib_digipot2",
+                "path": "DIGI POT 2 Click/data/lib_digipot2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

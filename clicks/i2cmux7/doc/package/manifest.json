@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > I2C",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "I2C MUX 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.i2cmux7",
-    "product_link": "https://www.mikroe.com/i2c-mux-7-click",
-    "short_description": "I2C MUX 7 Click is a compact add-on board representing a bidirectional selector dedicated to applications with I2C slave address conflicts. This board features the PI4MSD5V9547, an octal bidirectional translating multiplexer controlled by the I2C-bus from Texas Instruments. Only one SCL/SDA channel can be selected at a time, determined by the contents of the programmable control register. The board powers up with Channel 0 connected, allowing immediate communication between the Master and downstream devices on that channel.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.I2CMUX7",
-    "subdir_name": "lib_i2cmux7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5069",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "I2C MUX 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.I2CMUX7",
+                "subdir_name": "lib_i2cmux7",
+                "path": "I2C MUX 7 Click/data/lib_i2cmux7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

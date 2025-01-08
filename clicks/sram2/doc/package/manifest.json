@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > SRAM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SRAM 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.sram2",
-    "product_link": "https://www.mikroe.com/sram-2-click",
-    "short_description": "SRAM 2 Click is based on ANV32A62A SRAM memory from Anvo-Systems Dresden. It's a 64Kb serial SRAM with a non-volatile SONOS storage element included with each memory cell, organized as 8k words of 8 bits each.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3801
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Sram2",
-    "subdir_name": "lib_sram2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4178",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SRAM 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Sram2",
+                "subdir_name": "lib_sram2",
+                "path": "SRAM 2 Click/data/lib_sram2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "DMX Click",
-    "description": "DMX Click is a device used to establish communication between the MCU and equipment that uses the DMX512-A communication protocol.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","ADM2862E","PIC18F26K42"],
-    "category" : ["DMX"] 
+    "hw" : ["Click","ADM2862E","PIC18F26K42"]
 }

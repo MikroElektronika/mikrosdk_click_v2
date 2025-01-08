@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # EERAM 3 Click
 
-> EERAM 3 Click is a compact add-on board that contains EERAM memory designed to retain data during power loss without the aid of external batteries. This board features the 48L256, a serial EERAM with SRAM memory core, including hidden EEPROM backup from Microchip Technology.
+> [EERAM 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4854) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/eeram3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4854&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/eeram-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the EERAM3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of EERAM 3 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for EERAM3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.EERAM3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `eeram3_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t eeram3_init ( eeram3_t *ctx, eeram3_cfg_t *cfg );
 void eeram3_default_cfg ( eeram3_t *ctx );
 ```
 
-#### Example key functions :
-
 - `eeram3_memory_secure_write` This function securely writes a desired number of data bytes starting from the selected memory address.
 ```c
 err_t eeram3_memory_secure_write ( eeram3_t *ctx, uint16_t address, uint8_t *data_in, uint8_t len );
@@ -68,18 +63,11 @@ err_t eeram3_memory_secure_read ( eeram3_t *ctx, uint16_t address, uint8_t *data
 err_t eeram3_set_block_protection ( eeram3_t *ctx, uint8_t block_protect );
 ```
 
-## Example Description
-
-> This example demonstrates the use of EERAM 3 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;        /**< Logger config object. */
@@ -111,7 +99,6 @@ void application_init ( void )
     eeram3_default_cfg ( &eeram3 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -120,7 +107,6 @@ void application_init ( void )
 > by reading from the same memory location and displaying the memory content on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t data_buf[ 64 ] = { 0 };
@@ -140,26 +126,21 @@ void application_task ( void )
     }
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.EERAM3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

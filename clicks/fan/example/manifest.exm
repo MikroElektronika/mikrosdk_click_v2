@@ -1,8 +1,5 @@
 {
     "name": "Fan Click",
-    "description": "Fan Click carries an EMC2301 controller for powering and regulating the operation of 5V four-wire fans, which are commonly utilized as coolers in computers and other electronics.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","EMC2301"],
-    "category" : ["Brushless"] 
+    "hw" : ["Click","EMC2301"]
 }

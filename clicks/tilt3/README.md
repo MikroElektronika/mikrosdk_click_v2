@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Tilt 3 Click
 
-> Tilt 3 Click is a compact add-on board used for measuring the tilt in multiple axes in relation to an absolute level plane. This board features the DSBA1P, a tilt sensor switch that breaks the circuit when tilted to an angle from ±30° to ±60° from NKK Switches.
+> [Tilt 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4779) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/tilt3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4779&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/tilt-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Tilt3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Tilt 3 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Tilt3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Tilt3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `tilt3_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void tilt3_cfg_setup ( tilt3_cfg_t *cfg );
 ```c
 err_t tilt3_init ( tilt3_t *ctx, tilt3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `tilt3_enable_switch` This function enables the tilt switch by setting the EN pin to the high logic state.
 ```c
@@ -63,18 +58,11 @@ void tilt3_disable_switch ( tilt3_t *ctx );
 uint8_t tilt3_get_switch_state ( tilt3_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Tilt 3 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and enables the tilt switch.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;      /**< Logger config object. */
@@ -108,7 +96,6 @@ void application_init ( void )
     tilt3_enable_switch( &tilt3 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -116,7 +103,6 @@ void application_init ( void )
 > As soon as the tilt switch state changes, it displays a corresponding message on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t state = tilt3_get_switch_state ( &tilt3 );
@@ -135,30 +121,26 @@ void application_task ( void )
         Delay_ms ( 500 );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > Tilt switches OFF at an angle of 60 degrees minimum and switches ON at the horizontal position (up to 10 degrees).
 > The tilt LED will turn ON when the tilt switch is OFF. 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Tilt3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

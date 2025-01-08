@@ -1,70 +1,63 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Tilt 2 Click
 
-Tilt 2 Click is a tilt sensor switch, which breaks the circuit when tilted to an angle of 45° or when shaken. It is a single-pole-double-throw type of switch (SPDT), which can be operated with up to 24V.
+> [Tilt 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3343) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/tilt2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3343&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/tilt-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Tilt2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Tilt2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void tilt2_cfg_setup ( tilt2_cfg_t *cfg ); 
- 
-- Initialization function.
-> TILT2_RETVAL tilt2_init ( tilt2_t *ctx, tilt2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void tilt2_default_cfg ( tilt2_t *ctx );
-
-
-#### Example key functions :
-
-- This function detection tilt.
-> uint8_t tilt2_tilt_detection ( tilt2_t *ctx );
- 
-## Examples Description
+## Example Description
 
 > This app detection tilt.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Tilt2
+
+### Example Key Functions
+
+- `tilt2_cfg_setup` Config Object Initialization function. 
+```c
+void tilt2_cfg_setup ( tilt2_cfg_t *cfg );
+``` 
+ 
+- `tilt2_init` Initialization function. 
+```c
+err_t tilt2_init ( tilt2_t *ctx, tilt2_cfg_t *cfg );
+```
+
+- `tilt2_default_cfg` Click Default Configuration function. 
+```c
+void tilt2_default_cfg ( tilt2_t *ctx );
+```
+
+- `tilt2_tilt_detection` This function detection tilt. 
+```c
+uint8_t tilt2_tilt_detection ( tilt2_t *ctx );
+```
+ 
+### Application Init
 
 > Initialization device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -89,7 +82,6 @@ void application_init ( void )
     TILT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     tilt2_init( &tilt2, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -97,7 +89,6 @@ void application_init ( void )
 > Tilt detection, if the tilt is detected, the message is logs on USBUART.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t tilt;
@@ -108,29 +99,22 @@ void application_task ( void )
         log_printf( &logger, " Tilt detection.. \r\n" );
         Delay_ms ( 300 );
     }
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Tilt2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

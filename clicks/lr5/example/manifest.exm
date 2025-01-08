@@ -1,8 +1,5 @@
 {
     "name": "LR 5 Click",
-    "description": "LR 5 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001409, RF technology-based SRD transceiver, which operates at a frequency of 915MHz from Mipot.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MIPOT 32001409"],
-    "category" : ["LoRa"] 
+    "hw" : ["Click","MIPOT 32001409"]
 }

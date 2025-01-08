@@ -3,7 +3,7 @@
  * \brief NanoLR Click example
  * 
  * # Description
- * This example reads and processes data from Nano LR clicks.
+ * This example reads and processes data from Nano LR Clicks.
  *
  * The demo application is composed of two sections :
  * 

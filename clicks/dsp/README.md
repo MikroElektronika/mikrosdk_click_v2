@@ -1,88 +1,76 @@
-\mainpage Main Page
 
 ---
 # DSP Click
 
-DSP Click is a compact add-on board that contains a multi-effects digital signal processor. This board features the V1000, a complete multi-effects audio DSP with ultra-high quality audio performance in a rapid ‘time-to-market’ solution from Coolaudio. The V1000 includes its integrated RAM with 16 built-in multi-effects and reverb controlled via I/O pins or I2C interface. Combined with a low-cost A/D-D/A codec like the V4220, this Click board™ provides an ultra-low cost FX solution.
+> [DSP Click](https://www.mikroe.com/?pid_product=MIKROE-4431) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dsp_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4431&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dsp-click?adtoken=48b980cc0840208867ff3317ac2fc531db4a1dd7&ad=mikromanage&id_employee=33)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Nov 2020.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Dsp Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
-
-```
-This library contains API for Dsp Click driver.
-```
-
-#### Standard key functions :
-
-> Config Object Initialization function.
-```
-void dsp_cfg_setup ( dsp_cfg_t *cfg );
-```
-
-> Initialization function.
-```
-err_t dsp_init ( dsp_t *ctx, dsp_cfg_t *cfg );
-```
-
-> Click Default Configuration function.
-```
-void dsp_default_cfg ( dsp_t *ctx );
-```
-
-#### Example key functions :
-
-> DSP reverb and multi-effects setting function.
-```
-dsp_retval_t dsp_set_effect ( dsp_t *ctx, uint8_t effects );
-```
-
-> DSP power on the device function.
-```
-void dsp_power_on ( dsp_t *ctx );
-```
-
-> DSP reset the device function.
-```
-void dsp_reset ( dsp_t *ctx );
-```
-
-## Examples Description
+## Example Description
 
 > This application controls reverb and multi-effects Digital Multi-Effects DSP 
 > provides different sound performance of the DSP Click.
 
-**The demo application is composed of two sections :**
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Dsp
+
+### Example Key Functions
+
+> Config Object Initialization function.
+```c
+void dsp_cfg_setup ( dsp_cfg_t *cfg );
+```
+
+> Initialization function.
+```c
+err_t dsp_init ( dsp_t *ctx, dsp_cfg_t *cfg );
+```
+
+> Click Default Configuration function.
+```c
+void dsp_default_cfg ( dsp_t *ctx );
+```
+
+> DSP reverb and multi-effects setting function.
+```c
+dsp_retval_t dsp_set_effect ( dsp_t *ctx, uint8_t effects );
+```
+
+> DSP power on the device function.
+```c
+void dsp_power_on ( dsp_t *ctx );
+```
+
+> DSP reset the device function.
+```c
+void dsp_reset ( dsp_t *ctx );
+```
 
 ### Application Init
 
 > Initializes GPIO driver, set the default configuration and start to write log.
 
-```
-void application_init ( void ) {
+```c
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     dsp_cfg_t dsp_cfg;  /**< Click config object. */
 
@@ -128,8 +116,9 @@ void application_init ( void ) {
 > such as multiple reverbs, echo, phaser, chorus, flanger, etc. every 10 sec.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
-```
-void application_task ( void ) {
+```c
+void application_task ( void ) 
+{
     log_printf( &logger, "-------------------------------\r\n" );
     dsp_set_effect( &dsp, effects );
     display_effects( );
@@ -152,22 +141,19 @@ void application_task ( void ) {
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Dsp
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

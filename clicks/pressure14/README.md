@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Pressure 14 Click
 
-Pressure 14 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the ABP2LANT060PG2A3XX, a piezoresistive silicon pressure sensor offering a digital output for reading pressure over the specified full-scale pressure span and a temperature range from Honeywell Sensing and Productivity Solutions. This I2C configurable sensor is calibrated and temperature compensated for sensor offset, sensitivity, temperature effects, and accuracy errors, including non-linearity, repeatability, and hysteresis, using an on-board ASIC. This Click board™ is suitable for pressure measurements in automotive applications, industrial and consumer applications.
+> [Pressure 14 Click](https://www.mikroe.com/?pid_product=MIKROE-4424) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pressure14_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4424&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pressure-14-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Pressure14 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This examples used ABP2 Series are piezoresistive silicon pressure sensors offering a digital output for reading pressure over the specified full scale pressure span and temperature range. 
+They are calibrated and temperature compensated for sensor offset, sensitivity, temperature effects and accuracy errors (which include non-linearity, repeatability and hysteresis) using an 
+on-board Application Specific IntegratedCircuit (ASIC).
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Pressure14 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Pressure14
 
-#### Standard key functions :
+### Example Key Functions
 
 - `pressure14_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +44,6 @@ void pressure14_cfg_setup ( pressure14_cfg_t *cfg );
 ```c
 err_t pressure14_init ( pressure14_t *ctx, pressure14_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `pressure14_measure_cmd` This function sends output measurement command that causes the ABP2 series pressure sensor to exit standby mode and enter operating mode.
 ```c
@@ -63,21 +60,13 @@ uint8_t pressure14_check_busy_flag_int ( pressure14_t *ctx );
 void pressure14_read_press_and_temp ( pressure14_t *ctx, uint8_t *status_byte, uint32_t *pressure_data, uint32_t *temp_data );
 ```
 
-## Example Description
-
-> This examples used ABP2 Series are piezoresistive silicon pressure sensors offering a digital output for reading pressure over the specified full scale pressure span and temperature range. 
-They are calibrated and temperature compensated for sensor offset, sensitivity, temperature effects and accuracy errors (which include non-linearity, repeatability and hysteresis) using an 
-on-board Application Specific IntegratedCircuit (ASIC).
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver enables I2C.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                  /**< Logger config object. */
     pressure14_cfg_t pressure14_cfg;    /**< Click config object. */
 
@@ -106,7 +95,6 @@ void application_init ( void ) {
     }
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -115,8 +103,8 @@ void application_init ( void ) {
 end-of-conversion pin ( INT ) following the pressure and temperature data acquisition and calculation. The results are being sent to the Usart Terminaland repeats every 5 seconds.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     pressure14_measure_cmd( &pressure14 );
     Delay_ms ( 10 );
     
@@ -132,25 +120,21 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Pressure14
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

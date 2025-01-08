@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Force",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Load Cell 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.loadcell3",
-    "product_link": "https://www.mikroe.com/load-cell-3-click",
-    "short_description": "Load Cell 3 Click is a compact add-on board that represents a weigh scale solution. This board features the PGA302, a low-drift, low-noise, programmable signal-conditioner device designed for various resistive bridge-sensing applications from Texas Instruments. It creates 2.5V of bridge excitation and a current output source with programmable current output up to 1mA. Two identical analog front-end (AFE) channels followed by a 16-bit Sigma-Delta ADC are available at the input, where each AFE channel has a dedicated programmable gain amplifier with gain up to 200V/V. It also comes with an on-chip temperature sensor and integrated EEPROM memory for device configuration, calibration, and user data.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.LoadCell3",
-    "subdir_name": "lib_loadcell3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4658",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Load Cell 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LoadCell3",
+                "subdir_name": "lib_loadcell3",
+                "path": "Load Cell 3 Click/data/lib_loadcell3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

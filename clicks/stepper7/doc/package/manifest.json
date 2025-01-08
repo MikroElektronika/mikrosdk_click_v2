@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Stepper 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepper7",
-    "product_link": "https://www.mikroe.com/stepper-7-click",
-    "short_description": "Stepper 7 Click is a bipolar step motor driver. It features an H-bridge bipolar step motor driver, which supports full and half step control modes. Stepper 7 Click also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ SPI bus.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        2297
-    ],
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Stepper7",
-    "subdir_name": "lib_stepper7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2912",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper7",
+                "subdir_name": "lib_stepper7",
+                "path": "Stepper 7 Click/data/lib_stepper7"
+            }
+        ]
+    }
 }
-
-
-

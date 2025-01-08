@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # WiFi 8 Click
 
-> WiFi 8 Click is a compact add-on board that contains a wireless combo module. This board features the ATWINC3400-MR210CA, a Bluetooth 5.0 certified module optimized for low power and high-performance mobile applications from Microchip Technology. 
+> [WiFi 8 Click](https://www.mikroe.com/?pid_product=MIKROE-4704) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/wifi_8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4704&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/wifi-8-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Jan 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the WiFi8 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This application showcases capability of the WiFi 8 Click board. 
+It initializes device, connects to local WiFi. Creates TCP, waits for connection
+and logs every message it receives for clients when it receives CR or LF flag
+it returns message back to Client.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for WiFi8 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.WiFi8
 
-#### Standard key functions :
+### Example Key Functions
 
 - `wifi8_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +51,6 @@ err_t wifi8_init ( wifi8_t *ctx, wifi8_cfg_t *cfg );
 err_t wifi8_default_cfg ( wifi8_t *ctx );
 ```
 
-#### Example key functions :
-
 - `wifi8_init_drv` Synchronous API to initialize the device driver.
 ```c
 err_t wifi8_init_drv(wifi8_t *ctx);
@@ -68,15 +66,6 @@ err_t wifi8_connect(wifi8_t *ctx, char *pc_ssid, uint8_t u8_ssid_len, wifi8_m2m_
 err_t wifi8_socket_bind(wifi8_t *ctx, int8_t sock, wifi8_sockaddr_t *pstr_addr, uint8_t u8_addr_len);
 ```
 
-## Example Description
-
-> This application showcases capability of the WiFi 8 Click board. 
-It initializes device, connects to local WiFi. Creates TCP, waits for connection
-and logs every message it receives for clients when it receives CR or LF flag
-it returns message back to Client.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes Host logger, and communication module and pins. 
@@ -86,7 +75,6 @@ current firmware version. After firmware is read it connects to local WiFi netwo
 set by user. When connected it initializes and creates socket.
 
 ```c
-
 void application_init(void)
 {
     log_cfg_t log_cfg;
@@ -172,7 +160,6 @@ void application_init(void)
 
     log_info(&logger, " Application Task ");
 }
-
 ```
 
 ### Application Task
@@ -181,7 +168,6 @@ void application_init(void)
 is connected/disconnected to TCP server and returns back when receives CR or LF flag.
 
 ```c
-
 void application_task(void)
 {
     wifi8_handle_events(&wifi8);
@@ -200,33 +186,28 @@ void application_task(void)
         }
     }
 }
-
 ```
 
-## Note
+### Note
 
 > User should set MAIN_WLAN_SSID and MAIN_WLAN_PSK for connecting to local network.
 When devices connects to network it will log its IP that user need to connect to.
 After user connects it should get notification and it can send data to server. 
 Server will return message "WiFi 8 Click" when Client sends CR or LF character in message.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.WiFi8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

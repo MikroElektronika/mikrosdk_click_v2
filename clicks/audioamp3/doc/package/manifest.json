@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Amplifier",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "AudioAmp 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.audioamp3",
-    "product_link": "https://www.mikroe.com/audioamp-3-click",
-    "short_description": "AudioAmp 3 Click is a stereo audio amplifier, capable of delivering up to 79W per channel with the 4Ω load.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2965
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.AudioAmp3",
-    "subdir_name": "lib_audioamp3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3901",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "AudioAmp 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AudioAmp3",
+                "subdir_name": "lib_audioamp3",
+                "path": "AudioAmp 3 Click/data/lib_audioamp3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

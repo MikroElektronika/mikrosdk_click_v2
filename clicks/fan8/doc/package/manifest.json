@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "FAN 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.fan8",
-    "product_link": "https://www.mikroe.com/fan-8-click",
-    "short_description": "Fan 8 Click is a compact add-on board that represents a compliant fan controller. This board features the MAX6615, a fan-speed controller, and a dual-channel temperature monitor with external thermistor inputs from Maxim Integrated, now part of Analog Devices. The MAX6615 controls the speed of two cooling fans based on the temperatures of external thermistors and the device's internal temperature, reporting temperature values in a digital form using the I2C serial interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.FAN8",
-    "subdir_name": "lib_fan8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4824",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "FAN 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.FAN8",
+                "subdir_name": "lib_fan8",
+                "path": "FAN 8 Click/data/lib_fan8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

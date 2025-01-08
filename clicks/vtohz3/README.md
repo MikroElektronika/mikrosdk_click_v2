@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # V to Hz 3 Click
 
-> V to Hz 3 Click is a compact add-on board that converts an analog voltage input signal into a specific frequency pulse wave signal. This board features the AD7740, an ultrasmall synchronous voltage-to-frequency converter from Analog Devices. The AD7740 has a linear response, so applying a voltage from 3V up to 5V on its VIN terminal will generate the pulse with a frequency linearly proportional to the input voltage. It contains an integrated 2.5V bandgap reference defining the span of the VFC and can be overdriven using an external reference. The full-scale output frequency is synchronous with the input clock signal provided by the LTC6903 programmable oscillator, with a maximum input frequency of 1MHz. Based on the analog input value, the output frequency goes from 10% to 90% of the input frequency.
+> [V to Hz 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5250) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/vtohz3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5250&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/v-to-hz-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the VtoHz3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the V to Hz 3 Click board by calculating the estimated output frequency from the input voltage.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for VtoHz3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.VtoHz3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `vtohz3_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void vtohz3_cfg_setup ( vtohz3_cfg_t *cfg );
 ```c
 err_t vtohz3_init ( vtohz3_t *ctx, vtohz3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `vtohz3_set_input_frequency` This function enables and sets output frequency of the programmable oscillator, which is the AD7740 input frequency.
 ```c
@@ -63,18 +58,11 @@ err_t vtohz3_read_an_pin_voltage ( vtohz3_t *ctx, float *data_out );
 uint32_t vtohz3_get_frequency ( vtohz3_t *ctx, float voltage, float vref_in );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the V to Hz 3 Click board by calculating the estimated output frequency from the input voltage.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and sets the input frequency.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;        /**< Logger config object. */
@@ -107,7 +95,6 @@ void application_init ( void )
     vtohz3_set_input_frequency ( &vtohz3, VTOHZ3_DEFAULT_IN_FREQUENCY );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -115,7 +102,6 @@ void application_init ( void )
 > Reads the input voltage from AN pin and calculates the output frequency from it. The results are being displayed on the USB UART approximately once per second.
 
 ```c
-
 void application_task ( void )
 {
     float voltage;
@@ -127,25 +113,21 @@ void application_task ( void )
     }
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.VtoHz3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

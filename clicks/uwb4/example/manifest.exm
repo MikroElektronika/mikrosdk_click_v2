@@ -1,8 +1,5 @@
 {
     "name": "UWB 4 Click",
-    "description": "UWB 4 Click is a compact add-on board for precise indoor positioning and location-based applications. This board features the Sera NX040 (453-00174C) from Ezurio, featuring NXP's SR040 chipset for ultra-wideband (UWB) and Nordic Semiconductor's nRF52833 for Bluetooth LE. The module supports IEEE 802.15.4/4z HPR UWB operations, providing exceptional ranging accuracy of less than ±10 cm with a typical receiver sensitivity of -92 dBm.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","453-00174C"],
-    "category" : ["Click Boards > Wireless connectivity > UWB"]
+    "hw" : ["Click","453-00174C"]
 }

@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V",
-    "category": "Click Boards > Audio & voice > Microphone",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Smart Mic Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.smartmic",
-    "product_link": "https://www.mikroe.com/smart-mic-click",
-    "short_description": "Smart Mic Click is a compact add-on board that provides wake-on-voice capabilities with secured privacy without compromising performance. This board features the IA611, an “Always-On” voice-wake acoustic processor from Knowles Electronics. The IA611 offers flexibility by supporting the most relevant audio and data interfaces and enables ultra-low-power voice and event detection, including voice UI supporting keywords, voice commands, and acoustic event detection. Its integrated programmable DSP is made available to 3rd party algorithms with 168kB of RAM, enabling unlimited creativity.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.SmartMic",
-    "subdir_name": "lib_smartmic"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4158",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart Mic Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartMic",
+                "subdir_name": "lib_smartmic",
+                "path": "Smart Mic Click/data/lib_smartmic"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

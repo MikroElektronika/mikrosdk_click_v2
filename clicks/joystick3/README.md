@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Joystick 3 Click
 
-> Joystick 3 Click is a compact add-on board that can fulfill your directional analog input needs. This board features 2765, a high-quality mini 2-axis analog output thumbstick from Adafruit Industries. This small joystick is a 'self-centering' analog-type with a black rocker cap similar to the PSP joysticks. It comprises two 10kΩ potentiometers, one for up/down and another for left/right direction. Knowing that this joystick represents an analog type, it connects with mikroBUS™ through the SPI interface through the MCP3204 12-bit A/D converter.
+> [Joystick 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5378) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/joystick3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5378&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/joystick-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Aug 2022.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Joystick 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the joystick 3 Click board by reading
+and displaying the raw ADC for X and Y axis, as well as the joystick angle and position
+calculated from those ADC readings.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Joystick 3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Joystick3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `joystick3_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t joystick3_init ( joystick3_t *ctx, joystick3_cfg_t *cfg );
 err_t joystick3_default_cfg ( joystick3_t *ctx );
 ```
 
-#### Example key functions :
-
 - `joystick3_read_raw_adc` This function reads the raw ADC for X and Y axis by using SPI serial interface.
 ```c
 err_t joystick3_read_raw_adc ( joystick3_t *ctx, uint16_t *raw_x, uint16_t *raw_y );
@@ -68,20 +65,11 @@ float joystick3_get_angle ( uint16_t raw_x, uint16_t raw_y );
 uint8_t joystick3_get_position ( uint16_t raw_x, uint16_t raw_y );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the joystick 3 Click board by reading
-and displaying the raw ADC for X and Y axis, as well as the joystick angle and position
-calculated from those ADC readings.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -111,7 +99,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -187,22 +174,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Joystick3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

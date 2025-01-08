@@ -1,8 +1,5 @@
 {
     "name": "LED Driver 9 Click",
-    "description": "LED Driver 9 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the TLC59116, I2C bus-controlled 16-channel LED driver optimized for red/green/blue/amber (RGBA) color mixing and backlight application from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TLC59116"],
-    "category" : ["LED Drivers"]
+    "hw" : ["Click","TLC59116"]
 }

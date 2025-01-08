@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ISO ADC Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.isoadc",
-    "product_link": "https://www.mikroe.com/iso-adc-click",
-    "short_description": "The ISO ADC Click is add-on board current-shunt measurement device with isolated delta-sigma modulator. This Click board™ is based on AMC1204BDWR provide a single-chip solution for measuring the small signal of a shunt resistor across an isolated barrier from Texas Instruments. ISO ADC Click contains shunt resistor, these types of resistors are typically used to sense currents in motor control inverters, green energy generation systems, and other industrial applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        3258
-    ],
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.ISOADC",
-    "subdir_name": "lib_isoadc"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4088",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ISO ADC Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ISOADC",
+                "subdir_name": "lib_isoadc",
+                "path": "ISO ADC Click/data/lib_isoadc"
+            }
+        ]
+    }
 }
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Brushless 10 Click",
-    "description": "Brushless 10 Click is a compact add-on board that provides precise control over brushless DC motors. This board features the TC78B016FTG, a 3-phase sine-wave PWM driver from Toshiba Semiconductor. The TC78B016FTG features Intelligent Phase Control (InPAC) for automatic motor phase adjustment, eliminating manual calibration, supporting an external power supply from 6V to 30V, and adjusting current output up to 3A. It also includes various control and diagnostic features such as rotational speed output, brake function, speed command, and safety detections with visual indicators. The onboard DAC also offers additional tunability for motor control enhancements like lead angle control, output duty cycle, motor lockout, and PWM frequency selection.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TC78B016FTG","DAC43608RTER"],
-    "category" : ["Click Boards > Motor control > Brushless"]
+    "hw" : ["Click","TC78B016FTG","DAC43608RTER"]
 }

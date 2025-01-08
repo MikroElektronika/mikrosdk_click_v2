@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # PIR 2 Click
 
-> PIR 2 Click is a compact add-on board designed for high-performance motion detection applications. This board features the ZSLM323511, a dual-element balanced differential pyroelectric (PIR) sensor from Zilog. Key features include excellent EMI immunity, a low-profile surface mount package, and a typical field of view of 150 degrees on the X-axis and 139 degrees on the Y-axis. The board also integrates the ZCWM05GIV1 PIR lens for maximum IR transmissivity. Ideal for security systems, lighting control, and video doorbells, PIR 2 Click ensures reliable motion detection in various demanding environments.
+> [PIR 2 Click](https://www.mikroe.com/?pid_product=MIKROE-6052) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pir2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6052&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pir-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Dec 2023.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the PIR 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of PIR 2 Click boards.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for PIR 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PIR2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `pir2_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void pir2_cfg_setup ( pir2_cfg_t *cfg );
 ```c
 err_t pir2_init ( pir2_t *ctx, pir2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `pir2_read_raw_adc` This function reads raw ADC value.
 ```c
@@ -63,18 +58,11 @@ err_t pir2_read_voltage ( pir2_t *ctx, float *voltage );
 err_t pir2_set_vref ( pir2_t *ctx, float vref );
 ```
 
-## Example Description
-
-> This example demonstrates the use of PIR 2 Click boards.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and selects the driver interface.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;      /**< Logger config object. */
@@ -107,7 +95,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -115,7 +102,6 @@ void application_init ( void )
 > It checks if the sensor has detected movement and displays message on the USB UART.
 
 ```c
-
 void application_task ( void ) 
 {
     float voltage = 0;
@@ -126,25 +112,21 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PIR2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "RF Meter 3 Click",
-    "description": "RF Meter 3 Click is a compact add-on board that collects information, analyzes RF power, and displays information in an easy-to-read digital format. This board features the LT5581, a low-power monolithic precision RMS power detector from Analog Devices. The RMS detector uses a proprietary technique to accurately measure the RF power in a range from 2GHz up to 2.6GHz, well-suited for signals with high crest factors. It outputs a DC voltage in linear scale proportional to an RF input signal power in dBm.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LT5581IDDB"],
-    "category" : ["RF Meter"]
+    "hw" : ["Click","LT5581IDDB"]
 }

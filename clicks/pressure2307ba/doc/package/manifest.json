@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Pressure 23 07BA Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pressure2307ba",
-    "product_link": "https://www.mikroe.com/pressure-23-click-07ba",
-    "short_description": "Pressure 23 Click - 07BA is a compact add-on board for accurate and reliable absolute pressure and temperature measurements in harsh environments. This board features the MS5849-07BA, an ultra-compact, chlorine-resistant sensor from TE Connectivity that delivers 24-bit resolution data via I2C or SPI interfaces. It operates within pressure ranges of 0.4 to 7 bar, features a chlorine-resistant gel coating, and measures temperatures from -20 to +85°C. The sensor's grounded metal ring provides robust protection and secure O-ring mounting, while the flexible communication options allow for optimized performance.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Pressure2307BA",
-    "subdir_name": "lib_pressure2307ba"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6207",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Pressure 23 07BA Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pressure2307BA",
+                "subdir_name": "lib_pressure2307ba",
+                "path": "Pressure 23 07BA Click/data/lib_pressure2307ba"
+            }
+        ]
+    }
 }
-
-
-
-
-

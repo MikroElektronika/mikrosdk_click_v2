@@ -1,8 +1,5 @@
 {
     "name": "Pressure 15 Click",
-    "description": "Pressure 15 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LPS27HHW, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LPS27HHTWTR"],
-    "category" : ["Pressure"]
+    "hw" : ["Click","LPS27HHTWTR"]
 }

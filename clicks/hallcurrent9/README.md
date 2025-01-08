@@ -1,90 +1,77 @@
-\mainpage Main Page
 
 ---
 # Hall Current 9 Click
 
-Hall Current 9 Click is a compact add-on board that contains the coreless current sensor corresponding to the safety standards. This board features the CQ3300, a high-speed response coreless current sensor using a Hall sensor that outputs the analog voltage proportional to the AC/DC from AKM Semiconductor.
+> [Hall Current 9 Click](https://www.mikroe.com/?pid_product=MIKROE-4466) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hall_current_9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4466&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hall-current-9-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Dec 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the HallCurrent9 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
-
-```
-> This library contains API for Hall Current 9 Click driver.
-
-```
-
-#### Standard key functions :
-
-- `hallcurrent9_cfg_setup` Config Object Initialization function.
-```
-void hallcurrent9_cfg_setup ( hallcurrent9_cfg_t *cfg );
-```
-
-- `hallcurrent9_init` Initialization function.
-```
-HALLCURRENT9_RETVAL hallcurrent9_init ( hallcurrent9_t *ctx, hallcurrent9_cfg_t *cfg );
-```
-
-- `hallcurrent9_default_cfg` Click Default Configuration function.
-```
-void hallcurrent9_default_cfg ( hallcurrent9_t *ctx );
-```
-
-#### Example key functions :
-
-- `hallcurrent9_read_adc` Hall Current 9 I2C ADC reading function.
-```
-err_t hallcurrent9_read_adc ( hallcurrent9_t *ctx, uint16_t *read_adc );
-```
-
-- `hallcurrent9_set_calibration` Hall Current 9 set calibration function.
-```
-err_t hallcurrent9_set_calibration ( hallcurrent9_t *ctx, hallcurrent9_calibration_data_t *adc_val );
-```
-
-- `hallcurrent9_get_current` Hall Current 9 get current function.
-```
-float hallcurrent9_get_current ( hallcurrent9_t *ctx, hallcurrent9_calibration_data_t *adc_val );
-```
-
-## Examples Description
+## Example Description
 
 > This library contains API for Hall Current 9 Click driver.
 > The library contains drivers for measuring ADC values 
 > and for calculation current.
 
-**The demo application is composed of two sections :**
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HallCurrent9
+
+### Example Key Functions
+
+- `hallcurrent9_cfg_setup` Config Object Initialization function.
+```c
+void hallcurrent9_cfg_setup ( hallcurrent9_cfg_t *cfg );
+```
+
+- `hallcurrent9_init` Initialization function.
+```c
+err_t hallcurrent9_init ( hallcurrent9_t *ctx, hallcurrent9_cfg_t *cfg );
+```
+
+- `hallcurrent9_default_cfg` Click Default Configuration function.
+```c
+void hallcurrent9_default_cfg ( hallcurrent9_t *ctx );
+```
+
+- `hallcurrent9_read_adc` Hall Current 9 I2C ADC reading function.
+```c
+err_t hallcurrent9_read_adc ( hallcurrent9_t *ctx, uint16_t *read_adc );
+```
+
+- `hallcurrent9_set_calibration` Hall Current 9 set calibration function.
+```c
+err_t hallcurrent9_set_calibration ( hallcurrent9_t *ctx, hallcurrent9_calibration_data_t *adc_val );
+```
+
+- `hallcurrent9_get_current` Hall Current 9 get current function.
+```c
+float hallcurrent9_get_current ( hallcurrent9_t *ctx, hallcurrent9_calibration_data_t *adc_val );
+```
 
 ### Application Init
 
 > Initializes I2C driver and triggers the built-in calibration.
 
-```
-void application_init ( void ) {
+```c
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                    /**< Logger config object. */
     hallcurrent9_cfg_t hallcurrent9_cfg;  /**< Click config object.  */
 
@@ -151,8 +138,9 @@ void application_init ( void ) {
 > In this example, we read and display the ADC and current ( mA ) data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
-```
-void application_task ( void ) {   
+```c
+void application_task ( void ) 
+{   
     log_printf( &logger, "--------------------------\r\n", adc_data );
     hallcurrent9_read_adc( &hallcurrent9, &adc_data );
     log_printf( &logger, "   ADC     : %d \r\n", adc_data );
@@ -164,22 +152,19 @@ void application_task ( void ) {
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HallCurrent9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

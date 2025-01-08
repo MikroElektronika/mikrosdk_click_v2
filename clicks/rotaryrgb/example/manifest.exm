@@ -1,8 +1,5 @@
 {
     "name": "Rotary RGB Click",
-    "description": "Rotary RGB Click is a compact add-on board for creating visual effects and precise position indications. This board features 16 individual RGB LEDs (WS2812B-2020) from Worldsemi and a high-quality rotary encoder (EC12D1564402) from ALPS. The WS2812B-2020 offers low driving voltage, high brightness, and excellent consistency, while the rotary encoder provides accurate 15-pulse incremental encoding with push-button functionality.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv"],
-    "hw" : ["Click","WS2812C-2020"],
-    "category" : ["Click Boards > HMI > Rotary encoder"]
+    "hw" : ["Click","WS2812C-2020"]
 }

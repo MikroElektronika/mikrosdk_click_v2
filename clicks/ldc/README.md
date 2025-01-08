@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # LDC Click
 
-> LDC Click is a compact add-on board that measures inductance change which a conductive target causes when it moves into the inductor's AC magnetic field. 
+> [LDC Click](https://www.mikroe.com/?pid_product=MIKROE-4784) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ldc_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4784&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ldc-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LDC Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases abillity of the device to detect 
+metal objects. It configures device for reading data from 
+channel 0, checks if ID's are OK and reads data when interrupt 
+is asserted and logs result.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LDC Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LDC
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ldc_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +51,6 @@ err_t ldc_init ( ldc_t *ctx, ldc_cfg_t *cfg );
 err_t ldc_default_cfg ( ldc_t *ctx );
 ```
 
-#### Example key functions :
-
 - `ldc_get_interrupt` Get interrupt pin status.
 ```c
 uint8_t ldc_get_interrupt ( ldc_t *ctx );
@@ -68,15 +66,6 @@ err_t ldc_get_frequency ( ldc_t *ctx, uint8_t channel, uint16_t divider, float *
 float ldc_calculate_inductance ( float frequency );
 ```
 
-## Example Description
-
-> This example showcases abillity of the device to detect 
-metal objects. It configures device for reading data from 
-channel 0, checks if ID's are OK and reads data when interrupt 
-is asserted and logs result.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of communication modules (I2C, UART) and 
@@ -85,7 +74,6 @@ channel 0, and checks if device ID's are correctly read, and
 read the currently set divider.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -143,7 +131,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -154,7 +141,6 @@ is greater than 0, then it calculates the inductance of the sensor.
 It will log error and error values if it occurred.
 
 ```c
-
 void application_task ( void ) 
 {
     if ( !ldc_get_interrupt( &ldc ) )
@@ -185,25 +171,21 @@ void application_task ( void )
         }
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LDC
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

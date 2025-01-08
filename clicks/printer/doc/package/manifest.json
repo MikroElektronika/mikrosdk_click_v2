@@ -1,0 +1,22 @@
+{
+    "display_name": "Printer Click",
+    "name": "mikroe.click.printer",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6460",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Printer Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Printer",
+                "subdir_name": "lib_printer",
+                "path": "Printer Click/data/lib_printer"
+            }
+        ]
+    }
+}

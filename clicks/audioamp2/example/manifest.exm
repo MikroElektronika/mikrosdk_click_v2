@@ -1,8 +1,5 @@
 {
     "name": "Audio Amp 2 Click",
-    "description": "Audio Amp 2 Click is a highly efficient class D audio amplifier, using the TDA7491, a dual BTL class-D audio amplifier IC, capable of delivering up to 20W to 8Ω load.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TDA7491"],
-    "category" : ["Amplifier"] 
+    "hw" : ["Click","TDA7491"]
 }

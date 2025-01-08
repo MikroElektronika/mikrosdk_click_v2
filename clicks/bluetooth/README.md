@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Bluetooth Click
 
-With the range up to a 100m and low power consumption, Bluetooth Click is a great solution if you are looking for a simple way to integrate Bluetooth 2.1 communication to your device. It features the RN-41 low power, class 1 Bluetooth radio module. Bluetooth Click communicates with the target board MCU through UART interface and is designed to run on 3.3V power supply only.
+> [Bluetooth Click](https://www.mikroe.com/?pid_product=MIKROE-958) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/bluetooth_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-958&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/bluetooth-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : UART GPS/GNSS type
 
-
 # Software Support
 
-We provide a library for the Bluetooth Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from Bluetooth Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Bluetooth Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Bluetooth
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void bluetooth_cfg_setup ( bluetooth_cfg_t *cfg ); 
+- `bluetooth_cfg_setup` Config Object Initialization function. 
+```c
+void bluetooth_cfg_setup ( bluetooth_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> BLUETOOTH_RETVAL bluetooth_init ( bluetooth_t *ctx, bluetooth_cfg_t *cfg );
+- `bluetooth_init` Initialization function. 
+```c
+err_t bluetooth_init ( bluetooth_t *ctx, bluetooth_cfg_t *cfg );
+```
 
-
-#### Example key functions :
-
-- The function enter the command mode of the RN-41 Bluetooth module on Bluetooth Click board.
-> void bluetooth_enter_command_mode ( bluetooth_t *ctx );
+- `bluetooth_enter_command_mode` The function enter the command mode of the RN-41 Bluetooth module on Bluetooth Click board. 
+```c
+void bluetooth_enter_command_mode ( bluetooth_t *ctx );
+```
  
-- The function set the authentication value to the RN-41 Bluetooth module on Bluetooth Click board.
-> void bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value );
+- `bluetooth_set_authentication` The function set the authentication value to the RN-41 Bluetooth module on Bluetooth Click board. 
+```c
+void bluetooth_set_authentication ( bluetooth_t *ctx, uint8_t auth_value );
+```
 
-- The function set security pin code string to the RN-41 Bluetooth module on Bluetooth Click board.
-> BLUETOOTH_RETVAL bluetooth_set_security_pin_code ( bluetooth_t *ctx, uint8_t *sp_code );
+- `bluetooth_set_security_pin_code` The function set security pin code string to the RN-41 Bluetooth module on Bluetooth Click board. 
+```c
+err_t bluetooth_set_security_pin_code ( bluetooth_t *ctx, uint8_t *sp_code );
+```
 
-## Examples Description
-
-> This example reads and processes data from Bluetooth clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes driver and wake-up module. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -145,7 +142,6 @@ void application_init ( void )
     
     log_printf( &logger, "The module has been configured.\n" );
 }
-  
 ```
 
 ### Application Task
@@ -153,37 +149,29 @@ void application_init ( void )
 > Reads the received data.
 
 ```c
-
 void application_task ( void )
 {
     bluetooth_process( "AOK" );
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > Before starting to use this Click, it must be paired with other device.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Bluetooth
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

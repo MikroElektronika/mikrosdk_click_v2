@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > RFID/NFC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "NFC 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.nfc4",
-    "product_link": "https://www.mikroe.com/nfc-4-click",
-    "short_description": "NFC 4 Click is a compact add-on board that contains an NFC transceiver for contactless communication. This board features the ST25R3916, a multi-purpose NFC transceiver supporting passive peer-to-peer functionality and NFC card-emulation mode, as well as NFC reader operation from STMicroelectronics. It features high RF output power to directly drive an antenna etched on the PCB, alongside its tuning circuit, at high efficiency.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.NFC4",
-    "subdir_name": "lib_nfc4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4842",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NFC 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NFC4",
+                "subdir_name": "lib_nfc4",
+                "path": "NFC 4 Click/data/lib_nfc4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

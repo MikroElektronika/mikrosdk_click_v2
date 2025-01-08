@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Audio DAC Click
 
-> Audio DAC Click is a compact add-on board perfect for upgrading your audio equipment. This board features the PCM5142, a 32-bit 384kHz audio stereo DAC with the DIR9001 digital audio receiver from Texas Instruments. The DIR9001 can receive 24-bit/96kHz signals at the highest via S/PDIF optical cable and complies with various digital audio standards, like IEC60958-3, JEITA CPR-1205, AES3, and EBUtech3250. The DIR9001's output is then processed via a stereo audio DAC, the PCM5142, with the latest generation of TI's advanced segment-DAC architecture to achieve excellent dynamic performance, detailed heights, and an exceptionally good sound stage.
+> [Audio DAC Click](https://www.mikroe.com/?pid_product=MIKROE-5587) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/audiodac_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5587&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/audio-dac-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Dec 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Audio DAC Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Audio DAC Click board by controling the volume level of both output channels.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Audio DAC Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AudioDAC
 
-#### Standard key functions :
+### Example Key Functions
 
 - `audiodac_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t audiodac_init ( audiodac_t *ctx, audiodac_cfg_t *cfg );
 err_t audiodac_default_cfg ( audiodac_t *ctx );
 ```
 
-#### Example key functions :
-
 - `audiodac_get_gpio4_pin` This function returns the GPIO4 pin logic state. The GPIO4 pin is mapped to auto mute flag output for both L and R channels by default.
 ```c
 uint8_t audiodac_get_gpio4_pin ( audiodac_t *ctx );
@@ -63,18 +58,11 @@ uint8_t audiodac_get_gpio4_pin ( audiodac_t *ctx );
 err_t audiodac_volume_control ( audiodac_t *ctx, uint8_t channel, uint8_t volume );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Audio DAC Click board by controling the volume level of both output channels.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -110,7 +98,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -159,22 +146,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AudioDAC
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

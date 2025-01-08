@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > ZigBee",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "XBEE 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.xbee3",
-    "product_link": "https://www.mikroe.com/xbee-3-click",
-    "short_description": "Xbee 3 Click is a compact add-on board suitable for mission-critical wireless applications. This board features the XB8X-DMUS-001, a low-power CE/RED certified Digi Xbee® RF module delivering superior performance and interference immunity from Digi International. The module can run either a proprietary DigiMesh® or point-to-multipoint networking protocol utilizing a low-power Silicon Labs MCU and an ADF7023 transceiver, along with an integrated SAW filter that offers industry-leading interference blocking. Operating between 863MHz and 870MHz (868MHz), it allows use in several regions, including approved European countries.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.XBEE3",
-    "subdir_name": "lib_xbee3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5299",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "XBEE 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.XBEE3",
+                "subdir_name": "lib_xbee3",
+                "path": "XBEE 3 Click/data/lib_xbee3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

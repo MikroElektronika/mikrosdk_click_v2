@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Pushbutton/Switches",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Analog Key Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.analogkey",
-    "product_link": "https://www.mikroe.com/analog-key-click",
-    "short_description": "Analog Key Click is an analog keyboard on a Click board. It contains six tactile pushbuttons, used to select one of six different voltage levels. The idea behind this Click is very simple: six resistors form a voltage divider.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2682
-    ],
-    "version": "2.1.0.22",
-    "cmake": true,
-    "alias": "Click.AnalogKey",
-    "subdir_name": "lib_analogkey"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3409",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Analog Key Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AnalogKey",
+                "subdir_name": "lib_analogkey",
+                "path": "Analog Key Click/data/lib_analogkey"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

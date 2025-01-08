@@ -1,8 +1,5 @@
 {
     "name": "Thermo 29 Click",
-    "description": "Thermo 29 Click is a compact add-on board for accurate temperature measurements. This board features the TMP126, a high-accuracy SPI-configurable digital temperature sensor from Texas Instruments. The TMP126 consists of an internal thermal BJT factory-calibrated sensor, 14-bit ADC, and a digital signal processor, offering a high accuracy of ±0.25°C and a temperature resolution of 0.03125°C per LSB. It also has a programmable alarm function that outputs an interrupt signal to the MCU when a specific temperature event occurs.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TMP126EDBVRQ1"],
-    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+    "hw" : ["Click","TMP126EDBVRQ1"]
 }

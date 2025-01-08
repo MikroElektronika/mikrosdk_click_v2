@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # 7-SEG RGB Click
 
-7-SEG RGB Click carries a full color single 7 segment digit display. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over the CS, and PWM pin on the mikroBUS™ line.
+> [7-SEG RGB Click](https://www.mikroe.com/?pid_product=MIKROE-2734) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/7segrgb_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2734&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/7-seg-rgb-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the 7SegRgb Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This Click shows all ten digits on a full-color single 7 segment digit display. 
+> Each segment has R, G, B LEDs that can be adjusted in 255 steps and the ability to control the brightness of all the LED.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 7SegRgb Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.7SegRgb
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c7segrgb_cfg_setup` This function initializes Click configuration structure to init state.
 ```c
@@ -46,8 +44,6 @@ void c7segrgb_cfg_setup ( c7segrgb_cfg_t *cfg );
 err_t c7segrgb_init ( c7segrgb_t *ctx, c7segrgb_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `c7segrgb_set_num` The function sets character and its color.
 ```c
 void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t character, uint8_t green_brightness, uint8_t red_brightness, uint8_t blue_brightness );
@@ -58,19 +54,11 @@ void c7segrgb_set_num ( c7segrgb_t *ctx, uint8_t character, uint8_t green_bright
 void c7segrgb_set_seven_seg ( c7segrgb_t *ctx );
 ```
 
-## Examples Description
-
-> This Click shows all ten digits on a full-color single 7 segment digit display. 
-> Each segment has R, G, B LEDs that can be adjusted in 255 steps and the ability to control the brightness of all the LED.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initialization driver enables - GPIO.
 
 ```c
-
 void application_init ( void )
 {
     c7segrgb_cfg_t cfg;
@@ -91,7 +79,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -100,7 +87,6 @@ void application_init ( void )
 > This simple example shows all ten digits in different colors on 7-SEG RGB Click.
 
 ```c
-
 void application_task ( void )
 {
     for ( uint8_t cnt_i = 0; cnt_i < 10; cnt_i++ )
@@ -145,10 +131,9 @@ void application_task ( void )
     c7segrgb_set_num( &c7segrgb, C7SEGRGB_NINE, 20, 10, 30 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 > Make sure the logic delays are defined for your system in the c7segrgb_delays.h file.
 >
@@ -158,25 +143,19 @@ void application_task ( void )
 > void logic_zero ( ) - Generic logic zero function.
 > </pre>
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.7SegRgb
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,64 +1,27 @@
-\mainpage Main Page
- 
 
 ---
 # ADC 9 Click
 
-ADC 9 Click is 8th channel analog to digital converter expansion board, for projects where you have demand for multi channel ADC conversion such as microcontrollers with small number or none analog inputs. This Click board is based on MCP3564 a 24-bit Delta-Sigma Analog-to-Digital Converter with programmable data rate of up to 153.6 ksps from Microchip. 
+> [ADC 9 Click](https://www.mikroe.com/?pid_product=MIKROE-4105) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/adc9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4105&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/adc-9-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jun 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Adc9 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Adc9 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void adc9_cfg_setup ( adc9_cfg_t *cfg ); 
- 
-- Initialization function.
-> ADC9_RETVAL adc9_init ( adc9_t *ctx, adc9_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void adc9_default_cfg ( adc9_t *ctx, adc9_rw_t *rw );
-
-
-#### Example key functions :
-
-- Function is used to check if an interrupt has occured.
-> uint8_t adc9_irq_pin_state ( adc9_t *ctx );
- 
-- Function is used to read ADC value when the default fata format is applied.
-> uint8_t adc9_read_def_adc ( adc9_t *ctx, adc9_rw_t *rw, int32_t *rd_data );
-
-- Function is used to calculate voltage based on ADC values.
-> float adc9_volt_calc ( adc9_t *ctx, int32_t adc_val, uint16_t v_ref, uint8_t gain );
-
-## Examples Description
+## Example Description
 
 > This Click is 8th channel analog to digital converter expansion board, usefull for projects 
 > where we have demand for multi channel ADC conversion such as microcontrollers with small 
@@ -66,14 +29,49 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > temperature sensor and burnout sensor detection, in order to reduce system component count 
 > and total solution cost. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Adc9
+
+### Example Key Functions
+
+- `adc9_cfg_setup` Config Object Initialization function. 
+```c
+void adc9_cfg_setup ( adc9_cfg_t *cfg );
+``` 
+ 
+- `adc9_init` Initialization function. 
+```c
+err_t adc9_init ( adc9_t *ctx, adc9_cfg_t *cfg );
+```
+
+- `adc9_default_cfg` Click Default Configuration function. 
+```c
+void adc9_default_cfg ( adc9_t *ctx, adc9_rw_t *rw );
+```
+
+- `adc9_irq_pin_state` Function is used to check if an interrupt has occured. 
+```c
+uint8_t adc9_irq_pin_state ( adc9_t *ctx );
+```
+ 
+- `adc9_read_def_adc` Function is used to read ADC value when the default fata format is applied. 
+```c
+uint8_t adc9_read_def_adc ( adc9_t *ctx, adc9_rw_t *rw, int32_t *rd_data );
+```
+
+- `adc9_volt_calc` Function is used to calculate voltage based on ADC values. 
+```c
+float adc9_volt_calc ( adc9_t *ctx, int32_t adc_val, uint16_t v_ref, uint8_t gain );
+```
+
+### Application Init
 
 > Initalizes SPI driver, resets and starts the device, and makes an initial log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -107,7 +105,6 @@ void application_init ( void )
     
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -116,7 +113,6 @@ void application_init ( void )
 > based on ADC from channels 0(positive) and 1(negative), and logs the result. 
 
 ```c
-
 void application_task ( void )
 {
     measurement_init( &adc9, &adc9_rw );
@@ -134,32 +130,25 @@ void application_task ( void )
     log_printf( &logger, "------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 > Depending on the VOLT SEL jumper position on the Click board the user needs to set VREF macro value (mV) in the code.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Adc9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

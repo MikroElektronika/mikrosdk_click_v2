@@ -3,7 +3,7 @@
  * \brief Buck 8 Click example
  * 
  * # Description
- * Demo application shows basic usage of BUCK 8 clicks.
+ * Demo application shows basic usage of BUCK 8 Clicks.
  *
  * The demo application is composed of two sections :
  * 

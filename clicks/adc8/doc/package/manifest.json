@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ADC 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.adc8",
-    "product_link": "https://www.mikroe.com/adc-8-click",
-    "short_description": "ADC 8 Click is a high precision, low-power, 16-bit analog-to-digital converter (ADC), based around the ADS1115 IC. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2718
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Adc8",
-    "subdir_name": "lib_adc8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3394",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Adc8",
+                "subdir_name": "lib_adc8",
+                "path": "ADC 8 Click/data/lib_adc8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

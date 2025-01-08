@@ -1,40 +1,42 @@
-\mainpage Main Page
 
 ---
 # Power Monitor Click
 
-> Power Monitor Click is a compact add-on board that represents an ultra-precise power monitoring solution. This board features the INA228, a digital power monitor with a 20-bit delta-sigma ADC specifically designed for current-sensing applications from Texas Instruments. The INA228 reports current, bus voltage, temperature, power, energy, and charge accumulation while employing a precision ±0.5 % integrated oscillator, all while performing the needed calculations in the background. It can measure a full-scale differential input of ±163.84mV or ±40.96mV across a resistive shunt sense element, with common-mode voltage support up to +85V. This Click board™ is suitable for current-sensing applications in DC-DC converters, power inverters, telecom equipment, industrial measurements, and many more.
+> [Power Monitor Click](https://www.mikroe.com/?pid_product=MIKROE-4810) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/powermonitor_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4810&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/power-monitor-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the PowerMonitor Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for Power Monitor Click driver.
+> The library initializes and defines the I2C bus drivers 
+> to write and read data from registers. 
+> The library also includes a function for reading 
+> Shunt and Bus voltage ( mV ), Current ( mA ), Power ( W ), Energy ( J ),   
+> as well as the Temperature in degrees Celsius.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for PowerMonitor Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PowerMonitor
 
-#### Standard key functions :
+### Example Key Functions
 
 - `powermonitor_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +53,6 @@ err_t powermonitor_init ( powermonitor_t *ctx, powermonitor_cfg_t *cfg );
 err_t powermonitor_default_cfg ( powermonitor_t *ctx );
 ```
 
-#### Example key functions :
-
 - `powermonitor_get_vshunt` Power Monitor get shunt voltage function.
 ```c
 err_t powermonitor_get_vshunt ( powermonitor_t *ctx, float *vshunt );
@@ -68,17 +68,6 @@ err_t powermonitor_get_vbus ( powermonitor_t *ctx, float *vbus );
 err_t powermonitor_get_current ( powermonitor_t *ctx, float *current );
 ```
 
-## Example Description
-
-> This library contains API for Power Monitor Click driver.
-> The library initializes and defines the I2C bus drivers 
-> to write and read data from registers. 
-> The library also includes a function for reading 
-> Shunt and Bus voltage ( mV ), Current ( mA ), Power ( W ), Energy ( J ),   
-> as well as the Temperature in degrees Celsius.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > The initialization of I2C  module, log UART, and additional pins. 
@@ -86,7 +75,6 @@ err_t powermonitor_get_current ( powermonitor_t *ctx, float *current );
 > the app checks communication, display Manufacturer, Stores Device and Revision ID. 
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;                    /**< Logger config object. */
@@ -135,19 +123,17 @@ void application_init ( void )
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a Power Monitor Click board™.
+> This is an example that shows the use of a Power Monitor Click board&trade;.
 > Measures and displays Shunt voltage ( mV ), Bus voltage ( mV ), 
 > Current ( mA ), Power ( W ), Energy ( J ) and Temperature ( degrees Celsius ). 
 > Results are being sent to the USART terminal where the user can track their changes. 
 > This task repeats every 2.5 sec.
 
 ```c
-
 void application_task ( void ) 
 {
     static float vshunt, vbus, current, power, energy, temperature;
@@ -179,26 +165,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PowerMonitor
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "Gyro 7 Click",
-    "description": "Gyro 7 Click is a compact add-on board that contains a high-performance gyroscope. This board features the ICG-1020S, a dual-axis MEMS angular rate sensor (gyroscope) from TDK InvenSense. The ICG-1020S provides extremely low RMS noise as well as noise density. The high-resolution gyroscope supports a full-scale programmable range of ±46.5dps to ±374dps, a fast sample rate at up to 32kHz, an SPI serial interface, and extremely low power consumption. This Click board™ is designed for optical image stabilization (OIS) applications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ICG-1020S"],
-    "category" : ["Motion"]
+    "hw" : ["Click","ICG-1020S"]
 }

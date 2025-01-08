@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Wirepas Click
 
-> Wirepas Click is a compact add-on board that allows you to implement the Wirepas Mesh wireless connectivity stack to your application. This board features the WIRL-PRO2 Thetis-I (2611011021010), a radio module with Wirepas Mesh Protocol from Würth Elektronik. It supports creating a Wirepas routing mesh protocol and is optimized for ultra-low energy consumption. The large scalability is ideal for extensive IoT networks and can work as a host-controlled device.
+> [Wirepas Click](https://www.mikroe.com/?pid_product=MIKROE-5874) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/wirepas_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5874&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/wirepas-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Wirepas Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Wirepas Click board by processing
+  the incoming data and displaying them on the USB UART in sink mode, and sending data to 
+  the sinks in router mode.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Wirepas Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Wirepas
 
-#### Standard key functions :
+### Example Key Functions
 
 - `wirepas_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t wirepas_init ( wirepas_t *ctx, wirepas_cfg_t *cfg );
 void wirepas_default_cfg ( wirepas_t *ctx );
 ```
 
-#### Example key functions :
-
 - `wirepas_send_command` Wirepas send command function.
 ```c
 err_t wirepas_send_command ( wirepas_t *ctx, uint8_t primitive_id, uint8_t payload_length, uint8_t *payload );
@@ -68,21 +65,12 @@ err_t wirepas_write_csap_attribute ( wirepas_t *ctx, uint16_t attribute_id, uint
 err_t wirepas_send_data ( wirepas_t *ctx, wirepas_sink_data sink_data, uint8_t tx_op, uint8_t apdu_length, uint8_t *apdu );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Wirepas Click board by processing
-  the incoming data and displaying them on the USB UART in sink mode, and sending data to 
-  the sinks in router mode.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration, setting device mode, node,
   net and channel addresses, and starting stack.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -227,26 +215,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
-> For the best experience use two clicks in sink mode and one in router.
+> For the best experience use two Clicks in sink mode and one in router.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Wirepas
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

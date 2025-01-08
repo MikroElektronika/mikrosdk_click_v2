@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V",
-    "category": "Click Boards > Storage > EEPROM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SWI EEPROM Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.swieeprom",
-    "product_link": "https://www.mikroe.com/swi-eeprom-click",
-    "short_description": "SWI EEPROM Click is a compact add-on board that provides a highly reliable memory solution. This board features the AT21CS01, a single-wire serial EEPROM with a unique, factory-programmed 64-bit serial number from Microchip Technology. The AT21CS01 has an ultra-high write endurance capability allowing more than one million cycles for each memory location to meet the requirements for today's high-write endurance applications. It is internally as 128 words of 8 bits each with achieved communication through a single I/O pin with Standard-Speed and High-Speed mode options. Also, it offers a security register with a factory-programmed serial number, which makes it the easiest way to add identification to various accessories and consumables.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.SWIEEPROM",
-    "subdir_name": "lib_swieeprom"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4521",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SWI EEPROM Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SWIEEPROM",
+                "subdir_name": "lib_swieeprom",
+                "path": "SWI EEPROM Click/data/lib_swieeprom"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

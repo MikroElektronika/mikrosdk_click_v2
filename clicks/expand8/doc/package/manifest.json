@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Expand 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.expand8",
-    "product_link": "https://www.mikroe.com/expand-8-click",
-    "short_description": "Expand 8 Click is a compact add-on board that contains a multi-port I/O expander with bi-directional input/outputs. This board features the MAX7317, 10-Port SPI-interfaced I/O expander with overvoltage and hot-insertion protection from Maxim Integrated.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        4086
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Expand8",
-    "subdir_name": "lib_expand8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4442",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand8",
+                "subdir_name": "lib_expand8",
+                "path": "Expand 8 Click/data/lib_expand8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

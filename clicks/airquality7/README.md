@@ -1,74 +1,70 @@
-\mainpage Main Page
- 
 
 ---
 # Air Quality 7 Click
 
-Air quality 7 Click is a compact add-on board that combines state-of-the-art MOS sensor technology with intelligent detection algorithms to monitor VOCs and CO2 equivalent variations in confined spaces.
+> [Air Quality 7 Click](https://www.mikroe.com/?pid_product=MIKROE-4196) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/airquality7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4196&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/air-quality-7-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Aug 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the AirQuality7 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for AirQuality7 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void airquality7_cfg_setup ( airquality7_cfg_t *cfg ); 
- 
-- Initialization function.
-> AIRQUALITY7_RETVAL airquality7_init ( airquality7_t *ctx, airquality7_cfg_t *cfg );
-
-#### Example key functions :
-
-- Get Status function.
-> airquality7_err_t airquality7_get_status( airquality7_t *ctx, uint16_t *tvoc_ppb, uint16_t *co2_ppm, uint32_t *res_val_ohm, uint8_t *err_byte );
- 
-- Get Revision function.
-> airquality7_err_t airquality7_get_revision( airquality7_t *ctx, uint8_t *year, uint8_t *month, uint8_t *day, uint8_t *ascii_code );
-
-- Get R0 Calibration function.
-> airquality7_err_t airquality7_get_r0_calib( airquality7_t *ctx, uint16_t *r0_kohm );
-
-## Examples Description
+## Example Description
 
 > This demo application measures air quality.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AirQuality7
+
+### Example Key Functions
+
+- `airquality7_cfg_setup` Config Object Initialization function. 
+```c
+void airquality7_cfg_setup ( airquality7_cfg_t *cfg );
+``` 
+ 
+- `airquality7_init` Initialization function. 
+```c
+err_t airquality7_init ( airquality7_t *ctx, airquality7_cfg_t *cfg );
+```
+
+- `airquality7_get_status` Get Status function. 
+```c
+airquality7_err_t airquality7_get_status ( airquality7_t *ctx, uint16_t *tvoc_ppb, uint16_t *co2_ppm, uint32_t *res_val_ohm, uint8_t *err_byte );
+```
+ 
+- `airquality7_get_revision` Get Revision function. 
+```c
+airquality7_err_t airquality7_get_revision ( airquality7_t *ctx, uint8_t *year, uint8_t *month, uint8_t *day, uint8_t *ascii_code );
+```
+
+- `airquality7_get_r0_calib` Get R0 Calibration function. 
+```c
+airquality7_err_t airquality7_get_r0_calib ( airquality7_t *ctx, uint16_t *r0_kohm );
+```
+
+### Application Init
 
 > Initializes I2C driver and reads revision date of the module. 
 > If CRC check is OK allows the program to go on, otherwise, it displays a message that
 > the program needs to be restarted.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -133,7 +129,6 @@ void application_init ( void )
     log_printf( &logger, "----------------------------------------- \r\n" );
     Delay_ms ( 500 );
 }
-  
 ```
 
 ### Application Task
@@ -141,7 +136,6 @@ void application_init ( void )
 > Reads air quality status every 1500ms and shows the results on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     airquality7_err_code = airquality7_get_status( &airquality7, 
@@ -164,30 +158,22 @@ void application_task ( void )
     
     Delay_ms ( 1000 );
     Delay_ms ( 500 );
-} 
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AirQuality7
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

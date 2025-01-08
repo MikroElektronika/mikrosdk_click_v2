@@ -1,8 +1,5 @@
 {
     "name": "H-Bridge 9 Click",
-    "description": "H-Bridge 9 Click is a compact add-on board that contains six MOSFET half-bridge outputs. This board features the L99UDL01, a six-channel half-bridge driver monolithic integrated circuit that is PWM configurable and current regulated from STMicroelectronics.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","L99UDL01"],
-    "category" : ["Brushed"]
+    "hw" : ["Click","L99UDL01"]
 }

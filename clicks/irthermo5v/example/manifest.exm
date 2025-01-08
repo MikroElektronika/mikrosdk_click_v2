@@ -1,8 +1,5 @@
 {
     "name": "IrThermo 5V Click",
-    "description": "IrThermo Click 5V is a contactless temperature measurement device that relies on the accurate thermopile sensor chip, which encompasses both the thermopile sensor element and the ASSP. The ASSP - signal conditioning circuitry features 17bit ADC and powerful DSP which allow high degree of accuracy and wide temperature measurement range. The IrThermo Click is equipped with both the 10bit PWM interface and the SMBus/I2C interface.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MLX90614"],
-    "category" : ["Temperature & humidity"]
+    "hw" : ["Click","MLX90614"]
 }

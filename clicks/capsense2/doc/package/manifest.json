@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Capacitive",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "CapSense 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.capsense2",
-    "product_link": "https://www.mikroe.com/capsense-2-click",
-    "short_description": "CapSense 2 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the CAP1114, a multi-channel capacitive touch sensor that takes human body capacitance as an input and directly provides the real-time sensor information via the I2C serial interface from Microchip. This board contains capacitive sensing elements, a 7-segment slider, two buttons, and four LED indicators that visually detect the activation on some of these parts. This Click board™ offers reliable and accurate sensing for any application that uses capacitive touch sensing functions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.CapSense2",
-    "subdir_name": "lib_capsense2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4982",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "CapSense 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CapSense2",
+                "subdir_name": "lib_capsense2",
+                "path": "CapSense 2 Click/data/lib_capsense2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

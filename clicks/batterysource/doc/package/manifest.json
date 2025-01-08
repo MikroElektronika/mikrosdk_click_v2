@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck-Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Battery Source Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.batterysource",
-    "product_link": "https://www.mikroe.com/battery-source-click",
-    "short_description": "Battery Source Click is a compact add-on board designed to boost power from a battery for portable applications. This board features the TPS81256, a high-efficiency step-up converter from Texas Instruments. The board boosts input voltage (2.5V to 5.5V) to 5V/1A on a USB Type-C connector. It operates at a 4MHz switching frequency, enters Power-Save mode at light loads, and reduces supply current to 43μA during light load operation. The board supports over 3W output power and has an input current of less than 1µA in shutdown mode, maximizing battery life.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.BatterySource",
-    "subdir_name": "lib_batterysource"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6090",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Battery Source Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BatterySource",
+                "subdir_name": "lib_batterysource",
+                "path": "Battery Source Click/data/lib_batterysource"
+            }
+        ]
+    }
 }
-
-
-

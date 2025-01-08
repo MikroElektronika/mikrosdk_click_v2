@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 28 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel28",
-    "product_link": "https://www.mikroe.com/accel-28-click",
-    "short_description": "Accel 28 Click is a compact add-on board that contains an acceleration sensor. This board features the LIS2HH12TR, an ultra-low-power high-performance three-axis accelerometer from STMicroelectronics. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, and ±8g in three axes with a configurable host interface that supports both SPI and I2C serial communication. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Accel28",
-    "subdir_name": "lib_accel28"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5737",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 28 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel28",
+                "subdir_name": "lib_accel28",
+                "path": "Accel 28 Click/data/lib_accel28"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # 3D Hall 2 Click
 
-3D Hall 2 Click is a very accurate magnetic field sensing Click board™, used to sense the magnetic field strength in three perpendicular axes. It relies on a TLV493D-A1B6, a low power 3D magnetic sensor from Infineon. 
+> [3D Hall 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3190) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/3dhall2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3190&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/3d-hall-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the 3d Hall 2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads X/Y/Z hall axis and temperature data and converts it to human readable format.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 3d Hall 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.3dHall2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c3dhall2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t c3dhall2_init ( c3dhall2_t *ctx, c3dhall2_cfg_t *cfg );
 err_t c3dhall2_default_cfg( c3dhall2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `c3dhall2_read_data` This function reads data from register.
 ```c
 err_t c3dhall2_read_data ( c3dhall2_t *ctx, uint8_t *data_buf, uint16_t len );
@@ -68,18 +63,11 @@ err_t c3dhall2_get_axis_temp_data ( c3dhall2_t *ctx, float *axis_data, float *te
 err_t c3dhall2_configuration ( c3dhall2_t *ctx, uint8_t settings1, uint8_t settings2 );
 ```
 
-## Examples Description
-
-> This example reads X/Y/Z hall axis and temperature data and converts it to human readable format.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -104,7 +92,6 @@ void application_init ( void )
     c3dhall2_init( &c3dhall2, &cfg );
     c3dhall2_default_cfg( &c3dhall2 );
 }
-  
 ```
 
 ### Application Task
@@ -112,7 +99,6 @@ void application_init ( void )
 > Reads X/Y/Z hall axis and Temperature data. All data logs on the USBUART every 200ms.
 
 ```c
-
 void application_task ( void )
 {
     float xyz_axis[ 3 ] = { 0 };
@@ -126,28 +112,21 @@ void application_task ( void )
         Delay_ms ( 200 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.3dHall2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Opto Encoder 5 Click
 
-> Opto Encoder 5 Click is a compact add-on board that offers non-contact switching with unparalleled accuracy and precision. This board features the OPB666N, a Photologic® slotted optical switch from TT Electronics, ensuring top-notch performance and reliability. It integrates an 890nm infrared LED and a monolithic integrated circuit with a photodiode, linear amplifier, and Schmitt trigger, all powered effectively by a 5V supply from the mikroBUS™ power rail. The board features an NPN open-collector output configuration and is TTI/LST TL compatible, highlighting its ease of use and versatility.
+> [Opto Encoder 5 Click](https://www.mikroe.com/?pid_product=MIKROE-6056) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/optoencoder5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6056&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/opto-encoder-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Dec 2023.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Opto Encoder 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the Opto Encoder 5 Click board by detecting eclipse states.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Opto Encoder 5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.OptoEncoder5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `optoencoder5_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void optoencoder5_cfg_setup ( optoencoder5_cfg_t *cfg );
 ```c
 err_t optoencoder5_init ( optoencoder5_t *ctx, optoencoder5_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `optoencoder5_enable` This function enables the slotted optical switch of Opto Encoder 5 Click board.
 ```c
@@ -63,18 +58,11 @@ void optoencoder5_disable ( optoencoder5_t *ctx );
 uint8_t optoencoder5_get_out_state ( optoencoder5_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the Opto Encoder 5 Click board by detecting eclipse states.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of GPIO module, log UART and enables the slotted optical switch.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;                      /**< Logger config object. */
@@ -105,7 +93,6 @@ void application_init ( void )
     optoencoder5_enable( &optoencoder5 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -130,23 +117,19 @@ void application_task ( void )
 }
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.OptoEncoder5
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "Color 13 Click",
-    "description": "Color 13 Click is a compact add-on board that measures the subtlest changes in light. This board features the APDS-9999, I2C compatible RGB, proximity detector, and vertical-cavity surface-emitting laser (VCSEL) in one optical module from Broadcom Limited.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","APDS-9999"],
-    "category" : ["Optical"]
+    "hw" : ["Click","APDS-9999"]
 }

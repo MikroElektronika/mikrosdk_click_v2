@@ -1,41 +1,40 @@
-\mainpage Main Page
- 
+
 ---
 # IrThermo 2 Click
 
-IrThermo 2 Click is a non-contact temperature measurement solution. The Click board carries the TMP007 infrared thermopile sensor with an integrated math engine.
+> [IrThermo 2 Click](https://www.mikroe.com/?pid_product=MIKROE-1888) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/irthermo2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1888&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/irthermo-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : maj 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the IrThermo2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> IrThermo 2 is a non-contact temperature measurement Click. The sensor absorbs the infrared 
+> radiation emitted by the target object (withing the sensor’s field of view) and 
+> the integrated math engine calculates its temperature by comparing it with the temperature 
+> of the silicon die. The measurement range of the sensor is between –40°C to 125°C.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for IrThermo2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.IrThermo2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `irthermo2_cfg_setup` Config Object Initialization function.
 ```c
@@ -50,8 +49,6 @@ err_t irthermo2_init ( irthermo2_t *ctx, irthermo2_cfg_t *cfg );
 ``` c
 void irthermo2_default_cfg ( irthermo2_t *ctx );
 ```
-
-#### Example key functions :
 
 - `irthermo2_get_raw_temperature` Function read 16-bit data from raw temperature register and calculate temperature in degrees Celsius.
 ```c
@@ -68,21 +65,11 @@ float irthermo2_get_object_temperature_c ( irthermo2_t *ctx );
 float irthermo2_get_object_temperature_f ( irthermo2_t *ctx );
 ```
 
-## Examples Description
-
-> IrThermo 2 is a non-contact temperature measurement Click. The sensor absorbs the infrared 
-> radiation emitted by the target object (withing the sensor’s field of view) and 
-> the integrated math engine calculates its temperature by comparing it with the temperature 
-> of the silicon die. The measurement range of the sensor is between –40°C to 125°C.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initialization driver enable's - I2C, set default configuration and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -110,7 +97,6 @@ void application_init ( void )
     irthermo2_default_cfg( &irthermo2 );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -121,7 +107,6 @@ void application_init ( void )
 > All data logs on usb uart for aproximetly every 5 sec when the data value changes.
 
 ```c
-
 void application_task ( void )
 {
     temperature = irthermo2_get_object_temperature_c( &irthermo2 );
@@ -134,29 +119,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.IrThermo2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

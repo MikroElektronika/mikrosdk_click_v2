@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # MRAM 4 Click
 
-> MRAM 4 Click is a compact add-on board representing a magneto-resistive random-access memory solution. This board features the EM064LX, an industrial STT-MRAM persistent memory from Everspin Technologies. It is a 64Mb MRAM IC RAM and can achieve up to 200MHz as a single and double data rate (STR/DTR). The MRAM technology is analog to Flash technology with SRAM-compatible read/write timings (Persistent SRAM, P-SRAM), where data is always non-volatile. It also has a hardware write-protection feature and performs read and write operations with data retention for ten years and unlimited read, write, and erase operations for the supported life of the chip.
+> [MRAM 4 Click](https://www.mikroe.com/?pid_product=MIKROE-5838) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mram4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5838&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/mram-4-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Aug 2023.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the MRAM 4 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of MRAM 4 Click board.
+> The demo app writes specified data to the memory and reads it back.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for MRAM 4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MRAM4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `mram4_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t mram4_init ( mram4_t *ctx, mram4_cfg_t *cfg );
 err_t mram4_default_cfg ( mram4_t *ctx );
 ```
 
-#### Example key functions :
-
 - `mram4_memory_write` MRAM 4 memory write function.
 ```c
 err_t mram4_memory_write ( mram4_t *ctx, uint32_t mem_addr, uint8_t *data_in, uint8_t len );
@@ -67,13 +63,6 @@ err_t mram4_memory_read ( mram4_t *ctx, uint32_t mem_addr, uint8_t *data_out, ui
 ```c
 err_t mram4_block_erase ( mram4_t *ctx, uint8_t cmd_block_erase, uint32_t mem_addr );
 ```
-
-## Example Description
-
-> This example demonstrates the use of MRAM 4 Click board.
-> The demo app writes specified data to the memory and reads it back.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -181,22 +170,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MRAM4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

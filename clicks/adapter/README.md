@@ -1,59 +1,27 @@
-\mainpage Main Page
 
 ---
 # Adapter Click
 
-Adapter Click™ is a breakout board which simplifies connection of add-on boards with IDC10 headers to mikroBUS™ socket. There are two ways of establishing connection: using male or female IDC10 connectors.
+> [Adapter Click](https://www.mikroe.com/?pid_product=MIKROE-1432) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/adapter_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1432&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/adapter-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : maj 2020.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Adapter Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Adapter Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void adapter_cfg_setup ( adapter_cfg_t *cfg ); 
- 
-- Initialization function.
-> ADAPTER_RETVAL adapter_init ( adapter_t *ctx, adapter_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- This function writes data to the desired register.
-> void adapter_generic_write ( adapter_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
- 
-- This function reads data from the desired register.
-> void adapter_generic_read ( adapter_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-
-## Examples Description
+## Example Description
 
 > Adapter Click is a breakout board which simplifies connection of add-on boards. 
 > There are two ways of establishing connection: using male or female IDC10 connectors. 
@@ -62,14 +30,39 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > side, depending on which one is more convenient in given circumstances.  
 > There are two jumpers for SPI/I2C selection and one for selection of power supply range.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Adapter
+
+### Example Key Functions
+
+- `adapter_cfg_setup` Config Object Initialization function. 
+```c
+void adapter_cfg_setup ( adapter_cfg_t *cfg );
+``` 
+ 
+- `adapter_init` Initialization function. 
+```c
+err_t adapter_init ( adapter_t *ctx, adapter_cfg_t *cfg );
+```
+
+- `adapter_generic_write` This function writes data to the desired register. 
+```c
+void adapter_generic_write ( adapter_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+```
+ 
+- `adapter_generic_read` This function reads data from the desired register. 
+```c
+void adapter_generic_read ( adapter_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+```
+
+### Application Init
 
 > Initalizes I2C or SPI driver and makes an initial log. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -94,7 +87,6 @@ void application_init ( void )
     ADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     adapter_init( &adapter, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -105,7 +97,6 @@ void application_init ( void )
 > and than reading from the same memory location.
 
 ```c
-
 void application_task ( void )
 {
     float temp_value;
@@ -146,29 +137,21 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Adapter
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Smoke 2 Click
 
-> Smoke 2 Click is a compact add-on board that contains the most efficient version of the smoke detector. This board features the ADPD188BI, a complete photometric system for smoke detection using optical dual-wavelength technology from Analog Devices.
+> [Smoke 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4299) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/smoke2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4299&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/smoke-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jul 2021.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Smoke2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example is made to see how Smoke 2 Clicks work. The purpose of this example is that, depending on the way we choose, 
+it collects data from the external environment about smoke, processes it, and prints it via the UART terminal.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Smoke2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Smoke2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `smoke2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t smoke2_init ( smoke2_t *ctx, smoke2_cfg_t *cfg );
 err_t smoke2_default_cfg ( smoke2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `smoke2_get_int_pin` This function eget state of int pin of Smoke 2 Click board.
 ```c
 uint8_t smoke2_get_int_pin ( smoke2_t *ctx );
@@ -68,19 +64,11 @@ void smoke2_write_data( smoke2_t *ctx, uint8_t reg, uint16_t tx_data );
 uint16_t smoke2_read_data( smoke2_t *ctx, uint8_t reg );
 ```
 
-## Example Description
-
-> This example is made to see how Smoke 2 clicks work. The purpose of this example is that, depending on the way we choose, 
-it collects data from the external environment about smoke, processes it, and prints it via the UART terminal.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of communication modules, additional pins, Mapping pins and configures device for measurement.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;            /**< Logger config object. */
@@ -132,7 +120,6 @@ void application_init ( void )
 #endif
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -140,7 +127,6 @@ void application_init ( void )
 > Example shows module working depending on example mode. We can choose between: EXAMPLE_MODE_PROXIMITY and EXAMPLE_MODE_SMOKE.
 
 ```c
-
 void application_task ( void ) 
 {
 #if ( EXAMPLE_MODE == EXAMPLE_MODE_SMOKE )
@@ -149,25 +135,21 @@ void application_task ( void )
     proximity_example( );
 #endif
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Smoke2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

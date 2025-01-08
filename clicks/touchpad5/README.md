@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Touchpad 5 Click
 
-> Touchpad 5 Click is a compact add-on board that easily integrates projected capacitive touch into user's applications. This board features the IQS550, a projected capacitive touch and proximity trackpad/touchscreen controller from Azoteq.
+> [Touchpad 5 Click](https://www.mikroe.com/?pid_product=MIKROE-5199) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/touchpad5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5199&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/touchpad-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Popovic
 - **Date**          : Apr 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Touchpad 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+>  This example demonstrates the use of Touchpad 5 Click board by utilizing the touchpad XY 
+   and snap functionalities.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Touchpad 5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.TouchPad5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `touchpad5_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t touchpad5_init ( touchpad5_t *ctx, touchpad5_cfg_t *cfg );
 err_t touchpad5_default_cfg ( touchpad5_t *ctx );
 ```
 
-#### Example key functions :
-
 - `touchpad5_get_touch` This function get touch XY data.
 ```c
 err_t touchpad5_get_touch( touchpad5_t *ctx, touchpad5_touch_t *touch_data );
@@ -68,13 +64,6 @@ err_t touchpad5_get_status( touchpad5_t *ctx, uint8_t sel_status, uint16_t *rx_d
 void touchpad5_wait_ready( touchpad5_t *ctx );
 ```
 
-## Example Description
-
->  This example demonstrates the use of Touchpad 5 Click board by utilizing the touchpad XY 
-   and snap functionalities.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 >  Initializes the driver and USB UART logging and displays the device version information 
@@ -82,7 +71,6 @@ void touchpad5_wait_ready( touchpad5_t *ctx );
    revision and bootloader status.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;                  /**< Logger config object. */
@@ -157,7 +145,6 @@ void application_init ( void )
     Delay_1sec( );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -207,27 +194,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > This example relies on the IQS5xx-A000 firmware of the touch-pad controller.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.TouchPad5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---
 

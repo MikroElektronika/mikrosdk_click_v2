@@ -1,74 +1,73 @@
-\mainpage Main Page
 
 ---
 # Buck 14 Click
 
-The Buck 14 Click is a Click board™ based around the BMR4613001/001, a PoL regulator from Flex. It's high-efficiency step-down converter which provides a highly regulated output voltage derived from the connected power source, rated from 4.5 to 14V.
+> [Buck 14 Click](https://www.mikroe.com/?pid_product=MIKROE-3847) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/buck14_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3847&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/buck-14-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Buck14 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Buck14 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void buck14_cfg_setup ( buck14_cfg_t *cfg ); 
- 
-- Initialization function.
-> BUCK14_RETVAL buck14_init ( buck14_t *ctx, buck14_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void buck14_default_cfg ( buck14_t *ctx );
-
-
-#### Example key functions :
-
-- This function sets state of the power control pin on cs.
-> void buck14_power_ctrl ( buck14_t *ctx, uint8_t state );
- 
-- This function gets manufacturer id.
-> uint8_t buck14_salert ( buck14_t *ctx );
-
-- This function sets output V.
-> uint8_t buc14_write_vout ( buck14_t *ctx, float vout );
-
-## Examples Description
+## Example Description
 
 > This app enables usage of high-efficiency step-down converter.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Buck14
+
+### Example Key Functions
+
+- `buck14_cfg_setup` Config Object Initialization function. 
+```c
+void buck14_cfg_setup ( buck14_cfg_t *cfg );
+``` 
+ 
+- `buck14_init` Initialization function. 
+```c
+err_t buck14_init ( buck14_t *ctx, buck14_cfg_t *cfg );
+```
+
+- `buck14_default_cfg` Click Default Configuration function. 
+```c
+void buck14_default_cfg ( buck14_t *ctx );
+```
+
+- `buck14_power_ctrl` This function sets state of the power control pin on cs. 
+```c
+void buck14_power_ctrl ( buck14_t *ctx, uint8_t state );
+```
+ 
+- `buck14_salert` This function gets manufacturer id. 
+```c
+uint8_t buck14_salert ( buck14_t *ctx );
+```
+
+- `buc14_write_vout` This function sets output V. 
+```c
+uint8_t buc14_write_vout ( buck14_t *ctx, float vout );
+```
+
+### Application Init
 
 > Configure device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -112,7 +111,6 @@ void application_init ( void )
     log_printf( &logger, "----------------------\r\n" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -120,7 +118,6 @@ void application_init ( void )
 > Sends 4 different commands for VOUT in span of 8sec
 
 ```c
-
 void application_task ( void )
 {
     uint8_t status_data;
@@ -198,35 +195,28 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > When you send data you should send LSB first.
 > Device input V should be beetween 4.5 - 14 V.
 > Device output V could be from 0.5 - 5 V deepending from limits you set currently it is set to 1V.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Buck14
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

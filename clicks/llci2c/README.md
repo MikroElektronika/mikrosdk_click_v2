@@ -1,71 +1,64 @@
-\mainpage Main Page
- 
+
 ---
 # LLC I2C Click
 
-LLC I2C Click can be utilized as the level converter for logic signals, which makes it a very useful Click board™. The topology of this logic level conversion (LLC) circuit is perfectly suited for the bi-directional I2C communication. Although there are some specialized integrated circuits on the market, sometimes it is more convenient to have a simple solution made of just a few passive elements and four MOSFETs.
+> [LLC I2C Click](https://www.mikroe.com/?pid_product=MIKROE-3276) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/llci2c_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3276&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/llc-i2c-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : maj 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LlcI2c Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for LlcI2c Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void llci2c_cfg_setup ( llci2c_cfg_t *cfg ); 
- 
-- Initialization function.
-> LLCI2C_RETVAL llci2c_init ( llci2c_t *ctx, llci2c_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- This function writes data to the desired register.
-> void llci2c_generic_write ( llci2c_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
- 
-- This function reads data from the desired register.
-> void llci2c_generic_read ( llci2c_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-
-## Examples Description
+## Example Description
 
 > This Click can be utilized as the level converter for logic signals. The topology of this 
 > logic level conversion (LLC) circuit is perfectly suited for the bi-directional I2C communication.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LlcI2c
+
+### Example Key Functions
+
+- `llci2c_cfg_setup` Config Object Initialization function. 
+```c
+void llci2c_cfg_setup ( llci2c_cfg_t *cfg );
+``` 
+ 
+- `llci2c_init` Initialization function. 
+```c
+err_t llci2c_init ( llci2c_t *ctx, llci2c_cfg_t *cfg );
+```
+
+- `llci2c_generic_write` This function writes data to the desired register. 
+```c
+void llci2c_generic_write ( llci2c_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+```
+ 
+- `llci2c_generic_read` This function reads data from the desired register. 
+```c
+void llci2c_generic_read ( llci2c_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+```
+
+### Application Init
 
 > Initialization driver init
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -90,7 +83,6 @@ void application_init ( void )
     LLCI2C_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     llci2c_init( &llci2c, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -98,7 +90,6 @@ void application_init ( void )
 > Reads the temperature from the Thermo 7 Click board and logs data to UART.
 
 ```c
-
 void application_task ( void )
 {
     // Thermo 7 measurement Temperature
@@ -121,10 +112,9 @@ void application_task ( void )
     log_info( &logger, " Ambient temperature : %2.f C", temp_msb );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 > <pre>
 > Connection between Thermo 7 and I2C-LLC is made through I2C interface.
@@ -132,25 +122,19 @@ void application_task ( void )
 > We use the Thermo 7 Click to demonstrate the functions of the I2C-LLC Click.
 > </pre> 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LlcI2c
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

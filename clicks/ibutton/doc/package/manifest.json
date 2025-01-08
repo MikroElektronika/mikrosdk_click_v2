@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > 1-Wire",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "iButton Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ibutton",
-    "product_link": "https://www.mikroe.com/ibutton-click",
-    "short_description": "iButton Click - is an iButton™ probe Click board™. The iButton is a Analog Devices technology based on Analog's 1-Wire® communication protocol, and a chip usually packed in a robust stainless steel casing. The button-shaped iButton device has two contacts - the lid and the base. These contacts carry the necessary connections down to a sensitive silicone chip, embedded inside the metal button. When the iButton touches the reader probe on the Click board™, it establishes the communication with the host MCU, via the 1-Wire® interface. The communication is almost instant, so it is enough to press the iButton lightly to the probe contacts.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        2283
-    ],
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.iButton",
-    "subdir_name": "lib_ibutton"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3045",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "iButton Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.iButton",
+                "subdir_name": "lib_ibutton",
+                "path": "iButton Click/data/lib_ibutton"
+            }
+        ]
+    }
 }
-
-
-
-
-

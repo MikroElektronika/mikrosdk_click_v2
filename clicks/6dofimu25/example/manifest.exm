@@ -1,8 +1,5 @@
 {
     "name": "6DOF IMU 25 Click",
-    "description": "6DOF IMU 25 Click is a compact add-on board for biopotential signal detection and motion tracking applications. This board features the ST1VAFE6AX biosensor from STMicroelectronics, which combines a vertical analog front-end (vAFE) for biopotential sensing with a high-performance 6-axis IMU. The IMU features a 3-axis accelerometer and 3-axis gyroscope with adjustable full-scale ranges, along with advanced functionalities like finite state machine (FSM), adaptive self-configuration (ASC), and a machine learning core (MLC) for on-device processing. The board also includes a 4.5KB FIFO buffer for efficient data handling and supports I2C and SPI communication interfaces for easy integration.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ST1VAFE6AXTR"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","ST1VAFE6AXTR"]
 }

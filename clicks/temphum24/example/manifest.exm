@@ -1,8 +1,5 @@
 {
     "name": "TempHum 24 Click",
-    "description": "Temp&Hum 24 Click is a compact add-on board that measures the surrounding environment's humidity and temperature. This board features the HDC3021, an integrated capacitive-based relative humidity and temperature sensor with a removable tape cover from Texas Instruments. The HDC3021 is characterized by its high accuracy (±0.5%RH and ±0.1°C over a wide operating temperature range) and high resolution, providing 16-bit data to the host controller with a configurable I2C interface. Offset Error Correction reduces RH sensor offset due to aging, exposure to extreme operating conditions, and contaminants to return the device to within accuracy specifications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","HDC3021DEHR"],
-    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+    "hw" : ["Click","HDC3021DEHR"]
 }

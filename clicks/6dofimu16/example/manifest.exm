@@ -1,8 +1,5 @@
 {
     "name": "6DOF IMU 16 Click",
-    "description": "6DOF IMU 16 Click is a compact add-on board with a 6-axis inertial measurement device. This board features the ICM-42605, a premium performance 6-axis MotionTracking™ IMU from TDK InvenSense. It combines a 3-axis gyroscope and a 3-axis accelerometer, supporting the lowest gyroscope and accelerometer sensor noise in this IMU class. It also has the highest stability against temperature, shock, SMT/bend-induced offset, and more.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ICM-45605"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","ICM-45605"]
 }

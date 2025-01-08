@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # I2C MUX Click
 
-I2C MUX Click is an quad bidirectional translating I2C and SMBus switch with reset function, intended for applications with I2C slave address conflicts (multiple, identical temp sensors). It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9546A from Texas Instruments. Click has three address jumpers, allowing up to eight TCA9546A devices on the same bus. I2C MUX Click allows voltage translation between 1.8V, 2.5V, 3.3V, and 5V buses, and also supports hot insertion.
+> [I2C MUX Click](https://www.mikroe.com/?pid_product=MIKROE-4048) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/i2cmux_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4048&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/i2c-mux-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the I2cMux Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for I2cMux Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void i2cmux_cfg_setup ( i2cmux_cfg_t *cfg ); 
- 
-- Initialization function.
-> I2CMUX_RETVAL i2cmux_init ( i2cmux_t *ctx, i2cmux_cfg_t *cfg );
-
-#### Example key functions :
-
-- This function resets I2C MUX 2 Click board by clearing the RST pin for 100ms.
-> void i2cmux_hw_reset ( i2cmux_t *ctx );
- 
-- This function sets channel of the I2C MUX Click board.
-> void i2cmux_set_channel ( i2cmux_t *ctx, uint8_t channel, uint8_t ch_slave_address );
-
-- This function reads data from the desired register.
-> void i2cmux_generic_read ( i2cmux_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of I2C MUX Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.I2cMux
+
+### Example Key Functions
+
+- `i2cmux_cfg_setup` Config Object Initialization function. 
+```c
+void i2cmux_cfg_setup ( i2cmux_cfg_t *cfg );
+``` 
+ 
+- `i2cmux_init` Initialization function. 
+```c
+err_t i2cmux_init ( i2cmux_t *ctx, i2cmux_cfg_t *cfg );
+```
+
+- `i2cmux_hw_reset` This function resets I2C MUX 2 Click board by clearing the RST pin for 100ms. 
+```c
+void i2cmux_hw_reset ( i2cmux_t *ctx );
+```
+ 
+- `i2cmux_set_channel` This function sets channel of the I2C MUX Click board. 
+```c
+void i2cmux_set_channel ( i2cmux_t *ctx, uint8_t channel, uint8_t ch_slave_address );
+```
+
+- `i2cmux_generic_read` This function reads data from the desired register. 
+```c
+void i2cmux_generic_read ( i2cmux_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+```
+
+### Application Init
 
 > Initalizes the driver, preforms hardware reset, then enables channel 0 and makes an initial log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -98,7 +96,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -106,7 +103,6 @@ void application_init ( void )
 > Reads the device ID of a Spectrometer Click (dev ID: 0x24) and displays it on the USB UART each second.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t rx_data;
@@ -120,25 +116,19 @@ void application_task ( void )
 
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.I2cMux
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LoRa",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LR 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lr4",
-    "product_link": "https://www.mikroe.com/lr-3-click",
-    "short_description": "LR 4 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001353, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Mipot.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.LR4",
-    "subdir_name": "lib_lr4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4617",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LR 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LR4",
+                "subdir_name": "lib_lr4",
+                "path": "LR 4 Click/data/lib_lr4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

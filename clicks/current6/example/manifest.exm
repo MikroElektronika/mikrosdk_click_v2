@@ -1,8 +1,5 @@
 {
     "name": "Current 6 Click",
-    "description": "Current 6 Click is a compact add-on board providing a precise and accurate current sensing solution. This board features the MAX40080, a fast-response bi-directional current-sense amplifier from Analog Devices. The device features ultra-low 5uV input offset voltage, very-low 0.2% gain error, and includes an analog-to-digital converter with programmable sample rate and 12-bit resolution featuring I2C compatible interface. It also features a wake-up current-threshold and auto-shutdown mode when the I2C is inactive, both designed to minimize power consumption. The current-shunt monitor can measure voltage signals on common-mode voltages ranging from -0.1V (ground sensing) to 36V, independent of the supply voltage. This Click board™ delivers higher performance to industrial control and automation applications, load and power supplies monitoring, telecom equipment, and many more.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX40080ANC"],
-    "category" : ["Current sensor"]
+    "hw" : ["Click","MAX40080ANC"]
 }

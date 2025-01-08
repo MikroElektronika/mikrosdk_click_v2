@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # PCR Click
 
-> PCR Click is a compact add-on board that allows you to use a pulsed coherent radar (PCR) in your application. This board features the XM125, the Entry+ PCR module from Acconeer. The XM125 uses an Acconeer A121 pulsed coherent radar system based on a patented PCR technology with picosecond time resolution. 
+> [PCR Click](https://www.mikroe.com/?pid_product=MIKROE-4636) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pcr_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4636&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pcr-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Nov 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the PCR Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of PCR Click board by 
+  reading distance between Click board and object. 
 
-## Library Description
+### Example Libraries
 
-> This library contains API for PCR Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PCR
 
-#### Standard key functions :
+### Example Key Functions
 
 - `pcr_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t pcr_init ( pcr_t *ctx, pcr_cfg_t *cfg );
 err_t pcr_default_cfg ( pcr_t *ctx );
 ```
 
-#### Example key functions :
-
 - `pcr_write_reg` PCR register writing function.
 ```c
 err_t pcr_write_reg ( pcr_t *ctx, uint16_t reg, uint32_t data_in );
@@ -68,19 +64,11 @@ err_t pcr_check_if_busy ( pcr_t *ctx );
 err_t pcr_get_distance ( pcr_t *ctx, uint32_t *distance_data );
 ```
 
-## Example Description
-
-> This example demonstrates the use of PCR Click board by 
-  reading distance between Click board and object. 
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger and performs the Click default configuration.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -116,7 +104,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -136,22 +123,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PCR
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

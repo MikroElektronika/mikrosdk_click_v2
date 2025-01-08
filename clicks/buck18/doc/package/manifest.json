@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Buck 18 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.buck18",
-    "product_link": "https://www.mikroe.com/buck-18-click",
-    "short_description": "Buck 18 Click is a compact add-on board for step-down voltage conversion in power-sensitive applications. This board features the MAXM38643, an ultra-low-IQ nanoPower buck module from Analog Devices, providing highly efficient voltage regulation with minimal power consumption. The board supports input voltages from 1.8V to 5.5V, converting them to output voltages between 0.7V and 3.3V. Users can manually adjust the output voltage through an onboard TRIM trimmer or digitally via the AD5171 digital potentiometer controlled through an I2C interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.Buck18",
-    "subdir_name": "lib_buck18"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6071",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Buck 18 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Buck18",
+                "subdir_name": "lib_buck18",
+                "path": "Buck 18 Click/data/lib_buck18"
+            }
+        ]
+    }
 }
-
-

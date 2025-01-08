@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Haptic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "HAPTIC 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.haptic2",
-    "product_link": "https://www.mikroe.com/haptic-2-click",
-    "short_description": "HAPTIC 2 Click is a compact add-on board that contains a linear vibration driver. This board features the LC898302AXA, a motor driver dedicated to LRA and ERM applications from ON Semiconductor. Controlled by only one pin, it allows crisp vibration thanks to automatic braking and over-driving feature and ignores the deviation of resonance frequency thanks to auto-tuning function. The original driving waveform will enable you to reduce power consumption, and it is helpful to maintain battery lifetime. This Click board™ is suitable for numerous everyday applications such as indicator systems, game consoles, training equipment/simulators with haptics function, robotics and mechatronics, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Haptic2",
-    "subdir_name": "lib_haptic2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4452",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "HAPTIC 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Haptic2",
+                "subdir_name": "lib_haptic2",
+                "path": "HAPTIC 2 Click/data/lib_haptic2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # Button Y Click
 
-Button Y Click is a Click board™ equipped with the tactile switch, sometimes referred to as a pushbutton. A pushbutton is a component that is used very often in various designs, allowing the user to interact with the application. Although it sounds simple, a button needs to comply with a range of application requirements. It needs to have a very good mechanical endurance while retaining its specifications, a predictable bouncing time, a very low ON resistance, very high OFF resistance, and it needs to fulfill aesthetical requirements.
+> [Button Y Click](https://www.mikroe.com/?pid_product=MIKROE-3262) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/button_y_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3262&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/button-y-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nikola Peric
 - **Date**          : Feb 2022.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the ButtonY Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+>  This library contains API for Button Y Click driver. 
+>  One library is used for every single one of them.
+>  They are simple touch detectors that send a pressed/released 
+>  signal and receive a PWM output which controls the backlight on the button.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ButtonY Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ButtonY
 
-#### Standard key functions :
+### Example Key Functions
 
 - `buttony_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +45,6 @@ void buttony_cfg_setup ( buttony_cfg_t *cfg );
 ```c
 err_t buttony_init ( buttony_t *ctx, buttony_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `buttony_pwm_stop` This function stops the PWM moudle output.
 ```c
@@ -63,21 +61,11 @@ err_t buttony_pwm_start ( buttony_t *ctx );
 uint8_t buttony_get_button_state ( buttony_t *ctx );
 ```
 
-## Example Description
-
->  This library contains API for Button Y Click driver. 
->  One library is used for every single one of them.
->  They are simple touch detectors that send a pressed/released 
->  signal and receive a PWM output which controls the backlight on the button.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > This function initializes and configures the logger and Click modules.
 
 ```c
-
 void application_init ( void )  
 {
     log_cfg_t log_cfg;          /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -125,7 +112,6 @@ void application_init ( void )
 >  reports the event in the console using UART communication.
 
 ```c
-
 void application_task ( void ) 
 {
     static float duty_cycle;
@@ -158,25 +144,21 @@ void application_task ( void )
         button_state_old = button_state;
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ButtonY
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

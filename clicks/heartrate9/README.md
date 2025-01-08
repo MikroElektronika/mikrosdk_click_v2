@@ -1,86 +1,73 @@
-\mainpage Main Page
 
 ---
 # Heart Rate 9 Click
 
-The Heart Rate 9 Click is a Click board™ which features PIC16F1779 8-bit MCU and SFH 7060 heart rate and pulse oximetry monitoring sensor.
+> [Heart Rate 9 Click](https://www.mikroe.com/?pid_product=MIKROE-3822) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/heartrate9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3822&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/heart-rate-9-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Dec 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the HeartRate9 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example reads and processes data from Heart Rate 9 Clicks.
 
-## Library Description
+### Example Libraries
 
-```
-This library contains API for HeartRate9 Click driver.
-```
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HeartRate9
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-```
+- `heartrate9_cfg_setup` Config Object Initialization function.
+```c
 void heartrate9_cfg_setup ( heartrate9_cfg_t *cfg );
 ```
 
-- Initialization function.
-```
-HEARTRATE9_RETVAL heartrate9_init ( heartrate9_t *ctx, heartrate9_cfg_t *cfg );
+- `heartrate9_init` Initialization function.
+```c
+err_t heartrate9_init ( heartrate9_t *ctx, heartrate9_cfg_t *cfg );
 ```
 
-- Click Default Configuration function.
-```
+- `heartrate9_default_cfg` Click Default Configuration function.
+```c
 void heartrate9_default_cfg ( heartrate9_t *ctx );
 ```
 
-#### Example key functions :
-
-- Heart Rate 9 data writing function.
-```
+- `heartrate9_generic_write` Heart Rate 9 data writing function.
+```c
 err_t heartrate9_generic_write ( heartrate9_t *ctx, char *data_buf, uint16_t len );
 ```
 
-- Heart Rate 9 data reading function.
-```
+- `heartrate9_generic_read` Heart Rate 9 data reading function.
+```c
 err_t heartrate9_generic_read ( heartrate9_t *ctx, char *data_buf, uint16_t max_len );
 ```
 
-- Sets state of the rst pin setting.
-```
+- `heartrate9_set_rst` Sets state of the rst pin setting.
+```c
 void heartrate9_set_rst ( heartrate9_t *ctx, uint8_t state );
 ```
-
-## Examples Description
-
-> This example reads and processes data from Heart Rate 9 clicks.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
 > Initializes driver and wake-up module.
 
-```
+```c
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -113,14 +100,13 @@ void application_init ( void )
     app_buf_len = 0;
     app_buf_cnt = 0;
 }
-
 ```
 
 ### Application Task
 
 > Reads the received data and logs it.
 
-```
+```c
 void application_task ( void )
 {
    heartrate9_process();
@@ -131,10 +117,9 @@ void application_task ( void )
         heartrate9_clear_app_buf(  );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > Data structure is:
 >>AA;BB;CC;DD;EE;
@@ -144,22 +129,19 @@ CC -> IR diode.\
 DD -> Green diode.\
 EE -> BPM.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HeartRate9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

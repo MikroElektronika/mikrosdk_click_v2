@@ -1,8 +1,5 @@
 {
     "name": "H-Bridge 12 Click",
-    "description": "H Bridge 12 Click is a compact add-on board with an H-Bridge gate driver, also known as a full-bridge pre-driver. This board features the DRV8823, a 4-bridge serial interface motor driver from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8823DCAR"],
-    "category" : ["Click Boards > Motor control > Brushed"]
+    "hw" : ["Click","DRV8823DCAR"]
 }

@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Diff Press 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.diffpress2",
-    "product_link": "https://www.mikroe.com/diff-press-2-click",
-    "short_description": "Diff Press 2 Click is a compact add-on board that contains Sensirion’s differential pressure sensor. This board features the SDP31-500PA, a small differential pressure sensor designed for high-volume applications. The SDP31-500PA comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from -500Pa up to +500Pa with an accuracy of 3%. It comes as calibrated and temperature compensated with high reliability/long-term stability, has the best signal-to-noise ratio. It operates in a temperature range of -40°C to 85°C, ensuring stable operation under extreme conditions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.DiffPress2",
-    "subdir_name": "lib_diffpress2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4894",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Diff Press 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DiffPress2",
+                "subdir_name": "lib_diffpress2",
+                "path": "Diff Press 2 Click/data/lib_diffpress2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "NeoMesh 915MHz Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.neomesh915mhz",
-    "product_link": "https://www.mikroe.com/neomesh-click-915mhz",
-    "short_description": "NeoMesh Click - 915MHz is a compact add-on board with a low-power, long-range transceiver, ideal for Mesh wireless networking. This board features the NC1000C-9, a wireless Mesh network module from NeoCortec. With an additional antenna that MikroE offers connected to the module’s u.Fl connector, you can create a fully functional wireless Mesh network node that will work in the Sub-GHz frequency band of 915MHz. The module has a generic application layer that can configured to suit applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.NeoMesh915MHz",
-    "subdir_name": "lib_neomesh915mhz"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6007",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NeoMesh 915MHz Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NeoMesh915MHz",
+                "subdir_name": "lib_neomesh915mhz",
+                "path": "NeoMesh 915MHz Click/data/lib_neomesh915mhz"
+            }
+        ]
+    }
 }
-
-
-
-
-

@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # LBAND RTK Click
 
-> LBAND RTK Click is a compact add-on board that provides global and easy access to satellite L-Band GNSS corrections. This board features the NEO-D9S-00B, an professional-grade satellite data receiver for L-band correction broadcast from u-blox. Operating in a frequency range from 1525MHz to 1559MHz, the NEO-D9S-00B decodes the satellite transmission and outputs a correction stream, enabling a high-precision GNSS receiver to reach accuracies down to centimeter level. It can also select the GNSS correction data delivery channel alongside advanced security features such as signature and anti-jamming.
+> [LBAND RTK Click](https://www.mikroe.com/?pid_product=MIKROE-5411) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lbandrtk_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5411&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lband-rtk-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jan 2023.
 - **Type**          : UART/I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the LBAND RTK Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of LBAND RTK Click by setting the Point to multipoint (PMP)
+configuration and waiting for the UBX-RXM-PMP message, then parsing it and displaying on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LBAND RTK Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LBANDRTK
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lbandrtk_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +43,6 @@ void lbandrtk_cfg_setup ( lbandrtk_cfg_t *cfg );
 ```c
 err_t lbandrtk_init ( lbandrtk_t *ctx, lbandrtk_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `lbandrtk_set_default_pmp_cfg` This function sets the Point to multipoint (PMP) to default configuration to RAM layer.
 ```c
@@ -63,20 +59,12 @@ err_t lbandrtk_get_pmp_cfg ( lbandrtk_t *ctx, lbandrtk_pmp_cfg_t *pmp_cfg );
 err_t lbandrtk_read_ubx_frame ( lbandrtk_t *ctx, lbandrtk_ubx_frame_t *frame );
 ```
 
-## Example Description
-
-> This example demonstrates the use of LBAND RTK Click by setting the Point to multipoint (PMP)
-configuration and waiting for the UBX-RXM-PMP message, then parsing it and displaying on the USB UART.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, reads the module version, sets the Point to multipoint (PMP) configuration
 (for EU center frequency by default) and then reads that config and displays on the USB UART.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -150,7 +138,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -248,26 +235,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Make sure to use a correct L-Band antenna and that it's placed outside on open-sky in order to be able to receive PMP data from satellites.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LBANDRTK
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # DIGI POT 9 Click
 
-DIGI POT 9 Click is a compact add-on board used as a digitally controlled potentiometer. This board features the AD5235, a dual-channel, nonvolatile memory, digitally controlled potentiometer from Analog Devices. The AD5235's versatile programming via an SPI-compatible serial interface allows multiple modes of operation and adjustment. The resistor wiper position is determined by the RDAC register contents, which act as a scratchpad register, allowing unlimited changes of resistance settings. The nominal resistance of the RDAC between terminal A and terminal B (RAB) is 250 kΩ with 1024 positions (10-bit resolution).
+> [DIGI POT 9 Click](https://www.mikroe.com/?pid_product=MIKROE-4727) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/digipot9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4727&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/digi-pot-9-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the DIGIPOT9 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of DIGI POT 9 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DIGIPOT9 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DIGIPOT9
 
-#### Standard key functions :
+### Example Key Functions
 
 - `digipot9_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +40,13 @@ void digipot9_cfg_setup ( digipot9_cfg_t *cfg );
 
 - `digipot9_init` Initialization function.
 ```c
-DIGIPOT9_RETVAL digipot9_init ( digipot9_t *ctx, digipot9_cfg_t *cfg );
+err_t digipot9_init ( digipot9_t *ctx, digipot9_cfg_t *cfg );
 ```
 
 - `digipot9_default_cfg` Click Default Configuration function.
 ```c
 void digipot9_default_cfg ( digipot9_t *ctx );
 ```
-
-#### Example key functions :
 
 - `digipot9_generic_write` This function writes two data bytes to the selected command and address by using SPI serial interface.
 ```c
@@ -68,18 +63,11 @@ err_t digipot9_generic_read ( digipot9_t *ctx, uint8_t command, uint8_t address,
 err_t digipot9_set_wiper_1 ( digipot9_t *ctx, uint16_t data_in );
 ```
 
-## Example Description
-
-> This example demonstrates the use of DIGI POT 9 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and makes an initial log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;            /**< Logger config object. */
@@ -114,7 +102,6 @@ void application_init ( void )
     digipot9_default_cfg ( &digipot9 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -124,7 +111,6 @@ void application_init ( void )
 > The current wiper position will be displayed on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     for ( uint16_t cnt = DIGIPOT9_WIPER_ZERO_SCALE; cnt <= DIGIPOT9_WIPER_FULL_SCALE; cnt += 50 )
@@ -136,26 +122,21 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DIGIPOT9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

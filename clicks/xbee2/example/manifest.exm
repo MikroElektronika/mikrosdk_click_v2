@@ -1,8 +1,5 @@
 {
     "name": "XBEE 2 Click",
-    "description": "Xbee 2 Click is a compact add-on board providing wireless end-point connectivity to other devices. This board features the XB3-24Z8UM, a Digi XBee® 3 transceiver module offering a fully interoperable ecosystem covering all vertical markets from Digi International. Building on industry-leading technology, the pre-certified Digi XBee® 3 module delivers the flexibility to switch between multiple frequencies and wireless protocols as needed (Zigbee, 802.15.4, DigiMesh® and BLE). It can be easily configured and controlled from a simple, central platform and comes with built-in Digi TrustFence® security, identity, and data privacy features which use more than 175 controls to protect against new and evolving cyber threats.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","XB3-24Z8UM"],
-    "category" : ["Click Boards > Wireless connectivity > ZigBee"]
+    "hw" : ["Click","XB3-24Z8UM"]
 }

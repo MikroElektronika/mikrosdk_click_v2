@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EnOcean 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.enocan3",
-    "product_link": "https://www.mikroe.com/enocean-3-click",
-    "short_description": "EnOcean 3 Click carries an ultra-low power TCM515 transceiver gateway module which operates at 868MHz radio band, perfectly suited for the realization of transceiver gateways, actuators and controllers for systems communicating based on the EnOcean radio standard.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2737
-    ],
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.Enocean3",
-    "subdir_name": "lib_enocean3"
+    "name": "mikroe.click.enocean3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3653",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EnOcean 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Enocean3",
+                "subdir_name": "lib_enocean3",
+                "path": "EnOcean 3 Click/data/lib_enocean3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Wireless SUN Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.wirelesssun",
-    "product_link": "https://www.mikroe.com/wireless-sun-click",
-    "short_description": "Wireless SUN Click is a compact add-on board representing a Wireless Smart Utility Network for Field Area Network (Wi-SUN FAN) solution. This board features the BP35C5, a Wi-SUN FAN-compatible wireless communication module from Rohm Semiconductor. The BP35C5 operates in the 920MHz band and includes a Wi-SUN software stack that enables operation at different transmission modes for high efficiency. Besides, certification under ARIB and the FCC allows immediate use in Japan and the US in large-scale (up to 1,000-node Sub-GHz) multi-hop mesh networks supporting channel hopping.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.10",
-    "cmake": true,
-    "alias": "Click.WirelessSUN",
-    "subdir_name": "lib_wirelesssun"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5338",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Wireless SUN Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WirelessSUN",
+                "subdir_name": "lib_wirelesssun",
+                "path": "Wireless SUN Click/data/lib_wirelesssun"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "DRAM Click",
-    "description": "DRAM Click is a compact add-on board representing a dynamic random-access memory solution. This board features the APS6404L-3SQR, 64Mb high-performance SPI/QPI PSRAM memory organized as 8M x 8 bits each from AP Memory. This Pseudo-SRAM device features a high speed, low pin count interface and incorporates a seamless self-managed refresh mechanism to maximize the performance of memory read operation. It has 4 SDR I/O pins and operates in SPI or QPI (quad peripheral interface) mode with frequencies up to 133 MHz.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","APS6404L-3SQR-SN"],
-    "category" : ["Click Boards > Storage > DRAM"]
+    "hw" : ["Click","APS6404L-3SQR-SN"]
 }

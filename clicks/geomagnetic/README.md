@@ -1,76 +1,74 @@
-\mainpage Main Page
- 
+
 ---
 # GeoMagnetic Click
 
-GeoMagnetic Click is a digital magnetometric Click board which can measure the geomagnetic field in three perpendicular axes. The onboard sensor uses FlipCore - a proprietary technology from Bosch, which results with a carefully tuned performance, tailored for demanding 3-axis mobile applications, such as a tilt-compensated electronic compass, gaming controllers, augmented reality applications and similar applications which require reliable and precise 3-axis magnetometric measurement.
+> [GeoMagnetic Click](https://www.mikroe.com/?pid_product=MIKROE-2935) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/geomagnetic_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2935&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/geomagnetic-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Geomagnetic Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Geomagnetic Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void geomagnetic_cfg_setup ( geomagnetic_cfg_t *cfg ); 
- 
-- Initialization function.
-> GEOMAGNETIC_RETVAL geomagnetic_init ( geomagnetic_t *ctx, geomagnetic_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void geomagnetic_default_cfg ( geomagnetic_t *ctx );
-
-
-#### Example key functions :
-
-- This function sets the x/y/z axis and hall resolution value.
-> void geomagnetic_read_axis_data ( geomagnetic_t *ctx, int16_t *data_x, int16_t *data_y, 
-  int16_t *data_z, uint16_t *resolution_hall );
- 
-- This function gives feedback on whether the device is ready to measure or not.
-> uint8_t geomagnetic_check_ready ( geomagnetic_t *ctx );
-
-- This function configures some Click module registers after the device has been reset.
-> geomagnetic_power_on_reset ( geomagnetic_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This example showcases how to initialize and configure the logger and Click modules and
   measure and display the data later on. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Geomagnetic
+
+### Example Key Functions
+
+- `geomagnetic_cfg_setup` Config Object Initialization function. 
+```c
+void geomagnetic_cfg_setup ( geomagnetic_cfg_t *cfg );
+``` 
+ 
+- `geomagnetic_init` Initialization function. 
+```c
+err_t geomagnetic_init ( geomagnetic_t *ctx, geomagnetic_cfg_t *cfg );
+```
+
+- `geomagnetic_default_cfg` Click Default Configuration function. 
+```c
+void geomagnetic_default_cfg ( geomagnetic_t *ctx );
+```
+
+- `geomagnetic_read_axis_data ` This function sets the x/y/z axis and hall resolution value. 
+```c
+void geomagnetic_read_axis_data  ( geomagnetic_t *ctx, int16_t *data_x, int16_t *data_y, int16_t *data_z, uint16_t *resolution_hall  );
+```
+ 
+- `geomagnetic_check_ready` This function gives feedback on whether the device is ready to measure or not. 
+```c
+uint8_t geomagnetic_check_ready ( geomagnetic_t *ctx );
+```
+
+- `` This function configures some Click module registers after the device has been reset. 
+```c
+geomagnetic_power_on_reset  ( geomagnetic_t *ctx );
+```
+
+### Application Init
 
 > This function initializes and configures the logger and Click modules. 
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -96,7 +94,6 @@ void application_init ( )
     geomagnetic_init( &geomagnetic, &cfg );
     geomagnetic_default_cfg( &geomagnetic );
 }
-  
 ```
 
 ### Application Task
@@ -105,10 +102,9 @@ void application_init ( )
   collects and displays data from all three axes every half a second. 
 
 ```c
-
 void application_task ( )
 {
-    GEOMAGNETIC_RETVAL ready_check;
+err_t ready_check;
     int16_t axis_x;
     int16_t axis_y;
     int16_t axis_z;
@@ -129,35 +125,28 @@ void application_task ( )
     log_printf( &logger, "---------------------------------\r\n" );
 
     Delay_ms ( 500 );
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > The Geomagnetic Click needs to initialize the SPI communication module first, because the
   communication interface selection ( on the Click ) is locked on to SPI and we need to write
   some data to the registers in order to configure the Click module.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Geomagnetic
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

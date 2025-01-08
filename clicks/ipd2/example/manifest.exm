@@ -1,8 +1,5 @@
 {
     "name": "IPD 2 Click",
-    "description": "IPD 2 Click is a compact add-on board for efficient and reliable high-side switching in automotive applications. This board features the BV2HD070EFU-C, an automotive-grade two-channel high-side switch from ROHM Semiconductor with advanced protection and diagnostic functionalities. This 70mΩ on-resistance high-side switch supports an input voltage range from 6V to 28V and includes built-in protection mechanisms such as overcurrent detection, thermal shutdown, undervoltage lockout, and open load detection. Additionally, it offers configurable overcurrent limits and diagnostic output for real-time fault feedback, ensuring enhanced system reliability.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","BV2HD070EFU-CE2"],
-    "category" : ["Click Boards > Miscellaneous > Relay"]
+    "hw" : ["Click","BV2HD070EFU-CE2"]
 }

@@ -3,7 +3,7 @@
  * @brief BLE TINY Click Example.
  *
  * # Description
- * This example reads and processes data from BLE TINY clicks.
+ * This example reads and processes data from BLE TINY Clicks.
  * Application waits for connection with Click board with phone.
  * Then checks its Coadless FW version and checks connected device.
  * Then waits for command to be stored in it's memory on 0 slot.

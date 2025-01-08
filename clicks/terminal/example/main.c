@@ -4,7 +4,7 @@
  * 
  * # Description
  * This example showcases how to initialize, configure and use the Terminal Click. It is a simple
- * GPIO Click which is used like an adapter for connecting and stacking other clicks and external
+ * GPIO Click which is used like an adapter for connecting and stacking other Clicks and external
  * equimpent.
  *
  * The demo application is composed of two sections :

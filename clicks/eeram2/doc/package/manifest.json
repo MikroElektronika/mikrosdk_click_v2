@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > EERAM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EERAM 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.eeram2",
-    "product_link": "https://www.mikroe.com/eeram-2-click",
-    "short_description": "EERAM 2 Click is a standalone serial SRAM memory that includes shadow non-volatile backup. EERAM uses a small external capacitor to provide the energy needed to move the contents of the SRAM to the non-volatile cells when system power is lost.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3717
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Eeram2",
-    "subdir_name": "lib_eeram2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4129",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EERAM 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Eeram2",
+                "subdir_name": "lib_eeram2",
+                "path": "EERAM 2 Click/data/lib_eeram2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Smart Buck 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.smartbuck3",
-    "product_link": "https://www.mikroe.com/smart-buck-3-click",
-    "short_description": "Smart Buck 3 Click is a compact add-on board that contains a high-frequency synchronous step-down DC-DC converter. This board features the TPS62366A, a processor supply with I2C compatible interface and a remote sense from Texas Instruments. As input, it uses voltages in the range of 2.5V up to 5.5V, including support for common battery technologies. As output, the converter can scale voltage from 0.5V up to 1.77V in 10mV steps, retaining up to 2.5A peak output current, operating at 2.5MHz of the typical switching frequency.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.SmartBuck3",
-    "subdir_name": "lib_smartbuck3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5741",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart Buck 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartBuck3",
+                "subdir_name": "lib_smartbuck3",
+                "path": "Smart Buck 3 Click/data/lib_smartbuck3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

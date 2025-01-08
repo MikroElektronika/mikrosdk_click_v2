@@ -3,7 +3,7 @@
  * @brief BLE 10 Click Example.
  *
  * # Description
- * This example reads and processes data from BLE 10 clicks.
+ * This example reads and processes data from BLE 10 Clicks.
  *
  * The demo application is composed of two sections :
  *

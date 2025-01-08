@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED matrix",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "2x2 RGB Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c2x2rgb",
-    "product_link": "https://www.mikroe.com/2x2-rgb-click",
-    "short_description": "2x2 RGB Click is a compact add-on board that contains a matrix of 4 “intelligent” RGB elements, forming a 2x2 display screen. This board features the KTD2052A, a 12-channel RGB LED driver from Kinetic Technologies. It is a fully programmable current regulator for up to four RGB LEDs (12 LEDs in total). The LED matrix consists of four LRTB GFTG, a 6-lead in-line MULTILEDs, from ams OSRAM. The LEDs have a 120-degree viewing angle.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.2x2RGB",
-    "subdir_name": "lib_c2x2rgb"
+    "name": "mikroe.click.2x2rgb",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5917",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "2x2 RGB Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.2x2RGB",
+                "subdir_name": "lib_c2x2rgb",
+                "path": "2x2 RGB Click/data/lib_c2x2rgb"
+            }
+        ]
+    }
 }
-
-
-
-
-

@@ -1,69 +1,64 @@
-\mainpage Main Page
- 
- 
 
 ---
 # FAN 4 Click
 
-Fan 4 Click is a very compact, two-wire fan driver. It utilizes an integrated 5V, DC, brushless-motor driver chip.
+> [FAN 4 Click](https://www.mikroe.com/?pid_product=MIKROE-3200) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/fan4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3200&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/fan-4-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : Katarina Perendic
 - **Date**          : nov 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Fan4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Fan4 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void fan4_cfg_setup ( fan4_cfg_t *cfg ); 
- 
-- Initialization function.
-> FAN4_RETVAL fan4_init ( fan4_t *ctx, fan4_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void fan4_default_cfg ( fan4_t *ctx );
-
-
-#### Example key functions :
-
-- Check diagnostic.
-> uint8_t fan4_check_diagnostic ( fan4_t *ctx );
- 
-- Set output voltage
-> FAN4_RETVAL fan4_set_output ( fan4_t *ctx, uint16_t output_volt, uint8_t boost_start_timer );
-
-## Examples Description
+## Example Description
 
 > Demo application shows basic use of Fan 4 Click.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Fan4
 
-> Configuring clicks and log objects.
+### Example Key Functions
+
+- `fan4_cfg_setup` Config Object Initialization function. 
+```c
+void fan4_cfg_setup ( fan4_cfg_t *cfg );
+``` 
+ 
+- `fan4_init` Initialization function. 
+```c
+err_t fan4_init ( fan4_t *ctx, fan4_cfg_t *cfg );
+```
+
+- `fan4_default_cfg` Click Default Configuration function. 
+```c
+void fan4_default_cfg ( fan4_t *ctx );
+```
+
+- `fan4_check_diagnostic` Check diagnostic. 
+```c
+uint8_t fan4_check_diagnostic ( fan4_t *ctx );
+```
+ 
+- Set output voltage
+err_t fan4_set_output ( fan4_t *ctx, uint16_t output_volt, uint8_t boost_start_timer );
+
+### Application Init
+
+> Configuring Clicks and log objects.
 > Settings the Click in the default configuration.
 
 ```c
@@ -120,25 +115,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Fan4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Step Up 2 Click
 
-> Step Up 2 Click is a compact add-on board designed to boost the power capabilities of devices. This board features the TPS61299, a synchronous boost converter from Texas Instruments. This component is renowned for its low quiescent current and high efficiency under light-load conditions. The board distinguishes itself with the ability to adjust output voltage via the integrated MAX5419 digital potentiometer, offering precise control through an I2C interface. It supports external voltages from 0.2V to 5.5V, delivering a regulated output range of 1.8V to 5.5V.
+> [Step Up 2 Click](https://www.mikroe.com/?pid_product=MIKROE-6076) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/stepup2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6076&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/step-up-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jan 2024.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Step Up 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the Step Up 2 Click board by changing the output voltage.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Step Up 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.StepUp2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `stepup2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t stepup2_init ( stepup2_t *ctx, stepup2_cfg_t *cfg );
 err_t stepup2_default_cfg ( stepup2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `stepup2_set_vout` This function sets the voltage output level.
 ```c
 err_t stepup2_set_vout ( stepup2_t *ctx, stepup2_vout_t vout );
@@ -67,12 +62,6 @@ err_t stepup2_set_resistance ( stepup2_t *ctx, float res_kohm );
 ```c
 void stepup2_enable ( stepup2_t *ctx );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the Step Up 2 Click board by changing the output voltage.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -141,22 +130,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.StepUp2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

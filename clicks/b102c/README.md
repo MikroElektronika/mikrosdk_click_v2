@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # B102C Click
 
-> B102C Click is a compact add-on board designed for Bluetooth 5.0 (BLE) communication in various wireless applications. This board features the B102C, a Bluetooth module from Amphenol based on the Realtek RTL8762CMF chip. The board offers BLE v5.0 support, a 20MHz Arm® Cortex® M4F processor, and an integrated antenna for 2.4GHz communication, with low-power modes for optimal energy efficiency. It includes UART and USB Type-C connectivity, a PROG header for debugging, and fully programmable GPIOs.
+> [B102C Click](https://www.mikroe.com/?pid_product=MIKROE-6088) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/b102c_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6088&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/b102c-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Feb 2024.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the B102C Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of B102C Click board by processing
+  the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for B102C Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.B102C
 
-#### Standard key functions :
+### Example Key Functions
 
 - `b102c_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t b102c_init ( b102c_t *ctx, b102c_cfg_t *cfg );
 err_t b102c_default_cfg ( b102c_t *ctx );
 ```
 
-#### Example key functions :
-
 - `b102c_send_cmd` This function sends a specified command to the B102C Click module.
 ```c
 void b102c_send_cmd ( b102c_t *ctx, uint8_t *cmd );
@@ -68,19 +64,11 @@ void b102c_send_cmd_with_params ( b102c_t *ctx, uint8_t *at_cmd_buf, uint8_t *pa
 void b102c_send_cmd_params_check ( b102c_t *ctx, uint8_t *at_cmd_buf );
 ```
 
-## Example Description
-
-> This example demonstrates the use of B102C Click board by processing
-  the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, then performs a factory reset and sets the local device name.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -130,7 +118,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     log_printf( &logger, " Connect to device. " );
 }
-
 ```
 
 ### Application Task
@@ -146,30 +133,26 @@ void application_task ( void )
         b102c_clear_app_buf( );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > For communication with B102C Click use the android application on the link:
 > https://play.google.com/store/apps/details?id=com.macdom.ble.blescanner
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.B102C
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

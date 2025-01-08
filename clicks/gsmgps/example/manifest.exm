@@ -1,8 +1,5 @@
 {
     "name": "GSM-GPS Click",
-    "description": "GSM-GPS Click is a mikroBUS add-on board with a SIM808 module that combines GSM/GPRS and GPS into a single device.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SIM808"],
-    "category" : ["GSM+GPS"] 
+    "hw" : ["Click","SIM808"]
 }

@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Nano GPS Click
 
-Nano GPS Click carries the Nano Hornet module from OriginGPS. It’s the smallest GPS module with an integrated patch antenna (measuring just 10x10x3.8mm).
+> [Nano GPS Click](https://www.mikroe.com/?pid_product=MIKROE-1912) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/nanogps_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1912&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/nano-gps-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : apr 2020.
 - **Type**          : UART GPS/GNSS type
 
-
 # Software Support
 
-We provide a library for the Nanogps Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from Nano GPS Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Nanogps Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Nanogps
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void nanogps_cfg_setup ( nanogps_cfg_t *cfg ); 
+- `nanogps_cfg_setup` Config Object Initialization function. 
+```c
+void nanogps_cfg_setup ( nanogps_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> NANOGPS_RETVAL nanogps_init ( nanogps_t *ctx, nanogps_cfg_t *cfg );
+- `nanogps_init` Initialization function. 
+```c
+err_t nanogps_init ( nanogps_t *ctx, nanogps_cfg_t *cfg );
+```
 
+- `nanogps_generic_parser` Generic parser function. 
+```c
+nanogps_error_t nanogps_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
+```
 
-#### Example key functions :
+- `nanogps_generic_read` Generic read function. 
+```c
+int32_t nanogps_generic_read ( nanogps_t *ctx, char *data_buf, uint16_t max_len );
+```
 
-- Generic parser function.
-> nanogps_error_t nanogps_generic_parser ( char *rsp,  uint8_t command, uint8_t element, char *parser_buf );
+- `nanogps_module_wakeup` Wake-up module. 
+```c
+void nanogps_module_wakeup ( nanogps_t *ctx );
+```
 
-- Generic read function.
-> int32_t nanogps_generic_read ( nanogps_t *ctx, char *data_buf, uint16_t max_len );
-
-- Wake-up module.
-> void nanogps_module_wakeup ( nanogps_t *ctx );
-
-## Examples Description
-
-> This example reads and processes data from Nano GPS clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes driver and wake-up module.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -92,7 +89,6 @@ void application_init ( void )
 
     nanogps_module_wakeup( &nanogps );
 }
-  
 ```
 
 ### Application Task
@@ -100,39 +96,31 @@ void application_init ( void )
 > Reads the received data and parses it.
 
 ```c
-
 void application_task ( void )
 {
     nanogps_process(  );
     parser_application( current_parser_buf );
 }
-
 ```
 
-## Note
+### Note
 
 > Depending on the environmental conditions and the satellites availability
 > it may take some time for the module to receive the position fix.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Nanogps
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

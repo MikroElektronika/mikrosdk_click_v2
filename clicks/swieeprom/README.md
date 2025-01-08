@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # SWI EEPROM Click
 
-> SWI EEPROM Click is a compact add-on board that provides a highly reliable memory solution. This board features the AT21CS01, a single-wire serial EEPROM with a unique, factory-programmed 64-bit serial number from Microchip Technology. The AT21CS01 has an ultra-high write endurance capability allowing more than one million cycles for each memory location to meet the requirements for today's high-write endurance applications. It is internally as 128 words of 8 bits each with achieved communication through a single I/O pin with Standard-Speed and High-Speed mode options. Also, it offers a security register with a factory-programmed serial number, which makes it the easiest way to add identification to various accessories and consumables.
+> [SWI EEPROM Click](https://www.mikroe.com/?pid_product=MIKROE-4521) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/swi_eeprom_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4521&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/swi-eeprom-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2023.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the SWI EEPROM Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of SWI EEPROM Click board by writing specified data to the memory and reading it back.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for SWI EEPROM Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SWIEEPROM
 
-#### Standard key functions :
+### Example Key Functions
 
 - `swieeprom_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void swieeprom_cfg_setup ( swieeprom_cfg_t *cfg );
 ```c
 err_t swieeprom_init ( swieeprom_t *ctx, swieeprom_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `swieeprom_mem_write_page` This function writes data to the specified memory address page.
 ```c
@@ -63,18 +58,11 @@ err_t swieeprom_mem_read ( swieeprom_t *ctx, uint8_t start_addr, uint8_t *data_o
 err_t swieeprom_mem_clear ( swieeprom_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of SWI EEPROM Click board by writing specified data to the memory and reading it back.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger and checks the communication.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -112,7 +100,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -161,29 +148,26 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > This application is written for the following MCUs and specifically for MIKROBUS 1:
 STM32F407ZG, MK64FN1M0VDC12, TM4C129XNCZAD, GD32VF103VBT6, PIC32MX795F512L
 In order to use it on another MCUs the pin_x functions must be defined in a way
 it matches the required timing specifications for the Single Wire interface.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SWIEEPROM
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

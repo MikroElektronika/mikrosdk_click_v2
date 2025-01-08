@@ -1,8 +1,5 @@
 {
     "name": "Barcode 2 Click",
-    "description": "Barcode 2 Click is an adapter add-on board that contains a computerized image recognition system that is compliant with a wide range of different 1D and 2D barcode protocols.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","EM3080-W"],
-    "category" : ["Miscellaneous"] 
+    "hw" : ["Click","EM3080-W"]
 }

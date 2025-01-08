@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Capacitive",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Cap Touch 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.captouch6",
-    "product_link": "https://www.mikroe.com/cap-touch-6-click",
-    "short_description": "Cap Touch 6 Click is a compact add-on board that easily integrates projected capacitive touch into users' applications. This board features the IQS227D, a single-channel capacitive controller with an internal voltage regular and reference capacitor from Azoteq. Besides the capacitive sensing area, this board also has output pins for proximity and touch events with their corresponding LED indicators. The IQS227D automatically tracks slow varying environmental changes via various filters.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.CapTouch6",
-    "subdir_name": "lib_captouch6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5517",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Cap Touch 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CapTouch6",
+                "subdir_name": "lib_captouch6",
+                "path": "Cap Touch 6 Click/data/lib_captouch6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Bluetooth Click",
-    "description": "With the range up to a 100m and low power consumption, Bluetooth Click is a great solution if you are looking for a simple way to integrate Bluetooth 2.1 communication to your device. It features the RN-41 low power, class 1 Bluetooth radio module. Bluetooth Click communicates with the target board MCU through UART interface and is designed to run on 3.3V power supply only.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","RN-41"],
-    "category" : ["BT/BLE"] 
+    "hw" : ["Click","RN-41"]
 }

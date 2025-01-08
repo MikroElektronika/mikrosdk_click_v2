@@ -1,8 +1,5 @@
 {
     "name": "WiFi 11 Click",
-    "description": "WiFi 11 Click is a compact add-on board that contains a WiFi and Bluetooth module that has dual bands for WiFi communication. This board features the BW16, a low-power dual bands Wireless LAN (WLAN) and Bluetooth Low Energy SoC module from Ai-Thinker.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","BW16"],
-    "category" : ["WIFI"] 
+    "hw" : ["Click","BW16"]
 }

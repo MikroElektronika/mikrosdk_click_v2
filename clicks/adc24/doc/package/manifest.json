@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ADC 24 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.adc24",
-    "product_link": "https://www.mikroe.com/adc-24-click",
-    "short_description": "ADC 24 Click is a compact add-on board for high-speed analog to digital conversion. This board features the AD7490, a 12-bit, 16-channel successive approximation ADC from Analog Devices, optimized for efficient power usage with a consumption of just 2.5mA from a 5V supply while achieving up to 1MSPS throughput rates. The board features 16 single-ended analog inputs with a configurable input range, supported by a channel sequencer for sequential channel conversion and multiple operational modes for flexible power management. This makes ADC 24 Click ideal for extensive system monitoring applications such as multichannel system monitoring, power line monitoring, data acquisition, instrumentation, and process control, serving various industrial and tech applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.ADC24",
-    "subdir_name": "lib_adc24"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6039",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 24 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ADC24",
+                "subdir_name": "lib_adc24",
+                "path": "ADC 24 Click/data/lib_adc24"
+            }
+        ]
+    }
 }
-
-
-

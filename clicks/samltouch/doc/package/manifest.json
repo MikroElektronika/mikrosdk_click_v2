@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Capacitive",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SAML Touch Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.samltouch",
-    "product_link": "https://www.mikroe.com/saml-touch-click",
-    "short_description": "SAML Touch Click is a Click board™ equipped with two capacitive touch pads and one capacitive slider.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2757
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.SamlTouch",
-    "subdir_name": "lib_samltouch"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3414",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SAML Touch Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SamlTouch",
+                "subdir_name": "lib_samltouch",
+                "path": "SAML Touch Click/data/lib_samltouch"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

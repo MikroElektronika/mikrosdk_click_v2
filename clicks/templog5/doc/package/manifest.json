@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Temp-Log 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.templog5",
-    "product_link": "https://www.mikroe.com/temp-log-5-click",
-    "short_description": "Temp-Log 5 Click is a temperature measuring Click board™ featuring the CAT34TS02, an accurate temperature sensor IC with integrated Serial Presence Detect EEPROM. Temperature Sensor measures and store temperatures at least 10 times in second. Temperature measurement results can be retrieved by the host MCU via I2C interface, and are compared to critical limits stored into internal registers. It also features programmable event output function and supports three modes.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2754
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.TempLog5",
-    "subdir_name": "lib_templog5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3442",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Temp-Log 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TempLog5",
+                "subdir_name": "lib_templog5",
+                "path": "Temp-Log 5 Click/data/lib_templog5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

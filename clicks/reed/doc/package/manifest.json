@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "REED Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.reed",
-    "product_link": "https://www.mikroe.com/reed-click",
-    "short_description": "REED Click is a simple board that carries a standard (Single Pole Single Throw Normally Open) reed switch. A reed switch comprises of two thin magnetic contacts sealed inside a casing.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1632
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Reed",
-    "subdir_name": "lib_reed"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1998",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "REED Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Reed",
+                "subdir_name": "lib_reed",
+                "path": "REED Click/data/lib_reed"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Gyro 5 Click
 
-Gyro 5 Click is a three-axis gyroscope Click board™ that can sense motion over three perpendicular axes. It is equipped with the ITG-3701, a three-axis digital gyroscope. 
+> [Gyro 5 Click](https://www.mikroe.com/?pid_product=MIKROE-3669) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gyro5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3669&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gyro-5-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Nov 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Gyro5 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Gyro5 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void gyro5_cfg_setup ( gyro5_cfg_t *cfg ); 
- 
-- Initialization function.
-> GYRO5_RETVAL gyro5_init ( gyro5_t *ctx, gyro5_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void gyro5_default_cfg ( gyro5_t *ctx );
-
-
-#### Example key functions :
-
-- Getting gyroscope axes values
-> void gyro5_get_axes ( gyro5_t *ctx, float *x_axis, float *y_axis, float *z_axis );
- 
-- Getting temperature value
-> void gyro5_get_temperature ( gyro5_t *ctx, float *temperature );
-
-- Click Default Configuration function.
-> void gyro5_default_cfg ( gyro5_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application shows temperature and gyroscope axes values
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Gyro5
+
+### Example Key Functions
+
+- `gyro5_cfg_setup` Config Object Initialization function. 
+```c
+void gyro5_cfg_setup ( gyro5_cfg_t *cfg );
+``` 
+ 
+- `gyro5_init` Initialization function. 
+```c
+err_t gyro5_init ( gyro5_t *ctx, gyro5_cfg_t *cfg );
+```
+
+- `gyro5_default_cfg` Click Default Configuration function. 
+```c
+void gyro5_default_cfg ( gyro5_t *ctx );
+```
+
+- `gyro5_get_axes` Getting gyroscope axes values. 
+```c
+void gyro5_get_axes ( gyro5_t *ctx, float *x_axis, float *y_axis, float *z_axis );
+```
+ 
+- `gyro5_get_temperature` Getting temperature value. 
+```c
+void gyro5_get_temperature ( gyro5_t *ctx, float *temperature );
+```
+
+- `gyro5_default_cfg` Click Default Configuration function. 
+```c
+void gyro5_default_cfg ( gyro5_t *ctx );
+```
+
+### Application Init
 
 > Initializes GPIO pins, I2C and LOG modules.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -100,7 +97,6 @@ void application_init ( void )
     log_printf( &logger, "      Gyro 5 Click\r\n" );
     log_printf( &logger, "-----------------------\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +104,6 @@ void application_init ( void )
 > Checks data ready INT, gets temperature and axes data and LOGs those values
 
 ```c
-
 void application_task ( void )
 {
     //  Task implementation.
@@ -129,29 +124,23 @@ void application_task ( void )
         Delay_ms ( 1000 );
         Delay_ms ( 1000 );
     }
-}  
+}
 
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Gyro5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

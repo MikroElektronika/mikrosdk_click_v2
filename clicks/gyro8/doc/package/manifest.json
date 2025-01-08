@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Gyro 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gyro8",
-    "product_link": "https://www.mikroe.com/gyro-8-click",
-    "short_description": "Gyro 8 Click is a compact add-on board that contains a high-performance gyroscope. This board features Murata's SCR2100-D08, a high-performance single-axis angular rate sensor (gyroscope). Based on Murata's proven capacitive 3D-MEMS technology, the SCR2100-D08 is characterized by high stability and reliability, providing immensely stable output over a wide range of temperatures, humidity, and vibration. This high-resolution gyroscope supports ±125°/s X-axis angular rate measurement range, extensive self-diagnostic features, an SPI serial interface, and low power consumption.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.Gyro8",
-    "subdir_name": "lib_gyro8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5471",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Gyro 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Gyro8",
+                "subdir_name": "lib_gyro8",
+                "path": "Gyro 8 Click/data/lib_gyro8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

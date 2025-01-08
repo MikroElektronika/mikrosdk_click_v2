@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Buck 12 Click
 
-Buck 12 Click is a high-efficiency step-down converter which provides 3.3V on its output, derived from the connected power supply voltage, in the range from 4.2V to 18V.
+> [Buck 12 Click](https://www.mikroe.com/?pid_product=MIKROE-3652) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/buck12_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3652&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/buck-12-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Buck12 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Buck12 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void buck12_cfg_setup ( buck12_cfg_t *cfg ); 
- 
-- Initialization function.
-> BUCK12_RETVAL buck12_init ( buck12_t *ctx, buck12_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void buck12_default_cfg ( buck12_t *ctx );
-
-
-#### Example key functions :
-
-- This function for enable or disable device.
-> void buck12_control ( buck12_t *ctx, uint8_t ctrl );
- 
-- This function reads ADC on the channel.
-> uint16_t buck12_get_channel_adc ( buck12_t *ctx, uint8_t channel );
-
-- This function gets Voltage.
-> float buck12_get_voltage ( buck12_t *ctx, uint8_t select_volt );
-
-## Examples Description
+## Example Description
 
 > This demo application reads the voltage in [mV] at the input and output terminals.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Buck12
 
-> Configuring clicks and log objects.
+### Example Key Functions
+
+- `buck12_cfg_setup` Config Object Initialization function. 
+```c
+void buck12_cfg_setup ( buck12_cfg_t *cfg );
+``` 
+ 
+- `buck12_init` Initialization function. 
+```c
+err_t buck12_init ( buck12_t *ctx, buck12_cfg_t *cfg );
+```
+
+- `buck12_default_cfg` Click Default Configuration function. 
+```c
+void buck12_default_cfg ( buck12_t *ctx );
+```
+
+- `buck12_control` This function for enable or disable device. 
+```c
+void buck12_control ( buck12_t *ctx, uint8_t ctrl );
+```
+ 
+- `buck12_get_channel_adc` This function reads ADC on the channel. 
+```c
+uint16_t buck12_get_channel_adc ( buck12_t *ctx, uint8_t channel );
+```
+
+- `buck12_get_voltage` This function gets Voltage. 
+```c
+float buck12_get_voltage ( buck12_t *ctx, uint8_t select_volt );
+```
+
+### Application Init
+
+> Configuring Clicks and log objects.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +96,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +104,6 @@ void application_init ( void )
 > This data logs to the USBUART every 2 sec.
 
 ```c
-
 void application_task ( void )
 {
     float voltage;
@@ -125,28 +120,21 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Buck12
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

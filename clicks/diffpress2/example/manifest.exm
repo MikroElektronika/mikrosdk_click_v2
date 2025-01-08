@@ -1,8 +1,5 @@
 {
     "name": "Diff Press 2 Click",
-    "description": "Diff Press 2 Click is a compact add-on board that contains Sensirion’s differential pressure sensor. This board features the SDP31-500PA, a small differential pressure sensor designed for high-volume applications. The SDP31-500PA comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from -500Pa up to +500Pa with an accuracy of 3%. It comes as calibrated and temperature compensated with high reliability/long-term stability, has the best signal-to-noise ratio. It operates in a temperature range of -40°C to 85°C, ensuring stable operation under extreme conditions.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SDP31"],
-    "category" : ["Pressure"]
+    "hw" : ["Click","SDP31"]
 }

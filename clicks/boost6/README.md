@@ -1,82 +1,79 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Boost 6 Click
 
-The Boost 6 Click is a Click board™ which features the TPS55332-Q1, a monolithic high-voltage switching regulator with integrated 3-A, 60-V power MOSFET.
+> [Boost 6 Click](https://www.mikroe.com/?pid_product=MIKROE-3813) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/boost6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3813&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/boost-6-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Boost6 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Boost6 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void boost6_cfg_setup ( boost6_cfg_t *cfg ); 
- 
-- Initialization function.
-> BOOST6_RETVAL boost6_init ( boost6_t *ctx, boost6_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void boost6_default_cfg ( boost6_t *ctx );
-
-
-#### Example key functions :
-
-- This function hardware reset the TPS55332-Q1 60-V Output Step Up DC/DC Converter
-- on Boost 6 Click by cleared to '0' state of the RST pin,
-- wait the 100 ms, sets to '1' state of the RST pin and wait another the 100 ms.
-> void boost6_hw_reset ( boost6_t *ctx );
- 
-- This function power OFF provides electrical off control of the regulator
-- TPS55332-Q1 60-V Output Step Up DC/DC Converter
-- on Boost 6 Click by cleared to '0' state of the EN pin.
-> void boost6_power_off ( boost6_t *ctx );
-
-- This function power ON provides electrical off control of the regulator
-- TPS55332-Q1 60-V Output Step Up DC/DC Converter
-- on Boost 6 Click by sets to '1' state of the EN pin.
-> void boost6_power_on ( boost6_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This app enable or disable monolithic high-voltage switching regulator.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Boost6
+
+### Example Key Functions
+
+- `boost6_cfg_setup` Config Object Initialization function. 
+```c
+void boost6_cfg_setup ( boost6_cfg_t *cfg );
+``` 
+ 
+- `boost6_init` Initialization function. 
+```c
+err_t boost6_init ( boost6_t *ctx, boost6_cfg_t *cfg );
+```
+
+- `boost6_default_cfg` Click Default Configuration function. 
+```c
+void boost6_default_cfg ( boost6_t *ctx );
+```
+
+- This function hardware reset the TPS55332-Q1 60-V Output Step Up DC/DC Converter
+- on Boost 6 Click by cleared to '0' state of the RST pin,
+- `boost6_hw_reset` wait the 100 ms, sets to '1' state of the RST pin and wait another the 100 ms. 
+```c
+void boost6_hw_reset ( boost6_t *ctx );
+```
+ 
+- This function power OFF provides electrical off control of the regulator
+- TPS55332-Q1 60-V Output Step Up DC/DC Converter
+- `boost6_power_off` on Boost 6 Click by cleared to '0' state of the EN pin. 
+```c
+void boost6_power_off ( boost6_t *ctx );
+```
+
+- This function power ON provides electrical off control of the regulator
+- TPS55332-Q1 60-V Output Step Up DC/DC Converter
+- `boost6_power_on` on Boost 6 Click by sets to '1' state of the EN pin. 
+```c
+void boost6_power_on ( boost6_t *ctx );
+```
+
+### Application Init
 
 > Initializes device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -116,7 +113,6 @@ void application_init ( void )
     log_printf( &logger, "-----------------\r\n" );
     Delay_100ms( );
 }
-  
 ```
 
 ### Application Task
@@ -125,7 +121,6 @@ void application_init ( void )
 > Enable device 5000ms and disable device 5000ms.
 
 ```c
-
 void application_task ( void )
 {
     boost6_power_on( &boost6 );
@@ -147,29 +142,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Boost6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

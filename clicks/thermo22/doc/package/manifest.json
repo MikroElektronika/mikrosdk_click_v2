@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Thermo 22 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.thermo22",
-    "product_link": "https://www.mikroe.com/thermo-22-click",
-    "short_description": "Thermo 22 Click is a compact add-on board that provides an accurate temperature measurement. This board features the TMP75C, a high-precision digital temperature sensor from Texas Instruments. The TMP75C houses an integrated digital temperature sensor with a 12-bit analog-to-digital converter (ADC), a reference circuit, and serial interface logic functions in one package. Characterized by its high accuracy (up to ±0.25°C typical) and high resolution of 0.0625°C, this temperature sensor provides temperature data to the host controller with a configurable I2C interface. This Click board™ is appropriate for thermal management and protection of various consumer, industrial, and environmental applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Thermo22",
-    "subdir_name": "lib_thermo22"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5068",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermo 22 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermo22",
+                "subdir_name": "lib_thermo22",
+                "path": "Thermo 22 Click/data/lib_thermo22"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

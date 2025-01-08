@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Gas",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Alcohol 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.alcohol3",
-    "product_link": "https://www.mikroe.com/alcohol-3-click",
-    "short_description": "Alcohol 3 Click is a gas sensor Click board, that reacts to the presence of deoxidizing and reducing gases, such as ethanol (also known as alcohol).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2672
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Alcohol3",
-    "subdir_name": "lib_alcohol3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3318",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Alcohol 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Alcohol3",
+                "subdir_name": "lib_alcohol3",
+                "path": "Alcohol 3 Click/data/lib_alcohol3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

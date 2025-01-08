@@ -1,40 +1,44 @@
-\mainpage Main Page
 
 ---
 # Plug n Trust Click
 
-> Plug&Trust Click is a compact add-on board that contains a ready-to-use IoT secure element solution.
+> [Plug n Trust Click](https://www.mikroe.com/?pid_product=MIKROE-4656) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/plug%26trust_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4656&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/plugtrust-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Feb 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the PlugnTrust Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This application is showcasing basic functionality of Plug&Trust
+Click board. It gets identify data from device, selects card 
+manager and applet. Then checks free memory, reads all objects and 
+deletes not reserved ones. After that showcases a few of functionality: 
+Generating random data, 
+Creating, reading and deleteing binary objects, 
+Creating AES symmetrical key and cipher with it;
+In the end it is showcasing funcionality in the endless loop.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for PlugnTrust Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PlugnTrust
 
-#### Standard key functions :
+### Example Key Functions
 
 - `plugntrust_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +55,6 @@ err_t plugntrust_init ( plugntrust_t *ctx, plugntrust_cfg_t *cfg );
 err_t plugntrust_default_cfg ( plugntrust_t *ctx );
 ```
 
-#### Example key functions :
-
 - `plugntrust_apdu_transfer` Write-Read frame data function.
 ```c
 err_t plugntrust_apdu_transfer ( plugntrust_t *ctx, plugntrust_frame_data_t *frame_data );
@@ -67,19 +69,6 @@ err_t plugntrust_select_card_manager ( plugntrust_t *ctx, uint8_t rsp, uint8_t *
 ```c
 err_t plugntrust_select_applet ( plugntrust_t *ctx, uint8_t ns_encode, plugntrust_version_info_t *ver_info );
 ```
-
-## Example Description
-
-> This application is showcasing basic functionality of Plug&Trust
-click board. It gets identify data from device, selects card 
-manager and applet. Then checks free memory, reads all objects and 
-deletes not reserved ones. After that showcases a few of functionality: 
-Generating random data, 
-Creating, reading and deleteing binary objects, 
-Creating AES symmetrical key and cipher with it;
-In the end it is showcasing funcionality in the endless loop.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -97,7 +86,6 @@ deleted and checked if it still exists. Finally it creates
 data with that key, and in the end it deletes that key object.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -175,7 +163,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
@@ -187,7 +174,6 @@ deletes both AES key object and binary object thats created
 at the start of task.
 
 ```c
-
 void application_task ( void ) 
 {
     #define DATA_LEN 16
@@ -289,30 +275,26 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 > For more informations and explanations refer to documents 
 from NXP->AN12413 and UM11225.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PlugnTrust
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

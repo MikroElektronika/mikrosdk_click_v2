@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # MRAM 2 Click
 
-MRAM 2 Click is a compact add-on board for applications that must store and retrieve data and programs quickly using a small number of pins.
+> [MRAM 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4232) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mram2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4232&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/mram-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Sep 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Mram2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example demonstrates the use of MRAM 2 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Mram2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Mram2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `mram2_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void mram2_cfg_setup ( mram2_cfg_t *cfg );
 ```c
 err_t mram2_init ( mram2_t *ctx, mram2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `mram2_wren` Write Enable function
 ```c
@@ -63,18 +58,11 @@ void mram2_read ( mram2_t *ctx, uint32_t mem_adr, uint8_t *rd_data, uint8_t n_by
 void mram2_write ( mram2_t *ctx, uint32_t mem_adr, uint8_t *wr_data, uint8_t n_bytes );
 ```
 
-## Examples Description
-
-> This example demonstrates the use of MRAM 2 Click board.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver, sets the write protect and disables the hold signal.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -108,7 +96,6 @@ void application_init ( void )
     log_printf( &logger, "------------------- \r\n" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -117,7 +104,6 @@ void application_init ( void )
 > and displays it to the USB UART approximately every 5 seconds.
 
 ```c
-
 void application_task ( void )
 {
     mram2_wren( &mram2 );
@@ -138,29 +124,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Mram2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

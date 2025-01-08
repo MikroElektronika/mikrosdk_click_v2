@@ -1,8 +1,5 @@
 {
     "name": "6DOF IMU 10 Click",
-    "description": "6DOF IMU 10 Click is a 6 Degrees-of-Freedom inertial sensor module, that features KMX62 sensor whcih consist of tri-axial magnetometer (range ±2g / ±4g / ±8g / ±16g) plus a triaxial accelerometer (±1200µT).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","KMX62-1031"],
-    "category" : ["Motion"] 
+    "hw" : ["Click","KMX62-1031"]
 }

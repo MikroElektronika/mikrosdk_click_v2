@@ -1,8 +1,5 @@
 {
     "name": "AudioAmp 3 Click",
-    "description": "AudioAmp 3 Click is a stereo audio amplifier, capable of delivering up to 79W per channel with the 4Ω load.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TAS5414"],
-    "category" : ["Amplifier"] 
+    "hw" : ["Click","TAS5414"]
 }

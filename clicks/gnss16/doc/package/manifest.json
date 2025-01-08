@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GNSS 16 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gnss16",
-    "product_link": "https://www.mikroe.com/gnss-16-click",
-    "short_description": "GNSS 16 Click is a compact add-on board that delivers meter-level accuracy in urban environments. This Click board™ features the NEO-F10N-00B, a professional-grade L1/L5 dual-band GNSS receiver from u-blox. It features dual-band multipath mitigation technology to ensure robust signal reception and supports multiple GNSS systems, including GPS, Galileo, and BeiDou. Configurable for specific constellations, it optimizes power consumption while maintaining high performance.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.GNSS16",
-    "subdir_name": "lib_gnss16"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6129",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 16 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS16",
+                "subdir_name": "lib_gnss16",
+                "path": "GNSS 16 Click/data/lib_gnss16"
+            }
+        ]
+    }
 }
-
-
-

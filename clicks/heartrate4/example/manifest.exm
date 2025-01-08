@@ -1,8 +1,5 @@
 {
     "name": "Heart rate 4 Click",
-    "description": "Heart rate 4 Click carries the MAX30101 high-sensitivity pulse oximeter and heart-rate sensor from Maxim Integrated. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface, with additional functionality provided by INT pin on the mikroBUS™ line.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX30101"],
-    "category" : ["Biometrics"] 
+    "hw" : ["Click","MAX30101"]
 }

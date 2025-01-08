@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Proximity 9 Click
 
-Proximity 9 Click is a very accurate and reliable proximity sensing (PS) and ambient light sensing (ALS) device, equipped with the VCNL4040, an integrated PS and ALS sensor which features the Filtron™ technology.
+> [Proximity 9 Click](https://www.mikroe.com/?pid_product=MIKROE-3465) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/proximity9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3465&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/proximity-9-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Proximity9 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Proximity9 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void proximity9_cfg_setup ( proximity9_cfg_t *cfg ); 
- 
-- Initialization function.
-> PROXIMITY9_RETVAL proximity9_init ( proximity9_t *ctx, proximity9_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void proximity9_default_cfg ( proximity9_t *ctx );
-
-
-#### Example key functions :
-
-- INT Pin Check function
-> uint8_t proximity9_check_int_pin ( proximity9_t *ctx );
- 
-- INT Flag Check function
-> uint8_t proximity9_check_int_flag ( proximity9_t *ctx, uint8_t bit_mask );
-
-- ALS Get function
-> float proximity9_get_als_lux ( proximity9_t *ctx );
-
-## Examples Description
- 
 > This application is proximity sensing (PS) and ambient light sensing (ALS) device.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Proximity9
+
+### Example Key Functions
+
+- `proximity9_cfg_setup` Config Object Initialization function. 
+```c
+void proximity9_cfg_setup ( proximity9_cfg_t *cfg );
+``` 
+ 
+- `proximity9_init` Initialization function. 
+```c
+err_t proximity9_init ( proximity9_t *ctx, proximity9_cfg_t *cfg );
+```
+
+- `proximity9_default_cfg` Click Default Configuration function. 
+```c
+void proximity9_default_cfg ( proximity9_t *ctx );
+```
+
+- `proximity9_check_int_pin` INT Pin Check function. 
+```c
+uint8_t proximity9_check_int_pin ( proximity9_t *ctx );
+```
+ 
+- `proximity9_check_int_flag` INT Flag Check function. 
+```c
+uint8_t proximity9_check_int_flag ( proximity9_t *ctx, uint8_t bit_mask );
+```
+
+- `proximity9_get_als_lux` ALS Get function. 
+```c
+float proximity9_get_als_lux ( proximity9_t *ctx );
+```
+
+### Application Init
 
 > Initializes I2C interface and performs a device configurations.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +98,6 @@ void application_init ( void )
     log_printf( &logger, "************************************ \r\n" );
     Delay_ms ( 300 );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +106,6 @@ void application_init ( void )
 > Allows data and interrupt flags messages to be showed on the uart terminal.
 
 ```c
-
 void application_task ( )
 {
     uint8_t int_check;
@@ -143,35 +138,28 @@ void application_task ( )
         log_printf( &logger, "************************************ \r\n" );
         Delay_ms ( 200 );
     }
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > The ALS sensitivity depends on the ALS integration time setting.
 > The longer integration time has higher sensitivity.
 > The Proximity (PS) output data can be set to 12-bit or 16-bit resolution.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Proximity9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

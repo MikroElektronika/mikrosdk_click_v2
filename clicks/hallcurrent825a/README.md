@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Hall Current 8 25A Click
 
-> Hall Current 8 Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4971-A025T5, a high-precision coreless current sensor for industrial/consumer applications from Infineon Technologies. The TLI4971-A025T5 has an analog interface and two fast overcurrent detection outputs, which support the protection of the power circuitry. Galvanic isolation is also provided according to the magnetic sensing principle. Infineon's monolithic Hall technology enables accurate and highly linear measurement of currents with a full scale up to 25A. This Click board™ is suitable for AC/DC current measurement applications: electrical drives, general-purpose inverters, chargers, current monitoring, overload, over-current detection, and many more.
+> [Hall Current 8 25A Click](https://www.mikroe.com/?pid_product=MIKROE-4632) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent825a_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4632&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hall-current-8-click-25a)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2021.
 - **Type**          : ADC type
 
-
 # Software Support
 
-We provide a library for the HallCurrent825A Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for Hall Current 8 25A Click driver. The library initializes and defines the ADC drivers. The library also includes a function for calibration, current measurement and overcurrent detection.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for HallCurrent825A Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HallCurrent825A
 
-#### Standard key functions :
+### Example Key Functions
 
 - `hallcurrent825a_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void hallcurrent825a_cfg_setup ( hallcurrent825a_cfg_t *cfg );
 ```c
 err_t hallcurrent825a_init ( hallcurrent825a_t *ctx, hallcurrent825a_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `hallcurrent825a_calibration` This function sets the calibration value into the offset data from context object of the TLI4971 high precision coreless current sensor on Hall Current 8 25A Click board.
 ```c
@@ -63,18 +58,11 @@ err_t hallcurrent825a_get_voltage ( hallcurrent825a_t *ctx, float *avr_voltage )
 err_t hallcurrent825a_get_current ( hallcurrent825a_t *ctx, float *current );
 ```
 
-## Example Description
-
-> This library contains API for Hall Current 8 25A Click driver. The library initializes and defines the ADC drivers. The library also includes a function for calibration, current measurement and overcurrent detection.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes ADC driver, calibrate AD conversion of the AN pin and start to write log.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;                            /**< Logger config object. */
@@ -130,7 +118,6 @@ void application_init ( void )
     log_printf( &logger, "    Start measurements :   \r\n");
     log_printf( &logger, "---------------------------\r\n");
 }
-
 ```
 
 ### Application Task
@@ -140,7 +127,6 @@ In this example, we read and display current data [A], AN pin voltage level [V].
 Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {
     float current = 0;
@@ -158,26 +144,22 @@ void application_task ( void )
     log_printf( &logger, "---------------------------\r\n");
     Delay_ms ( 1000 );
 }
-
 ```
  
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HallCurrent825A
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

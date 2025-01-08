@@ -1,8 +1,5 @@
 {
     "name": "DC MOTOR  Click",
-    "description": "DC MOTOR Click is a DC motor driver board in mikroBUS form factor. It features the DRV8833RTYH-Bridge motor driver, 74HC4053 multiplexer and two screw terminals",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8833RTY"],
-    "category" : ["Brushed"] 
+    "hw" : ["Click","DRV8833RTY"]
 }

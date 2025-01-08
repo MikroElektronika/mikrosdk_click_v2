@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # LTE IoT 8 Click
 
-> LTE IoT 8 Click is a compact add-on board that contains a low-power solution for LTE and NB-IoT connectivity. This board features the SKY66430-11, a multi-band multi-chip System-in-Package (SiP) supporting 5G Massive IoT (LTE-M/NB-IoT) platforms from Skyworks Solutions and Sequans Communications.
+> [LTE IoT 8 Click](https://www.mikroe.com/?pid_product=MIKROE-4493) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lte_iot_8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4493&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lte-iot-8-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Apr 2021.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the LTEIoT8 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> Application example shows device capability to connect 
+network and send SMS messages using standard "AT" commands.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LTEIoT8 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LTEIoT8
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lteiot8_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t lteiot8_init ( lteiot8_t *ctx, lteiot8_cfg_t *cfg );
 err_t lteiot8_default_cfg ( lteiot8_t *ctx );
 ```
 
-#### Example key functions :
-
 - `lteiot8_send_cmd` Send command function.
 ```c
 void lteiot8_send_cmd ( lteiot8_t *ctx, char *cmd );
@@ -68,19 +64,11 @@ void lteiot8_set_sim_apn ( lteiot8_t *ctx, char *sim_apn );
 void lteiot8_send_text_message ( lteiot8_t *ctx, char *phone_number, char *message_content );
 ```
 
-## Example Description
-
-> Application example shows device capability to connect 
-network and send SMS messages using standard "AT" commands.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and wake-up module and test communication.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -129,7 +117,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     example_state = LTEIOT8_CONFIGURE_FOR_CONNECTION;
 }
-
 ```
 
 ### Application Task
@@ -148,7 +135,6 @@ that it is connected to network.
 > Sends message in selected mode (PDU/TXT).
 
 ```c
-
 void application_task ( void ) 
 {
     switch ( example_state )
@@ -222,10 +208,9 @@ void application_task ( void )
         }
     }
 }
-
 ```
 
-## Note
+### Note
 
 > In order for the example to work, user needs to set the phone number to which he wants 
 to send an SMS, and also will need to set an APN and SMSC of entered SIM card.
@@ -236,22 +221,19 @@ SMSC_ADDRESS_CSCA           "\"+381999999\",145",
 SMSC_ADDRESS_PDU            "+381999999\" ,
 PHONE_NUMBER_TO_MESSAGE     "+381659999999"
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LTEIoT8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

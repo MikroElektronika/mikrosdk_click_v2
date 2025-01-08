@@ -1,40 +1,41 @@
-\mainpage Main Page
 
 ---
 # Excelon-Ultra Click
 
-> Excelon-Ultra Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY15B116QSN, a high-performance 16-Mbit nonvolatile memory that employs an advanced ferroelectric process from Infineon Technologies.
+> [Excelon-Ultra Click](https://www.mikroe.com/?pid_product=MIKROE-4698) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/excelonultra_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4698&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/excelon-ultra-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the ExcelonUltra Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example is showcase of device and it's library abillity.
+  In this example is shown device ID, ability to manipulate with memory.
+  After default configuration device IDs are logged. After that application
+  Writes data to memory, reads data from memory, clears data from memory and
+  checks if data is cleard by reading that same memory address.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ExcelonUltra Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ExcelonUltra
 
-#### Standard key functions :
+### Example Key Functions
 
 - `excelonultra_cfg_setup` Config Object Initialization function.
 ```c
@@ -50,8 +51,6 @@ err_t excelonultra_init ( excelonultra_t *ctx, excelonultra_cfg_t *cfg );
 ```c
 err_t excelonultra_default_cfg ( excelonultra_t *ctx );
 ```
-
-#### Example key functions :
 
 - `excelonultra_write_data_to_memory` Write data starting from specified memory address.
 ```c
@@ -71,16 +70,6 @@ err_t excelonultra_clear_data_from_memory
 ( excelonultra_t *ctx, uint32_t mem_adr, uint32_t mem_data_len );
 ```
 
-## Example Description
-
-> This example is showcase of device and it's library abillity.
-  In this example is shown device ID, ability to manipulate with memory.
-  After default configuration device IDs are logged. After that application
-  Writes data to memory, reads data from memory, clears data from memory and
-  checks if data is cleard by reading that same memory address.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes MCU modules for communication used in this application (UART, SPI).
@@ -88,7 +77,6 @@ Calls default configuration that resets device, reads IDs, and enables writing t
 memory and sets all RAM memory to be free for conrol.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -134,7 +122,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -144,7 +131,6 @@ and checks if it's cleared by reading data. On every iteration of the fucntion
 writing data is changed between "MikroE" and "Excelon-Ultra Click"
 
 ```c
-
 void application_task ( void ) 
 {
     static uint32_t memory_address = 0x00000055;
@@ -186,26 +172,21 @@ void application_task ( void )
     log_printf( &logger, "***********************************\r\n" );
     Delay_ms ( 500 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ExcelonUltra
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

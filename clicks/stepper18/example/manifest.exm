@@ -1,8 +1,5 @@
 {
     "name": "Stepper 18 Click",
-    "description": "Stepper 18 Click is a compact add-on board that contains a microstepping stepper motor driver. This board features the DRV8426, a stepper motor driver for industrial and consumer applications from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8426"],
-    "category" : ["Stepper"]
+    "hw" : ["Click","DRV8426"]
 }

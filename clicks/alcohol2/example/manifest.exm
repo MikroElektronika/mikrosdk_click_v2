@@ -1,8 +1,5 @@
 {
     "name": "Alcohol 2 Click",
-    "description": "Alcohol 2 Click is a very accurate ethanol gas (alcohol) sensor Click board™, equipped with the SPEC amperometric gas sensor which electrochemically reacts with the ethanol.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","Alcohol 2"],
-    "category" : ["Gas"] 
+    "hw" : ["Click","Alcohol 2"]
 }

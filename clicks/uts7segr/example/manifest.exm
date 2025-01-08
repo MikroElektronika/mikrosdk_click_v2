@@ -1,8 +1,5 @@
 {
     "name": "UT-S 7-SEG R Click",
-    "description": "7-segment LED display is the most commonly used type of display to represent changing numerical values. The principle is very simple - seven LED segments are positioned in a certain shape and by turning specific segments on or off, the shape that resembles a specific number is lit. This method of displaying numbers was first used in the beginning of the 20th century, but after the invention of the LED in ‘70, it is the most commonly used method to display numbers. It utilizes a fairly simple and cheap design with the numbers clearly visible.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX6969"],
-    "category" : ["LED segment"]
+    "hw" : ["Click","MAX6969"]
 }

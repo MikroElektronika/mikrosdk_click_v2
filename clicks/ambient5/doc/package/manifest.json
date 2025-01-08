@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Ambient 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ambient5",
-    "product_link": "https://www.mikroe.com/ambient-5-click",
-    "short_description": "Ambient 5 Click can sense the intensity of the ambient light, providing measurement data in a digital format, over the I2C interface. It utilizes the VEML6030, a miniature ambient light sensor (ALS) which occupies only 2x2 mm of space. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2663
-    ],
-    "version": "2.1.0.20",
-    "cmake": true,
-    "alias": "Click.Ambient5",
-    "subdir_name": "lib_ambient5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3320",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ambient 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ambient5",
+                "subdir_name": "lib_ambient5",
+                "path": "Ambient 5 Click/data/lib_ambient5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

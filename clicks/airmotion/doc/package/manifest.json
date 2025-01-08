@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Air Motion Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.airmotion",
-    "product_link": "https://www.mikroe.com/air-motion-click",
-    "short_description": "Air Motion Click is a compact add-on board that contains a 6-axis inertial measurement unit. This board features TDK InvenSense’s ICM-40627, a 6-axis MEMS MotionTracking™ device that combines a 3-axis user-selectable gyroscope accelerometer.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.AirMotion",
-    "subdir_name": "lib_airmotion"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5524",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Air Motion Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AirMotion",
+                "subdir_name": "lib_airmotion",
+                "path": "Air Motion Click/data/lib_airmotion"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

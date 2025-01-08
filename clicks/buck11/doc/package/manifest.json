@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Buck 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.buck11",
-    "product_link": "https://www.mikroe.com/buck-11-click",
-    "short_description": "Buck 11 Click is a high-efficiency step-down converter which provides 3.3V on its output, derived from the connected power supply voltage, in the range from 4.2V to 60V.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2771
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Buck11",
-    "subdir_name": "lib_buck11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3438",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Buck 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Buck11",
+                "subdir_name": "lib_buck11",
+                "path": "Buck 11 Click/data/lib_buck11"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

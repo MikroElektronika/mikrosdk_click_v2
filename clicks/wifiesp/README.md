@@ -1,40 +1,39 @@
-\mainpage Main Page
- 
+
 ---
 # Wifi ESP Click
 
-> WiFi ESP Click carries the ESP-WROOM-02 module that integrates ESP8266EX.
+> [WiFi ESP Click](https://www.mikroe.com/?pid_product=MIKROE-2542) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/wifiesp_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2542&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/wifi-esp-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the WifiEsp Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example connects to the desired WiFi network and then
+> creates web server on the IP address assigned to the Click board.
+> The user can connect to the server via web browser.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for WifiEsp Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.WifiEsp
 
-#### Standard key functions :
+### Example Key Functions
 
 - `wifiesp_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t wifiesp_init ( wifiesp_t *ctx, wifiesp_cfg_t *cfg );
 void wifiesp_default_cfg ( wifiesp_t *ctx );
 ```
 
-#### Example key functions :
-
 - `wifiesp_send_cmd` Sends AT command to the module.
 ```c
 void wifiesp_send_cmd( wifiesp_t* ctx, uint8_t* cmd, uint8_t* args );
@@ -68,21 +65,12 @@ void wifiesp_generic_write ( wifiesp_t *ctx, char *data_buf, uint16_t len );
 int32_t wifiesp_generic_read ( wifiesp_t *ctx, char *data_buf, int32_t max_len );
 ```
 
-## Example Description
-
-> This example connects to the desired WiFi network and then
-> creates web server on the IP address assigned to the Click board.
-> The user can connect to the server via web browser.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes driver and wifi communication, then connects to the desired WiFi network
 > and creates web server on the IP address assigned to the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -116,7 +104,6 @@ void application_init ( void )
     
     log_info( &logger, "Please connect to the IP address listed above.\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -126,7 +113,6 @@ void application_init ( void )
 > The Click board will respond by sending a page content to the client.
 
 ```c
-
 void application_task ( void )
 {
     if ( WIFIESP_OK == wifiesp_rsp_check( WIFIESP_RECEIVE ) ) 
@@ -160,28 +146,21 @@ void application_task ( void )
         Delay_ms ( 100 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.WifiEsp
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

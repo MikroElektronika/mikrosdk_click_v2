@@ -3,7 +3,7 @@
  * @brief Magic RFID Click Example.
  *
  * # Description
- * This example reads and processes data from Magic RFID clicks.
+ * This example reads and processes data from Magic RFID Clicks.
  *
  * The demo application is composed of two sections :
  *

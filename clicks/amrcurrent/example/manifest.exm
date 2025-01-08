@@ -1,8 +1,5 @@
 {
     "name": "AMR Current Click",
-    "description": "The AMR current Click is product is ±20A fully integrated bi-directional analog output current sensors that deliver both high accuracy and high bandwidth.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCR1101-20-5"],
-    "category" : ["Current sensor"] 
+    "hw" : ["Click","MCR1101-20-5"]
 }

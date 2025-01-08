@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
+ * Configuring Clicks and log objects.
  * Reads the device ID and also checks the Click and MCU communication.
  * 
  * ## Application Task  

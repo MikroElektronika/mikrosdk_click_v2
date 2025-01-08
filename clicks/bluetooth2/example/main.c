@@ -3,7 +3,7 @@
  * @brief Bluetooth2 Click Example.
  *
  * # Description
- * This example reads and processes data from Bluetooth2 clicks.
+ * This example reads and processes data from Bluetooth2 Clicks.
  *
  * The demo application is composed of two sections :
  *

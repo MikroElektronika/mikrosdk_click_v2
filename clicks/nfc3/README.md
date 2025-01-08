@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # NFC 3 Click
 
-NFC 3 Click is a compact add-on board that contains an NFC transceiver for contactless communication at 13.56MHz. This board features the PN5180A0HN, a highly integrated high-performance full NFC Forum-compliant frontend from NXP Semiconductors. The PN5180A0HN utilizes an outstanding modulation and demodulation concept for different contactless communication methods and protocols. It is fully compliant with many Reader/Writer standards (ISO 14443A/B, ISO 15693, ISO 18092, and more), alongside support for reading all NFC tag types (type 1, 2, 3, 4A, and 4B). Besides the SPI host interface, it also features high RF output power to drive an antenna etched on the PCB directly, besides its tuning circuit, at high efficiency.
+> [NFC 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5538) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/nfc3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5538&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/nfc-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Feb 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the NFC3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of NFC 3 Click board by reading MIFARE ISO/IEC 14443 type A tag UID.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for NFC3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NFC3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `nfc3_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t nfc3_init ( nfc3_t *ctx, nfc3_cfg_t *cfg );
 void nfc3_reset ( nfc3_t *ctx );
 ```
 
-#### Example key functions :
-
 - `nfc3_read_card_uid` NFC 3 read card UID function.
 ```c
 uint8_t nfc3_read_card_uid ( nfc3_t *ctx, uint8_t *data_out );
@@ -68,18 +63,11 @@ err_t nfc3_read_firmware_version ( nfc3_t *ctx, uint16_t *data_out );
 err_t nfc3_read_eeprom_version ( nfc3_t *ctx, uint16_t *data_out );
 ```
 
-## Example Description
-
-> This example demonstrates the use of NFC 3 Click board by reading MIFARE ISO/IEC 14443 type A tag UID.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and logger, then enables the Click board and reads the device product, firmware and eeprom versions.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -125,7 +113,6 @@ void application_init ( void )
     log_printf( &logger, "------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
@@ -133,7 +120,6 @@ void application_init ( void )
 > If there's a tag detected, it reads its UID and displays it on USB UART.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t uid[ 7 ];
@@ -150,30 +136,25 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > Only tags with 4-byte or 7-byte UIDs are compatible with this example. We recommend MIKROE-1475 - an RFiD tag 13.56MHz compliant with ISO14443-A standard.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NFC3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

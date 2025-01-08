@@ -1,8 +1,5 @@
 {
     "name": "LDO Click",
-    "description": "LDO Click is a compact add-on board designed to regulate the output voltage of a power supply to a lower level with a very low dropout voltage. This board features the TPS7A83A, a low-noise, low-dropout linear regulator (LDO) from Texas Instruments capable of sourcing 2A with only 200mV of maximum dropout. The TPS7A8300A has a pin-programmable output voltage from 0.8V-3.95V with a 50mV resolution, or it can be adjustable from 0.8V-5.2V using an external resistor divider.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TPS7A8300ARGWT","TCA9534APWR"],
-    "category" : ["Click Boards > Power management > Linear"]
+    "hw" : ["Click","TPS7A8300ARGWT","TCA9534APWR"]
 }

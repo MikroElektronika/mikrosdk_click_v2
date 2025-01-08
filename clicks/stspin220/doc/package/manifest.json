@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "STSPIN220 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stspin220",
-    "product_link": "https://www.mikroe.com/stspin220-click",
-    "short_description": "STSPIN220 Click is a stepper motor driver with the PWM current control and selectable microstepping up to 256 microsteps. It is based on the STSPIN220, a low voltage stepper motor driver from STSPIN2 series. It is optimized for battery-powered, low voltage motor driving applications, featuring the lowest standby current available on the market (max 80 nA). The STSPIN220 is a high-efficiency motor driver, featuring low ON resistance MOSFETs as the output stage, in a small 3x3mm QFN package. Its output stage implements the PWM current control with fixed OFF time, along with a full set of protection features. The device can be used with the step motor voltage ranging from 1.8V to 10V, and current up to 1.3A per bridge.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        2852
-    ],
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.STSPIN220",
-    "subdir_name": "lib_stspin220"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3545",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "STSPIN220 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.STSPIN220",
+                "subdir_name": "lib_stspin220",
+                "path": "STSPIN220 Click/data/lib_stspin220"
+            }
+        ]
+    }
 }
-
-
-

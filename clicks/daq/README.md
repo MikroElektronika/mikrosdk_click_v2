@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # DAQ Click
 
-> DAQ Click is a compact add-on board representing a data acquisition solution. This board features the ADAQ7768-1, a 24-bit precision data acquisition (DAQ) μModule system that encapsulates signal conditioning, conversion, and processing blocks into one SiP from Analog Devices. It supports a fully differential input signal with a maximum voltage range of ±12V with an excellent common-mode rejection ratio (CMRR). The input signal is fully buffered with a low input bias current, enabling the ADAQ7768-1 to interface to sensors with high output impedance directly.
+> [DAQ Click](https://www.mikroe.com/?pid_product=MIKROE-4495) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/daq_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4495&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/daq-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the DAQ Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases ability of the device to read ADC 
+data and calculate voltage for set configuration.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DAQ Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DAQ
 
-#### Standard key functions :
+### Example Key Functions
 
 - `daq_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t daq_init ( daq_t *ctx, daq_cfg_t *cfg );
 err_t daq_default_cfg ( daq_t *ctx );
 ```
 
-#### Example key functions :
-
 - `daq_set_gain` Set gain range.
 ```c
 err_t daq_set_gain ( daq_t *ctx, daq_gain gain );
@@ -68,13 +64,6 @@ err_t daq_read_data ( daq_t *ctx, int32_t *adc_data );
 void daq_calculate_voltage ( daq_t *ctx, int32_t adc_data, float *voltage );
 ```
 
-## Example Description
-
-> This example showcases ability of the device to read ADC 
-data and calculate voltage for set configuration.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of communication modules (SPI, UART) and
@@ -84,7 +73,6 @@ by setting gain to +-12V. In the end reads vendor and
 device ID to confirm communication.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -136,7 +124,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -144,7 +131,6 @@ void application_init ( void )
 > Reads ADC data and calculates voltage from it, every 0.3 seconds.
 
 ```c
-
 void application_task ( void ) 
 {
     int32_t adc_data = 0;
@@ -157,26 +143,21 @@ void application_task ( void )
     log_printf( &logger, "***********************************\r\n" );
     Delay_ms ( 300 );  
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DAQ
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

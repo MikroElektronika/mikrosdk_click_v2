@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > WIFI",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IoT ExpressLink 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.iotexpresslink3",
-    "product_link": "https://www.mikroe.com/iot-expresslink-3-click",
-    "short_description": "IoT ExpressLink 3 Click is a compact add-on board that allows users to connect easily to IoT ExpressLink services and securely interact with cloud applications and other devices. This board features the NORA-W256WS, a standalone multi-radio module from u-blox. The module supports Wi-Fi radio at 802.11b/g/n standard and 2.4GHz of ISM band. It also supports the Bluetooth Low Energy 5. The embedded AWS IoT ExpressLink-compliant software includes secured pre-flashed certificates in the module.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.IoTExpressLink3",
-    "subdir_name": "lib_iotexpresslink3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5891",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IoT ExpressLink 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IoTExpressLink3",
+                "subdir_name": "lib_iotexpresslink3",
+                "path": "IoT ExpressLink 3 Click/data/lib_iotexpresslink3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

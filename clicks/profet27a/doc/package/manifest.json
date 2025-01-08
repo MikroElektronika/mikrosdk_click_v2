@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Power Switch",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "PROFET 2 7A Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.profet27a",
-    "product_link": "https://www.mikroe.com/profet-2-click-7a",
-    "short_description": "PROFET 2 Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS70082EPAXUMA1, a dual-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.PROFET27A",
-    "subdir_name": "lib_profet27a"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4819",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PROFET 2 7A Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PROFET27A",
+                "subdir_name": "lib_profet27a",
+                "path": "PROFET 2 7A Click/data/lib_profet27a"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

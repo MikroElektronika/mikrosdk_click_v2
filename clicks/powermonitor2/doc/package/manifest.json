@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Power Switch",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Power Monitor 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.powermonitor2",
-    "product_link": "https://www.mikroe.com/power-monitor-2-click",
-    "short_description": "Power Monitoring 2 Click is a compact add-on board for precise power monitoring of connected load devices. This board features two INA219 12-bit I2C-output digital power monitors from Texas Instruments. This Click board™ monitors current and voltage on two separate power rails - 3.3V and 5V - of an onboard mikroBUS™ socket, providing real-time digital readings of the power consumption of added Click boards™. It supports high-speed I2C communication with configurable I2C addresses and operates at 3.3V and 5V logic levels, which makes it ideal for applications in power management, system diagnostics, and energy optimization in embedded systems.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.PowerMonitor2",
-    "subdir_name": "lib_powermonitor2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6202",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Power Monitor 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PowerMonitor2",
+                "subdir_name": "lib_powermonitor2",
+                "path": "Power Monitor 2 Click/data/lib_powermonitor2"
+            }
+        ]
+    }
 }
-
-

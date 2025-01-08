@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Flicker Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.flicker",
-    "product_link": "https://www.mikroe.com/flicker-click",
-    "short_description": "FLICKER Click is the perfect, simple solution if you need to turn a device on and off at specific time intervals, like blinking LED commercials, alarm system lights, or any other signalling lights.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1962
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Flicker",
-    "subdir_name": "lib_flicker"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2481",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Flicker Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Flicker",
+                "subdir_name": "lib_flicker",
+                "path": "Flicker Click/data/lib_flicker"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

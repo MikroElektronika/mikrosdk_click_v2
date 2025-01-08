@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LTE IoT",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LTE IoT 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lteiot7",
-    "product_link": "https://www.mikroe.com/lte-iot-7-click",
-    "short_description": "LTE IoT 7 Click is an add-on board representing a secure-cloud multi-band solution designed for IoT applications. This board features the SARA-R422M8S, a multi-band LTE-M/NB-IoT/EGPRS multi-mode solution with integrated high-performance standard precision M8 GNSS receiver for global position acquisition from u-blox. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, it also provides over-the-air firmware updates, end-to-end trusted domain security, and u-Blox’s leading GNSS technology.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.LTEIoT7",
-    "subdir_name": "lib_lteiot7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5290",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE IoT 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTEIoT7",
+                "subdir_name": "lib_lteiot7",
+                "path": "LTE IoT 7 Click/data/lib_lteiot7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

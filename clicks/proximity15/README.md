@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Proximity 15 Click
 
-> Proximity 15 Click is a compact add-on board that contains a close-range proximity sensing solution. This board features the VL53L1, a state-of-the-art, Time-of-Flight (ToF), a laser-ranging miniature sensor from STMicroelectronics.
+> [Proximity 15 Click](https://www.mikroe.com/?pid_product=MIKROE-4822) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/proximity15_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4822&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/proximity-15-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Aug 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Proximity15 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Proximity 15 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Proximity15 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Proximity15
 
-#### Standard key functions :
+### Example Key Functions
 
 - `proximity15_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t proximity15_init ( proximity15_t *ctx, proximity15_cfg_t *cfg );
 err_t proximity15_default_cfg ( proximity15_t *ctx );
 ```
 
-#### Example key functions :
-
 - `proximity15_get_distance` This function waits for the data ready, then reads the distance measured by the sensor in milimeters and clears interrupts.
 ```c
 err_t proximity15_get_distance ( proximity15_t *ctx, uint16_t *distance );
@@ -68,19 +63,12 @@ err_t proximity15_set_inter_measurement_period ( proximity15_t *ctx, uint16_t ti
 err_t proximity15_set_timing_budget ( proximity15_t *ctx, proximity15_timing_budget_t time );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Proximity 15 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which 
 enables the sensor and sets it to long distance mode with 50ms timing budget and 100ms inter measurement periods.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;                  /**< Logger config object. */
@@ -120,7 +108,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -128,7 +115,6 @@ void application_init ( void )
 > Reads the distance measured by the sensor in milimeters and displays the value on the USB UART approximately every 100ms.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t distance = 0;
@@ -138,29 +124,25 @@ void application_task ( void )
         log_printf( &logger, " Distance(mm): %u\r\n\n", distance );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > In order to measure longer distance, increase the timing budget and inter measurement periods.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Proximity15
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

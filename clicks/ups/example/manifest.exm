@@ -1,8 +1,5 @@
 {
     "name": "UPS Click",
-    "description": "UPS Click is a supercapacitor charger Click that provides continuous power for a load connected to the output terminals.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LTC3225"],
-    "category" : ["Battery charger"] 
+    "hw" : ["Click","LTC3225"]
 }

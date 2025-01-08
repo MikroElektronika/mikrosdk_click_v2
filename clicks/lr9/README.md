@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # LR 9 Click
 
-> LR 9 Click is a compact add-on board designed for ultra-long-range spread spectrum communication tasks within the LPWAN domain. This board is based on the RA-08, a LoRaWAN module from Ai-Thinker Technology, featuring the ASR6601 system-on-chip (SoC) that combines RF transceivers, modems, and a 32-bit RISC microcontroller (MCU). This module excels with its support for LoRa and (G)FSK modulation, a frequency range of 410MHz to 525MHz, and embedded storage of 128KB FLASH and 16KB SRAM, ensuring robust and versatile communication capabilities. Moreover, it's equipped with UART and I2C interfaces for easy programming and integration and an SMA antenna connector for enhanced connectivity.
+> [LR 9 Click](https://www.mikroe.com/?pid_product=MIKROE-6038) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lr9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6038&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lr-9-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Dec 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the LR 9 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of LR 9 Click board by processing
+> the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LR 9 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LR9
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lr9_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +43,6 @@ void lr9_cfg_setup ( lr9_cfg_t *cfg );
 ```c
 err_t lr9_init ( lr9_t *ctx, lr9_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `lr9_send_data_frame` This function sends the desired data frame by using the UART serial interface.
 ```c
@@ -62,13 +58,6 @@ err_t lr9_inquire_command ( lr9_t *ctx, uint8_t *command, lr9_en_set_t en_set );
 ```c
 err_t lr9_write_command ( lr9_t *ctx, uint8_t *command, uint8_t *param );
 ```
-
-## Example Description
-
-> This example demonstrates the use of LR 9 Click board by processing
-> the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -150,22 +139,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LR9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

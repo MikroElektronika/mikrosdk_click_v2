@@ -1,8 +1,5 @@
 {
     "name": "Stepper 5 Click",
-    "description": "Stepper 5 Click is the complete integrated bipolar step motor driver solution, rich with many features that allow silent operation and optimal working conditions for the connected motor. The specialized TMC2208 IC driver from Trinamic company far exceeds the capabilities of similar step motor drivers that are commonly used. In order to achieve such outstanding performances with a wide range of various step motors, this device features several technologies: stealth Chop2™ - for silent motor operation; spreadCycle™ - highly dynamic, motor current control; microPlayer™ interpolation with 256 microsteps.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","TMC2208"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","TMC2208"]
 }

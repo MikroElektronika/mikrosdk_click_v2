@@ -1,8 +1,5 @@
 {
     "name": "Water Detect 3 Click",
-    "description": "Water Detect 3 Click is a compact add-on board that detects water and other electroconductive liquids. This board features the MCP606, a micropower CMOS operational amplifier from Microchip. In the same package, the Water Detect 3 Click comes with a separate PCB with an electroconductive water detection area connected to a Click board™ with wires.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP607-I/SN"],
-    "category" : ["Click Boards > Sensors > Miscellaneous"]
+    "hw" : ["Click","MCP607-I/SN"]
 }

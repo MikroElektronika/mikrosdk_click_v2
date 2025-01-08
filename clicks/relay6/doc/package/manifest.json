@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Relay 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.relay6",
-    "product_link": "https://www.mikroe.com/relay-6-click",
-    "short_description": "Relay 6 Click is a compact add-on board for precise load control and monitoring applications. This board features four 9913-05-20TRs, a reed relay from Coto Technology, well-known for its ultra-miniature SMD design, which offers the smallest footprint in the market. These four relays each have four load connection terminals and blue LED indicators that signal the operational status, ensuring clear and immediate feedback.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Relay6",
-    "subdir_name": "lib_relay6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6001",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Relay 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Relay6",
+                "subdir_name": "lib_relay6",
+                "path": "Relay 6 Click/data/lib_relay6"
+            }
+        ]
+    }
 }
-
-
-

@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # ADC 4 Click
 
-ADC 4 Click is an advanced analog to digital multichannel converter, which can sample inputs from 16 single-ended channels or 8 differential input channel pairs.
+> [ADC 4 Click](https://www.mikroe.com/?pid_product=MIKROE-2879) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/adc4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2879&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/adc-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Adc4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Adc4 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void adc4_cfg_setup ( adc4_cfg_t *cfg ); 
- 
-- Initialization function.
-> ADC4_RETVAL adc4_init ( adc4_t *ctx, adc4_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void adc4_default_cfg ( adc4_t *ctx );
-
-
-#### Example key functions :
-
-- Error check function
-> uint8_t adc4_get_err_pin ( adc4_t *ctx );
- 
-- Get configuration function
-> void adc4_get_config ( adc4_t *ctx, uint8_t reg_address, uint16_t *value );
-
-- Get voltage function
-> uint16_t adc4_get_voltage ( adc4_t *ctx, const float ref_voltage );
-
-## Examples Description
+## Example Description
 
 > This application is a converter from analog to digital multichannel 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Adc4
+
+### Example Key Functions
+
+- `adc4_cfg_setup` Config Object Initialization function. 
+```c
+void adc4_cfg_setup ( adc4_cfg_t *cfg );
+``` 
+ 
+- `adc4_init` Initialization function. 
+```c
+err_t adc4_init ( adc4_t *ctx, adc4_cfg_t *cfg );
+```
+
+- `adc4_default_cfg` Click Default Configuration function. 
+```c
+void adc4_default_cfg ( adc4_t *ctx );
+```
+
+- `adc4_get_err_pin` Error check function. 
+```c
+uint8_t adc4_get_err_pin( adc4_t *ctx );
+```
+ 
+- `adc4_get_config` Get configuration function. 
+```c
+void adc4_get_config( adc4_t *ctx, uint8_t reg_address, uint16_t *value );
+```
+
+- `adc4_get_voltage` Get voltage function. 
+```c
+uint16_t adc4_get_voltage( adc4_t *ctx, const float ref_voltage );
+```
+
+### Application Init
 
 > Initializes ADC 4 driver and setups working mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +98,6 @@ void application_init ( void )
 
     voltage = 0;
 }
-  
 ```
 
 ### Application Task
@@ -111,7 +107,6 @@ void application_init ( void )
 > to calculate and convert input voltage from CH0 with external referent voltage set by VREF jumper on the Click board.
 
 ```c
-
 void application_task ( )
 {
     voltage = adc4_get_voltage( &adc4, ADC4_VREF_4000MV);
@@ -126,29 +121,22 @@ void application_task ( )
     }
 
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Adc4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "AMR Angle Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.amrangle",
-    "product_link": "https://www.mikroe.com/amr-angle-click",
-    "short_description": "AMR Angle Click is a compact add-on board containing an anisotropic magnetoresistive measurement solution ideal for either angle or linear position measurements.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.AMRAngle",
-    "subdir_name": "lib_amrangle"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4561",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "AMR Angle Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AMRAngle",
+                "subdir_name": "lib_amrangle",
+                "path": "AMR Angle Click/data/lib_amrangle"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

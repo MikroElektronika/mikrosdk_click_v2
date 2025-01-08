@@ -1,41 +1,38 @@
-\mainpage Main Page
- 
+
 ---
 # Light mix sens Click
 
-Light mix-sens Click is carrying TMD37253, an advanced proximity measurement, color sense (RGBC+IR), and digital ambient light sensing (ALS) device. The TMD37253 slim module package has been designed to accommodate a “single hole” aperture approach that incorporates an IR LED and factory calibrated LED driver. The proximity detection feature provides object detection (e.g., mobile device screen to the user’s ear) by photodiode detection of reflected IR energy (sourced by the integrated LED). The ALS detection feature provides photopic light intensity data. The color photodiodes have UV and IR blocking filters and a dedicated data converters producing 16-bit data.
+> [Light mix-sens Click](https://www.mikroe.com/?pid_product=MIKROE-4148) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lightmixsens_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4148&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/light-mix-sens-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jul 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LightMixSens Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example show usage of Light Mix Sens Click. It switches the IR light for separate and 
+> measure sectar of RGB lights. Click also measure proximity from the object using light source.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LightMixSens Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LightMixSens
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lightmixsens_cfg_setup` Config Object Initialization function.
 ```c
@@ -52,8 +49,6 @@ err_t lightmixsens_init ( lightmixsens_t *ctx, lightmixsens_cfg_t *cfg );
 void lightmixsens_default_cfg ( lightmixsens_t *ctx );
 ```
 
-#### Example key functions :
-
 - `lightmixsens_write_byte` Generic Write Byte function.
 ```c
 err_t lightmixsens_write_byte ( lightmixsens_t *ctx, uint8_t reg_addr, uint8_t data_in );
@@ -69,20 +64,12 @@ err_t lightmixsens_read_byte ( lightmixsens_t *ctx, uint8_t reg_addr, uint8_t *d
 void lightmixsens_switch_ir_to_prox ( lightmixsens_t *ctx );
 ```
 
-## Examples Description
-
-> This example show usage of Light Mix Sens Click. It switches the IR light for separate and 
-> measure sectar of RGB lights. Click also measure proximity from the object using light source.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes all necessary peripherals and pins, initializes I2C driver and performs 
 > the Click board default configuration to allow ALS/Color and Proximity measurements.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -117,7 +104,6 @@ void application_init ( void )
 
     log_printf( &logger, "*  Light mix-sens Click initialization done.  *\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -126,7 +112,6 @@ void application_init ( void )
 > The all results will be sent to the selected UART terminal.
 
 ```c
-
 void application_task ( void )
 {
     lightmixsens_wait_atime( &lightmixsens );
@@ -151,25 +136,19 @@ void application_task ( void )
 
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LightMixSens
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

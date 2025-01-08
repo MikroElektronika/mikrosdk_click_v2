@@ -1,8 +1,5 @@
 {
     "name": "Brushless 24 Click",
-    "description": "Brushless 24 Click is a compact add-on board that controls brushless DC (BLDC) motors with any MCU. This board features the DRV10866, a 3- phase sensorless motor driver from Texas Instruments with integrated power MOSFETs with current drive capability up to 800mA peak. The DRV10866 implements a 150° commutation (sensorless BEMF control scheme) for a 3-phase motor alongside a synchronous rectification mode of operation that achieves increased efficiency for motor driver applications. Besides choosing the motor speed and a wide operating voltage range of up to 5V, it also has several built-in protection circuits, such as undervoltage, lock detection, voltage surge protection, and overtemperature.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV10866DSCR"],
-    "category" : ["Brushless"]
+    "hw" : ["Click","DRV10866DSCR"]
 }

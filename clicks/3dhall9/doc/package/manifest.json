@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "3D Hall 9 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c3dhall9",
-    "product_link": "https://www.mikroe.com/3d-hall-9-click",
-    "short_description": "3D Hall 9 Click is a compact add-on board used to detect the strength of a magnetic field in all three dimensions. This board features the ALS31300, a 3D linear Hall-effect sensor with digital output and advanced low power management from Allegro Microsystems. The ALS31300 features an I2C interface, enabling it to be easily configured by MCU with the measurement data provided in digital format of 12-bits corresponding to the magnetic field measured in each X, Y, and Z axes.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.3DHall9",
-    "subdir_name": "lib_c3dhall9"
+    "name": "mikroe.click.3dhall9",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4948",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3D Hall 9 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3DHall9",
+                "subdir_name": "lib_c3dhall9",
+                "path": "3D Hall 9 Click/data/lib_c3dhall9"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

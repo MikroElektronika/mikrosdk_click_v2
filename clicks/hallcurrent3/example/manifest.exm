@@ -1,8 +1,5 @@
 {
     "name": "Hall Current 3 Click",
-    "description": "Hall current 3 Click is a very accurate current measurement Click board™, which utilizes the Hall effect to provide a precise and reliable measurement of reasonably high current. Its most distinctive feature is a very low series resistance of only 0.7mΩ, making this device a nearly-perfect ammeter.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MLX91210"],
-    "category" : ["Current sensor"] 
+    "hw" : ["Click","MLX91210"]
 }

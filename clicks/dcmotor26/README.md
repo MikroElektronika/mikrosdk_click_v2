@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # DC Motor 26 Click
 
-> DC Motor 26 Click is a compact add-on board with a brushed DC motor driver. This board features the TB9053FTG, a PWM-type, dual-channel, H-bridge, brushed DC motor driver from Toshiba Semiconductor. The TB9053FTG is rated for an operating voltage range from 4.5V to 28V, with the motor controlled directly through a PWM signal or SPI serial interface. In addition, this driver allows a dual configuration with two motors with 5A current ratings per channel or one 10A channel drive in a Parallel mode of operation. It also has complete diagnostic and protection capabilities supporting robust and reliable operation.
+> [DC Motor 26 Click](https://www.mikroe.com/?pid_product=MIKROE-5655) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dcmotor26_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5655&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dc-motor-26-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Mar 2023.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the DC Motor 26 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of DC Motor 26 Click board by controlling the speed
+of DC motor over PWM duty cycle as well as displaying the motor current consumption.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DC Motor 26 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DCMotor26
 
-#### Standard key functions :
+### Example Key Functions
 
 - `dcmotor26_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t dcmotor26_init ( dcmotor26_t *ctx, dcmotor26_cfg_t *cfg );
 err_t dcmotor26_default_cfg ( dcmotor26_t *ctx );
 ```
 
-#### Example key functions :
-
 - `dcmotor26_get_motor_current` DC Motor 26 get motor current function.
 ```c
 err_t dcmotor26_get_motor_current ( dcmotor26_t *ctx, float *current );
@@ -68,19 +64,11 @@ err_t dcmotor26_set_ch1_operation_mode ( dcmotor26_t *ctx, uint8_t mode );
 err_t dcmotor26_set_cm_sel_pin ( dcmotor26_t *ctx, uint8_t state );
 ```
 
-## Example Description
-
-> This example demonstrates the use of DC Motor 26 Click board by controlling the speed
-of DC motor over PWM duty cycle as well as displaying the motor current consumption.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -116,7 +104,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -180,27 +167,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > The Click board swiches should be set as follows: SW 1-2-3-4 : H-H-L-L
 This sets the Click board as a SPI controlled single-channel device so the motor should be connected to OUT1/2 and OUT3/4.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DCMotor26
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

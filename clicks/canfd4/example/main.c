@@ -3,7 +3,7 @@
  * \brief CanFd4 Click example
  * 
  * # Description
- * This example reads and processes data from CAN FD 4 clicks.
+ * This example reads and processes data from CAN FD 4 Clicks.
  *
  * The demo application is composed of two sections :
  * 

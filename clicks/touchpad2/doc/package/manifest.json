@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Capacitive",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "TouchPad 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.touchpad2",
-    "product_link": "https://www.mikroe.com/touchpad-2-click",
-    "short_description": "Touchpad 2 Click is a compact add-on board that easily integrates projected capacitive touch into their applications. This board features the IQS525, a projected capacitive touch and proximity trackpad/touchscreen controller from Azoteq. It features best in class sensitivity, signal-to-noise ratio, and automatic tuning of electrodes, in addition to the multi-touch and multi-hover feature. This Click board™ is characterized by embedded gesture engine recognition for simple gestures (tap, swipes, hold), as well as built-in noise detection and filtering. This Click board™ is suitable for human-machine interfaces, keypad or scrolling functions, single-finger gesture-based interfaces, and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.TouchPad2",
-    "subdir_name": "lib_touchpad2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4594",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TouchPad 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TouchPad2",
+                "subdir_name": "lib_touchpad2",
+                "path": "TouchPad 2 Click/data/lib_touchpad2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

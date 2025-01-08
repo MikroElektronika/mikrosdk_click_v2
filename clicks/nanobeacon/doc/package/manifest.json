@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > BT/BLE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "NanoBeacon Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.nanobeacon",
-    "product_link": "https://www.mikroe.com/nanobeacon-click",
-    "short_description": "NanoBeacon Click is a compact add-on board that provides a powerful and efficient Bluetooth beacon solution. This board features the IN100, an ultra-low power Bluetooth 5.3 Beacon SoC from InPlay, that sets a new standard in beacon technology. Its ultra-low power consumption, enhanced privacy mode, and three beacon modes offer seamless compatibility with no Bluetooth programming required - plug and play. Its compact design houses two types of built-in memory (4Kb OTP and 4KB SRAM), UART and I2C interfaces, and a hardware security engine.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.NanoBeacon",
-    "subdir_name": "lib_nanobeacon"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5794",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NanoBeacon Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NanoBeacon",
+                "subdir_name": "lib_nanobeacon",
+                "path": "NanoBeacon Click/data/lib_nanobeacon"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

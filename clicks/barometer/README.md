@@ -1,74 +1,73 @@
-\mainpage Main Page
- 
+
 ---
 # Barometer Click
 
-Barometer Click carries the LPS25HB IC, which is a piezoresistive absolute pressure sensor with a measurement range from 260 to 1260 hPa.
+> [Barometer Click](https://www.mikroe.com/?pid_product=MIKROE-1817) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/barometer_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1817&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/barometer-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Barometer Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Barometer Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void barometer_cfg_setup ( barometer_cfg_t *cfg ); 
- 
-- Initialization function.
-> BAROMETER_RETVAL barometer_init ( barometer_t *ctx, barometer_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void barometer_default_cfg ( barometer_t *ctx );
-
-
-#### Example key functions :
-
-- Read temperature in degrees Celsius function
-> float barometer_get_temperature_c ( barometer_t *ctx );
- 
-- Read pressure in milibars function
-> float barometer_get_pressure( barometer_t *ctx );
-
-- Check sensor status function
-> uint8_t barometer_check_status ( barometer_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application measures temperature and pressure data. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Barometer
+
+### Example Key Functions
+
+- `barometer_cfg_setup` Config Object Initialization function. 
+```c
+void barometer_cfg_setup ( barometer_cfg_t *cfg );
+``` 
+ 
+- `barometer_init` Initialization function. 
+```c
+err_t barometer_init ( barometer_t *ctx, barometer_cfg_t *cfg );
+```
+
+- `barometer_default_cfg` Click Default Configuration function. 
+```c
+void barometer_default_cfg ( barometer_t *ctx );
+```
+
+- `barometer_get_temperature_c` Read temperature in degrees Celsius function. 
+```c
+float barometer_get_temperature_c( barometer_t *ctx );
+```
+ 
+- `barometer_get_pressure` Read pressure in milibars function. 
+```c
+float barometer_get_pressure ( barometer_t *ctx );
+```
+
+- `barometer_check_status` Check sensor status function. 
+```c
+uint8_t barometer_check_status( barometer_t *ctx );
+```
+
+### Application Init
 
 > Initialization driver enable's - I2C, set default configuration and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -108,7 +107,6 @@ void application_init ( void )
     log_printf( &logger, "-------------------------------- \r\n" );
     Delay_100ms( );
 }
-  
 ```
 
 ### Application Task
@@ -116,7 +114,6 @@ void application_init ( void )
 > This is a example which demonstrates the use of Barometer Click board 
 
 ```c
-
 void application_task ( void )
 {
     float temperature_c;
@@ -135,28 +132,21 @@ void application_task ( void )
 
     Delay_1sec( );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Barometer
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

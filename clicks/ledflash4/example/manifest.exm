@@ -1,8 +1,5 @@
 {
     "name": "LED Flash 4 Click",
-    "description": "LED Flash 4 Click is a compact add-on board for high-performance LED flash and torch applications. This board features the AS1170, a high-current LED driver from ams OSRAM. The AS1170 operates as an inductive, highly efficient DC-DC step-up converter with an external power supply range of 2.7V to 4.4V, featuring two internal current sinks for independent control of onboard flash LEDs. It includes essential protection functions such as flash timeout, overvoltage, overtemperature, undervoltage, and short circuit protection, ensuring reliable operation even in demanding environments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AS1170-ZWLT"],
-    "category" : ["Click Boards > Display & LED > LED segment"]
+    "hw" : ["Click","AS1170-ZWLT"]
 }

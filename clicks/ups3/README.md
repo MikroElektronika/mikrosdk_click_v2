@@ -1,87 +1,75 @@
-\mainpage Main Page
 
 ---
 # UPS 3 Click
 
-UPS 3 Click is a compact add-on board that represents a bidirectional active charge/balancing solution. This board features the LTC3110, a bidirectional buck-boost DC/DC regulator/charger combination with selectable operation modes for charging and system backup from Analog Devices. It can autonomously transition from Charge to Backup mode or switch modes based on an external command. A proprietary low noise switching algorithm optimizes efficiency with capacitor/battery voltages above, below, or equal to the system output voltage. Additional features include voltage supervisors for direction control and end of a charge and a general-purpose comparator with open-collector output for interfacing with MCU. This Click board™ is suitable for a backup power source for a wide range of battery-operated embedded applications.
+> [UPS 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4479) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ups3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4479&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ups-3)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Dec 2020.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Ups3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
-
-```
-This library contains API for Ups3 Click driver.
-```
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-```
-void ups3_cfg_setup ( ups3_cfg_t *cfg );
-```
-
-- Initialization function.
-```
-UPS3_RETVAL ups3_init ( ups3_t *ctx, ups3_cfg_t *cfg );
-```
-
-- Click Default Configuration function.
-```
-void ups3_default_cfg ( ups3_t *ctx );
-```
-
-#### Example key functions :
-
-- UPS 3 enable device function.
-```
-err_t ups3_set_enable ( ups3_t *ctx, uint8_t enable );ON>
-```
-
-- UPS 3 get error function.
-```
-uint8_t ups3_get_error ( ups3_t *ctx );
-```
-
- UPS 3 get charge/backup mode function.
-```
-uint8_t ups3_get_chrg ( ups3_t *ctx );
-```
-
-## Examples Description
+## Example Description
 
 > This application demonstrates the use of UPS 3 Click board. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ups3
+
+### Example Key Functions
+
+- `ups3_cfg_setup` Config Object Initialization function.
+```c
+void ups3_cfg_setup ( ups3_cfg_t *cfg );
+```
+
+- `ups3_init` Initialization function.
+```c
+err_t ups3_init ( ups3_t *ctx, ups3_cfg_t *cfg );
+```
+
+- `ups3_default_cfg` Click Default Configuration function.
+```c
+void ups3_default_cfg ( ups3_t *ctx );
+```
+
+- `ups3_set_enable` UPS 3 enable device function.
+```c
+err_t ups3_set_enable ( ups3_t *ctx, uint8_t enable );ON>
+```
+
+- `ups3_get_error` UPS 3 get error function.
+```c
+uint8_t ups3_get_error ( ups3_t *ctx );
+```
+
+- `ups3_get_chrg` UPS 3 get charge/backup mode function.
+```c
+uint8_t ups3_get_chrg ( ups3_t *ctx );
+```
 
 ### Application Init
 
 > Initialization driver enable's - GPIO, also write log.
 
-```
-void application_init ( void ) {
+```c
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;    /**< Logger config object. */
     ups3_cfg_t ups3_cfg;  /**< Click config object. */
 
@@ -118,12 +106,13 @@ void application_init ( void ) {
 
 ### Application Task
 
-> With this example we show the operation of UPS 3 clicks.
+> With this example we show the operation of UPS 3 Clicks.
 > This example shows an autonomously transition from charge to backup mode.
 > Results are being sent to the Usart Terminal where you can track their changes. 
 
-```
-void application_task ( void ) {      
+```c
+void application_task ( void ) 
+{      
     if ( ups3_get_error( &ups3 ) == UPS3_GET_ERROR_CMPIN_OK ) {
         if ( ups3_get_cap_ok( &ups3 ) != cok_status ) {
             new_status = UPS3_STATUS_NEW; 
@@ -162,22 +151,19 @@ void application_task ( void ) {
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ups3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

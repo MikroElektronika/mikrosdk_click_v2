@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Speed Radar Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.speedradar",
-    "product_link": "https://www.mikroe.com/speed-radar-click",
-    "short_description": "Speed Radar Click is a compact add-on board that comes with a radar motion detector. This board features the K-LD2, a radar transceiver from RFbeam. It is a 24GHz radar with a detection distance for humans of up to 15m and cars of up to 30m. Its digital structure makes it easy to use in an MCU-based application or as a standalone device where movement detection or even a speed measurement is required.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.SpeedRadar",
-    "subdir_name": "lib_speedradar"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5869",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Speed Radar Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SpeedRadar",
+                "subdir_name": "lib_speedradar",
+                "path": "Speed Radar Click/data/lib_speedradar"
+            }
+        ]
+    }
 }
-
-
-
-
-

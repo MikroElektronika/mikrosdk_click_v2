@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # LR 3 Click
 
-LR 3 Click is a compact add-on board that contains a long-range transceiver. This board features the 32001345, RF technology-based SRD transceiver, which operates at a frequency of 868MHz from Mipot.
+> [LR 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4616) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lr3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4616&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lr-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jun 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the LR3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from LR 3 Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LR3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LR3
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void lr3_cfg_setup ( lr3_cfg_t *cfg ); 
+- `lr3_cfg_setup` Config Object Initialization function. 
+```c
+void lr3_cfg_setup ( lr3_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> LR3_RETVAL lr3_init ( lr3_t *ctx, lr3_cfg_t *cfg );
+- `lr3_init` Initialization function. 
+```c
+err_t lr3_init ( lr3_t *ctx, lr3_cfg_t *cfg );
+```
 
-
-#### Example key functions :
-
-- Function performs the recovery of EEPROM default values.
-> LR3_RETVAL lr3_factory_reset ( lr3_t *ctx );
+- `lr3_factory_reset` Function performs the recovery of EEPROM default values. 
+```c
+err_t lr3_factory_reset ( lr3_t *ctx );
+```
  
-- Function writes data to EEPROM.
-> LR3_RETVAL lr3_write_eeprom ( lr3_t *ctx, uint8_t address, uint8_t n_bytes, uint8_t *data_in );
+- `lr3_write_eeprom` Function writes data to EEPROM. 
+```c
+err_t lr3_write_eeprom ( lr3_t *ctx, uint8_t address, uint8_t n_bytes, uint8_t *data_in );
+```
 
-- Function performs the transmission of radio frames.
-> LR3_RETVAL lr3_tx_message ( lr3_t *ctx, lr3_tx_msg_t *tx_msg );
+- `lr3_tx_message` Function performs the transmission of radio frames. 
+```c
+err_t lr3_tx_message ( lr3_t *ctx, lr3_tx_msg_t *tx_msg );
+```
 
-## Examples Description
-
-> This example reads and processes data from LR 3 clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver, enables the Click board and configures it for the selected mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -157,7 +154,6 @@ void application_init ( void )
     
 #endif
 }
-  
 ```
 
 ### Application Task
@@ -165,7 +161,6 @@ void application_init ( void )
 > Depending on the selected mode, it reads all the received data or sends a desired message every 3 seconds. All data is being displayed on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
 #ifdef END_NODE
@@ -188,29 +183,22 @@ void application_task ( void )
 #ifdef MASTER
     lr3_read_message_process( &lr3 );
 #endif 
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LR3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

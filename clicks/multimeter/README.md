@@ -1,76 +1,76 @@
-\mainpage Main Page
 
 ---
 # Multimeter Click
 
-<Multimeter Click is a Click board™ designed to measure voltage, current, resistance, and capacitance properties of the components, connected to the input terminals. Each property measurement is done on a separate terminal.>
+> [Multimeter Click](https://www.mikroe.com/?pid_product=MIKROE-3116) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/multimeter_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3116&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/multimeter-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Multimeter Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Multimeter Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void multimeter_cfg_setup ( multimeter_cfg_t *cfg ); 
- 
-- Initialization function.
-> MULTIMETER_RETVAL multimeter_init ( multimeter_t *ctx, multimeter_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void multimeter_default_cfg ( multimeter_t *ctx );
-
-#### Example key functions :
-
-- This function reads and returns resistance data.
-> float multimeter_read_resistance ( multimeter_t *ctx );
- 
-- This function reads and returns voltage data.
-> float multimeter_read_voltage ( multimeter_t *ctx );
-
-- This function reads and returns current data.
-> float multimeter_read_current ( multimeter_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This example showcases how to configure, initialize and use the Multimeter Click. The
   Click measures resistance in Ohms, voltage in mVs, current in mAs and capacitance in nFs
   using a dual CMOS and quad CMOS op-amps, an ADC and other on board modules. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Multimeter
+
+### Example Key Functions
+
+- `multimeter_cfg_setup` Config Object Initialization function. 
+```c
+void multimeter_cfg_setup ( multimeter_cfg_t *cfg );
+``` 
+ 
+- `multimeter_init` Initialization function. 
+```c
+err_t multimeter_init ( multimeter_t *ctx, multimeter_cfg_t *cfg );
+```
+
+- `multimeter_default_cfg` Click Default Configuration function. 
+```c
+void multimeter_default_cfg ( multimeter_t *ctx );
+```
+
+- `multimeter_read_resistance` This function reads and returns resistance data. 
+```c
+float multimeter_read_resistance ( multimeter_t *ctx );
+```
+ 
+- `multimeter_read_voltage` This function reads and returns voltage data. 
+```c
+float multimeter_read_voltage ( multimeter_t *ctx );
+```
+
+- `multimeter_read_current` This function reads and returns current data. 
+```c
+float multimeter_read_current ( multimeter_t *ctx );
+```
+
+### Application Init
 
 > This function initializes and configures the logger and Click modules. Additional 
   calibration of the measurement components is done in the default_cfg(...) function.
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -96,7 +96,6 @@ void application_init ( )
     multimeter_init( &multimeter, &cfg );
     multimeter_default_cfg( &multimeter );
 }
-  
 ```
 
 ### Application Task
@@ -105,7 +104,6 @@ void application_init ( )
   It does so every second. 
 
 ```c
-
 void application_task ( )
 {
     float resistance;
@@ -127,27 +125,22 @@ void application_task ( )
 
     log_printf( &logger, "------------------------\r\n" );
     Delay_1sec( );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Multimeter
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

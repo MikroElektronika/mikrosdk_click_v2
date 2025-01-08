@@ -3,7 +3,7 @@
  * \brief Barcode Click example
  * 
  * # Description
- * This example reads and processes data from Barcode clicks.
+ * This example reads and processes data from Barcode Clicks.
  *
  * The demo application is composed of two sections :
  * 

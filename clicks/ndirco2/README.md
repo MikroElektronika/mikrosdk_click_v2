@@ -1,74 +1,69 @@
-\mainpage Main Page
- 
- 
 
 ---
 # NDIR CO2 Click
 
-NDIR CO2 Click is an advanced integrated CO2 gas sensor system, which is able to measure an absolute CO2 concentration, by utilizing the CDM7160 integrated sensor.
+> [NDIR CO2 Click](https://www.mikroe.com/?pid_product=MIKROE-3134) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ndirco2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3134&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ndir-co2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the NDIRCO2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for NDIRCO2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void ndirco2_cfg_setup ( ndirco2_cfg_t *cfg ); 
- 
-- Initialization function.
-> NDIRCO2_RETVAL ndirco2_init ( ndirco2_t *ctx, ndirco2_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- CO2 Concentration Read function
-> void ndirco2_read_co2 ( ndirco2_t *ctx, uint8_t set_check_mode, uint16_t *output_data );
- 
-- Average Complete Check function
-> uint8_t ndirco2_check_average_complete ( ndirco2_t *ctx );
-
-- Mode Set function
-> void ndirco2_set_mode ( ndirco2_t *ctx, uint8_t select_mode );
-
-## Examples Description
+## Example Description
 
 > This application measures absolute CO2 concetration.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NDIRCO2
+
+### Example Key Functions
+
+- `ndirco2_cfg_setup` Config Object Initialization function. 
+```c
+void ndirco2_cfg_setup ( ndirco2_cfg_t *cfg );
+``` 
+ 
+- `ndirco2_init` Initialization function. 
+```c
+err_t ndirco2_init ( ndirco2_t *ctx, ndirco2_cfg_t *cfg );
+```
+
+- `ndirco2_read_co2` CO2 Concentration Read function. 
+```c
+void ndirco2_read_co2 ( ndirco2_t *ctx, uint8_t set_check_mode, uint16_t *output_data );
+```
+ 
+- `ndirco2_check_average_complete` Average Complete Check function. 
+```c
+uint8_t ndirco2_check_average_complete ( ndirco2_t *ctx );
+```
+
+- `ndirco2_set_mode` Mode Set function. 
+```c
+void ndirco2_set_mode ( ndirco2_t *ctx, uint8_t select_mode );
+```
+
+### Application Init
 
 > Initializes I2C driver and performs driver reset and determines
 > number of averaging measurements.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +96,6 @@ void application_init ( void )
     log_printf( &logger, "NDIR CO2 is initialized \r\n" );
     Delay_ms ( 200 );
 }
-  
 ```
 
 ### Application Task
@@ -111,7 +105,6 @@ void application_init ( void )
 > Results of measurements logs on USBUART.
 
 ```c
-
 void application_task ( )
 {
     uint16_t co2_data;
@@ -119,28 +112,21 @@ void application_task ( )
     ndirco2_read_co2( &ndirco2, NDIRCO2_CHECK_EACH_MEASURE, &co2_data );
     log_printf( &logger, "CO2 concentration is: %d ppm \r\n", co2_data );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NDIRCO2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

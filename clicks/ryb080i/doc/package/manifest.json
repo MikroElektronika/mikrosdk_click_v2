@@ -1,0 +1,22 @@
+{
+    "display_name": "RYB080I Click",
+    "name": "mikroe.click.ryb080i",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6352",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RYB080I Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RYB080I",
+                "subdir_name": "lib_ryb080i",
+                "path": "RYB080I Click/data/lib_ryb080i"
+            }
+        ]
+    }
+}

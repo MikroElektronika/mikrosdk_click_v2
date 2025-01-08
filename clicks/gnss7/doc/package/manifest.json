@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GNSS 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gnss7",
-    "product_link": "https://www.mikroe.com/gnss-7-click",
-    "short_description": "Determine your current position with GNSS 7 Click. It carries the NEO-M9N GNSS receiver module from u-blox.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3209
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Gnss7",
-    "subdir_name": "lib_gnss7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3922",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Gnss7",
+                "subdir_name": "lib_gnss7",
+                "path": "GNSS 7 Click/data/lib_gnss7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Vaccum Click",
-    "description": "Vacuum Click is an accurate vacuum pressure sensing Click board™, capable of measuring absolute pressure values down to -115kPa.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MPXV6115V"],
-    "category" : ["Pressure"] 
+    "hw" : ["Click","MPXV6115V"]
 }

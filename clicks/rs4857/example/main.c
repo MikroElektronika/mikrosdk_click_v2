@@ -3,7 +3,7 @@
  * @brief RS485 7 Click Example.
  *
  * # Description
- * This example reads and processes data from RS485 7 clicks.
+ * This example reads and processes data from RS485 7 Clicks.
  * The library also includes a function for enabling/disabling 
  * the receiver or driver and data writing or reading.
  *

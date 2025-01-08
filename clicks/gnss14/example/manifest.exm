@@ -1,8 +1,5 @@
 {
     "name": "GNSS 14 Click",
-    "description": "GNSS 14 Click is a compact add-on board that provides fast positioning capability to your application. This board features the MIA-M10Q, a standard precision GNSS module from u-blox. It has an exceptional sensitivity and acquisition time for all L1 GNSS signals, attributed to its integrated M10 standard precision low-power platform. The M10 platform supports concurrent reception of four GNSS (GPS, GLONASS, Galileo, and BeiDou). The high number of visible satellites enables the receiver to select the best signals. This maximizes position availability, particularly under challenging conditions like deep urban canyons.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MIA-M10Q-00B"],
-    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+    "hw" : ["Click","MIA-M10Q-00B"]
 }

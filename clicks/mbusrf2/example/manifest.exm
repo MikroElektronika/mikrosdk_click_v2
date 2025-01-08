@@ -1,8 +1,5 @@
 {
     "name": "M-BUS RF 2  Click",
-    "description": "M-BUS RF 2 Click is a compact add-on board designed for utility metering and various telemetry applications. This board features the Metis-I (2605041183000), an 868MHz radio module from Würth Elektronik. It integrates an MSP430 microcontroller and a CC1101 RF chip-set to ensure efficient data transmission. Key features include a frequency range of 868.3MHz to 869.525MHz, support for the Wireless M-BUS EN13757-4:2013 and Open Metering System (OMS) standards, and communication capabilities up to 700 meters in clear conditions.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","Metis-I"],
-    "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
+    "hw" : ["Click","Metis-I"]
 }

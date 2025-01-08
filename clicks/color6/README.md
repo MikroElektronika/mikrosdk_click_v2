@@ -1,78 +1,75 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Color 6 Click
 
-Color 6 Click is a very accurate color sensing Click board™ which features the AS73211, an XYZ true color sensor from ams.
+> [Color 6 Click](https://www.mikroe.com/?pid_product=MIKROE-3061) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/color6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3061&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/color-6-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Nov 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Color6 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Color6 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void color6_cfg_setup ( color6_cfg_t *cfg ); 
- 
-- Initialization function.
-> COLOR6_RETVAL color6_init ( color6_t *ctx, color6_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void color6_default_cfg ( color6_t *ctx );
-
-
-#### Example key functions :
-
-- This function write one byte in register.
-> void color6_write_byte ( color6_t *ctx, uint8_t reg, uint8_t r_data );
- 
-- This function reads one byte data from register.
-> uint8_t color6_read_byte ( color6_t *ctx, uint8_t reg );
-
-- The measurement result is available as TEMP of the output result registers.
-> float color6_get_temperature ( color6_t *ctx );
-
-## Examples Description
+## Example Description
 
 > Reads values from the X / Y / Z channel and 
 > converts to ee (input light irradiance regarding to the photodiode�s area
 > within the conversion time interval) data. 
  
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Color6
+
+### Example Key Functions
+
+- `color6_cfg_setup` Config Object Initialization function. 
+```c
+void color6_cfg_setup ( color6_cfg_t *cfg );
+``` 
+ 
+- `color6_init` Initialization function. 
+```c
+err_t color6_init ( color6_t *ctx, color6_cfg_t *cfg );
+```
+
+- `color6_default_cfg` Click Default Configuration function. 
+```c
+void color6_default_cfg ( color6_t *ctx );
+```
+
+- `color6_write_byte` This function write one byte in register. 
+```c
+void color6_write_byte ( color6_t *ctx, uint8_t reg, uint8_t r_data );
+```
+ 
+- `color6_read_byte` This function reads one byte data from register. 
+```c
+uint8_t color6_read_byte ( color6_t *ctx, uint8_t reg );
+```
+
+- `color6_get_temperature` The measurement result is available as TEMP of the output result registers. 
+```c
+float color6_get_temperature ( color6_t *ctx );
+```
+
+### Application Init
 
 > Initializes driver init and configuration chip for measurement. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -113,7 +110,6 @@ void application_init ( void )
 > This data logs on USB UART every 2 seconds.
 
 ```c
-
 void application_task ( void )
 {
     x_data = color6_read_data( &color6, COLOR6_MREG_MEASUREMENT_X_CHANNEL );
@@ -142,25 +138,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Color6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "I2C Isolator 6 Click",
-    "description": "I2C Isolator 6 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the ADUM2250, a two-channel, 5kVRMS I2C digital isolator from Analog Devices. The ADUM2250 provides two bidirectional channels, supporting a completely isolated I2C interface that eliminates the need for splitting I2C signals into separate transmit and receive signals for use with standalone optocouplers. It supports data rates from DC up to 1MHz and has a hot swap circuitry to prevent data glitches.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ADUM2250"],
-    "category" : ["Click Boards > Interface > I2C"]
+    "hw" : ["Click","ADUM2250"]
 }

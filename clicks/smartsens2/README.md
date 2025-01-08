@@ -1,40 +1,41 @@
-\mainpage Main Page
 
 ---
 # Smart Sens 2 Click
 
-> Smart Sens 2 Click is a compact add-on board that contains a smart sensor system with an integrated IMU sensor. This board utilizes the BHI260AP, BME688, BMP390, and BMM150, an ultra-low-power programmable smart sensor, environmental and pressure sensor, and a magnetometer from Bosch Sensortec. The BHI260AP includes a powerful 32-bit MCU and a 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) alongside an event-driven software framework. In addition to its internal functions also perform signal data processing from several onboard sensors performing measurements of various parameters such as an environmental and magnetic field. In addition to these primary functions, this Click board™ allows users to select the desired serial interface, use the debug interface, and select BOOT mode.
+> [Smart Sens 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5207) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/smartsens2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5207&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/smart-sens-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jan 2022.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Smart Sens 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases the ability of the Smart Sens 2 Click board.
+It has multiple examples that you can easily select with the
+defines at the top of the main. There are 9 examples: Euler, Quaternion,
+Vector (Accelerometer, Gyroscope, Magnetometer), and
+Environmental (Temperature, Barometer, Humidity, Gas).
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Smart Sens 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SmartSens2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `smartsens2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +52,6 @@ err_t smartsens2_init ( smartsens2_t *ctx, smartsens2_cfg_t *cfg );
 err_t smartsens2_default_cfg ( smartsens2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `smartsens2_register_fifo_parse_callback` Function to link a callback and relevant reference when the sensor event is available in the FIFO.
 ```c
 err_t smartsens2_register_fifo_parse_callback ( smartsens2_t *ctx, uint8_t sensor_id, smartsens2_fifo_parse_callback_t callback, void *callback_ref );
@@ -67,16 +66,6 @@ err_t smartsens2_set_virt_sensor_cfg( smartsens2_t *ctx, uint8_t sensor_id, floa
 ```c
 err_t smartsens2_get_and_process_fifo ( smartsens2_t *ctx, uint8_t *work_buffer, uint32_t buffer_size );
 ```
-
-## Example Description
-
-> This example showcases the ability of the Smart Sens 2 Click board.
-It has multiple examples that you can easily select with the
-defines at the top of the main. There are 9 examples: Euler, Quaternion,
-Vector (Accelerometer, Gyroscope, Magnetometer), and
-Environmental (Temperature, Barometer, Humidity, Gas).
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -95,7 +84,6 @@ and driver will update the list of virtual sensors present, and finally will con
 virtual sensor that will be used in the selected example.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -219,7 +207,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -243,29 +230,26 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Select one of the examples with macros at the top of the main file. Euler example is selected by default.
 You can choose one of 4 type of parsers: Euler, Quaternion, Vector, Environmental. If Vector example is selected
 you choose one of the 3 sensors to show X, Y, and Z values: Accelerometer, Gyroscope, or Magnetometer.
 If Environmental example is selected you choose one of the 4 sensors: Temperature, Barometer, Humidity, or Gas.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SmartSens2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

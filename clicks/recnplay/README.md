@@ -1,74 +1,69 @@
-\mainpage Main Page
- 
----
-# Rec & Play Click 
 
-Rec&Play Click is a digital voice recorder on a Click board. It is based on the
-ISD3900, a multi-message record and playback device. It features the ChipCorder
-technology, offering digital sound compression, smart message management, 
-digitally configurable signal path, and more.
+---
+# Rec & Play Click
+
+> [Rec N Play Click](https://www.mikroe.com/?pid_product=MIKROE-3345) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/recnplay_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3345&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/recplay-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the RecNPlay Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for RecNPlay Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void recnplay_cfg_setup ( recnplay_cfg_t *cfg ); 
- 
-- Initialization function.
-> RECNPLAY_RETVAL recnplay_init ( recnplay_t *ctx, recnplay_cfg_t *cfg );
-
-#### Example key functions :
-
-- Function queries the ISD3900 device status.
-> RECNPLAY_RETVAL recplay_read_status ( recnplay_t* ctx, uint8_t* interr_status );
- 
-- Function erases the message starting at the specified address.
-> RECNPLAY_RETVAL recplay_erase_msg ( recnplay_t* ctx, uint32_t mem_addr );
-
-- Function initiates a managed record at first available location in memory.
-> RECNPLAY_RETVAL recplay_record_msg ( recnplay_t* ctx );
-
-## Examples Description
+## Example Description
 
 > This application demonstrates the process of recording a message and playing it back.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.RecNPlay
+
+### Example Key Functions
+
+- `recnplay_cfg_setup` Config Object Initialization function. 
+```c
+void recnplay_cfg_setup ( recnplay_cfg_t *cfg );
+``` 
+ 
+- `recnplay_init` Initialization function. 
+```c
+err_t recnplay_init ( recnplay_t *ctx, recnplay_cfg_t *cfg );
+```
+
+- `recplay_read_status` Function queries the ISD3900 device status. 
+```c
+err_t recplay_read_status ( recnplay_t* ctx, uint8_t* interr_status );
+```
+ 
+- `recplay_erase_msg` Function erases the message starting at the specified address. 
+```c
+err_t recplay_erase_msg ( recnplay_t* ctx, uint32_t mem_addr );
+```
+
+- `recplay_record_msg` Function initiates a managed record at first available location in memory. 
+```c
+err_t recplay_record_msg ( recnplay_t* ctx );
+```
+
+### Application Init
 
 > Initializes SPI interface in proper mode and performs all the necessary commands to
 > put the device in proper working mode (chip reset, chip power up, chip erasing, clock configuration).
 
 ```c
-
 void application_init ( void )
 {
   	log_cfg_t log_cfg;
@@ -107,7 +102,6 @@ void application_init ( void )
     volume = 0;
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -117,7 +111,6 @@ void application_init ( void )
 > recorded message. When playback is done it erases the recorded message from memory. Afterwards, it repeats all the operations every 10 seconds.
 
 ```c
-
 void application_task ( void )
 {
   	uint8_t cnt;
@@ -188,34 +181,27 @@ void application_task ( void )
 
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > The ISD3900 must be properly configured to work in record mode every time when user wants to record a message.
 > When user wants to play a recorded message, then ISD3900 must be properly configured, but now to work in play mode.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.RecNPlay
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

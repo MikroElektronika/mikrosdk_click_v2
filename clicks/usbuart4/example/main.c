@@ -3,7 +3,7 @@
  * @brief USB UART 4 Click Example.
  *
  *# Description
- * This example reads and processes data from USB UART 4 clicks.
+ * This example reads and processes data from USB UART 4 Clicks.
  *
  * The demo application is composed of two sections :
  * 

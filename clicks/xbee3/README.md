@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # XBEE 3 Click
 
-> Xbee 3 Click is a compact add-on board suitable for mission-critical wireless applications. This board features the XB8X-DMUS-001, a low-power CE/RED certified Digi Xbee® RF module delivering superior performance and interference immunity from Digi International. The module can run either a proprietary DigiMesh® or point-to-multipoint networking protocol utilizing a low-power Silicon Labs MCU and an ADF7023 transceiver, along with an integrated SAW filter that offers industry-leading interference blocking. Operating between 863MHz and 870MHz (868MHz), it allows use in several regions, including approved European countries.
+> [XBEE 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5299) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/xbee3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5299&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/xbee-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Aug 2022.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the XBEE 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an XBEE 3 Click board by showing the communication between the two Click boards configured in transparent mode.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for XBEE 3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.XBEE3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `xbee3_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void xbee3_cfg_setup ( xbee3_cfg_t *cfg );
 ```c
 err_t xbee3_init ( xbee3_t *ctx, xbee3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `xbee3_get_serial_number` This function sends a get serial number command.
 ```c
@@ -63,18 +58,11 @@ err_t xbee3_set_device_name ( xbee3_t *ctx, char *dev_name );
 err_t xbee3_set_destination_address ( xbee3_t *ctx, char *dest_addr_high, char *dest_addr_low );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an XBEE 3 Click board by showing the communication between the two Click boards configured in transparent mode.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and configures the Click board by performing a factory reset, and setting the device name, destination address, and api mode to transparent.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -162,7 +150,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -189,22 +176,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.XBEE3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LightRanger 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lightranger7",
-    "product_link": "https://www.mikroe.com/lightranger-7-click",
-    "short_description": "LightRanger 7 Click is a compact add-on board capable of precise distance measurement and motion tracking. This board features the AFBR-S50, a medium-range 3D multipixel Time-of-Flight (ToF) sensor from Broadcom. Besides a VCSEL-based ToF sensor (Laser Class 1 eye safety), optimized to measure various distances working equally well on white, black, colored, and metallic reflective surfaces, this board also includes a 32-bit MCU, RA4M2 group of Renesas MCU with Arm® Cortex®-M33 core, alongside a 4-pin standard CAN connections compatible with Pixhawk®, a popular general-purpose flight controller.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.LightRanger7",
-    "subdir_name": "lib_lightranger7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6238",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LightRanger 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LightRanger7",
+                "subdir_name": "lib_lightranger7",
+                "path": "LightRanger 7 Click/data/lib_lightranger7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

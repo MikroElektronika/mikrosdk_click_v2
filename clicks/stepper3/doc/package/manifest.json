@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Stepper 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepper3",
-    "product_link": "https://www.mikroe.com/stepper-3-click",
-    "short_description": "Stepper 3 Click is designed to drive unipolar stepper motors, with a supply voltage applied to the common wire. The current flows through the common wire and the motor coil, via the activated current sink driver, to the ground. This Click board™ uses the ULN2003A, a high voltage and current Darlington transistors array IC, as the sink driver. This IC is an ideal solution for this purpose, as it has seven high power Darlington output stages, activated by TTL/CMOS logic level signals, applied to the control pins. This allows driving unipolar stepper motors with up to 30V and 500mA per coil.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        1898
-    ],
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Stepper3",
-    "subdir_name": "lib_stepper3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2035",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper3",
+                "subdir_name": "lib_stepper3",
+                "path": "Stepper 3 Click/data/lib_stepper3"
+            }
+        ]
+    }
 }
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "ADC 12 Click",
-    "description": "ADC 12 Click is a compact add-on board that contains a fully-featured, general-purpose analog-to-digital converter. This board features the ADS7828, a low-power 12-bit data acquisition device that features a serial I2C interface and an 8-channel multiplexer from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ADS7828"],
-    "category" : ["ADC"]
+    "hw" : ["Click","ADS7828"]
 }

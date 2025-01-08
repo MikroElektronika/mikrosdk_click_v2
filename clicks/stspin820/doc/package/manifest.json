@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "STSPIN820 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stspin820",
-    "product_link": "https://www.mikroe.com/stspin820-click",
-    "short_description": "STSPIN820 Click is a stepper motor driver with the PWM current control, selectable microstepping up to 256 microsteps, and a wide voltage range. It is based on the STSPIN820, a stepper motor driver from STSPIN8 series. Designed to be a bullet-proof solution for the new wave of demanding industrial applications, it integrates two full-bridges with low ON resistance, the control logic, and a full set of protection features, in a small 4x4mm QFN package. Its output stage implements the PWM current control with the fixed OFF time. The device can be used with the step motor voltage ranging from 7V up to 45V, and current up to 1.5A per bridge.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        2853
-    ],
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.STSPIN820",
-    "subdir_name": "lib_stspin820"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3544",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "STSPIN820 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.STSPIN820",
+                "subdir_name": "lib_stspin820",
+                "path": "STSPIN820 Click/data/lib_stspin820"
+            }
+        ]
+    }
 }
-
-
-

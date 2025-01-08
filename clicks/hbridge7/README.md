@@ -1,68 +1,65 @@
-\mainpage Main Page
- 
+
 ---
 # H-Bridge 7 Click
 
-H-Bridge 7 Click features flexible motor driver IC for a wide variety of applications, labeled as the DRV8876N. This Click board™ integrates an N-channel H-bridge, charge pump regulator, and protection circuitry. The charge pump improves efficiency by allowing for both high-side and low-side N-channels MOSFETs and 100% duty cycle support. This IC allows the H-Bridge 7 Click to achieve ultra-low quiescent current draw by shutting down most of the internal circuitry with his low-power sleep mode.
+> [H-Bridge 7 Click](https://www.mikroe.com/?pid_product=MIKROE-4143) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hbridge7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4143&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/h-bridge-7-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Hbridge7 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Hbridge7 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void hbridge7_cfg_setup ( hbridge7_cfg_t *cfg ); 
- 
-- Initialization function.
-> HBRIDGE7_RETVAL hbridge7_init ( hbridge7_t *ctx, hbridge7_cfg_t *cfg );
-
-
-#### Example key functions :
- 
-- Set motor control.
-> void hbridge7_motor_control ( hbridge7_t *ctx, uint8_t ctrl );
-
-- Get Fault pin state.
-> uint8_t hbridge7_get_fault_state ( hbridge7_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of H-Bridge 7 Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Hbridge7
+
+### Example Key Functions
+
+- `hbridge7_cfg_setup` Config Object Initialization function. 
+```c
+void hbridge7_cfg_setup ( hbridge7_cfg_t *cfg );
+``` 
+ 
+- `hbridge7_init` Initialization function. 
+```c
+err_t hbridge7_init ( hbridge7_t *ctx, hbridge7_cfg_t *cfg );
+```
+
+
+ 
+- `hbridge7_motor_control` Set motor control. 
+```c
+void hbridge7_motor_control ( hbridge7_t *ctx, uint8_t ctrl );
+```
+
+- `hbridge7_get_fault_state` Get Fault pin state. 
+```c
+uint8_t hbridge7_get_fault_state ( hbridge7_t *ctx );
+```
+
+### Application Init
 
 > Initializes the driver and makes an initial log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -87,7 +84,6 @@ void application_init ( void )
     HBRIDGE7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     hbridge7_init( &hbridge7, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -98,7 +94,6 @@ void application_init ( void )
 > you can track the program flow.
 
 ```c
-
 void application_task ( void )
 {
     log_printf( &logger, "The motor turns forward! \r\n" );
@@ -126,29 +121,22 @@ void application_task ( void )
     hbridge7_motor_control( &hbridge7, HBRIDGE7_MOTOR_SLEEP );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-}   
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Hbridge7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

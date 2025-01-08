@@ -1,8 +1,5 @@
 {
     "name": "Thermo J Click",
-    "description": "Thermo J Click is a temperature measurement Click board™, which uses a thermocouple type-J probe, connected to a PPC-SMP-J onboard connector.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP9600"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","MCP9600"]
 }

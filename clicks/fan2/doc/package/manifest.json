@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Fan 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.fan2",
-    "product_link": "https://www.mikroe.com/fan-2-click",
-    "short_description": "Fan 2 Click carries the MAX31760 precision fan-speed controller. It can measure temperature and adjust the fan speed to keep the temperature at the same level. Fan 2 Click can also control two fans at the same time.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2115
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Fan2",
-    "subdir_name": "lib_fan2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2708",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Fan 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Fan2",
+                "subdir_name": "lib_fan2",
+                "path": "Fan 2 Click/data/lib_fan2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

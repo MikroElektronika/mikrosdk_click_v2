@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Compass 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.compass8",
-    "product_link": "https://www.mikroe.com/compass-8-click",
-    "short_description": "Compass 8 Click is a compact add-on board designed for precise compass applications. This board features the AK09919, a 3-axis electronic compass IC from AKM Semiconductor. The AK09919 is based on high-sensitivity Hall sensor technology for detecting terrestrial magnetism across the X, Y, and Z axes, has multiple operational modes, a built-in oscillator, and a Power On Reset circuit. It also includes a magnetic sensor overflow monitor and a 16-sample FIFO data buffer for efficient data handling.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Compass8",
-    "subdir_name": "lib_compass8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6099",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Compass 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Compass8",
+                "subdir_name": "lib_compass8",
+                "path": "Compass 8 Click/data/lib_compass8"
+            }
+        ]
+    }
 }
-
-
-

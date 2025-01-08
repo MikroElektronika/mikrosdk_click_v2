@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IR Beacon Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.irbeacon",
-    "product_link": "https://www.mikroe.com/ir-beacon-click",
-    "short_description": "IR Beacon Click is a mikroBUS™ add-on board with an array of nine high speed infrared emitting diodes.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1846
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.IrBeacon",
-    "subdir_name": "lib_irbeacon"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1939",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IR Beacon Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IrBeacon",
+                "subdir_name": "lib_irbeacon",
+                "path": "IR Beacon Click/data/lib_irbeacon"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

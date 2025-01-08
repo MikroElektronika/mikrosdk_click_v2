@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Haptic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Vibro Motor 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.vibromotor2",
-    "product_link": "https://www.mikroe.com/vibro-motor-2-click",
-    "short_description": "Vibro Motor 2 Click features a compact size Eccentric Rotating Mass (ERM) motor, labeled as Z4FC1B1301781 as well as DMG3420U MOSFET to drive the ERM motor, since the MCU itself cannot provide enough power for the motor driving. This type of motor is often used for haptic feedback on many small handheld devices, such as the cellphones, pagers, RFID scanners and similar devices. This motor contains a small eccentric weight on its rotor, so while rotating it also produces vibration effect",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        2906
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.VibroMotor2",
-    "subdir_name": "lib_vibromotor2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3713",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Vibro Motor 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VibroMotor2",
+                "subdir_name": "lib_vibromotor2",
+                "path": "Vibro Motor 2 Click/data/lib_vibromotor2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

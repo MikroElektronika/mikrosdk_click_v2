@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # LightRanger 9 Click
 
-> LightRanger 9 Click is a compact add-on board suitable for range-finding and distance sensing applications. This board features the TMF8828, a dToF (direct time of flight) optical distance sensor with an integrated Vertical Cavity Surface Emitting Laser (VCSEL) achieving up to 5m target detection distance from ams AG. Due to its lens on the SPAD, it supports 3x3, 4x4, 3x6, and 8x8 multizone output data and a wide, dynamically adjustable field of view. All raw data processing is performed inside the TMF8828, providing distance information and confidence values through its I2C interface. A unique addition to this Click board™ represents an additional 0.7mm thick protective lens that further reduces interference and improves the sensor's accuracy.
+> [LightRanger 9 Click](https://www.mikroe.com/?pid_product=MIKROE-5237) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lightranger9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5237&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lightranger-9-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LightRanger 9 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of LightRanger 9 Click board by reading and displaying all four sub-captures data measurements on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LightRanger 9 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LightRanger9
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lightranger9_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t lightranger9_init ( lightranger9_t *ctx, lightranger9_cfg_t *cfg );
 err_t lightranger9_default_cfg ( lightranger9_t *ctx );
 ```
 
-#### Example key functions :
-
 - `lightranger9_get_int_pin` This function returns the INT pin logic state.
 ```c
 uint8_t lightranger9_get_int_pin ( lightranger9_t *ctx );
@@ -68,18 +63,11 @@ err_t lightranger9_clear_interrupts ( lightranger9_t *ctx );
 err_t lightranger9_get_capture ( lightranger9_t *ctx, lightranger9_capture_t *capture );
 ```
 
-## Example Description
-
-> This example demonstrates the use of LightRanger 9 Click board by reading and displaying all four sub-captures data measurements on the USB UART.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -137,22 +124,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LightRanger9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

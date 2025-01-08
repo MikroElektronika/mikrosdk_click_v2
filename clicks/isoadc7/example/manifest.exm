@@ -1,8 +1,5 @@
 {
     "name": "ISO ADC 7 Click",
-    "description": "ISO ADC 7 Click is a compact add-on board designed for precise multi-channel data acquisition in various industrial applications. This board features the AMC131M03, a three-channel, 24-bit delta-sigma ADC from Texas Instruments. The AMC131M03 features a silicon-dioxide-based isolation barrier providing 5000-VRMS isolation, integrated digital decimation filters for reduced quantization noise, and a programmable gain amplifier with gains up to 128 for high-accuracy measurements. Additionally, it includes an internal temperature sensor with options for external or onboard temperature sensing.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr"],
-    "hw" : ["Click","AMC131M03DFMR"],
-    "category" : ["Click Boards > Mixed signal > ADC"]
+    "hw" : ["Click","AMC131M03DFMR"]
 }

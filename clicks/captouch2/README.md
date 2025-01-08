@@ -1,73 +1,71 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Cap Touch 2 Click
 
-Cap Touch 2 Click is a capacitive touch sensing Click board which features the CAP1166, an advanced touch/proximity sensor IC, packed with a range of different touch/proximity functionalities, allowing development of robust and aesthetically pleasing touch interfaces.
+> [Cap Touch 2 Click](https://www.mikroe.com/?pid_product=MIKROE-2964) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/captouch2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2964&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/cap-touch-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Katarina Perendic
 - **Date**          : okt 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the CapTouch2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for CapTouch2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void captouch2_cfg_setup ( captouch2_cfg_t *cfg ); 
- 
-- Initialization function.
-> CAPTOUCH2_RETVAL captouch2_init ( captouch2_t *ctx, captouch2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void captouch2_default_cfg ( captouch2_t *ctx );
-
-
-#### Example key functions :
-
-- Touch Detect function
-> void captouch2_detect_touch( captouch2_t *ctx, uint8_t *in_sens );
- 
-- Interrupt Check function
-> uint8_t captouch2_check_interrupt( captouch2_t *ctx );
-
-- Reset function
-> void captouch2_reset( captouch2_t *ctx );
-
-## Examples Description
- 
 > The demo application shows the button reading and checking.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CapTouch2
 
-> Configuring clicks and log objects.
+### Example Key Functions
+
+- `captouch2_cfg_setup` Config Object Initialization function. 
+```c
+void captouch2_cfg_setup ( captouch2_cfg_t *cfg );
+``` 
+ 
+- `captouch2_init` Initialization function. 
+```c
+err_t captouch2_init ( captouch2_t *ctx, captouch2_cfg_t *cfg );
+```
+
+- `captouch2_default_cfg` Click Default Configuration function. 
+```c
+void captouch2_default_cfg ( captouch2_t *ctx );
+```
+
+- `captouch2_detect_touch` Touch Detect function. 
+```c
+void captouch2_detect_touch ( captouch2_t *ctx, uint8_t *in_sens );
+```
+ 
+- `captouch2_check_interrupt` Interrupt Check function. 
+```c
+uint8_t captouch2_check_interrupt ( captouch2_t *ctx );
+```
+
+- `captouch2_reset` Reset function. 
+```c
+void captouch2_reset ( captouch2_t *ctx );
+```
+
+### Application Init
+
+> Configuring Clicks and log objects.
 > Reset device and settings the Click in the default configuration.
 
 ```c
@@ -130,25 +128,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CapTouch2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

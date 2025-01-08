@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # TMR mix-sens Click
 
-The TMR mix-sens Click is an add-on board equipped with the TMR digital push-pull and analog magnetic sensors, as well as intensity of magnetic field indicator.
+> [TMR mix-sens Click](https://www.mikroe.com/?pid_product=MIKROE-4106) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/tmrmixsens_click.png">
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4106&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/tmr-mix-sens-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : ADC type
 
-
 # Software Support
 
-We provide a library for the Tmrmixsens Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Tmrmixsens Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void tmrmixsens_cfg_setup ( tmrmixsens_cfg_t *cfg ); 
- 
-- Initialization function.
-> TMRMIXSENS_RETVAL tmrmixsens_init ( tmrmixsens_t *ctx, tmrmixsens_cfg_t *cfg );
-
-#### Example key functions :
-
-- Generic read function.
-> tmrmixsens_data_t tmrmixsens_generic_read ( tmrmixsens_t *ctx );
- 
-- Get state of the omnipolar ( OMN ) pin function.
-> uint8_t tmrmixsens_get_omnipolar ( tmrmixsens_t *ctx );
-
-- Get state of the bipolar ( BI ) pin function.
-> uint8_t tmrmixsens_get_bipolar ( tmrmixsens_t *ctx );
-
-## Examples Description
+## Example Description
 
 > The TMR mix-sens Click has three types of magnetic field sensors: Two digital and one analog sensor. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Tmrmixsens
+
+### Example Key Functions
+
+- `tmrmixsens_cfg_setup` Config Object Initialization function. 
+```c
+void tmrmixsens_cfg_setup ( tmrmixsens_cfg_t *cfg );
+``` 
+ 
+- `tmrmixsens_init` Initialization function. 
+```c
+err_t tmrmixsens_init ( tmrmixsens_t *ctx, tmrmixsens_cfg_t *cfg );
+```
+
+- `tmrmixsens_generic_read` Generic read function. 
+```c
+tmrmixsens_data_t tmrmixsens_generic_read ( tmrmixsens_t *ctx );
+```
+ 
+- `tmrmixsens_get_omnipolar` Get state of the omnipolar ( OMN ) pin function. 
+```c
+uint8_t tmrmixsens_get_omnipolar ( tmrmixsens_t *ctx );
+```
+
+- `tmrmixsens_get_bipolar` Get state of the bipolar ( BI ) pin function. 
+```c
+uint8_t tmrmixsens_get_bipolar ( tmrmixsens_t *ctx );
+```
+
+### Application Init
 
 > Initializes the driver and logger and makes an initial log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -89,7 +87,6 @@ void application_init ( void )
     TMRMIXSENS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     tmrmixsens_init( &tmrmixsens, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -97,7 +94,6 @@ void application_init ( void )
 > Displays the ADC value of linear output and the states of bipolar and omnipolar indicators on the USB UART each second.
 
 ```c
-
 void application_task ( void )
 {
     tmrmixsens_data_t tmp;
@@ -122,29 +118,22 @@ void application_task ( void )
     
     log_printf( &logger, "--------------------------------------\r\n" );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Tmrmixsens
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

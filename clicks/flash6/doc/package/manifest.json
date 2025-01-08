@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > FLASH",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Flash 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.flash6",
-    "product_link": "https://www.mikroe.com/flash-6-click",
-    "short_description": "The Flash 6 Click based on W25Q128JV (128M-bit) flash memory from Winbond provides a storage solution for systems with limited space, pins and power.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3255
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Flash6",
-    "subdir_name": "lib_flash6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4067",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Flash 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Flash6",
+                "subdir_name": "lib_flash6",
+                "path": "Flash 6 Click/data/lib_flash6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > ZigBee",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "XBEE 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.xbee2",
-    "product_link": "https://www.mikroe.com/xbee-2-click",
-    "short_description": "Xbee 2 Click is a compact add-on board providing wireless end-point connectivity to other devices. This board features the XB3-24Z8UM, a Digi XBee® 3 transceiver module offering a fully interoperable ecosystem covering all vertical markets from Digi International. Building on industry-leading technology, the pre-certified Digi XBee® 3 module delivers the flexibility to switch between multiple frequencies and wireless protocols as needed (Zigbee, 802.15.4, DigiMesh® and BLE). It can be easily configured and controlled from a simple, central platform and comes with built-in Digi TrustFence® security, identity, and data privacy features which use more than 175 controls to protect against new and evolving cyber threats.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.XBEE2",
-    "subdir_name": "lib_xbee2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5302",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "XBEE 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.XBEE2",
+                "subdir_name": "lib_xbee2",
+                "path": "XBEE 2 Click/data/lib_xbee2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

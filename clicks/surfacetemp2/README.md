@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Surface Temp 2 Click
 
-Surface temp 2 Click is a compact add-on board that contains a high accuracy temperature sensor offering breakthrough performance over a wide industrial temperature range.
+> [Surface Temp 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4266) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/surfacetemp2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4266&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/surface-temp-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Sep 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the SurfaceTemp2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for SurfaceTemp2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void surfacetemp2_cfg_setup ( surfacetemp2_cfg_t *cfg ); 
- 
-- Initialization function.
-> SURFACETEMP2_RETVAL surfacetemp2_init ( surfacetemp2_t *ctx, surfacetemp2_cfg_t *cfg );
-
-#### Example key functions :
-
-- Get Temperature function
-> float surfacetemp2_get_temperature ( surfacetemp2_t *ctx );
- 
-- Set Critical Temperature Threshold function
-> void surfacetemp2_set_crit_trsh ( surfacetemp2_t *ctx, float trsh );
-
-- Get CT pin state function
-> uint8_t surfacetemp2_get_ct_pin ( surfacetemp2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of Surface Temp 2 Click.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SurfaceTemp2
+
+### Example Key Functions
+
+- `surfacetemp2_cfg_setup` Config Object Initialization function. 
+```c
+void surfacetemp2_cfg_setup ( surfacetemp2_cfg_t *cfg );
+``` 
+ 
+- `surfacetemp2_init` Initialization function. 
+```c
+err_t surfacetemp2_init ( surfacetemp2_t *ctx, surfacetemp2_cfg_t *cfg );
+```
+
+- `surfacetemp2_get_temperature` Get Temperature function. 
+```c
+float surfacetemp2_get_temperature ( surfacetemp2_t *ctx );
+```
+ 
+- `surfacetemp2_set_crit_trsh` Set Critical Temperature Threshold function. 
+```c
+void surfacetemp2_set_crit_trsh ( surfacetemp2_t *ctx, float trsh );
+```
+
+- `surfacetemp2_get_ct_pin` Get CT pin state function. 
+```c
+uint8_t surfacetemp2_get_ct_pin ( surfacetemp2_t *ctx );
+```
+
+### Application Init
 
 > Initalizes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +96,6 @@ void application_init ( void )
     log_info( &logger, "---- Application Task ----" );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -107,36 +103,27 @@ void application_init ( void )
 > Reads the temperature in Celsius and displays the value on the USB UART each second.
 
 ```c
-
 void application_task ( void )
 {
     temperature = surfacetemp2_get_temperature( &surfacetemp2 );
     log_printf( &logger, " Temperature : %.2f C \r\n", temperature );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SurfaceTemp2
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

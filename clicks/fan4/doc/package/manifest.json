@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "FAN 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.fan4",
-    "product_link": "https://www.mikroe.com/fan-4-click",
-    "short_description": "Fan 4 Click is a very compact, two-wire fan driver. It utilizes an integrated 5V, DC, brushless-motor driver chip.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2581
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Fan4",
-    "subdir_name": "lib_fan4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3200",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "FAN 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Fan4",
+                "subdir_name": "lib_fan4",
+                "path": "FAN 4 Click/data/lib_fan4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

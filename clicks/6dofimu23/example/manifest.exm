@@ -1,8 +1,5 @@
 {
     "name": "6DOF IMU 23 Click",
-    "description": "6DOF IMU 23 Click is a compact add-on board for precise motion tracking and measurement. This board features the IIM-20670, a high-performance 6-axis MotionTracking device from TDK InvenSense that integrates a 3-axis gyroscope and a 3-axis accelerometer. The gyroscope offers a full-scale range of up to ±1966 dps with high accuracy, while the accelerometer provides a range of ±2g to ±65g. Key features also include a 10MHz SPI interface, shock tolerance up to 10,000 g, on-chip 16-bit ADCs, and low current consumption.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","IIM-20670"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","IIM-20670"]
 }

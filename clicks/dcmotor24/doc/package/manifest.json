@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DC Motor 24 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.dcmotor24",
-    "product_link": "https://www.mikroe.com/dc-motor-24-click",
-    "short_description": "DC Motor 24 Click is a compact add-on board with a brushed DC motor driver. This board features the L9958, an SPI-controlled H-bridge from STMicroelectronics. The L9958 is rated for an operating voltage range from 4V to 28V, with direct PWM motor control and current regulation threshold set by the SPI interface from 2.5A to 8.6A. It also has complete diagnostic and protection capabilities supporting the robust and reliable operation.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.DCMotor24",
-    "subdir_name": "lib_dcmotor24"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5537",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DC Motor 24 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DCMotor24",
+                "subdir_name": "lib_dcmotor24",
+                "path": "DC Motor 24 Click/data/lib_dcmotor24"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

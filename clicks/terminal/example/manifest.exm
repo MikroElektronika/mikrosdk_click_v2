@@ -1,8 +1,5 @@
 {
     "name": "Terminal Click",
-    "description": "<Terminal Click can be extremely interesting for the development of systems that are equipped with mikroBUS™ slots only, or a small number of GPIO pins available, such as the Clicker family of development systems. Using this Click on such a system will greatly improve its usability, and yet it will remain small, compact and manageable.>",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","None"],
-    "category" : ["Adapter"] 
+    "hw" : ["Click","None"]
 }

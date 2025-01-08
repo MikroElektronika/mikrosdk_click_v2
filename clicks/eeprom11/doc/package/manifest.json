@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > EEPROM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EEPROM 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.eeprom11",
-    "product_link": "https://www.mikroe.com/eeprom-11-click",
-    "short_description": "EEPROM 11 Click is a compact add-on board with a highly reliable, nonvolatile memory solution. This board features the S-34C04AB, an EEPROM for DIMM serial presence detection from ABLIC. The EEPROM is internally organized as 2 pages of 256 words x 8-bit, and a capacity of 4Kbits and is an EE1004-1 JEDEC standard-compliant.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.EEPROM11",
-    "subdir_name": "lib_eeprom11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5889",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EEPROM 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EEPROM11",
+                "subdir_name": "lib_eeprom11",
+                "path": "EEPROM 11 Click/data/lib_eeprom11"
+            }
+        ]
+    }
 }
-
-
-
-
-

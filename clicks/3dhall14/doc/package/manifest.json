@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "3D Hall 14 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c3dhall14",
-    "product_link": "https://www.mikroe.com/3d-hall-14-click",
-    "short_description": "3D Hall 14 Click is a compact add-on board designed for high-precision position sensing in various applications. This board features the MLX90394, a 3-axis magnetometer from Melexis based on the Triaxis® Hall technology. The MLX90394 offers low power consumption, excellent noise performance, and flexible measurement modes, including intelligent wake-up functions for efficient power management. It communicates via a standard 2-Wire I2C interface and supports fast-mode frequencies up to 1MHz.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.3DHall14",
-    "subdir_name": "lib_c3dhall14"
+    "name": "mikroe.click.3dhall14",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6242",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3D Hall 14 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3DHall14",
+                "subdir_name": "lib_c3dhall14",
+                "path": "3D Hall 14 Click/data/lib_c3dhall14"
+            }
+        ]
+    }
 }
-
-

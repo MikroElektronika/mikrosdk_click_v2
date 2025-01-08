@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 31 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel31",
-    "product_link": "https://www.mikroe.com/accel-31-click",
-    "short_description": "Accel 31 Click is a compact add-on board designed for precise motion and orientation detection in space-constrained devices. This board features the BMA580, a triaxial low-g accelerometer from Bosch Sensortec, which offers a 16-bit digital resolution with measurement ranges of ±2, ±4, ±8, and ±16 g, along with flexible output data rates from 1.56Hz to 6.4kHz, enabling high adaptability and accuracy. The BMA580 supports advanced power modes, including high-performance and low-power, self-wake-up functionality, and bone conduction-based voice activity detection.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.Accel31",
-    "subdir_name": "lib_accel31"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6410",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 31 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel31",
+                "subdir_name": "lib_accel31",
+                "path": "Accel 31 Click/data/lib_accel31"
+            }
+        ]
+    }
 }
-

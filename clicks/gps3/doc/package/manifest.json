@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GPS 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gps3",
-    "product_link": "https://www.mikroe.com/gps-3-click",
-    "short_description": "GPS3 Click carries Quectel’s L80 GPS module, a high-sensitivity ultra slim GPS module with a patch antenna.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1147
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Gps3",
-    "subdir_name": "lib_gps3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1714",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GPS 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Gps3",
+                "subdir_name": "lib_gps3",
+                "path": "GPS 3 Click/data/lib_gps3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

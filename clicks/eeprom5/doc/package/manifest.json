@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > EEPROM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EEPROM 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.eeprom5",
-    "product_link": "https://www.mikroe.com/eeprom-5-click",
-    "short_description": "EEPROM 5 Click is a compact add-on board that contains the highest-density memory solution. This board features the M95M04, the 4Mbit electrically erasable programmable memory organized as 524288 x 8 bits accessed through the SPI interface from STMicroelectronics.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        4082
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.EEPROM5",
-    "subdir_name": "lib_eeprom5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4422",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EEPROM 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EEPROM5",
+                "subdir_name": "lib_eeprom5",
+                "path": "EEPROM 5 Click/data/lib_eeprom5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

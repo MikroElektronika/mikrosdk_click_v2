@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init
- * Configuring clicks and log objects.
+ * Configuring Clicks and log objects.
  * 
  * ## Application Task  
  * It detects vibrations and enables PWM and writes log according to them.

@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Current 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.current5",
-    "product_link": "https://www.mikroe.com/current-5-click",
-    "short_description": "Current 5 Click is a compact add-on board that provides a precise and accurate current sensing solution. This board features the INA381, a high-speed current-sense amplifier with an integrated comparator from Texas Instruments. This device has selectable operating modes (transparent or latched) and detects overcurrent conditions by measuring the voltage developed across a current shunt resistor. Then it compares that voltage to a user-defined threshold limit set by the comparator reference potentiometer. The current-shunt monitor can measure differential voltage signals on common-mode voltages that vary from –0.2V to 26V, independent of the supply voltage. This Click board™ delivers higher performance to applications such as test and measurement, load and power supplies monitoring, low-side phase motor control, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.Current5",
-    "subdir_name": "lib_current5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4953",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Current 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Current5",
+                "subdir_name": "lib_current5",
+                "path": "Current 5 Click/data/lib_current5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

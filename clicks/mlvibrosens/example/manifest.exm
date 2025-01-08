@@ -1,8 +1,5 @@
 {
     "name": "ML Vibro Sens Click",
-    "description": "ML Vibro Sens Click is a compact add-on board for motion sensing and vibration analysis. This board features the FXLS8974CF, a 3-axis low-g 12-bit digital accelerometer from NXP designed for precise motion detection and data collection. This Click board™ represents a machine learning training tool that communicates with the host MCU over an I2C interface, with selectable addresses and dual operating modes for interrupt signaling or motion detection. It features two DC motors - a balanced motor for generating steady baseline vibrations and an unbalanced motor for customizable vibration patterns controlled via PWM or PDM signals.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","FXLS8974CFR3"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","FXLS8974CFR3"]
 }

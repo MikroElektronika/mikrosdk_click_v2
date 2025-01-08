@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # SolidSwitch 2 Click
 
-> SolidSwitch 2 Click is a compact add-on board that contains a load switching device. This board features the L9026, an automotive eight-channel relay driver from STMicroelectronics. The L9026 incorporates two high-side drivers and six configurable high-side/low-side drivers driven by an SPI interface or by two dedicated parallel inputs. Operating from an external power supply from 3V up to 18V, it provides a maximum current of 1A on its output terminals. It also offers advanced diagnostic and protection features such as short-to-ground, open load, overcurrent, and overtemperature detections.
+> [SolidSwitch 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5313) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/solidswitch2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5313&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/solidswitch-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Aug 2022.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the SolidSwitch 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of SolidSwitch 2 Click board by controlling the output state.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for SolidSwitch 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SolidSwitch2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `solidswitch2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t solidswitch2_init ( solidswitch2_t *ctx, solidswitch2_cfg_t *cfg );
 err_t solidswitch2_default_cfg ( solidswitch2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `solidswitch2_write_register` This function writes a desired data to the selected register by using SPI serial interface.
 ```c
 err_t solidswitch2_write_register ( solidswitch2_t *ctx, uint8_t reg, uint8_t data_in );
@@ -68,12 +63,6 @@ void solidswitch2_toggle_in0_pin ( solidswitch2_t *ctx );
 void solidswitch2_toggle_in1_pin ( solidswitch2_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of SolidSwitch 2 Click board by controlling the output state.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which maps outputs as follows:
@@ -83,7 +72,6 @@ void solidswitch2_toggle_in1_pin ( solidswitch2_t *ctx );
 > - OUT6-7 - PWM LED.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -119,7 +107,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -150,22 +137,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SolidSwitch2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

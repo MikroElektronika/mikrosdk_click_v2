@@ -1,8 +1,5 @@
 {
     "name": "Ambient 6 Click",
-    "description": "Ambient 6 Click can sense the intensity of the ambient light, providing the measurement data in digital format over the I2C interface.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","VEML7700"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","VEML7700"]
 }

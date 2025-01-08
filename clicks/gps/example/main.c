@@ -3,7 +3,7 @@
  * \brief Gps Click example
  * 
  * # Description
- * This example reads and processes data from GPS clicks.
+ * This example reads and processes data from GPS Clicks.
  *
  * The demo application is composed of two sections :
  * 

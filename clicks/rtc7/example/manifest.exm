@@ -1,8 +1,5 @@
 {
     "name": "RTC 7 Click",
-    "description": "RTC 7 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery or a super capacitor, for an extended period of time. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX31341B"],
-    "category" : ["RTC"] 
+    "hw" : ["Click","MAX31341B"]
 }

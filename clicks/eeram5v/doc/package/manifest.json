@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > SRAM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EERAM 5V Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.eeram5v",
-    "product_link": "https://www.mikroe.com/eeram-5v-click",
-    "short_description": "EERAM 5V Click is a static RAM (SRAM) memory Click board™ with the unique feature - it has a backup non-volatile memory array, used to store the data from the SRAM array. Since the SRAM is not able to maintain its content after the power loss, the non-volatile EEPROM backup can be a very handy addition that can be used to preserve the data, even after the power loss event. This is a very useful feature when working with critical or sensitive applications. The memory backup procedure can be executed both automatically and manually. When it is set to work in the manual mode, the onboard capacitor will act as a power source with enough power to complete the backup cycle. The power-on backup restore mode is also available, taking only about 25ms to complete.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2365
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.EERAM5V",
-    "subdir_name": "lib_eeram5v"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2729",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EERAM 5V Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EERAM5V",
+                "subdir_name": "lib_eeram5v",
+                "path": "EERAM 5V Click/data/lib_eeram5v"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

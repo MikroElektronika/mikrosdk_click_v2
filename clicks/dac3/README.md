@@ -1,78 +1,76 @@
-\mainpage Main Page
- 
+
 ---
 # DAC 3 Click
 
-DAC3 Click carries Microchip’s MCP4726 IC, a 12-bit digital-to-analog converter, along with voltage output screw terminals. The digital value is converted to the appropriate voltage level in the range between GND and REFERENCE (VCC or 4.096V), which is proportional to the received 12-bit number.
+> [DAC 3 Click](https://www.mikroe.com/?pid_product=MIKROE-2038) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dac3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2038&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/dac3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : May 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the DAC3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for DAC3 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void dac3_cfg_setup ( dac3_cfg_t *cfg ); 
- 
-- Initialization function.
-> DAC3_RETVAL dac3_init ( dac3_t *ctx, dac3_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void dac3_default_cfg ( dac3_t *ctx );
-
-
-#### Example key functions :
-
-- This function configures the Click module.
-> void dac3_write_all_mem ( dac3_t *ctx, uint16_t value );
- 
-- This function sends a command to the Click module using SPI communication.
-> void dac3_send_command ( dac3_t *ctx, uint8_t cmd );
-
-- This function sets the output voltage on the Click module terminal.
-> void dac3_set_out_voltage ( dac3_t *ctx, uint16_t output );
-
-## Examples Description
+## Example Description
 
 > This example showcases how to initialize, configure and use the DAC 3 Click module. The Click
   performs digital to analog conversion and the output voltage can be read on the output termi-
   nal using a multimeter. An oscilloscope is required to read the analog signal. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DAC3
+
+### Example Key Functions
+
+- `dac3_cfg_setup` Config Object Initialization function. 
+```c
+void dac3_cfg_setup ( dac3_cfg_t *cfg );
+``` 
+ 
+- `dac3_init` Initialization function. 
+```c
+err_t dac3_init ( dac3_t *ctx, dac3_cfg_t *cfg );
+```
+
+- `dac3_default_cfg` Click Default Configuration function. 
+```c
+void dac3_default_cfg ( dac3_t *ctx );
+```
+
+- `dac3_write_all_mem` This function configures the Click module. 
+```c
+void dac3_write_all_mem ( dac3_t *ctx, uint16_t value );
+```
+ 
+- `dac3_send_command` This function sends a command to the Click module using SPI communication. 
+```c
+void dac3_send_command ( dac3_t *ctx, uint8_t cmd );
+```
+
+- `dac3_set_out_voltage` This function sets the output voltage on the Click module terminal. 
+```c
+void dac3_set_out_voltage ( dac3_t *ctx, uint16_t output );
+```
+
+### Application Init
 
 > This function configures and initializes the Click and logger modules. The write_all_mem(...)
   function configures DAC settings. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -104,7 +102,6 @@ void application_init ( void )
     dac3_write_all_mem( &dac3, 0 );
     Delay_100ms( );
 }
-  
 ```
 
 ### Application Task
@@ -113,7 +110,6 @@ void application_init ( void )
   output terminal a few times in a loop with a 5 second delay. It does so every 1 second. 
 
 ```c
-
 void application_task ( void )
 {
     uint8_t cnt;
@@ -144,29 +140,22 @@ void application_task ( void )
 
     log_printf( &logger, "###############################\r\n" );
     Delay_1sec( );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DAC3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

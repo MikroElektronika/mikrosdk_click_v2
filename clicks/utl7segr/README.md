@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # UT-L 7-SEG R Click
 
-UT-L 7-SEG R Click carries two SMD ultra thin LED 7-SEG displays and the MAX6969 constant-current LED driver from Maxim Integrated. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
+> [UT-L 7-SEG R Click](https://www.mikroe.com/?pid_product=MIKROE-2743) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/utl7segr_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2743&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ut-l-7-seg-r-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the UT-L7-SEGR Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> The demo application shows basic usage of the UT 7 SEG display.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for UT-L7-SEGR Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.UT-L7-SEGR
 
-#### Standard key functions :
+### Example Key Functions
 
 - `utl7segr_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +40,13 @@ void utl7segr_cfg_setup ( utl7segr_cfg_t *cfg );
 
 - `utl7segr_init` Initialization function.
 ```c
-UTL7SEGR_RETVAL utl7segr_init ( utl7segr_t *ctx, utl7segr_cfg_t *cfg );
+err_t utl7segr_init ( utl7segr_t *ctx, utl7segr_cfg_t *cfg );
 ```
 
 - `utl7segr_default_cfg` Click Default Configuration function.
 ```c
 void utl7segr_default_cfg ( utl7segr_t *ctx );
 ```
-
-#### Example key functions :
 
 - `utl7segr_generic_write` This function writes a desired number of data bytes starting from the selected register by using SPI serial interface.
 ```c
@@ -69,20 +64,13 @@ void utl7segr_display_state ( utl7segr_t *ctx, uint8_t state );
 void utl7segr_display_number ( utl7segr_t *ctx, uint8_t number, uint8_t dot_pos );
 ```
 
-
-## Example Description
-
-> The demo application shows basic usage of the UT 7 SEG display.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
-> Configuring clicks and log objects. Settings the Click in the default configuration.
+> Configuring Clicks and log objects. Settings the Click in the default configuration.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;            /**< Logger config object. */
     utl7segr_cfg_t utl7segr_cfg;  /**< Click config object.  */
 
@@ -121,8 +109,8 @@ void application_init ( void ) {
 > Draws numbers from 0 to 99 on the screen.
 
 ```c
-
-void application_task ( void ) {  
+void application_task ( void ) 
+{  
     log_info( &logger, "---- Number counter ----" );
 
     for ( uint8_t cnt = 0; cnt < 100; cnt++ ) {
@@ -130,28 +118,22 @@ void application_task ( void ) {
         Delay_ms ( 500 );
     }
 }
-
 ```
 
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.UT-L7-SEGR
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

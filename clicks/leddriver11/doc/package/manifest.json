@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED Drivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LED Driver 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.leddriver11",
-    "product_link": "https://www.mikroe.com/led-driver-11-click",
-    "short_description": "LED Driver 11 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the WLMDU9456001JT (172946001), a fully integrated constant current LED driver with the buck switching regulator and inductor in a single package from Würth Elektronik.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.LEDDriver11",
-    "subdir_name": "lib_leddriver11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4757",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LED Driver 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LEDDriver11",
+                "subdir_name": "lib_leddriver11",
+                "path": "LED Driver 11 Click/data/lib_leddriver11"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

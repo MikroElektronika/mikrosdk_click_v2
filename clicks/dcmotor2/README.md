@@ -1,19 +1,19 @@
-\mainpage Main Page
- 
+
 ---
 # DC Motor 2 Click
 
-<DC MOTOR 2 Click carries the TB6593FNG driver IC for direct current motors. With two pairs of screw terminals (power supply and outputs), the Click board can drive motors with voltages from 2.5 to 13V (output current of up to 1.2 amps with peaks up to 3.2 amps) . The PWM signal drives the motor while the IN1 and IN2 pins provide binary direction signals that set the direction of the motor (clockwise or counter clockwise), or apply stop or short brake functions.>
+> [DC Motor 2 Click](https://www.mikroe.com/?pid_product=MIKROE-1911) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dcmotor2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1911&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dc-motor-2-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : Nikola Peric
 - **Date**          : Feb 2022.
@@ -21,59 +21,60 @@
 
 # Software Support
 
-We provide a library for the DcMotor2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for DcMotor2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void dcmotor2_cfg_setup ( dcmotor2_cfg_t *cfg ); 
- 
-- Initialization function.
-> DCMOTOR2_RETVAL dcmotor2_init ( dcmotor2_t *ctx, dcmotor2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void dcmotor2_default_cfg ( dcmotor2_t *ctx );
-
-
-#### Example key functions :
-
-- This function sets the IN1/IN2 pins to 0/1 and makes the motor spin counter
-  clockwise.
-> void dcmotor2_spin_counter_clockwise ( dcmotor2_t *ctx );
- 
-- This function sets the IN1/IN2 pins to 1/0 and makes the motor spin clockwise.
-> void dcmotor2_spin_clockwise ( dcmotor2_t *ctx );
-
-- This function sets the IN1/IN2 pins to 1/1 and forces the motor to break.
-> void dcmotor2_pull_brake ( dcmotor2_t *ctx );
-
-- This function sets the IN1/IN2 pins to 0/0 and stops the motor completely.
-> void dcmotor2_stop_motor ( dcmotor2_t *ctx );
-
-## Examples Description
+## Example Description
 
 >  This library contains API for the DC Motor 2 Click driver.
 >  This example showcases how to initialize and use the DC Motor 2 Click. The Click contains a 
 >  Driver IC for DC motors which can spin the motor clockwise, counter-clockwise, break it and
 >  completely stop the motor. The example needs a DC motor and a power supply in order to work.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DcMotor2
+
+### Example Key Functions
+
+- `dcmotor2_cfg_setup` Config Object Initialization function. 
+```c
+void dcmotor2_cfg_setup ( dcmotor2_cfg_t *cfg );
+``` 
+ 
+- `dcmotor2_init` Initialization function. 
+```c
+err_t dcmotor2_init ( dcmotor2_t *ctx, dcmotor2_cfg_t *cfg );
+```
+
+- `dcmotor2_default_cfg` Click Default Configuration function. 
+```c
+void dcmotor2_default_cfg ( dcmotor2_t *ctx );
+```
+
+- This function sets the IN1/IN2 pins to 0/1 and makes the motor spin counter
+  clockwise.
+> void dcmotor2_spin_counter_clockwise ( dcmotor2_t *ctx );
+ 
+- `dcmotor2_spin_clockwise` This function sets the IN1/IN2 pins to 1/0 and makes the motor spin clockwise. 
+```c
+void dcmotor2_spin_clockwise ( dcmotor2_t *ctx );
+```
+
+- `dcmotor2_pull_brake` This function sets the IN1/IN2 pins to 1/1 and forces the motor to break. 
+```c
+void dcmotor2_pull_brake ( dcmotor2_t *ctx );
+```
+
+- `dcmotor2_stop_motor` This function sets the IN1/IN2 pins to 0/0 and stops the motor completely. 
+```c
+void dcmotor2_stop_motor ( dcmotor2_t *ctx );
+```
+
+### Application Init
 
 > This function initializes and configures the logger and Click modules. 
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -103,7 +104,6 @@ void application_init ( )
     Delay_ms ( 1000 );
     log_info( &logger, "---- Application Task ----" );
 }
-  
 ```
 
 ### Application Task
@@ -115,7 +115,6 @@ void application_init ( )
 >  Results are being sent to the Usart Terminal where you can track their changes. 
 
 ```c
-
 void application_task ( )
 {    
     static int8_t duty_cnt = 1;
@@ -160,26 +159,21 @@ void application_task ( )
     duty_cnt += duty_inc;
 
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DcMotor2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

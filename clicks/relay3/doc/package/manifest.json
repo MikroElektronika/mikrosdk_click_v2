@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Relay 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.relay3",
-    "product_link": "https://www.mikroe.com/relay-3-click",
-    "short_description": "Relay Click 3 is a dual relay Click board, featuring two single-pole double-throw relays which can be operated by output pins of the host microcontroller (MCU). It offers an elegant and easy solution for controlling a wide range of power applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2662
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Relay3",
-    "subdir_name": "lib_relay3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3357",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Relay 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Relay3",
+                "subdir_name": "lib_relay3",
+                "path": "Relay 3 Click/data/lib_relay3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

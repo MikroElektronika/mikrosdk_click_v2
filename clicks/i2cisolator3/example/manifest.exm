@@ -1,8 +1,5 @@
 {
     "name": "I2C Isolator 3 Click",
-    "description": "I2C Isolator 3 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the CPC5902, a dual optically isolated bidirectional logic-bus repeater from IXYS Integrated Circuits Division.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CPC5902"],
-    "category" : ["I2C"]
+    "hw" : ["Click","CPC5902"]
 }

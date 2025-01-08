@@ -1,50 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED segment",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BarGraph Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.bargraph",
-    "product_link": "https://www.mikroe.com/bargraph-click",
-    "short_description": "BarGraph Click is a 10-segment bar graph display Click, which uses a high-quality bar graph LED display. The bar graph display is a very popular device for displaying various properties, whether it be an audio level, current/voltage level, the position of the encoder, or any other property that can be displayed in a form of a bar graph.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        631
-    ],
-    "version": "2.1.0.20",
-    "cmake": true,
-    "alias": "Click.BarGraph",
-    "subdir_name": "lib_bargraph"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1423",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BarGraph Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BarGraph",
+                "subdir_name": "lib_bargraph",
+                "path": "BarGraph Click/data/lib_bargraph"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

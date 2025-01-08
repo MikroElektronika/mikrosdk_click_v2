@@ -1,78 +1,74 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Counter Click
 
-Counter Click carries an LS7366R 32-bit quadrature counter. The top of the board has a pinout for interfacing with incremental encoders. The interface has ENCA and ENCB pins, along with ENCI, which is a programmable index.
+> [Counter Click](https://www.mikroe.com/?pid_product=MIKROE-1917) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/counter_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1917&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/counter-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Counter Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Counter Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void counter_cfg_setup ( counter_cfg_t *cfg ); 
- 
-- Initialization function.
-> COUNTER_RETVAL counter_init ( counter_t *ctx, counter_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void counter_default_cfg ( counter_t *ctx );
-
-
-#### Example key functions :
-
-- This function reads CNTR, using Click object.
-> int32_t counter_read_cntr ( counter_t *ctx );
- 
-- This function reads STR, using Click object.
-> uint8_t counter_read_str ( counter_t *ctx );
-
-- This function reads OTR, using Click object.
-> int32_t counter_read_otr ( counter_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application measures the speed and the position of the DC motor shafts.
 
+### Example Libraries
 
-**The demo application is composed of two sections :**
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Counter
 
-### Application Init 
+### Example Key Functions
+
+- `counter_cfg_setup` Config Object Initialization function. 
+```c
+void counter_cfg_setup ( counter_cfg_t *cfg );
+``` 
+ 
+- `counter_init` Initialization function. 
+```c
+err_t counter_init ( counter_t *ctx, counter_cfg_t *cfg );
+```
+
+- `counter_default_cfg` Click Default Configuration function. 
+```c
+void counter_default_cfg ( counter_t *ctx );
+```
+
+- `counter_read_cntr` This function reads CNTR, using Click object. 
+```c
+int32_t counter_read_cntr ( counter_t *ctx );
+```
+ 
+- `counter_read_str` This function reads STR, using Click object. 
+```c
+uint8_t counter_read_str ( counter_t *ctx );
+```
+
+- `counter_read_otr` This function reads OTR, using Click object. 
+```c
+int32_t counter_read_otr ( counter_t *ctx );
+```
+
+### Application Init
 
 > Initializes driver init and chip init
 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -100,7 +96,6 @@ void application_init ( void )
     counter_default_cfg( &counter );
     Delay_ms ( 300 );
 }
-  
 ```
 
 ### Application Task
@@ -113,7 +108,6 @@ void application_init ( void )
 
 
 ```c
-
 void application_task ( void )
 {
     count = counter_read_cntr( &counter );
@@ -124,33 +118,26 @@ void application_task ( void )
     count_old = count;
     log_printf( &logger, "-------------------------\r\n" );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-## NOTE
+### Note
 
 > An appropriate motor with optical encoder needs to be connected to the Click board.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Counter
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

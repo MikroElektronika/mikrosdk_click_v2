@@ -1,72 +1,65 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Line Follower Click
 
-Line Follower Click carries an array of five QRE1113 miniature reflective object sensors. As the name implies, Line Follower Click is best used for line following robots and cars.
+> [Line Follower Click](https://www.mikroe.com/?pid_product=MIKROE-1999) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/linefollower_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1999&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/line-follower-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Dec 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the LineFollower Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for LineFollower Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void linefollower_cfg_setup ( linefollower_cfg_t *cfg ); 
- 
-- Initialization function.
-> LINEFOLLOWER_RETVAL linefollower_init ( linefollower_t *ctx, linefollower_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void linefollower_default_cfg ( linefollower_t *ctx );
-
-
-#### Example key functions :
-
-- Get status of all pin function
-> void linefollower_data_track ( linefollower_t *ctx, linefollower_direction_t *data_track );
-
-## Examples Description
+## Example Description
 
 > Line Follower Click carries an array of five QRE1113 
 > miniature reflective object sensors,
 > reading staus of AN, RST, PWM, TX and RX pins and reading tracking data.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LineFollower
+
+### Example Key Functions
+
+- `linefollower_cfg_setup` Config Object Initialization function. 
+```c
+void linefollower_cfg_setup ( linefollower_cfg_t *cfg );
+``` 
+ 
+- `linefollower_init` Initialization function. 
+```c
+err_t linefollower_init ( linefollower_t *ctx, linefollower_cfg_t *cfg );
+```
+
+- `linefollower_default_cfg` Click Default Configuration function. 
+```c
+void linefollower_default_cfg ( linefollower_t *ctx );
+```
+
+- `linefollower_data_track` Get status of all pin function. 
+```c
+void linefollower_data_track ( linefollower_t *ctx, linefollower_direction_t *data_track );
+```
+
+### Application Init
 
 > Application Init performs logger and Click Initialization.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -95,7 +88,6 @@ void application_init ( void )
     log_printf( &logger, " Line Follower  Click \r\n" );
     log_printf( &logger, "----------------------\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -107,7 +99,6 @@ void application_init ( void )
 > white surface which changes the output signal to 0.
 
 ```c
-
 void application_task ( void )
 {
     linefollower_direction_t data_track;
@@ -122,31 +113,24 @@ void application_task ( void )
                 (uint16_t) data_track.u5);
     
     Delay_ms ( 100 );
-} 
-
+}
 ```
 
-## Note
+### Note
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LineFollower
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

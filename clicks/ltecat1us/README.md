@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # LTE Cat.1-US Click
 
-LTE Cat.1-US Click is a Click board™ based on Thales Cinterion® ELS61 wireless module that delivers highly efficient Cat 1 LTE connectivity for M2M IoT solutions offering seamless fall back to 2G and 3G networks. The best in class solution enables M2M optimized speeds of 10Mbit/s download and 5Mbit/s uplink making it ideal for the vast number of M2M and industrial IoT applications that are not dependent on speed but that requires the longevity of LTE networks, while still providing 3G and 2G connectivity to ensure complete population and geographic coverage as LTE rolls out.
+> [LTE Cat.1-US Click](https://www.mikroe.com/?pid_product=MIKROE-3885) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ltecat1us_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3885&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lte-cat1-us-click-for-united-states)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2021.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the LTECat1US Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example reads and processes data from LTE Cat.1-US Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LTECat1US Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LTECat1US
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ltecat1us_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void ltecat1us_cfg_setup ( ltecat1us_cfg_t *cfg );
 ```c
 err_t ltecat1us_init ( ltecat1us_t *ctx, ltecat1us_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `ltecat1us_send_cmd` This function sends the specified command to the Click module.
 ```c
@@ -63,19 +58,13 @@ void ltecat1us_send_cmd_with_parameter ( ltecat1us_t *ctx, char *at_cmd_buf, cha
 void ltecat1us_send_text_message ( ltecat1us_t *ctx, char *phone_number, char *message_context );
 ```
 
-## Example Description
-
-> This example reads and processes data from LTE Cat.1-US clicks.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and wake-up module and sets default configuration for connecting device to network.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     ltecat1us_cfg_t ltecat1us_cfg;  /**< Click config object. */
 
@@ -178,7 +167,6 @@ void application_init ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
@@ -186,8 +174,8 @@ void application_init ( void ) {
 > Waits for device to connect to network and then sends SMS to selected phone number.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     if ( app_connection_status == WAIT_FOR_CONNECTION ) {
         // CGATT - request IMSI
         ltecat1us_send_cmd_check( &ltecat1us, LTECAT1US_CMD_CGATT );
@@ -259,10 +247,9 @@ void application_task ( void ) {
         }
     }
 }
-
 ```
 
-## Note
+### Note
 
 > In order for the example to work, 
 > user needs to set the phone number and sim apn to which he wants to send an SMS
@@ -271,22 +258,19 @@ void application_task ( void ) {
    >> * SIM_APN "vipmobile"
    >> * PHONE_NUMBER_TO_MESSAGE "+381659999999"
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LTECat1US
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

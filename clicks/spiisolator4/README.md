@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # SPI Isolator 4 Click
 
-> SPI Isolator 4 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the ADuM341E, a quad-channel 5kVRMS digital isolator from Analog Devices. This board features the ADuM341E, a quad-channel 5kVRMS digital isolator from Analog Devices. This isolation component provides outstanding performance by combining high speed, complementary metal-oxide-semiconductor (CMOS), and monolithic air core transformer technology. Its data channels are independent and available in various configurations with a withstand voltage rating of 5kVrms, and operate with the external supply voltage ranging from 2.25V to 5.5V, providing compatibility with lower voltage systems enabling voltage translation functionality across the isolation barrier.
+> [SPI Isolator 4 Click](https://www.mikroe.com/?pid_product=MIKROE-4869) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/spiisolator4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4869&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/spi-isolator-4-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Mikroe Team
 - **Date**          : Sep 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the SPIIsolator4 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the SPI Isolator 4 Click driver.
+> This demo application shows an example of an SPI Isolator 4 Click wired 
+> to the nvSRAM 4 Click for reading Device ID.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for SPIIsolator4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SPIIsolator4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `spiisolator4_cfg_setup` Config Object Initialization function.
 ```c
@@ -50,8 +49,6 @@ err_t spiisolator4_init ( spiisolator4_t *ctx, spiisolator4_cfg_t *cfg );
 ```c
 err_t spiisolator4_default_cfg ( spiisolator4_t *ctx );
 ```
-
-#### Example key functions :
 
 - `spiisolator4_generic_write` SPI Isolator 4 data writing function.
 ```c
@@ -69,21 +66,12 @@ err_t spiisolator4_generic_read ( spiisolator4_t *ctx, uint8_t reg, uint8_t *dat
 err_t spiisolator4_set_enable ( spiisolator4_t *ctx, spiisolator4_enable_mode_t en_mode );
 ```
 
-## Example Description
-
-> This library contains API for the SPI Isolator 4 Click driver.
-> This demo application shows an example of an SPI Isolator 4 Click wired 
-> to the nvSRAM 4 Click for reading Device ID.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of SPI module and log UART.
 > After driver initialization, the app sets the default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;                    /**< Logger config object. */
@@ -120,17 +108,15 @@ void application_init ( void )
     log_printf( &logger, "--------------------------\r\n" ); 
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of an SPI Isolator 4 Click board™.
-> Logs Device ID of the nvSRAM 4 Click wired to the SPI Isolator 4 board™.  
+> This is an example that shows the use of an SPI Isolator 4 Click board&trade;.
+> Logs Device ID of the nvSRAM 4 Click wired to the SPI Isolator 4 board&trade;.  
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void )
 {
     get_device_id( );
@@ -138,7 +124,6 @@ void application_task ( void )
     log_printf( &logger, "--------------------------\r\n" ); 
     Delay_ms ( 1000 );
 }
-
 ```
 
 ## Additional Function
@@ -147,23 +132,19 @@ void application_task ( void )
 static void get_device_id ( void );
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SPIIsolator4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

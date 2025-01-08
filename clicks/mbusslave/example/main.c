@@ -3,7 +3,7 @@
  * \brief MBusSlave Click example
  * 
  * # Description
- * This example reads and processes data from M-Bus Slave clicks.
+ * This example reads and processes data from M-Bus Slave Clicks.
  *
  * The demo application is composed of two sections :
  * 

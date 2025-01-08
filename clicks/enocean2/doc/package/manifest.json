@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > 2.4 GHz Transceivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EnOcean 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.enocean2",
-    "product_link": "https://www.mikroe.com/enocean-2-click",
-    "short_description": "EnOcean 2 Click carries the TCM 515Z transceiver, based on the 2.4 GHz IEEE 802.15.4 radio standard. The Click is designed to run on a 3.3V power supply. It communicates with the target microcontroller over UART interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2014
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.EnOcean2",
-    "subdir_name": "lib_enocean2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2521",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EnOcean 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EnOcean2",
+                "subdir_name": "lib_enocean2",
+                "path": "EnOcean 2 Click/data/lib_enocean2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

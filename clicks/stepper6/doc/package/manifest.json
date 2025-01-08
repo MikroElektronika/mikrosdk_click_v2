@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Stepper 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepper6",
-    "product_link": "https://www.mikroe.com/stepper-6-click",
-    "short_description": "Stepper 6 Click is the complete integrated bipolar step motor driver solution. It comes with the abundance of features that allow silent operation and optimal working conditions for the connected motor. A specialized integrated driver chip on this Click board™ far exceeds the capabilities of similar, commonly used step motor drivers. It comes in the package which also includes the mikroSDK™ software, and a library with all the functions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        2470
-    ],
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Stepper6",
-    "subdir_name": "lib_stepper6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3214",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper6",
+                "subdir_name": "lib_stepper6",
+                "path": "Stepper 6 Click/data/lib_stepper6"
+            }
+        ]
+    }
 }
-
-
-

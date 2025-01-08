@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Piezo Accel 2 25g Click
 
-> Piezo Accel 2 Click - 25g is a compact add-on board for precise vibration and motion monitoring in condition-based maintenance applications. This board features the 830M1-0025, a triaxial piezoelectric accelerometer from TE Connectivity, capable of detecting motion and acceleration along all three axes (X, Y, Z). The 830M1-0025 offers a ±25g range with a sensitivity of 50mV/g, providing reliable and accurate analog voltage outputs. It integrates a built-in RTD temperature sensor for simultaneous vibration and temperature monitoring, and the onboard MCP3562R 24-bit ADC converts these signals into high-resolution digital data. Communication is made through an SPI interface with additional interrupt and clock functionality for easy integration with a host MCU.
+> [Piezo Accel 2 25g Click](https://www.mikroe.com/?pid_product=MIKROE-6408) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/piezoaccel225g_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6408&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/piezo-accel-2-click-25g)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Apr 2024.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Piezo Accel 2 25g Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Piezo Accel 2 25g Click board by reading and displaying
+the ADC values of X, Y, and Z axis, and the internal temperature sensor measurements. 
+Those data can be visualized on the SerialPlot application.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Piezo Accel 2 25g Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PiezoAccel225g
 
-#### Standard key functions :
+### Example Key Functions
 
 - `piezoaccel225g_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t piezoaccel225g_init ( piezoaccel225g_t *ctx, piezoaccel225g_cfg_t *cfg );
 err_t piezoaccel225g_default_cfg ( piezoaccel225g_t *ctx );
 ```
 
-#### Example key functions :
-
 - `piezoaccel225g_read_adc_data` This function reads raw ADC values of X, Y, and Z axis, and the internal temperature sensor measurements.
 ```c
 err_t piezoaccel225g_read_adc_data ( piezoaccel225g_t *ctx, piezoaccel225g_adc_data_t *data_out );
@@ -68,20 +65,11 @@ err_t piezoaccel225g_fast_cmd_write ( piezoaccel225g_t *ctx, uint8_t fast_cmd );
 err_t piezoaccel225g_reg_read_multi ( piezoaccel225g_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Piezo Accel 2 25g Click board by reading and displaying
-the ADC values of X, Y, and Z axis, and the internal temperature sensor measurements. 
-Those data can be visualized on the SerialPlot application.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration for ADC measurements.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -117,7 +105,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -137,27 +124,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > We recommend using the SerialPlot tool for data visualization. The temperature measurements
 should be visualized independently. The data format for plotter is as follows: X;Y;Z;TEMP;
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PiezoAccel225g
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

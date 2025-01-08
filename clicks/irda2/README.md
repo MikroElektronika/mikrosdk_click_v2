@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # IrDA 2 Click
 
-> IrDA2 Click features the TFDU4101 infrared transceiver module as well as MCP2120 infrared encoder/decoder from Microchip connected with the 7.3728 MHz external crystal. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target board via UART interface and the following mikroBUS™ pins: AN, RST, CS.
+> [IrDA 2 Click](https://www.mikroe.com/?pid_product=MIKROE-1195) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/irda2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1195&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/irda2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the IrDA2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an IrDA 2 Click board by showing the communication between the two Click boards.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for IrDA2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.IrDA2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `irda2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t irda2_init ( irda2_t *ctx, irda2_cfg_t *cfg );
 void irda2_default_cfg ( irda2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `irda2_generic_write` This function writes a desired number of data bytes by using UART serial interface.
 ```c
 err_t irda2_generic_write ( irda2_t *ctx, uint8_t *data_in, uint16_t len )
@@ -68,18 +63,11 @@ err_t irda2_generic_read ( irda2_t *ctx, uint8_t *data_out, uint16_t len );
 void irda2_reset( irda2_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an IrDA 2 Click board by showing the communication between the two Click boards.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initalizes device and makes an initial log.
 
 ```c
-
 void application_init( void ) 
 {
     irda2_cfg_t irda2_cfg;
@@ -116,7 +104,6 @@ void application_init( void )
 #endif
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -124,7 +111,6 @@ void application_init( void )
 > Depending on the selected application mode, it reads all the received data or sends the desired text message once per second.
 
 ```c
-
 void application_task( void ) 
 {
 #ifdef DEMO_APP_TRANSMITTER
@@ -139,25 +125,21 @@ void application_task( void )
     }
 #endif
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.IrDA2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init
- * Configuring clicks and log objects.
+ * Configuring Clicks and log objects.
  * 
  * ## Application Task
  * Detect the magnetic field near the REED Click.

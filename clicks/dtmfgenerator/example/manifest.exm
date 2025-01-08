@@ -1,8 +1,5 @@
 {
     "name": "DTMF Generator Click",
-    "description": "DTMF Generator Click is a compact add-on board that generates DTMF (Dual-Tone Multi-Frequency) signals designed for MCU interfaces. This board features the HT9200A, a dual-tone multi-frequency decoder mostly used in mobile communications systems from Holtek Semiconductor Inc.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","HT9200A"],
-    "category" : ["Signal processing"]
+    "hw" : ["Click","HT9200A"]
 }

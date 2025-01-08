@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Brushless 20 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.brushless20",
-    "product_link": "https://www.mikroe.com/brushless-20-click",
-    "short_description": "Brushless 20 Click is a compact add-on board that controls brushless DC (BLDC) motors with any MCU. This board features the DRV8313, a fully integrated three-phase BLDC motor driver from Texas Instruments. It provides three individually controllable half-H-bridge drivers intended to drive a three-phase BLDC motor, solenoids, or other loads. Each output driver channel consists of N-channel power MOSFETs configured in a 1/2-H-bridge configuration. Besides, it has a wide operating voltage range from 8V to 60V, alongside several built-in protection circuits such as undervoltage, charge pump faults, overcurrent, and overtemperature.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Brushless20",
-    "subdir_name": "lib_brushless20"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5294",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Brushless 20 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Brushless20",
+                "subdir_name": "lib_brushless20",
+                "path": "Brushless 20 Click/data/lib_brushless20"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

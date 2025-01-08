@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Pushbutton/Switches",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Joystick 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.joystick3",
-    "product_link": "https://www.mikroe.com/joystick-3-click",
-    "short_description": "Joystick 3 Click is a compact add-on board that can fulfill your directional analog input needs. This board features 2765, a high-quality mini 2-axis analog output thumbstick from Adafruit Industries. This small joystick is a 'self-centering' analog-type with a black rocker cap similar to the PSP joysticks. It comprises two 10kΩ potentiometers, one for up/down and another for left/right direction. Knowing that this joystick represents an analog type, it connects with mikroBUS™ through the SPI interface through the MCP3204 12-bit A/D converter.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Joystick3",
-    "subdir_name": "lib_joystick3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5378",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Joystick 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Joystick3",
+                "subdir_name": "lib_joystick3",
+                "path": "Joystick 3 Click/data/lib_joystick3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > RS485",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RS485 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rs4854",
-    "product_link": "https://www.mikroe.com/rs485-4-click",
-    "short_description": "RS485 4 Click offers an UART to RS485 signal conversion, featuring the ADM2795E specialized IC with the complete galvanic isolation.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2713
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Rs4854",
-    "subdir_name": "lib_rs4854"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3395",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RS485 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Rs4854",
+                "subdir_name": "lib_rs4854",
+                "path": "RS485 4 Click/data/lib_rs4854"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

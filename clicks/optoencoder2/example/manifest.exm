@@ -1,8 +1,5 @@
 {
     "name": "Opto Encoder 2 Click",
-    "description": "Opto Encoder 2 Click is a linear incremental optical sensor/encoder Click which can be used for the movement or rotation encoding.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AEDR 8300"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","AEDR 8300"]
 }

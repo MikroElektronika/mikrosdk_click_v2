@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GPS 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gps6",
-    "product_link": "https://www.mikroe.com/gps-6-click",
-    "short_description": "GPS 6 Click is a compact add-on board that provides users with positioning, navigation, and timing services. This board features the A2200-A, a GPS receiver module that enables fast acquisition and tracking with SiRFstar IV technology from Lantronix. This small-form-factor module operates with a frequency of 1,575GHz with accuracy from 2 up to 2.5m and fully addresses the demand for the lowest power consumption. The removal of jammers guarantees operation even in hostile environments. High sensitivity during acquisition or while tracking allows for use in many different backgrounds and under the most challenging operating conditions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "alias": "Click.GPS6",
-    "cmake": true,
-    "subdir_name": "lib_gps6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5115",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GPS 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GPS6",
+                "subdir_name": "lib_gps6",
+                "path": "GPS 6 Click/data/lib_gps6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

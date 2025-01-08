@@ -1,8 +1,5 @@
 {
     "name": "Hall Current 13 Click",
-    "description": "Hall Current 13 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the TMCS1107-Q1, a galvanically isolated Hall-effect current sensor capable of DC or AC current measurement with high accuracy, excellent linearity, and temperature stability from Texas Instruments. It enables the lowest drift, <3% full-scale error, and highest accuracy over time and temperature. It also provides a reliable 420V lifetime working voltage and 3kVRMS isolation between the current path and circuitry with uni/bidirectional current sensing. Besides, the user is allowed to process the output signal in analog or digital form.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TMCS1107A2UQDRQ1","MCP3221A5T"],
-    "category" : ["Current sensor"]
+    "hw" : ["Click","TMCS1107A2UQDRQ1","MCP3221A5T"]
 }

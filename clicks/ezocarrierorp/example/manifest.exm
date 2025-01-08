@@ -1,8 +1,5 @@
 {
     "name": "EZO Carrier ORP Click",
-    "description": "EZO Carrier Click - ORP is a compact add-on board suitable for determining a liquid's oxidation/reduction potential in your application. This board features the EZO-ORP™, an ISO 11271 compliant embedded ORP circuit board from Atlas Scientific. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","EZO-ORP"],
-    "category" : ["Click Boards > Sensors > Environmental"]
+    "hw" : ["Click","EZO-ORP"]
 }

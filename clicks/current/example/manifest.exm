@@ -1,8 +1,5 @@
 {
     "name": "Current Click",
-    "description": "Current Click is an add-on board used for measurement of electric current. It features INA196 current shunt monitor, MCP3201 12-bit ADC, MAX6106 voltage reference as well as two screw terminals. ",
-    "image": "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP3201"],
-    "category" : ["Current sensor"] 
+    "hw" : ["Click","MCP3201"]
 }

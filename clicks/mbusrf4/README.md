@@ -1,71 +1,68 @@
-\mainpage Main Page
 
 ---
 # M-BUS RF 4 Click
 
-M-BUS RF 4 Click is a mikroBUS™ add-on board with a MIPOT 32001324 RF wireless transceiver. This module operates in the 868 MHz SRD Band. Thanks to its small LCC form factor (15 x 25 mm only) and its low power consumption this module allows the implementation of highly integrated low power (battery operated) solutions for water, gas, heat or electricity metering applications, both on meter or concentrator devices.
+> [M-BUS RF 4 Click](https://www.mikroe.com/?pid_product=MIKROE-3692) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mbusrf4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3692&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/m-bus-rf-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : UART GPS/GNSS type
 
-
 # Software Support
 
-We provide a library for the MBusRf4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from M-BUS RF 4 Clicks. 
 
-## Library Description
+### Example Libraries
 
-> This library contains API for MBusRf4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MBusRf4
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void mbusrf4_cfg_setup ( mbusrf4_cfg_t *cfg ); 
+- `mbusrf4_cfg_setup` Config Object Initialization function. 
+```c
+void mbusrf4_cfg_setup ( mbusrf4_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> MBUSRF4_RETVAL mbusrf4_init ( mbusrf4_t *ctx, mbusrf4_cfg_t *cfg );
+- `mbusrf4_init` Initialization function. 
+```c
+err_t mbusrf4_init ( mbusrf4_t *ctx, mbusrf4_cfg_t *cfg );
+```
 
-
-#### Example key functions :
-
-- Header and checksum are calculated and sent at the beginning (header) and finally (checksum)
-> void mbusrf4_send_command ( mbusrf4_t *ctx, uint8_t command, uint8_t length, uint8_t *payload_buff );
+- `mbusrf4_send_command` Header and checksum are calculated and sent at the beginning (header) and finally (checksum). 
+```c
+void mbusrf4_send_command ( mbusrf4_t *ctx, uint8_t command, uint8_t length, uint8_t *payload_buff );
+```
  
-- This function write specific number of data.
-> void mbusrf4_generic_write ( mbusrf4_t *ctx, char *data_buf, uint16_t len )
+- `mbusrf4_generic_write` This function write specific number of data. 
+```c
+void mbusrf4_generic_write ( mbusrf4_t *ctx, char *data_buf, uint16_t len );
+```
 
-- This function read data of maximum length.
-> uint16_t mbusrf4_generic_read ( mbusrf4_t *ctx, char *data_buf, uint16_t max_len );
+- `mbusrf4_generic_read` This function read data of maximum length. 
+```c
+uint16_t mbusrf4_generic_read ( mbusrf4_t *ctx, char *data_buf, uint16_t max_len );
+```
 
-## Examples Description
-
-> This example reads and processes data from M-BUS RF 4 clicks. 
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes driver init, reads basic information and checks communication
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -119,7 +116,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     log_info( &logger, "Application Task" );
 }
-  
 ```
 
 ### Application Task
@@ -128,7 +124,6 @@ void application_init ( void )
 > In the TX mode sends the data packet....
 
 ```c
-
 void application_task ( void )
 {
     // RX App mode
@@ -156,10 +151,9 @@ void application_task ( void )
 
     #endif
 }
-
 ```
 
-## Note
+### Note
 
 > ## Additional Function
 > mbusrf4_process ( ) - The general process of collecting data and adding it to application buffer;
@@ -172,25 +166,19 @@ void application_task ( void )
  
 >  mbusrf4_log_data ( uint8_t log_type, uint8_t *log_buf, int32_t log_len ) - Log application buffer;
  
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MBusRf4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

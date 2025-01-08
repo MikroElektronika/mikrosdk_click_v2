@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > DAC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MUX 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mux5",
-    "product_link": "https://www.mikroe.com/mux-5-click",
-    "short_description": "MUX 5 Click is a compact add-on board that contains a precise multiplexing solution. This board features the MAX14661, a serially controlled, dual-channel analog multiplexer from Analog Devices, allowing any of the 16 pins to be connected to either common pin simultaneously in any combination. The MAX14661 features Beyond-the-Rails™ capability that allows ±5.5V signals to be passed with any supply configuration alongside a configurable host interface that supports SPI and I2C serial communications. Both modes provide individual control of each independent switch so that any combination of switches can be applied.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.MUX5",
-    "subdir_name": "lib_mux5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5423",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MUX 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MUX5",
+                "subdir_name": "lib_mux5",
+                "path": "MUX 5 Click/data/lib_mux5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

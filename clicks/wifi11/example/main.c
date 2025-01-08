@@ -3,7 +3,7 @@
  * \brief Wifi11 Click example
  * 
  * # Description
- * This example reads and processes data from WiFi 11 clicks.
+ * This example reads and processes data from WiFi 11 Clicks.
  *
  * The demo application is composed of two sections :
  * 

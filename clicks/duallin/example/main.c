@@ -3,7 +3,7 @@
  * \brief DualLin Click example
  * 
  * # Description
- * This example reads and processes data from Dual LIN clicks.
+ * This example reads and processes data from Dual LIN Clicks.
  *
  * The demo application is composed of two sections :
  * 

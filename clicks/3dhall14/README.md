@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # 3D Hall 14 Click
 
-> 3D Hall 14 Click is a compact add-on board designed for high-precision position sensing in various applications. This board features the MLX90394, a 3-axis magnetometer from Melexis based on the Triaxis® Hall technology. The MLX90394 offers low power consumption, excellent noise performance, and flexible measurement modes, including intelligent wake-up functions for efficient power management. It communicates via a standard 2-Wire I2C interface and supports fast-mode frequencies up to 1MHz.
+> [3D Hall 14 Click](https://www.mikroe.com/?pid_product=MIKROE-6242) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/3dhall14_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6242&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/3d-hall-14-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Apr 2024.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the 3D Hall 14 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of 3D Hall 14 Click board by reading the magnetic field strength from 3 axes and the sensor internal temperature.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 3D Hall 14 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.3DHall14
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c3dhall14_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t c3dhall14_init ( c3dhall14_t *ctx, c3dhall14_cfg_t *cfg );
 err_t c3dhall14_default_cfg ( c3dhall14_t *ctx );
 ```
 
-#### Example key functions :
-
 - `c3dhall14_get_magnetic_flux` This function reads the raw values of X, Y, and Z axis and converts them to magnetic flux data in microTesla.
 ```c
 err_t c3dhall14_get_magnetic_flux ( c3dhall14_t *ctx, float *x_axis, float *y_axis, float *z_axis );
@@ -68,18 +63,11 @@ err_t c3dhall14_get_temperature ( c3dhall14_t *ctx, float *temperature );
 err_t c3dhall14_set_range ( c3dhall14_t *ctx, uint8_t range );
 ```
 
-## Example Description
-
-> This example demonstrates the use of 3D Hall 14 Click board by reading the magnetic field strength from 3 axes and the sensor internal temperature.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -142,22 +129,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.3DHall14
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

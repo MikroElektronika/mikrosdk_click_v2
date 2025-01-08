@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # NFC Tag 5 Click
 
-> NFC Tag 5 Click is a compact add-on board that contains a compact NFC tag IC. This board features the M24LR64E-R, a dynamic NFC/RFID tag IC with a dual interface 64-Kbit EEPROM from STMicroelectronics. It features an I2C interface alongside an RF contactless interface operating at 13.56MHz, organized as 8192×8 bits in the I2C mode and 2048×32 bits in the ISO 15693 and ISO 18000-3 mode 1 RF mode. The M24LR64E-R also features an energy harvesting analog output and a user-configurable digital output pin, used as an interrupt, toggling during either RF write in progress or RF busy mode.
+> [NFC Tag 5 Click](https://www.mikroe.com/?pid_product=MIKROE-5230) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/nfctag5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5230&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/nfc-tag-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the NFC Tag 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of NFC Tag 5 Click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for NFC Tag 5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NFCTag5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `nfctag5_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t nfctag5_init ( nfctag5_t *ctx, nfctag5_cfg_t *cfg );
 err_t nfctag5_default_cfg ( nfctag5_t *ctx );
 ```
 
-#### Example key functions :
-
 - `nfctag5_write_ndef_uri_record` This function writes specific NDEF URI record to the memory address specified with NTAG5LINK_NDEF_MESSAGE_START_ADDRESS macro.
 ```c
 err_t nfctag5_write_ndef_uri_record ( nfctag5_t *ctx, uint8_t uri_prefix, uint8_t *uri_data, uint8_t data_len );
@@ -68,18 +63,11 @@ err_t nfctag5_write_message_to_memory ( nfctag5_t *ctx, uint16_t block_addr, uin
 err_t nfctag5_read_message_from_memory ( nfctag5_t *ctx, uint16_t block_addr, uint8_t *message, uint16_t message_len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of NFC Tag 5 Click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger and performs the Click default configuration which formats its user memory. After that it programs the specified NDEF URI record to the memory.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -121,7 +109,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -157,26 +144,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Trying to write/read in RF mode (for example, processing NDEF URI record with a smartphone) while writing to memory over I2C is in progress can interrupt and block the I2C communication. 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NFCTag5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

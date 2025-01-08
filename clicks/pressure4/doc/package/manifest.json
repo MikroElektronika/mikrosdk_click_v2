@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Pressure 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pressure4",
-    "product_link": "https://www.mikroe.com/pressure-4-click",
-    "short_description": "Pressure 4 Click is an absolute barometric pressure measurement Click board™, which features a low power consumption, high precision barometric pressure sensor. Capable of using both SPI and I2C communication protocols, Pressure 4 Click allows being interfaced with a broad range of various microcontroller units (MCUs). The sensor used on this Click board™ features onboard processing capabilities, such as the IIR filtering, used to filter out abrupt changes of pressure. Low power consumption allows Pressure 4 Click to be used in many portable, battery-powered applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2380
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Pressure4",
-    "subdir_name": "lib_pressure4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3020",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Pressure 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pressure4",
+                "subdir_name": "lib_pressure4",
+                "path": "Pressure 4 Click/data/lib_pressure4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

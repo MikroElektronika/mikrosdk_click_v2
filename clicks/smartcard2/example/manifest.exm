@@ -1,8 +1,5 @@
 {
     "name": "Smart Card 2 Click",
-    "description": "Smart Card 2 Click is a compact add-on board for reading smart cards. This board features Microchip’s SEC1210, a low-power single-chip Smart Card controller with a UART interface. The SEC1210 bridge controller uses a combination of hardware and software to deliver high-performance and flexible design customization options. It is fully compliant with standards like ISO/IEC 7816, EMV 4.2/4.3, ETSI TS 102 221, and PC/SC, utilizing TrustSpan™ technology that enables digital systems to communicate securely, process, move and store information. With its onboard card holder, it supports data processing with 2FF smart cards, and with an additional connector for external connection, it also allows the processing of a standard 1FF card.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","SEC1210/PV-URT"],
-    "category" : ["Click Boards > Interface > Adapter"]
+    "hw" : ["Click","SEC1210/PV-URT"]
 }

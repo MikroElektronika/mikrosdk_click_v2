@@ -1,8 +1,5 @@
 {
     "name": "Balancer 2 Click",
-    "description": "Balancer 2 Click is an overvoltage protection device for a 2-series cell lithium-ion battery. Click contains two separate overvoltage battery detection circuits and automatic cell imbalance correction.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP3202"],
-    "category" : ["Battery Charger"] 
+    "hw" : ["Click","MCP3202"]
 }

@@ -1,8 +1,5 @@
 {
     "name": "LTE IoT 5 Click",
-    "description": "LTE IoT 5 Click is an add-on board with a compact and cost-effective secure-cloud multi-band solution designed for IoT applications. This board features the SARA-R510M8S, a cellular module that supports LTE Cat M1/Cat NB2 bands with integrated high-performance standard precision M8 GNSS receiver for global position acquisition from u-Blox. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators this low power size-optimized solution, specifically designed for IoT, also provides over-the-air firmware updates, end-to-end trusted domain security, and u-Blox’s leading GNSS technology.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","SARA-R510M8S-00B"],
-    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
+    "hw" : ["Click","SARA-R510M8S-00B"]
 }

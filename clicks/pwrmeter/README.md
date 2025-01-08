@@ -1,60 +1,27 @@
-\mainpage Main Page
- 
+
 ---
 # PWR Meter Click
 
-PWR Meter Click is a power measurement Click board™, capable of measuring voltage and current through the load, connected to either AC or DC power source. PWR Meter Click uses the MCP39F511A, a very sophisticated monitoring IC from Microchip, with 16-bit processing core.
+> [PWR Meter Click](https://www.mikroe.com/?pid_product=MIKROE-3150) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pwrmeter_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3150&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pwr-meter-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jun 2020.
 - **Type**          : UART GPS/GNSS type
 
-
 # Software Support
 
-We provide a library for the PwrMeter Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for PwrMeter Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void pwrmeter_cfg_setup ( pwrmeter_cfg_t *cfg ); 
- 
-- Initialization function.
-> PWRMETER_RETVAL pwrmeter_init ( pwrmeter_t *ctx, pwrmeter_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Function reads 16-bit data from the desired register.
-> PWRMETER_RETVAL pwrmeter_read_reg_word ( pwrmeter_t *ctx, uint16_t register_addr, uint16_t *data_out );
- 
-- Function reads 32-bit data from the desired register.
-> PWRMETER_RETVAL pwrmeter_read_reg_dword ( pwrmeter_t *ctx, uint16_t register_addr, uint32_t *data_out );
-
-- Function reads signed 16bit or 32bit data from the desired register.
-> PWRMETER_RETVAL pwrmeter_read_reg_signed ( pwrmeter_t *ctx, uint16_t register_addr, uint8_t data_mode, int32_t *data_out );
-
-## Examples Description
+## Example Description
 
 > This Click is capable of measuring voltage and current through the load, connected to either 
 > AC or DC power source. It is used to calculate all the measurement parameters, returning 
@@ -62,15 +29,45 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 > load on the host MCU. These parameters include active, reactive, and apparent power, current 
 > and voltage RMS, line frequency, and power factor.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PwrMeter
+
+### Example Key Functions
+
+- `pwrmeter_cfg_setup` Config Object Initialization function. 
+```c
+void pwrmeter_cfg_setup ( pwrmeter_cfg_t *cfg );
+``` 
+ 
+- `pwrmeter_init` Initialization function. 
+```c
+err_t pwrmeter_init ( pwrmeter_t *ctx, pwrmeter_cfg_t *cfg );
+```
+
+- `pwrmeter_read_reg_word` Function reads 16-bit data from the desired register. 
+```c
+err_t pwrmeter_read_reg_word ( pwrmeter_t *ctx, uint16_t register_addr, uint16_t *data_out );
+```
+ 
+- `pwrmeter_read_reg_dword` Function reads 32-bit data from the desired register. 
+```c
+err_t pwrmeter_read_reg_dword ( pwrmeter_t *ctx, uint16_t register_addr, uint32_t *data_out );
+```
+
+- `pwrmeter_read_reg_signed` Function reads signed 16bit or 32bit data from the desired register. 
+```c
+err_t pwrmeter_read_reg_signed ( pwrmeter_t *ctx, uint16_t register_addr, uint8_t data_mode, int32_t *data_out );
+```
+
+### Application Init
 
 > Initializes UART interface, puts output of regulator in active state and
 > configures gain channel and uart baud rate.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -108,7 +105,6 @@ void application_init ( void )
     log_printf( &logger, "PWR Meter is initialized\r\n" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -117,7 +113,6 @@ void application_init ( void )
 > to determined units and logs all results on uart terminal each second.
 
 ```c
-
 void application_task ( void )
 {
     response_byte = pwrmeter_read_reg_word( &pwrmeter, PWRMETER_VOLT_RMS_REG, &voltage_rms );
@@ -196,30 +191,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Do not apply higher voltage than 60V to this board! This Click is designed for lower voltage 
 > monitoring and evaluation of the MCP39F511A and its basic functionalities. 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PwrMeter
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

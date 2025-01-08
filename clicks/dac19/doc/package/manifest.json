@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > DAC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DAC 19 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.dac19",
-    "product_link": "https://www.mikroe.com/dac-19-click",
-    "short_description": "DAC 19 Click is a compact add-on board designed for high-performance voltage-output applications. This board features the DAC53701-Q1, a 10-bit automotive-grade DAC from Texas Instruments, offering smart functionality through force-sense output, GPI function trigger, PWM output, and integrated nonvolatile memory (NVM). The board supports an internal or power supply reference, provides a full-scale output range, and communicates efficiently with microcontrollers using an I2C interface with up to 1MHz clock speed.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.DAC19",
-    "subdir_name": "lib_dac19"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6406",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DAC 19 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DAC19",
+                "subdir_name": "lib_dac19",
+                "path": "DAC 19 Click/data/lib_dac19"
+            }
+        ]
+    }
 }
-

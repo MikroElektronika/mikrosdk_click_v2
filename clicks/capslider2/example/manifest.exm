@@ -1,8 +1,5 @@
 {
     "name": "CAP Slider 2 Click",
-    "description": "CAP Slider 2 Click is a capacitive touch sensor with XY cross shaped electrodes integrated on a Click board™. This Click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","IQS333"],
-    "category" : ["Capacitive"] 
+    "hw" : ["Click","IQS333"]
 }

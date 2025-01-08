@@ -1,0 +1,5 @@
+{
+    "name": "BATT-MON 5 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","LC709204VXE-01TBG"]
+}

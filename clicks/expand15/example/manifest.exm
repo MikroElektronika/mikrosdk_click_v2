@@ -1,8 +1,5 @@
 {
     "name": "Expand 15 Click",
-    "description": "Expand 15 Click is a compact add-on board that contains a multi-channel I/O expander. This board features the TCAL6416, a general-purpose I/O expansion for most microcontroller families from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TCAL6416RTWR"],
-    "category" : ["Click Boards > Interface > Port expander"]
+    "hw" : ["Click","TCAL6416RTWR"]
 }

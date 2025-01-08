@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Sensors > Miscellaneous",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Barcode 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.barcode3",
-    "product_link": "https://www.mikroe.com/barcode-3-click",
-    "short_description": "Barcode 3 Click is a compact add-on board for efficient barcode scanning applications. This board features the LV30, an advanced area image engine from Rakinda. The LV30 features a laser aiming system and LED illumination, ensuring quick and accurate barcode decoding on various media, including paper and magnetic cards. This module also includes a red LED for low-light conditions, a laser aimer for precise positioning, an onboard buzzer for audible feedback, buttons for scanning and resetting, and an LED indicator for successful reads.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.Barcode3",
-    "subdir_name": "lib_barcode3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6130",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Barcode 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Barcode3",
+                "subdir_name": "lib_barcode3",
+                "path": "Barcode 3 Click/data/lib_barcode3"
+            }
+        ]
+    }
 }
-
-

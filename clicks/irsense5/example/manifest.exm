@@ -1,8 +1,5 @@
 {
     "name": "IR Sense 5 Click",
-    "description": "IR Sense 5 Click is a compact add-on board designed for accurate, non-contact surface temperature measurement. This board features the ZTP-148SRC1, a thermopile IR sensor from Amphenol, with a measurement range from -20 to +100°C, an active area of 0.7x0.7mm², and a typical field of view of 85 degrees. The board also integrates an OPA2365AIDR OpAmp for signal amplification and an MCP3221 analog-to-digital converter for digitizing the output. Additional features include output offset selection and test points for signal monitoring.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ZTP-148SRC1"],
-    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+    "hw" : ["Click","ZTP-148SRC1"]
 }

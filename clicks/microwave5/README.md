@@ -1,44 +1,38 @@
-\mainpage Main Page
 
 ---
 # Microwave 5 Click
 
-> Microwave 5 Click is a compact add-on board that utilizes the Doppler Shift Phenomenon to sense motion. 
-> This board features the PD-V10-G5, a miniature X-band microwave transceiver from Ningbo Pdlux Electronic Technology. 
-> The transmitter on this transceiver works on a 10.525GHz frequency over the patch antenna, 
-> with a 2-4kHz pulse repetition frequency. The strength of the sensor’s output, in other words, 
-> the detection range, depends on the Signal-to-Noise ratio.
+> [Microwave 5 Click](https://www.mikroe.com/?pid_product=MIKROE-5772) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/microwave5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5772&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/microwave-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : May 2023.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the Microwave 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the Microwave 5 Click board&trade; 
+> by reading and displaying the results of AD conversion and motion detection.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Microwave 5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Microwave5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `microwave5_cfg_setup` Config Object Initialization function.
 ```c
@@ -49,8 +43,6 @@ void microwave5_cfg_setup ( microwave5_cfg_t *cfg );
 ```c
 err_t microwave5_init ( microwave5_t *ctx, microwave5_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `microwave5_read_raw_adc` Microwave 5 read raw ADC value function.
 ```c
@@ -66,13 +58,6 @@ err_t microwave5_read_voltage ( microwave5_t *ctx, float *voltage );
 ```c
 err_t microwave5_set_vref ( microwave5_t *ctx, float vref );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the Microwave 5 Click board™ 
-> by reading and displaying the results of AD conversion and motion detection.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -166,22 +151,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Microwave5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

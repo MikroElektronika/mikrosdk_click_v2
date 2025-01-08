@@ -1,8 +1,5 @@
 {
     "name": "GNSS ZOE Click",
-    "description": "GNSS ZOE Click is a evaluation board for ultra small ZOE-M8Q GNSS SiP receiver from u-blox.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ZOE-M8Q"],
-    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"] 
+    "hw" : ["Click","ZOE-M8Q"]
 }

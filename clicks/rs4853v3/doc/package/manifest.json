@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Interface > RS485",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RS485 3V3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rs4853v3",
-    "product_link": "https://www.mikroe.com/rs485-33v-click",
-    "short_description": "RS485 Click 3.3V is a RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. It features a half-duplex communication capability, bus Idle, open and short-circuit detection, glitch free power-up and power-down for hot-plugging applications, thermal shutdown, and more. It is well suited for transmitting data packets over long distances and noisy areas, using the twisted wire bus, which offers good electromagnetic interferences (EMI) immunity. ESD protection of the transceiver IC ensures reliable operation, exceeding 16kV for human body model (HBM).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        246
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.RS4853V3",
-    "subdir_name": "lib_rs4853v3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-989",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RS485 3V3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RS4853V3",
+                "subdir_name": "lib_rs4853v3",
+                "path": "RS485 3V3 Click/data/lib_rs4853v3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

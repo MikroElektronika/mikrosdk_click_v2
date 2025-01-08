@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Light 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.light2",
-    "product_link": "https://www.mikroe.com/light-2-click",
-    "short_description": "Light 2 Click is a compact add-on board designed for accurate and flexible light measurement in various environments. This board features the ISL76682, a high-sensitivity, light-to-digital sensor with an I2C interface from Renesas, made specifically for automotive applications. Key features include a photodiode array that closely mimics the human eye's response, an ADC for flicker rejection, and four selectable light measurement ranges via I2C, enhancing both flexibility and accuracy. With a typical power consumption of 55µA in Standard mode and two power-down modes to minimize energy use, the board is efficient and adaptable to different lighting conditions.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.Light2",
-    "subdir_name": "lib_light2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6022",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Light 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Light2",
+                "subdir_name": "lib_light2",
+                "path": "Light 2 Click/data/lib_light2"
+            }
+        ]
+    }
 }
-
-
-

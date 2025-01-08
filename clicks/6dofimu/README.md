@@ -1,19 +1,19 @@
-\mainpage Main Page
- 
+
 ---
 # 6DOF IMU Click
 
-<6DOF IMU Click carries ST’s LSM6DS33TR 6-axis inertial measurement unit comprising a 3-axis gyroscope and a 3-axis accelerometer. The chip is a highly accurate 6 DOF inertial measurement unit with long-term stable operation over a wide range of temperatures.>
+> [6DOF IMU Click](https://www.mikroe.com/?pid_product=MIKROE-1941) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/6dofimu_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1941&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/6dof-imu-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
@@ -21,56 +21,56 @@
 
 # Software Support
 
-We provide a library for the 6DofImu Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for 6DofImu Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c6dofimu_cfg_setup ( c6dofimu_cfg_t *cfg ); 
- 
-- Initialization function.
-> C6DOFIMU_RETVAL c6dofimu_init ( c6dofimu_t *ctx, c6dofimu_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c6dofimu_default_cfg ( c6dofimu_t *ctx );
-
-#### Example key functions :
-
-- This function reads axis data for the gyroscope or the accelerometer from
-  predefined data register addresses.
-> void c6dofimu_read_axis_data ( c6dofimu_t *ctx, uint8_t read_mode );
- 
-- This function reads temperature data from predefined data registers.
-> float c6dofimu_read_temperature ( c6dofimu_t *ctx );
-
-- This function reads the digital signal from the INT pin.
-> uint8_t c6dofimu_digital_read_int ( c6dofimu_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This example showcases how to initalize and use the 6DOF IMU Click. The Click contains a 
   6-axis inertial measurement unit ( accelerometer + gyroscope ). After configuring the Click
   module for proper use, axis and temperature data will be measured every second. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.6DofImu
+
+### Example Key Functions
+
+- `c6dofimu_cfg_setup` Config Object Initialization function. 
+```c
+void c6dofimu_cfg_setup ( c6dofimu_cfg_t *cfg );
+``` 
+ 
+- `c6dofimu_init` Initialization function. 
+```c
+err_t c6dofimu_init ( c6dofimu_t *ctx, c6dofimu_cfg_t *cfg );
+```
+
+- `c6dofimu_default_cfg` Click Default Configuration function. 
+```c
+void c6dofimu_default_cfg ( c6dofimu_t *ctx );
+```
+
+- This function reads axis data for the gyroscope or the accelerometer from
+  predefined data register addresses.
+> void c6dofimu_read_axis_data ( c6dofimu_t *ctx, uint8_t read_mode );
+ 
+- `c6dofimu_read_temperature` This function reads temperature data from predefined data registers. 
+```c
+float c6dofimu_read_temperature ( c6dofimu_t *ctx );
+```
+
+- `c6dofimu_digital_read_int` This function reads the digital signal from the INT pin. 
+```c
+uint8_t c6dofimu_digital_read_int ( c6dofimu_t *ctx );
+```
+
+### Application Init
 
 > This function initializes and configures the Click and logger modules. In order for the 
   device to work well, proper data needs to be written to the measurement control
   registers as is done in the default_cfg(...) function. 
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -98,7 +98,6 @@ void application_init ( )
     Delay_100ms( );
     c6dofimu_default_cfg( &c6dofimu );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +107,6 @@ void application_init ( )
   registers. 
 
 ```c
-
 void application_task ( )
 {
     float temperature; 
@@ -128,32 +126,27 @@ void application_task ( )
                                                                   c6dofimu.gyro_axis.z );
     log_printf( &logger, " * Temperature: %.3f C\r\n", temperature );
     Delay_1sec( );
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > <WARNING> If you write data to any of the "reserved" register addresses, you can permanently
   damage the chip. If you are feeling adventurous, read the LSM6DS33 chip datasheet.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.6DofImu
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

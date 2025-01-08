@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC32|dsPIC",
-    "category": "Click Boards > Sensors > Environmental",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Smart Sens 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.smartsens2",
-    "product_link": "https://www.mikroe.com/smart-sens-2-click",
-    "short_description": "Smart Sens 2 Click is a compact add-on board that contains a smart sensor system with an integrated IMU sensor. This board utilizes the BHI260AP, BME688, BMP390, and BMM150, an ultra-low-power programmable smart sensor, environmental and pressure sensor, and a magnetometer from Bosch Sensortec. The BHI260AP includes a powerful 32-bit MCU and a 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) alongside an event-driven software framework. In addition to its internal functions also perform signal data processing from several onboard sensors performing measurements of various parameters such as an environmental and magnetic field. In addition to these primary functions, this Click board™ allows users to select the desired serial interface, use the debug interface, and select BOOT mode.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.SmartSens2",
-    "subdir_name": "lib_smartsens2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5207",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart Sens 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartSens2",
+                "subdir_name": "lib_smartsens2",
+                "path": "Smart Sens 2 Click/data/lib_smartsens2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

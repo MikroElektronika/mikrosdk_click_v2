@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BOOST Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.boost",
-    "product_link": "https://www.mikroe.com/boost-click",
-    "short_description": "Boost Click provides an adjustable output voltage through the onboard DAC that drives the FB pin of the MIC2606 to set desired output voltage. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2196
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Boost",
-    "subdir_name": "lib_boost"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2780",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BOOST Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Boost",
+                "subdir_name": "lib_boost",
+                "path": "BOOST Click/data/lib_boost"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

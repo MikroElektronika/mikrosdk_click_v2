@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Ultra-Low Press Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ultralowpress",
-    "product_link": "https://www.mikroe.com/ultra-low-press-click",
-    "short_description": "Ultra-Low Press Click is a compact add-on board containing a mountable gage pressure sensor for pneumatic pressure measurements.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.UltraLowPress",
-    "subdir_name": "lib_ultralowpress"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4676",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ultra-Low Press Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.UltraLowPress",
+                "subdir_name": "lib_ultralowpress",
+                "path": "Ultra-Low Press Click/data/lib_ultralowpress"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

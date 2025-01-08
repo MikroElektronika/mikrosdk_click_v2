@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Capacitive",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Touchpad Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.touchpad",
-    "product_link": "https://www.mikroe.com/touchpad-click",
-    "short_description": "Touchpad Click is a capacitive touch input device driven by Microchip’s low-powered MTCH6102 controller. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1634
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Touchpad",
-    "subdir_name": "lib_touchpad"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1995",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Touchpad Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Touchpad",
+                "subdir_name": "lib_touchpad",
+                "path": "Touchpad Click/data/lib_touchpad"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

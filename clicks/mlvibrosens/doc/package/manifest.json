@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ML Vibro Sens Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mlvibrosens",
-    "product_link": "https://www.mikroe.com/ml-vibro-sens-click",
-    "short_description": "ML Vibro Sens Click is a compact add-on board for motion sensing and vibration analysis. This board features the FXLS8974CF, a 3-axis low-g 12-bit digital accelerometer from NXP designed for precise motion detection and data collection. This Click board™ represents a machine learning training tool that communicates with the host MCU over an I2C interface, with selectable addresses and dual operating modes for interrupt signaling or motion detection. It features two DC motors - a balanced motor for generating steady baseline vibrations and an unbalanced motor for customizable vibration patterns controlled via PWM or PDM signals.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.MLVibroSens",
-    "subdir_name": "lib_mlvibrosens"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6470",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ML Vibro Sens Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MLVibroSens",
+                "subdir_name": "lib_mlvibrosens",
+                "path": "ML Vibro Sens Click/data/lib_mlvibrosens"
+            }
+        ]
+    }
 }
-

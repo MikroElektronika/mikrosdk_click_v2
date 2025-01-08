@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "TempHum 25 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.temphum25",
-    "product_link": "https://www.mikroe.com/temphum-25-click",
-    "short_description": "Temp&Hum 25 Click is a compact add-on board designed for precise temperature and humidity monitoring. This board features the SHT33-DIS-B2.5KS, a high-reliability, third-generation relative humidity and temperature sensor from Sensirion. This sensor offers exceptional accuracy and reliability, with a range of 0-100% RH and -40 to +125°C, and features ISO17025-certified calibration, CMOSens® technology, and NIST-traceability. The board supports the new Click Snap feature, allowing easy detachment of the sensor area for flexible use.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.TempHum25",
-    "subdir_name": "lib_temphum25"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6241",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TempHum 25 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TempHum25",
+                "subdir_name": "lib_temphum25",
+                "path": "TempHum 25 Click/data/lib_temphum25"
+            }
+        ]
+    }
 }
-
-
-

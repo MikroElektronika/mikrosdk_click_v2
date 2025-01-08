@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Biometrics",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Ecg 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ecg6",
-    "product_link": "https://www.mikroe.com/ecg-6-click",
-    "short_description": "ECG 6 Click is a complete solution for the development of ECG and Heart-Rate (HR) applications. It features the MAX86150, a Reflective Heart Rate Monitor and Medical-Grade Pulse Oximeter from Maxim Integrated. The Click board™ contain integrated electrocardiogram, pulse oximeter, heart rate monitor sensor module. The ECG 6 Click can be used for application in Fitness Assistant Devices, Wearable Devices, Smartphones, Tablet.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3226
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Ecg6",
-    "subdir_name": "lib_ecg6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4061",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ecg 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ecg6",
+                "subdir_name": "lib_ecg6",
+                "path": "Ecg 6 Click/data/lib_ecg6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

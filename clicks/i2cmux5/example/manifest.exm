@@ -1,8 +1,5 @@
 {
     "name": "I2C MUX 5 Click",
-    "description": "I2C MUX 5 Click is a compact add-on board with translating I2C and SMBus switch intended for applications with I2C slave address conflicts.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LTC4306"],
-    "category" : ["I2C"]
+    "hw" : ["Click","LTC4306"]
 }

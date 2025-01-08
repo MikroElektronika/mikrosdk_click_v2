@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SHT1x Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.sht1x",
-    "product_link": "https://www.mikroe.com/sht1x-click",
-    "short_description": "This Click measures temperature and humidity",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        211
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Sht1x",
-    "subdir_name": "lib_sht1x"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-949",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SHT1x Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Sht1x",
+                "subdir_name": "lib_sht1x",
+                "path": "SHT1x Click/data/lib_sht1x"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Thermostat 2 Click",
-    "description": "Thermostat 2 Click is a general-purpose thermostat Click board™ designed to be used with any temperature sensor based on the DS1820 sensor design: 3-pin package with 1-Wire® communication interface.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","DS1820"],
-    "category" : ["Temperature & humidity"]
+    "hw" : ["Click","DS1820"]
 }

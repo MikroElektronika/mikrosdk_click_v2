@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > FLASH",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SQI FLASH Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.sqiflash",
-    "product_link": "https://www.mikroe.com/sqi-flash-click",
-    "short_description": "SQI FLASH Click is based on the SST26VF064B, a 64 Mbit Serial Quad I/O flash device from Microchip. The chip utilizes 4-bit multiplexed I/O serial interface to boost the performance. The Click is a very fast solid-state, non-volatile data storage medium, that can be electrically erased and reprogrammed.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        2248
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.SqiFlash",
-    "subdir_name": "lib_sqiflash"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2828",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SQI FLASH Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SqiFlash",
+                "subdir_name": "lib_sqiflash",
+                "path": "SQI FLASH Click/data/lib_sqiflash"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

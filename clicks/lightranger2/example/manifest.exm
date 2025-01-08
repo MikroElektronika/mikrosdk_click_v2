@@ -1,8 +1,5 @@
 {
-  "name": "LightRanger 2 Click",
-  "description": "LightRanger 2 Click carries VL53L0X IC from STMicroelectronics, the worlds smallest Time-of-Flight ranging and gesture detector sensor.",
-  "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-  "hw": ["Click", "VL53L0X IC"],
-  "category": [ "Optical" ]
+    "name": "LightRanger 2 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw": ["Click", "VL53L0X IC"]
 }

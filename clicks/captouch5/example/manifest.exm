@@ -1,8 +1,5 @@
 {
     "name": "Cap Touch 5 Click",
-    "description": "Cap Touch 5 Click is a capacitive touch sensing Click board™ which features the CY8CMBR3106S-LQXI CapSense® Express™ controller which enables advanced, yet easy-to-implement, capacitive touch sensing user interface solutions.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CY8CMBR3106S-LQXI"],
-    "category" : ["Capacitive"] 
+    "hw" : ["Click","CY8CMBR3106S-LQXI"]
 }

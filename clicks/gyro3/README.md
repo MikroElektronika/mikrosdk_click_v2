@@ -1,79 +1,76 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Gyro 3 Click
 
-Gyro 3 Click is a three-axis gyroscope Click board™ that can sense motion over three perpendicular axes. It is equipped with the I3G4250, a three-axis digital gyroscope. 
+> [Gyro 3 Click](https://www.mikroe.com/?pid_product=MIKROE-3449) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gyro3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3449&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gyro-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Gyro3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Gyro3 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void gyro3_cfg_setup ( gyro3_cfg_t *cfg ); 
- 
-- Initialization function.
-> GYRO3_RETVAL gyro3_init ( gyro3_t *ctx, gyro3_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void gyro3_default_cfg ( gyro3_t *ctx );
-
-
-#### Example key functions :
-
-- This function reads value stored in temperature register (26h).
-> void gyro3_get_temp ( gyro3_t *ctx, uint8_t *temperature_value );
-
-- This function reads data level value in FIFO register from FIFO SRC register (2Fh) and stores result in fifo_data_level.
-> void gyro3_get_fifo_data_level ( gyro3_t *ctx, uint8_t * fifo_data_level );
-
-- This function reads values from XYZ axes registers and converts them to degrees per second value.
-> void gyro3_get_axes ( gyro3_t *ctx, float *x_axis, float *y_axis, float *z_axis, uint8_t measurement_range );
-
-
-
-
-## Examples Description
+## Example Description
 
 > This example checks if new data is available on all three axes, If yes then reads and logs their values.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Gyro3
+
+### Example Key Functions
+
+- `gyro3_cfg_setup` Config Object Initialization function. 
+```c
+void gyro3_cfg_setup ( gyro3_cfg_t *cfg );
+``` 
+ 
+- `gyro3_init` Initialization function. 
+```c
+err_t gyro3_init ( gyro3_t *ctx, gyro3_cfg_t *cfg );
+```
+
+- `gyro3_default_cfg` Click Default Configuration function. 
+```c
+void gyro3_default_cfg ( gyro3_t *ctx );
+```
+
+- `gyro3_get_temp` This function reads value stored in temperature register (26h). 
+```c
+void gyro3_get_temp ( gyro3_t *ctx, uint8_t *temperature_value );
+```
+
+- `gyro3_get_fifo_data_level` This function reads data level value in FIFO register from FIFO SRC register (2Fh) and stores result in fifo_data_level. 
+```c
+void gyro3_get_fifo_data_level ( gyro3_t *ctx, uint8_t * fifo_data_level );
+```
+
+- `gyro3_get_axes` This function reads values from XYZ axes registers and converts them to degrees per second value. 
+```c
+void gyro3_get_axes ( gyro3_t *ctx, float *x_axis, float *y_axis, float *z_axis, uint8_t measurement_range );
+```
+
+
+
+
+### Application Init
 
 > Initialize I2C driver, basic device configuration, I2C interface, LOG interface and GPIO pins.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -103,15 +100,13 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
 
-Check if new data is available on all three axes, If yes then read and log their values.
+> Check if new data is available on all three axes, If yes then read and log their values.
 
 ```c
-
 void application_task ( void )
 {
     //  Task implementation.
@@ -126,30 +121,23 @@ void application_task ( void )
         log_printf( &logger, "\r\nx_axis : %.2f %s\t", x_axis, degrees_per_second );
         log_printf( &logger, "y_axis : %.2f %s\t", y_axis, degrees_per_second );
         log_printf( &logger, "z_axis : %.2f %s\r\n", z_axis, degrees_per_second );      
-    } 
-
+    }
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Gyro3
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

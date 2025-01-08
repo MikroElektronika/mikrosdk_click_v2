@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # AMR Angle Click
 
-AMR Angle Click is a compact add-on board containing an anisotropic magnetoresistive measurement solution ideal for either angle or linear position measurements. This board features the ADA4571, an AMR sensor with clean and amplified cosine and sine output signals related to a rotating magnetic field angle from Analog Devices.
+> [AMR Angle Click](https://www.mikroe.com/?pid_product=MIKROE-4561) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/amr_angle_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4561&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/amr-angle-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Nikolic
 - **Date**          : jan 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the AMRAngle Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This demo application shows the performance of AMR Angle Click by reading and presenting the temperature and angle results on the UART log.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for AMRAngle Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AMRAngle
 
-#### Standard key functions :
+### Example Key Functions
 
 - `amrangle_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +40,13 @@ void amrangle_cfg_setup ( amrangle_cfg_t *cfg, uint8_t sel_toolchain );
 
 - `amrangle_init` Initialization function.
 ```c
-AMRANGLE_RETVAL amrangle_init ( amrangle_t *ctx, amrangle_cfg_t *cfg );
+err_t amrangle_init ( amrangle_t *ctx, amrangle_cfg_t *cfg );
 ```
 
 - `amrangle_default_cfg` Click Default Configuration function.
 ```c
 void amrangle_default_cfg ( amrangle_t *ctx );
 ```
-
-#### Example key functions :
 
 - `amrangle_angle_read` This function reads an angle in degrees.
 ```c
@@ -68,19 +63,13 @@ float amrangle_read_vtp_temp ( amrangle_t *ctx );
 void amrangle_gain_control_mode ( amrangle_t *ctx, uint8_t gain_control );
 ```
 
-## Example Description
-
-> This demo application shows the performance of AMR Angle Click by reading and presenting the temperature and angle results on the UART log.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Starts up the UART LOG, SPI and ADC drivers. Performs the default settings like setting the adc vref, resolution and gpio pins.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;              /**< Logger config object. */
     amrangle_cfg_t amrangle_cfg;    /**< Click config object. */
 
@@ -113,7 +102,6 @@ void application_init ( void ) {
     Delay_ms ( 500 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -121,8 +109,8 @@ void application_init ( void ) {
 > The application task consists of reading the temperature and angle data from the sensor and sending that data to the UART log every second.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     temperature_res = amrangle_read_vtp_temp( &amrangle );
     angle_res = amrangle_angle_read( &amrangle );
     log_printf( &logger, " Temperature: %.2f C\r\n", temperature_res );
@@ -130,26 +118,21 @@ void application_task ( void ) {
     log_printf( &logger, " --------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AMRAngle
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -3,7 +3,7 @@
  * @brief BLE 6 Click Example.
  *
  * # Description
- * This example reads and processes data from BLE 6 clicks.
+ * This example reads and processes data from BLE 6 Clicks.
  *
  * The demo application is composed of two sections :
  *

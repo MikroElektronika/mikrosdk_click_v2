@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Driver Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.driver",
-    "product_link": "https://www.mikroe.com/driver-click",
-    "short_description": "Driver Click features an IC with seven integrated high-current sink drivers, which can be used to drive a wide range of loads via simple parallel interface. These integrated drivers use high-efficiency MOSFETs for improved thermal performance.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2382
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Driver",
-    "subdir_name": "lib_driver"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3109",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Driver Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Driver",
+                "subdir_name": "lib_driver",
+                "path": "Driver Click/data/lib_driver"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

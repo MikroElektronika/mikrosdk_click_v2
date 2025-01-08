@@ -1,8 +1,5 @@
 {
     "name": "6DOF IMU 22 Click",
-    "description": "6DOF IMU 22 Click is a compact add-on board for advanced motion tracking. This board features the ICM-42670-P, a high-performance 6-axis MEMS MotionTracking IMU from TDK InvenSense. The ICM-42670-P integrates a 3-axis gyroscope and accelerometer, offering exceptional precision in motion detection. It supports both I2C and SPI interfaces for communication, features a substantial 2.25Kbytes FIFO, and includes two programmable interrupts that enhance power efficiency through a wake-on-motion feature.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ICM-42670-P"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","ICM-42670-P"]
 }

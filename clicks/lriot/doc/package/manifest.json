@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LoRa",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LR IoT Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lriot",
-    "product_link": "https://www.mikroe.com/lr-iot-click",
-    "short_description": "LR IoT Click is a compact add-on board that contains a long-range LoRa transceiver. This board features Semtech Corporation’s LR1110, an ultra-low power platform integrating a LoRa® transceiver, multi-constellation GNSS, and passive WiFi AP MAC address scanner. Alongside its sub-GHz capabilities, the LR1110 also has a multi-band front-end capable of receiving 802.11b/g/n WiFi Access Point MAC addresses and GNSS (GPS, BeiDou, geostationary) satellite raw data befitting geo-positioning purposes. The acquired information is then transmitted using an LPWAN network to a geolocation server, which analyzes it and correlates the position with data from a geolocation database, enabling a unique balance between low power and performance.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.LRIoT",
-    "subdir_name": "lib_lriot"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5447",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LR IoT Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LRIoT",
+                "subdir_name": "lib_lriot",
+                "path": "LR IoT Click/data/lib_lriot"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

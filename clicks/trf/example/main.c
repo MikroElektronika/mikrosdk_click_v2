@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
+ * Configuring Clicks and log objects.
  * 
  * ## Application Task  
  * Checks if new data byte have received in rx buffer (ready for reading),

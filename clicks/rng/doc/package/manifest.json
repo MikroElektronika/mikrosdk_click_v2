@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Encryption",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RNG Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rng",
-    "product_link": "https://www.mikroe.com/rng-click",
-    "short_description": "RNG Click is a random number generator (RNG) is a device that generates a sequence of numbers or symbols that cannot be reasonably predicted better than by a random chance. This Click board™ is true hardware random-number generator (HRNG), which generate genuinely random numbers.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3259
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Rng",
-    "subdir_name": "lib_rng"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4090",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RNG Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Rng",
+                "subdir_name": "lib_rng",
+                "path": "RNG Click/data/lib_rng"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -3,7 +3,7 @@
  * \brief Rs2322 Click example
  * 
  * # Description
- * This example reads and processes data from RS232 2 clicks.
+ * This example reads and processes data from RS232 2 Clicks.
  *
  * The demo application is composed of two sections :
  * 

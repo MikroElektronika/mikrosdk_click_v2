@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Expand 17 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.expand17",
-    "product_link": "https://www.mikroe.com/expand-17-click",
-    "short_description": "Expand 17 Click is a compact add-on board designed to expand the number of input/output pins in your system. This board features the TCAL6408, an 8-bit I/O expander from Texas Instruments, which communicates via the I2C protocol. The TCAL6408 features programmable output drive strength, latchable inputs, pull-up/pull-down resistors, and configurable open-drain or push-pull outputs, offering flexible and enhanced I/O performance with minimal power consumption and reduced EMI.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.Expand17",
-    "subdir_name": "lib_expand17"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6054",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 17 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand17",
+                "subdir_name": "lib_expand17",
+                "path": "Expand 17 Click/data/lib_expand17"
+            }
+        ]
+    }
 }
-
-

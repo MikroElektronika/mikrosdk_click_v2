@@ -1,50 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GSM/LTE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "4G LTE-E Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c4gltee",
-    "product_link": "https://www.mikroe.com/4g-lte-e-click",
-    "short_description": "4G LTE Click is an LTE Cat 1 / 2G multimode cellular network solution, featuring the compact LARA-R2 series modem from u-blox. This module supports up to three LTE bands and GSM bands. It also features a full range of options for the high speed cellular networking and communication, such as the network indication, full embedded TCP/UDP stack, HTTP and HTTPS transfer protocols, IPv4/IPv6 dual-stack support, secondary antenna for the RX diversity, antenna detection, jamming signal detection, embedded TLS 1.2 protocol for the improved security and more. 4G LARA Click can achieve data rates up to 10.3 Mbps/5.2 Mbps (downlink/uplink).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        2058
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.4GLTEE",
-    "subdir_name": "lib_c4gltee"
+    "name": "mikroe.click.4gltee",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2527",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4G LTE-E Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.4GLTEE",
+                "subdir_name": "lib_c4gltee",
+                "path": "4G LTE-E Click/data/lib_c4gltee"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

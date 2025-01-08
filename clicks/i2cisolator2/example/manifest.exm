@@ -1,8 +1,5 @@
 {
     "name": "I2C Isolator 2 Click",
-    "description": "I2C Isolator 2 Click provides I2C lines and power isolation for slave devices. It carries the ADM3260 dual I2C isolator with an integrated DC-to-DC converter. I2C Isolator 2 Click is designed to run on either 3.3V or 5V power supply.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ADM3260"],
-    "category" : ["I2C"] 
+    "hw" : ["Click","ADM3260"]
 }

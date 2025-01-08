@@ -1,8 +1,5 @@
 {
     "name": "Fingerprint 4 Click",
-    "description": "Fingerprint 4 Click is an adapter Click board™ used to interface a compatible fingerprint sensor with the host MCU. This board features FINGERPRINTS BM-Lite Module, a complete biometric fingerprint solution ready to be used out-of-the-box. The BM-Lite Module combines superior biometric performance and a high standard of quality components to offer a comprehensive embedded solution for increased security and enhanced user convenience. It uses a 3D pixel sensing technology that can read virtually any finger, dry or wet, alongside simple serial commands with a configurable communication interface to enroll and verify. Its protective coating helps in protection against ESD, scratches, impact, and everyday wear and tear.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","FPC BM-Lite"],
-    "category" : ["Click Boards > HMI > Fingerprint"]
+    "hw" : ["Click","FPC BM-Lite"]
 }

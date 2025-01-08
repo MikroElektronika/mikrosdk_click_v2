@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Analog MUX 5 Click
 
-> Analog MUX 5 Click is a compact add-on board that switches one of many inputs to one output. This board features the MAX4634, a fast, low-voltage four-channel CMOS analog multiplexer from Analog Devices. This low-voltage multiplexer operates from both mikroBUS™ power rails and features 4Ω maximum ON-resistance (RON). CMOS switch construction allows the processing of analog signals within the supply voltage range. It is also characterized by an easy way of management, only through a couple of signals from the mikroBUS™ socket. This Click board™ is suitable for various applications, from industrial and instrumentation to medical, consumer, communications, and more.
+> [Analog MUX 5 Click](https://www.mikroe.com/?pid_product=MIKROE-5120) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/analogmux5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5120&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/analog-mux-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nikola Peric
 - **Date**          : Apr 2022.
 - **Type**          : ADC type
 
-
 # Software Support
 
-We provide a library for the Analog MUX 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases how to initialize, configure and use the Analog MUX 5 Click module.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Analog MUX 5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AnalogMUX5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `analogmux5_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t analogmux5_init ( analogmux5_t *ctx, analogmux5_cfg_t *cfg );
 err_t analogmux5_default_cfg ( analogmux5_t *ctx );
 ```
 
-#### Example key functions :
-
 - `analogmux5_enable` Analog MUX 5 enable function.
 ```c
 void analogmux5_enable ( analogmux5_t *ctx );
@@ -68,18 +63,11 @@ err_t analogmux5_select_ch ( analogmux5_t *ctx, uint8_t ch_select );
 err_t analogmux5_read_an_pin_voltage ( analogmux5_t *ctx, float *data_out );
 ```
 
-## Example Description
-
-> This example showcases how to initialize, configure and use the Analog MUX 5 Click module.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and enables the analog inputs.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -126,7 +113,6 @@ void application_init ( void )
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {
     float analogmux5_an_voltage = 0;
@@ -164,25 +150,21 @@ void application_task ( void )
     }
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AnalogMUX5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

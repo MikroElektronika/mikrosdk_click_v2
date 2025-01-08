@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Battery Charger",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Charger 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.charger8",
-    "product_link": "https://www.mikroe.com/charger-8-click",
-    "short_description": "Charger 8 Click is an intelligent Li-Ion battery charger, system power manager, and a battery fuel gauge Click board™.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2686
-    ],
-    "version": "2.1.0.22",
-    "cmake": true,
-    "alias": "Click.Charger8",
-    "subdir_name": "lib_charger8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3348",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Charger 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Charger8",
+                "subdir_name": "lib_charger8",
+                "path": "Charger 8 Click/data/lib_charger8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

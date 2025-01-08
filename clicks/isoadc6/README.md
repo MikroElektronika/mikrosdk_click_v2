@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # ISO ADC 6 Click
 
-> ISO ADC 6 Click is a compact add-on board that contains an eight-channel isolated ADC. This board features the AD7124-8, an 8-channel, low noise, low power, 24-bit, sigma-delta ADC from Analog Devices. The ADC has a programmable gain array (PGA) that allows gains of 1, 2, 4, 8, 16, 32, 64, and 128. Additionally, the ADC contains a 2.5V reference, which can be used with reference buffers, along with the externally applied references. The host MCU is isolated from the ADC by the ADuM341E, a 5kVrms quad digital isolator from Analog Devices.
+> [ISO ADC 6 Click](https://www.mikroe.com/?pid_product=MIKROE-5901) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/isoadc6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5901&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/iso-adc-6-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Sep 2023.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the ISO ADC 6 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the ISO ADC 6 Click board&trade; 
+> by reading and writing data by using SPI serial interface 
+> and reading results of AD conversion.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ISO ADC 6 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ISOADC6
 
-#### Standard key functions :
+### Example Key Functions
 
 - `isoadc6_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t isoadc6_init ( isoadc6_t *ctx, isoadc6_cfg_t *cfg );
 err_t isoadc6_default_cfg ( isoadc6_t *ctx );
 ```
 
-#### Example key functions :
-
 - `isoadc6_get_voltage` ISO ADC 6 get voltage level function.
 ```c
 err_t isoadc6_get_voltage ( isoadc6_t* ctx, float *voltage );
@@ -67,14 +64,6 @@ err_t isoadc6_get_adc_data ( isoadc6_t* ctx, uint32_t *adc_data );
 ```c
 err_t isoadc6_set_adc_control ( isoadc6_t* ctx, uint16_t adc_ctrl_data );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the ISO ADC 6 Click board™ 
-> by reading and writing data by using SPI serial interface 
-> and reading results of AD conversion.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -139,22 +128,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ISOADC6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

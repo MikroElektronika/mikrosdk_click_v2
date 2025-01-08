@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LoRa",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LR 11 868MHz Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lr11868mhz",
-    "product_link": "https://www.mikroe.com/lr-11-click-868mhz",
-    "short_description": "LR 11 Click - 868MHz is a compact add-on board for long-range, low-power wireless communication in IoT applications. This board features the 453-00140R, an ultra-low power LoraWAN module Ezurio (part of the RM126x series), integrating the Silicon Labs EFR32 SoC and the Semtech SX1261 radio. It supports LoRaWAN classes A, B, and C, offering secure, scalable, and bi-directional communication. It operates in the 863-870MHz frequency range with a typical transmit power of up to 14dBm and a communication range of up to 15km.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.LR11868MHz",
-    "subdir_name": "lib_lr11868mhz"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6318",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LR 11 868MHz Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LR11868MHz",
+                "subdir_name": "lib_lr11868mhz",
+                "path": "LR 11 868MHz Click/data/lib_lr11868mhz"
+            }
+        ]
+    }
 }
-

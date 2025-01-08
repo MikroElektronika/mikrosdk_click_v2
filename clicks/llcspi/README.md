@@ -1,72 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # LLC SPI Click
 
-The LLC SPI Click is a very useful Click board™ which can be utilized as the level converter for logic signals.
+> [LLC SPI Click](https://www.mikroe.com/?pid_product=MIKROE-3298) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/llcspi_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3298&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/llc-spi-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the llcspi Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for llcspi Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void llcspi_cfg_setup ( llcspi_cfg_t *cfg ); 
- 
-- Initialization function.
-> LLCSPI_RETVAL llcspi_init ( llcspi_t *ctx, llcspi_cfg_t *cfg );
-
-#### Example key functions :
-
-- LLC SPI write
-> void llcspi_generic_write ( llcspi_t *ctx, uint8_t *p_buf, uint16_t n_bytes );
- 
-- LLC SPI read
-> void llcspi_generic_read ( llcspi_t *ctx, uint8_t *p_buf, uint16_t n_bytes );
-
-- LLC SPI transfer
-> void llcspi_generic_transfer ( llcspi_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
-
-## Examples Description
+## Example Description
 
 > This application is converter for logic signals.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Llcspi
+
+### Example Key Functions
+
+- `llcspi_cfg_setup` Config Object Initialization function. 
+```c
+void llcspi_cfg_setup ( llcspi_cfg_t *cfg );
+``` 
+ 
+- `llcspi_init` Initialization function. 
+```c
+err_t llcspi_init ( llcspi_t *ctx, llcspi_cfg_t *cfg );
+```
+
+- `llcspi_generic_write` LLC SPI write. 
+```c
+void llcspi_generic_write ( llcspi_t *ctx, uint8_t *p_buf, uint16_t n_bytes );
+```
+ 
+- `llcspi_generic_read` LLC SPI read. 
+```c
+void llcspi_generic_read ( llcspi_t *ctx, uint8_t *p_buf, uint16_t n_bytes );
+```
+
+- `llcspi_generic_transfer` LLC SPI transfer. 
+```c
+void llcspi_generic_transfer ( llcspi_t *ctx, uint8_t *wr_buf, uint16_t wr_len, uint8_t *rd_buf, uint16_t rd_len );
+```
+
+### Application Init
 
 > Initialization device init
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -91,7 +87,6 @@ void application_init ( void )
     LLCSPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     llcspi_init( &llcspi, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -99,7 +94,6 @@ void application_init ( void )
 > Counter passes through the loop and logs the value of the counter on the bargraph display
 
 ```c
-
 void application_task ( void )
 {
     uint16_t convert;
@@ -117,35 +111,28 @@ void application_task ( void )
         
         Delay_ms ( 1000 );
     }
-}  
-
+}
 ```
 
-## Note
+### Note
  
 > Connection between BarGraph and LLC-SPI is made through SPI interface.
 > You can connect a BarGraph Click to LLC-SPI Click with the wires to make connection between Click boards.
 > We use the BarGraph Click to demonstrate the functions of the LLC-SPI Click.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Llcspi
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

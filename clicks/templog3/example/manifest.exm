@@ -1,8 +1,5 @@
 {
     "name": "Temp-Log 3 Click",
-    "description": "Temp-Log 3 Click is a temperature measuring Click board™ featuring the MCP9843 IC, an accurate temperature sensor IC with integrated EEPROM",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP9843 IC"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","MCP9843 IC"]
 }

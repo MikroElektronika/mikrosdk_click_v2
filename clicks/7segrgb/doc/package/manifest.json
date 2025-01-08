@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V",
-    "category": "Click Boards > Display & LED > LED segment",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "7-SEG RGB Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c7segrgb",
-    "product_link": "https://www.mikroe.com/7-seg-rgb-click",
-    "short_description": "7-SEG RGB Click carries a full color single 7 segment digit display. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over the CS, and PWM pin on the mikroBUS™ line.",
-    "supported_compiler": "mikroC AI|GCC|Clang",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2135
-    ],
-    "version": "2.1.0.21",
-    "cmake": true,
-    "alias": "Click.7SegRgb",
-    "subdir_name": "lib_c7segrgb"
+    "name": "mikroe.click.7segrgb",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2734",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "7-SEG RGB Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.7SegRgb",
+                "subdir_name": "lib_c7segrgb",
+                "path": "7-SEG RGB Click/data/lib_c7segrgb"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

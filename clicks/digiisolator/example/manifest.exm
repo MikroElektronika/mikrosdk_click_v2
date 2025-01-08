@@ -1,8 +1,5 @@
 {
     "name": "DIGI Isolator Click",
-    "description": "DIGI Isolator Click is a compact add-on board that provides electrical isolation and signal conditioning for the serial peripheral interface and a UART interface. This board features two DCL540C01, high-speed, quad-channel digital isolators from Toshiba Semiconductor. Depending on the usage, this CMOS isolator can achieve data rates of up to 150Mbps, while withstanding up to 5kVrms voltage. DIGI Isolator Click is designed to isolate two additional IO pins besides SPI and UART interfaces.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DCL540C01"],
-    "category" : ["Click Boards > Interface > Port expander"]
+    "hw" : ["Click","DCL540C01"]
 }
