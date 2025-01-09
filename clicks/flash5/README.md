@@ -1,74 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Flash 5 Click
 
-Flash 5 Click is a perfect solution for the mass storage option in various embedded applications.
+> [Flash 5 Click](https://www.mikroe.com/?pid_product=MIKROE-3780) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/flash5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3780&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/flash-5-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Flash5 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Flash5 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void flash5_cfg_setup ( flash5_cfg_t *cfg ); 
- 
-- Initialization function.
-> FLASH5_RETVAL flash5_init ( flash5_t *ctx, flash5_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Function for setting page read
-> void flash5_page_read ( flash5_t *ctx, uint16_t page_num );
- 
-- Function for loading one page
-> void flash5_page_load_memory ( flash5_t *ctx, uint16_t column_addr, uint8_t *data_buf, uint16_t buf_size );
-
-- Function for writing status data
-> void flash5_write_status_data ( flash5_t *ctx, uint8_t status_cmd, uint8_t status_addr, uint8_t status_data );
-
-## Examples Description
+## Example Description
 
 > This application is for storing mass storage.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Flash5
+
+### Example Key Functions
+
+- `flash5_cfg_setup` Config Object Initialization function. 
+```c
+void flash5_cfg_setup ( flash5_cfg_t *cfg );
+``` 
+ 
+- `flash5_init` Initialization function. 
+```c
+err_t flash5_init ( flash5_t *ctx, flash5_cfg_t *cfg );
+```
+
+- `flash5_page_read` Function for setting page read. 
+```c
+void flash5_page_read ( flash5_t *ctx, uint16_t page_num );
+```
+ 
+- `flash5_page_load_memory` Function for loading one page. 
+```c
+void flash5_page_load_memory ( flash5_t *ctx, uint16_t column_addr, uint8_t *data_buf, uint16_t buf_size );
+```
+
+- `flash5_write_status_data` Function for writing status data. 
+```c
+void flash5_write_status_data ( flash5_t *ctx, uint8_t status_cmd, uint8_t status_addr, uint8_t status_data );
+```
+
+### Application Init
 
 > Initializes driver, resets device, erasing one page of memory, tests communication and configures device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -128,7 +122,6 @@ void application_init ( void )
     log_printf( &logger, "------------------- \r\n" );
     Delay_ms ( 500 );
 }
-  
 ```
 
 ### Application Task
@@ -136,7 +129,6 @@ void application_init ( void )
 > Writes "MikroE" to device memory and then reads it and sends it to log.
 
 ```c
-
 void application_task ( )
 {
     char read_buf[ 6 ];
@@ -159,28 +151,22 @@ void application_task ( )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Flash5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

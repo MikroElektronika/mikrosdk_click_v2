@@ -1,8 +1,5 @@
 {
     "name": "THERMO 5 Click",
-    "description": "THERMO 5 Click measures temperature in default range of 0°C to 127°C and extended range of -64°C to 191°C with ±1°C accuracy. It carries the EMC1414 temperature sensor.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","EMC1414"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","EMC1414"]
 }

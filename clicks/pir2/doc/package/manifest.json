@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "PIR 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pir2",
-    "product_link": "https://www.mikroe.com/pir-2-click",
-    "short_description": "PIR 2 Click is a compact add-on board designed for high-performance motion detection applications. This board features the ZSLM323511, a dual-element balanced differential pyroelectric (PIR) sensor from Zilog. Key features include excellent EMI immunity, a low-profile surface mount package, and a typical field of view of 150 degrees on the X-axis and 139 degrees on the Y-axis. The board also integrates the ZCWM05GIV1 PIR lens for maximum IR transmissivity. Ideal for security systems, lighting control, and video doorbells, PIR 2 Click ensures reliable motion detection in various demanding environments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.PIR2",
-    "subdir_name": "lib_pir2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6052",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PIR 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PIR2",
+                "subdir_name": "lib_pir2",
+                "path": "PIR 2 Click/data/lib_pir2"
+            }
+        ]
+    }
 }
-
-
-

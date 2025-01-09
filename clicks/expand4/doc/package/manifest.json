@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Expand 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.expand4",
-    "product_link": "https://www.mikroe.com/expand-4-click",
-    "short_description": "Expand 4 Click carries TPCIC6A595, a chip that combines an 8-bit serial-in, parallel-out shift register with an 8-bit D-type storage register.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1499
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Expand4",
-    "subdir_name": "lib_expand4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1910",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand4",
+                "subdir_name": "lib_expand4",
+                "path": "Expand 4 Click/data/lib_expand4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

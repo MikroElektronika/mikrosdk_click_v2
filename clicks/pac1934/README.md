@@ -1,72 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Pac1934 Click
 
-PAC1934 Click carries the PAC1934 four channel DC power/energy monitor from Microchip. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over an I2C interface.
+> [Pac1934 Click](https://www.mikroe.com/?pid_product=MIKROE-2735) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pac1934_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2735&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pac1934-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Pac1934 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Pac1934 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void pac1934_cfg_setup ( pac1934_cfg_t *cfg ); 
- 
-- Initialization function.
-> PAC1934_RETVAL pac1934_init ( pac1934_t *ctx, pac1934_cfg_t *cfg );
-
-#### Example key functions :
-
-- Write one byte function.
-> void pac1934_write_byte ( pac1934_t *ctx, uint8_t wr_addr, uint8_t wr_data );
- 
-- Read one byte function.
-> uint8_t pac1934_read_byte ( pac1934_t *ctx, uint8_t rd_addr );
-
-- Send command function.
-> void pac1934_send_command ( pac1934_t *ctx, uint8_t wr_cmd );
-
-## Examples Description
- 
 > This application measures the voltage.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Pac1934
+
+### Example Key Functions
+
+- `pac1934_cfg_setup` Config Object Initialization function. 
+```c
+void pac1934_cfg_setup ( pac1934_cfg_t *cfg );
+``` 
+ 
+- `pac1934_init` Initialization function. 
+```c
+err_t pac1934_init ( pac1934_t *ctx, pac1934_cfg_t *cfg );
+```
+
+- `pac1934_write_byte` Write one byte function. 
+```c
+void pac1934_write_byte ( pac1934_t *ctx, uint8_t wr_addr, uint8_t wr_data );
+```
+ 
+- `pac1934_read_byte` Read one byte function. 
+```c
+uint8_t pac1934_read_byte ( pac1934_t *ctx, uint8_t rd_addr );
+```
+
+- `pac1934_send_command` Send command function. 
+```c
+void pac1934_send_command ( pac1934_t *ctx, uint8_t wr_cmd );
+```
+
+### Application Init
 
 > Initalizes device, enables the device and makes an initial log. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -91,7 +87,6 @@ void application_init ( void )
     PAC1934_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     pac1934_init( &pac1934, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -100,7 +95,6 @@ void application_init ( void )
 > functions that PAC1934 Click has, it mesures voltage, current, power and energy.
 
 ```c
-
 void application_task ( void )
 {
     float read_value;
@@ -124,29 +118,22 @@ void application_task ( void )
     log_printf( &logger, "Energy :  %.2f J \r\n", read_value );
     log_printf( &logger, "--------------------- \r\n" );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Pac1934
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

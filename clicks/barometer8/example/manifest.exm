@@ -1,8 +1,5 @@
 {
     "name": "Barometer 8 Click",
-    "description": "Barometer 8 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the ILPS22QS, an ultra-compact piezoresistive absolute pressure sensor that functions as a digital output barometer from STMicroelectronics. The ILPS22QS comprises a sensing element and an IC chip for signal processing in one package, converts pressure into a 24-bit digital value, and sends the information via a configurable host interface that supports SPI and I2C serial communications. It has a selectable dual full-scale absolute pressure range, up to 1260hPa and 4060hPa, with an accuracy of 0.5hPa over a wide operating temperature range.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ILPS22QSTR"],
-    "category" : ["Pressure"]
+    "hw" : ["Click","ILPS22QSTR"]
 }

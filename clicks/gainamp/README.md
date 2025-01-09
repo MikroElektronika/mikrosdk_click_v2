@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # GainAMP Click
 
-> GainAMP Click carries the LTC6912 dual channel, low noise, digitally programmable gain amplifier (PGA).
+> [GainAMP Click](https://www.mikroe.com/?pid_product=MIKROE-2555) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gainamp_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2555&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gainamp-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Sep 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the GainAMP Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that demonstrates the use of the GainAMP Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for GainAMP Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.GainAMP
 
-#### Standard key functions :
+### Example Key Functions
 
 - `gainamp_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t gainamp_init ( gainamp_t *ctx, gainamp_cfg_t *cfg );
 err_t gainamp_default_cfg ( gainamp_t *ctx );
 ```
 
-#### Example key functions :
-
 - `gainamp_read_an_pin_value` GainAMP read AN pin value function.
 ```c
 err_t gainamp_read_an_pin_value ( gainamp_t *ctx, uint16_t *data_out );
@@ -68,18 +63,11 @@ err_t gainamp_read_an_pin_voltage ( gainamp_t *ctx, float *data_out );
 void gainamp_set_gain ( gainamp_t *ctx, uint8_t gain );
 ```
 
-## Example Description
-
-> This is an example that demonstrates the use of the GainAMP Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes SPI module and set CS pin and RST pin as OUTPUT, initialization driver init and resets chip.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -114,7 +102,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -122,7 +109,6 @@ void application_init ( void )
 > Sets the gain for both channels, channel A and channel B.
 
 ```c
-
 void application_task ( void )
 {
     gainamp_set_gain( &gainamp, GAINAMP_CHANNEL_A_x1 | GAINAMP_CHANNEL_B_x5 );
@@ -149,26 +135,21 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.GainAMP
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

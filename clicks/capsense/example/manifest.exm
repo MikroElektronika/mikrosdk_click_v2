@@ -1,8 +1,5 @@
 {
     "name": "CapSense Click",
-    "description": "CapSense Click add-on board features a capacitive sensing module CY8C201A0 which takes human body capacitance as an input and directly provides the real time sensor information via I2C output.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CY8C201A0"],
-    "category" : ["Capacitive"] 
+    "hw" : ["Click","CY8C201A0"]
 }

@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Microphone",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "VU Meter Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.vumeter",
-    "product_link": "https://www.mikroe.com/vu-meter-click",
-    "short_description": "VU Meter Click is a compact add-on board representing a volume unit meter that displays the intensity of an audio signal. This board features the LM3914, a monolithic integrated circuit that senses analog voltage levels and drives a 10-segment bar graph display from Texas Instruments. This Click board™ is manufactured with a sound detecting device (microphone), Op-Amp, and the LM3914, which gleams the bar graph display according to the sound’s quality. The LM3914 is an analog-controlled driver meaning it can control (turn ON or OFF) a display by an analog input voltage and eliminates the need for additional programming.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.VUMeter",
-    "subdir_name": "lib_vumeter"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5111",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "VU Meter Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VUMeter",
+                "subdir_name": "lib_vumeter",
+                "path": "VU Meter Click/data/lib_vumeter"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

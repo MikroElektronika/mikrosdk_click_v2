@@ -1,19 +1,19 @@
-\mainpage Main Page
- 
+
 ---
 # RS232 SPI Click
 
-RS232 SPI Click is based around the MAX3100, a universal asynchronous receiver transmitter (UART) - the first UART specifically optimized for small microcontroller-based systems, from Maxim Integrated. Because of the features contained in its modules, the RS232 SPI Click can be used for handheld instruments, small networks in HVAC or Building control, UART in SPI systems, battery-powered systems, PDAs, notebooks and many more.
+> [RS232 SPI Click](https://www.mikroe.com/?pid_product=MIKROE-3912) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rs232spi_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3912&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rs232-spi-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
@@ -21,54 +21,56 @@ RS232 SPI Click is based around the MAX3100, a universal asynchronous receiver t
 
 # Software Support
 
-We provide a library for the Rs232Spi Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Rs232Spi Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void rs232spi_cfg_setup ( rs232spi_cfg_t *cfg ); 
- 
-- Initialization function.
-> RS232SPI_RETVAL rs232spi_init ( rs232spi_t *ctx, rs232spi_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void rs232spi_default_cfg ( rs232spi_t *ctx );
-
-#### Example key functions :
-
-- This function writes two bytes of data using the SPI serial interface.
-> void rs232spi_reg_write ( rs232spi_t *ctx, uint16_t write_data );
- 
-- This function reads two bytes of data using the SPI serial interface.
-> uint16_t rs232spi_reg_read ( rs232spi_t *ctx, uint16_t write_data );
-
-- This function writes the specified digital signal to the RST pin.
-> void rs232spi_digital_write_rst ( rs232spi_t *ctx, uint8_t signal );
-
-## Examples Description
+## Example Description
 
 > This example showcases how to initialize and use the RS232 SPI Click. The Click has a uni-
   versal asynchronous transceiver which uses a SPI serial interface to communicate with the 
-  MCU. In order for this example to work, 2 clicks are needed - a receiver and a transmitter. 
+  MCU. In order for this example to work, 2 Clicks are needed - a receiver and a transmitter. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Rs232Spi
+
+### Example Key Functions
+
+- `rs232spi_cfg_setup` Config Object Initialization function. 
+```c
+void rs232spi_cfg_setup ( rs232spi_cfg_t *cfg );
+``` 
+ 
+- `rs232spi_init` Initialization function. 
+```c
+err_t rs232spi_init ( rs232spi_t *ctx, rs232spi_cfg_t *cfg );
+```
+
+- `rs232spi_default_cfg` Click Default Configuration function. 
+```c
+void rs232spi_default_cfg ( rs232spi_t *ctx );
+```
+
+- `rs232spi_reg_write` This function writes two bytes of data using the SPI serial interface. 
+```c
+void rs232spi_reg_write ( rs232spi_t *ctx, uint16_t write_data );
+```
+ 
+- `rs232spi_reg_read` This function reads two bytes of data using the SPI serial interface. 
+```c
+uint16_t rs232spi_reg_read ( rs232spi_t *ctx, uint16_t write_data );
+```
+
+- `rs232spi_digital_write_rst` This function writes the specified digital signal to the RST pin. 
+```c
+void rs232spi_digital_write_rst ( rs232spi_t *ctx, uint8_t signal );
+```
+
+### Application Init
 
 > This function initializes and configures the logger and Click modules. Additional configura-
   ting is done in the default_cfg(...) function.
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -100,7 +102,6 @@ void application_init ( )
     rs232spi_flush( &rs232spi );
     Delay_100ms( );
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +110,6 @@ void application_init ( )
   message in the "write mode". 
 
 ```c
-
 void application_task ( )
 {
     uint8_t mode = 0;
@@ -136,27 +136,23 @@ void application_task ( )
         Delay_ms ( 1000 );
         Delay_ms ( 1000 );
     }
-}  
+}
 
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Rs232Spi
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

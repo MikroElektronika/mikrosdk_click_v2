@@ -1,8 +1,5 @@
 {
     "name": "Stepper 10 Click",
-    "description": "Stepper 10 Click is a two-phase bipolar stepping motor driver capable of controlling one stepper motor with PWM constant current drive. Click's featured chip TB67S128FTG, from Toshiba Semiconductor, fabricated with BiCD process with an output rating of 50V/5A and a built-in decoder can supply the motor with voltage of up to 44V. Toshiba's innovative technology process results in low-power consumption with low on-resistance (0.25Ω) on the integrated MOSFET output stage. The stepper motor can be driven in both directions from full step to 1/128 micro-steps.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TB67S128FTG","TCA9534APWR","TS5A23157RSER"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","TB67S128FTG","TCA9534APWR","TS5A23157RSER"]
 }

@@ -3,7 +3,7 @@
  * \brief Rs4856 Click example
  * 
  * # Description
- * This example reads and processes data from RS485 6 clicks.
+ * This example reads and processes data from RS485 6 Clicks.
  *
  * The demo application is composed of two sections :
  * 

@@ -1,41 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # Clock Gen 3 Click
 
-Clock Gen 3 Click features a low power self-contained digital frequency source providing a precision frequency from 1kHz to 68MHz, set through a serial port.
+> [Clock Gen 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4171) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/clockgen3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4171&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/clock-gen-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jul 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the ClockGen3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https:///shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example demonstrates the use of Clock Gen 3 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ClockGen3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ClockGen3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `clockgen3_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +42,6 @@ void clockgen3_cfg_setup ( clockgen3_cfg_t *cfg );
 ```c
 err_t clockgen3_init ( clockgen3_t *ctx, clockgen3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `clockgen3_set_cs_pin` Sets CS pin state
 ```c
@@ -64,18 +58,11 @@ void clockgen3_generic_write ( clockgen3_t *ctx, uint8_t *data_buf, uint8_t len 
 void clockgen3_set_freq ( clockgen3_t *ctx, float freq );
 ```
 
-## Examples Description
-
-> This example demonstrates the use of Clock Gen 3 Click board.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -102,7 +89,6 @@ void application_init ( void )
     clockgen3_config( &clockgen3, CLOCKGEN3_CFG_ON_CLK_180 );
     Delay_ms ( 500 );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +96,6 @@ void application_init ( void )
 > Sets different frequencies every 3 seconds and displays the set frequency on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     log_printf( &logger, ">> Set Freq = 12.000 MHz \r\n" );
@@ -144,30 +129,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     log_printf( &logger, "---------------------------- \r\n" );
-} 
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from compilers IDE(recommended) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ClockGen3
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https:///shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

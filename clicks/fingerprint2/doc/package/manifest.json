@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Fingerprint",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Fingerprint 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.fingerprint2",
-    "product_link": "https://www.mikroe.com/fingerprint-2-click",
-    "short_description": "Fingerprint 2 Click is a new fingerprint scanner Click board simplified for everyone's use and it's very easy to implement! This add-on board consists of a high-speed Nuvoton processor which carries high-performance fingerprint algorithm developed for on-board A-172-MRQ fingerprint sensor from company ByNew Technology Inc. This board can be used as a standalone device when connected over USB to PC or it can be controlled by the MCU/processor over serial UART interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3257
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Fingerprint2",
-    "subdir_name": "lib_fingerprint2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4119",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Fingerprint 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Fingerprint2",
+                "subdir_name": "lib_fingerprint2",
+                "path": "Fingerprint 2 Click/data/lib_fingerprint2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

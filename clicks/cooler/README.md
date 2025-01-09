@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Cooler Click
 
-> Cooler Click is a compact add-on board designed as a cooling solution to manage heat in electronic systems efficiently. This board features the DRV8213, a brushless DC motor driver from Texas Instruments, ensuring a high-performance operation. This board also directly integrates a TMP007 temperature sensor and an MF25060V2-1000U-A99 cooling fan onto its platform, offering a compact and ready-to-use cooling system. It operates across a wide PWM frequency range from 0 to 100kHz, supports both 3.3V and 5V logic levels, and features several protection mechanisms, including undervoltage lockout, overcurrent protection, and overtemperature shutdown.
+> [Cooler Click](https://www.mikroe.com/?pid_product=MIKROE-6068) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/cooler_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6068&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/cooler-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jan 2024.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the Cooler Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the Cooler Click board
+ by reading the target object temperature and controlling the cooler.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Cooler Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Cooler
 
-#### Standard key functions :
+### Example Key Functions
 
 - `cooler_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t cooler_init ( cooler_t *ctx, cooler_cfg_t *cfg );
 err_t cooler_default_cfg ( cooler_t *ctx );
 ```
 
-#### Example key functions :
-
 - `cooler_get_object_temperature` This function reads the object's temperature data in degrees Celsius.
 ```c
 err_t cooler_get_object_temperature ( cooler_t *ctx, float *temperature );
@@ -62,13 +58,6 @@ err_t cooler_get_object_temperature ( cooler_t *ctx, float *temperature );
 ```c
 err_t cooler_set_out_state ( cooler_t *ctx, cooler_out_state_t out_state );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the Cooler Click board
- by reading the target object temperature and controlling the cooler.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -147,22 +136,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Cooler
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

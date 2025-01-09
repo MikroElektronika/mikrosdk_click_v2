@@ -1,46 +1,38 @@
-\mainpage Main Page
 
 ---
 # Thermo 28 Click
 
-> Thermo 28 Click is a compact add-on board that accurately measures temperature. 
-> This board features the ams AG’s AS6221, a high-accuracy digital temperature sensor. 
-> The AS6221 consists of a Si bandgap temperature factory-calibrated sensor, 16-bit ADC, 
-> and a digital signal processor, offering a high accuracy of ±0.9°C. 
-> It provides temperature data to the host controller through a compatible I2C interface, 
-> reliability, user-selectable I2C addresses, and alert functionality, 
-> which triggers an interrupt to protect the device from excessive temperatures.
+> [Thermo 28 Click](https://www.mikroe.com/?pid_product=MIKROE-5466) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/thermo28_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5466&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/thermo-28-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Nov 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Thermo 28 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Thermo 28 Click board&trade; 
+> by reading and displaying the temperature measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Thermo 28 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Thermo28
 
-#### Standard key functions :
+### Example Key Functions
 
 - `thermo28_cfg_setup` Config Object Initialization function.
 ```c
@@ -57,8 +49,6 @@ err_t thermo28_init ( thermo28_t *ctx, thermo28_cfg_t *cfg );
 err_t thermo28_default_cfg ( thermo28_t *ctx );
 ```
 
-#### Example key functions :
-
 - `thermo28_get_temperature` Thermo 28 get temperature function.
 ```c
 err_t thermo28_get_temperature ( thermo28_t *ctx, float *temperature );
@@ -74,19 +64,11 @@ err_t thermo28_set_config ( thermo28_t *ctx, thermo28_config_t config );
 err_t thermo28_set_continuous_conversion ( thermo28_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Thermo 28 Click board™ 
-> by reading and displaying the temperature measurements.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -124,12 +106,11 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a Thermo 28 Click board™.
+> This is an example that shows the use of a Thermo 28 Click board&trade;.
 > Reads the temperature measurement in degree Celsius and displays the results.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
@@ -146,23 +127,19 @@ void application_task ( void )
 }
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Thermo28
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Clock & Timing > Clock generator",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Clock Gen 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.clockgen2",
-    "product_link": "https://www.mikroe.com/clock-gen-2-click",
-    "short_description": "Clock Gen 2 Click is an accurate square wave generator that can generate a clock signal in the range from 260kHz to 66.6MHz.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2395
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.ClockGen2",
-    "subdir_name": "lib_clockgen2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3076",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Clock Gen 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ClockGen2",
+                "subdir_name": "lib_clockgen2",
+                "path": "Clock Gen 2 Click/data/lib_clockgen2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > BT/BLE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RN4871 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rn4871",
-    "product_link": "https://www.mikroe.com/rn4871-click",
-    "short_description": "RN4871 Click carries the RN4871 Bluetooth® 4.2 low energy module from Microchip.The Click is designed to run on a 3.3V power supply. It uses ASCII Command Interface over UART for communication with target microcontroller, with additional functionality provided by the following pins on the mikroBUS™ line: RST, CS, and INT.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2067
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Rn4871",
-    "subdir_name": "lib_rn4871"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2544",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RN4871 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Rn4871",
+                "subdir_name": "lib_rn4871",
+                "path": "RN4871 Click/data/lib_rn4871"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GNSS 13 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gnss13",
-    "product_link": "https://www.mikroe.com/gnss-13-click",
-    "short_description": "GNSS 13 Click is a compact add-on board that provides positioning, navigation, and timing services. This board features the LG77LICMD, a global-region standard-precision GNSS module from Quectel Wireless Solutions. This module utilizes concurrent reception of up to three GNSS systems (GPS, GLONASS (or BeiDou), and Galileo), maximizing position availability, especially under challenging conditions such as deep urban canyons. By combining EASY™ (Embedded Assist System), an advanced AGNSS feature, with GLP (GNSS Low Power), a low-power mode, the LG77LICMD module achieves high performance, low power consumption, and fully meets industrial standards. It also has a configurable host interface, anti-jamming technology, and a multi-tone active interference canceller.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.GNSS13",
-    "subdir_name": "lib_gnss13"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5580",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 13 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS13",
+                "subdir_name": "lib_gnss13",
+                "path": "GNSS 13 Click/data/lib_gnss13"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

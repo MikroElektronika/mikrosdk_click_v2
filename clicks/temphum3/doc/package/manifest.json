@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "TempHum 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.temphum3",
-    "product_link": "https://www.mikroe.com/temp-hum-3-click",
-    "short_description": "Temp&Hum 3 Click is a smart environmental temperature and humidity sensor Click board™, packed with features which allow easy and simple integration into any design that requires accurate and reliable humidity and temperature measurements",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2324
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.TempHum3",
-    "subdir_name": "lib_temphum3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2937",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TempHum 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TempHum3",
+                "subdir_name": "lib_temphum3",
+                "path": "TempHum 3 Click/data/lib_temphum3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

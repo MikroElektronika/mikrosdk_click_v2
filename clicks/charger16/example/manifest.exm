@@ -1,8 +1,5 @@
 {
     "name": "Charger 16 Click",
-    "description": "Charger 16 Click is a compact add-on board that represents a single-cell battery charger. This board features the LT1571, a constant-current/constant-voltage battery charger with preset voltage and termination flag from Analog Devices.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LT1571"],
-    "category" : ["Battery Charger"]
+    "hw" : ["Click","LT1571"]
 }

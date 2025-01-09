@@ -1,0 +1,22 @@
+{
+    "display_name": "4G LTE 3 E Click",
+    "name": "mikroe.click.4glte3e",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6380",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4G LTE 3 E Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.4GLTE3E",
+                "subdir_name": "lib_c4glte3e",
+                "path": "4G LTE 3 E Click/data/lib_c4glte3e"
+            }
+        ]
+    }
+}

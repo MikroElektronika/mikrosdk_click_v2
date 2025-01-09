@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Turbidity Click
 
-> Turbidity Click is an adapter Click board™, used to interface a compatible turbidity sensor with the host MCU. This board features one 1x3 2.5mm connector suitable for connecting a TSD-10 Turbidity Sensor via an additional 3-wire cable for Turbidity Click specially made for this purpose. It allows users to upgrade their projects with a sensor that senses the cloudiness or haziness of a fluid caused by large numbers of individual particles invisible to the naked eye. This sensor also measures temperature as well as turbidity.
+> [Turbidity Click](https://www.mikroe.com/?pid_product=MIKROE-4276) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/turbidity_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4276&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/turbidity-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Nov 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Turbidity Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the Turbidity Click driver.
+> The demo application reads ADC value, ADC voltage and 
+> Nephelometric Turbidity Units ( NTU ).
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Turbidity Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Turbidity
 
-#### Standard key functions :
+### Example Key Functions
 
 - `turbidity_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t turbidity_init ( turbidity_t *ctx, turbidity_cfg_t *cfg );
 err_t turbidity_default_cfg ( turbidity_t *ctx );
 ```
 
-#### Example key functions :
-
 - `turbidity_get_ntu` Turbidity get NTU function.
 ```c
 err_t turbidity_get_ntu ( turbidity_t *ctx, float *ntu );
@@ -68,21 +65,12 @@ err_t turbidity_read_adc ( turbidity_t *ctx, uint16_t *adc_val );
 err_t turbidity_get_adc_voltage ( turbidity_t *ctx, float *voltage );
 ```
 
-## Example Description
-
-> This library contains API for the Turbidity Click driver.
-> The demo application reads ADC value, ADC voltage and 
-> Nephelometric Turbidity Units ( NTU ).
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > nitialization of I2C module and log UART.
 > After driver initialization, default settings turn on the device.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -120,17 +108,15 @@ void application_init ( void )
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This example demonstrates the use of the Turbidity Click board™.
+> This example demonstrates the use of the Turbidity Click board&trade;.
 > In this example, we monitor and display Nephelometric Turbidity Units ( NTU ).
 > Results are being sent to the Usart Terminal, where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {
     static float ntu;
@@ -140,25 +126,21 @@ void application_task ( void )
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Turbidity
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

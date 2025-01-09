@@ -1,73 +1,73 @@
-\mainpage Main Page
- 
+
 ---
 # Barometer 2 Click
 
-Barometer 2 Click is a digital barometer on a Click board™. Barometer 2 is equipped with the LPS35HW, an absolute piezoresistive pressure sensor with ceramic, water resistant package, manufactured using a proprietary technology.
+> [Barometer 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3603) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/barometer2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3603&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/barometer-2-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Nov 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Barometer2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Barometer2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void barometer2_cfg_setup ( barometer2_cfg_t *cfg ); 
- 
-- Initialization function.
-> BAROMETER2_RETVAL barometer2_init ( barometer2_t *ctx, barometer2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void barometer2_default_cfg ( barometer2_t *ctx );
-
-
-#### Example key functions :
-
-- Gets the pressure value.
-> float barometer2_get_pressure ( barometer2_t *ctx, uint8_t press_format );
- 
-- Gets the temperature value.
-> float barometer2_get_temperature ( barometer2_t *ctx, uint8_t temp_format );
-
-- Resets the device.
-> void barometer2_software_reset ( barometer2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > The example starts off with the initialization and configuration of the Click and logger modules, tests the communication channel and reads and displays temperature and pressure values every second.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Barometer2
+
+### Example Key Functions
+
+- `barometer2_cfg_setup` Config Object Initialization function. 
+```c
+void barometer2_cfg_setup ( barometer2_cfg_t *cfg );
+``` 
+ 
+- `barometer2_init` Initialization function. 
+```c
+err_t barometer2_init ( barometer2_t *ctx, barometer2_cfg_t *cfg );
+```
+
+- `barometer2_default_cfg` Click Default Configuration function. 
+```c
+void barometer2_default_cfg ( barometer2_t *ctx );
+```
+
+- `barometer2_get_pressure` Gets the pressure value. 
+```c
+float barometer2_get_pressure ( barometer2_t *ctx, uint8_t press_format );
+```
+ 
+- `barometer2_get_temperature` Gets the temperature value. 
+```c
+float barometer2_get_temperature ( barometer2_t *ctx, uint8_t temp_format );
+```
+
+- `barometer2_software_reset` Resets the device. 
+```c
+void barometer2_software_reset ( barometer2_t *ctx );
+```
+
+### Application Init
 
 > Initializes and configures the Click and logger modules and tests the communication for errors.
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -117,7 +117,6 @@ void application_init ( )
     Delay_1sec( );
     log_printf( &logger, "---- Start Measurement ---- \r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -125,7 +124,6 @@ void application_init ( )
 > Reads and displays temperature and pressure values every second.
 
 ```c
-
 void application_task ( )
 {
     float temperature;
@@ -139,29 +137,22 @@ void application_task ( )
 
     log_printf( &logger, "--------------------------\n" );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Barometer2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

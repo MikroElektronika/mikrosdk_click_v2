@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Waveform 4 Click
 
-> Waveform 4 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9106, a quad-channel, 12-bit, 180MSPS waveform generator, integrating on-chip static random access memory (SRAM) and direct digital synthesis (DDS) for complex waveform generation from Analog Devices. The DDS is up to a 180 MHz master clock sinewave generator with a 24-bit tuning word allowing 10.8 Hz/LSB frequency resolution.
+> [Waveform 4 Click](https://www.mikroe.com/?pid_product=MIKROE-4908) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/waveform4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4908&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/waveform-4-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Waveform4 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Waveform 4 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Waveform4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Waveform4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `waveform4_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t waveform4_init ( waveform4_t *ctx, waveform4_cfg_t *cfg );
 err_t waveform4_default_cfg ( waveform4_t *ctx );
 ```
 
-#### Example key functions :
-
 - `waveform4_set_frequency` This function sets the sine and cosine (DDS) waves output frequency.
 ```c
 err_t waveform4_set_frequency ( waveform4_t *ctx, uint32_t freq );
@@ -68,19 +63,12 @@ err_t waveform4_set_gain ( waveform4_t *ctx, uint8_t channel, float gain );
 err_t waveform4_set_wave_output ( waveform4_t *ctx, uint8_t channel, uint8_t wave );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Waveform 4 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which resets the registers and sets the sine wave output with default gain and 
 > default frequency for all channels. After that it displays the list of supported commands on the USB UART.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -117,7 +105,6 @@ void application_init ( void )
     waveform4_display_commands ( );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -125,7 +112,6 @@ void application_init ( void )
 > Depending on the command character received from USB UART it changes the signal frequency, gain or wave of the selected channel.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t command = 0;
@@ -134,26 +120,21 @@ void application_task ( void )
         waveform4_parse_command ( command );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Waveform4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

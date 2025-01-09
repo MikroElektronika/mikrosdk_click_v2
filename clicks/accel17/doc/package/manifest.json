@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 17 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel17",
-    "product_link": "https://www.mikroe.com/accel-17-click",
-    "short_description": "Accel 17 Click is a compact add-on board that contains an acceleration sensor. This board features the MXC62320MP, a low-power digital output dual-axis accelerometer fabricated on a standard, submicron CMOS process from MEMSIC.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.Accel17",
-    "subdir_name": "lib_accel17"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4855",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 17 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel17",
+                "subdir_name": "lib_accel17",
+                "path": "Accel 17 Click/data/lib_accel17"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Inclinometer Click",
-    "description": "Inclinometer Click is a compact add-on board that offers best-in-class characteristics for inclination measurements. This board features the SCL3300, a high-performance inclinometer sensor component from Murata.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SCL3300"],
-    "category" : ["Motion"]
+    "hw" : ["Click","SCL3300"]
 }

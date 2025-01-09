@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # STSPIN220 Click
 
-> STSPIN220 Click is a stepper motor driver with the PWM current control and selectable microstepping up to 256 microsteps. It is based on the STSPIN220, a low voltage stepper motor driver from STSPIN2 series. It is optimized for battery-powered, low voltage motor driving applications, featuring the lowest standby current available on the market (max 80 nA). The STSPIN220 is a high-efficiency motor driver, featuring low ON resistance MOSFETs as the output stage, in a small 3x3mm QFN package. Its output stage implements the PWM current control with fixed OFF time, along with a full set of protection features. The device can be used with the step motor voltage ranging from 1.8V to 10V, and current up to 1.3A per bridge.
+> [STSPIN220 Click](https://www.mikroe.com/?pid_product=MIKROE-3545) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/stspin220_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3545&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/stspin220-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Mar 2024.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the STSPIN220 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the STSPIN220 Click board by driving the motor in both directions for a desired number of steps.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for STSPIN220 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.STSPIN220
 
-#### Standard key functions :
+### Example Key Functions
 
 - `stspin220_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t stspin220_init ( stspin220_t *ctx, stspin220_cfg_t *cfg );
 void stspin220_default_cfg ( stspin220_t *ctx );
 ```
 
-#### Example key functions :
-
 - `stspin220_set_direction` This function sets the motor direction by setting the DIR pin logic state.
 ```c
 void stspin220_set_direction ( stspin220_t *ctx, uint8_t dir );
@@ -68,18 +63,11 @@ void stspin220_drive_motor ( stspin220_t *ctx, uint32_t steps, uint8_t speed );
 void stspin220_reset_device ( stspin220_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the STSPIN220 Click board by driving the motor in both directions for a desired number of steps.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -111,7 +99,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -137,22 +124,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.STSPIN220
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

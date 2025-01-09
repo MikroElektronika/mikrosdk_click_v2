@@ -1,73 +1,69 @@
-\mainpage Main Page
-
 
 ---
 # CAP Slider 2 Click
 
-CAP Slider 2 Click is a capacitive touch sensor with XY cross shaped electrodes integrated on a Click board™. This Click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself
+> [CAP Slider 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3204) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/capslider2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3204&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/cap-slider-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the CapSlider2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for CapSlider2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void capslider2_cfg_setup ( capslider2_cfg_t *cfg ); 
- 
-- Initialization function.
-> CAPSLIDER2_RETVAL capslider2_init ( capslider2_t *ctx, capslider2_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Generic Write function
-> uint8_t capsldr2_write_reg ( capslider2_t *ctx, uint8_t register_address, uint8_t *data_in, uint8_t n_bytes );
- 
-- Generic Read function
-> uint8_t capsldr2_read_reg ( capslider2_t *ctx, uint8_t register_address, uint8_t *data_out, uint8_t n_bytes );
-
-- Data Ready Check function
-> uint8_t capsldr2_check_data_ready ( capslider2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application could be used for controlling various devices.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CapSlider2
+
+### Example Key Functions
+
+- `capslider2_cfg_setup` Config Object Initialization function. 
+```c
+void capslider2_cfg_setup ( capslider2_cfg_t *cfg );
+``` 
+ 
+- `capslider2_init` Initialization function. 
+```c
+err_t capslider2_init ( capslider2_t *ctx, capslider2_cfg_t *cfg );
+```
+
+- `capsldr2_write_reg` Generic Write function. 
+```c
+uint8_t capsldr2_write_reg( capslider2_t *ctx, uint8_t register_address, uint8_t *data_in, uint8_t n_bytes );
+```
+ 
+- `capsldr2_read_reg` Generic Read function. 
+```c
+uint8_t capsldr2_read_reg( capslider2_t *ctx, uint8_t register_address, uint8_t *data_out, uint8_t n_bytes );
+```
+
+- `capsldr2_check_data_ready` Data Ready Check function. 
+```c
+uint8_t capsldr2_check_data_ready( capslider2_t *ctx );
+```
+
+### Application Init
 
 > Initializes I2C interface, performs the device reset and configurations
 > and sets the desired threshold value which determines sensor sensitivity.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -112,7 +108,6 @@ void application_init ( void )
     log_printf( &logger, "CAP Slider 2 is initialized\r\n" );
 
 }
-  
 ```
 
 ### Application Task
@@ -123,7 +118,6 @@ void application_init ( void )
 > while Y slider increases/decreases the LEDs intensity.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t data_wheel1;
@@ -158,33 +152,26 @@ void application_task ( void )
         wheel_avrg2 = 0;
         cnt = 0;
     }
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > In some cases, the user will need to wait several seconds after the Click initialization for the sensor to be stabilized.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CapSlider2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

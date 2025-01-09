@@ -1,8 +1,5 @@
 {
     "name": "TempHum 22 Click",
-    "description": "Temp&Hum 22 Click is a compact add-on board representing temperature and humidity sensing solution. This board features the SHT41A, a 4th generation automotive-grade relative humidity and temperature sensor from Sensirion. The SHT41A is characterized by its high accuracy (±2% RH and ±0.3°C over a wide operating temperature range) and high resolution providing 16-bit data to the host controller with a configurable I2C interface. Also, it is designed for reliable operation in harsh conditions such as condensing environments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SHT41A-AD1B"],
-    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+    "hw" : ["Click","SHT41A-AD1B"]
 }

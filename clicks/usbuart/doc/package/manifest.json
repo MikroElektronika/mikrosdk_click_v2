@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Interface > USB",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "USB UART Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.usbuart",
-    "product_link": "https://www.mikroe.com/usb-uart-click",
-    "short_description": "USB UART Click offers a USB to asynchronous serial data (UART) interface, allowing the microcontroller based designs to communicate with the personal computer, in a very simple way. It is equipped with the FT232RL, a very popular USB to UART interface IC, used on many MikroElektronika devices - both for its reliability and simplicity. USB UART Click is used for whenever there is a need for seamless and effortless interfacing of the UART lines to a personal computer.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        421
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.22",
-    "cmake": true,
-    "alias": "Click.USBUART",
-    "subdir_name": "lib_usbuart"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1203",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB UART Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBUART",
+                "subdir_name": "lib_usbuart",
+                "path": "USB UART Click/data/lib_usbuart"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

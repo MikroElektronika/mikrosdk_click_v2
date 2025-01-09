@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Amplifier",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "AudioAMP 12 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.audioamp12",
-    "product_link": "https://www.mikroe.com/audioamp-12-click",
-    "short_description": "AudioAMP 12 Click is a compact add-on board that can reproduce input signals with desired volume and power levels at sound-producing output elements. This board features the TS2007FC, a filter-free class-D audio amplifier from STMicroelectronics. This amplifier can drive up to 1.4W into an 8Ω load at 5V, achieving better efficiency than a typical class AB audio power amplifier. In addition, it can drive up to 2.3W but into a 4Ω load at 3V and with a 1% THD+N at maximum.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.AudioAMP12",
-    "subdir_name": "lib_audioamp12"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5796",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "AudioAMP 12 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AudioAMP12",
+                "subdir_name": "lib_audioamp12",
+                "path": "AudioAMP 12 Click/data/lib_audioamp12"
+            }
+        ]
+    }
 }
-
-
-
-
-

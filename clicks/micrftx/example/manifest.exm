@@ -1,8 +1,5 @@
 {
     "name": "MICRF TX Click",
-    "description": "MICRF TX Click is a compact add-on board designed as a powerful RF transmitter for data transmission over the 315MHz frequency band. This board features the MICRF112, a high-performance RF transmitter IC from Microchip, renowned for its efficiency in operation. This Click board™ stands out for its ease of use, requiring only a simple crystal oscillator to set the frequency, and supports both ASK and FSK modulation types with a Phase-Locked Loop (PLL) for stable frequency.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MICRF112YMM"],
-    "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
+    "hw" : ["Click","MICRF112YMM"]
 }

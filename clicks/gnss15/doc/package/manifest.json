@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GNSS 15 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gnss15",
-    "product_link": "https://www.mikroe.com/gnss-15-click",
-    "short_description": "GNSS 15 Click is a compact add-on board for advanced automotive navigation and tracking applications. This board features the TESEO-VIC3DA, an automotive GNSS dead-reckoning module from STMicroelectronics. This module combines a 6-axis IMU with multi-constellation satellite reception, offering exceptional accuracy and dead-reckoning capabilities. It stands out for its rapid time-to-first-fix and the ability to receive firmware updates for enhanced performance. Designed for flexibility, it supports both UART and I2C communications, includes pins for precise odometer readings, and features an SMA antenna connector for superior signal quality.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.GNSS15",
-    "subdir_name": "lib_gnss15"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5987",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 15 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS15",
+                "subdir_name": "lib_gnss15",
+                "path": "GNSS 15 Click/data/lib_gnss15"
+            }
+        ]
+    }
 }
-
-
-

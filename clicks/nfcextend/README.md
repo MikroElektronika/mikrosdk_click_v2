@@ -1,19 +1,19 @@
-\mainpage Main Page
- 
+
 ---
 # NFC Extend Click
 
-NFC Extend Click is NFC tag interface device with possibility of using any shape and size external antenna, offering 16 Kbit of electrically erasable programmable memory (EEPROM). This Click Board™ offer two communication interfaces.>
+> [NFC Extend Click](https://www.mikroe.com/?pid_product=MIKROE-3971) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/nfcextend_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3971&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/nfc-extend-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
@@ -21,53 +21,55 @@ NFC Extend Click is NFC tag interface device with possibility of using any shape
 
 # Software Support
 
-We provide a library for the NfcExtend Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for NfcExtend Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void nfcextend_cfg_setup ( nfcextend_cfg_t *cfg ); 
- 
-- Initialization function.
-> NFCEXTEND_RETVAL nfcextend_init ( nfcextend_t *ctx, nfcextend_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void nfcextend_default_cfg ( nfcextend_t *ctx );
-
-#### Example key functions :
-
-- This function writes data to the chip.
-> uint8_t nfcextend_i2c_set ( nfcextend_t *ctx, nfcextend_block_t *block );
- 
-- This function reads data from the chip.
-> uint8_t nfcextend_i2c_get ( nfcextend_t *ctx, nfcextend_block_t *block );
-
-- This function reads the digital signal from the INT pin.
-> uint8_t nfcextend_digital_read_int ( nfcextend_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This example showcases how to configure and use the NFC Extend Click. The Click is an NFC tag 
   interface which uses the I2C serial interface and an RF link interface in order to communicate.
   The example requires the ST25 NFC Tap application which can be downloaded to your phone. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NfcExtend
+
+### Example Key Functions
+
+- `nfcextend_cfg_setup` Config Object Initialization function. 
+```c
+void nfcextend_cfg_setup ( nfcextend_cfg_t *cfg );
+``` 
+ 
+- `nfcextend_init` Initialization function. 
+```c
+err_t nfcextend_init ( nfcextend_t *ctx, nfcextend_cfg_t *cfg );
+```
+
+- `nfcextend_default_cfg` Click Default Configuration function. 
+```c
+void nfcextend_default_cfg ( nfcextend_t *ctx );
+```
+
+- `nfcextend_i2c_set` This function writes data to the chip. 
+```c
+uint8_t nfcextend_i2c_set ( nfcextend_t *ctx, nfcextend_block_t *block );
+```
+ 
+- `nfcextend_i2c_get` This function reads data from the chip. 
+```c
+uint8_t nfcextend_i2c_get ( nfcextend_t *ctx, nfcextend_block_t *block );
+```
+
+- `nfcextend_digital_read_int` This function reads the digital signal from the INT pin. 
+```c
+uint8_t nfcextend_digital_read_int ( nfcextend_t *ctx );
+```
+
+### Application Init
 
 > This function initializes and configures the logger and Click modules.
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -110,7 +112,6 @@ void application_init ( )
     }
     log_printf( &logger, "-----------------------\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -120,7 +121,6 @@ void application_init ( )
   it and show the received data in the UART console. 
 
 ```c
-
 void application_task ( )
 {
     nfcextend_block_t block;
@@ -168,27 +168,22 @@ void application_task ( )
         log_printf( &logger, " ** Message END **\r\n" );
         log_printf( &logger, " ------------------------------\r\n" );
     }
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NfcExtend
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

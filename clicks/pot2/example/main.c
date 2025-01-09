@@ -8,7 +8,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configures clicks and log objects.
+ * Configures Clicks and log objects.
  * 
  * ## Application Task  
  * Demo app reads ADC data and displays them as dec and hex values every second

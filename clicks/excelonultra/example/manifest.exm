@@ -1,8 +1,5 @@
 {
     "name": "Excelon-Ultra Click",
-    "description": "Excelon-Ultra Click is a compact add-on board that contains the most reliable nonvolatile memory. This board features the CY15B116QSN, a high-performance 16-Mbit nonvolatile memory that employs an advanced ferroelectric process from Infineon Technologies.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CY15B116QSN"],
-    "category" : ["Click Boards > Storage > FRAM"]
+    "hw" : ["Click","CY15B116QSN"]
 }

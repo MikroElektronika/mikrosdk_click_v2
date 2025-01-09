@@ -1,8 +1,5 @@
 {
     "name": "WIZFI360 Click",
-    "description": "WIZFI360 Click is a compact add-on board for reliable WiFi connectivity in industrial applications. This board features the WIZFI360, a WiFi module from WIZnet, known for its low power consumption and full compliance with IEEE802.11 b/g/n standards. The board supports SoftAP, Station, and SoftAP+Station modes, operates within the frequency range of 2400MHz to 2483.5MHz, and offers a versatile serial port baud rate of up to 2Mbps. It features WPA_PSK and WPA2_PSK encryption for secure communication, configurable operating channels from 1 to 13, and the ability to handle up to 5 simultaneous TCP/UDP links.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","WIZFI360-PA"],
-    "category" : ["Click Boards > Wireless connectivity > WIFI"]
+    "hw" : ["Click","WIZFI360-PA"]
 }

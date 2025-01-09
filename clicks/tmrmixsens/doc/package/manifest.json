@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "TMR mix-sens Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.tmrmixsens",
-    "product_link": "https://www.mikroe.com/tmr-mix-sens-click",
-    "short_description": "The TMR mix-sens Click has three types of magnetic field sensors: Two digital and one analog sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3197
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Tmrmixsens",
-    "subdir_name": "lib_tmrmixsens"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4106",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TMR mix-sens Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Tmrmixsens",
+                "subdir_name": "lib_tmrmixsens",
+                "path": "TMR mix-sens Click/data/lib_tmrmixsens"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

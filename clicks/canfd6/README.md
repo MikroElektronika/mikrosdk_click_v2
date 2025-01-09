@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # CAN FD 6 Click
 
-> CAN FD 6 Click is a compact add-on board containing a CAN transceiver that supports CAN and CAN FD protocols. This board features the TCAN4550, a CAN FD controller that provides an interface between the CAN bus and the CAN protocol controller up to 5 megabits per second (Mbps) from Texas Instruments.
+> [CAN FD 6 Click](https://www.mikroe.com/?pid_product=MIKROE-4572) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/canfd6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4572&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/can-fd-6-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Nikolic
 - **Date**          : feb 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the CANFD6 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This application presents the capabilities of the CAN FD 6 Click board. The board can be used both as a receiver and a transmitter. Use def directive to define the receive or transmit app.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for CANFD6 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CANFD6
 
-#### Standard key functions :
+### Example Key Functions
 
 - `canfd6_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t canfd6_init ( canfd6_t *ctx, canfd6_cfg_t *cfg );
 void canfd6_default_cfg ( canfd6_t *ctx );
 ```
 
-#### Example key functions :
-
 - `canfd6_mcan_write_txbuffer` This function will write a CAN message to a specified TX buffer that can be transmitted at a later time with the transmit buffer contents function.
 ```c
 uint32_t canfd6_mcan_write_txbuffer ( canfd6_t *ctx, uint8_t buf_index, canfd6_mcan_tx_header_t *header, uint8_t data_payload[ ] );
@@ -68,19 +63,13 @@ err_t canfd6_mcan_transmit_buffer_contents ( canfd6_t *ctx, uint8_t buf_index );
 uint8_t canfd6_mcan_read_nextfifo ( canfd6_t *ctx, canfd6_mcan_fifo_enum_t fifo_def, canfd6_mcan_rx_header_t *header, uint8_t data_payload[ ] );
 ```
 
-## Example Description
-
-> This application presents the capabilities of the CAN FD 6 Click board. The board can be used both as a receiver and a transmitter. Use def directive to define the receive or transmit app.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > The app starts by initializing the UART LOG and SPI drivers. The default cfg function performs the mandatory settings of the device. The user's default configuration can be modified ( for more information about device configuration, check the datasheet ). Additionally, the app writes two messages to the FIFO buffer and sends them if the transmit buffer content event is triggered.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;        /**< Logger config object. */
     canfd6_cfg_t canfd6_cfg;  /**< Click config object. */
 
@@ -142,7 +131,6 @@ void application_init ( void ) {
 #endif
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -150,8 +138,8 @@ void application_init ( void ) {
 > Depending on the defined app option, the application task performs the following procedure. If the transmitter is preferred, the application task triggers the transmit buffer contents event of the first message and, later on, the second message. On the other hand, the receiver waits for the CAN FD interrupt, where the payload is read along with the header ID.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
 #ifdef DEMO_APP_TRANSMITTER
     log_printf( &logger, " Transmit first message\r\n" );
     canfd6_mcan_transmit_buffer_contents( &canfd6, CANFD6_FIRST_MSG );
@@ -197,26 +185,21 @@ void application_task ( void ) {
     }
 #endif
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CANFD6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

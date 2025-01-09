@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Microwave 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.microwave6",
-    "product_link": "https://www.mikroe.com/microwave-6-click",
-    "short_description": "Microwave 6 Click is a compact add-on board that utilizes the Doppler Shift Phenomenon to sense motion. This board features the PD-V8-S, a high-frequency microwave sensor from Ningbo Pdlux Electronic Technology. The transmitter on this transceiver works on a 5.8GHz frequency over the patch antenna, with a 2-3kHz pulse repetition frequency. The strength of the sensor’s output, in other words, the detection range, depends on the Signal-to-Noise ratio.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.Microwave6",
-    "subdir_name": "lib_microwave6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5773",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Microwave 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Microwave6",
+                "subdir_name": "lib_microwave6",
+                "path": "Microwave 6 Click/data/lib_microwave6"
+            }
+        ]
+    }
 }
-
-
-
-
-

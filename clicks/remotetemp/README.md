@@ -1,72 +1,69 @@
-\mainpage Main Page
-
 
 ---
 # Remote Temp Click
 
-Remote Temp Click is a temperature sensing Click board™, which features the EMC1833 from Microchip, a specifically designed IC, capable of measuring remote temperature. This option makes Remote Temp Click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the BJT model junction can be a substrate PNP or NPN.
+> [Remote Temp Click](https://www.mikroe.com/?pid_product=MIKROE-3685) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/remotetemp_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3685&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/remote-temp-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the RemoteTemp Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for RemoteTemp Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void remotetemp_cfg_setup ( remotetemp_cfg_t *cfg ); 
- 
-- Initialization function.
-> REMOTETEMP_RETVAL remotetemp_init ( remotetemp_t *ctx, remotetemp_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void remotetemp_default_cfg ( remotetemp_t *ctx );
-
-
-#### Example key functions :
-
-- Getting state of INT pin.
-> uint8_t remotetemp_int_get ( remotetemp_t *ctx );
-
- 
-- Getting state of AN pin.
-> uint8_t remotetemp_an_get ( remotetemp_t *ctx );
-
-
-- Setting temperature range.
-> uint8_t remotetemp_set_range( remotetemp_t *ctx, uint8_t range_setting );
-
-
-## Examples Description
+## Example Description
 
 > This application reads remote temperature data.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.RemoteTemp
+
+### Example Key Functions
+
+- `remotetemp_cfg_setup` Config Object Initialization function. 
+```c
+void remotetemp_cfg_setup ( remotetemp_cfg_t *cfg );
+``` 
+ 
+- `remotetemp_init` Initialization function. 
+```c
+err_t remotetemp_init ( remotetemp_t *ctx, remotetemp_cfg_t *cfg );
+```
+
+- `remotetemp_default_cfg` Click Default Configuration function. 
+```c
+void remotetemp_default_cfg ( remotetemp_t *ctx );
+```
+
+- `remotetemp_int_get` Getting state of INT pin. 
+```c
+uint8_t remotetemp_int_get ( remotetemp_t *ctx );
+```
+
+- `remotetemp_an_get` Getting state of AN pin. 
+```c
+uint8_t remotetemp_an_get ( remotetemp_t *ctx );
+```
+
+- `remotetemp_set_range` Setting temperature range. 
+```c
+uint8_t remotetemp_set_range ( remotetemp_t *ctx, uint8_t range_setting );
+```
+
+### Application Init
 
 > Initializes I2C driver, sets range, configures device and sets threshold values.
 
@@ -117,24 +114,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.RemoteTemp
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

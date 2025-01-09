@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LTE IoT",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LTE IoT 14 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lteiot14",
-    "product_link": "https://www.mikroe.com/lte-iot-14-click",
-    "short_description": "LTE IoT 14 Click is a compact add-on board designed for low-latency and low-throughput wireless data communication in IoT applications. This board features the SIM7090G, a multi-band LTE module from SIMCom, supporting Cat-M and Cat-NB communication modes and multi-constellation GNSS (GPS/GLONASS/Galileo/BeiDou) for global connectivity. This board features a UART interface for communication with the host MCU, a USB Type-C port for data transfer and firmware upgrades, as well as visual indicators for real-time network and power status. It also includes test points for easier debugging, dual SMA connectors for LTE and GNSS antennas, and a micro SIM card holder for flexible service provider selection.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.LTEIoT14",
-    "subdir_name": "lib_lteiot14"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6389",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE IoT 14 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTEIoT14",
+                "subdir_name": "lib_lteiot14",
+                "path": "LTE IoT 14 Click/data/lib_lteiot14"
+            }
+        ]
+    }
 }
-

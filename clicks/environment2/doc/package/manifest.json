@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Environmental",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Environment 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.environment2",
-    "product_link": "https://www.mikroe.com/environment-2-click",
-    "short_description": "Environment 2 Click is a compact add-on board containing best-in-class SHT humidity and SGP air-quality sensing solutions from Sensirion. This board features SHT40 and SGP40, a high-accuracy ultra-low-power relative humidity, and a temperature sensor combined with MOx based gas sensor. The SHT40 sensor offers linearized digital output, provides constant temperature accuracy, up to 0.1°C, and shows the best performance when operated within the temperature and humidity range of 5-60°C and 20-80%RH, while the SGP40, a digital gas sensor, features a temperature-controlled micro hot-plate providing a humidity-compensated VOC-based indoor air quality signal. This Click board™ is suitable for indoor air quality and various temperature and humidity-related applications",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Environment2",
-    "subdir_name": "lib_environment2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4558",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Environment 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Environment2",
+                "subdir_name": "lib_environment2",
+                "path": "Environment 2 Click/data/lib_environment2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

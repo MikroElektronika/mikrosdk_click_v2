@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # RS232 Isolator 2 Click
 
-RS232 Isolator 2 Click is a compact add-on board that contains a fully isolated transceiver used to provide secure and easy UART to RS232 conversion. This board features the ICL3221, a 3.3V powered RS232 transmitter/receiver that provides ±15kV ESD protection on its RS232 pins from Renesas. This Click board™ is characterized by an assured minimum data rate of 250kbps. It features an automatic power-down function and uses high-speed digital optocouplers to isolate the RS232 interface for 3.75kV isolation. It also possesses an LED indicator that indicates a valid RS232 signal at any of the receiver inputs. This Click board™ is suitable for isolation of RS232 signals, portable equipment, and where the low operational power consumption and even lower standby power consumption are critical.
+> [RS232 Isolator 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4536) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rs232isolator2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4536&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rs232-isolator-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jan 2021.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Rs232Isolator2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for RS 232 Isolator 2 Click driver.
+> This example transmits/receives and processes data from RS 232 Isolator 2 Clicks.
+> The library initializes and defines the UART bus drivers 
+> to transmit or receive data. 
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Rs232Isolator2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Rs232Isolator2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `rs232isolator2_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +43,13 @@ void rs232isolator2_cfg_setup ( rs232isolator2_cfg_t *cfg );
 
 - `rs232isolator2_init` Initialization function.
 ```c
-RS232ISOLATOR2_RETVAL rs232isolator2_init ( rs232isolator2_t *ctx, rs232isolator2_cfg_t *cfg );
+err_t rs232isolator2_init ( rs232isolator2_t *ctx, rs232isolator2_cfg_t *cfg );
 ```
 
 - `rs232isolator2_default_cfg` Click Default Configuration function.
 ```c
 void rs232isolator2_default_cfg ( rs232isolator2_t *ctx );
 ```
-
-#### Example key functions :
 
 - `rs232isolator2_generic_write` RS 232 Isolator 2 data writing function.
 ```c
@@ -68,22 +66,13 @@ err_t rs232isolator2_generic_read ( rs232isolator2_t *ctx, char *data_buf, uint1
 err_t rs232isolator2_send_data ( rs232isolator2_t *ctx, char *tx_data );
 ```
 
-## Example Description
-
-> This library contains API for RS 232 Isolator 2 Click driver.
-> This example transmits/receives and processes data from RS 232 Isolator 2 clicks.
-> The library initializes and defines the UART bus drivers 
-> to transmit or receive data. 
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and wake-up module.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     rs232isolator2_cfg_t rs232isolator2_cfg;  /**< Click config object. */
 
@@ -136,7 +125,6 @@ void application_init ( void ) {
         
     log_printf( &logger, "------------------\r\n" );
 }
-
 ```
 
 ### Application Task
@@ -146,8 +134,8 @@ void application_init ( void ) {
 > while transmitted send messages every 2 seconds.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     
     #ifdef TRANSMITTER
     
@@ -170,25 +158,21 @@ void application_task ( void ) {
     
     #endif
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Rs232Isolator2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

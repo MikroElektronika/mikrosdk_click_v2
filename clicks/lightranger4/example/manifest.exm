@@ -1,8 +1,5 @@
 {
     "name": "Light Ranger 4 Click",
-    "description": "Light Ranger 4 Click is an accurate distance measurement Click board based on a ToF (Time of Flight) measurement principle.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","VL53L1X"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","VL53L1X"]
 }

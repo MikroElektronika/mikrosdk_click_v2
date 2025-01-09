@@ -1,8 +1,5 @@
 {
     "name": "Stepper 14 Click",
-    "description": "The Stepper 14 Click is a Click board™ that features the DRV8847PWPR, a step motor driver, from Texas Instruments. This Click board™ provides a bipolar step motor controle, It features an H-bridge bipolar step motor driver, which supports full-, half-, quarter-, or eighth-step modes. This Click board™ also carries a port expander so that the communication can be done with a minimal number of pins, through the mikroBUS™ I2C bus.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8847PWPR","PCA9538ABSH"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","DRV8847PWPR","PCA9538ABSH"]
 }

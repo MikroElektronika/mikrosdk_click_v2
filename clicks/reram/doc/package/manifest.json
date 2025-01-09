@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > ReRAM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ReRAM Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.reram",
-    "product_link": "https://www.mikroe.com/reram-click",
-    "short_description": "ReRAM Click features ReRAM (Resistive Random Access Memory) module which contains the cell array made of 524.288 words x 8 bits, which totals 4 Mbits of data. The used memory module can withstand a large number of write cycles, it has data retention period greater than 10 years and it can read and write to random addresses with no delay.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2850
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Reram",
-    "subdir_name": "lib_reram"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3641",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ReRAM Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Reram",
+                "subdir_name": "lib_reram",
+                "path": "ReRAM Click/data/lib_reram"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

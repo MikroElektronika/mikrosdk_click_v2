@@ -11,7 +11,7 @@
  * Initialization driver enable's - GPIO, also write log.
  *
  * ## Application Task
- * With this example we show the operation of UPS 3 clicks.
+ * With this example we show the operation of UPS 3 Clicks.
  * This example shows an autonomously transition from charge to backup mode.
  * Results are being sent to the Usart Terminal where you can track their changes. 
  *

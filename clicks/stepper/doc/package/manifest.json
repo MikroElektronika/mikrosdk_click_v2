@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Stepper Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepper",
-    "product_link": "https://www.mikroe.com/stepper-click",
-    "short_description": "Stepper Click is a complete solution for driving bipolar stepper motors with full/half and micro-steps. It features the A3967 IC from Allegro Microsystems with proprietary Satlington™ sink drivers on its outputs, which ensure high efficiency and reliable operation of the internal H-Bridges. This IC has the integrated translation section, used to simplify the control: using simple step control inputs from the host MCU, the stepper motor can be driven in both directions, with the predetermined step sizes. In addition, the output current is regulated allowing for noiseless operation of the stepper motor, with no resonance and ringing typically observed at unregulated stepper driver designs.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        926
-    ],
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.Stepper",
-    "subdir_name": "lib_stepper"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1528",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper",
+                "subdir_name": "lib_stepper",
+                "path": "Stepper Click/data/lib_stepper"
+            }
+        ]
+    }
 }
-
-
-

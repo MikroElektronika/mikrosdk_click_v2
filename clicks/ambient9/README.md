@@ -1,73 +1,70 @@
-\mainpage Main Page
- 
+
 ---
 # Ambient 9 Click
 
-Ambient 9 Click is a compact add-on board that contains an integrated ambient light sensing and proximity detector with IR LED in an optical module. This board features the APDS-9160-003, digital ALS, and IR sensing, an IR LED, and a complete proximity sensing solution from Broadcom Limited, that is fit to be used under a small aperture of the devices cover windows. It has a wide dynamic range, the proximity detection feature operates well from bright sunlight to dark rooms, and both the PS and ALS functions independently provides maximum flexibility in applications.
+> [Ambient 9 Click](https://www.mikroe.com/?pid_product=MIKROE-4197) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ambient9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4197&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/ambient-9-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jul 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Ambient9 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Ambient9 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void ambient9_cfg_setup ( ambient9_cfg_t *cfg ); 
- 
-- Initialization function.
-> AMBIENT9_RETVAL ambient9_init ( ambient9_t *ctx, ambient9_cfg_t *cfg );
-
-#### Example key functions :
-
-- Generic function for reading ALS data from senso
-> uint32_t ambient9_als_data ( ambient9_t *ctx );
- 
-- Generic function for reading proximity data from sensor
-> uint16_t ambient9_proxy_data ( ambient9_t *ctx );
-
-- Function for enabeling sensor for ALS or proximity
-> void ambient9_enable_data ( ambient9_t *ctx, uint8_t als_ps );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of Ambient 9 Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ambient9
+
+### Example Key Functions
+
+- `ambient9_cfg_setup` Config Object Initialization function. 
+```c
+void ambient9_cfg_setup ( ambient9_cfg_t *cfg );
+``` 
+ 
+- `ambient9_init` Initialization function. 
+```c
+err_t ambient9_init ( ambient9_t *ctx, ambient9_cfg_t *cfg );
+```
+
+- `ambient9_als_data` Generic function for reading ALS data from senso. 
+```c
+uint32_t ambient9_als_data( ambient9_t *ctx );
+```
+ 
+- `ambient9_proxy_data` Generic function for reading proximity data from sensor. 
+```c
+uint16_t ambient9_proxy_data( ambient9_t *ctx );
+```
+
+- `ambient9_enable_data` Function for enabeling sensor for ALS or proximity. 
+```c
+void ambient9_enable_data( ambient9_t *ctx, uint8_t als_ps );
+```
+
+### Application Init
 
 > Initializes the driver then reads the device status and part ID. If there's any error occured 
 > it displays an appropriate message on the USB UART. After that, it enables the device mode
 > defined by the dev_mode variable. ALS mode is selected by default.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -114,7 +111,6 @@ void application_init ( void )
     log_printf( &logger, " ***** APP TASK ***** \r\n" );
     Delay_ms ( 500 );
 }
-  
 ```
 
 ### Application Task
@@ -123,7 +119,6 @@ void application_init ( void )
 > displays the results on the USB UART every 100ms.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t proxy_data;
@@ -140,29 +135,22 @@ void application_task ( void )
         log_printf( &logger, " - Proximity data: %u \r\n", proxy_data );
     }
     Delay_ms ( 100 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ambient9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

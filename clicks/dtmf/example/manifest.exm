@@ -1,8 +1,5 @@
 {
     "name": "DTMF Click",
-    "description": "DTMF Click is a compact add-on board designed for projects that demand reliable telephony interactions. This board features the CMX865A, a DTMF Codec/FSK Combo multi-standard modem from CML Micro. The CMX865A excels in encoding and decoding DTMF signals, alongside supporting FSK data transmission compatible with V.23, V.21, Bell 103, and Bell 202 standards, making it versatile for various telephony applications. It's particularly adept at enabling dual-mode operations for transmitting and receiving data, ensuring high fidelity in signal processing and resistance to voice falsing. Ideal for security systems, automated response services, and IoT devices requiring telephonic interaction, DTMF Click provides a solution for developers looking to incorporate reliable telecommunication capabilities.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CMX865AD4"],
-    "category" : ["Click Boards > Audio & voice > Signal processing"]
+    "hw" : ["Click","CMX865AD4"]
 }

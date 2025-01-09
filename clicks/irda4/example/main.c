@@ -12,7 +12,7 @@
  * Initializes the driver and disables the transmitter shutdown.
  *
  * ## Application Task
- * Demonstrates the use of IrDA 4 clicks which can be used as transmitter or receiver. 
+ * Demonstrates the use of IrDA 4 Clicks which can be used as transmitter or receiver. 
  * - TRANSMITTER : Device is sending tx_message data. 
  * - RECEIVER    : Device is reading a message that is being transmitted and 
  *                 logs it on the UART terminal. 

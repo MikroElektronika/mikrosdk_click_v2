@@ -1,8 +1,5 @@
 {
     "name": "Grid-EYE 2 Click",
-    "description": "Grid-EYE 2 Click is a compact add-on board designed for thermal imaging and motion detection applications. This board features the AMG883543, an infrared array sensor from Panasonic with a 90° viewing angle and an 8x8 pixel matrix that measures temperatures from 0°C to 80°C with a resolution of 0.25°C. The sensor can detect objects up to 5 meters away and outputs temperature data via a digital interface. The board also supports the Click Snap feature, allowing the main sensor area to be detached for flexible positioning.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AMG883543"],
-    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+    "hw" : ["Click","AMG883543"]
 }

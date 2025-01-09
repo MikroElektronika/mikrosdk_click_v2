@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Shake2Wake Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.shake2wake",
-    "product_link": "https://www.mikroe.com/shake-2-wake-click",
-    "short_description": "Shake2Wake Click carries an ADXL362 ultralow power, 3-axis MEMS accelerometer and ADP195 load switch. The distinguishing feature of this IC is that it incorporates several activity detection modes.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1589
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Shake2Wake",
-    "subdir_name": "lib_shake2wake"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1942",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Shake2Wake Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Shake2Wake",
+                "subdir_name": "lib_shake2wake",
+                "path": "Shake2Wake Click/data/lib_shake2wake"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Fan 2 Click",
-    "description": "Fan 2 Click carries the MAX31760 precision fan-speed controller. It can measure temperature and adjust the fan speed to keep the temperature at the same level. Fan 2 Click can also control two fans at the same time.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX31760"],
-    "category" : ["Brushless"] 
+    "hw" : ["Click","MAX31760"]
 }

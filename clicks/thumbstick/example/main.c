@@ -3,7 +3,7 @@
  * \brief Thumbstick Click example
  * 
  * # Description
- * The demo application shows clickboard axis postioning and button pressed.
+ * The demo application shows Clickboard axis postioning and button pressed.
  *
  * The demo application is composed of two sections :
  * 

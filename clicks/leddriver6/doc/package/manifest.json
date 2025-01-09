@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED Drivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LED driver 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.leddriver6",
-    "product_link": "https://www.mikroe.com/led-driver-6-click",
-    "short_description": "LED driver 6 Click is a high brightness LED or LED strip driver, designed to be used in tunable Smart Connected Lighting (SCL) applications. It is based on the AL1781, a single-channel PWM dimmable linear LED driver.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2731
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Leddriver6",
-    "subdir_name": "lib_leddriver6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3400",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LED driver 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Leddriver6",
+                "subdir_name": "lib_leddriver6",
+                "path": "LED driver 6 Click/data/lib_leddriver6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

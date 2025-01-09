@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Expand 18 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.expand18",
-    "product_link": "https://www.mikroe.com/expand-18-click",
-    "short_description": "Expand 18 Click is a compact add-on board used for expanding the I/O capabilities of various microcontroller (MCU) systems. This board features the PCAL9714, an ultra-low-voltage 14-bit SPI I/O expander from NXP. This board supports both 3.3V and 5V logic levels, features integrated level shifting for mixed-voltage systems, and operates via a high-speed 5MHz SPI interface. Additionally, it offers Agile I/O capabilities such as programmable output drive strength, latchable inputs, and interrupt management. Expand 18 Click is ideal for interfacing MCUs with sensors, keypads, and push buttons in power-sensitive applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.Expand18",
-    "subdir_name": "lib_expand18"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6200",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 18 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand18",
+                "subdir_name": "lib_expand18",
+                "path": "Expand 18 Click/data/lib_expand18"
+            }
+        ]
+    }
 }
-

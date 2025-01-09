@@ -1,8 +1,5 @@
 {
     "name": "Calypso Click",
-    "description": "Calypso Click is a compact add-on board for wireless connectivity in embedded applications. This board features the WIRL-WIFS Calypso WLAN module (2610011025000) from Würth Elektronik, which supports IEEE 802.11 b/g/n standards and includes a fully integrated TCP/IP stack. It also features edge castellated connections, a smart antenna configuration, and supports both IPv4 and IPv6 protocols, including SNTP, DHCP, mDNS, HTTP(S), and MQTT, offering secure connectivity with six simultaneous secure sockets, secure boot, and OTA updates.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","WIRL-WIFS Calypso"],
-    "category" : ["Click Boards > Wireless connectivity > WIFI"]
+    "hw" : ["Click","WIRL-WIFS Calypso"]
 }

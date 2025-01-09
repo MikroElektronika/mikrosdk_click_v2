@@ -1,78 +1,76 @@
-\mainpage Main Page
- 
+
 ---
 # RNG Click
 
-RNG Click is a random number generator (RNG) is a device that generates a sequence of numbers or symbols that cannot be reasonably predicted better than by a random chance. This Click board™ is true hardware random-number generator (HRNG), which generate genuinely random numbers.
+> [RNG Click](https://www.mikroe.com/?pid_product=MIKROE-4090) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rng_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4090&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/rng-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jun 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Rng Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Rng Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void rng_cfg_setup ( rng_cfg_t *cfg ); 
- 
-- Initialization function.
-> RNG_RETVAL rng_init ( rng_t *ctx, rng_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void rng_default_cfg ( rng_t *ctx );
-
-
-#### Example key functions :
-
-- This function gets voltage in millivolts.
-> float rng_get_voltage ( rng_t *ctx );
- 
-- This function sets configuration.
-> void rng_set_config ( rng_t *ctx, uint16_t conf_data );
-
-- This function sets desired vref.
-> void rng_set_vref ( rng_t *ctx, uint16_t vref_mv );
-
-## Examples Description
+## Example Description
 
 > This Click is a random number generator. The device contain potentiometer which control voltage
 > so it generates a sequence of numbers or symbols that cannot be reasonably predicted better 
 > by a random chance. Random number generators have applications in gambling, statistical sampling,
 > computer simulation, cryptography, completely randomized design, and various other areas. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Rng
+
+### Example Key Functions
+
+- `rng_cfg_setup` Config Object Initialization function. 
+```c
+void rng_cfg_setup ( rng_cfg_t *cfg );
+``` 
+ 
+- `rng_init` Initialization function. 
+```c
+err_t rng_init ( rng_t *ctx, rng_cfg_t *cfg );
+```
+
+- `rng_default_cfg` Click Default Configuration function. 
+```c
+void rng_default_cfg ( rng_t *ctx );
+```
+
+- `rng_get_voltage` This function gets voltage in millivolts. 
+```c
+float rng_get_voltage ( rng_t *ctx );
+```
+ 
+- `rng_set_config` This function sets configuration. 
+```c
+void rng_set_config ( rng_t *ctx, uint16_t conf_data );
+```
+
+- `rng_set_vref` This function sets desired vref. 
+```c
+void rng_set_vref ( rng_t *ctx, uint16_t vref_mv );
+```
+
+### Application Init
 
 > Initializes driver, then sets configuration and voltage reference.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +97,6 @@ void application_init ( void )
 
     rng_default_cfg( &rng );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +105,6 @@ void application_init ( void )
 > displays the result on USB UART each second.
 
 ```c
-
 void application_task ( void )
 {
     float voltage;
@@ -118,29 +114,22 @@ void application_task ( void )
     log_printf( &logger, "Voltage from AIN0: %.2f mV\r\n", voltage );
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Rng
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

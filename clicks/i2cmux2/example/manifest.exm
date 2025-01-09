@@ -1,8 +1,5 @@
 {
     "name": "I2C MUX 2 Click",
-    "description": "I2C MUX 2 Click is a quad bidirectional translating I2C and SMBus switch with reset and interrupt functions, intended for applications with I2C slave address conflicts. It features a quad bidirectional translating switch controlled via the I2C bus, labeled as TCA9545A from Texas Instruments. Four interrupt inputs (INT3–INT0), one for each of the downstream pairs, are provided on Click board. One interrupt (INT) output acts as an AND of the four interrupt inputs.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TCA9545A"],
-    "category" : ["I2C"] 
+    "hw" : ["Click","TCA9545A"]
 }

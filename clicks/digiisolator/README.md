@@ -1,45 +1,39 @@
-\mainpage Main Page
 
 ---
 # DIGI Isolator Click
 
-> DIGI Isolator Click is a compact add-on board that provides electrical isolation 
-> and signal conditioning for the serial peripheral interface and a UART interface. 
-> This board features two DCL540C01, high-speed, quad-channel digital isolators from Toshiba Semiconductor. 
-> Depending on the usage, this CMOS isolator can achieve data rates of up to 150Mbps, 
-> while withstanding up to 5kVrms voltage. DIGI Isolator Click is designed to isolate two additional IO pins 
-> besides SPI and UART interfaces.
+> [DIGI Isolator Click](https://www.mikroe.com/?pid_product=MIKROE-5178) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/digiisolator_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5178&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/digi-isolator-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : May 2023.
 - **Type**          : UART/SPI/ADC type
 
-
 # Software Support
 
-We provide a library for the DIGI Isolator Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the DIGI Isolator Click board 
+> by reading and writing data by using SPI and UART serial interface 
+> and reading results of AD conversion.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DIGI Isolator Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DIGIIsolator
 
-#### Standard key functions :
+### Example Key Functions
 
 - `digiisolator_cfg_setup` Config Object Initialization function.
 ```c
@@ -50,8 +44,6 @@ void digiisolator_cfg_setup ( digiisolator_cfg_t *cfg );
 ```c
 err_t digiisolator_init ( digiisolator_t *ctx, digiisolator_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `digiisolator_spi_transfer` DIGI Isolator SPI transfer function.
 ```c
@@ -67,14 +59,6 @@ err_t digiisolator_uart_write ( digiisolator_t *ctx, char *data_in, uint16_t len
 ```c
 err_t digiisolator_get_d1_pin_voltage ( digiisolator_t *ctx, float *data_out );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the DIGI Isolator Click board 
-> by reading and writing data by using SPI and UART serial interface 
-> and reading results of AD conversion.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -168,22 +152,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DIGIIsolator
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,39 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GSM/LTE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LTE Cat.1 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ltecat12",
-    "product_link": "https://www.mikroe.com/lte-cat1-2-click-for-eu",
-    "short_description": "LTE Cat.1 2 Click (EU) is a compact add-on board that provides your application with complete LTE and VoLTE with CSFB functionalities. This board features the ELS62-E, a single antenna LTE cat.1bis module from Telit.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.LTECat12",
-    "subdir_name": "lib_ltecat12"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5906",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE Cat.1 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTECat12",
+                "subdir_name": "lib_ltecat12",
+                "path": "LTE Cat.1 2 Click/data/lib_ltecat12"
+            }
+        ]
+    }
 }
-
-
-
-

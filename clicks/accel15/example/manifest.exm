@@ -1,8 +1,5 @@
 {
     "name": "Accel 15 Click",
-    "description": "Accel 15 Click is a compact add-on board that contains a longevity acceleration sensor. This board features the BMA490L, a high-performance 16-bit digital triaxial acceleration sensor with extended availability of up to ten years from Bosch Sensortech. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, and ±16g in three axes with a configurable host interface that supports both I2C and SPI serial communication and with intelligent on-chip motion-triggered interrupt features. Intelligent signal processing and evaluation in the accelerometer ASIC enables advanced gesture recognition for numerous industrial IoT applications where low power consumption is vital. This Click board™ is suitable for home appliances, power tools, and other industrial products whose lifetime is essential.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","BMA490L"],
-    "category" : ["Motion"]
+    "hw" : ["Click","BMA490L"]
 }

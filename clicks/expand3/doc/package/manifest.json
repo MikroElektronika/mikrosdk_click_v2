@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Expand 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.expand3",
-    "product_link": "https://www.mikroe.com/expand-3-click",
-    "short_description": "Expand 3 Click is a compact add-on board providing general-purpose I/O expansion. This board features the DS2408, an 8-channel programmable I/O expander from Analog Devices. The DS2408 has a factory-lasered 64-bit registration number, enabling multiple Expand 3 Click boards™ to be connected on the same data line, communicating with the host MCU through a standard Dallas Semiconductor 1-Wire interface (15.3kbps or 100kbps). PIO outputs are configured as open-drain and provide a maximum on-resistance of 100Ω.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        1415
-    ],
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.Expand3",
-    "subdir_name": "lib_expand3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1874",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand3",
+                "subdir_name": "lib_expand3",
+                "path": "Expand 3 Click/data/lib_expand3"
+            }
+        ]
+    }
 }
-
-
-
-

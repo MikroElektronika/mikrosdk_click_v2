@@ -1,8 +1,5 @@
 {
     "name": "EEPROM 12 Click",
-    "description": "EEPROM 12 Click is a compact add-on board that contains a highly reliable, nonvolatile memory solution. This board features the M24256E, an EEPROM from STMicroelectronics. It is a 256Kbit (32KB) EEPROM with a page size of 64 bytes and an additional identification page with the same size. This identification page can be read or written and (later) permanently locked in read-only mode and can be used to store sensitive application parameters.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","M24256E-FMN6TP"],
-    "category" : ["Click Boards > Storage > EEPROM"]
+    "hw" : ["Click","M24256E-FMN6TP"]
 }

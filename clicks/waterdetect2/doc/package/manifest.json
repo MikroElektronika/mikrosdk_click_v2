@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Miscellaneous",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Water Detect 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.waterdetect2",
-    "product_link": "https://www.mikroe.com/water-detect-2-click",
-    "short_description": "Water Detect 2 Click is a compact add-on board that can detect the presence/flow of a liquid in a clear tube. This board features the OPB350L250, a tube liquid sensor from TT Electronics. Water Detect 2 Click has multiple output states and can recognize fluid present, no fluid present, and no tube present. This sensor excepts 1/4” tubing (6.3mm) as an outside diameter of the clear tubes, regardless of the direction of the liquid’s flow.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.WaterDetect2",
-    "subdir_name": "lib_waterdetect2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5820",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Water Detect 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WaterDetect2",
+                "subdir_name": "lib_waterdetect2",
+                "path": "Water Detect 2 Click/data/lib_waterdetect2"
+            }
+        ]
+    }
 }
-
-
-
-
-

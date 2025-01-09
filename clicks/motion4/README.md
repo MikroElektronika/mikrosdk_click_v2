@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Motion 4 Click
 
-Motion 4 Click is a long distance PaPIR's motion sensor with plastic lense and controllable output. This Click board features EKMC1603111, a PIR motion sensor from Panasonic Corporation which can be used as human motion detector and is able to detect movement up to 12m with 170uA current consumption. Also featured on Motion 4 Click bord is TLP241A photorelay from Toshiba that is used to provide a reinforced galvanic isolation for the external signals used to drive some external high power electronic equipment when motion is detected. It's allowing up to 40V between the SSR contacts in OFF state, and currents up to 2A while in ON state, thanks to a very low ON-state resistance. Motion 4 Click board™ is supported by a mikroSDK compliant library, which includes functions that simplify software development. This Click board™ comes as a fully tested product, ready to be used on a system equipped with the mikroBUS™ socket.
+> [Motion 4 Click](https://www.mikroe.com/?pid_product=MIKROE-4078) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/motion4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4078&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/motion-4-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jun 2021.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the Motion4 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Motion 4 Click boards.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Motion4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Motion4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `motion4_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,10 +40,8 @@ void motion4_cfg_setup ( motion4_cfg_t *cfg );
 
 - `motion4_init` Initialization function.
 ```c
-MOTION4_RETVAL motion4_init ( motion4_t *ctx, motion4_cfg_t *cfg );
+err_t motion4_init ( motion4_t *ctx, motion4_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `motion4_enable` This function enables/disables motion sensor by setting EN pin state.
 ```c
@@ -58,19 +53,13 @@ void motion4_enable ( motion4_t *ctx, uint8_t state );
 uint8_t motion4_detect_state ( motion4_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Motion 4 Click boards.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and enables the motion sensor.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     motion4_cfg_t motion4_cfg;  /**< Click config object. */
 
@@ -104,7 +93,6 @@ void application_init ( void ) {
     log_printf( &logger, "The sensor is ready.\r\n" );
     log_printf( &logger, "-----------------------\r\n" );
 }
-
 ```
 
 ### Application Task
@@ -112,8 +100,8 @@ void application_init ( void ) {
 > It checks if the sensor has detected movement and therefore displays the desired message on the USB UART.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     uint8_t int_status;
 
     int_status = motion4_detect_state( &motion4 );
@@ -131,25 +119,21 @@ void application_task ( void ) {
         Delay_ms ( 100 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Motion4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

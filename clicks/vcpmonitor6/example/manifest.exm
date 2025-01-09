@@ -1,8 +1,5 @@
 {
     "name": "VCP Monitor 6 Click",
-    "description": "VCP Monitor 6 Click is a compact add-on board designed for precise digital power monitoring applications. This board features the INA780A, a 16-bit I2C-output digital power monitor with EZShunt™ technology from Texas Instruments. Capable of measuring currents up to 20A and supporting voltages up to 85V, it accurately monitors current, voltage, and temperature, calculating power, energy, and charge. Programmable registers allow for fine-tuning measurement precision, supporting continuous and triggered operation modes.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","INA780A"],
-    "category" : ["Click Boards > Mixed signal > Measurements"]
+    "hw" : ["Click","INA780A"]
 }

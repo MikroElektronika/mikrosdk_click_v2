@@ -1,8 +1,5 @@
 {
     "name": "GNSS 7 Click",
-    "description": "Determine your current position with GNSS 7 Click. It carries the NEO-M9N GNSS receiver module from u-blox.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","NEO-M9N"],
-    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"] 
+    "hw" : ["Click","NEO-M9N"]
 }

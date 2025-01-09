@@ -1,77 +1,74 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Led Flash 2 Click
 
-LED Flash 2 Click is a powerful flash/torch Click, featuring the MIC2870 from Microchip, a high-efficiency flash LED driver, optimized for driving one or two high-brightness camera flash LEDs.
+> [Led Flash 2 Click](https://www.mikroe.com/?pid_product=MIKROE-2830) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ledflash2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2830&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/led-flash-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LedFlash2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for LedFlash2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void ledflash2_cfg_setup ( ledflash2_cfg_t *cfg ); 
- 
-- Initialization function.
-> LEDFLASH2_RETVAL ledflash2_init ( ledflash2_t *ctx, ledflash2_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void ledflash2_default_cfg ( ledflash2_t *ctx );
-
-
-#### Example key functions :
-
-- This function reads raw data from any register.
-> uint8_t ledflash2_read_register ( ledflash2_t *ctx, uint8_t reg_address );
- 
-- This function writes data into any register.
-> void ledflash2_write_register ( ledflash2_t *ctx, uint8_t reg_address, uint8_t reg_data );
-
-- This function will set the flash inhibit pin to either 1 or 0. It should be
-- used when Click is in flash mode, to reduce the flash intensity.
-> void ledflash2_toggle_flash_inhibit ( ledflash2_t *ctx, uint8_t pin_state );
-
-## Examples Description
+## Example Description
 
 > This app demonstrate flash and torch mode on LED light.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LedFlash2
+
+### Example Key Functions
+
+- `ledflash2_cfg_setup` Config Object Initialization function. 
+```c
+void ledflash2_cfg_setup ( ledflash2_cfg_t *cfg );
+``` 
+ 
+- `ledflash2_init` Initialization function. 
+```c
+err_t ledflash2_init ( ledflash2_t *ctx, ledflash2_cfg_t *cfg );
+```
+
+- `ledflash2_default_cfg` Click Default Configuration function. 
+```c
+void ledflash2_default_cfg ( ledflash2_t *ctx );
+```
+
+- `ledflash2_read_register` This function reads raw data from any register. 
+```c
+uint8_t ledflash2_read_register ( ledflash2_t *ctx, uint8_t reg_address );
+```
+ 
+- `ledflash2_write_register` This function writes data into any register. 
+```c
+void ledflash2_write_register ( ledflash2_t *ctx, uint8_t reg_address, uint8_t reg_data );
+```
+
+- This function will set the flash inhibit pin to either 1 or 0. It should be
+- `ledflash2_toggle_flash_inhibit` used when Click is in flash mode, to reduce the flash intensity. 
+```c
+void ledflash2_toggle_flash_inhibit ( ledflash2_t *ctx, uint8_t pin_state );
+```
+
+### Application Init
 
 > Initializes device and sets the Click into "OFF" mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +96,6 @@ void application_init ( void )
     ledflash2_set_mode( &ledflash2, LEDFLASH2_MODE_OFF, 0, 0 );
     log_printf( &logger, "Initialized...\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +105,6 @@ void application_init ( void )
 > It will then turn the Click off.
 
 ```c
-
 void application_task ( void )
 {
     Delay_ms ( 1000 );
@@ -155,30 +150,24 @@ void application_task ( void )
 
 ```
 
-## Note
+### Note
 
 > LED lights can be very bright, even on lowest power settings.
 > Avoid looking directly into the light when Click is in operation.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LedFlash2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

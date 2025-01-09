@@ -1,68 +1,69 @@
-\mainpage Main Page
 
 ---
 # BUCK 7 Click
 
-Buck 7 Click is a high-efficiency buck (step-down) DC-DC converter, which can provide digitally adjusted step-down voltage on its output while delivering up to 3.5A of current.
+> [BUCK 7 Click](https://www.mikroe.com/?pid_product=MIKROE-3094) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/buck7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3094&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/buck-7-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the BUCK7 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for BUCK7 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void buck7_cfg_setup ( buck7_cfg_t *cfg ); 
- 
-- Initialization function.
-> BUCK7_RETVAL buck7_init ( buck7_t *ctx, buck7_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void buck7_default_cfg ( buck7_t *ctx );
-
-
-#### Example key functions :
-
-- Function for settings output voltage.
-> void buck7_set_output_voltage ( buck7_t *ctx, uint16_t voltage );
- 
-- Function for enable chip
-> void buck7_enable ( buck7_t *ctx );
-
-- Function for settings chip mode
-> void buck7_set_mode ( buck7_t *ctx, uint8_t mode );
-
-## Examples Description
+## Example Description
 
 > This demo application controls the voltage at the output using the BUCK 7 Click.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BUCK7
+
+### Example Key Functions
+
+- `buck7_cfg_setup` Config Object Initialization function. 
+```c
+void buck7_cfg_setup ( buck7_cfg_t *cfg );
+``` 
+ 
+- `buck7_init` Initialization function. 
+```c
+err_t buck7_init ( buck7_t *ctx, buck7_cfg_t *cfg );
+```
+
+- `buck7_default_cfg` Click Default Configuration function. 
+```c
+void buck7_default_cfg ( buck7_t *ctx );
+```
+
+- `buck7_set_output_voltage` Function for settings output voltage. 
+```c
+void buck7_set_output_voltage ( buck7_t *ctx, uint16_t voltage );
+```
+ 
+- `buck7_enable` Function for enable chip. 
+```c
+void buck7_enable( buck7_t *ctx );
+```
+
+- `buck7_set_mode` Function for settings chip mode. 
+```c
+void buck7_set_mode( buck7_t *ctx, uint8_t mode );
+```
+
+### Application Init
 
 > Initializes Driver init, reset chip, enable chip and set mode
 
@@ -139,25 +140,19 @@ void application_task ( )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BUCK7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

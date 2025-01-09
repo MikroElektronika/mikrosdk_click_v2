@@ -1,8 +1,5 @@
 {
     "name": "4x4 Key Click",
-    "description": "4x4 Key Click carries a 16 button keypad. The design of the board — inputs are read by a pair of connected 8-bit parallel-in serial-out shift registers — allows for multiple key presses at the same time.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MC74HC165A"],
-    "category" : ["Pushbutton/Switches"] 
+    "hw" : ["Click","MC74HC165A"]
 }

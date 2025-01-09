@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DC Motor 9 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.dcmotor9",
-    "product_link": "https://www.mikroe.com/dc-motor-9-click",
-    "short_description": "DC Motor 9 Click is a brushed DC motor driver with the current limiting and current sensing. It is based on the DRV8871, an integrated H-Bridge driver IC, optimized for motor driving applications. It can be operated by two logic signals, allowing to drive the connected motor in two different ways: it can use fixed logic levels for the direction control, or it can be controlled by a PWM signal, offering an additional speed control option. The DRV8871 also contains a set of protection features, offering a very high level of reliability. Besides driving capabilities, DC Motor 9 Click can also sense current consumption at its output.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2711
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.DcMotor9",
-    "subdir_name": "lib_dcmotor9"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3416",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DC Motor 9 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DcMotor9",
+                "subdir_name": "lib_dcmotor9",
+                "path": "DC Motor 9 Click/data/lib_dcmotor9"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Rec N Play 2 Click",
-    "description": "Rec&Play 2 Click is a compact add-on board for voice recording and playback applications. It is based on the ISD1616B, a single-message voice record and playback IC from Nuvoton. The board features an on-chip oscillator, a microphone preamplifier with Automatic Gain Control (AGC), an omnidirectional microphone, and a speaker driver for high-quality audio recording and playback. Voice data is stored in onboard Flash memory without digital compression, ensuring clear and reliable sound. It supports both manual and digital control, as well as flexible message durations from 10 to 26 seconds.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ISD1616BSY"],
-    "category" : ["Click Boards > Audio & voice > Signal processing"]
+    "hw" : ["Click","ISD1616BSY"]
 }

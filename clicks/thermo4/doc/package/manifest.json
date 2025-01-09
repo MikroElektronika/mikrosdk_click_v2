@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Thermo 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.thermo4",
-    "product_link": "https://www.mikroe.com/thermo-4-click",
-    "short_description": "THERMO 4 Click carries the LM75A digital temperature sensor and thermal watchdog. The sensor has the range from −55 °C to +125 °C.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2064
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Thermo4",
-    "subdir_name": "lib_thermo4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2632",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermo 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermo4",
+                "subdir_name": "lib_thermo4",
+                "path": "Thermo 4 Click/data/lib_thermo4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

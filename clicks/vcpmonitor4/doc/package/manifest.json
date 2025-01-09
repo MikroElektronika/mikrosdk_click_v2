@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Measurements",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "VCP Monitor 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.vcpmonitor4",
-    "product_link": "https://www.mikroe.com/vcp-monitor-4-click",
-    "short_description": "VCP Monitor 4 Click is a compact add-on board that represents a high-precision power monitoring system. This board features the INA239, ultra-precise digital power monitor with a 16-bit delta-sigma ADC specifically designed for current-sensing applications from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.VCPMonitor4",
-    "subdir_name": "lib_vcpmonitor4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4763",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "VCP Monitor 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VCPMonitor4",
+                "subdir_name": "lib_vcpmonitor4",
+                "path": "VCP Monitor 4 Click/data/lib_vcpmonitor4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

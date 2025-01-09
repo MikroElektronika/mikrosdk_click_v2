@@ -1,8 +1,5 @@
 {
     "name": "Magneto 11 Click",
-    "description": "Magneto 11 Click is a compact add-on board that contains an accurate and reliable magnetic sensing device. This board features the AS5510, a linear hall sensor with 10-bit resolution, and an I2C interface from ams AG. It can measure the absolute position of lateral movement of a simple 2-pole magnet. A lateral stroke of 0.5mm ~ 2mm can be measured with air gaps around 1.0mm, depending on the magnet size. The AS5510 may be switched to a Power-Down state when it is not used to conserve power. This Click board™ is suitable for position sensing applications requiring a small magnetic range where noise is a critical design parameter.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AS5510-DSOM"],
-    "category" : ["Magnetic"]
+    "hw" : ["Click","AS5510-DSOM"]
 }

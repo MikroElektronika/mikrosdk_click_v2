@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # OOK RX Click
 
-> OOK RX Click is a wireless receiver that operates at the frequency of 433MHz (sub-GHz). This device allows realization of a simple, low-speed wireless ad hoc communication network between a receiver and compatible transmitter.
+> [OOK RX Click](https://www.mikroe.com/?pid_product=MIKROE-2902) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ookrx_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2902&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ook-rx-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Nov 2023.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the OOK RX Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of OOK RX Click board by reading and parsing packet messages received from the transmitter.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for OOK RX Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.OOKRX
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ookrx_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void ookrx_cfg_setup ( ookrx_cfg_t *cfg );
 ```c
 err_t ookrx_init ( ookrx_t *ctx, ookrx_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `ookrx_enable_device` This function enables device by setting the EN pin to high logic state.
 ```c
@@ -63,18 +58,11 @@ static void ookrx_wait_ready ( ookrx_t *ctx );
 static uint8_t ookrx_read_packet ( ookrx_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of OOK RX Click board by reading and parsing packet messages received from the transmitter.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and enables the device and squelch mode. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -107,7 +95,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -143,29 +130,26 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > The OOK TX Click board is a compatible transmitter for the OOK RX Click.
 Here are a few steps for troubleshooting if you are experiencing issues running this example:
 > - Check the MCU clock configuration, use an external oscillator instead of the MCU's internal one for better accuracy on manchester data rate delay.
 > - Measure the actual data rate on the data line and adjust the OOKRX_MAN_BIT_LEN_US value accordingly.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.OOKRX
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

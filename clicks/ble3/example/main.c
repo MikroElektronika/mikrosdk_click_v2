@@ -3,7 +3,7 @@
  * \brief Ble3 Click example
  * 
  * # Description
- * This example reads and processes data from BLE 3 clicks.
+ * This example reads and processes data from BLE 3 Clicks.
  *
  * The demo application is composed of two sections :
  * 

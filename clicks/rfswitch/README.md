@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # RF Switch Click
 
-> RF Switch Click is a Click board™ equipped with the MASWSS0115, a GaAs PHEMT MMIC single-pole, double-throw (SPDT) switch developed by Macom for switching between small signal components such as filter banks, single-band LNAs, converters, etc. The MASWSS0115 is ideally suited for applications where a very small size and low cost are required.
+> [RF Switch Click](https://www.mikroe.com/?pid_product=MIKROE-4168) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rfswitch_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4168&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rf-switch-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Sep 2021.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the RFSwitch Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that demonstrates the use of the RF Switch Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for RFSwitch Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.RFSwitch
 
-#### Standard key functions :
+### Example Key Functions
 
 - `rfswitch_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void rfswitch_cfg_setup ( rfswitch_cfg_t *cfg );
 ```c
 err_t rfswitch_init ( rfswitch_t *ctx, rfswitch_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `rfswitch_power_on` RF Switch power on function.
 ```c
@@ -63,18 +58,11 @@ void rfswitch_switch_channel ( rfswitch_t *ctx );
 void rfswitch_select_channel ( rfswitch_t *ctx, uint8_t select_channel );
 ```
 
-## Example Description
-
-> This is an example that demonstrates the use of the RF Switch Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver enable's - GPIO, also write log and powers on device.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -114,7 +102,6 @@ void application_init ( void )
     log_printf( &logger, " 3. Switching channel   \r\n" );
     log_printf( &logger, "------------------------\r\n" );
 }
-
 ```
 
 ### Application Task
@@ -123,7 +110,6 @@ void application_init ( void )
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {
     uint8_t tx_buf;
@@ -159,26 +145,21 @@ void application_task ( void )
         }
     }
 }
-
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.RFSwitch
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

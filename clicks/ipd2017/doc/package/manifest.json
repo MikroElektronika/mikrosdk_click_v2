@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IPD 2017 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ipd2017",
-    "product_link": "https://www.mikroe.com/ipd-click-tpd2017",
-    "short_description": "IPD Click is a compact add-on board for controlling inductive and resistive loads in industrial automation and other demanding applications. This board features the TPD2017FN, an 8-channel low-side switch with MOSFET outputs from Toshiba Semiconductor.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.IPD2017",
-    "subdir_name": "lib_ipd2017"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6075",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IPD 2017 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IPD2017",
+                "subdir_name": "lib_ipd2017",
+                "path": "IPD 2017 Click/data/lib_ipd2017"
+            }
+        ]
+    }
 }
-
-
-

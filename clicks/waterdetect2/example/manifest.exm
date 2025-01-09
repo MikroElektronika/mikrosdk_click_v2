@@ -1,8 +1,5 @@
 {
     "name": "Water Detect 2 Click",
-    "description": "Water Detect 2 Click is a compact add-on board that can detect the presence/flow of a liquid in a clear tube. This board features the OPB350L250, a tube liquid sensor from TT Electronics. Water Detect 2 Click has multiple output states and can recognize fluid present, no fluid present, and no tube present. This sensor excepts 1/4” tubing (6.3mm) as an outside diameter of the clear tubes, regardless of the direction of the liquid’s flow.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","OPB350L250"],
-    "category" : ["Click Boards > Sensors > Miscellaneous"]
+    "hw" : ["Click","OPB350L250"]
 }

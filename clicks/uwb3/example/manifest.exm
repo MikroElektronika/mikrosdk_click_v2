@@ -1,8 +1,5 @@
 {
     "name": "UWB 3 Click",
-    "description": "UWB 3 Click is a compact add-on board that brings Ultra-Wideband communication to your application. This board features the DWM3001, a fully integrated UWB transceiver module from Qorvo. The module integrates the DW3110 IC, nRF52833 MCU, planar UWB antenna, accelerometer, power management, and crystal. It is a fully calibrated, tested, and validated design. This Click board™ makes the perfect solution for the development of precision real-time location systems (RTLS) using two-way ranging or TDoA schemes in various markets, location-aware wireless sensor networks (WSNs), and more.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","DWM3001CSR"],
-    "category" : ["Click Boards > Wireless connectivity > UWB"]
+    "hw" : ["Click","DWM3001CSR"]
 }

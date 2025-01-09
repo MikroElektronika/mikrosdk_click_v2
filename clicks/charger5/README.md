@@ -1,70 +1,69 @@
-\mainpage Main Page
-
- 
 
 ---
 # Charger 5 Click
 
-Charger 5 Click is designed to charge Lithium-Ion and Lithium-Polymer batteries.
+> [Charger 5 Click](https://www.mikroe.com/?pid_product=MIKROE-2848) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/charger5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2848&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/charger-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nemanja Medakovic
 - **Date**          : Nov 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Charger5 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https:///shop.mikroe.com/compilers).
-The demo can run on all the main MikroElektronika [development boards](https:///shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account.
-
-## Library Description
-
-> This library contains API for Charger 5 Click driver.
-
-#### Standard key functions :
-
-- Configuration Object Setup function.
-> void charger5_cfg_setup( charger5_cfg_t *cfg );
- 
-- Click Initialization function.
-> charger5_err_t charger5_init( charger5_t *ctx, charger5_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void charger5_default_cfg( charger5_t *ctx );
-
-#### Example key functions :
-
-- Generic Write function.
-> charger5_err_t charger5_generic_write( charger5_t *ctx, uint8_t reg_addr, uint16_t transfer_data );
- 
-- Generic Read function.
-> uint16_t charger5_generic_read( charger5_t *ctx, uint8_t reg_addr );
-
-- Increment Wiper function.
-> charger5_err_t charger5_increment_wiper( charger5_t *ctx, uint8_t reg_addr, uint8_t n_steps );
-
-## Examples Description
+## Example Description
 
 >
 > This example demonstrates the use of the Charger 5 Click board.
 >
 
-**The demo application is composed of two sections :**
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Charger5
+
+### Example Key Functions
+
+- `charger5_cfg_setup` Configuration Object Setup function. 
+```c
+void charger5_cfg_setup ( charger5_cfg_t *cfg );
+```
+ 
+- `charger5_init` Click Initialization function. 
+```c
+charger5_err_t charger5_init ( charger5_t *ctx, charger5_cfg_t *cfg );
+```
+
+- `charger5_default_cfg` Click Default Configuration function. 
+```c
+void charger5_default_cfg ( charger5_t *ctx );
+```
+
+- `charger5_generic_write` Generic Write function. 
+```c
+charger5_err_t charger5_generic_write ( charger5_t *ctx, uint8_t reg_addr, uint16_t transfer_data );
+```
+ 
+- `charger5_generic_read` Generic Read function. 
+```c
+uint16_t charger5_generic_read ( charger5_t *ctx, uint8_t reg_addr );
+```
+
+- `charger5_increment_wiper` Increment Wiper function. 
+```c
+charger5_err_t charger5_increment_wiper ( charger5_t *ctx, uint8_t reg_addr, uint8_t n_steps );
+```
 
 ### Application Init
 
@@ -73,7 +72,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 >
 
 ```c
-
 void application_init( void )
 {
     charger5_cfg_t charger5_cfg;
@@ -101,7 +99,6 @@ void application_init( void )
     log_write( &console, "***************************************",
                LOG_FORMAT_LINE );
 }
-
 ```
 
 ### Application Task
@@ -112,7 +109,6 @@ void application_init( void )
 >
 
 ```c
-
 void application_task( void )
 {
     charger5_generic_write( &charger5, CHARGER5_REG_WIPER0_VOL,
@@ -139,34 +135,27 @@ void application_task( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 >
 > Increment/decrement command can only be issued to volatile memory locations.
 >
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Charger5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https:///shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Slider Click
 
-Slider Click features a mechanical slide action potentiometer - a slider, which gives a nice feeling when actuating, along with 16 SMD LEDs, that can be used for any kind of visual feedback. The onboard high-resolution 22-bit ADC can detect even the smallest move, faithfully capturing the smoothness of the slider movement, while digitizing its position. The 16 onboard SMD LEDs can give a nice visual feedback of the slider position, but those LEDs can also be used for other purposes since they are not hardwired to the slider.
+> [Slider Click](https://www.mikroe.com/?pid_product=MIKROE-2702) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/slider_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2702&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/slider-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Slider Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Slider Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void slider_cfg_setup ( slider_cfg_t *cfg ); 
- 
-- Initialization function.
-> SLIDER_RETVAL slider_init ( slider_t *ctx, slider_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void slider_default_cfg ( slider_t *ctx );
-
-
-#### Example key functions :
-
-- Function calls slider_readADC function, but first checks is ADC conversion finished.
-> uint32_t slider_read_adc_and_ready ( slider_t *ctx );
- 
-- Function enables LED output to shows output laches when state is low, and disables LED output when state is high.
-> void slider_enable_led_output ( slider_t *ctx, uint8_t state );
-
-- Function enables output laches to monitor converted ADC value, when state is high.
-> void slider_enable_output_laches ( slider_t *ctx, uint8_t state );
-
-## Examples Description
+## Example Description
 
 > This example detect even the smallest move, faithfully capturing the smoothness of the slider movement, while digitizing its position. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Slider
+
+### Example Key Functions
+
+- `slider_cfg_setup` Config Object Initialization function. 
+```c
+void slider_cfg_setup ( slider_cfg_t *cfg );
+``` 
+ 
+- `slider_init` Initialization function. 
+```c
+err_t slider_init ( slider_t *ctx, slider_cfg_t *cfg );
+```
+
+- `slider_default_cfg` Click Default Configuration function. 
+```c
+void slider_default_cfg ( slider_t *ctx );
+```
+
+- `slider_read_adc_and_ready` Function calls slider_readADC function, but first checks is ADC conversion finished. 
+```c
+uint32_t slider_read_adc_and_ready ( slider_t *ctx );
+```
+ 
+- `slider_enable_led_output` Function enables LED output to shows output laches when state is low, and disables LED output when state is high. 
+```c
+void slider_enable_led_output ( slider_t *ctx, uint8_t state );
+```
+
+- `slider_enable_output_laches` Function enables output laches to monitor converted ADC value, when state is high. 
+```c
+void slider_enable_output_laches ( slider_t *ctx, uint8_t state );
+```
+
+### Application Init
 
 > Initializes Click driver
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -96,7 +93,6 @@ void application_init ( void )
     slider_init( &slider, &cfg );
     slider_default_cfg( &slider );
 }
-  
 ```
 
 ### Application Task
@@ -104,34 +100,26 @@ void application_init ( void )
 > Converts analog input voltage (VCC), witch value depends on the slider position, to digital output value, shows result of conversion on LED and logs result on USB UART. 
 
 ```c
-
 void application_task ( void )
 {
     adc_value = slider_write_output( &slider );
     log_printf( &logger, "%.0f\r\n", adc_value );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Slider
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

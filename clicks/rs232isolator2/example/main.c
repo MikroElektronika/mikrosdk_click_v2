@@ -4,7 +4,7 @@
  *
  * # Description
  * This library contains API for RS 232 Isolator 2 Click driver.
- * This example transmits/receives and processes data from RS 232 Isolator 2 clicks.
+ * This example transmits/receives and processes data from RS 232 Isolator 2 Clicks.
  * The library initializes and defines the UART bus drivers 
  * to transmit or receive data. 
  *

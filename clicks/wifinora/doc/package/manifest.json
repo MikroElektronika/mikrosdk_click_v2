@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > WIFI",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "WiFi NORA Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.wifinora",
-    "product_link": "https://www.mikroe.com/wifi-nora-click",
-    "short_description": "WiFi NORA Click is a compact add-on board that provides WiFi and BLE connectivity for professional-grade applications. This board features the NORA-W366-00B6-00B, a dual-band WiFi module with Bluetooth Low Energy (BLE) from u-blox, offering support for WiFi 4 (802.11a/b/g/n) in both 2.4 and 5GHz bands and Bluetooth v5.3 with peripheral and central roles. It features a UART interface for easy integration with the host MCU, high-level AT command configuration, and robust security protocols, including WPA2/WPA3 and TLS encryption. The board also includes a user-configurable RGB LED indicator and buttons for bootloader and application mode selection.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.WiFiNORA",
-    "subdir_name": "lib_wifinora"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6217",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WiFi NORA Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WiFiNORA",
+                "subdir_name": "lib_wifinora",
+                "path": "WiFi NORA Click/data/lib_wifinora"
+            }
+        ]
+    }
 }
-
-
-

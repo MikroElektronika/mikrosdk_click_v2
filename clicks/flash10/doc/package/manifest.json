@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > FLASH",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Flash 10 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.flash10",
-    "product_link": "https://www.mikroe.com/flash-10-click",
-    "short_description": "Flash 10 Click is a compact add-on board representing a highly reliable memory solution. This board features the AT25FF321A, an SPI configurable 32Mbit (2Mx16) serial Flash memory solution from Dialog Semiconductor. The AT25FF321A is an ideal solution for systems in which program code is shadowed from Flash memory into embedded or external RAM (code shadow) for execution and where small amounts of data are stored and updated locally in the Flash memory. It has a flexible and optimized erase architecture for code and data storage applications, non-volatile protection, and four specialized 128-byte OTP security registers to store a unique device ID and locked key storage. This memory can withstand many write cycles (minimum 100k) and has a data retention period greater than 20 years.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.Flash10",
-    "subdir_name": "lib_flash10"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5289",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Flash 10 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Flash10",
+                "subdir_name": "lib_flash10",
+                "path": "Flash 10 Click/data/lib_flash10"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

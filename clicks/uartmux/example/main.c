@@ -3,7 +3,7 @@
  * \brief UartMux Click example
  * 
  * # Description
- * This example reads and processes data from UART Mux clicks.
+ * This example reads and processes data from UART Mux Clicks.
  *
  * The demo application is composed of two sections :
  * 

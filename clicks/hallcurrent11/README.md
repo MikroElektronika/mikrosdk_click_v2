@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Hall Current 11 Click
 
-> Hall Current 11 Click is a compact add-on board that provides economical and precise AC or DC current sensing solutions. This board features the TMCS1108A2U, a galvanically isolated Hall-effect current sensor with high accuracy, excellent linearity, and temperature stability from Texas Instruments. The input current flows through an internal 1.8mΩ conductor that generates a magnetic field measured by an integrated Hall-effect sensor. It features a 100V functional isolation working voltage with both unidirectional and bidirectional current sensing. Based on the selected logic voltage VCC, the TMCS1108A2U allows the user to measure current in two appropriate ranges, where after that, can process the output signal in analog or digital form.
+> [Hall Current 11 Click](https://www.mikroe.com/?pid_product=MIKROE-4797) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent11_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4797&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hall-current-11-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the HallCurrent11 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for Hall Current 11 Click driver.
+> The demo application reads ADC value and current ( A ).
 
-## Library Description
+### Example Libraries
 
-> This library contains API for HallCurrent11 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HallCurrent11
 
-#### Standard key functions :
+### Example Key Functions
 
 - `hallcurrent11_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t hallcurrent11_init ( hallcurrent11_t *ctx, hallcurrent11_cfg_t *cfg );
 err_t hallcurrent11_default_cfg ( hallcurrent11_t *ctx );
 ```
 
-#### Example key functions :
-
 - `hallcurrent11_get_adc` Hall Current 11 ADC reading function.
 ```c
 err_t hallcurrent11_get_adc ( hallcurrent11_t *ctx, uint16_t *data_out );
@@ -68,20 +64,12 @@ err_t hallcurrent11_get_adc_voltage ( hallcurrent11_t *ctx, float *adc_vtg );
 err_t hallcurrent11_get_current ( hallcurrent11_t *ctx, float *current );
 ```
 
-## Example Description
-
-> This library contains API for Hall Current 11 Click driver.
-> The demo application reads ADC value and current ( A ).
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes I2C driver and log UART.
 > After driver initialization the app set default settings.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;                      /**< Logger config object. */
@@ -117,17 +105,15 @@ void application_init ( void )
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Hall Current 11 Click board™.
+> This is an example that demonstrates the use of the Hall Current 11 Click board&trade;.
 > In this example, we read and display the ADC values and current ( A ) data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {
     static uint16_t adc_data;
@@ -143,25 +129,21 @@ void application_task ( void )
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HallCurrent11
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "Alcohol 3 Click",
-    "description": "Alcohol 3 Click is a gas sensor Click board, that reacts to the presence of deoxidizing and reducing gases, such as ethanol (also known as alcohol).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MiCS-5524,"],
-    "category" : ["Alcohol,Gas"] 
+    "hw" : ["Click","MiCS-5524,"]
 }

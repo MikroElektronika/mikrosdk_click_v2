@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Color 10 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.color10",
-    "product_link": "https://www.mikroe.com/color-10-click",
-    "short_description": "Color 10 Click is carrying VEML3328 sensor for RGB and IR light sensing as well as the RGB diode incorporated on the board which makes it good color detection device when its combined with a white LED. The VEML3328 sensor senses red, green, blue, clear and IR light by incorporating photodiodes, amplifiers, and analog / digital circuits into a single CMOS chip. With this sensor, the brightness and color temperature of a display backlight can be adjusted based on the ambient light source, and it can differentiate indoor from outdoor lighting environments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3013
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Color10",
-    "subdir_name": "lib_color10"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3997",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Color 10 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Color10",
+                "subdir_name": "lib_color10",
+                "path": "Color 10 Click/data/lib_color10"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

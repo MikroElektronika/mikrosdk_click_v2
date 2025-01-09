@@ -1,8 +1,5 @@
 {
     "name": "GNSS 12 Click",
-    "description": "GNSS 12 Click is a compact add-on board that provides fast positioning capability. This board features the CAM-M8C, a professional-grade GNSS module built on the high-performing M8 GNSS engine from u-blox. This module utilizes concurrent reception of up to three GNSS systems (GPS/Galileo together with either BeiDou or GLONASS), offering high sensitivity and strong signal levels. Besides internal, the CAM-M8C can use an optional external active antenna. It has a configurable host interface, advanced jamming/spoofing detection, and provides outstanding positioning accuracy even in GNSS-hostile environments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CAM-M8C-0"],
-    "category" : ["Click Boards > Wireless connectivity > GPS/GNSS"]
+    "hw" : ["Click","CAM-M8C-0"]
 }

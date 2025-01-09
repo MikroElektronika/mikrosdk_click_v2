@@ -1,8 +1,5 @@
 {
     "name": "Joystick 3 Click",
-    "description": "Joystick 3 Click is a compact add-on board that can fulfill your directional analog input needs. This board features 2765, a high-quality mini 2-axis analog output thumbstick from Adafruit Industries. This small joystick is a 'self-centering' analog-type with a black rocker cap similar to the PSP joysticks. It comprises two 10kΩ potentiometers, one for up/down and another for left/right direction. Knowing that this joystick represents an analog type, it connects with mikroBUS™ through the SPI interface through the MCP3204 12-bit A/D converter.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","2765","MCP3204"],
-    "category" : ["Click Boards > HMI > Pushbutton/Switches"]
+    "hw" : ["Click","2765","MCP3204"]
 }

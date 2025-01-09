@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Brushless 26 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.brushless26",
-    "product_link": "https://www.mikroe.com/brushless-26-click",
-    "short_description": "Brushless 26 Click is a compact add-on board that controls brushless DC motors with any MCU. This board features the DRV8317H, a three-phase PWM motor driver from Texas Instruments. It provides three integrated MOSFET half-bridges for driving three-phase brushless DC (BLDC) motors with 5V, 9V, 12V, or 18V DC rails or 2s to 4s batteries.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Brushless26",
-    "subdir_name": "lib_brushless26"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5843",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Brushless 26 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Brushless26",
+                "subdir_name": "lib_brushless26",
+                "path": "Brushless 26 Click/data/lib_brushless26"
+            }
+        ]
+    }
 }
-
-
-
-
-

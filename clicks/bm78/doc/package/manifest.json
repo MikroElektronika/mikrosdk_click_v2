@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > BT/BLE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BM78 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.bm78",
-    "product_link": "https://www.mikroe.com/bm78-click",
-    "short_description": "BM78 Click is a compact add-on board designed to integrate dual-mode Bluetooth wireless capability into various projects. This board features the BM78, a fully certified 2.4GHz Bluetooth (BR/EDR/LE) wireless module from Microchip. The BM78 module includes an on-board Bluetooth stack, power management subsystem, 2.4GHz transceiver, and RF power amplifier. It supports GAP, SDP, SPP, and GATT profiles, with data transfer facilitated through transparent UART mode. It features a MODE SEL switch for operational modes, a reset pin, status indicators, a software power button, and a WAKE button.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.BM78",
-    "subdir_name": "lib_bm78"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6114",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BM78 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BM78",
+                "subdir_name": "lib_bm78",
+                "path": "BM78 Click/data/lib_bm78"
+            }
+        ]
+    }
 }
-
-

@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Interface > USB",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "FTDI Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ftdi",
-    "product_link": "https://www.mikroe.com/ftdi-click",
-    "short_description": "FTDI Click is a compact add-on board that provides a high-speed USB to a serial interface converter. This board features the FT2232H, a 5th-generation high-speed USB 2.0 to a serial UART/I2C/SPI interface converter from FTDI. The entire USB protocol is handled on the chip (FTDI USB drivers required), making this board ideal for various USB applications. Besides a selectable interface and a standalone operation possibility, it also includes an EEPROM which contains the USB configuration descriptors for the FT2232H and one DA converter for additional reference in user-configurable applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        621
-    ],
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.FTDI",
-    "subdir_name": "lib_ftdi"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1421",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "FTDI Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.FTDI",
+                "subdir_name": "lib_ftdi",
+                "path": "FTDI Click/data/lib_ftdi"
+            }
+        ]
+    }
 }
-
-
-
-

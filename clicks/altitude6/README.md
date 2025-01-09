@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Altitude 6 Click
 
-> Altitude 6 Click is a compact add-on board that allows height measurement of an object or point related to sea level or ground level. This board features the MS5611-01BA03, a high-resolution barometric pressure sensor optimized for altimeter applications with an altitude resolution of 10 cm from TE Connectivity. It consists of a high linearity pressure sensor and an ultra-low power 24 bit ΔΣ ADC with internal factory calibrated coefficients. Also, it provides a precise digital 24-bit pressure and temperature value, different operation modes, and a configurable host interface that supports both SPI and I2C serial communication allowing the user to optimize for conversion speed and current consumption. The high accuracy and stability of both pressure and temperature signal of the MS5611-01BA03 make this Click board™ suitable for height sensing in medical and consumer applications, indoor navigation, mobile altimeter or barometer systems, and many more.
+> [Altitude 6 Click](https://www.mikroe.com/?pid_product=MIKROE-4903) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/altitude6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4903&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/altitude-6-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Oct 2021.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Altitude6 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for Altitude 6 Click driver.
+> The demo application reads and calculate 
+> temperature, pressure and altitude data.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Altitude6 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Altitude6
 
-#### Standard key functions :
+### Example Key Functions
 
 - `altitude6_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t altitude6_init ( altitude6_t *ctx, altitude6_cfg_t *cfg );
 err_t altitude6_default_cfg ( altitude6_t *ctx );
 ```
 
-#### Example key functions :
-
 - `altitude6_get_data` Altitude 6 get data function.
 ```c
 err_t altitude6_get_data ( altitude6_t *ctx, float *temperature, float *pressure, float *altitude );
@@ -68,14 +65,6 @@ err_t altitude6_get_raw_data ( altitude6_t *ctx, uint32_t *temp_data, uint32_t *
 err_t altitude6_get_calibration_data ( altitude6_t *ctx );
 ```
 
-## Example Description
-
-> This library contains API for Altitude 6 Click driver.
-> The demo application reads and calculate 
-> temperature, pressure and altitude data.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes I2C or SPI driver and log UART.
@@ -83,7 +72,6 @@ err_t altitude6_get_calibration_data ( altitude6_t *ctx );
 > driver interface setup and  default settings.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -123,18 +111,16 @@ void application_init ( void )
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Altitude 6 Click board™.
+> This is an example that demonstrates the use of the Altitude 6 Click board&trade;.
 > In this example, display the Altitude ( m ), 
 > Pressure ( mBar ) and Temperature ( degree Celsius ) data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void )
 {
     static float temperature;
@@ -150,25 +136,21 @@ void application_task ( void )
     }
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Altitude6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Brushless 31 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.brushless31",
-    "product_link": "https://www.mikroe.com/brushless-31-click",
-    "short_description": "Brushless 31 Click is a compact add-on board for precise and efficient brushless motor control. This board features the TB6605FTG, a three-phase full sine-wave brushless motor controller from Toshiba Semiconductor. The board features six onboard external N-channel MOSFETs for smooth motor operation, sine-wave PWM driving with 2-phase modulation for high efficiency and low noise, and includes essential functions like dead time, brake, and manual/auto lead-angle control. It supports clockwise and counterclockwise rotation and offers motor lock protection for added safety. Brushless 31 Click is ideal for home appliances, fans, and office equipment applications, where reliable and precise motor control is critical.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.Brushless31",
-    "subdir_name": "lib_brushless31"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6348",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Brushless 31 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Brushless31",
+                "subdir_name": "lib_brushless31",
+                "path": "Brushless 31 Click/data/lib_brushless31"
+            }
+        ]
+    }
 }
-
-

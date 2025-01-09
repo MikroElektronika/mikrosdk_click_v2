@@ -1,8 +1,5 @@
 {
     "name": "HOD CAP Click",
-    "description": "HOD CAP Click is a compact add-on board that adds a smart sensing solution to your application. This board features the AS8579, a capacitive sensor from ams OSRAM. The sensor features I/Q signal demodulation, parasitic influences from cable, and PCB protection. It has ten sense outputs, five of which come with sensing line filter circuits. This Click board™ makes the perfect solution for the development of autonomous driving applications such as hands-on steering wheel detection and detection of any human presence inside a vehicle or outside of the vehicle, e.g., for automatic trunk opener and more.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AS8579"],
-    "category" : ["Click Boards > HMI > Capacitive"]
+    "hw" : ["Click","AS8579"]
 }

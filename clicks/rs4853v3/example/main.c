@@ -3,7 +3,7 @@
  * @brief RS485 3V3 Click Example.
  *
  * # Description
- * This example reads and processes data from RS485 3.3V clicks.
+ * This example reads and processes data from RS485 3.3V Clicks.
  *
  * The demo application is composed of two sections :
  *

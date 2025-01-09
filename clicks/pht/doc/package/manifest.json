@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Environmental",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "PHT Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pht",
-    "product_link": "https://www.mikroe.com/pht-click",
-    "short_description": "PHT Click is a compact add-on board that contains a PHT combo sensor. This board features the MS8607, a digital combination sensor providing 3 environmental measurements all-in-one: pressure, humidity, and temperature from TE Connectivity. This sensor is based on leading MEMS technologies, provides factory-calibrated PHT data available over an I2C serial interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        3922
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.PHT",
-    "subdir_name": "lib_pht"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4348",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PHT Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PHT",
+                "subdir_name": "lib_pht",
+                "path": "PHT Click/data/lib_pht"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

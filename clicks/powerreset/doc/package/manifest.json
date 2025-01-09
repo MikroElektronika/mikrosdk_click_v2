@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Capacitive",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
-    "display_name": "Power/Reset Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
+    "display_name": "Power Reset Click",
     "name": "mikroe.click.powerreset",
-    "product_link": "https://www.mikroe.com/power-reset-click",
-    "short_description": "Power/Reset Click is equipped with two capacitive touch pads on a single Click board™.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2832
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.PowerReset",
-    "subdir_name": "lib_powerreset"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3771",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Power Reset Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PowerReset",
+                "subdir_name": "lib_powerreset",
+                "path": "Power Reset Click/data/lib_powerreset"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IrDA 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.irda2",
-    "product_link": "https://www.mikroe.com/irda2-click",
-    "short_description": "IrDA2 Click features the TFDU4101 infrared transceiver module as well as MCP2120 infrared encoder/decoder from Microchip connected with the 7.3728 MHz external crystal. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target board via UART interface and the following mikroBUS™ pins: AN, RST, CS.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        372
-    ],
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.IrDA2",
-    "subdir_name": "lib_irda2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1195",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IrDA 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IrDA2",
+                "subdir_name": "lib_irda2",
+                "path": "IrDA 2 Click/data/lib_irda2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

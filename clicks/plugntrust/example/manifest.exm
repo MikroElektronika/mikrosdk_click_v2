@@ -1,8 +1,5 @@
 {
     "name": "Plug n Trust Click",
-    "description": "Plug&Trust Click is a compact add-on board that contains a ready-to-use IoT secure element solution.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SE050"],
-    "category" : ["Encryption"]
+    "hw" : ["Click","SE050"]
 }

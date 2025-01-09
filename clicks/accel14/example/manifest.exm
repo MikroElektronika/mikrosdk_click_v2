@@ -1,8 +1,5 @@
 {
     "name": "Accel 14 Click",
-    "description": "Accel 14 Click is digital acceleration and vibration sensor Click board™. It features an ultra-wide bandwidth, low-noise, 3-axis digital vibration sensor, labeled as IIS3DWB, from STMicroelectronics. This Click board™ allows selectable full-scale acceleration measurements in ranges of ±2 g, ±4 g, ±8, and ±16 g in three axes, and it’s capable of measuring accelerations with a bandwidth up to 6 kHz with an output data rate of 26.7 kHz.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","IIS3DWB"],
-    "category" : ["Motion"] 
+    "hw" : ["Click","IIS3DWB"]
 }

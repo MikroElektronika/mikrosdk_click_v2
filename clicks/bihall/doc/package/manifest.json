@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BI HALL Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.bihall",
-    "product_link": "https://www.mikroe.com/bi-hall-click",
-    "short_description": "Bi Hall Click is a simple solution for adding a bipolar Hall switch to your design. It carries the Melexis US2882 bipolar Hall-effect switch and a 74LVC1T45 single bit, dual supply transceiver.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1076
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.BiHall",
-    "subdir_name": "lib_bihall"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1646",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BI HALL Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BiHall",
+                "subdir_name": "lib_bihall",
+                "path": "BI HALL Click/data/lib_bihall"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

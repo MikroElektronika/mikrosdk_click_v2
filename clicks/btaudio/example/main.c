@@ -3,7 +3,7 @@
  * \brief BtAudio Click example
  *
  * # Description
- * This example reads and processes data from BT Audio clicks.
+ * This example reads and processes data from BT Audio Clicks.
  *
  * The demo application is composed of two sections :
  *

@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Measurements",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "PAC1944 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pac1944",
-    "product_link": "https://www.mikroe.com/pac1944-click",
-    "short_description": "PAC1944 Click is a compact add-on board that contains an energy monitoring solution. This board features the PAC1944, a multi-channel DC power/energy monitor from Microchip Technology. It uses real-time calibration to minimize offset and gain errors with no input filters required for this device.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.PAC1944",
-    "subdir_name": "lib_pac1944"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4478",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PAC1944 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PAC1944",
+                "subdir_name": "lib_pac1944",
+                "path": "PAC1944 Click/data/lib_pac1944"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

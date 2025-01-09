@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "PIR Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pir",
-    "product_link": "https://www.mikroe.com/pir-click",
-    "short_description": "PIR Click is a pyroelectric sensor which generates a voltage when exposed to infrared radiation emitted by live bodies. It is equipped with the PL-N823-01, an infrared sensor from KEMET that uses the pyrolectric effect of ceramic by absorbing infrared rays emitted from the human body, while the the white plastic Fresnel lens covering the sensor filters visible light.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2696
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Pir",
-    "subdir_name": "lib_pir"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3339",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PIR Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pir",
+                "subdir_name": "lib_pir",
+                "path": "PIR Click/data/lib_pir"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

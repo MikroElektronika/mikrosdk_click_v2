@@ -1,78 +1,73 @@
-\mainpage Main Page
- 
+
 ---
 # SHT AN Click
 
-SHT AN Click is a sensorics based add on board which can be used for measuring humidity and temperature. It features fully calibrated, linearized and temperature compensated SHT31-ARP-B sensor with analog output.
+> [SHT AN Click](https://www.mikroe.com/?pid_product=MIKROE-3984) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/shtan_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3984&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/sht-an-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : ADC type
 
-
 # Software Support
 
-We provide a library for the ShtAn Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for ShtAn Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void shtan_cfg_setup ( shtan_cfg_t *cfg ); 
- 
-- Initialization function.
-> SHTAN_RETVAL shtan_init ( shtan_t *ctx, shtan_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void shtan_default_cfg ( shtan_t *ctx );
-
-
-#### Example key functions :
-
-- Function sets signal output ADC mode 
-- of the SHT3x-ARP Humidity and Temperature Sensor IC on SHT
-- ANClick.
-> void shtan_set_mode ( shtan_t *ctx, uint8_t adc_mode );
- 
-- Function hardware reset the SHT3x-ARP Humidity and Temperature Sensor IC
-- on SHT AN Click by cleared to '0' state of the RST pin,
-- wait the 100 ms, sets to '1' state of the RST pin.
-> void shtan_reset ( shtan_t *ctx );
-
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of SHT AN Click to measure temperature and humidity.
 
+### Example Libraries
 
-**The demo application is composed of two sections :**
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ShtAn
 
-### Application Init 
+### Example Key Functions
+
+- `shtan_cfg_setup` Config Object Initialization function. 
+```c
+void shtan_cfg_setup ( shtan_cfg_t *cfg );
+``` 
+ 
+- `shtan_init` Initialization function. 
+```c
+err_t shtan_init ( shtan_t *ctx, shtan_cfg_t *cfg );
+```
+
+- `shtan_default_cfg` Click Default Configuration function. 
+```c
+void shtan_default_cfg ( shtan_t *ctx );
+```
+
+- Function sets signal output ADC mode 
+- of the SHT3x-ARP Humidity and Temperature Sensor IC on SHT
+- `shtan_set_mode` ANClick. 
+```c
+void shtan_set_mode ( shtan_t *ctx, uint8_t adc_mode );
+```
+ 
+- Function hardware reset the SHT3x-ARP Humidity and Temperature Sensor IC
+- on SHT AN Click by cleared to '0' state of the RST pin,
+- `shtan_reset` wait the 100 ms, sets to '1' state of the RST pin. 
+```c
+void shtan_reset ( shtan_t *ctx );
+```
+
+### Application Init
 
 > Initialization driver enables - GPIO, sw reset,
 > initializes ADC, set ADC channel and sets ADC read mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -116,7 +111,6 @@ void application_init ( void )
     log_printf( &logger, "--------------------\r\n" );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -128,7 +122,6 @@ void application_init ( void )
 > All data logs on usb uart for aproximetly every 1 sec.
 
 ```c
-
 void application_task ( void )
 {
    shtan_calculate_temperature( void );
@@ -137,29 +130,22 @@ void application_task ( void )
    log_printf( &logger, "  Hum.  : %.2f\r\n", humidity );
    log_printf( &logger, "--------------------------" );
    Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ShtAn
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,42 +1,39 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Hall Current 6 Click
 
-> Hall Current 6 Click is a very accurate current measurement Click board™, based on the ACS723 IC. This IC is a galvanically isolated current sensor, which utilizes the Hall-effect principle.
+> [Hall Current 6 Click](https://www.mikroe.com/?pid_product=MIKROE-3443) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3443&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hall-current-6-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the HallCurrent6 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> 
+> This application reads current data.
+> 
 
-## Library Description
+### Example Libraries
 
-> This library contains API for HallCurrent6 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HallCurrent6
 
-#### Standard key functions :
+### Example Key Functions
 
 - `hallcurrent6_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,10 +42,8 @@ void hallcurrent6_cfg_setup ( hallcurrent6_cfg_t *cfg );
 
 - `hallcurrent6_init` Initialization function.
 ```c
-HALLCURRENT6_RETVAL hallcurrent6_init ( hallcurrent6_t *ctx, hallcurrent6_cfg_t *cfg );
+err_t hallcurrent6_init ( hallcurrent6_t *ctx, hallcurrent6_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `hallcurrent6_read_data` Reads ADC current data
 ```c
@@ -65,22 +60,13 @@ float hallcurrent6_get_current ( hallcurrent6_t *ctx );
 void hallcurrent6_generic_read ( hallcurrent6_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 ```
 
-## Example Description
-
-> 
-> This application reads current data.
-> 
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 >
 > Initializations driver init
 > 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -107,7 +93,6 @@ void application_init ( void )
 
     log_info( &logger, "---- App Init Done ----" );
 }
-  
 ```
 
 ### Application Task
@@ -117,7 +102,6 @@ void application_init ( void )
 > 
 
 ```c
-
 void application_task ( void )
 {
     float current;
@@ -125,29 +109,22 @@ void application_task ( void )
     current = hallcurrent6_get_current( &hallcurrent6 );
     log_printf( &logger, " Current value: %.2f mA \r\n" , current);
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HallCurrent6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

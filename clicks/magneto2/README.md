@@ -1,75 +1,64 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Magneto 2 Click
 
-Magneto 2 Click is a mikroBUS add-on board with Melexis's MLX90316 monolithic
-rotary position sensor. 
+> [Magneto 2 Click](https://www.mikroe.com/?pid_product=MIKROE-1938) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/magneto2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1938&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/magneto-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Magneto2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example collects data from the sensor, calculates position of absolute 
+> rotary angle and then logs it.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Magneto2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Magneto2
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void magneto2_cfg_setup ( magneto2_cfg_t *cfg ); 
+- `magneto2_cfg_setup` Config Object Initialization function. 
+```c
+void magneto2_cfg_setup ( magneto2_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> MAGNETO2_RETVAL magneto2_init ( magneto2_t *ctx, magneto2_cfg_t *cfg );
-
-#### Example key functions :
+- `magneto2_init` Initialization function. 
+```c
+err_t magneto2_init ( magneto2_t *ctx, magneto2_cfg_t *cfg );
+```
 
 - This function reads 14-bit data value from target register,
   calculates and converts to float angle value from 0� to 360�.
 > float magneto2_read_angle ( magneto2_t* ctx )
  
-- This function takes 14-bit data value from target register.
-> uint16_t magneto2_read_data ( magneto2_t* ctx );
+- `magneto2_read_data` This function takes 14-bit data value from target register. 
+```c
+uint16_t magneto2_read_data ( magneto2_t* ctx );
+```
 
-
-## Examples Description
- 
-> This example collects data from the sensor, calculates position of absolute 
-> rotary angle and then logs it.
-
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes driver and start write log.
 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -97,7 +86,6 @@ void application_init ( void )
     angle_value = 0;
     angle_value_old = -1.0;
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +97,6 @@ void application_init ( void )
 
 
 ```c
-
 void application_task ( void )
 {
     angle_value = magneto2_read_angle( &magneto2 );
@@ -136,30 +123,22 @@ void application_task ( void )
         angle_value_old = angle_value;
         Delay_ms ( 1000 );
     }
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Magneto2
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

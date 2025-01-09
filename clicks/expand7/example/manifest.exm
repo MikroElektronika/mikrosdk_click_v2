@@ -1,8 +1,5 @@
 {
     "name": "Expand 7 Click",
-    "description": "EXPAND 7 Click is a compact add-on board that contains a multi-port I/O expander with bi-directional input/outputs or PWM outputs.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CY8C9540A"],
-    "category" : ["Port expander"] 
+    "hw" : ["Click","CY8C9540A"]
 }

@@ -1,8 +1,5 @@
 {
     "name": "IR reflect Click",
-    "description": "IR reflect Click carries a GP2S700HCP reflective photointerrupter and an onboard potentiometer. On this type of photointerrupter the infrared emitter and receiver are facing the same direction.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","GP2S700HCP"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","GP2S700HCP"]
 }

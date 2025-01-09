@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # VAV Press Click
 
-VAV Press Click is a compact add-on board that contains a board-mount pressure sensor. This board features the LMIS025B, a low differential pressure sensor from First Sensor (part of TE Connectivity). It is based on thermal flow measurement of gas through a micro-flow channel integrated within the sensor chip. The innovative LMI technology features superior sensitivity, especially for ultra-low pressures ranging from 0 to 25Pa. The extremely low gas flow through the sensor ensures high immunity to dust contamination, humidity, and long tubing compared to other flow-based pressure sensors.
+> [VAV Press Click](https://www.mikroe.com/?pid_product=MIKROE-4667) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/vav_press_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4667&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/vav-press-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the VavPress Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the Vav Press Click driver.
+> This demo application shows an example of 
+> differential pressure and temperature measurement.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for VavPress Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.VavPress
 
-#### Standard key functions :
+### Example Key Functions
 
 - `vavpress_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,7 +42,7 @@ void vavpress_cfg_setup ( vavpress_cfg_t *cfg );
 
 - `vavpress_init` Initialization function.
 ```c
-VAVPRESS_RETVAL vavpress_init ( vavpress_t *ctx, vavpress_cfg_t *cfg );
+err_t vavpress_init ( vavpress_t *ctx, vavpress_cfg_t *cfg );
 ```
 
 - `vavpress_default_cfg` Click Default Configuration function.
@@ -51,30 +50,20 @@ VAVPRESS_RETVAL vavpress_init ( vavpress_t *ctx, vavpress_cfg_t *cfg );
 void vavpress_default_cfg ( vavpress_t *ctx );
 ```
 
-#### Example key functions :
-
 - `vavpress_set_default_sensor_param` VAV Press set default sensor parameter function.
 ```c
-VAVPRESS_RETVAL vavpress_set_default_sensor_param ( vavpress_t *ctx, vavpress_sensor_param_data_t *param_data );
+err_t vavpress_set_default_sensor_param ( vavpress_t *ctx, vavpress_sensor_param_data_t *param_data );
 ```
 
 - `vavpress_get_dif_press_and_temp` VAV Press get differential pressure and temperature function.
 ```c
-VAVPRESS_RETVAL vavpress_get_dif_press_and_temp ( vavpress_t *ctx, vavpress_sensor_param_data_t *param_data, float *diff_press, float *temperature );
+err_t vavpress_get_dif_press_and_temp ( vavpress_t *ctx, vavpress_sensor_param_data_t *param_data, float *diff_press, float *temperature );
 ```
 
 - `vavpress_retrieve_electronic_signature` VAV Press retrieve electronic signature function.
 ```c
-VAVPRESS_RETVAL vavpress_retrieve_electronic_signature ( vavpress_t *ctx, vavpress_el_signature_data_t *el_signature_data );
+err_t vavpress_retrieve_electronic_signature ( vavpress_t *ctx, vavpress_el_signature_data_t *el_signature_data );
 ```
-
-## Example Description
-
-> This library contains API for the Vav Press Click driver.
-> This demo application shows an example of 
-> differential pressure and temperature measurement.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -84,8 +73,8 @@ VAVPRESS_RETVAL vavpress_retrieve_electronic_signature ( vavpress_t *ctx, vavpre
 > and set the sensor parameters data.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;            /**< Logger config object. */
     vavpress_cfg_t vavpress_cfg;  /**< Click config object. */
 
@@ -143,18 +132,17 @@ void application_init ( void ) {
     param_data.known_temperature_c = 24.0;
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a Vav Press Click board™.
+> This is an example that shows the use of a Vav Press Click board&trade;.
 > Logs pressure difference value [ Pa ] and temperature [ degree Celsius ] value.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
-void application_task ( void ) {   
+void application_task ( void ) 
+{   
     err_t error_flag = vavpress_get_dif_press_and_temp( &vavpress, &param_data, &diff_press, &temperature );
     if ( error_flag == VAVPRESS_OK ) {
         log_printf( &logger, " Diff. Pressure    : %.4f Pa\r\n", diff_press );
@@ -169,25 +157,21 @@ void application_task ( void ) {
         for ( ; ; );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.VavPress
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

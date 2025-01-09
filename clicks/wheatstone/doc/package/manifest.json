@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Measurements",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Wheatstone Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.wheatstone",
-    "product_link": "https://www.mikroe.com/wheatstone-click",
-    "short_description": "Wheatstone Click is a measurement Click board™ which utilizes a Wheatstone bridge circuit onboard, in order to precisely measure the resistance of an external element. Besides the wheatstone bridge circuit, this Click board™ also utilizes MAX4208 – an ultra-low offset/drift, precision instrumentation amplifier, from Maxim Integrated.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3296
-    ],
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.Wheatstone",
-    "subdir_name": "lib_wheatstone"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4124",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Wheatstone Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Wheatstone",
+                "subdir_name": "lib_wheatstone",
+                "path": "Wheatstone Click/data/lib_wheatstone"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Temp ISO Click",
-    "description": "Temp ISO Click is a compact add-on board for accurate and isolated temperature measurements in high-voltage environments. This board features the ISOTMP35-Q1, an automotive-grade isolated temperature sensor with analog output from Texas Instruments. This sensor integrates a robust isolation barrier with a withstand voltage of up to 3000VRMS, a linear analog output with a 10mV/°C slope, and a wide temperature range of –40°C to 150°C. It delivers high accuracy of ±2.0°C, fast thermal response, and is AEC-Q100 qualified, ensuring long-term reliability in demanding conditions. The board also features Click Snap, enabling flexible sensor placement by detaching the PCB for standalone operation.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ISOTMP35BEDFQRQ1"],
-    "category" : ["Click Boards > Sensors > Temperature & humidity"]
+    "hw" : ["Click","ISOTMP35BEDFQRQ1"]
 }

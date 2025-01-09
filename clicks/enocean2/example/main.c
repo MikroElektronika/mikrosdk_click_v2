@@ -3,7 +3,7 @@
  * \brief EnOcean2 Click example
  * 
  * # Description
- * This example reads and processes data from EnOcean 2 clicks.
+ * This example reads and processes data from EnOcean 2 Clicks.
  *
  * The demo application is composed of two sections :
  * 

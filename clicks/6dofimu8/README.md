@@ -1,74 +1,73 @@
-\mainpage Main Page
 
 ---
 # 6DOF IMU 8 Click
 
-6DOF IMU 8 Click is an advanced 6-axis motion tracking Click board™, which utilizes the ISM330DLC, a high-performance System in Package (SiP), equipped with a 3-axis gyroscope, and a 3-axis accelerometer.
+> [6DOF IMU 8 Click](https://www.mikroe.com/?pid_product=MIKROE-3447) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/6dofimu8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3447&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/6dof-imu-8-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the 6DOF IMU 8 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for 6DOF IMU 8 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c6dofimu8_cfg_setup ( c6dofimu8_cfg_t *cfg ); 
- 
-- Initialization function.
-> C6DOFIMU8_RETVAL c6dofimu8_init ( c6dofimu8_t *ctx, c6dofimu8_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c6dofimu8_default_cfg ( c6dofimu8_t *ctx );
-
-
-#### Example key functions :
-
-- This function checks does interrupt generated on the INT1 pin.
-> uint8_t c6dofimu8_get_int_1_pin ( c6dofimu8_t *ctx );
- 
-- This function checks a data ready status for all measurements.
-> uint8_t c6dofimu8_get_drdy_status ( c6dofimu8_t *ctx, uint8_t bit_mask );
-
-- This function performs a magnetometer data reading.
-> void c6dofimu8_get_magnetometer_data ( c6dofimu8_t *ctx, t_c6dofimu8_axis *magneto_out );
-
-## Examples Description
+## Example Description
 
 > This app gets three-axis gyroscope value, three-axis accelerometer value and temperature.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.6DofImu8
+
+### Example Key Functions
+
+- `c6dofimu8_cfg_setup` Config Object Initialization function. 
+```c
+void c6dofimu8_cfg_setup ( c6dofimu8_cfg_t *cfg );
+``` 
+ 
+- `c6dofimu8_init` Initialization function. 
+```c
+err_t c6dofimu8_init ( c6dofimu8_t *ctx, c6dofimu8_cfg_t *cfg );
+```
+
+- `c6dofimu8_default_cfg` Click Default Configuration function. 
+```c
+void c6dofimu8_default_cfg ( c6dofimu8_t *ctx );
+```
+
+- `c6dofimu8_get_int_1_pin` This function checks does interrupt generated on the INT1 pin. 
+```c
+uint8_t c6dofimu8_get_int_1_pin ( c6dofimu8_t *ctx );
+```
+ 
+- `c6dofimu8_get_drdy_status` This function checks a data ready status for all measurements. 
+```c
+uint8_t c6dofimu8_get_drdy_status ( c6dofimu8_t *ctx, uint8_t bit_mask );
+```
+
+- `c6dofimu8_get_magnetometer_data` This function performs a magnetometer data reading. 
+```c
+void c6dofimu8_get_magnetometer_data ( c6dofimu8_t *ctx, t_c6dofimu8_axis *magneto_out );
+```
+
+### Application Init
 
 > Initializes device and performs a device software reset and configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -100,7 +99,6 @@ void application_init ( void )
     log_printf( &logger, "** 6DOF IMU 8 is initialized **\r\n" );
     Delay_ms ( 300 );
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +107,6 @@ void application_init ( void )
 > gyroscope and temperature data which will be converted and calculated to the properly units each second.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t data_ready;
@@ -140,28 +137,21 @@ void application_task ( void )
 
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.6DofImu8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

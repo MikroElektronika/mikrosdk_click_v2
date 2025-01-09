@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 13 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel13",
-    "product_link": "https://www.mikroe.com/accel-13-click",
-    "short_description": "Accel 13 Click features an ultra-low power triaxial accelerometer sensor with embedded intelligence, labeled as the IIS2DLPC.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2900
-    ],
-    "version": "2.1.0.20",
-    "cmake": true,
-    "alias": "Click.Accel13",
-    "subdir_name": "lib_accel13"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3742",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 13 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel13",
+                "subdir_name": "lib_accel13",
+                "path": "Accel 13 Click/data/lib_accel13"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

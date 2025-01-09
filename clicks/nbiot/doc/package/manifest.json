@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LTE IoT",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "NB IoT Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.nbiot",
-    "product_link": "https://www.mikroe.com/nb-iot-click",
-    "short_description": "NB IoT Click is a Click board™ that allows LTE Cat NB1 connectivity by utilizing Quectel BC95-G, a specialized multi-band IoT module with very low power requirements and compact form factor, making it perfectly suited for various IoT-based applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2593
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.NbIot",
-    "subdir_name": "lib_nbiot"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3294",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NB IoT Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NbIot",
+                "subdir_name": "lib_nbiot",
+                "path": "NB IoT Click/data/lib_nbiot"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 21 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel21",
-    "product_link": "https://www.mikroe.com/accel-21-click",
-    "short_description": "Accel 21 Click is a compact add-on board that contains an acceleration sensor. This board features the MIS2DH, a high-performance three-axis accelerometer from STMicroelectronics. The MIS2DH allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, or ±16g in three axes with a configurable host interface that supports both SPI and I2C serial communication. It also supports high-resolution and low-power operating modes, allowing maximum flexibility to meet various use case needs.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Accel21",
-    "subdir_name": "lib_accel21"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5530",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 21 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel21",
+                "subdir_name": "lib_accel21",
+                "path": "Accel 21 Click/data/lib_accel21"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

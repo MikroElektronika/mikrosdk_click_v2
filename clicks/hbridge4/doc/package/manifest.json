@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "H-Bridge 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hbridge4",
-    "product_link": "https://www.mikroe.com/h-bridge-4-click",
-    "short_description": "H-Bridge 4 Click is a Click board™ that contains the AP1010AEN, which is a two channel H-Bridge motor driver compatible with a motor operating voltage up to 18V and can drive two DC motors or one stepper motor.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2951
-    ],
-    "version": "2.1.0.26",
-    "cmake": true,
-    "alias": "Click.HBridge4",
-    "subdir_name": "lib_hbridge4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3787",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "H-Bridge 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HBridge4",
+                "subdir_name": "lib_hbridge4",
+                "path": "H-Bridge 4 Click/data/lib_hbridge4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250108](#20250108)**
 + **[20241212](#20241212)**
 + **[20241205](#20241205)**
 + **[20241128](#20241128)**
@@ -115,6 +116,30 @@
 
 ---
 ---
+---
+
+## `20250108`
+
+*Following click boards have been added:*
+
++ `4G LTE 3 E Click`
++ `RYB080I`
++ `ADC 26`
++ `Thermostat 5`
++ `Smart DOF 4`
++ `Proteus-e`
++ `Brushless 18`
++ `NFC 7 I2C`
++ `Air Quality 12`
++ `Printer`
++ `BATT-MON 5`
++ `GNSS 9`
++ `H-Bridge 17`
+
+*Restructuring the Click boards repository, update manifests, readme, and contibuting files.*
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20241212`

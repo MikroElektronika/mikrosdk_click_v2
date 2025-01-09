@@ -1,67 +1,63 @@
-\mainpage Main Page
- 
+
 ---
 # Microwave 2 Click
 
-Microwave 2 Click is an accurate and reliable short to medium range motion detection Click board™, based on a Doppler radar principle.
+> [Microwave 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3187) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/microwave2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3187&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/microwave-2-eu-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Microwave2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Microwave2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void microwave2_cfg_setup ( microwave2_cfg_t *cfg ); 
- 
-- Initialization function.
-> MICROWAVE2_RETVAL microwave2_init ( microwave2_t *ctx, microwave2_cfg_t *cfg );
-
-#### Example key functions :
-
-- Set pin DL 
-> uint8_t microwave2_dl_state ( microwave2_t *ctx );
- 
-- Set pin DA
-> uint8_t microwave2_da_state ( microwave2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application is an accurate and reliable short to medium range motion detection.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Microwave2
+
+### Example Key Functions
+
+- `microwave2_cfg_setup` Config Object Initialization function. 
+```c
+void microwave2_cfg_setup ( microwave2_cfg_t *cfg );
+``` 
+ 
+- `microwave2_init` Initialization function. 
+```c
+err_t microwave2_init ( microwave2_t *ctx, microwave2_cfg_t *cfg );
+```
+
+- `microwave2_dl_state` Set pin DL . 
+```c
+uint8_t microwave2_dl_state ( microwave2_t *ctx );
+```
+ 
+- `microwave2_da_state` Set pin DA. 
+```c
+uint8_t microwave2_da_state ( microwave2_t *ctx );
+```
+
+### Application Init
 
 > Initializes the Click board for communication.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -86,7 +82,6 @@ void application_init ( void )
     MICROWAVE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     microwave2_init( &microwave2, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -94,33 +89,25 @@ void application_init ( void )
 > Data sent from the Click board is captured and different actions are applied.
 
 ```c
-
 void application_task ( void )
 {
     microwave2_process();
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Microwave2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

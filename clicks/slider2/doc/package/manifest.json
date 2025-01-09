@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Potentiometers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Slider 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.slider2",
-    "product_link": "https://www.mikroe.com/slider-2-click",
-    "short_description": "The Slider 2 Click is a very accurate potentiometer Click Board, featuring a high-quality mechanical slide-action potentiometer (slider), which in conjunction with the accurate voltage reference IC, provides very precise analog control voltage (CV) at its output. Featuring an accurate voltage reference IC, the output of the Click board™ can be directly sampled by the A/D peripheral of the microcontroller (MCU). Since there are many different MCU architectures with different reference voltage requirements, Slider 2 Click offers a possibility to select the voltage reference between 4.096V and 2.048V, two most commonly used values for different MCU peripherals.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2613
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Slider2",
-    "subdir_name": "lib_slider2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3301",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Slider 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Slider2",
+                "subdir_name": "lib_slider2",
+                "path": "Slider 2 Click/data/lib_slider2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

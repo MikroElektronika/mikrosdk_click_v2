@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # EnOcean 4 Click
 
-EnOcean 4 Click carries a ultra-low power TCM515U transceiver gateway module which operates at 902MHz radio band, perfectly suited for the realization of transceiver gateways, actuators and controllers for systems communicating based on the EnOcean radio standard.
+> [EnOcean 4 Click](https://www.mikroe.com/?pid_product=MIKROE-3637) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/enocean4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3637&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/enocean-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Enocean4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from EnOcean 4 Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Enocean4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Enocean4
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void enocean4_cfg_setup ( enocean4_cfg_t *cfg ); 
+- `enocean4_cfg_setup` Config Object Initialization function. 
+```c
+void enocean4_cfg_setup ( enocean4_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> ENOCEAN4_RETVAL enocean4_init ( enocean4_t *ctx, enocean4_cfg_t *cfg );
+- `enocean4_init` Initialization function. 
+```c
+err_t enocean4_init ( enocean4_t *ctx, enocean4_cfg_t *cfg );
+```
 
-#### Example key functions :
-
-- Handler Set function.
-> void enocean4_response_handler_set( enocean4_t *ctx, void ( *handler )( enocean4_packet_t*, uint8_t* ) );
+- `enocean4_response_handler_set( enocean4_t *ctx, void` Handler Set function. 
+```c
+void enocean4_response_handler_set( enocean4_t *ctx, void ( *handler )( enocean4_packet_t*, uint8_t* ) );
+```
  
-- Response Proccesing function.
-> uint8_t enocean4_process ( enocean4_t *ctx );
+- `enocean4_process` Response Proccesing function. 
+```c
+uint8_t enocean4_process ( enocean4_t *ctx );
+```
 
-- Response Ready Check function.
-> uint8_t enocean4_response_ready ( enocean4_t *ctx );
+- `enocean4_response_ready` Response Ready Check function. 
+```c
+uint8_t enocean4_response_ready ( enocean4_t *ctx );
+```
 
-## Examples Description
- 
-> This example reads and processes data from EnOcean 4 clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -147,7 +145,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 500 );
 }
-  
 ```
 
 ### Application Task
@@ -157,7 +154,6 @@ void application_init ( void )
 > then waits for a response.
 
 ```c
-
 void application_task ( void )
 {
 #ifdef DEMO_APP_RECEIVER
@@ -185,29 +181,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 #endif
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Enocean4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

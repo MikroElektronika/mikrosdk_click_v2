@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Measurements",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LEM Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lem",
-    "product_link": "https://www.mikroe.com/lem-click",
-    "short_description": "LEM Click carries the LTS 6-NP current transducer and MCP3201 ADC converter. The Click can measure AC and DC current with exceptional speed, up to 200 KHz.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2061
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Lem",
-    "subdir_name": "lib_lem"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2553",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LEM Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Lem",
+                "subdir_name": "lib_lem",
+                "path": "LEM Click/data/lib_lem"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

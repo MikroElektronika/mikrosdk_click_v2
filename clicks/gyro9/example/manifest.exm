@@ -1,8 +1,5 @@
 {
     "name": "Gyro 9 Click",
-    "description": "Gyro 9 Click is a compact add-on board that contains a high-performance gyroscope. This board features the A3G4250D, a MEMS motion sensor from STMicroelectronics. It is a low-power 3-axes digital output gyroscope that provides unprecedented stability at zero rate level and sensitivity over temperature and time and is equipped with an embedded temperature sensor. The gyroscope has a 16-bit rate value data output with an 8-bit compensation temperature data output.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","A3G4250DTR"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","A3G4250DTR"]
 }

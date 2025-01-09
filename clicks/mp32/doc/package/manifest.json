@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Audio & voice > MP3",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MP3 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mp32",
-    "product_link": "https://www.mikroe.com/mp3-2-click",
-    "short_description": "MP3 2 Click is an audio decoder expansion board with on-board microSD card slot, that enables you to create your personal audio playback system. It holds the KT403A,a SOC chip solution with intergraded MCU, hardware audio MP3/WAV decoder and DSP, from Shenzhen Qianle Microelectronics Technology Co.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3749
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Mp32",
-    "subdir_name": "lib_mp32"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4159",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MP3 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mp32",
+                "subdir_name": "lib_mp32",
+                "path": "MP3 2 Click/data/lib_mp32"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

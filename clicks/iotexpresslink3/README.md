@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # IoT ExpressLink 3 Click
 
-> IoT ExpressLink 3 Click is a compact add-on board that allows users to connect easily to IoT ExpressLink services and securely interact with cloud applications and other devices. This board features the NORA-W256WS, a standalone multi-radio module from u-blox. The module supports Wi-Fi radio at 802.11b/g/n standard and 2.4GHz of ISM band. It also supports the Bluetooth Low Energy 5. The embedded AWS IoT ExpressLink-compliant software includes secured pre-flashed certificates in the module.
+> [IoT ExpressLink 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5891) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/iotexpresslink3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5891&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/iot-expresslink-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the IoT ExpressLink 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of IoT ExpressLink 3 Click board by bridging the USB UART
+to mikroBUS UART which allows the Click board to establish a connection with
+the IoT ExpressLink over the Quick Connect demo application without an AWS account.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for IoT ExpressLink 3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.IoTExpressLink3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `iotexpresslink3_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +45,6 @@ void iotexpresslink3_cfg_setup ( iotexpresslink3_cfg_t *cfg );
 err_t iotexpresslink3_init ( iotexpresslink3_t *ctx, iotexpresslink3_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `iotexpresslink3_reset_device` This function resets device by toggling the RST pin state.
 ```c
 void iotexpresslink3_reset_device ( iotexpresslink3_t *ctx );
@@ -58,14 +55,6 @@ void iotexpresslink3_reset_device ( iotexpresslink3_t *ctx );
 void iotexpresslink3_send_cmd ( iotexpresslink3_t *ctx, uint8_t *cmd );
 ```
 
-## Example Description
-
-> This example demonstrates the use of IoT ExpressLink 3 Click board by bridging the USB UART
-to mikroBUS UART which allows the Click board to establish a connection with
-the IoT ExpressLink over the Quick Connect demo application without an AWS account.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, resets the Click board to factory default settings, reads
@@ -75,7 +64,6 @@ message "Failed to access network" or "Failed to login AWS (MQTT) broker" appear
 check the WiFi credentials and try running the example again.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -159,7 +147,6 @@ void application_init ( void )
     
     uart_set_blocking( &logger.uart, false );
 }
-
 ```
 
 ### Application Task
@@ -185,7 +172,7 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > To run the demo, follow the below steps:
 > 1. If you opened a terminal application in the previous step, be sure to > disconnect that application from the serial port. 
@@ -200,22 +187,19 @@ flowing from the device to the cloud using AT+SEND commands. The demo will run f
 to two minutes, and afterwards, you will be able to type AT+SEND commands yourself and
 see the data coming in on the visualizer.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.IoTExpressLink3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

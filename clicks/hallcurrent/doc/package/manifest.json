@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Hall Current Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hallcurrent",
-    "product_link": "https://www.mikroe.com/hall-current-click",
-    "short_description": "Hall Current Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4970-D050T4, a 16-bit digital SPI output (13-bit current value) coreless magnetic current sensor designed for the current range of ±25A from Infineon Technology. A differential measurement principle allows effective stray field suppression with a highly linear output signal without hysteresis. Due to the integrated primary conductor (current rail), there is no need for external calibration. The TLI4970-D050T4 is highly accurate over temperature range and lifetime with fast overcurrent detection with a configurable threshold.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1039
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.HallCurrent",
-    "subdir_name": "lib_hallcurrent"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1578",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Current Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallCurrent",
+                "subdir_name": "lib_hallcurrent",
+                "path": "Hall Current Click/data/lib_hallcurrent"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # M-BUS RF 3 Click
 
-> M-BUS RF 3 Click is a compact add-on board designed for utility metering and various telemetry applications. This board features the Metis-II (2607021183000), an 868MHz radio module from Würth Elektronik. It integrates an MSP430 microcontroller and a CC1125 RF chip-set to ensure efficient data transmission. Key features include a frequency range of 868.3MHz to 869.525MHz, support for the Wireless M-BUS EN13757-4:2013 and Open Metering System (OMS) standards, and communication capabilities up to 1000 meters in line-of-sight conditions. The board also offers energy-saving functionalities such as Wake-On-Radio, an output power of +14dBm output, and AES-128 encryption for secure communication.
+> [M-BUS RF 3 Click](https://www.mikroe.com/?pid_product=MIKROE-6084) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mbusrf3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6084&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/m-bus-rf-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jan 2024.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the M-BUS RF 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of M-BUS RF 3 Click board by processing
+  the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for M-BUS RF 3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MBUSRF3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `mbusrf3_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t mbusrf3_init ( mbusrf3_t *ctx, mbusrf3_cfg_t *cfg );
 err_t mbusrf3_default_cfg ( mbusrf3_t *ctx );
 ```
 
-#### Example key functions :
-
 - `mbusrf3_set_rst_pin` This function is used to set reset pin state.
 ```c
 void mbusrf3_set_rst_pin ( mbusrf3_t *ctx, uint8_t pin_state );
@@ -68,19 +64,11 @@ err_t mbusrf3_send_command ( mbusrf3_t *ctx, uint8_t cmd, uint8_t *data_in, uint
 err_t mbusrf3_send_data ( mbusrf3_t *ctx, uint8_t *data_in, uint8_t len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of M-BUS RF 3 Click board by processing
-  the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click configuration depending on selected DEMO_EXAMPLE macro.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -116,7 +104,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -130,25 +117,21 @@ void application_task ( void )
 {
     mbusrf3_example( );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MBUSRF3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Relay 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.relay4",
-    "product_link": "https://www.mikroe.com/relay-4-click",
-    "short_description": "Relay 4 Click is a compact add-on board with a general-purpose relay that any host MCU can control. This board features the J1031C3VDC, high-current single-pole double-throw (SPDT) signal relay from CIT Relay and Switch. Highly sensitive, the J1031C3VDC offers a low coil power consumption in a small, lightweight package with PC pin mounting. It comes with a dimension of 12.5x7.5x10 millimetre (LxWxH) and a 1C contact arrangement with a coil voltage of 3VDC, providing a switching voltage of 125VAC/60VDC maximum.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.Relay4",
-    "subdir_name": "lib_relay4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5539",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Relay 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Relay4",
+                "subdir_name": "lib_relay4",
+                "path": "Relay 4 Click/data/lib_relay4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

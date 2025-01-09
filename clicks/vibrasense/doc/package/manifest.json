@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Vibra sense Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.vibrasense",
-    "product_link": "https://www.mikroe.com/vibra-sense-click",
-    "short_description": "Vibra Sense Click is a low cost micro shock vibration sensor with a digital output which can be set as an Interrupt (mikroBUS INT pin) An onboard potentiometer lets you set the interrupt threshold.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1561
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.VibraSense",
-    "subdir_name": "lib_vibrasense"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1927",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Vibra sense Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VibraSense",
+                "subdir_name": "lib_vibrasense",
+                "path": "Vibra sense Click/data/lib_vibrasense"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

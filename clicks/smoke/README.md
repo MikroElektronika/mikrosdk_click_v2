@@ -1,78 +1,76 @@
-\mainpage Main Page
- 
+
 ---
 # Smoke Click
 
-Smoke Click carries the MAX30105 high-sensitivity optical sensor for smoke detection. The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target MCU over I2C interface with additional functionality provided by the INT pin on the mikroBUS™ line.
+> [Smoke Click](https://www.mikroe.com/?pid_product=MIKROE-2560) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/smoke_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2560&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/smoke-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Smoke Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Smoke Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void smoke_cfg_setup ( smoke_cfg_t *cfg ); 
- 
-- Initialization function.
-> SMOKE_RETVAL smoke_init ( smoke_t *ctx, smoke_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void smoke_default_cfg ( smoke_t *ctx );
-
-
-#### Example key functions :
-
-- Set registers values function.
-> uint8_t smoke_set_registers ( smoke_t *ctx, smoke_set_registers_t *registers );
-
-- Enable or disable interrupt function.
-> uint8_t smoke_enable_disable_interrupts ( smoke_t *ctx, uint8_t interrupt_flag, uint8_t enable_flag );
- 
-- Function for reading enabled led values.
-> uint8_t smoke_read_leds ( smoke_t *ctx );
-
-## Examples Description
+## Example Description
 
 >  This Click includes internal LEDs, photodetectors, optical elements, and low-noise electronics 
 > with ambient light rejection. The sensor can detect a wide variety of smoke particle sizes. 
 > It also has an on-chip temperature sensor for calibrating the temperature dependence of the 
 > particle sensing subsystem. The temperature sensor has an inherent resolution 0.0625°C.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Smoke
+
+### Example Key Functions
+
+- `smoke_cfg_setup` Config Object Initialization function. 
+```c
+void smoke_cfg_setup ( smoke_cfg_t *cfg );
+``` 
+ 
+- `smoke_init` Initialization function. 
+```c
+err_t smoke_init ( smoke_t *ctx, smoke_cfg_t *cfg );
+```
+
+- `smoke_default_cfg` Click Default Configuration function. 
+```c
+void smoke_default_cfg ( smoke_t *ctx );
+```
+
+- `smoke_set_registers` Set registers values function. 
+```c
+uint8_t smoke_set_registers ( smoke_t *ctx, smoke_set_registers_t *registers );
+```
+
+- `smoke_enable_disable_interrupts` Enable or disable interrupt function. 
+```c
+uint8_t smoke_enable_disable_interrupts ( smoke_t *ctx, uint8_t interrupt_flag, uint8_t enable_flag );
+```
+ 
+- `smoke_read_leds` Function for reading enabled led values. 
+```c
+uint8_t smoke_read_leds ( smoke_t *ctx );
+```
+
+### Application Init
 
 > Initalizes I2C driver, and sets default configuration of         device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -108,7 +106,6 @@ void application_init ( void )
         for( ; ; );
     }
 }
-  
 ```
 
 ### Application Task
@@ -117,7 +114,6 @@ void application_init ( void )
     green and temperature values from an internal sensor and displays and logs it.
 
 ```c
-
 void application_task ( void )
 {
     smoke_read_leds( &smoke );
@@ -134,29 +130,22 @@ void application_task ( void )
 
     Delay_ms ( 500 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Smoke
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

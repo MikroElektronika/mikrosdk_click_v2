@@ -1,9 +1,6 @@
 {
     "name": "Remote Temp Click",
-    "description": "Remote Temp Click is a temperature sensing Click board™, which features the EMC1833 from Microchip, a specifically designed IC, capable of measuring remote temperature. 
                     This option makes Remote Temp Click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the BJT model junction can be a substrate PNP or NPN.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","EMC1833"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","EMC1833"]
 }

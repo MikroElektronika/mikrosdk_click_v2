@@ -1,40 +1,41 @@
-\mainpage Main Page
 
 ---
 # SPI Isolator 2 Click
 
-> SPI Isolator 2 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the ISO7741, a high-performance quad-channel digital isolator with a double capacitive silicon dioxide insulation barrier capable of galvanic isolation up to 5000Vrms from Texas Instruments. The ISO7741 provides high electromagnetic immunity and low emissions at low power consumption while isolating digital I/Os. It has three forward and one reverse-direction channel with enable pins that can be used to put the respective outputs in Hi-Z state. This Click board™ provides a simple, compact solution for isolated SPI data communication.
+> [SPI Isolator 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4415) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/spiisolator2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4415&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/spi-isolator-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jul 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the SPIIsolator2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example that demonstrates the use of the SPI Isolator 2 Click board.
+This board uses the ISO7741 which provides high electromagnetic immunity and low
+emissions at low power consumption while isolating digital I/Os. In this example,
+we write and then read data from the connected EEPROM 5 Click to the SPI Isolator 2
+Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for SPIIsolator2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SPIIsolator2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `spiisolator2_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +46,6 @@ void spiisolator2_cfg_setup ( spiisolator2_cfg_t *cfg );
 ```c
 err_t spiisolator2_init ( spiisolator2_t *ctx, spiisolator2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `spiisolator2_output_enable` The function enable or disable output ( isolation ) of the ISO7741DWR High-Speed, Robust-EMC Reinforced and Basic Quad-Channel Digital Isolators on SPI Isolator 2 Click board.
 ```c
@@ -63,22 +62,11 @@ void spiisolator2_set_cmd ( spiisolator2_t *ctx, uint8_t cmd );
 void spiisolator2_write_byte ( spiisolator2_t *ctx, uint8_t reg, uint8_t tx_data );
 ```
 
-## Example Description
-
-> This is an example that demonstrates the use of the SPI Isolator 2 Click board.
-This board uses the ISO7741 which provides high electromagnetic immunity and low
-emissions at low power consumption while isolating digital I/Os. In this example,
-we write and then read data from the connected EEPROM 5 Click to the SPI Isolator 2
-click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes SPI, set RST and CS pin as outputs, begins to write log, set write/read memory address, enable output.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;                         /**< Logger config object. */
@@ -112,7 +100,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
@@ -121,7 +108,6 @@ void application_init ( void )
 All data is being displayed on the USB UART where you can track the program flow.
 
 ```c
-
 void application_task ( void ) 
 {
     spiisolator2_set_cmd( &spiisolator2, SPIISOLATOR2_EEPROM5_CMD_WREN );
@@ -145,26 +131,21 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SPIIsolator2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

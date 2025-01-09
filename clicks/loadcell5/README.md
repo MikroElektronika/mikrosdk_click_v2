@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Load Cell 5 Click
 
-Load Cell 5 Click is a compact add-on board that represents a weigh scale solution. This board features the AD7780, a pin-programmable, low power, 24-bit sigma-delta ΣΔ ADC from Analog Devices. It interfaces directly to the load cell, where the low-level signal from the load cell is amplified by the AD7780’s internal low noise programmable gain amplifier programmed to operate with a gain of 128 or 1. It also has a power-down mode allowing the user to switch off the power to the bridge sensor and power-down the AD7780 when not converting, increasing the product battery life. 
+> [Load Cell 5 Click](https://www.mikroe.com/?pid_product=MIKROE-4510) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/loadcell5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4510&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/load-cell-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jan 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the LoadCell5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for Load Cell 5 Click driver.
+> The library initializes and defines the SPI bus drivers to read status and ADC data. 
+> The library also includes a function for tare, calibration and weight measurement.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LoadCell5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LoadCell5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `loadcell5_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +42,13 @@ void loadcell5_cfg_setup ( loadcell5_cfg_t *cfg );
 
 - `loadcell5_init` Initialization function.
 ```c
-LOADCELL5_RETVAL loadcell5_init ( loadcell5_t *ctx, loadcell5_cfg_t *cfg );
+err_t loadcell5_init ( loadcell5_t *ctx, loadcell5_cfg_t *cfg );
 ```
 
 - `loadcell5_default_cfg` Click Default Configuration function.
 ```c
 void loadcell5_default_cfg ( loadcell5_t *ctx );
 ```
-
-#### Example key functions :
 
 - `loadcell5_set_power_mode` Load Cell 5 set power mode function.
 ```c
@@ -68,14 +65,6 @@ uint32_t loadcell5_read_adc ( loadcell5_t *ctx );
 float loadcell5_get_weight ( loadcell5_t *ctx, loadcell5_data_t *cell_data );
 ```
 
-## Example Description
-
-> This library contains API for Load Cell 5 Click driver.
-> The library initializes and defines the SPI bus drivers to read status and ADC data. 
-> The library also includes a function for tare, calibration and weight measurement.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > The initialization of SPI module, log UART, and additional pins
@@ -83,8 +72,8 @@ float loadcell5_get_weight ( loadcell5_t *ctx, loadcell5_data_t *cell_data );
 > and start measurements. 
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     loadcell5_cfg_t loadcell5_cfg;  /**< Click config object. */
 
@@ -197,7 +186,6 @@ void application_init ( void ) {
     log_printf( &logger, "   Start measurements :  \r\n");
     log_printf( &logger, "-------------------------\r\n");
 }
-
 ```
 
 ### Application Task
@@ -208,34 +196,29 @@ void application_init ( void ) {
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
-void application_task ( void ) {   
+void application_task ( void ) 
+{   
     weight_val = loadcell5_get_weight( &loadcell5, &cell_data );
 
     log_printf(&logger, "   Weight : %.2f g\r\n", weight_val );
 
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LoadCell5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

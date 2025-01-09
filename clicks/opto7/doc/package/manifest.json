@@ -1,39 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Optocoupler",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Opto 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.opto7",
-    "product_link": "https://www.mikroe.com/opto-7-click",
-    "short_description": "Opto 7 Click is a compact add-on board that provides uncomplicated safety isolation from high voltage. This board features two ISOM8710, high-speed single-channel opto-emulators from Texas Instruments. The ISOM8710 opto-emulator has a diode-emulator input and digital output",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.Opto7",
-    "subdir_name": "lib_opto7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5923",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Opto 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Opto7",
+                "subdir_name": "lib_opto7",
+                "path": "Opto 7 Click/data/lib_opto7"
+            }
+        ]
+    }
 }
-
-
-
-

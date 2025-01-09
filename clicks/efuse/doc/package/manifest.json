@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Power Switch",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "eFuse Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.efuse",
-    "product_link": "https://www.mikroe.com/efuse-click",
-    "short_description": "Fuse Click is a compact add-on board that contains a programmable electronic power breaker. This board features the STPW12, an integrated electronic power breaker optimized to monitor the input power from STMicroelectronics. Connected in series to the power rail, it can disconnect the electronic circuitry on its output if the power consumption overcomes the programmed limit. The intervention of the protection is communicated to the MCU through a signal on the fault pin. The device can also be enabled/disabled through a dedicated Enable pin with a direct PWM mode, which can be achieved through an external PWM signal.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.eFuse",
-    "subdir_name": "lib_efuse"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4726",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "eFuse Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.eFuse",
+                "subdir_name": "lib_efuse",
+                "path": "eFuse Click/data/lib_efuse"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

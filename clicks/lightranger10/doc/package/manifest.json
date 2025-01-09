@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LightRanger 10 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lightranger10",
-    "product_link": "https://www.mikroe.com/lightranger-10-click",
-    "short_description": "LightRanger 10 Click is a compact add-on board suitable for range-finding and distance sensing applications. This board features the VL53L4CX, a ToF (time of flight) optical distance sensor with an extended target detection range from STMicroelectronics. Specifically designed for long-range and multi-target measurements, the VL53L4CX provides very accurate distance measurements up to 6m with excellent results over short distances and 18° FoV (Field of View), which improves performances under ambient light. Data processing is performed inside the VL53L4CX, providing distance information and confidence values through its I2C interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.LightRanger10",
-    "subdir_name": "lib_lightranger10"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5206",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LightRanger 10 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LightRanger10",
+                "subdir_name": "lib_lightranger10",
+                "path": "LightRanger 10 Click/data/lib_lightranger10"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Light Click",
-    "description": "Light Click is the add-on board with PD15-22CTR8 PIN photodiode, providing an effective and easy way to measure ambient light intensity",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TSL230BR"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","TSL230BR"]
 }

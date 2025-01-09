@@ -1,39 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Hall Switch 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hallswitch3",
-    "product_link": "https://www.mikroe.com/hall-switch-3-click",
-    "short_description": "Hall Switch 3 Click is a compact add-on board representing a magnetic field-activated switch. This board features the NMH1000, a Hall-effect magnetic switch from NXP Semiconductor. It is a low-voltage, low-current, and low-output data rate device with a very small size. The switch is most sensitive to a vertical field passing through the top-bottom surfaces, orthogonal to the plane of the Hall Switch 3 Click board™.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.HallSwitch3",
-    "subdir_name": "lib_hallswitch3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6017",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Switch 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallSwitch3",
+                "subdir_name": "lib_hallswitch3",
+                "path": "Hall Switch 3 Click/data/lib_hallswitch3"
+            }
+        ]
+    }
 }
-
-
-
-

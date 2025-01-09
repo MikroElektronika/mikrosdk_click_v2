@@ -1,8 +1,5 @@
 {
     "name": "iqRF Click",
-    "description": "IQRF Click carries the RF transceiver, operating in the 868/916 MHz frequency.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","DCTR-76DA"],
-    "category" : ["Sub-1 GHz Transceievers"] 
+    "hw" : ["Click","DCTR-76DA"]
 }

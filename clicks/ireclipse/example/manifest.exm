@@ -1,8 +1,5 @@
 {
     "name": "IR ECLIPSE Click",
-    "description": "IR eclipse Click carries an EE-SX198 photo interrupter sensor. This sensor consists of an infrared transmitter and receiver facing each other and spaced apart by a 3mm slit.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","EE-SX198"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","EE-SX198"]
 }

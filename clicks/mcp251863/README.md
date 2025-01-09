@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # MCP251863 Click
 
-> MCP251863 Click is a compact add-on board representing a complete CAN solution used as a control node in a CAN network. This board features the MCP251863, IC representing a compact solution with a controller and a transceiver in one package, the MCP2518FD and ATA6563 from Microchip. The ATA6563, a low-level physical layer IC (PHY), provides a physical connection with the CAN bus itself, while the CAN controller MCP2518FD represents an interface between the MCU and the PHY. It features three operating modes with dedicated fail-safe features, remote wake-up via CAN, and ideally passive behavior when powered off on the CAN bus. This Click board™ is suitable for developing a wide range of automotive diagnostic applications, even on MCUs that don’t support CAN interface.
+> [MCP251863 Click](https://www.mikroe.com/?pid_product=MIKROE-4955) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mcp251863_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4955&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/mcp251863-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Oct 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the MCP251863 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an MCP251863 Click board by showing
+the communication between the two Click boards configured as a receiver and transmitter.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for MCP251863 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MCP251863
 
-#### Standard key functions :
+### Example Key Functions
 
 - `mcp251863_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t mcp251863_init ( mcp251863_t *ctx, mcp251863_cfg_t *cfg );
 err_t mcp251863_default_cfg ( mcp251863_t *ctx );
 ```
 
-#### Example key functions :
-
 - `mcp251863_transmit_message` Transmits the desired message and checks is message successfully sent.
 ```c
 err_t mcp251863_transmit_message ( mcp251863_t *ctx, uint8_t *data_in, uint16_t data_len );
@@ -68,19 +64,11 @@ err_t mcp251863_receive_message ( mcp251863_t *ctx, uint8_t *data_out, uint16_t 
 err_t mcp251863_operation_mode_select ( mcp251863_t *ctx, uint8_t op_mode );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an MCP251863 Click board by showing
-the communication between the two Click boards configured as a receiver and transmitter.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger, performs the Click default configuration and displays the selected application mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -121,7 +109,6 @@ void application_init ( void )
 #endif
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -129,7 +116,6 @@ void application_init ( void )
 > Depending on the selected mode, it sends a desired message using CAN protocol or reads all the received data and displays them on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
 #ifdef DEMO_APP_TRANSMITTER
@@ -153,26 +139,21 @@ void application_task ( void )
     }
 #endif
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MCP251863
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

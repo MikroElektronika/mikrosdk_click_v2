@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Stepper 10 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepper10",
-    "product_link": "https://www.mikroe.com/stepper-10-click",
-    "short_description": "Stepper 10 Click is a two-phase bipolar stepping motor driver capable of controlling one stepper motor with PWM constant current drive. Click's featured chip TB67S128FTG, from Toshiba Semiconductor, fabricated with BiCD process with an output rating of 50V/5A and a built-in decoder can supply the motor with voltage of up to 44V. Toshiba's innovative technology process results in low-power consumption with low on-resistance (0.25Ω) on the integrated MOSFET output stage. The stepper motor can be driven in both directions from full step to 1/128 micro-steps.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        3745
-    ],
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.Stepper10",
-    "subdir_name": "lib_stepper10"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4138",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper 10 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper10",
+                "subdir_name": "lib_stepper10",
+                "path": "Stepper 10 Click/data/lib_stepper10"
+            }
+        ]
+    }
 }
-
-
-
-

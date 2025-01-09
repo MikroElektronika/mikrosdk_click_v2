@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # ECG 7 Click
 
-> ECG 7 Click is a compact add-on board that records the heart's electrical activity. This board features the MCP6N16, a single zero-drift instrumentation amplifier with selectable gain from Microchip. In addition to the jack connector provided for connecting the cable with ECG electrodes, this Click board™ offers the possibility of connecting electrodes through screw terminals or an onboard header if the electrode connection does not match the jack connector. Besides, the user is allowed to process the output signal in analog or digital form.
+> [ECG 7 Click](https://www.mikroe.com/?pid_product=MIKROE-5214) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ecg7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5214&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ecg-7-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Apr 2022.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the ECG 7 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of ECG 7 Click board by reading and displaying the voltage from VOUT BUFF which can be visualized on the SerialPlot application.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ECG 7 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ECG7
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ecg7_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void ecg7_cfg_setup ( ecg7_cfg_t *cfg );
 ```c
 err_t ecg7_init ( ecg7_t *ctx, ecg7_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `ecg7_read_raw_adc` This function reads raw ADC value.
 ```c
@@ -63,18 +58,11 @@ err_t ecg7_read_voltage ( ecg7_t *ctx, float *voltage );
 err_t ecg7_set_vref ( ecg7_t *ctx, float vref );
 ```
 
-## Example Description
-
-> This example demonstrates the use of ECG 7 Click board by reading and displaying the voltage from VOUT BUFF which can be visualized on the SerialPlot application.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -105,7 +93,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -113,7 +100,6 @@ void application_init ( void )
 > Reads the output voltage and displays it on the USB UART (SerialPlot) every 4ms approximately.
 
 ```c
-
 void application_task ( void )
 {
     float ecg7_an_voltage = 0;
@@ -123,29 +109,25 @@ void application_task ( void )
         Delay_ms ( 4 );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > We recommend using the SerialPlot tool for data visualizing. Please make sure to set up ECG electrodes properly.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ECG7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

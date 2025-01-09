@@ -1,8 +1,5 @@
 {
     "name": "Diff Press 3 Click",
-    "description": "Diff Press 3 Click is a compact add-on board that can measure differential pressure. It features the 2513130810401, a WSEN-PDUS differential pressure sensor from Würth Elektronik. The sensor is MEMS based and uses a piezo-resistive sensing principle. It is a fully calibrated pressure sensor with 15-bit digital and 11-bit analog outputs. In addition to pressure measurement, the 2513130810401 WSEN-PDUS sensor also has an embedded temperature sensor.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","2513130810401"],
-    "category" : ["Click Boards > Sensors > Pressure"]
+    "hw" : ["Click","2513130810401"]
 }

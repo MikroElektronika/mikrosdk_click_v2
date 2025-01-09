@@ -3,7 +3,7 @@
  * @brief Button Power Click Example.
  *
  * # Description
- * This example showcases how to initialize and use the whole family of Button clicks. 
+ * This example showcases how to initialize and use the whole family of Button Clicks. 
  * One library is used for every single one of them. They are simple touch detectors which send
  * a pressed/released signal and receive a PWM output which controls the backlight on the button.
  *

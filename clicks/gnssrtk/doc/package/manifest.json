@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GNSS RTK Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gnssrtk",
-    "product_link": "https://www.mikroe.com/gnss-rtk-click",
-    "short_description": "GNSS RTK Click is a compact add-on board used to enhance the precision of position data derived from satellite-based positioning systems. This board features the ZED-F9P, a multi-band GNSS module with integrated multi-band Real Time Kinematics (RTK) technology offering centimeter-level accuracy from U-blox. This module concurrently uses GNSS signals from all four GNSS constellations (GPS, GLONASS, Galileo, and BeiDou), and provides multi-band RTK with fast convergence times, reliable performance, and easy integration. It also includes moving base support, allowing both base and rover to move while computing a centimeter-level accurate position between them.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.GNSSRTK",
-    "subdir_name": "lib_gnssrtk"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4456",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS RTK Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSSRTK",
+                "subdir_name": "lib_gnssrtk",
+                "path": "GNSS RTK Click/data/lib_gnssrtk"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Touchpad 3 Click
 
-Touchpad 3 Click is a compact add-on board that allows users to easily integrate projected capacitive touch into their applications. This board features the MTCH6301, a turnkey capacitive touch controller that makes it easy for users to use popular multitouch and gesture interfaces from Microchip. This controller’s sophisticated combination of Self and Mutual capacitive scanning for XY touchscreens and touchpads enables several features, including single and dual-touch drawing, the reporting of 11 single-finger gestures, and the detection of up to 10 touches. This Click board™ is suitable for human-machine interfaces, keypad or scrolling functions, single-finger gesture-based interfaces, and more.
+> [Touchpad 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4382) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/touchpad3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4382&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/touchpad-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Touchpad3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example prints the coordinate points of the position we touch on a Click. We use RST and INT pins. The whole project is done through i2c communication.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Touchpad3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Touchpad3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `touchpad3_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t touchpad3_init ( touchpad3_t *ctx, touchpad3_cfg_t *cfg );
 void touchpad3_default_cfg ( touchpad3_t *ctx );
 ```
 
-#### Example key functions :
-
 - `touchpad3_general_configuration` The function performs the general configuration of the MTCH6301 Projected Capacitive Touch Controller on the TouchPad 3 Click board.
 ```c
 void touchpad3_general_configuration ( touchpad3_t *ctx );
@@ -68,19 +63,13 @@ void touchpad3_decoding_configuration ( touchpad3_t *ctx );
 void touchpad3_sensor_mapping_configuration ( touchpad3_t *ctx );
 ```
 
-## Example Description
-
-> This example prints the coordinate points of the position we touch on a Click. We use RST and INT pins. The whole project is done through i2c communication.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver enables - Initializes I2C, set RST pin as an output, set INT pin as input and start to write log. I2C, perform a hardware reset, configuration (general, decoding, sensor mapping), get device ID and enable the touch, also write log.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                 /**< Logger config object. */
     touchpad3_cfg_t touchpad3_cfg;     /**< Click config object. */
 
@@ -127,7 +116,6 @@ void application_init ( void ) {
     log_printf( &logger, "------------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
@@ -135,8 +123,8 @@ void application_init ( void ) {
 > This is an example that demonstrates the use of the TouchPad 3 Click board. TouchPad 3 Click board uses USB UART log to display X and Y coordinates of the touch, depending on the selected Touch ID.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     if ( touchpad3_get_int( &touchpad3 ) == TOUCHPAD3_INT_STATUS_HIGH ) {
        
        touchpad3_get_touch( &touchpad3, &touch_data, &x_axis, &y_axis );
@@ -150,25 +138,21 @@ void application_task ( void ) {
         }
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Touchpad3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Relay 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.relay5",
-    "product_link": "https://www.mikroe.com/relay-5-click",
-    "short_description": "Relay 5 Click is a compact add-on board with general-purpose relays that any host MCU can control. This board features three J1031C3VDC.15S, a high-current single-pole double-throw (SPDT) signal relays controlled by the PCA9538A, a low-voltage 8-bit I/O port expander from NXP Semiconductors. Highly sensitive, the J1031C3VDC.15S offers a low coil power consumption in a small, lightweight package with PC pin mounting. It comes with a dimension of 12.5x7.5x10 millimeters (LxWxH) and a 1C contact arrangement with a coil voltage of 3VDC, providing a maximum switching voltage of 125VAC/60VDC.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Relay5",
-    "subdir_name": "lib_relay5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5675",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Relay 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Relay5",
+                "subdir_name": "lib_relay5",
+                "path": "Relay 5 Click/data/lib_relay5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

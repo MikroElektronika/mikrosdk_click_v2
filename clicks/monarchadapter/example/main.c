@@ -3,7 +3,7 @@
  * \brief MonarchAdapter Click example
  * 
  * # Description
- * This example reads and processes data from Monarch Adapter clicks.
+ * This example reads and processes data from Monarch Adapter Clicks.
  *
  * The demo application is composed of two sections :
  * 

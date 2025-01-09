@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "H-Bridge 10 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hbridge10",
-    "product_link": "https://www.mikroe.com/h-bridge-10-click",
-    "short_description": "H-Bridge 10 Click is a compact add-on board containing H-bridge outputs that let you control a DC motor to go backward or forward. This board features the MP6523, a triple, half-bridge, DMOS, output driver with integrated power MOSFETs that can drive up to three different loads from Monolithic Power Systems (MPS). The MP6523 is rated for an operating voltage range from 7V to 28V. It is SPI-configurable and has various diagnostic functions. Complete protection features include short-circuit protection (SCP), under-voltage protection (UVP), and thermal shutdown, alongside an onboard power supply existence-check circuit. This Click board™ is suitable as a multiple brushed DC motor driver for driving various loads in automotive and industrial applications, and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
-    "cmake": true,
-    "alias": "Click.HBridge10",
-    "subdir_name": "lib_hbridge10"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5108",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "H-Bridge 10 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HBridge10",
+                "subdir_name": "lib_hbridge10",
+                "path": "H-Bridge 10 Click/data/lib_hbridge10"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

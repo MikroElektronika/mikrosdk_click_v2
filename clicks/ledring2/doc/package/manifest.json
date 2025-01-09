@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED matrix",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LED Ring 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ledring2",
-    "product_link": "https://www.mikroe.com/led-ring-2-click",
-    "short_description": "LED Ring 2 Click is a compact add-on board that provides a circular-shaped electronic lighting solution. This board features three I2C-configurable high-performance LED matrix drivers, the LP5862 from Texas Instruments. The LP5862 integrates 18 constant current sinks for driving 18 yellow LEDs. With the help of two additional LP5862 drivers, it is possible to realize, as shown on this board, a solution of 54 yellow LEDs arranged in a circular pattern. In addition, it also provides excellent PWM dimming effects.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.LEDRing2",
-    "subdir_name": "lib_ledring2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5634",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LED Ring 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LEDRing2",
+                "subdir_name": "lib_ledring2",
+                "path": "LED Ring 2 Click/data/lib_ledring2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

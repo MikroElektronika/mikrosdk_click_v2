@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Current 9 Click
 
-> Current 9 Click is a compact add-on board providing a precise and accurate current sensing solution. This board features the CT415-HSN830DR, high-bandwidth and ultra-low-noise XtremeSense® TMR current sensor designed for the current range up to 30A from Crocus Technology. This sensor also features an integrated current-carrying conductor which handles rated current and generates a current measurement as a linear analog output voltage, accomplishing a total output error of about ±1% full-scale. After that, the user is allowed to process the output voltage in analog or digital form.
+> [Current 9 Click](https://www.mikroe.com/?pid_product=MIKROE-5319) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/current9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5319&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/current-9-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Aug 2022.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the Current 9 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Current 9 Click board by reading and displaying the input current measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Current 9 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Current9
 
-#### Standard key functions :
+### Example Key Functions
 
 - `current9_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void current9_cfg_setup ( current9_cfg_t *cfg );
 ```c
 err_t current9_init ( current9_t *ctx, current9_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `current9_read_voltage` This function reads raw ADC value and converts it to proportional voltage level.
 ```c
@@ -63,18 +58,11 @@ err_t current9_read_current ( current9_t *ctx, float *current );
 err_t current9_set_vref ( current9_t *ctx, float vref );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Current 9 Click board by reading and displaying the input current measurements.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -105,7 +93,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -113,7 +100,6 @@ void application_init ( void )
 > Reads the input current measurements and displays the results on the USB UART approximately once per second.
 
 ```c
-
 void application_task ( void )
 {
     float current = 0;
@@ -123,31 +109,27 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > For better accuracy, set the voltage reference by using the @b current9_set_vref function,
 increase the number of conversions by modifying the @b CURRENT9_NUM_CONVERSIONS macro,
 and adjust the @b CURRENT9_ZERO_CURRENT_OFFSET voltage value.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Current9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

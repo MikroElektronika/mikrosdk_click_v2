@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Gas",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Air Quality 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.airquality8",
-    "product_link": "https://www.mikroe.com/air-quality-8-click",
-    "short_description": "Air quality 8 Click is a compact add-on board containing a best-in-class air-quality sensing solution. This board features the ZMOD4510, a fully calibrated digital sensor solution that detects air quality in various indoor and outdoor applications from Renesas. The ZMOD4510 comes with selective ozone measurement capabilities, offering visibility into the air quality in users' environments for a personalized experience. This Click board™ is an I2C configurable and characterized by outstanding long-term stability and lifetime. Many additional features such as low power consumption, wide NO2 and O3 detection range, and high sensitivity make this Click board™ an excellent choice for detecting unhealthy conditions in outdoor air, such as personal air-quality monitor, HVAC, and other various air quality-related applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.AirQuality8",
-    "subdir_name": "lib_airquality8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4904",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Air Quality 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AirQuality8",
+                "subdir_name": "lib_airquality8",
+                "path": "Air Quality 8 Click/data/lib_airquality8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

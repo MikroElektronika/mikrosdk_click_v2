@@ -1,8 +1,5 @@
 {
     "name": "WiFi 9 Click",
-    "description": "WiFi 9 Click is fully embedded stand-alone Wi-Fi module, equipped with the PAN9420 a 2.4 GHz ISM band Wi-Fi-embedded module which includes a wireless radio and an MCU for easy integration of Wi-Fi connectivity into various electronic devices.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","PAN9420"],
-    "category" : ["WiFi"] 
+    "hw" : ["Click","PAN9420"]
 }

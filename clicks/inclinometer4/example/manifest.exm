@@ -1,8 +1,5 @@
 {
     "name": "Inclinometer 4 Click",
-    "description": "Inclinometer 4 Click is a compact add-on board designed to measure angles of slope or elevation of an object concerning gravity's direction. This board features the FXLS8971CF, a 3-axis low-g MEMS accelerometer from NXP Semiconductor. The FXLS8971CF offers high-performance and low-power modes, with selectable full-scale ranges of ±2/4/8/16g and features such as selectable output data rates, motion detection, and a 144-byte output data buffer.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","FXLS8971CF"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","FXLS8971CF"]
 }

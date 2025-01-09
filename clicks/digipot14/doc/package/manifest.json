@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Digital potentiometer",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DIGI POT 14 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.digipot14",
-    "product_link": "https://www.mikroe.com/digi-pot-14-click",
-    "short_description": "DIGI POT 14 Click is a compact add-on board that contains a digitally controlled potentiometer. This board features the TPL0102, a dual-channel digital potentiometer with non-volatile memory from Texas Instruments. It is a 100K resistance end-to-end potentiometer with a 256-position resolution, where the wiper position can be stored in EEPROM. It can operate from both 3.3V and 5V power supplies and provides a typical 92ppm/ºC end-to-end nominal resistance temperature coefficient and only 4ppm/ºC ratiometric.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.DIGIPOT14",
-    "subdir_name": "lib_digipot14"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5814",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DIGI POT 14 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DIGIPOT14",
+                "subdir_name": "lib_digipot14",
+                "path": "DIGI POT 14 Click/data/lib_digipot14"
+            }
+        ]
+    }
 }
-
-
-
-
-

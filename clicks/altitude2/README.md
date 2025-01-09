@@ -1,41 +1,37 @@
-\mainpage Main Page
- 
 
 ---
 # Altitude 2 Click
 
-Altitude 2 Click is a high-resolution barometric pressure sensor Click board™. It provides very accurate measurements of temperature and atmospheric pressure, which can be used to calculate the altitude with a very high resolution of 20cm per step. Besides that, the device also includes features such as the ultra-low noise delta-sigma 24bit ADC, low power consumption, fast conversion times, pre-programmed unique compensation values, and more.
+> [Altitude 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3030) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="http://download.mikroe.com/images/click_for_ide/altitude2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3030&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/altitude-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Altitude2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example demonstrates the use of Altitude 2 Click to measure temperature, altitude and pressure.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Altitude2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Altitude2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `altitude2_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +42,6 @@ void altitude2_cfg_setup ( altitude2_cfg_t *cfg );
 ```c
 err_t altitude2_init ( altitude2_t *ctx, altitude2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `altitude2_read_prom` This function reads calibration data from PROM.
 ```c
@@ -64,13 +58,7 @@ void altitude2_reset( altitude2_t *ctx );
 void altitude2_read_data( altitude2_t *ctx, float *temp_data, float *press_data, float *altitude_data );
 ```
 
-## Examples Description
-
-This example demonstrates the use of Altitude 2 Click to measure temperature, altitude and pressure.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes I2C driver and performs the device reset,
 > after which the calibration coefficients be read.
@@ -78,7 +66,6 @@ This example demonstrates the use of Altitude 2 Click to measure temperature, al
 > Calibration coefficients are necessary to read after the device reset.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -109,7 +96,6 @@ void application_init ( void )
     log_printf( &logger, "Altitude 2 is initialized\r\n" );
     Delay_ms ( 200 );
 }
-  
 ```
 
 ### Application Task
@@ -119,7 +105,6 @@ void application_init ( void )
 > Logs results on USBUART and repeats operation each second.
 
 ```c
-
 void application_task ( void )
 {
     altitude2_read_data( &altitude2, &temperature, &pressure, &altitude );
@@ -130,29 +115,22 @@ void application_task ( void )
     log_printf( &logger, "---------------------------------------\r\n\r\n" );
 
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Altitude2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

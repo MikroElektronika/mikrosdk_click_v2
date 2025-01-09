@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 15 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel15",
-    "product_link": "https://www.mikroe.com/accel-15-click",
-    "short_description": "Accel 15 Click is a compact add-on board that contains a longevity acceleration sensor. This board features the BMA490L, a high-performance 16-bit digital triaxial acceleration sensor with extended availability of up to ten years from Bosch Sensortech. It allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, ±8g, and ±16g in three axes with a configurable host interface that supports both I2C and SPI serial communication and with intelligent on-chip motion-triggered interrupt features. Intelligent signal processing and evaluation in the accelerometer ASIC enables advanced gesture recognition for numerous industrial IoT applications where low power consumption is vital. This Click board™ is suitable for home appliances, power tools, and other industrial products whose lifetime is essential.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Accel15",
-    "subdir_name": "lib_accel15"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4501",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 15 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel15",
+                "subdir_name": "lib_accel15",
+                "path": "Accel 15 Click/data/lib_accel15"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

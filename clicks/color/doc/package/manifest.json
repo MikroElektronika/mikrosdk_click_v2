@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Color Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.color",
-    "product_link": "https://www.mikroe.com/color-click",
-    "short_description": "Color Click is a color light sensing Click board™, featuring the popular TSC3471 integrated color sensor. It is capable of sensing red, green, and blue light components, as well as the clear light.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        780
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Color",
-    "subdir_name": "lib_color"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1438",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Color Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Color",
+                "subdir_name": "lib_color",
+                "path": "Color Click/data/lib_color"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

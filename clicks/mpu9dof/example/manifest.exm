@@ -1,8 +1,5 @@
 {
     "name": "MPU 9DOF Click",
-    "description": "MPU 9DOF Click carries the MPU–9250 System in Package, which is the world’s first 9-axis Motion Tracking device. MPU–9250 comprises two chips. One is the MPU–6050 that contains a 3-axis accelerometer, a 3-axis gyroscope, and a DMP (digital motion processor); the other is AK8975, a 3-axis digital compass.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MPU–9250"],
-    "category" : ["Motion"] 
+    "hw" : ["Click","MPU–9250"]
 }

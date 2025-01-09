@@ -1,8 +1,5 @@
 {
     "name": "Barometer 2 Click",
-    "description": "Barometer 2 Click is a digital barometer on a Click board™. Barometer 2 is equipped with the LPS35HW, an absolute piezoresistive pressure sensor with ceramic, water resistant package, manufactured using a proprietary technology.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LPS35HW"],
-    "category" : ["Pressure"] 
+    "hw" : ["Click","LPS35HW"]
 }

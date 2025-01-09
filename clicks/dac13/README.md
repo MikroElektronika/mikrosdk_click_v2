@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # DAC 13 Click
 
-> DAC 13 Click is a compact add-on board providing a highly accurate digital-to-analog conversion. This board features the AD3541R, a low drift, single channel, 16-bit accuracy, voltage output digital-to-analog converter (DAC) from Analog Devices. The AD3542R operates with a fixed 2.5V reference, communicates with the host MCU through the SPI interface, and can be configurable in multiple voltage span ranges. Also, it provides the possibility to select the power supply of the internal trans-impedance amplifier as well as its gain, which scales the output voltage.
+> [DAC 13 Click](https://www.mikroe.com/?pid_product=MIKROE-5412) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dac13_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5412&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dac-13-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Oct 2022.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the DAC 13 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of DAC 13 Click board by changing the outputs voltage level every 2 seconds.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DAC 13 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DAC13
 
-#### Standard key functions :
+### Example Key Functions
 
 - `dac13_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t dac13_init ( dac13_t *ctx, dac13_cfg_t *cfg );
 err_t dac13_default_cfg ( dac13_t *ctx );
 ```
 
-#### Example key functions :
-
 - `dac13_set_output_range` This function sets the output voltage range and as well as the @b ctx->v_zero_scale and @b ctx->v_full_scale variables for the selected range.
 ```c
 err_t dac13_set_output_range ( dac13_t *ctx, uint8_t out_range );
@@ -68,18 +63,11 @@ err_t dac13_set_dac_value ( dac13_t *ctx, uint16_t dac_value );
 err_t dac13_set_output_voltage ( dac13_t *ctx, float voltage );
 ```
 
-## Example Description
-
-> This example demonstrates the use of DAC 13 Click board by changing the outputs voltage level every 2 seconds.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -141,22 +128,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DAC13
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

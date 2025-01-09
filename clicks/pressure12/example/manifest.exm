@@ -1,8 +1,5 @@
 {
     "name": "Pressure 12 Click",
-    "description": "Pressure 12 Click is a barometric gauge pressure measuring Click board™, equipped with the Amplified Basic Pressure sensor series (ABP), which features a ratiometric analog output, which is proportional to the applied pressure.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ABPLLNN600MGAA3"],
-    "category" : ["Pressure"] 
+    "hw" : ["Click","ABPLLNN600MGAA3"]
 }

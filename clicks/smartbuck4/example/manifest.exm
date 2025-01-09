@@ -1,8 +1,5 @@
 {
     "name": "Smart Buck 4 Click",
-    "description": "Smart Buck 4 Click is a compact add-on board that contains a high-frequency synchronous step-down DC-DC converter. This board features the LTS3562, a quad synchronous step-down DC-DC regulator from Analog Devices. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LTC3562EUD#PBF"],
-    "category" : ["Click Boards > Power management > Buck"]
+    "hw" : ["Click","LTC3562EUD#PBF"]
 }

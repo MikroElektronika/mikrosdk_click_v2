@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Rotary encoder",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Rotary W 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rotaryw2",
-    "product_link": "https://www.mikroe.com/rotary-w-2-click",
-    "short_description": "Rotary W 2 Click is a compact add-on board that allows you to add a precision input knob to your design. This board features the TLC5925, a low-power 16-channel constant-current LED sink driver from Texas Instruments that, combined with a high-quality rotary encoder from ALPS, the EC12D1564402, allows you to add a precision input knob to your design. It also features an LED ring composed of 16 individual white LEDs that can be used to represent the encoder position more visually.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.RotaryW2",
-    "subdir_name": "lib_rotaryw2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5892",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Rotary W 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RotaryW2",
+                "subdir_name": "lib_rotaryw2",
+                "path": "Rotary W 2 Click/data/lib_rotaryw2"
+            }
+        ]
+    }
 }
-
-
-
-
-

@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Barcode 3 Click
 
-> Barcode 3 Click is a compact add-on board for efficient barcode scanning applications. This board features the LV30, an advanced area image engine from Rakinda. The LV30 features a laser aiming system and LED illumination, ensuring quick and accurate barcode decoding on various media, including paper and magnetic cards. This module also includes a red LED for low-light conditions, a laser aimer for precise positioning, an onboard buzzer for audible feedback, buttons for scanning and resetting, and an LED indicator for successful reads.
+> [Barcode 3 Click](https://www.mikroe.com/?pid_product=MIKROE-6130) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/barcode3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6130&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/barcode-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Mar 2024.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Barcode 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the Barcode 3 Click board by scanning and displaying the content of a barcode or QR Code.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Barcode 3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Barcode3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `barcode3_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void barcode3_cfg_setup ( barcode3_cfg_t *cfg );
 ```c
 err_t barcode3_init ( barcode3_t *ctx, barcode3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `barcode3_generic_read` This function reads a desired number of data bytes by using UART serial interface.
 ```c
@@ -63,18 +58,11 @@ void barcode3_start_scanning ( barcode3_t *ctx );
 void barcode3_stop_scanning ( barcode3_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the Barcode 3 Click board by scanning and displaying the content of a barcode or QR Code.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, stops scanning and resets the barcode device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -105,7 +93,6 @@ void application_init ( void )
     barcode3_reset_device ( &barcode3 );
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -144,22 +131,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Barcode3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

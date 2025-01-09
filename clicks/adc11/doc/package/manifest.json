@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ADC 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.adc11",
-    "product_link": "https://www.mikroe.com/adc-11-click",
-    "short_description": "ADC 11 Click is a compact add-on board that contains a high-performance data converter. This board features the LTC1864, a 16-bit 250ksps analog-to-digital converter from Analog Devices. With a typical supply current of only 850µA at the maximum sampling frequency, the LTC1864 is among the lowest power consumption ADCs available. After conversion, the LTC1864 goes into a low-power Sleep mode, further reducing the supply current. That’s why it can run at proper micro-power levels in applications that do not require the maximum sampling rate of the LTC1864. This Click board™ is suitable for high-speed data acquisition, low power battery-operated instrumentation, isolated and remote data acquisition, and many other applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.Adc11",
-    "subdir_name": "lib_adc11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4593",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Adc11",
+                "subdir_name": "lib_adc11",
+                "path": "ADC 11 Click/data/lib_adc11"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

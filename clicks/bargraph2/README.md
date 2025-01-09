@@ -1,69 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Bargraph 2 Click
 
-BarGraph 2 Click is a 10-segment bar graph display Click, which uses a high-quality, multicolor bar graph LED display. The bar graph display is a very popular device for displaying various properties, whether it be an audio level, current/voltage level, position of the encoder, and generally any property that can be displayed in a form of a bar graph.
+> [Bargraph 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3021) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/bargraph2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3021&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/bargraph-2-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Bargraph2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Bargraph2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void bargraph2_cfg_setup ( bargraph2_cfg_t *cfg ); 
- 
-- Initialization function.
-> BARGRAPH2_RETVAL bargraph2_init ( bargraph2_t *ctx, bargraph2_cfg_t *cfg );
-
-#### Example key functions :
-
-- This function turns on the green LED diode of the chosen segment.
-> void bargraph2_led_green ( bargraph2_t *ctx, uint8_t index );
- 
-- This function turns on green LED diodes from the starting index to the end index.
-> void bargraph2_leds_green ( bargraph2_t *ctx, int start_index, int end_index );
-
-- This function turns off all the LED diodes.
-> void bargraph2_lights_out ( bargraph2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > The example starts off with the initalisation and configuration of the logger and Click modules and later on showcases different ways of lighting LED diodes on the Click.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Bargraph2
+
+### Example Key Functions
+
+- `bargraph2_cfg_setup` Config Object Initialization function. 
+```c
+void bargraph2_cfg_setup ( bargraph2_cfg_t *cfg );
+``` 
+ 
+- `bargraph2_init` Initialization function. 
+```c
+err_t bargraph2_init ( bargraph2_t *ctx, bargraph2_cfg_t *cfg );
+```
+
+- `bargraph2_led_green` This function turns on the green LED diode of the chosen segment. 
+```c
+void bargraph2_led_green ( bargraph2_t *ctx, uint8_t index );
+```
+ 
+- `bargraph2_leds_green` This function turns on green LED diodes from the starting index to the end index. 
+```c
+void bargraph2_leds_green ( bargraph2_t *ctx, int start_index, int end_index );
+```
+
+- `bargraph2_lights_out` This function turns off all the LED diodes. 
+```c
+void bargraph2_lights_out ( bargraph2_t *ctx );
+```
+
+### Application Init
 
 > This function initializes and configures the logger and Click modules.
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -88,7 +87,6 @@ void application_init ( )
     BARGRAPH2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     bargraph2_init( &bargraph2, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -123,25 +121,19 @@ void application_task ( )
 }
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Bargraph2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

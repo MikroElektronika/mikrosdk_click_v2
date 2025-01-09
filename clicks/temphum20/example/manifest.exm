@@ -1,8 +1,5 @@
 {
     "name": "TempHum 20 Click",
-    "description": "Temp&Hum 20 Click is a compact add-on board that represents temperature and humidity sensing solution. This board features the CC2D23, a highly accurate, fully-calibrated relative humidity and temperature sensor from Amphenol. This sensor, characterized by its high accuracy (±2% from 20% to 80%RH (±3% over entire humidity range)) and high resolution, provides factory-calibrated 14-bit data to the host controller with a configurable I2C interface. It also comes with alarm features for preset control at a minimum and maximum humidity.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CC2D23"],
-    "category" : ["Temperature & humidity"]
+    "hw" : ["Click","CC2D23"]
 }

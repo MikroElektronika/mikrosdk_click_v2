@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel7",
-    "product_link": "https://www.mikroe.com/accel-7-click",
-    "short_description": "The acceleration sensing is based on the principle of measuring the differential capacitance, which further decreases errors due to manufacturing imperfections, temperature and other environmental influences. The micro-electromechanical sensor (MEMS) is coupled with a very advanced application specific integrated circuit (ASIC), which allows the simplicity of the KXTJ3-1057 design, requiring a low number of additional external components.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2479
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Accel7",
-    "subdir_name": "lib_accel7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3244",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel7",
+                "subdir_name": "lib_accel7",
+                "path": "Accel 7 Click/data/lib_accel7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

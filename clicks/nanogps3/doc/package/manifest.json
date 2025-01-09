@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Nano GPS 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.nanogps3",
-    "product_link": "https://www.mikroe.com/nano-gps-3-click",
-    "short_description": "Nano GPS 3 Click is a compact add-on board that provides fast positioning capabilities. This board features the ORG1511, a GPS/GNSS module with an integrated antenna from OriginGPS. It is a miniature, multi-channel GPS, GLONASS, Galileo, SBAS, and QZSS overlay system receiver that continuously tracks all satellites in view, providing real-time positioning data in industry-standard NMEA format. The module introduces the industry’s lowest energy per fix ratio, unparalleled accuracy, and extremely fast fixes even under challenging.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.NanoGPS3",
-    "subdir_name": "lib_nanogps3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5782",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Nano GPS 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NanoGPS3",
+                "subdir_name": "lib_nanogps3",
+                "path": "Nano GPS 3 Click/data/lib_nanogps3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

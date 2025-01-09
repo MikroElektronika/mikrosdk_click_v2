@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Ambient 18 Click
 
-> Ambient 18 Click is a compact add-on board used to sense the amount of the present ambient light. This board features the BH1680FVC, an analog current-output ambient light sensor from Rohm Semiconductor. The BH1680FVC can detect a wide range of illuminance up to 10klx and provides excellent responsivity close to the human eyes' response. Besides, it is also characterized by low sensitivity variation across various light sources, a built-in shutdown function, and the ability to process the output signal in analog or digital form. This Click board™ is the most suitable for obtaining ambient light data for adjusting brightness in applications that require power saving and better visibility.
+> [Ambient 18 Click](https://www.mikroe.com/?pid_product=MIKROE-4943) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ambient18_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4943&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ambient-18-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Dec 2021.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the Ambient 18 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Ambient 18 Click board by measuring and displaying the illuminance value in Lux.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Ambient 18 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ambient18
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ambient18_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void ambient18_cfg_setup ( ambient18_cfg_t *cfg );
 ```c
 err_t ambient18_init ( ambient18_t *ctx, ambient18_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `ambient18_set_gain_mode` This function sets the gain mode.
 ```c
@@ -63,18 +58,11 @@ err_t ambient18_read_voltage ( ambient18_t *ctx, float *voltage );
 int32_t ambient18_voltage_to_lux ( ambient18_t *ctx, float voltage );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Ambient 18 Click board by measuring and displaying the illuminance value in Lux.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and sets the gain mode to M-Gain which can detect the illuminance of up to 1000 lux.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -108,7 +96,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -118,7 +105,6 @@ The calculated value of illuminance in lux is being displayed on the USB UART
 approximately once per second.
 
 ```c
-
 void application_task ( void )
 {
     float voltage = 0;
@@ -128,25 +114,21 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ambient18
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,87 +1,75 @@
-\mainpage Main Page
 
 ---
 # Volume Click
 
-> Volume Click is a compact add-on board that provides the user with complete digital volume control. This board features the CS3310, a stereo digital volume control designed specifically for audio systems from Cirrus Logic.
+> [Volume Click](https://www.mikroe.com/?pid_product=MIKROE-4450) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/volume_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4450&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/volume-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Nikolic
 - **Date**          : nov 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Volume Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example sets up the device and performs volume turn up and down.
 
-## Library Description
+### Example Libraries
 
-```
-This library contains API for Volume Click driver.
-```
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Volume
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-```
+- `volume_cfg_setup` Config Object Initialization function.
+```c
 void volume_cfg_setup ( volume_cfg_t *cfg );
 ```
 
-- Initialization function.
-```
+- `volume_init` Initialization function.
+```c
 err_t volume_init ( volume_t *ctx, volume_cfg_t *cfg );
 ```
 
-- Click Default Configuration function.
-```
+- `volume_default_cfg` Click Default Configuration function.
+```c
 void volume_default_cfg ( volume_t *ctx );
 ```
 
-#### Example key functions :
-
-- Set volume gain function.
-```
+- `volume_set_vol_gain` Set volume gain function.
+```c
 err_t volume_set_vol_gain ( volume_t *ctx, float volume_left_dB, float volume_right_dB );
 ```
 
-- Power Up function.
-```
+- `volume_power_up` Power Up function.
+```c
 void volume_power_up ( volume_t *ctx );
 ```
 
-- Hardware MUTE function.
-```
+- `volume_hw_mute` Hardware MUTE function.
+```c
 void volume_hw_mute ( volume_t *ctx, uint8_t mute_state );
 ```
 
-## Examples Description
-
-This example sets up the device and performs volume turn up and down.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
-Initializes drivers and powers up the device.
+> Initializes drivers and powers up the device.
 
-```
-void application_init ( void ) {
+```c
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     volume_cfg_t volume_cfg;  /**< Click config object. */
 
@@ -117,10 +105,11 @@ void application_init ( void ) {
 
 ### Application Task
 
-Circles the volume from -40 [dB] to 10 [dB] back and forth.
+> Circles the volume from -40 [dB] to 10 [dB] back and forth.
 
-```
-void application_task ( void ) {
+```c
+void application_task ( void ) 
+{
     left_speaker_gain  = -40;
     right_speaker_gain = -40;
     one_circle = 0;
@@ -147,22 +136,19 @@ void application_task ( void ) {
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Volume
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

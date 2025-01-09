@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Current 10 Click
 
-> Current 10 Click is a compact add-on board designed for reliable current measurements. This board features the CT455, an XtremeSense™ TMR coreless current sensor from Allegro Microsystems, with a wide 1MHz bandwidth and a sensitivity of 333.3mV/mT, capable of detecting both positive and negative current flows (±6mT). It translates magnetic fields into a linear analog output with less than ±1.0% error across temperature and supply voltage variations.
+> [Current 10 Click](https://www.mikroe.com/?pid_product=MIKROE-6385) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/current10_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6385&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/current-10-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2024.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the Current 10 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Current 10 Click board by reading and displaying the input current measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Current 10 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Current10
 
-#### Standard key functions :
+### Example Key Functions
 
 - `current10_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void current10_cfg_setup ( current10_cfg_t *cfg );
 ```c
 err_t current10_init ( current10_t *ctx, current10_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `current10_calib_offset` This function calibrates the zero current offset value.
 ```c
@@ -63,18 +58,11 @@ err_t current10_calib_resolution ( current10_t *ctx, float calib_current );
 err_t current10_read_current ( current10_t *ctx, float *current );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Current 10 Click board by reading and displaying the input current measurements.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and calibrates the zero current offset and data resolution at 3A load current.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -134,7 +122,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -142,7 +129,6 @@ void application_init ( void )
 > Reads the input current measurements and displays the results on the USB UART approximately once per second.
 
 ```c
-
 void application_task ( void )
 {
     float current = 0;
@@ -152,29 +138,25 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > The measurement range is approximately: +/- 75A.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Current10
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

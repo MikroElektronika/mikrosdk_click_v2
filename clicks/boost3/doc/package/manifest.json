@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Boost 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.boost3",
-    "product_link": "https://www.mikroe.com/boost-3-click",
-    "short_description": "Boost 3 Click is a compact add-on board that contains a boost converter with an integrated current mirror function. This board features the TPS61391, a 700-kHz pulse-width modulating (PWM) Step-Up converter with a 70V switch FET with an input voltage up to 5.5V from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3873
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Boost3",
-    "subdir_name": "lib_boost3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4287",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Boost 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Boost3",
+                "subdir_name": "lib_boost3",
+                "path": "Boost 3 Click/data/lib_boost3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

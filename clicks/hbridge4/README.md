@@ -1,72 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # H-Bridge 4 Click
 
-H-Bridge 4 Click is a Click board™ that contains the AP1010AEN, which is a two channel H-Bridge motor driver compatible with a motor operating voltage up to 18V and can drive two DC motors or one stepper motor.
+> [H-Bridge 4 Click](https://www.mikroe.com/?pid_product=MIKROE-3787) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hbridge4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3787&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/h-bridge-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the HBridge4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for HBridge4 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void hbridge4_cfg_setup ( hbridge4_cfg_t *cfg ); 
- 
-- Initialization function.
-> HBRIDGE4_RETVAL hbridge4_init ( hbridge4_t *ctx, hbridge4_cfg_t *cfg );
-
-#### Example key functions :
-
-- Enable the device function
-> void hbridge4_enable ( hbridge4_t *ctx, uint8_t state );
- 
-- Set IN1 function
-> void hbridge4_set_in1 ( hbridge4_t *ctx, uint8_t state );
-
-- Motor A standby function
-> void hbridge4_motor_a_standby ( hbridge4_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application is used to turn on DC or Stepper motors.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HBridge4
+
+### Example Key Functions
+
+- `hbridge4_cfg_setup` Config Object Initialization function. 
+```c
+void hbridge4_cfg_setup ( hbridge4_cfg_t *cfg );
+``` 
+ 
+- `hbridge4_init` Initialization function. 
+```c
+err_t hbridge4_init ( hbridge4_t *ctx, hbridge4_cfg_t *cfg );
+```
+
+- `hbridge4_enable` Enable the device function. 
+```c
+void hbridge4_enable ( hbridge4_t *ctx, uint8_t state );
+```
+ 
+- `hbridge4_set_in1` Set IN1 function. 
+```c
+void hbridge4_set_in1 ( hbridge4_t *ctx, uint8_t state );
+```
+
+- `hbridge4_motor_a_standby` Motor A standby function. 
+```c
+void hbridge4_motor_a_standby ( hbridge4_t *ctx );
+```
+
+### Application Init
 
 > Initialization driver enables GPIO and also starts write log. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -97,7 +93,6 @@ void application_init ( void )
     log_printf( &logger, " H-Bridge 4 Click \r\n" );
     log_printf( &logger, "------------------- \r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -107,7 +102,6 @@ void application_init ( void )
 > spining it in counter-clockwise direction and applying brake function again.
 
 ```c
-
 void application_task ( )
 {
     log_printf( &logger, "The motor A is in standby mode \r\n" );
@@ -128,28 +122,21 @@ void application_task ( )
     hbridge4_motor_a_brake( &hbridge4 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HBridge4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

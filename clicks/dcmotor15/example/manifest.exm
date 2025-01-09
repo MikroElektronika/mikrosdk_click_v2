@@ -1,8 +1,5 @@
 {
     "name": "DC Motor 15 Click",
-    "description": "DC Motor 15 Click is a compact add-on board that contains a motor driver with current sense and regulation. This board features the DRV8874, an integrated motor driver with N-channel H-bridge, charge pump, current sensing, and adjustment from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8874"],
-    "category" : ["Brushed"]
+    "hw" : ["Click","DRV8874"]
 }

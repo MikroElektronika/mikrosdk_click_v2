@@ -1,8 +1,5 @@
 {
     "name": "FRAM 2 Click",
-    "description": "FRAM 2 Click carries a ferroelectric RAM module. Ferroelectric RAM, also known as FRAM, is a non-volatile memory type, with characteristics comparable to much faster DRAM memory modules.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CY15B104Q"],
-    "category" : ["FRAM"] 
+    "hw" : ["Click","CY15B104Q"]
 }

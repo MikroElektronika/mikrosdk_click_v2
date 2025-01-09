@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > USB-C PD",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "USB-C Sink Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.usbcsink",
-    "product_link": "https://www.mikroe.com/usb-c-sink-click",
-    "short_description": "USB-C Sink Click is a compact add-on board that contains a standalone autonomous USB power delivery controller. This board features the STUSB4500, a USB-C sink-only controller compatible with Power-Delivery (PD) from STMicroelectronics. It supports dead battery mode to allow a system to be powered from an external source directly, establishes a valid source-to-sink connection, and negotiates a USB power delivery (PD) contract with a PD capable source device.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        3850
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.USBCSink",
-    "subdir_name": "lib_usbcsink"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4328",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB-C Sink Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBCSink",
+                "subdir_name": "lib_usbcsink",
+                "path": "USB-C Sink Click/data/lib_usbcsink"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

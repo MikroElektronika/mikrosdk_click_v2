@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Light Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.light",
-    "product_link": "https://www.mikroe.com/light-click",
-    "short_description": "This application return the ambient light intensity",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        630
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Light",
-    "subdir_name": "lib_light"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1424",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Light Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Light",
+                "subdir_name": "lib_light",
+                "path": "Light Click/data/lib_light"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

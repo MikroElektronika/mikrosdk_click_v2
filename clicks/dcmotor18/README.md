@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # DC Motor 18 Click
 
-> DC Motor 18 Click is a compact add-on board that contains a brushed DC motor driver. This board features the TB9051FTG, an automotive PWM-type single-channel H-Bridge DC brushed motor driver from Toshiba Semiconductor.
+> [DC Motor 18 Click](https://www.mikroe.com/?pid_product=MIKROE-4786) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dc_motor_18_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4786&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dc-motor-18-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Aug 2021.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the DCMotor18 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example application showcases ability of Click 
+board to control DC motors using PWM modulation in 
+both directions and different speeds.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DCMotor18 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DCMotor18
 
-#### Standard key functions :
+### Example Key Functions
 
 - `dcmotor18_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t dcmotor18_init ( dcmotor18_t *ctx, dcmotor18_cfg_t *cfg );
 err_t dcmotor18_default_cfg ( dcmotor18_t *ctx );
 ```
 
-#### Example key functions :
-
 - `dcmotor18_set_speed_percentage` Set speed output percentage.
 ```c
 err_t dcmotor18_set_speed_percentage ( dcmotor18_t *ctx, float speed_percentage );
@@ -68,14 +65,6 @@ void dcmotor18_set_enable ( dcmotor18_t *ctx, uint8_t state );
 err_t dcmotor18_read_an_pin_current ( dcmotor18_t *ctx, float *data_out );
 ```
 
-## Example Description
-
-> This example application showcases ability of Click 
-board to control DC motors using PWM modulation in 
-both directions and different speeds.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of MCU communication modules (PWM, ADC, UART) 
@@ -83,7 +72,6 @@ and additioal gpio for control of the device. Then sets
 default configuration that enables device to control the DC motor.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -120,7 +108,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     Delay_ms ( 500 );
 }
-
 ```
 
 ### Application Task
@@ -131,7 +118,6 @@ direction and repeats the process of increasing and decreasing
 acceleration.
 
 ```c
-
 void application_task ( void ) 
 {
     static int8_t duty_cnt = 1;
@@ -165,25 +151,21 @@ void application_task ( void )
     
     Delay_ms ( 1000 );  
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DCMotor18
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

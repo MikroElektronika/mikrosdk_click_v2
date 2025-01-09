@@ -1,8 +1,5 @@
 {
     "name": "LR 11 868MHz Click",
-    "description": "LR 11 Click - 868MHz is a compact add-on board for long-range, low-power wireless communication in IoT applications. This board features the 453-00140R, an ultra-low power LoraWAN module Ezurio (part of the RM126x series), integrating the Silicon Labs EFR32 SoC and the Semtech SX1261 radio. It supports LoRaWAN classes A, B, and C, offering secure, scalable, and bi-directional communication. It operates in the 863-870MHz frequency range with a typical transmit power of up to 14dBm and a communication range of up to 15km.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","453-00140R"],
-    "category" : ["Click Boards > Wireless connectivity > LoRa"]
+    "hw" : ["Click","453-00140R"]
 }

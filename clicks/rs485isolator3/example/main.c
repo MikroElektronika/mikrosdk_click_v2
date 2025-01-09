@@ -3,7 +3,7 @@
  * @brief RS485 Isolator 3 Click Example.
  *
  * # Description
- * This example reads and processes data from RS485 Isolator 3 clicks.
+ * This example reads and processes data from RS485 Isolator 3 Clicks.
  *
  * The demo application is composed of two sections :
  *

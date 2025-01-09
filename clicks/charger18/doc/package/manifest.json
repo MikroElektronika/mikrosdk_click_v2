@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Battery Charger",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Charger 18 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.charger18",
-    "product_link": "https://www.mikroe.com/charger-18-click",
-    "short_description": "Charger 18 Click is a compact add-on board representing a single-cell battery charger. This board features the LTC3553, a micropower, highly integrated power management, and battery charger for single-cell Li-Ion/Polymer battery applications from Analog Devices. Designed specifically for USB applications, it also includes a PowerPath manager with automatic load prioritization and input current limit, a battery charger, and numerous internal protection features. It also indicates a battery charge state, and it comes with a synchronous 200mA buck regulator and a 150mA low dropout linear regulator (LDO).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Charger18",
-    "subdir_name": "lib_charger18"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4990",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Charger 18 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Charger18",
+                "subdir_name": "lib_charger18",
+                "path": "Charger 18 Click/data/lib_charger18"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

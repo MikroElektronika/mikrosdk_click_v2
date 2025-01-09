@@ -1,8 +1,5 @@
 {
     "name": "Step Down 9 Click",
-    "description": "Step Down 9 Click is a compact add-on board that converts higher voltages into a lower voltage level. This board features the MAX20406, an automotive fully integrated synchronous silent switcher buck converter from Analog Devices. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX20406AFOA/VY+T"],
-    "category" : ["Click Boards > Power management > Buck"]
+    "hw" : ["Click","MAX20406AFOA/VY+T"]
 }

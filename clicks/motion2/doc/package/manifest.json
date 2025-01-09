@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Motion 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.motion2",
-    "product_link": "https://www.mikroe.com/motion-2-click",
-    "short_description": "Motion 2 Click is a Click board™ based on EKMC1607112, PIR motion sensor from Panasonic Corporation that's used as human motion detector. Also featured on Motion 2 Click bord is TLP241A photorelay from Toshiba that is used to provide a reinforced galvanic isolation for the external signals used to drive some external high power electronic equipment when motion is detected. It's allowing up to 40V between the SSR contacts in OFF state, and currents up to 2A while in ON state, thanks to a very low ON-state resistance. Motion 2 Click board™ is supported by a mikroSDK compliant library, which includes functions that simplify software development. This Click board™ comes as a fully tested product, ready to be used on a system equipped with the mikroBUS™ socket.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3232
-    ],
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Motion2",
-    "subdir_name": "lib_motion2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4059",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Motion 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Motion2",
+                "subdir_name": "lib_motion2",
+                "path": "Motion 2 Click/data/lib_motion2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

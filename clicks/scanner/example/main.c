@@ -3,7 +3,7 @@
  * \brief Scanner Click example
  * 
  * # Description
- * This example reads data from Scanner clicks.
+ * This example reads data from Scanner Clicks.
  *
  * The demo application is composed of two sections :
  * 

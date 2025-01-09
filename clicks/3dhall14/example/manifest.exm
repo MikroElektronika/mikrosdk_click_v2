@@ -1,8 +1,5 @@
 {
     "name": "3D Hall 14 Click",
-    "description": "3D Hall 14 Click is a compact add-on board designed for high-precision position sensing in various applications. This board features the MLX90394, a 3-axis magnetometer from Melexis based on the Triaxis® Hall technology. The MLX90394 offers low power consumption, excellent noise performance, and flexible measurement modes, including intelligent wake-up functions for efficient power management. It communicates via a standard 2-Wire I2C interface and supports fast-mode frequencies up to 1MHz.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MLX90394RLD-AAA-001-SP"],
-    "category" : ["Click Boards > Sensors > Magnetic"]
+    "hw" : ["Click","MLX90394RLD-AAA-001-SP"]
 }

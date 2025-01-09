@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # G2C Click
 
-> Go to Cloud (G2C) Click is a gateway Click board™ which provides a simple and reliable connection to the Click Cloud platform, a cloud-based rapid prototyping environment, hosted by MikroElektronika. Go to Cloud (G2C) Click offers an unprecedented simplicity for adding Click Cloud connectivity to any embedded application, by utilizing the simple UART interface: it can be configured and managed using a minimal set of well-documented AT commands.
+> [G2C Click](https://www.mikroe.com/?pid_product=MIKROE-3291) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/g2c_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3291&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/g2c-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : May 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the G2C Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example shows the device capability of connecting to the cloud and updating the sensor data on the cloud and receiving data from actuators.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for G2C Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.G2C
 
-#### Standard key functions :
+### Example Key Functions
 
 - `g2c_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void g2c_cfg_setup ( g2c_cfg_t *cfg );
 ```c
 err_t g2c_init ( g2c_t *ctx, g2c_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `g2c_reset_device` This function resets the device by toggling the RST pin.
 ```c
@@ -63,18 +58,11 @@ void g2c_set_net_creds ( g2c_t *ctx, uint8_t *sim_apn, uint8_t *username, uint8_
 void g2c_set_broker_creds ( g2c_t *ctx, uint8_t *dev_key, uint8_t *password );
 ```
 
-## Example Description
-
-> This example shows the device capability of connecting to the cloud and updating the sensor data on the cloud and receiving data from actuators.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, restarts the device, and after that tests the communication by sending "AT" command.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -127,7 +115,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     example_state = G2C_CONNECT_TO_NETWORK;
 }
-
 ```
 
 ### Application Task
@@ -176,7 +163,7 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > In order for the example to work, user needs to set the WiFi credentials and the cloud device parameters.
 Enter valid values for the following macros: 
@@ -191,22 +178,19 @@ WIFI_SSID, WIFI_PASS, DEVICE_KEY, DEVICE_PASSWORD, DEVICE_SENSOR_REF.
 DEVICE_SENSOR_REF is expected to be a reference to a temperature sensor with a data range from -20 to +80 degrees Celsius.
 For more information about the registration on the Click Cloud and creating the device refer to the following [user guide](https://download.mikroe.com/documents/click-cloud/guide-to-click-cloud.pdf).
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.G2C
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

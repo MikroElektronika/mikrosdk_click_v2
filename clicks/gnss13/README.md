@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # GNSS 13 Click
 
-> GNSS 13 Click is a compact add-on board that provides positioning, navigation, and timing services. This board features the LG77LICMD, a global-region standard-precision GNSS module from Quectel Wireless Solutions. This module utilizes concurrent reception of up to three GNSS systems (GPS, GLONASS (or BeiDou), and Galileo), maximizing position availability, especially under challenging conditions such as deep urban canyons. By combining EASY™ (Embedded Assist System), an advanced AGNSS feature, with GLP (GNSS Low Power), a low-power mode, the LG77LICMD module achieves high performance, low power consumption, and fully meets industrial standards. It also has a configurable host interface, anti-jamming technology, and a multi-tone active interference canceller.
+> [GNSS 13 Click](https://www.mikroe.com/?pid_product=MIKROE-5580) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gnss13_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5580&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gnss-13-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Feb 2023.
 - **Type**          : UART/I2C type
 
-
 # Software Support
 
-We provide a library for the GNSS 13 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of GNSS 13 Click by reading and displaying the GPS coordinates.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for GNSS 13 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.GNSS13
 
-#### Standard key functions :
+### Example Key Functions
 
 - `gnss13_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void gnss13_cfg_setup ( gnss13_cfg_t *cfg );
 ```c
 err_t gnss13_init ( gnss13_t *ctx, gnss13_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `gnss13_generic_read` This function reads a desired number of data bytes from the module.
 ```c
@@ -63,18 +58,11 @@ err_t gnss13_parse_gngga ( uint8_t *rsp_buf, uint8_t gngga_element, uint8_t *ele
 void gnss13_clear_ring_buffers ( gnss13_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of GNSS 13 Click by reading and displaying the GPS coordinates.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -103,7 +91,6 @@ void application_init ( void )
     }
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -123,22 +110,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.GNSS13
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

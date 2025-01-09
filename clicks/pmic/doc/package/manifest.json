@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Battery Charger",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "PMIC Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pmic",
-    "product_link": "https://www.mikroe.com/pmic-click",
-    "short_description": "PMIC Click is a compact add-on board for efficient power management in rechargeable applications. This board features the nPM1300, an advanced Power Management Integrated Circuit (PMIC) from Nordic Semiconductor, offering integrated battery charging and advanced system power management features. The board includes an 800mA JEITA-compliant linear battery charger, two 200mA buck regulators, and configurable load switches, all housed in a compact QFN32 package.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.PMIC",
-    "subdir_name": "lib_pmic"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6201",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PMIC Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PMIC",
+                "subdir_name": "lib_pmic",
+                "path": "PMIC Click/data/lib_pmic"
+            }
+        ]
+    }
 }
-
-

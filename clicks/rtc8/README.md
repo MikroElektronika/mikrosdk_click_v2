@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # RTC 8 Click
 
-> RTC 8 Click is a real time clock module which has an extremely low power consumption, allowing it to be used with a single button cell battery, for an extended period of time. 
+> [RTC 8 Click](https://www.mikroe.com/?pid_product=MIKROE-3456) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rtc8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3456&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rtc-8-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : okt 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Rtc8 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> Demo application shows the operation of RTC 8 Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Rtc8 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Rtc8
 
-#### Standard key functions :
+### Example Key Functions
 
 - `rtc8_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t rtc8_init ( rtc8_t *ctx, rtc8_cfg_t *cfg );
 err_t rtc8_default_cfg ( rtc8_t *ctx );
 ```
 
-#### Example key functions :
-
 - `rtc8_set_time` Set new time - 24 hour format
 ```c
 err_t rtc8_set_time ( rtc8_t *ctx, rtc8_time_t *time_s );
@@ -68,15 +63,9 @@ err_t rtc8_set_date ( rtc8_t *ctx, rtc8_date_t *date_s );
 err_t rtx8_get_time_and_date ( rtc8_t *ctx, rtc8_time_t *time_s, rtc8_date_t *date_s );
 ```
 
-## Examples Description
+### Application Init
 
-> Demo application shows the operation of RTC 8 clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
-
-> Configuring clicks and log objects.
+> Configuring Clicks and log objects.
 > Settings the Click in the default configuration.
 > Sets new: Time, Date, UNIX time and alarm data.
 
@@ -178,30 +167,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Comment out the lines for setting date and time if you would like the 
 > module to keep counting time after a reset or shut down.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Rtc8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

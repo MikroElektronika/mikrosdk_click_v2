@@ -3,7 +3,7 @@
  * \brief Thingstream Click example
  * 
  * # Description
- * This example reads and processes data from Thingstream clicks.
+ * This example reads and processes data from Thingstream Clicks.
  *
  * The demo application is composed of two sections :
  * 

@@ -1,8 +1,5 @@
 {
     "name": "Flash 2 Click",
-    "description": "Flash 2 Click features a 64 Mbit Flash memory IC, manufactured by using the proprietary high-performance CMOS Super-Flash® technology, which allows the Flash 2 Click to withstand up to 100,000 write cycles, with the data retention period of 100 years, which is considerably longer than any other memory module of this type. The flash memory IC used on this Click board™ features Serial Flash Discoverable Parameters (SFDP) mode, used to retrieve the advanced information from the device, such as the operating characteristics, structure and vendor specified information, memory size, operating voltage, timing information, and more.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SST26VF064B"],
-    "category" : ["FLASH"] 
+    "hw" : ["Click","SST26VF064B"]
 }

@@ -1,8 +1,5 @@
 {
     "name": "iButton Click",
-    "description": "iButton Click - is an iButton™ probe Click board™. The iButton is a Analog Devices technology based on Analog's 1-Wire® communication protocol, and a chip usually packed in a robust stainless steel casing. The button-shaped iButton device has two contacts - the lid and the base. These contacts carry the necessary connections down to a sensitive silicone chip, embedded inside the metal button. When the iButton touches the reader probe on the Click board™, it establishes the communication with the host MCU, via the 1-Wire® interface. The communication is almost instant, so it is enough to press the iButton lightly to the probe contacts.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DS1990A"],
-    "category" : ["Click Boards > Interface > 1-Wire"]
+    "hw" : ["Click","DS1990A"]
 }

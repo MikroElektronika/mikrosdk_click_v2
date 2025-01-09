@@ -1,8 +1,5 @@
 {
     "name": "TouchKey Click",
-    "description": "Touchkey Click has four capacitive pads powered by TTP224, a touchpad detector IC. Capacitive buttons like these can be toggled even when placed under a layer of glass or paper. The board outputs an interrupt signals for each pad: OUTA, OUTB, OUTC and OUTD (in place of default mikroBUS RST, AN, PWM and INT pins, respectively).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TTP224"],
-    "category" : ["Capacitive"] 
+    "hw" : ["Click","TTP224"]
 }

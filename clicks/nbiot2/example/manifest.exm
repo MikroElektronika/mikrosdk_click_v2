@@ -1,8 +1,5 @@
 {
     "name": "NB IoT 2 Click",
-    "description": "NB IoT 2 Click is a compact add-on board that contains a compact LTE Cat NB2 module with ultra-low power consumption. This board features the BC66-NA, a high-performance, multi-band LTE Cat NB2 module with extremely low power consumption from Quectel Wireless Solutions.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","BC66-NA"],
-    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
+    "hw" : ["Click","BC66-NA"]
 }

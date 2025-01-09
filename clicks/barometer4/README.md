@@ -1,40 +1,41 @@
-\mainpage Main Page
 
 ---
 # Barometer 4 Click
 
-> Barometer 4 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the ICP-10111, a high accuracy low power barometric and temperature sensor from TDK InvenSense. The ICP-10111 is based on MEMS capacitive technology providing ultra-low noise at the lowest power, enabling industry-leading relative accuracy, sensor throughput, and temperature stability. It comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 30kPa up to 110kPa with an accuracy of ±1Pa over a wide operating temperature range.
+> [Barometer 4 Click](https://www.mikroe.com/?pid_product=MIKROE-4868) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/barometer4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4868&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/barometer-4-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Sep 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Barometer4 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the Barometer 4 Click driver.
+> The library initializes and defines the I2C bus drivers 
+> to write and read data from registers.
+> This demo application shows an example of 
+> atmospheric pressure and temperature measurement.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Barometer4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Barometer4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `barometer4_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +52,6 @@ err_t barometer4_init ( barometer4_t *ctx, barometer4_cfg_t *cfg );
 err_t barometer4_default_cfg ( barometer4_t *ctx );
 ```
 
-#### Example key functions :
-
 - `barometer4_get_pressure_and_temperature` Barometer 4 get pressure and temperature function.
 ```c
 err_t barometer4_get_pressure_and_temperature ( barometer4_t *ctx,  float *pressure, float *temperature );
@@ -68,16 +67,6 @@ err_t barometer4_get_raw_data ( barometer4_t *ctx, uint16_t measurement_comd, ui
 err_t barometer4_soft_reset ( barometer4_t *ctx );
 ```
 
-## Example Description
-
-> This library contains API for the Barometer 4 Click driver.
-> The library initializes and defines the I2C bus drivers 
-> to write and read data from registers.
-> This demo application shows an example of 
-> atmospheric pressure and temperature measurement.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > The initialization of the I2C module and log UART.
@@ -85,7 +74,6 @@ err_t barometer4_soft_reset ( barometer4_t *ctx );
 > the app display device ID.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;                /**< Logger config object. */
@@ -134,17 +122,15 @@ void application_init ( void )
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a Barometer 4 Click board™.
+> This is an example that shows the use of a Barometer 4 Click board&trade;.
 > Logs the atmospheric pressure [ Pa ] and temperature [ degree Celsius ] data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {  
     static float pressure;
@@ -156,25 +142,21 @@ void application_task ( void )
     log_printf( &logger, "----------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Barometer4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

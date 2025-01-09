@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GPS/GNSS",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GNSS RTK 3 DA Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gnssrtk3da",
-    "product_link": "https://www.mikroe.com/gnss-rtk-3-click-lc29hda",
-    "short_description": "GNSS RTK 3 Click is a compact add-on board that enhances the precision of position data derived from satellite-based positioning systems. This board features the LC29HDA, a dual-band, multi-castellation GNSS module from Quectel. This module supports the concurrent reception of all five global GNSS constellations: GPS, BDS, Galileo, GZSS, and GLONASS. It can receive and track many visible satellites in multi-bands, significantly mitigating the multipath effect in deep urban canyons and improving positioning accuracy.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.GNSSRTK3DA",
-    "subdir_name": "lib_gnssrtk3da"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5914",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS RTK 3 DA Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSSRTK3DA",
+                "subdir_name": "lib_gnssrtk3da",
+                "path": "GNSS RTK 3 DA Click/data/lib_gnssrtk3da"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

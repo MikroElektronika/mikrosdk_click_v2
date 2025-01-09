@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Interface > RS485",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RS485 Isolator Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rs485isolator",
-    "product_link": "https://www.mikroe.com/rs485-isolator-click",
-    "short_description": "RS485 Isolator Click is an RS485 communication isolator and carries the ADM2682EBRIZ, a 5 kV rms signal and power isolated RS-485 transceiver.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2501
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Rs485Isolator",
-    "subdir_name": "lib_rs485isolator"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2673",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RS485 Isolator Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Rs485Isolator",
+                "subdir_name": "lib_rs485isolator",
+                "path": "RS485 Isolator Click/data/lib_rs485isolator"
+            }
+        ]
+    }
 }
-
-
-
-
-

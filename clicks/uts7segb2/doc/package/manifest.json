@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED segment",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "UT-S 7-SEG B 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.uts7segb2",
-    "product_link": "https://www.mikroe.com/ut-s-7-seg-b-2-click",
-    "short_description": "UT-S 7-SEG B 2 Click is a compact add-on board that presents an easy solution for adding a numeric or hexadecimal display to your application. This board features the TLC5947, a constant-current sink LED driver from Texas Instruments, alongside six ultra-thin blue single-digit numeric displays, the JSS-3011BUB-21. The displays are small in size (0.39 inches in height) and can display letters, numbers, and symbols in a highly readable form. The host MCU can control the light intensity of the blue segments of the display.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.UTS7SEGB2",
-    "subdir_name": "lib_uts7segb2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5912",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "UT-S 7-SEG B 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.UTS7SEGB2",
+                "subdir_name": "lib_uts7segb2",
+                "path": "UT-S 7-SEG B 2 Click/data/lib_uts7segb2"
+            }
+        ]
+    }
 }
-
-
-

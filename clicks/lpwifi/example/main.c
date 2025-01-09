@@ -3,7 +3,7 @@
  * @brief LP WiFi Click Example.
  *
  * # Description
- * This example reads and processes data from LP WiFi clicks.
+ * This example reads and processes data from LP WiFi Clicks.
  *
  * The demo application is composed of two sections :
  *

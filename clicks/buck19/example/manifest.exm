@@ -1,8 +1,5 @@
 {
     "name": "Buck 19 Click",
-    "description": "Buck 19 Click is a compact add-on board that steps down the voltage from its input (supply) to its output (load). This board features the STPD01, a programmable synchronous buck converter from STMicroelectronics, providing power supply in applications following USB power delivery specifications. The STPD01 provides the desired voltage levels required by USB power delivery systems (USB PD 3.0) via I2C serial interface up to 60W output power, more precisely voltages in the range of 3V to 20V with a step of 20mV minimum, and currents from 0.1A to 3A with a minimum in steps of 50mA. It also offers advanced protection features such as overvoltage, overcurrent, and overtemperature detections.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","STPD01PUR"],
-    "category" : ["Click Boards > Power management > Buck"]
+    "hw" : ["Click","STPD01PUR"]
 }

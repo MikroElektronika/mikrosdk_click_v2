@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # Waveform 3 Click
 
-> Waveform 3 Click is a compact add-on board that represents a high-performance signal generator. This board features the AD9837, a low-power programmable waveform generator capable of producing sine, triangular, and square wave outputs from Analog Devices.
+> [Waveform 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4432) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/waveform3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4432&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/waveform-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Nikolic
 - **Date**          : jan 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Waveform3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This demo app shows the basic capabilities of Waveform 3
+Click board. First, the sinusoidal wave is incremented
+to targeted frequency for visually pleasing introduction
+after which it changes between 4 modes of output.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Waveform3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Waveform3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `waveform3_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +43,13 @@ void waveform3_cfg_setup ( waveform3_cfg_t *cfg );
 
 - `waveform3_init` Initialization function.
 ```c
-WAVEFORM3_RETVAL waveform3_init ( waveform3_t *ctx, waveform3_cfg_t *cfg );
+err_t waveform3_init ( waveform3_t *ctx, waveform3_cfg_t *cfg );
 ```
 
 - `waveform3_default_cfg` Click Default Configuration function.
 ```c
 void waveform3_default_cfg ( waveform3_t *ctx );
 ```
-
-#### Example key functions :
 
 - `waveform3_set_mode` This function sets output mode, freq and phase channels of AD9837 waveform generator.
 ```c
@@ -68,15 +66,6 @@ uint32_t waveform3_set_freq ( waveform3_t *ctx, uint32_t frequency, uint8_t freq
 uint16_t waveform3_set_phase ( waveform3_t *ctx, float phase, uint8_t phase_reg );
 ```
 
-## Example Description
-
-> This demo app shows the basic capabilities of Waveform 3
-click board. First, the sinusoidal wave is incremented
-to targeted frequency for visually pleasing introduction
-after which it changes between 4 modes of output.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Application initializes the UART LOG and SPI drivers,
@@ -85,8 +74,8 @@ default values. In the end, the mode is set with the
 preferred freq and phase channel.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;              /**< Logger config object. */
     waveform3_cfg_t waveform3_cfg;  /**< Click config object. */
 
@@ -120,7 +109,6 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     waveform3_set_mode( &waveform3, WAVEFORM3_CFG_MODE_SINUSOIDAL, WAVEFORM3_CFG_FREQ_REG0, WAVEFORM3_CFG_PHASE_REG0 );
 }
-
 ```
 
 ### Application Task
@@ -132,8 +120,8 @@ sinusoidal, triangular, DAC divided by 2 and DAC
 outputs respectively.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     uint8_t cfg_mode_switch;
     
     if ( start_frequency < target_frequency ) {
@@ -155,31 +143,26 @@ void application_task ( void ) {
         }
     }
 }
-
 ```
 
-## Note
+### Note
 
 > Waveform 3 Click might not provide a high enough peak to peak signal on higher frequencies.
 The user can freely implement custom buffer for the output stage.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Waveform3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

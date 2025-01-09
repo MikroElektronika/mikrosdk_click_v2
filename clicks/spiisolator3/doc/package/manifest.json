@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > SPI",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SPI Isolator 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.spiisolator3",
-    "product_link": "https://www.mikroe.com/spi-isolator-3-click",
-    "short_description": "SPI Isolator 3 Click is a compact add-on board that contains a digital isolator optimized for a serial peripheral interface. This board features the MAX14483, a 6-channel 3.75kVRMS digital galvanic isolator with a very low propagation delay on the SDI, SDO, and SCLK channels from Maxim Integrated. Besides a second enable control input, which allows MAX14483 to isolate multiple SPI devices, and an auxiliary channel available for passing timing or control signals from the master side to the slave side, the MAX14483 also possesses power monitors provided for both power domains to signal if the opposite side of the isolator is ready for operation.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.SpiIsolator3",
-    "subdir_name": "lib_spiisolator3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4651",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SPI Isolator 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SpiIsolator3",
+                "subdir_name": "lib_spiisolator3",
+                "path": "SPI Isolator 3 Click/data/lib_spiisolator3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

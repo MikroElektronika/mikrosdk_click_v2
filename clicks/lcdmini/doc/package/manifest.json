@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LCD",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LCD mini Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lcdmini",
-    "product_link": "https://www.mikroe.com/lcd-mini-click",
-    "short_description": "LCD mini Click displays 2x16 monochrome characters on an LMB162XFW LCD display. It features the MCP23S17 port expander and the MCP4161 digital potentiometer, both from Microchip.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        2001
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.LCDmini",
-    "subdir_name": "lib_lcdmini"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2453",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LCD mini Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LCDmini",
+                "subdir_name": "lib_lcdmini",
+                "path": "LCD mini Click/data/lib_lcdmini"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

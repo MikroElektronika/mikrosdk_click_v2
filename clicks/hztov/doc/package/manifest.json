@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Measurements",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Hz to V Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hztov",
-    "product_link": "https://www.mikroe.com/hz-to-v-click",
-    "short_description": "HZ to V Click is a device that can converts input frequency of the signal with virtually any wave shape to a DC voltage output, with a level proportional to the input frequency. It has a linear response, and by applying a signal with the frequency between 1kHz to 10kHz on its input, the Click board™ will generate a DC voltage, ranging from 0.33V to 3.3V.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2266
-    ],
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.HzToV",
-    "subdir_name": "lib_hztov"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2890",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hz to V Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HzToV",
+                "subdir_name": "lib_hztov",
+                "path": "Hz to V Click/data/lib_hztov"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

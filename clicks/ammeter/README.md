@@ -1,71 +1,62 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Ammeter Click
 
-Ammeter Click is a mikroBUS add-on board with circuitry for measuring electric current (both AC and DC).
+> [Ammeter Click](https://www.mikroe.com/?pid_product=MIKROE-2377) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ammeter_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2377&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ammeter-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Jovan Stajkovic
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Ammeter Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Ammeter Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void ammeter_cfg_setup ( ammeter_cfg_t *cfg ); 
- 
-- Initialization function.
-> AMMETER_RETVAL ammeter_init ( ammeter_t *ctx, ammeter_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Function is used to measure amperage of a power consumer connected to the Click board.
-> float ammeter_amperage ( ammeter_t *ctx );
-
-## Examples Description
+## Example Description
 
 > 
 > Demo app measures and displays current by using Ammeter Click board.
 > 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ammeter
+
+### Example Key Functions
+
+- `ammeter_cfg_setup` Config Object Initialization function. 
+```c
+void ammeter_cfg_setup ( ammeter_cfg_t *cfg );
+``` 
+ 
+- `ammeter_init` Initialization function. 
+```c
+err_t ammeter_init ( ammeter_t *ctx, ammeter_cfg_t *cfg );
+```
+
+- `ammeter_amperage` Function is used to measure amperage of a power consumer connected to the Click board. 
+```c
+float ammeter_amperage ( ammeter_t *ctx );
+```
+
+### Application Init
 
 >
 > Initalizes SPI, LOG and Click drivers.
 > 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -93,7 +84,6 @@ void application_init ( void )
     log_printf( &logger, "    Ammeter  Click     \r\n" );
     log_printf( &logger, "-----------------------\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -105,7 +95,6 @@ void application_init ( void )
 > 
 
 ```c
-
 void application_task ( void )
 {
     amperage = ammeter_amperage( &ammeter );
@@ -113,11 +102,10 @@ void application_task ( void )
     
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > 
 > It is important to notice that this Click board has its' own electronic 
@@ -125,25 +113,19 @@ void application_task ( void )
   Result will not be correct in that case.
 > 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ammeter
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

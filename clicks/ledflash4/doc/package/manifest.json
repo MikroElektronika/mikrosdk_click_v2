@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED segment",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LED Flash 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ledflash4",
-    "product_link": "https://www.mikroe.com/led-flash-4-click",
-    "short_description": "LED Flash 4 Click is a compact add-on board for high-performance LED flash and torch applications. This board features the AS1170, a high-current LED driver from ams OSRAM. The AS1170 operates as an inductive, highly efficient DC-DC step-up converter with an external power supply range of 2.7V to 4.4V, featuring two internal current sinks for independent control of onboard flash LEDs. It includes essential protection functions such as flash timeout, overvoltage, overtemperature, undervoltage, and short circuit protection, ensuring reliable operation even in demanding environments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.LEDFlash4",
-    "subdir_name": "lib_ledflash4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6282",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LED Flash 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LEDFlash4",
+                "subdir_name": "lib_ledflash4",
+                "path": "LED Flash 4 Click/data/lib_ledflash4"
+            }
+        ]
+    }
 }
-
-

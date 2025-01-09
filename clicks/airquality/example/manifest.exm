@@ -1,8 +1,5 @@
 {
     "name": "Air quality Click",
-    "description": "Air quality Click carries an MQ-135 sensor for detecting poisonous gases that impact air quality in homes and offices. The Click is designed to run on a 5V power supply. It communicates with the target microcontroller over the AN pin on the mikroBUS™ line.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MQ-135"],
-    "category" : ["Gas"]
+    "hw" : ["Click","MQ-135"]
 }

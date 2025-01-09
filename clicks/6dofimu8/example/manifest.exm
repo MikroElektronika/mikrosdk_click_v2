@@ -1,8 +1,5 @@
 {
     "name": "6DOF IMU 8 Click",
-    "description": "6DOF IMU 8 Click is an advanced 6-axis motion tracking Click board™, which utilizes the ISM330DLC, a high-performance System in Package (SiP), equipped with a 3-axis gyroscope, and a 3-axis accelerometer.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ISM330DLC"],
-    "category" : ["Motion"] 
+    "hw" : ["Click","ISM330DLC"]
 }

@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # LYRA 24P Click
 
-> LYRA 24P Click is a compact add-on board for high-performance wireless connectivity in IoT devices running on Bluetooth. This board features the LYRA 24P (453-00145R), a secure high-performance wireless module from Ezurio. It features a 32-bit ARM® Cortex®-M33 core at 39MHz, Bluetooth® Low Energy (BLE) 5.3 connectivity, and industry-leading Secure Vault® technology for enhanced security and future-proofing. The module supports 2.4GHz wireless connectivity with a built-in antenna and offers global regulatory certifications.
+> [LYRA 24P Click](https://www.mikroe.com/?pid_product=MIKROE-6021) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lyra24p_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6021&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lyra-24p-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Nov 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the LYRA 24P Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of LYRA 24P Click board by processing
+> the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LYRA 24P Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LYRA24P
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lyra24p_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +43,6 @@ void lyra24p_cfg_setup ( lyra24p_cfg_t *cfg );
 ```c
 err_t lyra24p_init ( lyra24p_t *ctx, lyra24p_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `lyra24p_write_command` This function writes a desired command by using UART serial interface.
 ```c
@@ -62,13 +58,6 @@ err_t lyra24p_write_cmd_param ( lyra24p_t *ctx, uint8_t *command, uint8_t *cmd_v
 ```c
 err_t lyra24p_inquire_command ( lyra24p_t *ctx, uint8_t *command, uint8_t *cmd_val, uint8_t en_query );
 ```
-
-## Example Description
-
-> This example demonstrates the use of LYRA 24P Click board by processing
-> the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -180,26 +169,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > We have used the BLE Scanner smartphone application for the test.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LYRA24P
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

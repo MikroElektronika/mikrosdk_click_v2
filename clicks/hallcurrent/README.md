@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # Hall Current Click
 
-> Hall Current Click is a compact add-on board that contains a precise solution for AC/DC current sensing. This board features the TLI4970-D050T4, a 16-bit digital SPI output (13-bit current value) coreless magnetic current sensor designed for the current range of ±25A from Infineon Technology. A differential measurement principle allows effective stray field suppression with a highly linear output signal without hysteresis. Due to the integrated primary conductor (current rail), there is no need for external calibration. The TLI4970-D050T4 is highly accurate over temperature range and lifetime with fast overcurrent detection with a configurable threshold.
+> [Hall Current Click](https://www.mikroe.com/?pid_product=MIKROE-1578) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1578&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hall-current-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the HallCurrent Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> The application is current sensor.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for HallCurrent Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HallCurrent
 
-#### Standard key functions :
+### Example Key Functions
 
 - `hallcurrent_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void hallcurrent_cfg_setup ( hallcurrent_cfg_t *cfg );
 ```c
 err_t hallcurrent_init ( hallcurrent_t *ctx, hallcurrent_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `hallcurrent_read_data` Generic read 16-bit data function
 ```c
@@ -63,18 +58,11 @@ uint8_t hallcurrent_check_status ( hallcurrent_t *ctx );
 float hallcurrent_read_current ( hallcurrent_t *ctx );
 ```
 
-## Examples Description
-
-> The application is current sensor.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initialization driver enable's - SPI and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -104,7 +92,6 @@ void application_init ( void )
     log_printf( &logger,  "       Hall Current     \r\n" );
     log_printf( &logger, "------------------------\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -112,34 +99,25 @@ void application_init ( void )
 > This is an example which demonstrates the use of Hall Current Click board.
 
 ```c
-
 void application_task ( void )
 {
     log_printf( &logger, " Current : %.3f A \r\n", hallcurrent_read_current( &hallcurrent ) );
     log_printf( &logger, "------------------------\r\n" );
     Delay_ms ( 1000 );
-} 
+}
+```## Application Output
 
-```
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HallCurrent
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Stepper",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Multi Stepper TB67S209 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.multisteppertb67s209",
-    "product_link": "https://www.mikroe.com/multi-stepper-click-tb67s209",
-    "short_description": "Multi Stepper Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the TB67S209FTG, CLOCK-in controlled bipolar stepping motor driver from Toshiba Semiconductor. It supports a PWM constant-current control drive, selectable mixed decay mode, and allows from full-step up to 1/32 steps resolution for less motor noise and smoother control. It has a wide operating voltage range of 10V to 47V with an output current capacity of 2.8A in addition to several built-in error detection circuits.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.10",
-    "alias": "Click.MultiStepperTB67S209",
-    "cmake": true,
-    "subdir_name": "lib_multisteppertb67s209"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5042",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Multi Stepper TB67S209 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MultiStepperTB67S209",
+                "subdir_name": "lib_multisteppertb67s209",
+                "path": "Multi Stepper TB67S209 Click/data/lib_multisteppertb67s209"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

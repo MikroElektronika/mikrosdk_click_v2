@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 10 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel10",
-    "product_link": "https://www.mikroe.com/accel-10-click",
-    "short_description": "Accel 10 Click features an ultra-low power triaxial `femto` accelerometer sensor with embedded intelligence, labeled as the LIS2DW12TR.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3230
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Accel10",
-    "subdir_name": "lib_accel10"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4112",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 10 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel10",
+                "subdir_name": "lib_accel10",
+                "path": "Accel 10 Click/data/lib_accel10"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

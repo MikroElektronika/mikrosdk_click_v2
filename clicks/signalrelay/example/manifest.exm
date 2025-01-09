@@ -1,8 +1,5 @@
 {
     "name": "Signal Realy Click",
-    "description": "Signal Relay Click can be used for ON/OFF control in various devices. It carries four ultra-small GV5-1 PCB relays from Omron and runs on a 5V power supply.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","GV5-1 PCB"],
-    "category" : ["Relay"] 
+    "hw" : ["Click","GV5-1 PCB"]
 }

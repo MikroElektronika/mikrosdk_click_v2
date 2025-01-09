@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "UVC Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.uvc",
-    "product_link": "https://www.mikroe.com/uvc-click",
-    "short_description": "UVC Click is an ultraviolet sensing board which complements UVC Light Click for a ultimate ultraviolet solution. The board is based on GUVC-T21GH ultraviolet sensor from GenUV, capable of measuring UVC spectrum in the range of 220nm up to 280nm and light intensity from 0mW/cm² up to 9.3mW/cm². With high sensitivity and good solar blindness, it can be a perfect solution for monitoring sterilization lamps used in ultraviolet germicidal irradiation (UVGI), a disinfection method that is becoming an essential tool in the battle against viruses and bacteria. UVC Click has two ways of reading UV sensor output, direct analog output value and digital output thanks to MCP3221 ADC converter.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3758
-    ],
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.Uvc",
-    "subdir_name": "lib_uvc"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4144",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "UVC Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Uvc",
+                "subdir_name": "lib_uvc",
+                "path": "UVC Click/data/lib_uvc"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

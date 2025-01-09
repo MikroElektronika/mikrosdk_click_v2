@@ -1,44 +1,38 @@
-\mainpage Main Page
 
 ---
 # UART MUX 4 Click
 
-> UART MUX 4 Click is a compact add-on board that switches the UART pins (RX and TX) 
-from the mikroBUS™ socket to one of the two available outputs. 
-This board features the 74HC4066D, a quad single-pole, single-throw analog switch from Nexperia. 
-The UART MUX 4 Click allows you to switch from one multiplexed UART to another easily, 
-but not both simultaneously.
+> [UART MUX 4 Click](https://www.mikroe.com/?pid_product=MIKROE-5720) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/uartmux4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5720&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/uart-mux-4-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Apr 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the UART MUX 4 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of UART MUX 4 Click board by processing
+> the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for UART MUX 4 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.UARTMUX4
 
-#### Standard key functions :
+### Example Key Functions
 
 - `uartmux4_cfg_setup` Config Object Initialization function.
 ```c
@@ -50,8 +44,6 @@ void uartmux4_cfg_setup ( uartmux4_cfg_t *cfg );
 err_t uartmux4_init ( uartmux4_t *ctx, uartmux4_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `uartmux4_enable_uart1` UART MUX 4 enable the UART 1 function.
 ```c
 void uartmux4_enable_uart1 ( uartmux4_t *ctx );
@@ -61,13 +53,6 @@ void uartmux4_enable_uart1 ( uartmux4_t *ctx );
 ```c
 void uartmux4_enable_uart2 ( uartmux4_t *ctx );
 ```
-
-## Example Description
-
-> This example demonstrates the use of UART MUX 4 Click board by processing
-> the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -150,22 +135,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.UARTMUX4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

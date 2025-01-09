@@ -1,73 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Color 8 Click
 
-Color 8 Click is a color-sensing Click board™, a part of our sensor Click board™ line. Sensing the color by utilizing ROHM’s BH1749NUC, an integrated color sensor IC, it comes in the package which also includes the mikroSDK™ software, a library with all the functions.
+> [Color 8 Click](https://www.mikroe.com/?pid_product=MIKROE-3213) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/color8_click.png" height=300px>
-</p>>
-
-[Click Product page](https://www.mikroe.com/color-8-click)
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3213&image=1" height=300px>
+</p>
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Color8 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Color8 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void color8_cfg_setup ( color8_cfg_t *cfg ); 
- 
-- Initialization function.
-> COLOR8_RETVAL color8_init ( color8_t *ctx, color8_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- This function reads data from register.
-> uint16_t color8_read_data ( color8_t *ctx, uint8_t reg_data );
- 
-- This functions reads 3 color filters and Clear Filters and converts the resulting color from RGB to HSL.
-> float color8_get_color_value ( color8_t *ctx );
-
-- This function detect colors.
-> uint8_t color8_get_color ( color8_t *ctx, float color_value );
-
-## Examples Description
+## Example Description
 
 > This demo app reads RED, GREEEN, BLUE, IR data and return detect color.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Color8
+
+### Example Key Functions
+
+- `color8_cfg_setup` Config Object Initialization function. 
+```c
+void color8_cfg_setup ( color8_cfg_t *cfg );
+``` 
+ 
+- `color8_init` Initialization function. 
+```c
+err_t color8_init ( color8_t *ctx, color8_cfg_t *cfg );
+```
+
+- `color8_read_data` This function reads data from register. 
+```c
+uint16_t color8_read_data ( color8_t *ctx, uint8_t reg_data );
+```
+ 
+- `color8_get_color_value` This functions reads 3 color filters and Clear Filters and converts the resulting color from RGB to HSL. 
+```c
+float color8_get_color_value ( color8_t *ctx );
+```
+
+- `color8_get_color` This function detect colors. 
+```c
+uint8_t color8_get_color ( color8_t *ctx, float color_value );
+```
+
+### Application Init
 
 > Initialization device device configuration for start measurement.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -95,7 +90,6 @@ void application_init ( void )
     color8_default_cfg( &color8 );
     log_printf( &logger, "---- Start measurement ----\r\n");
 }
-  
 ```
 
 ### Application Task
@@ -104,7 +98,6 @@ void application_init ( void )
 > Converts data to HSL value and return detect color.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t red_data;
@@ -178,29 +171,22 @@ void application_task ( void )
         }
     }
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Color8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > SPI",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "SPI Isolator Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.spiisolator",
-    "product_link": "https://www.mikroe.com/spi-isolator-click",
-    "short_description": "The Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2927
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Spiisolator",
-    "subdir_name": "lib_spiisolator"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2583",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SPI Isolator Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Spiisolator",
+                "subdir_name": "lib_spiisolator",
+                "path": "SPI Isolator Click/data/lib_spiisolator"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

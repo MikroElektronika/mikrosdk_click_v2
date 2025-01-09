@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MICRF RX Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.micrfrx",
-    "product_link": "https://www.mikroe.com/micrf-rx-click",
-    "short_description": "MICRF RX Click is a compact add-on board for high-sensitivity applications, including remote keyless entry, tire pressure monitoring systems, and remote actuation systems. This board features the MICRF220, an ASK/OOK 315MHz receiver with RSSI and squelch capabilities from Microchip to offer top-notch RF performance. This super-heterodyne, image-reject RF receiver provides a -110dBm sensitivity at 1kbps and a 0.1% Bit Error Rate (BER), supporting adjustable demodulator filter bandwidths for bit rates up to 14.4kbps.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.MICRFRX",
-    "subdir_name": "lib_micrfrx"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6014",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MICRF RX Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MICRFRX",
+                "subdir_name": "lib_micrfrx",
+                "path": "MICRF RX Click/data/lib_micrfrx"
+            }
+        ]
+    }
 }
-
-
-
-
-

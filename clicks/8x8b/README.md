@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # 8x8 B Click
 
-8x8 B Click is a 64 LED matrix display Click board™, composed of SMD LEDs organized in 8 rows by 8 columns. It has a digital brightness control in 16 steps, it can control every LED in the display matrix independently, it blanks the display on power up to eliminate glitches and it requires a single resistor to control the current through all the LEDs at once, which simplifies the design. 8x8 B Click uses a fast SPI communication protocol, allowing fast display response and no lag.
+> [8x8 B Click](https://www.mikroe.com/?pid_product=MIKROE-1307) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/8x8b_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1307&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/8x8-b-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the 8X8B Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This demo example shows a drawing of Image, new create string and character on the screen.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 8X8B Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.8X8B
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c8x8b_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t c8x8b_init ( c8x8b_t *ctx, c8x8b_cfg_t *cfg );
 void c8x8b_default_cfg ( c8x8b_t *ctx );
 ```
 
-#### Example key functions :
-
 - `c8x8b_write_cmd` This function writes a desired number of data bytes starting from the selected register by using SPI serial interface.
 ```c
 void c8x8b_write_cmd ( c8x8b_t *ctx, uint8_t cmd, uint8_t tx_data  );
@@ -68,19 +63,13 @@ void c8x8b_display_refresh ( c8x8b_t *ctx );
 void c8x8b_display_byte ( c8x8b_t *ctx, char tx_byte );
 ```
 
-## Example Description
-
-> This demo example shows a drawing of Image, new create string and character on the screen.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
-> Configuring clicks and log objects. Settings the Click in the default configuration.
+> Configuring Clicks and log objects. Settings the Click in the default configuration.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     c8x8b_cfg_t c8x8b_cfg;  /**< Click config object. */
 
@@ -113,7 +102,6 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     Delay_1sec( );
 }
-
 ```
 
 ### Application Task
@@ -121,8 +109,8 @@ void application_init ( void ) {
 > Shows one byte, then scrolls the string and image, every 1 sec.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     c8x8b_display_byte( &c8x8b, demo_char );
     Delay_ms ( 1000 );
     
@@ -135,27 +123,22 @@ void application_task ( void ) {
     c8x8b_display_image( &c8x8b, &demo_img_off[ 0 ] );
     Delay_ms ( 1000 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.8X8B
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

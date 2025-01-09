@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > LoRa",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LR 9 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lr9",
-    "product_link": "https://www.mikroe.com/lr-9-click",
-    "short_description": "LR 9 Click is a compact add-on board designed for ultra-long-range spread spectrum communication tasks within the LPWAN domain. This board is based on the RA-08, a LoRaWAN module from Ai-Thinker Technology, featuring the ASR6601 system-on-chip (SoC) that combines RF transceivers, modems, and a 32-bit RISC microcontroller (MCU). This module excels with its support for LoRa and (G)FSK modulation, a frequency range of 410MHz to 525MHz, and embedded storage of 128KB FLASH and 16KB SRAM, ensuring robust and versatile communication capabilities. Moreover, it's equipped with UART and I2C interfaces for easy programming and integration and an SMA antenna connector for enhanced connectivity.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.LR9",
-    "subdir_name": "lib_lr9"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6038",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LR 9 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LR9",
+                "subdir_name": "lib_lr9",
+                "path": "LR 9 Click/data/lib_lr9"
+            }
+        ]
+    }
 }
-
-

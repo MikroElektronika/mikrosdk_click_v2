@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck-Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BATT-MAN 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.battman2",
-    "product_link": "https://www.mikroe.com/batt-man-2-click",
-    "short_description": "BATT-MAN 2 Click is a compact add-on board representing an advanced battery and power management solution. This board features the MAX77654, a single inductor, multiple-output (SIMO) power management IC (PMIC) from Maxim Integrated, now part of Analog Devices. This I2C programmable board features a buck-boost regulator that provides three independently programmable power rails from a single inductor. Also, it has one 100mA LDO output with ripple rejection for audio and other noise-sensitive applications and a highly-configurable linear charger that supports a wide range of Li+ battery capacities featuring battery temperature monitoring for additional safety (JEITA).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.BATTMAN2",
-    "subdir_name": "lib_battman2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4837",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BATT-MAN 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BATTMAN2",
+                "subdir_name": "lib_battman2",
+                "path": "BATT-MAN 2 Click/data/lib_battman2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

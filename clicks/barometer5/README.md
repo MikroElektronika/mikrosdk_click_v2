@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Barometer 5 Click
 
-> Barometer 5 Click is a compact add-on board used to measure air pressure in a specific environment. This board features the MS5637-02BA03, a high accuracy low voltage barometric and temperature sensor from TE Connectivity Measurement Specialties. The MS5637-02BA03 includes a high-linearity pressure sensor and an ultra-low-power 24-bit ΔΣ ADC with internal factory-calibrated coefficients, providing a precise digital 24-bit pressure and temperature value, and different operation modes allowing the user to optimize for conversion speed and current consumption. It comes with a configurable host interface that supports I2C serial communication and measures pressure in a range from 300mbar up to 1.2bar with an accuracy of ±2mbar over a wide operating temperature range.
+> [Barometer 5 Click](https://www.mikroe.com/?pid_product=MIKROE-4924) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/barometer5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4924&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/barometer-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Oct 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Barometer5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
+## Example Description
 
 > This library contains API for Barometer 5 Click driver.
+> The demo application reads and calculate temperature and pressure data.
 
-#### Standard key functions :
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Barometer5
+
+### Example Key Functions
 
 - `barometer5_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t barometer5_init ( barometer5_t *ctx, barometer5_cfg_t *cfg );
 err_t barometer5_default_cfg ( barometer5_t *ctx );
 ```
 
-#### Example key functions :
-
 - `barometer5_get_data` Barometer 5 get data function.
 ```c
 err_t barometer5_get_data ( barometer5_t *ctx, float *temperature, float *pressure );
@@ -68,20 +64,12 @@ err_t barometer5_get_pressure ( barometer5_t *ctx, float *pressure );
 err_t barometer5_get_temperature ( barometer5_t *ctx, float *temperature );
 ```
 
-## Example Description
-
-> This library contains API for Barometer 5 Click driver.
-> The demo application reads and calculate temperature and pressure data.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes I2C driver and log UART.
 > After driver initialization the app set default settings.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -119,17 +107,15 @@ void application_init ( void )
     log_printf( &logger, "---------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Barometer 5 Click board™.
+> This is an example that demonstrates the use of the Barometer 5 Click board&trade;.
 > In this example, display the Pressure ( mBar ) and Temperature ( degree Celsius ) data.
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {
     static float temperature;
@@ -144,25 +130,21 @@ void application_task ( void )
     
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Barometer5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

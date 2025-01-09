@@ -1,8 +1,5 @@
 {
     "name": "ADC 24 Click",
-    "description": "ADC 24 Click is a compact add-on board for high-speed analog to digital conversion. This board features the AD7490, a 12-bit, 16-channel successive approximation ADC from Analog Devices, optimized for efficient power usage with a consumption of just 2.5mA from a 5V supply while achieving up to 1MSPS throughput rates. The board features 16 single-ended analog inputs with a configurable input range, supported by a channel sequencer for sequential channel conversion and multiple operational modes for flexible power management. This makes ADC 24 Click ideal for extensive system monitoring applications such as multichannel system monitoring, power line monitoring, data acquisition, instrumentation, and process control, serving various industrial and tech applications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AD7490WBCSZ"],
-    "category" : ["Click Boards > Mixed signal > ADC"]
+    "hw" : ["Click","AD7490WBCSZ"]
 }

@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Battery Charger",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MCP73871 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mcp73871",
-    "product_link": "https://www.mikroe.com/mcp73871-click",
-    "short_description": "MCP73871 Click is a fully integrated solution for system power delivery and Li-Po/Li-Ion battery charge management.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2209
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Mcp73871",
-    "subdir_name": "lib_mcp73871"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2858",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MCP73871 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mcp73871",
+                "subdir_name": "lib_mcp73871",
+                "path": "MCP73871 Click/data/lib_mcp73871"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

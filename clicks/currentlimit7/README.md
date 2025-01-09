@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Current Limit 7 Click
 
-> Current Limit 7 Click is a compact add-on board representing a current-limiting solution. This board features the MAX14575A, an adjustable current-limit switch from Analog Devices. This Click board™ features internal current limiting to prevent damage to host devices due to faulty load conditions, has a low 32mΩ on-resistance, and operates from a 2.3V to 5.5V input voltage range. Also, the current limit is adjustable from 250mA to 2.5A programmed through AD5272 digital rheostat and set via onboard range switch. This Click board™ is suitable for applications in portable equipment and condition monitoring or power supplies, protecting them in short circuits or other overload conditions.
+> [Current Limit 7 Click](https://www.mikroe.com/?pid_product=MIKROE-4972) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/currentlimit7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4972&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/current-limit-7-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Dec 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Current Limit 7 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the Current Limit 7 Click driver.
+> This driver provides the functions to set the current limiting conditions 
+> in order to provide the threshold of the fault conditions.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Current Limit 7 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CurrentLimit7
 
-#### Standard key functions :
+### Example Key Functions
 
 - `currentlimit7_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t currentlimit7_init ( currentlimit7_t *ctx, currentlimit7_cfg_t *cfg );
 err_t currentlimit7_default_cfg ( currentlimit7_t *ctx );
 ```
 
-#### Example key functions :
-
 - `currentlimit7_set_current_limit` Current Limit 7 set current limit function.
 ```c
 err_t currentlimit7_set_current_limit ( currentlimit7_t *ctx, uint8_t op_mode, uint16_t current_limit_ma );
@@ -68,21 +65,12 @@ err_t currentlimit7_set_resistance ( currentlimit7_t *ctx, uint32_t res_ohm );
 uint8_t currentlimit7_get_fault ( currentlimit7_t *ctx );
 ```
 
-## Example Description
-
-> This library contains API for the Current Limit 7 Click driver.
-> This driver provides the functions to set the current limiting conditions 
-> in order to provide the threshold of the fault conditions.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of I2C module and log UART.
 > After driver initialization, default settings turn on the device.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -144,12 +132,11 @@ void application_init ( void )
     display_selection( );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This example demonstrates the use of the Current Limit 7 Click board™.
+> This example demonstrates the use of the Current Limit 7 Click board&trade;.
 > Reading user's input from Usart Terminal and using it as an index 
 > for an array of pre-calculated values that define the current limit level.
 > Results are being sent to the Usart Terminal, where you can track their changes.
@@ -200,22 +187,19 @@ void application_task ( void )
 static void display_selection ( void );
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CurrentLimit7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

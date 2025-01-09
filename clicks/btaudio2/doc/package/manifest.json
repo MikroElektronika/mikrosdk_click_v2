@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > BT/BLE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BT Audio 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.btaudio2",
-    "product_link": "https://www.mikroe.com/bt-audio-2-click",
-    "short_description": "BT Audio 2 Click is Bluetooth audio stream add on board based on BM62 module from Microchip. It's a Stereo Audio module which is fully qualified Bluetooth v5.0 dual-mode (BDR/EDR/BLE) to be added in any wireless audio and voice application. With features like high resolution up to 24-bit, 96 kHz audio data format, Bluetooth Low Energy data rate up to 1Mbits/s, connection of two hosts with HFP/A2DP profiles simultaneously, seamless serial data over UART interface and many more it's perfect solution for applications like portable speakers and headsets.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "related_projects": [
-        3746
-    ],
-    "version": "2.1.0.4",
-    "cmake": true,
-    "alias": "Click.BTAudio2",
-    "subdir_name": "lib_btaudio2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4117",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BT Audio 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BTAudio2",
+                "subdir_name": "lib_btaudio2",
+                "path": "BT Audio 2 Click/data/lib_btaudio2"
+            }
+        ]
+    }
 }
-
-
-
-

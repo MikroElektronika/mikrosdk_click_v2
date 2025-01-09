@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "3D Hall 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c3dhall8",
-    "product_link": "https://www.mikroe.com/3d-hall-8-click",
-    "short_description": "3D Hall 8 Click is a compact add-on board containing an ultra-small 3D-magnetic sensor for industrial and consumer applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.3DHall8",
-    "subdir_name": "lib_c3dhall8"
+    "name": "mikroe.click.3dhall8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4498",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3D Hall 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3DHall8",
+                "subdir_name": "lib_c3dhall8",
+                "path": "3D Hall 8 Click/data/lib_c3dhall8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > I2C",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "I2C Isolator 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.i2cisolator3",
-    "product_link": "https://www.mikroe.com/i2c-isolator-3-click",
-    "short_description": "I2C Isolator 3 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the CPC5902, a dual optically isolated bidirectional logic-bus repeater from IXYS Integrated Circuits Division.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        4110
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.I2CIsolator3",
-    "subdir_name": "lib_i2cisolator3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4467",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "I2C Isolator 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.I2CIsolator3",
+                "subdir_name": "lib_i2cisolator3",
+                "path": "I2C Isolator 3 Click/data/lib_i2cisolator3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

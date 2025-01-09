@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # Flash 8 Click
 
-> Flash 8 Click is a compact add-on board representing a highly reliable memory solution. This board features the GD5F2GQ5UEYIGR, a 2Gb high-density non-volatile memory storage solution for embedded systems from GigaDevice Semiconductor. It is based on an industry-standard NAND Flash memory core, representing an attractive alternative to SPI-NOR and standard parallel NAND Flash with advanced features. The GD5F2GQ5UEYIGR also has advanced security features (8K-Byte OTP region), software/hardware write protection, can withstand many write cycles (minimum 100k), and has a data retention period greater than ten years.
+> [Flash 8 Click](https://www.mikroe.com/?pid_product=MIKROE-5293) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/flash8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5293&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/flash-8-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : May 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Flash8 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for Flash 8 Click driver.
+> The library using SPI serial interface.
+> The library also includes a function for write and read memory
+> as well as write protection control functions.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Flash8 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Flash8
 
-#### Standard key functions :
+### Example Key Functions
 
 - `flash8_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +51,6 @@ err_t flash8_init ( flash8_t *ctx, flash8_cfg_t *cfg );
 void flash8_default_cfg ( flash8_t *ctx );
 ```
 
-#### Example key functions :
-
 - `flash8_write_memory` Flash 8 write memory function.
 ```c
 err_t flash8_write_memory ( flash8_t *ctx, uint32_t row_address, uint16_t column_address, uint8_t *data_in, uint16_t len, uint8_t *feature_status_out );
@@ -68,15 +66,6 @@ err_t flash8_read_memory ( flash8_t *ctx, uint32_t row_address, uint16_t column_
 err_t flash8_read_id ( flash8_t *ctx, uint8_t *manufacture_id, uint8_t *device_id, uint8_t *organization_id );
 ```
 
-## Example Description
-
-> This library contains API for Flash 8 Click driver.
-> The library using SPI serial interface.
-> The library also includes a function for write and read memory
-> as well as write protection control functions.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of SPI module and log UART.
@@ -87,7 +76,6 @@ err_t flash8_read_id ( flash8_t *ctx, uint8_t *manufacture_id, uint8_t *device_i
 > and column_address of the 456 ( 0x01C8 ).
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;        /**< Logger config object. */
@@ -193,19 +181,17 @@ void application_init ( void )
     log_printf( &logger, "--------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a Flash 8 Click board™.
+> This is an example that shows the use of a Flash 8 Click board&trade;.
 > The app reads a data string, which we have previously written to memory, 
 > starting from the selected row_address of the 123 ( 0x0000007B ) 
 > and column_address of the 456 ( 0x01C8 ).
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {   
     flash8_read_memory( &flash8, 123, 456, &rx_data[ 0 ], 9, &feature_status_out );
@@ -214,26 +200,21 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Flash8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

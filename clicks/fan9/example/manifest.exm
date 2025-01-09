@@ -1,8 +1,5 @@
 {
     "name": "Fan 9 Click",
-    "description": "Fan 9 Click is a compact add-on board designed for high-power fan applications requiring low noise and minimal vibration. This board features the A5932, an automotive-grade three-phase sinusoidal sensorless fan controller from Allegro Microsystems. This board operates with a power supply range of 12V to 42V, using a sinusoidal drive to reduce audible noise and vibration. It features I2C communication, PWM speed control, and a red FLT LED indicator for fault conditions.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","A5932GESSR-1-T"],
-    "category" : ["Click Boards > Motor control > Brushless"]
+    "hw" : ["Click","A5932GESSR-1-T"]
 }

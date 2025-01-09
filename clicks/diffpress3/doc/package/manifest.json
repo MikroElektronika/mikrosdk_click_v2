@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Diff Press 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.diffpress3",
-    "product_link": "https://www.mikroe.com/diff-press-3-click",
-    "short_description": "Diff Press 3 Click is a compact add-on board that can measure differential pressure. It features the 2513130810401, a WSEN-PDUS differential pressure sensor from Würth Elektronik. The sensor is MEMS based and uses a piezo-resistive sensing principle. It is a fully calibrated pressure sensor with 15-bit digital and 11-bit analog outputs. In addition to pressure measurement, the 2513130810401 WSEN-PDUS sensor also has an embedded temperature sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.DiffPress3",
-    "subdir_name": "lib_diffpress3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5771",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Diff Press 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DiffPress3",
+                "subdir_name": "lib_diffpress3",
+                "path": "Diff Press 3 Click/data/lib_diffpress3"
+            }
+        ]
+    }
 }
-
-
-
-
-

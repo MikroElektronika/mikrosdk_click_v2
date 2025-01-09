@@ -1,8 +1,5 @@
 {
     "name": "Inclinometer 3 Click",
-    "description": "Inclinometer 3 Click is a compact add-on board for precise tilt and leveling measurement applications. This board features the SCL3400-D01, a two-axis inclinometer sensor from Murata, leveraging advanced capacitive 3D-MEMS technology. It features a high-performance mixed-signal ASIC with a flexible SPI digital interface housed in a robust 12-pin pre-molded casing, ensuring long-term reliability and performance.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SCL3400-D01"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","SCL3400-D01"]
 }

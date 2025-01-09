@@ -3,7 +3,7 @@
  * \brief NbIot Click example
  * 
 * # Description
- * This example reads and processes data from NB IoT clicks.
+ * This example reads and processes data from NB IoT Clicks.
  *
  * The demo application is composed of two sections :
  * 

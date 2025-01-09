@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Color 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.color2",
-    "product_link": "https://www.mikroe.com/color-2-click",
-    "short_description": "Color 2 Click carries the ISL29125 RGB color light sensor. It detects red, green and blue in a variety of lighting conditions, outputting 16-bit resolution data in a measuring range from 5.7 m lux to 10,000 lux.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1594
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Color2",
-    "subdir_name": "lib_color2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1988",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Color 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Color2",
+                "subdir_name": "lib_color2",
+                "path": "Color 2 Click/data/lib_color2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

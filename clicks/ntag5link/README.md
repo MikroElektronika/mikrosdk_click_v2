@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # NTAG 5 Link Click
 
-> NTAG 5 Link Click is a compact add-on board that acts as a bridge between an NFC-enabled device and any I2C slave, such as a sensor or external memory. This board features the NTA5332, a highly integrated NFC IC which creates a secure standard-based link from the device to the cloud from NXP Semiconductors. Based on the NTAG 5 switch and operating at 13.56MHz, the NTA5332 represents an NFC Forum-compliant contactless tag that can be read and written by an NFC-enabled device at close range and by an ISO/IEC 15693-enabled industrial reader over a more extended range. It also incorporates an I2C interface with an I2C master features and AES mutual authentication, SRAM memory, and energy harvesting possibility, which means it can supply power to other components in the system.
+> [NTAG 5 Link Click](https://www.mikroe.com/?pid_product=MIKROE-4635) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ntag5link_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4635&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ntag-5-link-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Feb 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the NTAG 5 Link Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of NTAG 5 Link Click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for NTAG 5 Link Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NTAG5Link
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ntag5link_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t ntag5link_init ( ntag5link_t *ctx, ntag5link_cfg_t *cfg );
 err_t ntag5link_default_cfg ( ntag5link_t *ctx );
 ```
 
-#### Example key functions :
-
 - `ntag5link_write_ndef_uri_record` This function writes specific NDEF URI record to the memory address specified with NTAG5LINK_NDEF_MESSAGE_START_ADDRESS macro.
 ```c
 err_t ntag5link_write_ndef_uri_record ( ntag5link_t *ctx, uint8_t uri_prefix, uint8_t *uri_data, uint8_t data_len );
@@ -68,19 +63,12 @@ err_t ntag5link_write_message_to_memory ( ntag5link_t *ctx, uint16_t block_addr,
 err_t ntag5link_read_message_from_memory ( ntag5link_t *ctx, uint16_t block_addr, uint8_t *message, uint16_t message_len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of NTAG 5 Link Click board by programming the specified NDEF URI record to the memory, and showing the memory read/write feature.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger and performs the Click default configuration which 
 enables the device and formats its user memory. After that it programs the specified NDEF URI record to the memory.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -122,7 +110,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -159,22 +146,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NTAG5Link
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

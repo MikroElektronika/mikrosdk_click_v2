@@ -1,8 +1,5 @@
 {
     "name": "LR 9 Click",
-    "description": "LR 9 Click is a compact add-on board designed for ultra-long-range spread spectrum communication tasks within the LPWAN domain. This board is based on the RA-08, a LoRaWAN module from Ai-Thinker Technology, featuring the ASR6601 system-on-chip (SoC) that combines RF transceivers, modems, and a 32-bit RISC microcontroller (MCU). This module excels with its support for LoRa and (G)FSK modulation, a frequency range of 410MHz to 525MHz, and embedded storage of 128KB FLASH and 16KB SRAM, ensuring robust and versatile communication capabilities. Moreover, it's equipped with UART and I2C interfaces for easy programming and integration and an SMA antenna connector for enhanced connectivity.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","RA-08"],
-    "category" : ["Click Boards > Wireless connectivity > LoRa"]
+    "hw" : ["Click","RA-08"]
 }

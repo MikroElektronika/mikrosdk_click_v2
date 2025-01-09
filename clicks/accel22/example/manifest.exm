@@ -1,8 +1,5 @@
 {
     "name": "Accel 22 Click",
-    "description": "Accel 22 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL367, an ultra-low-power, high-performance three-axis accelerometer from Analog Devices. The ADXL367 allows selectable full-scale acceleration measurements in ranges of ±2g, ±4g, and ±8g in three axes, with a resolution of 0.25 mg/LSB on the ±2g range, alongside a configurable host interface that supports both SPI and I2C serial communication. This device combines a 3-axis MEMS accelerometer, a temperature sensor, and a 14-bit analog-to-digital converter (ADC) to synchronize an external analog signal conversion.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ADXL367BCCZ-RL"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","ADXL367BCCZ-RL"]
 }

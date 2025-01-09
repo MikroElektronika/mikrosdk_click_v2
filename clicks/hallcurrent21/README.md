@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Hall Current 21 Click
 
-> Hall Current 21 Click is a compact add-on board designed for precise current measurement across a wide frequency range, ideal for fast and accurate monitoring applications. This board features the ACS37030, a galvanically-isolated current sensor from Allegro Microsystems. It provides bidirectional current sensing with a range of ±65A and a sensitivity of 20.3mV/A, offering high isolation of 3500VRMS and a working voltage of up to 840VRMS. It also features low noise and a wide operating bandwidth, making it suitable for high-speed switching current and control loop monitoring. This Click board™ is perfect for power supplies in servers, data centers, and solar DC-DC converters.
+> [Hall Current 21 Click](https://www.mikroe.com/?pid_product=MIKROE-6449) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent21_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6449&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hall-current-21-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Oct 2024.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Hall Current 21 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Hall Current 21 Click board by reading and displaying the input current measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Hall Current 21 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HallCurrent21
 
-#### Standard key functions :
+### Example Key Functions
 
 - `hallcurrent21_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void hallcurrent21_cfg_setup ( hallcurrent21_cfg_t *cfg );
 ```c
 err_t hallcurrent21_init ( hallcurrent21_t *ctx, hallcurrent21_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `hallcurrent21_read_voltage_avg` This function reads a desired number of ADC samples and calculates the average voltage level of the selected input channel.
 ```c
@@ -63,18 +58,11 @@ err_t hallcurrent21_calib_resolution ( hallcurrent21_t *ctx, float calib_current
 err_t hallcurrent21_read_current ( hallcurrent21_t *ctx, float *current );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Hall Current 21 Click board by reading and displaying the input current measurements.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and calibrates the data resolution at 3A load current.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -120,7 +108,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -139,26 +126,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > The measurement range is approximately: +/- 65A.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HallCurrent21
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

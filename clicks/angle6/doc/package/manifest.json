@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Angle 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.angle6",
-    "product_link": "https://www.mikroe.com/angle-6-click",
-    "short_description": "Angle 6 Click is a compact add-on board that detects the absolute angular position of a permanent magnet, typically a diametrically magnetized cylinder on a rotating shaft. This board features the MAQ470GQE, a 12-bit contactless angle sensor with PWM output from Monolithic Power Systems. It supports a wide range of magnetic field strengths and spatial configurations, with both end-of-shaft and off-axis (side-shaft mounting), supported configurations. Fast data acquisition and processing provides accurate angle measurement at speeds from 0 to 60,000 rpm, alongside magnetic field strength detection with programmable thresholds.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.Angle6",
-    "subdir_name": "lib_angle6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5282",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Angle 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Angle6",
+                "subdir_name": "lib_angle6",
+                "path": "Angle 6 Click/data/lib_angle6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

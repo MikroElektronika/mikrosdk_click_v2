@@ -1,8 +1,5 @@
 {
     "name": "Proximity 8 Click",
-    "description": "Proximity 8 Click is a close-range proximity sensing Click board™, equipped with the VCNL36687S, a very accurate and power-efficient proximity sensor (PS) with VCSEL. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","VCNL36687S","VCSEL"],
-    "category" : ["Proximity"] 
+    "hw" : ["Click","VCNL36687S","VCSEL"]
 }

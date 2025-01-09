@@ -1,8 +1,5 @@
 {
     "name": "Air Motion Click",
-    "description": "Air Motion Click is a compact add-on board that contains a 6-axis inertial measurement unit. This board features TDK InvenSense’s ICM-40627, a 6-axis MEMS MotionTracking™ device that combines a 3-axis user-selectable gyroscope accelerometer.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ICM-40627"],
-    "category" : ["Click Boards > Sensors > Motion"]
+    "hw" : ["Click","ICM-40627"]
 }

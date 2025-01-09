@@ -1,48 +1,39 @@
-\mainpage Main Page
 
 ---
 # Color 12 Click
 
-> Color 12 Click is a compact add-on board providing an accurate color-sensing solution. 
-> This board features the BU27006MUC-Z, a digital color sensor from Rohm Semiconductor 
-> with an integrated flicker sensing function. The BU27006MUC-Z can sense Red, Green, Blue (RGB), 
-> and Infrared light and efficiently convert them into digital values via the I2C interface. 
-> Its remarkable high sensitivity, wide dynamic range, and exceptional IR-cut characteristics 
-> enable precise illuminance measurement, typically up to 50klx, 
-> and accurate ambient light color temperature determination. 
-> Moreover, this sensor can effectively detect flicker noise originating from displays and room lighting, 
-> with a typical sensitivity of 10klx.
+> [Color 12 Click](https://www.mikroe.com/?pid_product=MIKROE-5724) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/color12_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5724&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/color-12-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Apr 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Color 12 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the Color 12 Click driver.
+> The demo application sets sensor configuration 
+> and reads and displays RGB/IR measurement results.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Color 12 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Color12
 
-#### Standard key functions :
+### Example Key Functions
 
 - `color12_cfg_setup` Config Object Initialization function.
 ```c
@@ -59,8 +50,6 @@ err_t color12_init ( color12_t *ctx, color12_cfg_t *cfg );
 err_t color12_default_cfg ( color12_t *ctx );
 ```
 
-#### Example key functions :
-
 - `color12_get_color_data` Color 12 gets the color measurement result function.
 ```c
 err_t color12_get_color_data ( color12_t *ctx, color12_color_sel_t color_sel, uint16_t *color_data );
@@ -75,14 +64,6 @@ err_t color12_set_config ( color12_t *ctx, color12_config_t config );
 ```c
 err_t color12_get_config ( color12_t *ctx, color12_config_t *config );
 ```
-
-## Example Description
-
-> This library contains API for the Color 12 Click driver.
-> The demo application sets sensor configuration 
-> and reads and displays RGB/IR measurement results.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -131,7 +112,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of the Color 12 Click board™.
+> This example demonstrates the use of the Color 12 Click board&trade;.
 > Reads and displays the results of the RGB/IR measurements.
 > Results are being sent to the UART Terminal, where you can track their changes.
 
@@ -162,22 +143,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Color12
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

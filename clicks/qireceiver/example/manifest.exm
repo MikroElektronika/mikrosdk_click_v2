@@ -1,8 +1,5 @@
 {
     "name": "Qi Receiver Click",
-    "description": "Qi Receiver Click is based on the P9025AC 5W Qi wireless power receiver integrated circuit, with the advanced Foreign Object Detection (FOD) feature, from IDT. The Click utilizes the principles of the inductive coupling for the purpose of wireless power transfer.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","P9025AC 5W"],
-    "category" : ["Wireless Charging"] 
+    "hw" : ["Click","P9025AC 5W"]
 }

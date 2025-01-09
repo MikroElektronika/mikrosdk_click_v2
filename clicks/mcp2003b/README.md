@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # MCP2003B Click
 
-> MCP2003B Click is a compact add-on board with a physical interface to automotive and industrial LIN systems compliant with the LIN Bus Specification Revision 2.2, SAE J2602, and ISO 17987. This board features the MCP2003B, a LIN transceiver from Microchip. The LIN, which stands for a Local Interconnect Network, is used in conjunction with the CAN interface for communication between the components inside of vehicles. The MCP2003B is a bi-directional half-duplex LIN transceiver that supports baud rates up to 20Kbaud with a LIN-compatible output driver. According to the standard on which this LIN transceiver works, connecting up to 15 peripheral devices to a single controller device is possible.
+> [MCP2003B Click](https://www.mikroe.com/?pid_product=MIKROE-2227) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mcp2003b_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2227&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/mcp2003b-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Feb 2024.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the MCP2003B Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an MCP2003B Click board by showing the communication between the two Click board configured as a receiver and transmitter.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for MCP2003B Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MCP2003B
 
-#### Standard key functions :
+### Example Key Functions
 
 - `mcp2003b_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void mcp2003b_cfg_setup ( mcp2003b_cfg_t *cfg );
 ```c
 err_t mcp2003b_init ( mcp2003b_t *ctx, mcp2003b_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `mcp2003b_generic_write` This function writes a desired number of data bytes by using UART serial interface.
 ```c
@@ -63,18 +58,11 @@ err_t mcp2003b_generic_read ( mcp2003b_t *ctx, uint8_t *data_out, uint16_t len )
 void mcp2003b_set_cs_pin ( mcp2003b_t *ctx, uint8_t state );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an MCP2003B Click board by showing the communication between the two Click board configured as a receiver and transmitter.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger and displays the selected application mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -108,7 +96,6 @@ void application_init ( void )
 #endif
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -134,27 +121,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > The Click boards should be connected as follows: VBB->VBB, LBUS->LBUS, GND->GND.
 The communication power supply voltage provided on VBB pin should be in range from 5.5V to 30V.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MCP2003B
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

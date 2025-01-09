@@ -1,76 +1,75 @@
-\mainpage Main Page
- 
+
 ---
 # DC Motor 3 Click
 
-DC MOTOR 3 Click is a mikroBUS™ add-on board with a Toshiba TB6549FG full-bridge driver for direct current motors. The IC is capable of outputting currents of up to 3.5 A with 30V, making it suitable for high-power motors
+> [DC Motor 3 Click](https://www.mikroe.com/?pid_product=MIKROE-2047) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dcmotor3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2047&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dc-motor-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Nikola Peric
 - **Date**          : Feb 2022.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the DcMotor3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for DcMotor3 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void dcmotor3_cfg_setup ( dcmotor3_cfg_t *cfg ); 
- 
-- Initialization function.
-> DCMOTOR3_RETVAL dcmotor3_init ( dcmotor3_t *ctx, dcmotor3_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void dcmotor3_default_cfg ( dcmotor3_t *ctx );
-
-
-#### Example key functions :
-
-- This function set the direction of rotation in the clockwise direction by sets AN pin and clear RST pin.
-> void dcmotor3_clockwise ( dcmotor3_t *ctx );
- 
-- This function set the direction of rotation in the counter clockwise direction by clear AN pin and sets RST pin.
-> void dcmotor3_counter_clockwise ( dcmotor3_t *ctx );
-
-- This function brake the engine by sets AN and RST pins on DC Motor 3 Click board.
-> void dcmotor3_short_brake ( dcmotor3_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This Click  has four operating modes: clockwise, counter-clockwise, short brake and stop. 
 > The operating mode is configured through IN1 and IN2 pins. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DcMotor3
+
+### Example Key Functions
+
+- `dcmotor3_cfg_setup` Config Object Initialization function. 
+```c
+void dcmotor3_cfg_setup ( dcmotor3_cfg_t *cfg );
+``` 
+ 
+- `dcmotor3_init` Initialization function. 
+```c
+err_t dcmotor3_init ( dcmotor3_t *ctx, dcmotor3_cfg_t *cfg );
+```
+
+- `dcmotor3_default_cfg` Click Default Configuration function. 
+```c
+void dcmotor3_default_cfg ( dcmotor3_t *ctx );
+```
+
+- `dcmotor3_clockwise` This function set the direction of rotation in the clockwise direction by sets AN pin and clear RST pin. 
+```c
+void dcmotor3_clockwise ( dcmotor3_t *ctx );
+```
+ 
+- `dcmotor3_counter_clockwise` This function set the direction of rotation in the counter clockwise direction by clear AN pin and sets RST pin. 
+```c
+void dcmotor3_counter_clockwise ( dcmotor3_t *ctx );
+```
+
+- `dcmotor3_short_brake` This function brake the engine by sets AN and RST pins on DC Motor 3 Click board. 
+```c
+void dcmotor3_short_brake ( dcmotor3_t *ctx );
+```
+
+### Application Init
 
 > Initialization driver enable's - GPIO,
 > PWM initialization, set PWM duty cycle and PWM frequency, start PWM, enable the engine, and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -102,7 +101,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     log_info( &logger, "---- Application Task ----" );
 }
-  
 ```
 
 ### Application Task
@@ -114,7 +112,6 @@ void application_init ( void )
 >  Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void )
 {    
     static int8_t duty_cnt = 1;
@@ -156,29 +153,22 @@ void application_task ( void )
         }
     }
     duty_cnt += duty_inc;
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DcMotor3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,0 +1,22 @@
+{
+    "display_name": "ADC 26 Click",
+    "name": "mikroe.click.adc26",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6416",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 26 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ADC26",
+                "subdir_name": "lib_adc26",
+                "path": "ADC 26 Click/data/lib_adc26"
+            }
+        ]
+    }
+}

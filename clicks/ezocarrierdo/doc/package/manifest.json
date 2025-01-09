@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Sensors > Environmental",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EZO Carrier DO Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ezocarrierdo",
-    "product_link": "https://www.mikroe.com/ezo-carrier-click-oxygen",
-    "short_description": "EZO Carrier Click - Oxygen is a compact add-on board suitable for determining the dissolved oxygen of a liquid in your application. This board features the EZO-DO™, an ISO 5814 compliant embedded dissolved oxygen circuit board from Atlas Scientific.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.5",
-    "cmake": true,
-    "alias": "Click.EZOCarrierDO",
-    "subdir_name": "lib_ezocarrierdo"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6010",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EZO Carrier DO Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EZOCarrierDO",
+                "subdir_name": "lib_ezocarrierdo",
+                "path": "EZO Carrier DO Click/data/lib_ezocarrierdo"
+            }
+        ]
+    }
 }
-
-
-

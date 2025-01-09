@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # LED Driver 13 Click
 
-> LED Driver 13 Click is a compact add-on board that simplifies the control of multiple LEDs. This board features the A80604-1, a 4-channel LED driver designed at a switching frequency of 400kHz that provides 150mA per channel from Allegro Microsystems. It is powered by an external power supply in the range of 6V to 18V, providing an output voltage of approximately 26V, which is used to power LEDs connected to LED channels. On the logical side, this board uses both 3V3 and 5V with mikroBUS™ power rails and communicates with the MCU via GPIO pins. In addition, the user is given the option of analog or digital LED dimming selection, using a PWM pin from the mikroBUS™ socket or via an onboard potentiometer/external PWM signal.
+> [LED Driver 13 Click](https://www.mikroe.com/?pid_product=MIKROE-4965) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/leddriver13_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4965&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/led-driver-13-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Dec 2021.
 - **Type**          : PWM type
 
-
 # Software Support
 
-We provide a library for the LED Driver 13 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
+## Example Description
 
 > This library contains API for LED Driver 13 Click driver.
 
-#### Standard key functions :
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LEDDriver13
+
+### Example Key Functions
 
 - `leddriver13_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t leddriver13_init ( leddriver13_t *ctx, leddriver13_cfg_t *cfg );
 err_t leddriver13_default_cfg ( leddriver13_t *ctx );
 ```
 
-#### Example key functions :
-
 - `leddriver13_set_enable` LED Driver 13 set enable function.
 ```c
 err_t leddriver13_set_enable ( leddriver13_t *ctx );
@@ -68,19 +63,12 @@ err_t leddriver13_pwm_start ( leddriver13_t *ctx );
 err_t leddriver13_set_duty_cycle ( leddriver13_t *ctx, float duty_cycle );
 ```
 
-## Example Description
-
-> This library contains API for LED Driver 13 Click driver.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and executes the Click default configuration which
 > starts the PWM module and sets the LEDs current to minimum.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -119,17 +107,15 @@ void application_init ( void )
     leddriver13_set_duty_cycle ( &leddriver13, 0.01 );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that demonstrates the use of the LED Driver 13 Click board™.
+> This is an example that demonstrates the use of the LED Driver 13 Click board&trade;.
 > The app controls the LEDs brightness by changing the PWM duty cycle.
 > The PWM duty cycle percentage will be logged on the USB UART.
 
 ```c
-
  void application_task ( void ) 
 {
     static int8_t duty_cnt = 1;
@@ -149,27 +135,22 @@ void application_init ( void )
         duty_inc = 1;
     }
     duty_cnt += duty_inc;
-} 
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LEDDriver13
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

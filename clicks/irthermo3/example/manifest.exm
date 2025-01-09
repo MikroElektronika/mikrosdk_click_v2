@@ -1,8 +1,5 @@
 {
     "name": "IrThermo 3 Click",
-    "description": "IrThermo 3 Click is a device which allows contactless measurement of the object temperature.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MLX90632","PCA9306"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","MLX90632","PCA9306"]
 }

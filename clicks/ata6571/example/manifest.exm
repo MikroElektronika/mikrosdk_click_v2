@@ -1,8 +1,5 @@
 {
     "name": "ATA6571 Click",
-    "description": "ATA6571 Click is a compact add-on board that contains a transceiver designed for high-speed CAN applications. This board features the ATA6571, a standalone high-speed CAN FD transceiver that interfaces a CAN protocol controller and the physical two-wire CAN bus from Microchip.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","ATA6571"],
-    "category" : ["CAN"]
+    "hw" : ["Click","ATA6571"]
 }

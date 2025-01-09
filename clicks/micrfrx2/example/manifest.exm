@@ -1,8 +1,5 @@
 {
     "name": "MICRF RX 2 Click",
-    "description": "MICRF RX 2 Click is a compact add-on board for high-sensitivity applications, including remote keyless entry, tire pressure monitoring systems, and remote actuation systems. This board features the MICRF219A, an ASK/OOK 433MHz receiver with Auto-Poll and RSSI from Microchip to offer top-notch RF performance. This super-heterodyne, image-reject RF receiver provides a -110dBm sensitivity at 1kbps and a 0.1% Bit Error Rate (BER), supporting adjustable demodulator filter bandwidths for bit rates up to 20kbps.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MICRF219AAYQS"],
-    "category" : ["Click Boards > Wireless connectivity > Sub-1 GHz Transceivers"]
+    "hw" : ["Click","MICRF219AAYQS"]
 }

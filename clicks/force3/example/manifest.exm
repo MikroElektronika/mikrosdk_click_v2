@@ -1,8 +1,5 @@
 {
     "name": "Force 3 Click",
-    "description": "Force 3 Click is a compact add-on board with circuitry for implementing Force Sensing Resistor into your projects whose resistance changes when a force, pressure, or mechanical stress is applied.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","FSR 400"],
-    "category" : ["Force"] 
+    "hw" : ["Click","FSR 400"]
 }

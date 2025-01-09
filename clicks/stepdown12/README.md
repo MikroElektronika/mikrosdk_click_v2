@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Step Down 12 Click
 
-> Step Down 12 Click is a compact add-on board for reliable DC-DC step-down applications. Based on Texas Instruments' TPS62902 synchronous step-down converter, it features the DCS-Control topology, which combines hysteretic, voltage mode, and current mode control for precision and fast response to voltage changes. Supporting a wide input voltage range of 3V to 17V, it provides stable output voltages with accuracy within ±1% and can enter power save mode for high efficiency under light loads. With 16 configurable output voltages from 0.7V to 5.5V, this Click board™ is ideal for applications in factory automation, building systems, data centers, enterprise computing, and motor drives where efficient, stable power conversion is essential.
+> [Step Down 12 Click](https://www.mikroe.com/?pid_product=MIKROE-6126) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/stepdown12_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6126&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/step-down-12-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Mar 2024.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Step Down 12 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Step Down 12 Click board by changing the output voltage every 3 seconds.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Step Down 12 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.StepDown12
 
-#### Standard key functions :
+### Example Key Functions
 
 - `stepdown12_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t stepdown12_init ( stepdown12_t *ctx, stepdown12_cfg_t *cfg );
 void stepdown12_default_cfg ( stepdown12_t *ctx );
 ```
 
-#### Example key functions :
-
 - `stepdown12_get_pg_pin` This function returns the power good (PG) pin logic state.
 ```c
 uint8_t stepdown12_get_pg_pin ( stepdown12_t *ctx );
@@ -68,18 +63,11 @@ err_t stepdown12_set_vout ( stepdown12_t *ctx, float vout );
 void stepdown12_enable_device ( stepdown12_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Step Down 12 Click board by changing the output voltage every 3 seconds.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -111,7 +99,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -145,22 +132,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.StepDown12
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

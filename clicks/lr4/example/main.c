@@ -3,7 +3,7 @@
  * \brief LR4 Click example
  * 
  * # Description
- * This example reads and processes data from LR 4 clicks.
+ * This example reads and processes data from LR 4 Clicks.
  *
  * The demo application is composed of two sections :
  * 

@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Boost",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "BATT Boost 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.battboost2",
-    "product_link": "https://www.mikroe.com/batt-boost-2-click",
-    "short_description": "BATT Boost 2 Click is a compact add-on board designed to extend the battery life of non-rechargeable, primary batteries in low-voltage, low-power applications. This board features the NBM7100A, a coin-cell battery-life booster with adaptive power optimization from Nexperia. The NBM7100A integrates two high-efficiency DC-DC conversion stages and an intelligent learning algorithm to optimize energy usage, allowing it to handle bursts of current up to 200mA without depleting the battery. It features two output terminals: VDH for high pulse load applications and VDP for powering 'Always-ON' components. Communication with the host MCU is achieved via the I2C interface, supporting up to 1MHz clock frequencies.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.BATTBoost2",
-    "subdir_name": "lib_battboost2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6098",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BATT Boost 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BATTBoost2",
+                "subdir_name": "lib_battboost2",
+                "path": "BATT Boost 2 Click/data/lib_battboost2"
+            }
+        ]
+    }
 }
-
-

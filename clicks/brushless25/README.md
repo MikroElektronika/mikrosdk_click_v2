@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Brushless 25 Click
 
-> Brushless 25 Click is a compact add-on board that controls brushless DC (three-phase BLDC) motors with any MCU. This board features the MCT8316A, a high-speed sensorless trapezoidal control integrated FET BLDC driver from Texas Instruments. It provides three individually controllable drivers intended to drive a three-phase BLDC motor, solenoids, or other loads.
+> [Brushless 25 Click](https://www.mikroe.com/?pid_product=MIKROE-5644) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/brushless25_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5644&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/brushless-25-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jan 2023.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Brushless 25 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> Application example shows the device's capability of controlling 
+ the brushless motor speed and state of the driver.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Brushless 25 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Brushless25
 
-#### Standard key functions :
+### Example Key Functions
 
 - `brushless25_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t brushless25_init ( brushless25_t *ctx, brushless25_cfg_t *cfg );
 err_t brushless25_default_cfg ( brushless25_t *ctx );
 ```
 
-#### Example key functions :
-
 - `brushless25_register_write` Brushless 25 data writing function.
 ```c
 err_t brushless25_register_write ( brushless25_t *ctx, uint16_t reg, uint32_t data_in );
@@ -68,20 +64,12 @@ err_t brushless25_register_read ( brushless25_t *ctx, uint16_t reg, uint32_t *da
 err_t brushless25_set_speed_value ( brushless25_t *ctx, float spd_val );
 ```
 
-## Example Description
-
-> Application example shows the device's capability of controlling 
- the brushless motor speed and state of the driver.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, sets the device into slow start mode 
  and sets the speed of the motor to 30%.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -119,7 +107,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -221,22 +208,19 @@ void application_task ( void )
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Brushless25
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

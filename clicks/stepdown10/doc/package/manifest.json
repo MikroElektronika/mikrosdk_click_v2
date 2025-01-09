@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Step Down 10 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.stepdown10",
-    "product_link": "https://www.mikroe.com/step-down-10-click",
-    "short_description": "Step Down 10 Click is a compact add-on board that converts higher voltages into a lower voltage level. This board features the TPSM63610, a high-density synchronous buck DC/DC power module with enhanced HotRodTM from Texas Instruments. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.StepDown10",
-    "subdir_name": "lib_stepdown10"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5875",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Step Down 10 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.StepDown10",
+                "subdir_name": "lib_stepdown10",
+                "path": "Step Down 10 Click/data/lib_stepdown10"
+            }
+        ]
+    }
 }
-
-
-
-
-

@@ -1,73 +1,69 @@
-\mainpage Main Page
- 
- 
 
 ---
 # 6DOF IMU 9 Click
 
-The 6DOF IMU 9 Click is a Click board™ which features the IAM-20680, a 6-axis MotionTracking device that combines a 3-axis gyroscope and a 3-axis accelerometer, from TDK InvenSense.
+> [6DOF IMU 9 Click](https://www.mikroe.com/?pid_product=MIKROE-3827) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/6dofimu9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3827&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/6dof-imu-9-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the 6DOFIMU9 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for 6DOFIMU9 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c6dofimu9_cfg_setup ( c6dofimu9_cfg_t *cfg ); 
- 
-- Initialization function.
-> C6DOFIMU9_RETVAL c6dofimu9_init ( c6dofimu9_t *ctx, c6dofimu9_cfg_t *cfg );
-
-#### Example key functions :
-
-- Set Gyro configuration function
-> void c6dofimu9_set_gyro_config ( c6dofimu9_t *ctx, uint8_t gyro_config_data );
- 
-- Set Gyro measurement range configuration function
-> void c6dofimu9_set_gyro_measurement_range ( c6dofimu9_t *ctx, uint16_t gyro_full_scale_range );
-
-- Set Accel measurement range configuration function
-> void c6dofimu9_set_accel_measurement_range ( c6dofimu9_t *ctx, uint8_t accel_full_scale_range );
-
-## Examples Description
+## Example Description
 
 > This application measure 3-axis gyroscope and a 3-axis accelerometer.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.6DOFIMU9
+
+### Example Key Functions
+
+- `c6dofimu9_cfg_setup` Config Object Initialization function. 
+```c
+void c6dofimu9_cfg_setup ( c6dofimu9_cfg_t *cfg );
+``` 
+ 
+- `c6dofimu9_init` Initialization function. 
+```c
+err_t c6dofimu9_init ( c6dofimu9_t *ctx, c6dofimu9_cfg_t *cfg );
+```
+
+- `c6dofimu9_set_gyro_config` Set Gyro configuration function. 
+```c
+void c6dofimu9_set_gyro_config( c6dofimu9_t *ctx, uint8_t gyro_config_data );
+```
+ 
+- `c6dofimu9_set_gyro_measurement_range` Set Gyro measurement range configuration function. 
+```c
+void c6dofimu9_set_gyro_measurement_range( c6dofimu9_t *ctx, uint16_t gyro_full_scale_range );
+```
+
+- `c6dofimu9_set_accel_measurement_range` Set Accel measurement range configuration function. 
+```c
+void c6dofimu9_set_accel_measurement_range( c6dofimu9_t *ctx, uint8_t accel_full_scale_range );
+```
+
+### Application Init
 
 > Initialization driver enables - I2C, check device ID,
 > configure accelerometer and gyroscope, also write log. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -121,7 +117,6 @@ void application_init ( void )
     log_printf( &logger, "-------------------------------------\r\n" );
     Delay_100ms( );
 }
-  
 ```
 
 ### Application Task
@@ -132,7 +127,6 @@ void application_init ( void )
 > All data logs write on USB uart changes for every 1 sec.
 
 ```c
-
 void application_task ( )
 {
     int16_t accel_axis_x;
@@ -161,27 +155,22 @@ void application_task ( )
 
     log_printf(&logger, "-------------------------------------\r\n");
     Delay_1sec( );
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.6DOFIMU9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Dot-Matrix R Click
 
-Dot Matrix R Click is a display device Click board™ based on a four-digit dot matrix display module, labeled as HCMS-3906 from a company Avago (Broadcom Inc).
+> [Dot Matrix R Click](https://www.mikroe.com/?pid_product=MIKROE-4169) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dotmatrixr_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4169&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dot-matrix-r-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jul 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the DotMatrixR Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for DotMatrixR Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void dotmatrixr_cfg_setup ( dotmatrixr_cfg_t *cfg ); 
- 
-- Initialization function.
-> DOTMATRIXR_RETVAL dotmatrixr_init ( dotmatrixr_t *ctx, dotmatrixr_cfg_t *cfg );
-
-#### Example key functions :
-
-- Sets BL pin to high or low state
-> void dotmatrixr_set_bl_pin_state ( dotmatrixr_t *ctx, uint8_t state );
- 
-- Restart device 
-> void dotmatrixr_restart ( dotmatrixr_t *ctx );
-
-- Sets display to written value
-> void dotmatrixr_write_ascii ( dotmatrixr_t *ctx, char *ascii_data );
-
-## Examples Description
+## Example Description
 
 > This demo application show data on display.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DotMatrixR
+
+### Example Key Functions
+
+- `dotmatrixr_cfg_setup` Config Object Initialization function. 
+```c
+void dotmatrixr_cfg_setup ( dotmatrixr_cfg_t *cfg );
+``` 
+ 
+- `dotmatrixr_init` Initialization function. 
+```c
+err_t dotmatrixr_init ( dotmatrixr_t *ctx, dotmatrixr_cfg_t *cfg );
+```
+
+- `dotmatrixr_set_bl_pin_state` Sets BL pin to high or low state. 
+```c
+void dotmatrixr_set_bl_pin_state( dotmatrixr_t *ctx, uint8_t state );
+```
+ 
+- `dotmatrixr_restart` Restart device . 
+```c
+void dotmatrixr_restart( dotmatrixr_t *ctx );
+```
+
+- `dotmatrixr_write_ascii` Sets display to written value. 
+```c
+void dotmatrixr_write_ascii( dotmatrixr_t *ctx, char *ascii_data );
+```
+
+### Application Init
 
 > Configuration device
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -102,7 +100,6 @@ void application_init ( void )
                        DOTMATRIXR_CTRL_BYTE_0_PIXEL_PEAK_CURRENT_9p3mA |
                        DOTMATRIXR_CTRL_BYTE_0_MODE_NORMAL );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +107,6 @@ void application_init ( void )
 > Display shows 3 different data in span of 1 second
 
 ```c
-
 void application_task ( void )
 {
     dotmatrixr_write_ascii( &dotmatrixr, &demo_t1[ 0 ] );
@@ -119,30 +115,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     dotmatrixr_write_ascii( &dotmatrixr, &demo_t3[ 0 ] );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DotMatrixR
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

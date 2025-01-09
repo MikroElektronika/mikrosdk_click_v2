@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Current 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.current6",
-    "product_link": "https://www.mikroe.com/current-6-click",
-    "short_description": "Current 6 Click is a compact add-on board providing a precise and accurate current sensing solution. This board features the MAX40080, a fast-response bi-directional current-sense amplifier from Analog Devices. The device features ultra-low 5uV input offset voltage, very-low 0.2% gain error, and includes an analog-to-digital converter with programmable sample rate and 12-bit resolution featuring I2C compatible interface. It also features a wake-up current-threshold and auto-shutdown mode when the I2C is inactive, both designed to minimize power consumption. The current-shunt monitor can measure voltage signals on common-mode voltages ranging from -0.1V (ground sensing) to 36V, independent of the supply voltage. This Click board™ delivers higher performance to industrial control and automation applications, load and power supplies monitoring, telecom equipment, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.Current6",
-    "subdir_name": "lib_current6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4914",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Current 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Current6",
+                "subdir_name": "lib_current6",
+                "path": "Current 6 Click/data/lib_current6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

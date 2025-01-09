@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GSM/LTE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "NB IoT 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.nbiot5",
-    "product_link": "https://www.mikroe.com/nb-iot-5-click",
-    "short_description": "NB IoT 5 Click is a compact add-on board suitable as narrow-band Internet of Things universal wireless communication solution. This board features the OT01-5, a high-performance NB-IoT module with ultra-low power consumption allowing battery life of about ten years from Notioni.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.NBIoT5",
-    "subdir_name": "lib_nbiot5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4472",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NB IoT 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NBIoT5",
+                "subdir_name": "lib_nbiot5",
+                "path": "NB IoT 5 Click/data/lib_nbiot5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

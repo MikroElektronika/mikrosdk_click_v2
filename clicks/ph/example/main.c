@@ -3,7 +3,7 @@
  * @brief pH Click Example.
  *
  * # Description
- * This example reads and processes data from pH clicks.
+ * This example reads and processes data from pH Clicks.
  *
  * The demo application is composed of two sections :
  *

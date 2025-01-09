@@ -1,8 +1,5 @@
 {
     "name": "I2C MUX 4 Click",
-    "description": "I2C MUX 4 Click is a compact add-on board that contains a dual bidirectional translating switch dedicated for applications with I2C slave address conflicts.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TCA9543APWR"],
-    "category" : ["I2C"] 
+    "hw" : ["Click","TCA9543APWR"]
 }

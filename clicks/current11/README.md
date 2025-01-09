@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Current 11 Click
 
-> Current 11 Click is a compact add-on board for industrial and commercial current-sensing applications. This board features the ACS37600K (ACS37600KOKATN-006B5-C), a programmable linear Hall-effect sensor IC from Allegro Microsystems. This sensor features a chopper-stabilized Hall-effect front-end for precise magnetic flux detection, with a sensitivity of 6mV/G and a bidirectional operating range of ±333G.
+> [Current 11 Click](https://www.mikroe.com/?pid_product=MIKROE-6166) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/current11_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6166&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/current-11-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Apr 2024.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the Current 11 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Current 11 Click board by reading and displaying the input current measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Current 11 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Current11
 
-#### Standard key functions :
+### Example Key Functions
 
 - `current11_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void current11_cfg_setup ( current11_cfg_t *cfg );
 ```c
 err_t current11_init ( current11_t *ctx, current11_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `current11_set_vref` This function sets the voltage reference for Current 11 Click driver.
 ```c
@@ -63,18 +58,11 @@ err_t current11_calibrate_offset ( current11_t *ctx );
 err_t current11_read_current ( current11_t *ctx, float *current );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Current 11 Click board by reading and displaying the input current measurements.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and calibrates the zero current offset.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -119,7 +107,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -127,7 +114,6 @@ void application_init ( void )
 > Reads the input current measurements and displays the results on the USB UART approximately once per second.
 
 ```c
-
 void application_task ( void )
 {
     float current = 0;
@@ -137,31 +123,27 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > For better accuracy, set the voltage reference by using the current11_set_vref function,
 increase the number of conversions by modifying the CURRENT11_NUM_CONVERSIONS macro, 
 and adjust the CURRENT11_COUPLING_FACTOR_G_A value.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Current11
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

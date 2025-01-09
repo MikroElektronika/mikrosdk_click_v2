@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Amplifier",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GainAMP 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gainamp3",
-    "product_link": "https://www.mikroe.com/gainamp-3-click",
-    "short_description": "GainAMP 3 Click is a compact add-on board that contains a 4-channel programmable gain amplifier. This board features the ADA4254, a zero drift, high voltage, programmable gain instrumentation amplifier from Analog Devices. It features 12 binary weighted gains and three scaling gain options resulting in 36 possible gain settings. It comes with an input multiplexer providing ±60V protection to the high impedance inputs of the amplifier and an excitation current source output available to bias sensors such as resistance temperature detectors (RTDs).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.GainAMP3",
-    "subdir_name": "lib_gainamp3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4800",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GainAMP 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GainAMP3",
+                "subdir_name": "lib_gainamp3",
+                "path": "GainAMP 3 Click/data/lib_gainamp3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

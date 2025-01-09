@@ -1,72 +1,69 @@
-\mainpage Main Page
-
- 
 
 ---
 # Flash Click
 
-Flash Click is 8,388,608 bits (8 Mbit) on a Click board, organized into 1,048,576 bytes (1 MB).
-In other words, this Click board is a Flash memory medium with the capacity of 1 MB.
-The used Flash module has very good endurance and it can withstand up to 100,000 write cycles, with the data retention period of about 20 years.
+> [Flash Click](https://www.mikroe.com/?pid_product=MIKROE-1199) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/flash_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1199&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/flash-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nemanja Medakovic
 - **Date**          : Nov 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Flash Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers).
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account.
-
-## Library Description
-
-> This library contains API for Flash Click driver.
-
-#### Standard key functions :
-
-- Config Object Setup function.
-> void flash_cfg_setup( flash_cfg_t *cfg );
- 
-- Click Initialization function.
-> flash_err_t flash_init( flash_t *ctx, flash_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void flash_default_cfg( flash_t *ctx );
-
-#### Example key functions :
-
-- Page Write function.
-> flash_err_t flash_write_page( flash_t *ctx, uint32_t mem_addr, spi_master_data_t *data_tx, uint16_t n_data );
- 
-- Page Read function.
-> flash_err_t flash_read_page( flash_t *ctx, uint32_t mem_addr, spi_master_data_t *data_rx, uint16_t n_data );
-
-- Sector Erase function.
-> flash_err_t flash_erase_sector( flash_t *ctx, uint32_t mem_addr );
-
-## Examples Description
+## Example Description
 
 >
 > This example demonstrates the use (control) of the FLASH memory.
 >
 
-**The demo application is composed of two sections :**
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Flash
+
+### Example Key Functions
+
+- `flash_cfg_setup` Config Object Setup function. 
+```c
+void flash_cfg_setup ( flash_cfg_t *cfg );
+```
+ 
+- `flash_init` Click Initialization function. 
+```c
+flash_err_t flash_init ( flash_t *ctx, flash_cfg_t *cfg );
+```
+
+- `flash_default_cfg` Click Default Configuration function. 
+```c
+void flash_default_cfg ( flash_t *ctx );
+```
+
+- `flash_write_page` Page Write function. 
+```c
+flash_err_t flash_write_page ( flash_t *ctx, uint32_t mem_addr, spi_master_data_t *data_tx, uint16_t n_data );
+```
+ 
+- `flash_read_page` Page Read function. 
+```c
+flash_err_t flash_read_page ( flash_t *ctx, uint32_t mem_addr, spi_master_data_t *data_rx, uint16_t n_data );
+```
+
+- `flash_erase_sector` Sector Erase function. 
+```c
+flash_err_t flash_erase_sector ( flash_t *ctx, uint32_t mem_addr );
+```
 
 ### Application Init
 
@@ -76,7 +73,6 @@ Package can be downloaded/installed directly form compilers IDE(recommended way)
 >
 
 ```c
-
 void application_init( void )
 {
     flash_cfg_t flash_cfg;
@@ -107,7 +103,6 @@ void application_init( void )
     log_printf( &logger, "***  Flash Initialization Done.  ***\r\n" );
     log_printf( &logger, "************************************\r\n" );
 }
-
 ```
 
 ### Application Task
@@ -118,7 +113,6 @@ void application_init( void )
 >
 
 ```c
-
 void application_task( void )
 {
     enter_data( "Mikroelektronika (MikroE)" );
@@ -143,7 +137,6 @@ void application_task( void )
 
     process_wait( );
 }
-
 ```
 
 ### Additional Functions
@@ -153,25 +146,19 @@ void application_task( void )
 > - Process Wait / Makes a delay to wait while some process be done.
 >
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Flash
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

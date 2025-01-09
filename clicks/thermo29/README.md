@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Thermo 29 Click
 
-> Thermo 29 Click is a compact add-on board for accurate temperature measurements. This board features the TMP126, a high-accuracy SPI-configurable digital temperature sensor from Texas Instruments. The TMP126 consists of an internal thermal BJT factory-calibrated sensor, 14-bit ADC, and a digital signal processor, offering a high accuracy of ±0.25°C and a temperature resolution of 0.03125°C per LSB. It also has a programmable alarm function that outputs an interrupt signal to the MCU when a specific temperature event occurs.
+> [Thermo 29 Click](https://www.mikroe.com/?pid_product=MIKROE-5586) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/thermo29_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5586&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/thermo-29-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jan 2023.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Thermo 29 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Thermo 29 Click board by reading and displaying the temperature measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Thermo 29 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Thermo29
 
-#### Standard key functions :
+### Example Key Functions
 
 - `thermo29_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t thermo29_init ( thermo29_t *ctx, thermo29_cfg_t *cfg );
 err_t thermo29_default_cfg ( thermo29_t *ctx );
 ```
 
-#### Example key functions :
-
 - `thermo29_read_unique_id` This function reads the device unique ID words (6 bytes in total).
 ```c
 err_t thermo29_read_unique_id ( thermo29_t *ctx, uint16_t *unique_id );
@@ -68,12 +63,6 @@ uint8_t thermo29_get_alert_pin ( thermo29_t *ctx );
 err_t thermo29_read_temperature ( thermo29_t *ctx, float *temperature );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Thermo 29 Click board by reading and displaying the temperature measurements.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger, and performs the Click default configuration which enables
@@ -81,7 +70,6 @@ continuous conversion and sets the conversion rate to 1 Hz with a data ready fla
 the alert pin. After that, reads and displays the device 48-bit unique ID.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -124,7 +112,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -147,22 +134,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Thermo29
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

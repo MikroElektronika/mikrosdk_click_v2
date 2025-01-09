@@ -1,77 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # MCP2542 Click
 
-MCP2542 Click is the CAN bus transceiver, which allows TTL/CMOS level signals typically found on MCUs, to be used for the communication via the CAN bus, which uses the higher voltage levels and differential signals
+> [MCP2542 Click](https://www.mikroe.com/?pid_product=MIKROE-2299) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mcp2542_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2299&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/mcp2542-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Mcp2542 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Mcp2542 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void mcp2542_cfg_setup ( mcp2542_cfg_t *cfg ); 
- 
-- Initialization function.
-> MCP2542_RETVAL mcp2542_init ( mcp2542_t *ctx, mcp2542_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void mcp2542_default_cfg( mcp2542_t *ctx );
-
-
-#### Example key functions :
-
-- Generic single read function.
-> mcp2542_data_t mcp2542_generic_single_read ( mcp2542_t *ctx );
- 
-- Generic single write function.
-> void mcp2542_generic_single_write ( mcp2542_t *ctx, mcp2542_data_t tx_data );
-
-- Generic multi write function.
-> void mcp2542_generic_multi_write ( mcp2542_t *ctx, mcp2542_data_t *data_buf,  uart_length_t len );
-
-## Examples Description
+## Example Description
 
 > This application use for comunication.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Mcp2542
+
+### Example Key Functions
+
+- `mcp2542_cfg_setup` Config Object Initialization function. 
+```c
+void mcp2542_cfg_setup ( mcp2542_cfg_t *cfg );
+``` 
+ 
+- `mcp2542_init` Initialization function. 
+```c
+err_t mcp2542_init ( mcp2542_t *ctx, mcp2542_cfg_t *cfg );
+```
+
+- `mcp2542_default_cfg` Click Default Configuration function. 
+```c
+void mcp2542_default_cfg ( mcp2542_t *ctx );
+```
+
+- `mcp2542_generic_single_read` Generic single read function. 
+```c
+mcp2542_data_t mcp2542_generic_single_read ( mcp2542_t *ctx );
+```
+ 
+- `mcp2542_generic_single_write` Generic single write function. 
+```c
+void mcp2542_generic_single_write ( mcp2542_t *ctx, mcp2542_data_t tx_data );
+```
+
+- `mcp2542_generic_multi_write` Generic multi write function. 
+```c
+void mcp2542_generic_multi_write ( mcp2542_t *ctx, mcp2542_data_t *data_buf,  uart_length_t len );
+```
+
+### Application Init
 
 > Driver intialization.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -98,7 +94,6 @@ void application_init ( void )
 
      mcp2542_default_cfg( &mcp2542 );
 }
-  
 ```
 
 ### Application Task
@@ -106,7 +101,6 @@ void application_init ( void )
 > Checks if new data byte have received in rx buffer (ready for reading), and if ready than reads one byte from rx buffer. In second case aplication task writes message data via UART.
 
 ```c
-
 void application_task ( void )
 {
     uint8_t tmp;
@@ -129,30 +123,22 @@ void application_task ( void )
        Delay_ms ( 1000 );
 #endif
 
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Mcp2542
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

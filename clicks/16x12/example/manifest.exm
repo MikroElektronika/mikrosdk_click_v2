@@ -1,8 +1,5 @@
 {
     "name": "16x12 G Click",
-    "description": "16x12 G Click carries a 16x12 LED display and the IS31FL3733 matrix driver. The Click is designed to run on either 3.3V or 5V power supply.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","IS31FL3733"],
-    "category" : ["LED Matrix"] 
+    "hw" : ["Click","IS31FL3733"]
 }

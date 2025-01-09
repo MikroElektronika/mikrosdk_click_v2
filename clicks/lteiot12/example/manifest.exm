@@ -1,8 +1,5 @@
 {
     "name": "LTE IoT 12 Click",
-    "description": "LTE IoT 12 Click is a compact add-on board designed for low-power LTE Cat M1, NB-IoT, and EGPRS communication in IoT applications. This board features the BG95-M3 multi-mode data-only from Quectel, which also integrates GNSS (GPS, GLONASS, BDS, Galileo, QZSS) for precise location tracking. The board supports a wide range of LTE and 2G bands, offers ultra-low power consumption, and features advanced security via an ARM Cortex A7 processor with TrustZone technology. It includes UART and USB interfaces for easy communication, GNSS data output, and firmware upgrades.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","BG95M3LA-64-SGNS"],
-    "category" : ["Click Boards > Wireless connectivity > LTE IoT"]
+    "hw" : ["Click","BG95M3LA-64-SGNS"]
 }

@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Storage > EEPROM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EEPROM 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.eeprom6",
-    "product_link": "https://www.mikroe.com/eeprom-6-click",
-    "short_description": "EEPROM 6 Click is a compact add-on board that contains a serial EEPROM memory that operates from the 1-Wire interface. This board features the DS28EC20, a 20480-bit EEPROM organized as 80 memory pages of 256 bits each from Analog Devices. As a specific feature, blocks of eight memory pages can be write-protected or put in â€œEPROM-Emulationâ€ Mode, where bits can only be changed from a 1 to a 0 state. It communicates with MCU at 15.4kbps or 90kbps over the 1-Wire protocol and has a 64-bit registration number that ensures error-free device selection.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3882
-    ],
-    "version": "2.1.0.10",
-    "alias": "Click.EEPROM6",
-    "cmake": true,
-    "subdir_name": "lib_eeprom6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4296",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EEPROM 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EEPROM6",
+                "subdir_name": "lib_eeprom6",
+                "path": "EEPROM 6 Click/data/lib_eeprom6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

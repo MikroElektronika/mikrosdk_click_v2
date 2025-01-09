@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "H-Bridge 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hbridge5",
-    "product_link": "https://www.mikroe.com/h-bridge-5-click",
-    "short_description": "The H-Bridge 5 Click is designed for control DC motors and inductiv loads. This Click board™ contains the MP6515GF-Z, a H-bridge motor driver from MPS, It features an Full H-Bridge driver with Internal safety features include over-current protection, input over-voltage protection, under voltage lockout (UVLO), and thermal shutdown.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2975
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.HBridge5",
-    "subdir_name": "lib_hbridge5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3854",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "H-Bridge 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HBridge5",
+                "subdir_name": "lib_hbridge5",
+                "path": "H-Bridge 5 Click/data/lib_hbridge5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

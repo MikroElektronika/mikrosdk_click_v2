@@ -1,8 +1,5 @@
 {
     "name": "POT Click",
-    "description": "OT Click is a Click board™ with the accurate selectable reference voltage output. By employing a high-quality 10mm carbon potentiometer, this Click board™ can provide very accurate voltage output. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","OPA344"],
-    "category" : ["Potentiometer"] 
+    "hw" : ["Click","OPA344"]
 }

@@ -1,8 +1,5 @@
 {
     "name": "UV 3 Click",
-    "description": "UV 3 Click is an advanced ultraviolet (UV) light sensor with I2C protocol interface. The Click carries VEML6070 UVA light sensor designed by the CMOS process. UV 3 Click runs on either 3.3V or 5V power supply.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","VEML6070"],
-    "category" : ["Optical"] 
+    "hw" : ["Click","VEML6070"]
 }

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Hall Current 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hallcurrent7",
-    "product_link": "https://www.mikroe.com/hall-current-7-click",
-    "short_description": "Hall Current 7 Click is a compact add-on board that provides economical and precise solutions for AC or DC current sensing. This board features the ACS770, a thermally enhanced, fully integrated, Hall effect-based high precision linear current sensor with 100µΩ current conductor from Allegro MicroSystems. Applied current flows directly into the integrated conductor generating a magnetic field, and an integrated low-hysteresis core concentrates the magnetic field sensed by the Hall element with a typical accuracy of ±1% and 120 kHz bandwidth.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        4093
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.HallCurrent7",
-    "subdir_name": "lib_hallcurrent7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4420",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Current 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallCurrent7",
+                "subdir_name": "lib_hallcurrent7",
+                "path": "Hall Current 7 Click/data/lib_hallcurrent7"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

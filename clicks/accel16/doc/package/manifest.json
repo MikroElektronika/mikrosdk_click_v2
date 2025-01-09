@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 16 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel16",
-    "product_link": "https://www.mikroe.com/accel-16-click",
-    "short_description": "Accel 16 Click is a compact add-on board that contains an acceleration sensor. This board features the ADXL363, a micropower three-sensor combination including acceleration and temperature from Analog Devices. This device combines a 3-axis MEMS accelerometer, a temperature sensor, and an analog-to-digital converter (ADC) input for synchronized conversions of external signals.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.Accel16",
-    "subdir_name": "lib_accel16"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4876",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 16 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel16",
+                "subdir_name": "lib_accel16",
+                "path": "Accel 16 Click/data/lib_accel16"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

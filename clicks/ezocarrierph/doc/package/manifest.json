@@ -1,39 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Sensors > Environmental",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "EZO Carrier pH Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ezocarrierph",
-    "product_link": "https://www.mikroe.com/ezo-carrier-click-ph",
-    "short_description": "EZO Carrier Click - pH is a compact add-on board that allows you to measure the potential of hydrogen (the power of hydrogen) in your application. This board features the EZO™ pH, a pH measurement interface circuit board from Atlas Scientific.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.EZOCarrierpH",
-    "subdir_name": "lib_ezocarrierph"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6009",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EZO Carrier pH Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EZOCarrierpH",
+                "subdir_name": "lib_ezocarrierph",
+                "path": "EZO Carrier pH Click/data/lib_ezocarrierph"
+            }
+        ]
+    }
 }
-
-
-
-

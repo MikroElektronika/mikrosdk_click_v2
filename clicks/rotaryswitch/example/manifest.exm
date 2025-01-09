@@ -1,8 +1,5 @@
 {
     "name": "Rotary Switch Click",
-    "description": "Rotary Switch Click is a compact add-on board for applications requiring precise rotary input. This board is based on the RDS6-16S-1065-1-SMT, a 16-position notched cap surface-mount rotary DIP switch from Same Sky. This switch features continuous 360-degree actuator rotation, a 2.54mm pin pitch, and robust construction with a contact resistance of 80mΩ and a maximum operating torque of 700gf*cm, ensuring reliable operation for up to 10,000 steps. The board supports the innovative Click Snap feature, allowing the rotary switch to operate autonomously when detached, providing flexibility in various implementations.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TCA9536DGKR","RDS6-16S-1065-1-SMT-TR"],
-    "category" : ["Click Boards > HMI > Rotary encoder"]
+    "hw" : ["Click","TCA9536DGKR","RDS6-16S-1065-1-SMT-TR"]
 }

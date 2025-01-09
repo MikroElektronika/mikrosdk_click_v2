@@ -1,41 +1,37 @@
-\mainpage Main Page
- 
 
 ---
 # Opto Encoder 2 Click
 
-Opto Encoder 2 Click is a linear incremental optical sensor/encoder Click which can be used for the movement or rotation encoding.
+> [Opto Encoder 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3634) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/optoencoder2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3634&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/opto-encoder-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the OptoEncoder2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This application is used to encode motion or rotation.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for OptoEncoder2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.OptoEncoder2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `optoencoder2_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +42,6 @@ void optoencoder2_cfg_setup ( optoencoder2_cfg_t *cfg );
 ```c
 err_t optoencoder2_init ( optoencoder2_t *ctx, optoencoder2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `optoencoder2_pwm_get` Getting PWM pin state
 ```c
@@ -64,18 +58,11 @@ uint8_t optoencoder2_int_get ( optoencoder2_t *ctx );
 int32_t optoencoder2_get_position ( optoencoder2_t *ctx );
 ```
 
-## Examples Description
-
-> This application is used to encode motion or rotation.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes GPIO driver and resets encoder counter to 0 (zero).
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +88,6 @@ void application_init ( void )
 
     optoencoder2_zero_counter( &optoencoder2 );
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +95,6 @@ void application_init ( void )
 > If motion is detected - encoder increments or decrements position on each rising edge on Channel A (INT pin) and logs encoder position.
 
 ```c
-
 void application_task ( )
 {
     int32_t encoder_position = 0;
@@ -122,29 +107,22 @@ void application_task ( )
     {
         log_printf( &logger, "Position: %ld \r\n", encoder_position );
     }
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.OptoEncoder2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

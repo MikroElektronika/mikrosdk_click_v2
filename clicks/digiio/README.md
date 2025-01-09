@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # DIGI IO Click
 
-> DIGI I/O Click is a compact add-on board for flexible industrial digital input and output control. This board features the MAX14906, a quad-channel industrial digital input/output IC from Analog Devices, compliant with IEC 61131-2 standard. Each channel can be individually configured as a high-side switch, push-pull driver, or digital input, supporting various operating modes with current limiting up to 1.2A and fast signal transmission. The board supports 24V operation by default, with options for individual channel power configuration, and includes built-in diagnostics like overvoltage and undervoltage detection, thermal overload, and wire-break detection. DIGI I/O Click is ideal for industrial automation, motor control systems, PLCs, and Distributed Control Systems (DCS).
+> [DIGI IO Click](https://www.mikroe.com/?pid_product=MIKROE-6236) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/digiio_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6236&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/digi-io-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : May 2024.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the DIGI IO Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of DIGI IO Click board by setting and reading the DOI channels state.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DIGI IO Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DIGIIO
 
-#### Standard key functions :
+### Example Key Functions
 
 - `digiio_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t digiio_init ( digiio_t *ctx, digiio_cfg_t *cfg );
 err_t digiio_default_cfg ( digiio_t *ctx );
 ```
 
-#### Example key functions :
-
 - `digiio_write_reg` This function writes data to the selected register by using SPI serial interface.
 ```c
 err_t digiio_write_reg ( digiio_t *ctx, uint8_t reg, uint8_t data_in );
@@ -68,18 +63,11 @@ err_t digiio_read_reg ( digiio_t *ctx, uint8_t reg, uint8_t *data_out );
 void digiio_sync_io ( digiio_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of DIGI IO Click board by setting and reading the DOI channels state.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which sets the DOI1 and DOI2 as output and the DOI3 and DOI4 as inputs.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -176,22 +163,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DIGIIO
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

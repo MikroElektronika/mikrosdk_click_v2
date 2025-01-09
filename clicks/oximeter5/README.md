@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # Oximeter 5 Click
 
-> Oximeter 5 Click is a compact add-on board suitable for measuring blood oxygen saturation. This board features the MAX30102, integrated pulse oximetry, and heart-rate monitor module from Analog Devices. The MAX30102 includes internal LEDs, photodetectors, optical elements, and low-noise electronics with ambient light rejection. It operates on a single 1.8V power supply acquired from both mikroBUS™ power rails for the internal LEDs, communicating through a standard I2C compatible interface. The MAX30102 can be shut down through software with zero standby current, allowing the power rails to remain powered at all times.
+> [Oximeter 5 Click](https://www.mikroe.com/?pid_product=MIKROE-4986) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/oximeter5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4986&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/oximeter-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Nov 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Oximeter 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
-
-## Library Description
+## Example Description
 
 > This library contains API for Oximeter 5 Click driver.
+> The demo application reads and calculate 
+> SpO2 oxygen saturation data.
 
-#### Standard key functions :
+### Example Libraries
+
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Oximeter5
+
+### Example Key Functions
 
 - `oximeter5_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t oximeter5_init ( oximeter5_t *ctx, oximeter5_cfg_t *cfg );
 err_t oximeter5_default_cfg ( oximeter5_t *ctx );
 ```
 
-#### Example key functions :
-
 - `oximeter5_read_sensor_data` Oximeter 5 get sensor data function.
 ```c
 err_t oximeter5_read_sensor_data ( oximeter5_t *ctx, uint32_t *ir, uint32_t *red );
@@ -68,14 +65,6 @@ err_t oximeter5_get_oxygen_saturation ( uint32_t *pun_ir_buffer, int32_t n_ir_bu
 err_t oximeter5_read_temperature ( oximeter5_t *ctx, float *temperature );
 ```
 
-## Example Description
-
-> This library contains API for Oximeter 5 Click driver.
-> The demo application reads and calculate 
-> SpO2 oxygen saturation data.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes I2C driver and log UART.
@@ -85,7 +74,6 @@ err_t oximeter5_read_temperature ( oximeter5_t *ctx, float *temperature );
 > read the first 100 samples, and determine the signal range.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;              /**< Logger config object. */
@@ -146,18 +134,16 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 ); 
 }
-
 ```
 
 ### Application Task
 
-> This is an example that demonstrates the use of the Oximeter 5 Click board™.
+> This is an example that demonstrates the use of the Oximeter 5 Click board&trade;.
 > In this example, display the IR and RED ADC data, 
 > and the SpO2 oxygen saturation data [ 0% - 100% ].
 > Results are being sent to the Usart Terminal where you can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {
     for ( uint8_t n_cnt = 25; n_cnt < 100; n_cnt++ )
@@ -230,30 +216,26 @@ void application_task ( void )
         }
     }
 }
-
 ```
 
-## Note
+### Note
 
 > A measurement time of at least 10 seconds is required 
 > for the SpO2 oxygen saturation data to be valid.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Oximeter5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

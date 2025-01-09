@@ -1,8 +1,5 @@
 {
     "name": "Piezo Driver Click",
-    "description": "Piezo Driver Click is a compact add-on board that allows you easy system configuration for driving a two-terminal or three-terminal piezo sounder with few external components. This board features the PAM8906, a piezo sounder driver with self-excitation mode from Diodes Incorporated. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","PAM8906M1012-13"],
-    "category" : ["Click Boards > Audio & voice > Speakers"]
+    "hw" : ["Click","PAM8906M1012-13"]
 }

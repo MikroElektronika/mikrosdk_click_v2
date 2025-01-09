@@ -1,8 +1,5 @@
 {
     "name": "I2C Isolator 7 Click",
-    "description": "I2C Isolator 7 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the ADuM1252, an ultra-low power, bidirectional I2C isolator from Analog Devices. It can isolate I2C bidirectional data transfer of up to 2MHz SCL and bidirectional SCL for advanced bus topologies, and it supports clock stretching and multiple controllers across the isolation barrier. It also features the enhanced hot-swappable side 2 IO.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ADuM1252"],
-    "category" : ["Click Boards > Interface > I2C"]
+    "hw" : ["Click","ADuM1252"]
 }

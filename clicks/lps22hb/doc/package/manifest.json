@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "LPS22HB Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lps22hb",
-    "product_link": "https://www.mikroe.com/lps22hb-click",
-    "short_description": "LPS22HB Click is an easy solution for adding a digital barometer to your design. It carries the LPS22HB MEMS nano pressure sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2074
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Lps22hb",
-    "subdir_name": "lib_lps22hb"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2665",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LPS22HB Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Lps22hb",
+                "subdir_name": "lib_lps22hb",
+                "path": "LPS22HB Click/data/lib_lps22hb"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

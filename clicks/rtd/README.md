@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # RTD Click
 
-> RTD Click is based on MAX31865 resistance to digital converter from Maxim Integrated, optimized for platinum resistance temperature detectors, or RTD.
+> [RTD Click](https://www.mikroe.com/?pid_product=MIKROE-2815) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rtd_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2815&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rtd-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Rtd Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This app measures temperature and converts the data to celsius degrees.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Rtd Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Rtd
 
-#### Standard key functions :
+### Example Key Functions
 
 - `rtd_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void rtd_cfg_setup ( rtd_cfg_t *cfg );
 ```c
 err_t rtd_init ( rtd_t *ctx, rtd_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `rtd_read_register` This function reads data from the chosen register.
 ```c
@@ -63,13 +58,7 @@ uint16_t rtd_read_temperature ( rtd_t *ctx );
 float rtd_convert_temperature ( rtd_t *ctx, uint16_t input_data, uint16_t referent_resistance );
 ```
 
-## Examples Description
-
-> This app measures temperature and converts the data to celsius degrees.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes RTD Click driver, and sets the
 > proper configuration mode for three wire RTD.
@@ -105,7 +94,6 @@ void application_init ( void )
     Delay_ms ( 100 );
     log_info( &logger, " Application Task " );
 }
-  
 ```
 
 ### Application Task
@@ -114,7 +102,6 @@ void application_init ( void )
 > and displays it on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t read_value = 0;
@@ -127,28 +114,21 @@ void application_task ( void )
 
     Delay_ms ( 300 );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Rtd
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

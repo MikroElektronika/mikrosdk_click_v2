@@ -1,8 +1,5 @@
 {
     "name": "Pollution Click",
-    "description": "Pollution Click carries the VOC gas sensor and has high sensitivity to organic gases such as methanal (also known as formaldehyde), benzene, alcohol, toluene, etc.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","WSP2110"],
-    "category" : ["Gas"] 
+    "hw" : ["Click","WSP2110"]
 }

@@ -3,7 +3,7 @@
  * @brief Heart Rate 9 Click Example.
  *
  * # Description
- * This example reads and processes data from Heart Rate 9 clicks.
+ * This example reads and processes data from Heart Rate 9 Clicks.
  *
  * The demo application is composed of two sections :
  *

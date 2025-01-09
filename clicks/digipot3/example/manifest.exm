@@ -1,8 +1,5 @@
 {
     "name": "DIGI POT 3 Click",
-    "description": "DIGI POT 3 Click is a versatile and feature-rich digital potentiometer Click with 1024 steps and an internal non-volatile memory (EEMEM), which can be used for storing the wiper position, but also for storing various user data.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AD5321"],
-    "category" : ["Digital potentiometer"] 
+    "hw" : ["Click","AD5321"]
 }

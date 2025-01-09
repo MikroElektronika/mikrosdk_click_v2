@@ -1,74 +1,73 @@
-\mainpage Main Page
- 
+
 ---
 # Temp Log 6 Click
 
-Temp-Log 6 Click is a temperature sensing Click board™, which features the MAX6642, a specifically designed IC, capable of measuring its own die temperature, as well as a temperature at a remote PN junction. This option makes Temp-Log 6 Click well-suited for monitoring the temperature of a CPU, GPU or FPGA, where the PN junction is typically a substrate PNP transistor on the die of the measured IC.
- 
-<p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/templog6_click.png" height=300px>
-</p>
+> [Temp-Log 6 Click](https://www.mikroe.com/?pid_product=MIKROE-3437) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
-[Click Product page](https://www.mikroe.com/temp-log-6-click)
+<p align="center">
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3437&image=1" height=300px>
+</p>
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the TempLog6 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for TempLog6 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void templog6_cfg_setup ( templog6_cfg_t *cfg ); 
- 
-- Initialization function.
-> TEMPLOG6_RETVAL templog6_init ( templog6_t *ctx, templog6_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void templog6_default_cfg ( templog6_t *ctx );
-
-
-#### Example key functions :
-
-- Writes one byte of data.
-> void templog6_write_byte ( templog6_t *ctx, uint8_t reg, uint8_t data_buf );
- 
-- Reads one byte of data.
-> uint8_t templog6_read_byte ( templog6_t *ctx, uint8_t reg ); 
-
-- Gets the INT pin.
-> uint8_t templog6_get_interrupt ( templog6_t *ctx );
-
-
-## Examples Description
- 
 > The example starts off with the initialization and configuration of the Click and logger modules, tests the communication channel and reads and displays local and remote temperature values every second.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.TempLog6
+
+### Example Key Functions
+
+- `templog6_cfg_setup` Config Object Initialization function. 
+```c
+void templog6_cfg_setup ( templog6_cfg_t *cfg );
+``` 
+ 
+- `templog6_init` Initialization function. 
+```c
+err_t templog6_init ( templog6_t *ctx, templog6_cfg_t *cfg );
+```
+
+- `templog6_default_cfg` Click Default Configuration function. 
+```c
+void templog6_default_cfg ( templog6_t *ctx );
+```
+
+- `templog6_write_byte` Writes one byte of data. 
+```c
+void templog6_write_byte ( templog6_t *ctx, uint8_t reg, uint8_t data_buf );
+```
+ 
+- `templog6_read_byte` Reads one byte of data. 
+```c
+uint8_t templog6_read_byte ( templog6_t *ctx, uint8_t reg );
+``` 
+
+- `templog6_get_interrupt` Gets the INT pin. 
+```c
+uint8_t templog6_get_interrupt ( templog6_t *ctx );
+```
+
+### Application Init
 
 > Initializes and configures the Click and logger modules and tests the communication for errors.
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -113,7 +112,6 @@ void application_init ( )
 
     log_printf( &logger, "--- Start measurement ---\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -121,7 +119,6 @@ void application_init ( )
 > Reads and displays local and remote temperature values every second.
 
 ```c
-
 void application_task ( void )
 {
     float remote_temp;
@@ -135,29 +132,23 @@ void application_task ( void )
     
     log_printf( &logger, "-----------------------------\r\n" );
     Delay_ms ( 1000 );
-}  
+}
 
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.TempLog6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

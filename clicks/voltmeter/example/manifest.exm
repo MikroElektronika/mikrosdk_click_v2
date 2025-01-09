@@ -1,8 +1,5 @@
 {
     "name": "Voltmeter Click",
-    "description": "Voltmeter Click is a mikroBUS™ add-on board for measuring voltage in an external electric circuit.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP3201"],
-    "category" : ["Measurements"] 
+    "hw" : ["Click","MCP3201"]
 }

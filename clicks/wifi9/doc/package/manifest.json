@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > WIFI",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "WiFi 9 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.wifi9",
-    "product_link": "https://www.mikroe.com/wifi-9-click",
-    "short_description": "WiFi 9 Click is fully embedded stand-alone Wi-Fi module, equipped with the PAN9420 a 2.4 GHz ISM band Wi-Fi-embedded module which includes a wireless radio and an MCU for easy integration of Wi-Fi connectivity into various electronic devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2858
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Wifi9",
-    "subdir_name": "lib_wifi9"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3666",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WiFi 9 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Wifi9",
+                "subdir_name": "lib_wifi9",
+                "path": "WiFi 9 Click/data/lib_wifi9"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

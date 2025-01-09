@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ISO ADC 7 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.isoadc7",
-    "product_link": "https://www.mikroe.com/iso-adc-7-click",
-    "short_description": "ISO ADC 7 Click is a compact add-on board designed for precise multi-channel data acquisition in various industrial applications. This board features the AMC131M03, a three-channel, 24-bit delta-sigma ADC from Texas Instruments. The AMC131M03 features a silicon-dioxide-based isolation barrier providing 5000-VRMS isolation, integrated digital decimation filters for reduced quantization noise, and a programmable gain amplifier with gains up to 128 for high-accuracy measurements. Additionally, it includes an internal temperature sensor with options for external or onboard temperature sensing.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.ISOADC7",
-    "subdir_name": "lib_isoadc7"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6210",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ISO ADC 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ISOADC7",
+                "subdir_name": "lib_isoadc7",
+                "path": "ISO ADC 7 Click/data/lib_isoadc7"
+            }
+        ]
+    }
 }
-

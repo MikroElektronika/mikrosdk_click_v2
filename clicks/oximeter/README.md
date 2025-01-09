@@ -1,42 +1,37 @@
-\mainpage Main Page
- 
 
 ---
 # Oximeter Click
 
-> Oximeter Click is a versatile photometric Click board�, perfectly suited for
-measuring the blood oxygen saturation.
+> [Oximeter Click](https://www.mikroe.com/?pid_product=MIKROE-3102) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/oximeter_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3102&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/oximeter-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Oximeter Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This application collects data from the sensor, calculates it and then logs the result.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Oximeter Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Oximeter
 
-#### Standard key functions :
+### Example Key Functions
 
 - `oximeter_cfg_setup` Config Object Initialization function.
 ```c
@@ -53,8 +48,6 @@ err_t oximeter_init ( oximeter_t *ctx, oximeter_cfg_t *cfg );
 void oximeter_default_cfg ( oximeter_t *ctx );
 ```
 
-#### Example key functions :
-
 - `oximeter_write_reg` Function writes 16-bit data to the register.
 ```c
 err_t oximeter_write_reg ( oximeter_t* ctx, uint8_t reg, uint16_t data_in );
@@ -70,20 +63,13 @@ err_t oximeter_set_time_slot_a ( oximeter_t* ctx, oximeter_enable_t* dev_enable,
 err_t oximeter_enable_channels ( oximeter_t* ctx, uint8_t select_channel );
 ```
 
-## Examples Description
-
-> This application collects data from the sensor, calculates it and then logs the result.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes driver and performs the device configuration which puts Time Slot A
 > in enabled mode and LEDX2 (IR diode) to active state.  Before the device configuration, the
 > SW reset will be performed and in this way we will put the registers in initial state.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -110,7 +96,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-  
 ```
 
 ### Application Task
@@ -118,33 +103,25 @@ void application_init ( void )
 > Logs PD1-PD4 data on USB UART
 
 ```c
-
 void application_task ( void )
 {
     oxim_logs_results();
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Oximeter
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

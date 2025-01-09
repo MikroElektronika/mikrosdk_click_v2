@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Current sensor",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "VCT Monitor Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.vctmonitor",
-    "product_link": "https://www.mikroe.com/vct-monitor-click",
-    "short_description": "VCT Monitor Click is a compact add-on board that contains a highly integrated monitoring solution without compromising accuracy. This board features the LTC2990, an I2C configurable high-performance temperature, voltage, and current monitor from Analog Devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        3907
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.VCTMonitor",
-    "subdir_name": "lib_vctmonitor"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4353",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "VCT Monitor Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VCTMonitor",
+                "subdir_name": "lib_vctmonitor",
+                "path": "VCT Monitor Click/data/lib_vctmonitor"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

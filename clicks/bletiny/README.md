@@ -1,40 +1,41 @@
-\mainpage Main Page
 
 ---
 # BLE TINY Click
 
-> BLE TINY Click is a compact add-on board that provides BLE connectivity for any embedded application. This board features the DA14531, SmartBond TINY module based on the world’s smallest and lowest power Bluetooth 5.1 System-on-Chip (SoC) from Dialog Semiconductor.
+> [BLE TINY Click](https://www.mikroe.com/?pid_product=MIKROE-4582) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ble_tiny_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4582&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ble-tiny-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Apr 2021.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the BLETINY Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example reads and processes data from BLE TINY Clicks. 
+Application waits for connection with Click board with phone.
+Then checks its Coadless FW version and checks connected device. 
+Then waits for command to be stored in it's memory on 0 slot. 
+After that depending on the command stored it executes that type of example.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for BLETINY Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BLETINY
 
-#### Standard key functions :
+### Example Key Functions
 
 - `bletiny_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +44,13 @@ void bletiny_cfg_setup ( bletiny_cfg_t *cfg );
 
 - `bletiny_init` Initialization function.
 ```c
-BLETINY_RETVAL bletiny_init ( bletiny_t *ctx, bletiny_cfg_t *cfg );
+err_t bletiny_init ( bletiny_t *ctx, bletiny_cfg_t *cfg );
 ```
 
 - `bletiny_default_cfg` Click Default Configuration function.
 ```c
 void bletiny_default_cfg ( bletiny_t *ctx );
 ```
-
-#### Example key functions :
 
 - `bletiny_send_cmd` Send command function.
 ```c
@@ -68,16 +67,6 @@ void bletiny_i2c_config ( bletiny_t *ctx, uint8_t speed, uint8_t reg_len );
 err_t bletiny_i2c_write ( bletiny_t *ctx, uint8_t slave_address, uint16_t reg, uint8_t reg_data );
 ```
 
-## Example Description
-
-> This example reads and processes data from BLE TINY clicks. 
-Application waits for connection with Click board with phone.
-Then checks its Coadless FW version and checks connected device. 
-Then waits for command to be stored in it's memory on 0 slot. 
-After that depending on the command stored it executes that type of example.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and resets device and seds Disconnect and Reset IO commands. 
@@ -87,7 +76,6 @@ connection. In the end it waits for command from its memory. After valid
 command is stored in memory on 0 slot it contines to Application Task.
 
 ```c
-
 void application_init ( void ) 
 {   
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -195,7 +183,6 @@ void application_init ( void )
     bletiny_clear_app_buf( );
     log_printf( &logger, " Application Task \r\n" );
 }
-
 ```
 
 ### Application Task
@@ -206,7 +193,6 @@ SPI example uses EEPROM 2 Click board to write and read data of its memory.
 APP example just reads UART data and logs it to UART Terminal.
 
 ```c
-
 void application_task ( void ) 
 {
     static uint8_t info = 0;
@@ -254,31 +240,27 @@ void application_task ( void )
         }
     }
 }
-
 ```
 
-## Note
+### Note
 
 > For this application you need to install Dialog's mobile application SmartConsole.
 This application I2C example is created using EEPROM Click board, and for SPI
 example EEPROM 2 Click board is used.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BLETINY
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

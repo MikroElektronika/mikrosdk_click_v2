@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Pushbutton/Switches",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Button 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.button3",
-    "product_link": "https://www.mikroe.com/button-3-click",
-    "short_description": "Button 3 Click is a compact add-on board for precise and reliable tactile input detection. This board features three TL3215 series tactile switches from E-Switch, known for their high reliability and consistent performance. Each switch has a 2mm actuator, 160gf actuation force, and a silver contact material for excellent conductivity and durability. The integrated LED provides clear visual feedback, and the board supports the new Click Snap feature, allowing the main sensor area to become movable by breaking the PCB for flexible implementation.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.Button3",
-    "subdir_name": "lib_button3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6276",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Button 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Button3",
+                "subdir_name": "lib_button3",
+                "path": "Button 3 Click/data/lib_button3"
+            }
+        ]
+    }
 }
-
-

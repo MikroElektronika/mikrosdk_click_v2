@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Light mix-sens Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.lightmixsens",
-    "product_link": "https://www.mikroe.com/light-mix-sens-click",
-    "short_description": "Light mix-sens Click is carrying TMD37253, an advanced proximity measurement, color sense (RGBC+IR), and digital ambient light sensing (ALS) device. The TMD37253 slim module package has been designed to accommodate a “single hole” aperture approach that incorporates an IR LED and factory calibrated LED driver. The proximity detection feature provides object detection (e.g., mobile device screen to the user’s ear) by photodiode detection of reflected IR energy (sourced by the integrated LED). The ALS detection feature provides photopic light intensity data. The color photodiodes have UV and IR blocking filters and a dedicated data converters producing 16-bit data.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        3767
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.LightMixSens",
-    "subdir_name": "lib_lightmixsens"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4148",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Light mix-sens Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LightMixSens",
+                "subdir_name": "lib_lightmixsens",
+                "path": "Light mix-sens Click/data/lib_lightmixsens"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "Fan 6 Click",
-    "description": "The Fan 6 Click is a Click board™ which features EMC2103, an SMBus compliant fan controller with up to up to 3 external and 1 internal temperature channels.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","EMC2103"],
-    "category" : ["Brushless"] 
+    "hw" : ["Click","EMC2103"]
 }

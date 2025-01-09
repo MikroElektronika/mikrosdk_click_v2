@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Accel 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.accel8",
-    "product_link": "https://www.mikroe.com/accel-8-click",
-    "short_description": "Accel 8 Click is an advanced 6-axis motion tracking Click board™, which utilizes the MPU6050, a very popular motion sensor IC, equipped with a 3-axis gyroscope and 3-axis accelerometer.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2584
-    ],
-    "version": "2.1.0.20",
-    "cmake": true,
-    "alias": "Click.Accel8",
-    "subdir_name": "lib_accel8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3341",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel8",
+                "subdir_name": "lib_accel8",
+                "path": "Accel 8 Click/data/lib_accel8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

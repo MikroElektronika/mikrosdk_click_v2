@@ -1,78 +1,74 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Angle Click
 
-Angle Click is a precise Hall-effect angle sensing Click board that can be used to measure the rotational angle of the magnetic field in the X-Y plane above it (parallel to the surface of the Click), through the whole range of 360°. The Click yields very precise results for both off-axis and axis operation, which make it a perfect choice for precise measuring of the rotational angle in a wide range of different high-speed applications, for example in the automotive industry: electronic power steering, transmission, torsion bar, or the motor shaft rotation.
+> [Angle Click](https://www.mikroe.com/?pid_product=MIKROE-2030) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/angle_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2030&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/angle-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Angle Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Angle Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void angle_cfg_setup ( angle_cfg_t *cfg ); 
- 
-- Initialization function.
-> ANGLE_RETVAL angle_init ( angle_t *ctx, angle_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void angle_default_cfg ( angle_t *ctx );
-
-
-#### Example key functions :
-
-- This function reads angle value.
-> uint16_t angle_get_angle ( angle_t *ctx );
- 
-- This function reads temperature value.
-> uint16_t angle_get_temperature ( angle_t *ctx );
-
-- This function reads magnetics value.
-> uint16_t angle_get_magnetics ( angle_t *ctx );
-
-
-## Examples Description
+## Example Description
 
 > Angle Click is a precise Hall-effect angle sensing Click board that can be used to measure 
 > the rotational angle of the magnetic field in the X-Y plane above it.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Angle
+
+### Example Key Functions
+
+- `angle_cfg_setup` Config Object Initialization function. 
+```c
+void angle_cfg_setup ( angle_cfg_t *cfg );
+``` 
+ 
+- `angle_init` Initialization function. 
+```c
+err_t angle_init ( angle_t *ctx, angle_cfg_t *cfg );
+```
+
+- `angle_default_cfg` Click Default Configuration function. 
+```c
+void angle_default_cfg ( angle_t *ctx );
+```
+
+- `angle_get_angle` This function reads angle value. 
+```c
+uint16_t angle_get_angle ( angle_t *ctx );
+```
+ 
+- `angle_get_temperature` This function reads temperature value. 
+```c
+uint16_t angle_get_temperature ( angle_t *ctx );
+```
+
+- `angle_get_magnetics` This function reads magnetics value. 
+```c
+uint16_t angle_get_magnetics ( angle_t *ctx );
+```
+
+### Application Init
 
 > Driver intialization and Angle settings mode
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -98,7 +94,6 @@ void application_init ( void )
     angle_init( &angle, &cfg );
     angle_default_cfg ( &angle );
 }
-  
 ```
 
 ### Application Task
@@ -106,7 +101,6 @@ void application_init ( void )
 > Reads angle and magnetics data values and displays it in the terminal.
 
 ```c
-
 void application_task ( void )
 {
     angle_val = angle_get_angle( &angle );
@@ -117,28 +111,21 @@ void application_task ( void )
     
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Angle
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

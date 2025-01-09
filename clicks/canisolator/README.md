@@ -1,83 +1,82 @@
-\mainpage Main Page
- 
- 
 
 ---
 # CAN Isolator Click
 
-CAN Isolator Click provides isolated CAN communication. It carries the ADM3053 signal and power isolated CAN transceiver with an integrated isolated DC-to-DC converter.
+> [CAN Isolator Click](https://www.mikroe.com/?pid_product=MIKROE-2627) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/canisolator_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2627&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/can-isolator-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the CanIsolator Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for CanIsolator Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void canisolator_cfg_setup ( canisolator_cfg_t *cfg ); 
- 
-- Initialization function.
-> CANISOLATOR_RETVAL canisolator_init ( canisolator_t *ctx, canisolator_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void canisolator_default_cfg ( canisolator_t *ctx );
-
-
-#### Example key functions :
-
-- Generic multi write function.
-> void canisolator_generic_multi_write ( canisolator_t *ctx, canisolator_data_t *data_buf,  uart_length_t len );
- 
-- Generic multi read function.
-> void canisolator_generic_multi_read ( canisolator_t *ctx, canisolator_data_t *data_buf,  uart_length_t len );
-
-- Generic single read function.
-> canisolator_data_t canisolator_generic_single_read ( canisolator_t *ctx );
-
-- Generic single write function.
-> void canisolator_generic_single_write ( canisolator_t *ctx, canisolator_data_t tx_data );
-
-## Examples Description
+## Example Description
 
 > 
 > This is a example which demonstrates the use of Can Isolator Click board.
 > 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CanIsolator
+
+### Example Key Functions
+
+- `canisolator_cfg_setup` Config Object Initialization function. 
+```c
+void canisolator_cfg_setup ( canisolator_cfg_t *cfg );
+``` 
+ 
+- `canisolator_init` Initialization function. 
+```c
+err_t canisolator_init ( canisolator_t *ctx, canisolator_cfg_t *cfg );
+```
+
+- `canisolator_default_cfg` Click Default Configuration function. 
+```c
+void canisolator_default_cfg ( canisolator_t *ctx );
+```
+
+- `canisolator_generic_multi_write` Generic multi write function. 
+```c
+void canisolator_generic_multi_write ( canisolator_t *ctx, canisolator_data_t *data_buf,  uart_length_t len );
+```
+ 
+- `canisolator_generic_multi_read` Generic multi read function. 
+```c
+void canisolator_generic_multi_read ( canisolator_t *ctx, canisolator_data_t *data_buf,  uart_length_t len );
+```
+
+- `canisolator_generic_single_read` Generic single read function. 
+```c
+canisolator_data_t canisolator_generic_single_read ( canisolator_t *ctx );
+```
+
+- `canisolator_generic_single_write` Generic single write function. 
+```c
+void canisolator_generic_single_write ( canisolator_t *ctx, canisolator_data_t tx_data );
+```
+
+### Application Init
 
 >
-> Configuring clicks and log objects.
+> Configuring Clicks and log objects.
 > 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -107,7 +106,6 @@ void application_init ( void )
     log_printf( &logger, "---------------------\r\n" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -120,7 +118,6 @@ void application_init ( void )
 > 
 
 ```c
-
 void application_task ( void )
 {
     canisolator_data_t tmp;
@@ -153,32 +150,25 @@ void application_task ( void )
 #endif
 
 }
-
 ```
 
-## Note
+### Note
 
 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CanIsolator
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

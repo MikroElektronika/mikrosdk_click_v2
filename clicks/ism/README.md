@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # ISM Click
 
-> ISM Click is a compact add-on board that contains a complete wireless RF digital data transceiver. This board features the RFM75, a low-power, high-performance 2.4GHz GFSK transceiver from RF Solutions. The RFM75 transceiver is configurable through SPI serial interface and operates with only 3.3V in the worldwide ISM frequency band from 2400MHz up to 2527MHz. The embedded packet processing engines enable their entire operation with a simple MCU as a radio system. Burst mode transmission and up to 2Mbps air data rate make it suitable for applications requiring ultra-low power consumption.
+> [ISM Click](https://www.mikroe.com/?pid_product=MIKROE-4625) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ism_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4625&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ism-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Ism Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the ISM Click driver.
+> This example transmits/receives and processes data from ISM Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Ism Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ism
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ism_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t ism_init ( ism_t *ctx, ism_cfg_t *cfg );
 void ism_default_cfg ( ism_t *ctx );
 ```
 
-#### Example key functions :
-
 - `ism_device_config` ISM device configuration function.
 ```c
 err_t ism_device_config ( ism_t *ctx );
@@ -68,19 +64,11 @@ err_t ism_receive_packet ( ism_t *ctx, uint8_t *rx_data );
 err_t ism_transmit_packet ( ism_t *ctx, uint8_t type, uint8_t *tx_data, uint8_t len );
 ```
 
-## Example Description
-
-> This library contains API for the ISM Click driver.
-> This example transmits/receives and processes data from ISM clicks.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and performs the default configuration. 
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -121,7 +109,6 @@ void application_init ( void )
 #endif
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -131,7 +118,6 @@ void application_init ( void )
 > while transmitter send messages every 1 second.
 
 ```c
-
 void application_task ( void ) 
 {
 #ifdef DEMO_APP_TRANSMITTER
@@ -153,26 +139,21 @@ void application_task ( void )
     }
 #endif
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ism
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all Mikroelektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

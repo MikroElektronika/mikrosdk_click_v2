@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Wireless connectivity > Sub-1 GHz Transceivers",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "M-BUS RF 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mbusrf4",
-    "product_link": "https://www.mikroe.com/m-bus-rf-4-click",
-    "short_description": "M-BUS RF 4 Click is a mikroBUS™ add-on board with a MIPOT 32001324 RF wireless transceiver. This module operates in the 868 MHz SRD Band. Thanks to its small LCC form factor (15 x 25 mm only) and its low power consumption this module allows the implementation of highly integrated low power (battery operated) solutions for water, gas, heat or electricity metering applications, both on meter or concentrator devices.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2864
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.MBusRf4",
-    "subdir_name": "lib_mbusrf4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3692",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "M-BUS RF 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MBusRf4",
+                "subdir_name": "lib_mbusrf4",
+                "path": "M-BUS RF 4 Click/data/lib_mbusrf4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

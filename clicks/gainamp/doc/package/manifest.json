@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Amplifier",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "GainAMP Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.gainamp",
-    "product_link": "https://www.mikroe.com/gainamp-click",
-    "short_description": "GainAMP Click carries the LTC6912 dual channel, low noise, digitally programmable gain amplifier (PGA).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "related_projects": [
-        2037
-    ],
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.GainAMP",
-    "subdir_name": "lib_gainamp"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2555",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GainAMP Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GainAMP",
+                "subdir_name": "lib_gainamp",
+                "path": "GainAMP Click/data/lib_gainamp"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

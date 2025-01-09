@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # LCD Mono Click
 
-LCD Mono Click is a Click board™ that uses the LS013B7DH03 LCD display from Sharp which combined with the EFM32, from Silicon Labs, and its energy saving capabilities creates a powerful display application.
+> [LCD Mono Click](https://www.mikroe.com/?pid_product=MIKROE-3789) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lcdmono_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3789&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lcd-mono-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the LcdMono Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This application sets text on lcd displey.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LcdMono Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LcdMono
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lcdmono_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void lcdmono_cfg_setup ( lcdmono_cfg_t *cfg );
 ```c
 err_t lcdmono_init ( lcdmono_t *ctx, lcdmono_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `lcdmono_draw_text` Draw text on the screen
 ```c
@@ -63,18 +58,11 @@ void lcdmono_display_power ( lcdmono_t *ctx, uint8_t ctrl );
 void lcdmono_display_reset ( lcdmono_t *ctx );
 ```
 
-## Examples Description
-
-> This application sets text on lcd displey.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Driver initialization - Starting LCD Mono display. Print text to the display by changing font size ...
 
 ```c
-
 void application_init ( void )
 {
     lcdmono_cfg_t cfg;
@@ -121,7 +109,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     lcdmono_clear( &lcdmono );
 }
-  
 ```
 
 ### Application Task
@@ -129,7 +116,6 @@ void application_init ( void )
 > Drawing an image to the display every 3 second.
 
 ```c
-
 void application_task ( void )
 {
     lcdmono_draw_frame( &lcdmono, demo_img_mikroe_light );
@@ -149,10 +135,9 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 >  - Create Image:
 >      Save the image in resolution of 128x128 px with the extension (monochrome bmp) ...
@@ -173,25 +158,19 @@ void application_task ( void )
 >      Generate source code
 >      Copy the font from resource.c file to this project in file lcdmono_font.h
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LcdMono
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

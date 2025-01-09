@@ -4,7 +4,7 @@
  *
  * # Description
  * This library contains API for the ISM Click driver.
- * This example transmits/receives and processes data from ISM clicks.
+ * This example transmits/receives and processes data from ISM Clicks.
  *
  * The demo application is composed of two sections :
  *

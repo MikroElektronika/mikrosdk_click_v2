@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # NFC Click
 
-> NFC Click is a mikroBUS™ add-on board with a versatile near field communications controller from NXP — the PN7120 IC. NFC devices are used in contactless payment systems, electronic ticketing, smartcards, but also in retail and advertising — inexpensive NFC tags can be embedded into packaging labels, flyers or posters.
+> [NFC Click](https://www.mikroe.com/?pid_product=MIKROE-2395) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/nfc_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2395&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/nfc-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Mar 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the NFC Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example which demonstrates the usage of NFC Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for NFC Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NFC
 
-#### Standard key functions :
+### Example Key Functions
 
 - `nfc_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t nfc_init ( nfc_t *ctx, nfc_cfg_t *cfg );
 void nfc_default_cfg ( nfc_t *ctx );
 ```
 
-#### Example key functions :
-
 - `nfc_hw_reset` HW reset function.
 ```c
 void nfc_hw_reset( nfc_t *ctx );
@@ -68,19 +63,12 @@ uint8_t nfc_get_data ( nfc_t *ctx, uint8_t *p_rx_data );
 void nfc_cmd_disable_standby_mode ( nfc_t *ctx );
 ```
 
-## Example Description
-
-> This is an example which demonstrates the usage of NFC Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and logger, then performs hardware reset, puts the device in operating mode by 
  disabling standby mode, performs test procedure, and configures the device to start discovery.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -175,7 +163,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -199,22 +186,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NFC
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

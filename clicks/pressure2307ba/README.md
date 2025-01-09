@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Pressure 23 07BA Click
 
-> Pressure 23 Click - 07BA is a compact add-on board for accurate and reliable absolute pressure and temperature measurements in harsh environments. This board features the MS5849-07BA, an ultra-compact, chlorine-resistant sensor from TE Connectivity that delivers 24-bit resolution data via I2C or SPI interfaces. It operates within pressure ranges of 0.4 to 7 bar, features a chlorine-resistant gel coating, and measures temperatures from -20 to +85°C. The sensor's grounded metal ring provides robust protection and secure O-ring mounting, while the flexible communication options allow for optimized performance.
+> [Pressure 23 07BA Click](https://www.mikroe.com/?pid_product=MIKROE-6207) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pressure2307ba_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6207&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pressure-23-click-07ba)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : May 2024.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Pressure 23 07BA Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Pressure 23 07BA Click board&trade; by reading and displaying
+> the pressure and temperature measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Pressure 23 07BA Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Pressure2307BA
 
-#### Standard key functions :
+### Example Key Functions
 
 - `pressure2307ba_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t pressure2307ba_init ( pressure2307ba_t *ctx, pressure2307ba_cfg_t *cfg );
 err_t pressure2307ba_default_cfg ( pressure2307ba_t *ctx );
 ```
 
-#### Example key functions :
-
 - `pressure2307ba_get_measurement_data` Pressure 23 07BA gets the measurement data function.
 ```c
 err_t pressure2307ba_get_measurement_data ( pressure2307ba_t *ctx, float *pressure, float *temperature );
@@ -67,13 +63,6 @@ err_t pressure2307ba_get_calibration_data ( pressure2307ba_t *ctx );
 ```c
 err_t pressure2307ba_read_adc ( pressure2307ba_t *ctx, uint8_t sel_data, uint32_t *adc_data );
 ```
-
-## Example Description
-
-> This example demonstrates the use of Pressure 23 07BA Click board™ by reading and displaying
-> the pressure and temperature measurements.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -141,22 +130,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Pressure2307BA
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

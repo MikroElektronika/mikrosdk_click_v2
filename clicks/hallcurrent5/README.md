@@ -1,77 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Hall Current 5 Click
 
-Hall Current 5 Click is a very accurate electric current measurement Click board™ based on the ACS733 IC. This IC is a galvanically isolated current sensor, which utilizes the Hall-effect principle.
+> [Hall Current 5 Click](https://www.mikroe.com/?pid_product=MIKROE-3393) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hallcurrent5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3393&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hall-current-5-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : ADC type
 
-
 # Software Support
 
-We provide a library for the HallCurrent5 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for HallCurrent5 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void hallcurrent5_cfg_setup ( hallcurrent5_cfg_t *cfg ); 
- 
-- Initialization function.
-> HALLCURRENT5_RETVAL hallcurrent5_init ( hallcurrent5_t *ctx, hallcurrent5_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void hallcurrent5_default_cfg ( hallcurrent5_t *ctx );
-
-
-#### Example key functions :
-
-- This function sets ADC resolution.
-> void hallcurrent5_set_adc_resolution ( hallcurrent5_t *ctx, float adc_res );
- 
-- This function gets ADC voltage.
-> float hallcurrent5_get_adc_voltage ( hallcurrent5_t *ctx, uint16_t adc_value );
-
-
-- This function gets ADC current value.
-> float hallcurrent5_get_current ( hallcurrent5_t *ctx, uint16_t adc_value );
-
-## Examples Description
+## Example Description
 
 > The demo application reads ADC value and current value.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HallCurrent5
+
+### Example Key Functions
+
+- `hallcurrent5_cfg_setup` Config Object Initialization function. 
+```c
+void hallcurrent5_cfg_setup ( hallcurrent5_cfg_t *cfg );
+``` 
+ 
+- `hallcurrent5_init` Initialization function. 
+```c
+err_t hallcurrent5_init ( hallcurrent5_t *ctx, hallcurrent5_cfg_t *cfg );
+```
+
+- `hallcurrent5_default_cfg` Click Default Configuration function. 
+```c
+void hallcurrent5_default_cfg ( hallcurrent5_t *ctx );
+```
+
+- `hallcurrent5_set_adc_resolution` This function sets ADC resolution. 
+```c
+void hallcurrent5_set_adc_resolution ( hallcurrent5_t *ctx, float adc_res );
+```
+ 
+- `hallcurrent5_get_adc_voltage` This function gets ADC voltage. 
+```c
+float hallcurrent5_get_adc_voltage ( hallcurrent5_t *ctx, uint16_t adc_value );
+```
+
+- `hallcurrent5_get_current` This function gets ADC current value. 
+```c
+float hallcurrent5_get_current ( hallcurrent5_t *ctx, uint16_t adc_value );
+```
+
+### Application Init
 
 > Initialization device and ADC Init.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +97,6 @@ void application_init ( void )
     hallcurrent5_set_init_voltage( &hallcurrent5, 316 );
     Delay_100ms();
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +104,6 @@ void application_init ( void )
 > Reads current value in mA and this data logs to USBUART every 500ms. 
 
 ```c
-
 void application_task ( void )
 {
     hallcurrent5_data_t tmp;
@@ -143,34 +137,27 @@ void application_task ( void )
 
     Delay_ms ( 500 );
 }
-
 ```
 
-## Note
+### Note
 
 > Before the start of the program you have to set the starting voltage on AN pin.
 > First, measure the voltage in mV on AN pin, when electronic load isn't >  connected to the Click board, 
 >  and pass that value as an input parameter of the voltage initialization function. 
  
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HallCurrent5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Color 12 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.color12",
-    "product_link": "https://www.mikroe.com/color-12-click",
-    "short_description": "Color 12 Click is a compact add-on board providing an accurate color-sensing solution. This board features the BU27006MUC-Z, a digital color sensor from Rohm Semiconductor with an integrated flicker sensing function. The BU27006MUC-Z can sense Red, Green, Blue (RGB), and Infrared light and efficiently convert them into digital values via the I2C interface. Its remarkable high sensitivity, wide dynamic range, and exceptional IR-cut characteristics enable precise illuminance measurement, typically up to 50klx, and accurate ambient light color temperature determination. Moreover, this sensor can effectively detect flicker noise originating from displays and room lighting, with a typical sensitivity of 10klx.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Color12",
-    "subdir_name": "lib_color12"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5724",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Color 12 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Color12",
+                "subdir_name": "lib_color12",
+                "path": "Color 12 Click/data/lib_color12"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

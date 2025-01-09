@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Proximity 8 Click
 
-Proximity 8 Click is a close-range proximity sensing Click board™, equipped with the VCNL36687S, a very accurate and power-efficient proximity sensor (PS) with VCSEL.
+> [Proximity 8 Click](https://www.mikroe.com/?pid_product=MIKROE-3439) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/proximity8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3439&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/proximity-8-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Proximity8 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Proximity8 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void proximity8_cfg_setup ( proximity8_cfg_t *cfg ); 
- 
-- Initialization function.
-> PROXIMITY8_RETVAL proximity8_init ( proximity8_t *ctx, proximity8_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void proximity8_default_cfg ( proximity8_t *ctx );
-
-
-#### Example key functions :
-
-- This function reads data from the desired register.
-> void proximity8_generic_read ( proximity8_t *ctx, uint8_t reg, uint8_t *data_buf );
- 
-- This function writes data to the desired register.
-> void proximity8_generic_write ( proximity8_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-
-- This function returns Interrupt state.
-> uint8_t proximity8_get_interrupt_state( proximity8_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application enables usage of the proximity sensor
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Proximity8
+
+### Example Key Functions
+
+- `proximity8_cfg_setup` Config Object Initialization function. 
+```c
+void proximity8_cfg_setup ( proximity8_cfg_t *cfg );
+``` 
+ 
+- `proximity8_init` Initialization function. 
+```c
+err_t proximity8_init ( proximity8_t *ctx, proximity8_cfg_t *cfg );
+```
+
+- `proximity8_default_cfg` Click Default Configuration function. 
+```c
+void proximity8_default_cfg ( proximity8_t *ctx );
+```
+
+- `proximity8_generic_read` This function reads data from the desired register. 
+```c
+void proximity8_generic_read ( proximity8_t *ctx, uint8_t reg, uint8_t *data_buf );
+```
+ 
+- `proximity8_generic_write` This function writes data to the desired register. 
+```c
+void proximity8_generic_write ( proximity8_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+```
+
+- `proximity8_get_interrupt_state` This function returns Interrupt state. 
+```c
+uint8_t proximity8_get_interrupt_state ( proximity8_t *ctx );
+```
+
+### Application Init
 
 > Initialization Driver init, test comunication and configuration chip for measurement
  
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -115,7 +112,6 @@ void application_init ( void )
 
     log_printf( &logger, "---- Start measurement ----\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -123,7 +119,6 @@ void application_init ( void )
 > Reads Proximity data and this data logs to the USBUART every 1500ms.
 
 ```c
-
 void application_task ( void )
 {
     //  Task implementation.
@@ -138,33 +133,26 @@ void application_task ( void )
    log_printf( &logger, "-------------------------\r\n" );
    Delay_ms ( 1000 );
    Delay_ms ( 500 );
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > The reading value and proximity of the data depend on the configuration.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Proximity8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

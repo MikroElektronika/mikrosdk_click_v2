@@ -1,8 +1,5 @@
 {
     "name": "Vibro Motor 3 Click",
-    "description": "Vibro Motor 3 Click is a compact add-on board that makes an ideal solution for adding simple haptic feedback in any design. This board features the G0832022D, a coin-sized linear resonant actuator (LRA) that generates vibration/haptic feedback in the Z plane, perpendicular to the motor's surface from Jinlong Machinery & Electronics, Inc.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV2605"],
-    "category" : ["Haptic"]
+    "hw" : ["Click","DRV2605"]
 }

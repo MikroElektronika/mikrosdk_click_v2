@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # HOD CAP Click
 
-> HOD CAP Click is a compact add-on board that adds a smart sensing solution to your application. This board features the AS8579, a capacitive sensor from ams OSRAM. The sensor features I/Q signal demodulation, parasitic influences from cable, and PCB protection. It has ten sense outputs, five of which come with sensing line filter circuits. This Click board™ makes the perfect solution for the development of autonomous driving applications such as hands-on steering wheel detection and detection of any human presence inside a vehicle or outside of the vehicle, e.g., for automatic trunk opener and more.
+> [HOD CAP Click](https://www.mikroe.com/?pid_product=MIKROE-5719) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/hodcap_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5719&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/hod-cap-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Apr 2023.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the HOD CAP Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the HOD CAP Click driver. 
+> The demo application sets the sensor configuration 
+> and detects the changes in capacity by measuring 
+> the relative change of the impedance for each channel.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for HOD CAP Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.HODCAP
 
-#### Standard key functions :
+### Example Key Functions
 
 - `hodcap_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +51,6 @@ err_t hodcap_init ( hodcap_t *ctx, hodcap_cfg_t *cfg );
 err_t hodcap_default_cfg ( hodcap_t *ctx );
 ```
 
-#### Example key functions :
-
 - `hodcap_get_i_q_data` HOD CAP gets the I and Q data function.
 ```c
 err_t hodcap_get_i_q_data ( hodcap_t *ctx, uint16_t *i_data, uint16_t *q_data );
@@ -67,15 +65,6 @@ err_t hodcap_mux_channel_selection ( hodcap_t *ctx, uint8_t sen_pos );
 ```c
 err_t hodcap_wait_adc_data_ready ( hodcap_t *ctx );
 ```
-
-## Example Description
-
-> This library contains API for the HOD CAP Click driver. 
-> The demo application sets the sensor configuration 
-> and detects the changes in capacity by measuring 
-> the relative change of the impedance for each channel.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -124,7 +113,7 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of the HOD CAP Click board™.
+> This example demonstrates the use of the HOD CAP Click board&trade;.
 > The demo application measures the relative change of the impedance 
 > and displays I and Q data per channel.
 > Results are being sent to the UART Terminal, where you can track their changes.
@@ -154,22 +143,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.HODCAP
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

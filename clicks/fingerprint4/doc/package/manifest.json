@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > HMI > Fingerprint",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Fingerprint 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.fingerprint4",
-    "product_link": "https://www.mikroe.com/fingerprint-4-click",
-    "short_description": "Fingerprint 4 Click is an adapter Click board™ used to interface a compatible fingerprint sensor with the host MCU. This board features FINGERPRINTS BM-Lite Module, a complete biometric fingerprint solution ready to be used out-of-the-box. The BM-Lite Module combines superior biometric performance and a high standard of quality components to offer a comprehensive embedded solution for increased security and enhanced user convenience. It uses a 3D pixel sensing technology that can read virtually any finger, dry or wet, alongside simple serial commands with a configurable communication interface to enroll and verify. Its protective coating helps in protection against ESD, scratches, impact, and everyday wear and tear.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.Fingerprint4",
-    "subdir_name": "lib_fingerprint4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5465",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Fingerprint 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Fingerprint4",
+                "subdir_name": "lib_fingerprint4",
+                "path": "Fingerprint 4 Click/data/lib_fingerprint4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-

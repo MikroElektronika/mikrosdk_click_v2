@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # LightRanger 8 Click
 
-> LightRanger 8 Click is a compact add-on board that contains a ranging sensor with multi-target detection. This board features the VL53L3CX, the latest Time-of-Flight (ToF) product that embeds third-generation FlightSense patented technology from STMicroelectronics.
+> [LightRanger 8 Click](https://www.mikroe.com/?pid_product=MIKROE-4492) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lightranger8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4492&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lightranger-8-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Nikolic
 - **Date**          : jan 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the LightRanger8 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This demo application shows an example of distance measurement via VL53L3 ranging sensor.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LightRanger8 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LightRanger8
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lightranger8_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t lightranger8_init ( lightranger8_t *ctx, lightranger8_cfg_t *cfg );
 err_t lightranger8_default_cfg ( lightranger8_t *ctx );
 ```
 
-#### Example key functions :
-
 - `lightranger8_set_measurement_timing_budget` This function sets the timing budget of the VL53Lx ranging sensor.
 ```c
 err_t lightranger8_set_measurement_timing_budget ( lightranger8_t *ctx, uint32_t budget_us );
@@ -68,12 +63,6 @@ void lightranger8_start_measurement ( lightranger8_t *ctx, uint32_t period_ms );
 uint16_t lightranger8_get_distance ( lightranger8_t *ctx );
 ```
 
-## Example Description
-
-> This demo application shows an example of distance measurement via VL53L3 ranging sensor.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of I2C module, log UART and additional pins.
@@ -88,8 +77,8 @@ finished, device starts the measurement with intermeasurement
 period set by the user.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                           /**< Logger config object. */
     lightranger8_cfg_t lightranger8_cfg;         /**< Click config object. */
 
@@ -150,7 +139,6 @@ void application_init ( void ) {
     log_printf( &logger, " -------------    Sensor measurement commencing...    -------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
@@ -161,8 +149,8 @@ measurement. An acqured distance is shown on the LOG with
 the 2 seconds delay so the terminal is possible to read.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     uint16_t distance;
     
     while ( lightranger8_get_interrupt_state( &lightranger8 ) != 0 ) {
@@ -176,25 +164,21 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LightRanger8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

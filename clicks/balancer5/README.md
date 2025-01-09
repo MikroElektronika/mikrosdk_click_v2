@@ -1,71 +1,63 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Balancer 5 Click
 
-Balancer 5 Click is an intelligent 2-cell Li-Ion battery charger, system power manager, and a battery fuel gauge Click board™. Balancer 5 Click is based on BQ25887 controller which has some extra features enabling charging without too much hassle.
+> [Balancer 5 Click](https://www.mikroe.com/?pid_product=MIKROE-3853) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/balancer5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3853&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/balancer-5-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Balancer5 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Balancer5 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void balancer5_cfg_setup ( balancer5_cfg_t *cfg ); 
- 
-- Initialization function.
-> BALANCER5_RETVAL balancer5_init ( balancer5_t *ctx, balancer5_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void balancer5_default_cfg ( balancer5_t *ctx );
-
-
-#### Example key functions :
-
-- This function sets charging status.
-> void balancer5_charge ( balancer5_t *ctx, uint8_t state );
-
-
-## Examples Description
+## Example Description
 
 > This demo performs neccessary initializations, reads ADC values from Click registers and logs it.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Balancer5
+
+### Example Key Functions
+
+- `balancer5_cfg_setup` Config Object Initialization function. 
+```c
+void balancer5_cfg_setup ( balancer5_cfg_t *cfg );
+``` 
+ 
+- `balancer5_init` Initialization function. 
+```c
+err_t balancer5_init ( balancer5_t *ctx, balancer5_cfg_t *cfg );
+```
+
+- `balancer5_default_cfg` Click Default Configuration function. 
+```c
+void balancer5_default_cfg ( balancer5_t *ctx );
+```
+
+- `balancer5_charge` This function sets charging status. 
+```c
+void balancer5_charge ( balancer5_t *ctx, uint8_t state );
+```
+
+### Application Init
 
 > Initializes Click and Driver, Checks Device ID, starts charging, reads charge status registers and configures ADC.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -119,15 +111,13 @@ void application_init ( void )
     balancer5_default_cfg ( &balancer5 );
    
 }
-  
 ```
 
 ### Application Task
 
-Reads ADC values from registers and logs it.
+> Reads ADC values from registers and logs it.
 
 ```c
-
 void application_task ( void )
 {
     temp_data = balancer5_read_data( &balancer5, BALANCER5_REG_IBUS_ADC1 );
@@ -196,34 +186,27 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-## Note
+### Note
 
 Additional functions charger_status_1_handler() and charger_status_2_handler() 
 are used to log charger status 1 and 2. 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Balancer5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

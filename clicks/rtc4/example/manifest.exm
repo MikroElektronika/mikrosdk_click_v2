@@ -1,8 +1,5 @@
 {
     "name": "RTC 4 Click",
-    "description": "RTC 4 Click carries DS2417, a real time clock/calendar with a 1-Wire MicroLAN interface and a programmable interrupt for system output.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","DS2417"],
-    "category" : ["RTC"]
+    "hw" : ["Click","DS2417"]
 }

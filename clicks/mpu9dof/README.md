@@ -1,77 +1,75 @@
-\mainpage Main Page
- 
+
 ---
 # MPU 9DOF Click
 
-MPU 9DOF Click carries the MPU–9250 System in Package, which is the world’s first 9-axis Motion Tracking device. MPU–9250 comprises two chips. One is the MPU–6050 that contains a 3-axis accelerometer, a 3-axis gyroscope, and a DMP (digital motion processor); the other is AK8975, a 3-axis digital compass. 
+> [MPU 9DOF Click](https://www.mikroe.com/?pid_product=MIKROE-1719) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/mpu9dof_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-1719&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/mpu-9dof-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : maj 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Mpu9Dof Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Mpu9Dof Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void mpu9dof_cfg_setup ( mpu9dof_cfg_t *cfg ); 
- 
-- Initialization function.
-> MPU9DOF_RETVAL mpu9dof_init ( mpu9dof_t *ctx, mpu9dof_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void mpu9dof_default_cfg ( mpu9dof_t *ctx );
-
-
-#### Example key functions :
-
-- Function read Gyro X-axis, Y-axis and Z-axis axis.
-> void mpu9dof_read_accel ( mpu9dof_t *ctx, int16_t *accel_x, int16_t *accel_y, int16_t *accel_z );
- 
-- Function read Gyro X-axis, Y-axis and Z-axis axis.
-> void mpu9dof_read_gyro ( mpu9dof_t *ctx, int16_t *gyro_x, int16_t *gyro_y, int16_t *gyro_z );
-
-- Function read Magnetometar X-axis, Y-axis and Z-axis axis.
-> void mpu9dof_read_mag ( mpu9dof_t *ctx, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z );
-
-## Examples Description
+## Example Description
 
 > MPU 9DOF Click carries the world’s first 9-axis Motion Tracking device. It comprises two chips: one that contains 
 > a 3-axis accelerometer, a 3-axis gyroscope, and a DMP (digital motion processor); 
 > the other is a 3-axis digital compass. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Mpu9Dof
+
+### Example Key Functions
+
+- `mpu9dof_cfg_setup` Config Object Initialization function. 
+```c
+void mpu9dof_cfg_setup ( mpu9dof_cfg_t *cfg );
+``` 
+ 
+- `mpu9dof_init` Initialization function. 
+```c
+err_t mpu9dof_init ( mpu9dof_t *ctx, mpu9dof_cfg_t *cfg );
+```
+
+- `mpu9dof_default_cfg` Click Default Configuration function. 
+```c
+void mpu9dof_default_cfg ( mpu9dof_t *ctx );
+```
+
+- `mpu9dof_read_accel` Function read Gyro X-axis, Y-axis and Z-axis axis. 
+```c
+void mpu9dof_read_accel ( mpu9dof_t *ctx, int16_t *accel_x, int16_t *accel_y, int16_t *accel_z );
+```
+ 
+- `mpu9dof_read_gyro` Function read Gyro X-axis, Y-axis and Z-axis axis. 
+```c
+void mpu9dof_read_gyro ( mpu9dof_t *ctx, int16_t *gyro_x, int16_t *gyro_y, int16_t *gyro_z );
+```
+
+- `mpu9dof_read_mag` Function read Magnetometar X-axis, Y-axis and Z-axis axis. 
+```c
+void mpu9dof_read_mag ( mpu9dof_t *ctx, int16_t *mag_x, int16_t *mag_y, int16_t *mag_z );
+```
+
+### Application Init
 
 > Initialization driver enable's - I2C, initialize MPU-9150 XL G & MPU-9150 MAG and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -99,7 +97,6 @@ void application_init ( void )
     Delay_10ms( );
     mpu9dof_default_cfg ( &mpu9dof );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +107,6 @@ void application_init ( void )
 > All data logs on usb uart for aproximetly every 1 sec. 
 
 ```c
-
 void application_task ( void )
 {
     mpu9dof_read_accel( &mpu9dof, &accel_x, &accel_y, &accel_z );
@@ -133,30 +129,22 @@ void application_task ( void )
     log_printf( &logger, "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\r\n" );
     log_printf( &logger, "\r\n");
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Mpu9Dof
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > Digital potentiometer",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Digi Pot 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.digipot4",
-    "product_link": "https://www.mikroe.com/digi-pot-4-click",
-    "short_description": "DIGI POT 4 Click is a digitally controlled dual potentiometer, with the resistance of 10KΩ. It has a 10bit resolution which allows for a very smooth linear wiper positioning through 1024 steps.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2287
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.DigiPot4",
-    "subdir_name": "lib_digipot4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2873",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Digi Pot 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DigiPot4",
+                "subdir_name": "lib_digipot4",
+                "path": "Digi Pot 4 Click/data/lib_digipot4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

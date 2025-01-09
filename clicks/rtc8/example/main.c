@@ -3,12 +3,12 @@
  * \brief Rtc8 Click example
  * 
  * # Description
- * Demo application shows the operation of RTC 8 clicks.
+ * Demo application shows the operation of RTC 8 Clicks.
  *
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Configuring clicks and log objects.
+ * Configuring Clicks and log objects.
  * Settings the Click in the default configuration.
  * Sets new: Time, Date, UNIX time and alarm data.
  * 

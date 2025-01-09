@@ -1,8 +1,5 @@
 {
     "name": "eINK Click",
-    "description": "eINK Click is an adapter Click board™, used to interface a compatible eINK display with the host MCU.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SSD1606"],
-    "category" : ["Electronic Paper Display"] 
+    "hw" : ["Click","SSD1606"]
 }

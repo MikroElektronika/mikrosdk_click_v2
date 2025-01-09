@@ -1,8 +1,5 @@
 {
     "name": "Light 2 Click",
-    "description": "Light 2 Click is a compact add-on board designed for accurate and flexible light measurement in various environments. This board features the ISL76682, a high-sensitivity, light-to-digital sensor with an I2C interface from Renesas, made specifically for automotive applications. Key features include a photodiode array that closely mimics the human eye's response, an ADC for flicker rejection, and four selectable light measurement ranges via I2C, enhancing both flexibility and accuracy. With a typical power consumption of 55µA in Standard mode and two power-down modes to minimize energy use, the board is efficient and adaptable to different lighting conditions.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ISL76682AROZ-T7"],
-    "category" : ["Click Boards > Sensors > Optical"]
+    "hw" : ["Click","ISL76682AROZ-T7"]
 }

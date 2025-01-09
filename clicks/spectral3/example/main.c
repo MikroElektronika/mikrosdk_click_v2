@@ -3,7 +3,7 @@
  * \brief Spectral3 Click example
  * 
  * # Description
- * This example reads and processes data from Spectral 3 clicks.
+ * This example reads and processes data from Spectral 3 Clicks.
  *
  * The demo application is composed of two sections :
  * 

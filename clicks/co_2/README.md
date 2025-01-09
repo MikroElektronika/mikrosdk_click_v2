@@ -1,74 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # CO 2 Click
 
-CO 2 Click is a very accurate, carbon-monoxide-gas-sensor Click board™, equipped with the SPEC amperometric,3SP CO 1000 gas sensor which electrochemically reacts with the carbon monoxide (CO).
+> [CO 2 Click](https://www.mikroe.com/?pid_product=MIKROE-3196) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/co2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3196&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/co-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the CO2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https:///shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https:///shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for CO2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void co2_cfg_setup ( co2_cfg_t *cfg ); 
- 
-- Initialization function.
-> CO2_RETVAL co2_init ( co2_t *ctx, co2_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Function reads the converted data (CO) from the 12-bit AD converter.
-> void co2_read_adc( co2_t *ctx, uint16_t *data_out );
- 
-- Function puts the device to enabled or to disabled state.
-> void co2_enable( co2_t *ctx, uint8_t state );
-
-- Function reads the CO converted data and calculates this value to the ppm.
-> co2_get_co2_ppm( co2_t *ctx, float *co2_data );
-
-## Examples Description
+## Example Description
 
 > This application enables usage of very accurate CO sensor.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CO2
+
+### Example Key Functions
+
+- `co2_cfg_setup` Config Object Initialization function. 
+```c
+void co2_cfg_setup ( co2_cfg_t *cfg );
+``` 
+ 
+- `co2_init` Initialization function. 
+```c
+err_t co2_init ( co2_t *ctx, co2_cfg_t *cfg );
+```
+
+- `co2_read_adc` Function reads the converted data (CO) from the 12-bit AD converter. 
+```c
+void co2_read_adc ( co2_t *ctx, uint16_t *data_out );
+```
+ 
+- `co2_enable` Function puts the device to enabled or to disabled state. 
+```c
+void co2_enable ( co2_t *ctx, uint8_t state );
+```
+
+- `co2_get_co2_ppm` Function reads the CO converted data and calculates this value to the ppm. 
+```c
+ co2_get_co2_ppm ( co2_t *ctx, float *co2_data );
+```
+
+### Application Init
 
 > Initializes I2C interface and performs the device configuration for properly working.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -108,7 +102,6 @@ void application_init ( void )
     log_printf( &logger, "CO 2 is initialized\r\n\r\n" );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -129,25 +122,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CO2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https:///shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https:///shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https:///shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https:///shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

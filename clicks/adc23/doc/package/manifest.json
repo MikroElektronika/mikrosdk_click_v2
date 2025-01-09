@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ADC 23 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.adc23",
-    "product_link": "https://www.mikroe.com/adc-23-click",
-    "short_description": "ADC 23 Click is a compact add-on board that converts an analog voltage into a digital representation. This board features the ADS127L11, a wide-bandwidth 24-bit delta-sigma analog-to-digital converter from Texas Instruments. It is capable of data rates up to 400ksps using a wideband filter and up to 1067ksps using a low-latency filter. It also offers an excellent combination of AC performance and DC precision with low power consumption.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.ADC23",
-    "subdir_name": "lib_adc23"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5861",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 23 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ADC23",
+                "subdir_name": "lib_adc23",
+                "path": "ADC 23 Click/data/lib_adc23"
+            }
+        ]
+    }
 }
-
-
-
-
-

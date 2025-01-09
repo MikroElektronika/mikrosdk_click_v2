@@ -4,7 +4,7 @@
  *
  * # Description
  * This library contains API for UART MUX 2 Click driver.
- * This example transmits/receives and processes data from UART MUX 2 clicks.
+ * This example transmits/receives and processes data from UART MUX 2 Clicks.
  * The library initializes and defines the UART bus drivers 
  * to transmit or receive data. 
  *

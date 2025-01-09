@@ -1,0 +1,22 @@
+{
+    "display_name": "Thermostat 5 Click",
+    "name": "mikroe.click.thermostat5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6102",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermostat 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermostat5",
+                "subdir_name": "lib_thermostat5",
+                "path": "Thermostat 5 Click/data/lib_thermostat5"
+            }
+        ]
+    }
+}

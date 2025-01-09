@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Clock & Timing > RTC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Timer Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.timer",
-    "product_link": "https://www.mikroe.com/timer-click",
-    "short_description": "Timer Click is a mikroBUS add-on board with Maxim’s DS1682 total elapsed time recorder.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1822
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Timer",
-    "subdir_name": "lib_timer"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2333",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Timer Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Timer",
+                "subdir_name": "lib_timer",
+                "path": "Timer Click/data/lib_timer"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

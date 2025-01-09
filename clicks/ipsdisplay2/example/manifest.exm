@@ -1,8 +1,5 @@
 {
     "name": "IPS Display 2 Click",
-    "description": "IPS Display 2 Click is a compact add-on board that displays high-resolution graphics in embedded applications. This board features the ER-TFT1.54-2, a 1.54inch TFT LCD display from EastRising Technology, and uses the ST7789V2 controller for 262K color output. The display offers a 240x240 pixel resolution, operates through a 3-wire SPI interface, and includes additional control signals for precise display management. Its small form factor and high-resolution output make it suitable for various projects, including handheld devices, smart displays, and panels requiring clear visual output.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ER-TFT1.54-2","ST7789V"],
-    "category" : ["Click Boards > Display & LED > LCD"]
+    "hw" : ["Click","ER-TFT1.54-2","ST7789V"]
 }

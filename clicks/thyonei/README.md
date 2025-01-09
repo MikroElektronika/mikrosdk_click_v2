@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Thyone-I Click
 
-> Thyone-I Click is a compact add-on board for wireless communication in various devices like control systems, remote controls, and sensor nodes. This board features the WIRL-PRO2 Thyone-I (2611011021000) module from Würth Elektronik. It operates in the 2.4GHz license-free band, ensuring secure and reliable data transmission in both point-to-point and mesh configurations. It features versatile connectivity options with onboard and external antenna support, a data transmission rate of up to 2Mbit/s, and embedded security with hardware-accelerated encryption.
+> [Thyone-I Click](https://www.mikroe.com/?pid_product=MIKROE-6085) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/thyonei_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6085&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/thyone-i-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Dec 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the Thyone-I Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the Thyone-I Click board by sending and receiving data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Thyone-I Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ThyoneI
 
-#### Standard key functions :
+### Example Key Functions
 
 - `thyonei_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t thyonei_init ( thyonei_t *ctx, thyonei_cfg_t *cfg );
 void thyonei_default_cfg ( thyonei_t *ctx );
 ```
 
-#### Example key functions :
-
 - `thyonei_get_req` This command can be used to set individual setting parameters in flash of Thyone-I Click board.
 ```c
 err_t thyonei_get_req ( thyonei_t *ctx, uint8_t settings_index, uint8_t *param_len, uint8_t *parameter );
@@ -68,18 +63,11 @@ err_t thyonei_multicast_data_req ( thyonei_t *ctx, uint8_t message_len, uint8_t 
 err_t thyonei_unicast_data_req ( thyonei_t *ctx, uint8_t message_len, uint8_t *message );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the Thyone-I Click board by sending and receiving data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration and setting the MAC addresses and mode.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;          /**< Logger config object. */
@@ -160,7 +148,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -217,22 +204,19 @@ void application_task ( void )
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ThyoneI
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

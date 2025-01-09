@@ -1,8 +1,5 @@
 {
     "name": "4x4 RGB Click",
-    "description": "4x4 RGB Click is a matrix of 16 intelligent RGB elements, forming a 4x4 display screen.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv"],
-    "hw" : ["Click","MCP1826"],
-    "category" : ["LED Matrix"] 
+    "hw" : ["Click","MCP1826"]
 }

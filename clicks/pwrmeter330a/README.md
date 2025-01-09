@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # PWR Meter 3 30A Click
 
-> PWR Meter 3 Click - 30A is a compact add-on board that measures voltage and current through the connected load. This board features the ACS37800KMACTR-030B3-I2C, an I2C-configurable power monitoring solution from Allegro MicroSystems, which simplifies the addition of power monitoring to many AC/DC powered systems. The ACS37800KMACTR-030B3-I2C’s Hall-effect-based current sensing technology achieves reinforced isolation ratings (4800 VRMS) alongside a reliable ±30A bidirectional current sensing. It also has two LED indicators for the realization of visual detection of some anomalies in operation, such as under/overvoltage and fast overcurrent fault detection.
+> [PWR Meter 3 30A Click](https://www.mikroe.com/?pid_product=MIKROE-6257) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pwrmeter330a_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6257&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pwr-meter-3-click-30a)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Oct 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the PWR Meter 3 30A Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of PWR Meter 3 30A Click board by reading and displaying the voltage, current, and power RMS measurements.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for PWR Meter 3 30A Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PWRMeter330A
 
-#### Standard key functions :
+### Example Key Functions
 
 - `pwrmeter330a_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t pwrmeter330a_init ( pwrmeter330a_t *ctx, pwrmeter330a_cfg_t *cfg );
 err_t pwrmeter330a_default_cfg ( pwrmeter330a_t *ctx );
 ```
 
-#### Example key functions :
-
 - `pwrmeter330a_get_dio0_pin` This function returns the DIO0 pin logic state.
 ```c
 uint8_t pwrmeter330a_get_dio0_pin ( pwrmeter330a_t *ctx );
@@ -68,19 +63,12 @@ uint8_t pwrmeter330a_get_dio1_pin ( pwrmeter330a_t *ctx );
 err_t pwrmeter330a_read_average_rms ( pwrmeter330a_t *ctx, float *v_rms, float *i_rms, uint16_t num_avg );
 ```
 
-## Example Description
-
-> This example demonstrates the use of PWR Meter 3 30A Click board by reading and displaying the voltage, current, and power RMS measurements.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which sets the DC measurement
 and VRMS thresholds to about 28V for overvoltage and about 9.3V for undervoltage flag.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -116,7 +104,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -145,22 +132,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PWRMeter330A
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

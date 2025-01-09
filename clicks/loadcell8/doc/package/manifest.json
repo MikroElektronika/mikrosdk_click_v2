@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Force",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Load Cell 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.loadcell8",
-    "product_link": "https://www.mikroe.com/load-cell-8-click",
-    "short_description": "Load Cell 8 Click is a compact add-on board representing a weigh scale solution. This board features the ZSC31050, an advanced differential sensor signal conditioner from Renesas designed for high-precision signal conditioning in applications requiring detailed sensor-specific corrections. It excels in processing differential sensor signals for various resistive bridge sensors. The ZSC31050 is capable of highly accurate amplification, offering digital compensation of sensor offset, sensitivity, temperature drift, and non-linearity. It supports a broad signal range from 1mV/V to 275mV/V, making its use across industrial, medical, and consumer applications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.LoadCell8",
-    "subdir_name": "lib_loadcell8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6060",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Load Cell 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LoadCell8",
+                "subdir_name": "lib_loadcell8",
+                "path": "Load Cell 8 Click/data/lib_loadcell8"
+            }
+        ]
+    }
 }
-
-
-

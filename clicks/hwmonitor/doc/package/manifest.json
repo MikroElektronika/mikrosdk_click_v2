@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Power Switch",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "HW Monitor Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.hwmonitor",
-    "product_link": "https://www.mikroe.com/hw-monitor-click",
-    "short_description": "HW Monitor Click is a compact add-on board used to monitor and regulate the performance of various hardware components within an embedded system. This board features the LM96080, an I2C-configurable system hardware monitor from Texas Instruments that contains a 10-bit delta-sigma ADC capable of measuring seven positive voltages and local temperature. The LM96080 also has two programmable fan speed monitoring inputs besides other hardware monitoring functions like chassis intrusion detection, additional external interrupt input, master reset for external purposes, as well as a sequencer that performs watchdog window comparisons of all measured values.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.HWMonitor",
-    "subdir_name": "lib_hwmonitor"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5684",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "HW Monitor Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HWMonitor",
+                "subdir_name": "lib_hwmonitor",
+                "path": "HW Monitor Click/data/lib_hwmonitor"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

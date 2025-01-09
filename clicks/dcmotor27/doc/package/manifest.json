@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushed",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DC Motor 27 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.dcmotor27",
-    "product_link": "https://www.mikroe.com/dc-motor-27-click",
-    "short_description": "DC Motor 27 Click is a compact add-on board that contains a high-performance brushed DC motor driver. This board features the DRV8143, an automotive half-bridge driver with integrated current sense and diagnostic from Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.9",
-    "cmake": true,
-    "alias": "Click.DCMotor27",
-    "subdir_name": "lib_dcmotor27"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5806",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DC Motor 27 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DCMotor27",
+                "subdir_name": "lib_dcmotor27",
+                "path": "DC Motor 27 Click/data/lib_dcmotor27"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

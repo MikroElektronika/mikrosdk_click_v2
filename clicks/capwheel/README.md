@@ -1,72 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
-CAP Wheel Click is a capacitive touch sensor with round shaped electrodes integrated on a Click board™. This Click can sense touch even through plastic, wood, or other dielectric materials, which can be used to protect the surface of the PCB and the sensor pad trace itself.
+# Cap Wheel Click
+
+> [CAP WHEEL Click](https://www.mikroe.com/?pid_product=MIKROE-3203) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/capwheel_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3203&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/cap-wheel-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the CapWheel Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for CapWheel Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void capwheel_cfg_setup ( capwheel_cfg_t *cfg ); 
- 
-- Initialization function.
-> CAPWHEEL_RETVAL capwheel_init ( capwheel_t *ctx, capwheel_cfg_t *cfg );
-
-
-
-#### Example key functions :
-
-- Generic Write function.
-> uint8_t capwheel_write_reg ( capwheel_t *ctx, uint8_t register_address, uint8_t *data_in, uint8_t n_bytes );
- 
-- Generic Read function.
-> uint8_t capwheel_read_reg ( capwheel_t *ctx, uint8_t register_address, uint8_t *data_out, uint8_t n_bytes );
-
-- Data Ready Check function.
-> uint8_t capwheel_check_data_ready ( capwheel_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application is use for controling various devices.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.CapWheel
+
+### Example Key Functions
+
+- `capwheel_cfg_setup` Config Object Initialization function. 
+```c
+void capwheel_cfg_setup ( capwheel_cfg_t *cfg );
+``` 
+ 
+- `capwheel_init` Initialization function. 
+```c
+err_t capwheel_init ( capwheel_t *ctx, capwheel_cfg_t *cfg );
+```
+
+- `capwheel_write_reg` Generic Write function. 
+```c
+uint8_t capwheel_write_reg ( capwheel_t *ctx, uint8_t register_address, uint8_t *data_in, uint8_t n_bytes );
+```
+ 
+- `capwheel_read_reg` Generic Read function. 
+```c
+uint8_t capwheel_read_reg ( capwheel_t *ctx, uint8_t register_address, uint8_t *data_out, uint8_t n_bytes );
+```
+
+- `capwheel_check_data_ready` Data Ready Check function. 
+```c
+uint8_t capwheel_check_data_ready ( capwheel_t *ctx );
+```
+
+### Application Init
 
 > Initializes I2C interface, performs the device reset and activates the desired channels (from CH0 to CH9), in this example all channels are activated.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -98,7 +94,6 @@ void application_init ( void )
     
     log_printf( &logger, "CAP Wheel is initialized and ready\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -106,7 +101,6 @@ void application_init ( void )
 > Checks is sense data ready for reading and if was ready, then reads wheel coordinates and sends these results to the LEDs.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t sense_data;
@@ -120,30 +114,22 @@ void application_task ( void )
         
         capwheel_set_output( &capwheel, sense_data, CAPWHEEL_LED_BRIGHTNESS_NUMBER );
     }
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.CapWheel
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "GNSS3 Click",
-    "description": "GNSS3 Click carries SIMCom’s SIM33ELA standalone GNSS module with an integrated antenna (and a connector for an external one).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SIM33ELA"],
-    "category" : ["GPS+GNSS"] 
+    "hw" : ["Click","SIM33ELA"]
 }

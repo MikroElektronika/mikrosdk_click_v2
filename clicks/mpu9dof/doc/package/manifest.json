@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MPU 9DOF Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mpu9dof",
-    "product_link": "https://www.mikroe.com/mpu-9dof-click",
-    "short_description": "MPU 9DOF Click carries the MPU–9250 System in Package, which is the world’s first 9-axis Motion Tracking device. MPU–9250 comprises two chips. One is the MPU–6050 that contains a 3-axis accelerometer, a 3-axis gyroscope, and a DMP (digital motion processor); the other is AK8975, a 3-axis digital compass.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1149
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Mpu9Dof",
-    "subdir_name": "lib_mpu9dof"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1719",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MPU 9DOF Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mpu9Dof",
+                "subdir_name": "lib_mpu9dof",
+                "path": "MPU 9DOF Click/data/lib_mpu9dof"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

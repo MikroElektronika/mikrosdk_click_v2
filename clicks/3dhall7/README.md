@@ -1,80 +1,77 @@
-\mainpage Main Page
- 
- 
 
 ---
 # 3D Hall 7 Click
 
-3D Hall 7 Click is a very accurate, magnetic field sensing Click board™, used to measure the intensity of the magnetic field across three perpendicular axes.
+> [3D Hall 7 Click](https://www.mikroe.com/?pid_product=MIKROE-3629) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/3dhall7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3629&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/3d-hall-7-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Nov 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the 3dHall7 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for 3dHall7 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c3dhall7_cfg_setup ( c3dhall7_cfg_t *cfg ); 
- 
-- Initialization function.
-> C3DHALL7_RETVAL c3dhall7_init ( c3dhall7_t *ctx, c3dhall7_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c3dhall7_default_cfg ( c3dhall7_t *ctx );
-
-
-#### Example key functions :
-
-- Get Axis data function.
-> void c3dhall7_get_axis_data( c3dhall7_t *ctx, T_C3DHALL7_AXIS *axis)
- 
-- Measurement status function.
-> void c3dhall7_get_status ( c3dhall7_t *ctx, T_C3DHALL7_STATUS *status );
-
-- Measurement status function.
-> void c3dhall7_get_status ( c3dhall7_t *ctx, T_C3DHALL7_STATUS *status );
-
-## Examples Description
+## Example Description
 
 > 
 > Read magnet positions.
 > 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.3dHall7
+
+### Example Key Functions
+
+- `c3dhall7_cfg_setup` Config Object Initialization function. 
+```c
+void c3dhall7_cfg_setup ( c3dhall7_cfg_t *cfg );
+``` 
+ 
+- `c3dhall7_init` Initialization function. 
+```c
+err_t c3dhall7_init ( c3dhall7_t *ctx, c3dhall7_cfg_t *cfg );
+```
+
+- `c3dhall7_default_cfg` Click Default Configuration function. 
+```c
+void c3dhall7_default_cfg ( c3dhall7_t *ctx );
+```
+
+- `c3dhall7_get_axis_data` Get Axis data function. 
+```c
+void c3dhall7_get_axis_data ( c3dhall7_t *ctx, T_C3DHALL7_AXIS *axis );
+```
+ 
+- `c3dhall7_get_status` Measurement status function. 
+```c
+void c3dhall7_get_status ( c3dhall7_t *ctx, T_C3DHALL7_STATUS *status );
+```
+
+- `c3dhall7_get_status` Measurement status function. 
+```c
+void c3dhall7_get_status ( c3dhall7_t *ctx, T_C3DHALL7_STATUS *status );
+```
+
+### Application Init
 
 >
 > Initializes driver init, test communication and configuration device for measurement.
 > 
 
 ```c
-
 void application_init ( c3dhall7_t *ctx, void )
 {
     c3dhall7_dev_info_t info;
@@ -124,7 +121,6 @@ void application_init ( c3dhall7_t *ctx, void )
     // Configuration 
     c3dhall7_default_cfg ( &c3dhall7 );
 }
-  
 ```
 
 ### Application Task
@@ -134,7 +130,6 @@ void application_init ( c3dhall7_t *ctx, void )
 > 
 
 ```c
-
 void application_task ( void )
 {
     c3dhall7_axix_t axis;
@@ -154,28 +149,23 @@ void application_task ( void )
     mikrobus_log_write( "---------------------------------------------", LOG_LINE);
     Delay_ms ( 500 );
 }
-
 ```
 
-## Note
+### Note
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.3dHall7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

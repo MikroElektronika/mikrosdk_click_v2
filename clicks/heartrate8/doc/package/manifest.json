@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Biometrics",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Heart Rate 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.heartrate8",
-    "product_link": "https://www.mikroe.com/heart-rate-8-click",
-    "short_description": "Heart Rate 8 Click is an optical biosensor Click board™, designed for heart-rate monitoring (HRM). This Click board™ employs a specialized sensor that incorporates three LED drivers and two photo-sensing elements, sensitive to green and IR light.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2590
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.HeartRate8",
-    "subdir_name": "lib_heartrate8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3218",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Heart Rate 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HeartRate8",
+                "subdir_name": "lib_heartrate8",
+                "path": "Heart Rate 8 Click/data/lib_heartrate8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 {
     "name": "eFuse 7 Click",
-    "description": "eFuse 7 Click is a compact add-on board with a power path protection solution that limits circuit currents and voltages to safe levels during fault conditions. This board features the LS12052BD33, an eFuse with over-voltage protection and blocking FET control from Littelfuse. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LS12052BD33"],
-    "category" : ["Click Boards > Power management > Power Switch"]
+    "hw" : ["Click","LS12052BD33"]
 }

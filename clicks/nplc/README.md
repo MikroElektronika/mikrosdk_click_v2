@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # N-PLC Click
 
-> N-PLC Click is a compact add-on board that uses existing electrical power lines to transmit data signals. This board features the SM2400, an advanced multi-standard Narrow-band Power Line Communication (N-PLC) modem from Semitech. The SM2400 features a dual-core architecture, a DSP core for N-PLC modulations, and a 32-bit core for running protocols for superior communication performance and flexibility for various open standards and customized implementations. It includes firmware options for IEEE 1901.2 compliant PHY and MAC layers, a 6LoWPAN data link layer, and special modes for industrial IoT applications. In addition to the ability to accept signals from another PLC modem or the power line communication AC coupling circuit, this board also has a handful of other features, such as a selectable interface and power supply, firmware update capabilities, LED indicators, and many others.
+> [N-PLC Click](https://www.mikroe.com/?pid_product=MIKROE-5502) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/nplc_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5502&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/n-plc-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Mar 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the N-PLC Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of an N-PLC Click boards by showing the communication between the two Click boards configured as a receiver and transmitter.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for N-PLC Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.NPLC
 
-#### Standard key functions :
+### Example Key Functions
 
 - `nplc_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t nplc_init ( nplc_t *ctx, nplc_cfg_t *cfg );
 err_t nplc_default_cfg ( nplc_t *ctx );
 ```
 
-#### Example key functions :
-
 - `nplc_set_mode` This function sets operation mode to command or data.
 ```c
 void nplc_set_mode ( nplc_t *ctx, uint8_t mode );
@@ -68,19 +63,12 @@ err_t nplc_generic_write ( nplc_t *ctx, char *data_in, uint16_t len );
 err_t nplc_generic_read ( nplc_t *ctx, char *data_out, uint16_t len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of an N-PLC Click boards by showing the communication between the two Click boards configured as a receiver and transmitter.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, resets the Click board to default config, displays the firmware version and switches to data operation mode.
 After that displays the selected application mode and sends an initial message in case of transmitter mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -149,7 +137,6 @@ void application_init ( void )
 #endif   
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -176,27 +163,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Once both devices are programmed, one as a receiver and the other as a transmitter, you will need to reset the transmitter board in order
 to start the communication by sending an initial message.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.NPLC
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "EZO Carrier DO Click",
-    "description": "EZO Carrier Click - Oxygen is a compact add-on board suitable for determining the dissolved oxygen of a liquid in your application. This board features the EZO-DO™, an ISO 5814 compliant embedded dissolved oxygen circuit board from Atlas Scientific.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","EZO-DO"],
-    "category" : ["Click Boards > Sensors > Environmental"]
+    "hw" : ["Click","EZO-DO"]
 }

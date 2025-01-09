@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # USB UART 5 Click
 
-> USB UART 5 Click is a compact add-on board with a general-purpose USB to UART serial interface. This board features the CP2110, a highly-integrated USB-to-UART bridge controller from Silicon Labs. The CP2110 uses the standard USB HID device class, requiring no custom driver and a UART interface that implements all RS-232 signals, including control and hardware handshaking, so existing system firmware does not need to be modified. The UART capabilities of the CP2110 also include baud rate support from 300 to 1Mbps, hardware flow control, RS-485 support, and GPIO signals that are user-defined for status and control information.
+> [USB UART 5 Click](https://www.mikroe.com/?pid_product=MIKROE-5574) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/usbuart5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5574&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/usb-uart-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jan 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the USB UART 5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example reads and processes data from USB UART 5 Click board&trade;.
+> The library initializes and defines the UART bus drivers 
+> to transmit or receive data.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for USB UART 5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.USBUART5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `usbuart5_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t usbuart5_init ( usbuart5_t *ctx, usbuart5_cfg_t *cfg );
 void usbuart5_default_cfg ( usbuart5_t *ctx );
 ```
 
-#### Example key functions :
-
 - `usbuart5_generic_write`  USB UART 5 data writing function.
 ```c
 err_t usbuart5_generic_write ( usbuart5_t *ctx, char *data_in, uint16_t len )
@@ -67,14 +64,6 @@ err_t usbuart5_generic_read ( usbuart5_t *ctx, char *data_out, uint16_t len );
 ```c
 void usbuart5_reset_device ( usbuart5_t *ctx );
 ```
-
-## Example Description
-
-> This example reads and processes data from USB UART 5 Click board™.
-> The library initializes and defines the UART bus drivers 
-> to transmit or receive data.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -134,27 +123,24 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Make sure to download and install 
 > CP2110/4 Software package for Windows/Mac/Linux on the host PC.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.USBUART5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

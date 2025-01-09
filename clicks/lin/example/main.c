@@ -3,7 +3,7 @@
  * \brief Lin Click example
  * 
  * # Description
- * This example reads and processes data from LIN clicks.
+ * This example reads and processes data from LIN Clicks.
  *
  * The demo application is composed of two sections :
  * 

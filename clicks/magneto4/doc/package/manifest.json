@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MAGNETO 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.magneto4",
-    "product_link": "https://www.mikroe.com/magneto-4-click",
-    "short_description": "Magneto 4 Click is a high-resolution magnetic encoder Click board™ which allows contactless motion sensing down to 0.5µm.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2739
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.Magneto4",
-    "subdir_name": "lib_magneto4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3522",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MAGNETO 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Magneto4",
+                "subdir_name": "lib_magneto4",
+                "path": "MAGNETO 4 Click/data/lib_magneto4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

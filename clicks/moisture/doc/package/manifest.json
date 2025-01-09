@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Moisture Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.moisture",
-    "product_link": "https://www.mikroe.com/moisture-click",
-    "short_description": "Moisture Click is a Click board™ that can be used to easily detect a moisture level of the skin, by simply touching the sensitive surface of the PCB.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2433
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Moisture",
-    "subdir_name": "lib_moisture"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3084",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Moisture Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Moisture",
+                "subdir_name": "lib_moisture",
+                "path": "Moisture Click/data/lib_moisture"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

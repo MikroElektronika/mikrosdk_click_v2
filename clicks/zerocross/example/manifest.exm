@@ -1,8 +1,5 @@
 {
     "name": "Zero-Cross Click",
-    "description": "Zero-Cross Click is a compact add-on board that has the ability to detect the change from positive to negative or negative to a positive level of a sinusoidal waveform. This board features circuitry that provides Zero Crossing Detection (ZCD). Whenever the sine wave crosses the ground potential, the output shifts from HIGH logic to LOW or vice-versa. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","NO IC"],
-    "category" : ["Click Boards > Mixed signal > Measurements"]
+    "hw" : ["Click","NO IC"]
 }

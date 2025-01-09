@@ -1,8 +1,5 @@
 {
     "name": "Buck-Boost 4 Click",
-    "description": "Buck-Boost 4 Click is a compact add-on board that contains a buck-boost DC/DC converter with four integrated MOSFETs. This board features the TPS55289, a buck-boost converter from Texas Instruments. It can deliver on its output voltages from 0.8 up to 22V, from the input voltage in a range of 3 up to 30V. The output voltage can be programmed in 10mV steps.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TPS55289RYQR"],
-    "category" : ["Click Boards > Power management > Buck-Boost"]
+    "hw" : ["Click","TPS55289RYQR"]
 }

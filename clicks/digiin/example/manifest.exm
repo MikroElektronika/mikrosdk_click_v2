@@ -1,8 +1,5 @@
 {
     "name": "DIGI IN Click",
-    "description": "DIGI IN Click is a compact add-board that converts industrial inputs into serialized SPI-compatible output. This board features the MAX22199, an octal industrial digital input from Analog Devices. It stands out for its compliance with the IEC 61131-2 standard, ensuring reliability and efficiency.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX22199ATJ+"],
-    "category" : ["Click Boards > Interface > Port expander"]
+    "hw" : ["Click","MAX22199ATJ+"]
 }

@@ -1,73 +1,71 @@
-\mainpage Main Page
- 
- 
 
 ---
 # LDC 1101 Click
 
-LDC1101 Click is an inductance-to-digital converter Click Board™. It is designed for a range of different applications, based on the inductivity measurements. 
+> [LDC 1101 Click](https://www.mikroe.com/?pid_product=MIKROE-3240) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ldc1101_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3240&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ldc1101-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : nov 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Ldc1101 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Ldc1101 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void ldc1101_cfg_setup ( ldc1101_cfg_t *cfg ); 
- 
-- Initialization function.
-> LDC1101_RETVAL ldc1101_init ( ldc1101_t *ctx, ldc1101_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void ldc1101_default_cfg ( ldc1101_t *ctx );
-
-
-#### Example key functions :
-
-- Functions for reads RP data
-> uint16_t ldc1101_get_rp_data ( ldc1101_t *ctx );
- 
-- Functions for reads L data
-> uint16_t ldc1101_get_l_data ( ldc1101_t *ctx );
-
-- Functions for get interrupt pin status
-> uint8_t ldc1101_get_interrupt( ldc1101_t *ctx );
-
-## Examples Description
+## Example Description
 
 > Example demonstrates measurement of inductance change depending on the linear motion 
 > of the metal object.
 > Induction of the linear metal position depends on the type of metal and the configuration.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ldc1101
+
+### Example Key Functions
+
+- `ldc1101_cfg_setup` Config Object Initialization function. 
+```c
+void ldc1101_cfg_setup ( ldc1101_cfg_t *cfg );
+``` 
+ 
+- `ldc1101_init` Initialization function. 
+```c
+err_t ldc1101_init ( ldc1101_t *ctx, ldc1101_cfg_t *cfg );
+```
+
+- `ldc1101_default_cfg` Click Default Configuration function. 
+```c
+void ldc1101_default_cfg ( ldc1101_t *ctx );
+```
+
+- `ldc1101_get_rp_data` Functions for reads RP data. 
+```c
+uint16_t ldc1101_get_rp_data ( ldc1101_t *ctx );
+```
+ 
+- `ldc1101_get_l_data` Functions for reads L data. 
+```c
+uint16_t ldc1101_get_l_data ( ldc1101_t *ctx );
+```
+
+- `ldc1101_get_interrupt` Functions for get interrupt pin status. 
+```c
+uint8_t ldc1101_get_interrupt ( ldc1101_t *ctx );
+```
+
+### Application Init
 
 > Initializes I2C module and sets CS pin as OUTPUT and PWM and INT pin sa INPUT.
 > Driver intialization, standard configurations and start measurement.
@@ -121,25 +119,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ldc1101
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

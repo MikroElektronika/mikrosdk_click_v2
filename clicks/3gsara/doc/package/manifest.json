@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GSM/LTE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "3G SARA Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c3gsara",
-    "product_link": "https://www.mikroe.com/3g-sara-click",
-    "short_description": "3G SARA Click is a versatile cellular network communication solution, featuring the compact 3.75G UMTS/HSPA SARA U-201 modem from u-blox.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1938
-    ],
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.3gSara",
-    "subdir_name": "lib_c3gsara"
+    "name": "mikroe.click.3gsara",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2244",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3G SARA Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3gSara",
+                "subdir_name": "lib_c3gsara",
+                "path": "3G SARA Click/data/lib_c3gsara"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

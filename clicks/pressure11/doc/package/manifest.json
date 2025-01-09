@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Pressure 11 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pressure11",
-    "product_link": "https://www.mikroe.com/pressure-11-click",
-    "short_description": "This sensor offers many benefits, including low power consumption, high resolution of the pressure data, embedded thermal compensation, FIFO buffer with several operating modes, temperature measurement, etc.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2720
-    ],
-    "version": "2.1.0.19",
-    "cmake": true,
-    "alias": "Click.Pressure11",
-    "subdir_name": "lib_pressure11"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3411",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Pressure 11 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pressure11",
+                "subdir_name": "lib_pressure11",
+                "path": "Pressure 11 Click/data/lib_pressure11"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

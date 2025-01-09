@@ -1,8 +1,5 @@
 {
     "name": "CAN FD 2 Click",
-    "description": "CAN FD 2 Click is a HS CAN transceiver add on board, suitable for evaluation of TLE9255W CAN network transceiver from Infineon.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","TLE9255W"],
-    "category" : ["CAN"] 
+    "hw" : ["Click","TLE9255W"]
 }

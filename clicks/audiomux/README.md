@@ -1,80 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # AudioMUX Click
 
-AudioMUX Click is a sound processing Click board™ with digital controls, based on the TDA7468D IC. It can be used to select one of four audio input channels, adjust its frequency response and volume, and send it to the output.
+> [AudioMUX Click](https://www.mikroe.com/?pid_product=MIKROE-3344) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/audiomux_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3344&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/audiomux-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the AudioMUX Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for AudioMUX Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void audiomux_cfg_setup ( audiomux_cfg_t *cfg ); 
- 
-- Initialization function.
-> AUDIOMUX_RETVAL audiomux_init ( audiomux_t *ctx, audiomux_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void audiomux_default_cfg ( audiomux_t *ctx );
-
-
-#### Example key functions :
-
-- This function performs a input selection and control.
-> T_AUDIOMUX_RETVAL audiomux_select_input ( audiomux_t *ctx, uint8_t input_sel, uint8_t mute_in,
->                                           uint8_t mic_gain, uint8_t mic_state );
- 
-- This function performs a left or right volume control.
-> T_AUDIOMUX_RETVAL audiomux_set_volume ( audiomux_t *ctx, uint8_t volume1, uint8_t volume2,
->                                         uint8_t side_sel );
-
-- This function performs a control of the treble and bass for EQ section.
-> T_AUDIOMUX_RETVAL audiomux_set_treble_bass ( audiomux_t *ctx, uint8_t treble, uint8_t bass );
-
-## Examples Description
-
-The following demo shows basic Click functionality:
+> The following demo shows basic Click functionality:
 Initializes AudioMUX device to work with the desired configurations and
 shows a message on uart when playing is started. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AudioMUX
+
+### Example Key Functions
+
+- `audiomux_cfg_setup` Config Object Initialization function. 
+```c
+void audiomux_cfg_setup ( audiomux_cfg_t *cfg );
+``` 
+ 
+- `audiomux_init` Initialization function. 
+```c
+err_t audiomux_init ( audiomux_t *ctx, audiomux_cfg_t *cfg );
+```
+
+- `audiomux_default_cfg` Click Default Configuration function. 
+```c
+void audiomux_default_cfg ( audiomux_t *ctx );
+```
+
+- This function performs a input selection and control.
+err_t audiomux_select_input ( audiomux_t *ctx, uint8_t input_sel, uint8_t mute_in,
+>                                           uint8_t mic_gain, uint8_t mic_state );
+ 
+- This function performs a left or right volume control.
+err_t audiomux_set_volume ( audiomux_t *ctx, uint8_t volume1, uint8_t volume2,
+>                                         uint8_t side_sel );
+
+- `audiomux_set_treble_bass` This function performs a control of the treble and bass for EQ section. 
+```c
+err_t audiomux_set_treble_bass ( audiomux_t *ctx, uint8_t treble, uint8_t bass );
+```
+
+### Application Init
 
 > Initializes Click and logger driver.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -104,7 +97,6 @@ void application_init ( void )
 
     log_info( &logger, "** AudioMUX initialized **\r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -112,7 +104,6 @@ void application_init ( void )
 > Plays selected channel and shows output on the terminal.
 
 ```c
-
 void application_task ( void )
 {
     if (init_check == 0)
@@ -134,29 +125,21 @@ void application_task ( void )
         mess_cnt++;
     }
 }
+``` 
 
-```
- 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AudioMUX
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

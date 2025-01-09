@@ -1,78 +1,75 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Boost-INV Click
 
-Boost-INV Click is a very useful DC/DC voltage converter device, as can output both positive and negative voltage, boosted up to 12.78V and -13.95, from a single fixed voltage input.
+> [Boost-INV Click](https://www.mikroe.com/?pid_product=MIKROE-3124) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/boostinv_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3124&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/boost-inv-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Luka FIlipovic
 - **Date**          : Nov 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the BoostInv Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for BoostInv Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void boostinv_cfg_setup ( boostinv_cfg_t *cfg ); 
- 
-- Initialization function.
-> BOOSTINV_RETVAL boostinv_init ( boostinv_t *ctx, boostinv_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void boostinv_default_cfg ( boostinv_t *ctx );
-
-
-#### Example key functions :
-
-- Functions for enable chip.
-> void boostinv_enable ( boostinv_t *ctx );
- 
-- Functions for set positive output voltage
-> void boostinv_set_positive_voltage ( boostinv_t *ctx, uint16_t voltage );
-
-- Functions for set negative output voltage
-> void boostinv_set_negative_voltage ( boostinv_t *ctx, int16_t voltage );
-
-## Examples Description
+## Example Description
 
 > Changes the positive and negative output voltage. Input Voltage 3.3V.
 > Positive output voltage goes from 3200mV, 7750mV, 12000mV and 7750mV.
 > Negative output voltage goes from -1450mV, -6700mV, -11050mV and -6700mV.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BoostInv
+
+### Example Key Functions
+
+- `boostinv_cfg_setup` Config Object Initialization function. 
+```c
+void boostinv_cfg_setup ( boostinv_cfg_t *cfg );
+``` 
+ 
+- `boostinv_init` Initialization function. 
+```c
+err_t boostinv_init ( boostinv_t *ctx, boostinv_cfg_t *cfg );
+```
+
+- `boostinv_default_cfg` Click Default Configuration function. 
+```c
+void boostinv_default_cfg ( boostinv_t *ctx );
+```
+
+- `boostinv_enable` Functions for enable chip. 
+```c
+void boostinv_enable ( boostinv_t *ctx );
+```
+ 
+- `boostinv_set_positive_voltage` Functions for set positive output voltage. 
+```c
+void boostinv_set_positive_voltage( boostinv_t *ctx, uint16_t voltage );
+```
+
+- `boostinv_set_negative_voltage` Functions for set negative output voltage. 
+```c
+void boostinv_set_negative_voltage( boostinv_t *ctx, int16_t voltage );
+```
+
+### Application Init
 
 > Initializes I2C module and sets EN ( RST ) pin as output.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -102,7 +99,6 @@ void application_init ( void )
     log_printf( &logger, "-------------------------\r\n" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -110,7 +106,6 @@ void application_init ( void )
 > Changes the positive and negative output voltage every 5 sec.
 
 ```c
-
 void application_task ( void )
 {
     //  Task implementation.
@@ -194,29 +189,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BoostInv
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

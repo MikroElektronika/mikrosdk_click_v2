@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Matrix G Click
 
-Matrix G Click is a mikroBUS add-on board with two green 5x7 matrices driven by two MAX7219 8-bit LED Display Drivers. The active area of each matrix is 7.62mm high and 5.08 mm wide. 7x5 is a standard resolution for displaying ASCII characters, so the Click is essentially a dual-character display capable of showing letters in more readable typefaces compared to a 14-segment display. The Click communicates with the target MCU through the mikroBUS SPI interface with two separate Chip Select lines for each matrix (CSL for the left, CSR for the right). This board is designed to use a 5V power supply.
+> [Matrix G Click](https://www.mikroe.com/?pid_product=MIKROE-2246) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/matrixg_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2246&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/matrix-g-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the MatrixG Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases how to prepare the logger and Click modules for use and how to display ASCII characters on both of the LED segments of the Click.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for MatrixG Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.MatrixG
 
-#### Standard key functions :
+### Example Key Functions
 
 - `matrixg_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +40,13 @@ void matrixg_cfg_setup ( matrixg_cfg_t *cfg );
 
 - `matrixg_init` Initialization function.
 ```c
-MATRIXG_RETVAL matrixg_init ( matrixg_t *ctx, matrixg_cfg_t *cfg );
+err_t matrixg_init ( matrixg_t *ctx, matrixg_cfg_t *cfg );
 ```
 
 - `matrixg_default_cfg` Click Default Configuration function.
 ```c
 void matrixg_default_cfg ( matrixg_t *ctx );
 ```
-
-#### Example key functions :
 
 - `matrixg_display_characters` This function displays the specified characters on the L/R segments of the Click.
 ```c
@@ -68,19 +63,13 @@ void matrixg_set_csn_high ( matrixg_t *ctx );
 void matrixg_set_csn_low ( matrixg_t *ctx );
 ```
 
-## Example Description
-
-> This example showcases how to prepare the logger and Click modules for use and how to display ASCII characters on both of the LED segments of the Click.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > This function initializes and configures the logger and Click modules. After the initialization of the logger module, communication, mikrobus and pin setup, some of the registers are configured in order for the Click module to work properly.
 
 ```c
-
-void application_init ( ) {
+void application_init ( ) 
+{
    
     log_cfg_t log_cfg;
     matrixg_cfg_t cfg;
@@ -107,7 +96,6 @@ void application_init ( ) {
     matrixg_default_cfg( &matrixg );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
@@ -115,8 +103,8 @@ void application_init ( ) {
 > This function displays two strings on each of the LED segments, showing one character every second. It should display " Mikroelektronika" on the left one and "Mikroelektronika " on the right.
 
 ```c
-
-void application_task ( ) {
+void application_task ( ) 
+{
    
     matrixg_display_characters( &matrixg, ' ', 'M' );
     Delay_ms ( 1000 );
@@ -153,30 +141,25 @@ void application_task ( ) {
     matrixg_display_characters( &matrixg, 'a', ' ' );
     Delay_ms ( 100 );
 }
-
 ```
 
-## Note
+### Note
 
 > The Click has two chips, each controlling one of the LED segments, on and requires you to write data to both at the same time. Writing to one specific chip will not work. If you wish to display characters on a single segment, you have to send ' ' characters to the other segment.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.MatrixG
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

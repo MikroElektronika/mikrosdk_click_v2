@@ -1,8 +1,5 @@
 {
     "name": "PWM 2 Click",
-    "description": "PWM 2 Click offers 48 independently controlled PWM channels, available over the onboard headers, perfectly suited for driving LEDs. Each channel has a 12-bit PWM register associated to it, with the addition of the 6-bit correction register, also known as the dot correction register",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LT8500"],
-    "category" : ["PWM"] 
+    "hw" : ["Click","LT8500"]
 }

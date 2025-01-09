@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Color 18 Click
 
-> Color 18 Click is a compact add-on board for accurate ambient light detection and flicker monitoring. This board features the TCS3530, a true color ambient light sensor from ams OSRAM. The TCS3530 features true color XYZ sensing, flicker detection up to 7kHz, and eight concurrent sensing channels with independent gain configurations. It also includes a UV/IR blocking filter for precise light measurements and a unique Click Snap feature, allowing the main sensor area to become movable by breaking the PCB for flexible implementation.
+> [Color 18 Click](https://www.mikroe.com/?pid_product=MIKROE-6284) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/color18_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6284&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/color-18-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2024.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Color 18 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Color 18 Click by reading and displaying the values from all 8 modulator channels.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Color 18 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Color18
 
-#### Standard key functions :
+### Example Key Functions
 
 - `color18_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t color18_init ( color18_t *ctx, color18_cfg_t *cfg );
 err_t color18_default_cfg ( color18_t *ctx );
 ```
 
-#### Example key functions :
-
 - `color18_get_int_pin` This function returns the INT pin logic state.
 ```c
 uint8_t color18_get_int_pin ( color18_t *ctx );
@@ -68,18 +63,11 @@ err_t color18_read_data ( color18_t *ctx, color18_data_t *data_out );
 err_t color18_clear_fifo ( color18_t *ctx );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Color 18 Click by reading and displaying the values from all 8 modulator channels.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -144,22 +131,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Color18
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

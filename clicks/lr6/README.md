@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # LR 6 Click
 
-> LR 6 Click is a compact add-on board designed for ultra-long-distance spread-spectrum communication. This board features the Ra-01S, a LoRa™ wireless radio frequency module from Ai-Thinker Technology, featuring the SX1268 radio chip. This module provides exceptional sensitivity of over -148dBm, a power output of +22dBm, and supports multiple modulation methods, including LoRa™, within the 433MHz frequency band. The board offers robust anti-interference capabilities and low power consumption, making it ideal for applications requiring reliable long-range communication.
+> [LR 6 Click](https://www.mikroe.com/?pid_product=MIKROE-6112) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lr6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6112&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lr-6-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2024.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the LR 6 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of LR 6 Click board by processing
+> the incoming data and displaying them on the USB UART.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LR 6 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LR6
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lr6_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t lr6_init ( lr6_t *ctx, lr6_cfg_t *cfg );
 err_t lr6_default_cfg ( lr6_t *ctx );
 ```
 
-#### Example key functions :
-
 - `lr6_send_data` This function sends a desired number of data bytes to the buffer by using the selected mode using the SPI serial interface.
 ```c
 err_t lr6_send_data ( lr6_t *ctx, uint8_t *send_data, uint8_t len, uint8_t mode );
@@ -67,13 +63,6 @@ err_t lr6_receive_data ( lr6_t *ctx, uint8_t *receive_data, uint16_t buff_len, u
 ```c
 err_t lr6_set_lr_config ( lr6_t *ctx, lr6_lora_cfg_t lora_cfg );
 ```
-
-## Example Description
-
-> This example demonstrates the use of LR 6 Click board by processing
-> the incoming data and displaying them on the USB UART.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -167,22 +156,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LR6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

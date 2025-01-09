@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # AlphaNum G 2 Click
 
-> AlphaNum G 2 Click is a compact add-on board that represents an easy solution for adding numeric or hexadecimal displays to your application. This board features the LTP-3862, a dual-digit 16-segment alphanumeric green display from Lite-ON. It is a 0.3” (7.62mm) display with black face and white segments. The LED segments use common anodes, and besides segments, the decimal point (DP) dot is also available.
+> [AlphaNum G 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5903) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/alphanumg2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5903&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/alphanum-g-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Sep 2023.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the AlphaNum G 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the AlphaNum G 2 Click board&trade; 
+> by writing and displaying the desired alphanumeric characters.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for AlphaNum G 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.AlphaNumG2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `alphanumg2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t alphanumg2_init ( alphanumg2_t *ctx, alphanumg2_cfg_t *cfg );
 err_t alphanumg2_default_cfg ( alphanumg2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `alphanumg2_display_character` AlphaNum G 2 display character function.
 ```c
 err_t alphanumg2_display_character ( alphanumg2_t *ctx, uint8_t left_char, uint16_t left_brightness, uint8_t right_char, uint16_t right_brightness );
@@ -62,13 +58,6 @@ err_t alphanumg2_display_character ( alphanumg2_t *ctx, uint8_t left_char, uint1
 ```c
 err_t alphanumg2_set_led_output ( alphanumg2_t *ctx, uint16_t seg_bit_mask, alphanumg2_dot_t seg_dot, uint16_t brightness );
 ```
-
-## Example Description
-
-> This example demonstrates the use of the AlphaNum G 2 Click board™ 
-> by writing and displaying the desired alphanumeric characters.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -141,22 +130,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.AlphaNumG2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

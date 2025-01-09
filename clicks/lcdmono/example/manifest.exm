@@ -1,8 +1,5 @@
 {
     "name": "LCD Mono Click",
-    "description": "LCD Mono Click is a Click board™ that uses the LS013B7DH03 LCD display from Sharp which combined with the EFM32, from Silicon Labs, and its energy saving capabilities creates a powerful display application.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LS013B7DH03"],
-    "category" : ["LCD"] 
+    "hw" : ["Click","LS013B7DH03"]
 }

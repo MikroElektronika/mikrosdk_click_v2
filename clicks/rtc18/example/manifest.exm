@@ -1,8 +1,5 @@
 {
     "name": "RTC 18 Click",
-    "description": "RTC 18 Click is a compact add-on board that accurately keeps the time of a day. This board features the RV-3032-C7, an I2C-configurable real-time clock module that incorporates an integrated CMOS circuit and an XTAL from Micro Crystal AG. The RV-3032-C7 is a temperature compensated RTC with premium accuracy (0.22 sec/day) and extremely low power consumption, allowing it to be used with a single button cell battery for an extended period. It can measure temperature with a typical accuracy of ±1°C and a resolution of 0.0625°C/step with a programmable alarm on top and bottom temperature limits. It features standard RTC functions with automatic leap year correction, and standard interrupt for Periodic Countdown Timer and Periodic Time Update (seconds, minutes), date/hour/minute alarm, and an external event.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","RV-3032-C7"],
-    "category" : ["Click Boards > Clock & Timing > RTC"]
+    "hw" : ["Click","RV-3032-C7"]
 }

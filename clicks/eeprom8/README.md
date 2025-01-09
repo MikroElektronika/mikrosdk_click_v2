@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # EEPROM 8 Click
 
-> EEPROM 8 Click is a compact add-on board that contains a highly reliable nonvolatile memory solution. This board features the CAV24C512, a 512-Kb electrically erasable programmable memory with enhanced hardware write protection for entire memory from ON Semiconductor. Internally organized as 65,536 words of 8 bits each, the CAV24C512 comes up with the compatible I2C serial interface. The CAV24C512 combines unprecedented data storage with excellent energy efficiency. It lasts one million full-memory read/write/erase cycles with more than 100 years of data retention.
+> [EEPROM 8 Click](https://www.mikroe.com/?pid_product=MIKROE-5073) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/eeprom8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5073&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/eeprom-8-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Popovic
 - **Date**          : Mar 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the EEPROM 8 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of EEPROM 8 Click board by writing specified data to the memory and reading it back.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for EEPROM 8 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.EEPROM8
 
-#### Standard key functions :
+### Example Key Functions
 
 - `eeprom8_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void eeprom8_cfg_setup ( eeprom8_cfg_t *cfg );
 ```c
 err_t eeprom8_init ( eeprom8_t *ctx, eeprom8_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `eeprom8_write_page` This function writes up to 128 bytes of data starting from the selected register.
 ```c
@@ -63,18 +58,11 @@ err_t eeprom8_read_random_byte( eeprom8_t *ctx, uint16_t reg_addr, uint8_t *data
 err_t eeprom8_read_sequential( eeprom8_t *ctx, uint16_t reg_addr, uint16_t n_bytes, uint8_t *data_out );
 ```
 
-## Example Description
-
-> This example demonstrates the use of EEPROM 8 Click board by writing specified data to the memory and reading it back.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and USB UART logging.
 
 ```c
-
 void application_init ( void ) 
 {
     eeprom8_cfg_t eeprom8_cfg;  /**< Click config object. */
@@ -104,7 +92,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -112,7 +99,6 @@ void application_init ( void )
 > Task writes a desired number of data bytes to the EEPROM 8 memory and verifies that it is written correctly by reading from the same memory location and in case of successful read, displays the memory content on the USB UART. This is done in two passes.
 
 ```c
-
 void application_task ( void ) 
 {
     // Reset variables
@@ -142,25 +128,21 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.EEPROM8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

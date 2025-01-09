@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Display & LED > LED matrix",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "1x4 RGB Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c1x4rgb",
-    "product_link": "https://www.mikroe.com/1x4-rgb-click",
-    "short_description": "1x4 RGB Click is a compact add-on board that creates vivid and dynamic lighting effects. This board features the LP5812, an advanced RGB LED driver from Texas Instruments. It features ultra-low operation current, an autonomous animation engine, and support for both analog and PWM dimming. The board operates with 3.3V or 5V logic voltage levels and communicates with the host MCU via a standard 2-wire I2C interface. It is suitable for portable and wearable electronics, gaming, home entertainment, IoT, networking, industrial HMI, and many more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.1x4RGB",
-    "subdir_name": "lib_c1x4rgb"
+    "name": "mikroe.click.1x4rgb",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6240",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "1x4 RGB Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.1x4RGB",
+                "subdir_name": "lib_c1x4rgb",
+                "path": "1x4 RGB Click/data/lib_c1x4rgb"
+            }
+        ]
+    }
 }
-
-
-

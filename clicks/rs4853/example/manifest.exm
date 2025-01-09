@@ -1,8 +1,5 @@
 {
     "name": "RS 485 3 Click",
-    "description": "RS485 3 Click is an RS422/485 transceiver Click board™, which can be used as an interface between the TTL level UART and the RS422/485 communication bus. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SN65HVD31DR"],
-    "category" : ["RS485"] 
+    "hw" : ["Click","SN65HVD31DR"]
 }

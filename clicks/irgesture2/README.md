@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # IR Gesture 2 Click
 
-> IR Gesture 2 Click is a compact add-on board that provides contactless gesture recognition. This board features the MAX25405, a data-acquisition system for the gesture and proximity sensing from Analog Devices. Detection distance is improved by integrating a complete optical system with a lens, aperture, visible light filter, and a 6x10 photodetector array. The proximity, hand detection, and gesture recognition functions of the MAX25405 operate by detecting the light reflected from the controlled IR-LED light sources driven directly from the MAX25405. It can also detect these gestures even when exposed to bright ambient light and process data from the sensor through an SPI interface.
+> [IR Gesture 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5146) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/irgesture2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5146&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ir-gesture-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Apr 2022.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the IR Gesture 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of IR Gesture 2 Click board by reading and displaying the raw ADC values of entire 60-pixel IR photodiode array.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for IR Gesture 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.IRGesture2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `irgesture2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t irgesture2_init ( irgesture2_t *ctx, irgesture2_cfg_t *cfg );
 err_t irgesture2_default_cfg ( irgesture2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `irgesture2_get_int_pin` This function returns the INT pin logic state.
 ```c
 uint8_t irgesture2_get_int_pin ( irgesture2_t *ctx );
@@ -68,18 +63,11 @@ err_t irgesture2_read_pixels ( irgesture2_t *ctx, int16_t *pixels, bool flip_pix
 err_t irgesture2_write_register ( irgesture2_t *ctx, uint8_t reg, uint8_t data_in );
 ```
 
-## Example Description
-
-> This example demonstrates the use of IR Gesture 2 Click board by reading and displaying the raw ADC values of entire 60-pixel IR photodiode array.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -145,22 +132,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.IRGesture2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

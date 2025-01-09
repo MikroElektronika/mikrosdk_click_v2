@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Expand Click
 
-< Expand Click is an accessory board in mikroBUS form factor. It includes a 16-bit I/O expander MCP23S17 with SPI clock speeds up to 10 MHz for higher throughput applications >
+> [Expand Click](https://www.mikroe.com/?pid_product=MIKROE-951) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/expand_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-951&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/expand-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Feb 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Expand Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Expand Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void expand_cfg_setup ( expand_cfg_t *cfg ); 
- 
-- Initialization function.
-> EXPAND_RETVAL expand_init ( expand_t *ctx, expand_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Set expander PORTA direction function.
-> void expand_set_direction_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t write_data );
- 
-- Write one byte of data to register for PORTA function.
-> void expand_write_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t write_data );
-
-- Reset function.
-> void expand_reset ( expand_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This applicatioin use for expansion I/O lines.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Expand
+
+### Example Key Functions
+
+- `expand_cfg_setup` Config Object Initialization function. 
+```c
+void expand_cfg_setup ( expand_cfg_t *cfg );
+``` 
+ 
+- `expand_init` Initialization function. 
+```c
+err_t expand_init ( expand_t *ctx, expand_cfg_t *cfg );
+```
+
+- `expand_set_direction_port_a` Set expander PORTA direction function. 
+```c
+void expand_set_direction_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t write_data );
+```
+ 
+- `expand_write_port_a` Write one byte of data to register for PORTA function. 
+```c
+void expand_write_port_a ( expand_t *ctx, uint8_t mod_cmd, uint8_t write_data );
+```
+
+- `expand_reset` Reset function. 
+```c
+void expand_reset ( expand_t *ctx );
+```
+
+### Application Init
 
 > Initialization driver enable's - GPIO, reset MCP23S17 chip, set PORTA to be output and PORTB to be input, set default configuration and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -98,7 +95,6 @@ void application_init ( void )
     
     expand_set_pull_ups_port_b( &expand, EXPAND_SPI_MODULE_POSITION_0, 0xFF );
 }
-  
 ```
 
 ### Application Task
@@ -108,7 +104,6 @@ void application_init ( void )
 > Results are being sent to the Usart Terminal where you can track their changes. All data logs on usb uart for aproximetly every 500 ms.
 
 ```c
-
 void application_task ( void )
 {
     pin_position = 1;
@@ -127,29 +122,22 @@ void application_task ( void )
 
         Delay_ms ( 500 );
     }
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Expand
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

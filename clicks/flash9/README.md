@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Flash 9 Click
 
-> Flash 9 Click is a compact add-on board that contains a highly reliable memory solution. This board features the W25Q02JV, an SPI configurable serial Flash memory solution from Winbond Electronics. It represents a four 512Mb stack die supporting linear addressing for the full 2Gb memory address range, offering flexibility and performance well beyond ordinary Serial Flash devices. The W25Q02JV array is organized into 1,048,576 programmable pages of 256-bytes each, where up to 256 bytes can be programmed at a time. This memory also has advanced security features, can withstand many write cycles (minimum 100k), and has a data retention period greater than 20 years.
+> [Flash 9 Click](https://www.mikroe.com/?pid_product=MIKROE-4987) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/flash9_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4987&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/flash-9-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Dec 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Flash 9 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Flash 9 Click board by writing specified data to the memory and reading it back.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Flash 9 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Flash9
 
-#### Standard key functions :
+### Example Key Functions
 
 - `flash9_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t flash9_init ( flash9_t *ctx, flash9_cfg_t *cfg );
 err_t flash9_default_cfg ( flash9_t *ctx );
 ```
 
-#### Example key functions :
-
 - `flash9_erase_memory` This function erases the selected amount of memory which contains the selected address.
 ```c
 err_t flash9_erase_memory ( flash9_t *ctx, uint8_t erase_cmd, uint32_t address );
@@ -68,18 +63,11 @@ err_t flash9_memory_write ( flash9_t *ctx, uint32_t address, uint8_t *data_in, u
 err_t flash9_memory_read_fast ( flash9_t *ctx, uint32_t address, uint8_t *data_out, uint16_t len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Flash 9 Click board by writing specified data to the memory and reading it back.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -154,22 +141,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Flash9
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

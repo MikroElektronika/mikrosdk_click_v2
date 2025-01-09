@@ -3,7 +3,7 @@
  * @brief LTE IoT 4 Click Example.
  *
  * # Description
- * This example reads and processes data from LTE IoT 4 clicks.
+ * This example reads and processes data from LTE IoT 4 Clicks.
  *
  * The demo application is composed of two sections :
  * 

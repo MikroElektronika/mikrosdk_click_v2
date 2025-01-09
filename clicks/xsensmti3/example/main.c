@@ -3,7 +3,7 @@
  * @brief XSENS MTi-3 Click Example.
  *
  * # Description
- * This example reads and processes data from XSENS MTi-3 clicks.
+ * This example reads and processes data from XSENS MTi-3 Clicks.
  *
  * The demo application is composed of two sections :
  *

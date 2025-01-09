@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > FM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "FM Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.fm",
-    "product_link": "https://www.mikroe.com/fm-click",
-    "short_description": "FM Click with it’s Si4703 IC is a complete FM radio tuner in the form of add-on board. It supports worldwide FM band (76 – 108 MHz).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        673
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Fm",
-    "subdir_name": "lib_fm"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1431",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "FM Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Fm",
+                "subdir_name": "lib_fm",
+                "path": "FM Click/data/lib_fm"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

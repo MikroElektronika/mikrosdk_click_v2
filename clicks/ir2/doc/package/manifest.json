@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IR 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ir2",
-    "product_link": "https://www.mikroe.com/ir-2-click",
-    "short_description": "IR 2 Click is a compact add-on board representing a compact and easy solution for adding infrared (IR) remote control to your design. This board features the TSMP58138, a miniaturized sensor for receiving the modulated signal of QEE113 IR emitting diode from Vishay Semiconductors. This IR sensor module consists of a photodetector, pre-amplifier, and automatic gain control to surpass ambient noise with signals transmitted to it in the near-infrared range with a wavelength of 940nm. It also communicates with the target MCU via selectable GPIO lines.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.IR2",
-    "subdir_name": "lib_ir2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5088",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IR 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IR2",
+                "subdir_name": "lib_ir2",
+                "path": "IR 2 Click/data/lib_ir2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

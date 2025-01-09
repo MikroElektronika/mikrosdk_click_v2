@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > ReRAM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ReRAM 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.reram2",
-    "product_link": "https://www.mikroe.com/reram-2-click",
-    "short_description": "ReRAM 2 Click is a compact add-on board containing highly reliable resistive random-access memory. This board features the MB85AS8MT, an 8Mbit memory organized as 1,048,576 words of 8 bits from Fujitsu Semiconductor. The MB85AS8MT uses the resistance-variable memory process and silicon-gate CMOS process technologies to form nonvolatile memory cells. This SPI configurable ReRAM can withstand many write cycles (1x106 rewrite operations), has a data retention period greater than ten years, and can read and write to random addresses with very negligible delay. This Click board™ is ideal as a nonvolatile storage media or temporary RAM expansion for storing variables in any embedded application that requires rapid writes and unlimited endurance.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.ReRAM2",
-    "subdir_name": "lib_reram2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4895",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ReRAM 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ReRAM2",
+                "subdir_name": "lib_reram2",
+                "path": "ReRAM 2 Click/data/lib_reram2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

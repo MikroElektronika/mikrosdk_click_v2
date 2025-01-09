@@ -3,7 +3,7 @@
  * @brief RS485 5V Click Example.
  *
  * # Description
- * This example reads and processes data from RS485 5V clicks.
+ * This example reads and processes data from RS485 5V Clicks.
  *
  * The demo application is composed of two sections :
  *

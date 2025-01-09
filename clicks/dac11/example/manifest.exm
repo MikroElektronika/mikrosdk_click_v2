@@ -1,8 +1,5 @@
 {
     "name": "DAC 11 Click",
-    "description": "DAC 11 Click is a compact add-on board that contains a highly accurate digital-to-analog converter. This board features the DAC128S085, a general-purpose OCTAL 12-bit analog voltage-output DAC from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DAC128S085"],
-    "category" : ["DAC"]
+    "hw" : ["Click","DAC128S085"]
 }

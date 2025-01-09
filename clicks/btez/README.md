@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # BT-EZ Click
 
-The BT-EZ Click is a Click board™ which provide BLE connectivity for any embedded application.
+> [BT-EZ Click](https://www.mikroe.com/?pid_product=MIKROE-4038) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/btez_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4038&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/bt-ez-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the BtEz Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](http://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](http://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from BT-EZ Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for BtEz Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BtEz
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void btez_cfg_setup ( btez_cfg_t *cfg ); 
+- `btez_cfg_setup` Config Object Initialization function. 
+```c
+void btez_cfg_setup ( btez_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> BTEZ_RETVAL btez_init ( btez_t *ctx, btez_cfg_t *cfg );
+- `btez_init` Initialization function. 
+```c
+err_t btez_init ( btez_t *ctx, btez_cfg_t *cfg );
+```
 
-#### Example key functions :
-
-- Generic write function.
-> void btez_generic_write ( btez_t *ctx, char *data_buf, uint16_t len );
+- `btez_generic_write` Generic write function. 
+```c
+void btez_generic_write ( btez_t *ctx, char *data_buf, uint16_t len );
+```
  
-- Generic read function.
-> int32_t btez_generic_read ( btez_t *ctx, char *data_buf, uint16_t max_len );
+- `btez_generic_read` Generic read function. 
+```c
+int32_t btez_generic_read ( btez_t *ctx, char *data_buf, uint16_t max_len );
+```
 
-- Send command function.
-> void btez_send_command ( btez_t *ctx, char *command );
+- `btez_send_command` Send command function. 
+```c
+void btez_send_command ( btez_t *ctx, char *command );
+```
 
-## Examples Description
-
-> This example reads and processes data from BT-EZ clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -108,7 +106,6 @@ void application_init ( void )
     log_printf( &logger, "The module has been configured.\r\n" );
     Delay_1sec( );
 }
-  
 ```
 
 ### Application Task
@@ -116,38 +113,29 @@ void application_init ( void )
 > Checks for the received data, reads it and replies with a certain message.
 
 ```c
-
 void application_task ( void )
 {
     btez_process( );
-} 
-
-```
- 
-## Note
+}
+``` 
+### Note
 
 > We have used the Serial Bluetooth Terminal smartphone application for the test. 
 > A smartphone and the Click board must be paired in order to exchange messages with each other.
 
-The full application code, and ready to use projects can be installed directly from compilers IDE(recommended) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BtEz
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](http://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

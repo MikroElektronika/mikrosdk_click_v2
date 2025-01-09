@@ -1,8 +1,5 @@
 {
     "name": "LSM303AGR Click",
-    "description": "LSM303AGR Click is a magnetometer and accelerometer device, capable of sensing both the magnetic and gravitational field along three orthogonal axes. It uses the LSM303AGR from STMicroelectronics, an integrated MEMS IC with plenty of features that allow accurate and reliable sensing.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LSM303AGR"],
-    "category" : ["Magnetic"] 
+    "hw" : ["Click","LSM303AGR"]
 }

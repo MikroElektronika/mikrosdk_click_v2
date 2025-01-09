@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # ROTARY O Click
 
-Rotary Click carries a 15-pulse incremental rotary encoder with detents, surrounded by a ring of 16 orange LEDs. It’s a perfect solution for adding a precision input knob to your design. The encoder outputs A and B signals (out of phase to each other); the knob also acts as a push-button which sends an interrupt to the target board MCU. The LED ring is controlled through SPI lines (CS, SCK, MISO, MOSI). Rotary Click can be used with either a 3.3V or 5V power supply.
+> [ROTARY O Click](https://www.mikroe.com/?pid_product=MIKROE-2380) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rotaryo_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2380&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/rotary-o-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the RotaryO Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> The demo application controls led on Click with rotory on board
 
-## Library Description
+### Example Libraries
 
-> This library contains API for RotaryO Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.RotaryO
 
-#### Standard key functions :
+### Example Key Functions
 
 - `rotaryo_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void rotaryo_cfg_setup ( rotaryo_cfg_t *cfg );
 ```c
 err_t rotaryo_init ( rotaryo_t *ctx, rotaryo_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `rotaryo_generic_transfer` ROTARY O data transfer function.
 ```c
@@ -63,19 +58,13 @@ void rotaryo_turn_on_led_by_data ( rotaryo_t *ctx, uint16_t write_data );
 void rotaryo_turn_on_led_by_position ( rotaryo_t *ctx, uint8_t led_position );
 ```
 
-## Example Description
-
-> The demo application controls led on Click with rotory on board
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes SPI driver, set initial states, set RST logic high and performs device configuration.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     rotaryo_cfg_t rotaryo_cfg;  /**< Click config object. */
 
@@ -112,7 +101,6 @@ void application_init ( void ) {
     old__rot_state = 0;
     new_rotate_state = 1;
 }
-
 ```
 
 ### Application Task
@@ -120,8 +108,8 @@ void application_init ( void ) {
 > Show functionality of Rotary O Click, rotating and turn on/off led's, using the SPI interface
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     rotaryo_turn_on_led_by_data( &rotaryo, led_data );
 
 //     Push button
@@ -173,30 +161,25 @@ void application_task ( void ) {
         }
     }
 }
-
 ```
 
-## Note
+### Note
 
-> In order to use all of the clicks functionality, pull down INT pin.
+> In order to use all of the Clicks functionality, pull down INT pin.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.RotaryO
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,41 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Smart DOF 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.smartdof2",
-    "product_link": "https://www.mikroe.com/smart-dof-2-click",
-    "short_description": "Smart DOF 2 Click is a compact add-on board with a highly advanced integrated 6-axis IMU measurement unit. This board features the LSM6DSV16XTR, a high-performance 6-axis IMU with sensor fusion, ASC, MLC, Qvar, and OIS/EIS paths from STMicroelectronics. The IMU unit features an accelerometer and gyroscope that can be turned off independently of each other, still allowed to have different ODRs and power modes. The unit can be configured as a finite state machine (FSM), machine learning core (MLC), and Qvar sensing.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.SmartDOF2",
-    "subdir_name": "lib_smartdof2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5672",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart DOF 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartDOF2",
+                "subdir_name": "lib_smartdof2",
+                "path": "Smart DOF 2 Click/data/lib_smartdof2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

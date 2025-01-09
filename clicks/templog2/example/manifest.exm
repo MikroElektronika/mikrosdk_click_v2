@@ -1,8 +1,5 @@
 {
     "name": "Temp-Log 2 Click",
-    "description": "Temp-Log 2 Click is a precise ambient temperature measurement device, equipped with the additional non-volatile (EEPROM) memory that can be used to permanently store system configuration, and 64 bits of general-purpose EEPROM, used for logging application specific or user preference data.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TMP116"],
-    "category" : ["Temperature & humidity","Temperature Logging"] 
+    "hw" : ["Click","TMP116"]
 }

@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Expand 11 Click
 
-> Expand 11 Click is a compact add-on board that contains a multi-port I/O expander. This board features the TCA9536, a general-purpose remote I/O expansion for most microcontroller families from Texas Instruments. The TCA9536 comes in a 4-port configuration and allows easy addition of I/O through a standard I2C serial interface. Each port is user-configurable to either a logic input or logic output by writing to the I/O configuration register bits. The data for each input or output is kept in the corresponding input or output register. There is an additional special function register that port P3, in addition to its standard I/O function, can also configure as an interrupt feature.
+> [Expand 11 Click](https://www.mikroe.com/?pid_product=MIKROE-5532) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/expand11_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5532&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/expand-11-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Feb 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Expand 11 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Expand 11 Click board by setting and reading the port state.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Expand 11 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Expand11
 
-#### Standard key functions :
+### Example Key Functions
 
 - `expand11_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t expand11_init ( expand11_t *ctx, expand11_cfg_t *cfg );
 err_t expand11_default_cfg ( expand11_t *ctx );
 ```
 
-#### Example key functions :
-
 - `expand11_set_pin_direction` This function sets the direction of the selected pins.
 ```c
 err_t expand11_set_pin_direction ( expand11_t *ctx, uint8_t direction, uint8_t pin_mask );
@@ -68,18 +63,11 @@ err_t expand11_set_all_pins_value ( expand11_t *ctx, uint8_t set_mask );
 err_t expand11_read_port_value ( expand11_t *ctx, uint8_t *data_out );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Expand 11 Click board by setting and reading the port state.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which sets the pins P0-P1 as output and P2-P3 as input.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -143,22 +130,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Expand11
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

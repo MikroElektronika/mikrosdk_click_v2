@@ -1,8 +1,5 @@
 {
     "name": "eFuse 2 Click",
-    "description": "eFuse 2 Click is a compact add-on board that contains an integrated FET hot-swap device. This board features the TPS259631, a highly integrated circuit protection and power management solution from Texas Instruments. It provides multiple protection modes against overloads, short circuits, voltage surges, and excessive inrush current.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TPS259631"],
-    "category" : ["Power Switch"]
+    "hw" : ["Click","TPS259631"]
 }

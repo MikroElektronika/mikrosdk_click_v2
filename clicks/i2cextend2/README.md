@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # I2C Extend 2 Click
 
-> I2C Extend 2 Click is a compact add-on board suitable for I2C communication bus extension. This board features the PCA9615, a 2-channel multipoint differential I2C bus buffer with hot-swap logic from NXP Semiconductors. The PCA9615 converts the two default I2C signals into four differential signals, two for SCL and two for SDA.
+> [I2C Extend 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4419) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/i2cextend2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4419&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/i2c-extend-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the I2CExtend2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example which demonstrates the use of I2C Extend 2 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for I2CExtend2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.I2CExtend2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `i2cextend2_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void i2cextend2_cfg_setup ( i2cextend2_cfg_t *cfg );
 ```c
 err_t i2cextend2_init ( i2cextend2_t *ctx, i2cextend2_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `i2cextend2_rmt_write` Generic write data in Remote Mode function.
 ```c
@@ -63,18 +58,11 @@ uint8_t i2cextend2_rmt_read ( i2cextend2_t *ctx, uint8_t reg );
 void i2cextend2_enable ( i2cextend2_t *ctx, uint8_t en_extend );
 ```
 
-## Example Description
-
-> This is an example which demonstrates the use of I2C Extend 2 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver enables - I2C,  check communication with device 6DOF IMU 11 Click  connected to the I2C Extend 2 Click ( Remote Mode ), set default configuration and start measurement.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -132,7 +120,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     log_printf( &logger, "------------------------\r\n" );
 }
-
 ```
 
 ### Application Task
@@ -140,7 +127,6 @@ void application_init ( void )
 > In this example, we read Accel and Mag axis of the connected  6DOF IMU 11 Click boards to the I2C Extend 2 Click ( Remote Mode ) which is connected by a LAN cable to I2C Extend 2 Click ( Local Mode ). Results are being sent to the Usart Terminal where you can track their changes. All data logs write on USB uart changes for every 2 sec.
 
 ```c
-
 void application_task ( void ) 
 {
     log_printf( &logger, "\t   Accel   \t|\t    Mag    \r\n" );
@@ -164,26 +150,22 @@ void application_task ( void )
     log_printf( &logger, "------------------------------------------------\r\n" );
     Delay_ms ( 1000 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.I2CExtend2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

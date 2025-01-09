@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # TempHum 20 Click
 
-> Temp&Hum 20 Click is a compact add-on board that represents temperature and humidity sensing solution. This board features the CC2D23, a highly accurate, fully-calibrated relative humidity and temperature sensor from Amphenol. This sensor, characterized by its high accuracy (±2% from 20% to 80%RH (±3% over entire humidity range)) and high resolution, provides factory-calibrated 14-bit data to the host controller with a configurable I2C interface. It also comes with alarm features for preset control at a minimum and maximum humidity.
+> [TempHum 20 Click](https://www.mikroe.com/?pid_product=MIKROE-4907) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/temphum20_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4907&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/temphum-20-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the TempHum20 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Temp & Hum 20 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for TempHum20 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.TempHum20
 
-#### Standard key functions :
+### Example Key Functions
 
 - `temphum20_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t temphum20_init ( temphum20_t *ctx, temphum20_cfg_t *cfg );
 err_t temphum20_default_cfg ( temphum20_t *ctx );
 ```
 
-#### Example key functions :
-
 - `temphum20_write_command` This function writes a desired command data to the selected command byte.
 ```c
 err_t temphum20_write_command ( temphum20_t *ctx, uint8_t cmd_byte, uint16_t cmd_data );
@@ -68,18 +63,11 @@ err_t temphum20_get_measurement ( temphum20_t *ctx, float *temp, float *hum );
 err_t temphum20_set_operating_mode ( temphum20_t *ctx, uint8_t op_mode );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Temp & Hum 20 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger and performs the Click default configuration which resets the device and sets it to normal operating mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -123,7 +110,6 @@ void application_init ( void )
 > When the new data is ready, this function reads the temperature and humidity data and displays the results on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     float humidity, temperature = 0;
@@ -134,25 +120,21 @@ void application_task ( void )
         log_printf ( &logger, " Humidity: %.3f %%\r\n\n", humidity );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.TempHum20
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "AlphaNum G 2 Click",
-    "description": "AlphaNum G 2 Click is a compact add-on board that represents an easy solution for adding numeric or hexadecimal displays to your application. This board features the LTP-3862, a dual-digit 16-segment alphanumeric green display from Lite-ON. It is a 0.3” (7.62mm) display with black face and white segments. The LED segments use common anodes, and besides segments, the decimal point (DP) dot is also available.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","LTP-3862G,TLC5947RHBR"],
-    "category" : ["Click Boards > Display & LED > LED segment"]
+    "hw" : ["Click","LTP-3862G,TLC5947RHBR"]
 }

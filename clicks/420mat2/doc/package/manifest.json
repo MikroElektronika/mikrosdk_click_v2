@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Current",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "4-20mA T 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c420mat2",
-    "product_link": "https://www.mikroe.com/4-20ma-t-2-click",
-    "short_description": "4-20mA T 2 Click is a compact add-on board for transmitting an analog output current over an industry-standard 4-20mA current loop. This board features DAC161S997, a low-power 16-bit ΣΔ digital-to-analog converter (DAC) from Texas Instruments. It has a programmable Power-Up condition and loop-error detection/reporting accessible via simple 4-wire SPI for data transfer and configuration of the DAC functions. In addition, it is characterized by low power consumption and the possibility of simple Highway Addressable Remote Transducer (HART) modulator interfacing, allowing the injection of FSK-modulated digital data into the 4-20mA current loop.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.c420mAT2",
-    "subdir_name": "lib_c420mat2"
+    "name": "mikroe.click.420mat2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5540",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4-20mA T 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.c420mAT2",
+                "subdir_name": "lib_c420mat2",
+                "path": "4-20mA T 2 Click/data/lib_c420mat2"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

@@ -1,36 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Miscellaneous > Relay",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "IPD 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ipd2",
-    "product_link": "https://www.mikroe.com/ipd-2-click",
-    "short_description": "IPD 2 Click is a compact add-on board for efficient and reliable high-side switching in automotive applications. This board features the BV2HD070EFU-C, an automotive-grade two-channel high-side switch from ROHM Semiconductor with advanced protection and diagnostic functionalities. This 70mΩ on-resistance high-side switch supports an input voltage range from 6V to 28V and includes built-in protection mechanisms such as overcurrent detection, thermal shutdown, undervoltage lockout, and open load detection. Additionally, it offers configurable overcurrent limits and diagnostic output for real-time fault feedback, ensuring enhanced system reliability.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.1",
-    "cmake": true,
-    "alias": "Click.IPD2",
-    "subdir_name": "lib_ipd2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6314",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IPD 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IPD2",
+                "subdir_name": "lib_ipd2",
+                "path": "IPD 2 Click/data/lib_ipd2"
+            }
+        ]
+    }
 }
-

@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # DAC 16 Click
 
-> DAC 16 Click is a compact add-on board, a digital-to-analog converter (DAC) designed for precise voltage and current output applications. This board features the DAC63204-Q1, an automotive-qualified 12-bit DAC from Texas Instruments. This Click board™ features four output channels with flexible configuration options, including adjustable voltage gains and selectable current ranges from ±25μA to ±250μA. It also supports both internal and external voltage references and offers a Hi-Z power-down mode for enhanced protection. Communication with the host MCU is enabled through either a 4-wire SPI or I2C interface, with configurable I2C addresses and a general-purpose I/O pin for additional functionality.
+> [DAC 16 Click](https://www.mikroe.com/?pid_product=MIKROE-6209) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dac16_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6209&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dac-16-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Apr 2024.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the DAC 16 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of DAC 16 Click board by changing the voltage level
+on the OUT0 as well as the waveform signals from a function generator on the OUT1.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DAC 16 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DAC16
 
-#### Standard key functions :
+### Example Key Functions
 
 - `dac16_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t dac16_init ( dac16_t *ctx, dac16_cfg_t *cfg );
 err_t dac16_default_cfg ( dac16_t *ctx );
 ```
 
-#### Example key functions :
-
 - `dac16_set_dac_data` This function sets the raw DAC data for the selected DAC channel.
 ```c
 err_t dac16_set_dac_data ( dac16_t *ctx, uint8_t dac, uint16_t dac_data );
@@ -68,19 +64,11 @@ err_t dac16_start_function_gen ( dac16_t *ctx, uint8_t dac );
 err_t dac16_stop_function_gen ( dac16_t *ctx, uint8_t dac );
 ```
 
-## Example Description
-
-> This example demonstrates the use of DAC 16 Click board by changing the voltage level
-on the OUT0 as well as the waveform signals from a function generator on the OUT1.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -117,7 +105,6 @@ void application_init ( void )
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -195,22 +182,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DAC16
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "LTE IoT 4 Click",
-    "description": "LTE IoT 4 Click is a compact add-on board that contains an IoT module with worldwide coverage. This board features the nRF9160, highly integrated, low-power SiP with LTE-M/NB-IoT and GPS from Nordic Semiconductor.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","NRF9160"],
-    "category" : ["LTE IoT"]
+    "hw" : ["Click","NRF9160"]
 }

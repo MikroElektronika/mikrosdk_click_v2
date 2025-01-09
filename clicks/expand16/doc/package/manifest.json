@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Expand 16 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.expand16",
-    "product_link": "https://www.mikroe.com/expand-16-click",
-    "short_description": "Expand 16 Click is a compact add-on board with a multi-port I/O expander. This board features the FLX6408, a fully configurable 8-bit GPIO expander from ON Semiconductor. It brings eight independently configurable input/output ports, with a 6mA output drive, when configured in the output mode. ",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.Expand16",
-    "subdir_name": "lib_expand16"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5939",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 16 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand16",
+                "subdir_name": "lib_expand16",
+                "path": "Expand 16 Click/data/lib_expand16"
+            }
+        ]
+    }
 }
-
-
-

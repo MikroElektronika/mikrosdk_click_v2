@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Wireless Charging",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Qi Receiver Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.qireceiver",
-    "product_link": "https://www.mikroe.com/qi-receiver-click",
-    "short_description": "Qi Receiver Click is based on the P9025AC 5W Qi wireless power receiver integrated circuit, with the advanced Foreign Object Detection (FOD) feature, from IDT. The Click utilizes the principles of the inductive coupling for the purpose of wireless power transfer.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2211
-    ],
-    "version": "2.1.0.18",
-    "cmake": true,
-    "alias": "Click.QiReceiver",
-    "subdir_name": "lib_qireceiver"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2799",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Qi Receiver Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.QiReceiver",
+                "subdir_name": "lib_qireceiver",
+                "path": "Qi Receiver Click/data/lib_qireceiver"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

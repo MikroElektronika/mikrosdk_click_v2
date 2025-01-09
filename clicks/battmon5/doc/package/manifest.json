@@ -1,0 +1,22 @@
+{
+    "display_name": "BATT-MON 5 Click",
+    "name": "mikroe.click.battmon5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6448",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BATT-MON 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BATTMON5",
+                "subdir_name": "lib_battmon5",
+                "path": "BATT-MON 5 Click/data/lib_battmon5"
+            }
+        ]
+    }
+}

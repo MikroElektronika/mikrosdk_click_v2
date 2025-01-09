@@ -3,7 +3,7 @@
  * @brief LTE Cat.1-US Click Example.
  *
  * # Description
- * This example reads and processes data from LTE Cat.1-US clicks.
+ * This example reads and processes data from LTE Cat.1-US Clicks.
  *
  * The demo application is composed of two sections :
  * 

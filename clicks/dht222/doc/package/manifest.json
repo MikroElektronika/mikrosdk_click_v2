@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DHT22 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.dht222",
-    "product_link": "https://www.mikroe.com/dht22-2-click",
-    "short_description": "DHT22 2 Click is used for measuring the environmental temperature and relative humidity. It uses the AM2322 sensor, with very accurate thermal and humidity measuring capabilities. It can use either 1-Wire or I2C protocol to communicate with the integrated circuit.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2226
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Dht222",
-    "subdir_name": "lib_dht222"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2818",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DHT22 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Dht222",
+                "subdir_name": "lib_dht222",
+                "path": "DHT22 2 Click/data/lib_dht222"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

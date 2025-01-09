@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "ADC 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.adc3",
-    "product_link": "https://www.mikroe.com/adc-3-click",
-    "short_description": "ADC 3 Click represent 16-bit multichannel analog-to-digital converter. The Click has four pairs of screw terminals onboard, letting you access the chip’s four differential input channels.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        1572
-    ],
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.Adc3",
-    "subdir_name": "lib_adc3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1894",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Adc3",
+                "subdir_name": "lib_adc3",
+                "path": "ADC 3 Click/data/lib_adc3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

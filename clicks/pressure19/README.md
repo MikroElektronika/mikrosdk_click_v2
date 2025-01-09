@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Pressure 19 Click
 
-> Pressure 19 Click is a compact add-on board that contains a board-mount pressure sensor. This board features the MLX90817, a factory-calibrated absolute pressure sensor delivering ratiometric analog output from Melexis Technologies. The MLX90817 comes with a configurable host interface that supports I2C serial communication and configurable signal processing (the user is allowed to process the output signal in analog or digital form). It measures pressure from 0.2 up to 3bar with a pressure accuracy of ±33mbar. Its DSP-based architecture using a 16bit microcontroller provides outstanding performance in terms of initial accuracy and assures operation in a temperature range of -40°C to +120°C, ensuring stable operation under extreme conditions.
+> [Pressure 19 Click](https://www.mikroe.com/?pid_product=MIKROE-5089) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pressure19_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5089&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pressure-19-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Mar 2022.
 - **Type**          : ADC/I2C type
 
-
 # Software Support
 
-We provide a library for the Pressure 19 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Pressure 19 Click board by reading and displaying the absolute pressure value in mBar.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Pressure 19 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Pressure19
 
-#### Standard key functions :
+### Example Key Functions
 
 - `pressure19_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void pressure19_cfg_setup ( pressure19_cfg_t *cfg );
 ```c
 err_t pressure19_init ( pressure19_t *ctx, pressure19_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `pressure19_get_pressure` This function reads the output voltage and converts it to pressure in mBar.
 ```c
@@ -63,18 +58,11 @@ err_t pressure19_read_voltage ( pressure19_t *ctx, float *voltage );
 err_t pressure19_set_vref ( pressure19_t *ctx, float vref );
 ```
 
-## Example Description
-
-> This example demonstrates the use of Pressure 19 Click board by reading and displaying the absolute pressure value in mBar.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;                  /**< Logger config object. */
@@ -105,7 +93,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -113,7 +100,6 @@ void application_init ( void )
 > Reads and displays the absolute pressure value [mBar] on the USB UART approximately once per seconds.
 
 ```c
-
 void application_task ( void )
 {
     uint16_t pressure;
@@ -123,25 +109,21 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Pressure19
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # PROFET 10A Click
 
-PROFET Click is a compact add-on board that contains a smart high-side power switch. This board features the BTS7008-1EPA, a single-channel, high-side power switch with embedded protection and diagnosis feature from Infineon Technologies. This switch has a driving capability suitable for 10A loads featuring a ReverSave™, which causes the power transistor to switch on in case of reverse polarity.
+> [PROFET 10A Click](https://www.mikroe.com/?pid_product=MIKROE-4817) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/profet10a_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4817&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/profet-click-10a)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Jun 2021.
 - **Type**          : ADC type
 
-
 # Software Support
 
-We provide a library for the PROFET 10A Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases the ability of the PROFET 10A Click board.
+It configures Host MCU for communication and then enables 
+and disables output channel. Besides that, it reads the voltage 
+of IS pin and calculates current on output.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for PROFET 10A Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.PROFET10A
 
-#### Standard key functions :
+### Example Key Functions
 
 - `profet10a_cfg_setup` Config Object Initialization function.
 ```c
@@ -46,8 +46,6 @@ void profet10a_cfg_setup ( profet10a_cfg_t *cfg );
 err_t profet10a_init ( profet10a_t *ctx, profet10a_cfg_t *cfg );
 ```
 
-#### Example key functions :
-
 - `profet10a_read_an_pin_voltage` PROFET 10A read AN pin voltage level function.
 ```c
 err_t profet10a_read_an_pin_voltage ( profet10a_t *ctx, float *data_out );
@@ -58,22 +56,12 @@ err_t profet10a_read_an_pin_voltage ( profet10a_t *ctx, float *data_out );
 err_t profet10a_set_mode ( profet10a_t *ctx, uint8_t mode );
 ```
 
-## Example Description
-
-> This example showcases the ability of the PROFET 10A Click board.
-It configures Host MCU for communication and then enables 
-and disables output channel. Besides that, it reads the voltage 
-of IS pin and calculates current on output.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of the communication modules(ADC and UART) 
 and additional pins for controlling the device.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -108,7 +96,6 @@ void application_init ( void )
     profet10a_set_mode( &profet10a, PROFET10A_DIAGNOSTIC_ON );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
@@ -118,7 +105,6 @@ DIAGNOSTIC and OFF mode while it reads the voltage of IS pin
 and with that calculates current on output.
 
 ```c
-
 void application_task ( void )
 {
     static uint8_t mode = PROFET10A_DIAGNOSTIC_ON;
@@ -152,30 +138,26 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-## Note
+### Note
 
 > Formula for calculating current on load: 
 I_load = voltage(IS) x kILIS / 1.2 kΩ
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.PROFET10A
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

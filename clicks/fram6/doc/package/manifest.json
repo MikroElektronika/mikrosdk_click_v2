@@ -1,47 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Storage > FRAM",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "FRAM 6 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.fram6",
-    "product_link": "https://www.mikroe.com/fram-6-click",
-    "short_description": "FRAM 6 Click is a compact add-on board that contains highly reliable ferroelectric random access memory. This board features the CY15B102Q, a 2Mbit nonvolatile memory employing an advanced ferroelectric process organized as 256K words of 8 bits each from Cypress Semiconductor, now part of Infineon.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.16",
-    "cmake": true,
-    "alias": "Click.FRAM6",
-    "subdir_name": "lib_fram6"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4831",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "FRAM 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.FRAM6",
+                "subdir_name": "lib_fram6",
+                "path": "FRAM 6 Click/data/lib_fram6"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

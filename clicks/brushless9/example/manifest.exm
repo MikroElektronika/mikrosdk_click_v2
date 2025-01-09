@@ -1,8 +1,5 @@
 {
     "name": "Brushless 9 Click",
-    "description": "Brushless 9 Click is a compact add-on board suitable for controlling BLDC motors with any MCU. This board features the TC78B027FTG, a 1-Hall sine-wave PWM controller for three-phase brushless DC motors from Toshiba Semiconductor. It simplifies the motor selection by using only one Hall sensor input that can be used with either a single Hall sensor motor or the more conventional 3 Hall sensor motors.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TC78B027FTG"],
-    "category" : ["Brushless"]
+    "hw" : ["Click","TC78B027FTG"]
 }

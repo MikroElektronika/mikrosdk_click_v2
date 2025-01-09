@@ -1,44 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Pressure",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Pressure 8 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.pressure8",
-    "product_link": "https://www.mikroe.com/pressure-8-click",
-    "short_description": "Pressure 8 Click is an accurate and fully calibrated pressure sensor, equipped with the MPR series integrated piezoresistive silicon pressure sensor IC.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2647
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.Pressure8",
-    "subdir_name": "lib_pressure8"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3338",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Pressure 8 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pressure8",
+                "subdir_name": "lib_pressure8",
+                "path": "Pressure 8 Click/data/lib_pressure8"
+            }
+        ]
+    }
 }
-
-
-
-
-
-

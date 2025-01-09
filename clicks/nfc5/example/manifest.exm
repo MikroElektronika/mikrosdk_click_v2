@@ -1,8 +1,5 @@
 {
     "name": "NFC 5 Click",
-    "description": "NFC 5 Click is a compact add-on board designed for advanced NFC applications. This board features the ST25R3918, a multipurpose NFC transceiver from STMicroelectronics. This Click board™ is built to cater to the growing needs of the Internet of Things (IoT) ecosystem, providing robust NFC reader functionalities, passive peer-to-peer communication, and card emulation modes with outstanding analog performance. Its notable features include exceptional read range with minimal power output, advanced noise reduction, and compatibility with ISO14443, ISO15693, and NFC Forum Tag types 1, 2, 4, and 5.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ST25R3918-AQWT"],
-    "category" : ["Click Boards > Wireless connectivity > RFID/NFC"]
+    "hw" : ["Click","ST25R3918-AQWT"]
 }

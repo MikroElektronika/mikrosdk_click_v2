@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Magnetic",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Magnetic Rotary Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.magneticrotary",
-    "product_link": "https://www.mikroe.com/magnetic-rotary-click",
-    "short_description": "Magnetic rotary Click is a very accurate position sensing Click board™ which utilizes the HMC1512, a magnetic field displacement sensor IC.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2655
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.MagneticRotary",
-    "subdir_name": "lib_magneticrotary"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3275",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Magnetic Rotary Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MagneticRotary",
+                "subdir_name": "lib_magneticrotary",
+                "path": "Magnetic Rotary Click/data/lib_magneticrotary"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

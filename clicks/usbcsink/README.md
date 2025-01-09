@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # USB-C Sink Click
 
-> USB-C Sink Click is a compact add-on board that contains a standalone autonomous USB power delivery controller. This board features the STUSB4500, a USB-C sink-only controller compatible with Power-Delivery (PD) from STMicroelectronics. It supports dead battery mode to allow a system to be powered from an external source directly, establishes a valid source-to-sink connection, and negotiates a USB power delivery (PD) contract with a PD capable source device.
+> [USB-C Sink Click](https://www.mikroe.com/?pid_product=MIKROE-4328) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/usbcsink_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4328&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/usb-c-sink-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Aug 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the USBCSink Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This is an example which demonstrates the use of USB-C Sink Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for USBCSink Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.USBCSink
 
-#### Standard key functions :
+### Example Key Functions
 
 - `usbcsink_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void usbcsink_cfg_setup ( usbcsink_cfg_t *cfg );
 ```c
 err_t usbcsink_init ( usbcsink_t *ctx, usbcsink_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `usbcsink_hw_reset` HW reset function.
 ```c
@@ -63,20 +58,14 @@ uint8_t usbcsink_get_pdo2 ( usbcsink_t *ctx );
 void usbcsink_write_byte ( usbcsink_t *ctx, uint8_t reg, uint8_t tx_data );
 ```
 
-## Example Description
-
-> This is an example which demonstrates the use of USB-C Sink Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization driver enables - I2C, set hw reset, set PDO2 profile and current value for PDO2 1.5A,
 > upload new data and reset device to write NVM settings to the STUSB450, also write log.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;  /**< Logger config object. */
     usbcsink_cfg_t usbcsink_cfg;  /**< Click config object. */
 
@@ -123,7 +112,6 @@ void application_init ( void ) {
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -135,8 +123,8 @@ void application_init ( void ) {
 > All data logs write on USB uart changes for every 5 sec.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     usbcsink_load_data( &usbcsink );
 
     log_printf( &logger , "     New Parameters     \r\n" );
@@ -160,26 +148,22 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.USBCSink
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

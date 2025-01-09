@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # LTE Cat.4 3 Click
 
-> LTE Cat.4 3 Click is a compact add-on board representing a multi-band and multi-mode solution, offering universal connectivity and reliable performance. This board features the LARA-L6004D-01B, an LTE Cat 4 module in the smallest form factor from u-blox. The module supports an LTE Cat 4 FDD and an LTE Cat 4 TDD radio access technology (RAT), with a 3G UMTS/HSPA and 2G GSM/GPRS/EGPRS fallback. It is an ideal solution for global and multi-regional coverage.
+> [LTE Cat.4 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5991) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ltecat43_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5991&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lte-cat4-3-click-data)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Nov 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the LTE Cat.4 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> Application example shows device capability of connecting to the network and sending SMS or TCP/UDP messages using standard "AT" commands.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LTE Cat.4 3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LTECat43
 
-#### Standard key functions :
+### Example Key Functions
 
 - `ltecat43_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void ltecat43_cfg_setup ( ltecat43_cfg_t *cfg );
 ```c
 err_t ltecat43_init ( ltecat43_t *ctx, ltecat43_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `ltecat43_set_power_state` This function sets a desired power state by toggling PWR pin with a specific time for high state.
 ```c
@@ -63,18 +58,11 @@ void ltecat43_set_sim_apn ( ltecat43_t *ctx, char *sim_apn );
 void ltecat43_send_sms_text ( ltecat43_t *ctx, char *phone_number, char *sms_text );
 ```
 
-## Example Description
-
-> Application example shows device capability of connecting to the network and sending SMS or TCP/UDP messages using standard "AT" commands.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, restarts the module and tests the communication.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -122,7 +110,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     example_state = LTECAT43_CONFIGURE_FOR_NETWORK;
 }
-
 ```
 
 ### Application Task
@@ -181,7 +168,7 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > In order for the examples to work, user needs to set the APN and SMSC (SMS PDU mode only)
 of entered SIM card as well as the phone number (SMS mode only) to which he wants to send an SMS.
@@ -191,22 +178,19 @@ Enter valid values for the following macros: SIM_APN, SIM_SMSC and PHONE_NUMBER_
 > > - SIM_SMSC "+381610401"
 > > - PHONE_NUMBER_TO_MESSAGE "+381659999999"
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LTECat43
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

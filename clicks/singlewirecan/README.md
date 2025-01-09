@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Single Wire CAN Click
 
-Single Wire CAN Click is a compact add-on board that contains an IC for a single wire data link capable of operating with various protocols such as the Controller Area Network (CAN). This board features the NCV7356D1R2G, Single Wire CAN transceiver from ON Semiconductor, which operates from a supply voltage from 5V to 27V with bus speed up to 40 kbps. 
+> [Single Wire CAN Click](https://www.mikroe.com/?pid_product=MIKROE-4225) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/singlewirecan_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4225&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/single-wire-can-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jul 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the SingleWireCan Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for SingleWireCan Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void singlewirecan_cfg_setup ( singlewirecan_cfg_t *cfg ); 
- 
-- Initialization function.
-> SINGLEWIRECAN_RETVAL singlewirecan_init ( singlewirecan_t *ctx, singlewirecan_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- The function set desired operating mode of NCV7356 Single Wire CAN Transceiver
-> void singlewirecan_set_operating_mode ( singlewirecan_t *ctx, uint8_t op_mode );
- 
-- This function write specified number of bytes
-> void singlewirecan_generic_write ( singlewirecan_t *ctx, char *data_buf, uint16_t len );
-
-- This function reads a desired number of data bytes.
-> int32_t singlewirecan_generic_read ( singlewirecan_t *ctx, char *data_buf, uint16_t max_len );
-
-## Examples Description
+## Example Description
 
 > This example demonstrate the use of Single Wire CAN Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.SingleWireCan
+
+### Example Key Functions
+
+- `singlewirecan_cfg_setup` Config Object Initialization function. 
+```c
+void singlewirecan_cfg_setup ( singlewirecan_cfg_t *cfg );
+``` 
+ 
+- `singlewirecan_init` Initialization function. 
+```c
+err_t singlewirecan_init ( singlewirecan_t *ctx, singlewirecan_cfg_t *cfg );
+```
+
+- `singlewirecan_set_operating_mode` The function set desired operating mode of NCV7356 Single Wire CAN Transceiver. 
+```c
+void singlewirecan_set_operating_mode ( singlewirecan_t *ctx, uint8_t op_mode );
+```
+ 
+- `singlewirecan_generic_write` This function write specified number of bytes. 
+```c
+void singlewirecan_generic_write ( singlewirecan_t *ctx, char *data_buf, uint16_t len );
+```
+
+- `singlewirecan_generic_read` This function reads a desired number of data bytes. 
+```c
+int32_t singlewirecan_generic_read ( singlewirecan_t *ctx, char *data_buf, uint16_t max_len );
+```
+
+### Application Init
 
 > Initializes the driver and configures the Click for the normal operation mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -95,7 +92,6 @@ void application_init ( void )
     log_info( &logger, "---- Normal Operation Mode ----" );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -103,7 +99,6 @@ void application_init ( void )
 > Depending on the selected mode, it reads all the received data or sends the desired message every 2 seconds.
 
 ```c
-
 void application_task ( void )
 {
 #ifdef DEMO_APP_RECEIVER
@@ -116,29 +111,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 #endif    
-} 
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.SingleWireCan
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

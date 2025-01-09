@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > GSM/LTE",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "4G LTE 2 Data-NA Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c4glte2datana",
-    "product_link": "https://www.mikroe.com/4g-lte-2-click-data-for-north-america",
-    "short_description": "4G LTE 2 Click - Data (for North America) is a compact add-on board providing a secure-cloud multi-band solution offering universal connectivity and reliable performance. This board features the LARA-R6401D, the world’s smallest LTE Cat 1 module from u-blox with coverage for North American region and a built-in MQTT client, representing a data-only solution. Equipped with familiar AT commands set over the UART interface, USB interface, and Network and Status indicators, the LARA-R6401D also has a comprehensive certification scheme, multi-band and multi-mode capabilities providing excellent flexibility, except for the support of voice/audio application.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.11",
-    "cmake": true,
-    "alias": "Click.4GLTE2DataNA",
-    "subdir_name": "lib_c4glte2datana"
+    "name": "mikroe.click.4glte2datana",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6476",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4G LTE 2 Data-NA Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.4GLTE2DataNA",
+                "subdir_name": "lib_c4glte2datana",
+                "path": "4G LTE 2 Data-NA Click/data/lib_c4glte2datana"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,38 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Wireless connectivity > WIFI",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "WIZFI360 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.wizfi360",
-    "product_link": "https://www.mikroe.com/wizfi360-click",
-    "short_description": "WIZFI360 Click is a compact add-on board for reliable WiFi connectivity in industrial applications. This board features the WIZFI360, a WiFi module from WIZnet, known for its low power consumption and full compliance with IEEE802.11 b/g/n standards. The board supports SoftAP, Station, and SoftAP+Station modes, operates within the frequency range of 2400MHz to 2483.5MHz, and offers a versatile serial port baud rate of up to 2Mbps. It features WPA_PSK and WPA2_PSK encryption for secure communication, configurable operating channels from 1 to 13, and the ability to handle up to 5 simultaneous TCP/UDP links.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.3",
-    "cmake": true,
-    "alias": "Click.WIZFI360",
-    "subdir_name": "lib_wizfi360"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6153",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WIZFI360 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WIZFI360",
+                "subdir_name": "lib_wizfi360",
+                "path": "WIZFI360 Click/data/lib_wizfi360"
+            }
+        ]
+    }
 }
-
-
-

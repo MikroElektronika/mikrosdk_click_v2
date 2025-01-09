@@ -23,7 +23,7 @@
  * - err_t wirepas_poll_indication ( wirepas_t *ctx )
  *
  * @note
- * For the best experience use two clicks in sink mode and one in router.
+ * For the best experience use two Clicks in sink mode and one in router.
  *
  * @author Stefan Ilic
  *

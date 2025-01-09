@@ -1,46 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Buck",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MCP16331 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mcp16331",
-    "product_link": "https://www.mikroe.com/mcp16331-click",
-    "short_description": "MCP16331 Click functions as a buck-boost voltage regulator, a switching regulator topology that combines principles of the buck conversion (step-down) and the boost conversion (step-up).",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2202
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Mcp16331",
-    "subdir_name": "lib_mcp16331"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2762",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MCP16331 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mcp16331",
+                "subdir_name": "lib_mcp16331",
+                "path": "MCP16331 Click/data/lib_mcp16331"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

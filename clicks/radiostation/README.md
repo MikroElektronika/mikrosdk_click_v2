@@ -1,77 +1,73 @@
-\mainpage Main Page
- 
+
 ---
 # RadioStation Click
 
-RadioStation Click is a unique Click board™ that can be used to broadcast the music via the FM radio band. It features the Si4713-B30 from Silicon Labs, the best in class integrated FM broadcast stereo transmitter, which operates in the frequency range of 76MHz to 108MHz. It can also broadcast RDS/RDBS data. The Click board™ can be equipped with a small FM antenna, which is used to extend the broadcasting range.
+> [RadioStation Click](https://www.mikroe.com/?pid_product=MIKROE-2822) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/radiostation_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2822&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/radiostation-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jun 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the RadioStation Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> RadioStation Click can be used to broadcast the music via the FM radio band 
+> ( which operates in the frequency range of 76MHz to 108MHz ).
 
-## Library Description
+### Example Libraries
 
-> This library contains API for RadioStation Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.RadioStation
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void radiostation_cfg_setup ( radiostation_cfg_t *cfg ); 
+- `radiostation_cfg_setup` Config Object Initialization function. 
+```c
+void radiostation_cfg_setup ( radiostation_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> RADIOSTATION_RETVAL radiostation_init ( radiostation_t *ctx, radiostation_cfg_t *cfg );
+- `radiostation_init` Initialization function. 
+```c
+err_t radiostation_init ( radiostation_t *ctx, radiostation_cfg_t *cfg );
+```
 
-- Click Default Configuration function.
-> void radiostation_default_cfg ( radiostation_t *ctx );
-
-
-#### Example key functions :
+- `radiostation_default_cfg` Click Default Configuration function. 
+```c
+void radiostation_default_cfg ( radiostation_t *ctx );
+```
 
 - Returns status information about the Audio Signal Quality and current FM transmit frequency. 
  1 byte for return status (same as return value) and 4 bytes for ASQ status.
 > uint8_t radiostation_get_asq_status ( radiostation_t *ctx, radiostation_cmd_t *cmd, uint8_t *ret_vals ) ;
  
-- Powers up the chip with default settings. This function should be executed before sending any commands to the chip.
-> uint8_t radiostation_power_up ( radiostation_t *ctx, radiostation_cmd_t *cmd );
+- `radiostation_power_up` Powers up the chip with default settings. This function should be executed before sending any commands to the chip. 
+```c
+uint8_t radiostation_power_up ( radiostation_t *ctx, radiostation_cmd_t *cmd );
+```
 
-- Returns status information which is set by radiostation_get_tune_measure, radiostation_set_tune_frequency or radiostation_set_tune_power. 1 byte for return status (same as return value) and 7 bytes for tune status.
-> uint8_t radiostation_get_tune_status ( radiostation_t *ctx, radiostation_cmd_t *cmd, uint8_t clear_stc_status_bit, uint8_t *ret_vals );
+- `radiostation_get_tune_status` Returns status information which is set by radiostation_get_tune_measure, radiostation_set_tune_frequency or radiostation_set_tune_power. 1 byte for return status (same as return value) and 7 bytes for tune status. 
+```c
+uint8_t radiostation_get_tune_status ( radiostation_t *ctx, radiostation_cmd_t *cmd, uint8_t clear_stc_status_bit, uint8_t *ret_vals );
+```
 
-## Examples Description
-
-> RadioStation Click can be used to broadcast the music via the FM radio band 
-> ( which operates in the frequency range of 76MHz to 108MHz ).
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initialization driver enable's - I2C and sets transmit_frequency.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +97,6 @@ void application_init ( void )
 
     radiostation_default_cfg( &radiostation, &radiostation_cmd );
 }
-  
 ```
 
 ### Application Task
@@ -110,35 +105,26 @@ void application_init ( void )
 > it on 100.00 MHz frequency. 
 
 ```c
-
 void application_task ( void )
 {
     radiostation_get_asq_status( &radiostation, &radiostation_cmd, &buff[ 0 ] );
     Delay_ms ( 50 );
-}  
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.RadioStation
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

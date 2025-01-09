@@ -1,8 +1,5 @@
 {
     "name": "Thermo 6 Click",
-    "description": "Thermo 6 Click is a precise and versatile ambient temperature measurement Click board, based on the Maxim Integrated MAX31875 temperature sensor.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MAX31875"],
-    "category" : ["Temperature & humidity"] 
+    "hw" : ["Click","MAX31875"]
 }

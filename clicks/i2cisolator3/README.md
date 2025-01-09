@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # I2C Isolator 3 Click
 
-> I2C Isolator 3 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the CPC5902, a dual optically isolated bidirectional logic-bus repeater from IXYS Integrated Circuits Division. 
+> [I2C Isolator 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4467) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4467&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/i2c-isolator-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jul 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the I2CIsolator3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+>  This is an example that demonstrates the use of the I2C Isolator 3 Click board. In this example, we measure temperature
+from the Thermo 20 Click connected to the I2C Isolator 3 Click board. 
 
-## Library Description
+### Example Libraries
 
-> This library contains API for I2CIsolator3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.I2CIsolator3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `i2cisolator3_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +43,6 @@ void i2cisolator3_cfg_setup ( i2cisolator3_cfg_t *cfg );
 ```c
 err_t i2cisolator3_init ( i2cisolator3_t *ctx, i2cisolator3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `i2cisolator3_send_cmd` The function sends the desired command to a remote device wired with CPC5902, Optically Isolated I2C Bus Repeater on I2C Isolator 3 Click board.
 ```c
@@ -63,20 +59,13 @@ void i2cisolator3_write_byte ( i2cisolator3_t *ctx, uint8_t reg, uint8_t tx_data
 uint8_t i2cisolator3_read_byte ( i2cisolator3_t *ctx, uint8_t reg );
 ```
 
-## Example Description
-
->  This is an example that demonstrates the use of the I2C Isolator 3 Click board. In this example, we measure temperature
-from the Thermo 20 Click connected to the I2C Isolator 3 Click board. 
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 >  Initializes I2C and start to write log. Initialization driver enables - I2C, set I2C slave address of the Thermo 20 Click, performs software reset, also write log.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                         /**< Logger config object. */
     i2cisolator3_cfg_t i2cisolator3_cfg;       /**< Click config object. */
 
@@ -121,7 +110,6 @@ void application_init ( void ) {
 
     log_info( &logger, " Application Task \r\n" );
 }
-
 ```
 
 ### Application Task
@@ -130,8 +118,8 @@ void application_init ( void ) {
 the temperature information. All data logs write on USB UART changes every 3 sec.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     i2cisolator3_send_cmd( &i2cisolator3, I2CISOLATOR3_THERMO20_CMD_CONVERSION );
     Delay_ms ( 100 );
 
@@ -142,24 +130,21 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );    
 }
-
 ```
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
 
-**Other Mikroe Libraries used in the example:**
+## Application Output
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.I2CIsolator3
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Additional notes and informations**
+## Additional Notes and Information
 
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

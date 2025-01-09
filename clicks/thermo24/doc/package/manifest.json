@@ -1,43 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Thermo 24 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.thermo24",
-    "product_link": "https://www.mikroe.com/thermo-24-click",
-    "short_description": "Thermo 24 Click is a compact add-on board that contains the 4th generation temperature sensing solution from Sensirion. This board features the STS40, a high-accuracy ultra-low-power temperature sensor. The STS40 integrates a digital temperature sensor with a 16-bit analog-to-digital converter (ADC), a data processing circuit, and serial interface logic functions in one package. Characterized by its high accuracy (up to Â±0.2Â°C typical) and high resolution of 0.01Â°C, this temperature sensor provides temperature data to the host controller with a configurable I2C interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.9",
-    "alias": "Click.Thermo24",
-    "cmake": true,
-    "subdir_name": "lib_thermo24"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5110",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermo 24 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermo24",
+                "subdir_name": "lib_thermo24",
+                "path": "Thermo 24 Click/data/lib_thermo24"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-

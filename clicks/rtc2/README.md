@@ -1,73 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # RTC2 Click
 
-< RTC2 Click is an accessory board in mikroBus™ form factor. It features the DS1307 serial real-time clock (RTC). It is a low-power, full binary-coded decimal (BCD) clock/calendar with programmable square-wave output signal. >
+> [RTC 2 Click](https://www.mikroe.com/?pid_product=MIKROE-2063) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/rtc2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2063&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/rtc-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Rtc2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Rtc2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void rtc2_cfg_setup ( rtc2_cfg_t *cfg ); 
- 
-- Initialization function.
-> RTC2_RETVAL rtc2_init ( rtc2_t *ctx, rtc2_cfg_t *cfg );
-
-#### Example key functions :
-
-- Generic read byte of data function.
-> uint8_t rtc2_read_byte ( rtc2_t *ctx, uint8_t reg_address );
- 
-- Generic write byte of data function.
-> void rtc2_write_byte ( rtc2_t *ctx, uint8_t reg_address, uint8_t write_data );
-
-- Enable counting function.
-> void rtc2_enable_counting ( rtc2_t *ctx );
-
-## Examples Description
+## Example Description
 
 > This application give time and day information. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Rtc2
+
+### Example Key Functions
+
+- `rtc2_cfg_setup` Config Object Initialization function. 
+```c
+void rtc2_cfg_setup ( rtc2_cfg_t *cfg );
+``` 
+ 
+- `rtc2_init` Initialization function. 
+```c
+err_t rtc2_init ( rtc2_t *ctx, rtc2_cfg_t *cfg );
+```
+
+- `rtc2_read_byte` Generic read byte of data function. 
+```c
+uint8_t rtc2_read_byte ( rtc2_t *ctx, uint8_t reg_address );
+```
+ 
+- `rtc2_write_byte` Generic write byte of data function. 
+```c
+void rtc2_write_byte ( rtc2_t *ctx, uint8_t reg_address, uint8_t write_data );
+```
+
+- `rtc2_enable_counting` Enable counting function. 
+```c
+void rtc2_enable_counting ( rtc2_t *ctx );
+```
+
+### Application Init
 
 > Initialization driver enable's - I2C,set start time and date, enable counting and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -96,7 +91,6 @@ void application_init ( void )
     rtc2_set_date( &rtc2, 1, 31, 12, 2018 );
     rtc2_enable_counting( &rtc2 );
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +103,6 @@ void application_init ( void )
     All data logs write on usb uart changes for every 1 sec.
 
 ```c
-
 void application_task ( void )
 {
     rtc2_get_time( &rtc2, &time_hours, &time_minutes, &time_seconds );
@@ -148,36 +141,29 @@ void application_task ( void )
 
         time_seconds_new =  time_seconds;
     }
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > Additional Functions :
 
  - void displayDayOfTheWeek( uint8_t dayOfTheWeek ) - Write day of the week log on USART terminal.
  - void displayLogUart( uint8_t value ) - Write the value ( time or date ) of a two-digit number.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Rtc2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,8 +1,5 @@
 {
     "name": "LTE Cat.4 Click",
-    "description": "LTE Cat.4 Click (for Europe) is a compact add-on board made specially for 4G M2M and IoT applications in Europe. This board features the EG95EXGA-128-SGNS, an IoT/M2M-optimized LTE Cat.4 module that meets the 3GPP Release 11 standard from Quectel. It supports multiple wireless standards, including LTE-FDD, WCDMA, and GSM, ensuring broad network compatibility. Key features include multi-band LTE support (B1/B3/B7/B8/B20/B28), RX diversity for bands B1 and B8, and multi-constellation GNSS (GPS, GLONASS, BeiDou/Compass, Galileo, QZSS). It also integrates a 16-bit mono audio codec for voice functionality with support for CTIA standard headphones. Additionally, it offers a USB Type C connector for power and data transfer, AT command communication, and firmware upgrades.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","EG95EXGA-128-SGNS","MAX9860"],
-    "category" : ["Click Boards > Wireless connectivity > GSM/LTE"]
+    "hw" : ["Click","EG95EXGA-128-SGNS","MAX9860"]
 }

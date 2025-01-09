@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Proximity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Proximity 13 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.proximity13",
-    "product_link": "https://www.mikroe.com/proximity-13-click",
-    "short_description": "Proximity 13 Click based on SI1153-AB09-GMR IC from Silicon Labs that can be used as an proximity, and gesture detector with I2C digital interface and programmable-event interrupt output.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3189
-    ],
-    "version": "2.1.0.20",
-    "cmake": true,
-    "alias": "Click.Proximity13",
-    "subdir_name": "lib_proximity13"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3991",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Proximity 13 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Proximity13",
+                "subdir_name": "lib_proximity13",
+                "path": "Proximity 13 Click/data/lib_proximity13"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

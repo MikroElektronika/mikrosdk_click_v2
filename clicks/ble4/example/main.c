@@ -3,7 +3,7 @@
  * \brief BLE4 Click example
  * 
  * # Description
- * This example reads and processes data from BLE 4 clicks.
+ * This example reads and processes data from BLE 4 Clicks.
  *
  * The demo application is composed of two sections :
  * 

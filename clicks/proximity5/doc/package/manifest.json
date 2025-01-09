@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Proximity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Proximity 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.proximity5",
-    "product_link": "https://www.mikroe.com/proximity-5-click",
-    "short_description": "Proximity 5 Click is a very accurate and reliable proximity sensing (PS) and ambient light sensing (ALS) device, equipped with the state-of-the-art PS and ALS sensor.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        2373
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.Proximity5",
-    "subdir_name": "lib_proximity5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2984",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Proximity 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Proximity5",
+                "subdir_name": "lib_proximity5",
+                "path": "Proximity 5 Click/data/lib_proximity5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

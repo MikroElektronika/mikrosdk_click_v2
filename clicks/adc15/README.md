@@ -1,40 +1,40 @@
-\mainpage Main Page
 
 ---
 # ADC 15 Click
 
-> ADC 15 Click is a compact add-on board that contains a high-performance data converter. This board features the ADS131M02, a two-channel, simultaneously sampling, 24-bit, delta-sigma (ΔΣ), analog-to-digital converter from Texas Instruments. The ADC inputs can be independently configured via serial peripheral interface depending on the sensor input. A low noise, programmable gain amplifier (PGA) provides gains ranging from 1 to 128 to amplify low-level signals.
+> [ADC 15 Click](https://www.mikroe.com/?pid_product=MIKROE-4890) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/adc15_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4890&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/adc-15-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Luka Filipovic
 - **Date**          : Sep 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the ADC15 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example showcases ability of the Click board to 
+read adc data from 2 different channels. It's also configuratable
+to read data in different output rate, resolutions( word/data len ),
+and gain.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ADC15 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ADC15
 
-#### Standard key functions :
+### Example Key Functions
 
 - `adc15_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +51,6 @@ err_t adc15_init ( adc15_t *ctx, adc15_cfg_t *cfg );
 err_t adc15_default_cfg ( adc15_t *ctx );
 ```
 
-#### Example key functions :
-
 - `adc15_read_voltage` Get voltage value.
 ```c
 err_t adc15_read_voltage ( adc15_t *ctx, uint16_t *status, float *ch1_out, float *ch2_out );
@@ -68,15 +66,6 @@ err_t adc15_set_gain ( adc15_t *ctx, adc15_channel_t channel, adc15_gain_t gain 
 err_t adc15_set_word_len ( adc15_t *ctx, adc15_word_t word_len );
 ```
 
-## Example Description
-
-> This example showcases ability of the Click board to 
-read adc data from 2 different channels. It's also configuratable
-to read data in different output rate, resolutions( word/data len ),
-and gain.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of communication modules (SPI, UART) and additional
@@ -85,7 +74,6 @@ sets gain of 1 for both channels(+/-1.2V range) and word/data length
 of 24bit. In the end reads device ID.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -128,7 +116,6 @@ void application_init ( void )
     log_info( &logger, " Application Task " );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
@@ -137,7 +124,6 @@ void application_init ( void )
 and logs read status and channel voltage level.
 
 ```c
-
 void application_task ( void )
 {
     while ( adc15_data_ready( &adc15 ) );
@@ -153,26 +139,21 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ADC15
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

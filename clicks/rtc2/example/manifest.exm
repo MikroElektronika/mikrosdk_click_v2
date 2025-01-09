@@ -1,8 +1,5 @@
 {
     "name": "RTC2 Click",
-    "description": "<RTC2 Click is an accessory board in mikroBus™ form factor. It features the DS1307 serial real-time clock (RTC). It is a low-power, full binary-coded decimal (BCD) clock/calendar with programmable square-wave output signal.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DS1307"],
-    "category" : ["RTC"] 
+    "hw" : ["Click","DS1307"]
 }

@@ -1,70 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # EERAM 2 Click
 
-EERAM 2 Click is a standalone serial SRAM memory that includes shadow non-volatile backup. EERAM uses a small external capacitor to provide the energy needed to move the contents of the SRAM to the non-volatile cells when system power is lost.
+> [EERAM 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4129) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/eeram2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4129&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/eeram-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jun 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Eeram2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Eeram2 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void eeram2_cfg_setup ( eeram2_cfg_t *cfg ); 
- 
-- Initialization function.
-> EERAM2_RETVAL eeram2_init ( eeram2_t *ctx, eeram2_cfg_t *cfg );
-
-#### Example key functions :
-
-- Set On-hold status function.
-> void eeram2_set_on_hold_status ( eeram2_t *ctx, uint8_t en_hold );
- 
-- Set command function.
-> void eeram2_set_command ( eeram2_t *ctx, uint8_t command );
-
-- Set write status function.
-> void eeram2_set_write_status ( eeram2_t *ctx, uint8_t en_write );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of EERAM 2 Click board. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Eeram2
+
+### Example Key Functions
+
+- `eeram2_cfg_setup` Config Object Initialization function. 
+```c
+void eeram2_cfg_setup ( eeram2_cfg_t *cfg );
+``` 
+ 
+- `eeram2_init` Initialization function. 
+```c
+err_t eeram2_init ( eeram2_t *ctx, eeram2_cfg_t *cfg );
+```
+
+- `eeram2_set_on_hold_status` Set On-hold status function. 
+```c
+void eeram2_set_on_hold_status ( eeram2_t *ctx, uint8_t en_hold );
+```
+ 
+- `eeram2_set_command` Set command function. 
+```c
+void eeram2_set_command ( eeram2_t *ctx, uint8_t command );
+```
+
+- `eeram2_set_write_status` Set write status function. 
+```c
+void eeram2_set_write_status ( eeram2_t *ctx, uint8_t en_write );
+```
+
+### Application Init
 
 > Initialization driver enables - SPI. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -95,7 +93,6 @@ void application_init ( void )
     eeram2_set_write_status( &eeram2, EERAM2_WRITE_ENABLE );
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -104,7 +101,6 @@ void application_init ( void )
 > by reading from the same memory location and displaying its content on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
     check_status = eeram2_write_continuous( &eeram2, 0x00543210, &demo_data[ 0 ], 9 );
@@ -133,29 +129,22 @@ void application_task ( void )
     log_printf( &logger, "--------------------\r\n" );
     
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Eeram2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

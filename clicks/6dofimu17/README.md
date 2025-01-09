@@ -1,40 +1,42 @@
-\mainpage Main Page
 
 ---
 # 6DOF IMU 17 Click
 
-> 6DOF IMU 17 Click is a compact add-on board that contains a 6-axis inertial measurement unit. This board features the IIM-42652, a 6-axis SmartIndustrial™ MotionTracking device that supports an extended operating temperature range for industrial applications from TDK InvenSense. It combines a 3-axis gyroscope and a 3-axis accelerometer featuring a 2K-byte FIFO that can lower the traffic on the serial bus interface (SPI or I2C) and reduce power consumption by allowing the system processor to burst read sensor data and then go into a low-power mode.
+> [6DOF IMU 17 Click](https://www.mikroe.com/?pid_product=MIKROE-4785) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/6dofimu17_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4785&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/6dof-imu-17-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the 6DOFIMU17 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for 6DOF IMU 17 Click driver.
+> The library initializes and defines the I2C or SPI bus drivers 
+> to write and read data from registers. 
+> The library also includes a function for reading 
+> accelerometer and gyroscope X-axis, Y-axis, and Z-axis data 
+> as well as the temperature in degrees Celsius.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 6DOFIMU17 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.6DOFIMU17
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c6dofimu17_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +53,6 @@ err_t c6dofimu17_init ( c6dofimu17_t *ctx, c6dofimu17_cfg_t *cfg );
 err_t c6dofimu17_default_cfg ( c6dofimu17_t *ctx );
 ```
 
-#### Example key functions :
-
 - `c6dofimu17_get_accel_data` 6DOF IMU 17 get accel data function.
 ```c
 err_t c6dofimu17_get_accel_data ( c6dofimu17_t *ctx, c6dofimu17_axis_t *accel_data );
@@ -68,17 +68,6 @@ err_t c6dofimu17_get_gyro_data ( c6dofimu17_t *ctx, c6dofimu17_axis_t *gyro_data
 err_t c6dofimu17_get_temperature ( c6dofimu17_t *ctx, float *temperature );
 ```
 
-## Example Description
-
-> This library contains API for 6DOF IMU 17 Click driver.
-> The library initializes and defines the I2C or SPI bus drivers 
-> to write and read data from registers. 
-> The library also includes a function for reading 
-> accelerometer and gyroscope X-axis, Y-axis, and Z-axis data 
-> as well as the temperature in degrees Celsius.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > The initialization of I2C or SPI module, log UART, and additional pins. 
@@ -86,7 +75,6 @@ err_t c6dofimu17_get_temperature ( c6dofimu17_t *ctx, float *temperature );
 > sensor ID, and then executes a default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;                /**< Logger config object. */
@@ -138,19 +126,17 @@ void application_init ( void )
     log_printf( &logger, "\t--------------------------------------\r\n" );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a 6DOF IMU 17 Click board™.
+> This is an example that shows the use of a 6DOF IMU 17 Click board&trade;.
 > Measures and displays acceleration and gyroscope data for X-axis, Y-axis, and Z-axis
 > and the temperature in degrees Celsius. 
 > Results are being sent to the USART terminal where the user can track their changes. 
 > This task repeats every 100 ms.
 
 ```c
-
 void application_task ( void )
 {   
     c6dofimu17_axis_t accel_data;
@@ -169,25 +155,21 @@ void application_task ( void )
     }
     Delay_ms ( 100 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.6DOFIMU17
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

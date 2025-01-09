@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # Pressure 8 Click
 
-> Pressure 8 Click is an accurate and fully calibrated pressure sensor, equipped with the MPR series integrated piezoresistive silicon pressure sensor IC. 
+> [Pressure 8 Click](https://www.mikroe.com/?pid_product=MIKROE-3338) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/pressure8_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3338&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/pressure-8-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : nov 2019.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Pressure8 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This application reads pressure data.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Pressure8 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Pressure8
 
-#### Standard key functions :
+### Example Key Functions
 
 - `pressure8_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void pressure8_cfg_setup ( pressure8_cfg_t *cfg );
 ```c
 err_t pressure8_init ( pressure8_t *ctx, pressure8_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `pressure8_get_pressure` Functions for get Pressure data
 ```c
@@ -63,13 +58,7 @@ uint8_t pressure8_get_device_status ( pressure8_t *ctx );
 void pressure8_set_psi_range ( pressure8_t *ctx, float psi_min, float psi_max );
 ```
 
-## Examples Description
-
-> This application reads pressure data.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initialization device and logger module, reset device and set PSI range.
 
@@ -121,25 +110,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Pressure8
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

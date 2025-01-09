@@ -1,73 +1,68 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Boost 4 Click
 
-Boost 4 Click carries the TPS61230A, a high efficiency fully integrated synchronous boost converter from Texas Instruments. The Click is designed to run on a 3.3V power supply.
+> [Boost 4 Click](https://www.mikroe.com/?pid_product=MIKROE-2757) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/boost4_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2757&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/boost-4-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Jovan Stajkovic
 - **Date**          : Dec 2019.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Boost4 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Boost4 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void boost4_cfg_setup ( boost4_cfg_t *cfg ); 
- 
-- Initialization function.
-> BOOST4_RETVAL boost4_init ( boost4_t *ctx, boost4_cfg_t *cfg );
-
-
-#### Example key functions :
-
-- Generic SPI transfer, for sending and receiving packages.
-> void boost4_generic_transfer ( boost4_t *ctx, spi_master_transfer_data_t *block );
- 
-- Function set output voltage by write 12-bit data to the register on the TPS61230A High Efficiency Step-Up Converter of Boost 4 Click.
-> void boost4_set_out_voltage ( boost4_t *ctx, uint16_t value );
-
-- Function is used to enabled or disabled the device.
-> void boost4_enable ( boost4_t *ctx, uint8_t state );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of Boost 4 Click board.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Boost4
+
+### Example Key Functions
+
+- `boost4_cfg_setup` Config Object Initialization function. 
+```c
+void boost4_cfg_setup ( boost4_cfg_t *cfg );
+``` 
+ 
+- `boost4_init` Initialization function. 
+```c
+err_t boost4_init ( boost4_t *ctx, boost4_cfg_t *cfg );
+```
+
+- `boost4_generic_transfer` Generic SPI transfer, for sending and receiving packages. 
+```c
+void boost4_generic_transfer ( boost4_t *ctx, spi_master_transfer_data_t *block );
+```
+ 
+- `boost4_set_out_voltage` Function set output voltage by write 12-bit data to the register on the TPS61230A High Efficiency Step-Up Converter of Boost 4 Click. 
+```c
+void boost4_set_out_voltage ( boost4_t *ctx, uint16_t value );
+```
+
+- `boost4_enable` Function is used to enabled or disabled the device. 
+```c
+void boost4_enable ( boost4_t *ctx, uint8_t state );
+```
+
+### Application Init
 
 > Initializes the driver and logger, and enables the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -97,7 +92,6 @@ void application_init ( void )
     boost4_enable( &boost4, BOOST4_ENABLE );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -106,7 +100,6 @@ void application_init ( void )
 > All data are being logged on USB UART every 3 seconds.
 
 ```c
-
 void application_task ( void )
 {
     log_printf( &logger, " Set the max Vout \r\n" );
@@ -187,34 +180,27 @@ void application_task ( void )
     Delay_ms ( 1000 );
 
     log_printf( &logger, "-----------------------------\r\n" );
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > Vout cannot be set to voltage below Vin. So in order to get all values at Vout exactly 
 > as it is set in this example, please provide 2.5V to Vin. 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Boost4
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

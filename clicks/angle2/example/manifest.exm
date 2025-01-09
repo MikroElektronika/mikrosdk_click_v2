@@ -1,8 +1,5 @@
 {
     "name": "Angle 2 Click",
-    "description": "Angle 2 Click is a magnetic rotational sensor which relies on the ultra-fast MA700 angular sensor IC. Due to a high data output rate of 500kHz, the MA700 IC is able to provide a reliable absolute angular positional data at speeds up to 100,000 RPM.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MA700 IC"],
-    "category" : ["Magnetic"] 
+    "hw" : ["Click","MA700 IC"]
 }

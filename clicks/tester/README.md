@@ -1,19 +1,19 @@
-\mainpage Main Page
 
 ---
 # Tester Click
 
-Tester Click is a Click board™ used as a diagnostic tool on the mikroBUS™ socket.
+> [Tester Click](https://www.mikroe.com/?pid_product=MIKROE-3083) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/tester_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3083&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/tester-click)
 
 ---
 
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Jan 2020.
@@ -21,50 +21,49 @@ Tester Click is a Click board™ used as a diagnostic tool on the mikroBUS™ so
 
 # Software Support
 
-We provide a library for the Tester Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Tester Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void tester_cfg_setup ( tester_cfg_t *cfg ); 
- 
-- Initialization function.
-> TESTER_RETVAL tester_init ( tester_t *ctx, tester_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void tester_default_cfg ( tester_t *ctx );
-
-
-#### Example key functions :
-
-- This function sets the output voltage on the specified pin to high.
-> void tester_set_pin_high ( digital_out_t *pin );
- 
-- This function sets the output voltage on the specified pin to low.
-> void tester_set_pin_low ( digital_out_t *pin );
-
-## Examples Description
+## Example Description
 
 > This example showcases how to initialize, configure and use the Tester Click. It is a simple
   GPIO Click which is used to test if all the pins on a MikroBUS are working correctly. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Tester
+
+### Example Key Functions
+
+- `tester_cfg_setup` Config Object Initialization function. 
+```c
+void tester_cfg_setup ( tester_cfg_t *cfg );
+``` 
+ 
+- `tester_init` Initialization function. 
+```c
+err_t tester_init ( tester_t *ctx, tester_cfg_t *cfg );
+```
+
+- `tester_default_cfg` Click Default Configuration function. 
+```c
+void tester_default_cfg ( tester_t *ctx );
+```
+
+- `tester_set_pin_high` This function sets the output voltage on the specified pin to high. 
+```c
+void tester_set_pin_high ( digital_out_t *pin );
+```
+ 
+- `tester_set_pin_low` This function sets the output voltage on the specified pin to low. 
+```c
+void tester_set_pin_low ( digital_out_t *pin );
+```
+
+### Application Init
 
 > This function initializes and configures the Click and logger modules. 
 
 ```c
-
 void application_init ( )
 {
     log_cfg_t log_cfg;
@@ -89,7 +88,6 @@ void application_init ( )
     TESTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
     tester_init( &tester, &cfg );
 }
-  
 ```
 
 ### Application Task
@@ -99,7 +97,6 @@ void application_init ( )
   sets all pins to high and after one second sets them back to low.
 
 ```c
-
 void application_task ( )
 {
     int i;
@@ -116,23 +113,19 @@ void application_task ( )
 
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Tester
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

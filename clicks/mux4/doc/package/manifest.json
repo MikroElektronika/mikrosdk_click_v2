@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > DAC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "MUX 4 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.mux4",
-    "product_link": "https://www.mikroe.com/mux-4-click",
-    "short_description": "MUX 4 Click is a compact add-on board that contains a precise analog multiplexing IC. This board features the 74HC4851, 8-channel analog multiplexer/demultiplexer with injection-current effect control from Nexperia USA Inc.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.MUX4",
-    "subdir_name": "lib_mux4"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4754",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MUX 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MUX4",
+                "subdir_name": "lib_mux4",
+                "path": "MUX 4 Click/data/lib_mux4"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

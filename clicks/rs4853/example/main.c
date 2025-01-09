@@ -3,7 +3,7 @@
  * \brief Rs4853 Click example
  * 
  * # Description
- * This application is used to communicate between two RS485 clicks.
+ * This application is used to communicate between two RS485 Clicks.
  *
  * The demo application is composed of two sections :
  * 

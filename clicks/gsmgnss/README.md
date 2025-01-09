@@ -1,75 +1,74 @@
-\mainpage Main Page
- 
+
 ---
 # GSM/GNSS Click
 
-GSM/GNSS Click combines GPS/GLONASS location tracking with GSM module capability for mobile communication. The Click features Quectel’s MC60 quad-band module.
+> [GSM GNSS Click](https://www.mikroe.com/?pid_product=MIKROE-2439) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/gsmgnss_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2439&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/gsm-gnss-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : apr 2020.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the GsmGnss Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from GSM/GNSS Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for GsmGnss Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.GsmGnss
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void gsmgnss_cfg_setup ( gsmgnss_cfg_t *cfg ); 
+- `gsmgnss_cfg_setup` Config Object Initialization function. 
+```c
+void gsmgnss_cfg_setup ( gsmgnss_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> GSMGNSS_RETVAL gsmgnss_init ( gsmgnss_t *ctx, gsmgnss_cfg_t *cfg );
+- `gsmgnss_init` Initialization function. 
+```c
+err_t gsmgnss_init ( gsmgnss_t *ctx, gsmgnss_cfg_t *cfg );
+```
 
-- Power ON/OFF the module.
-> void gsmgnss_module_power ( gsmgnss_t *ctx, uint8_t state );
+- `gsmgnss_module_power` Power ON/OFF the module. 
+```c
+void gsmgnss_module_power ( gsmgnss_t *ctx, uint8_t state );
+```
 
-
-#### Example key functions :
-
-- Send command function.
-> void gsmgnss_send_cmd ( gsmgnss_t *ctx, char *cmd );
+- `gsmgnss_send_cmd` Send command function. 
+```c
+void gsmgnss_send_cmd ( gsmgnss_t *ctx, char *cmd );
+```
  
-- Set sim card APN.
-> void gsmgnss_set_sim_apn ( gsmgnss_t *ctx, char *sim_apn );
+- `gsmgnss_set_sim_apn` Set sim card APN. 
+```c
+void gsmgnss_set_sim_apn ( gsmgnss_t *ctx, char *sim_apn );
+```
 
-- GSM GNSS send SMS in PDU mode.
-> err_t gsmgnss_send_sms_pdu ( gsmgnss_t *ctx, char *service_center_number, char *phone_number, char *sms_text );
+- `gsmgnss_send_sms_pdu` GSM GNSS send SMS in PDU mode. 
+```c
+err_t gsmgnss_send_sms_pdu ( gsmgnss_t *ctx, char *service_center_number, char *phone_number, char *sms_text );
+```
 
-## Examples Description
-
-> This example reads and processes data from GSM/GNSS clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and powers up the module, then sets default configuration 
 > for connecting the device to network.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -171,7 +170,6 @@ void application_init ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -180,7 +178,6 @@ void application_init ( void )
 > it sends an SMS with GNSS info to the selected phone number approximately every 40 seconds.
 
 ```c
-
 void application_task ( void )
 {
     if ( app_connection_status == WAIT_FOR_CONNECTION )
@@ -263,11 +260,10 @@ void application_task ( void )
             }
         }
     }
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > A passive GPS antenna is required for the GNSS to receive the position fix. It may take several minutes for the module to receive the fix.
 > In order for the example to work, user needs to set the phone number to which he wants 
@@ -278,25 +274,19 @@ void application_task ( void )
    >> * SIM_SMSC "+381610401"
    >> * PHONE_NUMBER_TO_MESSAGE "+381659999999"
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.GsmGnss
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

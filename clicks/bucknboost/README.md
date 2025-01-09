@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Buck n Boost Click
 
-Buck & Boost Click is a compact add-on board that contains a configurable power management device. This board features the MIC7401, a highly-integrated power-management IC featuring five synchronous buck regulators, one boost regulator, and a high-speed I2C interface with an internal EEPROM memory from Microchip.
+> [Buck n Boost Click](https://www.mikroe.com/?pid_product=MIKROE-4354) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/bucknboost_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4354&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/buck-and-boost-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jun 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the BucknBoost Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This application demonstrates the use of Buck n Boost Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for BucknBoost Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BucknBoost
 
-#### Standard key functions :
+### Example Key Functions
 
 - `bucknboost_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +40,13 @@ void bucknboost_cfg_setup ( bucknboost_cfg_t *cfg );
 
 - `bucknboost_init` Initialization function.
 ```c
-BUCKNBOOST_RETVAL bucknboost_init ( bucknboost_t *ctx, bucknboost_cfg_t *cfg );
+err_t bucknboost_init ( bucknboost_t *ctx, bucknboost_cfg_t *cfg );
 ```
 
 - `bucknboost_default_cfg` Click Default Configuration function.
 ```c
 void bucknboost_default_cfg ( bucknboost_t *ctx );
 ```
-
-#### Example key functions :
 
 - `bucknboost_set_buck_out_voltage` This function sets the output voltage of a desired buck channel.
 ```c
@@ -68,12 +63,6 @@ err_t bucknboost_set_boost_out_voltage ( bucknboost_t *ctx, uint8_t data_in );
 err_t bucknboost_get_status ( bucknboost_t *ctx, bucknboost_status_t *st_data );
 ```
 
-## Example Description
-
-> This application demonstrates the use of Buck n Boost Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and sets the Click default configuration.
@@ -82,7 +71,6 @@ err_t bucknboost_get_status ( bucknboost_t *ctx, bucknboost_status_t *st_data );
 > OUT1 - 1.8V, OUT2 - 1.1V, OUT3 - 1.8V, OUT4 - 1.05V, OUT5 - 1.25V, OUT6 - 12V 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -126,7 +114,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -136,7 +123,6 @@ void application_init ( void )
 > All data is being displayed on the USB UART where you can track the program flow.
 
 ```c
-
 void application_task ( void )
 {
     bucknboost_status_t status_data;
@@ -184,26 +170,21 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other Mikroe Libraries used in the example:**
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BucknBoost
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

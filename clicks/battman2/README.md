@@ -1,40 +1,42 @@
-\mainpage Main Page
 
 ---
 # BATT-MAN 2 Click
 
-> BATT-MAN 2 Click is a compact add-on board representing an advanced battery and power management solution. This board features the MAX77654, a single inductor, multiple-output (SIMO) power management IC (PMIC) from Maxim Integrated, now part of Analog Devices. This I2C programmable board features a buck-boost regulator that provides three independently programmable power rails from a single inductor. Also, it has one 100mA LDO output with ripple rejection for audio and other noise-sensitive applications and a highly-configurable linear charger that supports a wide range of Li+ battery capacities featuring battery temperature monitoring for additional safety (JEITA).
+> [BATT-MAN 2 Click](https://www.mikroe.com/?pid_product=MIKROE-4837) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/battman2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4837&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/batt-man-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Aug 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the BATTMAN2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for BATT-MAN 2 Click driver.
+> The library initializes and defines the I2C bus drivers 
+> to write and read data from registers. 
+> The library also includes a function for configuring appropriate charge current, 
+> charge voltage, prequalification voltage, 
+> Buck, Buck-Boost and Linear regulator configuration, etc.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for BATTMAN2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BATTMAN2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `battman2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +53,6 @@ err_t battman2_init ( battman2_t *ctx, battman2_cfg_t *cfg );
 err_t battman2_default_cfg ( battman2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `battman2_set_charger_enable` BATT-MAN 2 set charger enable function.
 ```c
 err_t battman2_set_charger_enable ( battman2_t *ctx, uint8_t en_chg );
@@ -68,17 +68,6 @@ err_t battman2_set_charger_cfg ( battman2_t *ctx, battman2_chg_cnfg_t chg_cnfg )
 err_t battman2_get_charger_cfg ( battman2_t *ctx, battman2_chg_cnfg_t *chg_cnfg );
 ```
 
-## Example Description
-
-> This library contains API for BATT-MAN 2 Click driver.
-> The library initializes and defines the I2C bus drivers 
-> to write and read data from registers. 
-> The library also includes a function for configuring appropriate charge current, 
-> charge voltage, prequalification voltage, 
-> Buck, Buck-Boost and Linear regulator configuration, etc.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > The initialization of the I2C module, log UART, and additional pins. 
@@ -88,7 +77,6 @@ err_t battman2_get_charger_cfg ( battman2_t *ctx, battman2_chg_cnfg_t *chg_cnfg 
 > or sets Buck-Boost configuration.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;            /**< Logger config object. */
@@ -179,22 +167,20 @@ void application_init ( void )
         Delay_ms ( 1000 );
     #endif
 }
-
 ```
 
 ### Application Task
 
-> This is an example that shows the use of a BATT-MAN 2 Click board™.
+> This is an example that shows the use of a BATT-MAN 2 Click board&trade;.
 > The choice of example profile tasks depends on uncommented code.
 > Examples profile: CHARGER and BUCK-BOOST.
-> In the CHARGER profile, while on the BATT-MAN 2 Click board™ the 
+> In the CHARGER profile, while on the BATT-MAN 2 Click board&trade; the 
 > blue LED is the battery charging indicator, 
 > while the red LED indicates the cessation of battery charging. 
 > The yellow LED is an indicator of the BUCK-BOOST profile.
 > Results are being sent to the USART terminal where the user can track their changes.
 
 ```c
-
 void application_task ( void ) 
 {   
     #ifdef CHARGER
@@ -224,7 +210,6 @@ void application_task ( void )
         Delay_ms ( 1000 );
     #endif
 }
-
 ```
 
 ## Additional Function
@@ -237,22 +222,19 @@ static void display_charger_status ( void );
 static void display_sbb_status ( void ) 
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BATTMAN2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

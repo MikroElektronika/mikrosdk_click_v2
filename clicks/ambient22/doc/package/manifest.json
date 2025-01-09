@@ -1,42 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Optical",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Ambient 22 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.ambient22",
-    "product_link": "https://www.mikroe.com/ambient-22-click",
-    "short_description": "Ambient 22 Click is a compact add-on board that measures the intensity of visible light. This board features the OPT3005, a single-chip lux meter from Texas Instruments that transforms light intensity to a digital signal output that can be directly communicated via an I2C interface. The sensor's spectral response tightly matches the human eye's photopic response along with extreme rejection to 850nm and 940nm infrared light over a wide angle of incidence. Measurements can be made from 20mlux up to 166klux without manually selecting full-scale ranges using the built-in, full-scale setting feature.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.7",
-    "cmake": true,
-    "alias": "Click.Ambient22",
-    "subdir_name": "lib_ambient22"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5647",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ambient 22 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ambient22",
+                "subdir_name": "lib_ambient22",
+                "path": "Ambient 22 Click/data/lib_ambient22"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-

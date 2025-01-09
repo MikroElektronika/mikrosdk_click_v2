@@ -1,8 +1,5 @@
 {
     "name": "Magneto 9 Click",
-    "description": "Magneto 9 Click is a compact add-on board that contains a low-power, accurate, and reliable magnetic sensing device. This board features the A1359, dual tracking output linear hall-effect sensor from Allegro MicroSystems. ",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","A1359LLETR-T"],
-    "category" : ["Magnetic"]
+    "hw" : ["Click","A1359LLETR-T"]
 }

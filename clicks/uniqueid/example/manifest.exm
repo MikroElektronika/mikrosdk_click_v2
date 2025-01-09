@@ -1,8 +1,5 @@
 {
     "name": "UNIQUE ID Click",
-    "description": "Unique ID Click carries DS2401, an enhanced silicon serial number IC. It’s a low cost solution for providing a unique registration number to your design.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","DS2401"],
-    "category" : ["ID"]
+    "hw" : ["Click","DS2401"]
 }

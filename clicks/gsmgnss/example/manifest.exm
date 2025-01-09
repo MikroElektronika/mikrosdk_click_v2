@@ -1,8 +1,5 @@
 {
-    "name": "GSM/GNSS Click",
-    "description": "GSM/GNSS Click combines GPS/GLONASS location tracking with GSM module capability for mobile communication. The Click features Quectel’s MC60 quad-band module.",
-    "image" : "../../Resources/click_icon.png",
+    "name": "GSM GNSS Click",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","MC60E"],
-    "category" : ["GSM+GPS"] 
+    "hw" : ["Click","MC60E"]
 }

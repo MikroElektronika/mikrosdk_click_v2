@@ -1,8 +1,5 @@
 {
     "name": "LED Driver 8 Click",
-    "description": "LED Driver 8 Click is a compact add-on board optimized for dimming and blinking 32 mA RGBA LEDs. This board features the PCA9957HNMP, 24-channel SPI-compatible constant current LED driver from NXP Semiconductors.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","PCA9957HNMP"],
-    "category" : ["LED Drivers"] 
+    "hw" : ["Click","PCA9957HNMP"]
 }

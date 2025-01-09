@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # Temp&Hum 15 Click
 
-> Temp&Hum 15 Click is a compact add-on board that contains the 4th generation of best-in-class SHT humidity sensing solution from Sensirion. This board features the SHT40, a high-accuracy ultra-low-power 16-bit relative humidity, and temperature sensor.
+> [TempHum 15 Click](https://www.mikroe.com/?pid_product=MIKROE-4496) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/temphum15_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4496&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/blog/temphum-15-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Nikolic
 - **Date**          : jan 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the TempHum15 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This demo app represents the performance of the Temp&Hum 15 Click board. The log displays the temperature and humidity obtained from the sensor.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for TempHum15 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.TempHum15
 
-#### Standard key functions :
+### Example Key Functions
 
 - `temphum15_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +40,13 @@ void temphum15_cfg_setup ( temphum15_cfg_t *cfg );
 
 - `temphum15_init` Initialization function.
 ```c
-TEMPHUM15_RETVAL temphum15_init ( temphum15_t *ctx, temphum15_cfg_t *cfg );
+err_t temphum15_init ( temphum15_t *ctx, temphum15_cfg_t *cfg );
 ```
 
 - `temphum15_default_cfg` Click Default Configuration function.
 ```c
 void temphum15_default_cfg ( temphum15_t *ctx );
 ```
-
-#### Example key functions :
 
 - `temphum15_get_temp_and_hum` This function reads temperature and humidity with the power consumption based on the precision mode selected.
 ```c
@@ -68,19 +63,13 @@ err_t temphum15_soft_reset ( temphum15_t *ctx );
 err_t temphum15_read_serial ( temphum15_t *ctx, uint32_t *serial_number );
 ```
 
-## Example Description
-
-> This demo app represents the performance of the Temp&Hum 15 Click board. The log displays the temperature and humidity obtained from the sensor.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initialization of UART LOG and I2C drivers. The application also performs reset upon init.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;              /**< Logger config object. */
     temphum15_cfg_t temphum15_cfg;  /**< Click config object. */
 
@@ -114,7 +103,6 @@ void application_init ( void ) {
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );
 }
-
 ```
 
 ### Application Task
@@ -122,8 +110,8 @@ void application_init ( void ) {
  > Temperature and humidity data are being acquired every two seconds. If the acquisition fails, LOG states that no data is available.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     err_t status_data;
     
     status_data = temphum15_get_temp_and_hum( &temphum15, TEMPHUM15_MODE_HIGH_PRECISION, &temperature, &humidity );
@@ -138,25 +126,21 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.TempHum15
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

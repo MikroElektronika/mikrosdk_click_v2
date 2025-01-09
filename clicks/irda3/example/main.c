@@ -13,7 +13,7 @@
  * Also clears the response buffer.
  *
  * ## Application Task
- * Demonstrates the use of IrDA 3 clicks which can be used as transmitter or
+ * Demonstrates the use of IrDA 3 Clicks which can be used as transmitter or
  * receiver. There are four different examples in this project. 
  * Uncomment one of the below macros to select which example will be executed.
  * By default the DEMO_APP_TRANSMITTER_1 example is selected.

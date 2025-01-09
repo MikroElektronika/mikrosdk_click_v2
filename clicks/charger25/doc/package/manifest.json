@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Power management > Battery Charger",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Charger 25 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.charger25",
-    "product_link": "https://www.mikroe.com/charger-25-click",
-    "short_description": "Charger 25 Click is a compact add-on board that contains a battery charger. This board features the BQ25792, a buck-boost battery charger with a dual-input selector, and a USB PD3.0 OTG output from Texas Instruments. It is fully integrated for 1-4 cell Li-Ion and Li-Polymer batteries. Designed specifically for USB applications, it also includes a Narrow voltage DC (NVDC) power path management in which the system is regulated at a voltage slightly higher than the battery voltage without being allowed to drop below the minimum system voltage.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.8",
-    "cmake": true,
-    "alias": "Click.Charger25",
-    "subdir_name": "lib_charger25"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5839",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Charger 25 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Charger25",
+                "subdir_name": "lib_charger25",
+                "path": "Charger 25 Click/data/lib_charger25"
+            }
+        ]
+    }
 }
-
-
-
-
-

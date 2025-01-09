@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Expand 5 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.expand5",
-    "product_link": "https://www.mikroe.com/expand-5-click",
-    "short_description": "EXPAND 5 Click features a low-voltage 24-bit I2C and SMBus I/O expander. This 24-bit I/O expander is designed to provide general-purpose remote I/O expansion for most microcontroller families via the I2C serial interface.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3803
-    ],
-    "version": "2.1.0.14",
-    "cmake": true,
-    "alias": "Click.Expand5",
-    "subdir_name": "lib_expand5"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4186",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand5",
+                "subdir_name": "lib_expand5",
+                "path": "Expand 5 Click/data/lib_expand5"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

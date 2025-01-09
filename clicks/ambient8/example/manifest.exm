@@ -1,8 +1,5 @@
 {
-  "name": "Ambient 8 Click",
-  "description": "Ambient 8 Click is equipped with the ambient light sensor (ALS) IC, providing measurements of the ambient light intensity in a digital format. It utilizes the LTR-329ALS-01, an ALS with the I2C interface.",
-  "image": "../../Resources/click_icon.png",
-  "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-  "hw": [ "Click", "LTR-329ALS-01" ],
-  "category": [ "Optical" ]
+    "name": "Ambient 8 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw": [ "Click", "LTR-329ALS-01" ]
 }

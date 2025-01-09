@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # ESP8684 Click
 
-> ESP8664 Click is a compact add-on board that contains a wireless combo module. This board features the ESP8684-MINI-1, a highly integrated WiFi, and a Bluetooth 5 module from Espressif Systems. It simultaneously supports BSS in Station mode, SoftAP mode, Station + SoftAP mode, and promiscuous mode. 
+> [ESP8684 Click](https://www.mikroe.com/?pid_product=MIKROE-5803) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/esp8684_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5803&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/esp8684-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Ilic
 - **Date**          : Jun 2023.
 - **Type**          : UART type
 
-
 # Software Support
 
-We provide a library for the ESP8684 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example connects to the desired WiFi network and then
+  connects to the TCP/UDP server, writes then reads data to and from it.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ESP8684 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ESP8684
 
-#### Standard key functions :
+### Example Key Functions
 
 - `esp8684_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t esp8684_init ( esp8684_t *ctx, esp8684_cfg_t *cfg );
 void esp8684_default_cfg ( esp8684_t *ctx );
 ```
 
-#### Example key functions :
-
 - `esp8684_send_cmd` ESP8684 send command with arguments function.
 ```c
 void esp8684_send_cmd ( esp8684_t *ctx, uint8_t *cmd, uint8_t *args );
@@ -68,20 +64,12 @@ void esp8684_send_query_cmd ( esp8684_t *ctx, uint8_t *cmd );
 void esp8684_connect_to_network ( esp8684_t* ctx, uint8_t *ssid, uint8_t *password );
 ```
 
-## Example Description
-
-> This example connects to the desired WiFi network and then
-  connects to the TCP/UDP server, writes then reads data to and from it.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes driver and wifi communication, then connects to the desired WiFi network
   and sends data to the TCP/UDP server.
 
 ```c
-
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -139,7 +127,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -160,22 +147,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ESP8684
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

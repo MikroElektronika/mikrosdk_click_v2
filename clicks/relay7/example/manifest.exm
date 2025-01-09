@@ -1,8 +1,5 @@
 {
     "name": "Relay 7 Click",
-    "description": "Relay 7 Click is a compact add-on board for precise load control and monitoring applications. This board features four CRR05-1As, a CRR series reed relay from Standex Electronics, well-known for its ultra-miniature SMD design and high insulation resistance. These four relays each have four load connection terminals and orange LED indicators that signal the operational status, ensuring clear and immediate feedback. These relays are highly reliable and come in a rugged thermoset over-molded package with ceramic substrate and a typical 1013Ω insulation resistance. They support a coil voltage of 5VDC and switching capabilities up to 170VDC/0.5A/10W. It is ideally suited for test and measurement (ATE) equipment, instrumentation, and telecommunications.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","CRR05-1A"],
-    "category" : ["Click Boards > Miscellaneous > Relay"]
+    "hw" : ["Click","CRR05-1A"]
 }

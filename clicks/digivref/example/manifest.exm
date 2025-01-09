@@ -1,8 +1,5 @@
 {
     "name": "DigiVref Click",
-    "description": "DigiVref Click is a very precise voltage reference Click board™, which allows one of four different voltage values to be selected over the SPI interface.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP1541"],
-    "category" : ["Measurements"] 
+    "hw" : ["Click","MCP1541"]
 }

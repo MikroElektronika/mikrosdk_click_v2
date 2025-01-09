@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Charger 25 Click
 
-> Charger 25 Click is a compact add-on board that contains a battery charger. This board features the BQ25792, a buck-boost battery charger with a dual-input selector, and a USB PD3.0 OTG output from Texas Instruments. It is fully integrated for 1-4 cell Li-Ion and Li-Polymer batteries. Designed specifically for USB applications, it also includes a Narrow voltage DC (NVDC) power path management in which the system is regulated at a voltage slightly higher than the battery voltage without being allowed to drop below the minimum system voltage.
+> [Charger 25 Click](https://www.mikroe.com/?pid_product=MIKROE-5839) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/charger25_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5839&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/charger-25-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jul 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Charger 25 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of Charger 25 Click board&trade; 
+> by enabling battery charging and displaying battery voltage and charging status.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Charger 25 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Charger25
 
-#### Standard key functions :
+### Example Key Functions
 
 - `charger25_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t charger25_init ( charger25_t *ctx, charger25_cfg_t *cfg );
 err_t charger25_default_cfg ( charger25_t *ctx );
 ```
 
-#### Example key functions :
-
 - `charger25_get_vbat` Charger 25 get VBAT function.
 ```c
 err_t charger25_get_vbat ( charger25_t *ctx, uint16_t *vbat );
@@ -67,13 +63,6 @@ err_t charger25_get_status ( charger25_t *ctx, charger25_status_t *status );
 ```c
 err_t charger25_get_vbat_lim ( charger25_t *ctx, uint16_t *vtg_lim );
 ```
-
-## Example Description
-
-> This example demonstrates the use of Charger 25 Click board™ 
-> by enabling battery charging and displaying battery voltage and charging status.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -157,22 +146,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Charger25
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

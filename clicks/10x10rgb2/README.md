@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # 10x10 RGB 2 Click
 
-> 10x10 RGB 2 Click is a compact add-on board designed for creating vibrant LED displays and lighting solutions. This board features the IN-PC20TBT5R5G5B, an RGB LED with an advanced IC for seamless operation from Inolux. The board features a 10x10 matrix of "smart" RGB LEDs capable of dual-wire transmission and a sophisticated control circuit for dynamic color rendering. It incorporates CMOS technology for low power consumption and supports 256 grayscale levels for precise PWM dimming, along with 32 levels of brightness control.
+> [10x10 RGB 2 Click](https://www.mikroe.com/?pid_product=MIKROE-5976) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/10x10rgb2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5976&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/10x10-rgb-2-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Nov 2023.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the 10x10 RGB 2 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of the 10x10 RGB 2 Click board by showing a practical example of using the implemented functions.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for 10x10 RGB 2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.10x10RGB2
 
-#### Standard key functions :
+### Example Key Functions
 
 - `c10x10rgb2_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t c10x10rgb2_init ( c10x10rgb2_t *ctx, c10x10rgb2_cfg_t *cfg );
 err_t c10x10rgb2_default_cfg ( c10x10rgb2_t *ctx );
 ```
 
-#### Example key functions :
-
 - `c10x10rgb2_write_char` This function writes a single ASCII character in a 8x8 font size.
 ```c
 err_t c10x10rgb2_write_char ( c10x10rgb2_t *ctx, uint8_t data_in );
@@ -68,18 +63,11 @@ err_t c10x10rgb2_write_string ( c10x10rgb2_t *ctx, uint8_t *data_in, uint16_t sp
 err_t c10x10rgb2_draw_picture ( c10x10rgb2_t *ctx, const uint32_t *image );
 ```
 
-## Example Description
-
-> This example demonstrates the use of the 10x10 RGB 2 Click board by showing a practical example of using the implemented functions.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -115,7 +103,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -179,22 +166,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.10x10RGB2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

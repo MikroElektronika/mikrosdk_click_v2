@@ -1,49 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > Port expander",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Analog MUX Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.analogmux",
-    "product_link": "https://www.mikroe.com/analog-mux-click",
-    "short_description": "Analog MUX Click is a Click board™ that switches one of the sixteen inputs to one output. It employs the CD74HC4067, a High-Speed CMOS Logic 16-Channel Analog Multiplexer/Demultiplexer, produced by Texas Instruments.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3262
-    ],
-    "version": "2.1.0.13",
-    "cmake": true,
-    "alias": "Click.AnalogMUX",
-    "subdir_name": "lib_analogmux"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4111",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Analog MUX Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AnalogMUX",
+                "subdir_name": "lib_analogmux",
+                "path": "Analog MUX Click/data/lib_analogmux"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-
-

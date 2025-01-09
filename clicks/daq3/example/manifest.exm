@@ -1,8 +1,5 @@
 {
     "name": "DAQ 3 Click",
-    "description": "DAQ 3 Click is a compact add-on board representing a precision data acquisition solution. This board features the ADAQ4003, fast and precise μModule precision data acquisition (DAQ) signal chain solution from Analog Devices. Using SIP technology, the ADAQ4003 reduces end system component count by combining multiple standard signal processing and conditioning blocks into a single device.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ADAQ4003BBCZ"],
-    "category" : ["ADC"]
+    "hw" : ["Click","ADAQ4003BBCZ"]
 }

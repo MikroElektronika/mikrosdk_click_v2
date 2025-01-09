@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # DAC 15 Click
 
-> DAC 15 Click is a compact add-on board that provides a highly accurate digital-to-analog conversion on two channels. This board features the DAC80502, a dual 16-bit 1-LSB INL voltage-output DAC from Texas Instruments. The DAC operates at a wide power supply range and is a low-power device with as low as 1mA per channel at 5.5V. It also includes a 2.5V, 5-ppm/°C internal reference, giving a full-scale voltage buffered output ranges of 1.25V, 2.5V, and 5.5V.
+> [DAC 15 Click](https://www.mikroe.com/?pid_product=MIKROE-5825) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/dac15_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5825&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/dac-15-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Jul 2023.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the DAC 15 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of DAC 15 Click board&trade; 
+> by changing the output voltage level on the VOUTA and VOUTB.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for DAC 15 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.DAC15
 
-#### Standard key functions :
+### Example Key Functions
 
 - `dac15_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +49,6 @@ err_t dac15_init ( dac15_t *ctx, dac15_cfg_t *cfg );
 err_t dac15_default_cfg ( dac15_t *ctx );
 ```
 
-#### Example key functions :
-
 - `dac15_set_dac_data` DAC 15 set DAC data function.
 ```c
 err_t dac15_set_dac_data ( dac15_t *ctx, uint8_t dac_sel, uint16_t dac_data );
@@ -62,13 +58,6 @@ err_t dac15_set_dac_data ( dac15_t *ctx, uint8_t dac_sel, uint16_t dac_data );
 ```c
 err_t dac15_get_dac_data ( dac15_t *ctx, uint8_t dac_sel, uint16_t *dac_data );
 ```
-
-## Example Description
-
-> This example demonstrates the use of DAC 15 Click board™ 
-> by changing the output voltage level on the VOUTA and VOUTB.
-
-**The demo application is composed of two sections :**
 
 ### Application Init
 
@@ -150,22 +139,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.DAC15
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

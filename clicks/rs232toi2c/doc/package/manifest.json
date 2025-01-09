@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Interface > RS232",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "RS232 to I2C Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.rs232toi2c",
-    "product_link": "https://www.mikroe.com/rs232-to-i2c-click",
-    "short_description": "RS232 to I2C Click is a compact add-on board representing a universal usable RS232 to I2C converter. This board features the ZDU0110RFX, a bridge between a UART port and an I2C bus from Zilog, which at the same time represents the connection between the MCU and the RS232 line driver and receiver, the MAX3232. The ZDU0110RFX provides full-duplex asynchronous communications with a 128 byte FIFO buffer, of which 64 bytes each are allocated to receive and transmit operations. It also contains a 4kbit EEPROM and GPIO with programmable interrupt capability; programmable interrupts and interrupt lines for UART and GPIO notifications.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.RS232toI2C",
-    "subdir_name": "lib_rs232toi2c"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5056",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RS232 to I2C Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RS232toI2C",
+                "subdir_name": "lib_rs232toi2c",
+                "path": "RS232 to I2C Click/data/lib_rs232toi2c"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

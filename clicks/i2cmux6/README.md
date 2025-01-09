@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # I2C MUX 6 Click
 
-> I2C MUX 6 Click is a compact add-on board representing a bidirectional selector dedicated to I2C slave address conflicts applications. This board features the PCA9518, an expandable five-channel bidirectional buffer controlled by the I2C-bus from Texas Instruments. The PCA9518 overcomes the restriction of maximum bus capacitance by separating and buffering the I2C data (SDA) and clock (SCL) lines into multiple groups of 400pF I2C channels. It provides activation of the desired channel via a given Enable pin and permits extension of the I2C-bus, through an onboard expansion header, by buffering both the data (SDA) and the clock (SCL) lines enabling virtually an unlimited number of buses of 400pF.
+> [I2C MUX 6 Click](https://www.mikroe.com/?pid_product=MIKROE-5168) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/i2cmux6_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5168&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/i2c-mux-6-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Apr 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the I2C MUX 6 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of I2C MUX 6 Click board by reading the device ID of a 6DOF IMU 11 and Compass 3 Click boards connected to the channels 1 and 4 respectfully.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for I2C MUX 6 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.I2CMUX6
 
-#### Standard key functions :
+### Example Key Functions
 
 - `i2cmux6_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t i2cmux6_init ( i2cmux6_t *ctx, i2cmux6_cfg_t *cfg );
 err_t i2cmux6_default_cfg ( i2cmux6_t *ctx );
 ```
 
-#### Example key functions :
-
 - `i2cmux6_set_channel` This function sets the desired channel active and configures its slave address.
 ```c
 err_t i2cmux6_set_channel ( i2cmux6_t *ctx, uint8_t ch_sel, uint8_t ch_slave_addr );
@@ -68,18 +63,11 @@ err_t i2cmux6_generic_write ( i2cmux6_t *ctx, uint8_t reg, uint8_t *tx_buf, uint
 err_t i2cmux6_generic_read ( i2cmux6_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t rx_len );
 ```
 
-## Example Description
-
-> This example demonstrates the use of I2C MUX 6 Click board by reading the device ID of a 6DOF IMU 11 and Compass 3 Click boards connected to the channels 1 and 4 respectfully.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and logger.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -109,7 +97,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -158,26 +145,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Make sure to provide 3v3 power supply on VCC-I2C pin.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.I2CMUX6
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

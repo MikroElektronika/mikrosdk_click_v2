@@ -1,37 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Sensors > Temperature & humidity",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Grid-EYE 2 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.grideye2",
-    "product_link": "https://www.mikroe.com/grid-eye-2-click",
-    "short_description": "Grid-EYE 2 Click is a compact add-on board designed for thermal imaging and motion detection applications. This board features the AMG883543, an infrared array sensor from Panasonic with a 90° viewing angle and an 8x8 pixel matrix that measures temperatures from 0°C to 80°C with a resolution of 0.25°C. The sensor can detect objects up to 5 meters away and outputs temperature data via a digital interface. The board also supports the Click Snap feature, allowing the main sensor area to be detached for flexible positioning.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.2",
-    "cmake": true,
-    "alias": "Click.GridEYE2",
-    "subdir_name": "lib_grideye2"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6208",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Grid-EYE 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GridEYE2",
+                "subdir_name": "lib_grideye2",
+                "path": "Grid-EYE 2 Click/data/lib_grideye2"
+            }
+        ]
+    }
 }
-
-

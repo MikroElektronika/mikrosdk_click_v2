@@ -1,71 +1,68 @@
-\mainpage Main Page
- 
+
 ---
 # Oximeter 3 Click
 
-Oximeter 3 Click is a compact add-on board perfectly suited for measuring the blood oxygen saturation.
+> [Oximeter 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4267) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/oximeter3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4267&image=1" height=300px>
 </p>
-
-
-[Click Product page](https://www.mikroe.com/oximeter-3-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Sep 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the Oximeter3 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Oximeter3 Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void oximeter3_cfg_setup ( oximeter3_cfg_t *cfg ); 
- 
-- Initialization function.
-> OXIMETER3_RETVAL oximeter3_init ( oximeter3_t *ctx, oximeter3_cfg_t *cfg );
-
-#### Example key functions :
-
-- Generic read function.
-> uint8_t oximeter3_generic_read ( oximeter3_t *ctx, uint8_t reg );
- 
-- Gets state of the int pin
-> uint8_t oximeter3_get_int_status ( oximeter3_t *ctx );
-
-- Generic function for reading als and proximity values
-> uint16_t oximeter3_read_value ( oximeter3_t *ctx, uint8_t type_macro );
-
-## Examples Description
+## Example Description
 
 > This example demonstrates the use of Oximeter 3 Click board. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Oximeter3
+
+### Example Key Functions
+
+- `oximeter3_cfg_setup` Config Object Initialization function. 
+```c
+void oximeter3_cfg_setup ( oximeter3_cfg_t *cfg );
+``` 
+ 
+- `oximeter3_init` Initialization function. 
+```c
+err_t oximeter3_init ( oximeter3_t *ctx, oximeter3_cfg_t *cfg );
+```
+
+- `oximeter3_generic_read` Generic read function. 
+```c
+uint8_t oximeter3_generic_read ( oximeter3_t *ctx, uint8_t reg );
+```
+ 
+- `oximeter3_get_int_status` Gets state of the int pin. 
+```c
+uint8_t oximeter3_get_int_status ( oximeter3_t *ctx );
+```
+
+- `oximeter3_read_value` Generic function for reading als and proximity values. 
+```c
+uint16_t oximeter3_read_value ( oximeter3_t *ctx, uint8_t type_macro );
+```
+
+### Application Init
 
 > Initializes the driver, checks the device ID then configures the device for the selected mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -133,7 +130,6 @@ void application_init ( void )
 
     log_printf( &logger, " ***** APP TASK ***** \r\n" );
 }
-  
 ```
 
 ### Application Task
@@ -143,7 +139,6 @@ void application_init ( void )
 > All data is being logged on USB UART where you can track their changes.
 
 ```c
-
 void application_task ( void )
 {
     if ( OXIMETER3_HEART_RATE == dev_mode )
@@ -185,33 +180,26 @@ void application_task ( void )
             Delay_ms ( 500 );
         }
     }
-} 
-
+}
 ```
 
-## Note
+### Note
 
 > In the case of heart rate, please use a Serial Plot application for data plotting.
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Oximeter3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # ADAC 3 Click
 
-> ADAC 3 Click is a compact add-on board representing the ADC/DAC combo solution. This board features the PCF8591, a low-power 8-bit CMOS data acquisition device with four analog inputs, one analog output, and a serial I2C interface from NXP Semiconductors. The PCF8591 includes analog input multiplexing, an on-chip track and hold function and 8-bit analog-to-digital conversion alongside an 8-bit digital-to-analog conversion. In addition, the user is given the option to select the PCF8591 reference voltage value, choosing between 2,048 and 4,096V.
+> [ADAC 3 Click](https://www.mikroe.com/?pid_product=MIKROE-5198) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/adac3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5198&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/adac-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : May 2022.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the ADAC 3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of ADAC 3 Click board by setting the DAC output
+and reading the ADC results from 2 single-ended channels (AIN0, AIN1) and from a
+differential channel (AIN2+, AIN3-).
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ADAC 3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ADAC3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `adac3_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t adac3_init ( adac3_t *ctx, adac3_cfg_t *cfg );
 err_t adac3_default_cfg ( adac3_t *ctx );
 ```
 
-#### Example key functions :
-
 - `adac3_write_control` This function writes a control byte by using I2C serial interface.
 ```c
 err_t adac3_write_control ( adac3_t *ctx, uint8_t control );
@@ -68,14 +65,6 @@ err_t adac3_write_dac ( adac3_t *ctx, uint8_t dac );
 err_t adac3_read_adc ( adac3_t *ctx, uint8_t *adc );
 ```
 
-## Example Description
-
-> This example demonstrates the use of ADAC 3 Click board by setting the DAC output
-and reading the ADC results from 2 single-ended channels (AIN0, AIN1) and from a
-differential channel (AIN2+, AIN3-).
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and performs the Click default configuration which enables
@@ -83,7 +72,6 @@ DAC output, sets the analog input mode to single-ended (AIN0, AIN1) and
 differential (AIN2+, AIN3-), and enables the auto increment mode.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
@@ -119,7 +107,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -157,26 +144,23 @@ void application_task ( void )
 }
 ```
 
-## Note
+### Note
 
 > Inputs should be connected to GND when not in use.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ADAC3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

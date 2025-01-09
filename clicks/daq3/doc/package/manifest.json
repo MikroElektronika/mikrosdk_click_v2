@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Mixed signal > ADC",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "DAQ 3 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.daq3",
-    "product_link": "https://www.mikroe.com/daq-3-click",
-    "short_description": "DAQ 3 Click is a compact add-on board representing a precision data acquisition solution. This board features the ADAQ4003, fast and precise μModule precision data acquisition (DAQ) signal chain solution from Analog Devices. Using SIP technology, the ADAQ4003 reduces end system component count by combining multiple standard signal processing and conditioning blocks into a single device. These blocks include a high-resolution 18-bit, 2 MSPS successive approximation register ADC, fully differential ADC driver amplifier, and a stable reference buffer along with selectable gain options. This Click board™ is suitable for process control and machine automation applications, as automatic test equipment, digital control loops, and more.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.15",
-    "cmake": true,
-    "alias": "Click.Daq3",
-    "subdir_name": "lib_daq3"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4486",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DAQ 3 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Daq3",
+                "subdir_name": "lib_daq3",
+                "path": "DAQ 3 Click/data/lib_daq3"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

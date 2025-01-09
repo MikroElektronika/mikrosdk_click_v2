@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # ISO ADC 5 Click
 
-ISO ADC 5 Click is a compact add-on board that contains quad-channel isolated ADC with field supply. This board features the MAX22530, galvanically isolated, 4-channel, multiplexed, 12-bit, analog-to-digital converter (ADC), providing 5kVRMS isolation from Maxim Integrated.
+> [ISO ADC 5 Click](https://www.mikroe.com/?pid_product=MIKROE-4758) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/isoadc5_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4758&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/iso-adc-5-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Jul 2021.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the ISOADC5 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of ISO ADC 5 Click board.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ISOADC5 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ISOADC5
 
-#### Standard key functions :
+### Example Key Functions
 
 - `isoadc5_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void isoadc5_cfg_setup ( isoadc5_cfg_t *cfg );
 ```c
 err_t isoadc5_init ( isoadc5_t *ctx, isoadc5_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `isoadc5_write_register` This function writes two bytes of data to the selected register by using the SPI serial interface.
 ```c
@@ -63,18 +58,11 @@ err_t isoadc5_read_register ( isoadc5_t *ctx, uint8_t reg, uint16_t *data_out );
 err_t isoadc5_read_voltage( isoadc5_t *ctx, uint8_t filt, uint8_t ch, float *volt );
 ```
 
-## Example Description
-
-> This example demonstrates the use of ISO ADC 5 Click board.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver and makes an initial log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;          /**< Logger config object. */
@@ -107,7 +95,6 @@ void application_init ( void )
     }
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -115,7 +102,6 @@ void application_init ( void )
 > Reads the voltage from all input channels and displays the values of each channel on the USB UART approximately every second.
 
 ```c
-
 void application_task ( void )
 {
     float v_ain1 = 0, v_ain2 = 0, v_ain3 = 0, v_ain4 = 0;
@@ -133,30 +119,25 @@ void application_task ( void )
         Delay_ms ( 1000 );
     }
 }
-
 ```
 
-## Note
+### Note
 
 > The voltage input range is from 0 to 48V.
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ISOADC5
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](http://shop.mikroe.com/usb-uart-click),
-[USB UART 2 Click](http://shop.mikroe.com/usb-uart-2-click) or
-[RS232 Click](http://shop.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. The
-terminal available in all MikroElektronika
-[compilers](http://shop.mikroe.com/compilers), or any other terminal application
-of your choice, can be used to read the message.
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

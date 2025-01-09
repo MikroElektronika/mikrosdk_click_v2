@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # LR IoT Click
 
-> LR IoT Click is a compact add-on board that contains a long-range LoRa transceiver. This board features Semtech Corporation’s LR1110, an ultra-low power platform integrating a LoRa® transceiver, multi-constellation GNSS, and passive WiFi AP MAC address scanner. Alongside its sub-GHz capabilities, the LR1110 also has a multi-band front-end capable of receiving 802.11b/g/n WiFi Access Point MAC addresses and GNSS (GPS, BeiDou, geostationary) satellite raw data befitting geo-positioning purposes. The acquired information is then transmitted using an LPWAN network to a geolocation server, which analyzes it and correlates the position with data from a geolocation database, enabling a unique balance between low power and performance.
+> [LR IoT Click](https://www.mikroe.com/?pid_product=MIKROE-5447) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/lriot_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5447&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/lr-iot-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Stefan Filipovic
 - **Date**          : Sep 2022.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the LR IoT Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example demonstrates the use of LR IoT Click board by reading a GNSS and WiFi
+scanning results and displaying it on the USB UART. In the case of a tranceive firmware
+the communication between two devices over LoRa will be demonstrated as well.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for LR IoT Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.LRIoT
 
-#### Standard key functions :
+### Example Key Functions
 
 - `lriot_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +50,6 @@ err_t lriot_init ( lriot_t *ctx, lriot_cfg_t *cfg );
 err_t lriot_default_cfg ( lriot_t *ctx );
 ```
 
-#### Example key functions :
-
 - `lriot_get_wifi_scan_results` This function performs a WiFi scanning and reads the results.
 ```c
 err_t lriot_get_wifi_scan_results ( lriot_t *ctx, lriot_wifi_scan_results_t *results );
@@ -68,14 +65,6 @@ err_t lriot_get_gnss_scan_results ( lriot_t *ctx, lriot_gnss_scan_results_t *res
 err_t lriot_send_lora_message ( lriot_t *ctx, uint8_t *message );
 ```
 
-## Example Description
-
-> This example demonstrates the use of LR IoT Click board by reading a GNSS and WiFi
-scanning results and displaying it on the USB UART. In the case of a tranceive firmware
-the communication between two devices over LoRa will be demonstrated as well.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes the driver, performs the Click default configuration, and after that reads
@@ -83,7 +72,6 @@ and displays the chip's firmware information. In the case you need to update or 
 firmware refer to the @b LRIOT_UPDATE_FIRMWARE and @b LRIOT_FIRMWARE_SELECTOR macro definition.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;      /**< Logger config object. */
@@ -126,7 +114,6 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -140,7 +127,6 @@ void application_init ( void )
    on the USB UART.
 
 ```c
-
 void application_task ( void )
 {
 #if ( LRIOT_FIRMWARE_SELECTOR == LRIOT_TRANSCEIVE_FIRMWARE )
@@ -224,25 +210,21 @@ void application_task ( void )
     }
 #endif
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.LRIoT
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

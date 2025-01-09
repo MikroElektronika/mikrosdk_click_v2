@@ -1,68 +1,63 @@
-\mainpage Main Page
- 
+
 ---
 # BLE 7 Click
 
-The BLE 7 Click is a Click board™ witch provide BT/BLE connectivity for any embedded application. BLE 7 Click based on the BGX13S22GA-V31, a SiP module from Silicon Labs with a buit-in antenna. Click board™ an ultra-small, high-performing, Bluetooth low energy module for easy integration of Bluetooth low energy connectivity (BLE) into various electronic devices. Given its features, this Click can be used for health, sports, and wellness devices as well as Industrial, home, and building automation; and smart phone, tablet, and PC accessories.
+> [BLE 7 Click](https://www.mikroe.com/?pid_product=MIKROE-3872) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/ble7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-3872&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/ble-7-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : jul 2020.
 - **Type**          : UART GSM/IOT type
 
-
 # Software Support
 
-We provide a library for the Ble7 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This example reads and processes data from BLE 7 Clicks.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Ble7 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Ble7
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void ble7_cfg_setup ( ble7_cfg_t *cfg ); 
+- `ble7_cfg_setup` Config Object Initialization function. 
+```c
+void ble7_cfg_setup ( ble7_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> BLE7_RETVAL ble7_init ( ble7_t *ctx, ble7_cfg_t *cfg );
+- `ble7_init` Initialization function. 
+```c
+err_t ble7_init ( ble7_t *ctx, ble7_cfg_t *cfg );
+```
 
+- `ble7_reset` This function allows user to reset BGX module. 
+```c
+void ble7_reset ( ble7_t *ctx );
+```
 
-#### Example key functions :
+- `ble7_send_command` This function allows user to transmit data to the BGX module. 
+```c
+void ble7_send_command ( ble7_t *ctx, char *command );
+```
 
-- This function allows user to reset BGX module.
-> void ble7_reset ( ble7_t *ctx );
-
-- This function allows user to transmit data to the BGX module.
-> void ble7_send_command ( ble7_t *ctx, char *command );
-
-## Examples Description
-
-> This example reads and processes data from BLE 7 clicks.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initializes the driver and configures the Click board.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -166,7 +161,6 @@ void application_init ( void )
     log_printf( &logger, "The module has been configured.\r\n" );
     Delay_1sec( );
 }
-  
 ```
 
 ### Application Task
@@ -174,40 +168,32 @@ void application_init ( void )
 > Checks for the received data, reads it and replies with a certain message.
 
 ```c
-
 void application_task ( void )
 {
     ble7_process(  );
-}  
-
+}
 ```
 
-## Note
+### Note
 
 > We have used the BLE Scanner smartphone application for the test. 
 > A smartphone and the Click board must be paired in order to exchange messages with each other.
 > For more information about the BGX module commands, please refer to the following link:
 > https://docs.silabs.com/gecko-os/1/bgx/latest/commands
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Ble7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

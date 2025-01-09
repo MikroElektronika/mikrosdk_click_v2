@@ -1,8 +1,5 @@
 {
     "name": "RS232 Isolator 2 Click",
-    "description": "RS232 Isolator 2 Click is a compact add-on board that contains a fully isolated transceiver used to provide secure and easy UART to RS232 conversion. This board features the ICL3221, a 3.3V powered RS232 transmitter/receiver that provides ±15kV ESD protection on its RS232 pins from Renesas. This Click board™ is characterized by an assured minimum data rate of 250kbps. It features an automatic power-down function and uses high-speed digital optocouplers to isolate the RS232 interface for 3.75kV isolation. It also possesses an LED indicator that indicates a valid RS232 signal at any of the receiver inputs. This Click board™ is suitable for isolation of RS232 signals, portable equipment, and where the low operational power consumption and even lower standby power consumption are critical.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
-    "hw" : ["Click","ICL3221"],
-    "category" : ["RS232"]
+    "hw" : ["Click","ICL3221"]
 }

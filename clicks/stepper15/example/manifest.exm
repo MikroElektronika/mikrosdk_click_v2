@@ -1,8 +1,5 @@
 {
     "name": "Stepper 15 Click",
-    "description": "Stepper 15 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the DRV8889A, an automotive stepper driver with integrated current sense and stall detection from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","DRV8889A"],
-    "category" : ["Stepper"]
+    "hw" : ["Click","DRV8889A"]
 }

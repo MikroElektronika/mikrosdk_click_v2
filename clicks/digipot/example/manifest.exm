@@ -1,8 +1,5 @@
 {
     "name": "DIGI POT Click",
-    "description": "DIGIPOT Click is an accessory board in mikroBUS form factor. It features a single-channel digital potentiometer MCP4161 with 8-bit resolution (256 wiper steps) and industry-standard SPI serial interface.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP4161"],
-    "category" : ["Digital potentiometer"]
+    "hw" : ["Click","MCP4161"]
 }

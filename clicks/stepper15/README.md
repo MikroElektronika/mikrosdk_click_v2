@@ -1,40 +1,38 @@
-\mainpage Main Page
 
 ---
 # Stepper 15 Click
 
-Stepper 15 Click is a compact add-on board that contains a bipolar stepper motor driver. This board features the DRV8889A, an automotive stepper driver with integrated current sense and stall detection from Texas Instruments.
+> [Stepper 15 Click](https://www.mikroe.com/?pid_product=MIKROE-4639) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/stepper_15_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4639&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/stepper-15-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Mar 2021.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Stepper15 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This library contains API for the Stepper 15 Click driver.
+> The library contains drivers for work control of the Stepper Motor.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Stepper15 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Stepper15
 
-#### Standard key functions :
+### Example Key Functions
 
 - `stepper15_cfg_setup` Config Object Initialization function.
 ```c
@@ -43,15 +41,13 @@ void stepper15_cfg_setup ( stepper15_cfg_t *cfg );
 
 - `stepper15_init` Initialization function.
 ```c
-STEPPER15_RETVAL stepper15_init ( stepper15_t *ctx, stepper15_cfg_t *cfg );
+err_t stepper15_init ( stepper15_t *ctx, stepper15_cfg_t *cfg );
 ```
 
 - `stepper15_default_cfg` Click Default Configuration function.
 ```c
 void stepper15_default_cfg ( stepper15_t *ctx );
 ```
-
-#### Example key functions :
 
 - `stepper15_make_one_step` Stepper 15 make one step function.
 ```c
@@ -68,21 +64,14 @@ err_t stepper15_set_direction ( stepper15_t *ctx, uint8_t direction );
 err_t stepper15_step_by_angle ( stepper15_t *ctx, uint8_t step_speed, float angle, uint16_t step_360 );
 ```
 
-## Example Description
-
-> This library contains API for the Stepper 15 Click driver.
-> The library contains drivers for work control of the Stepper Motor.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > Initializes I2C and SPI driver and set default configuration,
 > enable the device and enable outputs mode.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;              /**< Logger config object. */
     stepper15_cfg_t stepper15_cfg;  /**< Click config object. */
 
@@ -131,13 +120,12 @@ void application_init ( void ) {
     stepper15_motor_stop( &stepper15 );
     Delay_ms ( 1000 );
 }
-
 ```
 
 ### Application Task
 
 > The application task represents an example that demonstrates 
-> the use of the Stepper 15 Click board™ 
+> the use of the Stepper 15 Click board&trade; 
 > with which the user can sequentially move the motor. 
 > The first part of the sequence executes the clockwise/counterclockwise motor movement
 > for an angle of 90-degrees with a step speed of 85/100%, 
@@ -146,8 +134,8 @@ void application_init ( void ) {
 > Results are sent to the USART Terminal, where you can track their changes.
 
 ```c
-
-void application_task ( void ) {
+void application_task ( void ) 
+{
     log_printf( &logger, "---------------------------------\r\n" );
     log_printf( &logger, "        Clockwise motion         \r\n" );
     log_printf( &logger, " Angle of rotation :  90 degrees \r\n" );
@@ -193,25 +181,21 @@ void application_task ( void ) {
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Stepper15
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

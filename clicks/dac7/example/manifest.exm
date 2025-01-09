@@ -1,8 +1,5 @@
 {
     "name": "DAC 7 Click",
-    "description": "DAC 7 Click carries the AD5624R 12-bit buffered Digital-to-Analog Converter that converts digital value to the corresponding voltage level using external voltage reference.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","AD5624R"],
-    "category" : ["DAC"] 
+    "hw" : ["Click","AD5624R"]
 }

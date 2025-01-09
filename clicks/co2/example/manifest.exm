@@ -1,8 +1,5 @@
 {
     "name": "CO2 Click",
-    "description": "CO2 Click is a compact add-on board that contains Sensirion’s miniature CO2 sensor. This board features the STC31, a gas concentration sensor designed for high-volume applications. The STC31 utilizes a revolutionized thermal conductivity measurement principle, which results in superior repeatability and long-term stability. The outstanding performance of these sensors is based on Sensirion’s patented CMOSens® sensor technology, which combines the sensor element, signal processing, and digital calibration on a small CMOS chip. It features a digital I2C interface, which makes it easy to connect directly to MCU. This Click board™ represents an ideal choice for health, environmental, industrial, residential monitoring of high CO2 concentrations and applications where reliability is crucial.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","STC31"],
-    "category" : ["Gas"]
+    "hw" : ["Click","STC31"]
 }

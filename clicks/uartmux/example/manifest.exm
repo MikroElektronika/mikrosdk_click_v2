@@ -1,8 +1,5 @@
 {
     "name": "UART Mux Click",
-    "description": "The UART Mux Click is a Click board™ that switches the UART pins (RX and TX) from the mikroBUS™ to one of the four available outputs.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","SN74LV4052A"],
-    "category" : ["DAC"] 
+    "hw" : ["Click","SN74LV4052A"]
 }

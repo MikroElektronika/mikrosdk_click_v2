@@ -1,48 +1,22 @@
 {
-    "architecture": "ARM|PIC32|RISC-V|dsPIC",
-    "category": "Click Boards > Sensors > Motion",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "6DOF IMU 12 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
-    "name": "mikroe.click.c6dofimu12",
-    "product_link": "https://www.mikroe.com/6dof-imu-12-click",
-    "short_description": "6DOF IMU 12 Click carries the ultra-low-power BMI270 from Bosch Sensortec, inertial measurement unit optimized for wearables providing precise acceleration, angular rate measurement and intelligent on-chip motion-triggered interrupt features.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "related_projects": [
-        3222
-    ],
-    "version": "2.1.0.17",
-    "cmake": true,
-    "alias": "Click.6DofImu12",
-    "subdir_name": "lib_c6dofimu12"
+    "name": "mikroe.click.6dofimu12",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4073",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "6DOF IMU 12 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.6DofImu12",
+                "subdir_name": "lib_c6dofimu12",
+                "path": "6DOF IMU 12 Click/data/lib_c6dofimu12"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,83 +1,82 @@
-\mainpage Main Page
- 
- 
 
 ---
 # 2x2 key Click
 
-2x2 Key Click has a 4 button keypad and allows multiple key presses.
+> [2x2 key Click](https://www.mikroe.com/?pid_product=MIKROE-2152) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/2x2key_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2152&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/2x2-key-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Mihajlo Djordjevic
 - **Date**          : Dec 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the 2x2key Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for 2x2key Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void c2x2key_cfg_setup ( c2x2key_cfg_t *cfg ); 
- 
-- Initialization function.
-> C2X2KEY_RETVAL c2x2key_init ( c2x2key_t *ctx, c2x2key_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void c2x2key_default_cfg ( c2x2key_t *ctx );
-
-
-#### Example key functions :
-
-- This function gets state of AN pin on 2X2_Key Click board.
-> uint8_t c2x2key_t1_state ( c2x2key_t *ctx );
- 
-- This function gets state of RST pin on 2X2_Key Click board.
-> uint8_t c2x2key_t2_state ( c2x2key_t *ctx );
-
-- This function gets state of CS pin on 2X2_Key Click board.
-> uint8_t c2x2key_t3_state ( c2x2key_t *ctx );
-
-- This function gets state of PWM pin on 2X2_Key Click board.
-> uint8_t c2x2key_t4_state ( c2x2key_t *ctx );
-
-## Examples Description
+## Example Description
 
 > 
 > This example code demonstrates the usage of 2X2 Key Click board.
 > 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.2x2key
+
+### Example Key Functions
+
+- `c2x2key_cfg_setup` Config Object Initialization function. 
+```c
+void c2x2key_cfg_setup ( c2x2key_cfg_t *cfg );
+``` 
+ 
+- `c2x2key_init` Initialization function. 
+```c
+err_t c2x2key_init ( c2x2key_t *ctx, c2x2key_cfg_t *cfg );
+```
+
+- `c2x2key_default_cfg` Click Default Configuration function. 
+```c
+void c2x2key_default_cfg ( c2x2key_t *ctx );
+```
+
+- `c2x2key_t1_state` This function gets state of AN pin on 2X2_Key Click board. 
+```c
+uint8_t c2x2key_t1_state ( c2x2key_t *ctx );
+```
+ 
+- `c2x2key_t2_state` This function gets state of RST pin on 2X2_Key Click board. 
+```c
+uint8_t c2x2key_t2_state ( c2x2key_t *ctx );
+```
+
+- `c2x2key_t3_state` This function gets state of CS pin on 2X2_Key Click board. 
+```c
+uint8_t c2x2key_t3_state ( c2x2key_t *ctx );
+```
+
+- `c2x2key_t4_state` This function gets state of PWM pin on 2X2_Key Click board. 
+```c
+uint8_t c2x2key_t4_state ( c2x2key_t *ctx );
+```
+
+### Application Init
 
 >
 > Application Init performs Logger and Click initialization.
 > 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -112,7 +111,6 @@ void application_init ( void )
     log_printf( &logger, "-----------------------\r\n" );
     Delay_ms ( 1000 );
 }
-  
 ```
 
 ### Application Task
@@ -123,7 +121,6 @@ void application_init ( void )
 > 
 
 ```c
-
 void application_task ( void )
 {
    t1_state = c2x2key_t1_state( &c2x2key );
@@ -189,25 +186,19 @@ void application_task ( void )
 
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.2x2key
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

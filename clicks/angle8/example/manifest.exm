@@ -1,8 +1,5 @@
 {
     "name": "Angle 8 Click",
-    "description": "Angle 8 Click is a compact add-on board that detects the absolute angular position of a permanent magnet. This board features the MA782GGU, a low-power angle sensor with integrated wake-up angle detection from Monolithic Power Systems. With its power cycling ability, the MA782GGU can be optimized for applications that require low average power. It supports a wide range of magnetic field strengths and spatial configurations, with both end-of-shaft and off-axis (side-shaft mounting), supported configurations. Fast data acquisition and processing provides accurate angle measurement at an applied magnetic field of 60mT, alongside magnetic field strength detection with programmable thresholds. This Click board™ is suitable for general-purpose angle measurements, in embedded motion control applications, as a power/speed control trigger solution, and more.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MA782GGU-P"],
-    "category" : ["Magnetic"]
+    "hw" : ["Click","MA782GGU-P"]
 }

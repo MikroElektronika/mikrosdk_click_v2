@@ -1,8 +1,5 @@
 {
     "name": "Current 4 Click",
-    "description": "Current 4 Click is a compact add-on board that provides a precise and accurate current sensing solution. This board features the INA250, a bidirectional, zero-drift current-shunt monitor from Texas Instruments.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","INA250A2"],
-    "category" : ["Current sensor"]
+    "hw" : ["Click","INA250A2"]
 }

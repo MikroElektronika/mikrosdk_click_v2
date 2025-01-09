@@ -1,40 +1,39 @@
-\mainpage Main Page
 
 ---
 # I2C Isolator 7 Click
 
-> I2C Isolator 7 Click is a compact add-on board that offers completely isolated bidirectional communication. This board features the ADuM1252, an ultra-low power, bidirectional I2C isolator from Analog Devices. It can isolate I2C bidirectional data transfer of up to 2MHz SCL and bidirectional SCL for advanced bus topologies, and it supports clock stretching and multiple controllers across the isolation barrier. It also features the enhanced hot-swappable side 2 IO.
+> [I2C Isolator 7 Click](https://www.mikroe.com/?pid_product=MIKROE-5943) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/i2cisolator7_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-5943&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/i2c-isolator-7-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Oct 2023.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the I2C Isolator 7 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This demo application shows an example of an I2C Isolator 7 Click 
+> wired to the PRESS Click board&trade; for reading device ID (Who am I).
+> The library also includes an I2C writing and reading functions.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for I2C Isolator 7 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.I2CIsolator7
 
-#### Standard key functions :
+### Example Key Functions
 
 - `i2cisolator7_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +44,6 @@ void i2cisolator7_cfg_setup ( i2cisolator7_cfg_t *cfg );
 ```c
 err_t i2cisolator7_init ( i2cisolator7_t *ctx, i2cisolator7_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `i2cisolator7_generic_write` This function shall generate a START signal, followed by len number of writes from data_in.
 ```c
@@ -63,18 +60,10 @@ err_t i2cisolator7_generic_read ( i2cisolator7_t *ctx, uint8_t *data_out, uint8_
 err_t i2cisolator7_write_then_read ( i2cisolator7_t *ctx, uint8_t *data_in, uint8_t len_write_data, uint8_t *data_out, uint8_t len_read_data );
 ```
 
-## Example Description
-
-> This demo application shows an example of an I2C Isolator 7 Click 
-> wired to the PRESS Click board™ for reading device ID (Who am I).
-> The library also includes an I2C writing and reading functions.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > The initialization of I2C module and log UART.
-> After driver initialization, the app sets the PRESS Click board™ slave address.
+> After driver initialization, the app sets the PRESS Click board&trade; slave address.
 
 ```c
 void application_init ( void ) 
@@ -120,9 +109,9 @@ void application_init ( void )
 
 ### Application Task
 
-> This example demonstrates the use of the I2C Isolator 7 Click board™.
-> Logs device ID values of the PRESS Click board™ 
-> wired to the I2C Isolator 7 Click board™.
+> This example demonstrates the use of the I2C Isolator 7 Click board&trade;.
+> Logs device ID values of the PRESS Click board&trade; 
+> wired to the I2C Isolator 7 Click board&trade;.
 
 ```c
 void application_task ( void ) 
@@ -141,22 +130,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.I2CIsolator7
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

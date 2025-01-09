@@ -1,40 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Motor control > Brushless",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-    "dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Brushless 27 Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.brushless27",
-    "product_link": "https://www.mikroe.com/brushless-27-click",
-    "short_description": "Brushless 27 Click is a compact add-on board that controls DC brushless motors with any MCU. This board features the TMC6300, a power driver for BLDC/PMSM motors from TRINAMIC. It is a highly efficient low voltage, zero standby driver for 3-phase BLDC/PMSM motors with up to 2A peak current.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type":"mikroSDK Library",
-    "version": "2.1.0.6",
-    "cmake": true,
-    "alias": "Click.Brushless27",
-    "subdir_name": "lib_brushless27"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5910",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Brushless 27 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Brushless27",
+                "subdir_name": "lib_brushless27",
+                "path": "Brushless 27 Click/data/lib_brushless27"
+            }
+        ]
+    }
 }
-
-
-
-
-

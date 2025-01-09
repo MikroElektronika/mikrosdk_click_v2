@@ -1,71 +1,69 @@
-\mainpage Main Page
- 
+
 ---
 # SPI Isolator Click
 
-SPI Isolator Click carries the ADuM4154 5kV digital isolator optimized for a serial peripheral interface (SPI).
+> [SPI Isolator Click](https://www.mikroe.com/?pid_product=MIKROE-2583) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/spiisolator_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2583&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/spi-isolator-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : May 2020.
 - **Type**          : SPI type
 
-
 # Software Support
 
-We provide a library for the Spiisolator Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for Spiisolator Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void spiisolator_cfg_setup ( spiisolator_cfg_t *cfg ); 
- 
-- Initialization function.
-> SPIISOLATOR_RETVAL spiisolator_init ( spiisolator_t *ctx, spiisolator_cfg_t *cfg );
-
-#### Example key functions :
-
-- Generic transfer function.
-> void spiisolator_generic_transfer ( spiisolator_t *ctx, spi_master_transfer_data_t *block );
- 
-- Write the byte of data function.
-> void spiisolator_write_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t write_cmd, uint8_t write_data );
-
-- Read the byte of data function.
-> uint8_t spiisolator_read_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t read_cmd );
-
-## Examples Description
- 
 > TThe Click is designed to run on either 3.3V or 5V power supply. It communicates with the target microcontroller over SPI interface.
 > In this example we have used an 8x8 Click board connected to a SPI Isolator Click board. 
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Spiisolator
+
+### Example Key Functions
+
+- `spiisolator_cfg_setup` Config Object Initialization function. 
+```c
+void spiisolator_cfg_setup ( spiisolator_cfg_t *cfg );
+``` 
+ 
+- `spiisolator_init` Initialization function. 
+```c
+err_t spiisolator_init ( spiisolator_t *ctx, spiisolator_cfg_t *cfg );
+```
+
+- `spiisolator_generic_transfer` Generic transfer function. 
+```c
+void spiisolator_generic_transfer ( spiisolator_t *ctx, spi_master_transfer_data_t *block );
+```
+ 
+- `spiisolator_write_byte` Write the byte of data function. 
+```c
+void spiisolator_write_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t write_cmd, uint8_t write_data );
+```
+
+- `spiisolator_read_byte` Read the byte of data function. 
+```c
+uint8_t spiisolator_read_byte ( spiisolator_t *ctx, uint8_t reg_address, uint8_t read_cmd );
+```
+
+### Application Init
 
 > Initialization driver enables - SPI, set default configuration, also write log. 
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -94,7 +92,6 @@ void application_init ( void )
 
     Delay_100ms( );
 }
-  
 ```
 
 ### Application Task
@@ -102,7 +99,6 @@ void application_init ( void )
 > Controls an 8x8 Click board and displays the steps on UART Terminal.
 
 ```c
-
 void application_task ( void )
 {
     log_info( &logger, "> Display Character ..." );
@@ -120,29 +116,22 @@ void application_task ( void )
     log_info( &logger, "> Display Image OFF ..." );
     c8x8_display_image( &spiisolator, &demo_img_off[ 0 ] );
     Delay_ms ( 1000 );
-}  
-
+}
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Spiisolator
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

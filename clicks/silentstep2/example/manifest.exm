@@ -1,8 +1,5 @@
 {
     "name": "Silent Step 2 Click",
-    "description": "Silent Step 2 Click is a compact add-on board that allows extremely smooth and silent operation of the connected motor. This board features the TMC2130, a high-performance two-phase stepper motor driver from Analog Devices. The driver uses an external motor power supply of 4.75 up to 43V to power a 2-phase stepper motor up to 2A coil current (2.5A peak).",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","TMC2130"],
-    "category" : ["Click Boards > Motor control > Stepper"]
+    "hw" : ["Click","TMC2130"]
 }

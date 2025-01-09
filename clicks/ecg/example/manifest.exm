@@ -1,8 +1,5 @@
 {
     "name": "ECG Click",
-    "description": "This is an ECG (or EKG) machine on a Click board. It measures the electrical activity of a beating heart through electrodes taped to the skin. The board requires little setup, and the final measurement results can be displayed as an Electrocardiogram using a free Windows app.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","MCP609, MAX6106"],
-    "category" : ["Biometrics"] 
+    "hw" : ["Click","MCP609, MAX6106"]
 }

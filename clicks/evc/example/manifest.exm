@@ -1,8 +1,5 @@
 {
     "name": "${PACKAGE_NAME} Click",
-    "description": "EVC Click is a six-channel digital volume controller, equipped with an integrated electronic volume control circuit, which can be controlled over the I2C interface.",
-    "image" : "../../Resources/click_icon.png",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","PT2258"],
-    "category" : ["Amplifier"] 
+    "hw" : ["Click","PT2258"]
 }

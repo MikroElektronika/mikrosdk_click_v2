@@ -1,90 +1,76 @@
-\mainpage Main Page
-
-
 
 ---
 # ProxFusion 3 Click
 
-ProxFusion 3 Click is a compact add-on board that represents a multifunctional touch sensing Click board™. This board features the IQS2692A, an 8-channel ProxFusion® capacitive touch and proximity controller with additional sensing such as Hall- and inductive sensing from Azoteq.
+> [ProxFusion 3 Click](https://www.mikroe.com/?pid_product=MIKROE-4469) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/proxfusion3_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-4469&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/proxfusion-3-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Nenad Filipovic
 - **Date**          : Dec 2020.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the ProxFusion3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> Display information about the last detected touch.
 
-## Library Description
+### Example Libraries
 
-```
-This library contains API for ProxFusion3 Click driver.
-```
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ProxFusion3
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-```
+- `proxfusion3_cfg_setup` Config Object Initialization function.
+```c
 void proxfusion3_cfg_setup ( proxfusion3_cfg_t *cfg );
 ```
 
-- Initialization function.
-```
-PROXFUSION3_RETVAL proxfusion3_init ( proxfusion3_t *ctx, proxfusion3_cfg_t *cfg );
+- `proxfusion3_init` Initialization function.
+```c
+err_t proxfusion3_init ( proxfusion3_t *ctx, proxfusion3_cfg_t *cfg );
 ```
 
-- Click Default Configuration function.
-```
+- `proxfusion3_default_cfg` Click Default Configuration function.
+```c
 void proxfusion3_default_cfg ( proxfusion3_t *ctx );
 ```
 
-#### Example key functions :
-
-- ProxFusion 3 get touch function.
-```
+- `proxfusion3_get_touch` ProxFusion 3 get touch function.
+```c
 uint8_t proxfusion3_get_touch ( proxfusion3_t *ctx );
 ```
 
-- ProxFusion 3 check touch event function.
-```
+- `proxfusion3_check_touch_event` ProxFusion 3 check touch event function.
+```c
 uint8_t proxfusion3_check_touch_event ( proxfusion3_t *ctx );
 ```
 
-- ProxFusion 3 get version info data function.
-```
+- `proxfusion3_get_version_info` ProxFusion 3 get version info data function.
+```c
 err_t proxfusion3_get_version_info ( proxfusion3_t *ctx, uint8_t *product_number, uint8_t *software_version );
 ```
 
-## Examples Description
-
-Display information about the last detected touch.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
-Initializes I2C driver, read and display version info value
+> Initializes I2C driver, read and display version info value
 and start to write log.
 
-```
-void application_init ( void ) {
+```c
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;                  /**< Logger config object. */
     proxfusion3_cfg_t proxfusion3_cfg;  /**< Click config object.  */
 
@@ -131,12 +117,13 @@ void application_init ( void ) {
 
 ### Application Task
 
-This is an example that demonstrates the use of the ProxFusion 3 Click board.
+> This is an example that demonstrates the use of the ProxFusion 3 Click board.
 In this example, we check the touch event and display the last detected touch. 
 Results are being sent to the Usart Terminal where you can track their changes.
 
-```
-void application_task ( void ) {
+```c
+void application_task ( void ) 
+{
     if ( proxfusion3_check_touch_event( &proxfusion3 ) == PROXFUSION3_EVENT_TOUCH ) {        
         uint8_t touch_data = proxfusion3_get_touch( &proxfusion3 );
         Delay_ms ( 100 );
@@ -187,22 +174,19 @@ void application_task ( void ) {
 }
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [mikroE github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other mikroE Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ProxFusion3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all Mikroelektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

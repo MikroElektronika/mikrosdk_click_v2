@@ -1,40 +1,37 @@
-\mainpage Main Page
- 
+
 ---
 # ProxFusion Click
 
-> ProxFusion Click is a multifunctional capacitive and Hall-effect sensor device. This Click can detect touch by using two onboard sensor pads, and it can sense a rotation angle of a magnetic field, parallel with the surface of the Click board.
+> [ProxFusion Click](https://www.mikroe.com/?pid_product=MIKROE-2920) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/proxfusion_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2920&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/proxfusion-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : Katarina Perendic
 - **Date**          : okt 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the ProxFusion Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This demo-app reads and displays touch events using ProxFusion Click.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for ProxFusion Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.ProxFusion
 
-#### Standard key functions :
+### Example Key Functions
 
 - `proxfusion_cfg_setup` Config Object Initialization function.
 ```c
@@ -51,8 +48,6 @@ err_t proxfusion_init ( proxfusion_t *ctx, proxfusion_cfg_t *cfg );
 err_t proxfusion_default_cfg ( proxfusion_t *ctx );
 ```
 
-#### Example key functions :
-
 - `proxfusion_get_touch` Touch event
 ```c
 uint8_t proxfusion_get_touch ( proxfusion_t *ctx );
@@ -68,15 +63,9 @@ err_t proxfusion_set_system_reg ( proxfusion_t *ctx, uint8_t cfg );
 err_t proxfusion_set_event_reg ( proxfusion_t *ctx, uint8_t cfg );
 ```
 
-## Examples Description
+### Application Init
 
-> This demo-app reads and displays touch events using ProxFusion Click.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
-
-> Configuring clicks and log objects.
+> Configuring Clicks and log objects.
 > Settings the Click in the default configuration.
 
 ```c
@@ -141,25 +130,19 @@ void application_task ( void )
 }
 ```
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.ProxFusion
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

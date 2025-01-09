@@ -1,45 +1,22 @@
 {
-    "architecture": "ARM|PIC|PIC32|RISC-V|AVR|dsPIC",
-    "category": "Click Boards > Audio & voice > Signal processing",
-    "changelog": "Resources/CHANGELOG.md",
-    "contains": [
-        "libraries",
-        "hex_files",
-        "examples",
-        "source_files"
-    ],
-"dependency_list": [],
-    "details": "Resources/DETAILS.md",
     "display_name": "Headphone AMP Click",
-    "example_list": [
-        {
-            "project_path": "Examples/example"
-        }
-    ],
-    "help": "Help/doc",
-    "icon": "Resources/click_icon.png",
-    "license": {
-        "file_path": "",
-        "id": "46"
-    },
     "name": "mikroe.click.headphoneamp",
-    "product_link": "https://www.mikroe.com/headphone-amp-click",
-    "short_description": "Headphone Amp Click is a compact add-on board that contains a stereo headphone amplifier. This board features the LM4811, Boomer® audio power amplifier capable of delivering 105mW per channel with digital volume control from Texas Instruments. The Boomer® amplifiers are specifically designed to provide high-quality output power with a minimal amount of external components. Since the LM4811 does not require bootstrap capacitors or snubber networks, it is optimally suited for low-power portable systems. It features a digital volume control that sets the amplifier's gain from +12dB to −33dB in 16 discrete steps, in addition to a micro-power consumption Shutdown mode.",
-    "supported_compiler": "mikroC AI|GCC|Clang|XC",
-    "type": "Library",
-    "_type": "mikroSDK Library",
-    "version": "2.1.0.12",
-    "cmake": true,
-    "alias": "Click.HeadphoneAMP",
-    "subdir_name": "lib_headphoneamp"
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4766",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Headphone AMP Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HeadphoneAMP",
+                "subdir_name": "lib_headphoneamp",
+                "path": "Headphone AMP Click/data/lib_headphoneamp"
+            }
+        ]
+    }
 }
-
-
-
-
-
-
-
-
-
-

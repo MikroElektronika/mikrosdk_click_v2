@@ -1,74 +1,66 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Manometer 2 Click
 
-Manometer 2 Click carries the MS5525DSO-SB001GS digital pressure sensor, based on leading MEMS technology.
+> [Manometer 2 Click](https://www.mikroe.com/?pid_product=MIKROE-2550) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/manometer2_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2550&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/manometer-2-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : I2C/SPI type
 
-
 # Software Support
 
-We provide a library for the Manometer2 Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
+> This application is digital pressure sensor.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for Manometer2 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.Manometer2
 
-#### Standard key functions :
+### Example Key Functions
 
-- Config Object Initialization function.
-> void manometer2_cfg_setup ( manometer2_cfg_t *cfg ); 
+- `manometer2_cfg_setup` Config Object Initialization function. 
+```c
+void manometer2_cfg_setup ( manometer2_cfg_t *cfg );
+``` 
  
-- Initialization function.
-> MANOMETER2_RETVAL manometer2_init ( manometer2_t *ctx, manometer2_cfg_t *cfg );
-
-#### Example key functions :
+- `manometer2_init` Initialization function. 
+```c
+err_t manometer2_init ( manometer2_t *ctx, manometer2_cfg_t *cfg );
+```
 
 - Generic read data function
 uint32_t manometer2_read_command ( manometer2_t *ctx, uint8_t reg_address );
 
-- Function read coeffitient
-> void manometer2_read_coef ( manometer2_t *ctx );
+- `manometer2_read_coef` Function read coeffitient. 
+```c
+void manometer2_read_coef ( manometer2_t *ctx );
+```
 
 - Get pressure data function
 float manometer2_get_pressure ( manometer2_t *ctx, uint8_t oversampling_ratio );
 
-## Examples Description
-
-> This application is digital pressure sensor.
-
-**The demo application is composed of two sections :**
-
-### Application Init 
+### Application Init
 
 > Initialization driver enable's - I2C,
 > initialization Manometer 2 sensor MS5525DSO-SB001GS by read coeffitient value
 > and start write log.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -98,7 +90,6 @@ void application_init ( void )
     log_printf( &logger, "----------------------------- \r\n" );
     Delay_100ms( );
 }
-  
 ```
 
 ### Application Task
@@ -109,7 +100,6 @@ void application_init ( void )
 > All data logs on usb uart for aproximetly every 3 sec when the data value changes.
 
 ```c
-
 void application_task (  )
 {
     float temperature;
@@ -132,25 +122,19 @@ void application_task (  )
 
 ``` 
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+## Application Output
 
-**Other mikroE Libraries used in the example:** 
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.Manometer2
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

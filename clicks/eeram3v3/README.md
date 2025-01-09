@@ -1,40 +1,37 @@
-\mainpage Main Page
 
 ---
 # EERAM 3v3 Click
 
-EERAM 3.3V Click is a static RAM (SRAM) memory Click board™ with the unique feature - it has a backup non-volatile memory array, used to store the data from the SRAM array. Since the SRAM is not able to maintain its content after the power loss, the non-volatile EEPROM backup can be a very handy addition that can be used to preserve the data, even after the power loss event. This is a very useful feature when working with critical or sensitive applications. The memory backup procedure can be executed both automatically and manually. When it is set to work in the manual mode, the onboard capacitor will act as a power source with enough power to complete the backup cycle. The power-on backup restore mode is also available, taking only about 25ms to complete.
+> [EERAM 3v3 Click](https://www.mikroe.com/?pid_product=MIKROE-2728) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/eeram33v_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2728&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/eeram-33v-click)
 
 ---
 
-
-#### Click library
+#### Click Library
 
 - **Author**        : Jelena Milosavljevic
 - **Date**          : Jun 2021.
 - **Type**          : I2C type
 
-
 # Software Support
 
-We provide a library for the EERAM3v3 Click
-as well as a demo application (example), developed using MikroElektronika
-[compilers](https://www.mikroe.com/necto-studio).
-The demo can run on all the main MikroElektronika [development boards](https://www.mikroe.com/development-boards).
+## Example Description
 
-Package can be downloaded/installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+> This example show using EERAM Click to store the data to the SRAM ( static RAM ) memory. The data is read and written by the I2C serial communication bus, and the memory cells are organized into 2048 bytes, each 8bit wide.
 
-## Library Description
+### Example Libraries
 
-> This library contains API for EERAM3v3 Click driver.
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.EERAM3v3
 
-#### Standard key functions :
+### Example Key Functions
 
 - `eeram3v3_cfg_setup` Config Object Initialization function.
 ```c
@@ -45,8 +42,6 @@ void eeram3v3_cfg_setup ( eeram3v3_cfg_t *cfg );
 ```c
 err_t eeram3v3_init ( eeram3v3_t *ctx, eeram3v3_cfg_t *cfg );
 ```
-
-#### Example key functions :
 
 - `eeram3v3_generic_write` This function writes a desired number of data bytes starting from the selected register by using I2C serial interface.
 ```c
@@ -63,19 +58,13 @@ void eeram3v3_generic_read ( eeram3v3_t *ctx, uint8_t reg, uint8_t *rx_buf, uint
 void eeram3v3_status_write ( eeram3v3_t *ctx, uint8_t command );
 ```
 
-## Example Description
-
-> This example show using EERAM Click to store the data to the SRAM ( static RAM ) memory. The data is read and written by the I2C serial communication bus, and the memory cells are organized into 2048 bytes, each 8bit wide.
-
-**The demo application is composed of two sections :**
-
 ### Application Init
 
 > EERAM driver nitialization.
 
 ```c
-
-void application_init ( void ) {
+void application_init ( void ) 
+{
     log_cfg_t log_cfg;             /**< Logger config object. */
     eeram3v3_cfg_t eeram3v3_cfg;   /**< Click config object. */
 
@@ -106,7 +95,6 @@ void application_init ( void ) {
 
     log_info( &logger, " Application Task " );
 }
-
 ```
 
 ### Application Task
@@ -114,8 +102,8 @@ void application_init ( void ) {
 > Writing data to Click memory and displaying the read data via UART. 
 
 ```c
-
-void application_task ( void ){
+void application_task ( void )
+{
     log_info( &logger, "Writing MikroE to  SRAM memory, from address 0x0150:" );
     eeram3v3_write( &eeram3v3, 0x0150, &wr_data, 9 );
     log_info( &logger, "Reading 9 bytes of SRAM memory, from address 0x0150:" );
@@ -123,25 +111,21 @@ void application_task ( void ){
     log_info( &logger, "Data read: %s", rd_data );
     Delay_ms ( 1000 );
 }
-
 ```
 
-The full application code, and ready to use projects can be installed directly from *NECTO Studio Package Manager*(recommended way), downloaded from our [LibStock&trade;](https://libstock.mikroe.com) or found on [Mikroe github account](https://github.com/MikroElektronika/mikrosdk_click_v2/tree/master/clicks).
+## Application Output
 
-**Other Mikroe Libraries used in the example:**
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.EERAM3v3
+## Additional Notes and Information
 
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need
-[USB UART Click](https://www.mikroe.com/usb-uart-click),
-[USB UART 2 Click](https://www.mikroe.com/usb-uart-2-click) or
-[RS232 Click](https://www.mikroe.com/rs232-click) to connect to your PC, for
-development systems with no UART to USB interface available on the board. UART
-terminal is available in all MikroElektronika
-[compilers](https://shop.mikroe.com/compilers).
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---

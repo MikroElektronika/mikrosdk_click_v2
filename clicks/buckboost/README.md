@@ -1,76 +1,73 @@
-\mainpage Main Page
- 
- 
 
 ---
 # Buck-Boost  Click
 
-Buck-Boost Click™ features LTC3129-1, a buck-boost DC/DC conversion integrated circuit. The Click supports a wide input voltage range and can output eight discrete regulated output voltage levels, selectable by the digital output voltage selection pins, ranging from 2.5V to 15V. 
+> [Buck-Boost Click](https://www.mikroe.com/?pid_product=MIKROE-2806) demo application is developed using
+the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
+open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
+all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://download.mikroe.com/images/click_for_ide/buckboost_click.png" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-2806&image=1" height=300px>
 </p>
-
-[Click Product page](https://www.mikroe.com/buck-boost-click)
 
 ---
 
-
-#### Click library 
+#### Click Library
 
 - **Author**        : MikroE Team
 - **Date**          : Dec 2019.
 - **Type**          : GPIO type
 
-
 # Software Support
 
-We provide a library for the BuckBoost Click 
-as well as a demo application (example), developed using MikroElektronika 
-[compilers](https://shop.mikroe.com/compilers). 
-The demo can run on all the main MikroElektronika [development boards](https://shop.mikroe.com/development-boards).
-
-Package can be downloaded/installed directly form compilers IDE(recommended way), or downloaded from our LibStock, or found on mikroE github account. 
-
-## Library Description
-
-> This library contains API for BuckBoost Click driver.
-
-#### Standard key functions :
-
-- Config Object Initialization function.
-> void buckboost_cfg_setup ( buckboost_cfg_t *cfg ); 
- 
-- Initialization function.
-> BUCKBOOST_RETVAL buckboost_init ( buckboost_t *ctx, buckboost_cfg_t *cfg );
-
-- Click Default Configuration function.
-> void buckboost_default_cfg ( buckboost_t *ctx );
-
-
-#### Example key functions :
-
-- This function set fixed frequency PWM operation mode of LTC3129-1 on Buck Boost Click by set PWM pin ( logic 1 ).
-> void buckboost_set_mode_fixed_freq ( buckboost_t *ctx );
- 
-- This function enables automatic burst mode operation of LTC3129-1 on Buck Boost Click by clear PWM pin ( logic 0 ).
-> void buckboost_enables_auto_burst_mode ( buckboost_t *ctx );
-
-- This function set the output voltage of 2500 mV function.
-> void buckboost_set_2500mv ( buckboost_t *ctx );
-
-## Examples Description
+## Example Description
 
 > The demo application change output voltage from 2500 mV to 15000 mV every 5 seconds.
 
-**The demo application is composed of two sections :**
+### Example Libraries
 
-### Application Init 
+- MikroSDK.Board
+- MikroSDK.Log
+- Click.BuckBoost
+
+### Example Key Functions
+
+- `buckboost_cfg_setup` Config Object Initialization function. 
+```c
+void buckboost_cfg_setup ( buckboost_cfg_t *cfg );
+``` 
+ 
+- `buckboost_init` Initialization function. 
+```c
+err_t buckboost_init ( buckboost_t *ctx, buckboost_cfg_t *cfg );
+```
+
+- `buckboost_default_cfg` Click Default Configuration function. 
+```c
+void buckboost_default_cfg ( buckboost_t *ctx );
+```
+
+- `buckboost_set_mode_fixed_freq` This function set fixed frequency PWM operation mode of LTC3129-1 on Buck Boost Click by set PWM pin ( logic 1 ). 
+```c
+void buckboost_set_mode_fixed_freq ( buckboost_t *ctx );
+```
+ 
+- `buckboost_enables_auto_burst_mode` This function enables automatic burst mode operation of LTC3129-1 on Buck Boost Click by clear PWM pin ( logic 0 ). 
+```c
+void buckboost_enables_auto_burst_mode ( buckboost_t *ctx );
+```
+
+- `buckboost_set_2500mv` This function set the output voltage of 2500 mV function. 
+```c
+void buckboost_set_2500mv ( buckboost_t *ctx );
+```
+
+### Application Init
 
 > Initialization device and set default configuration.
 
 ```c
-
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -101,7 +98,6 @@ void application_init ( void )
     log_printf(&logger, "--------------------------------\r\n");
     Delay_ms ( 100 );
 }
-  
 ```
 
 ### Application Task
@@ -111,7 +107,6 @@ void application_init ( void )
 > All data logs write on usb uart for aproximetly every 5 sec.
 
 ```c
-
 void application_task ( void )
 {
     log_printf(&logger, " Set Output Voltage of  2500 mV \r\n");
@@ -185,30 +180,22 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-} 
-
+}
 ```
 
+## Application Output
 
-The full application code, and ready to use projects can be  installed directly form compilers IDE(recommneded) or found on LibStock page or mikroE GitHub accaunt.
+This Click board can be interfaced and monitored in two ways:
+- **Application Output** - Use the "Application Output" window in Debug mode for real-time data monitoring.
+Set it up properly by following [this tutorial](https://www.youtube.com/watch?v=ta5yyk1Woy4).
+- **UART Terminal** - Monitor data via the UART Terminal using
+a [USB to UART converter](https://www.mikroe.com/click/interface/usb?interface*=uart,uart). For detailed instructions,
+check out [this tutorial](https://help.mikroe.com/necto/v2/Getting%20Started/Tools/UARTTerminalTool).
 
-**Other mikroE Libraries used in the example:** 
+## Additional Notes and Information
 
-- MikroSDK.Board
-- MikroSDK.Log
-- Click.BuckBoost
-
-**Additional notes and informations**
-
-Depending on the development board you are using, you may need 
-[USB UART Click](https://shop.mikroe.com/usb-uart-click), 
-[USB UART 2 Click](https://shop.mikroe.com/usb-uart-2-click) or 
-[RS232 Click](https://shop.mikroe.com/rs232-click) to connect to your PC, for 
-development systems with no UART to USB interface available on the board. The 
-terminal available in all Mikroelektronika 
-[compilers](https://shop.mikroe.com/compilers), or any other terminal application 
-of your choice, can be used to read the message.
-
-
+The complete application code and a ready-to-use project are available through the NECTO Studio Package Manager for 
+direct installation in the [NECTO Studio](https://www.mikroe.com/necto). The application code can also be found on
+the MIKROE [GitHub](https://github.com/MikroElektronika/mikrosdk_click_v2) account.
 
 ---
