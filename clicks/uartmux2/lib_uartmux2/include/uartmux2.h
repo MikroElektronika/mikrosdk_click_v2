@@ -57,24 +57,6 @@ extern "C"{
  */
 
 /**
- * @defgroup uartmux2_reg UART MUX 2 Commands List
- * @brief List of commands of UART MUX 2 Click driver.
- */
-
-/**
- * @addtogroup uartmux2_reg
- * @{
- */
-
-/**
- * @brief UART MUX 2 description register.
- * @details Specified register for description of UART MUX 2 Click driver.
- */
-// TODO -- dodati makroe koji definisu adrese registara
-
-/*! @} */ // uartmux2_reg
-
-/**
  * @defgroup uartmux2_set UART MUX 2 Device Settings
  * @brief Settings for registers of UART MUX 2 Click driver.
  */
@@ -82,11 +64,6 @@ extern "C"{
 /**
  * @addtogroup uartmux2_set
  * @{
- */
-
-/**
- * @brief UART MUX 2 description setting.
- * @details Specified setting for description of UART MUX 2 Click driver.
  */
 
 /**

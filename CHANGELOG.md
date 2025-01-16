@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250116](#20250116)**
 + **[20250108](#20250108)**
 + **[20241212](#20241212)**
 + **[20241205](#20241205)**
@@ -116,6 +117,27 @@
 
 ---
 ---
+---
+
+## `20250116`
+
+*Following click boards have been added:*
+
++ `Nixie Power IN-12B Click`
++ `SPI Isolator 9`
++ `NINA-B222`
++ `Thermostat 6`
+
+*Following click boards have been modified:*
+
++ `Air Velocity`
++ `Hall Current 21`
++ `Hydrogen`
++ `Smoke`
++ `UART MUX 2`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250108`

@@ -571,7 +571,8 @@ A full list of Clicks available in this repository is defined below:
 | NFC 5 Click | [Click Here](./clicks/nfc5) | NFC 6 Click | [Click Here](./clicks/nfc6) |
 | NFC 7 I2C Click | [Click Here](./clicks/nfc7i2c) | NFC Extend Click | [Click Here](./clicks/nfcextend) |
 | NFC Tag 4 Click | [Click Here](./clicks/nfctag4) | NFC Tag 5 Click | [Click Here](./clicks/nfctag5) |
-| NINA-W152 Click | [Click Here](./clicks/ninaw152) | NO2 Click | [Click Here](./clicks/no2) |
+| NINA-B222 Click | [Click Here](./clicks/ninab222) | NINA-W152 Click | [Click Here](./clicks/ninaw152) |
+| Nixie Power IN-12B Click | [Click Here](./clicks/nixiepowerin12b) | NO2 Click | [Click Here](./clicks/no2) |
 | NO2 2 Click | [Click Here](./clicks/no22) | Noise Click | [Click Here](./clicks/noise) |
 | N-PLC Click | [Click Here](./clicks/nplc) | NTAG 5 Link Click | [Click Here](./clicks/ntag5link) |
 | nvSRAM Click | [Click Here](./clicks/nvsram) | nvSRAM 2 Click | [Click Here](./clicks/nvsram2) |
@@ -712,73 +713,74 @@ A full list of Clicks available in this repository is defined below:
 | SPI Isolator Click | [Click Here](./clicks/spiisolator) | SPI Isolator 2 Click | [Click Here](./clicks/spiisolator2) |
 | SPI Isolator 3 Click | [Click Here](./clicks/spiisolator3) | SPI Isolator 4 Click | [Click Here](./clicks/spiisolator4) |
 | SPI Isolator 5 Click | [Click Here](./clicks/spiisolator5) | SPI Isolator 6 Click | [Click Here](./clicks/spiisolator6) |
-| SPI Isolator 8 Click | [Click Here](./clicks/spiisolator8) | SPIRIT Click | [Click Here](./clicks/spirit) |
-| SPIRIT 2 Click | [Click Here](./clicks/spirit2) | SQI FLASH Click | [Click Here](./clicks/sqiflash) |
-| SRAM Click | [Click Here](./clicks/sram) | SRAM 2 Click | [Click Here](./clicks/sram2) |
-| SRAM 3 Click | [Click Here](./clicks/sram3) | SRAM 4 Click | [Click Here](./clicks/sram4) |
-| Step Down 10 Click | [Click Here](./clicks/stepdown10) | Step Down 11 Click | [Click Here](./clicks/stepdown11) |
-| Step Down 12 Click | [Click Here](./clicks/stepdown12) | Step Down 2 Click | [Click Here](./clicks/stepdown2) |
-| Step Down 3 Click | [Click Here](./clicks/stepdown3) | Step Down 5 Click | [Click Here](./clicks/stepdown5) |
-| Step Down 6 Click | [Click Here](./clicks/stepdown6) | Step Down 7 Click | [Click Here](./clicks/stepdown7) |
-| Step Down 8 Click | [Click Here](./clicks/stepdown8) | Step Down 9 Click | [Click Here](./clicks/stepdown9) |
-| Stepper Click | [Click Here](./clicks/stepper) | Stepper 10 Click | [Click Here](./clicks/stepper10) |
-| Stepper 11 Click | [Click Here](./clicks/stepper11) | Stepper 12 Click | [Click Here](./clicks/stepper12) |
-| Stepper 13 Click | [Click Here](./clicks/stepper13) | Stepper 14 Click | [Click Here](./clicks/stepper14) |
-| Stepper 15 Click | [Click Here](./clicks/stepper15) | Stepper 16 Click | [Click Here](./clicks/stepper16) |
-| Stepper 17 Click | [Click Here](./clicks/stepper17) | Stepper 18 Click | [Click Here](./clicks/stepper18) |
-| Stepper 19 Click | [Click Here](./clicks/stepper19) | Stepper 2 Click | [Click Here](./clicks/stepper2) |
-| Stepper 20 Click | [Click Here](./clicks/stepper20) | Stepper 21 Click | [Click Here](./clicks/stepper21) |
-| Stepper 22 Click | [Click Here](./clicks/stepper22) | Stepper 23 Click | [Click Here](./clicks/stepper23) |
-| Stepper 24 Click | [Click Here](./clicks/stepper24) | Stepper 3 Click | [Click Here](./clicks/stepper3) |
-| Stepper 4 Click | [Click Here](./clicks/stepper4) | Stepper 5 Click | [Click Here](./clicks/stepper5) |
-| Stepper 6 Click | [Click Here](./clicks/stepper6) | Stepper 7 Click | [Click Here](./clicks/stepper7) |
-| Stepper 8 Click | [Click Here](./clicks/stepper8) | Stepper 9 Click | [Click Here](./clicks/stepper9) |
-| Step Up Click | [Click Here](./clicks/stepup) | Step Up 2 Click | [Click Here](./clicks/stepup2) |
-| StereoAmp Click | [Click Here](./clicks/stereoamp) | Stretch Click | [Click Here](./clicks/stretch) |
-| STSPIN220 Click | [Click Here](./clicks/stspin220) | STSPIN233 Click | [Click Here](./clicks/stspin233) |
-| STSPIN250 Click | [Click Here](./clicks/stspin250) | STSPIN820 Click | [Click Here](./clicks/stspin820) |
-| Surface Temp Click | [Click Here](./clicks/surfacetemp) | Surface Temp 2 Click | [Click Here](./clicks/surfacetemp2) |
-| SWI EEPROM Click | [Click Here](./clicks/swieeprom) | SwipeSwitch Click | [Click Here](./clicks/swipeswitch) |
-| Tamper Click | [Click Here](./clicks/tamper) | Tamper 2 Click | [Click Here](./clicks/tamper2) |
-| TDC Click | [Click Here](./clicks/tdc) | TDC 2 Click | [Click Here](./clicks/tdc2) |
-| Temp Alarm Click | [Click Here](./clicks/tempalarm) | TempHum Click | [Click Here](./clicks/temphum) |
-| TempHum 10 Click | [Click Here](./clicks/temphum10) | TempHum 11 Click | [Click Here](./clicks/temphum11) |
-| TempHum 12 Click | [Click Here](./clicks/temphum12) | TempHum 13 Click | [Click Here](./clicks/temphum13) |
-| TempHum 14 Click | [Click Here](./clicks/temphum14) | TempHum 15 Click | [Click Here](./clicks/temphum15) |
-| TempHum 16 Click | [Click Here](./clicks/temphum16) | TempHum 17 Click | [Click Here](./clicks/temphum17) |
-| TempHum 18 Click | [Click Here](./clicks/temphum18) | TempHum 19 Click | [Click Here](./clicks/temphum19) |
-| TempHum 2 Click | [Click Here](./clicks/temphum2) | TempHum 20 Click | [Click Here](./clicks/temphum20) |
-| TempHum 21 Click | [Click Here](./clicks/temphum21) | TempHum 22 Click | [Click Here](./clicks/temphum22) |
-| TempHum 23 Click | [Click Here](./clicks/temphum23) | TempHum 24 Click | [Click Here](./clicks/temphum24) |
-| TempHum 25 Click | [Click Here](./clicks/temphum25) | TempHum 3 Click | [Click Here](./clicks/temphum3) |
-| TempHum 4 Click | [Click Here](./clicks/temphum4) | TempHum 5 Click | [Click Here](./clicks/temphum5) |
-| TempHum 6 Click | [Click Here](./clicks/temphum6) | TempHum 7 Click | [Click Here](./clicks/temphum7) |
-| TempHum 8 Click | [Click Here](./clicks/temphum8) | TempHum 9 Click | [Click Here](./clicks/temphum9) |
-| Temp ISO Click | [Click Here](./clicks/tempiso) | Temp-Log Click | [Click Here](./clicks/templog) |
-| Temp-Log 2 Click | [Click Here](./clicks/templog2) | Temp-Log 3 Click | [Click Here](./clicks/templog3) |
-| Temp-Log 4 Click | [Click Here](./clicks/templog4) | Temp-Log 5 Click | [Click Here](./clicks/templog5) |
-| Temp-Log 6 Click | [Click Here](./clicks/templog6) | Temp-Log 7 Click | [Click Here](./clicks/templog7) |
-| Temp Probe Click | [Click Here](./clicks/tempprobe) | Terminal Click | [Click Here](./clicks/terminal) |
-| Terminal 2 Click | [Click Here](./clicks/terminal2) | Tester Click | [Click Here](./clicks/tester) |
-| TFmini Click | [Click Here](./clicks/tfmini) | THERMO Click | [Click Here](./clicks/thermo) |
-| Thermo 11 Click | [Click Here](./clicks/thermo11) | Thermo 13 Click | [Click Here](./clicks/thermo13) |
-| Thermo 14 Click | [Click Here](./clicks/thermo14) | Thermo 15 Click | [Click Here](./clicks/thermo15) |
-| Thermo 16 Click | [Click Here](./clicks/thermo16) | Thermo 17 Click | [Click Here](./clicks/thermo17) |
-| Thermo 18 Click | [Click Here](./clicks/thermo18) | Thermo 19 Click | [Click Here](./clicks/thermo19) |
-| Thermo 2 Click | [Click Here](./clicks/thermo2) | Thermo 20 Click | [Click Here](./clicks/thermo20) |
-| Thermo 21 Click | [Click Here](./clicks/thermo21) | Thermo 22 Click | [Click Here](./clicks/thermo22) |
-| Thermo 23 Click | [Click Here](./clicks/thermo23) | Thermo 24 Click | [Click Here](./clicks/thermo24) |
-| Thermo 25 Click | [Click Here](./clicks/thermo25) | Thermo 26 Click | [Click Here](./clicks/thermo26) |
-| Thermo 27 Click | [Click Here](./clicks/thermo27) | Thermo 28 Click | [Click Here](./clicks/thermo28) |
-| Thermo 29 Click | [Click Here](./clicks/thermo29) | Thermo 3 Click | [Click Here](./clicks/thermo3) |
-| Thermo 30 Click | [Click Here](./clicks/thermo30) | Thermo 4 Click | [Click Here](./clicks/thermo4) |
-| THERMO 5 Click | [Click Here](./clicks/thermo5) | Thermo 6 Click | [Click Here](./clicks/thermo6) |
-| Thermo 7 Click | [Click Here](./clicks/thermo7) | Thermo 8 Click | [Click Here](./clicks/thermo8) |
-| Thermo 9 Click | [Click Here](./clicks/thermo9) | Thermo J Click | [Click Here](./clicks/thermoj) |
-| Thermo K Click | [Click Here](./clicks/thermok) | Thermo K 3 Click | [Click Here](./clicks/thermok3) |
-| Thermostat Click | [Click Here](./clicks/thermostat) | Thermostat 2 Click | [Click Here](./clicks/thermostat2) |
-| Thermostat 3 Click | [Click Here](./clicks/thermostat3) | Thermostat 4 Click | [Click Here](./clicks/thermostat4) |
-| Thermostat 5 Click | [Click Here](./clicks/thermostat5) | Thingstream Click | [Click Here](./clicks/thingstream) |
+| SPI Isolator 8 Click | [Click Here](./clicks/spiisolator8) | SPI Isolator 9 Click | [Click Here](./clicks/spiisolator9) |
+| SPIRIT Click | [Click Here](./clicks/spirit) | SPIRIT 2 Click | [Click Here](./clicks/spirit2) |
+| SQI FLASH Click | [Click Here](./clicks/sqiflash) | SRAM Click | [Click Here](./clicks/sram) |
+| SRAM 2 Click | [Click Here](./clicks/sram2) | SRAM 3 Click | [Click Here](./clicks/sram3) |
+| SRAM 4 Click | [Click Here](./clicks/sram4) | Step Down 10 Click | [Click Here](./clicks/stepdown10) |
+| Step Down 11 Click | [Click Here](./clicks/stepdown11) | Step Down 12 Click | [Click Here](./clicks/stepdown12) |
+| Step Down 2 Click | [Click Here](./clicks/stepdown2) | Step Down 3 Click | [Click Here](./clicks/stepdown3) |
+| Step Down 5 Click | [Click Here](./clicks/stepdown5) | Step Down 6 Click | [Click Here](./clicks/stepdown6) |
+| Step Down 7 Click | [Click Here](./clicks/stepdown7) | Step Down 8 Click | [Click Here](./clicks/stepdown8) |
+| Step Down 9 Click | [Click Here](./clicks/stepdown9) | Stepper Click | [Click Here](./clicks/stepper) |
+| Stepper 10 Click | [Click Here](./clicks/stepper10) | Stepper 11 Click | [Click Here](./clicks/stepper11) |
+| Stepper 12 Click | [Click Here](./clicks/stepper12) | Stepper 13 Click | [Click Here](./clicks/stepper13) |
+| Stepper 14 Click | [Click Here](./clicks/stepper14) | Stepper 15 Click | [Click Here](./clicks/stepper15) |
+| Stepper 16 Click | [Click Here](./clicks/stepper16) | Stepper 17 Click | [Click Here](./clicks/stepper17) |
+| Stepper 18 Click | [Click Here](./clicks/stepper18) | Stepper 19 Click | [Click Here](./clicks/stepper19) |
+| Stepper 2 Click | [Click Here](./clicks/stepper2) | Stepper 20 Click | [Click Here](./clicks/stepper20) |
+| Stepper 21 Click | [Click Here](./clicks/stepper21) | Stepper 22 Click | [Click Here](./clicks/stepper22) |
+| Stepper 23 Click | [Click Here](./clicks/stepper23) | Stepper 24 Click | [Click Here](./clicks/stepper24) |
+| Stepper 3 Click | [Click Here](./clicks/stepper3) | Stepper 4 Click | [Click Here](./clicks/stepper4) |
+| Stepper 5 Click | [Click Here](./clicks/stepper5) | Stepper 6 Click | [Click Here](./clicks/stepper6) |
+| Stepper 7 Click | [Click Here](./clicks/stepper7) | Stepper 8 Click | [Click Here](./clicks/stepper8) |
+| Stepper 9 Click | [Click Here](./clicks/stepper9) | Step Up Click | [Click Here](./clicks/stepup) |
+| Step Up 2 Click | [Click Here](./clicks/stepup2) | StereoAmp Click | [Click Here](./clicks/stereoamp) |
+| Stretch Click | [Click Here](./clicks/stretch) | STSPIN220 Click | [Click Here](./clicks/stspin220) |
+| STSPIN233 Click | [Click Here](./clicks/stspin233) | STSPIN250 Click | [Click Here](./clicks/stspin250) |
+| STSPIN820 Click | [Click Here](./clicks/stspin820) | Surface Temp Click | [Click Here](./clicks/surfacetemp) |
+| Surface Temp 2 Click | [Click Here](./clicks/surfacetemp2) | SWI EEPROM Click | [Click Here](./clicks/swieeprom) |
+| SwipeSwitch Click | [Click Here](./clicks/swipeswitch) | Tamper Click | [Click Here](./clicks/tamper) |
+| Tamper 2 Click | [Click Here](./clicks/tamper2) | TDC Click | [Click Here](./clicks/tdc) |
+| TDC 2 Click | [Click Here](./clicks/tdc2) | Temp Alarm Click | [Click Here](./clicks/tempalarm) |
+| TempHum Click | [Click Here](./clicks/temphum) | TempHum 10 Click | [Click Here](./clicks/temphum10) |
+| TempHum 11 Click | [Click Here](./clicks/temphum11) | TempHum 12 Click | [Click Here](./clicks/temphum12) |
+| TempHum 13 Click | [Click Here](./clicks/temphum13) | TempHum 14 Click | [Click Here](./clicks/temphum14) |
+| TempHum 15 Click | [Click Here](./clicks/temphum15) | TempHum 16 Click | [Click Here](./clicks/temphum16) |
+| TempHum 17 Click | [Click Here](./clicks/temphum17) | TempHum 18 Click | [Click Here](./clicks/temphum18) |
+| TempHum 19 Click | [Click Here](./clicks/temphum19) | TempHum 2 Click | [Click Here](./clicks/temphum2) |
+| TempHum 20 Click | [Click Here](./clicks/temphum20) | TempHum 21 Click | [Click Here](./clicks/temphum21) |
+| TempHum 22 Click | [Click Here](./clicks/temphum22) | TempHum 23 Click | [Click Here](./clicks/temphum23) |
+| TempHum 24 Click | [Click Here](./clicks/temphum24) | TempHum 25 Click | [Click Here](./clicks/temphum25) |
+| TempHum 3 Click | [Click Here](./clicks/temphum3) | TempHum 4 Click | [Click Here](./clicks/temphum4) |
+| TempHum 5 Click | [Click Here](./clicks/temphum5) | TempHum 6 Click | [Click Here](./clicks/temphum6) |
+| TempHum 7 Click | [Click Here](./clicks/temphum7) | TempHum 8 Click | [Click Here](./clicks/temphum8) |
+| TempHum 9 Click | [Click Here](./clicks/temphum9) | Temp ISO Click | [Click Here](./clicks/tempiso) |
+| Temp-Log Click | [Click Here](./clicks/templog) | Temp-Log 2 Click | [Click Here](./clicks/templog2) |
+| Temp-Log 3 Click | [Click Here](./clicks/templog3) | Temp-Log 4 Click | [Click Here](./clicks/templog4) |
+| Temp-Log 5 Click | [Click Here](./clicks/templog5) | Temp-Log 6 Click | [Click Here](./clicks/templog6) |
+| Temp-Log 7 Click | [Click Here](./clicks/templog7) | Temp Probe Click | [Click Here](./clicks/tempprobe) |
+| Terminal Click | [Click Here](./clicks/terminal) | Terminal 2 Click | [Click Here](./clicks/terminal2) |
+| Tester Click | [Click Here](./clicks/tester) | TFmini Click | [Click Here](./clicks/tfmini) |
+| THERMO Click | [Click Here](./clicks/thermo) | Thermo 11 Click | [Click Here](./clicks/thermo11) |
+| Thermo 13 Click | [Click Here](./clicks/thermo13) | Thermo 14 Click | [Click Here](./clicks/thermo14) |
+| Thermo 15 Click | [Click Here](./clicks/thermo15) | Thermo 16 Click | [Click Here](./clicks/thermo16) |
+| Thermo 17 Click | [Click Here](./clicks/thermo17) | Thermo 18 Click | [Click Here](./clicks/thermo18) |
+| Thermo 19 Click | [Click Here](./clicks/thermo19) | Thermo 2 Click | [Click Here](./clicks/thermo2) |
+| Thermo 20 Click | [Click Here](./clicks/thermo20) | Thermo 21 Click | [Click Here](./clicks/thermo21) |
+| Thermo 22 Click | [Click Here](./clicks/thermo22) | Thermo 23 Click | [Click Here](./clicks/thermo23) |
+| Thermo 24 Click | [Click Here](./clicks/thermo24) | Thermo 25 Click | [Click Here](./clicks/thermo25) |
+| Thermo 26 Click | [Click Here](./clicks/thermo26) | Thermo 27 Click | [Click Here](./clicks/thermo27) |
+| Thermo 28 Click | [Click Here](./clicks/thermo28) | Thermo 29 Click | [Click Here](./clicks/thermo29) |
+| Thermo 3 Click | [Click Here](./clicks/thermo3) | Thermo 30 Click | [Click Here](./clicks/thermo30) |
+| Thermo 4 Click | [Click Here](./clicks/thermo4) | THERMO 5 Click | [Click Here](./clicks/thermo5) |
+| Thermo 6 Click | [Click Here](./clicks/thermo6) | Thermo 7 Click | [Click Here](./clicks/thermo7) |
+| Thermo 8 Click | [Click Here](./clicks/thermo8) | Thermo 9 Click | [Click Here](./clicks/thermo9) |
+| Thermo J Click | [Click Here](./clicks/thermoj) | Thermo K Click | [Click Here](./clicks/thermok) |
+| Thermo K 3 Click | [Click Here](./clicks/thermok3) | Thermostat Click | [Click Here](./clicks/thermostat) |
+| Thermostat 2 Click | [Click Here](./clicks/thermostat2) | Thermostat 3 Click | [Click Here](./clicks/thermostat3) |
+| Thermostat 4 Click | [Click Here](./clicks/thermostat4) | Thermostat 5 Click | [Click Here](./clicks/thermostat5) |
+| Thermostat 6 Click | [Click Here](./clicks/thermostat6) | Thingstream Click | [Click Here](./clicks/thingstream) |
 | Thumbstick Click | [Click Here](./clicks/thumbstick) | Thumbwheel Click | [Click Here](./clicks/thumbwheel) |
 | Thunder Click | [Click Here](./clicks/thunder) | Thunder EMU Click | [Click Here](./clicks/thunderemu) |
 | Thyone-I Click | [Click Here](./clicks/thyonei) | Tilt Click | [Click Here](./clicks/tilt) |

@@ -55,42 +55,6 @@ extern "C"{
  */
 
 /**
- * @defgroup hydrogen_reg Hydrogen Registers List
- * @brief List of registers of Hydrogen Click driver.
- */
-
-/**
- * @addtogroup hydrogen_reg
- * @{
- */
-
-/**
- * @brief Hydrogen description register.
- * @details Specified register for description of Hydrogen Click driver.
- */
-// TODO -- dodati makroe koji definisu adrese registara
-
-/*! @} */ // hydrogen_reg
-
-/**
- * @defgroup hydrogen_set Hydrogen Registers Settings
- * @brief Settings for registers of Hydrogen Click driver.
- */
-
-/**
- * @addtogroup hydrogen_set
- * @{
- */
-
-/**
- * @brief Hydrogen description setting.
- * @details Specified setting for description of Hydrogen Click driver.
- */
-// TODO -- dodati makroe koji definisu komande/vrednosti koje se upisuju u registre
-
-/*! @} */ // hydrogen_set
-
-/**
  * @defgroup hydrogen_map Hydrogen MikroBUS Map
  * @brief MikroBUS pin mapping of Hydrogen Click driver.
  */
