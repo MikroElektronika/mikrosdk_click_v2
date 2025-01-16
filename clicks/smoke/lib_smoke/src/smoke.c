@@ -98,9 +98,6 @@ void smoke_default_cfg ( smoke_t *ctx )
     smoke_reset( ctx );
     Delay_100ms( );
     
-    
-    //TODO postaviti default configuraciju i napraviti citanje
-    
     default_configuration.avg_samp = SMOKE_SAMPLEAVG_4; 
     default_configuration.mode = SMOKE_MODE_MULTILED;
     default_configuration.adc_range = SMOKE_ADCRANGE_16384;

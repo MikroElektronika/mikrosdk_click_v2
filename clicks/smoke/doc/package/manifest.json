@@ -2,7 +2,7 @@
     "display_name": "Smoke Click",
     "name": "mikroe.click.smoke",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2560",
     "package_changed": true,
     "contents": {

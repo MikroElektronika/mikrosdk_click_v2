@@ -1,0 +1,22 @@
+{
+    "display_name": "Nixie Power IN-12B Click",
+    "name": "mikroe.click.nixiepowerin12b",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6496",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Nixie Power IN-12B Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NixiePowerIN12B",
+                "subdir_name": "lib_nixiepowerin12b",
+                "path": "Nixie Power IN-12B Click/data/lib_nixiepowerin12b"
+            }
+        ]
+    }
+}

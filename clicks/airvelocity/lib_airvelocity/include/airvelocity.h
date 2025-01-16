@@ -68,12 +68,6 @@ extern "C"{
  */
 
 /**
- * @brief Air Velocity description setting.
- * @details Specified setting for description of Air Velocity Click driver.
- */
-// TODO -- dodati makroe koji definisu komande/vrednosti koje se upisuju u registre
-
-/**
  * @brief Air Velocity device address setting.
  * @details Specified setting for device slave address selection of
  * Air Velocity Click driver.

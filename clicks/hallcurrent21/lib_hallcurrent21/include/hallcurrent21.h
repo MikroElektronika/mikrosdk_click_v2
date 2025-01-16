@@ -58,24 +58,6 @@ extern "C"{
  */
 
 /**
- * @defgroup hallcurrent21_reg Hall Current 21 Registers List
- * @brief List of registers of Hall Current 21 Click driver.
- */
-
-/**
- * @addtogroup hallcurrent21_reg
- * @{
- */
-
-/**
- * @brief Hall Current 21 description register.
- * @details Specified register for description of Hall Current 21 Click driver.
- */
-// TODO -- dodati makroe koji definisu adrese registara
-
-/*! @} */ // hallcurrent21_reg
-
-/**
  * @defgroup hallcurrent21_set Hall Current 21 Registers Settings
  * @brief Settings for registers of Hall Current 21 Click driver.
  */

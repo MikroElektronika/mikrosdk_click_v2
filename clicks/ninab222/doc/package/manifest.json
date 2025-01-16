@@ -1,0 +1,22 @@
+{
+    "display_name": "NINA-B222 Click",
+    "name": "mikroe.click.ninab222",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6086",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NINA-B222 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NINAB222",
+                "subdir_name": "lib_ninab222",
+                "path": "NINA-B222 Click/data/lib_ninab222"
+            }
+        ]
+    }
+}
