@@ -1,0 +1,22 @@
+{
+    "display_name": "LR 15 Click",
+    "name": "mikroe.click.lr15",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6422",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LR 15 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LR15",
+                "subdir_name": "lib_lr15",
+                "path": "LR 15 Click/data/lib_lr15"
+            }
+        ]
+    }
+}

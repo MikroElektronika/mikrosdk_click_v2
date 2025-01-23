@@ -1,0 +1,22 @@
+{
+    "display_name": "LTE Cat.1 7 Click",
+    "name": "mikroe.click.ltecat17",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6434",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE Cat.1 7 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTECat17",
+                "subdir_name": "lib_ltecat17",
+                "path": "LTE Cat.1 7 Click/data/lib_ltecat17"
+            }
+        ]
+    }
+}
