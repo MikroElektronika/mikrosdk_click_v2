@@ -1,0 +1,22 @@
+{
+    "display_name": "NFC 7 SPI Click",
+    "name": "mikroe.click.nfc7spi",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6452",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NFC 7 SPI Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NFC7SPI",
+                "subdir_name": "lib_nfc7spi",
+                "path": "NFC 7 SPI Click/data/lib_nfc7spi"
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display_name": "BT840 Click",
+    "name": "mikroe.click.bt840",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6454",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BT840 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BT840",
+                "subdir_name": "lib_bt840",
+                "path": "BT840 Click/data/lib_bt840"
+            }
+        ]
+    }
+}
