@@ -1,0 +1,22 @@
+{
+    "display_name": "Brushless 33 Click",
+    "name": "mikroe.click.brushless33",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6481",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Brushless 33 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Brushless33",
+                "subdir_name": "lib_brushless33",
+                "path": "Brushless 33 Click/data/lib_brushless33"
+            }
+        ]
+    }
+}

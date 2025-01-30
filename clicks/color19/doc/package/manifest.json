@@ -1,0 +1,22 @@
+{
+    "display_name": "Color 19 Click",
+    "name": "mikroe.click.color19",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6415",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Color 19 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Color19",
+                "subdir_name": "lib_color19",
+                "path": "Color 19 Click/data/lib_color19"
+            }
+        ]
+    }
+}
