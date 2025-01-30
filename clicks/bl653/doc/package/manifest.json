@@ -1,0 +1,22 @@
+{
+    "display_name": "BL653 Click",
+    "name": "mikroe.click.bl653",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6433",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BL653 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BL653",
+                "subdir_name": "lib_bl653",
+                "path": "BL653 Click/data/lib_bl653"
+            }
+        ]
+    }
+}

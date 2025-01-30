@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250130](#20250130)**
 + **[20250123](#20250123)**
 + **[20250116](#20250116)**
 + **[20250108](#20250108)**
@@ -118,6 +119,25 @@
 
 ---
 ---
+---
+
+## `20250130`
+
+*Following click boards have been added:*
+
++ `BL653`
++ `Color 19`
++ `GNSS RTK 5`
++ `Brushless 33`
+
+*Following click boards have been modified:*
+
++ `Color 4`
++ `Color 17`
++ `Spectrometer`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250123`

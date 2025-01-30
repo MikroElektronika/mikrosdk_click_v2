@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS RTK 5 Click",
+    "name": "mikroe.click.gnssrtk5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6451",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS RTK 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSSRTK5",
+                "subdir_name": "lib_gnssrtk5",
+                "path": "GNSS RTK 5 Click/data/lib_gnssrtk5"
+            }
+        ]
+    }
+}
