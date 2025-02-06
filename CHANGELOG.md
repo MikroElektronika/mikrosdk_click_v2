@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250206](#20250206)**
 + **[20250130](#20250130)**
 + **[20250123](#20250123)**
 + **[20250116](#20250116)**
@@ -119,6 +120,33 @@
 
 ---
 ---
+---
+
+## `20250206`
+
+*Following click boards have been added:*
+
++ `ATA6501`
++ `Light Ranger 13`
++ `Tester 2`
+
+*Following click boards have been modified:*
+
++ `BL653`
++ `BT840`
++ `Color 19`
++ `GNSS RTK 5`
++ `LR 15`
++ `LTE Cat.1 7`
++ `NFC 7 SPI`
++ `NINA-B222`
++ `Nixie Power IN-12B`
++ `SPI Isolator 9`
++ `Thermostat 6`
++ `PWR Meter 3 30A`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250130`

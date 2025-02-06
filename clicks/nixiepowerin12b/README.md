@@ -2,13 +2,13 @@
 ---
 # Nixie Power IN-12B Click
 
-> [Nixie Power IN-12B Click](https://www.mikroe.com/?pid_product=6496) demo application is developed using
+> [Nixie Power IN-12B Click](https://www.mikroe.com/?pid_product=MIKROE-6496) demo application is developed using
 the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
 open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
 all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://www.mikroe.com/?pid_product=&image=1" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-6496&image=1" height=300px>
 </p>
 
 ---

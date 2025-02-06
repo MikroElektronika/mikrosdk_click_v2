@@ -2,7 +2,7 @@
     "display_name": "NFC 7 SPI Click",
     "name": "mikroe.click.nfc7spi",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6452",
     "package_changed": true,
     "contents": {
