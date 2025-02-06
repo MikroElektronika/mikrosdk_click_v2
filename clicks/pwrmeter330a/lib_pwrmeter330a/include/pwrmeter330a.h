@@ -176,7 +176,10 @@ extern "C"{
 #define PWRMETER330A_ADC_FSCALE                 55000u
 #define PWRMETER330A_DELTA_VIN_MAX_mV           250
 #define PWRMETER330A_mV_TO_V                    1000u
-#define PWRMETER330A_MAX_CURRENT                30
+#define PWRMETER330A_MAX_CURRENT_15             15
+#define PWRMETER330A_MAX_CURRENT_30             30
+#define PWRMETER330A_MAX_CURRENT_60             60
+#define PWRMETER330A_MAX_CURRENT                PWRMETER330A_MAX_CURRENT_30
 #define PWRMETER330A_DEF_AVG_SAMPLES            500u
 
 /**

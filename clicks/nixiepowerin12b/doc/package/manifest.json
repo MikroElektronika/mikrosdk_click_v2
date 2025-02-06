@@ -2,7 +2,7 @@
     "display_name": "Nixie Power IN-12B Click",
     "name": "mikroe.click.nixiepowerin12b",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6496",
     "package_changed": true,
     "contents": {
