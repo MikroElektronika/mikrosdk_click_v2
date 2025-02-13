@@ -1,0 +1,5 @@
+{
+    "name": "BT122-A Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","BT122-A-V2R"]
+}
