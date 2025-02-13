@@ -1,0 +1,22 @@
+{
+    "display_name": "XBEE 4 Click",
+    "name": "mikroe.click.xbee4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6491",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "XBEE 4 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.XBEE4",
+                "subdir_name": "lib_xbee4",
+                "path": "XBEE 4 Click/data/lib_xbee4"
+            }
+        ]
+    }
+}

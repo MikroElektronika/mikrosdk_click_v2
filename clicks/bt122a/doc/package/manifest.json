@@ -1,0 +1,22 @@
+{
+    "display_name": "BT122-A Click",
+    "name": "mikroe.click.bt122a",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6432",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BT122-A Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BT122A",
+                "subdir_name": "lib_bt122a",
+                "path": "BT122-A Click/data/lib_bt122a"
+            }
+        ]
+    }
+}
