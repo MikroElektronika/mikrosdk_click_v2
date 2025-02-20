@@ -1,0 +1,22 @@
+{
+    "display_name": "ATA6505 Click",
+    "name": "mikroe.click.ata6505",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6463",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ATA6505 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ATA6505",
+                "subdir_name": "lib_ata6505",
+                "path": "ATA6505 Click/data/lib_ata6505"
+            }
+        ]
+    }
+}
