@@ -1,0 +1,22 @@
+{
+    "display_name": "Opto Encoder 6 Click",
+    "name": "mikroe.click.optoencoder6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6569",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Opto Encoder 6 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.OptoEncoder6",
+                "subdir_name": "lib_optoencoder6",
+                "path": "Opto Encoder 6 Click/data/lib_optoencoder6"
+            }
+        ]
+    }
+}
