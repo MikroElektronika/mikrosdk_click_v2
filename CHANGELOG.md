@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250227](#20250227)**
 + **[20250220](#20250220)**
 + **[20250213](#20250213)**
 + **[20250206](#20250206)**
@@ -122,6 +123,20 @@
 
 ---
 ---
+---
+
+## `20250227`
+
+*Following click boards have been added:*
+
++ `H-Bridge 18`
++ `Speaker 2`
++ `Opto Encoder 6`
++ `Heart Rate 13`
++ `Boost 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250220`

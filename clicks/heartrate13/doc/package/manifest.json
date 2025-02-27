@@ -1,0 +1,22 @@
+{
+    "display_name": "Heart Rate 13 Click",
+    "name": "mikroe.click.heartrate13",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6490",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Heart Rate 13 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HeartRate13",
+                "subdir_name": "lib_heartrate13",
+                "path": "Heart Rate 13 Click/data/lib_heartrate13"
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display_name": "Boost 5 Click",
+    "name": "mikroe.click.boost5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6549",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Boost 5 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Boost5",
+                "subdir_name": "lib_boost5",
+                "path": "Boost 5 Click/data/lib_boost5"
+            }
+        ]
+    }
+}

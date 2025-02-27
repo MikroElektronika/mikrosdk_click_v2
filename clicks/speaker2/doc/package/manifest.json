@@ -1,0 +1,22 @@
+{
+    "display_name": "Speaker 2 Click",
+    "name": "mikroe.click.speaker2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6515",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Speaker 2 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Speaker2",
+                "subdir_name": "lib_speaker2",
+                "path": "Speaker 2 Click/data/lib_speaker2"
+            }
+        ]
+    }
+}
