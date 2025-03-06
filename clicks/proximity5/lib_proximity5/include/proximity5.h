@@ -237,7 +237,6 @@
 #define CMD_WHITE_DATA_L                 0x0C
 #define CMD_WHITE_DATA_M                 0x0C
 #define CMD_WHITE_DATA_L_M               0x0C
-#define RESERVED                         0x0D
 #define CMD_INT_FLAG                     0x0D
 #define CMD_ID_L                         0x0E
 #define CMD_ID_M                         0x0E

@@ -2,7 +2,7 @@
     "display_name": "Proximity 5 Click",
     "name": "mikroe.click.proximity5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2984",
     "package_changed": true,
     "contents": {
