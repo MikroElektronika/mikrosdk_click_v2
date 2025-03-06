@@ -1,0 +1,22 @@
+{
+    "display_name": "Accel 32 Click",
+    "name": "mikroe.click.accel32",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6565",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 32 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel32",
+                "subdir_name": "lib_accel32",
+                "path": "Accel 32 Click/data/lib_accel32"
+            }
+        ]
+    }
+}

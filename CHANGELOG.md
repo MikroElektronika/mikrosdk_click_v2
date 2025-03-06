@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250306](#20250306)**
 + **[20250227](#20250227)**
 + **[20250220](#20250220)**
 + **[20250213](#20250213)**
@@ -123,6 +124,23 @@
 
 ---
 ---
+---
+
+## `20250306`
+
+*Following click boards have been added:*
+
++ `Vela IF820`
++ `Accel 32`
++ `LTE IoT 10`
++ `6DOF IMU 24`
+
+*Following click boards have been modified:*
+
++ `Proximity 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250227`

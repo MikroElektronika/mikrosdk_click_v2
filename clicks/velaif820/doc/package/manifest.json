@@ -1,0 +1,22 @@
+{
+    "display_name": "Vela IF820 Click",
+    "name": "mikroe.click.velaif820",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6513",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Vela IF820 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VelaIF820",
+                "subdir_name": "lib_velaif820",
+                "path": "Vela IF820 Click/data/lib_velaif820"
+            }
+        ]
+    }
+}
