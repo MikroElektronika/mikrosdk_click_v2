@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250313](#20250313)**
 + **[20250306](#20250306)**
 + **[20250227](#20250227)**
 + **[20250220](#20250220)**
@@ -124,6 +125,17 @@
 
 ---
 ---
+---
+
+## `20250313`
+
+*Following click boards have been added:*
+
++ `DC Motor 28 FNG Click`
++ `DC Motor 28 FTG Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250306`

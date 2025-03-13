@@ -276,7 +276,8 @@ A full list of Clicks available in this repository is defined below:
 | DC Motor 21 Click | [Click Here](./clicks/dcmotor21) | DC Motor 22 Click | [Click Here](./clicks/dcmotor22) |
 | DC Motor 23 Click | [Click Here](./clicks/dcmotor23) | DC Motor 24 Click | [Click Here](./clicks/dcmotor24) |
 | DC Motor 25 Click | [Click Here](./clicks/dcmotor25) | DC Motor 26 Click | [Click Here](./clicks/dcmotor26) |
-| DC Motor 27 Click | [Click Here](./clicks/dcmotor27) | DC Motor 29 Click | [Click Here](./clicks/dcmotor29) |
+| DC Motor 27 Click | [Click Here](./clicks/dcmotor27) | DC Motor 28 FNG Click | [Click Here](./clicks/dcmotor28fng) |
+| DC Motor 28 FTG Click | [Click Here](./clicks/dcmotor28ftg) | DC Motor 29 Click | [Click Here](./clicks/dcmotor29) |
 | DC Motor 3 Click | [Click Here](./clicks/dcmotor3) | DC Motor 4 Click | [Click Here](./clicks/dcmotor4) |
 | DC Motor 5 Click | [Click Here](./clicks/dcmotor5) | DC Motor 6 Click | [Click Here](./clicks/dcmotor6) |
 | DC MOTOR 7 Click | [Click Here](./clicks/dcmotor7) | DC Motor 8 Click | [Click Here](./clicks/dcmotor8) |
