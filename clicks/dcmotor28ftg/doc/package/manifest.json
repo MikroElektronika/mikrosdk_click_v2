@@ -1,0 +1,22 @@
+{
+    "display_name": "DC Motor 28 FTG Click",
+    "name": "mikroe.click.dcmotor28ftg",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6505",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DC Motor 28 FTG Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DCMotor28FTG",
+                "subdir_name": "lib_dcmotor28ftg",
+                "path": "DC Motor 28 FTG Click/data/lib_dcmotor28ftg"
+            }
+        ]
+    }
+}
