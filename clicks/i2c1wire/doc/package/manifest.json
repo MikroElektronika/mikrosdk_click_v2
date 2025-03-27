@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "I2C 1-Wire Click/Examples/example"
+                "path": "I2C 1-Wire Click/examples/example"
             }
         ],
         "libraries": [

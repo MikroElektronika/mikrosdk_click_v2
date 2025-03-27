@@ -1,0 +1,22 @@
+{
+    "display_name": "RTC 22 Click",
+    "name": "mikroe.click.rtc22",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6280",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 22 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC22",
+                "subdir_name": "lib_rtc22",
+                "path": "RTC 22 Click/data/lib_rtc22"
+            }
+        ]
+    }
+}

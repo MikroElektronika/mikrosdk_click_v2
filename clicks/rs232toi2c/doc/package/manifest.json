@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "RS232 to I2C Click/Examples/example"
+                "path": "RS232 to I2C Click/examples/example"
             }
         ],
         "libraries": [

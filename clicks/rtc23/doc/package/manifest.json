@@ -1,0 +1,22 @@
+{
+    "display_name": "RTC 23 Click",
+    "name": "mikroe.click.rtc23",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6281",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 23 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC23",
+                "subdir_name": "lib_rtc23",
+                "path": "RTC 23 Click/data/lib_rtc23"
+            }
+        ]
+    }
+}

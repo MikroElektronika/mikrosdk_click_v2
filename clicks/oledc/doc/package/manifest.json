@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "OLED C Click/Examples/example"
+                "path": "OLED C Click/examples/example"
             }
         ],
         "libraries": [

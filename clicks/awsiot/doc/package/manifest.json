@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "AWS IoT Click/Examples/example"
+                "path": "AWS IoT Click/examples/example"
             }
         ],
         "libraries": [

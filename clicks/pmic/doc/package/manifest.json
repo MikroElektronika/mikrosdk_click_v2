@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "PMIC Click/Examples/example"
+                "path": "PMIC Click/examples/example"
             }
         ],
         "libraries": [

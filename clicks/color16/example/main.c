@@ -41,6 +41,7 @@ void application_init ( void )
      * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
      */
     LOG_MAP_USB_UART( log_cfg );
+    log_cfg.is_interrupt = false;
     log_init( &logger, &log_cfg );
     log_info( &logger, " Application Init " );
 

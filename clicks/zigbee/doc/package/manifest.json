@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "ZigBee Click/Examples/example"
+                "path": "ZigBee Click/examples/example"
             }
         ],
         "libraries": [

@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "LSM303AGR Click/Examples/example"
+                "path": "LSM303AGR Click/examples/example"
             }
         ],
         "libraries": [

@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "BUCK Click/Examples/example"
+                "path": "BUCK Click/examples/example"
             }
         ],
         "libraries": [

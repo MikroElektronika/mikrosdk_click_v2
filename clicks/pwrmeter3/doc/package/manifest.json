@@ -1,0 +1,22 @@
+{
+    "display_name": "PWR Meter 3 Click",
+    "name": "mikroe.click.pwrmeter3",
+    "type": "click",
+    "version": "2.2.1",
+    "pid": "MIKROE-6257",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PWR Meter 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PWRMeter3",
+                "subdir_name": "lib_pwrmeter3",
+                "path": "PWR Meter 3 Click/data/lib_pwrmeter3"
+            }
+        ]
+    }
+}

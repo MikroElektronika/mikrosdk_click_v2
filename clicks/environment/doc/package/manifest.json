@@ -1,14 +1,14 @@
 {
     "display_name": "Environment Click",
-    "name": "mikroe.click.environment ",
+    "name": "mikroe.click.environment",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2467",
     "package_changed": true,
     "contents": {
         "examples": [
             {
-                "path": "Environment Click/Examples/example"
+                "path": "Environment Click/examples/example"
             }
         ],
         "libraries": [

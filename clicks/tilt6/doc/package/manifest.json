@@ -1,0 +1,22 @@
+{
+    "display_name": "Tilt 6 Click",
+    "name": "mikroe.click.tilt6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6568",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Tilt 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Tilt6",
+                "subdir_name": "lib_tilt6",
+                "path": "Tilt 6 Click/data/lib_tilt6"
+            }
+        ]
+    }
+}
