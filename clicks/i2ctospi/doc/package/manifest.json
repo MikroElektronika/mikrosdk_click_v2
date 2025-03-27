@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "I2C to SPI Click/Examples/example"
+                "path": "I2C to SPI Click/examples/example"
             }
         ],
         "libraries": [

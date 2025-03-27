@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "UART Mux Click/Examples/example"
+                "path": "UART Mux Click/examples/example"
             }
         ],
         "libraries": [

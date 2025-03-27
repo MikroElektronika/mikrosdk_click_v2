@@ -1,0 +1,22 @@
+{
+    "display_name": "Diff Press 5 Click",
+    "name": "mikroe.click.diffpress5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6527",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Diff Press 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DiffPress5",
+                "subdir_name": "lib_diffpress5",
+                "path": "Diff Press 5 Click/data/lib_diffpress5"
+            }
+        ]
+    }
+}

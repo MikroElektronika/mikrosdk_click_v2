@@ -310,7 +310,8 @@ extern "C"{
 #define COLOR16_MAP_MIKROBUS( cfg, mikrobus ) \
     cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
     cfg.sda = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
-    cfg.ldr = MIKROBUS( mikrobus, MIKROBUS_AN ); \
+    cfg.ldr = MIKROBUS( mikrobus, MIKROBUS_RST ); \
+    cfg.io1 = MIKROBUS( mikrobus, MIKROBUS_PWM ); \
     cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
 
 /*! @} */ // color16_map
@@ -356,6 +357,7 @@ typedef struct
     
     // Input pins
     digital_in_t int_pin;       /**< Interrupt pin. */
+    digital_in_t io1;           /**< GPIO1 pin. */
 
     // Modules
     i2c_master_t i2c;           /**< I2C driver object. */
@@ -376,6 +378,7 @@ typedef struct
 
     pin_name_t ldr;             /**< LED Driver pin. */
     pin_name_t int_pin;         /**< Interrupt pin. */
+    pin_name_t io1;             /**< GPIO1 pin. */
 
     uint32_t   i2c_speed;       /**< I2C serial speed. */
     uint8_t    i2c_address;     /**< I2C slave address. */
@@ -561,6 +564,16 @@ void color16_set_ldr_pin ( color16_t *ctx, uint8_t state );
  * @note None.
  */
 uint8_t color16_get_int_pin ( color16_t *ctx );
+
+/**
+ * @brief Color 16 get io1 pin function.
+ * @details This function returns the IO1 pin logic state.
+ * @param[in] ctx : Click context object.
+ * See #color16_t object definition for detailed explanation.
+ * @return Pin logic state.
+ * @note None.
+ */
+uint8_t color16_get_io1_pin ( color16_t *ctx );
 
 /**
  * @brief Color 16 set reg bank access function.

@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "BLE TX Click/Examples/example"
+                "path": "BLE TX Click/examples/example"
             }
         ],
         "libraries": [

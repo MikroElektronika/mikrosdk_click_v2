@@ -2,13 +2,13 @@
     "display_name": "Color 16 Click",
     "name": "mikroe.click.color16",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5421",
     "package_changed": true,
     "contents": {
         "examples": [
             {
-                "path": "Color 16 Click/Examples/example"
+                "path": "Color 16 Click/examples/example"
             }
         ],
         "libraries": [

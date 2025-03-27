@@ -36,6 +36,7 @@ void color16_cfg_setup ( color16_cfg_t *cfg )
     // Additional gpio pins
     cfg->ldr = HAL_PIN_NC;
     cfg->int_pin = HAL_PIN_NC;
+    cfg->io1 = HAL_PIN_NC;
 
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
     cfg->i2c_address = COLOR16_DEVICE_ADDRESS;
@@ -69,6 +70,7 @@ err_t color16_init ( color16_t *ctx, color16_cfg_t *cfg )
 
     digital_out_init( &ctx->ldr, cfg->ldr );
     digital_in_init( &ctx->int_pin, cfg->int_pin );
+    digital_in_init( &ctx->io1, cfg->io1 );
 
     return I2C_MASTER_SUCCESS;
 }
@@ -177,6 +179,11 @@ uint8_t color16_get_int_pin ( color16_t *ctx )
     return digital_in_read ( &ctx->int_pin );
 }
 
+uint8_t color16_get_io1_pin ( color16_t *ctx )
+{
+    return digital_in_read ( &ctx->io1 );
+}
+
 err_t color16_set_reg_bank_access ( color16_t *ctx, uint8_t reg_bank )
 {
     uint8_t cfg_0;
@@ -281,9 +288,9 @@ err_t color16_read_data ( color16_t *ctx, color16_data_t *data_out )
                 data_out->ch_2x_vis_2 = ( ( uint16_t ) data_buf[ 23 ] << 8 ) | data_buf[ 22 ];
                 data_out->ch_fd_2 = ( ( uint16_t ) data_buf[ 25 ] << 8 ) | data_buf[ 24 ];
                 data_out->ch_f1 = ( ( uint16_t ) data_buf[ 27 ] << 8 ) | data_buf[ 26 ];
-                data_out->ch_f5 = ( ( uint16_t ) data_buf[ 29 ] << 8 ) | data_buf[ 28 ];
-                data_out->ch_f7 = ( ( uint16_t ) data_buf[ 31 ] << 8 ) | data_buf[ 30 ];
-                data_out->ch_f8 = ( ( uint16_t ) data_buf[ 33 ] << 8 ) | data_buf[ 32 ];
+                data_out->ch_f5 = ( ( uint16_t ) data_buf[ 33 ] << 8 ) | data_buf[ 32 ];
+                data_out->ch_f7 = ( ( uint16_t ) data_buf[ 29 ] << 8 ) | data_buf[ 28 ];
+                data_out->ch_f8 = ( ( uint16_t ) data_buf[ 31 ] << 8 ) | data_buf[ 30 ];
                 data_out->ch_2x_vis_3 = ( ( uint16_t ) data_buf[ 35 ] << 8 ) | data_buf[ 34 ];
                 data_out->ch_fd_3 = ( ( uint16_t ) data_buf[ 37 ] << 8 ) | data_buf[ 36 ];
                 return COLOR16_OK;

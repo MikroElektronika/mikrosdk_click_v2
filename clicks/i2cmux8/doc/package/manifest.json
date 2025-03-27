@@ -1,0 +1,22 @@
+{
+    "display_name": "I2C MUX 8 Click",
+    "name": "mikroe.click.i2cmux8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6564",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "I2C MUX 8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.I2CMUX8",
+                "subdir_name": "lib_i2cmux8",
+                "path": "I2C MUX 8 Click/data/lib_i2cmux8"
+            }
+        ]
+    }
+}

@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "EnOcean Click/Examples/example"
+                "path": "EnOcean Click/examples/example"
             }
         ],
         "libraries": [

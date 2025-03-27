@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "UART 1-Wire Click/Examples/example"
+                "path": "UART 1-Wire Click/examples/example"
             }
         ],
         "libraries": [

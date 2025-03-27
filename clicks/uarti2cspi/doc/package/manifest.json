@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "UART I2C SPI Click/Examples/example"
+                "path": "UART I2C SPI Click/examples/example"
             }
         ],
         "libraries": [

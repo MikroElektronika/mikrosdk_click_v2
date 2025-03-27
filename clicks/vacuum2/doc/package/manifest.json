@@ -1,0 +1,22 @@
+{
+    "display_name": "Vacuum 2 Click",
+    "name": "mikroe.click.vacuum2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6528",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Vacuum 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Vacuum2",
+                "subdir_name": "lib_vacuum2",
+                "path": "Vacuum 2 Click/data/lib_vacuum2"
+            }
+        ]
+    }
+}

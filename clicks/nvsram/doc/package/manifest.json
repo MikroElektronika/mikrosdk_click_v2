@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "nvSRAM Click/Examples/example"
+                "path": "nvSRAM Click/examples/example"
             }
         ],
         "libraries": [

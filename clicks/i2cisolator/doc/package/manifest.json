@@ -8,7 +8,7 @@
     "contents": {
         "examples": [
             {
-                "path": "I2C isolator Click/Examples/example"
+                "path": "I2C isolator Click/examples/example"
             }
         ],
         "libraries": [

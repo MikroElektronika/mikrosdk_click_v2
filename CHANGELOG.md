@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250327](#20250327)**
 + **[20250313](#20250313)**
 + **[20250306](#20250306)**
 + **[20250227](#20250227)**
@@ -127,12 +128,36 @@
 ---
 ---
 
+## `20250327`
+
+*Following Click boards have been added:*
+
++ `Vacuum 2`
++ `Tilt 6`
++ `RTC 22`
++ `RTC 23`
++ `Diff Press 5`
++ `Accel 34`
++ `I2C MUX 8`
++ `LTE IoT 15`
+
+*Following Click boards have been modified:*
+
++ `Environment`
++ `PWR Meter 3`
+
+*Updated manifest.json file of all Click boards*
+
+**[BACK TO TOP](#changelog)**
+
+---
+
 ## `20250313`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
-+ `DC Motor 28 FNG Click`
-+ `DC Motor 28 FTG Click`
++ `DC Motor 28 FNG`
++ `DC Motor 28 FTG`
 
 **[BACK TO TOP](#changelog)**
 
@@ -140,14 +165,14 @@
 
 ## `20250306`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Vela IF820`
 + `Accel 32`
 + `LTE IoT 10`
 + `6DOF IMU 24`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `Proximity 5`
 
@@ -157,7 +182,7 @@
 
 ## `20250227`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `H-Bridge 18`
 + `Speaker 2`
@@ -171,7 +196,7 @@
 
 ## `20250220`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `ATA6505`
 + `Tilt 5`
@@ -183,7 +208,7 @@
 
 ## `20250213`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `ATA6503`
 + `XBEE 4`
@@ -196,13 +221,13 @@
 
 ## `20250206`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `ATA6501`
 + `Light Ranger 13`
 + `Tester 2`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `BL653`
 + `BT840`
@@ -223,14 +248,14 @@
 
 ## `20250130`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `BL653`
 + `Color 19`
 + `GNSS RTK 5`
 + `Brushless 33`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `Color 4`
 + `Color 17`
@@ -242,7 +267,7 @@
 
 ## `20250123`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `BT840`
 + `LR 15`
@@ -255,14 +280,14 @@
 
 ## `20250116`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Nixie Power IN-12B Click`
 + `SPI Isolator 9`
 + `NINA-B222`
 + `Thermostat 6`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `Air Velocity`
 + `Hall Current 21`
@@ -276,7 +301,7 @@
 
 ## `20250108`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `4G LTE 3 E Click`
 + `RYB080I`
@@ -300,7 +325,7 @@
 
 ## `20241212`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `IPS Display 2`
 + `Rotary Switch`
@@ -313,7 +338,7 @@
 
 ## `20241205`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `ML Vibro Sens`
 + `Temp ISO`
@@ -326,7 +351,7 @@
 
 ## `20241128`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Light 4`
 + `Accel 31`
@@ -340,7 +365,7 @@
 
 ## `20241121`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `VCP Monitor 5`
 + `Current 14`
@@ -353,7 +378,7 @@
 
 ## `20241114`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `DIGI I/O`
 + `Hall Current 21`
@@ -366,14 +391,14 @@
 
 ## `20241107`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `LTE Cat.1 6`
 + `DAC 19`
 + `RS485 Isolator 4`
 + `Expand 18`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `LTE IoT 5`
 
@@ -383,14 +408,14 @@
 
 ## `20241104`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `IPS Display`
 + `RGB Ring`
 + `BarGraph 5`
 + `LTE IoT 17`
 
-*Fixed "Click" word in all click boards packages.*
+*Fixed "Click" word in all Click boards packages.*
 
 **[BACK TO TOP](#changelog)**
 
@@ -398,7 +423,7 @@
 
 ## `20241024`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Calypso`
 + `Buzzer`
@@ -423,7 +448,7 @@
 
 ## `20240926`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `EPOS Module`
 + `Expand 19`
@@ -436,7 +461,7 @@
 
 ## `20240919`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `NINA-W152`
 + `IR Grid 4`
@@ -449,7 +474,7 @@
 
 ## `20240916`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `LTE Cat.4`
 + `Color 18`
@@ -471,7 +496,7 @@
 
 ## `20240822`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `UWB 4`
 + `Joystick 4`
@@ -484,7 +509,7 @@
 
 ## `20240815`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Barcode 3`
 + `PIR 3`
@@ -497,7 +522,7 @@
 
 ## `20240808`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `BM78`
 + `Button 3`
@@ -510,7 +535,7 @@
 
 ## `20240801`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `LTE Cat.1 3 NAX`
 + `Button 2`
@@ -523,7 +548,7 @@
 
 ## `20240729`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `LTE Cat.1 3 EX`
 + `Proximity 20`
@@ -535,7 +560,7 @@
 
 ## `20240718`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `PWR Meter 3 30A`
 + `3D Hall 14`
@@ -547,7 +572,7 @@
 
 ## `20240711`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `1x4 RGB`
 + `Proximity 19`
@@ -556,7 +581,7 @@
 + `TempHum 25`
 + `Thyone-I`
 
-*Updated CMakeLists.txt files of all click boards.*
+*Updated CMakeLists.txt files of all Click boards.*
 
 **[BACK TO TOP](#changelog)**
 
@@ -564,14 +589,14 @@
 
 ## `20240628`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Battery Source`
 + `Inclinometer 4`
 + `Compass 8`
 + `PWR Meter 3 90A`
 
-*Following click boards have been removed:*
+*Following Click boards have been removed:*
 
 + `PWR Meter 3`
 
@@ -581,7 +606,7 @@
 
 ## `20240621`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `IR Sense 5`
 + `Relay 7`
@@ -593,7 +618,7 @@
 
 ## `20240614`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `PIR 2`
 + `LYRA 24P`
@@ -605,7 +630,7 @@
 
 ## `20240607`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Light 2`
 + `Relay 6`
@@ -617,7 +642,7 @@
 + `Boost 11`
 + `Current 12`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `Buck-Boost 4`
 
@@ -627,7 +652,7 @@
 
 ## `20240517`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `IR Eclipse 2`
 + `M-BUS RF 2`
@@ -636,7 +661,7 @@
 + `GNSS RTK 3 DA`
 + `Pressure 23 30BA`
 
-*Following click boards have been removed:*
+*Following Click boards have been removed:*
 
 + `GNSS RTK 3`
 + `Pressure 23`
@@ -647,7 +672,7 @@
 
 ## `20240510`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `DIGI IN 2`
 + `AccelQvar`
@@ -662,7 +687,7 @@
 
 ## `20240426`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `MICRF TX`
 + `MICRF RX`
@@ -674,7 +699,7 @@
 
 ## `20240419`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `10x10 RGB 2`
 + `DIGI IN`
@@ -686,7 +711,7 @@
 
 ## `20240415`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `NFC 5`
 + `Mosaic`
@@ -698,12 +723,12 @@
 
 ## `20240405`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `4G LTE GNSS`
 + `LR 9`
 
-*Added XC compilers support to all click boards.*
+*Added XC compilers support to all Click boards.*
 
 **[BACK TO TOP](#changelog)**
 
@@ -711,7 +736,7 @@
 
 ## `20240329`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Stepper 19`
 + `Brushless 10`
@@ -722,7 +747,7 @@
 
 ## `20240322`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Haptic 4`
 + `Current Sens 2`
@@ -734,7 +759,7 @@
 
 ## `20240315`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `DTMF`
 + `Flash 12`
@@ -748,7 +773,7 @@
 
 ## `20240308`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `EZO Carrier EC`
 + `LR 10`
@@ -760,7 +785,7 @@
 + `STSPIN220`
 + `STSPIN820`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `10x10 RGB`
 + `4x4 RGB`
@@ -773,7 +798,7 @@
 
 ## `20240301`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `7-SEG 2`
 + `EZO Carrier ORP`
@@ -795,7 +820,7 @@
 
 ## `20240223`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `PCR`
 + `EZO Carrier RTD`
@@ -810,7 +835,7 @@
 + `Stepper`
 + `Stepper 2`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `1-Wire I2C`
 + `Charger`
@@ -827,7 +852,7 @@
 
 ## `20240219`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `BATT Boost`
 + `LED Flash 3`
@@ -845,7 +870,7 @@
 
 ## `20240209`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `CDC`
 + `Buck-Boost 4`
@@ -863,13 +888,13 @@
 
 ## `20240202`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Barometer 13`
 + `Charger 27`
 + `ISO ADC 6`
 
-*Added Clang to manifests to all click boards.*
+*Added Clang to manifests to all Click boards.*
 
 **[BACK TO TOP](#changelog)**
 
@@ -877,14 +902,14 @@
 
 ## `20240126`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `AccelPressure`
 + `Hall Switch 3`
 + `MagAccel`
 + `Silent Step 2`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `I2C Extend`
 
@@ -894,7 +919,7 @@
 
 ## `20240119`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Speed Sense`
 + `IR Sense 4`
@@ -906,7 +931,7 @@
 
 ## `20240112`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `EZO Carrier pH`
 + `H-Bridge 15`
@@ -921,7 +946,7 @@
 + `NeoMesh 2`
 + `LTE Cat.1 2`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `USB UART 3`
 
@@ -931,7 +956,7 @@
 
 ## `20231222`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `AD-SWIO 3`
 + `Opto 7`
@@ -945,7 +970,7 @@
 
 ## `20231215`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `UWB 3`
 + `Rotary B 2`
@@ -953,7 +978,7 @@
 + `AlphaNum G 2`
 + `I2C Isolator 7`
 
-*Bug fixes for 44 different click boards.*
+*Bug fixes for 44 different Click boards.*
 
 **[BACK TO TOP](#changelog)**
 
@@ -961,14 +986,14 @@
 
 ## `20231208`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `IoT ExpressLink 2`
 + `Thunder EMU`
 + `3D Hall 4`
 + `H-Bridge 14`
 
-*Added main return and delays include to all click boards.*
+*Added main return and delays include to all Click boards.*
 
 **[BACK TO TOP](#changelog)**
 
@@ -976,7 +1001,7 @@
 
 ## `20231201`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Rotary W 2`
 + `Charger 19`
@@ -989,14 +1014,14 @@
 
 ## `20231124`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Piezo Driver`
 + `Brushless 13`
 + `GNSS 11`
 + `Brushless 27`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `OOK TX`
 + `OOK RX`
@@ -1007,7 +1032,7 @@
 
 ## `20231117`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Step Down 10`
 + `EEPROM 12`
@@ -1020,7 +1045,7 @@
 
 ## `20231110`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `IoT ExpressLink 3`
 + `LightRanger 11`
@@ -1028,7 +1053,7 @@
 + `CAN FD 7`
 + `Hall Current 18`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `RTK Base`
 + `RTK Rover`
@@ -1039,7 +1064,7 @@
 
 ## `20231103`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Diff Press 4`
 + `PRESS`
@@ -1052,7 +1077,7 @@
 
 ## `20231027`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `LTE IoT 11`
 + `Water Detect 3`
@@ -1060,7 +1085,7 @@
 + `Temp Alarm`
 + `EEPROM 11`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `APC1 Sensor Demo`
 
@@ -1070,7 +1095,7 @@
 
 ## `20231020`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `DIGI Isolator`
 + `SPI Isolator 5`
@@ -1084,7 +1109,7 @@
 
 ## `20231013`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Speed Radar`
 + `GNSS RTK 3`
@@ -1097,7 +1122,7 @@
 
 ## `20231006`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `MRAM 4`
 + `Hall Current 17`
@@ -1109,14 +1134,14 @@
 
 ## `20230929`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `4G LTE 2 Voice-NA`
 + `DIGI POT 14`
 + `Charger 25`
 + `Step Down 9`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `USB UART ISO`
 
@@ -1126,7 +1151,7 @@
 
 ## `20230922`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `RMS to DC 2`
 + `Water Detect 2`
@@ -1140,14 +1165,14 @@
 
 ## `20230915`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `ANNA-B412`
 + `UWB 2`
 + `UT-L 7-SEG B`
 + `DAC 15`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `OSD`
 + `XSENS MTi-3`
@@ -1160,7 +1185,7 @@
 
 ## `20230908`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Headphone AMP 2`
 + `Ultrasonic 5`
@@ -1174,7 +1199,7 @@
 + `DC Motor 27`
 + `Nano GPS 3`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `AudioAmp`
 
@@ -1184,7 +1209,7 @@
 
 ## `20230818`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Nano Power 3`
 + `USB-C Sink 3`
@@ -1192,7 +1217,7 @@
 + `microSD`
 + `ClickID`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `Proximity 16`
 + `RS485 Isolator`
@@ -1204,13 +1229,13 @@
 
 ## `20230811`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `USB-C Sink 2`
 + `CAN Isolator 3`
 + `H-Bridge 13`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `G2C`
 + `Hall Current 6`
@@ -1224,7 +1249,7 @@
 
 ## `20230804`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Angle 9`
 + `Step Down 6`
@@ -1236,7 +1261,7 @@
 + `RTC`
 + `Smoke 2`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `3D Hall 6`
 + `7x10 B`
@@ -1297,7 +1322,7 @@
 
 ## `20230728`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `AM/FM 2`
 + `Smart DOF 3`
@@ -1312,7 +1337,7 @@
 + `AnyNet 3G-AA`
 + `AnyNet 2G`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `10x10 RGB`
 + `4x4 RGB`
@@ -1327,9 +1352,9 @@
 
 ## `20230721`
 
-*Added support for dsPIC to all click boards.*
+*Added support for dsPIC to all Click boards.*
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `CAN Isolator 2`
 + `RS Transceiver`
@@ -1341,7 +1366,7 @@
 + `Step Down 7`
 + `Wheatstone`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `UWB`
 + `RTD`
@@ -1370,14 +1395,14 @@
 
 ## `20230706`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `HOD CAP`
 + `RS485 8`
 + `Smart Buck 4`
 + `USB MUX`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `Thingstream`
 + `Motion`
@@ -1395,7 +1420,7 @@
 
 ## `20230630`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Boost-INV 3`
 + `Accel 28`
@@ -1403,7 +1428,7 @@
 + `Magneto 14`
 + `eFuse 7`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `VREG 2`
 + `Waveform`
@@ -1418,12 +1443,12 @@
 
 ## `20230622`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Relay 5`
 + `Solar Energy 2`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `SQI FLASH`
 + `Stepper 17`
@@ -1444,7 +1469,7 @@
 
 ## `20230616`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Smart Buck 3`
 + `DIGI POT 13`
@@ -1453,7 +1478,7 @@
 + `Stepper 9`
 + `Stepper 20`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `Presence`
 + `Pressure 2`
@@ -1487,7 +1512,7 @@
 
 ## `20230609`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `DIGI POT 12`
 + `Thermo 30`
@@ -1495,7 +1520,7 @@
 + `Flash 11`
 + `EEPROM 10`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `ISM TX`
 + `ISM RX`
@@ -1529,14 +1554,14 @@
 
 ## `20230602`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Smart DOF 2`
 + `4x4 RGB 2`
 + `Stepper 21`
 + `UART MUX 4`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `G2C`
 + `GSM`
@@ -1586,14 +1611,14 @@
 
 ## `20230526`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Magneto 13`
 + `HW Monitor 2`
 + `Color 17`
 + `IrDA 4`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `Angle 3`
 + `BLE 9`
@@ -1629,7 +1654,7 @@
 
 ## `20230519`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Color 12`
 + `I2C Isolator 5`
@@ -1637,7 +1662,7 @@
 + `LED Driver 19`
 + `Binho Nova`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `ADC 10`
 + `Brushless 3`
@@ -1682,14 +1707,14 @@
 
 ## `20230512`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `DC Motor 26`
 + `Ambient 23`
 + `N-PLC`
 + `CO2 3`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `Accel 18`
 + `Accel`
@@ -1734,14 +1759,14 @@
 
 ## `20230505`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `LED Driver 17`
 + `RS485 7`
 + `AWS IoT`
 + `Magnetic Rotary 5`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `3D Hall 2`
 + `3G SARA`
@@ -1760,14 +1785,14 @@
 
 ## `20230428`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `HW Monitor`
 + `USB-C Power`
 + `LDO`
 + `DC Motor 25`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `10x10 RGB`
 
@@ -1777,7 +1802,7 @@
 
 ## `20230421`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `6DOF IMU 20`
 + `Barometer 10`
@@ -1785,7 +1810,7 @@
 + `EEPROM 9`
 + `Temp-Log 7`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `OLED C`
 
@@ -1795,13 +1820,13 @@
 
 ## `20230413`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `GNSS 13`
 + `AudioAMP 9`
 + `Cap Touch 6`
 
-*Following click boards have been removed:*
+*Following Click boards have been removed:*
 
 + `Headphone AMP 2`
 + `WiFi BLE`
@@ -1812,7 +1837,7 @@
 
 ## `20230407`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `ADC 21`
 + `H-Bridge 11`
@@ -1826,7 +1851,7 @@
 
 ## `20230331`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Accel 29`
 + `Ambient 22`
@@ -1839,7 +1864,7 @@
 
 ## `20230324`
 
-* Added click boards released since the last sync.
+* Added Click boards released since the last sync.
 * All existing MEMAKE packages that have their CMAKE version published in NECTO are replaced.
 
 **[BACK TO TOP](#changelog)**
@@ -1848,7 +1873,7 @@
 
 ## `20220722`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Magnetic Rotary 3`
 + `Touchpad 5`
@@ -1875,7 +1900,7 @@
 
 ## `20220610`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Smart Sens 2`
 + `ECG 7`
@@ -1887,14 +1912,14 @@
 
 ## `20220603`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Hall Current 15`
 + `GNSS MAX`
 + `LightRanger 10`
 + `Compass 7`
 
-*Following click boards have been removed:*
+*Following Click boards have been removed:*
 
 + `Thermo 12`
 
@@ -1904,14 +1929,14 @@
 
 ## `20220527`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Heart Rate 11`
 + `Step Down 3`
 + `Spectrometer 2`
 + `DC Motor 22`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `Accel 11`
 + `Accel 12`
@@ -1923,13 +1948,13 @@
 
 ## `20220520`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Accel 4`
 + `I2C MUX 6`
 + `MRAM 3`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `Balancer 2`
 + `Load Cell 2`
@@ -1949,7 +1974,7 @@
 
 ## `20220513`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `3D Hall 10`
 + `3D Hall 11`
@@ -2021,7 +2046,7 @@
 + `USB to I2C 2`
 + `VU Meter`
 
-*Following click boards have been modified:*
+*Following Click boards have been modified:*
 
 + `AC Current`
 + `AD SWIO`
@@ -2069,7 +2094,7 @@
 
 ## `20220218`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Thermo 22`
 + `ADC 17`
@@ -2088,7 +2113,7 @@
 
 ## `20220204`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `TFmini`
 + `Diff Press 2`
@@ -2100,7 +2125,7 @@
 
 ## `20220128`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Barometer 6`
 + `CO2`
@@ -2113,7 +2138,7 @@
 
 ## `20220121`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Ambient 15`
 + `BT Audio 3`
@@ -2126,7 +2151,7 @@
 
 ## `20220114`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `UVA`
 + `BATT-MAN 2`
@@ -2146,7 +2171,7 @@
 
 ## `20211224`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Load Cell 6`
 + `Magnetic Rotary 2`
@@ -2159,7 +2184,7 @@
 
 ## `20211217`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `ADC 15`
 + `Waveform 4`
@@ -2181,7 +2206,7 @@
 
 ## `20211203`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Turbidity`
 + `BLE 12`
@@ -2196,7 +2221,7 @@
 
 ## `20211126`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `DC Motor 21`
 + `PROFET 15A`
@@ -2210,7 +2235,7 @@
 
 ## `20211119`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `PROFET 10A`
 + `Thermo 21`
@@ -2224,7 +2249,7 @@
 
 ## `20211112`
 
-* Added click boards released since last sync
+* Added Click boards released since last sync
 * Added support for Tiva
 * Unused files have been removed
 
@@ -2234,7 +2259,7 @@
 
 ## `20211022`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `RTC 13`
 + `GainAMP 3`
@@ -2249,8 +2274,8 @@
 
 * Click boards released since last sync
 * Added support for NXP
-* Update log initialization for all click boards
-* Packages coverign multiple clicks replaced by individual package for each click board
+* Update log initialization for all Click boards
+* Packages coverign multiple Clicks replaced by individual package for each Click board
 
 **[BACK TO TOP](#changelog)**
 
@@ -2258,7 +2283,7 @@
 
 ## `20210917`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Magneto 9`
 + `Compass 6`
@@ -2272,7 +2297,7 @@
 
 ## `20210910`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `BarGraph 4`
 + `Ambient 10`
@@ -2286,7 +2311,7 @@
 
 ## `20210903`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `8800 Retro`
 + `Led Driver 11`
@@ -2299,7 +2324,7 @@
 
 ## `20210827`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `VCP Monitor 4`
 + `DC Motor18`
@@ -2312,7 +2337,7 @@
 
 ## `20210820`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Stepper 11`
 + `Current 4`
@@ -2329,7 +2354,7 @@
 
 ## `20210816`
 
-*Following click boards have been added:*
+*Following Click boards have been added:*
 
 + `Hall Current 10`
 + `IRNSS`
@@ -2341,7 +2366,7 @@
 + `Hall Switch 2`
 + `MUX 4`
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
 + `DAC 10`
 + `TouchPad 4`
@@ -2358,855 +2383,855 @@
 
 *All packages fixed and updated.*
 
-*Following click boards have been updated:*
+*Following Click boards have been updated:*
 
-+ `10DOF click`
-+ `10x10 RGB click`
-+ `13DOF click`
-+ `16x12 G click`
-+ `16x9 G click`
-+ `2x2 key click`
-+ `2x20W Amp click`
-+ `2x30W Amp click`
-+ `2X5W AMP click`
-+ `3D Hall 2 click`
-+ `3D Hall 3 click`
-+ `3D Hall 5 click`
-+ `3D Hall 6 click`
-+ `3D Hall 7 click`
-+ `3D Hall 8 click`
-+ `3D Hall click`
-+ `3G SARA click`
-+ `3G-AA click`
-+ `3G-EA click`
-+ `3 x Buck click`
-+ `4-20 mA R click`
-+ `4-20 mA T click`
-+ `4Dot-Matrix R click`
-+ `4G LTE-APJ click`
-+ `4G LTE-ATT click`
-+ `4G LTE-E click`
-+ `4G LTE-NA click`
-+ `4x4 Key click`
-+ `4x4 RGB click`
-+ `5G NB IoT click`
-+ `6DOF IMU 10 click`
-+ `6DOF IMU 11 click`
-+ `6DOF IMU 12 click`
-+ `6DOF IMU 13 click`
-+ `6DOF IMU 14 click`
-+ `6DOF IMU 15 click`
-+ `6DOF IMU 2 click`
-+ `6DOF IMU 3 click`
-+ `6DOF IMU 4 click`
-+ `6DOF IMU 5 click`
-+ `6DOF IMU 6 click`
-+ `6DOF IMU 7 click`
-+ `6DOF IMU 8 click`
-+ `6DOF IMU 9 click`
-+ `6DOF IMU click`
-+ `7seg click`
-+ `7-SEG RGB click`
-+ `7x10 B click`
-+ `7x10 G click`
-+ `7x10 R click`
-+ `7x10 Y click`
-+ `8 pin I2C click`
-+ `8x8 B click`
-+ `8x8 G click`
-+ `8x8 R click`
-+ `8x8 Y click`
-+ `9DOF 2 click`
-+ `9DOF 3 click`
-+ `AC Current click`
-+ `Accel 10 click`
-+ `Accel 11 click`
-+ `Accel 12 click`
-+ `Accel 13 click`
-+ `Accel 14 click`
-+ `Accel 15 click`
-+ `Accel 2 click`
-+ `Accel 3 click`
-+ `Accel 5 click`
-+ `Accel 6 click`
-+ `Accel 7 click`
-+ `Accel 8 click`
-+ `Accel click`
-+ `ADAC click`
-+ `Adapter click`
-+ `ADC 10 click`
-+ `ADC 11 click`
-+ `ADC 12 click`
-+ `ADC 2 click`
-+ `ADC 3 click`
-+ `ADC 4 click`
-+ `ADC 5 click`
-+ `ADC 6 click`
-+ `ADC 7 click`
-+ `ADC 8 click`
-+ `ADC 9 click`
-+ `ADC click`
-+ `AD SWIO 2 click`
-+ `AD SWIO click`
-+ `Air Flow click`
-+ `Air quality 2 click`
-+ `Air quality 3 click`
-+ `Air quality 4 click`
-+ `Air quality 5 click`
-+ `Air quality 7 click`
-+ `Air Quality click`
-+ `Alcohol 2 click`
-+ `Alcohol 3 click`
-+ `Alcohol click`
-+ `AlphaNum G click`
-+ `AlphaNum R click`
-+ `Altitude 2 click`
-+ `Altitude 3 click`
-+ `Altitude 4 click`
-+ `Altitude click`
-+ `AM/FM click`
-+ `Ambient 11 click`
-+ `Ambient 2 click`
-+ `Ambient 3 click`
-+ `Ambient 4 click`
-+ `Ambient 5 click`
-+ `Ambient 6 click`
-+ `Ambient 7 click`
-+ `Ambient 8 click`
-+ `Ambient 9 click`
-+ `Ambient click`
-+ `Ammeter click`
-+ `Ammonia click`
-+ `AMR Angle click`
-+ `AMR Current click`
-+ `Analog Key click`
-+ `Analog Mux click`
-+ `Analog MUX 3 click`
-+ `Analog MUX 2 click`
-+ `Angle 2 click`
-+ `Angle 3 click`
-+ `Angle 4 click`
-+ `Angle 5 click`
-+ `Angle click`
-+ `ATA6570 click`
-+ `ATA6571 click`
-+ `ATA663211 click`
-+ `ATA663254 click`
-+ `Audio Xover click`
-+ `AudioAmp 2 click`
-+ `AudioAmp 3 click`
-+ `AudioAmp 4 click`
-+ `AudioAmp 5 click`
-+ `AudioAmp 6 click`
-+ `AudioAMP click`
-+ `AudioMUX click`
-+ `Balancer 2 click`
-+ `Balancer 3 click`
-+ `Balancer 5 click`
-+ `Barcode 2 click`
-+ `Barcode click`
-+ `Bargraph 2 click`
-+ `BARGRAPH 3 click`
-+ `BarGraph click`
-+ `Barometer 2 click`
-+ `Barometer 3 click`
-+ `Barometer click`
-+ `BATT-MAN click`
-+ `BATT-MON click`
-+ `BEE click`
-+ `BI HALL click`
-+ `BIG 7-SEG click`
-+ `BLE 3 click`
-+ `BLE 4 click`
-+ `BLE 7 click`
-+ `BLE 8 click`
-+ `BLE 9 click`
-+ `BLE TINY click`
-+ `BLE TX click`
-+ `Bluetooth 2 click`
-+ `Bluetooth click`
-+ `Boost 2 click`
-+ `Boost 3 click`
-+ `Boost 4 click`
-+ `Boost 6 click`
-+ `BOOST click`
-+ `Boost-inv 2 click`
-+ `Boost-INV click`
-+ `Brushless 12 click`
-+ `Brushless 14 click`
-+ `Brushless 2 click`
-+ `Brushless 3 click`
-+ `Brushless 4 click`
-+ `Brushless 5 click`
-+ `Brushless 6 click`
-+ `Brushless 7 click`
-+ `Brushless 8 click`
-+ `Brushless 9 click`
-+ `Brushless click`
-+ `BT Audio click`
-+ `BT-EZ click`
-+ `Buck n Boost click`
-+ `Buck 10 click`
-+ `Buck 11 click`
-+ `Buck 12 click`
-+ `Buck 13 click`
-+ `Buck 14 click`
-+ `Buck 2 click`
-+ `Buck 3 click`
-+ `Buck 5 click`
-+ `BUCK 6 click`
-+ `BUCK 7 click`
-+ `Buck 8 click`
-+ `Buck 9 click`
-+ `BUCK click`
-+ `Buck Boost 2 click`
-+ `Buck-Boost 3 click`
-+ `Buck Boost click`
-+ `Button ALARM click`
-+ `Button G click`
-+ `Button PLAY click`
-+ `Button Power click`
-+ `Button R click`
-+ `Button Y click`
-+ `BUZZ 2 click`
-+ `BUZZ click`
-+ `CAN Bus click`
-+ `CAN FD 2 click`
-+ `CAN FD 3 click`
-+ `CAN FD 4 click`
-+ `CAN FD 5 click`
-+ `CAN FD 6 click`
-+ `CAN FD click`
-+ `CAN Isolator click`
-+ `Cap Extend 3 click`
-+ `Cap Extend click`
-+ `CAP Slider 2 click`
-+ `Cap Touch 2 click`
-+ `Cap Touch 5 click`
-+ `Cap Touch click`
-+ `Cap Wheel 2 click`
-+ `CAP WHEEL click`
-+ `CapSense click`
-+ `ccRF 2 click`
-+ `CHARGER 12 click`
-+ `Charger 13 click`
-+ `Charger 2 click`
-+ `Charger 3 click`
-+ `Charger 5 click`
-+ `Charger 6 click`
-+ `Charger 8 click`
-+ `Charger 9 click`
-+ `Clock Gen 2 click`
-+ `Clock Gen 3 click`
-+ `Clock Gen 5 click`
-+ `Clock Gen click`
-+ `CO 2 click`
-+ `CO click`
-+ `Color 10 click`
-+ `Color 2 click`
-+ `Color 3 click`
-+ `Color 6 click`
-+ `Color 7 click`
-+ `Color 8 click`
-+ `Color 9 click`
-+ `Color click`
-+ `Comparator click`
-+ `Compass 2 click`
-+ `Compass 3 click`
-+ `Compass 4 click`
-+ `Compass click`
-+ `Counter click`
-+ `Current 2 click`
-+ `Current 3 click`
-+ `Current click`
-+ `DAC 10 click`
-+ `DAC 2 click`
-+ `DAC 3 click`
-+ `DAC 4 click`
-+ `DAC 5 click`
-+ `DAC 6 click`
-+ `DAC 7 click`
-+ `DAC 8 click`
-+ `DAC click`
-+ `DAQ 3 click`
-+ `DC Motor 10 click`
-+ `DC Motor 11 click`
-+ `DC Motor 14 click`
-+ `DC Motor 15 click`
-+ `DC Motor 17 click`
-+ `DC Motor 2 click`
-+ `DC Motor 3 click`
-+ `DC Motor 4 click`
-+ `DC Motor 5 click`
-+ `DC Motor 6 click`
-+ `DC MOTOR 7 click`
-+ `DC Motor 8 click`
-+ `DC Motor 9 click`
-+ `DC MOTOR click`
-+ `DHT22 2 click`
-+ `DHT22 click`
-+ `Diff Press click`
-+ `Diff pressure click`
-+ `DIGI POT click`
-+ `DIGI POT 3 click`
-+ `Digi Pot 4 click`
-+ `DIGI POT 5 click`
-+ `DIGI POT 6 click`
-+ `DIGI POT 7 click`
-+ `DIGI POT 8 click`
-+ `DIGI POT 2 click`
-+ `DigiVref click`
-+ `Dot Matrix R click`
-+ `Driver click`
-+ `DSP click`
-+ `DTMF Decoder click`
-+ `DTMF Generator click`
-+ `Dual EE click`
-+ `Dual LIN click`
-+ `Earthquake click`
-+ `ECG 3 click`
-+ `ECG 4 click`
-+ `Ecg 6 click`
-+ `ECG click`
-+ `ECG GSR click`
-+ `EEPROM 2 click`
-+ `EEPROM 3 click`
-+ `EEPROM 4 click`
-+ `EEPROM click`
-+ `EERAM 2 click`
-+ `EERAM 3v3 click`
-+ `EERAM 5V click`
-+ `eFuse 3 click`
-+ `eFuse click`
++ `10DOF Click`
++ `10x10 RGB Click`
++ `13DOF Click`
++ `16x12 G Click`
++ `16x9 G Click`
++ `2x2 key Click`
++ `2x20W Amp Click`
++ `2x30W Amp Click`
++ `2X5W AMP Click`
++ `3D Hall 2 Click`
++ `3D Hall 3 Click`
++ `3D Hall 5 Click`
++ `3D Hall 6 Click`
++ `3D Hall 7 Click`
++ `3D Hall 8 Click`
++ `3D Hall Click`
++ `3G SARA Click`
++ `3G-AA Click`
++ `3G-EA Click`
++ `3 x Buck Click`
++ `4-20 mA R Click`
++ `4-20 mA T Click`
++ `4Dot-Matrix R Click`
++ `4G LTE-APJ Click`
++ `4G LTE-ATT Click`
++ `4G LTE-E Click`
++ `4G LTE-NA Click`
++ `4x4 Key Click`
++ `4x4 RGB Click`
++ `5G NB IoT Click`
++ `6DOF IMU 10 Click`
++ `6DOF IMU 11 Click`
++ `6DOF IMU 12 Click`
++ `6DOF IMU 13 Click`
++ `6DOF IMU 14 Click`
++ `6DOF IMU 15 Click`
++ `6DOF IMU 2 Click`
++ `6DOF IMU 3 Click`
++ `6DOF IMU 4 Click`
++ `6DOF IMU 5 Click`
++ `6DOF IMU 6 Click`
++ `6DOF IMU 7 Click`
++ `6DOF IMU 8 Click`
++ `6DOF IMU 9 Click`
++ `6DOF IMU Click`
++ `7seg Click`
++ `7-SEG RGB Click`
++ `7x10 B Click`
++ `7x10 G Click`
++ `7x10 R Click`
++ `7x10 Y Click`
++ `8 pin I2C Click`
++ `8x8 B Click`
++ `8x8 G Click`
++ `8x8 R Click`
++ `8x8 Y Click`
++ `9DOF 2 Click`
++ `9DOF 3 Click`
++ `AC Current Click`
++ `Accel 10 Click`
++ `Accel 11 Click`
++ `Accel 12 Click`
++ `Accel 13 Click`
++ `Accel 14 Click`
++ `Accel 15 Click`
++ `Accel 2 Click`
++ `Accel 3 Click`
++ `Accel 5 Click`
++ `Accel 6 Click`
++ `Accel 7 Click`
++ `Accel 8 Click`
++ `Accel Click`
++ `ADAC Click`
++ `Adapter Click`
++ `ADC 10 Click`
++ `ADC 11 Click`
++ `ADC 12 Click`
++ `ADC 2 Click`
++ `ADC 3 Click`
++ `ADC 4 Click`
++ `ADC 5 Click`
++ `ADC 6 Click`
++ `ADC 7 Click`
++ `ADC 8 Click`
++ `ADC 9 Click`
++ `ADC Click`
++ `AD SWIO 2 Click`
++ `AD SWIO Click`
++ `Air Flow Click`
++ `Air quality 2 Click`
++ `Air quality 3 Click`
++ `Air quality 4 Click`
++ `Air quality 5 Click`
++ `Air quality 7 Click`
++ `Air Quality Click`
++ `Alcohol 2 Click`
++ `Alcohol 3 Click`
++ `Alcohol Click`
++ `AlphaNum G Click`
++ `AlphaNum R Click`
++ `Altitude 2 Click`
++ `Altitude 3 Click`
++ `Altitude 4 Click`
++ `Altitude Click`
++ `AM/FM Click`
++ `Ambient 11 Click`
++ `Ambient 2 Click`
++ `Ambient 3 Click`
++ `Ambient 4 Click`
++ `Ambient 5 Click`
++ `Ambient 6 Click`
++ `Ambient 7 Click`
++ `Ambient 8 Click`
++ `Ambient 9 Click`
++ `Ambient Click`
++ `Ammeter Click`
++ `Ammonia Click`
++ `AMR Angle Click`
++ `AMR Current Click`
++ `Analog Key Click`
++ `Analog Mux Click`
++ `Analog MUX 3 Click`
++ `Analog MUX 2 Click`
++ `Angle 2 Click`
++ `Angle 3 Click`
++ `Angle 4 Click`
++ `Angle 5 Click`
++ `Angle Click`
++ `ATA6570 Click`
++ `ATA6571 Click`
++ `ATA663211 Click`
++ `ATA663254 Click`
++ `Audio Xover Click`
++ `AudioAmp 2 Click`
++ `AudioAmp 3 Click`
++ `AudioAmp 4 Click`
++ `AudioAmp 5 Click`
++ `AudioAmp 6 Click`
++ `AudioAMP Click`
++ `AudioMUX Click`
++ `Balancer 2 Click`
++ `Balancer 3 Click`
++ `Balancer 5 Click`
++ `Barcode 2 Click`
++ `Barcode Click`
++ `Bargraph 2 Click`
++ `BARGRAPH 3 Click`
++ `BarGraph Click`
++ `Barometer 2 Click`
++ `Barometer 3 Click`
++ `Barometer Click`
++ `BATT-MAN Click`
++ `BATT-MON Click`
++ `BEE Click`
++ `BI HALL Click`
++ `BIG 7-SEG Click`
++ `BLE 3 Click`
++ `BLE 4 Click`
++ `BLE 7 Click`
++ `BLE 8 Click`
++ `BLE 9 Click`
++ `BLE TINY Click`
++ `BLE TX Click`
++ `Bluetooth 2 Click`
++ `Bluetooth Click`
++ `Boost 2 Click`
++ `Boost 3 Click`
++ `Boost 4 Click`
++ `Boost 6 Click`
++ `BOOST Click`
++ `Boost-inv 2 Click`
++ `Boost-INV Click`
++ `Brushless 12 Click`
++ `Brushless 14 Click`
++ `Brushless 2 Click`
++ `Brushless 3 Click`
++ `Brushless 4 Click`
++ `Brushless 5 Click`
++ `Brushless 6 Click`
++ `Brushless 7 Click`
++ `Brushless 8 Click`
++ `Brushless 9 Click`
++ `Brushless Click`
++ `BT Audio Click`
++ `BT-EZ Click`
++ `Buck n Boost Click`
++ `Buck 10 Click`
++ `Buck 11 Click`
++ `Buck 12 Click`
++ `Buck 13 Click`
++ `Buck 14 Click`
++ `Buck 2 Click`
++ `Buck 3 Click`
++ `Buck 5 Click`
++ `BUCK 6 Click`
++ `BUCK 7 Click`
++ `Buck 8 Click`
++ `Buck 9 Click`
++ `BUCK Click`
++ `Buck Boost 2 Click`
++ `Buck-Boost 3 Click`
++ `Buck Boost Click`
++ `Button ALARM Click`
++ `Button G Click`
++ `Button PLAY Click`
++ `Button Power Click`
++ `Button R Click`
++ `Button Y Click`
++ `BUZZ 2 Click`
++ `BUZZ Click`
++ `CAN Bus Click`
++ `CAN FD 2 Click`
++ `CAN FD 3 Click`
++ `CAN FD 4 Click`
++ `CAN FD 5 Click`
++ `CAN FD 6 Click`
++ `CAN FD Click`
++ `CAN Isolator Click`
++ `Cap Extend 3 Click`
++ `Cap Extend Click`
++ `CAP Slider 2 Click`
++ `Cap Touch 2 Click`
++ `Cap Touch 5 Click`
++ `Cap Touch Click`
++ `Cap Wheel 2 Click`
++ `CAP WHEEL Click`
++ `CapSense Click`
++ `ccRF 2 Click`
++ `CHARGER 12 Click`
++ `Charger 13 Click`
++ `Charger 2 Click`
++ `Charger 3 Click`
++ `Charger 5 Click`
++ `Charger 6 Click`
++ `Charger 8 Click`
++ `Charger 9 Click`
++ `Clock Gen 2 Click`
++ `Clock Gen 3 Click`
++ `Clock Gen 5 Click`
++ `Clock Gen Click`
++ `CO 2 Click`
++ `CO Click`
++ `Color 10 Click`
++ `Color 2 Click`
++ `Color 3 Click`
++ `Color 6 Click`
++ `Color 7 Click`
++ `Color 8 Click`
++ `Color 9 Click`
++ `Color Click`
++ `Comparator Click`
++ `Compass 2 Click`
++ `Compass 3 Click`
++ `Compass 4 Click`
++ `Compass Click`
++ `Counter Click`
++ `Current 2 Click`
++ `Current 3 Click`
++ `Current Click`
++ `DAC 10 Click`
++ `DAC 2 Click`
++ `DAC 3 Click`
++ `DAC 4 Click`
++ `DAC 5 Click`
++ `DAC 6 Click`
++ `DAC 7 Click`
++ `DAC 8 Click`
++ `DAC Click`
++ `DAQ 3 Click`
++ `DC Motor 10 Click`
++ `DC Motor 11 Click`
++ `DC Motor 14 Click`
++ `DC Motor 15 Click`
++ `DC Motor 17 Click`
++ `DC Motor 2 Click`
++ `DC Motor 3 Click`
++ `DC Motor 4 Click`
++ `DC Motor 5 Click`
++ `DC Motor 6 Click`
++ `DC MOTOR 7 Click`
++ `DC Motor 8 Click`
++ `DC Motor 9 Click`
++ `DC MOTOR Click`
++ `DHT22 2 Click`
++ `DHT22 Click`
++ `Diff Press Click`
++ `Diff pressure Click`
++ `DIGI POT Click`
++ `DIGI POT 3 Click`
++ `Digi Pot 4 Click`
++ `DIGI POT 5 Click`
++ `DIGI POT 6 Click`
++ `DIGI POT 7 Click`
++ `DIGI POT 8 Click`
++ `DIGI POT 2 Click`
++ `DigiVref Click`
++ `Dot Matrix R Click`
++ `Driver Click`
++ `DSP Click`
++ `DTMF Decoder Click`
++ `DTMF Generator Click`
++ `Dual EE Click`
++ `Dual LIN Click`
++ `Earthquake Click`
++ `ECG 3 Click`
++ `ECG 4 Click`
++ `Ecg 6 Click`
++ `ECG Click`
++ `ECG GSR Click`
++ `EEPROM 2 Click`
++ `EEPROM 3 Click`
++ `EEPROM 4 Click`
++ `EEPROM Click`
++ `EERAM 2 Click`
++ `EERAM 3v3 Click`
++ `EERAM 5V Click`
++ `eFuse 3 Click`
++ `eFuse Click`
 + `eINK 2.00 inch display`
 + `eINK 1.54 inch display`
 + `eINK 2.13 inch display`
 + `eINK 2.90 inch display`
-+ `EnOcean 2 click`
-+ `EnOcean 3 click`
-+ `EnOcean 4 click`
-+ `EnOcean click`
-+ `Environment click`
-+ `Environment 2 click`
-+ `EVC click`
-+ `Excelon LP click`
-+ `Expand 2 click`
-+ `Expand 4 click`
-+ `Expand 5 click`
-+ `Expand 6 click`
-+ `Expand 7 click`
-+ `Expand click`
-+ `Fan 2 click`
-+ `Fan 3 click`
-+ `FAN 4 click`
-+ `Fan 6 click`
-+ `Fan click`
-+ `Fever click`
-+ `Fiber Opt click`
-+ `Fingerprint 2 click`
-+ `Fingerprint 3 click`
-+ `FLAME click`
-+ `Flash 2 click`
-+ `Flash 3 click`
-+ `Flash 4 click`
++ `EnOcean 2 Click`
++ `EnOcean 3 Click`
++ `EnOcean 4 Click`
++ `EnOcean Click`
++ `Environment Click`
++ `Environment 2 Click`
++ `EVC Click`
++ `Excelon LP Click`
++ `Expand 2 Click`
++ `Expand 4 Click`
++ `Expand 5 Click`
++ `Expand 6 Click`
++ `Expand 7 Click`
++ `Expand Click`
++ `Fan 2 Click`
++ `Fan 3 Click`
++ `FAN 4 Click`
++ `Fan 6 Click`
++ `Fan Click`
++ `Fever Click`
++ `Fiber Opt Click`
++ `Fingerprint 2 Click`
++ `Fingerprint 3 Click`
++ `FLAME Click`
++ `Flash 2 Click`
++ `Flash 3 Click`
++ `Flash 4 Click`
 + `Flash 5`
-+ `Flash 6 click`
-+ `Flash click`
-+ `Flicker click`
-+ `FM click`
-+ `Force 2 click`
-+ `Force 3 click`
-+ `Force 4 click`
-+ `Force 5 click`
-+ `Force click`
-+ `FRAM 2 click`
-+ `FRAM 3 click`
-+ `Fram click`
-+ `FT click`
-+ `GainAMP 2 click`
-+ `Gaussmeter click`
-+ `GeoMagnetic click`
-+ `GMR Angle click`
-+ `GNSS2 click`
-+ `GNSS3 click`
-+ `GNSS4 click`
-+ `GNSS5 click`
-+ `GNSS7 click`
-+ `GNSS click`
-+ `GNSS RTK click`
-+ `GNSS ZOE click`
-+ `G2C 3G click`
-+ `G2C click`
-+ `GPS 3 click`
-+ `GPS 4 click`
-+ `GPS click`
-+ `Grid-Eye click`
-+ `GSM 2 click`
-+ `GSM 3 click`
-+ `GSM 4 click`
-+ `GSM click`
-+ `GSM/GNSS click`
-+ `GSM-GPS click`
-+ `GSR click`
-+ `Gyro 2 click`
-+ `Gyro 3 click`
-+ `Gyro 4 click`
-+ `Gyro 5 click`
-+ `Gyro click`
-+ `Hall Current 2 click`
-+ `Hall Current 3 click`
-+ `Hall Current 4 click`
-+ `Hall Current 5 click`
-+ `Hall Current 6 click`
-+ `Hall Current 8 25A click`
-+ `Hall Current 8 120A click`
-+ `Hall Current 9 click`
-+ `Hall Current click`
-+ `Hall Switch click`
-+ `HAPTIC 2 click`
-+ `HAPTIC click`
-+ `H-Bridge 2 click`
-+ `H-Bridge 3 click`
-+ `H-Bridge 4 click`
-+ `H-Bridge 5 click`
-+ `H-Bridge 7 click`
-+ `Heart Rate 10 click`
-+ `Heart Rate 2 click`
-+ `Heart rate 3 click`
-+ `Heart rate 4 click`
-+ `Heart rate 6 click`
-+ `Heart Rate 8 click`
-+ `Heart Rate 9 click`
-+ `Heart Rate click`
-+ `Heater click`
-+ `HTU21D click`
-+ `Hydro Probe click`
-+ `Hydrogen click`
-+ `Hz to V click`
-+ `HZ to V 2 click`
-+ `I2C 1-Wire click`
-+ `I2C Isolator 2 click`
-+ `I2C isolator click`
-+ `I2C MUX 2 click`
-+ `I2C MUX 3 click`
-+ `I2C MUX 4 click`
-+ `I2C MUX 5 click`
-+ `I2C MUX click`
-+ `I2C to CAN click`
-+ `I2C to SPI click`
-+ `Illuminance click`
-+ `Index Counter click`
-+ `iqRF 2 click`
-+ `iqRF click`
-+ `IR Beacon click`
-+ `IR distance click`
-+ `Ir Eclipse click`
-+ `IR Gesture click`
-+ `IR Grid 2 click`
-+ `IR Grid 3 click`
-+ `IR Grid click`
-+ `IR reflect click`
-+ `IR Sense 2 click`
-+ `IR Sense 3 click`
-+ `IR SENSE click`
-+ `IrDA 3 click`
-+ `IrDA 2 click`
-+ `IrThermo 3 click`
-+ `IrThermo 3V3 click`
-+ `IrThermo 5V click`
-+ `ISM click`
-+ `ISM RX click`
-+ `ISM TX click`
-+ `Joystick 2 click`
-+ `Joystick click`
-+ `Key Lock 2 click`
-+ `Keylock click`
-+ `Knob click`
-+ `LCD Mono click`
-+ `LDC 1000 click`
-+ `LDC 1101 click`
-+ `LED Driver 2 click`
-+ `LED Driver 3 click`
-+ `LED Driver 4 click`
-+ `Led Driver 5 click`
-+ `LED driver 6 click`
-+ `LED Driver 7 click`
-+ `Led Driver 8 click`
-+ `LED Driver 9 click`
-+ `LED DRIVER click`
-+ `Led Flash 2 click`
-+ `LED Flash click`
-+ `Led ring R click`
-+ `LEM click`
-+ `Light click`
-+ `Light Temp click`
-+ `LightRanger 2 click`
-+ `LightRanger 3 click`
-+ `LightRanger 4 click`
-+ `LightRanger 5 click`
-+ `LightRanger 8 click`
-+ `LightRanger click`
-+ `LIN click`
-+ `LIN HALL click`
-+ `Line Follower click`
-+ `LLC I2C click`
-+ `LLC SPI click`
-+ `Load Cell 2 click`
-+ `Load Cell 3 click`
-+ `Load Cell 5 click`
-+ `Load cell click`
-+ `LR 2 click`
-+ `LR 3 click`
-+ `LR 4 click`
-+ `LR 5 click`
-+ `LR click`
-+ `LPG click`
-+ `LPS22HB click`
-+ `LSM303AGR click`
-+ `LSM6DSL click`
-+ `LTE Cat.1-EU click`
-+ `LTE Cat.1-US click`
-+ `LTE IoT 2 click`
-+ `LTE IoT 4 click`
-+ `LTE IoT 5 click`
-+ `LTE IoT 6 click`
-+ `LTE IoT 8 click`
-+ `LTE IoT 9 click`
-+ `LTE IoT click`
-+ `MAC Address click`
-+ `Magnetic linear click`
-+ `Magnetic Rotary click`
-+ `Magneto 2 click`
-+ `MAGNETO 4 click`
-+ `Magneto 5 click`
-+ `Magneto 7 click`
-+ `Magneto 8 click`
-+ `MAGNETO click`
-+ `Manometer 2 click`
-+ `Manometer click`
-+ `Matrix G click`
-+ `Matrix R click`
-+ `Matrix RGB click`
-+ `M-Bus Master click`
-+ `M-BUS RF 4 click`
-+ `M-Bus Slave click`
-+ `MCP16331 click`
-+ `MCP16331 INV click`
-+ `MCP1664 click`
-+ `MCP2542 click`
-+ `MCP73213 click`
-+ `MCP73871 click`
-+ `MIC 2 click`
-+ `Mic click`
-+ `MIC23099 click`
-+ `MIC24045 click`
-+ `MIC24055 click`
-+ `MIC33153 click`
-+ `Moisture click`
-+ `Monarch Adapter click`
-+ `Motion 2 click`
-+ `Motion 3 click`
-+ `Motion 4 click`
-+ `MOTION click`
-+ `MP3 2 click`
-+ `MPU 9DOF click`
-+ `MPU IMU click`
-+ `MR Angle click`
-+ `MRAM 2 click`
-+ `MRAM click`
-+ `Multimeter click`
-+ `MUX 2 click`
-+ `MUX 3 click`
-+ `MUX click`
-+ `Nano GPS 2 click`
-+ `Nano GPS click`
-+ `Nano LR click`
-+ `Nano Power 2 click`
-+ `Nano Power click`
-+ `NB IoT 5 click`
-+ `NB IoT click`
-+ `NDIR CO2 click`
-+ `NFC Extend click`
-+ `NFC Tag 4 click`
-+ `NO2 2 click`
-+ `NO2 click`
-+ `Noise click`
-+ `nvSRAM 3 click`
-+ `nvSRAM 4 click`
-+ `nvSRAM click`
-+ `OBD II click`
-+ `OLED B click`
-+ `OLED C click`
-+ `OLED Switch click`
-+ `OLED W click`
-+ `One Shot click`
-+ `OOK RX click`
-+ `OOK TX click`
-+ `Opto 2 click`
-+ `Opto 3 click`
-+ `OPTO 4 click`
-+ `Opto 5 click`
-+ `OPTO click`
-+ `Opto Encoder 2 click`
-+ `Opto Encoder 3 click`
-+ `Opto Encoder click`
-+ `Oximeter 2 click`
-+ `Oximeter 3 click`
-+ `Oximeter click`
-+ `Ozone 2 click`
-+ `Ozone 3 click`
-+ `PAC1921 click`
-+ `Pac1934 click`
-+ `PAC1944 click`
-+ `PAC1954 click`
-+ `Pedometer 3 click`
-+ `Pedometer click`
-+ `Peltier click`
-+ `PHT click`
-+ `Piezo Accel click`
-+ `PIR click`
-+ `Pixi click`
-+ `PLL click`
-+ `Plug&Trust click`
-+ `Pollution click`
-+ `POT 2 click`
-+ `Pot 3 click`
-+ `POT click`
-+ `Power MUX 2 click`
-+ `PowerBank click`
-+ `Power/Reset click`
-+ `Presence click`
-+ `Pressure 10 click`
-+ `Pressure 11 click`
-+ `Pressure 12 click`
-+ `Pressure 15 click`
-+ `Pressure 2 click`
-+ `Pressure 3 click`
-+ `Pressure 4 click`
-+ `Pressure 5 click`
-+ `Pressure 6 click`
-+ `Pressure 7 click`
-+ `Pressure 8 click`
-+ `Pressure 9 click`
-+ `Pressure click`
-+ `ProxFusion 2 click`
-+ `ProxFusion 3 click`
-+ `ProxFusion click`
-+ `Proximity 10 click`
-+ `Proximity 11 click`
-+ `Proximity 13 click`
-+ `Proximity 14 click`
-+ `Proximity 2 click`
-+ `Proximity 3 click`
-+ `Proximity 5 click`
-+ `Proximity 6 click`
-+ `PROXIMITY 7 click`
-+ `Proximity 8 click`
-+ `Proximity 9 click`
-+ `Proximity click`
-+ `PWM 2 click`
-+ `PWM click`
-+ `Pwm Driver click`
-+ `PWR Meter 2 click`
-+ `PWR Meter click`
-+ `Qi Receiver click`
-+ `R Meter click`
-+ `RadioStation click`
-+ `REED click`
-+ `Relay 2 click`
-+ `Relay 3 click`
-+ `Relay click`
-+ `Remote Temp click`
-+ `ReRAM click`
-+ `RF Meter click`
-+ `RFID click`
-+ `RGB Driver click`
-+ `RMS to DC click`
-+ `RN4678 click`
-+ `RN4870 click`
-+ `RN4871 click`
-+ `RNG click`
-+ `ROTARY B click`
-+ `ROTARY G click`
-+ `ROTARY O click`
-+ `ROTARY R click`
-+ `ROTARY Y click`
-+ `RS232 2 click`
-+ `RS232 click`
-+ `RS232 Isolator 2 click`
-+ `RS232 Isolator click`
-+ `RS232 SPI click`
-+ `RS485 2 click`
-+ `RS485 3 click`
-+ `RS485 4 click`
-+ `RS485 5 click`
-+ `RS485 6 click`
-+ `RS485 3V3 click`
-+ `RS485 5V click`
-+ `RS485 Isolator 2 click`
-+ `RS485 isolator click`
-+ `RTC 10 click`
-+ `RTC 12 click`
-+ `RTC 2 click`
-+ `RTC 3 click`
-+ `RTC 5 click`
-+ `RTC 6 click`
-+ `RTC 7 click`
-+ `RTC 8 click`
-+ `RTC 9 click`
-+ `RTD 2 click`
-+ `RTD click`
-+ `SAML Touch click`
-+ `Scanner click`
-+ `Semper Flash 2 click`
-+ `Semper Flash click`
-+ `Servo click`
-+ `Shake2Wake click`
-+ `SHT AN click`
-+ `SHT click`
-+ `SHT1x click`
-+ `Shuttle click`
-+ `Signal Relay click`
-+ `Single Cell click`
-+ `Single Wire CAN click`
-+ `Slider 2 click`
-+ `Slider click`
-+ `Smart Buck click`
-+ `Smart DOF click`
-+ `Smoke click`
-+ `SOLAR ENERGY click`
-+ `SolidSwitch click`
-+ `Speaker click`
-+ `Spectral 2 click`
-+ `Spectral 3 click`
-+ `Spectral click`
-+ `Spectrometer click`
-+ `SPI Isolator 3 click`
-+ `SPI Isolator click`
-+ `SPIRIT clicks`
-+ `SRAM 2 click`
-+ `SRAM click`
-+ `Step Down 2 click`
-+ `Step Up click`
-+ `Stepper 15 click`
-+ `Stepper 16 click`
-+ `Stepper 18 click`
-+ `StereoAmp click`
-+ `Stretch click`
-+ `STSPIN233 click`
-+ `STSPIN250 click`
-+ `Surface Temp 2 click`
-+ `Surface Temp click`
-+ `SWI EEPROM click`
-+ `SwipeSwitch click`
-+ `Tamper 2 click`
-+ `Tamper click`
-+ `TempHum 10 click`
-+ `TempHum 11 click`
-+ `TempHum 12 click`
-+ `TempHum 13 click`
-+ `TempHum 15 click`
-+ `TempHum 16 click`
-+ `Temp&Hum 17 click`
-+ `TempHum 2 click`
-+ `TempHum 3 click`
-+ `TempHum 4 click`
-+ `TempHum 5 click`
-+ `TempHum 6 click`
-+ `TempHum 7 click`
-+ `TempHum 8 click`
-+ `TempHum 9 click`
-+ `TempHum click`
-+ `Temp-Log 2 click`
-+ `Temp-Log 3 click`
-+ `Temp-Log 4 click`
-+ `Temp-Log 5 click`
-+ `Temp-Log 6 click`
-+ `Temp-Log click`
-+ `Terminal click`
-+ `Tester click`
-+ `Thermo 11 click`
-+ `Thermo 13 click`
-+ `Thermo 14 click`
-+ `Thermo 15 click`
-+ `Thermo 16 click`
-+ `Thermo 17 click`
-+ `Thermo 20 click`
-+ `Thermo 3 click`
-+ `Thermo 4 click`
-+ `THERMO 5 click`
-+ `Thermo 6 click`
-+ `Thermo 7 click`
-+ `Thermo 8 click`
-+ `Thermo 9 click`
-+ `THERMO click`
-+ `Thermo J click`
-+ `Thermo K click`
-+ `Thermostat 3 click`
-+ `Thermostat click`
-+ `Thingstream click`
-+ `Thumbstick click`
-+ `Thunder click`
-+ `Tilt 2 click`
-+ `Tilt click`
-+ `TILT-n-SHAKE click`
-+ `Timer click`
-+ `TMR Angle click`
-+ `TMR mix-sens click`
-+ `TouchClamp click`
-+ `Touchkey 2 click`
-+ `TouchKey 3 click`
-+ `TouchKey 4 click`
-+ `TouchKey click`
-+ `TouchPad 2 click`
-+ `TouchPad 4 click`
-+ `Touchpad click`
-+ `tRF click`
-+ `UART 1-Wire click`
-+ `UART I2C/SPI click`
-+ `UART MUX 2 click`
-+ `UART Mux click`
-+ `Ultra-Low Press click`
-+ `UNI HALL click`
-+ `UPS 3 click`
-+ `UPS click`
-+ `USB UART 2 click`
-+ `USB UART 3 click`
-+ `USB UART 4 click`
-+ `USB UART click`
-+ `UT-L 7-SEG R click`
-+ `UT-M 7-SEG R click`
-+ `UT-S 7 SEG R click`
-+ `UV 2 click`
-+ `UV 3 click`
-+ `UV 4 click`
-+ `UV click`
-+ `UVC click`
-+ `UVC Light click`
-+ `UWB click`
-+ `V to Hz 2 click`
-+ `V to Hz click`
-+ `Vacuum click`
-+ `VAV Press click`
-+ `VCP Monitor 2 click`
-+ `VCP Monitor click`
-+ `Vibra sense click`
-+ `Vibro Motor 2 click`
-+ `Vibro Motor click`
-+ `Voltmeter click`
-+ `Volume 2 click`
-+ `Volume click`
-+ `VREG 2 click`
-+ `VREG click`
-+ `Water Detect click`
-+ `Waveform 3 click`
-+ `Waveform click`
-+ `Weather click`
-+ `WiFi 11 click`
-+ `WiFi 8 click`
-+ `WiFi 9 click`
-+ `WiFi BLE click`
-+ `WiFi ESP click`
++ `Flash 6 Click`
++ `Flash Click`
++ `Flicker Click`
++ `FM Click`
++ `Force 2 Click`
++ `Force 3 Click`
++ `Force 4 Click`
++ `Force 5 Click`
++ `Force Click`
++ `FRAM 2 Click`
++ `FRAM 3 Click`
++ `Fram Click`
++ `FT Click`
++ `GainAMP 2 Click`
++ `Gaussmeter Click`
++ `GeoMagnetic Click`
++ `GMR Angle Click`
++ `GNSS2 Click`
++ `GNSS3 Click`
++ `GNSS4 Click`
++ `GNSS5 Click`
++ `GNSS7 Click`
++ `GNSS Click`
++ `GNSS RTK Click`
++ `GNSS ZOE Click`
++ `G2C 3G Click`
++ `G2C Click`
++ `GPS 3 Click`
++ `GPS 4 Click`
++ `GPS Click`
++ `Grid-Eye Click`
++ `GSM 2 Click`
++ `GSM 3 Click`
++ `GSM 4 Click`
++ `GSM Click`
++ `GSM/GNSS Click`
++ `GSM-GPS Click`
++ `GSR Click`
++ `Gyro 2 Click`
++ `Gyro 3 Click`
++ `Gyro 4 Click`
++ `Gyro 5 Click`
++ `Gyro Click`
++ `Hall Current 2 Click`
++ `Hall Current 3 Click`
++ `Hall Current 4 Click`
++ `Hall Current 5 Click`
++ `Hall Current 6 Click`
++ `Hall Current 8 25A Click`
++ `Hall Current 8 120A Click`
++ `Hall Current 9 Click`
++ `Hall Current Click`
++ `Hall Switch Click`
++ `HAPTIC 2 Click`
++ `HAPTIC Click`
++ `H-Bridge 2 Click`
++ `H-Bridge 3 Click`
++ `H-Bridge 4 Click`
++ `H-Bridge 5 Click`
++ `H-Bridge 7 Click`
++ `Heart Rate 10 Click`
++ `Heart Rate 2 Click`
++ `Heart rate 3 Click`
++ `Heart rate 4 Click`
++ `Heart rate 6 Click`
++ `Heart Rate 8 Click`
++ `Heart Rate 9 Click`
++ `Heart Rate Click`
++ `Heater Click`
++ `HTU21D Click`
++ `Hydro Probe Click`
++ `Hydrogen Click`
++ `Hz to V Click`
++ `HZ to V 2 Click`
++ `I2C 1-Wire Click`
++ `I2C Isolator 2 Click`
++ `I2C isolator Click`
++ `I2C MUX 2 Click`
++ `I2C MUX 3 Click`
++ `I2C MUX 4 Click`
++ `I2C MUX 5 Click`
++ `I2C MUX Click`
++ `I2C to CAN Click`
++ `I2C to SPI Click`
++ `Illuminance Click`
++ `Index Counter Click`
++ `iqRF 2 Click`
++ `iqRF Click`
++ `IR Beacon Click`
++ `IR distance Click`
++ `Ir Eclipse Click`
++ `IR Gesture Click`
++ `IR Grid 2 Click`
++ `IR Grid 3 Click`
++ `IR Grid Click`
++ `IR reflect Click`
++ `IR Sense 2 Click`
++ `IR Sense 3 Click`
++ `IR SENSE Click`
++ `IrDA 3 Click`
++ `IrDA 2 Click`
++ `IrThermo 3 Click`
++ `IrThermo 3V3 Click`
++ `IrThermo 5V Click`
++ `ISM Click`
++ `ISM RX Click`
++ `ISM TX Click`
++ `Joystick 2 Click`
++ `Joystick Click`
++ `Key Lock 2 Click`
++ `Keylock Click`
++ `Knob Click`
++ `LCD Mono Click`
++ `LDC 1000 Click`
++ `LDC 1101 Click`
++ `LED Driver 2 Click`
++ `LED Driver 3 Click`
++ `LED Driver 4 Click`
++ `Led Driver 5 Click`
++ `LED driver 6 Click`
++ `LED Driver 7 Click`
++ `Led Driver 8 Click`
++ `LED Driver 9 Click`
++ `LED DRIVER Click`
++ `Led Flash 2 Click`
++ `LED Flash Click`
++ `Led ring R Click`
++ `LEM Click`
++ `Light Click`
++ `Light Temp Click`
++ `LightRanger 2 Click`
++ `LightRanger 3 Click`
++ `LightRanger 4 Click`
++ `LightRanger 5 Click`
++ `LightRanger 8 Click`
++ `LightRanger Click`
++ `LIN Click`
++ `LIN HALL Click`
++ `Line Follower Click`
++ `LLC I2C Click`
++ `LLC SPI Click`
++ `Load Cell 2 Click`
++ `Load Cell 3 Click`
++ `Load Cell 5 Click`
++ `Load cell Click`
++ `LR 2 Click`
++ `LR 3 Click`
++ `LR 4 Click`
++ `LR 5 Click`
++ `LR Click`
++ `LPG Click`
++ `LPS22HB Click`
++ `LSM303AGR Click`
++ `LSM6DSL Click`
++ `LTE Cat.1-EU Click`
++ `LTE Cat.1-US Click`
++ `LTE IoT 2 Click`
++ `LTE IoT 4 Click`
++ `LTE IoT 5 Click`
++ `LTE IoT 6 Click`
++ `LTE IoT 8 Click`
++ `LTE IoT 9 Click`
++ `LTE IoT Click`
++ `MAC Address Click`
++ `Magnetic linear Click`
++ `Magnetic Rotary Click`
++ `Magneto 2 Click`
++ `MAGNETO 4 Click`
++ `Magneto 5 Click`
++ `Magneto 7 Click`
++ `Magneto 8 Click`
++ `MAGNETO Click`
++ `Manometer 2 Click`
++ `Manometer Click`
++ `Matrix G Click`
++ `Matrix R Click`
++ `Matrix RGB Click`
++ `M-Bus Master Click`
++ `M-BUS RF 4 Click`
++ `M-Bus Slave Click`
++ `MCP16331 Click`
++ `MCP16331 INV Click`
++ `MCP1664 Click`
++ `MCP2542 Click`
++ `MCP73213 Click`
++ `MCP73871 Click`
++ `MIC 2 Click`
++ `Mic Click`
++ `MIC23099 Click`
++ `MIC24045 Click`
++ `MIC24055 Click`
++ `MIC33153 Click`
++ `Moisture Click`
++ `Monarch Adapter Click`
++ `Motion 2 Click`
++ `Motion 3 Click`
++ `Motion 4 Click`
++ `MOTION Click`
++ `MP3 2 Click`
++ `MPU 9DOF Click`
++ `MPU IMU Click`
++ `MR Angle Click`
++ `MRAM 2 Click`
++ `MRAM Click`
++ `Multimeter Click`
++ `MUX 2 Click`
++ `MUX 3 Click`
++ `MUX Click`
++ `Nano GPS 2 Click`
++ `Nano GPS Click`
++ `Nano LR Click`
++ `Nano Power 2 Click`
++ `Nano Power Click`
++ `NB IoT 5 Click`
++ `NB IoT Click`
++ `NDIR CO2 Click`
++ `NFC Extend Click`
++ `NFC Tag 4 Click`
++ `NO2 2 Click`
++ `NO2 Click`
++ `Noise Click`
++ `nvSRAM 3 Click`
++ `nvSRAM 4 Click`
++ `nvSRAM Click`
++ `OBD II Click`
++ `OLED B Click`
++ `OLED C Click`
++ `OLED Switch Click`
++ `OLED W Click`
++ `One Shot Click`
++ `OOK RX Click`
++ `OOK TX Click`
++ `Opto 2 Click`
++ `Opto 3 Click`
++ `OPTO 4 Click`
++ `Opto 5 Click`
++ `OPTO Click`
++ `Opto Encoder 2 Click`
++ `Opto Encoder 3 Click`
++ `Opto Encoder Click`
++ `Oximeter 2 Click`
++ `Oximeter 3 Click`
++ `Oximeter Click`
++ `Ozone 2 Click`
++ `Ozone 3 Click`
++ `PAC1921 Click`
++ `Pac1934 Click`
++ `PAC1944 Click`
++ `PAC1954 Click`
++ `Pedometer 3 Click`
++ `Pedometer Click`
++ `Peltier Click`
++ `PHT Click`
++ `Piezo Accel Click`
++ `PIR Click`
++ `Pixi Click`
++ `PLL Click`
++ `Plug&Trust Click`
++ `Pollution Click`
++ `POT 2 Click`
++ `Pot 3 Click`
++ `POT Click`
++ `Power MUX 2 Click`
++ `PowerBank Click`
++ `Power/Reset Click`
++ `Presence Click`
++ `Pressure 10 Click`
++ `Pressure 11 Click`
++ `Pressure 12 Click`
++ `Pressure 15 Click`
++ `Pressure 2 Click`
++ `Pressure 3 Click`
++ `Pressure 4 Click`
++ `Pressure 5 Click`
++ `Pressure 6 Click`
++ `Pressure 7 Click`
++ `Pressure 8 Click`
++ `Pressure 9 Click`
++ `Pressure Click`
++ `ProxFusion 2 Click`
++ `ProxFusion 3 Click`
++ `ProxFusion Click`
++ `Proximity 10 Click`
++ `Proximity 11 Click`
++ `Proximity 13 Click`
++ `Proximity 14 Click`
++ `Proximity 2 Click`
++ `Proximity 3 Click`
++ `Proximity 5 Click`
++ `Proximity 6 Click`
++ `PROXIMITY 7 Click`
++ `Proximity 8 Click`
++ `Proximity 9 Click`
++ `Proximity Click`
++ `PWM 2 Click`
++ `PWM Click`
++ `Pwm Driver Click`
++ `PWR Meter 2 Click`
++ `PWR Meter Click`
++ `Qi Receiver Click`
++ `R Meter Click`
++ `RadioStation Click`
++ `REED Click`
++ `Relay 2 Click`
++ `Relay 3 Click`
++ `Relay Click`
++ `Remote Temp Click`
++ `ReRAM Click`
++ `RF Meter Click`
++ `RFID Click`
++ `RGB Driver Click`
++ `RMS to DC Click`
++ `RN4678 Click`
++ `RN4870 Click`
++ `RN4871 Click`
++ `RNG Click`
++ `ROTARY B Click`
++ `ROTARY G Click`
++ `ROTARY O Click`
++ `ROTARY R Click`
++ `ROTARY Y Click`
++ `RS232 2 Click`
++ `RS232 Click`
++ `RS232 Isolator 2 Click`
++ `RS232 Isolator Click`
++ `RS232 SPI Click`
++ `RS485 2 Click`
++ `RS485 3 Click`
++ `RS485 4 Click`
++ `RS485 5 Click`
++ `RS485 6 Click`
++ `RS485 3V3 Click`
++ `RS485 5V Click`
++ `RS485 Isolator 2 Click`
++ `RS485 isolator Click`
++ `RTC 10 Click`
++ `RTC 12 Click`
++ `RTC 2 Click`
++ `RTC 3 Click`
++ `RTC 5 Click`
++ `RTC 6 Click`
++ `RTC 7 Click`
++ `RTC 8 Click`
++ `RTC 9 Click`
++ `RTD 2 Click`
++ `RTD Click`
++ `SAML Touch Click`
++ `Scanner Click`
++ `Semper Flash 2 Click`
++ `Semper Flash Click`
++ `Servo Click`
++ `Shake2Wake Click`
++ `SHT AN Click`
++ `SHT Click`
++ `SHT1x Click`
++ `Shuttle Click`
++ `Signal Relay Click`
++ `Single Cell Click`
++ `Single Wire CAN Click`
++ `Slider 2 Click`
++ `Slider Click`
++ `Smart Buck Click`
++ `Smart DOF Click`
++ `Smoke Click`
++ `SOLAR ENERGY Click`
++ `SolidSwitch Click`
++ `Speaker Click`
++ `Spectral 2 Click`
++ `Spectral 3 Click`
++ `Spectral Click`
++ `Spectrometer Click`
++ `SPI Isolator 3 Click`
++ `SPI Isolator Click`
++ `SPIRIT Clicks`
++ `SRAM 2 Click`
++ `SRAM Click`
++ `Step Down 2 Click`
++ `Step Up Click`
++ `Stepper 15 Click`
++ `Stepper 16 Click`
++ `Stepper 18 Click`
++ `StereoAmp Click`
++ `Stretch Click`
++ `STSPIN233 Click`
++ `STSPIN250 Click`
++ `Surface Temp 2 Click`
++ `Surface Temp Click`
++ `SWI EEPROM Click`
++ `SwipeSwitch Click`
++ `Tamper 2 Click`
++ `Tamper Click`
++ `TempHum 10 Click`
++ `TempHum 11 Click`
++ `TempHum 12 Click`
++ `TempHum 13 Click`
++ `TempHum 15 Click`
++ `TempHum 16 Click`
++ `Temp&Hum 17 Click`
++ `TempHum 2 Click`
++ `TempHum 3 Click`
++ `TempHum 4 Click`
++ `TempHum 5 Click`
++ `TempHum 6 Click`
++ `TempHum 7 Click`
++ `TempHum 8 Click`
++ `TempHum 9 Click`
++ `TempHum Click`
++ `Temp-Log 2 Click`
++ `Temp-Log 3 Click`
++ `Temp-Log 4 Click`
++ `Temp-Log 5 Click`
++ `Temp-Log 6 Click`
++ `Temp-Log Click`
++ `Terminal Click`
++ `Tester Click`
++ `Thermo 11 Click`
++ `Thermo 13 Click`
++ `Thermo 14 Click`
++ `Thermo 15 Click`
++ `Thermo 16 Click`
++ `Thermo 17 Click`
++ `Thermo 20 Click`
++ `Thermo 3 Click`
++ `Thermo 4 Click`
++ `THERMO 5 Click`
++ `Thermo 6 Click`
++ `Thermo 7 Click`
++ `Thermo 8 Click`
++ `Thermo 9 Click`
++ `THERMO Click`
++ `Thermo J Click`
++ `Thermo K Click`
++ `Thermostat 3 Click`
++ `Thermostat Click`
++ `Thingstream Click`
++ `Thumbstick Click`
++ `Thunder Click`
++ `Tilt 2 Click`
++ `Tilt Click`
++ `TILT-n-SHAKE Click`
++ `Timer Click`
++ `TMR Angle Click`
++ `TMR mix-sens Click`
++ `TouchClamp Click`
++ `Touchkey 2 Click`
++ `TouchKey 3 Click`
++ `TouchKey 4 Click`
++ `TouchKey Click`
++ `TouchPad 2 Click`
++ `TouchPad 4 Click`
++ `Touchpad Click`
++ `tRF Click`
++ `UART 1-Wire Click`
++ `UART I2C/SPI Click`
++ `UART MUX 2 Click`
++ `UART Mux Click`
++ `Ultra-Low Press Click`
++ `UNI HALL Click`
++ `UPS 3 Click`
++ `UPS Click`
++ `USB UART 2 Click`
++ `USB UART 3 Click`
++ `USB UART 4 Click`
++ `USB UART Click`
++ `UT-L 7-SEG R Click`
++ `UT-M 7-SEG R Click`
++ `UT-S 7 SEG R Click`
++ `UV 2 Click`
++ `UV 3 Click`
++ `UV 4 Click`
++ `UV Click`
++ `UVC Click`
++ `UVC Light Click`
++ `UWB Click`
++ `V to Hz 2 Click`
++ `V to Hz Click`
++ `Vacuum Click`
++ `VAV Press Click`
++ `VCP Monitor 2 Click`
++ `VCP Monitor Click`
++ `Vibra sense Click`
++ `Vibro Motor 2 Click`
++ `Vibro Motor Click`
++ `Voltmeter Click`
++ `Volume 2 Click`
++ `Volume Click`
++ `VREG 2 Click`
++ `VREG Click`
++ `Water Detect Click`
++ `Waveform 3 Click`
++ `Waveform Click`
++ `Weather Click`
++ `WiFi 11 Click`
++ `WiFi 8 Click`
++ `WiFi 9 Click`
++ `WiFi BLE Click`
++ `WiFi ESP Click`
 
 **[BACK TO TOP](#changelog)**
 
@@ -3216,241 +3241,241 @@
 
 *Click board libraries now support PIC32MX and PIC32MZ chips.*
 
-*Following click boards updated:*
+*Following Click boards updated:*
 
-+ `CAN FD 2 click`
-+ `CAN FD 3 click`
-+ `CAN FD 4 click`
-+ `CAN FD 5 click`
-+ `CAN FD 6 click`
-+ `CAN FD click`
-+ `CAN Isolator click`
-+ `Cap Extend 3 click`
-+ `Cap Extend click`
-+ `Cap Slider 2 click`
-+ `Cap Touch 2 click`
-+ `Cap Touch 5 click`
-+ `Cap Touch click`
-+ `Cap Wheel 2 click`
-+ `Cap Wheel click`
-+ `CapSense click`
-+ `ccRF2 click`
-+ `Charger 12 click`
-+ `Charger 13 click`
-+ `Charger 2 click`
-+ `Charger 3 click`
-+ `Charger 5 click`
-+ `Charger 6 click`
-+ `Charger 8 click`
-+ `Charger 9 click`
-+ `Charger click`
-+ `Clock Gen 2 click`
-+ `Clock Gen 3 click`
-+ `Clock Gen click`
-+ `BLE 3 click`
-+ `BLE 4 click`
-+ `BLE 5 click`
-+ `BLE 6 click`
-+ `BLE 8 click`
-+ `BLE 9 click`
-+ `BLE TINY click`
-+ `Boost 2 click`
-+ `Boost 3 click`
-+ `Boost 4 click`
-+ `Boost 6 click`
-+ `Boost click`
-+ `Boost-INV 2 click`
-+ `Boost-INV click`
-+ `Brushless 2 click`
-+ `Brushless 3 click`
-+ `Brushless 4 click`
-+ `Brushless 5 click`
-+ `Brushless 6 click`
-+ `Brushless 7 click`
-+ `Brushless 8 click`
-+ `Brushless 9 click`
-+ `Brushless click`
-+ `BT-EZ click`
-+ `Buck 10 click`
-+ `Buck 11 click`
-+ `Buck 12 click`
-+ `Buck 13 click`
-+ `Buck 14 click`
-+ `Buck 2 click`
-+ `Buck 3 click`
-+ `Buck 5 click`
-+ `Buck 6 click`
-+ `Buck 7 click`
-+ `Buck 8 click`
-+ `Buck 9 click`
-+ `BUCK click`
-+ `Buck-Boost 2 click`
-+ `Buck-Boost 3 click`
-+ `Buck-Boost click`
-+ `Button Alarm click`
-+ `Button G click`
-+ `Button PLAY click`
-+ `Button Power click`
-+ `Button R click`
-+ `Button Y click`
-+ `BUZZ 2 click`
-+ `BUZZ click`
-+ `AM/FM click`
-+ `Ambient 11 click`
-+ `Ambient 2 click`
-+ `Ambient 3 click`
-+ `Ambient 4 click`
-+ `Ambient 5 click`
-+ `Ambient 6 click`
-+ `Ambient 7 click`
-+ `Ambient 8 click`
-+ `Ambient 9 click`
-+ `Ambient click`
-+ `Ammeter click`
-+ `Ammonia click`
-+ `AMR Angle click`
-+ `AMR Current click`
-+ `Analog Key click`
-+ `Analog MUX 2 click`
-+ `Analog MUX 3 click`
-+ `Analog MUX click`
-+ `Angle 2 click`
-+ `Angle 3 click`
-+ `Angle 4 click`
-+ `Angle 5 click`
-+ `Angle click`
-+ `ATA6570 click`
-+ `ATA663211 click`
-+ `ATA663254 click`
-+ `Audio Xover click`
-+ `AudioAmp 2 click`
-+ `AudioAmp 3 click`
-+ `AudioAmp 4 click`
-+ `AudioAmp 5 click`
-+ `AudioAmp 6 click`
-+ `AudioAmp click`
-+ `AudioMUX click`
-+ `Balancer 2 click`
-+ `Balancer 3 click`
-+ `Balancer 5 click`
-+ `Barcode 2 click`
-+ `Barcode click`
-+ `BarGraph 2 click`
-+ `BarGraph 3 click`
-+ `BarGraph click`
-+ `Barometer 2 click`
-+ `Barometer 3 click`
-+ `BAROMETER click`
-+ `BATT-MAN click`
-+ `BATT-MON click`
-+ `BEE click`
-+ `Bi Hall click`
-+ `BIG 7-SEG R click`
-+ `AC Current click`
-+ `Accel 10 click`
-+ `Accel 11 click`
-+ `Accel 12 click`
-+ `Accel 13 click`
-+ `Accel 14 click`
-+ `Accel 15 click`
-+ `Accel2 click`
-+ `Accel 3 click`
-+ `Accel 5 click`
-+ `Accel 6 click`
-+ `Accel 7 click`
-+ `Accel 8 click`
-+ `Accel click`
-+ `ADAC click`
-+ `Adapter click`
-+ `ADC 10 click`
-+ `ADC2 click`
-+ `ADC3 click`
-+ `ADC 4 click`
-+ `ADC 5 click`
-+ `ADC 6 click`
-+ `ADC 7 click`
-+ `ADC 8 click`
-+ `ADC 9 click`
-+ `ADC click`
-+ `AD-SWIO 2 click`
-+ `AD-SWIO click`
-+ `Air Quality 2 click`
-+ `Air quality 3 click`
-+ `Air Quality 4 click`
-+ `Air quality 5 click`
-+ `Air quality 7 click`
-+ `AIR QUALITY click`
-+ `Alcohol click`
-+ `AIR QUALITY click`
-+ `Alcohol click`
-+ `CO click`
-+ `HYDROGEN click`
-+ `LPG click`
-+ `METHANE click`
-+ `Alcohol 2 click`
-+ `Alcohol 3 click`
-+ `AlphaNum G click`
-+ `AlphaNum R click`
-+ `Altitude 2 click`
-+ `Altitude 3 click`
-+ `Altitude 4 click`
-+ `Altitude click`
-+ `4x4 Key click`
-+ `4X4 RGB click`
-+ `5G NB IoT click`
-+ `6DOF IMU 10 click`
-+ `6DOF IMU 11 click`
-+ `6DOF IMU 12 click`
-+ `6DOF IMU 15 click`
-+ `6DOF IMU 2 click`
-+ `6DOF IMU 3 click`
-+ `6DOF IMU 4 click`
-+ `6DOF IMU 5 click`
-+ `6DOF IMU 6 click`
-+ `6DOF IMU 7 click`
-+ `6DOF IMU 8 click`
-+ `6DOF IMU 9 click`
-+ `6DOF IMU click`
-+ `7seg click`
-+ `7-SEG RGB click`
-+ `7x10 B click`
-+ `7x10 G click`
-+ `7x10 R click`
-+ `7x10 Y click`
-+ `8-pin I2C click`
-+ `8x8 B click`
-+ `8x8 G click`
-+ `8x8 R click`
-+ `8x8 Y click`
-+ `9DOF 2 click`
-+ `9DOF 3 click`
-+ `9DOF click`
-+ `10DOF click`
-+ `10x10 RGB click`
-+ `13DOF click`
-+ `16x12 G click`
-+ `16x9 G click`
-+ `2x2 Key click`
-+ `2x20W Amp click`
-+ `2x30W Amp click`
-+ `2x5W AMP click`
-+ `3D Hall 2 click`
-+ `3D Hall 3 click`
-+ `3D HALL 5 click`
-+ `3D Hall 6 click`
-+ `3D Hall 7 click`
-+ `3D Hall click`
-+ `3G SARA click`
-+ `3G-AA click (for United States)`
-+ `3G-EA click (for EU and Australia)`
-+ `3xBuck click`
-+ `4-20 mA R click`
-+ `4-20 mA T click`
-+ `4Dot Matrix R click`
-+ `4G LTE-APJ click (for Asia Pacific)`
-+ `4G LTE-AT&T click (for North America)`
-+ `4G LTE-E click (for EU)`
-+ `4G LTE-NA click (for North America)`
++ `CAN FD 2 Click`
++ `CAN FD 3 Click`
++ `CAN FD 4 Click`
++ `CAN FD 5 Click`
++ `CAN FD 6 Click`
++ `CAN FD Click`
++ `CAN Isolator Click`
++ `Cap Extend 3 Click`
++ `Cap Extend Click`
++ `Cap Slider 2 Click`
++ `Cap Touch 2 Click`
++ `Cap Touch 5 Click`
++ `Cap Touch Click`
++ `Cap Wheel 2 Click`
++ `Cap Wheel Click`
++ `CapSense Click`
++ `ccRF2 Click`
++ `Charger 12 Click`
++ `Charger 13 Click`
++ `Charger 2 Click`
++ `Charger 3 Click`
++ `Charger 5 Click`
++ `Charger 6 Click`
++ `Charger 8 Click`
++ `Charger 9 Click`
++ `Charger Click`
++ `Clock Gen 2 Click`
++ `Clock Gen 3 Click`
++ `Clock Gen Click`
++ `BLE 3 Click`
++ `BLE 4 Click`
++ `BLE 5 Click`
++ `BLE 6 Click`
++ `BLE 8 Click`
++ `BLE 9 Click`
++ `BLE TINY Click`
++ `Boost 2 Click`
++ `Boost 3 Click`
++ `Boost 4 Click`
++ `Boost 6 Click`
++ `Boost Click`
++ `Boost-INV 2 Click`
++ `Boost-INV Click`
++ `Brushless 2 Click`
++ `Brushless 3 Click`
++ `Brushless 4 Click`
++ `Brushless 5 Click`
++ `Brushless 6 Click`
++ `Brushless 7 Click`
++ `Brushless 8 Click`
++ `Brushless 9 Click`
++ `Brushless Click`
++ `BT-EZ Click`
++ `Buck 10 Click`
++ `Buck 11 Click`
++ `Buck 12 Click`
++ `Buck 13 Click`
++ `Buck 14 Click`
++ `Buck 2 Click`
++ `Buck 3 Click`
++ `Buck 5 Click`
++ `Buck 6 Click`
++ `Buck 7 Click`
++ `Buck 8 Click`
++ `Buck 9 Click`
++ `BUCK Click`
++ `Buck-Boost 2 Click`
++ `Buck-Boost 3 Click`
++ `Buck-Boost Click`
++ `Button Alarm Click`
++ `Button G Click`
++ `Button PLAY Click`
++ `Button Power Click`
++ `Button R Click`
++ `Button Y Click`
++ `BUZZ 2 Click`
++ `BUZZ Click`
++ `AM/FM Click`
++ `Ambient 11 Click`
++ `Ambient 2 Click`
++ `Ambient 3 Click`
++ `Ambient 4 Click`
++ `Ambient 5 Click`
++ `Ambient 6 Click`
++ `Ambient 7 Click`
++ `Ambient 8 Click`
++ `Ambient 9 Click`
++ `Ambient Click`
++ `Ammeter Click`
++ `Ammonia Click`
++ `AMR Angle Click`
++ `AMR Current Click`
++ `Analog Key Click`
++ `Analog MUX 2 Click`
++ `Analog MUX 3 Click`
++ `Analog MUX Click`
++ `Angle 2 Click`
++ `Angle 3 Click`
++ `Angle 4 Click`
++ `Angle 5 Click`
++ `Angle Click`
++ `ATA6570 Click`
++ `ATA663211 Click`
++ `ATA663254 Click`
++ `Audio Xover Click`
++ `AudioAmp 2 Click`
++ `AudioAmp 3 Click`
++ `AudioAmp 4 Click`
++ `AudioAmp 5 Click`
++ `AudioAmp 6 Click`
++ `AudioAmp Click`
++ `AudioMUX Click`
++ `Balancer 2 Click`
++ `Balancer 3 Click`
++ `Balancer 5 Click`
++ `Barcode 2 Click`
++ `Barcode Click`
++ `BarGraph 2 Click`
++ `BarGraph 3 Click`
++ `BarGraph Click`
++ `Barometer 2 Click`
++ `Barometer 3 Click`
++ `BAROMETER Click`
++ `BATT-MAN Click`
++ `BATT-MON Click`
++ `BEE Click`
++ `Bi Hall Click`
++ `BIG 7-SEG R Click`
++ `AC Current Click`
++ `Accel 10 Click`
++ `Accel 11 Click`
++ `Accel 12 Click`
++ `Accel 13 Click`
++ `Accel 14 Click`
++ `Accel 15 Click`
++ `Accel2 Click`
++ `Accel 3 Click`
++ `Accel 5 Click`
++ `Accel 6 Click`
++ `Accel 7 Click`
++ `Accel 8 Click`
++ `Accel Click`
++ `ADAC Click`
++ `Adapter Click`
++ `ADC 10 Click`
++ `ADC2 Click`
++ `ADC3 Click`
++ `ADC 4 Click`
++ `ADC 5 Click`
++ `ADC 6 Click`
++ `ADC 7 Click`
++ `ADC 8 Click`
++ `ADC 9 Click`
++ `ADC Click`
++ `AD-SWIO 2 Click`
++ `AD-SWIO Click`
++ `Air Quality 2 Click`
++ `Air quality 3 Click`
++ `Air Quality 4 Click`
++ `Air quality 5 Click`
++ `Air quality 7 Click`
++ `AIR QUALITY Click`
++ `Alcohol Click`
++ `AIR QUALITY Click`
++ `Alcohol Click`
++ `CO Click`
++ `HYDROGEN Click`
++ `LPG Click`
++ `METHANE Click`
++ `Alcohol 2 Click`
++ `Alcohol 3 Click`
++ `AlphaNum G Click`
++ `AlphaNum R Click`
++ `Altitude 2 Click`
++ `Altitude 3 Click`
++ `Altitude 4 Click`
++ `Altitude Click`
++ `4x4 Key Click`
++ `4X4 RGB Click`
++ `5G NB IoT Click`
++ `6DOF IMU 10 Click`
++ `6DOF IMU 11 Click`
++ `6DOF IMU 12 Click`
++ `6DOF IMU 15 Click`
++ `6DOF IMU 2 Click`
++ `6DOF IMU 3 Click`
++ `6DOF IMU 4 Click`
++ `6DOF IMU 5 Click`
++ `6DOF IMU 6 Click`
++ `6DOF IMU 7 Click`
++ `6DOF IMU 8 Click`
++ `6DOF IMU 9 Click`
++ `6DOF IMU Click`
++ `7seg Click`
++ `7-SEG RGB Click`
++ `7x10 B Click`
++ `7x10 G Click`
++ `7x10 R Click`
++ `7x10 Y Click`
++ `8-pin I2C Click`
++ `8x8 B Click`
++ `8x8 G Click`
++ `8x8 R Click`
++ `8x8 Y Click`
++ `9DOF 2 Click`
++ `9DOF 3 Click`
++ `9DOF Click`
++ `10DOF Click`
++ `10x10 RGB Click`
++ `13DOF Click`
++ `16x12 G Click`
++ `16x9 G Click`
++ `2x2 Key Click`
++ `2x20W Amp Click`
++ `2x30W Amp Click`
++ `2x5W AMP Click`
++ `3D Hall 2 Click`
++ `3D Hall 3 Click`
++ `3D HALL 5 Click`
++ `3D Hall 6 Click`
++ `3D Hall 7 Click`
++ `3D Hall Click`
++ `3G SARA Click`
++ `3G-AA Click (for United States)`
++ `3G-EA Click (for EU and Australia)`
++ `3xBuck Click`
++ `4-20 mA R Click`
++ `4-20 mA T Click`
++ `4Dot Matrix R Click`
++ `4G LTE-APJ Click (for Asia Pacific)`
++ `4G LTE-AT&T Click (for North America)`
++ `4G LTE-E Click (for EU)`
++ `4G LTE-NA Click (for North America)`
 
 **[BACK TO TOP](#changelog)**
 
@@ -3460,193 +3485,193 @@
 
 *Click boards updated:*
 
-+ `BT-EZ click`
-+ `Buck 10 click`
-+ `Buck 11 click`
-+ `Buck 12 click`
-+ `Buck 13 click`
-+ `Buck 14 click`
-+ `Buck 2 click`
-+ `Buck 3 click`
-+ `Buck 5 click`
-+ `Buck 6 click`
-+ `Buck 7 click`
-+ `Buck 8 click`
-+ `Buck 9 click`
-+ `BUCK click`
-+ `Buck-Boost 2 click`
-+ `Buck-Boost 3 click`
-+ `Buck-Boost click`
-+ `Button Alarm click`
-+ `Button G click`
-+ `Button PLAY click`
-+ `Button Power click`
-+ `Button R click`
-+ `Button Y click`
-+ `BUZZ 2 click`
-+ `BUZZ click`
-+ `BarGraph 2 click`
-+ `BarGraph 3 click`
-+ `BarGraph click`
-+ `Barometer 2 click`
-+ `Barometer 3 click`
-+ `BAROMETER click`
-+ `BATT-MAN click`
-+ `BATT-MON click`
-+ `BEE click`
-+ `Bi Hall click`
-+ `BIG 7-SEG R click`
-+ `BLE 3 click`
-+ `BLE 4 click`
-+ `BLE 7 click`
-+ `BLE 8 click`
-+ `BLE 9 click`
-+ `Bluetooth click`
-+ `Boost 2 click`
-+ `Boost 3 click`
-+ `Boost 4 click`
-+ `Boost 6 click`
-+ `Boost click`
-+ `Boost-INV 2 click`
-+ `Boost-INV click`
-+ `Brushless 2 click`
-+ `Brushless 3 click`
-+ `Brushless 4 click`
-+ `Brushless 5 click`
-+ `Brushless 6 click`
-+ `Brushless 7 click`
-+ `Brushless 8 click`
-+ `Brushless 9 click`
-+ `Brushless click`
-+ `Alcohol click`
-+ `AlphaNum G click`
-+ `AlphaNum R click`
-+ `Altitude 2 click`
-+ `Altitude 3 click`
-+ `Altitude 4 click`
-+ `Altitude click`
-+ `AM/FM click`
-+ `Ambient 11 click`
-+ `Ambient 2 click`
-+ `Ambient 3 click`
-+ `Ambient 4 click`
-+ `Ambient 5 click`
-+ `Ambient 6 click`
-+ `Ambient 7 click`
-+ `Ambient 8 click`
-+ `Ambient 9 click`
-+ `Ambient click`
-+ `Ammeter click`
-+ `Ammonia click`
-+ `AMR Current click`
-+ `Analog Key click`
-+ `Analog MUX 2 click`
-+ `Analog MUX click`
-+ `Angle 2 click`
-+ `Angle 3 click`
-+ `Angle 4 click`
-+ `Angle 5 click`
-+ `Angle click`
-+ `ATA6570 click`
-+ `ATA663211 click`
-+ `ATA663254 click`
-+ `Audio Xover click`
-+ `AudioAmp 2 click`
-+ `AudioAmp 3 click`
-+ `AudioAmp 4 click`
-+ `AudioAmp 5 click`
-+ `AudioAmp 6 click`
-+ `AudioAmp click`
-+ `AudioMUX click`
-+ `Balancer 2 click`
-+ `Balancer 3 click`
-+ `Balancer 5 click`
-+ `Barcode 2 click`
-+ `Barcode click`
-+ `ADC 10 click`
-+ `ADC2 click`
-+ `ADC3 click`
-+ `ADC 4 click`
-+ `ADC 5 click`
-+ `ADC 6 click`
-+ `ADC 7 click`
-+ `ADC 8 click`
-+ `ADC 9 click`
-+ `ADC click`
-+ `AD-SWIO 2 click`
-+ `AD-SWIO click`
-+ `Air Quality 2 click`
-+ `Air quality 3 click`
-+ `Air Quality 4 click`
-+ `Air quality 5 click`
-+ `Air quality 7 click`
-+ `AIR QUALITY click`
-+ `Alcohol 2 click`
-+ `Alcohol 3 click`
-+ `7seg click`
-+ `7-SEG RGB click`
-+ `7x10 B click`
-+ `7x10 G click`
-+ `7x10 R click`
-+ `7x10 Y click`
-+ `8-pin I2C click`
-+ `8x8 B click`
-+ `8x8 G click`
-+ `8x8 R click`
-+ `8x8 Y click`
-+ `9DOF click`
-+ `AC Current click`
-+ `Accel 11 click`
-+ `Accel 12 click`
-+ `Accel 13 click`
-+ `Accel 14 click`
-+ `Accel 15 click`
-+ `Accel2 click`
-+ `Accel 3 click`
-+ `Accel 5 click`
-+ `Accel 6 click`
-+ `Accel 7 click`
-+ `Accel 8 click`
-+ `Accel click`
-+ `ADAC click`
-+ `Adapter click`
-+ `4-20 mA R click`
-+ `4-20 mA T click`
-+ `4Dot Matrix R click`
-+ `4G LTE-APJ click (for Asia Pacific)`
-+ `4G LTE-AT&T click (for North America)`
-+ `4G LTE-E click (for EU)`
-+ `4G LTE-NA click (for North America)`
-+ `4x4 Key click`
-+ `4X4 RGB click`
-+ `5G NB IoT click`
-+ `6DOF IMU 10 click`
-+ `6DOF IMU 11 click`
-+ `6DOF IMU 12 click`
-+ `6DOF IMU 15 click`
-+ `6DOF IMU 2 click`
-+ `6DOF IMU 3 click`
-+ `6DOF IMU 4 click`
-+ `6DOF IMU 5 click`
-+ `6DOF IMU 6 click`
-+ `6DOF IMU 7 click`
-+ `6DOF IMU 8 click`
-+ `6DOF IMU 9 click`
-+ `6DOF IMU click`
-+ `16x9 G click`
-+ `2x2 Key click`
-+ `2x20W Amp click`
-+ `2x30W Amp click`
-+ `2x5W AMP click`
-+ `3D Hall 2 click`
-+ `3D Hall 3 click`
-+ `3D HALL 5 click`
-+ `3D Hall 6 click`
-+ `3D Hall 7 click`
-+ `3D Hall click`
-+ `3G SARA click`
-+ `3G-AA click (for United States)`
-+ `3G-EA click (for EU and Australia)`
++ `BT-EZ Click`
++ `Buck 10 Click`
++ `Buck 11 Click`
++ `Buck 12 Click`
++ `Buck 13 Click`
++ `Buck 14 Click`
++ `Buck 2 Click`
++ `Buck 3 Click`
++ `Buck 5 Click`
++ `Buck 6 Click`
++ `Buck 7 Click`
++ `Buck 8 Click`
++ `Buck 9 Click`
++ `BUCK Click`
++ `Buck-Boost 2 Click`
++ `Buck-Boost 3 Click`
++ `Buck-Boost Click`
++ `Button Alarm Click`
++ `Button G Click`
++ `Button PLAY Click`
++ `Button Power Click`
++ `Button R Click`
++ `Button Y Click`
++ `BUZZ 2 Click`
++ `BUZZ Click`
++ `BarGraph 2 Click`
++ `BarGraph 3 Click`
++ `BarGraph Click`
++ `Barometer 2 Click`
++ `Barometer 3 Click`
++ `BAROMETER Click`
++ `BATT-MAN Click`
++ `BATT-MON Click`
++ `BEE Click`
++ `Bi Hall Click`
++ `BIG 7-SEG R Click`
++ `BLE 3 Click`
++ `BLE 4 Click`
++ `BLE 7 Click`
++ `BLE 8 Click`
++ `BLE 9 Click`
++ `Bluetooth Click`
++ `Boost 2 Click`
++ `Boost 3 Click`
++ `Boost 4 Click`
++ `Boost 6 Click`
++ `Boost Click`
++ `Boost-INV 2 Click`
++ `Boost-INV Click`
++ `Brushless 2 Click`
++ `Brushless 3 Click`
++ `Brushless 4 Click`
++ `Brushless 5 Click`
++ `Brushless 6 Click`
++ `Brushless 7 Click`
++ `Brushless 8 Click`
++ `Brushless 9 Click`
++ `Brushless Click`
++ `Alcohol Click`
++ `AlphaNum G Click`
++ `AlphaNum R Click`
++ `Altitude 2 Click`
++ `Altitude 3 Click`
++ `Altitude 4 Click`
++ `Altitude Click`
++ `AM/FM Click`
++ `Ambient 11 Click`
++ `Ambient 2 Click`
++ `Ambient 3 Click`
++ `Ambient 4 Click`
++ `Ambient 5 Click`
++ `Ambient 6 Click`
++ `Ambient 7 Click`
++ `Ambient 8 Click`
++ `Ambient 9 Click`
++ `Ambient Click`
++ `Ammeter Click`
++ `Ammonia Click`
++ `AMR Current Click`
++ `Analog Key Click`
++ `Analog MUX 2 Click`
++ `Analog MUX Click`
++ `Angle 2 Click`
++ `Angle 3 Click`
++ `Angle 4 Click`
++ `Angle 5 Click`
++ `Angle Click`
++ `ATA6570 Click`
++ `ATA663211 Click`
++ `ATA663254 Click`
++ `Audio Xover Click`
++ `AudioAmp 2 Click`
++ `AudioAmp 3 Click`
++ `AudioAmp 4 Click`
++ `AudioAmp 5 Click`
++ `AudioAmp 6 Click`
++ `AudioAmp Click`
++ `AudioMUX Click`
++ `Balancer 2 Click`
++ `Balancer 3 Click`
++ `Balancer 5 Click`
++ `Barcode 2 Click`
++ `Barcode Click`
++ `ADC 10 Click`
++ `ADC2 Click`
++ `ADC3 Click`
++ `ADC 4 Click`
++ `ADC 5 Click`
++ `ADC 6 Click`
++ `ADC 7 Click`
++ `ADC 8 Click`
++ `ADC 9 Click`
++ `ADC Click`
++ `AD-SWIO 2 Click`
++ `AD-SWIO Click`
++ `Air Quality 2 Click`
++ `Air quality 3 Click`
++ `Air Quality 4 Click`
++ `Air quality 5 Click`
++ `Air quality 7 Click`
++ `AIR QUALITY Click`
++ `Alcohol 2 Click`
++ `Alcohol 3 Click`
++ `7seg Click`
++ `7-SEG RGB Click`
++ `7x10 B Click`
++ `7x10 G Click`
++ `7x10 R Click`
++ `7x10 Y Click`
++ `8-pin I2C Click`
++ `8x8 B Click`
++ `8x8 G Click`
++ `8x8 R Click`
++ `8x8 Y Click`
++ `9DOF Click`
++ `AC Current Click`
++ `Accel 11 Click`
++ `Accel 12 Click`
++ `Accel 13 Click`
++ `Accel 14 Click`
++ `Accel 15 Click`
++ `Accel2 Click`
++ `Accel 3 Click`
++ `Accel 5 Click`
++ `Accel 6 Click`
++ `Accel 7 Click`
++ `Accel 8 Click`
++ `Accel Click`
++ `ADAC Click`
++ `Adapter Click`
++ `4-20 mA R Click`
++ `4-20 mA T Click`
++ `4Dot Matrix R Click`
++ `4G LTE-APJ Click (for Asia Pacific)`
++ `4G LTE-AT&T Click (for North America)`
++ `4G LTE-E Click (for EU)`
++ `4G LTE-NA Click (for North America)`
++ `4x4 Key Click`
++ `4X4 RGB Click`
++ `5G NB IoT Click`
++ `6DOF IMU 10 Click`
++ `6DOF IMU 11 Click`
++ `6DOF IMU 12 Click`
++ `6DOF IMU 15 Click`
++ `6DOF IMU 2 Click`
++ `6DOF IMU 3 Click`
++ `6DOF IMU 4 Click`
++ `6DOF IMU 5 Click`
++ `6DOF IMU 6 Click`
++ `6DOF IMU 7 Click`
++ `6DOF IMU 8 Click`
++ `6DOF IMU 9 Click`
++ `6DOF IMU Click`
++ `16x9 G Click`
++ `2x2 Key Click`
++ `2x20W Amp Click`
++ `2x30W Amp Click`
++ `2x5W AMP Click`
++ `3D Hall 2 Click`
++ `3D Hall 3 Click`
++ `3D HALL 5 Click`
++ `3D Hall 6 Click`
++ `3D Hall 7 Click`
++ `3D Hall Click`
++ `3G SARA Click`
++ `3G-AA Click (for United States)`
++ `3G-EA Click (for EU and Australia)`
 
 **[BACK TO TOP](#changelog)**
 
@@ -3667,7 +3692,7 @@
 
 ## `20201225`
 
-*Synchronisation of current click board status with mikroSDK 2.0.*
+*Synchronisation of current Click board status with mikroSDK 2.0.*
 
 ---
 
