@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250403](#20250403)**
 + **[20250327](#20250327)**
 + **[20250313](#20250313)**
 + **[20250306](#20250306)**
@@ -126,6 +127,24 @@
 
 ---
 ---
+---
+
+## `20250403`
+
+*Following Click boards have been added:*
+
++ `Power Step 2`
++ `Environment 5`
++ `LTE Cat.1 8`
++ `Stepper 25`
+
+*Following Click boards have been modified:*
+
++ `IPS Display`
++ `IPS Display 2`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250327`

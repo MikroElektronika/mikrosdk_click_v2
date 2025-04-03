@@ -78,11 +78,13 @@ void application_task ( void )
     log_printf( &logger, " Writing text example\r\n\n" );
     ipsdisplay2_fill_screen ( &ipsdisplay2, IPSDISPLAY2_COLOR_BLACK );
     Delay_ms ( 1000 );
-    start_pt.x = 60;
-    start_pt.y = 70;
+    start_pt.x = 0;
+    start_pt.y = 50;
     ipsdisplay2_write_string ( &ipsdisplay2, start_pt, "      MIKROE      ", IPSDISPLAY2_COLOR_RED );
     start_pt.y += 20;
-    ipsdisplay2_write_string ( &ipsdisplay2, start_pt, " IPS display Click", IPSDISPLAY2_COLOR_RED );
+    ipsdisplay2_write_string ( &ipsdisplay2, start_pt, "   IPS Display 2  ", IPSDISPLAY2_COLOR_RED );
+    start_pt.y += 20;
+    ipsdisplay2_write_string ( &ipsdisplay2, start_pt, "       Click      ", IPSDISPLAY2_COLOR_RED );
     start_pt.y += 20;
     ipsdisplay2_write_string ( &ipsdisplay2, start_pt, "     240x240px    ", IPSDISPLAY2_COLOR_RED );
     start_pt.y += 20;

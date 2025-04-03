@@ -2,7 +2,7 @@
     "display_name": "IPS Display Click",
     "name": "mikroe.click.ipsdisplay",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6077",
     "package_changed": true,
     "contents": {

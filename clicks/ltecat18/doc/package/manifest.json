@@ -1,0 +1,22 @@
+{
+    "display_name": "LTE Cat.1 8 Click",
+    "name": "mikroe.click.ltecat18",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6560",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE Cat.1 8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTECat18",
+                "subdir_name": "lib_ltecat18",
+                "path": "LTE Cat.1 8 Click/data/lib_ltecat18"
+            }
+        ]
+    }
+}
