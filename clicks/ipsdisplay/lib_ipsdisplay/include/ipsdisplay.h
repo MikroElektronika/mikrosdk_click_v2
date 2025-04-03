@@ -398,8 +398,6 @@ extern "C"{
  * @brief IPS Display font setting.
  * @details Specified setting for font of IPS Display Click driver.
  */
-#define IPSDISPLAY_FONT_WIDTH                   6
-#define IPSDISPLAY_FONT_HEIGHT                  12
 #define IPSDISPLAY_FONT_TEXT_SPACE              1
 #define IPSDISPLAY_FONT_ASCII_OFFSET            32
 #define IPSDISPLAY_FONT_WIDTH_MSB               0x80
@@ -473,6 +471,29 @@ extern "C"{
 /*! @} */ // ipsdisplay
 
 /**
+ * @brief IPS Display Click font object.
+ * @details Font object definition of IPS Display Click driver.
+ */
+typedef struct
+{
+    const uint8_t *font_buf;    /**< Pointer to font array. */ 
+    uint8_t width;              /**< Font width. */ 
+    uint8_t height;             /**< Font height. */ 
+
+} ipsdisplay_font_t;
+
+/**
+ * @brief IPS Display Click point coordinates object.
+ * @details Point coordinates object definition of IPS Display Click driver.
+ */
+typedef struct
+{
+    uint16_t x;                     /**< X coordinate. */
+    uint16_t y;                     /**< Y coordinate. */
+
+} ipsdisplay_point_t;
+
+/**
  * @brief IPS Display Click context object.
  * @details Context object definition of IPS Display Click driver.
  */
@@ -487,6 +508,7 @@ typedef struct
     spi_master_t spi;               /**< SPI driver object. */
 
     uint8_t      rotation;          /**< Screen rotation settings. */
+    ipsdisplay_font_t font;         /**< Font setting. */ 
 
 } ipsdisplay_t;
 
@@ -507,21 +529,10 @@ typedef struct
     pin_name_t dc;                  /**< Display data/command selection pin in 4-line serial interface. */
 
     // static variable
-    uint32_t                          spi_speed;    /**< SPI serial speed. */
-    spi_master_mode_t                 spi_mode;     /**< SPI master mode. */
+    uint32_t            spi_speed;  /**< SPI serial speed. */
+    spi_master_mode_t   spi_mode;   /**< SPI master mode. */
 
 } ipsdisplay_cfg_t;
-
-/**
- * @brief IPS Display Click point coordinates object.
- * @details Point coordinates object definition of IPS Display Click driver.
- */
-typedef struct
-{
-    uint16_t x;                     /**< X coordinate. */
-    uint16_t y;                     /**< Y coordinate. */
-
-} ipsdisplay_point_t;
 
 /**
  * @brief IPS Display Click return value data.
@@ -690,6 +701,21 @@ void ipsdisplay_enter_data_mode ( ipsdisplay_t *ctx );
 err_t ipsdisplay_set_rotation ( ipsdisplay_t *ctx, uint8_t rotation );
 
 /**
+ * @brief IPS Display set font function.
+ * @details This function sets the active font size.
+ * @param[in] ctx : Click context object.
+ * See #ipsdisplay_t object definition for detailed explanation.
+ * @param[in] font_sel : @li @c 0 - 6x8 font,
+ *                       @li @c 1 - 8x16 font,
+ *                       @li @c 2 - 12x24 font.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+void ipsdisplay_set_font ( ipsdisplay_t *ctx, uint8_t font_sel );
+
+/**
  * @brief IPS Display set pos function.
  * @details This function sets the coordinates of editable display area.
  * @param[in] ctx : Click context object.
@@ -720,7 +746,7 @@ err_t ipsdisplay_fill_screen ( ipsdisplay_t *ctx, uint16_t color );
 
 /**
  * @brief IPS Display write char function.
- * @details This function writes a single ASCII character on the selected position in a 6x12 font size
+ * @details This function writes a single ASCII character on the selected position in configured font size
  * with a specified color.
  * @param[in] ctx : Click context object.
  * See #ipsdisplay_t object definition for detailed explanation.
@@ -737,7 +763,7 @@ err_t ipsdisplay_write_char ( ipsdisplay_t *ctx, ipsdisplay_point_t start_pt, ui
 
 /**
  * @brief IPS Display write string function.
- * @details This function writes a text string starting from the selected position in a 6x12 font size
+ * @details This function writes a text string starting from the selected position in configured font size
  * with a specified color.
  * @param[in] ctx : Click context object.
  * See #ipsdisplay_t object definition for detailed explanation.

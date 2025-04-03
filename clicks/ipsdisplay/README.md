@@ -53,7 +53,7 @@ err_t ipsdisplay_default_cfg ( ipsdisplay_t *ctx );
 err_t ipsdisplay_fill_screen ( ipsdisplay_t *ctx, uint16_t color );
 ```
 
-- `ipsdisplay_write_string` This function writes a text string starting from the selected position in a 6x12 font size with a specified color.
+- `ipsdisplay_write_string` This function writes a text string starting from the selected position in configured font size with a specified color.
 ```c
 err_t ipsdisplay_write_string ( ipsdisplay_t *ctx, ipsdisplay_point_t start_pt, uint8_t *data_in, uint16_t color );
 ```
@@ -126,16 +126,20 @@ void application_task ( void )
     ipsdisplay_fill_screen ( &ipsdisplay, IPSDISPLAY_COLOR_BLACK );
     Delay_ms ( 1000 );
     start_pt.x = 5;
-    start_pt.y = 70;
-    ipsdisplay_write_string ( &ipsdisplay, start_pt, "      MIKROE      ", IPSDISPLAY_COLOR_RED );
+    start_pt.y = 50;
+    ipsdisplay_write_string ( &ipsdisplay, start_pt, "    MIKROE    ", IPSDISPLAY_COLOR_RED );
     start_pt.y += 20;
-    ipsdisplay_write_string ( &ipsdisplay, start_pt, " IPS display Click", IPSDISPLAY_COLOR_RED );
+    ipsdisplay_write_string ( &ipsdisplay, start_pt, " IPS Display  ", IPSDISPLAY_COLOR_RED );
     start_pt.y += 20;
-    ipsdisplay_write_string ( &ipsdisplay, start_pt, "     135x240px    ", IPSDISPLAY_COLOR_RED );
+    ipsdisplay_write_string ( &ipsdisplay, start_pt, "    Click     ", IPSDISPLAY_COLOR_RED );
     start_pt.y += 20;
-    ipsdisplay_write_string ( &ipsdisplay, start_pt, "ST7789V controller", IPSDISPLAY_COLOR_RED );
+    ipsdisplay_write_string ( &ipsdisplay, start_pt, "  135x240px   ", IPSDISPLAY_COLOR_RED );
     start_pt.y += 20;
-    ipsdisplay_write_string ( &ipsdisplay, start_pt, "   TEST EXAMPLE   ", IPSDISPLAY_COLOR_RED );
+    ipsdisplay_write_string ( &ipsdisplay, start_pt, "   ST7789V    ", IPSDISPLAY_COLOR_RED );
+    start_pt.y += 20;
+    ipsdisplay_write_string ( &ipsdisplay, start_pt, "  controller  ", IPSDISPLAY_COLOR_RED );
+    start_pt.y += 20;
+    ipsdisplay_write_string ( &ipsdisplay, start_pt, " TEST EXAMPLE ", IPSDISPLAY_COLOR_RED );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );

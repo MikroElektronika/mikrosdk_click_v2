@@ -101,6 +101,7 @@ err_t ipsdisplay2_default_cfg ( ipsdisplay2_t *ctx )
     Delay_10ms ( );
 
     error_flag |= ipsdisplay2_set_rotation ( ctx, IPSDISPLAY2_ROTATION_VERTICAL_0 );
+    ipsdisplay2_set_font ( ctx, IPSDISPLAY2_FONT_12X24 );
 
     data_buf[ 0 ] = IPSDISPLAY2_COLMOD_CTRL_16BIT_PIXEL;
     error_flag |= ipsdisplay2_write_cmd_par ( ctx, IPSDISPLAY2_CMD_COLMOD, data_buf, 1 );
@@ -278,6 +279,44 @@ err_t ipsdisplay2_set_rotation ( ipsdisplay2_t *ctx, uint8_t rotation )
     return ipsdisplay2_write_cmd_par ( ctx, IPSDISPLAY2_CMD_MADCTL, &cmd_param, 1 );
 }
 
+void ipsdisplay2_set_font ( ipsdisplay2_t *ctx, uint8_t font_sel )
+{
+    switch ( font_sel )
+    {
+    #ifdef IPSDISPLAY2_FONT_6X12
+        case IPSDISPLAY2_FONT_6X12:
+        {
+            ctx->font.font_buf = ipsdisplay2_font_6x12;
+            ctx->font.width = 6;
+            ctx->font.height = 12;
+            break;
+        }
+    #endif
+    #ifdef IPSDISPLAY2_FONT_8X16
+        case IPSDISPLAY2_FONT_8X16:
+        {
+            ctx->font.font_buf = ipsdisplay2_font_8x16;
+            ctx->font.width = 8;
+            ctx->font.height = 16;
+            break;
+        }
+    #endif
+    #ifdef IPSDISPLAY2_FONT_12X24
+        case IPSDISPLAY2_FONT_12X24:
+        {
+            ctx->font.font_buf = ipsdisplay2_font_12x24;
+            ctx->font.width = 12;
+            ctx->font.height = 24;
+            break;
+        }
+    #endif
+        default:
+        {
+            break;
+        }
+    }
+}
+
 err_t ipsdisplay2_set_pos ( ipsdisplay2_t *ctx, ipsdisplay2_point_t start_pt, ipsdisplay2_point_t end_pt )
 {
     err_t error_flag = IPSDISPLAY2_OK;
@@ -366,19 +405,21 @@ err_t ipsdisplay2_write_char ( ipsdisplay2_t *ctx, ipsdisplay2_point_t start_pt,
 {
     err_t error_flag = IPSDISPLAY2_OK;
     ipsdisplay2_point_t point;
-    uint16_t font_pos = ( data_in - IPSDISPLAY2_FONT_ASCII_OFFSET ) * IPSDISPLAY2_FONT_HEIGHT;
-    for ( uint8_t h_cnt = 0; h_cnt < IPSDISPLAY2_FONT_HEIGHT; h_cnt++ )
+    uint16_t font_pos = ( data_in - IPSDISPLAY2_FONT_ASCII_OFFSET ) * ctx->font.height * ( ( ( ctx->font.width - 1 ) / 8 ) + 1 );
+    uint8_t h_cnt = 0;
+    uint8_t w_cnt = 0;
+    for ( h_cnt = 0; h_cnt < ctx->font.height; h_cnt++ )
     {
-        for ( uint8_t w_cnt = 0; w_cnt < IPSDISPLAY2_FONT_WIDTH; w_cnt++ )
+        for ( w_cnt = 0; w_cnt < ctx->font.width; w_cnt++ )
         {
-            if ( ipsdisplay2_font_6x12[ font_pos ] & ( IPSDISPLAY2_FONT_WIDTH_MSB >> w_cnt ) )
+            if ( ctx->font.font_buf[ font_pos + ( w_cnt / 8 ) ] & ( IPSDISPLAY2_FONT_WIDTH_MSB >> ( w_cnt % 8 ) ) )
             {
                 point.x = start_pt.x + w_cnt;
                 point.y = start_pt.y + h_cnt;
                 error_flag |= ipsdisplay2_draw_pixel ( ctx, point, color );
             }
         }
-        font_pos++;
+        font_pos = font_pos + ( ( w_cnt - 1 ) / 8 ) + 1;
     }
     return error_flag;
 }
@@ -394,30 +435,30 @@ err_t ipsdisplay2_write_string ( ipsdisplay2_t *ctx, ipsdisplay2_point_t start_p
         if ( ( IPSDISPLAY2_ROTATION_VERTICAL_0 == ctx->rotation ) || 
              ( IPSDISPLAY2_ROTATION_VERTICAL_180 == ctx->rotation ) )
         {
-            if ( point.x > ( IPSDISPLAY2_POS_WIDTH_MAX - IPSDISPLAY2_FONT_WIDTH ) )
+            if ( point.x > ( IPSDISPLAY2_POS_WIDTH_MAX - ctx->font.width ) )
             {
                 point.x = IPSDISPLAY2_POS_WIDTH_MIN;
-                point.y += IPSDISPLAY2_FONT_HEIGHT;
+                point.y += ctx->font.height;
             }
-            if ( point.y > ( IPSDISPLAY2_POS_HEIGHT_MAX - IPSDISPLAY2_FONT_HEIGHT ) )
+            if ( point.y > ( IPSDISPLAY2_POS_HEIGHT_MAX - ctx->font.height ) )
             {
                 point.y = IPSDISPLAY2_POS_HEIGHT_MIN;
             }
         }
         else
         {
-            if ( point.x > ( IPSDISPLAY2_POS_HEIGHT_MAX - IPSDISPLAY2_FONT_WIDTH ) )
+            if ( point.x > ( IPSDISPLAY2_POS_HEIGHT_MAX - ctx->font.width ) )
             {
                 point.x = IPSDISPLAY2_POS_HEIGHT_MIN;
-                point.y += IPSDISPLAY2_FONT_HEIGHT;
+                point.y += ctx->font.height;
             }
-            if ( point.y > ( IPSDISPLAY2_POS_WIDTH_MAX - IPSDISPLAY2_FONT_HEIGHT ) )
+            if ( point.y > ( IPSDISPLAY2_POS_WIDTH_MAX - ctx->font.height ) )
             {
                 point.y = IPSDISPLAY2_POS_WIDTH_MIN;
             }
         }
         error_flag |= ipsdisplay2_write_char ( ctx, point, data_in[ char_cnt ], color );
-        point.x += ( IPSDISPLAY2_FONT_WIDTH + IPSDISPLAY2_FONT_TEXT_SPACE );
+        point.x += ( ctx->font.width + IPSDISPLAY2_FONT_TEXT_SPACE );
     }
     return error_flag;
 }

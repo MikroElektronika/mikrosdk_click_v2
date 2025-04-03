@@ -1,0 +1,22 @@
+{
+    "display_name": "Power Step 2 Click",
+    "name": "mikroe.click.powerstep2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6524",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Power Step 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PowerStep2",
+                "subdir_name": "lib_powerstep2",
+                "path": "Power Step 2 Click/data/lib_powerstep2"
+            }
+        ]
+    }
+}

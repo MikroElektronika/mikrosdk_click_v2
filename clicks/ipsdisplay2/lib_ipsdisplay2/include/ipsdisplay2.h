@@ -398,8 +398,6 @@ extern "C"{
  * @brief IPS Display 2 font setting.
  * @details Specified setting for font of IPS Display 2 Click driver.
  */
-#define IPSDISPLAY2_FONT_WIDTH                  6
-#define IPSDISPLAY2_FONT_HEIGHT                 12
 #define IPSDISPLAY2_FONT_TEXT_SPACE             1
 #define IPSDISPLAY2_FONT_ASCII_OFFSET           32
 #define IPSDISPLAY2_FONT_WIDTH_MSB              0x80
@@ -474,6 +472,29 @@ extern "C"{
 /*! @} */ // ipsdisplay2
 
 /**
+ * @brief IPS Display 2 Click font object.
+ * @details Font object definition of IPS Display 2 Click driver.
+ */
+typedef struct
+{
+    const uint8_t *font_buf;    /**< Pointer to font array. */ 
+    uint8_t width;              /**< Font width. */ 
+    uint8_t height;             /**< Font height. */ 
+
+} ipsdisplay2_font_t;
+
+/**
+ * @brief IPS Display 2 Click point coordinates object.
+ * @details Point coordinates object definition of IPS Display 2 Click driver.
+ */
+typedef struct
+{
+    uint16_t x;                     /**< X coordinate. */
+    uint16_t y;                     /**< Y coordinate. */
+
+} ipsdisplay2_point_t;
+
+/**
  * @brief IPS Display 2 Click context object.
  * @details Context object definition of IPS Display 2 Click driver.
  */
@@ -489,6 +510,7 @@ typedef struct
     spi_master_t spi;               /**< SPI driver object. */
 
     uint8_t      rotation;          /**< Screen rotation settings. */
+    ipsdisplay2_font_t font;        /**< Font setting. */ 
 
 } ipsdisplay2_t;
 
@@ -514,17 +536,6 @@ typedef struct
     spi_master_mode_t   spi_mode;   /**< SPI master mode. */
 
 } ipsdisplay2_cfg_t;
-
-/**
- * @brief IPS Display 2 Click point coordinates object.
- * @details Point coordinates object definition of IPS Display 2 Click driver.
- */
-typedef struct
-{
-    uint16_t x;                     /**< X coordinate. */
-    uint16_t y;                     /**< Y coordinate. */
-
-} ipsdisplay2_point_t;
 
 /**
  * @brief IPS Display 2 Click return value data.
@@ -713,6 +724,21 @@ void ipsdisplay2_enter_data_mode ( ipsdisplay2_t *ctx );
 err_t ipsdisplay2_set_rotation ( ipsdisplay2_t *ctx, uint8_t rotation );
 
 /**
+ * @brief IPS Display 2 set font function.
+ * @details This function sets the active font size.
+ * @param[in] ctx : Click context object.
+ * See #ipsdisplay2_t object definition for detailed explanation.
+ * @param[in] font_sel : @li @c 0 - 6x8 font,
+ *                       @li @c 1 - 8x16 font,
+ *                       @li @c 2 - 12x24 font.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+void ipsdisplay2_set_font ( ipsdisplay2_t *ctx, uint8_t font_sel );
+
+/**
  * @brief IPS Display 2 set pos function.
  * @details This function sets the coordinates of editable display area.
  * @param[in] ctx : Click context object.
@@ -743,7 +769,7 @@ err_t ipsdisplay2_fill_screen ( ipsdisplay2_t *ctx, uint16_t color );
 
 /**
  * @brief IPS Display 2 write char function.
- * @details This function writes a single ASCII character on the selected position in a 6x12 font size
+ * @details This function writes a single ASCII character on the selected position in configured font size
  * with a specified color.
  * @param[in] ctx : Click context object.
  * See #ipsdisplay2_t object definition for detailed explanation.
@@ -760,7 +786,7 @@ err_t ipsdisplay2_write_char ( ipsdisplay2_t *ctx, ipsdisplay2_point_t start_pt,
 
 /**
  * @brief IPS Display 2 write string function.
- * @details This function writes a text string starting from the selected position in a 6x12 font size
+ * @details This function writes a text string starting from the selected position in configured font size
  * with a specified color.
  * @param[in] ctx : Click context object.
  * See #ipsdisplay2_t object definition for detailed explanation.

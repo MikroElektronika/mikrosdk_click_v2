@@ -1,0 +1,5 @@
+{
+    "name": "Environment 5 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","SHT40-BD1B-R2","STC31-C-R3"]
+}
