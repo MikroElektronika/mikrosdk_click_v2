@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250410](#20250410)**
 + **[20250403](#20250403)**
 + **[20250327](#20250327)**
 + **[20250313](#20250313)**
@@ -127,6 +128,19 @@
 
 ---
 ---
+---
+
+## `20250410`
+
+*Following Click boards have been added:*
+
++ `Micro Pump`
++ `DIGI Isolator 3`
++ `Flash 13`
++ `EEPROM 15`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250403`

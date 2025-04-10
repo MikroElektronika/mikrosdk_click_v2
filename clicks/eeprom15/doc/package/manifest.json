@@ -1,0 +1,22 @@
+{
+    "display_name": "EEPROM 15 Click",
+    "name": "mikroe.click.eeprom15",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6554",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EEPROM 15 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EEPROM15",
+                "subdir_name": "lib_eeprom15",
+                "path": "EEPROM 15 Click/data/lib_eeprom15"
+            }
+        ]
+    }
+}
