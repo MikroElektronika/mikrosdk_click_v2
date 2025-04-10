@@ -1,0 +1,22 @@
+{
+    "display_name": "DIGI Isolator 3 Click",
+    "name": "mikroe.click.digiisolator3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6518",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DIGI Isolator 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DIGIIsolator3",
+                "subdir_name": "lib_digiisolator3",
+                "path": "DIGI Isolator 3 Click/data/lib_digiisolator3"
+            }
+        ]
+    }
+}

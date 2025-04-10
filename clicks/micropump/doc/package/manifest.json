@@ -1,0 +1,22 @@
+{
+    "display_name": "Micro Pump Click",
+    "name": "mikroe.click.micropump",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6529",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Micro Pump Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MicroPump",
+                "subdir_name": "lib_micropump",
+                "path": "Micro Pump Click/data/lib_micropump"
+            }
+        ]
+    }
+}

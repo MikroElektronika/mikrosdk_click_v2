@@ -288,27 +288,28 @@ A full list of Clicks available in this repository is defined below:
 | Diff Press 5 Click | [Click Here](./clicks/diffpress5) | Diff pressure Click | [Click Here](./clicks/diffpressure) |
 | DIGI IN Click | [Click Here](./clicks/digiin) | DIGI IN 2 Click | [Click Here](./clicks/digiin2) |
 | DIGI IO Click | [Click Here](./clicks/digiio) | DIGI Isolator Click | [Click Here](./clicks/digiisolator) |
-| DIGI Isolator 2 Click | [Click Here](./clicks/digiisolator2) | DIGI POT Click | [Click Here](./clicks/digipot) |
-| DIGI POT 11 Click | [Click Here](./clicks/digipot11) | DIGI POT 12 Click | [Click Here](./clicks/digipot12) |
-| DIGI POT 13 Click | [Click Here](./clicks/digipot13) | DIGI POT 14 Click | [Click Here](./clicks/digipot14) |
-| DIGI POT 2 Click | [Click Here](./clicks/digipot2) | DIGI POT 3 Click | [Click Here](./clicks/digipot3) |
-| Digi Pot 4 Click | [Click Here](./clicks/digipot4) | DIGI POT 5 Click | [Click Here](./clicks/digipot5) |
-| DIGI POT 6 Click | [Click Here](./clicks/digipot6) | DIGI POT 7 Click | [Click Here](./clicks/digipot7) |
-| DIGI POT 8 Click | [Click Here](./clicks/digipot8) | DIGI POT 9 Click | [Click Here](./clicks/digipot9) |
-| DigiVref Click | [Click Here](./clicks/digivref) | DMX Click | [Click Here](./clicks/dmx) |
-| Dot Matrix R Click | [Click Here](./clicks/dotmatrixr) | DRAM Click | [Click Here](./clicks/dram) |
-| Driver Click | [Click Here](./clicks/driver) | Driver 2 Click | [Click Here](./clicks/driver2) |
-| DSP Click | [Click Here](./clicks/dsp) | DTMF Click | [Click Here](./clicks/dtmf) |
-| DTMF Decoder Click | [Click Here](./clicks/dtmfdecoder) | DTMF Generator Click | [Click Here](./clicks/dtmfgenerator) |
-| Dual EE Click | [Click Here](./clicks/dualee) | Dual LIN Click | [Click Here](./clicks/duallin) |
-| Earthquake Click | [Click Here](./clicks/earthquake) | EasyPull Click | [Click Here](./clicks/easypull) |
-| ECG Click | [Click Here](./clicks/ecg) | ECG 2 Click | [Click Here](./clicks/ecg2) |
-| ECG 3 Click | [Click Here](./clicks/ecg3) | ECG 4 Click | [Click Here](./clicks/ecg4) |
-| ECG 5 Click | [Click Here](./clicks/ecg5) | Ecg 6 Click | [Click Here](./clicks/ecg6) |
-| ECG 7 Click | [Click Here](./clicks/ecg7) | ECG GSR Click | [Click Here](./clicks/ecggsr) |
-| EEG Click | [Click Here](./clicks/eeg) | EEPROM Click | [Click Here](./clicks/eeprom) |
-| EEPROM 10 Click | [Click Here](./clicks/eeprom10) | EEPROM 11 Click | [Click Here](./clicks/eeprom11) |
-| EEPROM 12 Click | [Click Here](./clicks/eeprom12) | EEPROM 13 Click | [Click Here](./clicks/eeprom13) |
+| DIGI Isolator 2 Click | [Click Here](./clicks/digiisolator2) | DIGI Isolator 3 Click | [Click Here](./clicks/digiisolator3) |
+| DIGI POT Click | [Click Here](./clicks/digipot) | DIGI POT 11 Click | [Click Here](./clicks/digipot11) |
+| DIGI POT 12 Click | [Click Here](./clicks/digipot12) | DIGI POT 13 Click | [Click Here](./clicks/digipot13) |
+| DIGI POT 14 Click | [Click Here](./clicks/digipot14) | DIGI POT 2 Click | [Click Here](./clicks/digipot2) |
+| DIGI POT 3 Click | [Click Here](./clicks/digipot3) | Digi Pot 4 Click | [Click Here](./clicks/digipot4) |
+| DIGI POT 5 Click | [Click Here](./clicks/digipot5) | DIGI POT 6 Click | [Click Here](./clicks/digipot6) |
+| DIGI POT 7 Click | [Click Here](./clicks/digipot7) | DIGI POT 8 Click | [Click Here](./clicks/digipot8) |
+| DIGI POT 9 Click | [Click Here](./clicks/digipot9) | DigiVref Click | [Click Here](./clicks/digivref) |
+| DMX Click | [Click Here](./clicks/dmx) | Dot Matrix R Click | [Click Here](./clicks/dotmatrixr) |
+| DRAM Click | [Click Here](./clicks/dram) | Driver Click | [Click Here](./clicks/driver) |
+| Driver 2 Click | [Click Here](./clicks/driver2) | DSP Click | [Click Here](./clicks/dsp) |
+| DTMF Click | [Click Here](./clicks/dtmf) | DTMF Decoder Click | [Click Here](./clicks/dtmfdecoder) |
+| DTMF Generator Click | [Click Here](./clicks/dtmfgenerator) | Dual EE Click | [Click Here](./clicks/dualee) |
+| Dual LIN Click | [Click Here](./clicks/duallin) | Earthquake Click | [Click Here](./clicks/earthquake) |
+| EasyPull Click | [Click Here](./clicks/easypull) | ECG Click | [Click Here](./clicks/ecg) |
+| ECG 2 Click | [Click Here](./clicks/ecg2) | ECG 3 Click | [Click Here](./clicks/ecg3) |
+| ECG 4 Click | [Click Here](./clicks/ecg4) | ECG 5 Click | [Click Here](./clicks/ecg5) |
+| Ecg 6 Click | [Click Here](./clicks/ecg6) | ECG 7 Click | [Click Here](./clicks/ecg7) |
+| ECG GSR Click | [Click Here](./clicks/ecggsr) | EEG Click | [Click Here](./clicks/eeg) |
+| EEPROM Click | [Click Here](./clicks/eeprom) | EEPROM 10 Click | [Click Here](./clicks/eeprom10) |
+| EEPROM 11 Click | [Click Here](./clicks/eeprom11) | EEPROM 12 Click | [Click Here](./clicks/eeprom12) |
+| EEPROM 13 Click | [Click Here](./clicks/eeprom13) | EEPROM 15 Click | [Click Here](./clicks/eeprom15) |
 | EEPROM 2 Click | [Click Here](./clicks/eeprom2) | EEPROM 3 Click | [Click Here](./clicks/eeprom3) |
 | EEPROM 4 Click | [Click Here](./clicks/eeprom4) | EEPROM 5 Click | [Click Here](./clicks/eeprom5) |
 | EEPROM 6 Click | [Click Here](./clicks/eeprom6) | EEPROM 7 Click | [Click Here](./clicks/eeprom7) |
@@ -347,212 +348,213 @@ A full list of Clicks available in this repository is defined below:
 | Fingerprint 4 Click | [Click Here](./clicks/fingerprint4) | FLAME Click | [Click Here](./clicks/flame) |
 | Flash Click | [Click Here](./clicks/flash) | Flash 10 Click | [Click Here](./clicks/flash10) |
 | Flash 11 Click | [Click Here](./clicks/flash11) | Flash 12 Click | [Click Here](./clicks/flash12) |
-| Flash 2 Click | [Click Here](./clicks/flash2) | Flash 3 Click | [Click Here](./clicks/flash3) |
-| Flash 4 Click | [Click Here](./clicks/flash4) | Flash 5 Click | [Click Here](./clicks/flash5) |
-| Flash 6 Click | [Click Here](./clicks/flash6) | Flash 7 Click | [Click Here](./clicks/flash7) |
-| Flash 8 Click | [Click Here](./clicks/flash8) | Flash 9 Click | [Click Here](./clicks/flash9) |
-| Flicker Click | [Click Here](./clicks/flicker) | FM Click | [Click Here](./clicks/fm) |
-| Force Click | [Click Here](./clicks/force) | Force 2 Click | [Click Here](./clicks/force2) |
-| Force 3 Click | [Click Here](./clicks/force3) | Force 4 Click | [Click Here](./clicks/force4) |
-| Force 5 Click | [Click Here](./clicks/force5) | Fram Click | [Click Here](./clicks/fram) |
-| FRAM 2 Click | [Click Here](./clicks/fram2) | FRAM 3 Click | [Click Here](./clicks/fram3) |
-| FRAM 5 Click | [Click Here](./clicks/fram5) | FRAM 6 Click | [Click Here](./clicks/fram6) |
-| FT Click | [Click Here](./clicks/ft) | FTDI Click | [Click Here](./clicks/ftdi) |
-| G2C Click | [Click Here](./clicks/g2c) | G2C 3G Click | [Click Here](./clicks/g2c3g) |
-| GainAMP Click | [Click Here](./clicks/gainamp) | GainAMP 2 Click | [Click Here](./clicks/gainamp2) |
-| GainAMP 3 Click | [Click Here](./clicks/gainamp3) | Gaussmeter Click | [Click Here](./clicks/gaussmeter) |
-| GeoMagnetic Click | [Click Here](./clicks/geomagnetic) | GMR Angle Click | [Click Here](./clicks/gmrangle) |
-| GNSS Click | [Click Here](./clicks/gnss) | GNSS 10 Click | [Click Here](./clicks/gnss10) |
-| GNSS 11 Click | [Click Here](./clicks/gnss11) | GNSS 12 Click | [Click Here](./clicks/gnss12) |
-| GNSS 13 Click | [Click Here](./clicks/gnss13) | GNSS 14 Click | [Click Here](./clicks/gnss14) |
-| GNSS 15 Click | [Click Here](./clicks/gnss15) | GNSS 16 Click | [Click Here](./clicks/gnss16) |
-| GNSS 17 Click | [Click Here](./clicks/gnss17) | GNSS 18 Click | [Click Here](./clicks/gnss18) |
-| GNSS 2 Click | [Click Here](./clicks/gnss2) | GNSS3 Click | [Click Here](./clicks/gnss3) |
-| GNSS4 Click | [Click Here](./clicks/gnss4) | GNSS 5 Click | [Click Here](./clicks/gnss5) |
-| GNSS 6 Click | [Click Here](./clicks/gnss6) | GNSS 7 Click | [Click Here](./clicks/gnss7) |
-| GNSS 8 Click | [Click Here](./clicks/gnss8) | GNSS 9 Click | [Click Here](./clicks/gnss9) |
-| GNSS MAX Click | [Click Here](./clicks/gnssmax) | GNSS MAX 2 Click | [Click Here](./clicks/gnssmax2) |
-| GNSS RTK Click | [Click Here](./clicks/gnssrtk) | GNSS RTK 2 Click | [Click Here](./clicks/gnssrtk2) |
-| GNSS RTK 3 DA Click | [Click Here](./clicks/gnssrtk3da) | GNSS RTK 3 EA Click | [Click Here](./clicks/gnssrtk3ea) |
-| GNSS RTK 5 Click | [Click Here](./clicks/gnssrtk5) | GNSS ZOE Click | [Click Here](./clicks/gnsszoe) |
-| GPS Click | [Click Here](./clicks/gps) | GPS 3 Click | [Click Here](./clicks/gps3) |
-| GPS 4 Click | [Click Here](./clicks/gps4) | GPS 5 Click | [Click Here](./clicks/gps5) |
-| GPS 6 Click | [Click Here](./clicks/gps6) | Grid-Eye Click | [Click Here](./clicks/grideye) |
-| Grid-EYE 2 Click | [Click Here](./clicks/grideye2) | GSM Click | [Click Here](./clicks/gsm) |
-| GSM 2 Click | [Click Here](./clicks/gsm2) | GSM 3 Click | [Click Here](./clicks/gsm3) |
-| GSM 4 Click | [Click Here](./clicks/gsm4) | GSM 5 Click | [Click Here](./clicks/gsm5) |
-| GSM GNSS Click | [Click Here](./clicks/gsmgnss) | GSM GNSS 2 Click | [Click Here](./clicks/gsmgnss2) |
-| GSM-GPS Click | [Click Here](./clicks/gsmgps) | GSR Click | [Click Here](./clicks/gsr) |
-| Gyro Click | [Click Here](./clicks/gyro) | Gyro 2 Click | [Click Here](./clicks/gyro2) |
-| Gyro 3 Click | [Click Here](./clicks/gyro3) | Gyro 4 Click | [Click Here](./clicks/gyro4) |
-| Gyro 5 Click | [Click Here](./clicks/gyro5) | Gyro 6 Click | [Click Here](./clicks/gyro6) |
-| Gyro 7 Click | [Click Here](./clicks/gyro7) | Gyro 8 Click | [Click Here](./clicks/gyro8) |
-| Gyro 9 Click | [Click Here](./clicks/gyro9) | Hall Current Click | [Click Here](./clicks/hallcurrent) |
-| Hall Current 10 Click | [Click Here](./clicks/hallcurrent10) | Hall Current 11 Click | [Click Here](./clicks/hallcurrent11) |
-| Hall Current 12 Click | [Click Here](./clicks/hallcurrent12) | Hall Current 13 Click | [Click Here](./clicks/hallcurrent13) |
-| Hall Current 14 Click | [Click Here](./clicks/hallcurrent14) | Hall Current 15 Click | [Click Here](./clicks/hallcurrent15) |
-| Hall Current 16 Click | [Click Here](./clicks/hallcurrent16) | Hall Current 17 Click | [Click Here](./clicks/hallcurrent17) |
-| Hall Current 18 Click | [Click Here](./clicks/hallcurrent18) | Hall Current 19 Click | [Click Here](./clicks/hallcurrent19) |
-| Hall Current 2 Click | [Click Here](./clicks/hallcurrent2) | Hall Current 20 Click | [Click Here](./clicks/hallcurrent20) |
-| Hall Current 21 Click | [Click Here](./clicks/hallcurrent21) | Hall Current 3 Click | [Click Here](./clicks/hallcurrent3) |
-| Hall Current 4 Click | [Click Here](./clicks/hallcurrent4) | Hall Current 5 Click | [Click Here](./clicks/hallcurrent5) |
-| Hall Current 6 Click | [Click Here](./clicks/hallcurrent6) | Hall Current 7 Click | [Click Here](./clicks/hallcurrent7) |
-| Hall Current 8 120A Click | [Click Here](./clicks/hallcurrent8120a) | Hall Current 8 25A Click | [Click Here](./clicks/hallcurrent825a) |
-| Hall Current 9 Click | [Click Here](./clicks/hallcurrent9) | Hall Switch Click | [Click Here](./clicks/hallswitch) |
-| Hall Switch 2 Click | [Click Here](./clicks/hallswitch2) | Hall Switch 3 Click | [Click Here](./clicks/hallswitch3) |
-| HAPTIC Click | [Click Here](./clicks/haptic) | HAPTIC 2 Click | [Click Here](./clicks/haptic2) |
-| HAPTIC 3 Click | [Click Here](./clicks/haptic3) | Haptic 4 Click | [Click Here](./clicks/haptic4) |
-| H-Bridge Click | [Click Here](./clicks/hbridge) | H-Bridge 10 Click | [Click Here](./clicks/hbridge10) |
-| H-Bridge 11 Click | [Click Here](./clicks/hbridge11) | H-Bridge 12 Click | [Click Here](./clicks/hbridge12) |
-| H-Bridge 13 Click | [Click Here](./clicks/hbridge13) | H-Bridge 14 Click | [Click Here](./clicks/hbridge14) |
-| H-Bridge 15 Click | [Click Here](./clicks/hbridge15) | H-Bridge 16 Click | [Click Here](./clicks/hbridge16) |
-| H-Bridge 17 Click | [Click Here](./clicks/hbridge17) | H-Bridge 18 Click | [Click Here](./clicks/hbridge18) |
-| H-Bridge 2 Click | [Click Here](./clicks/hbridge2) | H-Bridge 3 Click | [Click Here](./clicks/hbridge3) |
-| H-Bridge 4 Click | [Click Here](./clicks/hbridge4) | H-Bridge 5 Click | [Click Here](./clicks/hbridge5) |
-| H-Bridge 6 Click | [Click Here](./clicks/hbridge6) | H-Bridge 7 Click | [Click Here](./clicks/hbridge7) |
-| H-Bridge 8 Click | [Click Here](./clicks/hbridge8) | H-Bridge 9 Click | [Click Here](./clicks/hbridge9) |
-| H-Bridge Driver Click | [Click Here](./clicks/hbridgedriver) | H-Bridge Driver 2 Click | [Click Here](./clicks/hbridgedriver2) |
-| HDC1000 Click | [Click Here](./clicks/hdc1000) | Headphone AMP Click | [Click Here](./clicks/headphoneamp) |
-| Headphone AMP 2 Click | [Click Here](./clicks/headphoneamp2) | Headphone AMP 3 Click | [Click Here](./clicks/headphoneamp3) |
-| Heart Rate Click | [Click Here](./clicks/heartrate) | Heart Rate 10 Click | [Click Here](./clicks/heartrate10) |
-| Heart Rate 11 Click | [Click Here](./clicks/heartrate11) | Heart Rate 13 Click | [Click Here](./clicks/heartrate13) |
-| Heart Rate 2 Click | [Click Here](./clicks/heartrate2) | Heart rate 3 Click | [Click Here](./clicks/heartrate3) |
-| Heart rate 4 Click | [Click Here](./clicks/heartrate4) | Heart Rate 5 Click | [Click Here](./clicks/heartrate5) |
-| Heart rate 6 Click | [Click Here](./clicks/heartrate6) | Heart Rate 7 Click | [Click Here](./clicks/heartrate7) |
-| Heart Rate 8 Click | [Click Here](./clicks/heartrate8) | Heart Rate 9 Click | [Click Here](./clicks/heartrate9) |
-| Heater Click | [Click Here](./clicks/heater) | HOD CAP Click | [Click Here](./clicks/hodcap) |
-| HTU21D Click | [Click Here](./clicks/htu21d) | Humidity Click | [Click Here](./clicks/humidity) |
-| HVAC Click | [Click Here](./clicks/hvac) | HW Monitor Click | [Click Here](./clicks/hwmonitor) |
-| HW Monitor 2 Click | [Click Here](./clicks/hwmonitor2) | HW Monitor 3 Click | [Click Here](./clicks/hwmonitor3) |
-| Hydrogen Click | [Click Here](./clicks/hydrogen) | Hydro Probe Click | [Click Here](./clicks/hydroprobe) |
-| Hz to V Click | [Click Here](./clicks/hztov) | HZ to V 2 Click | [Click Here](./clicks/hztov2) |
-| I2C 1-Wire Click | [Click Here](./clicks/i2c1wire) | I2C 1-Wire 2  Click | [Click Here](./clicks/i2c1wire2) |
-| I2C Extend Click | [Click Here](./clicks/i2cextend) | I2C Extend 2 Click | [Click Here](./clicks/i2cextend2) |
-| I2C isolator Click | [Click Here](./clicks/i2cisolator) | I2C Isolator 2 Click | [Click Here](./clicks/i2cisolator2) |
-| I2C Isolator 3 Click | [Click Here](./clicks/i2cisolator3) | I2C Isolator 4 Click | [Click Here](./clicks/i2cisolator4) |
-| I2C Isolator 5 Click | [Click Here](./clicks/i2cisolator5) | I2C Isolator 6 Click | [Click Here](./clicks/i2cisolator6) |
-| I2C Isolator 7 Click | [Click Here](./clicks/i2cisolator7) | I2C MUX Click | [Click Here](./clicks/i2cmux) |
-| I2C MUX 2 Click | [Click Here](./clicks/i2cmux2) | I2C MUX 3 Click | [Click Here](./clicks/i2cmux3) |
-| I2C MUX 4 Click | [Click Here](./clicks/i2cmux4) | I2C MUX 5 Click | [Click Here](./clicks/i2cmux5) |
-| I2C MUX 6 Click | [Click Here](./clicks/i2cmux6) | I2C MUX 7 Click | [Click Here](./clicks/i2cmux7) |
-| I2C MUX 8 Click | [Click Here](./clicks/i2cmux8) | I2C to CAN Click | [Click Here](./clicks/i2ctocan) |
-| I2C to SPI Click | [Click Here](./clicks/i2ctospi) | iButton Click | [Click Here](./clicks/ibutton) |
-| Illuminance Click | [Click Here](./clicks/illuminance) | Inclinometer Click | [Click Here](./clicks/inclinometer) |
-| Inclinometer 2 Click | [Click Here](./clicks/inclinometer2) | Inclinometer 3 Click | [Click Here](./clicks/inclinometer3) |
-| Inclinometer 4 Click | [Click Here](./clicks/inclinometer4) | Index Counter Click | [Click Here](./clicks/indexcounter) |
-| IoT ExpressLink Click | [Click Here](./clicks/iotexpresslink) | IoT ExpressLink 2 Click | [Click Here](./clicks/iotexpresslink2) |
-| IoT ExpressLink 3 Click | [Click Here](./clicks/iotexpresslink3) | IPD 2 Click | [Click Here](./clicks/ipd2) |
-| IPD 2015 Click | [Click Here](./clicks/ipd2015) | IPD 2017 Click | [Click Here](./clicks/ipd2017) |
-| IPS Display Click | [Click Here](./clicks/ipsdisplay) | IPS Display 2 Click | [Click Here](./clicks/ipsdisplay2) |
-| iqRF Click | [Click Here](./clicks/iqrf) | iqRF 2 Click | [Click Here](./clicks/iqrf2) |
-| IR Click | [Click Here](./clicks/ir) | IR 2 Click | [Click Here](./clicks/ir2) |
-| IR Beacon Click | [Click Here](./clicks/irbeacon) | IrDA 2 Click | [Click Here](./clicks/irda2) |
-| IrDA 3 Click | [Click Here](./clicks/irda3) | IrDA 4 Click | [Click Here](./clicks/irda4) |
-| IR distance Click | [Click Here](./clicks/irdistance) | Ir Eclipse Click | [Click Here](./clicks/ireclipse) |
-| IR Eclipse 2 Click | [Click Here](./clicks/ireclipse2) | IR Gesture Click | [Click Here](./clicks/irgesture) |
-| IR Gesture 2 Click | [Click Here](./clicks/irgesture2) | IR Gesture 3 Click | [Click Here](./clicks/irgesture3) |
-| IR Grid Click | [Click Here](./clicks/irgrid) | IR Grid 2 Click | [Click Here](./clicks/irgrid2) |
-| IR Grid 3 Click | [Click Here](./clicks/irgrid3) | IR Grid 4 Click | [Click Here](./clicks/irgrid4) |
-| IRNSS Click | [Click Here](./clicks/irnss) | IR reflect Click | [Click Here](./clicks/irreflect) |
-| IR SENSE Click | [Click Here](./clicks/irsense) | IR Sense 2 Click | [Click Here](./clicks/irsense2) |
-| IR Sense 3 Click | [Click Here](./clicks/irsense3) | IR Sense 4 Click | [Click Here](./clicks/irsense4) |
-| IR Sense 5 Click | [Click Here](./clicks/irsense5) | IrThermo 2 Click | [Click Here](./clicks/irthermo2) |
-| IrThermo 3 Click | [Click Here](./clicks/irthermo3) | IrThermo 3V3 Click | [Click Here](./clicks/irthermo3v3) |
-| IR Thermo 4 Click | [Click Here](./clicks/irthermo4) | IrThermo 5V Click | [Click Here](./clicks/irthermo5v) |
-| ISM Click | [Click Here](./clicks/ism) | ISM 5 Click | [Click Here](./clicks/ism5) |
-| ISM RX Click | [Click Here](./clicks/ismrx) | ISM RX 2 Click | [Click Here](./clicks/ismrx2) |
-| ISM RX 3 Click | [Click Here](./clicks/ismrx3) | ISM TX Click | [Click Here](./clicks/ismtx) |
-| ISO 9141 Click | [Click Here](./clicks/iso9141) | ISO ADC Click | [Click Here](./clicks/isoadc) |
-| ISO ADC 2 Click | [Click Here](./clicks/isoadc2) | ISO ADC 3 Click | [Click Here](./clicks/isoadc3) |
-| ISO ADC 5 Click | [Click Here](./clicks/isoadc5) | ISO ADC 6 Click | [Click Here](./clicks/isoadc6) |
-| ISO ADC 7 Click | [Click Here](./clicks/isoadc7) | Joystick Click | [Click Here](./clicks/joystick) |
-| Joystick 2 Click | [Click Here](./clicks/joystick2) | Joystick 3 Click | [Click Here](./clicks/joystick3) |
-| Joystick 4 Click | [Click Here](./clicks/joystick4) | Keylock Click | [Click Here](./clicks/keylock) |
-| Key Lock 2 Click | [Click Here](./clicks/keylock2) | Knob Click | [Click Here](./clicks/knob) |
-| LBAND RTK Click | [Click Here](./clicks/lbandrtk) | LCD mini Click | [Click Here](./clicks/lcdmini) |
-| LCD Mono Click | [Click Here](./clicks/lcdmono) | LDC Click | [Click Here](./clicks/ldc) |
-| LDC 1000 Click | [Click Here](./clicks/ldc1000) | LDC 1101 Click | [Click Here](./clicks/ldc1101) |
-| LDC 2 Click | [Click Here](./clicks/ldc2) | LDC Touch Click | [Click Here](./clicks/ldctouch) |
-| LDO Click | [Click Here](./clicks/ldo) | LED DRIVER Click | [Click Here](./clicks/leddriver) |
-| LED Driver 10 Click | [Click Here](./clicks/leddriver10) | LED Driver 11 Click | [Click Here](./clicks/leddriver11) |
-| LED Driver 12 Click | [Click Here](./clicks/leddriver12) | LED Driver 13 Click | [Click Here](./clicks/leddriver13) |
-| LED Driver 14 Click | [Click Here](./clicks/leddriver14) | LED Driver 15 Click | [Click Here](./clicks/leddriver15) |
-| LED Driver 16 Click | [Click Here](./clicks/leddriver16) | LED Driver 17 Click | [Click Here](./clicks/leddriver17) |
-| LED Driver 18 Click | [Click Here](./clicks/leddriver18) | LED Driver 19 Click | [Click Here](./clicks/leddriver19) |
-| LED Driver 2 Click | [Click Here](./clicks/leddriver2) | LED Driver 3 Click | [Click Here](./clicks/leddriver3) |
-| LED Driver 4 Click | [Click Here](./clicks/leddriver4) | Led Driver 5 Click | [Click Here](./clicks/leddriver5) |
-| LED driver 6 Click | [Click Here](./clicks/leddriver6) | LED Driver 7 Click | [Click Here](./clicks/leddriver7) |
-| LED Driver 8 Click | [Click Here](./clicks/leddriver8) | LED Driver 9 Click | [Click Here](./clicks/leddriver9) |
-| LED Flash Click | [Click Here](./clicks/ledflash) | Led Flash 2 Click | [Click Here](./clicks/ledflash2) |
-| LED Flash 3 Click | [Click Here](./clicks/ledflash3) | LED Flash 4 Click | [Click Here](./clicks/ledflash4) |
-| LED Ring 2 Click | [Click Here](./clicks/ledring2) | Led ring R Click | [Click Here](./clicks/ledringr) |
-| LEM Click | [Click Here](./clicks/lem) | Light Click | [Click Here](./clicks/light) |
-| Light 2 Click | [Click Here](./clicks/light2) | Light 3 Click | [Click Here](./clicks/light3) |
-| Light 4 Click | [Click Here](./clicks/light4) | LightHz Click | [Click Here](./clicks/lighthz) |
-| Light mix-sens Click | [Click Here](./clicks/lightmixsens) | LightRanger Click | [Click Here](./clicks/lightranger) |
-| LightRanger 10 Click | [Click Here](./clicks/lightranger10) | LightRanger 11 Click | [Click Here](./clicks/lightranger11) |
-| LightRanger 12 Click | [Click Here](./clicks/lightranger12) | LightRanger 13 Click | [Click Here](./clicks/lightranger13) |
-| LightRanger 2 Click | [Click Here](./clicks/lightranger2) | LightRanger 3 Click | [Click Here](./clicks/lightranger3) |
-| LightRanger 4 Click | [Click Here](./clicks/lightranger4) | LightRanger 5 Click | [Click Here](./clicks/lightranger5) |
-| LightRanger 7 Click | [Click Here](./clicks/lightranger7) | LightRanger 8 Click | [Click Here](./clicks/lightranger8) |
-| LightRanger 9 Click | [Click Here](./clicks/lightranger9) | Light Temp Click | [Click Here](./clicks/lighttemp) |
-| LIN Click | [Click Here](./clicks/lin) | Line Follower Click | [Click Here](./clicks/linefollower) |
-| LIN HALL Click | [Click Here](./clicks/linhall) | LIN Hall 2 Click | [Click Here](./clicks/linhall2) |
-| LLC I2C Click | [Click Here](./clicks/llci2c) | LLC SPI Click | [Click Here](./clicks/llcspi) |
-| Load cell Click | [Click Here](./clicks/loadcell) | Load Cell 2 Click | [Click Here](./clicks/loadcell2) |
-| Load Cell 3 Click | [Click Here](./clicks/loadcell3) | Load Cell 4 Click | [Click Here](./clicks/loadcell4) |
-| Load Cell 5 Click | [Click Here](./clicks/loadcell5) | Load Cell 6 Click | [Click Here](./clicks/loadcell6) |
-| Load Cell 7 Click | [Click Here](./clicks/loadcell7) | Load Cell 8 Click | [Click Here](./clicks/loadcell8) |
-| LPG Click | [Click Here](./clicks/lpg) | LPS22HB Click | [Click Here](./clicks/lps22hb) |
-| LP WiFi Click | [Click Here](./clicks/lpwifi) | LR Click | [Click Here](./clicks/lr) |
-| LR 10 Click | [Click Here](./clicks/lr10) | LR 11 868MHz Click | [Click Here](./clicks/lr11868mhz) |
-| LR 11 915MHz Click | [Click Here](./clicks/lr11915mhz) | LR 14 Click | [Click Here](./clicks/lr14) |
-| LR 15 Click | [Click Here](./clicks/lr15) | LR 2 Click | [Click Here](./clicks/lr2) |
-| LR 3 Click | [Click Here](./clicks/lr3) | LR 4 Click | [Click Here](./clicks/lr4) |
-| LR 5 Click | [Click Here](./clicks/lr5) | LR 6 Click | [Click Here](./clicks/lr6) |
-| LR 9 Click | [Click Here](./clicks/lr9) | LR IoT Click | [Click Here](./clicks/lriot) |
-| LSM303AGR Click | [Click Here](./clicks/lsm303agr) | LSM6DSL Click | [Click Here](./clicks/lsm6dsl) |
-| LTE Cat.1 2 Click | [Click Here](./clicks/ltecat12) | LTE Cat.1 3 AUX Click | [Click Here](./clicks/ltecat13aux) |
-| LTE Cat.1 3 EX Click | [Click Here](./clicks/ltecat13ex) | LTE Cat.1 3 NAX Click | [Click Here](./clicks/ltecat13nax) |
-| LTE Cat.1 6 Click | [Click Here](./clicks/ltecat16) | LTE Cat.1 7 Click | [Click Here](./clicks/ltecat17) |
-| LTE Cat.1 8 Click | [Click Here](./clicks/ltecat18) | LTE Cat.1-EU Click | [Click Here](./clicks/ltecat1eu) |
-| LTE Cat.1-US Click | [Click Here](./clicks/ltecat1us) | LTE Cat.4 Click | [Click Here](./clicks/ltecat4) |
-| LTE Cat.4 3 Click | [Click Here](./clicks/ltecat43) | LTE IoT Click | [Click Here](./clicks/lteiot) |
-| LTE IoT 10 Click | [Click Here](./clicks/lteiot10) | LTE IoT 11 Click | [Click Here](./clicks/lteiot11) |
-| LTE IoT 12 Click | [Click Here](./clicks/lteiot12) | LTE IoT 14 Click | [Click Here](./clicks/lteiot14) |
-| LTE IoT 15 Click | [Click Here](./clicks/lteiot15) | LTE IoT 17 Click | [Click Here](./clicks/lteiot17) |
-| LTE IoT 2 Click | [Click Here](./clicks/lteiot2) | LTE IoT 3 Click | [Click Here](./clicks/lteiot3) |
-| LTE IoT 4 Click | [Click Here](./clicks/lteiot4) | LTE IoT 5 Click | [Click Here](./clicks/lteiot5) |
-| LTE IoT 6 Click | [Click Here](./clicks/lteiot6) | LTE IoT 7 Click | [Click Here](./clicks/lteiot7) |
-| LTE IoT 8 Click | [Click Here](./clicks/lteiot8) | LTE IoT 9 Click | [Click Here](./clicks/lteiot9) |
-| LYRA 24P Click | [Click Here](./clicks/lyra24p) | MAC Address Click | [Click Here](./clicks/macaddress) |
-| MagAccel Click | [Click Here](./clicks/magaccel) | Magic RFID Click | [Click Here](./clicks/magicrfid) |
-| Magnetic linear Click | [Click Here](./clicks/magneticlinear) | Magnetic Rotary Click | [Click Here](./clicks/magneticrotary) |
-| Magnetic Rotary 2 Click | [Click Here](./clicks/magneticrotary2) | Magnetic Rotary 3 Click | [Click Here](./clicks/magneticrotary3) |
-| Magnetic Rotary 4 Click | [Click Here](./clicks/magneticrotary4) | Magnetic Rotary 5 Click | [Click Here](./clicks/magneticrotary5) |
-| Magnetic Rotary 6 Click | [Click Here](./clicks/magneticrotary6) | MAGNETO Click | [Click Here](./clicks/magneto) |
-| Magneto 10 Click | [Click Here](./clicks/magneto10) | Magneto 11 Click | [Click Here](./clicks/magneto11) |
-| Magneto 12 Click | [Click Here](./clicks/magneto12) | Magneto 13 Click | [Click Here](./clicks/magneto13) |
-| Magneto 14 Click | [Click Here](./clicks/magneto14) | Magneto 2 Click | [Click Here](./clicks/magneto2) |
-| MAGNETO 4 Click | [Click Here](./clicks/magneto4) | Magneto 5 Click | [Click Here](./clicks/magneto5) |
-| Magneto 6 Click | [Click Here](./clicks/magneto6) | Magneto 7 Click | [Click Here](./clicks/magneto7) |
-| Magneto 8 Click | [Click Here](./clicks/magneto8) | Magneto 9 Click | [Click Here](./clicks/magneto9) |
-| Manometer Click | [Click Here](./clicks/manometer) | Manometer 2 Click | [Click Here](./clicks/manometer2) |
-| Matrix G Click | [Click Here](./clicks/matrixg) | Matrix R Click | [Click Here](./clicks/matrixr) |
-| Matrix RGB Click | [Click Here](./clicks/matrixrgb) | M-Bus Master Click | [Click Here](./clicks/mbusmaster) |
-| M-BUS RF 2  Click | [Click Here](./clicks/mbusrf2) | M-BUS RF 3 Click | [Click Here](./clicks/mbusrf3) |
-| M-BUS RF 4 Click | [Click Here](./clicks/mbusrf4) | M-Bus Slave Click | [Click Here](./clicks/mbusslave) |
-| MCP16331 Click | [Click Here](./clicks/mcp16331) | MCP16331 INV Click | [Click Here](./clicks/mcp16331inv) |
-| MCP1664 Click | [Click Here](./clicks/mcp1664) | MCP2003B Click | [Click Here](./clicks/mcp2003b) |
-| MCP2517FD Click | [Click Here](./clicks/mcp2517fd) | MCP251863 Click | [Click Here](./clicks/mcp251863) |
-| MCP2518FD Click | [Click Here](./clicks/mcp2518fd) | MCP2542 Click | [Click Here](./clicks/mcp2542) |
-| MCP73213 Click | [Click Here](./clicks/mcp73213) | MCP73871 Click | [Click Here](./clicks/mcp73871) |
-| Methane Click | [Click Here](./clicks/methane) | Mic Click | [Click Here](./clicks/mic) |
-| MIC 2 Click | [Click Here](./clicks/mic2) | MIC23099 Click | [Click Here](./clicks/mic23099) |
-| MIC24045 Click | [Click Here](./clicks/mic24045) | MIC24055 Click | [Click Here](./clicks/mic24055) |
-| MIC 3 Click | [Click Here](./clicks/mic3) | MIC33153 Click | [Click Here](./clicks/mic33153) |
-| MICRF RX Click | [Click Here](./clicks/micrfrx) | MICRF RX 2 Click | [Click Here](./clicks/micrfrx2) |
-| MICRF TX Click | [Click Here](./clicks/micrftx) | microSD Click | [Click Here](./clicks/microsd) |
+| Flash 13 Click | [Click Here](./clicks/flash13) | Flash 2 Click | [Click Here](./clicks/flash2) |
+| Flash 3 Click | [Click Here](./clicks/flash3) | Flash 4 Click | [Click Here](./clicks/flash4) |
+| Flash 5 Click | [Click Here](./clicks/flash5) | Flash 6 Click | [Click Here](./clicks/flash6) |
+| Flash 7 Click | [Click Here](./clicks/flash7) | Flash 8 Click | [Click Here](./clicks/flash8) |
+| Flash 9 Click | [Click Here](./clicks/flash9) | Flicker Click | [Click Here](./clicks/flicker) |
+| FM Click | [Click Here](./clicks/fm) | Force Click | [Click Here](./clicks/force) |
+| Force 2 Click | [Click Here](./clicks/force2) | Force 3 Click | [Click Here](./clicks/force3) |
+| Force 4 Click | [Click Here](./clicks/force4) | Force 5 Click | [Click Here](./clicks/force5) |
+| Fram Click | [Click Here](./clicks/fram) | FRAM 2 Click | [Click Here](./clicks/fram2) |
+| FRAM 3 Click | [Click Here](./clicks/fram3) | FRAM 5 Click | [Click Here](./clicks/fram5) |
+| FRAM 6 Click | [Click Here](./clicks/fram6) | FT Click | [Click Here](./clicks/ft) |
+| FTDI Click | [Click Here](./clicks/ftdi) | G2C Click | [Click Here](./clicks/g2c) |
+| G2C 3G Click | [Click Here](./clicks/g2c3g) | GainAMP Click | [Click Here](./clicks/gainamp) |
+| GainAMP 2 Click | [Click Here](./clicks/gainamp2) | GainAMP 3 Click | [Click Here](./clicks/gainamp3) |
+| Gaussmeter Click | [Click Here](./clicks/gaussmeter) | GeoMagnetic Click | [Click Here](./clicks/geomagnetic) |
+| GMR Angle Click | [Click Here](./clicks/gmrangle) | GNSS Click | [Click Here](./clicks/gnss) |
+| GNSS 10 Click | [Click Here](./clicks/gnss10) | GNSS 11 Click | [Click Here](./clicks/gnss11) |
+| GNSS 12 Click | [Click Here](./clicks/gnss12) | GNSS 13 Click | [Click Here](./clicks/gnss13) |
+| GNSS 14 Click | [Click Here](./clicks/gnss14) | GNSS 15 Click | [Click Here](./clicks/gnss15) |
+| GNSS 16 Click | [Click Here](./clicks/gnss16) | GNSS 17 Click | [Click Here](./clicks/gnss17) |
+| GNSS 18 Click | [Click Here](./clicks/gnss18) | GNSS 2 Click | [Click Here](./clicks/gnss2) |
+| GNSS3 Click | [Click Here](./clicks/gnss3) | GNSS4 Click | [Click Here](./clicks/gnss4) |
+| GNSS 5 Click | [Click Here](./clicks/gnss5) | GNSS 6 Click | [Click Here](./clicks/gnss6) |
+| GNSS 7 Click | [Click Here](./clicks/gnss7) | GNSS 8 Click | [Click Here](./clicks/gnss8) |
+| GNSS 9 Click | [Click Here](./clicks/gnss9) | GNSS MAX Click | [Click Here](./clicks/gnssmax) |
+| GNSS MAX 2 Click | [Click Here](./clicks/gnssmax2) | GNSS RTK Click | [Click Here](./clicks/gnssrtk) |
+| GNSS RTK 2 Click | [Click Here](./clicks/gnssrtk2) | GNSS RTK 3 DA Click | [Click Here](./clicks/gnssrtk3da) |
+| GNSS RTK 3 EA Click | [Click Here](./clicks/gnssrtk3ea) | GNSS RTK 5 Click | [Click Here](./clicks/gnssrtk5) |
+| GNSS ZOE Click | [Click Here](./clicks/gnsszoe) | GPS Click | [Click Here](./clicks/gps) |
+| GPS 3 Click | [Click Here](./clicks/gps3) | GPS 4 Click | [Click Here](./clicks/gps4) |
+| GPS 5 Click | [Click Here](./clicks/gps5) | GPS 6 Click | [Click Here](./clicks/gps6) |
+| Grid-Eye Click | [Click Here](./clicks/grideye) | Grid-EYE 2 Click | [Click Here](./clicks/grideye2) |
+| GSM Click | [Click Here](./clicks/gsm) | GSM 2 Click | [Click Here](./clicks/gsm2) |
+| GSM 3 Click | [Click Here](./clicks/gsm3) | GSM 4 Click | [Click Here](./clicks/gsm4) |
+| GSM 5 Click | [Click Here](./clicks/gsm5) | GSM GNSS Click | [Click Here](./clicks/gsmgnss) |
+| GSM GNSS 2 Click | [Click Here](./clicks/gsmgnss2) | GSM-GPS Click | [Click Here](./clicks/gsmgps) |
+| GSR Click | [Click Here](./clicks/gsr) | Gyro Click | [Click Here](./clicks/gyro) |
+| Gyro 2 Click | [Click Here](./clicks/gyro2) | Gyro 3 Click | [Click Here](./clicks/gyro3) |
+| Gyro 4 Click | [Click Here](./clicks/gyro4) | Gyro 5 Click | [Click Here](./clicks/gyro5) |
+| Gyro 6 Click | [Click Here](./clicks/gyro6) | Gyro 7 Click | [Click Here](./clicks/gyro7) |
+| Gyro 8 Click | [Click Here](./clicks/gyro8) | Gyro 9 Click | [Click Here](./clicks/gyro9) |
+| Hall Current Click | [Click Here](./clicks/hallcurrent) | Hall Current 10 Click | [Click Here](./clicks/hallcurrent10) |
+| Hall Current 11 Click | [Click Here](./clicks/hallcurrent11) | Hall Current 12 Click | [Click Here](./clicks/hallcurrent12) |
+| Hall Current 13 Click | [Click Here](./clicks/hallcurrent13) | Hall Current 14 Click | [Click Here](./clicks/hallcurrent14) |
+| Hall Current 15 Click | [Click Here](./clicks/hallcurrent15) | Hall Current 16 Click | [Click Here](./clicks/hallcurrent16) |
+| Hall Current 17 Click | [Click Here](./clicks/hallcurrent17) | Hall Current 18 Click | [Click Here](./clicks/hallcurrent18) |
+| Hall Current 19 Click | [Click Here](./clicks/hallcurrent19) | Hall Current 2 Click | [Click Here](./clicks/hallcurrent2) |
+| Hall Current 20 Click | [Click Here](./clicks/hallcurrent20) | Hall Current 21 Click | [Click Here](./clicks/hallcurrent21) |
+| Hall Current 3 Click | [Click Here](./clicks/hallcurrent3) | Hall Current 4 Click | [Click Here](./clicks/hallcurrent4) |
+| Hall Current 5 Click | [Click Here](./clicks/hallcurrent5) | Hall Current 6 Click | [Click Here](./clicks/hallcurrent6) |
+| Hall Current 7 Click | [Click Here](./clicks/hallcurrent7) | Hall Current 8 120A Click | [Click Here](./clicks/hallcurrent8120a) |
+| Hall Current 8 25A Click | [Click Here](./clicks/hallcurrent825a) | Hall Current 9 Click | [Click Here](./clicks/hallcurrent9) |
+| Hall Switch Click | [Click Here](./clicks/hallswitch) | Hall Switch 2 Click | [Click Here](./clicks/hallswitch2) |
+| Hall Switch 3 Click | [Click Here](./clicks/hallswitch3) | HAPTIC Click | [Click Here](./clicks/haptic) |
+| HAPTIC 2 Click | [Click Here](./clicks/haptic2) | HAPTIC 3 Click | [Click Here](./clicks/haptic3) |
+| Haptic 4 Click | [Click Here](./clicks/haptic4) | H-Bridge Click | [Click Here](./clicks/hbridge) |
+| H-Bridge 10 Click | [Click Here](./clicks/hbridge10) | H-Bridge 11 Click | [Click Here](./clicks/hbridge11) |
+| H-Bridge 12 Click | [Click Here](./clicks/hbridge12) | H-Bridge 13 Click | [Click Here](./clicks/hbridge13) |
+| H-Bridge 14 Click | [Click Here](./clicks/hbridge14) | H-Bridge 15 Click | [Click Here](./clicks/hbridge15) |
+| H-Bridge 16 Click | [Click Here](./clicks/hbridge16) | H-Bridge 17 Click | [Click Here](./clicks/hbridge17) |
+| H-Bridge 18 Click | [Click Here](./clicks/hbridge18) | H-Bridge 2 Click | [Click Here](./clicks/hbridge2) |
+| H-Bridge 3 Click | [Click Here](./clicks/hbridge3) | H-Bridge 4 Click | [Click Here](./clicks/hbridge4) |
+| H-Bridge 5 Click | [Click Here](./clicks/hbridge5) | H-Bridge 6 Click | [Click Here](./clicks/hbridge6) |
+| H-Bridge 7 Click | [Click Here](./clicks/hbridge7) | H-Bridge 8 Click | [Click Here](./clicks/hbridge8) |
+| H-Bridge 9 Click | [Click Here](./clicks/hbridge9) | H-Bridge Driver Click | [Click Here](./clicks/hbridgedriver) |
+| H-Bridge Driver 2 Click | [Click Here](./clicks/hbridgedriver2) | HDC1000 Click | [Click Here](./clicks/hdc1000) |
+| Headphone AMP Click | [Click Here](./clicks/headphoneamp) | Headphone AMP 2 Click | [Click Here](./clicks/headphoneamp2) |
+| Headphone AMP 3 Click | [Click Here](./clicks/headphoneamp3) | Heart Rate Click | [Click Here](./clicks/heartrate) |
+| Heart Rate 10 Click | [Click Here](./clicks/heartrate10) | Heart Rate 11 Click | [Click Here](./clicks/heartrate11) |
+| Heart Rate 13 Click | [Click Here](./clicks/heartrate13) | Heart Rate 2 Click | [Click Here](./clicks/heartrate2) |
+| Heart rate 3 Click | [Click Here](./clicks/heartrate3) | Heart rate 4 Click | [Click Here](./clicks/heartrate4) |
+| Heart Rate 5 Click | [Click Here](./clicks/heartrate5) | Heart rate 6 Click | [Click Here](./clicks/heartrate6) |
+| Heart Rate 7 Click | [Click Here](./clicks/heartrate7) | Heart Rate 8 Click | [Click Here](./clicks/heartrate8) |
+| Heart Rate 9 Click | [Click Here](./clicks/heartrate9) | Heater Click | [Click Here](./clicks/heater) |
+| HOD CAP Click | [Click Here](./clicks/hodcap) | HTU21D Click | [Click Here](./clicks/htu21d) |
+| Humidity Click | [Click Here](./clicks/humidity) | HVAC Click | [Click Here](./clicks/hvac) |
+| HW Monitor Click | [Click Here](./clicks/hwmonitor) | HW Monitor 2 Click | [Click Here](./clicks/hwmonitor2) |
+| HW Monitor 3 Click | [Click Here](./clicks/hwmonitor3) | Hydrogen Click | [Click Here](./clicks/hydrogen) |
+| Hydro Probe Click | [Click Here](./clicks/hydroprobe) | Hz to V Click | [Click Here](./clicks/hztov) |
+| HZ to V 2 Click | [Click Here](./clicks/hztov2) | I2C 1-Wire Click | [Click Here](./clicks/i2c1wire) |
+| I2C 1-Wire 2  Click | [Click Here](./clicks/i2c1wire2) | I2C Extend Click | [Click Here](./clicks/i2cextend) |
+| I2C Extend 2 Click | [Click Here](./clicks/i2cextend2) | I2C isolator Click | [Click Here](./clicks/i2cisolator) |
+| I2C Isolator 2 Click | [Click Here](./clicks/i2cisolator2) | I2C Isolator 3 Click | [Click Here](./clicks/i2cisolator3) |
+| I2C Isolator 4 Click | [Click Here](./clicks/i2cisolator4) | I2C Isolator 5 Click | [Click Here](./clicks/i2cisolator5) |
+| I2C Isolator 6 Click | [Click Here](./clicks/i2cisolator6) | I2C Isolator 7 Click | [Click Here](./clicks/i2cisolator7) |
+| I2C MUX Click | [Click Here](./clicks/i2cmux) | I2C MUX 2 Click | [Click Here](./clicks/i2cmux2) |
+| I2C MUX 3 Click | [Click Here](./clicks/i2cmux3) | I2C MUX 4 Click | [Click Here](./clicks/i2cmux4) |
+| I2C MUX 5 Click | [Click Here](./clicks/i2cmux5) | I2C MUX 6 Click | [Click Here](./clicks/i2cmux6) |
+| I2C MUX 7 Click | [Click Here](./clicks/i2cmux7) | I2C MUX 8 Click | [Click Here](./clicks/i2cmux8) |
+| I2C to CAN Click | [Click Here](./clicks/i2ctocan) | I2C to SPI Click | [Click Here](./clicks/i2ctospi) |
+| iButton Click | [Click Here](./clicks/ibutton) | Illuminance Click | [Click Here](./clicks/illuminance) |
+| Inclinometer Click | [Click Here](./clicks/inclinometer) | Inclinometer 2 Click | [Click Here](./clicks/inclinometer2) |
+| Inclinometer 3 Click | [Click Here](./clicks/inclinometer3) | Inclinometer 4 Click | [Click Here](./clicks/inclinometer4) |
+| Index Counter Click | [Click Here](./clicks/indexcounter) | IoT ExpressLink Click | [Click Here](./clicks/iotexpresslink) |
+| IoT ExpressLink 2 Click | [Click Here](./clicks/iotexpresslink2) | IoT ExpressLink 3 Click | [Click Here](./clicks/iotexpresslink3) |
+| IPD 2 Click | [Click Here](./clicks/ipd2) | IPD 2015 Click | [Click Here](./clicks/ipd2015) |
+| IPD 2017 Click | [Click Here](./clicks/ipd2017) | IPS Display Click | [Click Here](./clicks/ipsdisplay) |
+| IPS Display 2 Click | [Click Here](./clicks/ipsdisplay2) | iqRF Click | [Click Here](./clicks/iqrf) |
+| iqRF 2 Click | [Click Here](./clicks/iqrf2) | IR Click | [Click Here](./clicks/ir) |
+| IR 2 Click | [Click Here](./clicks/ir2) | IR Beacon Click | [Click Here](./clicks/irbeacon) |
+| IrDA 2 Click | [Click Here](./clicks/irda2) | IrDA 3 Click | [Click Here](./clicks/irda3) |
+| IrDA 4 Click | [Click Here](./clicks/irda4) | IR distance Click | [Click Here](./clicks/irdistance) |
+| Ir Eclipse Click | [Click Here](./clicks/ireclipse) | IR Eclipse 2 Click | [Click Here](./clicks/ireclipse2) |
+| IR Gesture Click | [Click Here](./clicks/irgesture) | IR Gesture 2 Click | [Click Here](./clicks/irgesture2) |
+| IR Gesture 3 Click | [Click Here](./clicks/irgesture3) | IR Grid Click | [Click Here](./clicks/irgrid) |
+| IR Grid 2 Click | [Click Here](./clicks/irgrid2) | IR Grid 3 Click | [Click Here](./clicks/irgrid3) |
+| IR Grid 4 Click | [Click Here](./clicks/irgrid4) | IRNSS Click | [Click Here](./clicks/irnss) |
+| IR reflect Click | [Click Here](./clicks/irreflect) | IR SENSE Click | [Click Here](./clicks/irsense) |
+| IR Sense 2 Click | [Click Here](./clicks/irsense2) | IR Sense 3 Click | [Click Here](./clicks/irsense3) |
+| IR Sense 4 Click | [Click Here](./clicks/irsense4) | IR Sense 5 Click | [Click Here](./clicks/irsense5) |
+| IrThermo 2 Click | [Click Here](./clicks/irthermo2) | IrThermo 3 Click | [Click Here](./clicks/irthermo3) |
+| IrThermo 3V3 Click | [Click Here](./clicks/irthermo3v3) | IR Thermo 4 Click | [Click Here](./clicks/irthermo4) |
+| IrThermo 5V Click | [Click Here](./clicks/irthermo5v) | ISM Click | [Click Here](./clicks/ism) |
+| ISM 5 Click | [Click Here](./clicks/ism5) | ISM RX Click | [Click Here](./clicks/ismrx) |
+| ISM RX 2 Click | [Click Here](./clicks/ismrx2) | ISM RX 3 Click | [Click Here](./clicks/ismrx3) |
+| ISM TX Click | [Click Here](./clicks/ismtx) | ISO 9141 Click | [Click Here](./clicks/iso9141) |
+| ISO ADC Click | [Click Here](./clicks/isoadc) | ISO ADC 2 Click | [Click Here](./clicks/isoadc2) |
+| ISO ADC 3 Click | [Click Here](./clicks/isoadc3) | ISO ADC 5 Click | [Click Here](./clicks/isoadc5) |
+| ISO ADC 6 Click | [Click Here](./clicks/isoadc6) | ISO ADC 7 Click | [Click Here](./clicks/isoadc7) |
+| Joystick Click | [Click Here](./clicks/joystick) | Joystick 2 Click | [Click Here](./clicks/joystick2) |
+| Joystick 3 Click | [Click Here](./clicks/joystick3) | Joystick 4 Click | [Click Here](./clicks/joystick4) |
+| Keylock Click | [Click Here](./clicks/keylock) | Key Lock 2 Click | [Click Here](./clicks/keylock2) |
+| Knob Click | [Click Here](./clicks/knob) | LBAND RTK Click | [Click Here](./clicks/lbandrtk) |
+| LCD mini Click | [Click Here](./clicks/lcdmini) | LCD Mono Click | [Click Here](./clicks/lcdmono) |
+| LDC Click | [Click Here](./clicks/ldc) | LDC 1000 Click | [Click Here](./clicks/ldc1000) |
+| LDC 1101 Click | [Click Here](./clicks/ldc1101) | LDC 2 Click | [Click Here](./clicks/ldc2) |
+| LDC Touch Click | [Click Here](./clicks/ldctouch) | LDO Click | [Click Here](./clicks/ldo) |
+| LED DRIVER Click | [Click Here](./clicks/leddriver) | LED Driver 10 Click | [Click Here](./clicks/leddriver10) |
+| LED Driver 11 Click | [Click Here](./clicks/leddriver11) | LED Driver 12 Click | [Click Here](./clicks/leddriver12) |
+| LED Driver 13 Click | [Click Here](./clicks/leddriver13) | LED Driver 14 Click | [Click Here](./clicks/leddriver14) |
+| LED Driver 15 Click | [Click Here](./clicks/leddriver15) | LED Driver 16 Click | [Click Here](./clicks/leddriver16) |
+| LED Driver 17 Click | [Click Here](./clicks/leddriver17) | LED Driver 18 Click | [Click Here](./clicks/leddriver18) |
+| LED Driver 19 Click | [Click Here](./clicks/leddriver19) | LED Driver 2 Click | [Click Here](./clicks/leddriver2) |
+| LED Driver 3 Click | [Click Here](./clicks/leddriver3) | LED Driver 4 Click | [Click Here](./clicks/leddriver4) |
+| Led Driver 5 Click | [Click Here](./clicks/leddriver5) | LED driver 6 Click | [Click Here](./clicks/leddriver6) |
+| LED Driver 7 Click | [Click Here](./clicks/leddriver7) | LED Driver 8 Click | [Click Here](./clicks/leddriver8) |
+| LED Driver 9 Click | [Click Here](./clicks/leddriver9) | LED Flash Click | [Click Here](./clicks/ledflash) |
+| Led Flash 2 Click | [Click Here](./clicks/ledflash2) | LED Flash 3 Click | [Click Here](./clicks/ledflash3) |
+| LED Flash 4 Click | [Click Here](./clicks/ledflash4) | LED Ring 2 Click | [Click Here](./clicks/ledring2) |
+| Led ring R Click | [Click Here](./clicks/ledringr) | LEM Click | [Click Here](./clicks/lem) |
+| Light Click | [Click Here](./clicks/light) | Light 2 Click | [Click Here](./clicks/light2) |
+| Light 3 Click | [Click Here](./clicks/light3) | Light 4 Click | [Click Here](./clicks/light4) |
+| LightHz Click | [Click Here](./clicks/lighthz) | Light mix-sens Click | [Click Here](./clicks/lightmixsens) |
+| LightRanger Click | [Click Here](./clicks/lightranger) | LightRanger 10 Click | [Click Here](./clicks/lightranger10) |
+| LightRanger 11 Click | [Click Here](./clicks/lightranger11) | LightRanger 12 Click | [Click Here](./clicks/lightranger12) |
+| LightRanger 13 Click | [Click Here](./clicks/lightranger13) | LightRanger 2 Click | [Click Here](./clicks/lightranger2) |
+| LightRanger 3 Click | [Click Here](./clicks/lightranger3) | LightRanger 4 Click | [Click Here](./clicks/lightranger4) |
+| LightRanger 5 Click | [Click Here](./clicks/lightranger5) | LightRanger 7 Click | [Click Here](./clicks/lightranger7) |
+| LightRanger 8 Click | [Click Here](./clicks/lightranger8) | LightRanger 9 Click | [Click Here](./clicks/lightranger9) |
+| Light Temp Click | [Click Here](./clicks/lighttemp) | LIN Click | [Click Here](./clicks/lin) |
+| Line Follower Click | [Click Here](./clicks/linefollower) | LIN HALL Click | [Click Here](./clicks/linhall) |
+| LIN Hall 2 Click | [Click Here](./clicks/linhall2) | LLC I2C Click | [Click Here](./clicks/llci2c) |
+| LLC SPI Click | [Click Here](./clicks/llcspi) | Load cell Click | [Click Here](./clicks/loadcell) |
+| Load Cell 2 Click | [Click Here](./clicks/loadcell2) | Load Cell 3 Click | [Click Here](./clicks/loadcell3) |
+| Load Cell 4 Click | [Click Here](./clicks/loadcell4) | Load Cell 5 Click | [Click Here](./clicks/loadcell5) |
+| Load Cell 6 Click | [Click Here](./clicks/loadcell6) | Load Cell 7 Click | [Click Here](./clicks/loadcell7) |
+| Load Cell 8 Click | [Click Here](./clicks/loadcell8) | LPG Click | [Click Here](./clicks/lpg) |
+| LPS22HB Click | [Click Here](./clicks/lps22hb) | LP WiFi Click | [Click Here](./clicks/lpwifi) |
+| LR Click | [Click Here](./clicks/lr) | LR 10 Click | [Click Here](./clicks/lr10) |
+| LR 11 868MHz Click | [Click Here](./clicks/lr11868mhz) | LR 11 915MHz Click | [Click Here](./clicks/lr11915mhz) |
+| LR 14 Click | [Click Here](./clicks/lr14) | LR 15 Click | [Click Here](./clicks/lr15) |
+| LR 2 Click | [Click Here](./clicks/lr2) | LR 3 Click | [Click Here](./clicks/lr3) |
+| LR 4 Click | [Click Here](./clicks/lr4) | LR 5 Click | [Click Here](./clicks/lr5) |
+| LR 6 Click | [Click Here](./clicks/lr6) | LR 9 Click | [Click Here](./clicks/lr9) |
+| LR IoT Click | [Click Here](./clicks/lriot) | LSM303AGR Click | [Click Here](./clicks/lsm303agr) |
+| LSM6DSL Click | [Click Here](./clicks/lsm6dsl) | LTE Cat.1 2 Click | [Click Here](./clicks/ltecat12) |
+| LTE Cat.1 3 AUX Click | [Click Here](./clicks/ltecat13aux) | LTE Cat.1 3 EX Click | [Click Here](./clicks/ltecat13ex) |
+| LTE Cat.1 3 NAX Click | [Click Here](./clicks/ltecat13nax) | LTE Cat.1 6 Click | [Click Here](./clicks/ltecat16) |
+| LTE Cat.1 7 Click | [Click Here](./clicks/ltecat17) | LTE Cat.1 8 Click | [Click Here](./clicks/ltecat18) |
+| LTE Cat.1-EU Click | [Click Here](./clicks/ltecat1eu) | LTE Cat.1-US Click | [Click Here](./clicks/ltecat1us) |
+| LTE Cat.4 Click | [Click Here](./clicks/ltecat4) | LTE Cat.4 3 Click | [Click Here](./clicks/ltecat43) |
+| LTE IoT Click | [Click Here](./clicks/lteiot) | LTE IoT 10 Click | [Click Here](./clicks/lteiot10) |
+| LTE IoT 11 Click | [Click Here](./clicks/lteiot11) | LTE IoT 12 Click | [Click Here](./clicks/lteiot12) |
+| LTE IoT 14 Click | [Click Here](./clicks/lteiot14) | LTE IoT 15 Click | [Click Here](./clicks/lteiot15) |
+| LTE IoT 17 Click | [Click Here](./clicks/lteiot17) | LTE IoT 2 Click | [Click Here](./clicks/lteiot2) |
+| LTE IoT 3 Click | [Click Here](./clicks/lteiot3) | LTE IoT 4 Click | [Click Here](./clicks/lteiot4) |
+| LTE IoT 5 Click | [Click Here](./clicks/lteiot5) | LTE IoT 6 Click | [Click Here](./clicks/lteiot6) |
+| LTE IoT 7 Click | [Click Here](./clicks/lteiot7) | LTE IoT 8 Click | [Click Here](./clicks/lteiot8) |
+| LTE IoT 9 Click | [Click Here](./clicks/lteiot9) | LYRA 24P Click | [Click Here](./clicks/lyra24p) |
+| MAC Address Click | [Click Here](./clicks/macaddress) | MagAccel Click | [Click Here](./clicks/magaccel) |
+| Magic RFID Click | [Click Here](./clicks/magicrfid) | Magnetic linear Click | [Click Here](./clicks/magneticlinear) |
+| Magnetic Rotary Click | [Click Here](./clicks/magneticrotary) | Magnetic Rotary 2 Click | [Click Here](./clicks/magneticrotary2) |
+| Magnetic Rotary 3 Click | [Click Here](./clicks/magneticrotary3) | Magnetic Rotary 4 Click | [Click Here](./clicks/magneticrotary4) |
+| Magnetic Rotary 5 Click | [Click Here](./clicks/magneticrotary5) | Magnetic Rotary 6 Click | [Click Here](./clicks/magneticrotary6) |
+| MAGNETO Click | [Click Here](./clicks/magneto) | Magneto 10 Click | [Click Here](./clicks/magneto10) |
+| Magneto 11 Click | [Click Here](./clicks/magneto11) | Magneto 12 Click | [Click Here](./clicks/magneto12) |
+| Magneto 13 Click | [Click Here](./clicks/magneto13) | Magneto 14 Click | [Click Here](./clicks/magneto14) |
+| Magneto 2 Click | [Click Here](./clicks/magneto2) | MAGNETO 4 Click | [Click Here](./clicks/magneto4) |
+| Magneto 5 Click | [Click Here](./clicks/magneto5) | Magneto 6 Click | [Click Here](./clicks/magneto6) |
+| Magneto 7 Click | [Click Here](./clicks/magneto7) | Magneto 8 Click | [Click Here](./clicks/magneto8) |
+| Magneto 9 Click | [Click Here](./clicks/magneto9) | Manometer Click | [Click Here](./clicks/manometer) |
+| Manometer 2 Click | [Click Here](./clicks/manometer2) | Matrix G Click | [Click Here](./clicks/matrixg) |
+| Matrix R Click | [Click Here](./clicks/matrixr) | Matrix RGB Click | [Click Here](./clicks/matrixrgb) |
+| M-Bus Master Click | [Click Here](./clicks/mbusmaster) | M-BUS RF 2  Click | [Click Here](./clicks/mbusrf2) |
+| M-BUS RF 3 Click | [Click Here](./clicks/mbusrf3) | M-BUS RF 4 Click | [Click Here](./clicks/mbusrf4) |
+| M-Bus Slave Click | [Click Here](./clicks/mbusslave) | MCP16331 Click | [Click Here](./clicks/mcp16331) |
+| MCP16331 INV Click | [Click Here](./clicks/mcp16331inv) | MCP1664 Click | [Click Here](./clicks/mcp1664) |
+| MCP2003B Click | [Click Here](./clicks/mcp2003b) | MCP2517FD Click | [Click Here](./clicks/mcp2517fd) |
+| MCP251863 Click | [Click Here](./clicks/mcp251863) | MCP2518FD Click | [Click Here](./clicks/mcp2518fd) |
+| MCP2542 Click | [Click Here](./clicks/mcp2542) | MCP73213 Click | [Click Here](./clicks/mcp73213) |
+| MCP73871 Click | [Click Here](./clicks/mcp73871) | Methane Click | [Click Here](./clicks/methane) |
+| Mic Click | [Click Here](./clicks/mic) | MIC 2 Click | [Click Here](./clicks/mic2) |
+| MIC23099 Click | [Click Here](./clicks/mic23099) | MIC24045 Click | [Click Here](./clicks/mic24045) |
+| MIC24055 Click | [Click Here](./clicks/mic24055) | MIC 3 Click | [Click Here](./clicks/mic3) |
+| MIC33153 Click | [Click Here](./clicks/mic33153) | MICRF RX Click | [Click Here](./clicks/micrfrx) |
+| MICRF RX 2 Click | [Click Here](./clicks/micrfrx2) | MICRF TX Click | [Click Here](./clicks/micrftx) |
+| Micro Pump Click | [Click Here](./clicks/micropump) | microSD Click | [Click Here](./clicks/microsd) |
 | Microwave Click | [Click Here](./clicks/microwave) | Microwave 2 Click | [Click Here](./clicks/microwave2) |
 | Microwave 4 Click | [Click Here](./clicks/microwave4) | Microwave 5 Click | [Click Here](./clicks/microwave5) |
 | Microwave 6 Click | [Click Here](./clicks/microwave6) | ML Vibro Sens Click | [Click Here](./clicks/mlvibrosens) |
