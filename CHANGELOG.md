@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250417](#20250417)**
 + **[20250410](#20250410)**
 + **[20250403](#20250403)**
 + **[20250327](#20250327)**
@@ -128,6 +129,19 @@
 
 ---
 ---
+---
+
+## `20250417`
+
+*Following Click boards have been added:*
+
++ `ISM 3`
++ `Stephano-I`
++ `LTE IoT 16`
++ `GNSS 24`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250410`
