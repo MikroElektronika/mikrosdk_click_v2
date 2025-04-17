@@ -1,0 +1,22 @@
+{
+    "display_name": "Stephano-I Click",
+    "name": "mikroe.click.stephanoi",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6594",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stephano-I Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.StephanoI",
+                "subdir_name": "lib_stephanoi",
+                "path": "Stephano-I Click/data/lib_stephanoi"
+            }
+        ]
+    }
+}
