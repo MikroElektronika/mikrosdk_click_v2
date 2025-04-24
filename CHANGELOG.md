@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250424](#20250424)**
 + **[20250417](#20250417)**
 + **[20250410](#20250410)**
 + **[20250403](#20250403)**
@@ -129,6 +130,19 @@
 
 ---
 ---
+---
+
+## `20250424`
+
+*Following Click boards have been added:*
+
++ `VREF`
++ `GNSS 21`
++ `Hall Current 22`
++ `Ambient 24`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250417`

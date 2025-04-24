@@ -1,0 +1,22 @@
+{
+    "display_name": "Ambient 24 Click",
+    "name": "mikroe.click.ambient24",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6534",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ambient 24 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ambient24",
+                "subdir_name": "lib_ambient24",
+                "path": "Ambient 24 Click/data/lib_ambient24"
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS 21 Click",
+    "name": "mikroe.click.gnss21",
+    "type": "click",
+    "version": "2.2.1",
+    "pid": "MIKROE-6409",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 21 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS21",
+                "subdir_name": "lib_gnss21",
+                "path": "GNSS 21 Click/data/lib_gnss21"
+            }
+        ]
+    }
+}

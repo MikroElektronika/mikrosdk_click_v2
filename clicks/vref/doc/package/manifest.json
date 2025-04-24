@@ -1,0 +1,22 @@
+{
+    "display_name": "VREF Click",
+    "name": "mikroe.click.vref",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6593",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "VREF Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VREF",
+                "subdir_name": "lib_vref",
+                "path": "VREF Click/data/lib_vref"
+            }
+        ]
+    }
+}
