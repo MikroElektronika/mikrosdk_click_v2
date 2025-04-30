@@ -1,0 +1,22 @@
+{
+    "display_name": "IR Sense 6 Click",
+    "name": "mikroe.click.irsense6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6570",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IR Sense 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IRSense6",
+                "subdir_name": "lib_irsense6",
+                "path": "IR Sense 6 Click/data/lib_irsense6"
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display_name": "TDS Click",
+    "name": "mikroe.click.tds",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6597",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TDS Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TDS",
+                "subdir_name": "lib_tds",
+                "path": "TDS Click/data/lib_tds"
+            }
+        ]
+    }
+}
