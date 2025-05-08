@@ -1,0 +1,22 @@
+{
+    "display_name": "AC Current 2 Click",
+    "name": "mikroe.click.accurrent2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6579",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "AC Current 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ACCurrent2",
+                "subdir_name": "lib_accurrent2",
+                "path": "AC Current 2 Click/data/lib_accurrent2"
+            }
+        ]
+    }
+}

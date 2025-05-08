@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250508](#20250508)**
 + **[20250430](#20250430)**
 + **[20250424](#20250424)**
 + **[20250417](#20250417)**
@@ -131,6 +132,20 @@
 
 ---
 ---
+---
+
+## `20250508`
+
+*Following Click boards have been added:*
+
++ `6DOF IMU 27`
++ `AC Current 2`
++ `RTC 15`
++ `Charger 28`
++ `EEPROM 16`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250430`
