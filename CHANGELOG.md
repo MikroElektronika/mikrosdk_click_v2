@@ -144,6 +144,10 @@
 + `Charger 28`
 + `EEPROM 16`
 
+*Following Click boards have been removed:*
+
++ `PWR Meter 3 30A`
+
 **[BACK TO TOP](#changelog)**
 
 ---

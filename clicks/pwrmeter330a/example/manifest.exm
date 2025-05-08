@@ -1,5 +1,0 @@
-{
-    "name": "PWR Meter 3 30A Click",
-    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
-    "hw" : ["Click","ACS37800KMACTR-030B3-I2C"]
-}
