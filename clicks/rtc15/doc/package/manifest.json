@@ -1,0 +1,22 @@
+{
+    "display_name": "RTC 15 Click",
+    "name": "mikroe.click.rtc15",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6602",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 15 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC15",
+                "subdir_name": "lib_rtc15",
+                "path": "RTC 15 Click/data/lib_rtc15"
+            }
+        ]
+    }
+}

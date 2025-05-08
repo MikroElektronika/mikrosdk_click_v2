@@ -1,0 +1,22 @@
+{
+    "display_name": "EEPROM 16 Click",
+    "name": "mikroe.click.eeprom16",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6591",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EEPROM 16 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EEPROM16",
+                "subdir_name": "lib_eeprom16",
+                "path": "EEPROM 16 Click/data/lib_eeprom16"
+            }
+        ]
+    }
+}
