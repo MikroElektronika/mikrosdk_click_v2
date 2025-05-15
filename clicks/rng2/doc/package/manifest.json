@@ -1,0 +1,22 @@
+{
+    "display_name": "RNG 2 Click",
+    "name": "mikroe.click.rng2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5915",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RNG 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RNG2",
+                "subdir_name": "lib_rng2",
+                "path": "RNG 2 Click/data/lib_rng2"
+            }
+        ]
+    }
+}
