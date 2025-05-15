@@ -1,0 +1,22 @@
+{
+    "display_name": "ISM 7 Click",
+    "name": "mikroe.click.ism7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6611",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ISM 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ISM7",
+                "subdir_name": "lib_ism7",
+                "path": "ISM 7 Click/data/lib_ism7"
+            }
+        ]
+    }
+}
