@@ -1,0 +1,22 @@
+{
+    "display_name": "6DOF IMU 26 Click",
+    "name": "mikroe.click.6dofimu26",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6572",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "6DOF IMU 26 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.6DOFIMU26",
+                "subdir_name": "lib_c6dofimu26",
+                "path": "6DOF IMU 26 Click/data/lib_c6dofimu26"
+            }
+        ]
+    }
+}

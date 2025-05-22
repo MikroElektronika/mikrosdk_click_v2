@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250522](#20250522)**
 + **[20250515](#20250515)**
 + **[20250508](#20250508)**
 + **[20250430](#20250430)**
@@ -133,6 +134,19 @@
 
 ---
 ---
+---
+
+## `20250522`
+
+*Following Click boards have been added:*
+
++ `Current Sens`
++ `6DOF IMU 26`
++ `GNSS RTK 4`
++ `Hall Switch 5`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250515`
