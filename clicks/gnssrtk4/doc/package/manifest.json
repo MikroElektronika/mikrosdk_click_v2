@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS RTK 4 Click",
+    "name": "mikroe.click.gnssrtk4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6580",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS RTK 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSSRTK4",
+                "subdir_name": "lib_gnssrtk4",
+                "path": "GNSS RTK 4 Click/data/lib_gnssrtk4"
+            }
+        ]
+    }
+}

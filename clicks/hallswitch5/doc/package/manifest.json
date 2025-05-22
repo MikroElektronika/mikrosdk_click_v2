@@ -1,0 +1,22 @@
+{
+    "display_name": "Hall Switch 5 Click",
+    "name": "mikroe.click.hallswitch5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6604",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Switch 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallSwitch5",
+                "subdir_name": "lib_hallswitch5",
+                "path": "Hall Switch 5 Click/data/lib_hallswitch5"
+            }
+        ]
+    }
+}
