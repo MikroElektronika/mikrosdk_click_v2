@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250619](#20250619)**
 + **[20250522](#20250522)**
 + **[20250515](#20250515)**
 + **[20250508](#20250508)**
@@ -134,6 +135,21 @@
 
 ---
 ---
+---
+
+## `20250619`
+
+*Following Click boards have been added:*
+
++ `Smart NFC`
++ `XPort ETH SE`
++ `XPort ETH XE`
++ `GNSS 25`
++ `4G LTE 3 NA`
++ `Color 20`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250522`

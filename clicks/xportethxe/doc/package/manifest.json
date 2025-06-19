@@ -1,0 +1,22 @@
+{
+    "display_name": "XPort ETH XE Click",
+    "name": "mikroe.click.xportethxe",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6538",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "XPort ETH XE Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.XPortETHXE",
+                "subdir_name": "lib_xportethxe",
+                "path": "XPort ETH XE Click/data/lib_xportethxe"
+            }
+        ]
+    }
+}

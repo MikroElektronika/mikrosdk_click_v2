@@ -1,0 +1,22 @@
+{
+    "display_name": "Smart NFC Click",
+    "name": "mikroe.click.smartnfc",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6617",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart NFC Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartNFC",
+                "subdir_name": "lib_smartnfc",
+                "path": "Smart NFC Click/data/lib_smartnfc"
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display_name": "4G LTE 3 NA Click",
+    "name": "mikroe.click.4glte3na",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6396",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4G LTE 3 NA Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.4GLTE3NA",
+                "subdir_name": "lib_c4glte3na",
+                "path": "4G LTE 3 NA Click/data/lib_c4glte3na"
+            }
+        ]
+    }
+}
