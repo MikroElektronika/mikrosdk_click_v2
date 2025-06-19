@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS 25 Click",
+    "name": "mikroe.click.gnss25",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6535",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 25 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS25",
+                "subdir_name": "lib_gnss25",
+                "path": "GNSS 25 Click/data/lib_gnss25"
+            }
+        ]
+    }
+}
