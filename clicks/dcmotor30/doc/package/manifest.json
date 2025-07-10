@@ -1,0 +1,22 @@
+{
+    "display_name": "DC Motor 30 Click",
+    "name": "mikroe.click.dcmotor30",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6595",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DC Motor 30 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DCMotor30",
+                "subdir_name": "lib_dcmotor30",
+                "path": "DC Motor 30 Click/data/lib_dcmotor30"
+            }
+        ]
+    }
+}

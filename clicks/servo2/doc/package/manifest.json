@@ -1,0 +1,22 @@
+{
+    "display_name": "Servo 2 Click",
+    "name": "mikroe.click.servo2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6533",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Servo 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Servo2",
+                "subdir_name": "lib_servo2",
+                "path": "Servo 2 Click/data/lib_servo2"
+            }
+        ]
+    }
+}

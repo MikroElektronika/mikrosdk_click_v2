@@ -1,0 +1,5 @@
+{
+    "name": "Servo 2 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","TLC59401PWPR"]
+}

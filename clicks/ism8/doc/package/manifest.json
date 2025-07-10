@@ -1,0 +1,22 @@
+{
+    "display_name": "ISM 8 Click",
+    "name": "mikroe.click.ism8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6628",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ISM 8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ISM8",
+                "subdir_name": "lib_ism8",
+                "path": "ISM 8 Click/data/lib_ism8"
+            }
+        ]
+    }
+}
