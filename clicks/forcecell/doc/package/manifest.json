@@ -1,0 +1,22 @@
+{
+    "display_name": "Force Cell Click",
+    "name": "mikroe.click.forcecell",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6704",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Force Cell Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ForceCell",
+                "subdir_name": "lib_forcecell",
+                "path": "Force Cell Click/data/lib_forcecell"
+            }
+        ]
+    }
+}

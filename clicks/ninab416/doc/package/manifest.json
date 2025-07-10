@@ -1,0 +1,22 @@
+{
+    "display_name": "NINA-B416 Click",
+    "name": "mikroe.click.ninab416",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6618",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NINA-B416 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NINAB416",
+                "subdir_name": "lib_ninab416",
+                "path": "NINA-B416 Click/data/lib_ninab416"
+            }
+        ]
+    }
+}

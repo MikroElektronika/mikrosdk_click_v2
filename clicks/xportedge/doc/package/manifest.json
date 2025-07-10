@@ -1,0 +1,22 @@
+{
+    "display_name": "XPort EDGE Click",
+    "name": "mikroe.click.xportedge",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6540",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "XPort EDGE Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.XPortEDGE",
+                "subdir_name": "lib_xportedge",
+                "path": "XPort EDGE Click/data/lib_xportedge"
+            }
+        ]
+    }
+}

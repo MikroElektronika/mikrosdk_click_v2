@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250710](#20250710)**
 + **[20250619](#20250619)**
 + **[20250522](#20250522)**
 + **[20250515](#20250515)**
@@ -135,6 +136,25 @@
 
 ---
 ---
+---
+
+## `20250710`
+
+*Following Click boards have been added:*
+
++ `XPort EDGE`
++ `Force Cell`
++ `Charger 24`
++ `ISM 8`
++ `RTC 24`
++ `Servo 2`
++ `NINA-B416`
++ `3D Hall 15 I2C`
++ `DC Motor 30`
++ `ADC 27`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250619`
