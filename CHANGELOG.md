@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250717](#20250717)**
 + **[20250710](#20250710)**
 + **[20250619](#20250619)**
 + **[20250522](#20250522)**
@@ -136,6 +137,18 @@
 
 ---
 ---
+---
+
+## `20250717`
+
+*Following Click boards have been added:*
+
++ `Power Step`
++ `Environment 7`
++ `GNSS 26`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250710`

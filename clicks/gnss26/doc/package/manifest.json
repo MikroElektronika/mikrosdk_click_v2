@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS 26 Click",
+    "name": "mikroe.click.gnss26",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6544",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 26 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS26",
+                "subdir_name": "lib_gnss26",
+                "path": "GNSS 26 Click/data/lib_gnss26"
+            }
+        ]
+    }
+}

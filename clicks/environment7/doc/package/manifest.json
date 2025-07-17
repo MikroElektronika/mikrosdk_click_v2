@@ -1,0 +1,22 @@
+{
+    "display_name": "Environment 7 Click",
+    "name": "mikroe.click.environment7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6600",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Environment 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Environment7",
+                "subdir_name": "lib_environment7",
+                "path": "Environment 7 Click/data/lib_environment7"
+            }
+        ]
+    }
+}
