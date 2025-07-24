@@ -1,0 +1,22 @@
+{
+    "display_name": "Button 4 Click",
+    "name": "mikroe.click.button4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6620",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Button 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Button4",
+                "subdir_name": "lib_button4",
+                "path": "Button 4 Click/data/lib_button4"
+            }
+        ]
+    }
+}

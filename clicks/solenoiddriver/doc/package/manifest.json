@@ -1,0 +1,22 @@
+{
+    "display_name": "Solenoid Driver Click",
+    "name": "mikroe.click.solenoiddriver",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6574",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Solenoid Driver Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SolenoidDriver",
+                "subdir_name": "lib_solenoiddriver",
+                "path": "Solenoid Driver Click/data/lib_solenoiddriver"
+            }
+        ]
+    }
+}
