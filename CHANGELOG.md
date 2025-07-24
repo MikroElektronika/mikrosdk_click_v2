@@ -4,6 +4,7 @@
 
 **Updates by date of commit:**
 
++ **[20250724](#20250724)**
 + **[20250717](#20250717)**
 + **[20250710](#20250710)**
 + **[20250619](#20250619)**
@@ -137,6 +138,19 @@
 
 ---
 ---
+---
+
+## `20250724`
+
+*Following Click boards have been added:*
+
++ `Solenoid Driver`
++ `Proximity 22`
++ `Stepper 27`
++ `Button 4`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250717`

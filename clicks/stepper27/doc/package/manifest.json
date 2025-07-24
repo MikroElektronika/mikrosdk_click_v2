@@ -1,0 +1,22 @@
+{
+    "display_name": "Stepper 27 Click",
+    "name": "mikroe.click.stepper27",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6613",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper 27 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper27",
+                "subdir_name": "lib_stepper27",
+                "path": "Stepper 27 Click/data/lib_stepper27"
+            }
+        ]
+    }
+}
