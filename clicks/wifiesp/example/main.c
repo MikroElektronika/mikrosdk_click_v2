@@ -29,8 +29,8 @@
 #include "string.h"
 #include "conversions.h"
 
-#define APP_SSID                            "MikroE Public"
-#define APP_PASSWORD                        "mikroe.guest"
+#define APP_SSID                            "MIKROE GUEST"
+#define APP_PASSWORD                        "!guest.mikroe!"
 
 #define PROCESS_BUFFER_SIZE                 610
 

@@ -2,7 +2,7 @@
     "display_name": "G2C Click",
     "name": "mikroe.click.g2c",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3291",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "LTE IoT 15 Click",
     "name": "mikroe.click.lteiot15",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6553",
     "package_changed": true,
     "contents": {

@@ -52,8 +52,8 @@
 #define PROCESS_BUFFER_SIZE 500
 
 // Enter valid WiFi credentials below
-#define WIFI_SSID   "MikroE Public"     // WiFi SSID
-#define WIFI_PASS   "mikroe.guest"      // WiFi Password
+#define WIFI_SSID   "MIKROE GUEST"      // WiFi SSID
+#define WIFI_PASS   "!guest.mikroe!"    // WiFi Password
 
 static awsiot_t awsiot;
 static log_t logger;

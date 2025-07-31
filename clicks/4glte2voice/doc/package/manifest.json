@@ -2,7 +2,7 @@
     "display_name": "4G LTE 2 Voice Click",
     "name": "mikroe.click.4glte2voice",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5287",
     "package_changed": true,
     "contents": {

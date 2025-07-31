@@ -169,8 +169,8 @@ void application_task ( void )
 Enter valid values for the following macros: 
 WIFI_SSID, WIFI_PASS, DEVICE_KEY, DEVICE_PASSWORD, DEVICE_SENSOR_REF.
 > > Example: 
-> > - WIFI_SSID            "MikroE Public"
-> > - WIFI_PASS            "mikroe.guest"
+> > - WIFI_SSID            "MIKROE GUEST"
+> > - WIFI_PASS            "!guest.mikroe!"
 > > - DEVICE_KEY           "xxxxxxxxxxxxxxxx"
 > > - DEVICE_PASSWORD      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 > > - DEVICE_SENSOR_REF    "TEMP_SEN_R"

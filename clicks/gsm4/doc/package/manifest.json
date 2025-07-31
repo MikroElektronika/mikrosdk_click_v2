@@ -2,7 +2,7 @@
     "display_name": "GSM 4 Click",
     "name": "mikroe.click.gsm4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2388",
     "package_changed": true,
     "contents": {

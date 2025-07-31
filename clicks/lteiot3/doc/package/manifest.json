@@ -2,7 +2,7 @@
     "display_name": "LTE IoT 3 Click",
     "name": "mikroe.click.lteiot3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4118",
     "package_changed": true,
     "contents": {

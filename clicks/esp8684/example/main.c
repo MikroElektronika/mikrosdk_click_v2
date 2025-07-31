@@ -38,13 +38,13 @@
 
 #define PROCESS_BUFFER_SIZE 200
 
-#define ESP8684_SSID                        "MikroE Public"
-#define ESP8684_PASSWORD                    "mikroe.guest"
+#define ESP8684_SSID                        "MIKROE GUEST"
+#define ESP8684_PASSWORD                    "!guest.mikroe!"
 
 #define ESP8684_DATA                        "MikroE ESP8684 Click"
 
 // TCP/UDP example parameters
-#define REMOTE_IP                           "77.46.162.162" // TCP/UDP echo server IP address
+#define REMOTE_IP                           "54.187.244.144"// TCP/UDP echo server IP address
 #define REMOTE_PORT                         "51111"         // TCP/UDP echo server port
 #define TCP_LINK_ID                         "0"             // TCP link ID
 #define UDP_LINK_ID                         "1"             // UDP link ID

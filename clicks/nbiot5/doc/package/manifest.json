@@ -2,7 +2,7 @@
     "display_name": "NB IoT 5 Click",
     "name": "mikroe.click.nbiot5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4472",
     "package_changed": true,
     "contents": {

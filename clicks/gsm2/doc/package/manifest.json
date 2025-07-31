@@ -2,7 +2,7 @@
     "display_name": "GSM 2 Click",
     "name": "mikroe.click.gsm2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1375",
     "package_changed": true,
     "contents": {

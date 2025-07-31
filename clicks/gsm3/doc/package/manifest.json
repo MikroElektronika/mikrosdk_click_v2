@@ -2,7 +2,7 @@
     "display_name": "GSM 3 Click",
     "name": "mikroe.click.gsm3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1720",
     "package_changed": true,
     "contents": {

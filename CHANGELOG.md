@@ -205,6 +205,60 @@
 + `SolidSwitch 9 Click`
 + `TempHum 27 Click`
 
+*Following Click boards have been modified:*
+
++ `3G-AA Click`
++ `3G-EA Click`
++ `3G SARA Click`
++ `4G LTE 2 Data Click`
++ `4G LTE 2 Data-NA Click`
++ `4G LTE 2 Voice Click`
++ `4G LTE 2 Voice-NA Click`
++ `4G LTE 3 E Click`
++ `4G LTE 3 NA Click`
++ `4G LTE GNSS Click`
++ `Ai-WB2-12F Click`
++ `AWS IoT Click`
++ `Calypso Click`
++ `ESP8684 Click`
++ `G2C Click`
++ `GSM Click`
++ `GSM 2 Click`
++ `GSM 3 Click`
++ `GSM 4 Click`
++ `GSM 5 Click`
++ `IoT ExpressLink Click`
++ `IoT ExpressLink 3 Click`
++ `LTE Cat.1 2 Click`
++ `LTE Cat.1 3 AUX Click`
++ `LTE Cat.1 3 EX Click`
++ `LTE Cat.1 3 NAX Click`
++ `LTE Cat.1 6 Click`
++ `LTE Cat.1 7 Click`
++ `LTE Cat.1 8 Click`
++ `LTE Cat.4 Click`
++ `LTE Cat.4 3 Click`
++ `LTE IoT 10 Click`
++ `LTE IoT 11 Click`
++ `LTE IoT 12 Click`
++ `LTE IoT 14 Click`
++ `LTE IoT 15 Click`
++ `LTE IoT 16 Click`
++ `LTE IoT 17 Click`
++ `LTE IoT 3 Click`
++ `LTE IoT 5 Click`
++ `LTE IoT 7 Click`
++ `NB IoT 2 Click`
++ `NB IoT 4 Click`
++ `NB IoT 5 Click`
++ `NINA-W152 Click`
++ `Stephano-I Click`
++ `WiFi 8 Click`
++ `WiFi 9 Click`
++ `WiFi ESP Click`
++ `WiFi NORA Click`
++ `WIZFI360 Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

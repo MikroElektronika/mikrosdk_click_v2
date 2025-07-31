@@ -40,8 +40,8 @@
  * Enter valid values for the following macros: 
  * WIFI_SSID, WIFI_PASS, DEVICE_KEY, DEVICE_PASSWORD, DEVICE_SENSOR_REF.
  * Example:
- * WIFI_SSID            "MikroE Public"
- * WIFI_PASS            "mikroe.guest"
+ * WIFI_SSID            "MIKROE GUEST"
+ * WIFI_PASS            "!guest.mikroe!"
  * DEVICE_KEY           "xxxxxxxxxxxxxxxx"
  * DEVICE_PASSWORD      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
  * DEVICE_SENSOR_REF    "TEMP_SEN_R"
@@ -64,8 +64,8 @@
 #include "conversions.h"
 
 // Network config parameters
-#define WIFI_SSID                           "MikroE Public"  // Set valid WiFi SSID
-#define WIFI_PASS                           "mikroe.guest"   // Set valid WiFi Password
+#define WIFI_SSID                           "MIKROE GUEST"   // Set valid WiFi SSID
+#define WIFI_PASS                           "!guest.mikroe!" // Set valid WiFi Password
 
 // Cloud device config parameters
 #define DEVICE_KEY                          ""  // Cloud device key
