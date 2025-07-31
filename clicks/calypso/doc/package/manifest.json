@@ -2,7 +2,7 @@
     "display_name": "Calypso Click",
     "name": "mikroe.click.calypso",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6274",
     "package_changed": true,
     "contents": {

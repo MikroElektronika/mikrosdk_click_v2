@@ -56,11 +56,11 @@
 #define DEMO_EXAMPLE            EXAMPLE_WIFI    // Example selection macro
 
 // WiFi credentials
-#define WIFI_SSID               "MikroE Public"
-#define WIFI_PASSWORD           "mikroe.guest"
+#define WIFI_SSID               "MIKROE GUEST"
+#define WIFI_PASSWORD           "!guest.mikroe!"
 
 // WiFi TCP/UDP example parameters
-#define REMOTE_IP               "77.46.162.162" // TCP/UDP echo server IP address
+#define REMOTE_IP               "54.187.244.144"// TCP/UDP echo server IP address
 #define REMOTE_PORT             "51111"         // TCP/UDP echo server port
 
 // Message content

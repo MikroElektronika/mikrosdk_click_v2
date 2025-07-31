@@ -33,8 +33,8 @@
 #include "string.h"
 
 // Example parameters
-#define EXAMPLE_SSID                        "MikroE Public"
-#define EXAMPLE_PASSWORD                    "mikroe.guest"
+#define EXAMPLE_SSID                        "MIKROE GUEST"
+#define EXAMPLE_PASSWORD                    "!guest.mikroe!"
 #define EXAMPLE_SERVER_PORT                 "1234"
 
 // Application buffer size

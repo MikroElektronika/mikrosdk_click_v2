@@ -2,7 +2,7 @@
     "display_name": "AWS IoT Click",
     "name": "mikroe.click.awsiot",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5662",
     "package_changed": true,
     "contents": {

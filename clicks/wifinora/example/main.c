@@ -34,12 +34,12 @@
 #define MESSAGE_CONTENT                     "WiFi NORA Click board - demo example."
 
 // TCP/UDP example parameters
-#define REMOTE_IP                           "77.46.162.162" // TCP/UDP echo server IP address
+#define REMOTE_IP                           "54.187.244.144"// TCP/UDP echo server IP address
 #define REMOTE_PORT                         "51111"         // TCP/UDP echo server port
 
 // WiFi parameters
-#define WIFI_SSID                           "MikroE Public"
-#define WIFI_PWD                            "mikroe.guest"
+#define WIFI_SSID                           "MIKROE GUEST"
+#define WIFI_PWD                            "!guest.mikroe!"
 
 // Application buffer size
 #define APP_BUFFER_SIZE                     200

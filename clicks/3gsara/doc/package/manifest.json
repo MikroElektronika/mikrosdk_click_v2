@@ -2,7 +2,7 @@
     "display_name": "3G SARA Click",
     "name": "mikroe.click.3gsara",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2244",
     "package_changed": true,
     "contents": {

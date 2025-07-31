@@ -47,12 +47,12 @@
 #define MESSAGE_LEN                         "40"
 
 // TCP/UDP example parameters
-#define REMOTE_IP                           "77.46.162.162" // TCP/UDP echo server IP address
+#define REMOTE_IP                           "54.187.244.144"// TCP/UDP echo server IP address
 #define REMOTE_PORT                         "51111"         // TCP/UDP echo server port
 
 // WiFi parameters
-#define WIFI_SSID                           "MikroE Public"
-#define WIFI_PWD                            "mikroe.guest"
+#define WIFI_SSID                           "MIKROE GUEST"
+#define WIFI_PWD                            "!guest.mikroe!"
 
 // GPIO parameters
 #define LED_RED_GPIO                        "5"

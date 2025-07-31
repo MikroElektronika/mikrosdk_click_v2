@@ -2,7 +2,7 @@
     "display_name": "4G LTE GNSS Click",
     "name": "mikroe.click.4gltegnss",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5890",
     "package_changed": true,
     "contents": {

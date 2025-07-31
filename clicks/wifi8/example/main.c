@@ -39,9 +39,9 @@ static wifi8_t wifi8;
 static log_t logger;
 
 /** Wi-Fi Settings */
-#define MAIN_WLAN_SSID      "MikroE Public"         /**< Destination SSID */
+#define MAIN_WLAN_SSID      "MIKROE GUEST"          /**< Destination SSID */
 #define MAIN_WLAN_AUTH       M2M_WIFI_SEC_WPA_PSK   /**< Security type */
-#define MAIN_WLAN_PSK        "mikroe.guest"         /**< Password for Destination SSID */
+#define MAIN_WLAN_PSK        "!guest.mikroe!"       /**< Password for Destination SSID */
 #define MAIN_TCP_SERVER_PORT 8080                   /**< TCP Server port for client connection */
 
 typedef struct s_msg_wifi_product

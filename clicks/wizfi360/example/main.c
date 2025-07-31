@@ -48,15 +48,15 @@
 #define DEMO_SEND_DATA_LENGTH       "22"
 
 // SSID and password of the target AP
-#define DEMO_SSID                   "MikroE Public"
-#define DEMO_PASSWORD               "mikroe.guest"
+#define DEMO_SSID                   "MIKROE GUEST"
+#define DEMO_PASSWORD               "!guest.mikroe!"
 
 // Example of sending messages to a TCP/UDP echo server
 #define DEMO_EXAMPLE_TCP            "TCP"
 #define DEMO_EXAMPLE_UDP            "UDP"
 
 // TCP/UDP echo server IP address and port
-#define DEMO_REMOTE_ID              "77.46.162.162"
+#define DEMO_REMOTE_ID              "54.187.244.144"
 #define DEMO_REMOTE_PORT            "51111"
 
 static wizfi360_t wizfi360;

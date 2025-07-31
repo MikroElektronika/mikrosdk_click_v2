@@ -74,7 +74,7 @@
 #define SMS_MODE                            "1"             // SMS mode: "0" - PDU, "1" - TXT
 
 // TCP/UDP example parameters
-#define REMOTE_IP                           "77.46.162.162" // TCP/UDP echo server IP address
+#define REMOTE_IP                           "54.187.244.144"// TCP/UDP echo server IP address
 #define REMOTE_PORT                         "51111"         // TCP/UDP echo server port
 
 // Message content
