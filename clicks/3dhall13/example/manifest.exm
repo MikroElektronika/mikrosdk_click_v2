@@ -1,0 +1,5 @@
+{
+    "name": "3D Hall 13 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TMAG3001A1YBGR"]
+}
