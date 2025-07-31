@@ -1,0 +1,22 @@
+{
+    "display_name": "3D Hall 13 Click",
+    "name": "mikroe.click.3dhall13",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6555",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3D Hall 13 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3DHall13",
+                "subdir_name": "lib_c3dhall13",
+                "path": "3D Hall 13 Click/data/lib_c3dhall13"
+            }
+        ]
+    }
+}
