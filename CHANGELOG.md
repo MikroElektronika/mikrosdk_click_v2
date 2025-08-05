@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2025
+#### August
++ **[20250805](#20250805)**
 #### July
 + **[20250731](#20250731)**
 + **[20250724](#20250724)**
@@ -194,6 +196,16 @@
 
 ---
 ---
+---
+
+## `20250805`
+
+*Following Click boards have been added:*
+
++ `Power MUX 3 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250731`

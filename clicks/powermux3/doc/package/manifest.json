@@ -1,0 +1,22 @@
+{
+    "display_name": "Power MUX 3 Click",
+    "name": "mikroe.click.powermux3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6622",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Power MUX 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PowerMUX3",
+                "subdir_name": "lib_powermux3",
+                "path": "Power MUX 3 Click/data/lib_powermux3"
+            }
+        ]
+    }
+}
