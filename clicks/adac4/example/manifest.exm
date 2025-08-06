@@ -1,0 +1,5 @@
+{
+    "name": "ADAC 4 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TPAFE0808-WS2R"]
+}

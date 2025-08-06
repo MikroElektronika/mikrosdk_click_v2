@@ -1,0 +1,22 @@
+{
+    "display_name": "ADAC 4 Click",
+    "name": "mikroe.click.adac4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6722",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADAC 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ADAC4",
+                "subdir_name": "lib_adac4",
+                "path": "ADAC 4 Click/data/lib_adac4"
+            }
+        ]
+    }
+}
