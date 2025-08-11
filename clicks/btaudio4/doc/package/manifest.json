@@ -1,0 +1,22 @@
+{
+    "display_name": "BT Audio 4 Click",
+    "name": "mikroe.click.btaudio4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6685",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BT Audio 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BTAudio4",
+                "subdir_name": "lib_btaudio4",
+                "path": "BT Audio 4 Click/data/lib_btaudio4"
+            }
+        ]
+    }
+}
