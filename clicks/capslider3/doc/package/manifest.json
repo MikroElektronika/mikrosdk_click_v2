@@ -1,0 +1,22 @@
+{
+    "display_name": "Cap Slider 3 Click",
+    "name": "mikroe.click.capslider3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6645",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Cap Slider 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CapSlider3",
+                "subdir_name": "lib_capslider3",
+                "path": "Cap Slider 3 Click/data/lib_capslider3"
+            }
+        ]
+    }
+}
