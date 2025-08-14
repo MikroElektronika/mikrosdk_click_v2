@@ -1,0 +1,22 @@
+{
+    "display_name": "Charger 29 Click",
+    "name": "mikroe.click.charger29",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6652",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Charger 29 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Charger29",
+                "subdir_name": "lib_charger29",
+                "path": "Charger 29 Click/data/lib_charger29"
+            }
+        ]
+    }
+}
