@@ -1,0 +1,22 @@
+{
+    "display_name": "Haptic 5 Click",
+    "name": "mikroe.click.haptic5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6576",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Haptic 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Haptic5",
+                "subdir_name": "lib_haptic5",
+                "path": "Haptic 5 Click/data/lib_haptic5"
+            }
+        ]
+    }
+}
