@@ -1,0 +1,22 @@
+{
+    "display_name": "Air Velocity 2 Click",
+    "name": "mikroe.click.airvelocity2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6577",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Air Velocity 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AirVelocity2",
+                "subdir_name": "lib_airvelocity2",
+                "path": "Air Velocity 2 Click/data/lib_airvelocity2"
+            }
+        ]
+    }
+}
