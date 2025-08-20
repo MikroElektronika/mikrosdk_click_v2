@@ -1,0 +1,22 @@
+{
+    "display_name": "Counter 2 Click",
+    "name": "mikroe.click.counter2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6603",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Counter 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Counter2",
+                "subdir_name": "lib_counter2",
+                "path": "Counter 2 Click/data/lib_counter2"
+            }
+        ]
+    }
+}
