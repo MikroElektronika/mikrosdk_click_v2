@@ -1,0 +1,22 @@
+{
+    "display_name": "Buck 24 Click",
+    "name": "mikroe.click.buck24",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6705",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Buck 24 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Buck24",
+                "subdir_name": "lib_buck24",
+                "path": "Buck 24 Click/data/lib_buck24"
+            }
+        ]
+    }
+}
