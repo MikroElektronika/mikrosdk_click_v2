@@ -1,0 +1,22 @@
+{
+    "display_name": "Barometer 11 Click",
+    "name": "mikroe.click.barometer11",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6636",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Barometer 11 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Barometer11",
+                "subdir_name": "lib_barometer11",
+                "path": "Barometer 11 Click/data/lib_barometer11"
+            }
+        ]
+    }
+}
