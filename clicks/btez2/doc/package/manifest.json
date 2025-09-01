@@ -1,0 +1,22 @@
+{
+    "display_name": "BT-EZ 2 Click",
+    "name": "mikroe.click.btez2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6583",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BT-EZ 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BTEZ2",
+                "subdir_name": "lib_btez2",
+                "path": "BT-EZ 2 Click/data/lib_btez2"
+            }
+        ]
+    }
+}

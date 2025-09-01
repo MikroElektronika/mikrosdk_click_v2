@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2025
+#### September
++ **[20250901](#20250901)**
 #### August
 + **[20250828](#20250828)**
 + **[20250827](#20250827)**
@@ -208,6 +210,16 @@
 
 ---
 ---
+---
+
+## `20250901`
+
+*Following Click boards have been added:*
+
++ `BT-EZ 2 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250828`

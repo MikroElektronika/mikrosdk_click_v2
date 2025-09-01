@@ -1,0 +1,5 @@
+{
+    "name": "BT-EZ 2 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","CYW20822P4TAI040XUMA1"]
+}
