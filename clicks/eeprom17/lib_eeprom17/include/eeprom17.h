@@ -57,26 +57,8 @@ extern "C"{
  */
 
 /**
- * @defgroup eeprom17_reg EEPROM 17 Registers List
- * @brief List of registers of EEPROM 17 Click driver.
- */
-
-/**
- * @addtogroup eeprom17_reg
- * @{
- */
-
-/**
- * @brief EEPROM 17 description register.
- * @details Specified register for description of EEPROM 17 Click driver.
- */
-// TODO -- dodati makroe koji definisu adrese registara
-
-/*! @} */ // eeprom17_reg
-
-/**
- * @defgroup eeprom17_set EEPROM 17 Registers Settings
- * @brief Settings for registers of EEPROM 17 Click driver.
+ * @defgroup eeprom17_set EEPROM 17 Settings
+ * @brief Settings of EEPROM 17 Click driver.
  */
 
 /**

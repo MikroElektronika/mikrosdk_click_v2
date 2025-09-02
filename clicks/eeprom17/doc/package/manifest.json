@@ -2,7 +2,7 @@
     "display_name": "EEPROM 17 Click",
     "name": "mikroe.click.eeprom17",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6641",
     "package_changed": true,
     "contents": {
