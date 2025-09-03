@@ -1,0 +1,22 @@
+{
+    "display_name": "DC Motor 31 Click",
+    "name": "mikroe.click.dcmotor31",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6712",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DC Motor 31 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DCMotor31",
+                "subdir_name": "lib_dcmotor31",
+                "path": "DC Motor 31 Click/data/lib_dcmotor31"
+            }
+        ]
+    }
+}
