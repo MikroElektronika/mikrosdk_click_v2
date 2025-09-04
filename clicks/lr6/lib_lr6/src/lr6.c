@@ -101,7 +101,7 @@ err_t lr6_default_cfg ( lr6_t *ctx )
     Delay_10ms( );
 
     uint8_t data_buf[ 2 ] = { 0 };
-    err_flag |= lr6_reg_read( ctx, LR6_REG_LORA_SYNC_WORD_MSB, &data_buf, 2 );
+    err_flag |= lr6_reg_read( ctx, LR6_REG_LORA_SYNC_WORD_MSB, data_buf, 2 );
     uint16_t sync_word = ( data_buf[ 0 ] << 8 ) + data_buf[ 1 ];
     if ( sync_word != LR6_SYNC_WORD_PUBLIC && sync_word != LR6_SYNC_WORD_PRIVATE ) 
     {
@@ -490,7 +490,7 @@ err_t lr6_set_fix_inverted_iq (  lr6_t *ctx, uint8_t iq_cfg )
 
 err_t lr6_set_dio_irq_params ( lr6_t *ctx, uint16_t irq, uint16_t dio1, uint16_t dio2, uint16_t dio3 )
 {
-    uint8_t data_buf[ 4 ] = { 0 };
+    uint8_t data_buf[ 8 ] = { 0 };
     data_buf[ 0 ] = ( uint8_t ) ( ( irq >> 8 ) & 0x00FF );
     data_buf[ 1 ] = ( uint8_t ) ( irq & 0x00FF );
     data_buf[ 2 ] = ( uint8_t ) ( ( dio1 >> 8 ) & 0x00FF );
