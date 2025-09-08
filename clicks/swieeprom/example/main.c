@@ -109,7 +109,7 @@ static void swieeprom_logic_write_1 ( void );
 /**
  * @brief SWI EEPROM logic read function.
  * @details This function reads the SWI logic state.
- * @return None.
+ * @return Logic state.
  * @note None.
  */
 static uint8_t swieeprom_logic_read ( void );

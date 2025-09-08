@@ -33,8 +33,8 @@
  * @param[in] ctx : Click context object.
  * See #swieeprom_t object definition for detailed explanation.
  * @param[in] byte_to_send : Byte data to be sent.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
+ * @return @li @c 0 - Success,
+ *         @li @c 1 - Error.
  * See #err_t definition for detailed explanation.
  * @note None.
  */
@@ -47,9 +47,7 @@ static uint8_t swieeprom_send_byte ( swieeprom_t *ctx, uint8_t byte_to_send );
  * See #swieeprom_t object definition for detailed explanation.
  * @param[out] byte_to_receive : Read data byte.
  * @param[in] ack_nack : 0 - ACK, 1 - NACK to be written after read.
- * @return @li @c  0 - Success,
- *         @li @c -1 - Error.
- * See #err_t definition for detailed explanation.
+ * @return None.
  * @note None.
  */
 static void swieeprom_receive_byte ( swieeprom_t *ctx, uint8_t *byte_to_receive, uint8_t ack_nack );
@@ -90,7 +88,7 @@ err_t swieeprom_check_communication ( swieeprom_t *ctx )
     uint32_t id_value = 0;
     
     ctx->swi_start_stop ( );
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte ( ctx, SWIEEPROM_OP_CODE_ID | ctx->slave_address | 1 ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte ( ctx, SWIEEPROM_OP_CODE_ID | ctx->slave_address | 1 ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
@@ -120,17 +118,17 @@ err_t swieeprom_mem_write ( swieeprom_t *ctx, uint8_t start_addr, uint8_t data_i
         return SWIEEPROM_ERROR;
     }
     ctx->swi_start_stop ( );
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
     }
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, start_addr ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, start_addr ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
     }
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, data_in ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, data_in ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
@@ -147,19 +145,19 @@ err_t swieeprom_mem_write_page ( swieeprom_t *ctx, uint8_t start_addr, uint8_t *
         return SWIEEPROM_ERROR;
     }
     ctx->swi_start_stop ( );
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
     }
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, start_addr ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, start_addr ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
     }
     for ( uint8_t cnt = 0; cnt < len; cnt++ )
     {
-        if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, data_in[ cnt ] ) )
+        if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, data_in[ cnt ] ) )
         {
             ctx->swi_start_stop ( );
             return SWIEEPROM_ERROR;
@@ -177,18 +175,18 @@ err_t swieeprom_mem_read ( swieeprom_t *ctx, uint8_t start_addr, uint8_t *data_o
         return SWIEEPROM_ERROR;
     }
     ctx->swi_start_stop ( );
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
     }
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, start_addr ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, start_addr ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;
     }
     ctx->swi_start_stop ( );
-    if ( SWIEEPROM_ERROR == swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address | 1 ) )
+    if ( SWIEEPROM_OK != swieeprom_send_byte( ctx, SWIEEPROM_OP_CODE_EEPROM | ctx->slave_address | 1 ) )
     {
         ctx->swi_start_stop ( );
         return SWIEEPROM_ERROR;

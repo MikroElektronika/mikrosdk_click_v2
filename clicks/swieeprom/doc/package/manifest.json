@@ -2,7 +2,7 @@
     "display_name": "SWI EEPROM Click",
     "name": "mikroe.click.swieeprom",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4521",
     "package_changed": true,
     "contents": {

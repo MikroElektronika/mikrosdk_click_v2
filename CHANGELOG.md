@@ -225,6 +225,7 @@
 *Following Click boards have been modified:*
 
 + `LR 6 Click`
++ `SWI EEPROM Click`
 
 **[BACK TO TOP](#changelog)**
 
