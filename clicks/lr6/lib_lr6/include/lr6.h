@@ -96,7 +96,7 @@ extern "C"{
 #define LR6_CMD_SET_DIO2_AS_RF_SWITCH_CTRL         0x9D
 #define LR6_CMD_SET_DIO3_AS_TCXO_CTRL              0x97
 #define LR6_CMD_SET_RF_FREQUENCY                   0x86
-#define LR6_CMD_SET_PACKET_TYPE                    0x01
+#define LR6_CMD_SET_PACKET_TYPE                    0x8A
 #define LR6_CMD_GET_PACKET_TYPE                    0x11
 #define LR6_CMD_SET_TX_PARAMS                      0x8E
 #define LR6_CMD_SET_MODULATION_PARAMS              0x8B
@@ -212,7 +212,7 @@ extern "C"{
  */
 #define LR6_PA_CONFIG_DUTY_CYCLE                   0x04
 #define LR6_PA_CONFIG_HP_MAX                       0x07
-#define LR6_PA_CONFIG_SX1268                       0x01
+#define LR6_PA_CONFIG_SX1268                       0x00
 #define LR6_PA_CONFIG_PA_LUT                       0x01
 #define LR6_PWR_CONFIG_RNP_TIME                    0x04
 
@@ -236,21 +236,21 @@ extern "C"{
 #define LR6_RF_FREQUENCY_425_MHZ                   425000000ul
 #define LR6_RF_FREQ_CALIB_IMG_425_H                0x6B
 #define LR6_RF_FREQ_CALIB_IMG_425_L                0x6F
-#define LR6_RF_FREQ_CALIB_IMG_SENS                 32000000.0f / 33554432.0f
+#define LR6_RF_FREQ_CALIB_IMG_SENS                 ( 32000000.0 / 33554432.0 )
 
 /**
  * @brief LR 6 TX output power and LoRa config data values.
  * @details TX output power and LoRa configuration data values of LR 6 Click driver.
  */
 #define LR6_TX_OUTPUT_POWER                        22
-#define LR6_TX_OUTPUT_POWER_MIN                    -3 
-#define LR6_TX_OUTPUT_POWER_MAX                    22 
+#define LR6_TX_OUTPUT_POWER_MIN                    -3
+#define LR6_TX_OUTPUT_POWER_MAX                    22
 #define LR6_LORA_BANDWIDTH_31_25_KHZ               2
 #define LR6_LORA_BANDWIDTH_62_5_KHZ                3
 #define LR6_LORA_BANDWIDTH_125_KHZ                 4
 #define LR6_LORA_BANDWIDTH_250_KHZ                 5
-#define LR6_LORA_BANDWIDTH_500_KHZ                 6                                                             
-#define LR6_LORA_SPREADING_FACTOR                  7 
+#define LR6_LORA_BANDWIDTH_500_KHZ                 6
+#define LR6_LORA_SPREADING_FACTOR                  7
 #define LR6_LORA_CODINGRATE_4_5                    1
 #define LR6_LORA_CODINGRATE_4_6                    2
 #define LR6_LORA_CODINGRATE_4_7                    3
@@ -312,9 +312,9 @@ extern "C"{
  * @details IQ polarity data values of LR 6 Click driver.
  */
 #define LR6_IQ_POLARITY_SETUP_INV                  0x00
-#define LR6_IQ_POLARITY_SETUP_CLR                  0xFB  
+#define LR6_IQ_POLARITY_SETUP_CLR                  0xFB
 #define LR6_IQ_POLARITY_SETUP_NRM                  0x01
-#define LR6_IQ_POLARITY_SETUP_SET                  0x04 
+#define LR6_IQ_POLARITY_SETUP_SET                  0x04
 
 /**
  * @brief LR 6 LoRa packet and symb data values.
@@ -385,8 +385,8 @@ extern "C"{
  * Can be overwritten with @b lr6_init which will set
  * @b SET_SPI_DATA_SAMPLE_MIDDLE by default on the mapped mikrobus.
  */
-#define LR6_SET_DATA_SAMPLE_EDGE      SET_SPI_DATA_SAMPLE_EDGE
-#define LR6_SET_DATA_SAMPLE_MIDDLE    SET_SPI_DATA_SAMPLE_MIDDLE
+#define LR6_SET_DATA_SAMPLE_EDGE                    SET_SPI_DATA_SAMPLE_EDGE
+#define LR6_SET_DATA_SAMPLE_MIDDLE                  SET_SPI_DATA_SAMPLE_MIDDLE
 
 /*! @} */ // lr6_set
 
@@ -423,18 +423,18 @@ extern "C"{
 typedef struct
 {
     // Output pins
-    digital_out_t rst;    /**< Reset pin. */
+    digital_out_t rst;          /**< Reset pin. */
 
     // Input pins
-    digital_in_t md;      /**< MD - DIO pin. */
-    digital_in_t bsy;     /**< Busy pin. */
+    digital_in_t md;            /**< MD - DIO pin. */
+    digital_in_t bsy;           /**< Busy pin. */
 
     // Modules
-    spi_master_t spi;            /**< SPI driver object. */
+    spi_master_t spi;           /**< SPI driver object. */
 
-    pin_name_t   chip_select;    /**< Chip select pin descriptor (used for SPI driver). */
+    pin_name_t chip_select;     /**< Chip select pin descriptor (used for SPI driver). */
 
-    uint8_t packet_params[ 6 ];  /**< Packet params. */
+    uint8_t packet_params[ 6 ]; /**< Packet params. */
 
 } lr6_t;
 
@@ -445,15 +445,15 @@ typedef struct
 typedef struct
 {
     // Communication gpio pins
-    pin_name_t miso;     /**< Master input - slave output pin descriptor for SPI driver. */
-    pin_name_t mosi;     /**< Master output - slave input pin descriptor for SPI driver. */
-    pin_name_t sck;      /**< Clock pin descriptor for SPI driver. */
-    pin_name_t cs;       /**< Chip select pin descriptor for SPI driver. */
+    pin_name_t miso;            /**< Master input - slave output pin descriptor for SPI driver. */
+    pin_name_t mosi;            /**< Master output - slave input pin descriptor for SPI driver. */
+    pin_name_t sck;             /**< Clock pin descriptor for SPI driver. */
+    pin_name_t cs;              /**< Chip select pin descriptor for SPI driver. */
 
     // Additional gpio pins
-    pin_name_t  md;      /**< MD - DIO pin. */
-    pin_name_t rst;      /**< Reset pin. */
-    pin_name_t bsy;      /**< Busy pin. */
+    pin_name_t md;              /**< MD - DIO pin. */
+    pin_name_t rst;             /**< Reset pin. */
+    pin_name_t bsy;             /**< Busy pin. */
 
     // static variable
     uint32_t                          spi_speed;    /**< SPI serial speed. */
@@ -468,13 +468,13 @@ typedef struct
  */
 typedef struct
 {
-    uint8_t spd_fact;     /**< Spreading Factor. */
-    uint8_t bandwidth;    /**< Bandwidth. */
-    uint8_t c_rate;       /**< Coding Rate. */
-    uint16_t prmb_len;    /**< Preamble Length. */
-    uint8_t pl_len;       /**< Payload Length. */
-    uint8_t crc_on;       /**< CRC On. */
-    uint8_t inv_irq;      /**< Invert IRQ. */
+    uint8_t spd_fact;           /**< Spreading Factor. */
+    uint8_t bandwidth;          /**< Bandwidth. */
+    uint8_t c_rate;             /**< Coding Rate. */
+    uint16_t prmb_len;          /**< Preamble Length. */
+    uint8_t pl_len;             /**< Payload Length. */
+    uint8_t crc_on;             /**< CRC On. */
+    uint8_t inv_irq;            /**< Invert IRQ. */
 
 } lr6_lora_cfg_t;
 

@@ -3,19 +3,19 @@
  * @brief LR 6 Click example
  *
  * # Description
- * This example demonstrates the use of LR 6 Click board by processing
- * the incoming data and displaying them on the USB UART.
+ * This example demonstrates the use of the LR 6 Click board by showing
+ * the communication between two Click boards. The app transmits a predefined
+ * message and waits for a response. On successful reception, the payload and
+ * packet status (RSSI, SNR) are logged on the USB UART.
  *
  * The demo application is composed of two sections :
  *
  * ## Application Init
- * Initialization of SPI module and log UART.
- * After driver initialization, the app executes a default configuration.
+ * Initializes the logger and LR 6 Click and applies the default configuration.
  *
  * ## Application Task
- * The demo application is an echo example that sends a demo LoRa packet string 
- * and receives and processes all incoming data.
- * Results are being sent to the UART Terminal, where you can track their changes.
+ * Sends the demo message, polls for incoming data for up to 5 seconds,
+ * logs the received content and the link quality (RSSI/SNR), and repeats.
  *
  * @author Nenad Filipovic
  *
@@ -29,7 +29,7 @@ static lr6_t lr6;
 static log_t logger;
 
 // Demo string to be sent
-#define LR6_DEMO_TEXT            "MikroE\r\n" 
+#define LR6_DEMO_TEXT            "MIKROE - LR 6 Click board" 
 
 void application_init ( void )
 {
@@ -71,11 +71,12 @@ void application_init ( void )
 void application_task ( void )
 {
     uint8_t rx_data[ 255 ] = { 0 };
+    uint8_t rx_len = 0;
+    uint16_t timeout_cnt = 0;
     if ( LR6_OK == lr6_send_data( &lr6, LR6_DEMO_TEXT, strlen( LR6_DEMO_TEXT ), LR6_TX_MODE_SYNC ) ) 
     {
         log_info( &logger, " Send - success" );
-        uint8_t rx_len = 0;
-        do 
+        for ( ; ; )
         {
             if ( LR6_OK == lr6_receive_data( &lr6, rx_data, strlen( LR6_DEMO_TEXT ), &rx_len ) )
             {
@@ -87,6 +88,7 @@ void application_task ( void )
                     {
                         log_printf( &logger, "%c", rx_data[ cnt ] );
                     }
+                    log_printf( &logger, "\r\n" );
 
                     int8_t rssi, snr;
                     if ( LR6_OK == lr6_get_packet_status( &lr6, &rssi, &snr ) )
@@ -94,18 +96,24 @@ void application_task ( void )
                         log_printf( &logger, " Rssi Pkt: %d dBm\r\n", ( int16_t ) rssi );
                         log_printf( &logger, " Snr Pkt : %d dB\r\n", ( int16_t ) snr );
                         log_printf( &logger, " --------------------\r\n" );
-                        break;
                     }
+                    break;
                 }
             }
+            timeout_cnt++;
+            if ( timeout_cnt > 5000 )
+            {
+                log_info( &logger, " No response within 5 seconds" );
+                break;
+            }
+            Delay_ms ( 1 );
         } 
-        while ( rx_len == 0 );
     }
     else
     {
         log_info( &logger, "Send - fail" );
     }
-    Delay_ms ( 1000 );
+    Delay_ms ( 500 );
 }
 
 int main ( void ) 

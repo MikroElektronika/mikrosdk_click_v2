@@ -222,6 +222,10 @@
 
 + `IPS Display 3 Click`
 
+*Following Click boards have been modified:*
+
++ `LR 6 Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

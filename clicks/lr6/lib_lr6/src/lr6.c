@@ -95,24 +95,22 @@ err_t lr6_init ( lr6_t *ctx, lr6_cfg_t *cfg )
 err_t lr6_default_cfg ( lr6_t *ctx ) 
 {
     lr6_hw_reset( ctx );
-    Delay_10ms( );
+    Delay_100ms ( );
     
     err_t err_flag = lr6_wait_for_idle( ctx );
-    Delay_10ms( );
+    Delay_100ms ( );
 
     uint8_t data_buf[ 2 ] = { 0 };
     err_flag |= lr6_reg_read( ctx, LR6_REG_LORA_SYNC_WORD_MSB, data_buf, 2 );
-    uint16_t sync_word = ( data_buf[ 0 ] << 8 ) + data_buf[ 1 ];
+    uint16_t sync_word = ( ( uint16_t ) data_buf[ 0 ] << 8 ) + data_buf[ 1 ];
     if ( sync_word != LR6_SYNC_WORD_PUBLIC && sync_word != LR6_SYNC_WORD_PRIVATE ) 
     {
         return LR6_ERROR;
     }
     
     err_flag |= lr6_set_standby( ctx, LR6_STANDBY_RC );
-    Delay_10ms( );
 
     err_flag |= lr6_set_dio2_rf_switch( ctx, LR6_DIO2_AS_RF_SWITCH );
-    Delay_10ms( );
 
     err_flag |= lr6_set_calibrate( ctx, LR6_CALIBRATE_IMAGE_ON | 
                                         LR6_CALIBRATE_ADC_BULK_P_ON | 
@@ -121,30 +119,23 @@ err_t lr6_default_cfg ( lr6_t *ctx )
                                         LR6_CALIBRATE_PLL_ON |
                                         LR6_CALIBRATE_RC13M_ON |
                                         LR6_CALIBRATE_RC64K_ON );
-    Delay_10ms( );
 
     err_flag |= lr6_set_regulator_mode( ctx, LR6_REGULATOR_DC_DC );
-    Delay_10ms( );
 
     err_flag |= lr6_set_buff_base_addr( ctx, LR6_TX_BASE_ADDR_DEFAULT, 
                                              LR6_RX_BASE_ADDR_DEFAULT );
-    Delay_10ms( );
 
     err_flag |= lr6_set_pa_config( ctx, LR6_PA_CONFIG_DUTY_CYCLE, 
                                         LR6_PA_CONFIG_HP_MAX, 
                                         LR6_PA_CONFIG_SX1268, 
                                         LR6_PA_CONFIG_PA_LUT );
-    Delay_10ms( );
 
     err_flag |= lr6_set_ovc_protection( ctx, LR6_OVC_PROTECT_DEFAULT );
-    Delay_10ms( );
 
     err_flag |= lr6_set_power_config( ctx, LR6_TX_OUTPUT_POWER, 
                                            LR6_PWR_CONFIG_RNP_TIME );
-    Delay_10ms( );
 
     err_flag |= lr6_set_rf_frequency( ctx, LR6_RF_FREQUENCY_433_MHZ );
-    Delay_10ms( );
 
     lr6_lora_cfg_t lora_cfg;
     lora_cfg.spd_fact = LR6_LORA_SPREADING_FACTOR;
@@ -155,24 +146,20 @@ err_t lr6_default_cfg ( lr6_t *ctx )
     lora_cfg.crc_on = LR6_LORA_CRC_ON;
     lora_cfg.inv_irq = LR6_LORA_INV_IRQ_OFF;
     err_flag |= lr6_set_lr_config( ctx, lora_cfg );
-    Delay_10ms( );
 
     return err_flag;
 }
 
 void lr6_hw_reset ( lr6_t *ctx )
 {
-    Delay_10ms( );
+    Delay_10ms ( );
     digital_out_low( &ctx->rst );
-    Delay_10ms( );
-    Delay_10ms( );
+    Delay_10ms ( );
+    Delay_10ms ( );
     digital_out_high( &ctx->rst );
-    Delay_10ms( );
+    Delay_10ms ( );
 
-    while ( digital_in_read( &ctx->bsy ) )
-    {
-        Delay_1ms( );
-    }
+    lr6_wait_for_idle ( ctx );
 }
 
 uint8_t lr6_check_bsy_pin ( lr6_t *ctx )
@@ -217,13 +204,14 @@ err_t lr6_reg_write ( lr6_t *ctx, uint16_t reg, uint8_t *data_in, uint8_t len )
 {
     uint8_t tx_data[ 3 ] = { 0 };
     tx_data[ 0 ] = LR6_CMD_WRITE_REGISTER;
-    tx_data[ 1 ] = ( uint8_t ) ( ( reg & 0xFF00 )  >> 8 );
+    tx_data[ 1 ] = ( uint8_t ) ( ( reg & 0xFF00 ) >> 8 );
     tx_data[ 2 ] = ( uint8_t ) ( reg & 0x00FF );
     err_t err_flag = lr6_wait_for_idle( ctx );
     spi_master_select_device( ctx->chip_select );
-    err_flag |=  spi_master_write( &ctx->spi, tx_data, 3 );
+    err_flag |= spi_master_write( &ctx->spi, tx_data, 3 );
     err_flag |= spi_master_write( &ctx->spi, data_in, len );
     spi_master_deselect_device( ctx->chip_select );
+    err_flag |= lr6_wait_for_idle( ctx );
     return err_flag;
 }
 
@@ -231,7 +219,7 @@ err_t lr6_reg_read ( lr6_t *ctx, uint16_t reg, uint8_t *data_out, uint8_t len )
 {
     uint8_t tx_data[ 4 ] = { 0 };
     tx_data[ 0 ] = LR6_CMD_READ_REGISTER;
-    tx_data[ 1 ] = ( uint8_t ) ( ( reg & 0xFF00 )  >> 8 );
+    tx_data[ 1 ] = ( uint8_t ) ( ( reg & 0xFF00 ) >> 8 );
     tx_data[ 2 ] = ( uint8_t ) ( reg & 0x00FF );
     tx_data[ 3 ] = DUMMY;
     err_t err_flag = lr6_wait_for_idle( ctx );
@@ -239,6 +227,7 @@ err_t lr6_reg_read ( lr6_t *ctx, uint16_t reg, uint8_t *data_out, uint8_t len )
     err_flag |= spi_master_write( &ctx->spi, tx_data, 4 );
     err_flag |= spi_master_read( &ctx->spi, data_out, len );
     spi_master_deselect_device( ctx->chip_select );
+    err_flag |= lr6_wait_for_idle( ctx );
     return err_flag;
 }
 
@@ -258,6 +247,7 @@ err_t lr6_cmd_write ( lr6_t *ctx, uint8_t cmd, uint8_t *data_in, uint8_t len )
              ( ( status & LR6_STATUS_CMD_BIT_MASK ) == LR6_STATUS_CMD_FAILED ) ) 
         {
             status &= LR6_STATUS_CMD_BIT_MASK;
+            err_flag = LR6_ERROR;
             break;
         } 
         else if ( ( LR6_STATUS_DATA_ERROR == status ) || 
@@ -268,6 +258,7 @@ err_t lr6_cmd_write ( lr6_t *ctx, uint8_t cmd, uint8_t *data_in, uint8_t len )
         }
     }
     spi_master_deselect_device( ctx->chip_select );
+    err_flag |= lr6_wait_for_idle( ctx );
     return err_flag;
 }
 
@@ -293,6 +284,7 @@ err_t lr6_cmd_read ( lr6_t *ctx, uint8_t cmd, uint8_t *data_out, uint8_t len )
     err_flag |= spi_master_set_default_write_data( &ctx->spi, DUMMY );
     err_flag |= spi_master_read( &ctx->spi, data_out, len );
     spi_master_deselect_device( ctx->chip_select );
+    err_flag |= lr6_wait_for_idle( ctx ); 
     return err_flag;
 }
 
@@ -509,6 +501,7 @@ err_t lr6_get_status ( lr6_t *ctx, uint8_t *status )
 
 err_t lr6_set_rx ( lr6_t *ctx, uint32_t timeout )
 {
+    uint8_t status = 0;
     uint8_t data_buf[ 3 ] = { 0 };
     err_t err_flag = lr6_set_standby( ctx, LR6_STANDBY_RC );
     data_buf[ 0 ] = ( uint8_t ) ( ( timeout >> 16 ) & 0xFF);
@@ -518,13 +511,16 @@ err_t lr6_set_rx ( lr6_t *ctx, uint32_t timeout )
     
     for ( uint8_t cnt = 0; cnt < 10; cnt++ ) 
     {
-        uint8_t status = 0;
         err_flag |= lr6_get_status( ctx, &status );
         if ( ( status & LR6_STATUS_BITMASK ) == LR6_STATUS_SET_RX_OK )
         {
-          break;
+            break;
         }
         Delay_1ms( );
+    }
+    if ( ( status & LR6_STATUS_BITMASK ) != LR6_STATUS_SET_RX_OK )
+    {
+        err_flag |= LR6_ERROR;
     }
     return err_flag;
 }
@@ -545,7 +541,7 @@ err_t lr6_set_lr_config ( lr6_t *ctx, lr6_lora_cfg_t lora_cfg )
     }
     else
     {
-      ctx->packet_params[ 2 ] = LR6_SET_PREMBLE_LEN_ON;
+      ctx->packet_params[ 2 ] = LR6_SET_PREMBLE_LEN_OFF;
       ctx->packet_params[ 3 ] = LR6_SET_PREMBLE_LEN_DUMMY;
     }
 
@@ -569,9 +565,9 @@ err_t lr6_set_lr_config ( lr6_t *ctx, lr6_lora_cfg_t lora_cfg )
     
     err_flag |= lr6_set_fix_inverted_iq( ctx, ctx->packet_params[ 5 ] );
     err_flag |= lr6_cmd_write_check( ctx, LR6_CMD_SET_PACKET_PARAMS, ctx->packet_params, 6 );
-    err_flag |= lr6_set_dio_irq_params(ctx, LR6_IRQ_ALL, LR6_IRQ_DIO_CLR, 
-                                                         LR6_IRQ_DIO_CLR, 
-                                                         LR6_IRQ_DIO_CLR );
+    err_flag |= lr6_set_dio_irq_params(ctx, LR6_IRQ_ALL, LR6_IRQ_NONE, 
+                                                         LR6_IRQ_NONE, 
+                                                         LR6_IRQ_NONE );
     err_flag |= lr6_set_rx( ctx, LR6_SET_RX_DEFAULT );
 
     return err_flag;
@@ -587,6 +583,7 @@ err_t lr6_clear_irq_status ( lr6_t *ctx, uint16_t irq )
 
 err_t lr6_set_tx ( lr6_t *ctx, uint32_t timeout_ms )
 {
+    uint8_t status = DUMMY;
     err_t err_flag = lr6_set_standby( ctx, LR6_STANDBY_RC );
     uint8_t data_buf[ 3 ] = { 0 };
     uint32_t tout = timeout_ms;
@@ -603,13 +600,16 @@ err_t lr6_set_tx ( lr6_t *ctx, uint32_t timeout_ms )
     
     for( uint8_t cnt = 0; cnt < 10; cnt++ )
     {
-        uint8_t status = DUMMY;
         err_flag |= lr6_get_status( ctx, &status );
         if ( ( status & LR6_STATUS_BITMASK ) == LR6_STATUS_SET_TX_OK )
         {
             break;
         }
         Delay_1ms( );
+    }
+    if ( ( status & LR6_STATUS_BITMASK ) != LR6_STATUS_SET_TX_OK )
+    {
+        err_flag |= LR6_ERROR;
     }
     return err_flag;
 }
@@ -625,8 +625,9 @@ err_t lr6_get_irq_status ( lr6_t *ctx, uint16_t *irq_status )
 err_t lr6_send_data ( lr6_t *ctx, uint8_t *send_data, uint8_t len, uint8_t mode ) 
 {
     uint16_t irq_status = 0;
+    ctx->packet_params[ 2 ] = 0;
     ctx->packet_params[ 3 ] = len;
-    err_t err_flag = lr6_cmd_write_check( ctx, LR6_CMD_SET_PACKET_PARAMS, ctx->packet_params, 6);
+    err_t err_flag = lr6_cmd_write_check( ctx, LR6_CMD_SET_PACKET_PARAMS, ctx->packet_params, 6 );
     err_flag |= lr6_clear_irq_status( ctx, LR6_CLEAR_IRQ_STATUS );
     err_flag |= lr6_buffer_write( ctx, send_data, len);
     err_flag |= lr6_set_tx( ctx, 500 );
@@ -661,7 +662,7 @@ err_t lr6_receive_data ( lr6_t *ctx, uint8_t *receive_data, uint16_t buff_len, u
 {
     uint16_t irq_data = 0;
     err_t err_flag = lr6_get_irq_status( ctx, &irq_data );
-    if ( irq_data & LR6_IRQ_ALL )
+    if ( irq_data & LR6_IRQ_RX_DONE )
     {
         err_flag |= lr6_clear_irq_status( ctx, LR6_CLEAR_IRQ_STATUS );
         err_flag |= lr6_buffer_read( ctx, receive_data, buff_len, rx_len );
@@ -673,7 +674,7 @@ err_t lr6_get_packet_status ( lr6_t *ctx, int8_t *rssi, int8_t *snr )
 {
     uint8_t data_buf[ 4 ] = { 0 };
     err_t err_flag = lr6_cmd_read( ctx, LR6_CMD_GET_PACKET_STATUS, data_buf, 4 );
-    *rssi = ( ( int8_t ) data_buf[ 0 ] ) >> 1;
+    *rssi = ( data_buf[ 3 ] >> 1 ) * -1;
     *snr =  ( ( int8_t ) data_buf[ 2 ] ) >> 2;
     return err_flag;
 }
