@@ -223,6 +223,11 @@
 
 + `3D Hall 12 I2C Click`
 
+*Following Click boards have been modified:*
+
++ `Color 16 Click`
++ `TempHum 27 Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---
