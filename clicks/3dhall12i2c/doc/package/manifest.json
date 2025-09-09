@@ -1,0 +1,22 @@
+{
+    "display_name": "3D Hall 12 I2C Click",
+    "name": "mikroe.click.3dhall12i2c",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6654",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3D Hall 12 I2C Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3DHall12I2C",
+                "subdir_name": "lib_c3dhall12i2c",
+                "path": "3D Hall 12 I2C Click/data/lib_c3dhall12i2c"
+            }
+        ]
+    }
+}
