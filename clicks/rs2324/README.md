@@ -117,10 +117,6 @@ void application_task ( void )
 }
 ```
 
-### Note
-
-> NOTE_IF_REQUIRED
-
 ## Application Output
 
 This Click board can be interfaced and monitored in two ways:
