@@ -1,0 +1,22 @@
+{
+    "display_name": "LR 16 Click",
+    "name": "mikroe.click.lr16",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6598",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LR 16 Click/Examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LR16",
+                "subdir_name": "lib_lr16",
+                "path": "LR 16 Click/data/lib_lr16"
+            }
+        ]
+    }
+}
