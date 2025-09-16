@@ -1,0 +1,22 @@
+{
+    "display_name": "APC1 Sensor Demo",
+    "name": "mikroe.click.apc1sensor",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5908",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "APC1 Sensor Demo/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.APC1Sensor",
+                "subdir_name": "lib_apc1sensor",
+                "path": "APC1 Sensor Demo/data/lib_apc1sensor"
+            }
+        ]
+    }
+}

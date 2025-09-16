@@ -1,0 +1,22 @@
+{
+    "display_name": "I2C Scanner",
+    "name": "mikroe.click.i2cscanner",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": null,
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "I2C Scanner/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.I2CScanner",
+                "subdir_name": "lib_i2cscanner",
+                "path": "I2C Scanner/data/lib_i2cscanner"
+            }
+        ]
+    }
+}

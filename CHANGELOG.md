@@ -223,9 +223,15 @@
 
 ## `20250916`
 
-*Following Click boards have been added:*
+*Following Click boards and Demos have been added:*
 
 + `TempHum 26 Click`
++ `ClickID`
++ `APC1 Sensor Demo`
++ `I2C Scanner`
++ `eINK 1.54 inch display`
++ `eINK 2.13 inch display`
++ `eINK 2.90 inch display`
 
 **[BACK TO TOP](#changelog)**
 

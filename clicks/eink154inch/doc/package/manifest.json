@@ -1,0 +1,22 @@
+{
+    "display_name": "eINK 1.54 inch display",
+    "name": "mikroe.click.eink154inch",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3809",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "eINK 1.54 inch display/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Eink154Inch",
+                "subdir_name": "lib_eink154inch",
+                "path": "eINK 1.54 inch display/data/lib_eink154inch"
+            }
+        ]
+    }
+}

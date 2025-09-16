@@ -1,0 +1,22 @@
+{
+    "display_name": "ClickID",
+    "name": "mikroe.click.clickid",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": null,
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ClickID/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ClickID",
+                "subdir_name": "lib_clickid",
+                "path": "ClickID/data/lib_clickid"
+            }
+        ]
+    }
+}

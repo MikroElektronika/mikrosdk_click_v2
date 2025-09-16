@@ -1,0 +1,22 @@
+{
+    "display_name": "eINK 2.90 inch display",
+    "name": "mikroe.click.eink290inch",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3811",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "eINK 2.90 inch display/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Eink290Inch",
+                "subdir_name": "lib_eink290inch",
+                "path": "eINK 2.90 inch display/data/lib_eink290inch"
+            }
+        ]
+    }
+}
