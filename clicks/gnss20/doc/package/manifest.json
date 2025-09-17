@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS 20 Click",
+    "name": "mikroe.click.gnss20",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6743",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 20 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS20",
+                "subdir_name": "lib_gnss20",
+                "path": "GNSS 20 Click/data/lib_gnss20"
+            }
+        ]
+    }
+}
