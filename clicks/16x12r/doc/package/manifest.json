@@ -1,0 +1,22 @@
+{
+    "display_name": "16x12 R Click",
+    "name": "mikroe.click.16x12r",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6669",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "16x12 R Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.16x12R",
+                "subdir_name": "lib_c16x12r",
+                "path": "16x12 R Click/data/lib_c16x12r"
+            }
+        ]
+    }
+}
