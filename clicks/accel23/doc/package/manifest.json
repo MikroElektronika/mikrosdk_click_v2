@@ -1,0 +1,22 @@
+{
+    "display_name": "Accel 23 Click",
+    "name": "mikroe.click.accel23",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6664",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 23 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel23",
+                "subdir_name": "lib_accel23",
+                "path": "Accel 23 Click/data/lib_accel23"
+            }
+        ]
+    }
+}
