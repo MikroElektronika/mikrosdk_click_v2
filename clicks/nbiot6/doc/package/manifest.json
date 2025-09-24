@@ -1,0 +1,22 @@
+{
+    "display_name": "NB IoT 6 Click",
+    "name": "mikroe.click.nbiot6",
+    "type": "click",
+    "version": "2.2.1",
+    "pid": "MIKROE-6419",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NB IoT 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NBIoT6",
+                "subdir_name": "lib_nbiot6",
+                "path": "NB IoT 6 Click/data/lib_nbiot6"
+            }
+        ]
+    }
+}
