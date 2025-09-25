@@ -1,0 +1,22 @@
+{
+    "display_name": "Environment 6 Click",
+    "name": "mikroe.click.environment6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6536",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Environment 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Environment6",
+                "subdir_name": "lib_environment6",
+                "path": "Environment 6 Click/data/lib_environment6"
+            }
+        ]
+    }
+}
