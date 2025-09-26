@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS Antenna Board",
+    "name": "mikroe.click.gnssantenna",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6746",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS Antenna Board/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Board.GNSSAntenna",
+                "subdir_name": "lib_gnssantenna",
+                "path": "GNSS Antenna Board/data/lib_gnssantenna"
+            }
+        ]
+    }
+}
