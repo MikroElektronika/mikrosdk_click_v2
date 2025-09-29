@@ -1,0 +1,22 @@
+{
+    "display_name": "MDBT42Q Click",
+    "name": "mikroe.click.mdbt42q",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6686",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MDBT42Q Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MDBT42Q",
+                "subdir_name": "lib_mdbt42q",
+                "path": "MDBT42Q Click/data/lib_mdbt42q"
+            }
+        ]
+    }
+}

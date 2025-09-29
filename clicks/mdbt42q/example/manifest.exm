@@ -1,0 +1,5 @@
+{
+    "name": "MDBT42Q Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","MDBT42Q-AT2"]
+}
