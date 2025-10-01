@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2025
+#### October
++ **[20251001](#20251001)**
 #### September
 + **[20250930](#20250930)**
 + **[20250929](#20250929)**
@@ -227,6 +229,16 @@
 
 ---
 ---
+---
+
+## `20251001`
+
+*Following Click boards have been added:*
+
++ `BGM113 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20250930`

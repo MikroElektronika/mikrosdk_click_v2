@@ -1,0 +1,22 @@
+{
+    "display_name": "BGM113 Click",
+    "name": "mikroe.click.bgm113",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6584",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BGM113 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BGM113",
+                "subdir_name": "lib_bgm113",
+                "path": "BGM113 Click/data/lib_bgm113"
+            }
+        ]
+    }
+}
