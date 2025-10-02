@@ -1,0 +1,22 @@
+{
+    "display_name": "Fingerprint 5 Click",
+    "name": "mikroe.click.fingerprint5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6787",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Fingerprint 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Fingerprint5",
+                "subdir_name": "lib_fingerprint5",
+                "path": "Fingerprint 5 Click/data/lib_fingerprint5"
+            }
+        ]
+    }
+}

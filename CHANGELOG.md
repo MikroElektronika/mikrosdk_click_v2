@@ -6,6 +6,7 @@
 
 ### 2025
 #### October
++ **[20251002](#20251002)**
 + **[20251001](#20251001)**
 #### September
 + **[20250930](#20250930)**
@@ -229,6 +230,16 @@
 
 ---
 ---
+---
+
+## `20251002`
+
+*Following Click boards have been added:*
+
++ `Fingerprint 5 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20251001`
