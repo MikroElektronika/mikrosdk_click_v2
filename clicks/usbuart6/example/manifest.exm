@@ -1,0 +1,5 @@
+{
+    "name": "USB UART 6 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","CP2102C-A01-GQFN24"]
+}

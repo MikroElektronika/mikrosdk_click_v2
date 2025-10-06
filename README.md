@@ -868,42 +868,42 @@ A full list of Clicks available in this repository is defined below:
 | USB MUX Click | [Click Here](./clicks/usbmux) | USB to I2C 2 Click | [Click Here](./clicks/usbtoi2c2) |
 | USB UART Click | [Click Here](./clicks/usbuart) | USB UART 2 Click | [Click Here](./clicks/usbuart2) |
 | USB UART 3 Click | [Click Here](./clicks/usbuart3) | USB UART 4 Click | [Click Here](./clicks/usbuart4) |
-| USB UART 5 Click | [Click Here](./clicks/usbuart5) | USB UART ISO Click | [Click Here](./clicks/usbuartiso) |
-| UT-L 7-SEG B Click | [Click Here](./clicks/utl7segb) | UT-L 7-SEG R Click | [Click Here](./clicks/utl7segr) |
-| UT-M 7-SEG R Click | [Click Here](./clicks/utm7segr) | UT-S 7-SEG B 2 Click | [Click Here](./clicks/uts7segb2) |
-| UT-S 7-SEG R Click | [Click Here](./clicks/uts7segr) | UV Click | [Click Here](./clicks/uv) |
-| UV 2 Click | [Click Here](./clicks/uv2) | UV 3 Click | [Click Here](./clicks/uv3) |
-| UV 4 Click | [Click Here](./clicks/uv4) | UV 5 Click | [Click Here](./clicks/uv5) |
-| UVA Click | [Click Here](./clicks/uva) | UVB Click | [Click Here](./clicks/uvb) |
-| UVC Click | [Click Here](./clicks/uvc) | UVC Light Click | [Click Here](./clicks/uvclight) |
-| UWB Click | [Click Here](./clicks/uwb) | UWB 2 Click | [Click Here](./clicks/uwb2) |
-| UWB 3 Click | [Click Here](./clicks/uwb3) | UWB 4 Click | [Click Here](./clicks/uwb4) |
-| Vacuum Click | [Click Here](./clicks/vacuum) | Vacuum 2 Click | [Click Here](./clicks/vacuum2) |
-| VAV Press Click | [Click Here](./clicks/vavpress) | VCP Monitor Click | [Click Here](./clicks/vcpmonitor) |
-| VCP Monitor 2 Click | [Click Here](./clicks/vcpmonitor2) | VCP Monitor 3 Click | [Click Here](./clicks/vcpmonitor3) |
-| VCP Monitor 4 Click | [Click Here](./clicks/vcpmonitor4) | VCP Monitor 5 Click | [Click Here](./clicks/vcpmonitor5) |
-| VCP Monitor 6 Click | [Click Here](./clicks/vcpmonitor6) | VCT Monitor Click | [Click Here](./clicks/vctmonitor) |
-| Vela IF820 Click | [Click Here](./clicks/velaif820) | Vibra sense Click | [Click Here](./clicks/vibrasense) |
-| Vibra Sense 2 Click | [Click Here](./clicks/vibrasense2) | Vibro Motor Click | [Click Here](./clicks/vibromotor) |
-| Vibro Motor 2 Click | [Click Here](./clicks/vibromotor2) | Vibro Motor 3 Click | [Click Here](./clicks/vibromotor3) |
-| Vibro Motor 4 Click | [Click Here](./clicks/vibromotor4) | Voltmeter Click | [Click Here](./clicks/voltmeter) |
-| Volume Click | [Click Here](./clicks/volume) | Volume 2 Click | [Click Here](./clicks/volume2) |
-| VREF Click | [Click Here](./clicks/vref) | VREG Click | [Click Here](./clicks/vreg) |
-| VREG 2 Click | [Click Here](./clicks/vreg2) | V to Hz Click | [Click Here](./clicks/vtohz) |
-| V to Hz 2 Click | [Click Here](./clicks/vtohz2) | V to Hz 3 Click | [Click Here](./clicks/vtohz3) |
-| VU Meter Click | [Click Here](./clicks/vumeter) | Watchdog Click | [Click Here](./clicks/watchdog) |
-| Water Detect Click | [Click Here](./clicks/waterdetect) | Water Detect 2 Click | [Click Here](./clicks/waterdetect2) |
-| Water Detect 3 Click | [Click Here](./clicks/waterdetect3) | Waveform Click | [Click Here](./clicks/waveform) |
-| Waveform 2 Click | [Click Here](./clicks/waveform2) | Waveform 3 Click | [Click Here](./clicks/waveform3) |
-| Waveform 4 Click | [Click Here](./clicks/waveform4) | Weather Click | [Click Here](./clicks/weather) |
-| Wheatstone Click | [Click Here](./clicks/wheatstone) | WiFi 11 Click | [Click Here](./clicks/wifi11) |
-| WiFi 8 Click | [Click Here](./clicks/wifi8) | WiFi 9 Click | [Click Here](./clicks/wifi9) |
-| WiFi ESP Click | [Click Here](./clicks/wifiesp) | WiFi NORA Click | [Click Here](./clicks/wifinora) |
-| Wireless SUN Click | [Click Here](./clicks/wirelesssun) | Wirepas Click | [Click Here](./clicks/wirepas) |
-| WIZFI360 Click | [Click Here](./clicks/wizfi360) | XBEE Click | [Click Here](./clicks/xbee) |
-| XBEE 2 Click | [Click Here](./clicks/xbee2) | XBEE 3 Click | [Click Here](./clicks/xbee3) |
-| XBEE 4 Click | [Click Here](./clicks/xbee4) | XPort EDGE Click | [Click Here](./clicks/xportedge) |
-| XPort ETH SE Click | [Click Here](./clicks/xportethse) | XPort ETH XE Click | [Click Here](./clicks/xportethxe) |
-| XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) | Zero-Cross Click | [Click Here](./clicks/zerocross) |
-| ZigBee Click | [Click Here](./clicks/zigbee) |
+| USB UART 5 Click | [Click Here](./clicks/usbuart5) | USB UART 6 Click | [Click Here](./clicks/usbuart6) |
+| USB UART ISO Click | [Click Here](./clicks/usbuartiso) | UT-L 7-SEG B Click | [Click Here](./clicks/utl7segb) |
+| UT-L 7-SEG R Click | [Click Here](./clicks/utl7segr) | UT-M 7-SEG R Click | [Click Here](./clicks/utm7segr) |
+| UT-S 7-SEG B 2 Click | [Click Here](./clicks/uts7segb2) | UT-S 7-SEG R Click | [Click Here](./clicks/uts7segr) |
+| UV Click | [Click Here](./clicks/uv) | UV 2 Click | [Click Here](./clicks/uv2) |
+| UV 3 Click | [Click Here](./clicks/uv3) | UV 4 Click | [Click Here](./clicks/uv4) |
+| UV 5 Click | [Click Here](./clicks/uv5) | UVA Click | [Click Here](./clicks/uva) |
+| UVB Click | [Click Here](./clicks/uvb) | UVC Click | [Click Here](./clicks/uvc) |
+| UVC Light Click | [Click Here](./clicks/uvclight) | UWB Click | [Click Here](./clicks/uwb) |
+| UWB 2 Click | [Click Here](./clicks/uwb2) | UWB 3 Click | [Click Here](./clicks/uwb3) |
+| UWB 4 Click | [Click Here](./clicks/uwb4) | Vacuum Click | [Click Here](./clicks/vacuum) |
+| Vacuum 2 Click | [Click Here](./clicks/vacuum2) | VAV Press Click | [Click Here](./clicks/vavpress) |
+| VCP Monitor Click | [Click Here](./clicks/vcpmonitor) | VCP Monitor 2 Click | [Click Here](./clicks/vcpmonitor2) |
+| VCP Monitor 3 Click | [Click Here](./clicks/vcpmonitor3) | VCP Monitor 4 Click | [Click Here](./clicks/vcpmonitor4) |
+| VCP Monitor 5 Click | [Click Here](./clicks/vcpmonitor5) | VCP Monitor 6 Click | [Click Here](./clicks/vcpmonitor6) |
+| VCT Monitor Click | [Click Here](./clicks/vctmonitor) | Vela IF820 Click | [Click Here](./clicks/velaif820) |
+| Vibra sense Click | [Click Here](./clicks/vibrasense) | Vibra Sense 2 Click | [Click Here](./clicks/vibrasense2) |
+| Vibro Motor Click | [Click Here](./clicks/vibromotor) | Vibro Motor 2 Click | [Click Here](./clicks/vibromotor2) |
+| Vibro Motor 3 Click | [Click Here](./clicks/vibromotor3) | Vibro Motor 4 Click | [Click Here](./clicks/vibromotor4) |
+| Voltmeter Click | [Click Here](./clicks/voltmeter) | Volume Click | [Click Here](./clicks/volume) |
+| Volume 2 Click | [Click Here](./clicks/volume2) | VREF Click | [Click Here](./clicks/vref) |
+| VREG Click | [Click Here](./clicks/vreg) | VREG 2 Click | [Click Here](./clicks/vreg2) |
+| V to Hz Click | [Click Here](./clicks/vtohz) | V to Hz 2 Click | [Click Here](./clicks/vtohz2) |
+| V to Hz 3 Click | [Click Here](./clicks/vtohz3) | VU Meter Click | [Click Here](./clicks/vumeter) |
+| Watchdog Click | [Click Here](./clicks/watchdog) | Water Detect Click | [Click Here](./clicks/waterdetect) |
+| Water Detect 2 Click | [Click Here](./clicks/waterdetect2) | Water Detect 3 Click | [Click Here](./clicks/waterdetect3) |
+| Waveform Click | [Click Here](./clicks/waveform) | Waveform 2 Click | [Click Here](./clicks/waveform2) |
+| Waveform 3 Click | [Click Here](./clicks/waveform3) | Waveform 4 Click | [Click Here](./clicks/waveform4) |
+| Weather Click | [Click Here](./clicks/weather) | Wheatstone Click | [Click Here](./clicks/wheatstone) |
+| WiFi 11 Click | [Click Here](./clicks/wifi11) | WiFi 8 Click | [Click Here](./clicks/wifi8) |
+| WiFi 9 Click | [Click Here](./clicks/wifi9) | WiFi ESP Click | [Click Here](./clicks/wifiesp) |
+| WiFi NORA Click | [Click Here](./clicks/wifinora) | Wireless SUN Click | [Click Here](./clicks/wirelesssun) |
+| Wirepas Click | [Click Here](./clicks/wirepas) | WIZFI360 Click | [Click Here](./clicks/wizfi360) |
+| XBEE Click | [Click Here](./clicks/xbee) | XBEE 2 Click | [Click Here](./clicks/xbee2) |
+| XBEE 3 Click | [Click Here](./clicks/xbee3) | XBEE 4 Click | [Click Here](./clicks/xbee4) |
+| XPort EDGE Click | [Click Here](./clicks/xportedge) | XPort ETH SE Click | [Click Here](./clicks/xportethse) |
+| XPort ETH XE Click | [Click Here](./clicks/xportethxe) | XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) |
+| Zero-Cross Click | [Click Here](./clicks/zerocross) | ZigBee Click | [Click Here](./clicks/zigbee) |
 
