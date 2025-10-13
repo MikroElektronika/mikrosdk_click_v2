@@ -1,0 +1,5 @@
+{
+    "name": "2-Wire SPI ISO Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","L9963T-TR"]
+}

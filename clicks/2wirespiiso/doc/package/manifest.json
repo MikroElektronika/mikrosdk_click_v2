@@ -1,0 +1,22 @@
+{
+    "display_name": "2-Wire SPI ISO Click",
+    "name": "mikroe.click.2wirespiiso",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6778",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "2-Wire SPI ISO Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.2WireSPIISO",
+                "subdir_name": "lib_c2wirespiiso",
+                "path": "2-Wire SPI ISO Click/data/lib_c2wirespiiso"
+            }
+        ]
+    }
+}
