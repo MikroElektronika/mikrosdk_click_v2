@@ -1,0 +1,22 @@
+{
+    "display_name": "I2C Repeater Click",
+    "name": "mikroe.click.i2crepeater",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6785",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "I2C Repeater Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.I2CRepeater",
+                "subdir_name": "lib_i2crepeater",
+                "path": "I2C Repeater Click/data/lib_i2crepeater"
+            }
+        ]
+    }
+}
