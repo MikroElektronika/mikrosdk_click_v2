@@ -1,0 +1,22 @@
+{
+    "display_name": "Smart Buck 8 Click",
+    "name": "mikroe.click.smartbuck8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6624",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart Buck 8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartBuck8",
+                "subdir_name": "lib_smartbuck8",
+                "path": "Smart Buck 8 Click/data/lib_smartbuck8"
+            }
+        ]
+    }
+}
