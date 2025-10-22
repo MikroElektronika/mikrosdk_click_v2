@@ -1,0 +1,22 @@
+{
+    "display_name": "LTE IoT 19 Click",
+    "name": "mikroe.click.lteiot19",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6803",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE IoT 19 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTEIoT19",
+                "subdir_name": "lib_lteiot19",
+                "path": "LTE IoT 19 Click/data/lib_lteiot19"
+            }
+        ]
+    }
+}
