@@ -572,8 +572,7 @@ err_t lightranger5_set_command ( lightranger5_t *ctx, uint8_t cmd );
  *         @li @c -1 - Error.
  *
  * See #err_t definition for detailed explanation.
- * @note This function shall be pre-loaded by the host before command 
- * LIGHTRANGER5_CMD_DISTANCE_MEASURE_MODE_1 or LIGHTRANGER5_CMD_DL_CALIB_AND_STATE.
+ * @note None.
  *
  * @endcode
  */

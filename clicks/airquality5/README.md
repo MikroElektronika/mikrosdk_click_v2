@@ -95,7 +95,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Reads the values of CO, NH3 and NO2 sensor and logs data on USBUART every 500ms. 
+> Reads the values of CO, NH3 and NO2 sensor and logs data on USBUART every 200ms. 
 
 ```c
 void application_task ( void )
@@ -104,8 +104,6 @@ void application_task ( void )
     uint16_t NH3_sensor_data;
     uint16_t CO_sensor_data;
  
-    CO_sensor_data = airq5_read_sensor_data( &airquality5, AIRQ5_DATA_CHANNEL_CO );
-      
     NO2_sensor_data = airq5_read_sensor_data( &airquality5, AIRQ5_DATA_CHANNEL_NO2 );
     log_printf( &logger, " NO2 data: %d\r\n", NO2_sensor_data );
       

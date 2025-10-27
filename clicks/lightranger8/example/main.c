@@ -23,7 +23,7 @@
  * ## Application Task
  * A new data ready is checked as soon as possible which signals
  * the time required for the ranging sensor to perform the
- * measurement. An acqured distance is shown on the LOG with
+ * measurement. An acquired distance is shown on the LOG with
  * the 2 seconds delay so the terminal is possible to read.
  *
  * @author Stefan Nikolic
@@ -82,7 +82,7 @@ void application_init ( void ) {
     Delay_ms ( 1000 );
 
     log_printf( &logger, " -------------------------------------------------------------------------\r\n" );
-    log_printf( &logger, " For calibration place an object at %.1f cm distance from sensor.\r\n", ( float )calibration_distance_mm / 10 );
+    log_printf( &logger, " For calibration place an object at %.1f cm distance from sensor.\r\n", ( float ) calibration_distance_mm / 10 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
@@ -113,7 +113,7 @@ void application_task ( void ) {
 
     distance = lightranger8_get_distance( &lightranger8 );
     log_printf( &logger, " ----------------------\r\n" );
-    log_printf( &logger, " Distance: %.1f cm \r\n", ( float )distance / 10 );
+    log_printf( &logger, " Distance: %.1f cm \r\n", ( float ) distance / 10 );
     lightranger8_system_interrupt_clear ( &lightranger8 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );

@@ -58,11 +58,6 @@ void flash3_pause ( flash3_t *ctx );
 void flash3_unpause ( flash3_t *ctx );
 ```
 
-- `flash3_unpause` Unpause function. 
-```c
-void flash3_unpause ( flash3_t *ctx );
-```
-
 ### Application Init
 
 > Initalizes device, Flash 3 Click board and makes an initial log. 
@@ -104,7 +99,7 @@ void application_init ( void )
 ### Application Task
 
 > This is an example that shows the capabilities of the Flash 3 Click by
-  writing into memory array of a Flash 3 Click board and reading same data from memory array.
+writing into memory array of a Flash 3 Click board and reading same data from memory array.
 
 ```c
 void application_task ( void )
@@ -115,28 +110,25 @@ void application_task ( void )
     log_printf( &logger, "\r\n ____________________ \r\n" );
     log_printf( &logger, "Begin demonstration! \r\n\r\n" );
     
-    
-    log_printf( &logger, "Writing : %s\r\n", val_in );
     flash3_write( &flash3, 0x000000, &val_in[ 0 ], 6 );
-    Delay_ms ( 100 );
+    log_printf( &logger, "Written : %s\r\n", val_in );
     log_printf( &logger, "------------------ \r\n" );
-
-    log_printf( &logger, "Reading : %s\r\n", val_in );
-    flash3_normal_read( &flash3, 0x000000, &val_in[ 0 ], 6 );
     Delay_ms ( 100 );
-    log_printf( &logger, "------------------ \r\n" );
 
-    log_printf( &logger, "Erasing... \r\n" );
+    flash3_normal_read( &flash3, 0x000000, &val_out[ 0 ], 6 );
+    log_printf( &logger, "Read : %s\r\n", val_out );
+    log_printf( &logger, "------------------ \r\n" );
+    Delay_ms ( 100 );
+
     flash3_sector_erase( &flash3, 0x000000 );
-    Delay_ms ( 300 );
-    log_printf( &logger, "Erased!" );
-    Delay_ms ( 100 );
+    log_printf( &logger, "Erased!\r\n" );
     log_printf( &logger, "------------------ \r\n"  );
+    Delay_ms ( 500 );
 
-    log_printf( &logger, "Reading : %s\r\n", val_out );
     flash3_fast_read( &flash3, 0x000000, &val_out[ 0 ], 6 );
-    Delay_ms ( 100 );
+    log_printf( &logger, "Read : %s\r\n", val_out );
     log_printf( &logger, "------------------ \r\n" );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "Demonstration over!" );
     log_printf( &logger, "\r\n ___________________ \r\n" );

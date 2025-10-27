@@ -71,8 +71,6 @@ static int16_t dig_p9;
 
 static int32_t compensate_t ( void );
 
-static uint32_t compensate_h ( void );
-
 static uint32_t compensate_p ( void );
 
 static void hw_medium_delay ( void );
@@ -657,24 +655,6 @@ static int32_t compensate_t ( void )
     val_t = ( t_fine * 5 + 128 ) >> 8;
 
     return val_t;
-}
-
-static uint32_t compensate_h ( void )
-{
-    int32_t val_hum;
-
-    val_hum = ( t_fine - ( ( int32_t )76800 ) );
-
-    val_hum = ( ( ( ( ( adc_H << 14 ) - ( ( ( int32_t )dig_h4 ) << 20 ) - ( ( ( int32_t )dig_h5 ) * val_hum ) ) +
-             ( ( int32_t )16384 ) ) >> 15 ) * ( ( ( ( ( ( ( val_hum * ( ( int32_t )dig_h6 ) ) >> 10 ) *
-             ( ( ( val_hum * ( ( int32_t )dig_h3 ) ) >> 11 ) + ( ( int32_t )32768 ) ) ) >> 10) +
-             ( ( int32_t )2097152 ) ) * ( ( int32_t )dig_h2 ) + 8192 ) >> 14 ) );
-
-    val_hum = ( val_hum - ( ( ( ( ( val_hum >> 15 ) * ( val_hum >> 15 ) ) >> 7 ) * ( ( int32_t )dig_h1 ) ) >> 4 ) );
-    val_hum = ( val_hum < 0 ? 0 : val_hum );
-    val_hum = ( val_hum > 419430400 ? 419430400 : val_hum );
-
-    return ( uint32_t )( val_hum >> 12 );
 }
 
 static uint32_t compensate_p ( void )

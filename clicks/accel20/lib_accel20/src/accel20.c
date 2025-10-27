@@ -132,7 +132,7 @@ void accel20_cfg_setup ( accel20_cfg_t *cfg )
     cfg->spi_mode    = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->drv_sel = ACCEL20_DRV_SEL_I2C;
+    cfg->drv_sel = ACCEL20_DRV_SEL_SPI;
 }
 
 void accel20_drv_interface_selection ( accel20_cfg_t *cfg, accel20_drv_t drv_sel ) 

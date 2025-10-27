@@ -66,7 +66,7 @@ void c6dofimu_cfg_setup ( c6dofimu_cfg_t *cfg )
     cfg->i2c_address = C6DOFIMU_SLAVE_ADDRESS;
     cfg->spi_speed = 100000; 
     cfg->spi_mode = SPI_MASTER_MODE_0;
-    cfg->sel = C6DOFIMU_MASTER_SPI;
+    cfg->sel = C6DOFIMU_MASTER_I2C;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
 
@@ -241,10 +241,6 @@ static void c6dofimu_spi_read ( c6dofimu_t *ctx, uint8_t reg, uint8_t *data_buf,
     spi_master_write_then_read( &ctx->spi, tx_buf, 1, data_buf, len );
     spi_master_deselect_device( ctx->chip_select ); 
 
-    /*for ( cnt = 0; cnt < len; cnt++ )
-    {
-        data_buf[ cnt ] = rx_buf [ cnt + 1];
-    }*/
 }
 
 static int16_t drv_double_read ( c6dofimu_t *ctx, uint8_t reg )

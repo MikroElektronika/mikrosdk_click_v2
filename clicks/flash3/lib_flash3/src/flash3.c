@@ -286,34 +286,26 @@ static void drv_command ( flash3_t *ctx, uint8_t command )
 
     temp[ 0 ] = command;
 
-    spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, &temp, 1 );
-    spi_master_deselect_device( ctx->chip_select );  
 }
 
 static void drv_write_data ( flash3_t *ctx, uint8_t *buffer, uint16_t count )
 {
-    spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, buffer, count );
-    spi_master_deselect_device( ctx->chip_select );
 }
 
 static uint8_t drv_read_byte ( flash3_t *ctx )
 {
     uint8_t ret_val[ 1 ];
 
-    spi_master_select_device( ctx->chip_select );
     spi_master_read( &ctx->spi, ret_val, 1 );
-    spi_master_deselect_device( ctx->chip_select );
 
     return ret_val[ 0 ];
 }
 
 static void drv_read_data ( flash3_t *ctx, uint8_t *buffer, uint16_t count )
 {
-    spi_master_select_device( ctx->chip_select );
     spi_master_read( &ctx->spi, buffer, count );
-    spi_master_deselect_device( ctx->chip_select );
 }
 
 static void drv_write_address ( flash3_t *ctx, uint32_t address )
@@ -323,9 +315,7 @@ static void drv_write_address ( flash3_t *ctx, uint32_t address )
     temp[ 1 ] = ( uint8_t )  ( ( address & 0x00FF00 ) >> 8 );
     temp[ 2 ] = ( uint8_t )  ( address & 0x0000FF );
 
-    spi_master_select_device( ctx->chip_select );
     spi_master_write( &ctx->spi, temp, 3 );
-    spi_master_deselect_device( ctx->chip_select );
 
     return;
 }

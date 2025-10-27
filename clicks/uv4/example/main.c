@@ -18,7 +18,6 @@
  * Reads all configured measurements from selected channels
  * and logs results on USB UART. Repeats operation every 500ms.
  * 
- * 
  * \author MikroE Team
  *
  */
@@ -115,7 +114,7 @@ void application_task ( void )
                     break;
                 }
             }
-            log_printf( &logger, "%d\r\n", data_r[ cnt ] );
+            log_printf( &logger, "%lu\r\n", data_r[ cnt ] );
         }
         pom <<= 1;
     }

@@ -24,7 +24,7 @@ all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](ht
 ## Example Description
 
 > This is a example which demonstrates the use of 10DOF Click board.
-> It measures temperature, humidity and pressure data from the BME180 chip sensor
+> It measures temperature, and pressure data from the BME180 chip sensor
 > and accel, gyro and magnetometar coordinates values for X-axis, Y-axis and Z-axis.
 
 ### Example Libraries
@@ -99,7 +99,7 @@ void application_init ( void )
 
 ### Application Task
 
-> Displays temperature, humidity and pressure data from the BMP180 and BNO055 sensors.
+> Displays temperature and pressure data from the BMP180 and BNO055 sensors.
 
 ```c
 void application_task ( void )

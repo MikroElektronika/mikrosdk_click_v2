@@ -12,7 +12,7 @@
  * 
  * ## Application Task  
  * This example shows capabilities of Thermo 9 Click by measuring
- * temperature every 3 seconds and displaying temperature in degrres Celsius 
+ * temperature every 3 seconds and displaying temperature in degrees Celsius 
  * via USART terminal.
  * 
  * *note:* 

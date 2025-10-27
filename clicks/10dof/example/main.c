@@ -3,7 +3,7 @@
  * \brief C10Dof Click example
  * 
  * # Description
- * This example shows temperature,humidity,pressure, and values such as 
+ * This example shows temperature, pressure, and values such as 
  * accel, gyro and magnetometer coordinates for X,Y and Z axis.
  *
  * The demo application is composed of two sections :
@@ -14,10 +14,10 @@
  * 
  * ## Application Task  
  * This is a example which demonstrates the use of 10DOF Click board.
- * Measured temperature, humidity pressure data from the BME180 chip sensor
+ * Measured temperature, pressure data from the BME180 chip sensor
  * and accel, gyro and magnetometar coordinates values for X-axis, Y-axis and Z-axis.
  * Display temperature data to degrees Celsius [ C ],
- * pressure data [ mbar ], rate in dps, accel in mg and magnetometar in �T.
+ * pressure data [ mbar ], rate in dps, accel in mg and magnetometar in uT.
  * Results are being sent to the Usart Terminal where you can track their changes.
  * All data logs write on usb uart changes for every 3 sec.
  * 

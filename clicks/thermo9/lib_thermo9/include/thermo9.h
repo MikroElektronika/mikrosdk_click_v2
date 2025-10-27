@@ -120,9 +120,9 @@
  * \defgroup coef_calc Coefficient Calculations
  * \{
  */
-#define THERMO9_COEF_CALC_4_2                    -2
+#define THERMO9_COEF_CALC_4_2                    (-2)
 #define THERMO9_COEF_CALC_3                      4
-#define THERMO9_COEF_CALC_0                      -1.5
+#define THERMO9_COEF_CALC_0                      (-1.5)
 #define THERMO9_CALC_COEF_4                      1000000000000000000000.0
 #define THERMO9_CALC_COEF_3                      10000000000000000.0
 #define THERMO9_CALC_COEF_2                      100000000000.0
@@ -146,6 +146,7 @@ typedef uint8_t  thermo9_select_t;
 /**
  * @brief Master Input/Output type.
  */
+struct thermo9_s;
 typedef void ( *thermo9_master_io_t )( struct thermo9_s*, uint8_t, uint8_t*, uint8_t );
 
 /**

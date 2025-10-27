@@ -248,6 +248,23 @@
 
 + `LightRanger 14 Click`
 
+*Following Click boards have been modified:*
+
++ `10DOF Click`
++ `6DOF IMU Click`
++ `Accel 13 Click`
++ `Accel 20 Click`
++ `Air quality 4 Click`
++ `Air quality 5 Click`
++ `LightRanger 5 Click`
++ `LightRanger 8 Click`
++ `Proximity 10 Click`
++ `Thermo 28 Click`
++ `UV 2 Click`
++ `UV 4 Click`
++ `Flash 3 Click`
++ `Thermo 9 Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

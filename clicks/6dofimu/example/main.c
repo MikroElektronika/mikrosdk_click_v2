@@ -73,9 +73,7 @@ void application_task ( )
     float temperature; 
 
     c6dofimu_read_axis_data( &c6dofimu, C6DOFIMU_ACCEL_READ_MODE );
-//     Delay_1sec( );
     c6dofimu_read_axis_data( &c6dofimu, C6DOFIMU_GYRO_READ_MODE );
-//     Delay_1sec( );
     temperature = c6dofimu_read_temperature( &c6dofimu );
 
     log_printf( &logger, "--------------------------------------------\r\n" );

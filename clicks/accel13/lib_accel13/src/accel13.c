@@ -62,7 +62,7 @@ void accel13_cfg_setup ( accel13_cfg_t *cfg )
     cfg->int1 = HAL_PIN_NC;
 
     cfg->i2c_speed = I2C_MASTER_SPEED_STANDARD; 
-    cfg->i2c_address = ACCEL13_DEVICE_SLAVE_ADDR_VCC;
+    cfg->i2c_address = ACCEL13_DEVICE_SLAVE_ADDR_GND;
     cfg->spi_speed = 100000; 
     cfg->spi_mode = 0;
     cfg->sel = ACCEL13_MASTER_I2C;
@@ -105,7 +105,6 @@ ACCEL13_RETVAL accel13_init ( accel13_t *ctx, accel13_cfg_t *cfg )
         spi_master_config_t spi_cfg;
 
         spi_master_configure_default( &spi_cfg );
-        //spi_cfg.mode        = cfg->spi_mode;
         spi_cfg.speed  = cfg->spi_speed;
         spi_cfg.sck    = cfg->sck;
         spi_cfg.miso   = cfg->miso;

@@ -73,7 +73,7 @@ void thermo9_cfg_setup ( thermo9_cfg_t *cfg )
     cfg->spi_mode = SPI_MASTER_MODE_0;
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 
-    cfg->sel = THERMO9_MASTER_I2C;
+    cfg->sel = THERMO9_MASTER_SPI;
 }
 
 THERMO9_RETVAL thermo9_init ( thermo9_t *ctx, thermo9_cfg_t *cfg )
@@ -212,19 +212,18 @@ float thermo9_read_temp ( thermo9_t *ctx )
     temp_adc |= rx_buf[ 2 ];
     temp_adc &= 0x00FFFFFF;
 	
-    adc_value = (float)temp_adc / THERMO9_RES_MOD;
+    adc_value = ( float ) temp_adc / THERMO9_RES_MOD;
 
-    result = (-2) * ( float )ctx->temp_coef.coef4 / 
-    1000000000000000000000.0 * ( adc_value * adc_value * adc_value * adc_value );
+    result = THERMO9_COEF_CALC_4_2 * ( float ) ctx->temp_coef.coef4 / 
+             THERMO9_CALC_COEF_4 * ( adc_value * adc_value * adc_value * adc_value );
     
-    result += 4 * ( float )ctx->temp_coef.coef3 / 
-    10000000000000000.0 * ( adc_value * adc_value * adc_value );
-    result += (-2) * ( float )ctx->temp_coef.coef2 / 
-    100000000000.0 * ( adc_value * adc_value );
+    result += THERMO9_COEF_CALC_3 * ( float ) ctx->temp_coef.coef3 / 
+              THERMO9_CALC_COEF_3 * ( adc_value * adc_value * adc_value );
+    result += THERMO9_COEF_CALC_4_2 * ( float ) ctx->temp_coef.coef2 / 
+              THERMO9_CALC_COEF_2 * ( adc_value * adc_value );
     
-    result += ( float )ctx->temp_coef.coef1 / 1000000.0 * adc_value;
-    result += (-1.5) * ( float )ctx->temp_coef.coef0 /
-    100.0;
+    result += ( float ) ctx->temp_coef.coef1 / THERMO9_CALC_COEF_1 * adc_value;
+    result += THERMO9_COEF_CALC_0 * ( float ) ctx->temp_coef.coef0 / THERMO9_CALC_COEF_0;
 
     return result;
 }
@@ -256,7 +255,7 @@ static void thermo9_i2c_read ( thermo9_t *ctx, uint8_t reg, uint8_t *data_buf,
 static void thermo9_spi_write ( thermo9_t *ctx, uint8_t reg, uint8_t *data_buf, 
                                 uint8_t len )
 {
-    uint8_t tx_buf[ 265 ];
+    uint8_t tx_buf[ 256 ];
     uint8_t cnt;
 
     tx_buf[ 0 ] = reg;
@@ -274,7 +273,7 @@ static void thermo9_spi_read ( thermo9_t *ctx, uint8_t reg, uint8_t *data_buf,
                                uint8_t len )
 {
     uint8_t tx_buf[ 1 ];
-    tx_buf[ 0 ] = reg | 0x80;
+    tx_buf[ 0 ] = reg;
 
     spi_master_select_device( ctx->chip_select );
     spi_master_write_then_read( &ctx->spi, tx_buf, 1, data_buf, len );

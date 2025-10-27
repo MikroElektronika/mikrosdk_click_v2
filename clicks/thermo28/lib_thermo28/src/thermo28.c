@@ -56,7 +56,7 @@ void thermo28_cfg_setup ( thermo28_cfg_t *cfg )
     cfg->int_pin = HAL_PIN_NC;
 
     cfg->i2c_speed   = I2C_MASTER_SPEED_STANDARD;
-    cfg->i2c_address = THERMO28_DEVICE_ADDRESS_VDD;
+    cfg->i2c_address = THERMO28_DEVICE_ADDRESS_VSS;
 }
 
 err_t thermo28_init ( thermo28_t *ctx, thermo28_cfg_t *cfg ) 

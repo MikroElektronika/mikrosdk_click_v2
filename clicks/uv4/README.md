@@ -155,7 +155,7 @@ void application_task ( void )
                     break;
                 }
             }
-            log_printf( &logger, "%d\r\n", data_r[ cnt ] );
+            log_printf( &logger, "%lu\r\n", data_r[ cnt ] );
         }
         pom <<= 1;
     }

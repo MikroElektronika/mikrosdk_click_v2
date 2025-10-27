@@ -2,7 +2,7 @@
     "display_name": "Air quality 4 Click",
     "name": "mikroe.click.airquality4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2896",
     "package_changed": true,
     "contents": {

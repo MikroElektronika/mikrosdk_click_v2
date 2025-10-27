@@ -2,7 +2,7 @@
     "display_name": "10DOF Click",
     "name": "mikroe.click.10dof",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2073",
     "package_changed": true,
     "contents": {

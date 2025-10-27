@@ -195,7 +195,7 @@ void application_task ( void )
         if ( distance_mm ) {
             log_printf( &logger, "       Distance : %ld mm\r\n", distance_mm );    
         } else {
-            log_printf( &logger, "         Out of range    \r\n", distance_mm );    
+            log_printf( &logger, "         Out of range    \r\n" );    
         }
         
         log_printf( &logger, "------------------------------\r\n" );

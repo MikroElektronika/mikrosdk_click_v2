@@ -23,7 +23,7 @@ all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](ht
 
 ## Example Description
 
-> This app measurement UVA and UVB data and calculate UV index level.
+> This app measures UVA and UVB data and calculates UV index level.
 
 ### Example Libraries
 
@@ -65,7 +65,7 @@ uint16_t uv2_get_uvb ( uv2_t *ctx );
 
 ### Application Init
 
-> Initialization device and set default cinfiguration.
+> Initializes device and sets default cinfiguration.
 
 ```c
 void application_init ( void )
@@ -122,7 +122,7 @@ void application_init ( void )
 
 > This is a example which demonstrates the use of UV 2 Click board.
 > UV 2 Click communicates with VEML6075 sesnor via I2C by write to register and read from register.
-> This example measurement UVA and UVB data, calculate UV index level and write log.
+> This example measures UVA and UVB data, calculates UV index level and writes log.
 > Results are being sent to the Usart Terminal where you can track their changes.
 > All data logs write on usb uart changes for every 2 sec.
 
@@ -134,10 +134,10 @@ void application_task ( void )
     float uv_index;
 
     val_uva = uv2_get_uva( &uv2 );
-    log_printf( &logger, " UVA data = %d \r\n", val_uva );
+    log_printf( &logger, " UVA data = %u \r\n", val_uva );
 
     val_uvb = uv2_get_uvb( &uv2 );
-    log_printf( &logger, " UVB data = %d \r\n", val_uvb );
+    log_printf( &logger, " UVB data = %u \r\n", val_uvb );
 
     uv_index = uv2_get_uv_index( &uv2 );
     log_printf( &logger, " UV Index = %f \r\n", uv_index );

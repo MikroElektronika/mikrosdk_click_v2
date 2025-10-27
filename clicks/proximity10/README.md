@@ -122,8 +122,6 @@ void application_init ( void )
     cmd_resp = proximity10_send_command( &proximity10, PROXIMITY10_PS_AUTO_CMD );
     check_response( cmd_resp );
     
-    //Sound_Init( &GPIOE_ODR, 14 ); //??
-    
     log_printf( &logger, "** Proximity 10 is initialized **\r\n" );
     log_printf( &logger, "**************************************\r\n" );
     Delay_ms ( 500 );
@@ -135,9 +133,6 @@ void application_init ( void )
 > Reads the proximity PS1 data value and sends result to the uart terminal.
 > If measured proximity value is greater than selected proximity threshold value, the interrupt will be generated and
 > the message will be showed on the uart terminal.
-> When interrupt is generated the Sound function will make an alarm sound with determined duration depending on the    > detected proximity value,
-> how much is object away or close from the sensor.
-
 
 ```c
 void application_task ( void )
@@ -147,7 +142,6 @@ void application_task ( void )
     uint32_t proximity;
     uint8_t temp_read[ 2 ];
     uint8_t int_status;
-    uint16_t alarm_dur;
 
     proximity10_generic_read( &proximity10, PROXIMITY10_PS1_DATA_REG, &temp_read, 2 );
     proximity = temp_read[ 1 ];
@@ -161,13 +155,6 @@ void application_task ( void )
     if ( int_status == PROXIMITY10_PS1_INT_FLAG )
     {
         log_printf( &logger, "** Object is detected **\r\n" );
-        
-        alarm_dur = proximity / 100;
-        alarm_dur = alarm_dur + 35;
-        alarm_dur = ( float )( alarm_dur * 0.30928 );
-        alarm_dur = 180 - alarm_dur;
-        
-       // Sound_Play( 1400, alarm_dur );  //??
         Delay_ms ( 100 );
     }
     else
@@ -181,7 +168,7 @@ void application_task ( void )
 ### Note
 
 > Additional Functions :
-> - checkResponse - Sends an error code message to the uart terminal if error code is detected in the response.
+> - check_response - Sends an error code message to the uart terminal if error code is detected in the response.
 
 ## Application Output
 

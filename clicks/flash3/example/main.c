@@ -72,28 +72,25 @@ void application_task ( void )
     log_printf( &logger, "\r\n ____________________ \r\n" );
     log_printf( &logger, "Begin demonstration! \r\n\r\n" );
     
-    
-    log_printf( &logger, "Writing : %s\r\n", val_in );
     flash3_write( &flash3, 0x000000, &val_in[ 0 ], 6 );
-    Delay_ms ( 100 );
+    log_printf( &logger, "Written : %s\r\n", val_in );
     log_printf( &logger, "------------------ \r\n" );
-
-    log_printf( &logger, "Reading : %s\r\n", val_in );
-    flash3_normal_read( &flash3, 0x000000, &val_in[ 0 ], 6 );
     Delay_ms ( 100 );
-    log_printf( &logger, "------------------ \r\n" );
 
-    log_printf( &logger, "Erasing... \r\n" );
+    flash3_normal_read( &flash3, 0x000000, &val_out[ 0 ], 6 );
+    log_printf( &logger, "Read : %s\r\n", val_out );
+    log_printf( &logger, "------------------ \r\n" );
+    Delay_ms ( 100 );
+
     flash3_sector_erase( &flash3, 0x000000 );
-    Delay_ms ( 300 );
-    log_printf( &logger, "Erased!" );
-    Delay_ms ( 100 );
+    log_printf( &logger, "Erased!\r\n" );
     log_printf( &logger, "------------------ \r\n"  );
+    Delay_ms ( 500 );
 
-    log_printf( &logger, "Reading : %s\r\n", val_out );
     flash3_fast_read( &flash3, 0x000000, &val_out[ 0 ], 6 );
-    Delay_ms ( 100 );
+    log_printf( &logger, "Read : %s\r\n", val_out );
     log_printf( &logger, "------------------ \r\n" );
+    Delay_ms ( 100 );
 
     log_printf( &logger, "Demonstration over!" );
     log_printf( &logger, "\r\n ___________________ \r\n" );
@@ -102,7 +99,6 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
-    
 }
 
 int main ( void ) 
