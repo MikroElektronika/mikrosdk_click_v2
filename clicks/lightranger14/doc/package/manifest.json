@@ -1,0 +1,22 @@
+{
+    "display_name": "LightRanger 14 Click",
+    "name": "mikroe.click.lightranger14",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6747",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LightRanger 14 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LightRanger14",
+                "subdir_name": "lib_lightranger14",
+                "path": "LightRanger 14 Click/data/lib_lightranger14"
+            }
+        ]
+    }
+}
