@@ -1,0 +1,22 @@
+{
+    "display_name": "IR Grid 5 Click",
+    "name": "mikroe.click.irgrid5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6764",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "IR Grid 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.IRGrid5",
+                "subdir_name": "lib_irgrid5",
+                "path": "IR Grid 5 Click/data/lib_irgrid5"
+            }
+        ]
+    }
+}
