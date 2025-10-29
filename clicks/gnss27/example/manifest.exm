@@ -1,0 +1,5 @@
+{
+    "name": "GNSS 27 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","SE878K3A240R003000"]
+}
