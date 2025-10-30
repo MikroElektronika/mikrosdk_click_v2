@@ -1,0 +1,22 @@
+{
+    "display_name": "Grid-EYE 3 Click",
+    "name": "mikroe.click.grideye3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6821",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Grid-EYE 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GridEYE3",
+                "subdir_name": "lib_grideye3",
+                "path": "Grid-EYE 3 Click/data/lib_grideye3"
+            }
+        ]
+    }
+}
