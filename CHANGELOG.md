@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2025
+#### November
++ **[20251103](#20251103)**
 #### October
 + **[20251030](#20251030)**
 + **[20251029](#20251029)**
@@ -243,6 +245,16 @@
 
 ---
 ---
+---
+
+## `20251103`
+
+*Following Click boards have been added:*
+
++ `BLDC FOC 2 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20251030`

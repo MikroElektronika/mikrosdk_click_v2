@@ -1,0 +1,22 @@
+{
+    "display_name": "BLDC FOC 2 Click",
+    "name": "mikroe.click.bldcfoc2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6681",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BLDC FOC 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BLDCFOC2",
+                "subdir_name": "lib_bldcfoc2",
+                "path": "BLDC FOC 2 Click/data/lib_bldcfoc2"
+            }
+        ]
+    }
+}
