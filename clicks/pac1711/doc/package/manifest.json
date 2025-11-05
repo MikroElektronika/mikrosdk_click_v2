@@ -1,0 +1,22 @@
+{
+    "display_name": "PAC1711 Click",
+    "name": "mikroe.click.pac1711",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6801",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PAC1711 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PAC1711",
+                "subdir_name": "lib_pac1711",
+                "path": "PAC1711 Click/data/lib_pac1711"
+            }
+        ]
+    }
+}

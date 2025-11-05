@@ -1,0 +1,5 @@
+{
+    "name": "PAC1711 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","PAC1711T-1E/3P"]
+}
