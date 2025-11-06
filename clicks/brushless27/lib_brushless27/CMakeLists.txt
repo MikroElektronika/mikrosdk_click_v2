@@ -10,19 +10,22 @@ if (NOT PROJECT_TYPE)
 endif()
 
 add_library(lib_brushless27 STATIC
-        src/brushless27.c
-        include/brushless27.h
+    src/brushless27.c
+    include/brushless27.h
 )
 add_library(Click.Brushless27  ALIAS lib_brushless27)
 
+if (IS_PD_SETUP)
+    target_compile_definitions(
+        lib_brushless27 PUBLIC IS_PD_SETUP
+    )
+endif()
 
-
-target_include_directories(lib_brushless27 PUBLIC 
-        include
+target_include_directories(lib_brushless27 PUBLIC
+    include
 )
 
 find_package(MikroC.Core REQUIRED)
 target_link_libraries(lib_brushless27 PUBLIC MikroC.Core)
 find_package(MikroSDK.Driver REQUIRED)
 target_link_libraries(lib_brushless27 PUBLIC MikroSDK.Driver)
-

@@ -27,7 +27,7 @@
 
 #include "brushless27.h"
 
-void brushless27_cfg_setup ( brushless27_cfg_t *cfg ) 
+void brushless27_cfg_setup ( brushless27_cfg_t *cfg )
 {
     // Communication gpio pins
     cfg->scl = HAL_PIN_NC;
@@ -42,7 +42,7 @@ void brushless27_cfg_setup ( brushless27_cfg_t *cfg )
     cfg->i2c_address = BRUSHLESS27_DEVICE_ADDRESS_A1A0_00;
 }
 
-err_t brushless27_init ( brushless27_t *ctx, brushless27_cfg_t *cfg ) 
+err_t brushless27_init ( brushless27_t *ctx, brushless27_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
 
@@ -53,22 +53,24 @@ err_t brushless27_init ( brushless27_t *ctx, brushless27_cfg_t *cfg )
 
     ctx->slave_address = cfg->i2c_address;
 
-    if ( I2C_MASTER_ERROR == i2c_master_open( &ctx->i2c, &i2c_cfg ) ) 
+    if ( I2C_MASTER_ERROR == i2c_master_open( &ctx->i2c, &i2c_cfg ) )
     {
         return I2C_MASTER_ERROR;
     }
 
-    if ( I2C_MASTER_ERROR == i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address ) ) 
+    if ( I2C_MASTER_ERROR == i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address ) )
     {
         return I2C_MASTER_ERROR;
     }
 
-    if ( I2C_MASTER_ERROR == i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) ) 
+    if ( I2C_MASTER_ERROR == i2c_master_set_speed( &ctx->i2c, cfg->i2c_speed ) )
     {
         return I2C_MASTER_ERROR;
     }
 
+    #ifndef IS_PD_SETUP
     digital_out_init( &ctx->rst, cfg->rst );
+    #endif
 
     digital_in_init( &ctx->sen, cfg->sen );
     digital_in_init( &ctx->int_pin, cfg->int_pin );
@@ -76,18 +78,18 @@ err_t brushless27_init ( brushless27_t *ctx, brushless27_cfg_t *cfg )
     return I2C_MASTER_SUCCESS;
 }
 
-err_t brushless27_default_cfg ( brushless27_t *ctx ) 
+err_t brushless27_default_cfg ( brushless27_t *ctx )
 {
     err_t error_flag = BRUSHLESS27_OK;
-    
+
     brushless27_reset_port_exp( ctx );
-    
+
     error_flag |= brushless27_write_reg( ctx, BRUSHLESS27_REG_CONFIG, BRUSHLESS27_FLT_PIN );
 
     return error_flag;
 }
 
-err_t brushless27_generic_write ( brushless27_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len ) 
+err_t brushless27_generic_write ( brushless27_t *ctx, uint8_t reg, uint8_t *data_in, uint8_t len )
 {
     uint8_t data_buf[ 256 ] = { 0 };
     data_buf[ 0 ] = reg;
@@ -98,7 +100,7 @@ err_t brushless27_generic_write ( brushless27_t *ctx, uint8_t reg, uint8_t *data
     return i2c_master_write( &ctx->i2c, data_buf, len + 1 );
 }
 
-err_t brushless27_generic_read ( brushless27_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len ) 
+err_t brushless27_generic_read ( brushless27_t *ctx, uint8_t reg, uint8_t *data_out, uint8_t len )
 {
     return i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_out, len );
 }
@@ -115,23 +117,25 @@ uint8_t brushless27_get_int_pin ( brushless27_t *ctx )
 
 void brushless27_reset_port_exp ( brushless27_t *ctx )
 {
+    #ifndef IS_PD_SETUP
     digital_out_low( &ctx->rst );
     Delay_100ms( );
     digital_out_high( &ctx->rst );
     Delay_100ms( );
+    #endif
 }
 
 err_t brushless27_get_flt_pin ( brushless27_t *ctx )
 {
     uint8_t tmp_data = 0;
     err_t error_flag = BRUSHLESS27_OK;
-    
+
     error_flag = brushless27_read_reg ( ctx, BRUSHLESS27_REG_INPUT_PORT, &tmp_data );
     if ( tmp_data & BRUSHLESS27_FLT_PIN )
     {
         error_flag = BRUSHLESS27_ERROR;
     }
-    
+
     return error_flag;
 }
 
@@ -164,39 +168,39 @@ err_t brushless27_set_trap_com_state ( brushless27_t *ctx, uint8_t state )
     {
         case BRUSHLESS27_TR_COM_STATE_COAST:
         {
-            set_mask = BRUSHLESS27_NONE_PIN; 
-            clr_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_VH_PIN | BRUSHLESS27_WH_PIN; 
+            set_mask = BRUSHLESS27_NONE_PIN;
+            clr_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_VH_PIN | BRUSHLESS27_WH_PIN;
             break;
         }
-        
+
         case BRUSHLESS27_TR_COM_STATE_1:
         {
-            set_mask = BRUSHLESS27_VH_PIN | BRUSHLESS27_VL_PIN | BRUSHLESS27_WH_PIN; 
-            clr_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_WL_PIN; 
+            set_mask = BRUSHLESS27_VH_PIN | BRUSHLESS27_VL_PIN | BRUSHLESS27_WH_PIN;
+            clr_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_WL_PIN;
             break;
         }
-        
+
         case BRUSHLESS27_TR_COM_STATE_2:
         {
             set_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_UL_PIN | BRUSHLESS27_WH_PIN;
             clr_mask = BRUSHLESS27_VH_PIN | BRUSHLESS27_WL_PIN;
             break;
         }
-        
+
         case BRUSHLESS27_TR_COM_STATE_3:
         {
             set_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_UL_PIN | BRUSHLESS27_VH_PIN;
-            clr_mask = BRUSHLESS27_VL_PIN | BRUSHLESS27_WH_PIN; 
+            clr_mask = BRUSHLESS27_VL_PIN | BRUSHLESS27_WH_PIN;
             break;
         }
-        
+
         case BRUSHLESS27_TR_COM_STATE_4:
         {
             set_mask = BRUSHLESS27_VH_PIN | BRUSHLESS27_WH_PIN | BRUSHLESS27_WL_PIN;
             clr_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_VL_PIN;
             break;
         }
-        
+
         case BRUSHLESS27_TR_COM_STATE_5:
         {
             set_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_WH_PIN | BRUSHLESS27_WL_PIN;
@@ -210,20 +214,20 @@ err_t brushless27_set_trap_com_state ( brushless27_t *ctx, uint8_t state )
             clr_mask = BRUSHLESS27_UL_PIN | BRUSHLESS27_WH_PIN;
             break;
         }
-        
+
         case BRUSHLESS27_TR_COM_STATE_BRAKE:
         {
             set_mask = BRUSHLESS27_UL_PIN | BRUSHLESS27_VL_PIN | BRUSHLESS27_WL_PIN;
             clr_mask = BRUSHLESS27_UH_PIN | BRUSHLESS27_VH_PIN | BRUSHLESS27_WH_PIN;
             break;
         }
-        
+
         default:
         {
             return BRUSHLESS27_ERROR;
         }
     }
-    
+
     return brushless27_set_pins ( ctx, set_mask, clr_mask );
 }
 
@@ -233,10 +237,10 @@ err_t brushless27_toggle_pin ( brushless27_t *ctx, uint8_t pin_mask, uint8_t spe
     for ( uint16_t cnt = 0; cnt < BRUSHLESS27_NUM_PIN_TOGGLE; cnt++ )
     {
         int16_t speed_cnt = BRUSHLESS27_SPEED_MAX;
-        
+
         error_flag |= brushless27_set_pins ( ctx, pin_mask, BRUSHLESS27_NONE_PIN );
         error_flag |= brushless27_set_pins ( ctx, BRUSHLESS27_NONE_PIN, pin_mask );
-        
+
         while ( speed_cnt-- >= speed )
         {
             Delay_10us ( );
@@ -252,7 +256,7 @@ err_t brushless27_perform_com_seq ( brushless27_t *ctx, uint8_t dir, uint8_t spe
     {
         return BRUSHLESS27_ERROR;
     }
-    
+
     if ( BRUSHLESS27_DIR_CW == dir )
     {
         error_flag |= brushless27_set_trap_com_state ( ctx, BRUSHLESS27_TR_COM_STATE_6 );
@@ -269,7 +273,7 @@ err_t brushless27_perform_com_seq ( brushless27_t *ctx, uint8_t dir, uint8_t spe
         error_flag |= brushless27_toggle_pin ( ctx, BRUSHLESS27_WL_PIN, speed );
     }
     else
-    {        
+    {
         error_flag |= brushless27_set_trap_com_state ( ctx, BRUSHLESS27_TR_COM_STATE_3 );
         error_flag |= brushless27_toggle_pin ( ctx, BRUSHLESS27_UL_PIN, speed );
         error_flag |= brushless27_set_trap_com_state ( ctx, BRUSHLESS27_TR_COM_STATE_2 );
@@ -283,24 +287,22 @@ err_t brushless27_perform_com_seq ( brushless27_t *ctx, uint8_t dir, uint8_t spe
         error_flag |= brushless27_set_trap_com_state ( ctx, BRUSHLESS27_TR_COM_STATE_4 );
         error_flag |= brushless27_toggle_pin ( ctx, BRUSHLESS27_WL_PIN, speed );
     }
-    
+
     return error_flag;
 }
 
 err_t brushless27_drive_motor ( brushless27_t *ctx, uint8_t dir, uint8_t speed, uint32_t time_ms )
 {
     err_t error_flag = BRUSHLESS27_OK;
-    float aprox_sequence_time = BRUSHLESS27_COM_SEQ_DURATION_FOR_SPEED_MAX + 
+    float aprox_sequence_time = BRUSHLESS27_COM_SEQ_DURATION_FOR_SPEED_MAX +
                                 ( BRUSHLESS27_SPEED_MAX - speed ) * BRUSHLESS27_COM_SEQ_DURATION_SPEED_STEP;
     int32_t num_seq = ( int32_t ) ( time_ms / aprox_sequence_time + BRUSHLESS27_ROUND_TO_NEAREAST_INT );
-    do 
+    do
     {
         error_flag |= brushless27_perform_com_seq ( ctx, dir, speed );
-    } 
+    }
     while ( ( --num_seq > 0 ) && ( BRUSHLESS27_OK == error_flag ) );
     return error_flag;
 }
-
-
 
 // ------------------------------------------------------------------------- END
