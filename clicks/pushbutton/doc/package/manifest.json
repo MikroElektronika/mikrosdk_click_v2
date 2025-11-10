@@ -1,0 +1,22 @@
+{
+    "display_name": "Push Button Click",
+    "name": "mikroe.click.pushbutton",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6811",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Push Button Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PushButton",
+                "subdir_name": "lib_pushbutton",
+                "path": "Push Button Click/data/lib_pushbutton"
+            }
+        ]
+    }
+}

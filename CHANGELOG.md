@@ -6,6 +6,7 @@
 
 ### 2025
 #### November
++ **[20251110](#20251110)**
 + **[20251105](#20251105)**
 + **[20251103](#20251103)**
 #### October
@@ -246,6 +247,16 @@
 
 ---
 ---
+---
+
+## `20251110`
+
+*Following Click boards have been added:*
+
++ `Push Button Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20251105`
