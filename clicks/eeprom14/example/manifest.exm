@@ -1,0 +1,5 @@
+{
+    "name": "EEPROM 14 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","24LC512-I/MF"]
+}
