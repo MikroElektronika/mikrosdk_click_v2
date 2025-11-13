@@ -1,0 +1,22 @@
+{
+    "display_name": "Charger 31 Click",
+    "name": "mikroe.click.charger31",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6713",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Charger 31 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Charger31",
+                "subdir_name": "lib_charger31",
+                "path": "Charger 31 Click/data/lib_charger31"
+            }
+        ]
+    }
+}
