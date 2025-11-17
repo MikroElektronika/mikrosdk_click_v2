@@ -1,0 +1,22 @@
+{
+    "display_name": "Current 13 Click",
+    "name": "mikroe.click.current13",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6815",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Current 13 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Current13",
+                "subdir_name": "lib_current13",
+                "path": "Current 13 Click/data/lib_current13"
+            }
+        ]
+    }
+}
