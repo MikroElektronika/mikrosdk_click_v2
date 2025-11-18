@@ -1,0 +1,22 @@
+{
+    "display_name": "SPI to I2C Click",
+    "name": "mikroe.click.spitoi2c",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6789",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SPI to I2C Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SPItoI2C",
+                "subdir_name": "lib_spitoi2c",
+                "path": "SPI to I2C Click/data/lib_spitoi2c"
+            }
+        ]
+    }
+}
