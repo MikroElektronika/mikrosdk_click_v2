@@ -1,0 +1,22 @@
+{
+    "display_name": "CAN-LIN SBC Click",
+    "name": "mikroe.click.canlinsbc",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6530",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "CAN-LIN SBC Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CANLINSBC",
+                "subdir_name": "lib_canlinsbc",
+                "path": "CAN-LIN SBC Click/data/lib_canlinsbc"
+            }
+        ]
+    }
+}
