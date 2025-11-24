@@ -1,0 +1,22 @@
+{
+    "display_name": "M-BUS RF 5 Click",
+    "name": "mikroe.click.mbusrf5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6763",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "M-BUS RF 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MBUSRF5",
+                "subdir_name": "lib_mbusrf5",
+                "path": "M-BUS RF 5 Click/data/lib_mbusrf5"
+            }
+        ]
+    }
+}
