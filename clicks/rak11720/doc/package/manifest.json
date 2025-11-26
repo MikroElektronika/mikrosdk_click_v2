@@ -1,0 +1,22 @@
+{
+    "display_name": "RAK11720 Click",
+    "name": "mikroe.click.rak11720",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6627",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RAK11720 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RAK11720",
+                "subdir_name": "lib_rak11720",
+                "path": "RAK11720 Click/data/lib_rak11720"
+            }
+        ]
+    }
+}
