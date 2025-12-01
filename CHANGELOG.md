@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2025
+#### December
++ **[20251201](#20251201)**
 #### November
 + **[20251127](#20251127)**
 + **[20251126](#20251126)**
@@ -257,6 +259,16 @@
 
 ---
 ---
+---
+
+## `20251201`
+
+*Following Click boards have been added:*
+
++ `PMIC 2 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20251127`

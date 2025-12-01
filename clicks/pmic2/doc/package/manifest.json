@@ -1,0 +1,22 @@
+{
+    "display_name": "PMIC 2 Click",
+    "name": "mikroe.click.pmic2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6599",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PMIC 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PMIC2",
+                "subdir_name": "lib_pmic2",
+                "path": "PMIC 2 Click/data/lib_pmic2"
+            }
+        ]
+    }
+}
