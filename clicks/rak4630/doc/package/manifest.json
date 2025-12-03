@@ -1,0 +1,22 @@
+{
+    "display_name": "RAK4630 Click",
+    "name": "mikroe.click.rak4630",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6626",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RAK4630 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RAK4630",
+                "subdir_name": "lib_rak4630",
+                "path": "RAK4630 Click/data/lib_rak4630"
+            }
+        ]
+    }
+}
