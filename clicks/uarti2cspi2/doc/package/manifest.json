@@ -1,0 +1,22 @@
+{
+    "display_name": "UART I2C SPI 2 Click",
+    "name": "mikroe.click.uarti2cspi2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6827",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "UART I2C SPI 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.UARTI2CSPI2",
+                "subdir_name": "lib_uarti2cspi2",
+                "path": "UART I2C SPI 2 Click/data/lib_uarti2cspi2"
+            }
+        ]
+    }
+}

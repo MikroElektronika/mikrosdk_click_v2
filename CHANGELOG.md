@@ -6,6 +6,7 @@
 
 ### 2025
 #### December
++ **[20251208](#20251208)**
 + **[20251203](#20251203)**
 + **[20251201](#20251201)**
 #### November
@@ -260,6 +261,16 @@
 
 ---
 ---
+---
+
+## `20251208`
+
+*Following Click boards have been added:*
+
++ `UART I2C SPI 2 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20251203`
