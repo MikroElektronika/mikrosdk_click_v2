@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS MAX 3 Click",
+    "name": "mikroe.click.gnssmax3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6786",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS MAX 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSSMAX3",
+                "subdir_name": "lib_gnssmax3",
+                "path": "GNSS MAX 3 Click/data/lib_gnssmax3"
+            }
+        ]
+    }
+}
