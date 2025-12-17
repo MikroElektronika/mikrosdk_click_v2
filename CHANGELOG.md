@@ -274,6 +274,10 @@
 
 + `LTE IoT 13 Click`
 
+*Following Click boards have been updated:*
+
++ `4G LTE GNSS Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

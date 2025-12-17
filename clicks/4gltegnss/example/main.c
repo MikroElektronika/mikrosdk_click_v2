@@ -66,7 +66,7 @@
 #define DEMO_EXAMPLE                        EXAMPLE_TCP_UDP // Example selection macro
 
 // SIM APN config
-#define SIM_APN                             "internet"      // Set valid SIM APN
+#define SIM_APN                             ""              // Set valid SIM APN
 
 // SMS example parameters
 #define SIM_SMSC                            ""              // Set valid SMS Service Center Address - only in SMS PDU mode
@@ -518,7 +518,7 @@ static err_t c4gltegnss_example( void )
     uint8_t udp_socket_num[ 2 ] = { 0 };
 
     // Create TCP socket
-    #define RSP_USOCR "+USOCR:"
+    #define RSP_USOCR "+USOCR: "
     #define TCP_PROTOCOL "6"
     c4gltegnss_send_cmd_with_par ( &c4gltegnss, C4GLTEGNSS_CMD_USOCR, TCP_PROTOCOL );
     error_flag = c4gltegnss_rsp_check( C4GLTEGNSS_RSP_OK );
@@ -581,7 +581,7 @@ static err_t c4gltegnss_example( void )
     c4gltegnss_error_check( error_flag );
 
     // Read response message from TCP socket
-    #define URC_READ_SOCKET_DATA_TCP "+UUSORD:"
+    #define URC_READ_SOCKET_DATA_TCP "+UUSORD: "
     strcpy( urc_buf, URC_READ_SOCKET_DATA_TCP );
     strcat( urc_buf, tcp_socket_num );
     for ( ; ; )
@@ -627,7 +627,7 @@ static err_t c4gltegnss_example( void )
     c4gltegnss_error_check( error_flag );
 
     // Read response message from UDP socket
-    #define URC_READ_SOCKET_DATA_UDP "+UUSORF:"
+    #define URC_READ_SOCKET_DATA_UDP "+UUSORF: "
     strcpy( urc_buf, URC_READ_SOCKET_DATA_UDP );
     strcat( urc_buf, udp_socket_num );
     for ( ; ; )
