@@ -1,0 +1,5 @@
+{
+    "name": "LTE IoT 13 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","gcc-riscv","clang-riscv"],
+    "hw" : ["Click","2615011136000"]
+}
