@@ -1,0 +1,22 @@
+{
+    "display_name": "LTE IoT 23 Click",
+    "name": "mikroe.click.lteiot23",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6682",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE IoT 23 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTEIoT23",
+                "subdir_name": "lib_lteiot23",
+                "path": "LTE IoT 23 Click/data/lib_lteiot23"
+            }
+        ]
+    }
+}
