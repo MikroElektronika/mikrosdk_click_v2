@@ -1,0 +1,22 @@
+{
+    "display_name": "Current 17 Click",
+    "name": "mikroe.click.current17",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6819",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Current 17 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Current17",
+                "subdir_name": "lib_current17",
+                "path": "Current 17 Click/data/lib_current17"
+            }
+        ]
+    }
+}
