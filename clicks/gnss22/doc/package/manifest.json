@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS 22 Click",
+    "name": "mikroe.click.gnss22",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6794",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 22 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS22",
+                "subdir_name": "lib_gnss22",
+                "path": "GNSS 22 Click/data/lib_gnss22"
+            }
+        ]
+    }
+}
