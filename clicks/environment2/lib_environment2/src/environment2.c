@@ -966,9 +966,7 @@ static void dev_measurement_duration_raw_delay ( void ) {
 static void dev_measurement_duration_test_delay ( void ) {
     Delay_100ms( );
     Delay_100ms( );
-    Delay_10ms( );
-    Delay_10ms( );
-    Delay_10ms( );
+    Delay_100ms( );
     Delay_10ms( );
     Delay_10ms( );
 }

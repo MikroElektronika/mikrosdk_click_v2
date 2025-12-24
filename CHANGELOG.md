@@ -277,6 +277,10 @@
 
 + `GNSS 22 Click`
 
+*Following Click boards have been updated:*
+
++ `Environment 2 Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---
