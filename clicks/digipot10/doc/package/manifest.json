@@ -1,0 +1,22 @@
+{
+    "display_name": "DIGI POT 10 Click",
+    "name": "mikroe.click.digipot10",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6797",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DIGI POT 10 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DIGIPOT10",
+                "subdir_name": "lib_digipot10",
+                "path": "DIGI POT 10 Click/data/lib_digipot10"
+            }
+        ]
+    }
+}
