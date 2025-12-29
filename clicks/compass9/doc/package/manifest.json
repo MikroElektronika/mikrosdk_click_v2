@@ -1,0 +1,22 @@
+{
+    "display_name": "Compass 9 Click",
+    "name": "mikroe.click.compass9",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6575",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Compass 9 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Compass9",
+                "subdir_name": "lib_compass9",
+                "path": "Compass 9 Click/data/lib_compass9"
+            }
+        ]
+    }
+}
