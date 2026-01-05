@@ -4,6 +4,10 @@
 
 **Updates by date of commit:**
 
+### 2026
+#### January
++ **[20260105](#20260105)**
+
 ### 2025
 #### December
 + **[20251231](#20251231)**
@@ -272,6 +276,16 @@
 
 ---
 ---
+---
+
+## `20260105`
+
+*Following Click boards have been added:*
+
++ `NB IoT 7 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20251231`
