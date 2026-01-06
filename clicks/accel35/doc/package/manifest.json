@@ -1,0 +1,22 @@
+{
+    "display_name": "Accel 35 Click",
+    "name": "mikroe.click.accel35",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6828",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Accel 35 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Accel35",
+                "subdir_name": "lib_accel35",
+                "path": "Accel 35 Click/data/lib_accel35"
+            }
+        ]
+    }
+}
