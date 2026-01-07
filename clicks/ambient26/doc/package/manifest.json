@@ -1,0 +1,22 @@
+{
+    "display_name": "Ambient 26 Click",
+    "name": "mikroe.click.ambient26",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6856",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ambient 26 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ambient26",
+                "subdir_name": "lib_ambient26",
+                "path": "Ambient 26 Click/data/lib_ambient26"
+            }
+        ]
+    }
+}
