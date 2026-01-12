@@ -1,0 +1,22 @@
+{
+    "display_name": "EnOcean 5 Click",
+    "name": "mikroe.click.enocean5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6796",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "EnOcean 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.EnOcean5",
+                "subdir_name": "lib_enocean5",
+                "path": "EnOcean 5 Click/data/lib_enocean5"
+            }
+        ]
+    }
+}
