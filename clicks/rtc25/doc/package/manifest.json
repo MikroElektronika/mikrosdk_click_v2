@@ -1,0 +1,22 @@
+{
+    "display_name": "RTC 25 Click",
+    "name": "mikroe.click.rtc25",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6855",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 25 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC25",
+                "subdir_name": "lib_rtc25",
+                "path": "RTC 25 Click/data/lib_rtc25"
+            }
+        ]
+    }
+}
