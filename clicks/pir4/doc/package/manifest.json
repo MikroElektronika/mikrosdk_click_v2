@@ -1,0 +1,22 @@
+{
+    "display_name": "PIR 4 Click",
+    "name": "mikroe.click.pir4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6859",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PIR 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PIR4",
+                "subdir_name": "lib_pir4",
+                "path": "PIR 4 Click/data/lib_pir4"
+            }
+        ]
+    }
+}
