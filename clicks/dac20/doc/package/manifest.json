@@ -1,0 +1,22 @@
+{
+    "display_name": "DAC 20 Click",
+    "name": "mikroe.click.dac20",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6825",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DAC 20 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DAC20",
+                "subdir_name": "lib_dac20",
+                "path": "DAC 20 Click/data/lib_dac20"
+            }
+        ]
+    }
+}
