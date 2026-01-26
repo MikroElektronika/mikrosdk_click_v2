@@ -1,0 +1,22 @@
+{
+    "display_name": "NORA-B266 Click",
+    "name": "mikroe.click.norab266",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6850",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NORA-B266 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NORAB266",
+                "subdir_name": "lib_norab266",
+                "path": "NORA-B266 Click/data/lib_norab266"
+            }
+        ]
+    }
+}
