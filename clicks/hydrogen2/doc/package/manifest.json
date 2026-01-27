@@ -1,0 +1,22 @@
+{
+    "display_name": "Hydrogen 2 Click",
+    "name": "mikroe.click.hydrogen2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6875",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hydrogen 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Hydrogen2",
+                "subdir_name": "lib_hydrogen2",
+                "path": "Hydrogen 2 Click/data/lib_hydrogen2"
+            }
+        ]
+    }
+}
