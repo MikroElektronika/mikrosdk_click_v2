@@ -1,0 +1,22 @@
+{
+    "display_name": "RS485 Isolator 5 Click",
+    "name": "mikroe.click.rs485isolator5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6887",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RS485 Isolator 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RS485Isolator5",
+                "subdir_name": "lib_rs485isolator5",
+                "path": "RS485 Isolator 5 Click/data/lib_rs485isolator5"
+            }
+        ]
+    }
+}
