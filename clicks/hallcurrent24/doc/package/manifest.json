@@ -1,0 +1,22 @@
+{
+    "display_name": "Hall Current 24 Click",
+    "name": "mikroe.click.hallcurrent24",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6854",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Current 24 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallCurrent24",
+                "subdir_name": "lib_hallcurrent24",
+                "path": "Hall Current 24 Click/data/lib_hallcurrent24"
+            }
+        ]
+    }
+}
