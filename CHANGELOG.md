@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### February
++ **[20260202](#20260202)**
 #### January
 + **[20260129](#20260129)**
 + **[20260128](#20260128)**
@@ -289,6 +291,16 @@
 
 ---
 ---
+---
+
+## `20260202`
+
+*Following Click boards have been added:*
+
++ `Gesture Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260129`

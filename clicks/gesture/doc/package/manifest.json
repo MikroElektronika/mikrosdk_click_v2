@@ -1,0 +1,22 @@
+{
+    "display_name": "Gesture Click",
+    "name": "mikroe.click.gesture",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6517",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Gesture Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Gesture",
+                "subdir_name": "lib_gesture",
+                "path": "Gesture Click/data/lib_gesture"
+            }
+        ]
+    }
+}
