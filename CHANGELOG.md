@@ -299,6 +299,7 @@
 *Following Click boards have been added:*
 
 + `Proximity 24 Click`
++ `ATA6563 Click`
 
 **[BACK TO TOP](#changelog)**
 

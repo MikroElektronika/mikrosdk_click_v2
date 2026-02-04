@@ -1,0 +1,22 @@
+{
+    "display_name": "ATA6563 Click",
+    "name": "mikroe.click.ata6563",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2334",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ATA6563 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ATA6563",
+                "subdir_name": "lib_ata6563",
+                "path": "ATA6563 Click/data/lib_ata6563"
+            }
+        ]
+    }
+}
