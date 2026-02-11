@@ -1,0 +1,22 @@
+{
+    "display_name": "Light 5 Click",
+    "name": "mikroe.click.light5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6905",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Light 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Light5",
+                "subdir_name": "lib_light5",
+                "path": "Light 5 Click/data/lib_light5"
+            }
+        ]
+    }
+}
