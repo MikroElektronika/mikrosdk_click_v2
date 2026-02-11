@@ -302,6 +302,7 @@
 *Following Click boards have been added:*
 
 + `Light 5 Click`
++ `RAQ Click`
 
 **[BACK TO TOP](#changelog)**
 

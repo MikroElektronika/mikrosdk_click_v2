@@ -1,0 +1,22 @@
+{
+    "display_name": "RAQ Click",
+    "name": "mikroe.click.raq",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4385",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RAQ Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RAQ",
+                "subdir_name": "lib_raq",
+                "path": "RAQ Click/data/lib_raq"
+            }
+        ]
+    }
+}
