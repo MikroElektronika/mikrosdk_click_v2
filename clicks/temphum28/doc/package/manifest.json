@@ -1,0 +1,22 @@
+{
+    "display_name": "TempHum 28 Click",
+    "name": "mikroe.click.temphum28",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6904",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TempHum 28 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TempHum28",
+                "subdir_name": "lib_temphum28",
+                "path": "TempHum 28 Click/data/lib_temphum28"
+            }
+        ]
+    }
+}
