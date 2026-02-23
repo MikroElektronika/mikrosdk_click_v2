@@ -306,6 +306,7 @@
 *Following Click boards have been added:*
 
 + `WiFi NINA Click`
++ `Pressure 24 Click`
 
 **[BACK TO TOP](#changelog)**
 
