@@ -930,12 +930,12 @@ A full list of Clicks available in this repository is defined below:
 | Waveform 4 Click | [Click Here](./clicks/waveform4) | Weather Click | [Click Here](./clicks/weather) |
 | Wheatstone Click | [Click Here](./clicks/wheatstone) | WiFi 11 Click | [Click Here](./clicks/wifi11) |
 | WiFi 8 Click | [Click Here](./clicks/wifi8) | WiFi 9 Click | [Click Here](./clicks/wifi9) |
-| WiFi ESP Click | [Click Here](./clicks/wifiesp) | WiFi NORA Click | [Click Here](./clicks/wifinora) |
-| Wireless SUN Click | [Click Here](./clicks/wirelesssun) | Wirepas Click | [Click Here](./clicks/wirepas) |
-| WIZFI360 Click | [Click Here](./clicks/wizfi360) | XBEE Click | [Click Here](./clicks/xbee) |
-| XBEE 2 Click | [Click Here](./clicks/xbee2) | XBEE 3 Click | [Click Here](./clicks/xbee3) |
-| XBEE 4 Click | [Click Here](./clicks/xbee4) | XPort EDGE Click | [Click Here](./clicks/xportedge) |
-| XPort ETH SE Click | [Click Here](./clicks/xportethse) | XPort ETH XE Click | [Click Here](./clicks/xportethxe) |
-| XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) | Zero-Cross Click | [Click Here](./clicks/zerocross) |
-| ZigBee Click | [Click Here](./clicks/zigbee) |
+| WiFi ESP Click | [Click Here](./clicks/wifiesp) | WiFi NINA Click | [Click Here](./clicks/wifinina) |
+| WiFi NORA Click | [Click Here](./clicks/wifinora) | Wireless SUN Click | [Click Here](./clicks/wirelesssun) |
+| Wirepas Click | [Click Here](./clicks/wirepas) | WIZFI360 Click | [Click Here](./clicks/wizfi360) |
+| XBEE Click | [Click Here](./clicks/xbee) | XBEE 2 Click | [Click Here](./clicks/xbee2) |
+| XBEE 3 Click | [Click Here](./clicks/xbee3) | XBEE 4 Click | [Click Here](./clicks/xbee4) |
+| XPort EDGE Click | [Click Here](./clicks/xportedge) | XPort ETH SE Click | [Click Here](./clicks/xportethse) |
+| XPort ETH XE Click | [Click Here](./clicks/xportethxe) | XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) |
+| Zero-Cross Click | [Click Here](./clicks/zerocross) | ZigBee Click | [Click Here](./clicks/zigbee) |
 

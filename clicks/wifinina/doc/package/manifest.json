@@ -1,0 +1,22 @@
+{
+    "display_name": "WiFi NINA Click",
+    "name": "mikroe.click.wifinina",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2921",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WiFi NINA Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WiFiNINA",
+                "subdir_name": "lib_wifinina",
+                "path": "WiFi NINA Click/data/lib_wifinina"
+            }
+        ]
+    }
+}
