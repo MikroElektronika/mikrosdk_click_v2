@@ -1,0 +1,22 @@
+{
+    "display_name": "XSENS MTi-8 Click",
+    "name": "mikroe.click.xsensmti8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6660",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "XSENS MTi-8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.XSENSMTi8",
+                "subdir_name": "lib_xsensmti8",
+                "path": "XSENS MTi-8 Click/data/lib_xsensmti8"
+            }
+        ]
+    }
+}

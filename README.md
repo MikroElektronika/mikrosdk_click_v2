@@ -937,6 +937,6 @@ A full list of Clicks available in this repository is defined below:
 | XBEE 2 Click | [Click Here](./clicks/xbee2) | XBEE 3 Click | [Click Here](./clicks/xbee3) |
 | XBEE 4 Click | [Click Here](./clicks/xbee4) | XPort EDGE Click | [Click Here](./clicks/xportedge) |
 | XPort ETH SE Click | [Click Here](./clicks/xportethse) | XPort ETH XE Click | [Click Here](./clicks/xportethxe) |
-| XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) | Zero-Cross Click | [Click Here](./clicks/zerocross) |
-| ZigBee Click | [Click Here](./clicks/zigbee) |
+| XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) | XSENS MTi-8 Click | [Click Here](./clicks/xsensmti8) |
+| Zero-Cross Click | [Click Here](./clicks/zerocross) | ZigBee Click | [Click Here](./clicks/zigbee) |
 
