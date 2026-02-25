@@ -1,0 +1,22 @@
+{
+    "display_name": "Ultrasonic 3 Click",
+    "name": "mikroe.click.ultrasonic3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4870",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ultrasonic 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ultrasonic3",
+                "subdir_name": "lib_ultrasonic3",
+                "path": "Ultrasonic 3 Click/data/lib_ultrasonic3"
+            }
+        ]
+    }
+}
