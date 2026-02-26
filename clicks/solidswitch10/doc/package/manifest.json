@@ -1,0 +1,22 @@
+{
+    "display_name": "SolidSwitch 10 Click",
+    "name": "mikroe.click.solidswitch10",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6864",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SolidSwitch 10 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SolidSwitch10",
+                "subdir_name": "lib_solidswitch10",
+                "path": "SolidSwitch 10 Click/data/lib_solidswitch10"
+            }
+        ]
+    }
+}

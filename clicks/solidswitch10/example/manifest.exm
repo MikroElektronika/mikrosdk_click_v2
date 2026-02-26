@@ -1,0 +1,5 @@
+{
+    "name": "SolidSwitch 10 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","PCA9536D,118","IPS1050LQ"]
+}
