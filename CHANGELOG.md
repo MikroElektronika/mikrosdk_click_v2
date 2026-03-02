@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### March
++ **[20260302](#20260302)**
 #### February
 + **[20260226](#20260226)**
 + **[20260225](#20260225)**
@@ -302,6 +304,16 @@
 
 ---
 ---
+---
+
+## `20260302`
+
+*Following Click boards have been added:*
+
++ `OLED W 2 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260226`
