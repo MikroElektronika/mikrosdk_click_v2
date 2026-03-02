@@ -312,6 +312,7 @@
 
 + `OLED W 2 Click`
 + `MiWi Click`
++ `MiWi 2 Click`
 
 **[BACK TO TOP](#changelog)**
 
