@@ -311,6 +311,7 @@
 *Following Click boards have been added:*
 
 + `OLED W 2 Click`
++ `MiWi Click`
 
 **[BACK TO TOP](#changelog)**
 

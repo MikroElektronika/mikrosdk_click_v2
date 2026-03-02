@@ -1,0 +1,22 @@
+{
+    "display_name": "MiWi Click",
+    "name": "mikroe.click.miwi",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2924",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MiWi Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MiWi",
+                "subdir_name": "lib_miwi",
+                "path": "MiWi Click/data/lib_miwi"
+            }
+        ]
+    }
+}
