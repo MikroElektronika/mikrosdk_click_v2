@@ -1,0 +1,5 @@
+{
+    "name": "Ultrasonic 4 Click",
+    "toolchain": ["gcc-arm","clang-arm","xc32"],
+    "hw" : ["Click","ICU-20201"]
+}
