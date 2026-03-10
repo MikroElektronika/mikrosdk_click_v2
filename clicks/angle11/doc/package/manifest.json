@@ -1,0 +1,22 @@
+{
+    "display_name": "Angle 11 Click",
+    "name": "mikroe.click.angle11",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6888",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Angle 11 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Angle11",
+                "subdir_name": "lib_angle11",
+                "path": "Angle 11 Click/data/lib_angle11"
+            }
+        ]
+    }
+}
