@@ -1,0 +1,22 @@
+{
+    "display_name": "Skoll-I Click",
+    "name": "mikroe.click.skolli",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6830",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Skoll-I Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SkollI",
+                "subdir_name": "lib_skolli",
+                "path": "Skoll-I Click/data/lib_skolli"
+            }
+        ]
+    }
+}
