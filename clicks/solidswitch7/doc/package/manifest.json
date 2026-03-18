@@ -1,0 +1,22 @@
+{
+    "display_name": "SolidSwitch 7 Click",
+    "name": "mikroe.click.solidswitch7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6721",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SolidSwitch 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SolidSwitch7",
+                "subdir_name": "lib_solidswitch7",
+                "path": "SolidSwitch 7 Click/data/lib_solidswitch7"
+            }
+        ]
+    }
+}
