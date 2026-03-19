@@ -891,7 +891,7 @@ A full list of Clicks available in this repository is defined below:
 | TouchKey 4 Click | [Click Here](./clicks/touchkey4) | Touchpad Click | [Click Here](./clicks/touchpad) |
 | TouchPad 2 Click | [Click Here](./clicks/touchpad2) | Touchpad 3 Click | [Click Here](./clicks/touchpad3) |
 | Touchpad 4 Click | [Click Here](./clicks/touchpad4) | Touchpad 5 Click | [Click Here](./clicks/touchpad5) |
-| TPS Pressure Click | [Click Here](./clicks/tpspressure) | tRF Click | [Click Here](./clicks/trf) |
+| TPS Pressure 040MY Click | [Click Here](./clicks/tpspressure040my) | tRF Click | [Click Here](./clicks/trf) |
 | Turbidity Click | [Click Here](./clicks/turbidity) | UART 1-Wire Click | [Click Here](./clicks/uart1wire) |
 | UART I2C SPI Click | [Click Here](./clicks/uarti2cspi) | UART I2C SPI 2 Click | [Click Here](./clicks/uarti2cspi2) |
 | UART Mux Click | [Click Here](./clicks/uartmux) | UART MUX 2 Click | [Click Here](./clicks/uartmux2) |

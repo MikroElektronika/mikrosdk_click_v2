@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.21)
 if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
-    project(example_tpspressure LANGUAGES MikroC)
+    project(example_tpspressure040my LANGUAGES MikroC)
 else()
-    project(example_tpspressure LANGUAGES C ASM)
+    project(example_tpspressure040my LANGUAGES C ASM)
 endif()
 
 include(mikroeUtils)
@@ -11,22 +11,22 @@ if (NOT PROJECT_TYPE)
     set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
 endif()
 
-add_executable(example_tpspressure
+add_executable(example_tpspressure040my
         main.c
     
 )
 
 
-############################ example_tpspressure GENERATED CODE START ###########################
+############################ example_tpspressure040my GENERATED CODE START ###########################
 find_package(MikroC.Core REQUIRED)
-target_link_libraries(example_tpspressure PUBLIC MikroC.Core)
+target_link_libraries(example_tpspressure040my PUBLIC MikroC.Core)
 find_package(MikroSDK.Board REQUIRED)
-target_link_libraries(example_tpspressure PUBLIC MikroSDK.Board)
+target_link_libraries(example_tpspressure040my PUBLIC MikroSDK.Board)
 find_package(MikroSDK.Log REQUIRED)
-target_link_libraries(example_tpspressure PUBLIC MikroSDK.Log)
-add_subdirectory(lib_tpspressure)
-target_link_libraries(example_tpspressure PUBLIC Click.TPSPressure)
-############################ example_tpspressure GENERATED CODE END ###########################
+target_link_libraries(example_tpspressure040my PUBLIC MikroSDK.Log)
+add_subdirectory(lib_tpspressure040my)
+target_link_libraries(example_tpspressure040my PUBLIC Click.TPSPressure040MY)
+############################ example_tpspressure040my GENERATED CODE END ###########################
 
 if(COMPILER_REVISION)
     if(${COMPILER_REVISION} VERSION_GREATER_EQUAL "1.0")

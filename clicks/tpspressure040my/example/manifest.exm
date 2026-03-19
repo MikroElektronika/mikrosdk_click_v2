@@ -1,5 +1,5 @@
 {
-    "name": "TPS Pressure Click",
+    "name": "TPS Pressure 040MY Click",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["Click","TPS-040MY-CA1N-00-T"]
 }

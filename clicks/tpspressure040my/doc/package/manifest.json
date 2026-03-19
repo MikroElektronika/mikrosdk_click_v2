@@ -1,0 +1,22 @@
+{
+    "display_name": "TPS Pressure 040MY Click",
+    "name": "mikroe.click.tpspressure040my",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6824",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TPS Pressure 040MY Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TPSPressure040MY",
+                "subdir_name": "lib_tpspressure040my",
+                "path": "TPS Pressure 040MY Click/data/lib_tpspressure040my"
+            }
+        ]
+    }
+}

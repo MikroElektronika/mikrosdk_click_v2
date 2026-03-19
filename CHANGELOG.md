@@ -6,6 +6,7 @@
 
 ### 2026
 #### March
++ **[20260319](#20260319)**
 + **[20260318](#20260318)**
 + **[20260317](#20260317)**
 + **[20260316](#20260316)**
@@ -312,6 +313,20 @@
 
 ---
 ---
+---
+
+## `20260319`
+
+*Following Click boards have been added:*
+
++ `TPS Pressure 040MY Click`
+
+*Following Click boards have been removed:*
+
++ `TPS Pressure Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260318`

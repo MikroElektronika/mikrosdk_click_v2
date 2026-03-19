@@ -1,9 +1,9 @@
 /*!
  * @file main.c
- * @brief TPS Pressure Click example
+ * @brief TPS Pressure 040MY Click example
  *
  * # Description
- * This example demonstrates the use of the TPS Pressure Click board.
+ * This example demonstrates the use of the TPS Pressure 040MY Click board.
  * The application continuously measures and logs the pressure in millibars
  * and the temperature in degrees Celsius.
  *
@@ -21,15 +21,15 @@
 
 #include "board.h"
 #include "log.h"
-#include "tpspressure.h"
+#include "tpspressure040my.h"
 
-static tpspressure_t tpspressure;
+static tpspressure040my_t tpspressure040my;
 static log_t logger;
 
 void application_init ( void ) 
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
-    tpspressure_cfg_t tpspressure_cfg;  /**< Click config object. */
+    tpspressure040my_cfg_t tpspressure040my_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -45,15 +45,15 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-    tpspressure_cfg_setup( &tpspressure_cfg );
-    TPSPRESSURE_MAP_MIKROBUS( tpspressure_cfg, MIKROBUS_1 );
-    if ( I2C_MASTER_ERROR == tpspressure_init( &tpspressure, &tpspressure_cfg ) ) 
+    tpspressure040my_cfg_setup( &tpspressure040my_cfg );
+    TPSPRESSURE040MY_MAP_MIKROBUS( tpspressure040my_cfg, MIKROBUS_1 );
+    if ( I2C_MASTER_ERROR == tpspressure040my_init( &tpspressure040my, &tpspressure040my_cfg ) ) 
     {
         log_error( &logger, " Communication init." );
         for ( ; ; );
     }
     
-    if ( TPSPRESSURE_ERROR == tpspressure_default_cfg ( &tpspressure ) )
+    if ( TPSPRESSURE040MY_ERROR == tpspressure040my_default_cfg ( &tpspressure040my ) )
     {
         log_error( &logger, " Default configuration." );
         for ( ; ; );
@@ -66,7 +66,7 @@ void application_task ( void )
 {
     float pressure = 0;
     float temperature = 0;
-    if ( TPSPRESSURE_OK == tpspressure_read_data ( &tpspressure, &pressure, &temperature ) )
+    if ( TPSPRESSURE040MY_OK == tpspressure040my_read_data ( &tpspressure040my, &pressure, &temperature ) )
     {
         log_printf( &logger, " Pressure: %.2f mBar\r\n", pressure );
         log_printf( &logger, " Temperature: %.2f degC\r\n\n", temperature );
