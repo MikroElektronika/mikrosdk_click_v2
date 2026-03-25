@@ -1,0 +1,22 @@
+{
+    "display_name": "ISM 9 Click",
+    "name": "mikroe.click.ism9",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6911",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ISM 9 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ISM9",
+                "subdir_name": "lib_ism9",
+                "path": "ISM 9 Click/data/lib_ism9"
+            }
+        ]
+    }
+}
