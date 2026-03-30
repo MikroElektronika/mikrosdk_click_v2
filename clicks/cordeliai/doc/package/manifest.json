@@ -1,0 +1,22 @@
+{
+    "display_name": "Cordelia-I Click",
+    "name": "mikroe.click.cordeliai",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6909",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Cordelia-I Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CordeliaI",
+                "subdir_name": "lib_cordeliai",
+                "path": "Cordelia-I Click/data/lib_cordeliai"
+            }
+        ]
+    }
+}
