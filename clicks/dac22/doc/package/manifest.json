@@ -1,0 +1,22 @@
+{
+    "display_name": "DAC 22 Click",
+    "name": "mikroe.click.dac22",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6946",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DAC 22 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DAC22",
+                "subdir_name": "lib_dac22",
+                "path": "DAC 22 Click/data/lib_dac22"
+            }
+        ]
+    }
+}
