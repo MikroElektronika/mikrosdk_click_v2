@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### April
++ **[20260401](#20260401)**
 #### March
 + **[20260331](#20260331)**
 + **[20260330](#20260330)**
@@ -319,6 +321,16 @@
 
 ---
 ---
+---
+
+## `20260401`
+
+*Following Click boards have been added:*
+
++ `Current 15 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260331`
