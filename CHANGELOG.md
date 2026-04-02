@@ -330,6 +330,12 @@
 
 + `Pressure 27 Click`
 
+*Following Click boards have been updated:*
+
++ `RTC 2 Click`
++ `RTC 6 Click`
++ `Accel 35 Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

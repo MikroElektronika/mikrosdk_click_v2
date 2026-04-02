@@ -517,7 +517,7 @@ uint8_t accel35_get_it1_pin ( accel35_t *ctx );
 uint8_t accel35_get_it2_pin ( accel35_t *ctx );
 
 /**
- * @brief Accel 23 check communication function.
+ * @brief Accel 35 check communication function.
  * @details This function checks device communication by reading the WHO_AM_I register.
  * @param[in] ctx : Click context object.
  * See #accel35_t object definition for detailed explanation.

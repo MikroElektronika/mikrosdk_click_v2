@@ -2,8 +2,8 @@
     "display_name": "RTC 6 Click",
     "name": "mikroe.click.rtc6",
     "type": "click",
-    "version": "2.2.0",
-    "pid": "MIKROE-948",
+    "version": "2.2.1",
+    "pid": "MIKROE-2063",
     "package_changed": true,
     "contents": {
         "examples": [
