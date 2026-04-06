@@ -1,0 +1,22 @@
+{
+    "display_name": "RF Switch 2 Click",
+    "name": "mikroe.click.rfswitch2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6914",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RF Switch 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RFSwitch2",
+                "subdir_name": "lib_rfswitch2",
+                "path": "RF Switch 2 Click/data/lib_rfswitch2"
+            }
+        ]
+    }
+}
