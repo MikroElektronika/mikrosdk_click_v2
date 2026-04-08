@@ -1,0 +1,22 @@
+{
+    "display_name": "Boost 10 Click",
+    "name": "mikroe.click.boost10",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6927",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Boost 10 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Boost10",
+                "subdir_name": "lib_boost10",
+                "path": "Boost 10 Click/data/lib_boost10"
+            }
+        ]
+    }
+}
