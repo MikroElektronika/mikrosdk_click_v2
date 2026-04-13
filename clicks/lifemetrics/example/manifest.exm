@@ -1,0 +1,5 @@
+{
+    "name": "Life Metrics Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","AS7058A-BWLM","LIS2DH12TR","AS6223A-AWLM"]
+}

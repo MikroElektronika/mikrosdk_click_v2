@@ -1,0 +1,22 @@
+{
+    "display_name": "Life Metrics Click",
+    "name": "mikroe.click.lifemetrics",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6851",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Life Metrics Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LifeMetrics",
+                "subdir_name": "lib_lifemetrics",
+                "path": "Life Metrics Click/data/lib_lifemetrics"
+            }
+        ]
+    }
+}
