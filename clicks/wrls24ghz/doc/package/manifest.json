@@ -1,0 +1,22 @@
+{
+    "display_name": "WRLS 2.4GHz Click",
+    "name": "mikroe.click.wrls24ghz",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6915",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WRLS 2.4GHz Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WRLS24GHz",
+                "subdir_name": "lib_wrls24ghz",
+                "path": "WRLS 2.4GHz Click/data/lib_wrls24ghz"
+            }
+        ]
+    }
+}

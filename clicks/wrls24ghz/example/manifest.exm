@@ -1,0 +1,5 @@
+{
+    "name": "WRLS 2.4GHz Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv"],
+    "hw" : ["Click","HJ-131IMH_UART"]
+}
