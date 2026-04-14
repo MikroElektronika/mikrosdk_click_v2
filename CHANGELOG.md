@@ -334,6 +334,10 @@
 
 + `WRLS 2.4GHz Click`
 
+*Following Click boards have been updated:*
+
++ `Temp ISO Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

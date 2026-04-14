@@ -79,7 +79,11 @@ err_t tempiso_read_voltage_avg ( tempiso_t *ctx, uint16_t num_conv, float *volta
     float voltage_sum = 0;
     uint16_t cnt = 0;
     uint16_t timeout_cnt = 0;
-    while ( cnt < TEMPISO_NUM_CONVERSIONS )
+    if ( 0 == num_conv )
+    {
+        return TEMPISO_ERROR;
+    }
+    while ( cnt < num_conv )
     {
         if ( TEMPISO_OK == tempiso_read_voltage ( ctx, &voltage ) )
         {
@@ -92,7 +96,7 @@ err_t tempiso_read_voltage_avg ( tempiso_t *ctx, uint16_t num_conv, float *volta
             return TEMPISO_ERROR;
         }
     }
-    *voltage_avg = ( voltage_sum / TEMPISO_NUM_CONVERSIONS );
+    *voltage_avg = ( voltage_sum / num_conv );
     return TEMPISO_OK;
 }
 
