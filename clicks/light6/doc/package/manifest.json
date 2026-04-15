@@ -1,0 +1,22 @@
+{
+    "display_name": "Light 6 Click",
+    "name": "mikroe.click.light6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6942",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Light 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Light6",
+                "subdir_name": "lib_light6",
+                "path": "Light 6 Click/data/lib_light6"
+            }
+        ]
+    }
+}
