@@ -26,6 +26,10 @@
 #include "log.h"
 #include "macaddress.h"
 
+#ifndef MIKROBUS_POSITION_MACADDRESS
+    #define MIKROBUS_POSITION_MACADDRESS MIKROBUS_1
+#endif
+
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -67,7 +71,7 @@ void application_init ( void )
     //  Click initialization.
 
     macaddress_cfg_setup( &cfg );
-    MACADDRESS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MACADDRESS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MACADDRESS );
     macaddress_init( &macaddress, &cfg );
     
     macaddress_get_mac( &macaddress, mac_addr );

@@ -33,6 +33,10 @@
 #include "ble7.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_BLE7
+    #define MIKROBUS_POSITION_BLE7 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 200
 
@@ -177,7 +181,7 @@ void application_init ( void )
     //  Click initialization.
 
     ble7_cfg_setup( &cfg );
-    BLE7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE7 );
     ble7_init( &ble7, &cfg );
     Delay_1sec( );
     

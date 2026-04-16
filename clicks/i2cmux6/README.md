@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cmux6_cfg_setup( &i2cmux6_cfg );
-    I2CMUX6_MAP_MIKROBUS( i2cmux6_cfg, MIKROBUS_1 );
+    I2CMUX6_MAP_MIKROBUS( i2cmux6_cfg, MIKROBUS_POSITION_I2CMUX6 );
     if ( I2C_MASTER_ERROR == i2cmux6_init( &i2cmux6, &i2cmux6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ata6505_cfg_setup( &ata6505_cfg );
-    ATA6505_MAP_MIKROBUS( ata6505_cfg, MIKROBUS_1 );
+    ATA6505_MAP_MIKROBUS( ata6505_cfg, MIKROBUS_POSITION_ATA6505 );
     if ( UART_ERROR == ata6505_init( &ata6505, &ata6505_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     digipot10_cfg_setup( &digipot10_cfg );
-    DIGIPOT10_MAP_MIKROBUS( digipot10_cfg, MIKROBUS_1 );
+    DIGIPOT10_MAP_MIKROBUS( digipot10_cfg, MIKROBUS_POSITION_DIGIPOT10 );
     err_t init_flag = digipot10_init( &digipot10, &digipot10_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

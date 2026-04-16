@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     current14_cfg_setup( &current14_cfg );
-    CURRENT14_MAP_MIKROBUS( current14_cfg, MIKROBUS_1 );
+    CURRENT14_MAP_MIKROBUS( current14_cfg, MIKROBUS_POSITION_CURRENT14 );
     if ( I2C_MASTER_ERROR == current14_init( &current14, &current14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

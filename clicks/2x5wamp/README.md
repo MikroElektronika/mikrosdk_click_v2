@@ -103,7 +103,7 @@ void application_init ( void )
     //  Click initialization.
 
     c2x5wamp_cfg_setup( &cfg );
-    C2X5WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C2X5WAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_2X5WAMP );
     c2x5wamp_init( &c2x5wamp, &cfg );
     Delay_ms ( 100 );
     

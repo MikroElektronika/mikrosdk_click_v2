@@ -29,6 +29,10 @@
 #include "log.h"
 #include "htu21d.h"
 
+#ifndef MIKROBUS_POSITION_HTU21D
+    #define MIKROBUS_POSITION_HTU21D MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static htu21d_t htu21d;
@@ -62,7 +66,7 @@ void application_init ( void )
     //  Click initialization.
 
     htu21d_cfg_setup( &cfg );
-    HTU21D_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HTU21D_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HTU21D );
     htu21d_init( &htu21d, &cfg );
     
     htu21d_send_cmd ( &htu21d, HTU21D_SOFT_RESET );

@@ -39,6 +39,10 @@
 #include "string.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_MBUSRF4
+    #define MIKROBUS_POSITION_MBUSRF4 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 256
 #define PROCESS_PARSER_BUFFER_SIZE 256
@@ -334,7 +338,7 @@ void application_init ( void )
     //  Click initialization.
 
     mbusrf4_cfg_setup( &cfg );
-    MBUSRF4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MBUSRF4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MBUSRF4 );
     mbusrf4_init( &mbusrf4, &cfg );
 
     parser_cnt = 0;

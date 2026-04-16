@@ -87,7 +87,7 @@ void application_init ( void )
     //  Click initialization.
 
     driver_cfg_setup( &cfg );
-    DRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DRIVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DRIVER );
     driver_init( &driver, &cfg );
 }
 ```

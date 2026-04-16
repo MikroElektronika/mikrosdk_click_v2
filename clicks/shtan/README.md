@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     shtan_cfg_setup( &cfg );
-    SHTAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHTAN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHTAN );
     shtan_init( &shtan, &cfg );
 
     log_printf( &logger, "------------------\r\n" );

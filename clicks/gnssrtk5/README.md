@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssrtk5_cfg_setup( &gnssrtk5_cfg );
-    GNSSRTK5_MAP_MIKROBUS( gnssrtk5_cfg, MIKROBUS_1 );
+    GNSSRTK5_MAP_MIKROBUS( gnssrtk5_cfg, MIKROBUS_POSITION_GNSSRTK5 );
     if ( UART_ERROR == gnssrtk5_init( &gnssrtk5, &gnssrtk5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "swipeswitch.h"
 
+#ifndef MIKROBUS_POSITION_SWIPESWITCH
+    #define MIKROBUS_POSITION_SWIPESWITCH MIKROBUS_1
+#endif
+
 #define SWIPESWITCH_GESTURE_MODE        0    
 #define SWIPESWITCH_POSITION_MODE       1                
 
@@ -65,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     swipeswitch_cfg_setup( &cfg );
-    SWIPESWITCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SWIPESWITCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SWIPESWITCH );
     swipeswitch_init( &swipeswitch, &cfg );
     Delay_ms ( 300 );
     

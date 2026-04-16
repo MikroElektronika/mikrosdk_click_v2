@@ -23,6 +23,10 @@
 #include "log.h"
 #include "rfmeter.h"
 
+#ifndef MIKROBUS_POSITION_RFMETER
+    #define MIKROBUS_POSITION_RFMETER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rfmeter_t rfmeter;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     rfmeter_cfg_setup( &cfg );
-    RFMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RFMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RFMETER );
     rfmeter_init( &rfmeter, &cfg );
     log_printf( &logger, "----------------------- \r\n" );
     log_printf( &logger, "    RF Meter Click      \r\n" );

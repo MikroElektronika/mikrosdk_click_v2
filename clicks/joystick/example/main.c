@@ -28,6 +28,10 @@
 #include "log.h"
 #include "joystick.h"
 
+#ifndef MIKROBUS_POSITION_JOYSTICK
+    #define MIKROBUS_POSITION_JOYSTICK MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static joystick_t joystick;
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     joystick_cfg_setup( &cfg );
-    JOYSTCIK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    JOYSTICK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_JOYSTICK );
     joystick_init( &joystick, &cfg );
 
     Delay_ms ( 100 );

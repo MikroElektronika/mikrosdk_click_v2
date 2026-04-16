@@ -43,6 +43,10 @@
 #include "log.h"
 #include "wifinina.h"
 
+#ifndef MIKROBUS_POSITION_WIFININA
+    #define MIKROBUS_POSITION_WIFININA MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT         "WiFi NINA Click board - demo example."
 
@@ -190,7 +194,7 @@ void application_init ( void )
 
     // Click initialization.
     wifinina_cfg_setup( &wifinina_cfg );
-    WIFININA_MAP_MIKROBUS( wifinina_cfg, MIKROBUS_1 );
+    WIFININA_MAP_MIKROBUS( wifinina_cfg, MIKROBUS_POSITION_WIFININA );
     if ( UART_ERROR == wifinina_init( &wifinina, &wifinina_cfg ) )
     {
         log_error( &logger, " Communication init." );

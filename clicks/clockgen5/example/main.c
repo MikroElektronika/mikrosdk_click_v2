@@ -24,6 +24,10 @@
 #include "log.h"
 #include "clockgen5.h"
 
+#ifndef MIKROBUS_POSITION_CLOCKGEN5
+    #define MIKROBUS_POSITION_CLOCKGEN5 MIKROBUS_1
+#endif
+
 static clockgen5_t clockgen5;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void ) {
     // Click initialization.
 
     clockgen5_cfg_setup( &clockgen5_cfg );
-    CLOCKGEN5_MAP_MIKROBUS( clockgen5_cfg, MIKROBUS_1 );
+    CLOCKGEN5_MAP_MIKROBUS( clockgen5_cfg, MIKROBUS_POSITION_CLOCKGEN5 );
     err_t init_flag  = clockgen5_init( &clockgen5, &clockgen5_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

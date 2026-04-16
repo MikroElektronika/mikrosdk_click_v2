@@ -22,6 +22,10 @@
 #include "log.h"
 #include "mcp16331.h"
 
+#ifndef MIKROBUS_POSITION_MCP16331
+    #define MIKROBUS_POSITION_MCP16331 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static mcp16331_t mcp16331;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp16331_cfg_setup( &cfg );
-    MCP16331_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP16331_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP16331 );
     mcp16331_init( &mcp16331, &cfg );
 }
 

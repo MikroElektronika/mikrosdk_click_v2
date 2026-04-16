@@ -96,7 +96,7 @@ void application_init ( void )
     // Click initialization.
 
     i2ctocan_cfg_setup( &i2ctocan_cfg );
-    I2CTOCAN_MAP_MIKROBUS( i2ctocan_cfg, MIKROBUS_1 );
+    I2CTOCAN_MAP_MIKROBUS( i2ctocan_cfg, MIKROBUS_POSITION_I2CTOCAN );
     err_t init_flag = i2ctocan_init( &i2ctocan, &i2ctocan_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

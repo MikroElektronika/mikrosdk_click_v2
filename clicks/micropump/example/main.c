@@ -24,6 +24,10 @@
 #include "log.h"
 #include "micropump.h"
 
+#ifndef MIKROBUS_POSITION_MICROPUMP
+    #define MIKROBUS_POSITION_MICROPUMP MIKROBUS_1
+#endif
+
 static micropump_t micropump;   /**< Micro Pump Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     micropump_cfg_setup( &micropump_cfg );
-    MICROPUMP_MAP_MIKROBUS( micropump_cfg, MIKROBUS_1 );
+    MICROPUMP_MAP_MIKROBUS( micropump_cfg, MIKROBUS_POSITION_MICROPUMP );
     if ( ADC_ERROR == micropump_init( &micropump, &micropump_cfg ) )
     {
         log_error( &logger, " Communication init." );

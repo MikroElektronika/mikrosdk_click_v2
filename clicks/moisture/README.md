@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     moisture_cfg_setup( &cfg );
-    MOISTURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MOISTURE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MOISTURE );
     moisture_init( &moisture, &cfg );
     Delay_ms ( 100 );
 

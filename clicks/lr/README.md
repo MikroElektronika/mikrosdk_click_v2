@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     lr_cfg_setup( &lr_cfg );
-    LR_MAP_MIKROBUS( lr_cfg, MIKROBUS_1 );
+    LR_MAP_MIKROBUS( lr_cfg, MIKROBUS_POSITION_LR );
     if ( UART_ERROR == lr_init( &lr, &lr_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

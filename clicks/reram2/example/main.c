@@ -28,6 +28,10 @@
 #include "log.h"
 #include "reram2.h"
 
+#ifndef MIKROBUS_POSITION_RERAM2
+    #define MIKROBUS_POSITION_RERAM2 MIKROBUS_1
+#endif
+
 static reram2_t reram2;
 static log_t logger;
 static char demo_data[ 9 ] = { 'm', 'i', 'k', 'r', 'o', 'E', 13 ,10 , 0 };
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     reram2_cfg_setup( &reram2_cfg );
-    RERAM2_MAP_MIKROBUS( reram2_cfg, MIKROBUS_1 );
+    RERAM2_MAP_MIKROBUS( reram2_cfg, MIKROBUS_POSITION_RERAM2 );
     if ( SPI_MASTER_ERROR == reram2_init( &reram2, &reram2_cfg ) )
     {
         log_error( &logger, " Communication init." );

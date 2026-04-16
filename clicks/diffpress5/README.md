@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     diffpress5_cfg_setup( &diffpress5_cfg );
-    DIFFPRESS5_MAP_MIKROBUS( diffpress5_cfg, MIKROBUS_1 );
+    DIFFPRESS5_MAP_MIKROBUS( diffpress5_cfg, MIKROBUS_POSITION_DIFFPRESS5 );
     err_t init_flag = diffpress5_init( &diffpress5, &diffpress5_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

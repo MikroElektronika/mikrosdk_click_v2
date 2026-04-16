@@ -28,6 +28,10 @@
 #include "log.h"
 #include "volume2.h"
 
+#ifndef MIKROBUS_POSITION_VOLUME2
+    #define MIKROBUS_POSITION_VOLUME2 MIKROBUS_1
+#endif
+
 static volume2_t volume2;
 static log_t logger;
 
@@ -55,7 +59,7 @@ void application_init ( void ) {
     // Click initialization.
 
     volume2_cfg_setup( &volume2_cfg );
-    VOLUME2_MAP_MIKROBUS( volume2_cfg, MIKROBUS_1 );
+    VOLUME2_MAP_MIKROBUS( volume2_cfg, MIKROBUS_POSITION_VOLUME2 );
     err_t init_flag = volume2_init( &volume2, &volume2_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

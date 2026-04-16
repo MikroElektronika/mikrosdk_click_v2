@@ -27,6 +27,10 @@
 #include "log.h"
 #include "nvsram4.h"
 
+#ifndef MIKROBUS_POSITION_NVSRAM4
+    #define MIKROBUS_POSITION_NVSRAM4 MIKROBUS_1
+#endif
+
 static nvsram4_t nvsram4;
 static log_t logger;
 
@@ -60,7 +64,7 @@ void application_init ( void ) {
     // Click initialization.
 
     nvsram4_cfg_setup( &nvsram4_cfg );
-    NVSRAM4_MAP_MIKROBUS( nvsram4_cfg, MIKROBUS_1 );
+    NVSRAM4_MAP_MIKROBUS( nvsram4_cfg, MIKROBUS_POSITION_NVSRAM4 );
     err_t init_flag  = nvsram4_init( &nvsram4, &nvsram4_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

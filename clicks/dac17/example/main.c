@@ -23,6 +23,10 @@
 #include "log.h"
 #include "dac17.h"
 
+#ifndef MIKROBUS_POSITION_DAC17
+    #define MIKROBUS_POSITION_DAC17 MIKROBUS_1
+#endif
+
 static dac17_t dac17;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     dac17_cfg_setup( &dac17_cfg );
-    DAC17_MAP_MIKROBUS( dac17_cfg, MIKROBUS_1 );
+    DAC17_MAP_MIKROBUS( dac17_cfg, MIKROBUS_POSITION_DAC17 );
     if ( SPI_MASTER_ERROR == dac17_init( &dac17, &dac17_cfg ) )
     {
         log_error( &logger, " Communication init." );

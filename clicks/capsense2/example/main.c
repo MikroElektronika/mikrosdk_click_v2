@@ -23,6 +23,10 @@
 #include "log.h"
 #include "capsense2.h"
 
+#ifndef MIKROBUS_POSITION_CAPSENSE2
+    #define MIKROBUS_POSITION_CAPSENSE2 MIKROBUS_1
+#endif
+
 static capsense2_t capsense2;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     capsense2_cfg_setup( &capsense2_cfg );
-    CAPSENSE2_MAP_MIKROBUS( capsense2_cfg, MIKROBUS_1 );
+    CAPSENSE2_MAP_MIKROBUS( capsense2_cfg, MIKROBUS_POSITION_CAPSENSE2 );
     if ( I2C_MASTER_ERROR == capsense2_init( &capsense2, &capsense2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

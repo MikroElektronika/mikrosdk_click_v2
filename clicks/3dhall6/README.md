@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     c3dhall6_cfg_setup( &cfg );
-    C3DHALL6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C3DHALL6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_3DHALL6 );
     c3dhall6_init( &c3dhall6, &cfg );
 
     c3dhall6_aux_ref_t ref_val = 

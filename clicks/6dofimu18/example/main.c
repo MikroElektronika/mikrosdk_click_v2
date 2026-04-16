@@ -27,6 +27,10 @@
 #include "log.h"
 #include "c6dofimu18.h"
 
+#ifndef MIKROBUS_POSITION_6DOFIMU18
+    #define MIKROBUS_POSITION_6DOFIMU18 MIKROBUS_1
+#endif
+
 static c6dofimu18_t c6dofimu18;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     c6dofimu18_cfg_setup( &c6dofimu18_cfg );
-    C6DOFIMU18_MAP_MIKROBUS( c6dofimu18_cfg, MIKROBUS_1 );
+    C6DOFIMU18_MAP_MIKROBUS( c6dofimu18_cfg, MIKROBUS_POSITION_6DOFIMU18 );
     err_t init_flag = c6dofimu18_init( &c6dofimu18, &c6dofimu18_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "barometer3.h"
 
+#ifndef MIKROBUS_POSITION_BAROMETER3
+    #define MIKROBUS_POSITION_BAROMETER3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static barometer3_t barometer3;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     barometer3_cfg_setup( &cfg );
-    BAROMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BAROMETER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BAROMETER3 );
     barometer3_init( &barometer3, &cfg );
 
     barometer3_def_cfg( &barometer3 );

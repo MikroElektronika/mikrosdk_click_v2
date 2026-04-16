@@ -24,6 +24,10 @@
 #include "log.h"
 #include "c420mar.h"
 
+#ifndef MIKROBUS_POSITION_420MAR
+    #define MIKROBUS_POSITION_420MAR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c420mar_t c420mar;
@@ -52,7 +56,7 @@ void application_init ( )
     //  Click initialization.
 
     c420mar_cfg_setup( &cfg );
-    c420MAR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    c420MAR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_420MAR );
     c420mar_init( &c420mar, &cfg );
 }
 

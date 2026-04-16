@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     inclinometer_cfg_setup( &inclinometer_cfg );
-    INCLINOMETER_MAP_MIKROBUS( inclinometer_cfg, MIKROBUS_1 );
+    INCLINOMETER_MAP_MIKROBUS( inclinometer_cfg, MIKROBUS_POSITION_INCLINOMETER );
     err_t init_flag  = inclinometer_init( &inclinometer, &inclinometer_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

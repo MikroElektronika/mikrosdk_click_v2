@@ -22,6 +22,10 @@
 #include "log.h"
 #include "dotmatrixr.h"
 
+#ifndef MIKROBUS_POSITION_DOTMATRIXR
+    #define MIKROBUS_POSITION_DOTMATRIXR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dotmatrixr_t dotmatrixr;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     dotmatrixr_cfg_setup( &cfg );
-    DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DOTMATRIXR );
     dotmatrixr_init( &dotmatrixr, &cfg );
 
     Delay_ms ( 100 );

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "charger11.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER11
+    #define MIKROBUS_POSITION_CHARGER11 MIKROBUS_1
+#endif
+
 static charger11_t charger11;
 static log_t logger;
 
@@ -74,7 +78,7 @@ void application_init ( void ) {
 
     // Click initialization.
     charger11_cfg_setup( &charger11_cfg );
-    CHARGER11_MAP_MIKROBUS( charger11_cfg, MIKROBUS_1 );
+    CHARGER11_MAP_MIKROBUS( charger11_cfg, MIKROBUS_POSITION_CHARGER11 );
     err_t init_flag  = charger11_init( &charger11, &charger11_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) {
         log_error( &logger, " Application Init Error. " );

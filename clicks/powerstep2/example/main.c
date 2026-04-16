@@ -27,6 +27,10 @@
 #include "log.h"
 #include "powerstep2.h"
 
+#ifndef MIKROBUS_POSITION_POWERSTEP2
+    #define MIKROBUS_POSITION_POWERSTEP2 MIKROBUS_1
+#endif
+
 static powerstep2_t powerstep2;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     powerstep2_cfg_setup( &powerstep2_cfg );
-    POWERSTEP2_MAP_MIKROBUS( powerstep2_cfg, MIKROBUS_1 );
+    POWERSTEP2_MAP_MIKROBUS( powerstep2_cfg, MIKROBUS_POSITION_POWERSTEP2 );
     if ( SPI_MASTER_ERROR == powerstep2_init( &powerstep2, &powerstep2_cfg ) )
     {
         log_error( &logger, " Communication init." );

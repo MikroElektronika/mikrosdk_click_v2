@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     fram_cfg_setup( &cfg );
-    FRAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FRAM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FRAM );
     fram_init( &fram, &cfg );
     fram_erase_all( &fram );
 }

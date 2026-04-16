@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     spirit_cfg_setup( &cfg );
-    SPIRIT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPIRIT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPIRIT );
     spirit_init( &spirit, &cfg );
     Delay_ms ( 1000 );
 

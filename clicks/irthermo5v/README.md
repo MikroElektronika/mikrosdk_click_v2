@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     irthermo5v_cfg_setup( &irthermo5v_cfg );
-    IRTHERMO5V_MAP_MIKROBUS( irthermo5v_cfg, MIKROBUS_1 );
+    IRTHERMO5V_MAP_MIKROBUS( irthermo5v_cfg, MIKROBUS_POSITION_IRTHERMO5V );
     err_t init_flag = irthermo5v_init( &irthermo5v, &irthermo5v_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

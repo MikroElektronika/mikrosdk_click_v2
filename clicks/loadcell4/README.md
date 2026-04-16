@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     loadcell4_cfg_setup( &loadcell4_cfg );
-    LOADCELL4_MAP_MIKROBUS( loadcell4_cfg, MIKROBUS_1 );
+    LOADCELL4_MAP_MIKROBUS( loadcell4_cfg, MIKROBUS_POSITION_LOADCELL4 );
     err_t init_flag = loadcell4_init( &loadcell4, &loadcell4_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

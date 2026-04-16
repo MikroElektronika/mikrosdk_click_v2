@@ -24,6 +24,10 @@
 #include "log.h"
 #include "irgesture2.h"
 
+#ifndef MIKROBUS_POSITION_IRGESTURE2
+    #define MIKROBUS_POSITION_IRGESTURE2 MIKROBUS_1
+#endif
+
 static irgesture2_t irgesture2;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     irgesture2_cfg_setup( &irgesture2_cfg );
-    IRGESTURE2_MAP_MIKROBUS( irgesture2_cfg, MIKROBUS_1 );
+    IRGESTURE2_MAP_MIKROBUS( irgesture2_cfg, MIKROBUS_POSITION_IRGESTURE2 );
     if ( SPI_MASTER_ERROR == irgesture2_init( &irgesture2, &irgesture2_cfg ) )
     {
         log_error( &logger, " Communication init." );

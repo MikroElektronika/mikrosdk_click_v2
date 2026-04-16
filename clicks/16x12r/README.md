@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     c16x12r_cfg_setup( &c16x12r_cfg );
-    C16X12R_MAP_MIKROBUS( c16x12r_cfg, MIKROBUS_1 );
+    C16X12R_MAP_MIKROBUS( c16x12r_cfg, MIKROBUS_POSITION_16X12R );
     if ( I2C_MASTER_ERROR == c16x12r_init( &c16x12r, &c16x12r_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

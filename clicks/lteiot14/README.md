@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot14_cfg_setup( &lteiot14_cfg );
-    LTEIOT14_MAP_MIKROBUS( lteiot14_cfg, MIKROBUS_1 );
+    LTEIOT14_MAP_MIKROBUS( lteiot14_cfg, MIKROBUS_POSITION_LTEIOT14 );
     if ( UART_ERROR == lteiot14_init( &lteiot14, &lteiot14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

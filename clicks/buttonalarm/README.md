@@ -86,7 +86,7 @@ void application_init ( void )
     // Click initialization.
 
     buttonalarm_cfg_setup( &buttonalarm_cfg );
-    BUTTONALARM_MAP_MIKROBUS( buttonalarm_cfg, MIKROBUS_1 );
+    BUTTONALARM_MAP_MIKROBUS( buttonalarm_cfg, MIKROBUS_POSITION_BUTTONALARM );
     err_t init_flag  = buttonalarm_init( &buttonalarm, &buttonalarm_cfg );
     if ( PWM_ERROR == init_flag ) 
     {

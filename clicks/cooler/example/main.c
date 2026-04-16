@@ -25,6 +25,10 @@
 #include "log.h"
 #include "cooler.h"
 
+#ifndef MIKROBUS_POSITION_COOLER
+    #define MIKROBUS_POSITION_COOLER MIKROBUS_1
+#endif
+
 // Object temperature high limit
 #define COOLER_TEMP_HIGH_LIMIT    30.0
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     cooler_cfg_setup( &cooler_cfg );
-    COOLER_MAP_MIKROBUS( cooler_cfg, MIKROBUS_1 );
+    COOLER_MAP_MIKROBUS( cooler_cfg, MIKROBUS_POSITION_COOLER );
     err_t init_flag = cooler_init( &cooler, &cooler_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

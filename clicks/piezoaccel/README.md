@@ -93,7 +93,7 @@ void application_init ( void )
     // Click initialization.
 
     piezoaccel_cfg_setup( &piezoaccel_cfg );
-    PIEZOACCEL_MAP_MIKROBUS( piezoaccel_cfg, MIKROBUS_1 );
+    PIEZOACCEL_MAP_MIKROBUS( piezoaccel_cfg, MIKROBUS_POSITION_PIEZOACCEL );
     err_t init_flag = piezoaccel_init( &piezoaccel, &piezoaccel_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

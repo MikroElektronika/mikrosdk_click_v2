@@ -83,7 +83,7 @@ void application_init ( void )
     //  Click initialization.
 
     reed_cfg_setup( &cfg );
-    REED_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    REED_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_REED );
     reed_init( &reed, &cfg );
 
     reed_state = REED_NO_MAGNETIC_FIELD;

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     adc16_cfg_setup( &adc16_cfg );
-    ADC16_MAP_MIKROBUS( adc16_cfg, MIKROBUS_1 );
+    ADC16_MAP_MIKROBUS( adc16_cfg, MIKROBUS_POSITION_ADC16 );
     if ( I2C_MASTER_ERROR == adc16_init( &adc16, &adc16_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

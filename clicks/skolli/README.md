@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     skolli_cfg_setup( &skolli_cfg );
-    SKOLLI_MAP_MIKROBUS( skolli_cfg, MIKROBUS_1 );
+    SKOLLI_MAP_MIKROBUS( skolli_cfg, MIKROBUS_POSITION_SKOLLI );
     if ( UART_ERROR == skolli_init( &skolli, &skolli_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

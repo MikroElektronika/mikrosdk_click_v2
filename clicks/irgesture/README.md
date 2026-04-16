@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     irgesture_cfg_setup( &cfg );
-    IRGESTURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRGESTURE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRGESTURE );
     irgesture_init( &irgesture, &cfg );
     irgesture_default_cfg( &irgesture );
 }

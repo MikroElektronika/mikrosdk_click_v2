@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     pot3_cfg_setup( &pot3_cfg );
-    POT3_MAP_MIKROBUS( pot3_cfg, MIKROBUS_1 );
+    POT3_MAP_MIKROBUS( pot3_cfg, MIKROBUS_POSITION_POT3 );
     pot3_init( &pot3, &pot3_cfg );
 }
 ```

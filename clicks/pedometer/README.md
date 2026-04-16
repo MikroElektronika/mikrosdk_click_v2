@@ -84,7 +84,13 @@ void application_init ( void )
      */
     LOG_MAP_USB_UART( log_cfg );
     log_init( &logger, &log_cfg );
-    log_info( &logger, "---- Application Init ---- \r\n " );
+    log_info(&logger, "---- Application Init ----");
+
+    //  Click initialization.
+
+    pedometer_cfg_setup( &cfg );
+    PEDOMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PEDOMETER );
+    pedometer_init( &pedometer, &cfg );
 }
 ```
 
@@ -99,7 +105,6 @@ void application_task ( void )
 
     uint8_t new_step;
     uint32_t s_counter;
-    char demoText[ 50 ];
     
     new_step = pedometer_process( &pedometer );
 

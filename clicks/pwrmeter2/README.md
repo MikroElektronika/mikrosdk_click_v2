@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     pwrmeter2_cfg_setup( &pwrmeter2_cfg );
-    PWRMETER2_MAP_MIKROBUS( pwrmeter2_cfg, MIKROBUS_1 );
+    PWRMETER2_MAP_MIKROBUS( pwrmeter2_cfg, MIKROBUS_POSITION_PWRMETER2 );
     if ( SPI_MASTER_ERROR == pwrmeter2_init( &pwrmeter2, &pwrmeter2_cfg ) )
     {
         log_error( &logger, " Communication init." );

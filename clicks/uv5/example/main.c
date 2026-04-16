@@ -23,6 +23,10 @@
 #include "log.h"
 #include "uv5.h"
 
+#ifndef MIKROBUS_POSITION_UV5
+    #define MIKROBUS_POSITION_UV5 MIKROBUS_1
+#endif
+
 #define OUTCONV         4.194304    /* Conversion time duration expressed as the number of clock counts within this time
                                        based on the default configuration. */
 #define FSRE_UVA        1248        /* Full Scale Range of detectable input light irradiance Ee of the UVA channel
@@ -55,7 +59,7 @@ void application_init ( void )
 
     // Click initialization.
     uv5_cfg_setup( &uv5_cfg );
-    UV5_MAP_MIKROBUS( uv5_cfg, MIKROBUS_1 );
+    UV5_MAP_MIKROBUS( uv5_cfg, MIKROBUS_POSITION_UV5 );
     if ( I2C_MASTER_ERROR == uv5_init( &uv5, &uv5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

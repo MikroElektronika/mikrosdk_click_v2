@@ -31,6 +31,10 @@
 #include "log.h"
 #include "dcmotor9.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR9
+    #define MIKROBUS_POSITION_DCMOTOR9 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor9_t dcmotor9;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor9_cfg_setup( &dcmotor9_cfg );
-    DCMOTOR9_MAP_MIKROBUS( dcmotor9_cfg, MIKROBUS_1 );
+    DCMOTOR9_MAP_MIKROBUS( dcmotor9_cfg, MIKROBUS_POSITION_DCMOTOR9 );
     if ( dcmotor9_init( &dcmotor9, &dcmotor9_cfg ) == PWM_ERROR )
     {
         log_info( &logger, "---- Application Init Error ----" );

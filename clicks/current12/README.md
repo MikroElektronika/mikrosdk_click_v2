@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     current12_cfg_setup( &current12_cfg );
-    CURRENT12_MAP_MIKROBUS( current12_cfg, MIKROBUS_1 );
+    CURRENT12_MAP_MIKROBUS( current12_cfg, MIKROBUS_POSITION_CURRENT12 );
     if ( I2C_MASTER_ERROR == current12_init( &current12, &current12_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

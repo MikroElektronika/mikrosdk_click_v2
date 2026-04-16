@@ -28,6 +28,10 @@
 #include "log.h"
 #include "ireclipse.h"
 
+#ifndef MIKROBUS_POSITION_IRECLIPSE
+    #define MIKROBUS_POSITION_IRECLIPSE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ireclipse_t ireclipse;
@@ -62,7 +66,7 @@ void application_init ( void )
     //  Click initialization.
 
     ireclipse_cfg_setup( &cfg );
-    IRECLIPSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRECLIPSE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRECLIPSE );
     ireclipse_init( &ireclipse, &cfg );
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, "   Start counting:  \r\n" );

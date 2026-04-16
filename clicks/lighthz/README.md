@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     lighthz_cfg_setup( &lighthz_cfg );
-    LIGHTHZ_MAP_MIKROBUS( lighthz_cfg, MIKROBUS_1 );
+    LIGHTHZ_MAP_MIKROBUS( lighthz_cfg, MIKROBUS_POSITION_LIGHTHZ );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == lighthz_init( &lighthz, &lighthz_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

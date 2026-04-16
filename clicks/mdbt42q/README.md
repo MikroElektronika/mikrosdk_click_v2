@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     mdbt42q_cfg_setup( &mdbt42q_cfg );
-    MDBT42Q_MAP_MIKROBUS( mdbt42q_cfg, MIKROBUS_1 );
+    MDBT42Q_MAP_MIKROBUS( mdbt42q_cfg, MIKROBUS_POSITION_MDBT42Q );
     if ( MDBT42Q_OK != mdbt42q_init( &mdbt42q, &mdbt42q_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

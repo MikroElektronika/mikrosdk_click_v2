@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     singlewirecan_cfg_setup( &cfg );
-    SINGLEWIRECAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SINGLEWIRECAN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SINGLEWIRECAN );
     singlewirecan_init( &singlewirecan, &cfg );
     Delay_ms ( 100 );
 

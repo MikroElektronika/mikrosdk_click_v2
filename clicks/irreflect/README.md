@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     irreflect_cfg_setup( &cfg );
-    IRREFLECT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRREFLECT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRREFLECT );
     irreflect_init( &irreflect, &cfg );
     
     ir_state = 0;

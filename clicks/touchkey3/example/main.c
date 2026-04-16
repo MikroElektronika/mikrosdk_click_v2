@@ -26,6 +26,10 @@
 #include "log.h"
 #include "touchkey3.h"
 
+#ifndef MIKROBUS_POSITION_TOUCHKEY3
+    #define MIKROBUS_POSITION_TOUCHKEY3 MIKROBUS_1
+#endif
+
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -80,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchkey3_cfg_setup( &cfg );
-    TOUCHKEY3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHKEY3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHKEY3 );
     touchkey3_init( &touchkey3, &cfg );
 
     touchkey3_reset( &touchkey3 );

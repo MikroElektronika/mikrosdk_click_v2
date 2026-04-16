@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     buckboost4_cfg_setup( &buckboost4_cfg );
-    BUCKBOOST4_MAP_MIKROBUS( buckboost4_cfg, MIKROBUS_1 );
+    BUCKBOOST4_MAP_MIKROBUS( buckboost4_cfg, MIKROBUS_POSITION_BUCKBOOST4 );
     if ( I2C_MASTER_ERROR == buckboost4_init( &buckboost4, &buckboost4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

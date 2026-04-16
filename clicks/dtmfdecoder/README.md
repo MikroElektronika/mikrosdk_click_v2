@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     dtmfdecoder_cfg_setup( &dtmfdecoder_cfg );
-    DTMFDECODER_MAP_MIKROBUS( dtmfdecoder_cfg, MIKROBUS_1 );
+    DTMFDECODER_MAP_MIKROBUS( dtmfdecoder_cfg, MIKROBUS_POSITION_DTMFDECODER );
     err_t init_flag = dtmfdecoder_init( &dtmfdecoder, &dtmfdecoder_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

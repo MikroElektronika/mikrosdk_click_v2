@@ -24,6 +24,10 @@
 #include "log.h"
 #include "c2x2key.h"
 
+#ifndef MIKROBUS_POSITION_2X2KEY
+    #define MIKROBUS_POSITION_2X2KEY MIKROBUS_1
+#endif
+
 uint8_t t1_state     = 0;
 uint8_t t1_state_old = 1;
 uint8_t t2_state     = 0;
@@ -65,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     c2x2key_cfg_setup( &cfg );
-    C2X2KEY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C2X2KEY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_2X2KEY );
     c2x2key_init( &c2x2key, &cfg );
     
     log_printf( &logger, "-----------------------\r\n" );

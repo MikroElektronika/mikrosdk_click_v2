@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor7_cfg_setup( &cfg );
-    DCMOTOR7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR7 );
     dcmotor7_init( &dcmotor7, &cfg );
 
     dcmotor7_default_cfg( &dcmotor7 );

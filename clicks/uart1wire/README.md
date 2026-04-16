@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     uart1wire_cfg_setup( &cfg );
-    UART1WIRE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UART1WIRE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UART1WIRE );
     uart1wire_init( &uart1wire, &cfg );
     
     Delay_ms ( 100 );

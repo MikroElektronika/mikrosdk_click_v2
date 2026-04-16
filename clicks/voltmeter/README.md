@@ -78,7 +78,7 @@ void application_init ( void )
 
     //  Click initialization.
     voltmeter_cfg_setup( &cfg );
-    VOLTMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VOLTMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VOLTMETER );
     voltmeter_init( &voltmeter, &cfg );
     Delay_ms ( 100 );
     

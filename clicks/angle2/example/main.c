@@ -27,6 +27,10 @@
 #include "log.h"
 #include "angle2.h"
 
+#ifndef MIKROBUS_POSITION_ANGLE2
+    #define MIKROBUS_POSITION_ANGLE2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static angle2_t angle2;
@@ -56,7 +60,7 @@ void application_init ( )
     //  Click initialization.
 
     angle2_cfg_setup( &cfg );
-    ANGLE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANGLE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANGLE2 );
     angle2_init( &angle2, &cfg );
 
     Delay_ms ( 300 );

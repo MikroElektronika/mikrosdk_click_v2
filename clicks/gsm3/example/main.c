@@ -57,6 +57,10 @@
 #include "gsm3.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_GSM3
+    #define MIKROBUS_POSITION_GSM3 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_SMS                         1               // Example of sending SMS to a phone number
@@ -215,7 +219,7 @@ void application_init ( void )
 
     // Click initialization.
     gsm3_cfg_setup( &gsm3_cfg );
-    GSM3_MAP_MIKROBUS( gsm3_cfg, MIKROBUS_1 );
+    GSM3_MAP_MIKROBUS( gsm3_cfg, MIKROBUS_POSITION_GSM3 );
     if ( UART_ERROR == gsm3_init( &gsm3, &gsm3_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "c4dotmatrixr.h"
 
+#ifndef MIKROBUS_POSITION_4DOTMATRIXR
+    #define MIKROBUS_POSITION_4DOTMATRIXR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c4dotmatrixr_t c4dotmatrixr;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     c4dotmatrixr_cfg_setup( &cfg );
-    C4DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C4DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_4DOTMATRIXR );
     c4dotmatrixr_init( &c4dotmatrixr, &cfg );
     
     c4dotmatrixr_default_cfg ( &c4dotmatrixr );

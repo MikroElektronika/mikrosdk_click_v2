@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     c2x20wamp_cfg_setup( &cfg );
-    C2X20WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C2X20WAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_2X20WAMP );
     c2x20wamp_init( &c2x20wamp, &cfg );
     
     Delay_ms ( 100 );

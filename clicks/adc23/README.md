@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     adc23_cfg_setup( &adc23_cfg );
-    ADC23_MAP_MIKROBUS( adc23_cfg, MIKROBUS_1 );
+    ADC23_MAP_MIKROBUS( adc23_cfg, MIKROBUS_POSITION_ADC23 );
     if ( SPI_MASTER_ERROR == adc23_init( &adc23, &adc23_cfg ) )
     {
         log_error( &logger, " Communication init." );

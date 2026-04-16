@@ -29,6 +29,10 @@
 #include "log.h"
 #include "accel19.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL19
+    #define MIKROBUS_POSITION_ACCEL19 MIKROBUS_1
+#endif
+
 static accel19_t accel19;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     accel19_cfg_setup( &accel19_cfg );
-    ACCEL19_MAP_MIKROBUS( accel19_cfg, MIKROBUS_1 );
+    ACCEL19_MAP_MIKROBUS( accel19_cfg, MIKROBUS_POSITION_ACCEL19 );
     err_t init_flag  = accel19_init( &accel19, &accel19_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -39,6 +39,10 @@
 #include "log.h"
 #include "c5gnbiot.h"
 
+#ifndef MIKROBUS_POSITION_5GNBIOT
+    #define MIKROBUS_POSITION_5GNBIOT MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -144,7 +148,7 @@ void application_init ( void )
     
     // Click initialization.
     c5gnbiot_cfg_setup( &c5gnbiot_cfg );
-    C5GNBIOT_MAP_MIKROBUS( c5gnbiot_cfg, MIKROBUS_1 );
+    C5GNBIOT_MAP_MIKROBUS( c5gnbiot_cfg, MIKROBUS_POSITION_5GNBIOT );
     err_t init_flag  = c5gnbiot_init( &c5gnbiot, &c5gnbiot_cfg );
     if ( init_flag == UART_ERROR )
     {

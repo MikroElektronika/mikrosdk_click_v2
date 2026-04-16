@@ -27,6 +27,10 @@
 #include "log.h"
 #include "c2x30wamp.h"
 
+#ifndef MIKROBUS_POSITION_2X30WAMP
+    #define MIKROBUS_POSITION_2X30WAMP MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c2x30wamp_t c2x30wamp;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     c2x30wamp_cfg_setup( &cfg );
-    C2X30WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C2X30WAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_2X30WAMP );
     c2x30wamp_init( &c2x30wamp, &cfg );
 
     c2x30wamp_enable( &c2x30wamp, C2X30WAMP_ENABLE );

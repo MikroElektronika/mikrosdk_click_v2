@@ -86,7 +86,7 @@ void application_init ( void )
 
     //  Click initialization.
     i2c1wire_cfg_setup( &cfg );
-    I2C1WIRE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2C1WIRE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2C1WIRE );
     i2c1wire_init( &i2c1wire, &cfg );
     Delay_1sec( );
 }

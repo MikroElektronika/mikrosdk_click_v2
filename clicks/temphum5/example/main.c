@@ -22,6 +22,10 @@
 #include "log.h"
 #include "temphum5.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM5
+    #define MIKROBUS_POSITION_TEMPHUM5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static temphum5_t temphum5;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum5_cfg_setup( &cfg );
-    TEMPHUM5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM5 );
     temphum5_init( &temphum5, &cfg );
 }
 

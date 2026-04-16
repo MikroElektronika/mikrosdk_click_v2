@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     relay_cfg_setup( &cfg );
-    RELAY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RELAY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RELAY );
     relay_init( &relay, &cfg );
     
     relay_default_cfg ( &relay );

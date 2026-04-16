@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchkey2_cfg_setup( &cfg );
-    TOUCHKEY2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHKEY2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHKEY2 );
     touchkey2_init( &touchkey2, &cfg );
 }
 ```

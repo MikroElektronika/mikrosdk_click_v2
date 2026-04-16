@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     gsmgps_cfg_setup( &cfg );
-    GSMGPS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GSMGPS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GSMGPS );
     gsmgps_init( &gsmgps, &cfg );
 
     gsmgps_module_power( &gsmgps, GSMGPS_MODULE_POWER_ON );

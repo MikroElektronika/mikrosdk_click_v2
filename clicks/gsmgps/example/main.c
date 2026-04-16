@@ -43,6 +43,10 @@
 #include "gsmgps.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_GSMGPS
+    #define MIKROBUS_POSITION_GSMGPS MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -158,7 +162,7 @@ void application_init ( void )
     //  Click initialization.
 
     gsmgps_cfg_setup( &cfg );
-    GSMGPS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GSMGPS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GSMGPS );
     gsmgps_init( &gsmgps, &cfg );
 
     gsmgps_module_power( &gsmgps, GSMGPS_MODULE_POWER_ON );

@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     pir2_cfg_setup( &pir2_cfg );
-    PIR2_MAP_MIKROBUS( pir2_cfg, MIKROBUS_1 );
+    PIR2_MAP_MIKROBUS( pir2_cfg, MIKROBUS_POSITION_PIR2 );
     err_t init_flag = pir2_init( &pir2, &pir2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     co2_cfg_setup( &cfg );
-    CO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CO_2 );
     co2_init( &co2, &cfg );
 
     Delay_ms ( 500 );

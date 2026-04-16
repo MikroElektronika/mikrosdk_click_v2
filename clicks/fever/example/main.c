@@ -22,6 +22,10 @@
 #include "log.h"
 #include "fever.h"
 
+#ifndef MIKROBUS_POSITION_FEVER
+    #define MIKROBUS_POSITION_FEVER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static fever_t fever;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     fever_cfg_setup( &cfg );
-    FEVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FEVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FEVER );
     fever_init( &fever, &cfg );
 }
 

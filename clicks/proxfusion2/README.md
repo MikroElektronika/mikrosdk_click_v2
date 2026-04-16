@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     proxfusion2_cfg_setup( &proxfusion2_cfg );
-    PROXFUSION2_MAP_MIKROBUS( proxfusion2_cfg, MIKROBUS_1 );
+    PROXFUSION2_MAP_MIKROBUS( proxfusion2_cfg, MIKROBUS_POSITION_PROXFUSION2 );
     if ( I2C_MASTER_ERROR == proxfusion2_init( &proxfusion2, &proxfusion2_cfg ) )
     {
         log_error( &logger, " Communication init." );

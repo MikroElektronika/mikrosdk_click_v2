@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     silentstep_cfg_setup( &silentstep_cfg );
-    SILENTSTEP_MAP_MIKROBUS( silentstep_cfg, MIKROBUS_1 );
+    SILENTSTEP_MAP_MIKROBUS( silentstep_cfg, MIKROBUS_POSITION_SILENTSTEP );
     if ( SPI_MASTER_ERROR == silentstep_init( &silentstep, &silentstep_cfg ) )
     {
         log_error( &logger, " Communication init." );

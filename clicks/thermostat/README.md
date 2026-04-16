@@ -129,7 +129,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermostat_cfg_setup( &cfg );
-    THERMOSTAT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMOSTAT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMOSTAT );
     thermostat_init( &thermostat, &cfg );
 
     thermostat_soft_reset( &thermostat );

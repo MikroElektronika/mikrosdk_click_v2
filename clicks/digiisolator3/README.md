@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     digiisolator3_cfg_setup( &digiisolator3_cfg );
-    DIGIISOLATOR3_MAP_MIKROBUS( digiisolator3_cfg, MIKROBUS_1 );
+    DIGIISOLATOR3_MAP_MIKROBUS( digiisolator3_cfg, MIKROBUS_POSITION_DIGIISOLATOR3 );
     if ( UART_ERROR == digiisolator3_init( &digiisolator3, &digiisolator3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

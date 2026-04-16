@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     piezoaccel250g_cfg_setup( &piezoaccel250g_cfg );
-    PIEZOACCEL250G_MAP_MIKROBUS( piezoaccel250g_cfg, MIKROBUS_1 );
+    PIEZOACCEL250G_MAP_MIKROBUS( piezoaccel250g_cfg, MIKROBUS_POSITION_PIEZOACCEL250G );
     if ( SPI_MASTER_ERROR == piezoaccel250g_init( &piezoaccel250g, &piezoaccel250g_cfg ) )
     {
         log_error( &logger, " Communication init." );

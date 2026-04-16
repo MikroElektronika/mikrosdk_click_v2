@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     rmeter_cfg_setup( &cfg );
-    RMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RMETER );
     rmeter_init( &rmeter, &cfg );
 
     Delay_ms ( 100 );

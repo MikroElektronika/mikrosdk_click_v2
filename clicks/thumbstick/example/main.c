@@ -25,6 +25,10 @@
 #include "log.h"
 #include "thumbstick.h"
 
+#ifndef MIKROBUS_POSITION_THUMBSTICK
+    #define MIKROBUS_POSITION_THUMBSTICK MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thumbstick_t thumbstick;
@@ -65,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     thumbstick_cfg_setup( &cfg );
-    THUMBSTICK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THUMBSTICK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THUMBSTICK );
     thumbstick_init( &thumbstick, &cfg );
     
     thumbstick_set_sensitivity( POSTION_SENS_DEFAULT );

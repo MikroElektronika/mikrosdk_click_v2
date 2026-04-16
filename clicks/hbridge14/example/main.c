@@ -22,6 +22,10 @@
 #include "log.h"
 #include "hbridge14.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE14
+    #define MIKROBUS_POSITION_HBRIDGE14 MIKROBUS_1
+#endif
+
 static hbridge14_t hbridge14;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridge14_cfg_setup( &hbridge14_cfg );
-    HBRIDGE14_MAP_MIKROBUS( hbridge14_cfg, MIKROBUS_1 );
+    HBRIDGE14_MAP_MIKROBUS( hbridge14_cfg, MIKROBUS_POSITION_HBRIDGE14 );
     err_t init_flag = hbridge14_init( &hbridge14, &hbridge14_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

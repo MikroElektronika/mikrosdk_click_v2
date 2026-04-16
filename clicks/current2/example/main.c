@@ -23,6 +23,10 @@
 #include "log.h"
 #include "current2.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT2
+    #define MIKROBUS_POSITION_CURRENT2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static current2_t current;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     current2_cfg_setup( &cfg );
-    CURRENT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CURRENT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CURRENT2 );
     current2_init( &current, &cfg );
     Delay_ms ( 300 );
     log_printf( &logger, "Current 2 is initialized \r\n \r\n" );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "hbridge4.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE4
+    #define MIKROBUS_POSITION_HBRIDGE4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static hbridge4_t hbridge4;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     hbridge4_cfg_setup( &cfg );
-    HBRIDGE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HBRIDGE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HBRIDGE4 );
     hbridge4_init( &hbridge4, &cfg );
 
     hbridge4_enable( &hbridge4, 1 );

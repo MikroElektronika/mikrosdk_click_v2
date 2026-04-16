@@ -78,7 +78,7 @@ void application_init ( void )
     
     // Click initialization.
     iso9141_cfg_setup( &iso9141_cfg );
-    ISO9141_MAP_MIKROBUS( iso9141_cfg, MIKROBUS_1 );
+    ISO9141_MAP_MIKROBUS( iso9141_cfg, MIKROBUS_POSITION_ISO9141 );
     if ( UART_ERROR == iso9141_init( &iso9141, &iso9141_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

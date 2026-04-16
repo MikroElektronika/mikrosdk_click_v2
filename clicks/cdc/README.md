@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     cdc_cfg_setup( &cdc_cfg );
-    CDC_MAP_MIKROBUS( cdc_cfg, MIKROBUS_1 );
+    CDC_MAP_MIKROBUS( cdc_cfg, MIKROBUS_POSITION_CDC );
     err_t init_flag = cdc_init( &cdc, &cdc_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

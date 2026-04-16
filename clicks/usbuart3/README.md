@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     usbuart3_cfg_setup( &cfg );
-    USBUART3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    USBUART3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_USBUART3 );
     usbuart3_init( &usbuart3, &cfg );
     
     usbuart3_reset( &usbuart3 );

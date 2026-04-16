@@ -24,6 +24,10 @@
 #include "log.h"
 #include "loadcell7.h"
 
+#ifndef MIKROBUS_POSITION_LOADCELL7
+    #define MIKROBUS_POSITION_LOADCELL7 MIKROBUS_1
+#endif
+
 // Enter below the weight in grams of the goods with a known weight which 
 // you will use to calibrate the scale weight.
 #define LOADCELL7_CALIBRATION_WEIGHT_G  1000.0
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     loadcell7_cfg_setup( &loadcell7_cfg );
-    LOADCELL7_MAP_MIKROBUS( loadcell7_cfg, MIKROBUS_1 );
+    LOADCELL7_MAP_MIKROBUS( loadcell7_cfg, MIKROBUS_POSITION_LOADCELL7 );
     if ( SPI_MASTER_ERROR == loadcell7_init( &loadcell7, &loadcell7_cfg ) )
     {
         log_error( &logger, " Communication init." );

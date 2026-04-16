@@ -40,6 +40,10 @@
 #include "conversions.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_LR11868MHZ
+    #define MIKROBUS_POSITION_LR11868MHZ MIKROBUS_1
+#endif
+
 // Node address selection macros
 #define NODE_0_ADDRESS      0
 #define NODE_1_ADDRESS      1
@@ -168,7 +172,7 @@ void application_init ( void )
 
     // Click initialization.
     lr11868mhz_cfg_setup( &lr11868mhz_cfg );
-    LR11868MHZ_MAP_MIKROBUS( lr11868mhz_cfg, MIKROBUS_1 );
+    LR11868MHZ_MAP_MIKROBUS( lr11868mhz_cfg, MIKROBUS_POSITION_LR11868MHZ );
     if ( UART_ERROR == lr11868mhz_init( &lr11868mhz, &lr11868mhz_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

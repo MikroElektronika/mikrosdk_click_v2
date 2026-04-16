@@ -28,6 +28,10 @@
 #include "log.h"
 #include "irthermo2.h"
 
+#ifndef MIKROBUS_POSITION_IRTHERMO2
+    #define MIKROBUS_POSITION_IRTHERMO2 MIKROBUS_1
+#endif
+
 
 static irthermo2_t irthermo2;
 static log_t logger;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     irthermo2_cfg_setup( &cfg );
-    IRTHERMO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRTHERMO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRTHERMO2 );
     irthermo2_init( &irthermo2, &cfg );
 
     irthermo2_default_cfg( &irthermo2 );

@@ -43,6 +43,10 @@
 #include "lteiot2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_LTEIOT2
+    #define MIKROBUS_POSITION_LTEIOT2 MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -158,7 +162,7 @@ void application_init ( void )
     //  Click initialization.
 
     lteiot2_cfg_setup( &cfg );
-    LTEIOT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LTEIOT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LTEIOT2 );
     lteiot2_init( &lteiot2, &cfg );
 
     lteiot2_module_power( &lteiot2, LTEIOT2_MODULE_POWER_ON );

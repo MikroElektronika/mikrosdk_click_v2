@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     battmon5_cfg_setup( &battmon5_cfg );
-    BATTMON5_MAP_MIKROBUS( battmon5_cfg, MIKROBUS_1 );
+    BATTMON5_MAP_MIKROBUS( battmon5_cfg, MIKROBUS_POSITION_BATTMON5 );
     if ( I2C_MASTER_ERROR == battmon5_init( &battmon5, &battmon5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

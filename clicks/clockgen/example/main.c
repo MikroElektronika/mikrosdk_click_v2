@@ -28,6 +28,10 @@
 #include "log.h"
 #include "clockgen.h"
 
+#ifndef MIKROBUS_POSITION_CLOCKGEN
+    #define MIKROBUS_POSITION_CLOCKGEN MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static clockgen_t clockgen;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     clockgen_cfg_setup( &cfg );
-    CLOCKGEN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CLOCKGEN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CLOCKGEN );
     clockgen_init( &clockgen, &cfg );
 
     clockgen_default_cfg( &clockgen );

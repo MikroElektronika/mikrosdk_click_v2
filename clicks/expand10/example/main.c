@@ -23,6 +23,10 @@
 #include "log.h"
 #include "expand10.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND10
+    #define MIKROBUS_POSITION_EXPAND10 MIKROBUS_1
+#endif
+
 static expand10_t expand10;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     expand10_cfg_setup( &expand10_cfg );
-    EXPAND10_MAP_MIKROBUS( expand10_cfg, MIKROBUS_1 );
+    EXPAND10_MAP_MIKROBUS( expand10_cfg, MIKROBUS_POSITION_EXPAND10 );
     err_t init_flag = expand10_init( &expand10, &expand10_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

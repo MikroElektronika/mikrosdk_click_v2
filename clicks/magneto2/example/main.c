@@ -27,6 +27,10 @@
 #include "log.h"
 #include "magneto2.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO2
+    #define MIKROBUS_POSITION_MAGNETO2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static magneto2_t magneto2;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto2_cfg_setup( &cfg );
-    MAGNETO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO2 );
     magneto2_init( &magneto2, &cfg );
 
     angle_value_old = -1;

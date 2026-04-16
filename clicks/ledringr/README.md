@@ -87,7 +87,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     ledringr_cfg_setup( &cfg );
-    LEDRINGR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDRINGR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDRINGR );
     ledringr_init( &ledringr, &cfg );
 }
 ```

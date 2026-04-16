@@ -74,7 +74,7 @@ void application_init ( void )
     // Click initialization.
 
     buck9_cfg_setup( &buck9_cfg );
-    BUCK9_MAP_MIKROBUS( buck9_cfg, MIKROBUS_1 );
+    BUCK9_MAP_MIKROBUS( buck9_cfg, MIKROBUS_POSITION_BUCK9 );
     if ( buck9_init( &buck9, &buck9_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

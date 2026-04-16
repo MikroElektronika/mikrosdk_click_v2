@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     powerstep_cfg_setup( &powerstep_cfg );
-    POWERSTEP_MAP_MIKROBUS( powerstep_cfg, MIKROBUS_1 );
+    POWERSTEP_MAP_MIKROBUS( powerstep_cfg, MIKROBUS_POSITION_POWERSTEP );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == powerstep_init( &powerstep, &powerstep_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

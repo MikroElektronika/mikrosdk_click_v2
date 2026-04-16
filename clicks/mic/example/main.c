@@ -9,7 +9,7 @@
  * The demo application is composed of two sections :
  * 
  * ## Application Init 
- * Initializes LOG communication, ADC and configures AN pin as input on MIKROBUS1.
+ * Initializes LOG communication, ADC and configures AN pin as input.
  * 
  * ## Application Task  
  * Reads 12 bit ADC data from AN pin and displays it using the logger module.
@@ -22,6 +22,10 @@
 #include "board.h"
 #include "log.h"
 #include "mic.h"
+
+#ifndef MIKROBUS_POSITION_MIC
+    #define MIKROBUS_POSITION_MIC MIKROBUS_1
+#endif
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     mic_cfg_setup( &cfg );
-    MIC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC );
     mic_init( &mic, &cfg );
 }
 

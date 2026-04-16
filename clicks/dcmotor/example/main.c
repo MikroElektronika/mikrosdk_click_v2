@@ -27,6 +27,10 @@
 #include "log.h"
 #include "dcmotor.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR
+    #define MIKROBUS_POSITION_DCMOTOR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor_t dcmotor;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor_cfg_setup( &cfg );
-    DCMOTOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR );
     dcmotor_init( &dcmotor, &cfg );
 
     log_printf( &logger, " Initialization  PWM \r\n" );

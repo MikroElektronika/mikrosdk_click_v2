@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     fm_cfg_setup( &cfg );
-    FM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FM );
     fm_init( &fm, &cfg );
     
     Delay_ms ( 500 );

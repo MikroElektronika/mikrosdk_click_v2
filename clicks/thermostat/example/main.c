@@ -23,6 +23,10 @@
 #include "log.h"
 #include "thermostat.h"
 
+#ifndef MIKROBUS_POSITION_THERMOSTAT
+    #define MIKROBUS_POSITION_THERMOSTAT MIKROBUS_1
+#endif
+
 
 static thermostat_t thermostat;
 static log_t logger;
@@ -49,7 +53,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermostat_cfg_setup( &cfg );
-    THERMOSTAT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMOSTAT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMOSTAT );
     thermostat_init( &thermostat, &cfg );
 
     thermostat_soft_reset( &thermostat );

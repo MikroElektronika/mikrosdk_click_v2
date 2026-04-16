@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     vcpmonitor3_cfg_setup( &vcpmonitor3_cfg );
-    VCPMONITOR3_MAP_MIKROBUS( vcpmonitor3_cfg, MIKROBUS_1 );
+    VCPMONITOR3_MAP_MIKROBUS( vcpmonitor3_cfg, MIKROBUS_POSITION_VCPMONITOR3 );
     err_t init_flag  = vcpmonitor3_init( &vcpmonitor3, &vcpmonitor3_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

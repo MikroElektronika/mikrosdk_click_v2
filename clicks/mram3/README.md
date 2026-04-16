@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     mram3_cfg_setup( &mram3_cfg );
-    MRAM3_MAP_MIKROBUS( mram3_cfg, MIKROBUS_1 );
+    MRAM3_MAP_MIKROBUS( mram3_cfg, MIKROBUS_POSITION_MRAM3 );
     if ( SPI_MASTER_ERROR == mram3_init( &mram3, &mram3_cfg ) )
     {
         log_error( &logger, " Communication init." );

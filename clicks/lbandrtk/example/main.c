@@ -28,6 +28,10 @@
 #include "log.h"
 #include "lbandrtk.h"
 
+#ifndef MIKROBUS_POSITION_LBANDRTK
+    #define MIKROBUS_POSITION_LBANDRTK MIKROBUS_1
+#endif
+
 static lbandrtk_t lbandrtk;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     lbandrtk_cfg_setup( &lbandrtk_cfg );
-    LBANDRTK_MAP_MIKROBUS( lbandrtk_cfg, MIKROBUS_1 );
+    LBANDRTK_MAP_MIKROBUS( lbandrtk_cfg, MIKROBUS_POSITION_LBANDRTK );
     if ( LBANDRTK_OK != lbandrtk_init( &lbandrtk, &lbandrtk_cfg ) )
     {
         log_error( &logger, " Communication init." );

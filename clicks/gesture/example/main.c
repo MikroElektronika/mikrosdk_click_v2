@@ -31,6 +31,10 @@
 #include "log.h"
 #include "gesture.h"
 
+#ifndef MIKROBUS_POSITION_GESTURE
+    #define MIKROBUS_POSITION_GESTURE MIKROBUS_1
+#endif
+
 static gesture_t gesture;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     gesture_cfg_setup( &gesture_cfg );
-    GESTURE_MAP_MIKROBUS( gesture_cfg, MIKROBUS_1 );
+    GESTURE_MAP_MIKROBUS( gesture_cfg, MIKROBUS_POSITION_GESTURE );
     if ( I2C_MASTER_ERROR == gesture_init( &gesture, &gesture_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

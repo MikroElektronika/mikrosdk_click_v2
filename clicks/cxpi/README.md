@@ -83,7 +83,7 @@ void application_init ( void )
     // Click initialization.
 
     cxpi_cfg_setup( &cxpi_cfg );
-    CXPI_MAP_MIKROBUS( cxpi_cfg, MIKROBUS_1 );
+    CXPI_MAP_MIKROBUS( cxpi_cfg, MIKROBUS_POSITION_CXPI );
     err_t init_flag  = cxpi_init( &cxpi, &cxpi_cfg );
     if ( UART_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

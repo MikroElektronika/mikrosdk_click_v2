@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     lightranger3_cfg_setup( &cfg );
-    LIGHTRANGER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIGHTRANGER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIGHTRANGER3 );
     lightranger3_init( &lightranger3, &cfg );
 
     init_status = lightranger3_device_init( &lightranger3 );

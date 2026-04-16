@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     flash14_cfg_setup( &flash14_cfg );
-    FLASH14_MAP_MIKROBUS( flash14_cfg, MIKROBUS_1 );
+    FLASH14_MAP_MIKROBUS( flash14_cfg, MIKROBUS_POSITION_FLASH14 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == flash14_init( &flash14, &flash14_cfg ) )
     {
         log_error( &logger, " Communication init." );

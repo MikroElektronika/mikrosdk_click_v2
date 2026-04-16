@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     mpu9dof_cfg_setup( &cfg );
-    MPU9DOF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MPU9DOF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MPU9DOF );
     mpu9dof_init( &mpu9dof, &cfg );
 
     Delay_10ms( );

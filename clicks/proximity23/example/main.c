@@ -23,6 +23,10 @@
 #include "log.h"
 #include "proximity23.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY23
+    #define MIKROBUS_POSITION_PROXIMITY23 MIKROBUS_1
+#endif
+
 static proximity23_t proximity23;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     proximity23_cfg_setup( &proximity23_cfg );
-    PROXIMITY23_MAP_MIKROBUS( proximity23_cfg, MIKROBUS_1 );
+    PROXIMITY23_MAP_MIKROBUS( proximity23_cfg, MIKROBUS_POSITION_PROXIMITY23 );
     if ( I2C_MASTER_ERROR == proximity23_init( &proximity23, &proximity23_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

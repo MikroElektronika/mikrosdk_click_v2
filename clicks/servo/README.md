@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     servo_cfg_setup( &cfg );
-    SERVO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SERVO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SERVO );
     servo_init( &servo, &cfg );
     
     servo_default_cfg( &servo );

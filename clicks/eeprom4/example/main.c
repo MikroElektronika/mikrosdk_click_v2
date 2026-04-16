@@ -25,6 +25,10 @@
 #include "log.h"
 #include "eeprom4.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM4
+    #define MIKROBUS_POSITION_EEPROM4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static eeprom4_t eeprom4;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     eeprom4_cfg_setup( &cfg );
-    EEPROM4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EEPROM4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EEPROM4 );
     eeprom4_init( &eeprom4, &cfg );
     
     eeprom4_default_cfg( &eeprom4 );

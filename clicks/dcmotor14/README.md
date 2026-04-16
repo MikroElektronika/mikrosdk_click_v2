@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor14_cfg_setup( &cfg );
-    DCMOTOR14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR14_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR14 );
     dcmotor14_init( &dcmotor14, &cfg );
 }
 ```

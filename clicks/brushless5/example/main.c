@@ -30,6 +30,10 @@
 #include "log.h"
 #include "brushless5.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS5
+    #define MIKROBUS_POSITION_BRUSHLESS5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static brushless5_t brushless5;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     brushless5_cfg_setup( &cfg );
-    BRUSHLESS5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS5 );
     brushless5_init( &brushless5, &cfg );
     Delay_ms ( 100 );
     

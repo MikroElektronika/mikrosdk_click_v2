@@ -23,6 +23,10 @@
 #include "log.h"
 #include "scanner.h"
 
+#ifndef MIKROBUS_POSITION_SCANNER
+    #define MIKROBUS_POSITION_SCANNER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static scanner_t scanner;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     scanner_cfg_setup( &cfg );
-    SCANNER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SCANNER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SCANNER );
     scanner_init( &scanner, &cfg );
 
     Delay_ms ( 300 );

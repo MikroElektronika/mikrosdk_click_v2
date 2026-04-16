@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     tmrmixsens_cfg_setup( &cfg );
-    TMRMIXSENS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TMRMIXSENS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TMRMIXSENS );
     tmrmixsens_init( &tmrmixsens, &cfg );
 }
 ```

@@ -33,6 +33,10 @@
 #include "log.h"
 #include "bldcfoc2.h"
 
+#ifndef MIKROBUS_POSITION_BLDCFOC2
+    #define MIKROBUS_POSITION_BLDCFOC2 MIKROBUS_1
+#endif
+
 // Change the below macro value to 1 to include EEPROM default programming.
 #define BLDCFOC2_PROGRAM_EEPROM 0
 
@@ -59,7 +63,7 @@ void application_init ( void )
 
     // Click initialization.
     bldcfoc2_cfg_setup( &bldcfoc2_cfg );
-    BLDCFOC2_MAP_MIKROBUS( bldcfoc2_cfg, MIKROBUS_1 );
+    BLDCFOC2_MAP_MIKROBUS( bldcfoc2_cfg, MIKROBUS_POSITION_BLDCFOC2 );
     if ( PWM_ERROR == bldcfoc2_init( &bldcfoc2, &bldcfoc2_cfg ) )
     {
         log_error( &logger, " Communication init." );

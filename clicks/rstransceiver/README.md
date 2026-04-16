@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     rstransceiver_cfg_setup( &rstransceiver_cfg );
-    RSTRANSCEIVER_MAP_MIKROBUS( rstransceiver_cfg, MIKROBUS_1 );
+    RSTRANSCEIVER_MAP_MIKROBUS( rstransceiver_cfg, MIKROBUS_POSITION_RSTRANSCEIVER );
     if ( I2C_MASTER_ERROR == rstransceiver_init( &rstransceiver, &rstransceiver_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

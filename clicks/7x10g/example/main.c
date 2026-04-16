@@ -20,6 +20,10 @@
 #include "board.h"
 #include "c7x10g.h"
 
+#ifndef MIKROBUS_POSITION_7X10G
+    #define MIKROBUS_POSITION_7X10G MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c7x10g_t c7x10g;
@@ -33,7 +37,7 @@ void application_init ( void ) {
     //  Click initialization.
 
     c7x10g_cfg_setup( &c7x10g_cfg );
-    C7X10G_MAP_MIKROBUS( c7x10g_cfg, MIKROBUS_1 );
+    C7X10G_MAP_MIKROBUS( c7x10g_cfg, MIKROBUS_POSITION_7X10G );
     c7x10g_init( &c7x10g, &c7x10g_cfg );
 }
 

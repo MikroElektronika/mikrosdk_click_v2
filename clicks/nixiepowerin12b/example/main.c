@@ -24,6 +24,10 @@
 #include "log.h"
 #include "nixiepowerin12b.h"
 
+#ifndef MIKROBUS_POSITION_NIXIEPOWERIN12B
+    #define MIKROBUS_POSITION_NIXIEPOWERIN12B MIKROBUS_1
+#endif
+
 static nixiepowerin12b_t nixiepowerin12b;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     nixiepowerin12b_cfg_setup( &nixiepowerin12b_cfg );
-    NIXIEPOWERIN12B_MAP_MIKROBUS( nixiepowerin12b_cfg, MIKROBUS_1 );
+    NIXIEPOWERIN12B_MAP_MIKROBUS( nixiepowerin12b_cfg, MIKROBUS_POSITION_NIXIEPOWERIN12B );
     if ( I2C_MASTER_ERROR == nixiepowerin12b_init( &nixiepowerin12b, &nixiepowerin12b_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

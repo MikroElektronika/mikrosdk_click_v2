@@ -27,6 +27,10 @@
 #include "log.h"
 #include "charger30.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER30
+    #define MIKROBUS_POSITION_CHARGER30 MIKROBUS_1
+#endif
+
 static charger30_t charger30;
 static log_t logger;
 
@@ -72,7 +76,7 @@ void application_init ( void )
 
     // Click initialization.
     charger30_cfg_setup( &charger30_cfg );
-    CHARGER30_MAP_MIKROBUS( charger30_cfg, MIKROBUS_1 );
+    CHARGER30_MAP_MIKROBUS( charger30_cfg, MIKROBUS_POSITION_CHARGER30 );
     if ( I2C_MASTER_ERROR == charger30_init( &charger30, &charger30_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

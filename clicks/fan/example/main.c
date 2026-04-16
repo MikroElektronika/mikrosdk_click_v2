@@ -24,6 +24,10 @@
 #include "log.h"
 #include "fan.h"
 
+#ifndef MIKROBUS_POSITION_FAN
+    #define MIKROBUS_POSITION_FAN MIKROBUS_1
+#endif
+
 
 #define FAN_DUTY_RATIO_0_PER    0       /**< PWM duty ratio 0 pecrents - zero scale. >*/
 #define FAN_DUTY_RATIO_10_PER   10      /**< PWM duty ratio 10 percents - step. >*/
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     fan_cfg_setup( &fan_cfg );
-    FAN_MAP_MIKROBUS( fan_cfg, MIKROBUS_1 );
+    FAN_MAP_MIKROBUS( fan_cfg, MIKROBUS_POSITION_FAN );
     if ( fan_init( &fan, &fan_cfg ) == I2C_MASTER_ERROR )
     {
         log_info( &logger, "---- Application Init Error ----" );

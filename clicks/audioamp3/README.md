@@ -99,7 +99,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp3_cfg_setup( &cfg );
-    AUDIOAMP3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOAMP3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOAMP3 );
     audioamp3_init( &audioamp3, &cfg );
     
     log_printf( &logger, "--------------------------\r\n\n" );

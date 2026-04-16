@@ -91,7 +91,7 @@ void application_init ( void )
     // Click initialization.
 
     proxfusion3_cfg_setup( &proxfusion3_cfg );
-    PROXFUSION3_MAP_MIKROBUS( proxfusion3_cfg, MIKROBUS_1 );
+    PROXFUSION3_MAP_MIKROBUS( proxfusion3_cfg, MIKROBUS_POSITION_PROXFUSION3 );
     err_t init_flag = proxfusion3_init( &proxfusion3, &proxfusion3_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

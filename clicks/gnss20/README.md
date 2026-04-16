@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss20_cfg_setup( &gnss20_cfg );
-    GNSS20_MAP_MIKROBUS( gnss20_cfg, MIKROBUS_1 );
+    GNSS20_MAP_MIKROBUS( gnss20_cfg, MIKROBUS_POSITION_GNSS20 );
     if ( UART_ERROR == gnss20_init( &gnss20, &gnss20_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     btaudio2_cfg_setup( &btaudio2_cfg );
-    BTAUDIO2_MAP_MIKROBUS( btaudio2_cfg, MIKROBUS_1 );
+    BTAUDIO2_MAP_MIKROBUS( btaudio2_cfg, MIKROBUS_POSITION_BTAUDIO2 );
     if ( UART_ERROR == btaudio2_init( &btaudio2, &btaudio2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

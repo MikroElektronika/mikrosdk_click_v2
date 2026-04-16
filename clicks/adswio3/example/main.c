@@ -30,6 +30,10 @@
 #include "log.h"
 #include "adswio3.h"
 
+#ifndef MIKROBUS_POSITION_ADSWIO3
+    #define MIKROBUS_POSITION_ADSWIO3 MIKROBUS_1
+#endif
+
 static adswio3_t adswio3;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     adswio3_cfg_setup( &adswio3_cfg );
-    ADSWIO3_MAP_MIKROBUS( adswio3_cfg, MIKROBUS_1 );
+    ADSWIO3_MAP_MIKROBUS( adswio3_cfg, MIKROBUS_POSITION_ADSWIO3 );
     if ( SPI_MASTER_ERROR == adswio3_init( &adswio3, &adswio3_cfg ) )
     {
         log_error( &logger, " Communication init." );

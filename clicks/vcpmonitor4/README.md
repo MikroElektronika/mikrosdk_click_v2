@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     vcpmonitor4_cfg_setup( &vcpmonitor4_cfg );
-    VCPMONITOR4_MAP_MIKROBUS( vcpmonitor4_cfg, MIKROBUS_1 );
+    VCPMONITOR4_MAP_MIKROBUS( vcpmonitor4_cfg, MIKROBUS_POSITION_VCPMONITOR4 );
     err_t init_flag  = vcpmonitor4_init( &vcpmonitor4, &vcpmonitor4_cfg );
     VCPMONITOR4_SET_DATA_SAMPLE_EDGE
     if ( SPI_MASTER_ERROR == init_flag )

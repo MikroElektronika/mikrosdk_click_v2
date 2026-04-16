@@ -21,6 +21,10 @@
 #include "log.h"
 #include "fram6.h"
 
+#ifndef MIKROBUS_POSITION_FRAM6
+    #define MIKROBUS_POSITION_FRAM6 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE           "MikroE - FRAM 6 Click board"
 #define STARTING_ADDRESS            0x01234        
 
@@ -48,7 +52,7 @@ void application_init ( void )
     // Click initialization.
 
     fram6_cfg_setup( &fram6_cfg );
-    FRAM6_MAP_MIKROBUS( fram6_cfg, MIKROBUS_1 );
+    FRAM6_MAP_MIKROBUS( fram6_cfg, MIKROBUS_POSITION_FRAM6 );
     
     if ( SPI_MASTER_ERROR == fram6_init( &fram6, &fram6_cfg ) )
     {

@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac7_cfg_setup( &cfg );
-    DAC7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC7 );
     dac7_init( &dac7, &cfg );
     
     log_printf( &logger, "--------------------------\r\n\n" );

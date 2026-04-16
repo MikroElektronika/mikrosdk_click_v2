@@ -23,6 +23,10 @@
 #include "log.h"
 #include "utl7segb.h"
 
+#ifndef MIKROBUS_POSITION_UTL7SEGB
+    #define MIKROBUS_POSITION_UTL7SEGB MIKROBUS_1
+#endif
+
 static utl7segb_t utl7segb;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     utl7segb_cfg_setup( &utl7segb_cfg );
-    UTL7SEGB_MAP_MIKROBUS( utl7segb_cfg, MIKROBUS_1 );
+    UTL7SEGB_MAP_MIKROBUS( utl7segb_cfg, MIKROBUS_POSITION_UTL7SEGB );
     if ( SPI_MASTER_ERROR == utl7segb_init( &utl7segb, &utl7segb_cfg ) )
     {
         log_error( &logger, " Communication init." );

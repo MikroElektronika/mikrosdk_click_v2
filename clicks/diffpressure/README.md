@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     diffpressure_cfg_setup( &cfg );
-    DIFFPRESSURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIFFPRESSURE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIFFPRESSURE );
     if ( DIFFPRESSURE_OK != diffpressure_init( &diffpressure, &cfg ) )
     {
         log_error( &logger, " Communication init." );

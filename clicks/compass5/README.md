@@ -85,7 +85,7 @@ void application_init ( void )
     
     // Click initialization.
     compass5_cfg_setup( &compass5_cfg );
-    COMPASS5_MAP_MIKROBUS( compass5_cfg, MIKROBUS_1 );
+    COMPASS5_MAP_MIKROBUS( compass5_cfg, MIKROBUS_POSITION_COMPASS5 );
     err_t init_flag = compass5_init( &compass5, &compass5_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

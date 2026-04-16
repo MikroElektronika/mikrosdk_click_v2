@@ -25,6 +25,10 @@
 #include "log.h"
 #include "adc12.h"
 
+#ifndef MIKROBUS_POSITION_ADC12
+    #define MIKROBUS_POSITION_ADC12 MIKROBUS_1
+#endif
+
 static adc12_t adc12;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
     // Click initialization.
 
     adc12_cfg_setup( &adc12_cfg );
-    ADC12_MAP_MIKROBUS( adc12_cfg, MIKROBUS_1 );
+    ADC12_MAP_MIKROBUS( adc12_cfg, MIKROBUS_POSITION_ADC12 );
     err_t init_flag = adc12_init( &adc12, &adc12_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless16_cfg_setup( &brushless16_cfg );
-    BRUSHLESS16_MAP_MIKROBUS( brushless16_cfg, MIKROBUS_1 );
+    BRUSHLESS16_MAP_MIKROBUS( brushless16_cfg, MIKROBUS_POSITION_BRUSHLESS16 );
     if ( brushless16_init( &brushless16, &brushless16_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

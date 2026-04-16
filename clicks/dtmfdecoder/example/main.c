@@ -28,6 +28,10 @@
 #include "log.h"
 #include "dtmfdecoder.h"
 
+#ifndef MIKROBUS_POSITION_DTMFDECODER
+    #define MIKROBUS_POSITION_DTMFDECODER MIKROBUS_1
+#endif
+
 static dtmfdecoder_t dtmfdecoder;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void ) {
     // Click initialization.
 
     dtmfdecoder_cfg_setup( &dtmfdecoder_cfg );
-    DTMFDECODER_MAP_MIKROBUS( dtmfdecoder_cfg, MIKROBUS_1 );
+    DTMFDECODER_MAP_MIKROBUS( dtmfdecoder_cfg, MIKROBUS_POSITION_DTMFDECODER );
     err_t init_flag = dtmfdecoder_init( &dtmfdecoder, &dtmfdecoder_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

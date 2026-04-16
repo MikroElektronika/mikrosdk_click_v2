@@ -87,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     heartrate9_cfg_setup( &heartrate9_cfg );
-    HEARTRATE9_MAP_MIKROBUS( heartrate9_cfg, MIKROBUS_1 );
+    HEARTRATE9_MAP_MIKROBUS( heartrate9_cfg, MIKROBUS_POSITION_HEARTRATE9 );
     err_t init_flag  = heartrate9_init( &heartrate9, &heartrate9_cfg );
     if ( init_flag == UART_ERROR ) 
     {

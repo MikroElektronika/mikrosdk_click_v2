@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssrtk4_cfg_setup( &gnssrtk4_cfg );
-    GNSSRTK4_MAP_MIKROBUS( gnssrtk4_cfg, MIKROBUS_1 );
+    GNSSRTK4_MAP_MIKROBUS( gnssrtk4_cfg, MIKROBUS_POSITION_GNSSRTK4 );
     if ( UART_ERROR == gnssrtk4_init( &gnssrtk4, &gnssrtk4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

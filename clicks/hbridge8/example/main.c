@@ -27,6 +27,10 @@
 #include "log.h"
 #include "hbridge8.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE8
+    #define MIKROBUS_POSITION_HBRIDGE8 MIKROBUS_1
+#endif
+
 static hbridge8_t hbridge8;
 static log_t logger;
 uint8_t mode;
@@ -52,7 +56,7 @@ void application_init ( void )
     // Click initialization.
 
     hbridge8_cfg_setup( &hbridge8_cfg );
-    HBRIDGE8_MAP_MIKROBUS( hbridge8_cfg, MIKROBUS_1 );
+    HBRIDGE8_MAP_MIKROBUS( hbridge8_cfg, MIKROBUS_POSITION_HBRIDGE8 );
     err_t init_flag  = hbridge8_init( &hbridge8, &hbridge8_cfg );
     if ( PWM_ERROR == init_flag )
     {

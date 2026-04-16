@@ -32,6 +32,10 @@
 #include "rs485isolator.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS485ISOLATOR
+    #define MIKROBUS_POSITION_RS485ISOLATOR MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -95,7 +99,7 @@ void application_init ( void )
 
     // Click initialization.
     rs485isolator_cfg_setup( &cfg );
-    RS485ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS485ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS485ISOLATOR );
     rs485isolator_init( &rs485isolator, &cfg );
     
     log_info( &logger, " Application Task " );

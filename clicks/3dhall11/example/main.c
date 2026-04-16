@@ -23,6 +23,10 @@
 #include "log.h"
 #include "c3dhall11.h"
 
+#ifndef MIKROBUS_POSITION_3DHALL11
+    #define MIKROBUS_POSITION_3DHALL11 MIKROBUS_1
+#endif
+
 static c3dhall11_t c3dhall11;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     c3dhall11_cfg_setup( &c3dhall11_cfg );
-    C3DHALL11_MAP_MIKROBUS( c3dhall11_cfg, MIKROBUS_1 );
+    C3DHALL11_MAP_MIKROBUS( c3dhall11_cfg, MIKROBUS_POSITION_3DHALL11 );
     if ( I2C_MASTER_ERROR == c3dhall11_init( &c3dhall11, &c3dhall11_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     analogmux3_cfg_setup( &analogmux3_cfg );
-    ANALOGMUX3_MAP_MIKROBUS( analogmux3_cfg, MIKROBUS_1 );
+    ANALOGMUX3_MAP_MIKROBUS( analogmux3_cfg, MIKROBUS_POSITION_ANALOGMUX3 );
     
     // Vref STM32F407ZG
     analogmux3_cfg.vref = 2.048;

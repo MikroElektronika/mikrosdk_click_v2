@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     nbiot4_cfg_setup( &nbiot4_cfg );
-    NBIOT4_MAP_MIKROBUS( nbiot4_cfg, MIKROBUS_1 );
+    NBIOT4_MAP_MIKROBUS( nbiot4_cfg, MIKROBUS_POSITION_NBIOT4 );
     if ( UART_ERROR == nbiot4_init( &nbiot4, &nbiot4_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

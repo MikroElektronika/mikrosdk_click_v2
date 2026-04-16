@@ -88,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo9_cfg_setup( &cfg );
-    THERMO9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO9 );
     thermo9_init( &thermo9, &cfg );
     Delay_ms ( 100 );
     log_printf( &logger, "---------------------\r\n" );

@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     wifi9_cfg_setup( &cfg );
-    WIFI9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WIFI9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WIFI9 );
     wifi9_init( &wifi9, &cfg );
 
     wifi9_reset_device( &wifi9 );

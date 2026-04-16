@@ -22,6 +22,10 @@
 #include "log.h"
 #include "hallswitch2.h"
 
+#ifndef MIKROBUS_POSITION_HALLSWITCH2
+    #define MIKROBUS_POSITION_HALLSWITCH2 MIKROBUS_1
+#endif
+
 static hallswitch2_t hallswitch2;   /**< Hall Switch 2 Click driver object. */
 static log_t logger;                /**< Logger object. */
 static uint8_t print_state = 0xFF;  /**< Starting case, any number above 2 should be good for our example. */
@@ -48,7 +52,7 @@ void application_init ( void )
     // Click initialization.
 
     hallswitch2_cfg_setup( &hallswitch2_cfg );
-    HALLSWITCH2_MAP_MIKROBUS( hallswitch2_cfg, MIKROBUS_1 );
+    HALLSWITCH2_MAP_MIKROBUS( hallswitch2_cfg, MIKROBUS_POSITION_HALLSWITCH2 );
     if ( hallswitch2_init( &hallswitch2, &hallswitch2_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

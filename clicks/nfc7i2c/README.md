@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc7i2c_cfg_setup( &nfc7i2c_cfg );
-    NFC7I2C_MAP_MIKROBUS( nfc7i2c_cfg, MIKROBUS_1 );
+    NFC7I2C_MAP_MIKROBUS( nfc7i2c_cfg, MIKROBUS_POSITION_NFC7I2C );
     if ( I2C_MASTER_ERROR == nfc7i2c_init( &nfc7i2c, &nfc7i2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

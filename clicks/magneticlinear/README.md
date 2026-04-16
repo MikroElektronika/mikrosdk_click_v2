@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneticlinear_cfg_setup( &cfg );
-    MAGNETICLINEAR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETICLINEAR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETICLINEAR );
     magneticlinear_init( &magneticlinear, &cfg );
 }
 ```

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "multisteppertb67s269.h"
 
+#ifndef MIKROBUS_POSITION_MULTISTEPPERTB67S269
+    #define MIKROBUS_POSITION_MULTISTEPPERTB67S269 MIKROBUS_1
+#endif
+
 static multisteppertb67s269_t multisteppertb67s269;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     multisteppertb67s269_cfg_setup( &multisteppertb67s269_cfg );
-    MULTISTEPPERTB67S269_MAP_MIKROBUS( multisteppertb67s269_cfg, MIKROBUS_1 );
+    MULTISTEPPERTB67S269_MAP_MIKROBUS( multisteppertb67s269_cfg, MIKROBUS_POSITION_MULTISTEPPERTB67S269 );
     if ( I2C_MASTER_ERROR == multisteppertb67s269_init( &multisteppertb67s269, &multisteppertb67s269_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

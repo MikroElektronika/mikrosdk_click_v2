@@ -83,7 +83,7 @@ void application_init ( void )
     //  Click initialization.
 
     fan_cfg_setup( &fan_cfg );
-    FAN_MAP_MIKROBUS( fan_cfg, MIKROBUS_1 );
+    FAN_MAP_MIKROBUS( fan_cfg, MIKROBUS_POSITION_FAN );
     if ( fan_init( &fan, &fan_cfg ) == I2C_MASTER_ERROR )
     {
         log_info( &logger, "---- Application Init Error ----" );

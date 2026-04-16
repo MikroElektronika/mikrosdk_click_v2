@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo19_cfg_setup( &thermo19_cfg );
-    THERMO19_MAP_MIKROBUS( thermo19_cfg, MIKROBUS_1 );
+    THERMO19_MAP_MIKROBUS( thermo19_cfg, MIKROBUS_POSITION_THERMO19 );
     if ( ONE_WIRE_ERROR == thermo19_init( &thermo19, &thermo19_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     rn4871_cfg_setup( &cfg );
-    RN4871_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RN4871_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RN4871 );
     rn4871_init( &rn4871, &cfg );
 
     dev_type = RN4871_DEVICETYPE_MASTER;

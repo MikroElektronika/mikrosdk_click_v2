@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     optoencoder3_cfg_setup( &cfg );
-    OPTOENCODER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OPTOENCODER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OPTOENCODER3 );
     optoencoder3_init( &optoencoder3, &cfg );
 
     optoencoder3_enable ( &optoencoder3, OPTOENCODER3_ENABLE );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "lsm303agr.h"
 
+#ifndef MIKROBUS_POSITION_LSM303AGR
+    #define MIKROBUS_POSITION_LSM303AGR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static lsm303agr_t lsm303agr;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     lsm303agr_cfg_setup( &cfg );
-    LSM303AGR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LSM303AGR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LSM303AGR );
     lsm303agr_init( &lsm303agr, &cfg );
     
     lsm303agr_default_cfg ( &lsm303agr );

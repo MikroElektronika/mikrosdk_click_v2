@@ -29,6 +29,10 @@
 #include "log.h"
 #include "anynet2g.h"
 
+#ifndef MIKROBUS_POSITION_ANYNET2G
+    #define MIKROBUS_POSITION_ANYNET2G MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE                     256
 #define PROCESS_BUFFER_SIZE                 256
@@ -108,7 +112,7 @@ void application_init ( void )
 
     // Click initialization.
     anynet2g_cfg_setup( &anynet2g_cfg );
-    ANYNET2G_MAP_MIKROBUS( anynet2g_cfg, MIKROBUS_1 );
+    ANYNET2G_MAP_MIKROBUS( anynet2g_cfg, MIKROBUS_POSITION_ANYNET2G );
     if ( UART_ERROR == anynet2g_init( &anynet2g, &anynet2g_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

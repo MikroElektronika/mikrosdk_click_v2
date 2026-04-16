@@ -27,6 +27,10 @@
 #include "singlewirecan.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_SINGLEWIRECAN
+    #define MIKROBUS_POSITION_SINGLEWIRECAN MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE\r\n"
@@ -85,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     singlewirecan_cfg_setup( &cfg );
-    SINGLEWIRECAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SINGLEWIRECAN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SINGLEWIRECAN );
     singlewirecan_init( &singlewirecan, &cfg );
     Delay_ms ( 100 );
 

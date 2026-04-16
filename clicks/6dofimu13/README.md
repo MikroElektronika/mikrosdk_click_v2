@@ -91,7 +91,7 @@ void application_init ( void )
     // Click initialization.
 
     c6dofimu13_cfg_setup( &c6dofimu13_cfg );
-    C6DOFIMU13_MAP_MIKROBUS( c6dofimu13_cfg, MIKROBUS_1 );
+    C6DOFIMU13_MAP_MIKROBUS( c6dofimu13_cfg, MIKROBUS_POSITION_6DOFIMU13 );
     err_t init_flag = c6dofimu13_init( &c6dofimu13, &c6dofimu13_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

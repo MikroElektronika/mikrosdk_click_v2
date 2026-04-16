@@ -90,7 +90,7 @@ void application_init ( void )
     // Click initialization.
 
     daq3_cfg_setup( &daq3_cfg );
-    DAQ3_MAP_MIKROBUS( daq3_cfg, MIKROBUS_1 );
+    DAQ3_MAP_MIKROBUS( daq3_cfg, MIKROBUS_POSITION_DAQ3 );
     err_t init_flag  = daq3_init( &daq3, &daq3_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

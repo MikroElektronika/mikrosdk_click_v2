@@ -75,7 +75,7 @@ void application_init ( void )
 
     // Click initialization.
     tilt6_cfg_setup( &tilt6_cfg );
-    TILT6_MAP_MIKROBUS( tilt6_cfg, MIKROBUS_1 );
+    TILT6_MAP_MIKROBUS( tilt6_cfg, MIKROBUS_POSITION_TILT6 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == tilt6_init( &tilt6, &tilt6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

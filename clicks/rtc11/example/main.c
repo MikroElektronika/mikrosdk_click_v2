@@ -28,6 +28,10 @@
 #include "log.h"
 #include "rtc11.h"
 
+#ifndef MIKROBUS_POSITION_RTC11
+    #define MIKROBUS_POSITION_RTC11 MIKROBUS_1
+#endif
+
 static rtc11_t rtc11;
 static log_t logger;
 
@@ -100,7 +104,7 @@ void application_init ( void ) {
     // Click initialization.
 
     rtc11_cfg_setup( &rtc11_cfg );
-    RTC11_MAP_MIKROBUS( rtc11_cfg, MIKROBUS_1 );
+    RTC11_MAP_MIKROBUS( rtc11_cfg, MIKROBUS_POSITION_RTC11 );
     err_t init_flag  = rtc11_init( &rtc11, &rtc11_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

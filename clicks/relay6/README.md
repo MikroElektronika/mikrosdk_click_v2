@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     relay6_cfg_setup( &relay6_cfg );
-    RELAY6_MAP_MIKROBUS( relay6_cfg, MIKROBUS_1 );
+    RELAY6_MAP_MIKROBUS( relay6_cfg, MIKROBUS_POSITION_RELAY6 );
     if ( I2C_MASTER_ERROR == relay6_init( &relay6, &relay6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "force5.h"
 
+#ifndef MIKROBUS_POSITION_FORCE5
+    #define MIKROBUS_POSITION_FORCE5 MIKROBUS_1
+#endif
+
 static force5_t force5;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void ) {
 
     // Click initialization.
     force5_cfg_setup( &force5_cfg );
-    FORCE5_MAP_MIKROBUS( force5_cfg, MIKROBUS_1 );
+    FORCE5_MAP_MIKROBUS( force5_cfg, MIKROBUS_POSITION_FORCE5 );
     err_t init_flag = force5_init( &force5, &force5_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

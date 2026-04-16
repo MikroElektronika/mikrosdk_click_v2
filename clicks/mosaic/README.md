@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     mosaic_cfg_setup( &mosaic_cfg );
-    MOSAIC_MAP_MIKROBUS( mosaic_cfg, MIKROBUS_1 );
+    MOSAIC_MAP_MIKROBUS( mosaic_cfg, MIKROBUS_POSITION_MOSAIC );
     if ( UART_ERROR == mosaic_init( &mosaic, &mosaic_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

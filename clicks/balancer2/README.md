@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     balancer2_cfg_setup( &cfg );
-    BALANCER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BALANCER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BALANCER2 );
     balancer2_init( &balancer2, &cfg );
 
     Delay_ms ( 100 );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "spectral2.h"
 
+#ifndef MIKROBUS_POSITION_SPECTRAL2
+    #define MIKROBUS_POSITION_SPECTRAL2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static spectral2_t spectral2;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     spectral2_cfg_setup( &cfg );
-    SPECTRAL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPECTRAL2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPECTRAL2 );
 
     if ( spectral2_init( &spectral2, &cfg ) == SPECTRAL2_INIT_ERROR )
     {

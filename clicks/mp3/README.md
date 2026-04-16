@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     mp3_cfg_setup( &cfg );
-    MP3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MP3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MP3 );
     mp3_init( &mp3, &cfg );
 
     mp3_reset( &mp3 );

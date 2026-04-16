@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     dac16_cfg_setup( &dac16_cfg );
-    DAC16_MAP_MIKROBUS( dac16_cfg, MIKROBUS_1 );
+    DAC16_MAP_MIKROBUS( dac16_cfg, MIKROBUS_POSITION_DAC16 );
     err_t init_flag = dac16_init( &dac16, &dac16_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

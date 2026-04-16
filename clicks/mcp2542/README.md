@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp2542_cfg_setup( &cfg );
-    MCP2542_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP2542_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP2542 );
     mcp2542_init( &mcp2542, &cfg );
 
      mcp2542_default_cfg( &mcp2542 );

@@ -32,6 +32,10 @@
 #include "log.h"
 #include "efuse2.h"
 
+#ifndef MIKROBUS_POSITION_EFUSE2
+    #define MIKROBUS_POSITION_EFUSE2 MIKROBUS_1
+#endif
+
 static efuse2_t efuse2;
 static log_t logger;
 
@@ -60,7 +64,7 @@ void application_init ( void )
 
     // Click initialization.
     efuse2_cfg_setup( &efuse2_cfg );
-    EFUSE2_MAP_MIKROBUS( efuse2_cfg, MIKROBUS_1 );
+    EFUSE2_MAP_MIKROBUS( efuse2_cfg, MIKROBUS_POSITION_EFUSE2 );
     err_t init_flag = efuse2_init( &efuse2, &efuse2_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

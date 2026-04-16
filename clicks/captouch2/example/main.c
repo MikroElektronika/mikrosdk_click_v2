@@ -25,6 +25,10 @@
 #include "log.h"
 #include "captouch2.h"
 
+#ifndef MIKROBUS_POSITION_CAPTOUCH2
+    #define MIKROBUS_POSITION_CAPTOUCH2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static captouch2_t captouch2;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     captouch2_cfg_setup( &cfg );
-    CAPTOUCH2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPTOUCH2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPTOUCH2 );
     captouch2_init( &captouch2, &cfg );
 
     captouch2_reset( &captouch2 );

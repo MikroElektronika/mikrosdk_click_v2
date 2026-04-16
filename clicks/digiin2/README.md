@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     digiin2_cfg_setup( &digiin2_cfg );
-    DIGIIN2_MAP_MIKROBUS( digiin2_cfg, MIKROBUS_1 );
+    DIGIIN2_MAP_MIKROBUS( digiin2_cfg, MIKROBUS_POSITION_DIGIIN2 );
     if ( SPI_MASTER_ERROR == digiin2_init( &digiin2, &digiin2_cfg ) )
     {
         log_error( &logger, " Communication init." );

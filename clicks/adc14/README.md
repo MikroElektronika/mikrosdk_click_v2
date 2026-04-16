@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     adc14_cfg_setup( &adc14_cfg );
-    ADC14_MAP_MIKROBUS( adc14_cfg, MIKROBUS_1 );
+    ADC14_MAP_MIKROBUS( adc14_cfg, MIKROBUS_POSITION_ADC14 );
     if ( SPI_MASTER_ERROR == adc14_init( &adc14, &adc14_cfg ) )
     {
         log_error( &logger, " Communication init." );

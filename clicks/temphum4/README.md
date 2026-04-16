@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum4_cfg_setup( &cfg );
-    TEMPHUM4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM4 );
     temphum4_init( &temphum4, &cfg );
     
     temphum4_default_cfg( &temphum4 );

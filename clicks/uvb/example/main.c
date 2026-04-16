@@ -22,6 +22,10 @@
 #include "log.h"
 #include "uvb.h"
 
+#ifndef MIKROBUS_POSITION_UVB
+    #define MIKROBUS_POSITION_UVB MIKROBUS_1
+#endif
+
 static uvb_t uvb;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     uvb_cfg_setup( &uvb_cfg );
-    UVB_MAP_MIKROBUS( uvb_cfg, MIKROBUS_1 );
+    UVB_MAP_MIKROBUS( uvb_cfg, MIKROBUS_POSITION_UVB );
     err_t init_flag = uvb_init( &uvb, &uvb_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

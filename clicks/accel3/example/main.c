@@ -24,6 +24,10 @@
 #include "log.h"
 #include "accel3.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL3
+    #define MIKROBUS_POSITION_ACCEL3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel3_t accel3;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel3_cfg_setup( &cfg );
-    ACCEL3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL3 );
     accel3_init( &accel3, &cfg );
     
     log_printf( &logger, "--------------------------\r\n\n" );

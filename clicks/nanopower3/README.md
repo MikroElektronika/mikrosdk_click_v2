@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     nanopower3_cfg_setup( &nanopower3_cfg );
-    NANOPOWER3_MAP_MIKROBUS( nanopower3_cfg, MIKROBUS_1 );
+    NANOPOWER3_MAP_MIKROBUS( nanopower3_cfg, MIKROBUS_POSITION_NANOPOWER3 );
     if ( I2C_MASTER_ERROR == nanopower3_init( &nanopower3, &nanopower3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     rak4630_cfg_setup( &rak4630_cfg );
-    RAK4630_MAP_MIKROBUS( rak4630_cfg, MIKROBUS_1 );
+    RAK4630_MAP_MIKROBUS( rak4630_cfg, MIKROBUS_POSITION_RAK4630 );
     if ( UART_ERROR == rak4630_init( &rak4630, &rak4630_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

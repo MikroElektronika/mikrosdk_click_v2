@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     enocean2_cfg_setup( &cfg );
-    ENOCEAN2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ENOCEAN2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ENOCEAN2 );
     enocean2_init( &enocean2, &cfg );
 
     enocean2_rx_data.rx_buffer   = &rx_buffer[ 0 ];

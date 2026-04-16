@@ -29,6 +29,10 @@
 #include "log.h"
 #include "boost5.h"
 
+#ifndef MIKROBUS_POSITION_BOOST5
+    #define MIKROBUS_POSITION_BOOST5 MIKROBUS_1
+#endif
+
 static boost5_t boost5;   /**< Boost 5 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     boost5_cfg_setup( &boost5_cfg );
-    BOOST5_MAP_MIKROBUS( boost5_cfg, MIKROBUS_1 );
+    BOOST5_MAP_MIKROBUS( boost5_cfg, MIKROBUS_POSITION_BOOST5 );
     if ( ADC_ERROR == boost5_init( &boost5, &boost5_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ookrx_cfg_setup( &ookrx_cfg );
-    OOKRX_MAP_MIKROBUS( ookrx_cfg, MIKROBUS_1 );
+    OOKRX_MAP_MIKROBUS( ookrx_cfg, MIKROBUS_POSITION_OOKRX );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ookrx_init( &ookrx, &ookrx_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

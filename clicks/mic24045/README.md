@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     mic24045_cfg_setup( &cfg );
-    MIC24045_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC24045_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC24045 );
     mic24045_init( &mic24045, &cfg );
     
     mic24045_enable( &mic24045 );

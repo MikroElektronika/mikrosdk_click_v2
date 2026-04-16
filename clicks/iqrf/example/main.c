@@ -25,6 +25,10 @@
 #include "log.h"
 #include "iqrf.h"
 
+#ifndef MIKROBUS_POSITION_IQRF
+    #define MIKROBUS_POSITION_IQRF MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 //#define DEMO_APP_RECEIVER
@@ -65,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     iqrf_cfg_setup( &cfg );
-    IQRF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IQRF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IQRF );
     iqrf_init( &iqrf, &cfg );
     
     log_printf( &logger, "------------------------------------\r\n" );

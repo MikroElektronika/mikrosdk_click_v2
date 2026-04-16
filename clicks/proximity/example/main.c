@@ -22,6 +22,10 @@
 #include "log.h"
 #include "proximity.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY
+    #define MIKROBUS_POSITION_PROXIMITY MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static proximity_t proximity;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity_cfg_setup( &cfg );
-    PROXIMITY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY );
     proximity_init( &proximity, &cfg );
     proximity_set_default_mode( &proximity );
 }

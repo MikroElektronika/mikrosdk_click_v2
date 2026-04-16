@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     temphum22_cfg_setup( &temphum22_cfg );
-    TEMPHUM22_MAP_MIKROBUS( temphum22_cfg, MIKROBUS_1 );
+    TEMPHUM22_MAP_MIKROBUS( temphum22_cfg, MIKROBUS_POSITION_TEMPHUM22 );
     if ( I2C_MASTER_ERROR == temphum22_init( &temphum22, &temphum22_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

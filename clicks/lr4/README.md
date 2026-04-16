@@ -86,7 +86,7 @@ void application_init ( void )
     //  Click initialization.
 
     lr4_cfg_setup( &cfg );
-    LR4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LR4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LR4 );
     lr4_init( &lr4, &cfg );
 
     Delay_ms ( 100 );

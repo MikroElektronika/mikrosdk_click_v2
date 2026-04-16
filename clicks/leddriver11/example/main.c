@@ -23,6 +23,10 @@
 #include "log.h"
 #include "leddriver11.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER11
+    #define MIKROBUS_POSITION_LEDDRIVER11 MIKROBUS_1
+#endif
+
 static leddriver11_t leddriver11;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver11_cfg_setup( &leddriver11_cfg );
-    LEDDRIVER11_MAP_MIKROBUS( leddriver11_cfg, MIKROBUS_1 );
+    LEDDRIVER11_MAP_MIKROBUS( leddriver11_cfg, MIKROBUS_POSITION_LEDDRIVER11 );
     err_t init_flag = leddriver11_init( &leddriver11, &leddriver11_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

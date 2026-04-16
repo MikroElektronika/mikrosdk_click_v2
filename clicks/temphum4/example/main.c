@@ -24,6 +24,10 @@
 #include "log.h"
 #include "temphum4.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM4
+    #define MIKROBUS_POSITION_TEMPHUM4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static temphum4_t temphum4;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum4_cfg_setup( &cfg );
-    TEMPHUM4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM4 );
     temphum4_init( &temphum4, &cfg );
     
     temphum4_set_mode( &temphum4, TEMPHUM4_MODE_ACTIVE );

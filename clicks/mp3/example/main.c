@@ -23,6 +23,10 @@
 #include "mp3.h"
 #include "mp3_resources.h"
 
+#ifndef MIKROBUS_POSITION_MP3
+    #define MIKROBUS_POSITION_MP3 MIKROBUS_1
+#endif
+
 static mp3_t mp3;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     mp3_cfg_setup( &cfg );
-    MP3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MP3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MP3 );
     mp3_init( &mp3, &cfg );
 
     mp3_reset( &mp3 );

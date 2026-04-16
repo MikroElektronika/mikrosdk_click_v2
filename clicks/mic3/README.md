@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     mic3_cfg_setup( &mic3_cfg );
-    MIC3_MAP_MIKROBUS( mic3_cfg, MIKROBUS_1 );
+    MIC3_MAP_MIKROBUS( mic3_cfg, MIKROBUS_POSITION_MIC3 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == mic3_init( &mic3, &mic3_cfg ) ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

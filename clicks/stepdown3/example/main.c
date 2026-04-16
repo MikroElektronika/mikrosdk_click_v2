@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stepdown3.h"
 
+#ifndef MIKROBUS_POSITION_STEPDOWN3
+    #define MIKROBUS_POSITION_STEPDOWN3 MIKROBUS_1
+#endif
+
 static stepdown3_t stepdown3;   /**< Step Down 3 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     stepdown3_cfg_setup( &stepdown3_cfg );
-    STEPDOWN3_MAP_MIKROBUS( stepdown3_cfg, MIKROBUS_1 );
+    STEPDOWN3_MAP_MIKROBUS( stepdown3_cfg, MIKROBUS_POSITION_STEPDOWN3 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == stepdown3_init( &stepdown3, &stepdown3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

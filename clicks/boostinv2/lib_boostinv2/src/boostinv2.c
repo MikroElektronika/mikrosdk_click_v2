@@ -1,26 +1,24 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2026 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
  * \file
@@ -31,7 +29,7 @@
 
 // ------------------------------------------------------------- PRIVATE MACROS 
 
-#define BOOSTONV2_DUMMY 0
+#define BOOSTINV2_DUMMY 0
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
@@ -55,7 +53,7 @@ void boostinv2_cfg_setup ( boostinv2_cfg_t *cfg )
     cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
 
-BOOSTONV2_RETVAL boostinv2_init ( boostinv2_t *ctx, boostinv2_cfg_t *cfg )
+BOOSTINV2_RETVAL boostinv2_init ( boostinv2_t *ctx, boostinv2_cfg_t *cfg )
 {
     spi_master_config_t spi_cfg;
 
@@ -64,17 +62,17 @@ BOOSTONV2_RETVAL boostinv2_init ( boostinv2_t *ctx, boostinv2_cfg_t *cfg )
     spi_cfg.sck       = cfg->sck;
     spi_cfg.miso      = cfg->miso;
     spi_cfg.mosi      = cfg->mosi;
-    spi_cfg.default_write_data = BOOSTONV2_DUMMY;
+    spi_cfg.default_write_data = BOOSTINV2_DUMMY;
 
     digital_out_init( &ctx->cs, cfg->cs );
     ctx->chip_select = cfg->cs;
 
     if (  spi_master_open( &ctx->spi, &spi_cfg ) == SPI_MASTER_ERROR )
     {
-        return BOOSTONV2_INIT_ERROR;
+        return BOOSTINV2_INIT_ERROR;
     }
 
-    spi_master_set_default_write_data( &ctx->spi, BOOSTONV2_DUMMY );
+    spi_master_set_default_write_data( &ctx->spi, BOOSTINV2_DUMMY );
     spi_master_set_speed( &ctx->spi, cfg->spi_speed );
     spi_master_set_mode( &ctx->spi, cfg->spi_mode );
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
@@ -85,7 +83,7 @@ BOOSTONV2_RETVAL boostinv2_init ( boostinv2_t *ctx, boostinv2_cfg_t *cfg )
     digital_out_init( &ctx->csn, cfg->csn );
     digital_out_init( &ctx->psm, cfg->psm );
 
-    return BOOSTONV2_OK;
+    return BOOSTINV2_OK;
 }
 
 void boostinv2_default_cfg ( boostinv2_t *ctx ) 

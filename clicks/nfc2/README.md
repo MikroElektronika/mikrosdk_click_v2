@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc2_cfg_setup( &nfc2_cfg );
-    NFC2_MAP_MIKROBUS( nfc2_cfg, MIKROBUS_1 );
+    NFC2_MAP_MIKROBUS( nfc2_cfg, MIKROBUS_POSITION_NFC2 );
     err_t init_flag = nfc2_init( &nfc2, &nfc2_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

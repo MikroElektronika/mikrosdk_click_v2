@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     captouch4_cfg_setup( &captouch4_cfg );
-    CAPTOUCH4_MAP_MIKROBUS( captouch4_cfg, MIKROBUS_1 );
+    CAPTOUCH4_MAP_MIKROBUS( captouch4_cfg, MIKROBUS_POSITION_CAPTOUCH4 );
     if ( I2C_MASTER_ERROR == captouch4_init( &captouch4, &captouch4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

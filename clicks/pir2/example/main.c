@@ -21,6 +21,10 @@
 #include "log.h"
 #include "pir2.h"
 
+#ifndef MIKROBUS_POSITION_PIR2
+    #define MIKROBUS_POSITION_PIR2 MIKROBUS_1
+#endif
+
 static pir2_t pir2;     /**< PIR 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     pir2_cfg_setup( &pir2_cfg );
-    PIR2_MAP_MIKROBUS( pir2_cfg, MIKROBUS_1 );
+    PIR2_MAP_MIKROBUS( pir2_cfg, MIKROBUS_POSITION_PIR2 );
     err_t init_flag = pir2_init( &pir2, &pir2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -336,6 +336,8 @@
 
 + `DAC 24 Click`
 
+*All Click boards have been updated*
+
 **[BACK TO TOP](#changelog)**
 
 ---

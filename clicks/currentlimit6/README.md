@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     currentlimit6_cfg_setup( &currentlimit6_cfg );
-    CURRENTLIMIT6_MAP_MIKROBUS( currentlimit6_cfg, MIKROBUS_1 );
+    CURRENTLIMIT6_MAP_MIKROBUS( currentlimit6_cfg, MIKROBUS_POSITION_CURRENTLIMIT6 );
     if ( SPI_MASTER_ERROR == currentlimit6_init( &currentlimit6, &currentlimit6_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -30,6 +30,10 @@
 #include "log.h"
 #include "altitude2.h"
 
+#ifndef MIKROBUS_POSITION_ALTITUDE2
+    #define MIKROBUS_POSITION_ALTITUDE2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static altitude2_t altitude2;
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     altitude2_cfg_setup( &cfg );
-    ALTITUDE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ALTITUDE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ALTITUDE2 );
     altitude2_init( &altitude2, &cfg );
     Delay_ms ( 500 );
     altitude2_reset( &altitude2 );

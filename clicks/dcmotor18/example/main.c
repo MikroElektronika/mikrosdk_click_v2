@@ -28,6 +28,10 @@
 #include "log.h"
 #include "dcmotor18.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR18
+    #define MIKROBUS_POSITION_DCMOTOR18 MIKROBUS_1
+#endif
+
 static dcmotor18_t dcmotor18;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor18_cfg_setup( &dcmotor18_cfg );
-    DCMOTOR18_MAP_MIKROBUS( dcmotor18_cfg, MIKROBUS_1 );
+    DCMOTOR18_MAP_MIKROBUS( dcmotor18_cfg, MIKROBUS_POSITION_DCMOTOR18 );
     err_t init_flag  = dcmotor18_init( &dcmotor18, &dcmotor18_cfg );
     if ( PWM_ERROR == init_flag )
     {

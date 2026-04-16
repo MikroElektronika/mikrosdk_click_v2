@@ -23,6 +23,10 @@
 #include "log.h"
 #include "sht.h"
 
+#ifndef MIKROBUS_POSITION_SHT
+    #define MIKROBUS_POSITION_SHT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static sht_t sht;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     //  Click initialization.
     sht_cfg_setup( &cfg );
-    SHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHT );
     sht_init( &sht, &cfg );
     
     sht_reset( &sht );

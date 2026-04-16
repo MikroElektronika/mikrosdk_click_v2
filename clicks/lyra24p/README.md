@@ -87,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     lyra24p_cfg_setup( &lyra24p_cfg );
-    LYRA24P_MAP_MIKROBUS( lyra24p_cfg, MIKROBUS_1 );
+    LYRA24P_MAP_MIKROBUS( lyra24p_cfg, MIKROBUS_POSITION_LYRA24P );
     if ( UART_ERROR == lyra24p_init( &lyra24p, &lyra24p_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

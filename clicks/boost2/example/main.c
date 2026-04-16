@@ -24,6 +24,10 @@ voltage is good.
 #include "log.h"
 #include "boost2.h"
 
+#ifndef MIKROBUS_POSITION_BOOST2
+    #define MIKROBUS_POSITION_BOOST2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static boost2_t boost2;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     boost2_cfg_setup( &cfg );
-    BOOST2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOST2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOST2 );
     boost2_init( &boost2, &cfg );
 }
 

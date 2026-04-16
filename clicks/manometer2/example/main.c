@@ -27,6 +27,10 @@
 #include "log.h"
 #include "manometer2.h"
 
+#ifndef MIKROBUS_POSITION_MANOMETER2
+    #define MIKROBUS_POSITION_MANOMETER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static manometer2_t manometer2;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     manometer2_cfg_setup( &cfg );
-    MANOMETER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MANOMETER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MANOMETER2 );
     manometer2_init( &manometer2, &cfg );
 
     manometer2_read_coef( &manometer2 );

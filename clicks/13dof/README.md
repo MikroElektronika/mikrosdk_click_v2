@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     c13dof_cfg_setup( &cfg );
-    C13DOF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C13DOF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_13DOF );
     c13dof_init( &c13dof, &cfg );
     c13dof_default_cfg( &c13dof );
 }

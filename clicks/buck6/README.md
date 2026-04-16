@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck6_cfg_setup( &cfg );
-    BUCK6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK6 );
     buck6_init( &buck6, &cfg );
 }
 ```

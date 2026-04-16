@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     thumbstick2_cfg_setup( &thumbstick2_cfg );
-    THUMBSTICK2_MAP_MIKROBUS( thumbstick2_cfg, MIKROBUS_1 );
+    THUMBSTICK2_MAP_MIKROBUS( thumbstick2_cfg, MIKROBUS_POSITION_THUMBSTICK2 );
     if ( THUMBSTICK2_OK != thumbstick2_init( &thumbstick2, &thumbstick2_cfg ) )
     {
         log_error( &logger, " Communication init." );

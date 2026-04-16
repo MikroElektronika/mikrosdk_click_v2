@@ -29,6 +29,10 @@
 #include "gnss.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_GNSS
+    #define MIKROBUS_POSITION_GNSS MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static gnss_t gnss;
@@ -89,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss_cfg_setup( &gnss_cfg );
-    GNSS_MAP_MIKROBUS( gnss_cfg, MIKROBUS_1 );
+    GNSS_MAP_MIKROBUS( gnss_cfg, MIKROBUS_POSITION_GNSS );
     if ( UART_ERROR == gnss_init( &gnss, &gnss_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "i2c1wire2.h"
 
+#ifndef MIKROBUS_POSITION_I2C1WIRE2
+    #define MIKROBUS_POSITION_I2C1WIRE2 MIKROBUS_1
+#endif
+
 static i2c1wire2_t i2c1wire2;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     i2c1wire2_cfg_setup( &i2c1wire2_cfg );
-    I2C1WIRE2_MAP_MIKROBUS( i2c1wire2_cfg, MIKROBUS_1 );
+    I2C1WIRE2_MAP_MIKROBUS( i2c1wire2_cfg, MIKROBUS_POSITION_I2C1WIRE2 );
     if ( I2C_MASTER_ERROR == i2c1wire2_init( &i2c1wire2, &i2c1wire2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

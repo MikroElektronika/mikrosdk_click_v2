@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     temphum9_cfg_setup( &cfg );
-    TEMPHUM9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM9 );
     temphum9_init( &temphum9, &cfg );
     Delay_ms ( 100 );
 

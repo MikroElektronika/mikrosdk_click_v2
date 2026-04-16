@@ -86,7 +86,7 @@ void application_init ( void )
     //  Click initialization.
 
     surfacetemp_cfg_setup( &cfg );
-    SURFACETEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SURFACETEMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SURFACETEMP );
     surfacetemp_init( &surfacetemp, &cfg );
 
     status = surfacetemp_setup( &surfacetemp );

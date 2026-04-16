@@ -27,6 +27,10 @@
 #include "log.h"
 #include "spitoi2c.h"
 
+#ifndef MIKROBUS_POSITION_SPITOI2C
+    #define MIKROBUS_POSITION_SPITOI2C MIKROBUS_1
+#endif
+
 // I2C target device configuration
 #define DEVICE_NAME                 "3D Hall 11 Click"
 #define DEVICE_SLAVE_ADDRESS        0x35
@@ -57,7 +61,7 @@ void application_init ( void )
 
     // Click initialization.
     spitoi2c_cfg_setup( &spitoi2c_cfg );
-    SPITOI2C_MAP_MIKROBUS( spitoi2c_cfg, MIKROBUS_1 );
+    SPITOI2C_MAP_MIKROBUS( spitoi2c_cfg, MIKROBUS_POSITION_SPITOI2C );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == spitoi2c_init( &spitoi2c, &spitoi2c_cfg ) )
     {
         log_error( &logger, " Communication init." );

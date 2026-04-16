@@ -23,6 +23,10 @@
 #include "usbuart3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_USBUART3
+    #define MIKROBUS_POSITION_USBUART3 MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 // ------------------------------------------------------------------ VARIABLES
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     usbuart3_cfg_setup( &cfg );
-    USBUART3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    USBUART3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_USBUART3 );
     usbuart3_init( &usbuart3, &cfg );
     
     usbuart3_reset( &usbuart3 );

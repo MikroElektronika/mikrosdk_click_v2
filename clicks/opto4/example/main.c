@@ -22,6 +22,10 @@
 #include "log.h"
 #include "opto4.h"
 
+#ifndef MIKROBUS_POSITION_OPTO4
+    #define MIKROBUS_POSITION_OPTO4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static opto4_t opto4;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     opto4_cfg_setup( &cfg );
-    OPTO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OPTO4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OPTO4 );
     opto4_init( &opto4, &cfg );
 }
 

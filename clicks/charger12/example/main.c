@@ -32,6 +32,10 @@
 #include "log.h"
 #include "charger12.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER12
+    #define MIKROBUS_POSITION_CHARGER12 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static charger12_t charger12;
@@ -100,7 +104,7 @@ void application_init ( void )
     //  Click initialization.
 
     charger12_cfg_setup( &cfg );
-    CHARGER12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CHARGER12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CHARGER12 );
     charger12_init( &charger12, &cfg );
 
     Delay_ms ( 100 );

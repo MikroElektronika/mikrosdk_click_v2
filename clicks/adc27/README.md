@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     adc27_cfg_setup( &adc27_cfg );
-    ADC27_MAP_MIKROBUS( adc27_cfg, MIKROBUS_1 );
+    ADC27_MAP_MIKROBUS( adc27_cfg, MIKROBUS_POSITION_ADC27 );
     if ( SPI_MASTER_ERROR == adc27_init( &adc27, &adc27_cfg ) )
     {
         log_error( &logger, " Communication init." );

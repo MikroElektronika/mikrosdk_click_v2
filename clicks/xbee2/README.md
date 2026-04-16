@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     xbee2_cfg_setup( &xbee2_cfg );
-    XBEE2_MAP_MIKROBUS( xbee2_cfg, MIKROBUS_1 );
+    XBEE2_MAP_MIKROBUS( xbee2_cfg, MIKROBUS_POSITION_XBEE2 );
     if ( UART_ERROR == xbee2_init( &xbee2, &xbee2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

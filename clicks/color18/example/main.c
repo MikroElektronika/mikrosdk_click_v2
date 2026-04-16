@@ -23,6 +23,10 @@
 #include "log.h"
 #include "color18.h"
 
+#ifndef MIKROBUS_POSITION_COLOR18
+    #define MIKROBUS_POSITION_COLOR18 MIKROBUS_1
+#endif
+
 static color18_t color18;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     color18_cfg_setup( &color18_cfg );
-    COLOR18_MAP_MIKROBUS( color18_cfg, MIKROBUS_1 );
+    COLOR18_MAP_MIKROBUS( color18_cfg, MIKROBUS_POSITION_COLOR18 );
     if ( I2C_MASTER_ERROR == color18_init( &color18, &color18_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

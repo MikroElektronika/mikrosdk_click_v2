@@ -88,7 +88,7 @@ void application_init ( void )
 
     //  Click initialization.
     capsense_cfg_setup( &cfg );
-    CAPSENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPSENSE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPSENSE );
     capsense_init( &capsense, &cfg );
     
     if ( CAPSENSE_ERROR == capsense_default_cfg ( &capsense ) )

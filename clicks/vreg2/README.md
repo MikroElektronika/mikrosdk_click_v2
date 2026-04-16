@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     vreg2_cfg_setup( &vreg2_cfg );
-    VREG2_MAP_MIKROBUS( vreg2_cfg, MIKROBUS_1 );
+    VREG2_MAP_MIKROBUS( vreg2_cfg, MIKROBUS_POSITION_VREG2 );
     if ( PWM_ERROR == vreg2_init( &vreg2, &vreg2_cfg ) )
     {
         log_error( &logger, " Communication init." );

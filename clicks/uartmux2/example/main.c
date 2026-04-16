@@ -31,6 +31,10 @@
 #include "log.h"
 #include "uartmux2.h"
 
+#ifndef MIKROBUS_POSITION_UARTMUX2
+    #define MIKROBUS_POSITION_UARTMUX2 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 #define TRANSMITTER
@@ -85,7 +89,7 @@ void application_init ( void ) {
     // Click initialization.
 
     uartmux2_cfg_setup( &uartmux2_cfg );
-    UARTMUX2_MAP_MIKROBUS( uartmux2_cfg, MIKROBUS_1 );
+    UARTMUX2_MAP_MIKROBUS( uartmux2_cfg, MIKROBUS_POSITION_UARTMUX2 );
     err_t init_flag  = uartmux2_init( &uartmux2, &uartmux2_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

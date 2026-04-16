@@ -29,6 +29,10 @@
 #include "log.h"
 #include "magneto4.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO4
+    #define MIKROBUS_POSITION_MAGNETO4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static magneto4_t magneto4;
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto4_cfg_setup( &cfg );
-    MAGNETO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO4 );
     magneto4_init( &magneto4, &cfg );
     
     magneto4_default_cfg ( &magneto4 );

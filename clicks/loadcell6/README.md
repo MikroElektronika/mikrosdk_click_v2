@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     loadcell6_cfg_setup( &loadcell6_cfg );
-    LOADCELL6_MAP_MIKROBUS( loadcell6_cfg, MIKROBUS_1 );
+    LOADCELL6_MAP_MIKROBUS( loadcell6_cfg, MIKROBUS_POSITION_LOADCELL6 );
     if ( SPI_MASTER_ERROR == loadcell6_init( &loadcell6, &loadcell6_cfg ) )
     {
         log_error( &logger, " Communication init." );

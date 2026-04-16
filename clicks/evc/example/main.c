@@ -30,6 +30,10 @@
 #include "log.h"
 #include "evc.h"
 
+#ifndef MIKROBUS_POSITION_EVC
+    #define MIKROBUS_POSITION_EVC MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static evc_t evc;
@@ -143,7 +147,7 @@ void application_init ( void )
     //  Click initialization.
 
     evc_cfg_setup( &cfg );
-    EVC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EVC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EVC );
     evc_init( &evc, &cfg );
 
     evc_default_cfg( &evc );

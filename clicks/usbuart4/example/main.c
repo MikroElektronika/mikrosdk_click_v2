@@ -22,6 +22,10 @@
 #include "usbuart4.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_USBUART4
+    #define MIKROBUS_POSITION_USBUART4 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 500
 
 static usbuart4_t usbuart4;
@@ -51,7 +55,7 @@ void application_init ( void ) {
     // Click initialization.
 
     usbuart4_cfg_setup( &usbuart4_cfg );
-    USBUART4_MAP_MIKROBUS( usbuart4_cfg, MIKROBUS_1 );
+    USBUART4_MAP_MIKROBUS( usbuart4_cfg, MIKROBUS_POSITION_USBUART4 );
     
     err_t init_flag  = usbuart4_init( &usbuart4, &usbuart4_cfg );
     if ( UART_ERROR == init_flag ) {

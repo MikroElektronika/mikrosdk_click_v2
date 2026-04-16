@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     angle_cfg_setup( &cfg );
-    ANGLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANGLE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANGLE );
     angle_init( &angle, &cfg );
     angle_default_cfg ( &angle );
 }

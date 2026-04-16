@@ -24,6 +24,10 @@
 #include "log.h"
 #include "ireclipse2.h"
 
+#ifndef MIKROBUS_POSITION_IRECLIPSE2
+    #define MIKROBUS_POSITION_IRECLIPSE2 MIKROBUS_1
+#endif
+
 static ireclipse2_t ireclipse2;  /**< IR Eclipse 2 Click driver object. */
 static log_t logger;             /**< Logger object. */
 static uint8_t ecls_state = 0;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     ireclipse2_cfg_setup( &ireclipse2_cfg );
-    IRECLIPSE2_MAP_MIKROBUS( ireclipse2_cfg, MIKROBUS_1 );
+    IRECLIPSE2_MAP_MIKROBUS( ireclipse2_cfg, MIKROBUS_POSITION_IRECLIPSE2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ireclipse2_init( &ireclipse2, &ireclipse2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

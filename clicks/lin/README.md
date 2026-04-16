@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     lin_cfg_setup( &cfg );
-    LIN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIN );
     lin_init( &lin, &cfg );
     Delay_ms ( 100 );
     

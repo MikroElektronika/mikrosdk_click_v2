@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     relay7_cfg_setup( &relay7_cfg );
-    RELAY7_MAP_MIKROBUS( relay7_cfg, MIKROBUS_1 );
+    RELAY7_MAP_MIKROBUS( relay7_cfg, MIKROBUS_POSITION_RELAY7 );
     if ( I2C_MASTER_ERROR == relay7_init( &relay7, &relay7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

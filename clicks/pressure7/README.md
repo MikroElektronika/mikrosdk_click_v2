@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure7_cfg_setup( &cfg );
-    PRESSURE7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE7 );
     pressure7_init( &pressure7, &cfg );
     pressure7_default_cfg ( &pressure7 );
 

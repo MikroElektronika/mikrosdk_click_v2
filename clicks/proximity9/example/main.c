@@ -28,6 +28,10 @@
 #include "log.h"
 #include "proximity9.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY9
+    #define MIKROBUS_POSITION_PROXIMITY9 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static proximity9_t proximity9;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity9_cfg_setup( &cfg );
-    PROXIMITY9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY9 );
     proximity9_init( &proximity9, &cfg );
 
     proximity9_default_cfg( &proximity9 );

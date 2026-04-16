@@ -94,7 +94,7 @@ void application_init ( void )
     // Click initialization.
 
     temphum16_cfg_setup( &temphum16_cfg );
-    TEMPHUM16_MAP_MIKROBUS( temphum16_cfg, MIKROBUS_1 );
+    TEMPHUM16_MAP_MIKROBUS( temphum16_cfg, MIKROBUS_POSITION_TEMPHUM16 );
     err_t init_flag  = temphum16_init( &temphum16, &temphum16_cfg );
     if ( ( init_flag == I2C_MASTER_ERROR ) || ( init_flag == SPI_MASTER_ERROR ) ) {
         log_info( &logger, " Application Init Error. " );

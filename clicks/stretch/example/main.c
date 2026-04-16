@@ -22,6 +22,10 @@
 #include "log.h"
 #include "stretch.h"
 
+#ifndef MIKROBUS_POSITION_STRETCH
+    #define MIKROBUS_POSITION_STRETCH MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static stretch_t stretch;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     stretch_cfg_setup( &cfg );
-    STRETCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STRETCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STRETCH );
     stretch_init( &stretch, &cfg );
 
     Delay_100ms();

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "brushless27.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS27
+    #define MIKROBUS_POSITION_BRUSHLESS27 MIKROBUS_1
+#endif
+
 static brushless27_t brushless27;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless27_cfg_setup( &brushless27_cfg );
-    BRUSHLESS27_MAP_MIKROBUS( brushless27_cfg, MIKROBUS_1 );
+    BRUSHLESS27_MAP_MIKROBUS( brushless27_cfg, MIKROBUS_POSITION_BRUSHLESS27 );
     if ( I2C_MASTER_ERROR == brushless27_init( &brushless27, &brushless27_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

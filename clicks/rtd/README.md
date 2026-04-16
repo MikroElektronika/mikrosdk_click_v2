@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     rtd_cfg_setup( &cfg );
-    RTD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTD_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTD );
     rtd_init( &rtd, &cfg );
     
     RTD_SET_DATA_SAMPLE_EDGE;

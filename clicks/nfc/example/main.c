@@ -30,6 +30,10 @@
 #include "log.h"
 #include "nfc.h"
 
+#ifndef MIKROBUS_POSITION_NFC
+    #define MIKROBUS_POSITION_NFC MIKROBUS_1
+#endif
+
 static nfc_t nfc;
 static log_t logger;
 uint8_t n_cnt;
@@ -86,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc_cfg_setup( &nfc_cfg );
-    NFC_MAP_MIKROBUS( nfc_cfg, MIKROBUS_1 );
+    NFC_MAP_MIKROBUS( nfc_cfg, MIKROBUS_POSITION_NFC );
     err_t init_flag = nfc_init( &nfc, &nfc_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

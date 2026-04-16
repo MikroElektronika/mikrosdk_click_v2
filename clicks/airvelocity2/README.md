@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     airvelocity2_cfg_setup( &airvelocity2_cfg );
-    AIRVELOCITY2_MAP_MIKROBUS( airvelocity2_cfg, MIKROBUS_1 );
+    AIRVELOCITY2_MAP_MIKROBUS( airvelocity2_cfg, MIKROBUS_POSITION_AIRVELOCITY2 );
     if ( I2C_MASTER_ERROR == airvelocity2_init( &airvelocity2, &airvelocity2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

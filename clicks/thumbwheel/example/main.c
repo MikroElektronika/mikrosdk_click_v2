@@ -24,6 +24,10 @@
 #include "log.h"
 #include "thumbwheel.h"
 
+#ifndef MIKROBUS_POSITION_THUMBWHEEL
+    #define MIKROBUS_POSITION_THUMBWHEEL MIKROBUS_1
+#endif
+
 static thumbwheel_t thumbwheel;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     thumbwheel_cfg_setup( &thumbwheel_cfg );
-    THUMBWHEEL_MAP_MIKROBUS( thumbwheel_cfg, MIKROBUS_1 );
+    THUMBWHEEL_MAP_MIKROBUS( thumbwheel_cfg, MIKROBUS_POSITION_THUMBWHEEL );
     if ( ONE_WIRE_ERROR == thumbwheel_init( &thumbwheel, &thumbwheel_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

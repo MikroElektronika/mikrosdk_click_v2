@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     timer_cfg_setup( &cfg );
-    TIMER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TIMER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TIMER );
     timer_init( &timer, &cfg );
     Delay_ms ( 200 );
 

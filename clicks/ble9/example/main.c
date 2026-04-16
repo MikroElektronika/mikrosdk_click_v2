@@ -36,6 +36,10 @@
 #include "ble9.h"
 #include "log.h"
 
+#ifndef MIKROBUS_POSITION_BLE9
+    #define MIKROBUS_POSITION_BLE9 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static ble9_t ble9;
@@ -86,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     ble9_cfg_setup( &cfg );
-    BLE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE9 );
     ble9_init( &ble9, &cfg );
     Delay_ms ( 1000 );
     

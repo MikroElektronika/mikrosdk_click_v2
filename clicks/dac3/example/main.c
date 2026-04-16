@@ -26,6 +26,10 @@
 #include "log.h"
 #include "dac3.h"
 
+#ifndef MIKROBUS_POSITION_DAC3
+    #define MIKROBUS_POSITION_DAC3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dac3_t dac3;
@@ -54,7 +58,7 @@ void application_init ( )
     //  Click initialization.
 
     dac3_cfg_setup( &cfg );
-    DAC3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC3 );
     dac3_init( &dac3, &cfg );
 
     dac3.dac_cfg.vrl = 0;

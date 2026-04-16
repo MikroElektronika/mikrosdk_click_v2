@@ -27,6 +27,10 @@
 #include "duallin.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_DUALLIN
+    #define MIKROBUS_POSITION_DUALLIN MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 
@@ -65,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     duallin_cfg_setup( &cfg );
-    DUALLIN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DUALLIN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DUALLIN );
     duallin_init( &duallin, &cfg );
 
     duallin_bus1_status( &duallin, DUALLIN_PIN_STATE_HIGH );

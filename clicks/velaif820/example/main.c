@@ -42,6 +42,10 @@
 #include "log.h"
 #include "velaif820.h"
 
+#ifndef MIKROBUS_POSITION_VELAIF820
+    #define MIKROBUS_POSITION_VELAIF820 MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT     "Vela IF820 Click board - demo example."
 
@@ -168,7 +172,7 @@ void application_init ( void )
 
     // Click initialization.
     velaif820_cfg_setup( &velaif820_cfg );
-    VELAIF820_MAP_MIKROBUS( velaif820_cfg, MIKROBUS_1 );
+    VELAIF820_MAP_MIKROBUS( velaif820_cfg, MIKROBUS_POSITION_VELAIF820 );
     if ( UART_ERROR == velaif820_init( &velaif820, &velaif820_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

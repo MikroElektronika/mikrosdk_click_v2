@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     press_cfg_setup( &press_cfg );
-    PRESS_MAP_MIKROBUS( press_cfg, MIKROBUS_1 );
+    PRESS_MAP_MIKROBUS( press_cfg, MIKROBUS_POSITION_PRESS );
     if ( I2C_MASTER_ERROR == press_init( &press, &press_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

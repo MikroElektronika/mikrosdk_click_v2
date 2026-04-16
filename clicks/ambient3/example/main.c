@@ -22,6 +22,10 @@
 #include "log.h"
 #include "ambient3.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT3
+    #define MIKROBUS_POSITION_AMBIENT3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ambient3_t ambient3;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient3_cfg_setup( &cfg );
-    AMBIENT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT3 );
     ambient3_init( &ambient3, &cfg );
     ambient3_default_cfg( &ambient3 );
     Delay_ms ( 100 );

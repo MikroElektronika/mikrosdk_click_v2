@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pressure5.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE5
+    #define MIKROBUS_POSITION_PRESSURE5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure5_t pressure5;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure5_cfg_setup( &cfg );
-    PRESSURE5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE5 );
     pressure5_init( &pressure5, &cfg );
     pressure5_default_cfg( &pressure5 );
 }

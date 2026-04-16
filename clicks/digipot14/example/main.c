@@ -26,6 +26,10 @@
 #include "log.h"
 #include "digipot14.h"
 
+#ifndef MIKROBUS_POSITION_DIGIPOT14
+    #define MIKROBUS_POSITION_DIGIPOT14 MIKROBUS_1
+#endif
+
 static digipot14_t digipot14;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     digipot14_cfg_setup( &digipot14_cfg );
-    DIGIPOT14_MAP_MIKROBUS( digipot14_cfg, MIKROBUS_1 );
+    DIGIPOT14_MAP_MIKROBUS( digipot14_cfg, MIKROBUS_POSITION_DIGIPOT14 );
     if ( I2C_MASTER_ERROR == digipot14_init( &digipot14, &digipot14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

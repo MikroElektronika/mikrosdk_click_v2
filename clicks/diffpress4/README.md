@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     diffpress4_cfg_setup( &diffpress4_cfg );
-    DIFFPRESS4_MAP_MIKROBUS( diffpress4_cfg, MIKROBUS_1 );
+    DIFFPRESS4_MAP_MIKROBUS( diffpress4_cfg, MIKROBUS_POSITION_DIFFPRESS4 );
     if ( I2C_MASTER_ERROR == diffpress4_init( &diffpress4, &diffpress4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

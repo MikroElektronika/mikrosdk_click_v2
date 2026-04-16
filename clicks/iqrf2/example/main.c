@@ -27,6 +27,10 @@
 #include "iqrf2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_IQRF2
+    #define MIKROBUS_POSITION_IQRF2 MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE - iqRF 2 Click board\r\n"
@@ -85,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     iqrf2_cfg_setup( &cfg );
-    IQRF2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IQRF2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IQRF2 );
     iqrf2_init( &iqrf2, &cfg );
     Delay_ms ( 100 );
     

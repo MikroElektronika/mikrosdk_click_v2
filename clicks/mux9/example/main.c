@@ -23,6 +23,10 @@
 #include "log.h"
 #include "mux9.h"
 
+#ifndef MIKROBUS_POSITION_MUX9
+    #define MIKROBUS_POSITION_MUX9 MIKROBUS_1
+#endif
+
 static mux9_t mux9;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     mux9_cfg_setup( &mux9_cfg );
-    MUX9_MAP_MIKROBUS( mux9_cfg, MIKROBUS_1 );
+    MUX9_MAP_MIKROBUS( mux9_cfg, MIKROBUS_POSITION_MUX9 );
     if ( SPI_MASTER_ERROR == mux9_init( &mux9, &mux9_cfg ) )
     {
         log_error( &logger, " Communication init." );

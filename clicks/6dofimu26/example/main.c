@@ -25,6 +25,10 @@
 #include "log.h"
 #include "c6dofimu26.h"
 
+#ifndef MIKROBUS_POSITION_6DOFIMU26
+    #define MIKROBUS_POSITION_6DOFIMU26 MIKROBUS_1
+#endif
+
 static c6dofimu26_t c6dofimu26;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     c6dofimu26_cfg_setup( &c6dofimu26_cfg );
-    C6DOFIMU26_MAP_MIKROBUS( c6dofimu26_cfg, MIKROBUS_1 );
+    C6DOFIMU26_MAP_MIKROBUS( c6dofimu26_cfg, MIKROBUS_POSITION_6DOFIMU26 );
     if ( SPI_MASTER_ERROR == c6dofimu26_init( &c6dofimu26, &c6dofimu26_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -34,6 +34,10 @@
 #include "log.h"
 #include "wizfi360.h"
 
+#ifndef MIKROBUS_POSITION_WIZFI360
+    #define MIKROBUS_POSITION_WIZFI360 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             200
 #define PROCESS_BUFFER_SIZE         200
@@ -120,7 +124,7 @@ void application_init ( void )
 
     // Click initialization.
     wizfi360_cfg_setup( &wizfi360_cfg );
-    WIZFI360_MAP_MIKROBUS( wizfi360_cfg, MIKROBUS_1 );
+    WIZFI360_MAP_MIKROBUS( wizfi360_cfg, MIKROBUS_POSITION_WIZFI360 );
     if ( UART_ERROR == wizfi360_init( &wizfi360, &wizfi360_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

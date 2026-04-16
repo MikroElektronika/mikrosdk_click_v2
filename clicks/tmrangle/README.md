@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     tmrangle_cfg_setup( &cfg );
-    TMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TMRANGLE );
     tmrangle_init( &tmrangle, &cfg );
 
 }

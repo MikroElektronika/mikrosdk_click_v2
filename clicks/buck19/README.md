@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     buck19_cfg_setup( &buck19_cfg );
-    BUCK19_MAP_MIKROBUS( buck19_cfg, MIKROBUS_1 );
+    BUCK19_MAP_MIKROBUS( buck19_cfg, MIKROBUS_POSITION_BUCK19 );
     if ( I2C_MASTER_ERROR == buck19_init( &buck19, &buck19_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

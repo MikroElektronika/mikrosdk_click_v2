@@ -26,6 +26,10 @@
 #include "log.h"
 #include "microwave5.h"
 
+#ifndef MIKROBUS_POSITION_MICROWAVE5
+    #define MIKROBUS_POSITION_MICROWAVE5 MIKROBUS_1
+#endif
+
 #define MICROWAVE5_THRESHOLD    0.5f
 #define MICROWAVE5_FLAG_CLEAR   0
 #define MICROWAVE5_FLAG_SET     1
@@ -55,7 +59,7 @@ void application_init ( void )
     
     // Click initialization.
     microwave5_cfg_setup( &microwave5_cfg );
-    MICROWAVE5_MAP_MIKROBUS( microwave5_cfg, MIKROBUS_1 );
+    MICROWAVE5_MAP_MIKROBUS( microwave5_cfg, MIKROBUS_POSITION_MICROWAVE5 );
     err_t init_flag = microwave5_init( &microwave5, &microwave5_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

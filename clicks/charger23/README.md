@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     charger23_cfg_setup( &charger23_cfg );
-    CHARGER23_MAP_MIKROBUS( charger23_cfg, MIKROBUS_1 );
+    CHARGER23_MAP_MIKROBUS( charger23_cfg, MIKROBUS_POSITION_CHARGER23 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == charger23_init( &charger23, &charger23_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     clockgen5_cfg_setup( &clockgen5_cfg );
-    CLOCKGEN5_MAP_MIKROBUS( clockgen5_cfg, MIKROBUS_1 );
+    CLOCKGEN5_MAP_MIKROBUS( clockgen5_cfg, MIKROBUS_POSITION_CLOCKGEN5 );
     err_t init_flag  = clockgen5_init( &clockgen5, &clockgen5_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

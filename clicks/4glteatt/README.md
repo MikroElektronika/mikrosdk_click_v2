@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     c4glteatt_cfg_setup( &c4glteatt_cfg );
-    C4GLTEATT_MAP_MIKROBUS( c4glteatt_cfg, MIKROBUS_1 );
+    C4GLTEATT_MAP_MIKROBUS( c4glteatt_cfg, MIKROBUS_POSITION_4GLTEATT );
     c4glteatt_init( &c4glteatt, &c4glteatt_cfg );
     
     c4glteatt_module_power_on( &c4glteatt );

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "no2.h"
 
+#ifndef MIKROBUS_POSITION_NO2
+    #define MIKROBUS_POSITION_NO2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static no2_t no2;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     no2_cfg_setup( &cfg );
-    NO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NO2 );
     no2_init( &no2, &cfg );
 
     no2_default_cfg( &no2 );

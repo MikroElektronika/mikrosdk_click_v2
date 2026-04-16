@@ -77,7 +77,7 @@ void application_init ( void )
     //  Click initialization.
 
     ble3_cfg_setup( &cfg );
-    BLE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE3 );
     ble3_init( &ble3, &cfg );
     
     log_printf( &logger, "Configuring the module...\n" );

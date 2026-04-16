@@ -23,6 +23,10 @@
 #include "log.h"
 #include "clockgen4.h"
 
+#ifndef MIKROBUS_POSITION_CLOCKGEN4
+    #define MIKROBUS_POSITION_CLOCKGEN4 MIKROBUS_1
+#endif
+
 static clockgen4_t clockgen4;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void ){
     
     // Click initialization.
     clockgen4_cfg_setup( &clockgen4_cfg );
-    CLOCKGEN4_MAP_MIKROBUS( clockgen4_cfg, MIKROBUS_1 );
+    CLOCKGEN4_MAP_MIKROBUS( clockgen4_cfg, MIKROBUS_POSITION_CLOCKGEN4 );
     err_t init_flag  = clockgen4_init( &clockgen4, &clockgen4_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) {
         log_error( &logger, " Application Init Error. " );

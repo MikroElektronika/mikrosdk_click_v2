@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ambient26.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT26
+    #define MIKROBUS_POSITION_AMBIENT26 MIKROBUS_1
+#endif
+
 static ambient26_t ambient26;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient26_cfg_setup( &ambient26_cfg );
-    AMBIENT26_MAP_MIKROBUS( ambient26_cfg, MIKROBUS_1 );
+    AMBIENT26_MAP_MIKROBUS( ambient26_cfg, MIKROBUS_POSITION_AMBIENT26 );
     if ( I2C_MASTER_ERROR == ambient26_init( &ambient26, &ambient26_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

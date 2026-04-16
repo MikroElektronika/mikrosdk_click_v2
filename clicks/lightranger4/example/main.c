@@ -27,6 +27,10 @@
 #include "log.h"
 #include "lightranger4.h"
 
+#ifndef MIKROBUS_POSITION_LIGHTRANGER4
+    #define MIKROBUS_POSITION_LIGHTRANGER4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static lightranger4_t lightranger4;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     lightranger4_cfg_setup( &cfg );
-    LIGHTRANGER4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIGHTRANGER4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIGHTRANGER4 );
     lightranger4_init( &lightranger4, &cfg );
 
     lightranger4_power_on( &lightranger4 );

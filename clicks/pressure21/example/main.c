@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pressure21.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE21
+    #define MIKROBUS_POSITION_PRESSURE21 MIKROBUS_1
+#endif
+
 static pressure21_t pressure21;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure21_cfg_setup( &pressure21_cfg );
-    PRESSURE21_MAP_MIKROBUS( pressure21_cfg, MIKROBUS_1 );
+    PRESSURE21_MAP_MIKROBUS( pressure21_cfg, MIKROBUS_POSITION_PRESSURE21 );
     err_t init_flag = pressure21_init( &pressure21, &pressure21_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

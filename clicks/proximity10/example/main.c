@@ -30,6 +30,10 @@
 #include "log.h"
 #include "proximity10.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY10
+    #define MIKROBUS_POSITION_PROXIMITY10 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static proximity10_t proximity10;
@@ -109,7 +113,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity10_cfg_setup( &cfg );
-    PROXIMITY10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY10 );
     proximity10_init( &proximity10, &cfg );
 
     Delay_ms ( 1000 );

@@ -124,7 +124,7 @@ void application_init ( void )
     //  Click initialization.
 
     loadcell_cfg_setup( &cfg );
-    LOADCELL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LOADCELL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LOADCELL );
     loadcell_init( &loadcell, &cfg );
     
     log_printf(&logger, "-------------------------\r\n");

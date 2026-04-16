@@ -91,7 +91,7 @@ void application_init ( void )
     // Click initialization.
 
     dsp_cfg_setup( &dsp_cfg );
-    DSP_MAP_MIKROBUS( dsp_cfg, MIKROBUS_1 );
+    DSP_MAP_MIKROBUS( dsp_cfg, MIKROBUS_POSITION_DSP );
     if ( dsp_init( &dsp, &dsp_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

@@ -82,7 +82,7 @@ void application_init ( void )
 
     // Click initialization.
     ultrasonic4_cfg_setup( &ultrasonic4_cfg );
-    ULTRASONIC4_MAP_MIKROBUS( ultrasonic4_cfg, MIKROBUS_1 );
+    ULTRASONIC4_MAP_MIKROBUS( ultrasonic4_cfg, MIKROBUS_POSITION_ULTRASONIC4 );
     if ( SPI_MASTER_ERROR == ultrasonic4_init( &ultrasonic4, &ultrasonic4_cfg ) )
     {
         log_error( &logger, " Communication init." );

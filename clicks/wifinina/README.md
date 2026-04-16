@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     wifinina_cfg_setup( &wifinina_cfg );
-    WIFININA_MAP_MIKROBUS( wifinina_cfg, MIKROBUS_1 );
+    WIFININA_MAP_MIKROBUS( wifinina_cfg, MIKROBUS_POSITION_WIFININA );
     if ( UART_ERROR == wifinina_init( &wifinina, &wifinina_cfg ) )
     {
         log_error( &logger, " Communication init." );

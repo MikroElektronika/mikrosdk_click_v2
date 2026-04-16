@@ -24,6 +24,10 @@
 #include "log.h"
 #include "thermo23.h"
 
+#ifndef MIKROBUS_POSITION_THERMO23
+    #define MIKROBUS_POSITION_THERMO23 MIKROBUS_1
+#endif
+
 static thermo23_t thermo23;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo23_cfg_setup( &thermo23_cfg );
-    THERMO23_MAP_MIKROBUS( thermo23_cfg, MIKROBUS_1 );
+    THERMO23_MAP_MIKROBUS( thermo23_cfg, MIKROBUS_POSITION_THERMO23 );
     if ( UART_ERROR == thermo23_init( &thermo23, &thermo23_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

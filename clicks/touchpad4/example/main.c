@@ -34,6 +34,10 @@
 #include "log.h"
 #include "touchpad4.h"
 
+#ifndef MIKROBUS_POSITION_TOUCHPAD4
+    #define MIKROBUS_POSITION_TOUCHPAD4 MIKROBUS_1
+#endif
+
 #define TOUCHPAD4_EXAMPLE_TOUCH     1
 #define TOUCHPAD4_EXAMPLE_CHANNEL   2
 #define TOUCHPAD4_EXAMPLE_GESTURE   3
@@ -84,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     touchpad4_cfg_setup( &touchpad4_cfg );
-    TOUCHPAD4_MAP_MIKROBUS( touchpad4_cfg, MIKROBUS_1 );
+    TOUCHPAD4_MAP_MIKROBUS( touchpad4_cfg, MIKROBUS_POSITION_TOUCHPAD4 );
     err_t init_flag = touchpad4_init( &touchpad4, &touchpad4_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

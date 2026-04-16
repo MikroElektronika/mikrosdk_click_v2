@@ -26,6 +26,10 @@
 #include "log.h"
 #include "spiisolator9.h"
 
+#ifndef MIKROBUS_POSITION_SPIISOLATOR9
+    #define MIKROBUS_POSITION_SPIISOLATOR9 MIKROBUS_1
+#endif
+
 static spiisolator9_t spiisolator9;
 static log_t logger;
 
@@ -59,7 +63,7 @@ void application_init ( void )
 
     // Click initialization.
     spiisolator9_cfg_setup( &spiisolator9_cfg );
-    SPIISOLATOR9_MAP_MIKROBUS( spiisolator9_cfg, MIKROBUS_1 );
+    SPIISOLATOR9_MAP_MIKROBUS( spiisolator9_cfg, MIKROBUS_POSITION_SPIISOLATOR9 );
     if ( SPI_MASTER_ERROR == spiisolator9_init( &spiisolator9, &spiisolator9_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     barometer7_cfg_setup( &barometer7_cfg );
-    BAROMETER7_MAP_MIKROBUS( barometer7_cfg, MIKROBUS_1 );
+    BAROMETER7_MAP_MIKROBUS( barometer7_cfg, MIKROBUS_POSITION_BAROMETER7 );
     if ( SPI_MASTER_ERROR == barometer7_init( &barometer7, &barometer7_cfg ) )
     {
         log_error( &logger, " Communication init." );

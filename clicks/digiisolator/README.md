@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     digiisolator_cfg_setup( &digiisolator_cfg );
-    DIGIISOLATOR_MAP_MIKROBUS( digiisolator_cfg, MIKROBUS_1 );
+    DIGIISOLATOR_MAP_MIKROBUS( digiisolator_cfg, MIKROBUS_POSITION_DIGIISOLATOR );
     if ( SPI_MASTER_ERROR == digiisolator_init( &digiisolator, &digiisolator_cfg ) )
     {
         log_error( &logger, " Communication init." );

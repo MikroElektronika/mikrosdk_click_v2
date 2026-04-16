@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     lsm303agr_cfg_setup( &cfg );
-    LSM303AGR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LSM303AGR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LSM303AGR );
     lsm303agr_init( &lsm303agr, &cfg );
     lsm303agr_default_cfg ( &lsm303agr );
    

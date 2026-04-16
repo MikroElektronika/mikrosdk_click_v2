@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pressure7.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE7
+    #define MIKROBUS_POSITION_PRESSURE7 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure7_t pressure7;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure7_cfg_setup( &cfg );
-    PRESSURE7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE7 );
     pressure7_init( &pressure7, &cfg );
     pressure7_default_cfg ( &pressure7 );
     Delay_ms ( 200 );

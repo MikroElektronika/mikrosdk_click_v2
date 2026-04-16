@@ -26,6 +26,10 @@
 #include "log.h"
 #include "c8800retro.h"
 
+#ifndef MIKROBUS_POSITION_8800RETRO
+    #define MIKROBUS_POSITION_8800RETRO MIKROBUS_1
+#endif
+
 /**
  * @brief 8800 Retro Click demo example values.
  * @details Enum values for demo examples selection.
@@ -138,7 +142,7 @@ void application_init ( void )
 
     // Click initialization.
     c8800retro_cfg_setup( &c8800retro_cfg );
-    C8800RETRO_MAP_MIKROBUS( c8800retro_cfg, MIKROBUS_1 );
+    C8800RETRO_MAP_MIKROBUS( c8800retro_cfg, MIKROBUS_POSITION_8800RETRO );
     err_t init_flag = c8800retro_init( &c8800retro, &c8800retro_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

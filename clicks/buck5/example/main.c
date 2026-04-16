@@ -25,6 +25,10 @@
 #include "log.h"
 #include "buck5.h"
 
+#ifndef MIKROBUS_POSITION_BUCK5
+    #define MIKROBUS_POSITION_BUCK5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static buck5_t buck5;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck5_cfg_setup( &cfg );
-    BUCK5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK5 );
     buck5_init( &buck5, &cfg );
 
     buck5_power_on( &buck5 );

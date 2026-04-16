@@ -32,6 +32,10 @@
 #include "btez.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_BTEZ
+    #define MIKROBUS_POSITION_BTEZ MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 100
 #define PROCESS_RX_BUFFER_SIZE 200
 
@@ -137,7 +141,7 @@ void application_init ( void )
     //  Click initialization.
 
     btez_cfg_setup( &cfg );
-    BTEZ_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BTEZ_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BTEZ );
     btez_init( &btez, &cfg );
     Delay_ms ( 100 );
 

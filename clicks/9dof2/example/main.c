@@ -24,6 +24,10 @@
 #include "log.h"
 #include "c9dof2.h"
 
+#ifndef MIKROBUS_POSITION_9DOF2
+    #define MIKROBUS_POSITION_9DOF2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c9dof2_t c9dof2;
@@ -60,7 +64,7 @@ void application_init ( void )
     //  Click initialization.
 
     c9dof2_cfg_setup( &cfg );
-    C9DOF2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C9DOF2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_9DOF2 );
     c9dof2_init( &c9dof2, &cfg );
 
     c9dof2_dev_rst( &c9dof2 );

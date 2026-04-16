@@ -31,6 +31,10 @@
 #include "log.h"
 #include "i2cmux2.h"
 
+#ifndef MIKROBUS_POSITION_I2CMUX2
+    #define MIKROBUS_POSITION_I2CMUX2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 // Comment out the following lines to exclude unconnected channels from the example
@@ -113,7 +117,7 @@ void application_init ( void )
 
     //  Click initialization.
     i2cmux2_cfg_setup( &cfg );
-    I2CMUX2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CMUX2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CMUX2 );
     i2cmux2_init( &i2cmux2, &cfg );
 
     Delay_ms ( 100 );

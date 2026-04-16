@@ -25,6 +25,10 @@
 #include "log.h"
 #include "c7seg2.h"
 
+#ifndef MIKROBUS_POSITION_7SEG2
+    #define MIKROBUS_POSITION_7SEG2 MIKROBUS_1
+#endif
+
 // Number of display updates (see 7-SEG 2 refresh rate setting) before the displayed counter is incremented.
 #define C7SEG2_NUM_COUNTER_RATE             10
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.    
     c7seg2_cfg_setup( &c7seg2_pnp_cfg );
-    C7SEG2_MAP_MIKROBUS( c7seg2_pnp_cfg, MIKROBUS_1 );
+    C7SEG2_MAP_MIKROBUS( c7seg2_pnp_cfg, MIKROBUS_POSITION_7SEG2 );
     if ( I2C_MASTER_ERROR == c7seg2_init( &c7seg2, &c7seg2_pnp_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

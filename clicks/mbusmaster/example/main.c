@@ -30,6 +30,10 @@
 #include "log.h"
 #include "mbusmaster.h"
 
+#ifndef MIKROBUS_POSITION_MBUSMASTER
+    #define MIKROBUS_POSITION_MBUSMASTER MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE - M-Bus Master Click board\r\n"
@@ -90,7 +94,7 @@ void application_init ( void )
     //  Click initialization.
 
     mbusmaster_cfg_setup( &cfg );
-    MBUSMASTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MBUSMASTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MBUSMASTER );
     mbusmaster_init( &mbusmaster, &cfg );
     Delay_ms ( 100 );
 }

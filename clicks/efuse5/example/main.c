@@ -28,6 +28,10 @@
 #include "log.h"
 #include "efuse5.h"
 
+#ifndef MIKROBUS_POSITION_EFUSE5
+    #define MIKROBUS_POSITION_EFUSE5 MIKROBUS_1
+#endif
+
 static efuse5_t efuse5;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     efuse5_cfg_setup( &efuse5_cfg );
-    EFUSE5_MAP_MIKROBUS( efuse5_cfg, MIKROBUS_1 );
+    EFUSE5_MAP_MIKROBUS( efuse5_cfg, MIKROBUS_POSITION_EFUSE5 );
     if ( I2C_MASTER_ERROR == efuse5_init( &efuse5, &efuse5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

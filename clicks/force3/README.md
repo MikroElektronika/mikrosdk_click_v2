@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     force3_cfg_setup( &cfg );
-    FORCE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FORCE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FORCE3 );
     force3_init( &force3, &cfg );
 }
 ```

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "solidswitch9.h"
 
+#ifndef MIKROBUS_POSITION_SOLIDSWITCH9
+    #define MIKROBUS_POSITION_SOLIDSWITCH9 MIKROBUS_1
+#endif
+
 static solidswitch9_t solidswitch9;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     solidswitch9_cfg_setup( &solidswitch9_cfg );
-    SOLIDSWITCH9_MAP_MIKROBUS( solidswitch9_cfg, MIKROBUS_1 );
+    SOLIDSWITCH9_MAP_MIKROBUS( solidswitch9_cfg, MIKROBUS_POSITION_SOLIDSWITCH9 );
     if ( SPI_MASTER_ERROR == solidswitch9_init( &solidswitch9, &solidswitch9_cfg ) )
     {
         log_error( &logger, " Communication init." );

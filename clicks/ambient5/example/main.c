@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ambient5.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT5
+    #define MIKROBUS_POSITION_AMBIENT5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ambient5_t ambient5;
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient5_cfg_setup( &ambient_cfg );
-    AMBIENT5_MAP_MIKROBUS( ambient_cfg, MIKROBUS_1 );
+    AMBIENT5_MAP_MIKROBUS( ambient_cfg, MIKROBUS_POSITION_AMBIENT5 );
     ambient5_init( &ambient5, &ambient_cfg );
     ambient5_default_cfg( &ambient5 );
 

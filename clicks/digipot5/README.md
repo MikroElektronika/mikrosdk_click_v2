@@ -81,7 +81,7 @@ void application_init( void )
 
     //  Click initialization.
     digipot5_cfg_setup( &digipot5_cfg );
-    DIGIPOT5_MAP_MIKROBUS( digipot5_cfg, MIKROBUS_1 );
+    DIGIPOT5_MAP_MIKROBUS( digipot5_cfg, MIKROBUS_POSITION_DIGIPOT5 );
     digipot5_init( &digipot5, &digipot5_cfg );
     digipot5_reset( &digipot5 );
     digipot5_default_cfg( &digipot5 );

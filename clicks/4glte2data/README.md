@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     c4glte2data_cfg_setup( &c4glte2data_cfg );
-    C4GLTE2DATA_MAP_MIKROBUS( c4glte2data_cfg, MIKROBUS_1 );
+    C4GLTE2DATA_MAP_MIKROBUS( c4glte2data_cfg, MIKROBUS_POSITION_4GLTE2DATA );
     if ( UART_ERROR == c4glte2data_init( &c4glte2data, &c4glte2data_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     environment3_cfg_setup( &environment3_cfg );
-    ENVIRONMENT3_MAP_MIKROBUS( environment3_cfg, MIKROBUS_1 );
+    ENVIRONMENT3_MAP_MIKROBUS( environment3_cfg, MIKROBUS_POSITION_ENVIRONMENT3 );
     err_t init_flag  = environment3_init( &environment3, &environment3_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) 
     {

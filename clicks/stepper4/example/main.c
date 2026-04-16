@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stepper4.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER4
+    #define MIKROBUS_POSITION_STEPPER4 MIKROBUS_1
+#endif
+
 static stepper4_t stepper4;   /**< Stepper 4 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper4_cfg_setup( &stepper4_cfg );
-    STEPPER4_MAP_MIKROBUS( stepper4_cfg, MIKROBUS_1 );
+    STEPPER4_MAP_MIKROBUS( stepper4_cfg, MIKROBUS_POSITION_STEPPER4 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == stepper4_init( &stepper4, &stepper4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

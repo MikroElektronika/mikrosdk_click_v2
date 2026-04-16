@@ -23,6 +23,10 @@
 #include "log.h"
 #include "angle5.h"
 
+#ifndef MIKROBUS_POSITION_ANGLE5
+    #define MIKROBUS_POSITION_ANGLE5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static angle5_t angle5;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     angle5_cfg_setup( &cfg );
-    ANGLE5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANGLE5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANGLE5 );
     angle5_init( &angle5, &cfg );
 }
 

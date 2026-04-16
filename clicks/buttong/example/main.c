@@ -25,6 +25,10 @@
 #include "log.h"
 #include "buttong.h"
 
+#ifndef MIKROBUS_POSITION_BUTTONG
+    #define MIKROBUS_POSITION_BUTTONG MIKROBUS_1
+#endif
+
 static buttong_t buttong;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
     // Click initialization.
 
     buttong_cfg_setup( &buttong_cfg );
-    BUTTONG_MAP_MIKROBUS( buttong_cfg, MIKROBUS_1 );
+    BUTTONG_MAP_MIKROBUS( buttong_cfg, MIKROBUS_POSITION_BUTTONG );
     err_t init_flag  = buttong_init( &buttong, &buttong_cfg );
     if ( PWM_ERROR == init_flag ) 
     {

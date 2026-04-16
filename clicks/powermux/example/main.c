@@ -22,6 +22,10 @@
 #include "log.h"
 #include "powermux.h"
 
+#ifndef MIKROBUS_POSITION_POWERMUX
+    #define MIKROBUS_POSITION_POWERMUX MIKROBUS_1
+#endif
+
 static powermux_t powermux;   /**< Power MUX Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     powermux_cfg_setup( &powermux_cfg );
-    POWERMUX_MAP_MIKROBUS( powermux_cfg, MIKROBUS_1 );
+    POWERMUX_MAP_MIKROBUS( powermux_cfg, MIKROBUS_POSITION_POWERMUX );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == powermux_init( &powermux, &powermux_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

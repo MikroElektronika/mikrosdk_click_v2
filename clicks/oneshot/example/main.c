@@ -24,6 +24,10 @@
 #include "log.h"
 #include "oneshot.h"
 
+#ifndef MIKROBUS_POSITION_ONESHOT
+    #define MIKROBUS_POSITION_ONESHOT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static oneshot_t oneshot;
@@ -52,7 +56,7 @@ void application_init ( )
     //  Click initialization.
 
     oneshot_cfg_setup( &cfg );
-    ONESHOT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ONESHOT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ONESHOT );
     oneshot_init( &oneshot, &cfg );
     Delay_100ms( );
     oneshot_default_cfg( &oneshot );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "gyro8.h"
 
+#ifndef MIKROBUS_POSITION_GYRO8
+    #define MIKROBUS_POSITION_GYRO8 MIKROBUS_1
+#endif
+
 static gyro8_t gyro8;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     gyro8_cfg_setup( &gyro8_cfg );
-    GYRO8_MAP_MIKROBUS( gyro8_cfg, MIKROBUS_1 );
+    GYRO8_MAP_MIKROBUS( gyro8_cfg, MIKROBUS_POSITION_GYRO8 );
     if ( SPI_MASTER_ERROR == gyro8_init( &gyro8, &gyro8_cfg ) )
     {
         log_error( &logger, " Communication init." );

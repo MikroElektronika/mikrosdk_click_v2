@@ -31,6 +31,10 @@
 #include "log.h"
 #include "smartnfc.h"
 
+#ifndef MIKROBUS_POSITION_SMARTNFC
+    #define MIKROBUS_POSITION_SMARTNFC MIKROBUS_1
+#endif
+
 static smartnfc_t smartnfc;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     smartnfc_cfg_setup( &smartnfc_cfg );
-    SMARTNFC_MAP_MIKROBUS( smartnfc_cfg, MIKROBUS_1 );
+    SMARTNFC_MAP_MIKROBUS( smartnfc_cfg, MIKROBUS_POSITION_SMARTNFC );
     if ( UART_ERROR == smartnfc_init( &smartnfc, &smartnfc_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

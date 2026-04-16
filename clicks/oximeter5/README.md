@@ -94,7 +94,7 @@ void application_init ( void )
 
     // Click initialization.
     oximeter5_cfg_setup( &oximeter5_cfg );
-    OXIMETER5_MAP_MIKROBUS( oximeter5_cfg, MIKROBUS_1 );
+    OXIMETER5_MAP_MIKROBUS( oximeter5_cfg, MIKROBUS_POSITION_OXIMETER5 );
     if ( I2C_MASTER_ERROR == oximeter5_init( &oximeter5, &oximeter5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

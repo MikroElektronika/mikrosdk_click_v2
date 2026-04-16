@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc23_cfg_setup( &rtc23_cfg );
-    RTC23_MAP_MIKROBUS( rtc23_cfg, MIKROBUS_1 );
+    RTC23_MAP_MIKROBUS( rtc23_cfg, MIKROBUS_POSITION_RTC23 );
     if ( SPI_MASTER_ERROR == rtc23_init( &rtc23, &rtc23_cfg ) )
     {
         log_error( &logger, " Communication init." );

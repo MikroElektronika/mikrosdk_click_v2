@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     boostinv2_cfg_setup( &cfg );
-    BOOSTONV2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOSTINV2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOSTINV2 );
     boostinv2_init( &boostinv2, &cfg );
     
     boostinv2_enable( &boostinv2 );   

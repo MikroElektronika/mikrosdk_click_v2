@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     haptic4_cfg_setup( &haptic4_cfg );
-    HAPTIC4_MAP_MIKROBUS( haptic4_cfg, MIKROBUS_1 );
+    HAPTIC4_MAP_MIKROBUS( haptic4_cfg, MIKROBUS_POSITION_HAPTIC4 );
     if ( I2C_MASTER_ERROR == haptic4_init( &haptic4, &haptic4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

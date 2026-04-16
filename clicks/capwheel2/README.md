@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     capwheel2_cfg_setup( &cfg );
-    CAPWHEEL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPWHEEL2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPWHEEL2 );
     capwheel2_init( &capwheel2, &cfg );
 }
 ```

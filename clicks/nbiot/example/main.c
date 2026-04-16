@@ -35,6 +35,10 @@
 #include "log.h"
 #include "nbiot.h"
 
+#ifndef MIKROBUS_POSITION_NBIOT
+    #define MIKROBUS_POSITION_NBIOT MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -135,7 +139,7 @@ void application_init ( void )
     
     // Click initialization.
     nbiot_cfg_setup( &nbiot_cfg );
-    NBIOT_MAP_MIKROBUS( nbiot_cfg, MIKROBUS_1 );
+    NBIOT_MAP_MIKROBUS( nbiot_cfg, MIKROBUS_POSITION_NBIOT );
     err_t init_flag  = nbiot_init( &nbiot, &nbiot_cfg );
     if ( init_flag == UART_ERROR )
     {

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "pressure2307ba.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE2307BA
+    #define MIKROBUS_POSITION_PRESSURE2307BA MIKROBUS_1
+#endif
+
 static pressure2307ba_t pressure2307ba;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure2307ba_cfg_setup( &pressure2307ba_cfg );
-    PRESSURE2307BA_MAP_MIKROBUS( pressure2307ba_cfg, MIKROBUS_1 );
+    PRESSURE2307BA_MAP_MIKROBUS( pressure2307ba_cfg, MIKROBUS_POSITION_PRESSURE2307BA );
     err_t init_flag = pressure2307ba_init( &pressure2307ba, &pressure2307ba_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

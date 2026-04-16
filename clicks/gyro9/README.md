@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     gyro9_cfg_setup( &gyro9_cfg );
-    GYRO9_MAP_MIKROBUS( gyro9_cfg, MIKROBUS_1 );
+    GYRO9_MAP_MIKROBUS( gyro9_cfg, MIKROBUS_POSITION_GYRO9 );
     err_t init_flag = gyro9_init( &gyro9, &gyro9_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

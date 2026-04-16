@@ -24,6 +24,10 @@
 #include "log.h"
 #include "ambient8.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT8
+    #define MIKROBUS_POSITION_AMBIENT8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ambient8_t ambient8;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient8_cfg_setup( &cfg );
-    AMBIENT8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT8 );
     ambient8_init( &ambient8, &cfg );
 
     window_factor = 1;

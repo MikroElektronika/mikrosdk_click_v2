@@ -95,7 +95,7 @@ void application_init ( void )
     // Click initialization.
 
     dcmotor17_cfg_setup( &dcmotor17_cfg );
-    DCMOTOR17_MAP_MIKROBUS( dcmotor17_cfg, MIKROBUS_1 );
+    DCMOTOR17_MAP_MIKROBUS( dcmotor17_cfg, MIKROBUS_POSITION_DCMOTOR17 );
     if ( dcmotor17_init( &dcmotor17, &dcmotor17_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

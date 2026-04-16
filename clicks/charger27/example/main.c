@@ -27,6 +27,10 @@
 #include "log.h"
 #include "charger27.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER27
+    #define MIKROBUS_POSITION_CHARGER27 MIKROBUS_1
+#endif
+
 static charger27_t charger27;   /**< Charger 27 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     charger27_cfg_setup( &charger27_cfg );
-    CHARGER27_MAP_MIKROBUS( charger27_cfg, MIKROBUS_1 );
+    CHARGER27_MAP_MIKROBUS( charger27_cfg, MIKROBUS_POSITION_CHARGER27 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == charger27_init( &charger27, &charger27_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

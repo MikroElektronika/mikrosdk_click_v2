@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     uts7segb2_cfg_setup( &uts7segb2_cfg );
-    UTS7SEGB2_MAP_MIKROBUS( uts7segb2_cfg, MIKROBUS_1 );
+    UTS7SEGB2_MAP_MIKROBUS( uts7segb2_cfg, MIKROBUS_POSITION_UTS7SEGB2 );
     if ( SPI_MASTER_ERROR == uts7segb2_init( &uts7segb2, &uts7segb2_cfg ) )
     {
         log_error( &logger, " Communication init." );

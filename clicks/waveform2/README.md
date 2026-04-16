@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     waveform2_cfg_setup( &waveform2_cfg );
-    WAVEFORM2_MAP_MIKROBUS( waveform2_cfg, MIKROBUS_1 );
+    WAVEFORM2_MAP_MIKROBUS( waveform2_cfg, MIKROBUS_POSITION_WAVEFORM2 );
     err_t init_flag  = waveform2_init( &waveform2, &waveform2_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) {
         log_error( &logger, " Application Init Error. " );

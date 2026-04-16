@@ -22,6 +22,10 @@
 #include "log.h"
 #include "uva.h"
 
+#ifndef MIKROBUS_POSITION_UVA
+    #define MIKROBUS_POSITION_UVA MIKROBUS_1
+#endif
+
 static uva_t uva;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     uva_cfg_setup( &uva_cfg );
-    UVA_MAP_MIKROBUS( uva_cfg, MIKROBUS_1 );
+    UVA_MAP_MIKROBUS( uva_cfg, MIKROBUS_POSITION_UVA );
     if ( I2C_MASTER_ERROR == uva_init( &uva, &uva_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

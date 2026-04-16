@@ -22,6 +22,10 @@
 #include "log.h"
 #include "dualee.h"
 
+#ifndef MIKROBUS_POSITION_DUALEE
+    #define MIKROBUS_POSITION_DUALEE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dualee_t dualee;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     dualee_cfg_setup( &cfg );
-    DUALEE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DUALEE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DUALEE );
     dualee_init( &dualee, &cfg );
 
     log_printf( &logger, "*********** APPLICATION INIT ***********\r\n" );

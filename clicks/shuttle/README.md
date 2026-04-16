@@ -86,7 +86,7 @@ void application_init ( )
     //  Click initialization.
 
     shuttle_cfg_setup( &cfg );
-    SHUTTLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHUTTLE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHUTTLE );
     shuttle_init( &shuttle, &cfg );
 }
 ```

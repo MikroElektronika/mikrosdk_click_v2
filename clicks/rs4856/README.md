@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs4856_cfg_setup( &cfg );
-    RS4856_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4856_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4856 );
     rs4856_init( &rs4856, &cfg );
 
 #ifdef DEMO_APP_RECEIVER

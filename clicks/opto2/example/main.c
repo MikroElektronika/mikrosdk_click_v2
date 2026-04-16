@@ -24,6 +24,10 @@
 #include "log.h"
 #include "opto2.h"
 
+#ifndef MIKROBUS_POSITION_OPTO2
+    #define MIKROBUS_POSITION_OPTO2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static opto2_t opto2;
@@ -78,7 +82,7 @@ void application_init ( void )
     log_init( &logger, &log_cfg );
 
     opto2_cfg_setup( &cfg );
-    OPTO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OPTO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OPTO2 );
     opto2_init( &opto2, &cfg );
 
     log_info( &logger, "---- Application Init ----" );

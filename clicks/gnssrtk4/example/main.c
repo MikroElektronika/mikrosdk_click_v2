@@ -34,6 +34,10 @@
 #include "log.h"
 #include "gnssrtk4.h"
 
+#ifndef MIKROBUS_POSITION_GNSSRTK4
+    #define MIKROBUS_POSITION_GNSSRTK4 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE     500
 #define PROCESS_BUFFER_SIZE 200
@@ -99,7 +103,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssrtk4_cfg_setup( &gnssrtk4_cfg );
-    GNSSRTK4_MAP_MIKROBUS( gnssrtk4_cfg, MIKROBUS_1 );
+    GNSSRTK4_MAP_MIKROBUS( gnssrtk4_cfg, MIKROBUS_POSITION_GNSSRTK4 );
     if ( UART_ERROR == gnssrtk4_init( &gnssrtk4, &gnssrtk4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

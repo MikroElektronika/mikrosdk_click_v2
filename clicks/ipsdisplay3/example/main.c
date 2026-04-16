@@ -25,6 +25,10 @@
 #include "ipsdisplay3.h"
 #include "ipsdisplay3_resources.h"
 
+#ifndef MIKROBUS_POSITION_IPSDISPLAY3
+    #define MIKROBUS_POSITION_IPSDISPLAY3 MIKROBUS_1
+#endif
+
 static ipsdisplay3_t ipsdisplay3;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     ipsdisplay3_cfg_setup( &ipsdisplay3_cfg );
-    IPSDISPLAY3_MAP_MIKROBUS( ipsdisplay3_cfg, MIKROBUS_1 );
+    IPSDISPLAY3_MAP_MIKROBUS( ipsdisplay3_cfg, MIKROBUS_POSITION_IPSDISPLAY3 );
     if ( SPI_MASTER_ERROR == ipsdisplay3_init( &ipsdisplay3, &ipsdisplay3_cfg ) )
     {
         log_error( &logger, " Communication init." );

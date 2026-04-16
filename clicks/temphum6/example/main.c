@@ -23,6 +23,10 @@
 #include "log.h"
 #include "temphum6.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM6
+    #define MIKROBUS_POSITION_TEMPHUM6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static temphum6_t temphum6;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum6_cfg_setup( &cfg );
-    TEMPHUM6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM6 );
     temphum6_init( &temphum6, &cfg );
 
     temphum6_reset( &temphum6 );

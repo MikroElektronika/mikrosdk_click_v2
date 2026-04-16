@@ -26,6 +26,10 @@
 #include "log.h"
 #include "i2cmux7.h"
 
+#ifndef MIKROBUS_POSITION_I2CMUX7
+    #define MIKROBUS_POSITION_I2CMUX7 MIKROBUS_1
+#endif
+
 #define DEVICE0_NAME                "6DOF IMU 11 Click"
 #define DEVICE0_POSITION            I2CMUX7_CHANNEL_0
 #define DEVICE0_SLAVE_ADDRESS       0x0E
@@ -61,7 +65,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cmux7_cfg_setup( &i2cmux7_cfg );
-    I2CMUX7_MAP_MIKROBUS( i2cmux7_cfg, MIKROBUS_1 );
+    I2CMUX7_MAP_MIKROBUS( i2cmux7_cfg, MIKROBUS_POSITION_I2CMUX7 );
     if ( I2C_MASTER_ERROR == i2cmux7_init( &i2cmux7, &i2cmux7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

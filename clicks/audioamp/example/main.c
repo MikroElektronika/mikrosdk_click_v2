@@ -23,6 +23,10 @@
 #include "log.h"
 #include "audioamp.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOAMP
+    #define MIKROBUS_POSITION_AUDIOAMP MIKROBUS_1
+#endif
+
 static audioamp_t audioamp;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp_cfg_setup( &audioamp_cfg );
-    AUDIOAMP_MAP_MIKROBUS( audioamp_cfg, MIKROBUS_1 );
+    AUDIOAMP_MAP_MIKROBUS( audioamp_cfg, MIKROBUS_POSITION_AUDIOAMP );
 
     if ( audioamp_init( &audioamp, &audioamp_cfg ) == AUDIOAMP_INIT_ERROR )
     {

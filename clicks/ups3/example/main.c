@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ups3.h"
 
+#ifndef MIKROBUS_POSITION_UPS3
+    #define MIKROBUS_POSITION_UPS3 MIKROBUS_1
+#endif
+
 #define UPS3_STATUS_OLD         0x00
 #define UPS3_STATUS_NEW         0x01
 
@@ -53,7 +57,7 @@ void application_init ( void ) {
     // Click initialization.
 
     ups3_cfg_setup( &ups3_cfg );
-    UPS3_MAP_MIKROBUS( ups3_cfg, MIKROBUS_1 );
+    UPS3_MAP_MIKROBUS( ups3_cfg, MIKROBUS_POSITION_UPS3 );
     if ( ups3_init( &ups3, &ups3_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

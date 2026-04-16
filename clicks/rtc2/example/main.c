@@ -33,6 +33,10 @@
 #include "log.h"
 #include "rtc2.h"
 
+#ifndef MIKROBUS_POSITION_RTC2
+    #define MIKROBUS_POSITION_RTC2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rtc2_t rtc2;
@@ -115,7 +119,7 @@ void application_init ( void )
     //  Click initialization.
 
     rtc2_cfg_setup( &cfg );
-    RTC2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC2 );
     rtc2_init( &rtc2, &cfg );
 
     rtc2_set_time( &rtc2, 23, 59, 50 );

@@ -31,6 +31,10 @@
 #include "log.h"
 #include "audioamp8.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOAMP8
+    #define MIKROBUS_POSITION_AUDIOAMP8 MIKROBUS_1
+#endif
+
 static audioamp8_t audioamp8;
 static log_t logger;
 static audioamp8_pwr_mon_cfg_t pwr_mode;
@@ -128,7 +132,7 @@ void application_init ( void )
 
     // Click initialization.
     audioamp8_cfg_setup( &audioamp8_cfg );
-    AUDIOAMP8_MAP_MIKROBUS( audioamp8_cfg, MIKROBUS_1 );
+    AUDIOAMP8_MAP_MIKROBUS( audioamp8_cfg, MIKROBUS_POSITION_AUDIOAMP8 );
     err_t init_flag = audioamp8_init( &audioamp8, &audioamp8_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

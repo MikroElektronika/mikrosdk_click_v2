@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     touchpad5_cfg_setup( &touchpad5_cfg );
-    TOUCHPAD5_MAP_MIKROBUS( touchpad5_cfg, MIKROBUS_1 );
+    TOUCHPAD5_MAP_MIKROBUS( touchpad5_cfg, MIKROBUS_POSITION_TOUCHPAD5 );
     if ( I2C_MASTER_ERROR == touchpad5_init( &touchpad5, &touchpad5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "hallcurrent21.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT21
+    #define MIKROBUS_POSITION_HALLCURRENT21 MIKROBUS_1
+#endif
+
 // Load current [A] used for the data resolution calibration process.
 #define HALLCURRENT21_CALIBRATING_CURRENT   3.0f
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent21_cfg_setup( &hallcurrent21_cfg );
-    HALLCURRENT21_MAP_MIKROBUS( hallcurrent21_cfg, MIKROBUS_1 );
+    HALLCURRENT21_MAP_MIKROBUS( hallcurrent21_cfg, MIKROBUS_POSITION_HALLCURRENT21 );
     if ( SPI_MASTER_ERROR == hallcurrent21_init( &hallcurrent21, &hallcurrent21_cfg ) )
     {
         log_error( &logger, " Communication init." );

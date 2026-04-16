@@ -22,6 +22,10 @@
 #include "log.h"
 #include "leddriver3.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER3
+    #define MIKROBUS_POSITION_LEDDRIVER3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static leddriver3_t leddriver3;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver3_cfg_setup( &cfg );
-    LEDDRIVER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER3 );
 
     if ( LEDDRIVER3_INIT_ERROR == leddriver3_init( &leddriver3, &cfg ) )
     {

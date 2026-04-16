@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cisolator2_cfg_setup( &cfg );
-    I2CISOLATOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CISOLATOR2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CISOLATOR2 );
     i2cisolator2_init( &i2cisolator2, &cfg );
     
     i2cisolator2_enable_power( &i2cisolator2, I2CISOLATOR2_POWER_ENABLE );

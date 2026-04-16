@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     powerbank2_cfg_setup( &cfg );
-    POWERBANK2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POWERBANK2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POWERBANK2 );
     powerbank2_init( &powerbank2, &cfg );
 }
 ```

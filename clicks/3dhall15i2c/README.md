@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     c3dhall15i2c_cfg_setup( &c3dhall15i2c_cfg );
-    C3DHALL15I2C_MAP_MIKROBUS( c3dhall15i2c_cfg, MIKROBUS_1 );
+    C3DHALL15I2C_MAP_MIKROBUS( c3dhall15i2c_cfg, MIKROBUS_POSITION_3DHALL15I2C );
     if ( I2C_MASTER_ERROR == c3dhall15i2c_init( &c3dhall15i2c, &c3dhall15i2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

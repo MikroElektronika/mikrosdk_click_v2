@@ -94,7 +94,7 @@ void application_init ( void )
     // Click initialization.
 
     temphum17_cfg_setup( &temphum17_cfg );
-    TEMPHUM17_MAP_MIKROBUS( temphum17_cfg, MIKROBUS_1 );
+    TEMPHUM17_MAP_MIKROBUS( temphum17_cfg, MIKROBUS_POSITION_TEMPHUM17 );
     err_t init_flag = temphum17_init( &temphum17, &temphum17_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

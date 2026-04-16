@@ -42,6 +42,10 @@
 #include "log.h"
 #include "ryb080i.h"
 
+#ifndef MIKROBUS_POSITION_RYB080I
+    #define MIKROBUS_POSITION_RYB080I MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT     "RYB080I Click board - demo example."
 
@@ -169,7 +173,7 @@ void application_init ( void )
 
     // Click initialization.
     ryb080i_cfg_setup( &ryb080i_cfg );
-    RYB080I_MAP_MIKROBUS( ryb080i_cfg, MIKROBUS_1 );
+    RYB080I_MAP_MIKROBUS( ryb080i_cfg, MIKROBUS_POSITION_RYB080I );
     if ( UART_ERROR == ryb080i_init( &ryb080i, &ryb080i_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

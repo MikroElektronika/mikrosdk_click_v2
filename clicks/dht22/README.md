@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     dht22_cfg_setup( &dht22_cfg );
-    DHT22_MAP_MIKROBUS( dht22_cfg, MIKROBUS_1 );
+    DHT22_MAP_MIKROBUS( dht22_cfg, MIKROBUS_POSITION_DHT22 );
 
    if ( DIGITAL_OUT_UNSUPPORTED_PIN == dht22_init( &dht22, &dht22_cfg ) ) 
     {

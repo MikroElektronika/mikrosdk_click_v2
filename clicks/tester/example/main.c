@@ -25,6 +25,10 @@
 #include "log.h"
 #include "tester.h"
 
+#ifndef MIKROBUS_POSITION_TESTER
+    #define MIKROBUS_POSITION_TESTER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static tester_t tester;
@@ -98,7 +102,7 @@ void application_init ( )
     //  Click initialization.
 
     tester_cfg_setup( &cfg );
-    TESTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TESTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TESTER );
     tester_init( &tester, &cfg );
 }
 

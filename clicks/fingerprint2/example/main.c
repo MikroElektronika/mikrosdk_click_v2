@@ -36,6 +36,10 @@
 #include "fingerprint2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_FINGERPRINT2
+    #define MIKROBUS_POSITION_FINGERPRINT2 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 100
 #define PROCESS_RX_BUFFER_SIZE 800
 
@@ -187,7 +191,7 @@ void application_init ( void )
     //  Click initialization.
 
     fingerprint2_cfg_setup( &cfg );
-    FINGERPRINT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FINGERPRINT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FINGERPRINT2 );
     fingerprint2_init( &fingerprint2, &cfg );
     
     fingerprint2_reset ( &fingerprint2 );

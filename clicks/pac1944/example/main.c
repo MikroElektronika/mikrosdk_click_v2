@@ -37,6 +37,10 @@
 #include "log.h"
 #include "pac1944.h"
 
+#ifndef MIKROBUS_POSITION_PAC1944
+    #define MIKROBUS_POSITION_PAC1944 MIKROBUS_1
+#endif
+
 static pac1944_t pac1944;
 static log_t logger;
 
@@ -60,7 +64,7 @@ void application_init ( void ) {
     // Click initialization.
 
     pac1944_cfg_setup( &pac1944_cfg );
-    PAC1944_MAP_MIKROBUS( pac1944_cfg, MIKROBUS_1 );
+    PAC1944_MAP_MIKROBUS( pac1944_cfg, MIKROBUS_POSITION_PAC1944 );
     err_t init_flag = pac1944_init( &pac1944, &pac1944_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

@@ -30,6 +30,10 @@
 #include "log.h"
 #include "llci2c.h"
 
+#ifndef MIKROBUS_POSITION_LLCI2C
+    #define MIKROBUS_POSITION_LLCI2C MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static llci2c_t llci2c;
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     llci2c_cfg_setup( &cfg );
-    LLCI2C_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LLCI2C_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LLCI2C );
     llci2c_init( &llci2c, &cfg );
 }
 

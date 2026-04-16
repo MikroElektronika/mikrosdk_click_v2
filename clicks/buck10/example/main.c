@@ -28,6 +28,10 @@
 #include "log.h"
 #include "buck10.h"
 
+#ifndef MIKROBUS_POSITION_BUCK10
+    #define MIKROBUS_POSITION_BUCK10 MIKROBUS_1
+#endif
+
 static buck10_t buck10;   /**< Buck 10 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -51,7 +55,7 @@ void application_init ( void ) {
     // Click initialization.
 
     buck10_cfg_setup( &buck10_cfg );
-    BUCK10_MAP_MIKROBUS( buck10_cfg, MIKROBUS_1 );
+    BUCK10_MAP_MIKROBUS( buck10_cfg, MIKROBUS_POSITION_BUCK10 );
     if ( buck10_init( &buck10, &buck10_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

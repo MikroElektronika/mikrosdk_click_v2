@@ -23,6 +23,10 @@
 #include "lr2.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_LR2
+    #define MIKROBUS_POSITION_LR2 MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -65,7 +69,7 @@ void application_init ( void )
 
     // Click initialization.
     lr2_cfg_setup( &lr2_cfg );
-    LR2_MAP_MIKROBUS( lr2_cfg, MIKROBUS_1 );
+    LR2_MAP_MIKROBUS( lr2_cfg, MIKROBUS_POSITION_LR2 );
     if ( UART_ERROR == lr2_init( &lr2, &lr2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

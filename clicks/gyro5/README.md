@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     gyro5_cfg_setup( &cfg );
-    GYRO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GYRO5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GYRO5 );
     gyro5_init( &gyro5, &cfg );
     gyro5_default_cfg ( &gyro5 );
     Delay_ms ( 1000 );

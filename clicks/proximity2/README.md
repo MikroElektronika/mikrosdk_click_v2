@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity2_cfg_setup( &cfg );
-    PROXIMITY2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY2 );
     proximity2_init( &proximity2, &cfg );
     
     proximity2_default_cfg ( &proximity2 );

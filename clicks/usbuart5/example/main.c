@@ -30,6 +30,10 @@
 #include "log.h"
 #include "usbuart5.h"
 
+#ifndef MIKROBUS_POSITION_USBUART5
+    #define MIKROBUS_POSITION_USBUART5 MIKROBUS_1
+#endif
+
 static usbuart5_t usbuart5;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     usbuart5_cfg_setup( &usbuart5_cfg );
-    USBUART5_MAP_MIKROBUS( usbuart5_cfg, MIKROBUS_1 );
+    USBUART5_MAP_MIKROBUS( usbuart5_cfg, MIKROBUS_POSITION_USBUART5 );
     if ( UART_ERROR == usbuart5_init( &usbuart5, &usbuart5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

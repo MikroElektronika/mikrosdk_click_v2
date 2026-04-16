@@ -24,6 +24,10 @@
 #include "log.h"
 #include "hallcurrent17.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT17
+    #define MIKROBUS_POSITION_HALLCURRENT17 MIKROBUS_1
+#endif
+
 static hallcurrent17_t hallcurrent17;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent17_cfg_setup( &hallcurrent17_cfg );
-    HALLCURRENT17_MAP_MIKROBUS( hallcurrent17_cfg, MIKROBUS_1 );
+    HALLCURRENT17_MAP_MIKROBUS( hallcurrent17_cfg, MIKROBUS_POSITION_HALLCURRENT17 );
     if ( SPI_MASTER_ERROR == hallcurrent17_init( &hallcurrent17, &hallcurrent17_cfg ) )
     {
         log_error( &logger, " Communication init." );

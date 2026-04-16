@@ -87,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     accelqvar_cfg_setup( &accelqvar_cfg );
-    ACCELQVAR_MAP_MIKROBUS( accelqvar_cfg, MIKROBUS_1 );
+    ACCELQVAR_MAP_MIKROBUS( accelqvar_cfg, MIKROBUS_POSITION_ACCELQVAR );
     err_t init_flag = accelqvar_init( &accelqvar, &accelqvar_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

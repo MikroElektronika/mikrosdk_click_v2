@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     c420mat2_cfg_setup( &c420mat2_cfg );
-    C420MAT2_MAP_MIKROBUS( c420mat2_cfg, MIKROBUS_1 );
+    C420MAT2_MAP_MIKROBUS( c420mat2_cfg, MIKROBUS_POSITION_420MAT2 );
     if ( SPI_MASTER_ERROR == c420mat2_init( &c420mat2, &c420mat2_cfg ) )
     {
         log_error( &logger, " Communication init." );

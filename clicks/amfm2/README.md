@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     amfm2_cfg_setup( &amfm2_cfg );
-    AMFM2_MAP_MIKROBUS( amfm2_cfg, MIKROBUS_1 );
+    AMFM2_MAP_MIKROBUS( amfm2_cfg, MIKROBUS_POSITION_AMFM2 );
     if ( I2C_MASTER_ERROR == amfm2_init( &amfm2, &amfm2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

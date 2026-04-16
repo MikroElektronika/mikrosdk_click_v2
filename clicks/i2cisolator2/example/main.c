@@ -28,6 +28,10 @@
 #include "log.h"
 #include "i2cisolator2.h"
 
+#ifndef MIKROBUS_POSITION_I2CISOLATOR2
+    #define MIKROBUS_POSITION_I2CISOLATOR2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define EEPROM3_MEMORY_ADDRESS   0x10000ul
@@ -86,7 +90,7 @@ void application_init ( )
 
     // Click initialization.
     i2cisolator2_cfg_setup( &cfg );
-    I2CISOLATOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CISOLATOR2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CISOLATOR2 );
     i2cisolator2_init( &i2cisolator2, &cfg );
     
     i2cisolator2_enable_power( &i2cisolator2, I2CISOLATOR2_POWER_ENABLE );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     analogmux5_cfg_setup( &analogmux5_cfg );
-    ANALOGMUX5_MAP_MIKROBUS( analogmux5_cfg, MIKROBUS_1 );
+    ANALOGMUX5_MAP_MIKROBUS( analogmux5_cfg, MIKROBUS_POSITION_ANALOGMUX5 );
     if ( ADC_ERROR == analogmux5_init( &analogmux5, &analogmux5_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -27,6 +27,10 @@
 #include "log.h"
 #include "dac10.h"
 
+#ifndef MIKROBUS_POSITION_DAC10
+    #define MIKROBUS_POSITION_DAC10 MIKROBUS_1
+#endif
+
 #define REFERENCE_VOLTAGE  3.3 // The reference voltage defined by the VCC_SEL on-board jumper. 
 #define NUMBER_OF_STEPS    20  // The number of steps by which we will divide the entire voltage range. 
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     dac10_cfg_setup( &dac10_cfg );
-    DAC10_MAP_MIKROBUS( dac10_cfg, MIKROBUS_1 );
+    DAC10_MAP_MIKROBUS( dac10_cfg, MIKROBUS_POSITION_DAC10 );
     err_t init_flag = dac10_init( &dac10, &dac10_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

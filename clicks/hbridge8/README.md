@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     hbridge8_cfg_setup( &hbridge8_cfg );
-    HBRIDGE8_MAP_MIKROBUS( hbridge8_cfg, MIKROBUS_1 );
+    HBRIDGE8_MAP_MIKROBUS( hbridge8_cfg, MIKROBUS_POSITION_HBRIDGE8 );
     err_t init_flag  = hbridge8_init( &hbridge8, &hbridge8_cfg );
     if ( PWM_ERROR == init_flag )
     {

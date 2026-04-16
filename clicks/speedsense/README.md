@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     speedsense_cfg_setup( &speedsense_cfg );
-    SPEEDSENSE_MAP_MIKROBUS( speedsense_cfg, MIKROBUS_1 );
+    SPEEDSENSE_MAP_MIKROBUS( speedsense_cfg, MIKROBUS_POSITION_SPEEDSENSE );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == speedsense_init( &speedsense, &speedsense_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

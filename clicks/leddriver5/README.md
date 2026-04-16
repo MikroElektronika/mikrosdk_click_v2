@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver2_cfg_setup( &cfg );
-    LEDDRIVER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER2 );
     leddriver2_init( &leddriver2, &cfg );
 
     leddriver2_pwm_start( &leddriver2 );

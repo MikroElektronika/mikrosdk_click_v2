@@ -74,7 +74,7 @@ void application_init ( void )
 
     // Click initialization.
     accurrent2_cfg_setup( &accurrent2_cfg );
-    ACCURRENT2_MAP_MIKROBUS( accurrent2_cfg, MIKROBUS_1 );
+    ACCURRENT2_MAP_MIKROBUS( accurrent2_cfg, MIKROBUS_POSITION_ACCURRENT2 );
     err_t init_flag = accurrent2_init( &accurrent2, &accurrent2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

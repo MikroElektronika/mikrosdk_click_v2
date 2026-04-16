@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     templog7_cfg_setup( &templog7_cfg );
-    TEMPLOG7_MAP_MIKROBUS( templog7_cfg, MIKROBUS_1 );
+    TEMPLOG7_MAP_MIKROBUS( templog7_cfg, MIKROBUS_POSITION_TEMPLOG7 );
     if ( ONE_WIRE_ERROR == templog7_init( &templog7, &templog7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

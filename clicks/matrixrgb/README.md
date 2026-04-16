@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     matrixrgb_cfg_setup( &cfg );
-    MATRIXRGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MATRIXRGB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MATRIXRGB );
     matrixrgb_init( &matrixrgb, &cfg );
 
     matrixrgb_device_reset( &matrixrgb );

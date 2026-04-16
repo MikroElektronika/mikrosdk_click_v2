@@ -80,7 +80,7 @@ void application_init ( void )
     // Click initialization.
 
     co_cfg_setup( &co_cfg );
-    CO_MAP_MIKROBUS( co_cfg, MIKROBUS_1 );
+    CO_MAP_MIKROBUS( co_cfg, MIKROBUS_POSITION_CO );
     if ( co_init( &co, &co_cfg ) == ADC_ERROR ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

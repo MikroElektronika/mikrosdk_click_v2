@@ -36,6 +36,10 @@
 #include "log.h"
 #include "current.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT
+    #define MIKROBUS_POSITION_CURRENT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static current_t current;
@@ -65,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     current_cfg_setup( &cfg );
-    CURRENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CURRENT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CURRENT );
     current_init( &current, &cfg );
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "    Current  Click     \r\n" );

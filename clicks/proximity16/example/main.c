@@ -23,6 +23,10 @@
 #include "log.h"
 #include "proximity16.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY16
+    #define MIKROBUS_POSITION_PROXIMITY16 MIKROBUS_1
+#endif
+
 static proximity16_t proximity16;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     proximity16_cfg_setup( &proximity16_cfg );
-    PROXIMITY16_MAP_MIKROBUS( proximity16_cfg, MIKROBUS_1 );
+    PROXIMITY16_MAP_MIKROBUS( proximity16_cfg, MIKROBUS_POSITION_PROXIMITY16 );
     if ( I2C_MASTER_ERROR == proximity16_init( &proximity16, &proximity16_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

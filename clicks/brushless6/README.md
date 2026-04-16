@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     brushless6_cfg_setup( &cfg );
-    BRUSHLESS6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS6 );
     brushless6_init( &brushless6, &cfg );
     brushless6_calibration( );
     brushless6_setings( );

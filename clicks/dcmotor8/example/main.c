@@ -30,6 +30,10 @@
 #include "log.h"
 #include "dcmotor8.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR8
+    #define MIKROBUS_POSITION_DCMOTOR8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor8_t dcmotor8;
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor8_cfg_setup( &cfg );
-    DCMOTOR8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR8 );
     dcmotor8_init( &dcmotor8, &cfg );
 
     dcmotor8_set_duty_cycle ( &dcmotor8, 0.0 );

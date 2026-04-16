@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     dac21_cfg_setup( &dac21_cfg );
-    DAC21_MAP_MIKROBUS( dac21_cfg, MIKROBUS_1 );
+    DAC21_MAP_MIKROBUS( dac21_cfg, MIKROBUS_POSITION_DAC21 );
     if ( I2C_MASTER_ERROR == dac21_init( &dac21, &dac21_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

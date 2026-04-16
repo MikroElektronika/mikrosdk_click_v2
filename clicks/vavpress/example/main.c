@@ -29,6 +29,10 @@
 #include "log.h"
 #include "vavpress.h"
 
+#ifndef MIKROBUS_POSITION_VAVPRESS
+    #define MIKROBUS_POSITION_VAVPRESS MIKROBUS_1
+#endif
+
 static vavpress_t vavpress;
 static log_t logger;
 static float diff_press;
@@ -57,7 +61,7 @@ void application_init ( void ) {
     // Click initialization.
 
     vavpress_cfg_setup( &vavpress_cfg );
-    VAVPRESS_MAP_MIKROBUS( vavpress_cfg, MIKROBUS_1 );
+    VAVPRESS_MAP_MIKROBUS( vavpress_cfg, MIKROBUS_POSITION_VAVPRESS );
     err_t init_flag = vavpress_init( &vavpress, &vavpress_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

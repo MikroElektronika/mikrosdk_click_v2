@@ -29,6 +29,10 @@
 #include "log.h"
 #include "haptic5.h"
 
+#ifndef MIKROBUS_POSITION_HAPTIC5
+    #define MIKROBUS_POSITION_HAPTIC5 MIKROBUS_1
+#endif
+
 static haptic5_t haptic5;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     haptic5_cfg_setup( &haptic5_cfg );
-    HAPTIC5_MAP_MIKROBUS( haptic5_cfg, MIKROBUS_1 );
+    HAPTIC5_MAP_MIKROBUS( haptic5_cfg, MIKROBUS_POSITION_HAPTIC5 );
     if ( PWM_ERROR == haptic5_init( &haptic5, &haptic5_cfg ) )
     {
         log_error( &logger, " Communication init." );

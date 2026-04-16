@@ -24,6 +24,10 @@
 #include "log.h"
 #include "compass4.h"
 
+#ifndef MIKROBUS_POSITION_COMPASS4
+    #define MIKROBUS_POSITION_COMPASS4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static compass4_t compass4;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     compass4_cfg_setup( &cfg );
-    COMPASS4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COMPASS4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COMPASS4 );
     compass4_init( &compass4, &cfg );
 
     compass4_hardware_reset( &compass4 );

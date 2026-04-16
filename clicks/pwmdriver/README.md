@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     pwmdriver_cfg_setup( &cfg );
-    PWMDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PWMDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PWMDRIVER );
     pwmdriver_init( &pwmdriver, &cfg );
 
     Delay_ms ( 100 );

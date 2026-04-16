@@ -22,6 +22,10 @@
 #include "log.h"
 #include "angle4.h"
 
+#ifndef MIKROBUS_POSITION_ANGLE4
+    #define MIKROBUS_POSITION_ANGLE4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static angle4_t angle4;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     angle4_cfg_setup( &cfg );
-    ANGLE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANGLE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANGLE4 );
     angle4_init( &angle4, &cfg );
 
     angle4_default_cfg( &angle4, ANGLE4_CCFG2_DIR_COUNTER_CLOCKWISE_ROTATION,\

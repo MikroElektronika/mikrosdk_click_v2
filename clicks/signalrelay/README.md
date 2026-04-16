@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     signalrelay_cfg_setup( &cfg );
-    SIGNALRELAY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SIGNALRELAY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SIGNALRELAY );
     signalrelay_init( &signalrelay, &cfg );
 
     signalrelay_default_cfg ( &signalrelay );

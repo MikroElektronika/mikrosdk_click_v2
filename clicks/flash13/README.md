@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     flash13_cfg_setup( &flash13_cfg );
-    FLASH13_MAP_MIKROBUS( flash13_cfg, MIKROBUS_1 );
+    FLASH13_MAP_MIKROBUS( flash13_cfg, MIKROBUS_POSITION_FLASH13 );
     if ( SPI_MASTER_ERROR == flash13_init( &flash13, &flash13_cfg ) )
     {
         log_error( &logger, " Communication init." );

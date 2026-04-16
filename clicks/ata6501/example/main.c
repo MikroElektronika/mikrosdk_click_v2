@@ -28,6 +28,10 @@
 #include "log.h"
 #include "ata6501.h"
 
+#ifndef MIKROBUS_POSITION_ATA6501
+    #define MIKROBUS_POSITION_ATA6501 MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -90,7 +94,7 @@ void application_init ( void )
 
     // Click initialization.
     ata6501_cfg_setup( &ata6501_cfg );
-    ATA6501_MAP_MIKROBUS( ata6501_cfg, MIKROBUS_1 );
+    ATA6501_MAP_MIKROBUS( ata6501_cfg, MIKROBUS_POSITION_ATA6501 );
     if ( UART_ERROR == ata6501_init( &ata6501, &ata6501_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

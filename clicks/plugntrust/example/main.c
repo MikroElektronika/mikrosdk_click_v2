@@ -48,6 +48,10 @@
 #include "log.h"
 #include "plugntrust.h"
 
+#ifndef MIKROBUS_POSITION_PLUGNTRUST
+    #define MIKROBUS_POSITION_PLUGNTRUST MIKROBUS_1
+#endif
+
 //Library and log objects
 static plugntrust_t plugntrust;
 static log_t logger;
@@ -244,7 +248,7 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
     // Click initialization.
     plugntrust_cfg_setup( &plugntrust_cfg );
-    PLUGNTRUST_MAP_MIKROBUS( plugntrust_cfg, MIKROBUS_1 );
+    PLUGNTRUST_MAP_MIKROBUS( plugntrust_cfg, MIKROBUS_POSITION_PLUGNTRUST );
     err_t init_flag = plugntrust_init( &plugntrust, &plugntrust_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

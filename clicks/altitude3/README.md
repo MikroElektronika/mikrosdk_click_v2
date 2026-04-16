@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     altitude3_cfg_setup( &cfg );
-    ALTITUDE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ALTITUDE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ALTITUDE3 );
     altitude3_init( &altitude3, &cfg );
 
     altitude3_default_cfg ( &altitude3 );

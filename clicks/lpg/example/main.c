@@ -24,6 +24,10 @@
 #include "log.h"
 #include "lpg.h"
 
+#ifndef MIKROBUS_POSITION_LPG
+    #define MIKROBUS_POSITION_LPG MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static lpg_t lpg;   /**< LPG Click driver object. */
@@ -51,7 +55,7 @@ void application_init ( void ) {
     // Click initialization.
 
     lpg_cfg_setup( &lpg_cfg );
-    LPG_MAP_MIKROBUS( lpg_cfg, MIKROBUS_1 );
+    LPG_MAP_MIKROBUS( lpg_cfg, MIKROBUS_POSITION_LPG );
     if ( lpg_init( &lpg, &lpg_cfg ) == ADC_ERROR ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

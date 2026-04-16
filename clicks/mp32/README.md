@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     mp32_cfg_setup( &cfg );
-    MP32_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MP32_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MP32 );
     mp32_init( &mp32, &cfg );
 
     Delay_ms ( 500 );

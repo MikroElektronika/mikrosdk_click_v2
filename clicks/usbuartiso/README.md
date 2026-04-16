@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     usbuartiso_cfg_setup( &usbuartiso_cfg );
-    USBUARTISO_MAP_MIKROBUS( usbuartiso_cfg, MIKROBUS_1 );
+    USBUARTISO_MAP_MIKROBUS( usbuartiso_cfg, MIKROBUS_POSITION_USBUARTISO );
     if ( UART_ERROR == usbuartiso_init( &usbuartiso, &usbuartiso_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

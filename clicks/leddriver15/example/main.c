@@ -26,6 +26,10 @@
 #include "log.h"
 #include "leddriver15.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER15
+    #define MIKROBUS_POSITION_LEDDRIVER15 MIKROBUS_1
+#endif
+
 static leddriver15_t leddriver15;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver15_cfg_setup( &leddriver15_cfg );
-    LEDDRIVER15_MAP_MIKROBUS( leddriver15_cfg, MIKROBUS_1 );
+    LEDDRIVER15_MAP_MIKROBUS( leddriver15_cfg, MIKROBUS_POSITION_LEDDRIVER15 );
     if ( LEDDRIVER15_OK != leddriver15_init( &leddriver15, &leddriver15_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

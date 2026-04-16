@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     button2_cfg_setup( &button2_cfg );
-    BUTTON2_MAP_MIKROBUS( button2_cfg, MIKROBUS_1 );
+    BUTTON2_MAP_MIKROBUS( button2_cfg, MIKROBUS_POSITION_BUTTON2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == button2_init( &button2, &button2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

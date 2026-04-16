@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     mcp2517fd_cfg_setup( &mcp2517fd_cfg );
-    MCP2517FD_MAP_MIKROBUS( mcp2517fd_cfg, MIKROBUS_1 );
+    MCP2517FD_MAP_MIKROBUS( mcp2517fd_cfg, MIKROBUS_POSITION_MCP2517FD );
     if ( SPI_MASTER_ERROR == mcp2517fd_init( &mcp2517fd, &mcp2517fd_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -29,6 +29,10 @@
 #include "log.h"
 #include "solidswitch7.h"
 
+#ifndef MIKROBUS_POSITION_SOLIDSWITCH7
+    #define MIKROBUS_POSITION_SOLIDSWITCH7 MIKROBUS_1
+#endif
+
 static solidswitch7_t solidswitch7;   /**< SolidSwitch 7 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     solidswitch7_cfg_setup( &solidswitch7_cfg );
-    SOLIDSWITCH7_MAP_MIKROBUS( solidswitch7_cfg, MIKROBUS_1 );
+    SOLIDSWITCH7_MAP_MIKROBUS( solidswitch7_cfg, MIKROBUS_POSITION_SOLIDSWITCH7 );
     err_t init_flag = solidswitch7_init( &solidswitch7, &solidswitch7_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

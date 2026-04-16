@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     gyro3_cfg_setup( &cfg );
-    GYRO3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GYRO3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GYRO3 );
     gyro3_init( &gyro3, &cfg );
     gyro3_default_cfg( &gyro3 );
 

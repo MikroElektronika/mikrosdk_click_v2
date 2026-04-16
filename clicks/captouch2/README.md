@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     captouch2_cfg_setup( &cfg );
-    CAPTOUCH2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPTOUCH2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPTOUCH2 );
     captouch2_init( &captouch2, &cfg );
 
     captouch2_reset( &captouch2 );

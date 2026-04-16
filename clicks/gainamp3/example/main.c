@@ -28,6 +28,10 @@
 #include "log.h"
 #include "gainamp3.h"
 
+#ifndef MIKROBUS_POSITION_GAINAMP3
+    #define MIKROBUS_POSITION_GAINAMP3 MIKROBUS_1
+#endif
+
 static gainamp3_t gainamp3;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
     // Click initialization.
 
     gainamp3_cfg_setup( &gainamp3_cfg );
-    GAINAMP3_MAP_MIKROBUS( gainamp3_cfg, MIKROBUS_1 );
+    GAINAMP3_MAP_MIKROBUS( gainamp3_cfg, MIKROBUS_POSITION_GAINAMP3 );
     err_t init_flag = gainamp3_init( &gainamp3, &gainamp3_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

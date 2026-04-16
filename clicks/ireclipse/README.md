@@ -83,7 +83,7 @@ void application_init ( void )
     //  Click initialization.
 
     ireclipse_cfg_setup( &cfg );
-    IRECLIPSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRECLIPSE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRECLIPSE );
     ireclipse_init( &ireclipse, &cfg );
     log_printf( &logger, "--------------------\r\n" );
     log_printf( &logger, "   Start counting:  \r\n" );

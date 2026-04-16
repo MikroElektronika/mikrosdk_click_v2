@@ -36,6 +36,10 @@
 #include "log.h"
 #include "bt.h"
 
+#ifndef MIKROBUS_POSITION_BT
+    #define MIKROBUS_POSITION_BT MIKROBUS_1
+#endif
+
 static bt_t bt;
 static log_t logger;
 
@@ -96,7 +100,7 @@ void application_init ( void )
     // Click initialization.
 
     bt_cfg_setup( &bt_cfg );
-    BT_MAP_MIKROBUS( bt_cfg, MIKROBUS_1 );
+    BT_MAP_MIKROBUS( bt_cfg, MIKROBUS_POSITION_BT );
     err_t init_flag  = bt_init( &bt, &bt_cfg );
     if ( UART_ERROR == init_flag ) 
     {

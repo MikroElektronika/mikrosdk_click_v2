@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     bluetooth_cfg_setup( &cfg );
-    BLUETOOTH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLUETOOTH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLUETOOTH );
     bluetooth_init( &bluetooth, &cfg );
 
     Delay_ms ( 500 );

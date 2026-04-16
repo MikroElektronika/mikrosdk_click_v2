@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     fever_cfg_setup( &cfg );
-    FEVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FEVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FEVER );
     fever_init( &fever, &cfg );
 }
 ```

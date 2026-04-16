@@ -33,6 +33,10 @@
 #include "log.h"
 #include "profet10a.h"
 
+#ifndef MIKROBUS_POSITION_PROFET10A
+    #define MIKROBUS_POSITION_PROFET10A MIKROBUS_1
+#endif
+
 static profet10a_t profet10a;   /**< PROFET 10A Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -56,7 +60,7 @@ void application_init ( void )
 
     // Click initialization.
     profet10a_cfg_setup( &profet10a_cfg );
-    PROFET10A_MAP_MIKROBUS( profet10a_cfg, MIKROBUS_1 );
+    PROFET10A_MAP_MIKROBUS( profet10a_cfg, MIKROBUS_POSITION_PROFET10A );
     if ( profet10a_init( &profet10a, &profet10a_cfg ) == ADC_ERROR )
     {
         log_error( &logger, " Application Init Error. " );

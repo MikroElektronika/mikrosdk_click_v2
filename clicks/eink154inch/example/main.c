@@ -49,6 +49,10 @@
 #include "log.h"
 #include "eink154inch.h"
 #include "eink154inch_image.h"
+
+#ifndef MIKROBUS_POSITION_EINK154INCH
+    #define MIKROBUS_POSITION_EINK154INCH MIKROBUS_1
+#endif
 #ifndef IMAGE_MODE_ONLY
 #include "eink154inch_font.h"
 #endif
@@ -79,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     eink154inch_cfg_setup( &cfg );
-    EINK154INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EINK154INCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EINK154INCH );
     eink154inch_init( &eink154inch, &cfg );
 
     eink154inch_start_config( &eink154inch );

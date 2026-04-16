@@ -25,6 +25,10 @@
 #include "log.h"
 #include "i2cmux4.h"
 
+#ifndef MIKROBUS_POSITION_I2CMUX4
+    #define MIKROBUS_POSITION_I2CMUX4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static i2cmux4_t i2cmux4;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     i2cmux4_cfg_setup( &cfg );
-    I2CMUX4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CMUX4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CMUX4 );
     i2cmux4_init( &i2cmux4, &cfg );
 
     i2cmux4_power_on( &i2cmux4, I2CMUX4_ENABLE_POWER_ON );

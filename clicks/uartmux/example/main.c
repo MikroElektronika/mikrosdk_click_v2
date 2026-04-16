@@ -27,6 +27,10 @@
 #include "uartmux.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_UARTMUX
+    #define MIKROBUS_POSITION_UARTMUX MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 
@@ -83,7 +87,7 @@ void application_init ( void )
     //  Click initialization.
 
     uartmux_cfg_setup( &cfg );
-    UARTMUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UARTMUX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UARTMUX );
     uartmux_init( &uartmux, &cfg );
 
     uartmux_set_inhibit_communication( &uartmux, UARTMUX_PIN_STATE_LOW );

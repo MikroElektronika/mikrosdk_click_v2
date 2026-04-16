@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     wrls24ghz_cfg_setup( &wrls24ghz_cfg );
-    WRLS24GHZ_MAP_MIKROBUS( wrls24ghz_cfg, MIKROBUS_1 );
+    WRLS24GHZ_MAP_MIKROBUS( wrls24ghz_cfg, MIKROBUS_POSITION_WRLS24GHZ );
     if ( UART_ERROR == wrls24ghz_init( &wrls24ghz, &wrls24ghz_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

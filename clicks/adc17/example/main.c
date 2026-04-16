@@ -24,6 +24,10 @@
 #include "log.h"
 #include "adc17.h"
 
+#ifndef MIKROBUS_POSITION_ADC17
+    #define MIKROBUS_POSITION_ADC17 MIKROBUS_1
+#endif
+
 static adc17_t adc17;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     adc17_cfg_setup( &adc17_cfg );
-    ADC17_MAP_MIKROBUS( adc17_cfg, MIKROBUS_1 );
+    ADC17_MAP_MIKROBUS( adc17_cfg, MIKROBUS_POSITION_ADC17 );
     if ( I2C_MASTER_ERROR == adc17_init( &adc17, &adc17_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

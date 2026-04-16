@@ -24,6 +24,10 @@
 #include "log.h"
 #include "adc20.h"
 
+#ifndef MIKROBUS_POSITION_ADC20
+    #define MIKROBUS_POSITION_ADC20 MIKROBUS_1
+#endif
+
 static adc20_t adc20;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     adc20_cfg_setup( &adc20_cfg );
-    ADC20_MAP_MIKROBUS( adc20_cfg, MIKROBUS_1 );
+    ADC20_MAP_MIKROBUS( adc20_cfg, MIKROBUS_POSITION_ADC20 );
     if ( SPI_MASTER_ERROR == adc20_init( &adc20, &adc20_cfg ) )
     {
         log_error( &logger, " Communication init." );

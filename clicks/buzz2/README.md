@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     buzz2_cfg_setup( &buzz2_cfg );
-    BUZZ2_MAP_MIKROBUS( buzz2_cfg, MIKROBUS_1 );
+    BUZZ2_MAP_MIKROBUS( buzz2_cfg, MIKROBUS_POSITION_BUZZ2 );
     err_t init_flag  = buzz2_init( &buzz2, &buzz2_cfg );
     if ( init_flag == PWM_ERROR ) {
         log_error( &logger, " Application Init Error. " );

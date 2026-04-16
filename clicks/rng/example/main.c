@@ -26,6 +26,10 @@
 #include "log.h"
 #include "rng.h"
 
+#ifndef MIKROBUS_POSITION_RNG
+    #define MIKROBUS_POSITION_RNG MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rng_t rng;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     rng_cfg_setup( &cfg );
-    RNG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RNG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RNG );
     rng_init( &rng, &cfg );
 
     rng_default_cfg( &rng );

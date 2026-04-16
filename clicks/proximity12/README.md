@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     proximity12_cfg_setup( &proximity12_cfg );
-    PROXIMITY12_MAP_MIKROBUS( proximity12_cfg, MIKROBUS_1 );
+    PROXIMITY12_MAP_MIKROBUS( proximity12_cfg, MIKROBUS_POSITION_PROXIMITY12 );
     err_t init_flag = proximity12_init( &proximity12, &proximity12_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

@@ -38,6 +38,10 @@
 #include "string.h"
 #include "math.h"
 
+#ifndef MIKROBUS_POSITION_PWRMETER
+    #define MIKROBUS_POSITION_PWRMETER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 
@@ -120,7 +124,7 @@ void application_init ( void )
     //  Click initialization.
 
     pwrmeter_cfg_setup( &cfg );
-    PWRMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PWRMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PWRMETER );
     pwrmeter_init( &pwrmeter, &cfg );
     Delay_ms ( 500 );
     

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "pixi.h"
 
+#ifndef MIKROBUS_POSITION_PIXI
+    #define MIKROBUS_POSITION_PIXI MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pixi_t pixi;
@@ -56,7 +60,7 @@ void application_init ( )
     //  Click initialization.
 
     pixi_cfg_setup( &cfg );
-    PIXI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PIXI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PIXI );
     pixi_init( &pixi, &cfg );
 
     //  Device ID check.

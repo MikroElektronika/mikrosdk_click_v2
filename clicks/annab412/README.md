@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     annab412_cfg_setup( &annab412_cfg );
-    ANNAB412_MAP_MIKROBUS( annab412_cfg, MIKROBUS_1 );
+    ANNAB412_MAP_MIKROBUS( annab412_cfg, MIKROBUS_POSITION_ANNAB412 );
     if ( UART_ERROR == annab412_init( &annab412, &annab412_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "loadcell6.h"
 
+#ifndef MIKROBUS_POSITION_LOADCELL6
+    #define MIKROBUS_POSITION_LOADCELL6 MIKROBUS_1
+#endif
+
 static loadcell6_t loadcell6;
 static log_t logger;
 static loadcell6_data_t cell_data;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     loadcell6_cfg_setup( &loadcell6_cfg );
-    LOADCELL6_MAP_MIKROBUS( loadcell6_cfg, MIKROBUS_1 );
+    LOADCELL6_MAP_MIKROBUS( loadcell6_cfg, MIKROBUS_POSITION_LOADCELL6 );
     if ( SPI_MASTER_ERROR == loadcell6_init( &loadcell6, &loadcell6_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss9_cfg_setup( &gnss9_cfg );
-    GNSS9_MAP_MIKROBUS( gnss9_cfg, MIKROBUS_1 );
+    GNSS9_MAP_MIKROBUS( gnss9_cfg, MIKROBUS_POSITION_GNSS9 );
     err_t init_flag = gnss9_init( &gnss9, &gnss9_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss21_cfg_setup( &gnss21_cfg );
-    GNSS21_MAP_MIKROBUS( gnss21_cfg, MIKROBUS_1 );
+    GNSS21_MAP_MIKROBUS( gnss21_cfg, MIKROBUS_POSITION_GNSS21 );
     if ( GNSS21_OK != gnss21_init( &gnss21, &gnss21_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto8_cfg_setup( &cfg );
-    MAGNETO8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO8 );
     magneto8_init( &magneto8, &cfg );
 
     magneto8_default_cfg( &magneto8 );

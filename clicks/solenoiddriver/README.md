@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     solenoiddriver_cfg_setup( &solenoiddriver_cfg );
-    SOLENOIDDRIVER_MAP_MIKROBUS( solenoiddriver_cfg, MIKROBUS_1 );
+    SOLENOIDDRIVER_MAP_MIKROBUS( solenoiddriver_cfg, MIKROBUS_POSITION_SOLENOIDDRIVER );
     if ( SPI_MASTER_ERROR == solenoiddriver_init( &solenoiddriver, &solenoiddriver_cfg ) )
     {
         log_error( &logger, " Communication init." );

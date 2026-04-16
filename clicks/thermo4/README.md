@@ -88,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
     
     thermo4_cfg_setup( &cfg );
-    THERMO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO4 );
     thermo4_init( &thermo4, &cfg );
     log_info( &logger, "---- Application Init ----" );
 }

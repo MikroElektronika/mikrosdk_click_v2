@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper7_cfg_setup( &stepper7_cfg );
-    STEPPER7_MAP_MIKROBUS( stepper7_cfg, MIKROBUS_1 );
+    STEPPER7_MAP_MIKROBUS( stepper7_cfg, MIKROBUS_POSITION_STEPPER7 );
     if ( SPI_MASTER_ERROR == stepper7_init( &stepper7, &stepper7_cfg ) )
     {
         log_error( &logger, " Communication init." );

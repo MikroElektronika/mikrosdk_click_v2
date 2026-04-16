@@ -26,6 +26,10 @@
 #include "log.h"
 #include "rs232spi.h"
 
+#ifndef MIKROBUS_POSITION_RS232SPI
+    #define MIKROBUS_POSITION_RS232SPI MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rs232spi_t rs232spi;
@@ -59,7 +63,7 @@ void application_init ( )
     //  Click initialization.
 
     rs232spi_cfg_setup( &cfg );
-    RS232SPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS232SPI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS232SPI );
     rs232spi_init( &rs232spi, &cfg );
     Delay_ms ( 100 );
     rs232spi_digital_write_rst( &rs232spi, 1 );

@@ -92,7 +92,7 @@ void application_init ( )
     //  Click initialization.
 
     gaussmeter_cfg_setup( &cfg );
-    GAUSSMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GAUSSMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GAUSSMETER );
     gaussmeter_init( &gaussmeter, &cfg );
     Delay_ms ( 100 );
     gaussmeter_default_cfg( &gaussmeter );

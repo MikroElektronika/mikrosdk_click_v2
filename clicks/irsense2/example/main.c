@@ -23,6 +23,10 @@
 #include "log.h"
 #include "irsense2.h"
 
+#ifndef MIKROBUS_POSITION_IRSENSE2
+    #define MIKROBUS_POSITION_IRSENSE2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static irsense2_t irsense2;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     irsense2_cfg_setup( &cfg );
-    IRSENSE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRSENSE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRSENSE2 );
     irsense2_init( &irsense2, &cfg );
 
     Delay_us( 100 );

@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     rs2323_cfg_setup( &rs2323_cfg );
-    RS2323_MAP_MIKROBUS( rs2323_cfg, MIKROBUS_1 );
+    RS2323_MAP_MIKROBUS( rs2323_cfg, MIKROBUS_POSITION_RS2323 );
     if ( UART_ERROR == rs2323_init( &rs2323, &rs2323_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

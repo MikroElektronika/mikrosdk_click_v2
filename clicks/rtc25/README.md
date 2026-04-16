@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc25_cfg_setup( &rtc25_cfg );
-    RTC25_MAP_MIKROBUS( rtc25_cfg, MIKROBUS_1 );
+    RTC25_MAP_MIKROBUS( rtc25_cfg, MIKROBUS_POSITION_RTC25 );
     err_t init_flag = rtc25_init( &rtc25, &rtc25_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

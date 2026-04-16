@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     audiomux_cfg_setup( &cfg );
-    AUDIOMUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOMUX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOMUX );
     audiomux_init( &audiomux, &cfg );
 
     init_check = 0;

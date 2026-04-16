@@ -22,6 +22,10 @@
 #include "log.h"
 #include "motion4.h"
 
+#ifndef MIKROBUS_POSITION_MOTION4
+    #define MIKROBUS_POSITION_MOTION4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static motion4_t motion4;   /**< Motion 4 Click driver object. */
@@ -51,7 +55,7 @@ void application_init ( void ) {
     // Click initialization.
 
     motion4_cfg_setup( &motion4_cfg );
-    MOTION4_MAP_MIKROBUS( motion4_cfg, MIKROBUS_1 );
+    MOTION4_MAP_MIKROBUS( motion4_cfg, MIKROBUS_POSITION_MOTION4 );
     if ( motion4_init( &motion4, &motion4_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
        
         log_error( &logger, " Application Init Error. " );

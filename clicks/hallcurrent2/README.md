@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     hallcurrent2_cfg_setup( &cfg );
-    HALLCURRENT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HALLCURRENT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HALLCURRENT2 );
     hallcurrent2_init( &hallcurrent2, &cfg );
 
     hallcurrent2_reset( &hallcurrent2 );

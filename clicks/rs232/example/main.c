@@ -24,6 +24,10 @@
 #include "rs232.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS232
+    #define MIKROBUS_POSITION_RS232 MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define RS232_TRANSMITTER
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs232_cfg_setup( &cfg );
-    RS232_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS232_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS232 );
     rs232_init( &rs232, &cfg );
     
     Delay_ms ( 100 );

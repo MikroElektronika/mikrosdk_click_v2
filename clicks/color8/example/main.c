@@ -24,6 +24,10 @@
 #include "log.h"
 #include "color8.h"
 
+#ifndef MIKROBUS_POSITION_COLOR8
+    #define MIKROBUS_POSITION_COLOR8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static color8_t color8;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     color8_cfg_setup( &cfg );
-    COLOR8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR8 );
     color8_init( &color8, &cfg );
 
     color8_write_byte( &color8, COLOR8_REG_SYSTEM_CONTROL, COLOR8_SS_SW_RESET_IS_DONE | COLOR8_SS_INT_PIN_IS_ACTIVE );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "temphum15.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM15
+    #define MIKROBUS_POSITION_TEMPHUM15 MIKROBUS_1
+#endif
+
 static temphum15_t temphum15;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void ) {
     // Click initialization.
 
     temphum15_cfg_setup( &temphum15_cfg );
-    TEMPHUM15_MAP_MIKROBUS( temphum15_cfg, MIKROBUS_1 );
+    TEMPHUM15_MAP_MIKROBUS( temphum15_cfg, MIKROBUS_POSITION_TEMPHUM15 );
     err_t init_flag = temphum15_init( &temphum15, &temphum15_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

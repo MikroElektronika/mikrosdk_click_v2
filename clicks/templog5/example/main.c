@@ -26,6 +26,10 @@
 #include "log.h"
 #include "templog5.h"
 
+#ifndef MIKROBUS_POSITION_TEMPLOG5
+    #define MIKROBUS_POSITION_TEMPLOG5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static templog5_t templog5;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     templog5_cfg_setup( &cfg );
-    TEMPLOG5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG5 );
     templog5_init( &templog5, &cfg );
 
     tmp = templog5_read_data( &templog5, TEMPLOG5_REG_MANUFACTURER_ID );

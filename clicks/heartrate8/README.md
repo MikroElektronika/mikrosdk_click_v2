@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate8_cfg_setup( &cfg );
-    HEARTRATE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE8 );
     heartrate8_init( &heartrate8, &cfg );
     Delay_ms ( 500 );
     heartrate8_default_cfg( &heartrate8 );

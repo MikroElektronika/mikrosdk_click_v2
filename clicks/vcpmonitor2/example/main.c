@@ -25,6 +25,10 @@
 #include "log.h"
 #include "vcpmonitor2.h"
 
+#ifndef MIKROBUS_POSITION_VCPMONITOR2
+    #define MIKROBUS_POSITION_VCPMONITOR2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static vcpmonitor2_t vcpmonitor2;
@@ -99,7 +103,7 @@ void application_init ( void )
     //  Click initialization.
 
     vcpmonitor2_cfg_setup( &cfg );
-    VCPMONITOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VCPMONITOR2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VCPMONITOR2 );
     vcpmonitor2_init( &vcpmonitor2, &cfg );
 
     check_id = vcpmonitor2_get_manifacture_id( &vcpmonitor2 );

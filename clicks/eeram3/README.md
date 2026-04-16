@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     eeram3_cfg_setup( &eeram3_cfg );
-    EERAM3_MAP_MIKROBUS( eeram3_cfg, MIKROBUS_1 );
+    EERAM3_MAP_MIKROBUS( eeram3_cfg, MIKROBUS_POSITION_EERAM3 );
     
     if ( SPI_MASTER_ERROR == eeram3_init( &eeram3, &eeram3_cfg ) )
     {

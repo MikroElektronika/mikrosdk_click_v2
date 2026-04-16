@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     gnss4_cfg_setup( &cfg );
-    GNSS4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GNSS4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GNSS4 );
     gnss4_init( &gnss4, &cfg );
 
     gnss4_module_wakeup( &gnss4 );

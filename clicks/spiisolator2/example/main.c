@@ -26,6 +26,10 @@
 #include "log.h"
 #include "spiisolator2.h"
 
+#ifndef MIKROBUS_POSITION_SPIISOLATOR2
+    #define MIKROBUS_POSITION_SPIISOLATOR2 MIKROBUS_1
+#endif
+
 static spiisolator2_t spiisolator2;
 static log_t logger;
 static uint8_t demo_data[ 7 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 0 };
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     spiisolator2_cfg_setup( &spiisolator2_cfg );
-    SPIISOLATOR2_MAP_MIKROBUS( spiisolator2_cfg, MIKROBUS_1 );
+    SPIISOLATOR2_MAP_MIKROBUS( spiisolator2_cfg, MIKROBUS_POSITION_SPIISOLATOR2 );
     if ( SPI_MASTER_ERROR == spiisolator2_init( &spiisolator2, &spiisolator2_cfg ) ) 
     {        
         log_error( &logger, " Application Init Error. \r\n" );

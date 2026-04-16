@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     c6dofimu21_cfg_setup( &c6dofimu21_cfg );
-    C6DOFIMU21_MAP_MIKROBUS( c6dofimu21_cfg, MIKROBUS_1 );
+    C6DOFIMU21_MAP_MIKROBUS( c6dofimu21_cfg, MIKROBUS_POSITION_6DOFIMU21 );
     err_t init_flag = c6dofimu21_init( &c6dofimu21, &c6dofimu21_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

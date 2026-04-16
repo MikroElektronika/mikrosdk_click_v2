@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ledflash.h"
 
+#ifndef MIKROBUS_POSITION_LEDFLASH
+    #define MIKROBUS_POSITION_LEDFLASH MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ledflash_t ledflash;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     ledflash_cfg_setup( &cfg );
-    LEDFLASH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDFLASH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDFLASH );
     ledflash_init( &ledflash, &cfg );
     Delay_ms ( 100 );
     

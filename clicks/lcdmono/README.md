@@ -71,7 +71,7 @@ void application_init ( void )
 
     //  Click initialization.
     lcdmono_cfg_setup( &cfg );
-    LCDMONO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LCDMONO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LCDMONO );
     lcdmono_init( &lcdmono, &cfg );
 
     lcdmono_display_reset( &lcdmono );

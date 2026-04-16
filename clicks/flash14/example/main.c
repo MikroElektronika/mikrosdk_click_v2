@@ -24,6 +24,10 @@
 #include "log.h"
 #include "flash14.h"
 
+#ifndef MIKROBUS_POSITION_FLASH14
+    #define MIKROBUS_POSITION_FLASH14 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE_1         "MIKROE"
 #define DEMO_TEXT_MESSAGE_2         "Flash 14 Click"
 #define STARTING_ADDRESS            0x01234567ul
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     flash14_cfg_setup( &flash14_cfg );
-    FLASH14_MAP_MIKROBUS( flash14_cfg, MIKROBUS_1 );
+    FLASH14_MAP_MIKROBUS( flash14_cfg, MIKROBUS_POSITION_FLASH14 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == flash14_init( &flash14, &flash14_cfg ) )
     {
         log_error( &logger, " Communication init." );

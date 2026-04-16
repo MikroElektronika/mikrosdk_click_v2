@@ -30,6 +30,10 @@
 #include "thingstream.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_THINGSTREAM
+    #define MIKROBUS_POSITION_THINGSTREAM MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 600
 #define PROCESS_RX_BUFFER_SIZE 600
 #define PROCESS_PARSER_BUFFER_SIZE 600
@@ -143,7 +147,7 @@ void application_init ( void )
 
     // Click initialization.
     thingstream_cfg_setup( &cfg );
-    THINGSTREAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THINGSTREAM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THINGSTREAM );
     thingstream_init( &thingstream, &cfg );
 
     thingstream_module_power( &thingstream, true );

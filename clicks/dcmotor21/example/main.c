@@ -26,6 +26,10 @@
 #include "log.h"
 #include "dcmotor21.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR21
+    #define MIKROBUS_POSITION_DCMOTOR21 MIKROBUS_1
+#endif
+
 static dcmotor21_t dcmotor21;   /**< DC Motor 21 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor21_cfg_setup( &dcmotor21_cfg );
-    DCMOTOR21_MAP_MIKROBUS( dcmotor21_cfg, MIKROBUS_1 );
+    DCMOTOR21_MAP_MIKROBUS( dcmotor21_cfg, MIKROBUS_POSITION_DCMOTOR21 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == dcmotor21_init( &dcmotor21, &dcmotor21_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

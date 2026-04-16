@@ -92,7 +92,7 @@ err_t init_ret;
     //  Click initialization.
 
     pressure5_cfg_setup( &cfg );
-    PRESSURE5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE5 );
     pressure5_init( &pressure5, &cfg );
     pressure5_default_cfg( &pressure5 );
 }

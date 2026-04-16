@@ -22,6 +22,10 @@
 #include "log.h"
 #include "hallcurrent4.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT4
+    #define MIKROBUS_POSITION_HALLCURRENT4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static hallcurrent4_t hallcurrent4;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     hallcurrent4_cfg_setup( &cfg );
-    HALLCURRENT4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HALLCURRENT4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HALLCURRENT4 );
     hallcurrent4_init( &hallcurrent4, &cfg );
 }
 

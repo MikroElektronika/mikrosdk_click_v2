@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     hallswitch3_cfg_setup( &hallswitch3_cfg );
-    HALLSWITCH3_MAP_MIKROBUS( hallswitch3_cfg, MIKROBUS_1 );
+    HALLSWITCH3_MAP_MIKROBUS( hallswitch3_cfg, MIKROBUS_POSITION_HALLSWITCH3 );
     if ( I2C_MASTER_ERROR == hallswitch3_init( &hallswitch3, &hallswitch3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

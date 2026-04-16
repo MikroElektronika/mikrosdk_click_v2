@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     adc4_cfg_setup( &cfg );
-    ADC4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC4 );
     adc4_init( &adc4, &cfg );
 
     Delay_ms ( 100 );

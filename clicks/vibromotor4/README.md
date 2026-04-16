@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     vibromotor4_cfg_setup( &vibromotor4_cfg );
-    VIBROMOTOR4_MAP_MIKROBUS( vibromotor4_cfg, MIKROBUS_1 );
+    VIBROMOTOR4_MAP_MIKROBUS( vibromotor4_cfg, MIKROBUS_POSITION_VIBROMOTOR4 );
     err_t init_flag = vibromotor4_init( &vibromotor4, &vibromotor4_cfg );
     if ( I2C_MASTER_ERROR == init_flag )
     {

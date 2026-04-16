@@ -29,6 +29,10 @@
 #include "rgbring.h"
 #include "rgbring_delays.h"
 
+#ifndef MIKROBUS_POSITION_RGBRING
+    #define MIKROBUS_POSITION_RGBRING MIKROBUS_1
+#endif
+
 static rgbring_t rgbring;   /**< RGB Ring Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -88,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     rgbring_cfg_setup( &rgbring_cfg );
-    RGBRING_MAP_MIKROBUS( rgbring_cfg, MIKROBUS_1 );
+    RGBRING_MAP_MIKROBUS( rgbring_cfg, MIKROBUS_POSITION_RGBRING );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == 
          rgbring_init( &rgbring, &rgbring_logic_zero, &rgbring_logic_one, &rgbring_cfg ) ) 
     {

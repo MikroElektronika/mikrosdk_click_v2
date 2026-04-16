@@ -29,6 +29,10 @@
 #include "log.h"
 #include "flash.h"
 
+#ifndef MIKROBUS_POSITION_FLASH
+    #define MIKROBUS_POSITION_FLASH MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static flash_t flash;
@@ -93,7 +97,7 @@ void application_init( void )
     
     //  Click initialization.
     flash_cfg_setup( &flash_cfg );
-    FLASH_MAP_MIKROBUS( flash_cfg, MIKROBUS_1 );
+    FLASH_MAP_MIKROBUS( flash_cfg, MIKROBUS_POSITION_FLASH );
     flash_init( &flash, &flash_cfg );
 
     //  Click reset and default configuration.

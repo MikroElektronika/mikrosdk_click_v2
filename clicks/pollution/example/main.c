@@ -26,6 +26,10 @@
 #include "log.h"
 #include "pollution.h"
 
+#ifndef MIKROBUS_POSITION_POLLUTION
+    #define MIKROBUS_POSITION_POLLUTION MIKROBUS_1
+#endif
+
 float value_volt;
 float value_res;
 
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     pollution_cfg_setup( &cfg );
-    POLLUTION_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POLLUTION_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POLLUTION );
     pollution_init( &pollution, &cfg );
     
     log_printf( &logger, "-------------------------------------\r\n" );

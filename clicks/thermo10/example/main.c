@@ -29,6 +29,10 @@
 #include "log.h"
 #include "thermo10.h"
 
+#ifndef MIKROBUS_POSITION_THERMO10
+    #define MIKROBUS_POSITION_THERMO10 MIKROBUS_1
+#endif
+
 static thermo10_t thermo10;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo10_cfg_setup( &thermo10_cfg );
-    THERMO10_MAP_MIKROBUS( thermo10_cfg, MIKROBUS_1 );
+    THERMO10_MAP_MIKROBUS( thermo10_cfg, MIKROBUS_POSITION_THERMO10 );
     if ( I2C_MASTER_ERROR == thermo10_init( &thermo10, &thermo10_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

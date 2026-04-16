@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     expand6_cfg_setup( &cfg );
-    EXPAND6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND6 );
     expand6_init( &expand6, &cfg );
 
     expand6_reset ( &expand6 );

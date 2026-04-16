@@ -22,6 +22,10 @@
 #include "log.h"
 #include "recnplay2.h"
 
+#ifndef MIKROBUS_POSITION_RECNPLAY2
+    #define MIKROBUS_POSITION_RECNPLAY2 MIKROBUS_1
+#endif
+
 static recnplay2_t recnplay2;   /**< Rec N Play 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     recnplay2_cfg_setup( &recnplay2_cfg );
-    RECNPLAY2_MAP_MIKROBUS( recnplay2_cfg, MIKROBUS_1 );
+    RECNPLAY2_MAP_MIKROBUS( recnplay2_cfg, MIKROBUS_POSITION_RECNPLAY2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == recnplay2_init( &recnplay2, &recnplay2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

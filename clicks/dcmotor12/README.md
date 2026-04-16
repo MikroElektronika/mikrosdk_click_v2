@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor12_cfg_setup( &dcmotor12_cfg );
-    DCMOTOR12_MAP_MIKROBUS( dcmotor12_cfg, MIKROBUS_1 );
+    DCMOTOR12_MAP_MIKROBUS( dcmotor12_cfg, MIKROBUS_POSITION_DCMOTOR12 );
     if ( DCMOTOR12_OK != dcmotor12_init( &dcmotor12, &dcmotor12_cfg ) )
     {
         log_error( &logger, " Communication init." );

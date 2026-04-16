@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridgedriver_cfg_setup( &hbridgedriver_cfg );
-    HBRIDGEDRIVER_MAP_MIKROBUS( hbridgedriver_cfg, MIKROBUS_1 );
+    HBRIDGEDRIVER_MAP_MIKROBUS( hbridgedriver_cfg, MIKROBUS_POSITION_HBRIDGEDRIVER );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == hbridgedriver_init( &hbridgedriver, &hbridgedriver_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

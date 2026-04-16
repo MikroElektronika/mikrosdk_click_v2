@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     fram2_cfg_setup( &cfg );
-    FRAM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FRAM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FRAM2 );
     fram2_init( &fram2, &cfg );
     fram2_default_cfg ( &fram2 );
 

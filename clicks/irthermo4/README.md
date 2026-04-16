@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     irthermo4_cfg_setup( &irthermo4_cfg );
-    IRTHERMO4_MAP_MIKROBUS( irthermo4_cfg, MIKROBUS_1 );
+    IRTHERMO4_MAP_MIKROBUS( irthermo4_cfg, MIKROBUS_POSITION_IRTHERMO4 );
     if ( I2C_MASTER_ERROR == irthermo4_init( &irthermo4, &irthermo4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

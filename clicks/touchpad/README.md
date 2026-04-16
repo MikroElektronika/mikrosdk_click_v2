@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchpad_cfg_setup( &cfg );
-    TOUCHPAD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHPAD_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHPAD );
     touchpad_init( &touchpad, &cfg );
 
     touchpad_default_cfg( &touchpad );

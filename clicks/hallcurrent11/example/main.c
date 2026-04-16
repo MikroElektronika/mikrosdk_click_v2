@@ -25,6 +25,10 @@
 #include "log.h"
 #include "hallcurrent11.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT11
+    #define MIKROBUS_POSITION_HALLCURRENT11 MIKROBUS_1
+#endif
+
 static hallcurrent11_t hallcurrent11;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent11_cfg_setup( &hallcurrent11_cfg );
-    HALLCURRENT11_MAP_MIKROBUS( hallcurrent11_cfg, MIKROBUS_1 );
+    HALLCURRENT11_MAP_MIKROBUS( hallcurrent11_cfg, MIKROBUS_POSITION_HALLCURRENT11 );
     err_t init_flag = hallcurrent11_init( &hallcurrent11, &hallcurrent11_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

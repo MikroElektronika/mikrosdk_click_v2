@@ -34,6 +34,10 @@
 #include "log.h"
 #include "stepper16.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER16
+    #define MIKROBUS_POSITION_STEPPER16 MIKROBUS_1
+#endif
+
 static stepper16_t stepper16;
 static log_t logger;
 
@@ -68,7 +72,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper16_cfg_setup( &stepper16_cfg );
-    STEPPER16_MAP_MIKROBUS( stepper16_cfg, MIKROBUS_1 );
+    STEPPER16_MAP_MIKROBUS( stepper16_cfg, MIKROBUS_POSITION_STEPPER16 );
     err_t init_flag  = stepper16_init( &stepper16, &stepper16_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) 
     {

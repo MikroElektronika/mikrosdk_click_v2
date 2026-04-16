@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     current3_cfg_setup( &cfg );
-    CURRENT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CURRENT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CURRENT3 );
     current3_init( &current3, &cfg );
 
     Delay_ms ( 100 );

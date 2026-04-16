@@ -49,6 +49,10 @@
 #include "bletiny.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_BLETINY
+    #define MIKROBUS_POSITION_BLETINY MIKROBUS_1
+#endif
+
 /**
  * @brief Application receiver buffer size
  * @details Specified size of application receiver buffer.
@@ -199,7 +203,7 @@ void application_init ( void )
 
     // Click initialization.
     bletiny_cfg_setup( &bletiny_cfg );
-    BLETINY_MAP_MIKROBUS( bletiny_cfg, MIKROBUS_1 );
+    BLETINY_MAP_MIKROBUS( bletiny_cfg, MIKROBUS_POSITION_BLETINY );
     err_t init_flag  = bletiny_init( &bletiny, &bletiny_cfg );
 
     if ( init_flag == UART_ERROR )

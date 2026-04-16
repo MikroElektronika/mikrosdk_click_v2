@@ -87,7 +87,7 @@ void application_init ( void )
 
     //  Click initialization.
     shake2wake_cfg_setup( &cfg );
-    SHAKE2WAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHAKE2WAKE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHAKE2WAKE );
     shake2wake_init( &shake2wake, &cfg );
     Delay_ms ( 100 );
 

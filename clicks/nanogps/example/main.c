@@ -30,6 +30,10 @@
 #include "nanogps.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_NANOGPS
+    #define MIKROBUS_POSITION_NANOGPS MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 15
 #define PROCESS_RX_BUFFER_SIZE 600
 #define PROCESS_PARSER_BUFFER_SIZE 600
@@ -133,7 +137,7 @@ void application_init ( void )
     //  Click initialization.
 
     nanogps_cfg_setup( &cfg );
-    NANOGPS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NANOGPS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NANOGPS );
     nanogps_init( &nanogps, &cfg );
 
     nanogps_module_wakeup( &nanogps );

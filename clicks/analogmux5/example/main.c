@@ -25,6 +25,10 @@
 #include "log.h"
 #include "analogmux5.h"
 
+#ifndef MIKROBUS_POSITION_ANALOGMUX5
+    #define MIKROBUS_POSITION_ANALOGMUX5 MIKROBUS_1
+#endif
+
 static analogmux5_t analogmux5;   /**< Analog MUX 5 Click driver object. */
 static log_t logger;              /**< Logger object. */
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     analogmux5_cfg_setup( &analogmux5_cfg );
-    ANALOGMUX5_MAP_MIKROBUS( analogmux5_cfg, MIKROBUS_1 );
+    ANALOGMUX5_MAP_MIKROBUS( analogmux5_cfg, MIKROBUS_POSITION_ANALOGMUX5 );
     if ( ADC_ERROR == analogmux5_init( &analogmux5, &analogmux5_cfg ) )
     {
         log_error( &logger, " Communication init." );

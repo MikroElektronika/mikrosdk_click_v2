@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     expand18_cfg_setup( &expand18_cfg );
-    EXPAND18_MAP_MIKROBUS( expand18_cfg, MIKROBUS_1 );
+    EXPAND18_MAP_MIKROBUS( expand18_cfg, MIKROBUS_POSITION_EXPAND18 );
     if ( SPI_MASTER_ERROR == expand18_init( &expand18, &expand18_cfg ) )
     {
         log_error( &logger, " Communication init." );

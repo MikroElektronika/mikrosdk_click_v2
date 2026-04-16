@@ -32,6 +32,10 @@
 #include "monarchadapter.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_MONARCHADAPTER
+    #define MIKROBUS_POSITION_MONARCHADAPTER MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 50
 #define PROCESS_RX_BUFFER_SIZE 600
 #define PROCESS_PARSER_BUFFER_SIZE 600
@@ -128,7 +132,7 @@ void application_init ( void )
     //  Click initialization.
 
     monarchadapter_cfg_setup( &cfg );
-    MONARCHADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MONARCHADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MONARCHADAPTER );
     monarchadapter_init( &monarchadapter, &cfg );
 
     monarchadapter_power_on( &monarchadapter );

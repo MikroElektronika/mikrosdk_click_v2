@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     vctmonitor_cfg_setup( &vctmonitor_cfg );
-    VCTMONITOR_MAP_MIKROBUS( vctmonitor_cfg, MIKROBUS_1 );
+    VCTMONITOR_MAP_MIKROBUS( vctmonitor_cfg, MIKROBUS_POSITION_VCTMONITOR );
     err_t init_flag = vctmonitor_init( &vctmonitor, &vctmonitor_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

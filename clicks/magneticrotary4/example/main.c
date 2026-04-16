@@ -24,6 +24,10 @@
 #include "log.h"
 #include "magneticrotary4.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETICROTARY4
+    #define MIKROBUS_POSITION_MAGNETICROTARY4 MIKROBUS_1
+#endif
+
 static magneticrotary4_t magneticrotary4;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     magneticrotary4_cfg_setup( &magneticrotary4_cfg );
-    MAGNETICROTARY4_MAP_MIKROBUS( magneticrotary4_cfg, MIKROBUS_1 );
+    MAGNETICROTARY4_MAP_MIKROBUS( magneticrotary4_cfg, MIKROBUS_POSITION_MAGNETICROTARY4 );
     if ( SPI_MASTER_ERROR == magneticrotary4_init( &magneticrotary4, &magneticrotary4_cfg ) )
     {
         log_error( &logger, " Communication init." );

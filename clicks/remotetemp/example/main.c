@@ -23,6 +23,10 @@
 #include "log.h"
 #include "remotetemp.h"
 
+#ifndef MIKROBUS_POSITION_REMOTETEMP
+    #define MIKROBUS_POSITION_REMOTETEMP MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static remotetemp_t remotetemp;
@@ -192,7 +196,7 @@ void application_init ( void )
     //  Click initialization.
 
     remotetemp_cfg_setup( &cfg );
-    REMOTETEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    REMOTETEMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_REMOTETEMP );
     remotetemp_init( &remotetemp, &cfg );
     
     Delay_ms ( 300 );

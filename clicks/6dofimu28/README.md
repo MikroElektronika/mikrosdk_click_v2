@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     c6dofimu28_cfg_setup( &c6dofimu28_cfg );
-    C6DOFIMU28_MAP_MIKROBUS( c6dofimu28_cfg, MIKROBUS_1 );
+    C6DOFIMU28_MAP_MIKROBUS( c6dofimu28_cfg, MIKROBUS_POSITION_6DOFIMU28 );
     err_t init_flag = c6dofimu28_init( &c6dofimu28, &c6dofimu28_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

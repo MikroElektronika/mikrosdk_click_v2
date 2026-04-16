@@ -25,6 +25,10 @@
 #include "log.h"
 #include "flash4.h"
 
+#ifndef MIKROBUS_POSITION_FLASH4
+    #define MIKROBUS_POSITION_FLASH4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define DEMO_MESSAGE "MikroE"
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     flash4_cfg_setup( &cfg );
-    FLASH4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH4 );
     flash4_init( &flash4, &cfg );
     
     flash4_reset( &flash4 );

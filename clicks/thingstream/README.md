@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     thingstream_cfg_setup( &cfg );
-    THINGSTREAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THINGSTREAM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THINGSTREAM );
     thingstream_init( &thingstream, &cfg );
 
     thingstream_module_power( &thingstream, true );

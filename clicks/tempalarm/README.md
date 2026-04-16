@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     tempalarm_cfg_setup( &tempalarm_cfg );
-    TEMPALARM_MAP_MIKROBUS( tempalarm_cfg, MIKROBUS_1 );
+    TEMPALARM_MAP_MIKROBUS( tempalarm_cfg, MIKROBUS_POSITION_TEMPALARM );
     if ( I2C_MASTER_ERROR == tempalarm_init( &tempalarm, &tempalarm_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

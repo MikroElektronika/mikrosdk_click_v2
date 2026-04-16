@@ -28,6 +28,10 @@
 #include "log.h"
 #include "knob.h"
 
+#ifndef MIKROBUS_POSITION_KNOB
+    #define MIKROBUS_POSITION_KNOB MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static knob_t knob;
@@ -60,7 +64,7 @@ void application_init ( void )
     //  Click initialization.
 
     knob_cfg_setup( &cfg );
-    KNOB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    KNOB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_KNOB );
     knob_init( &knob, &cfg );
 
     knob_reset( &knob );

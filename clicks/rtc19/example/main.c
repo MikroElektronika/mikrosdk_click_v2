@@ -25,6 +25,10 @@
 #include "log.h"
 #include "rtc19.h"
 
+#ifndef MIKROBUS_POSITION_RTC19
+    #define MIKROBUS_POSITION_RTC19 MIKROBUS_1
+#endif
+
 static rtc19_t rtc19;
 static log_t logger;
 static rtc19_time_t time;
@@ -61,7 +65,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc19_cfg_setup( &rtc19_cfg );
-    RTC19_MAP_MIKROBUS( rtc19_cfg, MIKROBUS_1 );
+    RTC19_MAP_MIKROBUS( rtc19_cfg, MIKROBUS_POSITION_RTC19 );
     if ( I2C_MASTER_ERROR == rtc19_init( &rtc19, &rtc19_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

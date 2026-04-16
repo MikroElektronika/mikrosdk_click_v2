@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate_cfg_setup( &cfg );
-    HEARTRATE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE );
     heartrate_init( &heartrate, &cfg );
 
     heartrate_default_cfg( &heartrate );

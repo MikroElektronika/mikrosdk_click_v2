@@ -23,6 +23,10 @@
 #include "log.h"
 #include "magneto11.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO11
+    #define MIKROBUS_POSITION_MAGNETO11 MIKROBUS_1
+#endif
+
 static magneto11_t magneto11;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     magneto11_cfg_setup( &magneto11_cfg );
-    MAGNETO11_MAP_MIKROBUS( magneto11_cfg, MIKROBUS_1 );
+    MAGNETO11_MAP_MIKROBUS( magneto11_cfg, MIKROBUS_POSITION_MAGNETO11 );
     if ( I2C_MASTER_ERROR == magneto11_init( &magneto11, &magneto11_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

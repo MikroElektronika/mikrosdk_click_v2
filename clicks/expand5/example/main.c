@@ -22,6 +22,10 @@
 #include "log.h"
 #include "expand5.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND5
+    #define MIKROBUS_POSITION_EXPAND5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static expand5_t expand5;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     expand5_cfg_setup( &cfg );
-    EXPAND5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND5 );
     expand5_init( &expand5, &cfg );
 
     Delay_ms ( 100 );

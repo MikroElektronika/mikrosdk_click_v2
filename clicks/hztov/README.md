@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     hztov_cfg_setup( &cfg );
-    HZTOV_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HZTOV_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HZTOV );
     hztov_init( &hztov, &cfg );
     
     hztov_set_enable ( &hztov, HZTOV_ENABLE );

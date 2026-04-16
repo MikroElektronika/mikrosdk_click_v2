@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     powermonitor2_cfg_setup( &powermonitor2_cfg );
-    POWERMONITOR2_MAP_MIKROBUS( powermonitor2_cfg, MIKROBUS_1 );
+    POWERMONITOR2_MAP_MIKROBUS( powermonitor2_cfg, MIKROBUS_POSITION_POWERMONITOR2 );
     if ( I2C_MASTER_ERROR == powermonitor2_init( &powermonitor2, &powermonitor2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     fiberopt_cfg_setup( &cfg );
-    FIBEROPT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FIBEROPT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FIBEROPT );
     fiberopt_init( &fiberopt, &cfg );
 
 #ifdef DEMO_APP_TRANSMITTER

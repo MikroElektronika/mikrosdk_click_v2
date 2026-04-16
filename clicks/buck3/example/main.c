@@ -24,6 +24,10 @@
 #include "log.h"
 #include "buck3.h"
 
+#ifndef MIKROBUS_POSITION_BUCK3
+    #define MIKROBUS_POSITION_BUCK3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static buck3_t buck3;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck3_cfg_setup( &cfg );
-    BUCK3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK3 );
     buck3_init( &buck3, &cfg );
 
     buck3_default_cfg( &buck3 );

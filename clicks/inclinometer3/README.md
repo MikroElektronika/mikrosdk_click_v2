@@ -87,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     inclinometer3_cfg_setup( &inclinometer3_cfg );
-    INCLINOMETER3_MAP_MIKROBUS( inclinometer3_cfg, MIKROBUS_1 );
+    INCLINOMETER3_MAP_MIKROBUS( inclinometer3_cfg, MIKROBUS_POSITION_INCLINOMETER3 );
     if ( SPI_MASTER_ERROR == inclinometer3_init( &inclinometer3, &inclinometer3_cfg ) )
     {
         log_error( &logger, " Communication init." );

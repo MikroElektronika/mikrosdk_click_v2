@@ -77,7 +77,7 @@ void application_init( void )
 
     //  Click initialization.
     microwave_cfg_setup( &cfg );
-    MICROWAVE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MICROWAVE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MICROWAVE );
     microwave_init( &microwave, &cfg );
     Delay_ms ( 100 );
 

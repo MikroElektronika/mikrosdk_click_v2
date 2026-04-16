@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     digipot12_cfg_setup( &digipot12_cfg );
-    DIGIPOT12_MAP_MIKROBUS( digipot12_cfg, MIKROBUS_1 );
+    DIGIPOT12_MAP_MIKROBUS( digipot12_cfg, MIKROBUS_POSITION_DIGIPOT12 );
     if ( I2C_MASTER_ERROR == digipot12_init( &digipot12, &digipot12_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

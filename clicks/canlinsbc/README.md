@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     canlinsbc_cfg_setup( &canlinsbc_cfg );
-    CANLINSBC_MAP_MIKROBUS( canlinsbc_cfg, MIKROBUS_1 );
+    CANLINSBC_MAP_MIKROBUS( canlinsbc_cfg, MIKROBUS_POSITION_CANLINSBC );
     if ( SPI_MASTER_ERROR == canlinsbc_init( &canlinsbc, &canlinsbc_cfg ) )
     {
         log_error( &logger, " Communication init." );

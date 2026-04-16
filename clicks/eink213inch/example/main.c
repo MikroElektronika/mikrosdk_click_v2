@@ -47,6 +47,10 @@
 #include "log.h"
 #include "eink213inch.h"
 #include "eink213inch_image.h"
+
+#ifndef MIKROBUS_POSITION_EINK213INCH
+    #define MIKROBUS_POSITION_EINK213INCH MIKROBUS_1
+#endif
 #ifndef IMAGE_MODE_ONLY
 #include "eink213inch_font.h"
 #endif
@@ -85,7 +89,7 @@ void application_init ( void )
 
     //  Click initialization.
     eink213inch_cfg_setup( &cfg );
-    EINK213INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EINK213INCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EINK213INCH );
     eink213inch_init( &eink213inch, &cfg );
 
     eink213inch_start_config( &eink213inch );

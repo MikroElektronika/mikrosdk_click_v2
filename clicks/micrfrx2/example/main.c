@@ -32,6 +32,10 @@
 #include "log.h"
 #include "micrfrx2.h"
 
+#ifndef MIKROBUS_POSITION_MICRFRX2
+    #define MIKROBUS_POSITION_MICRFRX2 MIKROBUS_1
+#endif
+
 #define MICRFRX2_PREAMBLE       0x5AA5  /**< Packet preamble word. */
 
 static micrfrx2_t micrfrx2;     /**< MICRF RX 2 Click driver object. */
@@ -107,7 +111,7 @@ void application_init ( void )
 
     // Click initialization.
     micrfrx2_cfg_setup( &micrfrx2_cfg );
-    MICRFRX2_MAP_MIKROBUS( micrfrx2_cfg, MIKROBUS_1 );
+    MICRFRX2_MAP_MIKROBUS( micrfrx2_cfg, MIKROBUS_POSITION_MICRFRX2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == micrfrx2_init( &micrfrx2, &micrfrx2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "nfc5.h"
 
+#ifndef MIKROBUS_POSITION_NFC5
+    #define MIKROBUS_POSITION_NFC5 MIKROBUS_1
+#endif
+
 static nfc5_t nfc5;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc5_cfg_setup( &nfc5_cfg );
-    NFC5_MAP_MIKROBUS( nfc5_cfg, MIKROBUS_1 );
+    NFC5_MAP_MIKROBUS( nfc5_cfg, MIKROBUS_POSITION_NFC5 );
     err_t init_flag = nfc5_init( &nfc5, &nfc5_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

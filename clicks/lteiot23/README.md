@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot23_cfg_setup( &lteiot23_cfg );
-    LTEIOT23_MAP_MIKROBUS( lteiot23_cfg, MIKROBUS_1 );
+    LTEIOT23_MAP_MIKROBUS( lteiot23_cfg, MIKROBUS_POSITION_LTEIOT23 );
     if ( UART_ERROR == lteiot23_init( &lteiot23, &lteiot23_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

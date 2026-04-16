@@ -23,6 +23,10 @@
 #include "log.h"
 #include "flash6.h"
 
+#ifndef MIKROBUS_POSITION_FLASH6
+    #define MIKROBUS_POSITION_FLASH6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static flash6_t flash6;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     flash6_cfg_setup( &cfg );
-    FLASH6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH6 );
     flash6_init( &flash6, &cfg );
 
     flash6_software_reset( &flash6 );

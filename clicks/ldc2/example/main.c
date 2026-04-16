@@ -22,6 +22,10 @@
 #include "log.h"
 #include "ldc2.h"
 
+#ifndef MIKROBUS_POSITION_LDC2
+    #define MIKROBUS_POSITION_LDC2 MIKROBUS_1
+#endif
+
 static ldc2_t ldc2;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
     // Click initialization.
 
     ldc2_cfg_setup( &ldc2_cfg );
-    LDC2_MAP_MIKROBUS( ldc2_cfg, MIKROBUS_1 );
+    LDC2_MAP_MIKROBUS( ldc2_cfg, MIKROBUS_POSITION_LDC2 );
     if ( SPI_MASTER_ERROR == ldc2_init( &ldc2, &ldc2_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

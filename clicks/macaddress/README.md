@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     macaddress_cfg_setup( &cfg );
-    MACADDRESS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MACADDRESS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MACADDRESS );
     macaddress_init( &macaddress, &cfg );
     
     macaddress_get_mac( &macaddress, mac_addr );

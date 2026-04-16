@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     accel34_cfg_setup( &accel34_cfg );
-    ACCEL34_MAP_MIKROBUS( accel34_cfg, MIKROBUS_1 );
+    ACCEL34_MAP_MIKROBUS( accel34_cfg, MIKROBUS_POSITION_ACCEL34 );
     if ( I2C_MASTER_ERROR == accel34_init( &accel34, &accel34_cfg ) )
     {
         log_error( &logger, " Communication init." );

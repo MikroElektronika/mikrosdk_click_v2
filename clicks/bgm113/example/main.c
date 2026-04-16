@@ -35,6 +35,10 @@
 #include "log.h"
 #include "bgm113.h"
 
+#ifndef MIKROBUS_POSITION_BGM113
+    #define MIKROBUS_POSITION_BGM113 MIKROBUS_1
+#endif
+
 static bgm113_t bgm113;
 static log_t logger;
 
@@ -80,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     bgm113_cfg_setup( &bgm113_cfg );
-    BGM113_MAP_MIKROBUS( bgm113_cfg, MIKROBUS_1 );
+    BGM113_MAP_MIKROBUS( bgm113_cfg, MIKROBUS_POSITION_BGM113 );
     if ( UART_ERROR == bgm113_init( &bgm113, &bgm113_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "uarti2cspi.h"
 
+#ifndef MIKROBUS_POSITION_UARTI2CSPI
+    #define MIKROBUS_POSITION_UARTI2CSPI MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 // #define DEMO_APP_TRANSMITTER
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     uarti2cspi_cfg_setup( &cfg );
-    UARTI2CSPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UARTI2CSPI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UARTI2CSPI );
     uarti2cspi_init( &uarti2cspi, &cfg );
     Delay_ms ( 1000 );
 

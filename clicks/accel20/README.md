@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     accel20_cfg_setup( &accel20_cfg );
-    ACCEL20_MAP_MIKROBUS( accel20_cfg, MIKROBUS_1 );
+    ACCEL20_MAP_MIKROBUS( accel20_cfg, MIKROBUS_POSITION_ACCEL20 );
     err_t init_flag  = accel20_init( &accel20, &accel20_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

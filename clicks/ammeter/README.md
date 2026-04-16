@@ -78,7 +78,7 @@ void application_init ( void )
     //  Click initialization.
 
     ammeter_cfg_setup( &cfg );
-    AMMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMMETER );
     ammeter_init( &ammeter, &cfg );
     log_printf( &logger, "-----------------------\r\n" );
     log_printf( &logger, "    Ammeter  Click     \r\n" );

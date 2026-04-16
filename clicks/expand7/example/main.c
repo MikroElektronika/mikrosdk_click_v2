@@ -23,6 +23,10 @@
 #include "log.h"
 #include "expand7.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND7
+    #define MIKROBUS_POSITION_EXPAND7 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static expand7_t expand7;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     //  Click initialization.
     expand7_cfg_setup( &cfg );
-    EXPAND7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND7 );
     expand7_init( &expand7, &cfg );
     Delay_ms ( 100 );
     

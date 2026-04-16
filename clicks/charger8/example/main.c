@@ -32,6 +32,10 @@
 #include "log.h"
 #include "charger8.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER8
+    #define MIKROBUS_POSITION_CHARGER8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static charger8_t charger8;
@@ -60,7 +64,7 @@ void application_init ( void )
     //  Click initialization.
 
     charger8_cfg_setup( &cfg );
-    CHARGER8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CHARGER8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CHARGER8 );
     charger8_init( &charger8, &cfg );
 
     charger8_enable( &charger8, CHARGER8_CHARGER_ENABLE );

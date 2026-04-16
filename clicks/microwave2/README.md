@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     microwave2_cfg_setup( &cfg );
-    MICROWAVE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MICROWAVE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MICROWAVE2 );
     microwave2_init( &microwave2, &cfg );
 }
 ```

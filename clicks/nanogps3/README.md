@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     nanogps3_cfg_setup( &nanogps3_cfg );
-    NANOGPS3_MAP_MIKROBUS( nanogps3_cfg, MIKROBUS_1 );
+    NANOGPS3_MAP_MIKROBUS( nanogps3_cfg, MIKROBUS_POSITION_NANOGPS3 );
     err_t init_flag = nanogps3_init( &nanogps3, &nanogps3_cfg ); 
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -96,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     flash8_cfg_setup( &flash8_cfg );
-    FLASH8_MAP_MIKROBUS( flash8_cfg, MIKROBUS_1 );
+    FLASH8_MAP_MIKROBUS( flash8_cfg, MIKROBUS_POSITION_FLASH8 );
     if ( SPI_MASTER_ERROR == flash8_init( &flash8, &flash8_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     samltouch_cfg_setup( &cfg );
-    SAMLTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SAMLTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SAMLTOUCH );
     samltouch_init( &samltouch, &cfg );
     
     Delay_ms ( 500 );

@@ -31,6 +31,10 @@
 #include "log.h"
 #include "loadcell.h"
 
+#ifndef MIKROBUS_POSITION_LOADCELL
+    #define MIKROBUS_POSITION_LOADCELL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static loadcell_t loadcell;
@@ -65,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     loadcell_cfg_setup( &cfg );
-    LOADCELL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LOADCELL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LOADCELL );
     loadcell_init( &loadcell, &cfg );
     
     log_printf(&logger, "-------------------------\r\n");

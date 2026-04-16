@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel11_cfg_setup( &cfg );
-    ACCEL11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL11 );
     accel11_init( &accel11, &cfg );
 
     tmp = accel11_test_comunication( &accel11 );

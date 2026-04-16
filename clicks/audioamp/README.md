@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp_cfg_setup( &audioamp_cfg );
-    AUDIOAMP_MAP_MIKROBUS( audioamp_cfg, MIKROBUS_1 );
+    AUDIOAMP_MAP_MIKROBUS( audioamp_cfg, MIKROBUS_POSITION_AUDIOAMP );
 
     if ( audioamp_init( &audioamp, &audioamp_cfg ) == AUDIOAMP_INIT_ERROR )
     {

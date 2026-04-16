@@ -26,6 +26,10 @@
 #include "ble4.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_BLE4
+    #define MIKROBUS_POSITION_BLE4 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 5
 #define PROCESS_RX_BUFFER_SIZE 100
 #define PROCESS_PARSER_BUFFER_SIZE 100
@@ -129,7 +133,7 @@ void application_init ( void )
     //  Click initialization.
 
     ble4_cfg_setup( &cfg );
-    BLE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE4 );
     ble4_init( &ble4, &cfg );
 
     ble4_reset( &ble4 );

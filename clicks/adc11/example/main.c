@@ -26,6 +26,10 @@
 #include "log.h"
 #include "adc11.h"
 
+#ifndef MIKROBUS_POSITION_ADC11
+    #define MIKROBUS_POSITION_ADC11 MIKROBUS_1
+#endif
+
 static adc11_t adc11;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void ) {
     // Click initialization.
 
     adc11_cfg_setup( &adc11_cfg );
-    ADC11_MAP_MIKROBUS( adc11_cfg, MIKROBUS_1 );
+    ADC11_MAP_MIKROBUS( adc11_cfg, MIKROBUS_POSITION_ADC11 );
     err_t init_flag  = adc11_init( &adc11, &adc11_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

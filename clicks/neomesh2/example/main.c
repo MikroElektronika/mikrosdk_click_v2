@@ -27,6 +27,10 @@
 #include "log.h"
 #include "neomesh2.h"
 
+#ifndef MIKROBUS_POSITION_NEOMESH2
+    #define MIKROBUS_POSITION_NEOMESH2 MIKROBUS_1
+#endif
+
 // Comment out the line below to add the APP_RECEIVER_2 to the APP_ORIGINATOR example.
 #define SINGLE_RECEIVER_MODE
 
@@ -92,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     neomesh2_cfg_setup( &neomesh2_cfg );
-    NEOMESH2_MAP_MIKROBUS( neomesh2_cfg, MIKROBUS_1 );
+    NEOMESH2_MAP_MIKROBUS( neomesh2_cfg, MIKROBUS_POSITION_NEOMESH2 );
     if ( UART_ERROR == neomesh2_init( &neomesh2, &neomesh2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

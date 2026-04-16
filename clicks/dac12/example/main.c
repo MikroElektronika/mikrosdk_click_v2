@@ -23,6 +23,10 @@
 #include "log.h"
 #include "dac12.h"
 
+#ifndef MIKROBUS_POSITION_DAC12
+    #define MIKROBUS_POSITION_DAC12 MIKROBUS_1
+#endif
+
 #define NUMBER_OF_STEPS    20  // The number of steps by which the entire voltage range will be divided. 
 
 static dac12_t dac12;
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     dac12_cfg_setup( &dac12_cfg );
-    DAC12_MAP_MIKROBUS( dac12_cfg, MIKROBUS_1 );
+    DAC12_MAP_MIKROBUS( dac12_cfg, MIKROBUS_POSITION_DAC12 );
     if ( SPI_MASTER_ERROR == dac12_init( &dac12, &dac12_cfg ) )
     {
         log_error( &logger, " Communication init." );

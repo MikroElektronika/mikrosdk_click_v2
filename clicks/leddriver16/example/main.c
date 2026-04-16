@@ -31,6 +31,10 @@
 #include "log.h"
 #include "leddriver16.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER16
+    #define MIKROBUS_POSITION_LEDDRIVER16 MIKROBUS_1
+#endif
+
 static leddriver16_t leddriver16;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver16_cfg_setup( &leddriver16_cfg );
-    LEDDRIVER16_MAP_MIKROBUS( leddriver16_cfg, MIKROBUS_1 );
+    LEDDRIVER16_MAP_MIKROBUS( leddriver16_cfg, MIKROBUS_POSITION_LEDDRIVER16 );
     if ( SPI_MASTER_ERROR == leddriver16_init( &leddriver16, &leddriver16_cfg ) )
     {
         log_error( &logger, " Communication init." );

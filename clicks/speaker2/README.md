@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     speaker2_cfg_setup( &speaker2_cfg );
-    SPEAKER2_MAP_MIKROBUS( speaker2_cfg, MIKROBUS_1 );
+    SPEAKER2_MAP_MIKROBUS( speaker2_cfg, MIKROBUS_POSITION_SPEAKER2 );
     if ( SPI_MASTER_ERROR == speaker2_init( &speaker2, &speaker2_cfg ) )
     {
         log_error( &logger, " Communication init." );

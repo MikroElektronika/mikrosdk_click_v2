@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     audioamp12_cfg_setup( &audioamp12_cfg );
-    AUDIOAMP12_MAP_MIKROBUS( audioamp12_cfg, MIKROBUS_1 );
+    AUDIOAMP12_MAP_MIKROBUS( audioamp12_cfg, MIKROBUS_POSITION_AUDIOAMP12 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == audioamp12_init( &audioamp12, &audioamp12_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

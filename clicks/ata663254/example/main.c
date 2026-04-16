@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ata663254.h"
 
+#ifndef MIKROBUS_POSITION_ATA663254
+    #define MIKROBUS_POSITION_ATA663254 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define DEMO_APP_RECEIVER
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     ata663254_cfg_setup( &cfg );
-    ATA663254_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ATA663254_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ATA663254 );
     ata663254_init( &ata663254, &cfg );
     
     ata663254_enable( &ata663254, 1 );

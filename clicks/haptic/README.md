@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     haptic_cfg_setup( &cfg );
-    HAPTIC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HAPTIC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HAPTIC );
     haptic_init( &haptic, &cfg );
 
     log_printf( &logger, " Configuring the Click board...\r\n" );

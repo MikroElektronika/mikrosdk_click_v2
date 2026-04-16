@@ -24,6 +24,10 @@
 #include "log.h"
 #include "loadcell8.h"
 
+#ifndef MIKROBUS_POSITION_LOADCELL8
+    #define MIKROBUS_POSITION_LOADCELL8 MIKROBUS_1
+#endif
+
 static loadcell8_t loadcell8;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     loadcell8_cfg_setup( &loadcell8_cfg );
-    LOADCELL8_MAP_MIKROBUS( loadcell8_cfg, MIKROBUS_1 );
+    LOADCELL8_MAP_MIKROBUS( loadcell8_cfg, MIKROBUS_POSITION_LOADCELL8 );
     if ( I2C_MASTER_ERROR == loadcell8_init( &loadcell8, &loadcell8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -27,6 +27,10 @@
 #include "log.h"
 #include "nanobeacon.h"
 
+#ifndef MIKROBUS_POSITION_NANOBEACON
+    #define MIKROBUS_POSITION_NANOBEACON MIKROBUS_1
+#endif
+
 static nanobeacon_t nanobeacon;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     nanobeacon_cfg_setup( &nanobeacon_cfg );
-    NANOBEACON_MAP_MIKROBUS( nanobeacon_cfg, MIKROBUS_1 );
+    NANOBEACON_MAP_MIKROBUS( nanobeacon_cfg, MIKROBUS_POSITION_NANOBEACON );
     if ( UART_ERROR == nanobeacon_init( &nanobeacon, &nanobeacon_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

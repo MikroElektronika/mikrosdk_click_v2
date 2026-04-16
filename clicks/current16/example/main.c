@@ -27,6 +27,10 @@
 #include "log.h"
 #include "current16.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT16
+    #define MIKROBUS_POSITION_CURRENT16 MIKROBUS_1
+#endif
+
 // Load current [A] used for the data resolution calibration process.
 #define CURRENT16_CALIBRATING_CURRENT   3.0f
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     current16_cfg_setup( &current16_cfg );
-    CURRENT16_MAP_MIKROBUS( current16_cfg, MIKROBUS_1 );
+    CURRENT16_MAP_MIKROBUS( current16_cfg, MIKROBUS_POSITION_CURRENT16 );
     if ( CURRENT16_OK != current16_init( &current16, &current16_cfg ) )
     {
         log_error( &logger, " Communication init." );

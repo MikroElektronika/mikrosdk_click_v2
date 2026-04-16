@@ -24,6 +24,10 @@
 #include "log.h"
 #include "irsense3.h"
 
+#ifndef MIKROBUS_POSITION_IRSENSE3
+    #define MIKROBUS_POSITION_IRSENSE3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static irsense3_t irsense3;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     irsense3_cfg_setup( &cfg );
-    IRSENSE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRSENSE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRSENSE3 );
     irsense3_init( &irsense3, &cfg );
 
     // Software reset

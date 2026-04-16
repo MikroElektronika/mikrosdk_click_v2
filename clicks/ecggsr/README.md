@@ -88,7 +88,7 @@ void application_init ( void )
     
     //  Click initialization.
     ecggsr_cfg_setup( &ecggsr_cfg );
-    ECGGSR_MAP_MIKROBUS( ecggsr_cfg, MIKROBUS_1 );
+    ECGGSR_MAP_MIKROBUS( ecggsr_cfg, MIKROBUS_POSITION_ECGGSR );
     ecggsr_init( &ecggsr, &ecggsr_cfg );
     Delay_1sec();
     ecggsr_default_cfg( &ecggsr, &ecggsr_cfg );

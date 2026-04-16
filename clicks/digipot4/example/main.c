@@ -22,6 +22,10 @@
 #include "log.h"
 #include "digipot4.h"
 
+#ifndef MIKROBUS_POSITION_DIGIPOT4
+    #define MIKROBUS_POSITION_DIGIPOT4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static digipot4_t digipot4;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     digipot4_cfg_setup( &cfg );
-    DIGIPOT4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIGIPOT4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIGIPOT4 );
     digipot4_init( &digipot4, &cfg );
 }
 

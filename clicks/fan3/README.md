@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     fan3_cfg_setup( &cfg );
-    FAN3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FAN3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FAN3 );
     fan3_init( &fan3, &cfg );
 
     log_printf( &logger, ">>> Initialized...\r\n" );

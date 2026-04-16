@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     boost8_cfg_setup( &boost8_cfg );
-    BOOST8_MAP_MIKROBUS( boost8_cfg, MIKROBUS_1 );
+    BOOST8_MAP_MIKROBUS( boost8_cfg, MIKROBUS_POSITION_BOOST8 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == boost8_init( &boost8, &boost8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

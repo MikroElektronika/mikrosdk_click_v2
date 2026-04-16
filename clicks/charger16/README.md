@@ -86,7 +86,7 @@ void application_init ( void )
     // Click initialization.
 
     charger16_cfg_setup( &charger16_cfg );
-    CHARGER16_MAP_MIKROBUS( charger16_cfg, MIKROBUS_1 );
+    CHARGER16_MAP_MIKROBUS( charger16_cfg, MIKROBUS_POSITION_CHARGER16 );
     if ( charger16_init( &charger16, &charger16_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

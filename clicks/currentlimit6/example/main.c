@@ -30,6 +30,10 @@
 #include "log.h"
 #include "currentlimit6.h"
 
+#ifndef MIKROBUS_POSITION_CURRENTLIMIT6
+    #define MIKROBUS_POSITION_CURRENTLIMIT6 MIKROBUS_1
+#endif
+
 static currentlimit6_t currentlimit6;
 static log_t logger;
 const float limit_value[ 9 ] = { 0.100, 0.200, 0.300, 0.400, 0.500, 0.600, 0.700, 0.800, 0.999 };
@@ -71,7 +75,7 @@ void application_init ( void )
 
     // Click initialization.
     currentlimit6_cfg_setup( &currentlimit6_cfg );
-    CURRENTLIMIT6_MAP_MIKROBUS( currentlimit6_cfg, MIKROBUS_1 );
+    CURRENTLIMIT6_MAP_MIKROBUS( currentlimit6_cfg, MIKROBUS_POSITION_CURRENTLIMIT6 );
     if ( SPI_MASTER_ERROR == currentlimit6_init( &currentlimit6, &currentlimit6_cfg ) )
     {
         log_error( &logger, " Communication init." );

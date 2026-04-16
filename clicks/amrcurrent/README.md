@@ -29,38 +29,38 @@ all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](ht
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.AMRCurent
+- Click.Amrcurrent
 
 ### Example Key Functions
 
-- `amrcurent_cfg_setup` Config Object Initialization function. 
+- `amrcurrent_cfg_setup` Config Object Initialization function. 
 ```c
-void amrcurent_cfg_setup ( amrcurent_cfg_t *cfg );
+void amrcurrent_cfg_setup ( amrcurrent_cfg_t *cfg );
 ``` 
  
-- `amrcurent_init` Initialization function. 
+- `amrcurrent_init` Initialization function. 
 ```c
-err_t amrcurent_init ( amrcurent_t *ctx, amrcurent_cfg_t *cfg );
+err_t amrcurrent_init ( amrcurrent_t *ctx, amrcurrent_cfg_t *cfg );
 ```
 
-- `amrcurent_default_cfg` Click Default Configuration function. 
+- `amrcurrent_default_cfg` Click Default Configuration function. 
 ```c
-void amrcurent_default_cfg ( amrcurent_t *ctx );
+void amrcurrent_default_cfg ( amrcurrent_t *ctx );
 ```
 
-- `amrcurent_generic_write` This function writes data to the desired register. 
+- `amrcurrent_generic_write` This function writes data to the desired register. 
 ```c
-void amrcurent_generic_write ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void amrcurrent_generic_write ( amrcurrent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 ```
  
-- `amrcurent_generic_read` This function reads data from the desired register. 
+- `amrcurrent_generic_read` This function reads data from the desired register. 
 ```c
-void amrcurent_generic_read ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void amrcurrent_generic_read ( amrcurrent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 ```
 
 - `amrcurrent_read_value` This function read value. 
 ```c
-uint16_t amrcurrent_read_value (  amrcurent_t *ctx );
+uint16_t amrcurrent_read_value (  amrcurrent_t *ctx );
 ```
 
 ### Application Init
@@ -71,7 +71,7 @@ uint16_t amrcurrent_read_value (  amrcurent_t *ctx );
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    amrcurent_cfg_t cfg;
+    amrcurrent_cfg_t cfg;
 
     /** 
      * Logger initialization.
@@ -88,9 +88,9 @@ void application_init ( void )
 
     //  Click initialization.
 
-    amrcurent_cfg_setup( &cfg );
-    AMRCURENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    amrcurent_init( &amrcurent, &cfg );
+    amrcurrent_cfg_setup( &cfg );
+    AMRCURRENT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMRCURRENT );
+    amrcurrent_init( &amrcurrent, &cfg );
 }
 
   
@@ -105,12 +105,12 @@ void application_task ( void )
 {
     //  Task implementation.
 
-    read_adc_val = amrcurrent_read_value ( &amrcurent );
+    read_adc_val = amrcurrent_read_value ( &amrcurrent );
     log_printf( &logger, " - ADC value: \r\n ", read_adc_val );
     
     Delay_ms ( 100 );
 
-    read_curr_val = amrcurrent_get_current (  &amrcurent );
+    read_curr_val = amrcurrent_get_current (  &amrcurrent );
     log_printf( &logger, " - Current value: \r\n ", read_curr_val );
     
     Delay_ms ( 1000 );

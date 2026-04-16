@@ -23,6 +23,10 @@
 #include "log.h"
 #include "mic33153.h"
 
+#ifndef MIKROBUS_POSITION_MIC33153
+    #define MIKROBUS_POSITION_MIC33153 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static mic33153_t mic33153;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     mic33153_cfg_setup( &cfg );
-    MIC33153_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC33153_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC33153 );
     mic33153_init( &mic33153, &cfg );
     Delay_ms ( 100 );
 }

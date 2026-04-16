@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pwm.h"
 
+#ifndef MIKROBUS_POSITION_PWM
+    #define MIKROBUS_POSITION_PWM MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pwm_t pwm;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     pwm_cfg_setup( &cfg );
-    PWM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PWM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PWM );
     pwm_init( &pwm, &cfg );
     Delay_ms ( 100 );
     

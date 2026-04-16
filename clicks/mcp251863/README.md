@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     mcp251863_cfg_setup( &mcp251863_cfg );
-    MCP251863_MAP_MIKROBUS( mcp251863_cfg, MIKROBUS_1 );
+    MCP251863_MAP_MIKROBUS( mcp251863_cfg, MIKROBUS_POSITION_MCP251863 );
     if ( SPI_MASTER_ERROR == mcp251863_init( &mcp251863, &mcp251863_cfg ) )
     {
         log_error( &logger, " Communication init." );

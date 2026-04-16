@@ -24,6 +24,10 @@
 #include "log.h"
 #include "accel32.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL32
+    #define MIKROBUS_POSITION_ACCEL32 MIKROBUS_1
+#endif
+
 static accel32_t accel32;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     accel32_cfg_setup( &accel32_cfg );
-    ACCEL32_MAP_MIKROBUS( accel32_cfg, MIKROBUS_1 );
+    ACCEL32_MAP_MIKROBUS( accel32_cfg, MIKROBUS_POSITION_ACCEL32 );
     if ( SPI_MASTER_ERROR == accel32_init( &accel32, &accel32_cfg ) )
     {
         log_error( &logger, " Communication init." );

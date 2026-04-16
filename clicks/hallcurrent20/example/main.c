@@ -27,6 +27,10 @@
 #include "log.h"
 #include "hallcurrent20.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT20
+    #define MIKROBUS_POSITION_HALLCURRENT20 MIKROBUS_1
+#endif
+
 // Load current [A] used for the data resolution calibration process.
 #define HALLCURRENT20_CALIBRATING_CURRENT   3.0f
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent20_cfg_setup( &hallcurrent20_cfg );
-    HALLCURRENT20_MAP_MIKROBUS( hallcurrent20_cfg, MIKROBUS_1 );
+    HALLCURRENT20_MAP_MIKROBUS( hallcurrent20_cfg, MIKROBUS_POSITION_HALLCURRENT20 );
     if ( HALLCURRENT20_OK != hallcurrent20_init( &hallcurrent20, &hallcurrent20_cfg ) )
     {
         log_error( &logger, " Communication init." );

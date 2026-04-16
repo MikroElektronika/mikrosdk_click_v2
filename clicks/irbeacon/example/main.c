@@ -25,6 +25,10 @@
 #include "log.h"
 #include "irbeacon.h"
 
+#ifndef MIKROBUS_POSITION_IRBEACON
+    #define MIKROBUS_POSITION_IRBEACON MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static irbeacon_t irbeacon;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     irbeacon_cfg_setup( &cfg );
-    IRBEACON_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRBEACON_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRBEACON );
     irbeacon_init( &irbeacon, &cfg );
     irbeacon_pwm_start( &irbeacon );
     

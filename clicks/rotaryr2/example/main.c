@@ -24,6 +24,10 @@
 #include "log.h"
 #include "rotaryr2.h"
 
+#ifndef MIKROBUS_POSITION_ROTARYR2
+    #define MIKROBUS_POSITION_ROTARYR2 MIKROBUS_1
+#endif
+
 #define ROTARYR2_ONE_LED          ROTARYR2_SET_LED_DATA_1
 #define ROTARYR2_TWO_LED          ROTARYR2_SET_LED_DATA_1  | ROTARYR2_SET_LED_DATA_9
 #define ROTARYR2_FOUR_LED         ROTARYR2_SET_LED_DATA_1  | ROTARYR2_SET_LED_DATA_5  | \
@@ -95,7 +99,7 @@ void application_init ( void )
 
     // Click initialization.
     rotaryr2_cfg_setup( &rotaryr2_cfg );
-    ROTARYR2_MAP_MIKROBUS( rotaryr2_cfg, MIKROBUS_1 );
+    ROTARYR2_MAP_MIKROBUS( rotaryr2_cfg, MIKROBUS_POSITION_ROTARYR2 );
     if ( SPI_MASTER_ERROR == rotaryr2_init( &rotaryr2, &rotaryr2_cfg ) )
     {
         log_error( &logger, " Communication init." );

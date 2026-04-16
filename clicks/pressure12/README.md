@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure12_cfg_setup( &cfg );
-    PRESSURE12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE12 );
     if ( pressure12_init( &pressure12, &cfg ) == ADC_ERROR )
     {
         log_info( &logger, "---- Application Init Error ----" );

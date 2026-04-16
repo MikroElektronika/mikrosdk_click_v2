@@ -33,6 +33,10 @@
 #include "log.h"
 #include "touchkey4.h"
 
+#ifndef MIKROBUS_POSITION_TOUCHKEY4
+    #define MIKROBUS_POSITION_TOUCHKEY4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static touchkey4_t touchkey4;
@@ -64,7 +68,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchkey4_cfg_setup( &cfg );
-    TOUCHKEY4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHKEY4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHKEY4 );
     touchkey4_init( &touchkey4, &cfg );
 
     Delay_ms ( 1000 );

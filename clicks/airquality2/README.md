@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     airquality2_cfg_setup( &cfg );
-    AIRQUALITY2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AIRQUALITY2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AIRQUALITY2 );
     airquality2_init( &airquality2, &cfg );
     
     // Click calibration 

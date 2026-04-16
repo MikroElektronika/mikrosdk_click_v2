@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ninab416_cfg_setup( &ninab416_cfg );
-    NINAB416_MAP_MIKROBUS( ninab416_cfg, MIKROBUS_1 );
+    NINAB416_MAP_MIKROBUS( ninab416_cfg, MIKROBUS_POSITION_NINAB416 );
     if ( NINAB416_OK != ninab416_init( &ninab416, &ninab416_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     hodcap_cfg_setup( &hodcap_cfg );
-    HODCAP_MAP_MIKROBUS( hodcap_cfg, MIKROBUS_1 );
+    HODCAP_MAP_MIKROBUS( hodcap_cfg, MIKROBUS_POSITION_HODCAP );
     if ( SPI_MASTER_ERROR == hodcap_init( &hodcap, &hodcap_cfg ) )
     {
         log_error( &logger, " Communication init." );

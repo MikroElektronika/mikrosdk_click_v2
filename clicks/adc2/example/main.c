@@ -23,6 +23,10 @@
 #include "log.h"
 #include "adc2.h"
 
+#ifndef MIKROBUS_POSITION_ADC2
+    #define MIKROBUS_POSITION_ADC2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static adc2_t adc2;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     adc2_cfg_setup( &cfg );
-    ADC2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC2 );
     adc2_init( &adc2, &cfg );
 
     Delay_ms ( 100 );

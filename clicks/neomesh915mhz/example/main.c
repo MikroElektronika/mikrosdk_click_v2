@@ -27,6 +27,10 @@
 #include "log.h"
 #include "neomesh915mhz.h"
 
+#ifndef MIKROBUS_POSITION_NEOMESH915MHZ
+    #define MIKROBUS_POSITION_NEOMESH915MHZ MIKROBUS_1
+#endif
+
 // Comment out the line below to add the APP_RECEIVER_2 to the APP_ORIGINATOR example.
 #define SINGLE_RECEIVER_MODE
 
@@ -92,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     neomesh915mhz_cfg_setup( &neomesh915mhz_cfg );
-    NEOMESH915MHZ_MAP_MIKROBUS( neomesh915mhz_cfg, MIKROBUS_1 );
+    NEOMESH915MHZ_MAP_MIKROBUS( neomesh915mhz_cfg, MIKROBUS_POSITION_NEOMESH915MHZ );
     if ( UART_ERROR == neomesh915mhz_init( &neomesh915mhz, &neomesh915mhz_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

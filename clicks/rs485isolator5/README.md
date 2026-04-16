@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     rs485isolator5_cfg_setup( &rs485isolator5_cfg );
-    RS485ISOLATOR5_MAP_MIKROBUS( rs485isolator5_cfg, MIKROBUS_1 );
+    RS485ISOLATOR5_MAP_MIKROBUS( rs485isolator5_cfg, MIKROBUS_POSITION_RS485ISOLATOR5 );
     if ( UART_ERROR == rs485isolator5_init( &rs485isolator5, &rs485isolator5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

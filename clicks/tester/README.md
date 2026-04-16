@@ -85,7 +85,7 @@ void application_init ( )
     //  Click initialization.
 
     tester_cfg_setup( &cfg );
-    TESTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TESTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TESTER );
     tester_init( &tester, &cfg );
 }
 ```

@@ -34,6 +34,10 @@
 #include "rtkrover.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RTKROVER
+    #define MIKROBUS_POSITION_RTKROVER MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static rtkrover_t rtkrover;
@@ -94,7 +98,7 @@ void application_init ( void )
 
     // Click initialization.
     rtkrover_cfg_setup( &rtkrover_cfg );
-    RTKROVER_MAP_MIKROBUS( rtkrover_cfg, MIKROBUS_1 );
+    RTKROVER_MAP_MIKROBUS( rtkrover_cfg, MIKROBUS_POSITION_RTKROVER );
     if ( UART_ERROR == rtkrover_init( &rtkrover, &rtkrover_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

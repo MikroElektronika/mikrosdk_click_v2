@@ -26,6 +26,10 @@
 #include "log.h"
 #include "turbidity.h"
 
+#ifndef MIKROBUS_POSITION_TURBIDITY
+    #define MIKROBUS_POSITION_TURBIDITY MIKROBUS_1
+#endif
+
 static turbidity_t turbidity;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     turbidity_cfg_setup( &turbidity_cfg );
-    TURBIDITY_MAP_MIKROBUS( turbidity_cfg, MIKROBUS_1 );
+    TURBIDITY_MAP_MIKROBUS( turbidity_cfg, MIKROBUS_POSITION_TURBIDITY );
     if ( I2C_MASTER_ERROR == turbidity_init( &turbidity, &turbidity_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

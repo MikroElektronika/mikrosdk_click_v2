@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient12_cfg_setup( &ambient12_cfg );
-    AMBIENT12_MAP_MIKROBUS( ambient12_cfg, MIKROBUS_1 );
+    AMBIENT12_MAP_MIKROBUS( ambient12_cfg, MIKROBUS_POSITION_AMBIENT12 );
     if ( ADC_ERROR == ambient12_init( &ambient12, &ambient12_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

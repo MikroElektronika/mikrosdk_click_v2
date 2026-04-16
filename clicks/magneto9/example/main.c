@@ -23,6 +23,10 @@
 #include "log.h"
 #include "magneto9.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO9
+    #define MIKROBUS_POSITION_MAGNETO9 MIKROBUS_1
+#endif
+
 static magneto9_t magneto9;   /**< Magneto 9 Click driver object. */
 static log_t logger;          /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     magneto9_cfg_setup( &magneto9_cfg );
-    MAGNETO9_MAP_MIKROBUS( magneto9_cfg, MIKROBUS_1 );
+    MAGNETO9_MAP_MIKROBUS( magneto9_cfg, MIKROBUS_POSITION_MAGNETO9 );
     if ( ADC_ERROR == magneto9_init( &magneto9, &magneto9_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

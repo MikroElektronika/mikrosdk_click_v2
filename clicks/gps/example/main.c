@@ -27,6 +27,10 @@
 #include "gps.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_GPS
+    #define MIKROBUS_POSITION_GPS MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 15
 #define PROCESS_RX_BUFFER_SIZE 600
 #define PROCESS_PARSER_BUFFER_SIZE 600
@@ -130,7 +134,7 @@ void application_init ( void )
     //  Click initialization.
 
     gps_cfg_setup( &cfg );
-    GPS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GPS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GPS );
     gps_init( &gps, &cfg );
 
     gps_module_wakeup( &gps );

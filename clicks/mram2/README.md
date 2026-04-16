@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     mram2_cfg_setup( &cfg );
-    MRAM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MRAM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MRAM2 );
     mram2_init( &mram2, &cfg );
 
     log_printf( &logger, "------------------- \r\n" );

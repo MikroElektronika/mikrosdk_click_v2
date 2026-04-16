@@ -29,6 +29,10 @@
 #include "log.h"
 #include "color13.h"
 
+#ifndef MIKROBUS_POSITION_COLOR13
+    #define MIKROBUS_POSITION_COLOR13 MIKROBUS_1
+#endif
+
 #define COLOR13_EXAMPLE_PS_LS   3
 #define COLOR13_EXAMPLE_RGB     6
 
@@ -71,7 +75,7 @@ void application_init ( void )
 
     // Click initialization.
     color13_cfg_setup( &color13_cfg );
-    COLOR13_MAP_MIKROBUS( color13_cfg, MIKROBUS_1 );
+    COLOR13_MAP_MIKROBUS( color13_cfg, MIKROBUS_POSITION_COLOR13 );
     err_t init_flag = color13_init( &color13, &color13_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

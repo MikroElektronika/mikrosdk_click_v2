@@ -24,6 +24,10 @@
 #include "log.h"
 #include "silentstep4.h"
 
+#ifndef MIKROBUS_POSITION_SILENTSTEP4
+    #define MIKROBUS_POSITION_SILENTSTEP4 MIKROBUS_1
+#endif
+
 static silentstep4_t silentstep4;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     silentstep4_cfg_setup( &silentstep4_cfg );
-    SILENTSTEP4_MAP_MIKROBUS( silentstep4_cfg, MIKROBUS_1 );
+    SILENTSTEP4_MAP_MIKROBUS( silentstep4_cfg, MIKROBUS_POSITION_SILENTSTEP4 );
     err_t init_flag = silentstep4_init( &silentstep4, &silentstep4_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -79,7 +79,7 @@ void application_init ( void )
     // Click initialization.
 
     digipot2_cfg_setup( &digipot2_cfg );
-    DIGIPOT2_MAP_MIKROBUS( digipot2_cfg, MIKROBUS_1 );
+    DIGIPOT2_MAP_MIKROBUS( digipot2_cfg, MIKROBUS_POSITION_DIGIPOT2 );
     err_t init_flag  = digipot2_init( &digipot2, &digipot2_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

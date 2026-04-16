@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridge10_cfg_setup( &hbridge10_cfg );
-    HBRIDGE10_MAP_MIKROBUS( hbridge10_cfg, MIKROBUS_1 );
+    HBRIDGE10_MAP_MIKROBUS( hbridge10_cfg, MIKROBUS_POSITION_HBRIDGE10 );
     if ( SPI_MASTER_ERROR == hbridge10_init( &hbridge10, &hbridge10_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     buzz3_cfg_setup( &buzz3_cfg );
-    BUZZ3_MAP_MIKROBUS( buzz3_cfg, MIKROBUS_1 );
+    BUZZ3_MAP_MIKROBUS( buzz3_cfg, MIKROBUS_POSITION_BUZZ3 );
     err_t init_flag  = buzz3_init( &buzz3, &buzz3_cfg );
     if ( PWM_ERROR == init_flag ) 
     {

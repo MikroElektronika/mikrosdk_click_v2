@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     zerocross_cfg_setup( &zerocross_cfg );
-    ZEROCROSS_MAP_MIKROBUS( zerocross_cfg, MIKROBUS_1 );
+    ZEROCROSS_MAP_MIKROBUS( zerocross_cfg, MIKROBUS_POSITION_ZEROCROSS );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == zerocross_init( &zerocross, &zerocross_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

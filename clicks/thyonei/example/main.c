@@ -26,6 +26,10 @@
 #include "log.h"
 #include "thyonei.h"
 
+#ifndef MIKROBUS_POSITION_THYONEI
+    #define MIKROBUS_POSITION_THYONEI MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -91,7 +95,7 @@ void application_init ( void )
 
     // Click initialization.
     thyonei_cfg_setup( &thyonei_cfg );
-    THYONEI_MAP_MIKROBUS( thyonei_cfg, MIKROBUS_1 );
+    THYONEI_MAP_MIKROBUS( thyonei_cfg, MIKROBUS_POSITION_THYONEI );
     if ( UART_ERROR == thyonei_init( &thyonei, &thyonei_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

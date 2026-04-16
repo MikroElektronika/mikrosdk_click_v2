@@ -28,6 +28,10 @@
 #include "log.h"
 #include "altitude6.h"
 
+#ifndef MIKROBUS_POSITION_ALTITUDE6
+    #define MIKROBUS_POSITION_ALTITUDE6 MIKROBUS_1
+#endif
+
 static altitude6_t altitude6;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
     // Click initialization.
     altitude6_cfg_setup( &altitude6_cfg );
     altitude6_drv_interface_selection( &altitude6_cfg, ALTITUDE6_DRV_SEL_I2C );
-    ALTITUDE6_MAP_MIKROBUS( altitude6_cfg, MIKROBUS_1 );
+    ALTITUDE6_MAP_MIKROBUS( altitude6_cfg, MIKROBUS_POSITION_ALTITUDE6 );
     err_t init_flag  = altitude6_init( &altitude6, &altitude6_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

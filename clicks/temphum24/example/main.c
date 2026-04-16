@@ -26,6 +26,10 @@
 #include "log.h"
 #include "temphum24.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM24
+    #define MIKROBUS_POSITION_TEMPHUM24 MIKROBUS_1
+#endif
+
 static temphum24_t temphum24;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     temphum24_cfg_setup( &temphum24_cfg );
-    TEMPHUM24_MAP_MIKROBUS( temphum24_cfg, MIKROBUS_1 );
+    TEMPHUM24_MAP_MIKROBUS( temphum24_cfg, MIKROBUS_POSITION_TEMPHUM24 );
     if ( I2C_MASTER_ERROR == temphum24_init( &temphum24, &temphum24_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

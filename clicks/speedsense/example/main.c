@@ -25,6 +25,10 @@
 #include "log.h"
 #include "speedsense.h"
 
+#ifndef MIKROBUS_POSITION_SPEEDSENSE
+    #define MIKROBUS_POSITION_SPEEDSENSE MIKROBUS_1
+#endif
+
 #define SPEEDSENSE_MAG_POLE_PAIRS    3
 #define SPEEDSENSE_CALC_RMP          SPEEDSENSE_CNV_MIN_TO_MS / SPEEDSENSE_MAG_POLE_PAIRS
 
@@ -56,7 +60,7 @@ void application_init ( void )
 
     // Click initialization.
     speedsense_cfg_setup( &speedsense_cfg );
-    SPEEDSENSE_MAP_MIKROBUS( speedsense_cfg, MIKROBUS_1 );
+    SPEEDSENSE_MAP_MIKROBUS( speedsense_cfg, MIKROBUS_POSITION_SPEEDSENSE );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == speedsense_init( &speedsense, &speedsense_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

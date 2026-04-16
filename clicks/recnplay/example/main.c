@@ -29,6 +29,10 @@
 #include "log.h"
 #include "recnplay.h"
 
+#ifndef MIKROBUS_POSITION_RECNPLAY
+    #define MIKROBUS_POSITION_RECNPLAY MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static recnplay_t recnplay;
@@ -129,7 +133,7 @@ void application_init ( void )
     //  Click initialization.
 
     recnplay_cfg_setup( &cfg );
-    RECNPLAY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RECNPLAY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RECNPLAY );
     recnplay_init( &recnplay, &cfg );
 
     log_printf( &logger, "Chip reset...\r\n" );

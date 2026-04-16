@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pac1934.h"
 
+#ifndef MIKROBUS_POSITION_PAC1934
+    #define MIKROBUS_POSITION_PAC1934 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pac1934_t pac1934;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     pac1934_cfg_setup( &cfg );
-    PAC1934_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PAC1934_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PAC1934 );
     pac1934_init( &pac1934, &cfg );
 }
 

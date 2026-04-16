@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     currentsens_cfg_setup( &currentsens_cfg );
-    CURRENTSENS_MAP_MIKROBUS( currentsens_cfg, MIKROBUS_1 );
+    CURRENTSENS_MAP_MIKROBUS( currentsens_cfg, MIKROBUS_POSITION_CURRENTSENS );
     if ( SPI_MASTER_ERROR == currentsens_init( &currentsens, &currentsens_cfg ) )
     {
         log_error( &logger, " Communication init." );

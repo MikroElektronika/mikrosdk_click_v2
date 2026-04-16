@@ -30,6 +30,10 @@
 #include "log.h"
 #include "irreflect.h"
 
+#ifndef MIKROBUS_POSITION_IRREFLECT
+    #define MIKROBUS_POSITION_IRREFLECT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static irreflect_t irreflect;
@@ -61,7 +65,7 @@ void application_init ( void )
 
     //  Click initialization.
     irreflect_cfg_setup( &cfg );
-    IRREFLECT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRREFLECT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRREFLECT );
     irreflect_init( &irreflect, &cfg );
     
     ir_state = 0;

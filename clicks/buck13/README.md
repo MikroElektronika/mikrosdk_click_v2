@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck13_cfg_setup( &cfg );
-    BUCK13_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK13_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK13 );
     buck13_default_cfg ( &buck13 );
     buck13_init( &buck13, &cfg );
     log_info( &logger, "Buck 13 is enabled now" );

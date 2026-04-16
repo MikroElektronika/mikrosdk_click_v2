@@ -75,7 +75,7 @@ void application_init ( void )
 
     // Click initialization.
     tilt5_cfg_setup( &tilt5_cfg );
-    TILT5_MAP_MIKROBUS( tilt5_cfg, MIKROBUS_1 );
+    TILT5_MAP_MIKROBUS( tilt5_cfg, MIKROBUS_POSITION_TILT5 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == tilt5_init( &tilt5, &tilt5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

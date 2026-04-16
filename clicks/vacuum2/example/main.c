@@ -27,6 +27,10 @@
 #include "log.h"
 #include "vacuum2.h"
 
+#ifndef MIKROBUS_POSITION_VACUUM2
+    #define MIKROBUS_POSITION_VACUUM2 MIKROBUS_1
+#endif
+
 static vacuum2_t vacuum2;   /**< Vacuum 2 Click driver object. */
 static log_t logger;        /**< Logger object. */
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     vacuum2_cfg_setup( &vacuum2_cfg );
-    VACUUM2_MAP_MIKROBUS( vacuum2_cfg, MIKROBUS_1 );
+    VACUUM2_MAP_MIKROBUS( vacuum2_cfg, MIKROBUS_POSITION_VACUUM2 );
     err_t init_flag = vacuum2_init( &vacuum2, &vacuum2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

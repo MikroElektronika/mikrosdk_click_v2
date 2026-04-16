@@ -27,6 +27,10 @@
 #include "log.h"
 #include "proximity15.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY15
+    #define MIKROBUS_POSITION_PROXIMITY15 MIKROBUS_1
+#endif
+
 static proximity15_t proximity15;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     proximity15_cfg_setup( &proximity15_cfg );
-    PROXIMITY15_MAP_MIKROBUS( proximity15_cfg, MIKROBUS_1 );
+    PROXIMITY15_MAP_MIKROBUS( proximity15_cfg, MIKROBUS_POSITION_PROXIMITY15 );
     err_t init_flag = proximity15_init( &proximity15, &proximity15_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

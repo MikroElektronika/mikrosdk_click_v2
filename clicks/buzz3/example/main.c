@@ -33,6 +33,10 @@
 #include "log.h"
 #include "buzz3.h"
 
+#ifndef MIKROBUS_POSITION_BUZZ3
+    #define MIKROBUS_POSITION_BUZZ3 MIKROBUS_1
+#endif
+
 #define W 4*Q         // Whole 4/4 - 4 Beats
 #define H 2*Q         // Half 2/4 - 2 Beats 
 #define Q 250         // Quarter 1/4 - 1 Beat
@@ -214,7 +218,7 @@ void application_init ( void )
     // Click initialization.
 
     buzz3_cfg_setup( &buzz3_cfg );
-    BUZZ3_MAP_MIKROBUS( buzz3_cfg, MIKROBUS_1 );
+    BUZZ3_MAP_MIKROBUS( buzz3_cfg, MIKROBUS_POSITION_BUZZ3 );
     err_t init_flag  = buzz3_init( &buzz3, &buzz3_cfg );
     if ( PWM_ERROR == init_flag ) 
     {

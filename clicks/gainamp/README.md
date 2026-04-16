@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     gainamp_cfg_setup( &gainamp_cfg );
-    GAINAMP_MAP_MIKROBUS( gainamp_cfg, MIKROBUS_1 );
+    GAINAMP_MAP_MIKROBUS( gainamp_cfg, MIKROBUS_POSITION_GAINAMP );
     err_t init_flag  = gainamp_init( &gainamp, &gainamp_cfg );
     if ( ( SPI_MASTER_ERROR == init_flag ) || ( ADC_ERROR == init_flag ) ) {
         log_error( &logger, " Application Init Error. " );

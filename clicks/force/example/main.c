@@ -23,6 +23,10 @@
 #include "log.h"
 #include "force.h"
 
+#ifndef MIKROBUS_POSITION_FORCE
+    #define MIKROBUS_POSITION_FORCE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static force_t force;
@@ -55,7 +59,7 @@ void application_init ( )
     //  Click initialization.
 
     force_cfg_setup( &cfg );
-    FORCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FORCE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FORCE );
     force_init( &force, &cfg );
 }
 

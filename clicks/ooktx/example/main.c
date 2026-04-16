@@ -31,6 +31,10 @@
 #include "log.h"
 #include "ooktx.h"
 
+#ifndef MIKROBUS_POSITION_OOKTX
+    #define MIKROBUS_POSITION_OOKTX MIKROBUS_1
+#endif
+
 #define OOKTX_PREAMBLE          0x5AA5      /**< Packet preamble word. */
 #define OOKTX_MESSAGE           "MIKROE"    /**< Text message to send. */
 
@@ -105,7 +109,7 @@ void application_init ( void )
 
     // Click initialization.
     ooktx_cfg_setup( &ooktx_cfg );
-    OOKTX_MAP_MIKROBUS( ooktx_cfg, MIKROBUS_1 );
+    OOKTX_MAP_MIKROBUS( ooktx_cfg, MIKROBUS_POSITION_OOKTX );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ooktx_init( &ooktx, &ooktx_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

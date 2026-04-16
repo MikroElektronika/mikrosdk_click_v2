@@ -26,6 +26,10 @@
 #include "rs4855v.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS4855V
+    #define MIKROBUS_POSITION_RS4855V MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 100
 #define PROCESS_PARSER_BUFFER_SIZE 100
@@ -108,7 +112,7 @@ void application_init ( void ) {
     //  Click initialization.
 
     rs4855v_cfg_setup( &cfg );
-    RS4855V_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4855V_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4855V );
     rs4855v_init( &rs4855v, &cfg );
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );

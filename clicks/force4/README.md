@@ -78,7 +78,7 @@ void application_init ( void )
     //  Click initialization.
 
     force4_cfg_setup( &cfg );
-    FORCE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FORCE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FORCE4 );
     force4_init( &force4, &cfg );
     Delay_ms ( 100 );
 }

@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     brushless5_cfg_setup( &cfg );
-    BRUSHLESS5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS5 );
     brushless5_init( &brushless5, &cfg );
     Delay_ms ( 100 );
     

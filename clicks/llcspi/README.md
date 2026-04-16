@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     llcspi_cfg_setup( &cfg );
-    LLCSPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LLCSPI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LLCSPI );
     llcspi_init( &llcspi, &cfg );
 }
 ```

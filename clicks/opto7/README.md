@@ -84,7 +84,7 @@ void application_init ( void )
     
     // Click initialization.
     opto7_cfg_setup( &opto7_cfg );
-    OPTO7_MAP_MIKROBUS( opto7_cfg, MIKROBUS_1 );
+    OPTO7_MAP_MIKROBUS( opto7_cfg, MIKROBUS_POSITION_OPTO7 );
     
 #if ( DEMO_EXAMPLE == EXAMPLE_GPIO )
     opto7_drv_interface_selection( &opto7_cfg, OPTO7_DRV_SEL_GPIO );

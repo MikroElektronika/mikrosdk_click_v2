@@ -26,6 +26,10 @@
 #include "log.h"
 #include "hallcurrent825a.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT825A
+    #define MIKROBUS_POSITION_HALLCURRENT825A MIKROBUS_1
+#endif
+
 static hallcurrent825a_t hallcurrent825a;   /**< Hall Current 8 25A Click driver object. */
 static log_t logger;                        /**< Logger object. */
 
@@ -50,7 +54,7 @@ void application_init ( void )
     // Click initialization.
 
     hallcurrent825a_cfg_setup( &hallcurrent825a_cfg );
-    HALLCURRENT825A_MAP_MIKROBUS( hallcurrent825a_cfg, MIKROBUS_1 );
+    HALLCURRENT825A_MAP_MIKROBUS( hallcurrent825a_cfg, MIKROBUS_POSITION_HALLCURRENT825A );
     if ( ADC_ERROR == hallcurrent825a_init( &hallcurrent825a, &hallcurrent825a_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

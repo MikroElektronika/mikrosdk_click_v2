@@ -22,6 +22,10 @@
 #include "log.h"
 #include "barometer2.h"
 
+#ifndef MIKROBUS_POSITION_BAROMETER2
+    #define MIKROBUS_POSITION_BAROMETER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static barometer2_t barometer2;
@@ -52,7 +56,7 @@ void application_init ( )
     //  Click initialization.
 
     barometer2_cfg_setup( &cfg );
-    BAROMETER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BAROMETER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BAROMETER2 );
     barometer2_init( &barometer2, &cfg );
 
     // Test communication

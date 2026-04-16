@@ -22,6 +22,10 @@
 #include "log.h"
 #include "vacuum.h"
 
+#ifndef MIKROBUS_POSITION_VACUUM
+    #define MIKROBUS_POSITION_VACUUM MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static vacuum_t vacuum;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     vacuum_cfg_setup( &cfg );
-    VACCUM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VACUUM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VACUUM );
     vacuum_init( &vacuum, &cfg );
 
     vacuum_calibration( &vacuum );

@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     accel28_cfg_setup( &accel28_cfg );
-    ACCEL28_MAP_MIKROBUS( accel28_cfg, MIKROBUS_1 );
+    ACCEL28_MAP_MIKROBUS( accel28_cfg, MIKROBUS_POSITION_ACCEL28 );
     err_t init_flag = accel28_init( &accel28, &accel28_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

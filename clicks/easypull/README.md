@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     easypull_cfg_setup( &easypull_cfg );
-    EASYPULL_MAP_MIKROBUS( easypull_cfg, MIKROBUS_1 );
+    EASYPULL_MAP_MIKROBUS( easypull_cfg, MIKROBUS_POSITION_EASYPULL );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == easypull_init( &easypull, &easypull_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

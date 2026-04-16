@@ -24,6 +24,10 @@
 #include "log.h"
 #include "gmrangle.h"
 
+#ifndef MIKROBUS_POSITION_GMRANGLE
+    #define MIKROBUS_POSITION_GMRANGLE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static gmrangle_t gmrangle;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     //  Click initialization.
     gmrangle_cfg_setup( &cfg );
-    GMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GMRANGLE );
     gmrangle_init( &gmrangle, &cfg );
     
     GMRANGLE_SET_DATA_SAMPLE_EDGE; 

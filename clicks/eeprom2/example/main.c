@@ -23,6 +23,10 @@
 #include "log.h"
 #include "eeprom2.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM2
+    #define MIKROBUS_POSITION_EEPROM2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static eeprom2_t eeprom2;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     //  Click initialization.
     eeprom2_cfg_setup( &cfg );
-    EEPROM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EEPROM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EEPROM2 );
     eeprom2_init( &eeprom2, &cfg );
 }
 

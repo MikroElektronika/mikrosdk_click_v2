@@ -26,6 +26,10 @@
 #include "log.h"
 #include "uniqueid.h"
 
+#ifndef MIKROBUS_POSITION_UNIQUEID
+    #define MIKROBUS_POSITION_UNIQUEID MIKROBUS_1
+#endif
+
 static uniqueid_t uniqueid;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization
     uniqueid_cfg_setup( &uniqueid_cfg );
-    UNIQUEID_MAP_MIKROBUS( uniqueid_cfg, MIKROBUS_1 );
+    UNIQUEID_MAP_MIKROBUS( uniqueid_cfg, MIKROBUS_POSITION_UNIQUEID );
     if ( ONE_WIRE_ERROR == uniqueid_init( &uniqueid, &uniqueid_cfg ) ) 
     {
         log_error( &logger, " Initialization error." );

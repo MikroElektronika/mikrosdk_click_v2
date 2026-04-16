@@ -78,7 +78,7 @@ void application_init ( void )
 
     //  Click initialization.
     ata663211_cfg_setup( &cfg );
-    ATA663211_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ATA663211_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ATA663211 );
     ata663211_init( &ata663211, &cfg );
 #ifdef DEMO_APP_TRANSMITTER
     log_printf( &logger, " Application Mode: Transmitter\r\n" );

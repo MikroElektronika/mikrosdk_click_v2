@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     llci2c_cfg_setup( &cfg );
-    LLCI2C_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LLCI2C_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LLCI2C );
     llci2c_init( &llci2c, &cfg );
 }
 ```

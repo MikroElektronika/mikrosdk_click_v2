@@ -23,6 +23,10 @@
 #include "log.h"
 #include "proxfusion.h"
 
+#ifndef MIKROBUS_POSITION_PROXFUSION
+    #define MIKROBUS_POSITION_PROXFUSION MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static proxfusion_t proxfusion;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     proxfusion_cfg_setup( &proxfusion_cfg );
-    PROXFUSION_MAP_MIKROBUS( proxfusion_cfg, MIKROBUS_1 );
+    PROXFUSION_MAP_MIKROBUS( proxfusion_cfg, MIKROBUS_POSITION_PROXFUSION );
     if ( I2C_MASTER_ERROR == proxfusion_init( &proxfusion, &proxfusion_cfg ) )
     {
         log_error( &logger, " Communication init." );

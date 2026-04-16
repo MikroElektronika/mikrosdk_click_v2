@@ -87,7 +87,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient3_cfg_setup( &cfg );
-    AMBIENT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT3 );
     ambient3_init( &ambient3, &cfg );
     ambient3_default_cfg( &ambient3 );
     Delay_ms ( 100 );

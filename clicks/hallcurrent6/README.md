@@ -88,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     hallcurrent6_cfg_setup( &cfg );
-    HALLCURRENT6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HALLCURRENT6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HALLCURRENT6 );
     hallcurrent6_init( &hallcurrent6, &cfg );
 
     log_info( &logger, "---- App Init Done ----" );

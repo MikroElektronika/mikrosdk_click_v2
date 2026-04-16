@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     nanogps_cfg_setup( &cfg );
-    NANOGPS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NANOGPS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NANOGPS );
     nanogps_init( &nanogps, &cfg );
 
     nanogps_module_wakeup( &nanogps );

@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     ldc1101_cfg_setup( &cfg );
-    LDC1101_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LDC1101_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LDC1101 );
     ldc1101_init( &ldc1101, &cfg );
 
     log_printf( &logger, "     LDC1101 Click\r\n" );

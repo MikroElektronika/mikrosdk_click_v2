@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     comparator_cfg_setup( &cfg );
-    COMPARATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COMPARATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COMPARATOR );
     comparator_init( &comparator, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

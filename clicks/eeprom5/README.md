@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom5_cfg_setup( &eeprom5_cfg );
-    EEPROM5_MAP_MIKROBUS( eeprom5_cfg, MIKROBUS_1 );
+    EEPROM5_MAP_MIKROBUS( eeprom5_cfg, MIKROBUS_POSITION_EEPROM5 );
     err_t init_flag  = eeprom5_init( &eeprom5, &eeprom5_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) 
     {

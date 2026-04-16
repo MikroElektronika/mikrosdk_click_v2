@@ -92,7 +92,7 @@ void application_init ( )
     //  Click initialization.
 
     multimeter_cfg_setup( &cfg );
-    MULTIMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MULTIMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MULTIMETER );
     multimeter_init( &multimeter, &cfg );
     multimeter_default_cfg( &multimeter );
 }

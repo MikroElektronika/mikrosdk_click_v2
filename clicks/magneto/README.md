@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto_cfg_setup( &cfg );
-    MAGNETO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO );
     magneto_init( &magneto, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

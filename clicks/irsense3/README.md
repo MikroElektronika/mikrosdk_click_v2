@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     irsense3_cfg_setup( &cfg );
-    IRSENSE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRSENSE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRSENSE3 );
     irsense3_init( &irsense3, &cfg );
 
     // Software reset

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "temphum12.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM12
+    #define MIKROBUS_POSITION_TEMPHUM12 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static temphum12_t temphum12;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum12_cfg_setup( &cfg );
-    TEMPHUM12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM12 );
     temphum12_init( &temphum12, &cfg );
 
     temphum12_default_cfg( &temphum12 );

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "stereoamp.h"
 
+#ifndef MIKROBUS_POSITION_STEREOAMP
+    #define MIKROBUS_POSITION_STEREOAMP MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static stereoamp_t stereoamp;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     stereoamp_cfg_setup( &cfg );
-    STEREOAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STEREOAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STEREOAMP );
     stereoamp_init( &stereoamp, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

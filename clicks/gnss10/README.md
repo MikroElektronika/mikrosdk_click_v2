@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss10_cfg_setup( &gnss10_cfg );
-    GNSS10_MAP_MIKROBUS( gnss10_cfg, MIKROBUS_1 );
+    GNSS10_MAP_MIKROBUS( gnss10_cfg, MIKROBUS_POSITION_GNSS10 );
     err_t init_flag = gnss10_init( &gnss10, &gnss10_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

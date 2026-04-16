@@ -25,6 +25,10 @@
 #include "log.h"
 #include "color.h"
 
+#ifndef MIKROBUS_POSITION_COLOR
+    #define MIKROBUS_POSITION_COLOR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static color_t color;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     color_cfg_setup( &cfg );
-    COLOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR );
     color_init( &color, &cfg );
     color_default_cfg( &color );
     is_color = 0;

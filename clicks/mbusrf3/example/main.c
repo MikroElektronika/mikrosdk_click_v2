@@ -33,6 +33,10 @@
 #include "log.h"
 #include "mbusrf3.h"
 
+#ifndef MIKROBUS_POSITION_MBUSRF3
+    #define MIKROBUS_POSITION_MBUSRF3 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TRANSMIT                    0                // Transmit example
 #define EXAMPLE_RECEIVER                    1                // Reciver example
@@ -135,7 +139,7 @@ void application_init ( void )
 
     // Click initialization.
     mbusrf3_cfg_setup( &mbusrf3_cfg );
-    MBUSRF3_MAP_MIKROBUS( mbusrf3_cfg, MIKROBUS_1 );
+    MBUSRF3_MAP_MIKROBUS( mbusrf3_cfg, MIKROBUS_POSITION_MBUSRF3 );
     if ( UART_ERROR == mbusrf3_init( &mbusrf3, &mbusrf3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

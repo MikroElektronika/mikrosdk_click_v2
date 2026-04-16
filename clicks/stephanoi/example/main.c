@@ -47,6 +47,10 @@
 #include "conversions.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_STEPHANOI
+    #define MIKROBUS_POSITION_STEPHANOI MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_WIFI            0               // Example of sending messages to a TCP/UDP echo server over WiFi
 #define EXAMPLE_BLE             1               // Example of processing data from BLE connected device
@@ -185,7 +189,7 @@ void application_init ( void )
 
     // Click initialization.
     stephanoi_cfg_setup( &stephanoi_cfg );
-    STEPHANOI_MAP_MIKROBUS( stephanoi_cfg, MIKROBUS_1 );
+    STEPHANOI_MAP_MIKROBUS( stephanoi_cfg, MIKROBUS_POSITION_STEPHANOI );
     if ( UART_ERROR == stephanoi_init( &stephanoi, &stephanoi_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

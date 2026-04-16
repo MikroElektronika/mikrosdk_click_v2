@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Board initialization.
     gnssantenna_cfg_setup( &gnssantenna_cfg );
-    GNSSANTENNA_MAP_MIKROBUS( gnssantenna_cfg, MIKROBUS_1 );
+    GNSSANTENNA_MAP_MIKROBUS( gnssantenna_cfg, MIKROBUS_POSITION_GNSSANTENNA );
     if ( UART_ERROR == gnssantenna_init( &gnssantenna, &gnssantenna_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

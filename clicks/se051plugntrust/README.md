@@ -98,7 +98,7 @@ void application_init ( void )
 
     // Click initialization.
     se051plugntrust_cfg_setup( &se051plugntrust_cfg );
-    SE051PLUGNTRUST_MAP_MIKROBUS( se051plugntrust_cfg, MIKROBUS_1 );
+    SE051PLUGNTRUST_MAP_MIKROBUS( se051plugntrust_cfg, MIKROBUS_POSITION_SE051PLUGNTRUST );
     if ( I2C_MASTER_ERROR == se051plugntrust_init( &se051plugntrust, &se051plugntrust_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

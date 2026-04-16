@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     uv_cfg_setup( &cfg );
-    UV_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UV_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UV );
     if ( SPI_MASTER_ERROR == uv_init( &uv, &cfg ) )
     {
         log_info( &logger, "---- Application Init Error ----" );

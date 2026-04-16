@@ -23,6 +23,10 @@
 #include "log.h"
 #include "sqiflash.h"
 
+#ifndef MIKROBUS_POSITION_SQIFLASH
+    #define MIKROBUS_POSITION_SQIFLASH MIKROBUS_1
+#endif
+
 static sqiflash_t sqiflash;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     sqiflash_cfg_setup( &sqiflash_cfg );
-    SQIFLASH_MAP_MIKROBUS( sqiflash_cfg, MIKROBUS_1 );
+    SQIFLASH_MAP_MIKROBUS( sqiflash_cfg, MIKROBUS_POSITION_SQIFLASH );
     if ( SPI_MASTER_ERROR == sqiflash_init( &sqiflash, &sqiflash_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

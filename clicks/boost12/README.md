@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     boost12_cfg_setup( &boost12_cfg );
-    BOOST12_MAP_MIKROBUS( boost12_cfg, MIKROBUS_1 );
+    BOOST12_MAP_MIKROBUS( boost12_cfg, MIKROBUS_POSITION_BOOST12 );
     if ( PWM_ERROR == boost12_init( &boost12, &boost12_cfg ) )
     {
         log_error( &logger, " Communication init." );

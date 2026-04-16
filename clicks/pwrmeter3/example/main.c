@@ -28,6 +28,10 @@
 #include "log.h"
 #include "pwrmeter3.h"
 
+#ifndef MIKROBUS_POSITION_PWRMETER3
+    #define MIKROBUS_POSITION_PWRMETER3 MIKROBUS_1
+#endif
+
 static pwrmeter3_t pwrmeter3;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     pwrmeter3_cfg_setup( &pwrmeter3_cfg );
-    PWRMETER3_MAP_MIKROBUS( pwrmeter3_cfg, MIKROBUS_1 );
+    PWRMETER3_MAP_MIKROBUS( pwrmeter3_cfg, MIKROBUS_POSITION_PWRMETER3 );
     if ( I2C_MASTER_ERROR == pwrmeter3_init( &pwrmeter3, &pwrmeter3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

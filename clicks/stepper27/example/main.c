@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stepper27.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER27
+    #define MIKROBUS_POSITION_STEPPER27 MIKROBUS_1
+#endif
+
 static stepper27_t stepper27;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper27_cfg_setup( &stepper27_cfg );
-    STEPPER27_MAP_MIKROBUS( stepper27_cfg, MIKROBUS_1 );
+    STEPPER27_MAP_MIKROBUS( stepper27_cfg, MIKROBUS_POSITION_STEPPER27 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == stepper27_init( &stepper27, &stepper27_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

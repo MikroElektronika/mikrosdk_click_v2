@@ -27,6 +27,10 @@
 #include "log.h"
 #include "adac2.h"
 
+#ifndef MIKROBUS_POSITION_ADAC2
+    #define MIKROBUS_POSITION_ADAC2 MIKROBUS_1
+#endif
+
 static adac2_t adac2;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     adac2_cfg_setup( &adac2_cfg );
-    ADAC2_MAP_MIKROBUS( adac2_cfg, MIKROBUS_1 );
+    ADAC2_MAP_MIKROBUS( adac2_cfg, MIKROBUS_POSITION_ADAC2 );
     if ( SPI_MASTER_ERROR == adac2_init( &adac2, &adac2_cfg ) )
     {
         log_error( &logger, " Communication init." );

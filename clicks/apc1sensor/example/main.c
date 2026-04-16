@@ -31,6 +31,10 @@
 #include "log.h"
 #include "apc1sensor.h"
 
+#ifndef MIKROBUS_POSITION_APC1SENSOR
+    #define MIKROBUS_POSITION_APC1SENSOR MIKROBUS_1
+#endif
+
 static apc1sensor_t apc1sensor;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Sensor initialization.
     apc1sensor_cfg_setup( &apc1sensor_cfg );
-    APC1SENSOR_MAP_MIKROBUS( apc1sensor_cfg, MIKROBUS_1 );
+    APC1SENSOR_MAP_MIKROBUS( apc1sensor_cfg, MIKROBUS_POSITION_APC1SENSOR );
     if ( APC1SENSOR_OK != apc1sensor_init( &apc1sensor, &apc1sensor_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

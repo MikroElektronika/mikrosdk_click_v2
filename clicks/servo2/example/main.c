@@ -29,6 +29,10 @@
 #include "log.h"
 #include "servo2.h"
 
+#ifndef MIKROBUS_POSITION_SERVO2
+    #define MIKROBUS_POSITION_SERVO2 MIKROBUS_1
+#endif
+
 static servo2_t servo2;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     servo2_cfg_setup( &servo2_cfg );
-    SERVO2_MAP_MIKROBUS( servo2_cfg, MIKROBUS_1 );
+    SERVO2_MAP_MIKROBUS( servo2_cfg, MIKROBUS_POSITION_SERVO2 );
     if ( PWM_ERROR == servo2_init( &servo2, &servo2_cfg ) )
     {
         log_error( &logger, " Communication init." );

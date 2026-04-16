@@ -23,6 +23,10 @@
 #include "log.h"
 #include "thermok.h"
 
+#ifndef MIKROBUS_POSITION_THERMOK
+    #define MIKROBUS_POSITION_THERMOK MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermok_t thermok;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermok_cfg_setup( &cfg );
-    THERMOK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMOK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMOK );
     thermok_init( &thermok, &cfg );
 
     // Check communication and reads device ID

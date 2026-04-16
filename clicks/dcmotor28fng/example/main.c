@@ -29,6 +29,10 @@
 #include "log.h"
 #include "dcmotor28fng.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR28FNG
+    #define MIKROBUS_POSITION_DCMOTOR28FNG MIKROBUS_1
+#endif
+
 static dcmotor28fng_t dcmotor28fng;   /**< DC Motor 28 FNG Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor28fng_cfg_setup( &dcmotor28fng_cfg );
-    DCMOTOR28FNG_MAP_MIKROBUS( dcmotor28fng_cfg, MIKROBUS_1 );
+    DCMOTOR28FNG_MAP_MIKROBUS( dcmotor28fng_cfg, MIKROBUS_POSITION_DCMOTOR28FNG );
     if ( ADC_ERROR == dcmotor28fng_init( &dcmotor28fng, &dcmotor28fng_cfg ) )
     {
         log_error( &logger, " Communication init." );

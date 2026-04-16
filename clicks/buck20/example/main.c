@@ -27,6 +27,10 @@
 #include "log.h"
 #include "buck20.h"
 
+#ifndef MIKROBUS_POSITION_BUCK20
+    #define MIKROBUS_POSITION_BUCK20 MIKROBUS_1
+#endif
+
 static buck20_t buck20;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     buck20_cfg_setup( &buck20_cfg );
-    BUCK20_MAP_MIKROBUS( buck20_cfg, MIKROBUS_1 );
+    BUCK20_MAP_MIKROBUS( buck20_cfg, MIKROBUS_POSITION_BUCK20 );
     if ( SPI_MASTER_ERROR == buck20_init( &buck20, &buck20_cfg ) )
     {
         log_error( &logger, " Communication init." );

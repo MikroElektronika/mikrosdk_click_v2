@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ecg2.h"
 
+#ifndef MIKROBUS_POSITION_ECG2
+    #define MIKROBUS_POSITION_ECG2 MIKROBUS_1
+#endif
+
 static ecg2_t ecg2;
 static log_t logger;
 uint32_t time;
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     ecg2_cfg_setup( &ecg2_cfg );
-    ECG2_MAP_MIKROBUS( ecg2_cfg, MIKROBUS_1 );
+    ECG2_MAP_MIKROBUS( ecg2_cfg, MIKROBUS_POSITION_ECG2 );
     if ( SPI_MASTER_ERROR == ecg2_init( &ecg2, &ecg2_cfg ) )
     {
         log_error( &logger, " Communication init." );

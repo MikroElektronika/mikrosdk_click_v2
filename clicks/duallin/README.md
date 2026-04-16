@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     duallin_cfg_setup( &cfg );
-    DUALLIN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DUALLIN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DUALLIN );
     duallin_init( &duallin, &cfg );
 
     duallin_bus1_status( &duallin, DUALLIN_PIN_STATE_HIGH );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "adc21.h"
 
+#ifndef MIKROBUS_POSITION_ADC21
+    #define MIKROBUS_POSITION_ADC21 MIKROBUS_1
+#endif
+
 static adc21_t adc21;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     adc21_cfg_setup( &adc21_cfg );
-    ADC21_MAP_MIKROBUS( adc21_cfg, MIKROBUS_1 );
+    ADC21_MAP_MIKROBUS( adc21_cfg, MIKROBUS_POSITION_ADC21 );
     if ( SPI_MASTER_ERROR == adc21_init( &adc21, &adc21_cfg ) )
     {
         log_error( &logger, " Communication init." );

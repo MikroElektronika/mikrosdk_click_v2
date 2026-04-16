@@ -88,7 +88,7 @@ void application_init ( void )
 
     //  Click initialization.
     pressure9_cfg_setup( &cfg );
-    PRESSURE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE9 );
     pressure9_init( &pressure9, &cfg );
     Delay_ms ( 100 );
 

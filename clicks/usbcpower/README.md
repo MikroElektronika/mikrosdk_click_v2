@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     usbcpower_cfg_setup( &usbcpower_cfg );
-    USBCPOWER_MAP_MIKROBUS( usbcpower_cfg, MIKROBUS_1 );
+    USBCPOWER_MAP_MIKROBUS( usbcpower_cfg, MIKROBUS_POSITION_USBCPOWER );
     if ( I2C_MASTER_ERROR == usbcpower_init( &usbcpower, &usbcpower_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

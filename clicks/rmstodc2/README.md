@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     rmstodc2_cfg_setup( &rmstodc2_cfg );
-    RMSTODC2_MAP_MIKROBUS( rmstodc2_cfg, MIKROBUS_1 );
+    RMSTODC2_MAP_MIKROBUS( rmstodc2_cfg, MIKROBUS_POSITION_RMSTODC2 );
     err_t init_flag = rmstodc2_init( &rmstodc2, &rmstodc2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

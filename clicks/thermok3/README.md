@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     thermok3_cfg_setup( &thermok3_cfg );
-    THERMOK3_MAP_MIKROBUS( thermok3_cfg, MIKROBUS_1 );
+    THERMOK3_MAP_MIKROBUS( thermok3_cfg, MIKROBUS_POSITION_THERMOK3 );
     if ( SPI_MASTER_ERROR == thermok3_init( &thermok3, &thermok3_cfg ) )
     {
         log_error( &logger, " Communication init." );

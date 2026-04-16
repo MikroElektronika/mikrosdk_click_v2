@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ism9_cfg_setup( &ism9_cfg );
-    ISM9_MAP_MIKROBUS( ism9_cfg, MIKROBUS_1 );
+    ISM9_MAP_MIKROBUS( ism9_cfg, MIKROBUS_POSITION_ISM9 );
     if ( UART_ERROR == ism9_init( &ism9, &ism9_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssrtk2_cfg_setup( &gnssrtk2_cfg );
-    GNSSRTK2_MAP_MIKROBUS( gnssrtk2_cfg, MIKROBUS_1 );
+    GNSSRTK2_MAP_MIKROBUS( gnssrtk2_cfg, MIKROBUS_POSITION_GNSSRTK2 );
     err_t init_flag = gnssrtk2_init( &gnssrtk2, &gnssrtk2_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

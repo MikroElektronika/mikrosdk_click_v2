@@ -37,6 +37,10 @@
 #include "math.h"
 #include "log.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS8
+    #define MIKROBUS_POSITION_BRUSHLESS8 MIKROBUS_1
+#endif
+
 /* Select desired mode. */
 #define BRUSHLESS8_MODE BRUSHLESS8_PWM
 
@@ -72,7 +76,7 @@ void application_init ( void )
     brushless8_cfg_setup( &brushless8_cfg );
     // Select desired mode.
     brushless8_cfg.ctrl_mod = BRUSHLESS8_MODE;
-    BRUSHLESS8_MAP_MIKROBUS( brushless8_cfg, MIKROBUS_1 );
+    BRUSHLESS8_MAP_MIKROBUS( brushless8_cfg, MIKROBUS_POSITION_BRUSHLESS8 );
 
     BRUSHLESS8_RETVAL init_flag = brushless8_init( &brushless8, &brushless8_cfg );
     if ( BRUSHLESS8_OK != init_flag )

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     nbiot7_cfg_setup( &nbiot7_cfg );
-    NBIOT7_MAP_MIKROBUS( nbiot7_cfg, MIKROBUS_1 );
+    NBIOT7_MAP_MIKROBUS( nbiot7_cfg, MIKROBUS_POSITION_NBIOT7 );
     if ( UART_ERROR == nbiot7_init( &nbiot7, &nbiot7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

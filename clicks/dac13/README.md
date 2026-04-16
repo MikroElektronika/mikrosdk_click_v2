@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     dac13_cfg_setup( &dac13_cfg );
-    DAC13_MAP_MIKROBUS( dac13_cfg, MIKROBUS_1 );
+    DAC13_MAP_MIKROBUS( dac13_cfg, MIKROBUS_POSITION_DAC13 );
     if ( SPI_MASTER_ERROR == dac13_init( &dac13, &dac13_cfg ) )
     {
         log_error( &logger, " Communication init." );

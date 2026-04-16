@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     brushless7_cfg_setup( &cfg );
-    BRUSHLESS7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS7 );
     brushless7_init( &brushless7, &cfg );
     Delay_ms ( 100 );
 

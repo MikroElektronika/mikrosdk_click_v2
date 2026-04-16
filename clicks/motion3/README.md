@@ -79,7 +79,7 @@ void application_init ( void )
     // Click initialization.
 
     motion3_cfg_setup( &motion3_cfg );
-    MOTION3_MAP_MIKROBUS( motion3_cfg, MIKROBUS_1 );
+    MOTION3_MAP_MIKROBUS( motion3_cfg, MIKROBUS_POSITION_MOTION3 );
     if ( motion3_init( &motion3, &motion3_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
        
         log_error( &logger, " Application Init Error. " );

@@ -27,6 +27,10 @@
 #include "log.h"
 #include "thermostat2.h"
 
+#ifndef MIKROBUS_POSITION_THERMOSTAT2
+    #define MIKROBUS_POSITION_THERMOSTAT2 MIKROBUS_1
+#endif
+
 static thermostat2_t thermostat2;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     thermostat2_cfg_setup( &thermostat2_cfg );
-    THERMOSTAT2_MAP_MIKROBUS( thermostat2_cfg, MIKROBUS_1 );
+    THERMOSTAT2_MAP_MIKROBUS( thermostat2_cfg, MIKROBUS_POSITION_THERMOSTAT2 );
     if ( ONE_WIRE_ERROR == thermostat2_init( &thermostat2, &thermostat2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -21,6 +21,10 @@
 #include "log.h"
 #include "irthermo3v3.h"
 
+#ifndef MIKROBUS_POSITION_IRTHERMO3V3
+    #define MIKROBUS_POSITION_IRTHERMO3V3 MIKROBUS_1
+#endif
+
 static irthermo3v3_t irthermo3v3;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void ) {
 
     // Click initialization.
     irthermo3v3_cfg_setup( &irthermo3v3_cfg );
-    IRTHERMO3V3_MAP_MIKROBUS( irthermo3v3_cfg, MIKROBUS_1 );
+    IRTHERMO3V3_MAP_MIKROBUS( irthermo3v3_cfg, MIKROBUS_POSITION_IRTHERMO3V3 );
     err_t init_flag = irthermo3v3_init( &irthermo3v3, &irthermo3v3_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     capsense2_cfg_setup( &capsense2_cfg );
-    CAPSENSE2_MAP_MIKROBUS( capsense2_cfg, MIKROBUS_1 );
+    CAPSENSE2_MAP_MIKROBUS( capsense2_cfg, MIKROBUS_POSITION_CAPSENSE2 );
     if ( I2C_MASTER_ERROR == capsense2_init( &capsense2, &capsense2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

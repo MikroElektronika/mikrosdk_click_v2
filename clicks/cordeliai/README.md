@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     cordeliai_cfg_setup( &cordeliai_cfg );
-    CORDELIAI_MAP_MIKROBUS( cordeliai_cfg, MIKROBUS_1 );
+    CORDELIAI_MAP_MIKROBUS( cordeliai_cfg, MIKROBUS_POSITION_CORDELIAI );
     if ( UART_ERROR == cordeliai_init( &cordeliai, &cordeliai_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

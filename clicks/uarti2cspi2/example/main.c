@@ -30,6 +30,10 @@
 #include "log.h"
 #include "uarti2cspi2.h"
 
+#ifndef MIKROBUS_POSITION_UARTI2CSPI2
+    #define MIKROBUS_POSITION_UARTI2CSPI2 MIKROBUS_1
+#endif
+
 #define DEMO_MESSAGE "UART I2C/SPI 2 Click - demo message\r\n"
 
 static uarti2cspi2_t uarti2cspi2;
@@ -55,7 +59,7 @@ void application_init ( void )
 
     // Click initialization.
     uarti2cspi2_cfg_setup( &uarti2cspi2_cfg );
-    UARTI2CSPI2_MAP_MIKROBUS( uarti2cspi2_cfg, MIKROBUS_1 );
+    UARTI2CSPI2_MAP_MIKROBUS( uarti2cspi2_cfg, MIKROBUS_POSITION_UARTI2CSPI2 );
     err_t init_flag = uarti2cspi2_init( &uarti2cspi2, &uarti2cspi2_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

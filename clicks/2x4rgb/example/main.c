@@ -27,6 +27,10 @@
 #include "c2x4rgb.h"
 #include "c2x4rgb_delays.h"
 
+#ifndef MIKROBUS_POSITION_2X4RGB
+    #define MIKROBUS_POSITION_2X4RGB MIKROBUS_1
+#endif
+
 static c2x4rgb_t c2x4rgb;   /**< 2x4 RGB Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -86,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     c2x4rgb_cfg_setup( &c2x4rgb_cfg );
-    C2X4RGB_MAP_MIKROBUS( c2x4rgb_cfg, MIKROBUS_1 );
+    C2X4RGB_MAP_MIKROBUS( c2x4rgb_cfg, MIKROBUS_POSITION_2X4RGB );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == 
          c2x4rgb_init( &c2x4rgb, &c2x4rgb_logic_zero, &c2x4rgb_logic_one, &c2x4rgb_cfg ) ) 
     {

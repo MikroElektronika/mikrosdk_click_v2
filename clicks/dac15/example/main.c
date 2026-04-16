@@ -24,6 +24,10 @@
 #include "log.h"
 #include "dac15.h"
 
+#ifndef MIKROBUS_POSITION_DAC15
+    #define MIKROBUS_POSITION_DAC15 MIKROBUS_1
+#endif
+
 static dac15_t dac15;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     dac15_cfg_setup( &dac15_cfg );
-    DAC15_MAP_MIKROBUS( dac15_cfg, MIKROBUS_1 );
+    DAC15_MAP_MIKROBUS( dac15_cfg, MIKROBUS_POSITION_DAC15 );
     err_t init_flag = dac15_init( &dac15, &dac15_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "c3dhall2.h"
 
+#ifndef MIKROBUS_POSITION_3DHALL2
+    #define MIKROBUS_POSITION_3DHALL2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c3dhall2_t c3dhall2;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     c3dhall2_cfg_setup( &cfg );
-    C3DHALL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C3DHALL2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_3DHALL2 );
     c3dhall2_init( &c3dhall2, &cfg );
     c3dhall2_default_cfg( &c3dhall2 );
 

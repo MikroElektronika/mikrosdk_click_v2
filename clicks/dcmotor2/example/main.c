@@ -29,6 +29,10 @@
 #include "log.h"
 #include "dcmotor2.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR2
+    #define MIKROBUS_POSITION_DCMOTOR2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor2_t dcmotor2;
@@ -59,7 +63,7 @@ void application_init ( )
     //  Click initialization.
 
     dcmotor2_cfg_setup( &cfg );
-    DCMOTOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR2 );
     Delay_ms ( 100 );
     dcmotor2_init( &dcmotor2, &cfg );
     dcmotor2_pwm_start( &dcmotor2 );

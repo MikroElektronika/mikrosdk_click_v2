@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     uwb2_cfg_setup( &uwb2_cfg );
-    UWB2_MAP_MIKROBUS( uwb2_cfg, MIKROBUS_1 );
+    UWB2_MAP_MIKROBUS( uwb2_cfg, MIKROBUS_POSITION_UWB2 );
     if ( SPI_MASTER_ERROR == uwb2_init( &uwb2, &uwb2_cfg ) )
     {
         log_error( &logger, " Communication init." );

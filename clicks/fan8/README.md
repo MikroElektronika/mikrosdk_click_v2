@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     fan8_cfg_setup( &fan8_cfg );
-    FAN8_MAP_MIKROBUS( fan8_cfg, MIKROBUS_1 );
+    FAN8_MAP_MIKROBUS( fan8_cfg, MIKROBUS_POSITION_FAN8 );
     err_t init_flag = fan8_init( &fan8, &fan8_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

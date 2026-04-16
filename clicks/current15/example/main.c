@@ -26,6 +26,10 @@
 #include "log.h"
 #include "current15.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT15
+    #define MIKROBUS_POSITION_CURRENT15 MIKROBUS_1
+#endif
+
 // Load current [A] used for the data resolution calibration process.
 #define CURRENT15_CALIBRATING_CURRENT   3.0f
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     current15_cfg_setup( &current15_cfg );
-    CURRENT15_MAP_MIKROBUS( current15_cfg, MIKROBUS_1 );
+    CURRENT15_MAP_MIKROBUS( current15_cfg, MIKROBUS_POSITION_CURRENT15 );
     if ( SPI_MASTER_ERROR == current15_init( &current15, &current15_cfg ) )
     {
         log_error( &logger, " Communication init." );

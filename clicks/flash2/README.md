@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     flash2_cfg_setup( &cfg );
-    FLASH2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH2 );
     flash2_init( &flash2, &cfg );
     Delay_ms ( 300 );
     flash2_global_block_unlock( &flash2 );

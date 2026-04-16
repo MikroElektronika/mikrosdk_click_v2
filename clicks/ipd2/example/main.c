@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ipd2.h"
 
+#ifndef MIKROBUS_POSITION_IPD2
+    #define MIKROBUS_POSITION_IPD2 MIKROBUS_1
+#endif
+
 static ipd2_t ipd2;     /**< IPD 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     ipd2_cfg_setup( &ipd2_cfg );
-    IPD2_MAP_MIKROBUS( ipd2_cfg, MIKROBUS_1 );
+    IPD2_MAP_MIKROBUS( ipd2_cfg, MIKROBUS_POSITION_IPD2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ipd2_init( &ipd2, &ipd2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

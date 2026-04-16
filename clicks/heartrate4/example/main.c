@@ -24,6 +24,10 @@
 #include "log.h"
 #include "heartrate4.h"
 
+#ifndef MIKROBUS_POSITION_HEARTRATE4
+    #define MIKROBUS_POSITION_HEARTRATE4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static heartrate4_t heartrate4;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate4_cfg_setup( &cfg );
-    HEARTRATE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE4 );
     heartrate4_init( &heartrate4, &cfg );
 
     Delay_ms ( 100 );

@@ -90,7 +90,7 @@ void application_init ( )
     //  Click initialization.
 
     matrixg_cfg_setup( &cfg );
-    MATRIXG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MATRIXG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MATRIXG );
     matrixg_init( &matrixg, &cfg );
     Delay_ms ( 100 );
     matrixg_default_cfg( &matrixg );

@@ -90,7 +90,7 @@ void application_init ( )
     //  Click initialization.
 
     pac1921_cfg_setup( &cfg );
-    PAC1921_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PAC1921_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PAC1921 );
     pac1921_init( &pac1921, &cfg );
     Delay_ms ( 100 );
     pac1921_default_cfg( &pac1921 );

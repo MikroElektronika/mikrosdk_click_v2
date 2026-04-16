@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     nfc3_cfg_setup( &nfc3_cfg );
-    NFC3_MAP_MIKROBUS( nfc3_cfg, MIKROBUS_1 );
+    NFC3_MAP_MIKROBUS( nfc3_cfg, MIKROBUS_POSITION_NFC3 );
     err_t init_flag = nfc3_init( &nfc3, &nfc3_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) 
     {

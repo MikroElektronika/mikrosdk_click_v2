@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto2_cfg_setup( &cfg );
-    MAGNETO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO2 );
     magneto2_init( &magneto2, &cfg );
 
     angle_value = 0;

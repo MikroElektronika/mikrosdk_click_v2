@@ -29,6 +29,10 @@
 #include "log.h"
 #include "pmic2.h"
 
+#ifndef MIKROBUS_POSITION_PMIC2
+    #define MIKROBUS_POSITION_PMIC2 MIKROBUS_1
+#endif
+
 static pmic2_t pmic2;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     pmic2_cfg_setup( &pmic2_cfg );
-    PMIC2_MAP_MIKROBUS( pmic2_cfg, MIKROBUS_1 );
+    PMIC2_MAP_MIKROBUS( pmic2_cfg, MIKROBUS_POSITION_PMIC2 );
     if ( I2C_MASTER_ERROR == pmic2_init( &pmic2, &pmic2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

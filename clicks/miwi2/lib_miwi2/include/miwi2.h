@@ -1,5 +1,5 @@
 /****************************************************************************
-** Copyright (C) 2020 MikroElektronika d.o.o.
+** Copyright (C) 2026 MikroElektronika d.o.o.
 ** Contact: https://www.mikroe.com/contact
 **
 ** Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -462,7 +462,7 @@ err_t miwi2_rx_packet ( miwi2_t *ctx, uint8_t *payload );
 /**
  * @brief MiWi 2 reset function.
  * @details This function performs hardware reset by asserting the RST pin to high
- * for at least 100 µs and then releasing the pin.
+ * for at least 100 ï¿½s and then releasing the pin.
  * @param[in] ctx : Click context object.
  * See #miwi2_t object definition for detailed explanation.
  * @return Nothing.

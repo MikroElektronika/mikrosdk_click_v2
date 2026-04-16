@@ -91,7 +91,7 @@ void application_init ( )
     //  Click initialization.
 
     ldc1000_cfg_setup( &cfg );
-    LDC1000_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LDC1000_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LDC1000 );
     ldc1000_init( &ldc1000, &cfg );
     Delay_100ms( );
     ldc1000_default_cfg( &ldc1000 );

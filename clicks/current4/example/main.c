@@ -23,6 +23,10 @@
 #include "log.h"
 #include "current4.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT4
+    #define MIKROBUS_POSITION_CURRENT4 MIKROBUS_1
+#endif
+
 static current4_t current4;   /**< Current 4 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     current4_cfg_setup( &current4_cfg );
-    CURRENT4_MAP_MIKROBUS( current4_cfg, MIKROBUS_1 );
+    CURRENT4_MAP_MIKROBUS( current4_cfg, MIKROBUS_POSITION_CURRENT4 );
     if ( ADC_ERROR == current4_init( &current4, &current4_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

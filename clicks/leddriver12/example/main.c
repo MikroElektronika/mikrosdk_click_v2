@@ -24,6 +24,10 @@
 #include "log.h"
 #include "leddriver12.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER12
+    #define MIKROBUS_POSITION_LEDDRIVER12 MIKROBUS_1
+#endif
+
 static leddriver12_t leddriver12;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver12_cfg_setup( &leddriver12_cfg );
-    LEDDRIVER12_MAP_MIKROBUS( leddriver12_cfg, MIKROBUS_1 );
+    LEDDRIVER12_MAP_MIKROBUS( leddriver12_cfg, MIKROBUS_POSITION_LEDDRIVER12 );
     if ( I2C_MASTER_ERROR == leddriver12_init( &leddriver12, &leddriver12_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

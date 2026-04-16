@@ -74,7 +74,7 @@ void application_init ( void )
 
     // Click initialization.
     batterysource_cfg_setup( &batterysource_cfg );
-    BATTERYSOURCE_MAP_MIKROBUS( batterysource_cfg, MIKROBUS_1 );
+    BATTERYSOURCE_MAP_MIKROBUS( batterysource_cfg, MIKROBUS_POSITION_BATTERYSOURCE );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == batterysource_init( &batterysource, &batterysource_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

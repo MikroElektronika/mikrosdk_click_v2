@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     audioamp8_cfg_setup( &audioamp8_cfg );
-    AUDIOAMP8_MAP_MIKROBUS( audioamp8_cfg, MIKROBUS_1 );
+    AUDIOAMP8_MAP_MIKROBUS( audioamp8_cfg, MIKROBUS_POSITION_AUDIOAMP8 );
     err_t init_flag = audioamp8_init( &audioamp8, &audioamp8_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

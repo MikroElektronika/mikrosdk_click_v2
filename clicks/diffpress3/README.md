@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     diffpress3_cfg_setup( &diffpress3_cfg );
-    DIFFPRESS3_MAP_MIKROBUS( diffpress3_cfg, MIKROBUS_1 );
+    DIFFPRESS3_MAP_MIKROBUS( diffpress3_cfg, MIKROBUS_POSITION_DIFFPRESS3 );
     err_t init_flag = diffpress3_init( &diffpress3, &diffpress3_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

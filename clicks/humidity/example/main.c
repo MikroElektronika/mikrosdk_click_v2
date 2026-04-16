@@ -24,6 +24,10 @@
 #include "log.h"
 #include "humidity.h"
 
+#ifndef MIKROBUS_POSITION_HUMIDITY
+    #define MIKROBUS_POSITION_HUMIDITY MIKROBUS_1
+#endif
+
 static humidity_t humidity;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     humidity_cfg_setup( &humidity_cfg );
-    HUMIDITY_MAP_MIKROBUS( humidity_cfg, MIKROBUS_1 );
+    HUMIDITY_MAP_MIKROBUS( humidity_cfg, MIKROBUS_POSITION_HUMIDITY );
     if ( HUMIDITY_OK != humidity_init( &humidity, &humidity_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

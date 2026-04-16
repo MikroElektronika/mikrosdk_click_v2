@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     gnss3_cfg_setup( &cfg );
-    GNSS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GNSS3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GNSS3 );
     gnss3_init( &gnss3, &cfg );
 
     gnss3_module_wakeup( &gnss3 );

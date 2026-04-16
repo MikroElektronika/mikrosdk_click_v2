@@ -25,6 +25,10 @@
 #include "log.h"
 #include "ammonia.h"
 
+#ifndef MIKROBUS_POSITION_AMMONIA
+    #define MIKROBUS_POSITION_AMMONIA MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ammonia_t ammonia;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     ammonia_cfg_setup( &ammonia_cfg );
-    AMMONIA_MAP_MIKROBUS( ammonia_cfg, MIKROBUS_1 );
+    AMMONIA_MAP_MIKROBUS( ammonia_cfg, MIKROBUS_POSITION_AMMONIA );
 
     if ( ammonia_init( &ammonia, &ammonia_cfg ) == AMMONIA_INIT_ERROR )
     {

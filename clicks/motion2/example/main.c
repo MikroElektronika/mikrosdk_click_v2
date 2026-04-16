@@ -23,6 +23,10 @@
 #include "log.h"
 #include "motion2.h"
 
+#ifndef MIKROBUS_POSITION_MOTION2
+    #define MIKROBUS_POSITION_MOTION2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static motion2_t motion2;   /**< Motion 2 Click driver object. */
@@ -54,7 +58,7 @@ void application_init ( void ) {
     // Click initialization.
 
     motion2_cfg_setup( &motion2_cfg );
-    MOTION2_MAP_MIKROBUS( motion2_cfg, MIKROBUS_1 );
+    MOTION2_MAP_MIKROBUS( motion2_cfg, MIKROBUS_POSITION_MOTION2 );
     if ( motion2_init( &motion2, &motion2_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
        
         log_error( &logger, " Application Init Error. " );

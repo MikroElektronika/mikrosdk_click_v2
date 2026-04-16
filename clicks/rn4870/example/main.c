@@ -29,6 +29,10 @@
 #include "rn4870.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RN4870
+    #define MIKROBUS_POSITION_RN4870 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 #define PROCESS_PARSER_BUFFER_SIZE 500
@@ -95,7 +99,7 @@ void application_init ( void )
     //  Click initialization.
 
     rn4870_cfg_setup( &cfg );
-    RN4870_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RN4870_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RN4870 );
     rn4870_init( &rn4870, &cfg );
     Delay_ms ( 100 );
     

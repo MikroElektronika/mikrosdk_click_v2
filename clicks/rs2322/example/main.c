@@ -27,6 +27,10 @@
 #include "rs2322.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS2322
+    #define MIKROBUS_POSITION_RS2322 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 #define PROCESS_PARSER_BUFFER_SIZE 500
@@ -118,7 +122,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs2322_cfg_setup( &cfg );
-    RS2322_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS2322_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS2322 );
     rs2322_init( &rs2322, &cfg );
 }
 

@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     co2_cfg_setup( &co2_cfg );
-    CO2_MAP_MIKROBUS( co2_cfg, MIKROBUS_1 );
+    CO2_MAP_MIKROBUS( co2_cfg, MIKROBUS_POSITION_CO2 );
     err_t init_flag = co2_init( &co2, &co2_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

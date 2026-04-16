@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     barometer5_cfg_setup( &barometer5_cfg );
-    BAROMETER5_MAP_MIKROBUS( barometer5_cfg, MIKROBUS_1 );
+    BAROMETER5_MAP_MIKROBUS( barometer5_cfg, MIKROBUS_POSITION_BAROMETER5 );
     if ( I2C_MASTER_ERROR == barometer5_init( &barometer5, &barometer5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

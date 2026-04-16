@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ldctouch.h"
 
+#ifndef MIKROBUS_POSITION_LDCTOUCH
+    #define MIKROBUS_POSITION_LDCTOUCH MIKROBUS_1
+#endif
+
 static ldctouch_t ldctouch;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     ldctouch_cfg_setup( &ldctouch_cfg );
-    LDCTOUCH_MAP_MIKROBUS( ldctouch_cfg, MIKROBUS_1 );
+    LDCTOUCH_MAP_MIKROBUS( ldctouch_cfg, MIKROBUS_POSITION_LDCTOUCH );
     if ( I2C_MASTER_ERROR == ldctouch_init( &ldctouch, &ldctouch_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

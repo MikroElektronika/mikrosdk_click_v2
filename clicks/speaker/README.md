@@ -93,7 +93,7 @@ void application_init ( void )
     // Click initialization.
 
     speaker_cfg_setup( &speaker_cfg );
-    SPEAKER_MAP_MIKROBUS( speaker_cfg, MIKROBUS_1 );
+    SPEAKER_MAP_MIKROBUS( speaker_cfg, MIKROBUS_POSITION_SPEAKER );
     if ( speaker_init( &speaker, &speaker_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

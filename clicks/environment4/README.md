@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     environment4_cfg_setup( &environment4_cfg );
-    ENVIRONMENT4_MAP_MIKROBUS( environment4_cfg, MIKROBUS_1 );
+    ENVIRONMENT4_MAP_MIKROBUS( environment4_cfg, MIKROBUS_POSITION_ENVIRONMENT4 );
     if ( I2C_MASTER_ERROR == environment4_init( &environment4, &environment4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

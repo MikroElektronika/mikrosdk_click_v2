@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     aiwb212f_cfg_setup( &aiwb212f_cfg );
-    AIWB212F_MAP_MIKROBUS( aiwb212f_cfg, MIKROBUS_1 );
+    AIWB212F_MAP_MIKROBUS( aiwb212f_cfg, MIKROBUS_POSITION_AIWB212F );
     if ( UART_ERROR == aiwb212f_init( &aiwb212f, &aiwb212f_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

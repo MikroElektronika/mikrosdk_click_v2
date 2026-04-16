@@ -30,6 +30,10 @@
 #include "log.h"
 #include "smartcard2.h"
 
+#ifndef MIKROBUS_POSITION_SMARTCARD2
+    #define MIKROBUS_POSITION_SMARTCARD2 MIKROBUS_1
+#endif
+
 static smartcard2_t smartcard2;
 static log_t logger;
 static uint8_t icc_status = SMARTCARD2_ICC_ABSENT;
@@ -65,7 +69,7 @@ void application_init ( void )
 
     // Click initialization.
     smartcard2_cfg_setup( &smartcard2_cfg );
-    SMARTCARD2_MAP_MIKROBUS( smartcard2_cfg, MIKROBUS_1 );
+    SMARTCARD2_MAP_MIKROBUS( smartcard2_cfg, MIKROBUS_POSITION_SMARTCARD2 );
     if ( UART_ERROR == smartcard2_init( &smartcard2, &smartcard2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

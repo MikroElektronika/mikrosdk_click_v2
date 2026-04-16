@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum8_cfg_setup( &cfg );
-    TEMPHUM8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM8 );
     temphum8_init( &temphum8, &cfg );
 
     temphum8_software_reset( &temphum8 );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "accel.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL
+    #define MIKROBUS_POSITION_ACCEL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel_t accel;
@@ -55,7 +59,7 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     accel_cfg_setup( &cfg );
-    ACCEL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL );
     accel_init( &accel, &cfg );
 
     accel_generic_read( &accel, ACCEL_REG_DEVID, &tmp, 1 );

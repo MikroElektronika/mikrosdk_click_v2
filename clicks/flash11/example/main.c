@@ -27,6 +27,10 @@
 #include "log.h"
 #include "flash11.h"
 
+#ifndef MIKROBUS_POSITION_FLASH11
+    #define MIKROBUS_POSITION_FLASH11 MIKROBUS_1
+#endif
+
 static flash11_t flash11;
 static log_t logger;
 
@@ -55,7 +59,7 @@ void application_init ( void )
     
     // Click initialization.
     flash11_cfg_setup( &flash11_cfg );
-    FLASH11_MAP_MIKROBUS( flash11_cfg, MIKROBUS_1 );
+    FLASH11_MAP_MIKROBUS( flash11_cfg, MIKROBUS_POSITION_FLASH11 );
     if ( SPI_MASTER_ERROR == flash11_init( &flash11, &flash11_cfg ) )
     {
         log_error( &logger, " Communication init." );

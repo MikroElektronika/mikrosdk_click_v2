@@ -22,6 +22,10 @@
 #include "log.h"
 #include "mux.h"
 
+#ifndef MIKROBUS_POSITION_MUX
+    #define MIKROBUS_POSITION_MUX MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static mux_t mux;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     mux_cfg_setup( &cfg );
-    MUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MUX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MUX );
     mux_init( &mux, &cfg );
     Delay_ms ( 100 );
     

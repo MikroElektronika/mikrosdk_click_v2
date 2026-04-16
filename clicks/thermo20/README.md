@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo20_cfg_setup( &thermo20_cfg );
-    THERMO20_MAP_MIKROBUS( thermo20_cfg, MIKROBUS_1 );
+    THERMO20_MAP_MIKROBUS( thermo20_cfg, MIKROBUS_POSITION_THERMO20 );
     err_t init_flag = thermo20_init( &thermo20, &thermo20_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

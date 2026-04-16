@@ -33,6 +33,10 @@
 #include "log.h"
 #include "eposmodule.h"
 
+#ifndef MIKROBUS_POSITION_EPOSMODULE
+    #define MIKROBUS_POSITION_EPOSMODULE MIKROBUS_1
+#endif
+
 // Demo aplication selection macros
 #define APP_DIALING                 0
 #define APP_ANSWERING               1
@@ -68,7 +72,7 @@ void application_init ( void )
 
     // Click initialization.
     eposmodule_cfg_setup( &eposmodule_cfg );
-    EPOSMODULE_MAP_MIKROBUS( eposmodule_cfg, MIKROBUS_1 );
+    EPOSMODULE_MAP_MIKROBUS( eposmodule_cfg, MIKROBUS_POSITION_EPOSMODULE );
     if ( SPI_MASTER_ERROR == eposmodule_init( &eposmodule, &eposmodule_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc16_cfg_setup( &rtc16_cfg );
-    RTC16_MAP_MIKROBUS( rtc16_cfg, MIKROBUS_1 );
+    RTC16_MAP_MIKROBUS( rtc16_cfg, MIKROBUS_POSITION_RTC16 );
     if ( I2C_MASTER_ERROR == rtc16_init( &rtc16, &rtc16_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

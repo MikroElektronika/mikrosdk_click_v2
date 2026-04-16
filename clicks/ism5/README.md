@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ism5_cfg_setup( &ism5_cfg );
-    ISM5_MAP_MIKROBUS( ism5_cfg, MIKROBUS_1 );
+    ISM5_MAP_MIKROBUS( ism5_cfg, MIKROBUS_POSITION_ISM5 );
     if ( SPI_MASTER_ERROR == ism5_init( &ism5, &ism5_cfg ) )
     {
         log_error( &logger, " Communication init." );

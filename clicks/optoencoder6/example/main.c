@@ -23,6 +23,10 @@
 #include "log.h"
 #include "optoencoder6.h"
 
+#ifndef MIKROBUS_POSITION_OPTOENCODER6
+    #define MIKROBUS_POSITION_OPTOENCODER6 MIKROBUS_1
+#endif
+
 static optoencoder6_t optoencoder6;   /**< Opto Encoder 6 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     optoencoder6_cfg_setup( &optoencoder6_cfg );
-    OPTOENCODER6_MAP_MIKROBUS( optoencoder6_cfg, MIKROBUS_1 );
+    OPTOENCODER6_MAP_MIKROBUS( optoencoder6_cfg, MIKROBUS_POSITION_OPTOENCODER6 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == optoencoder6_init( &optoencoder6, &optoencoder6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "lps22hb.h"
 
+#ifndef MIKROBUS_POSITION_LPS22HB
+    #define MIKROBUS_POSITION_LPS22HB MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static lps22hb_t lps22hb;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     lps22hb_cfg_setup( &cfg );
-    LPS22HB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LPS22HB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LPS22HB );
     lps22hb_init( &lps22hb, &cfg );
     
     log_printf( &logger, "----------------------------\r\n" );

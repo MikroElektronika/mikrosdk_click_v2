@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     uwb3_cfg_setup( &uwb3_cfg );
-    UWB3_MAP_MIKROBUS( uwb3_cfg, MIKROBUS_1 );
+    UWB3_MAP_MIKROBUS( uwb3_cfg, MIKROBUS_POSITION_UWB3 );
     if ( UART_ERROR == uwb3_init( &uwb3, &uwb3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

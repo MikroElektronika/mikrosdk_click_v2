@@ -35,6 +35,10 @@
 #include "log.h"
 #include "rs4857.h"
 
+#ifndef MIKROBUS_POSITION_RS4857
+    #define MIKROBUS_POSITION_RS4857 MIKROBUS_1
+#endif
+
 #define DEMO_MESSAGE "\r\nMikroE\r\n"
 #define PROCESS_BUFFER_SIZE 200
 
@@ -82,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     rs4857_cfg_setup( &rs4857_cfg );
-    RS4857_MAP_MIKROBUS( rs4857_cfg, MIKROBUS_1 );
+    RS4857_MAP_MIKROBUS( rs4857_cfg, MIKROBUS_POSITION_RS4857 );
     if ( UART_ERROR == rs4857_init( &rs4857, &rs4857_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     anynet3gea_cfg_setup( &anynet3gea_cfg );
-    ANYNET3GEA_MAP_MIKROBUS( anynet3gea_cfg, MIKROBUS_1 );
+    ANYNET3GEA_MAP_MIKROBUS( anynet3gea_cfg, MIKROBUS_POSITION_ANYNET3GEA );
     if ( UART_ERROR == anynet3gea_init( &anynet3gea, &anynet3gea_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

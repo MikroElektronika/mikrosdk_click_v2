@@ -28,6 +28,10 @@
 #include "log.h"
 #include "charger5.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER5
+    #define MIKROBUS_POSITION_CHARGER5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static charger5_t charger5;
@@ -42,7 +46,7 @@ void application_init( void )
 
     //  Click initialization.
     charger5_cfg_setup( &charger5_cfg );
-    CHARGER5_MAP_MIKROBUS( charger5_cfg, MIKROBUS_1 );
+    CHARGER5_MAP_MIKROBUS( charger5_cfg, MIKROBUS_POSITION_CHARGER5 );
     charger5_init( &charger5, &charger5_cfg );
     charger5_default_cfg( &charger5 );
 

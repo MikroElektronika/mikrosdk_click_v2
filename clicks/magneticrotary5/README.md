@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     magneticrotary5_cfg_setup( &magneticrotary5_cfg );
-    MAGNETICROTARY5_MAP_MIKROBUS( magneticrotary5_cfg, MIKROBUS_1 );
+    MAGNETICROTARY5_MAP_MIKROBUS( magneticrotary5_cfg, MIKROBUS_POSITION_MAGNETICROTARY5 );
     if ( ADC_ERROR == magneticrotary5_init( &magneticrotary5, &magneticrotary5_cfg ) )
     {
         log_error( &logger, " Communication init." );

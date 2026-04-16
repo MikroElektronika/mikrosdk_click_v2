@@ -28,6 +28,10 @@
 #include "log.h"
 #include "watchdog.h"
 
+#ifndef MIKROBUS_POSITION_WATCHDOG
+    #define MIKROBUS_POSITION_WATCHDOG MIKROBUS_1
+#endif
+
 static watchdog_t watchdog;   /**< Watchdog Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     watchdog_cfg_setup( &watchdog_cfg );
-    WATCHDOG_MAP_MIKROBUS( watchdog_cfg, MIKROBUS_1 );
+    WATCHDOG_MAP_MIKROBUS( watchdog_cfg, MIKROBUS_POSITION_WATCHDOG );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == watchdog_init( &watchdog, &watchdog_cfg ) ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

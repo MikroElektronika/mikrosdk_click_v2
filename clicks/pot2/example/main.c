@@ -22,6 +22,10 @@
 #include "log.h"
 #include "pot2.h"
 
+#ifndef MIKROBUS_POSITION_POT2
+    #define MIKROBUS_POSITION_POT2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pot2_t pot2;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     pot2_cfg_setup( &cfg );
-    POT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POT2 );
     if ( pot2_init( &pot2, &cfg ) == ADC_ERROR )
     {
         log_info( &logger, "---- Application Init Error ----" );

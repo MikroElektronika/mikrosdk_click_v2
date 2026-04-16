@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor22_cfg_setup( &dcmotor22_cfg );
-    DCMOTOR22_MAP_MIKROBUS( dcmotor22_cfg, MIKROBUS_1 );
+    DCMOTOR22_MAP_MIKROBUS( dcmotor22_cfg, MIKROBUS_POSITION_DCMOTOR22 );
     if ( UART_ERROR == dcmotor22_init( &dcmotor22, &dcmotor22_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

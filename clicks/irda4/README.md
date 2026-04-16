@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     irda4_cfg_setup( &irda4_cfg );
-    IRDA4_MAP_MIKROBUS( irda4_cfg, MIKROBUS_1 );
+    IRDA4_MAP_MIKROBUS( irda4_cfg, MIKROBUS_POSITION_IRDA4 );
     if ( UART_ERROR == irda4_init( &irda4, &irda4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

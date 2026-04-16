@@ -32,6 +32,10 @@
 #include "log.h"
 #include "spiextend.h"
 
+#ifndef MIKROBUS_POSITION_SPIEXTEND
+    #define MIKROBUS_POSITION_SPIEXTEND MIKROBUS_1
+#endif
+
 static spiextend_t spiextend;
 static log_t logger;
 
@@ -75,7 +79,7 @@ void application_init ( void ) {
     // Click initialization.
 
     spiextend_cfg_setup( &spiextend_cfg );
-    SPIEXTEND_MAP_MIKROBUS( spiextend_cfg, MIKROBUS_1 );
+    SPIEXTEND_MAP_MIKROBUS( spiextend_cfg, MIKROBUS_POSITION_SPIEXTEND );
     err_t init_flag  = spiextend_init( &spiextend, &spiextend_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
        

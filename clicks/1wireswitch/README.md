@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     c1wireswitch_cfg_setup( &c1wireswitch_cfg );
-    C1WIRESWITCH_MAP_MIKROBUS( c1wireswitch_cfg, MIKROBUS_1 );
+    C1WIRESWITCH_MAP_MIKROBUS( c1wireswitch_cfg, MIKROBUS_POSITION_1WIRESWITCH );
     if ( ONE_WIRE_ERROR == c1wireswitch_init( &c1wireswitch, &c1wireswitch_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

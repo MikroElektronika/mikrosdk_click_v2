@@ -27,6 +27,10 @@
 #include "log.h"
 #include "fingerprint5.h"
 
+#ifndef MIKROBUS_POSITION_FINGERPRINT5
+    #define MIKROBUS_POSITION_FINGERPRINT5 MIKROBUS_1
+#endif
+
 #define NUMBER_OF_FINGERPRINTS  2   // Number of fingerprints to register.
 
 static fingerprint5_t fingerprint5;
@@ -99,7 +103,7 @@ void application_init ( void )
 
     // Click initialization.
     fingerprint5_cfg_setup( &fingerprint5_cfg );
-    FINGERPRINT5_MAP_MIKROBUS( fingerprint5_cfg, MIKROBUS_1 );
+    FINGERPRINT5_MAP_MIKROBUS( fingerprint5_cfg, MIKROBUS_POSITION_FINGERPRINT5 );
     if ( UART_ERROR == fingerprint5_init( &fingerprint5, &fingerprint5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     mrangle_cfg_setup( &mrangle_cfg );
-    MRANGLE_MAP_MIKROBUS( mrangle_cfg, MIKROBUS_1 );
+    MRANGLE_MAP_MIKROBUS( mrangle_cfg, MIKROBUS_POSITION_MRANGLE );
     if ( SPI_MASTER_ERROR == mrangle_init( &mrangle, &mrangle_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

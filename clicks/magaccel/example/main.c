@@ -28,6 +28,10 @@
 #include "log.h"
 #include "magaccel.h"
 
+#ifndef MIKROBUS_POSITION_MAGACCEL
+    #define MIKROBUS_POSITION_MAGACCEL MIKROBUS_1
+#endif
+
 static magaccel_t magaccel;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     magaccel_cfg_setup( &magaccel_cfg );
-    MAGACCEL_MAP_MIKROBUS( magaccel_cfg, MIKROBUS_1 );
+    MAGACCEL_MAP_MIKROBUS( magaccel_cfg, MIKROBUS_POSITION_MAGACCEL );
     if ( I2C_MASTER_ERROR == magaccel_init( &magaccel, &magaccel_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

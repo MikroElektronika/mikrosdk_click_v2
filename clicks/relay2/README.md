@@ -69,7 +69,7 @@ void application_init ( void )
     //  Click initialization.
 
     relay2_cfg_setup( &cfg );
-    RELAY2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RELAY2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RELAY2 );
     relay2_init( &relay2, &cfg );
     log_info( &logger, "---- App Init Done ----" );
 }

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "i2cscanner.h"
 
+#ifndef MIKROBUS_POSITION_I2CSCANNER
+    #define MIKROBUS_POSITION_I2CSCANNER MIKROBUS_1
+#endif
+
 static i2cscanner_t i2cscanner;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Scanner initialization.
     i2cscanner_cfg_setup( &i2cscanner_cfg );
-    I2CSCANNER_MAP_MIKROBUS( i2cscanner_cfg, MIKROBUS_1 );
+    I2CSCANNER_MAP_MIKROBUS( i2cscanner_cfg, MIKROBUS_POSITION_I2CSCANNER );
     if ( I2CSCANNER_OK != i2cscanner_init( &i2cscanner, &i2cscanner_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

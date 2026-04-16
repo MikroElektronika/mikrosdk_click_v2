@@ -30,6 +30,10 @@
 #include "log.h"
 #include "rs485isolator5.h"
 
+#ifndef MIKROBUS_POSITION_RS485ISOLATOR5
+    #define MIKROBUS_POSITION_RS485ISOLATOR5 MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -58,7 +62,7 @@ void application_init ( void )
 
     // Click initialization.
     rs485isolator5_cfg_setup( &rs485isolator5_cfg );
-    RS485ISOLATOR5_MAP_MIKROBUS( rs485isolator5_cfg, MIKROBUS_1 );
+    RS485ISOLATOR5_MAP_MIKROBUS( rs485isolator5_cfg, MIKROBUS_POSITION_RS485ISOLATOR5 );
     if ( UART_ERROR == rs485isolator5_init( &rs485isolator5, &rs485isolator5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -78,7 +78,7 @@ void application_init ( void )
     //  Click initialization.
 
     lem_cfg_setup( &cfg );
-    LEM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEM );
     lem_init( &lem, &cfg );
     log_printf( &logger, "---------------------\r\n" );
     log_printf( &logger, "      LEM Click      \r\n" );

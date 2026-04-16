@@ -24,6 +24,10 @@
 #include "log.h"
 #include "driver.h"
 
+#ifndef MIKROBUS_POSITION_DRIVER
+    #define MIKROBUS_POSITION_DRIVER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static driver_t driver;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     driver_cfg_setup( &cfg );
-    DRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DRIVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DRIVER );
     driver_init( &driver, &cfg );
 }
 

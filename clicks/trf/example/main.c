@@ -24,6 +24,10 @@
 #include "log.h"
 #include "trf.h"
 
+#ifndef MIKROBUS_POSITION_TRF
+    #define MIKROBUS_POSITION_TRF MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define DEMO_APP_RECEIVER
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     trf_cfg_setup( &cfg );
-    TRF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TRF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TRF );
     trf_init( &trf, &cfg );
     
     Delay_ms ( 100 );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "adc5.h"
 
+#ifndef MIKROBUS_POSITION_ADC5
+    #define MIKROBUS_POSITION_ADC5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static adc5_t adc5;
@@ -52,7 +56,7 @@ void application_init ( )
     //  Click initialization.
 
     adc5_cfg_setup( &cfg );
-    ADC5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC5 );
     adc5_init( &adc5, &cfg );
 }
 

@@ -75,7 +75,7 @@ void application_init( void )
 
     //  Click initialization.
     eeprom_cfg_setup( &eeprom_cfg );
-    EEPROM_MAP_MIKROBUS( eeprom_cfg, MIKROBUS_1 );
+    EEPROM_MAP_MIKROBUS( eeprom_cfg, MIKROBUS_POSITION_EEPROM );
     eeprom_init( &eeprom, &eeprom_cfg );
 
     /** 

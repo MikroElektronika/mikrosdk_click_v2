@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     environment_cfg_setup( &cfg );
-    ENVIRONMENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ENVIRONMENT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ENVIRONMENT );
     environment_init( &environment , &cfg );
     environment_default_cfg( &environment );
 }

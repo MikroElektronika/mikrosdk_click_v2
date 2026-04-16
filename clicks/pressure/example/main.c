@@ -27,6 +27,10 @@
 #include "log.h"
 #include "pressure.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE
+    #define MIKROBUS_POSITION_PRESSURE MIKROBUS_1
+#endif
+
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -56,7 +60,7 @@ void application_init( void )
 
     //  Click initialization.
     pressure_cfg_setup( &pressure_cfg );
-    PRESSURE_MAP_MIKROBUS( pressure_cfg, MIKROBUS_1 );
+    PRESSURE_MAP_MIKROBUS( pressure_cfg, MIKROBUS_POSITION_PRESSURE );
     pressure_init( &pressure, &pressure_cfg );
     pressure_sw_reset( &pressure );
     pressure_default_cfg( &pressure );

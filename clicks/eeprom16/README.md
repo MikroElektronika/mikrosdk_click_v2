@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom16_cfg_setup( &eeprom16_cfg );
-    EEPROM16_MAP_MIKROBUS( eeprom16_cfg, MIKROBUS_1 );
+    EEPROM16_MAP_MIKROBUS( eeprom16_cfg, MIKROBUS_POSITION_EEPROM16 );
     if ( SPI_MASTER_ERROR == eeprom16_init( &eeprom16, &eeprom16_cfg ) )
     {
         log_error( &logger, " Communication init." );

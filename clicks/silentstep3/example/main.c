@@ -24,6 +24,10 @@
 #include "log.h"
 #include "silentstep3.h"
 
+#ifndef MIKROBUS_POSITION_SILENTSTEP3
+    #define MIKROBUS_POSITION_SILENTSTEP3 MIKROBUS_1
+#endif
+
 static silentstep3_t silentstep3;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     silentstep3_cfg_setup( &silentstep3_cfg );
-    SILENTSTEP3_MAP_MIKROBUS( silentstep3_cfg, MIKROBUS_1 );
+    SILENTSTEP3_MAP_MIKROBUS( silentstep3_cfg, MIKROBUS_POSITION_SILENTSTEP3 );
     if ( SPI_MASTER_ERROR == silentstep3_init( &silentstep3, &silentstep3_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     co23_cfg_setup( &co23_cfg );
-    CO23_MAP_MIKROBUS( co23_cfg, MIKROBUS_1 );
+    CO23_MAP_MIKROBUS( co23_cfg, MIKROBUS_POSITION_CO23 );
     if ( I2C_MASTER_ERROR == co23_init( &co23, &co23_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

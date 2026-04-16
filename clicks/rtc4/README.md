@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc4_cfg_setup( &rtc4_cfg );
-    RTC4_MAP_MIKROBUS( rtc4_cfg, MIKROBUS_1 );
+    RTC4_MAP_MIKROBUS( rtc4_cfg, MIKROBUS_POSITION_RTC4 );
     if ( ONE_WIRE_ERROR == rtc4_init( &rtc4, &rtc4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

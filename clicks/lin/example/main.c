@@ -31,6 +31,10 @@
 #include "lin.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_LIN
+    #define MIKROBUS_POSITION_LIN MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE - LIN Click board\r\n"
@@ -89,7 +93,7 @@ void application_init ( void )
     //  Click initialization.
 
     lin_cfg_setup( &cfg );
-    LIN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIN );
     lin_init( &lin, &cfg );
     Delay_ms ( 100 );
     

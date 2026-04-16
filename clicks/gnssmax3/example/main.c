@@ -29,6 +29,10 @@
 #include "log.h"
 #include "gnssmax3.h"
 
+#ifndef MIKROBUS_POSITION_GNSSMAX3
+    #define MIKROBUS_POSITION_GNSSMAX3 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -96,7 +100,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssmax3_cfg_setup( &gnssmax3_cfg );
-    GNSSMAX3_MAP_MIKROBUS( gnssmax3_cfg, MIKROBUS_1 );
+    GNSSMAX3_MAP_MIKROBUS( gnssmax3_cfg, MIKROBUS_POSITION_GNSSMAX3 );
     if ( UART_ERROR == gnssmax3_init( &gnssmax3, &gnssmax3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

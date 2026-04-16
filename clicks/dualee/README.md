@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     dualee_cfg_setup( &cfg );
-    DUALEE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DUALEE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DUALEE );
     dualee_init( &dualee, &cfg );
 
     log_printf( &logger, "*********** APPLICATION INIT ***********\r\n" );

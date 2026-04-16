@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     isoadc_cfg_setup( &isoadc_cfg );
-    ISOADC_MAP_MIKROBUS( isoadc_cfg, MIKROBUS_1 );
+    ISOADC_MAP_MIKROBUS( isoadc_cfg, MIKROBUS_POSITION_ISOADC );
     if ( SPI_MASTER_ERROR == isoadc_init( &isoadc, &isoadc_cfg ) )
     {
         log_error( &logger, " Communication init." );

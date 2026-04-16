@@ -36,6 +36,10 @@
 #include "log.h"
 #include "lteiot4.h"
 
+#ifndef MIKROBUS_POSITION_LTEIOT4
+    #define MIKROBUS_POSITION_LTEIOT4 MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -136,7 +140,7 @@ void application_init ( void )
     
     // Click initialization.
     lteiot4_cfg_setup( &lteiot4_cfg );
-    LTEIOT4_MAP_MIKROBUS( lteiot4_cfg, MIKROBUS_1 );
+    LTEIOT4_MAP_MIKROBUS( lteiot4_cfg, MIKROBUS_POSITION_LTEIOT4 );
     err_t init_flag  = lteiot4_init( &lteiot4, &lteiot4_cfg );
     if ( init_flag == UART_ERROR )
     {

@@ -90,7 +90,7 @@ void application_init ( void )
     // Click initialization.
 
     dcmotor15_cfg_setup( &dcmotor15_cfg );
-    DCMOTOR15_MAP_MIKROBUS( dcmotor15_cfg, MIKROBUS_1 );
+    DCMOTOR15_MAP_MIKROBUS( dcmotor15_cfg, MIKROBUS_POSITION_DCMOTOR15 );
     if ( ADC_ERROR == dcmotor15_init( &dcmotor15, &dcmotor15_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

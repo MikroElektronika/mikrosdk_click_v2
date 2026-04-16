@@ -23,6 +23,10 @@
 #include "microwave2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_MICROWAVE2
+    #define MIKROBUS_POSITION_MICROWAVE2 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 #define PROCESS_PARSER_BUFFER_SIZE 500
@@ -126,7 +130,7 @@ void application_init ( void )
     //  Click initialization.
 
     microwave2_cfg_setup( &cfg );
-    MICROWAVE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MICROWAVE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MICROWAVE2 );
     microwave2_init( &microwave2, &cfg );
 }
 

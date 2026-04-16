@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     adac4_cfg_setup( &adac4_cfg );
-    ADAC4_MAP_MIKROBUS( adac4_cfg, MIKROBUS_1 );
+    ADAC4_MAP_MIKROBUS( adac4_cfg, MIKROBUS_POSITION_ADAC4 );
     if ( I2C_MASTER_ERROR == adac4_init( &adac4, &adac4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

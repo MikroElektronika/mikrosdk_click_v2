@@ -24,6 +24,10 @@
 #include "log.h"
 #include "capsense.h"
 
+#ifndef MIKROBUS_POSITION_CAPSENSE
+    #define MIKROBUS_POSITION_CAPSENSE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static capsense_t capsense;
@@ -71,7 +75,7 @@ void application_init ( void )
 
     //  Click initialization.
     capsense_cfg_setup( &cfg );
-    CAPSENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPSENSE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPSENSE );
     capsense_init( &capsense, &cfg );
     
     if ( CAPSENSE_ERROR == capsense_default_cfg ( &capsense ) )

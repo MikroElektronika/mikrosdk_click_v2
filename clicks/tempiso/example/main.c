@@ -23,6 +23,10 @@
 #include "log.h"
 #include "tempiso.h"
 
+#ifndef MIKROBUS_POSITION_TEMPISO
+    #define MIKROBUS_POSITION_TEMPISO MIKROBUS_1
+#endif
+
 static tempiso_t tempiso;   /**< Temp ISO Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     tempiso_cfg_setup( &tempiso_cfg );
-    TEMPISO_MAP_MIKROBUS( tempiso_cfg, MIKROBUS_1 );
+    TEMPISO_MAP_MIKROBUS( tempiso_cfg, MIKROBUS_POSITION_TEMPISO );
     if ( ADC_ERROR == tempiso_init( &tempiso, &tempiso_cfg ) )
     {
         log_error( &logger, " Communication init." );

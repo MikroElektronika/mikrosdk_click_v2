@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     fingerprint2_cfg_setup( &cfg );
-    FINGERPRINT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FINGERPRINT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FINGERPRINT2 );
     fingerprint2_init( &fingerprint2, &cfg );
     
     fingerprint2_reset ( &fingerprint2 );

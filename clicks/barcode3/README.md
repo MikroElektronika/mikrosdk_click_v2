@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     barcode3_cfg_setup( &barcode3_cfg );
-    BARCODE3_MAP_MIKROBUS( barcode3_cfg, MIKROBUS_1 );
+    BARCODE3_MAP_MIKROBUS( barcode3_cfg, MIKROBUS_POSITION_BARCODE3 );
     if ( UART_ERROR == barcode3_init( &barcode3, &barcode3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

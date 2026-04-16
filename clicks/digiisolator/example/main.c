@@ -28,6 +28,10 @@
 #include "log.h"
 #include "digiisolator.h"
 
+#ifndef MIKROBUS_POSITION_DIGIISOLATOR
+    #define MIKROBUS_POSITION_DIGIISOLATOR MIKROBUS_1
+#endif
+
 #define FLASH11_CMD_GET_ID         0x90, 0x00, 0x00, 0x00, 0x00, 0x00
 #define FLASH11_MANUFACTURER_ID    0x1F
 #define FLASH11_DEVICE_ID          0x15
@@ -57,7 +61,7 @@ void application_init ( void )
 
     // Click initialization.
     digiisolator_cfg_setup( &digiisolator_cfg );
-    DIGIISOLATOR_MAP_MIKROBUS( digiisolator_cfg, MIKROBUS_1 );
+    DIGIISOLATOR_MAP_MIKROBUS( digiisolator_cfg, MIKROBUS_POSITION_DIGIISOLATOR );
     if ( SPI_MASTER_ERROR == digiisolator_init( &digiisolator, &digiisolator_cfg ) )
     {
         log_error( &logger, " Communication init." );

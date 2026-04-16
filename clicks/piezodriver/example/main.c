@@ -27,6 +27,10 @@
 #include "log.h"
 #include "piezodriver.h"
 
+#ifndef MIKROBUS_POSITION_PIEZODRIVER
+    #define MIKROBUS_POSITION_PIEZODRIVER MIKROBUS_1
+#endif
+
 static piezodriver_t piezodriver;
 static log_t logger;
 
@@ -66,7 +70,7 @@ void application_init ( void )
 
     // Click initialization.
     piezodriver_cfg_setup( &piezodriver_cfg );
-    PIEZODRIVER_MAP_MIKROBUS( piezodriver_cfg, MIKROBUS_1 );
+    PIEZODRIVER_MAP_MIKROBUS( piezodriver_cfg, MIKROBUS_POSITION_PIEZODRIVER );
     if ( PWM_ERROR == piezodriver_init( &piezodriver, &piezodriver_cfg ) )
     {
         log_error( &logger, " Communication init." );

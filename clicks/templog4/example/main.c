@@ -25,6 +25,10 @@
 #include "log.h"
 #include "templog4.h"
 
+#ifndef MIKROBUS_POSITION_TEMPLOG4
+    #define MIKROBUS_POSITION_TEMPLOG4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static templog4_t templog4;
@@ -83,7 +87,7 @@ void application_init ( )
     //  Click initialization.
 
     templog4_cfg_setup( &cfg );
-    TEMPLOG4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG4 );
     templog4_init( &templog4, &cfg );
     templog4_default_cfg ( &templog4 );
 }

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "fingerprint4.h"
 
+#ifndef MIKROBUS_POSITION_FINGERPRINT4
+    #define MIKROBUS_POSITION_FINGERPRINT4 MIKROBUS_1
+#endif
+
 #define LOCATION_IN_FLASH               0   // Starting location or template ID where the fingerprints will be stored.
 #define NUMBER_OF_FINGERPRINTS          3   // Number of fingerprints to register.
 
@@ -89,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     fingerprint4_cfg_setup( &fingerprint4_cfg );
-    FINGERPRINT4_MAP_MIKROBUS( fingerprint4_cfg, MIKROBUS_1 );
+    FINGERPRINT4_MAP_MIKROBUS( fingerprint4_cfg, MIKROBUS_POSITION_FINGERPRINT4 );
     if ( FINGERPRINT4_RES_OK != fingerprint4_init( &fingerprint4, &fingerprint4_cfg ) )
     {
         log_error( &logger, " Communication init." );

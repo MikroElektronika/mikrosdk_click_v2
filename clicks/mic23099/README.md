@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     mic23099_cfg_setup( &cfg );
-    MIC23099_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC23099_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC23099 );
     mic23099_init( &mic23099, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

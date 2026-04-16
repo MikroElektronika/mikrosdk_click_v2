@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     nbiot6_cfg_setup( &nbiot6_cfg );
-    NBIOT6_MAP_MIKROBUS( nbiot6_cfg, MIKROBUS_1 );
+    NBIOT6_MAP_MIKROBUS( nbiot6_cfg, MIKROBUS_POSITION_NBIOT6 );
     if ( UART_ERROR == nbiot6_init( &nbiot6, &nbiot6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

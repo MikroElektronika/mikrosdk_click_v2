@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     environment6_cfg_setup( &environment6_cfg );
-    ENVIRONMENT6_MAP_MIKROBUS( environment6_cfg, MIKROBUS_1 );
+    ENVIRONMENT6_MAP_MIKROBUS( environment6_cfg, MIKROBUS_POSITION_ENVIRONMENT6 );
     err_t init_flag = environment6_init( &environment6, &environment6_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

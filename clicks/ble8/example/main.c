@@ -36,6 +36,10 @@
 #include "ble8.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_BLE8
+    #define MIKROBUS_POSITION_BLE8 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 5
 #define PROCESS_RX_BUFFER_SIZE 100
 #define PROCESS_PARSER_BUFFER_SIZE 100
@@ -139,7 +143,7 @@ void application_init ( void )
     //  Click initialization.
 
     ble8_cfg_setup( &cfg );
-    BLE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE8 );
     ble8_init( &ble8, &cfg );
 
     ble8_reset( &ble8 );

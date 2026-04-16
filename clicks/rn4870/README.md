@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     rn4870_cfg_setup( &cfg );
-    RN4870_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RN4870_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RN4870 );
     rn4870_init( &rn4870, &cfg );
 
     dev_type = RN4870_DEVICETYPE_MASTER;

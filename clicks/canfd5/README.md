@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     canfd5_cfg_setup( &cfg );
-    CANFD5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANFD5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANFD5 );
     canfd5_init( &canfd5, &cfg );
 
     canfd5_set_normal_operating_mode( &canfd5 );

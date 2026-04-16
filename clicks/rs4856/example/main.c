@@ -27,6 +27,10 @@
 #include "rs4856.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS4856
+    #define MIKROBUS_POSITION_RS4856 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 #define PROCESS_PARSER_BUFFER_SIZE 500
@@ -118,7 +122,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs4856_cfg_setup( &cfg );
-    RS4856_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4856_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4856 );
     rs4856_init( &rs4856, &cfg );
 
 #ifdef DEMO_APP_RECEIVER

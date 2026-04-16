@@ -72,7 +72,7 @@ void application_init ( void )
 
     //  Click initialization.
     eink154inch_cfg_setup( &cfg );
-    EINK154INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EINK154INCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EINK154INCH );
     eink154inch_init( &eink154inch, &cfg );
 
     eink154inch_start_config( &eink154inch );

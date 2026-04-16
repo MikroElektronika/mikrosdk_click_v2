@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs485isolator2_cfg_setup( &cfg );
-    RS485ISOLATOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS485ISOLATOR2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS485ISOLATOR2 );
     rs485isolator2_init( &rs485isolator2, &cfg );
     Delay_ms ( 100 );
     

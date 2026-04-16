@@ -91,7 +91,7 @@ void application_init ( )
     //  Click initialization.
 
     templog6_cfg_setup( &cfg );
-    TEMPLOG6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG6 );
     templog6_init( &templog6, &cfg );
         
     // Test communication 

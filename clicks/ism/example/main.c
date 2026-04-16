@@ -24,6 +24,10 @@
 #include "log.h"
 #include "ism.h"
 
+#ifndef MIKROBUS_POSITION_ISM
+    #define MIKROBUS_POSITION_ISM MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     ism_cfg_setup( &ism_cfg );
-    ISM_MAP_MIKROBUS( ism_cfg, MIKROBUS_1 );
+    ISM_MAP_MIKROBUS( ism_cfg, MIKROBUS_POSITION_ISM );
     if ( SPI_MASTER_ERROR == ism_init( &ism, &ism_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

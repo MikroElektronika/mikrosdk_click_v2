@@ -95,7 +95,7 @@ void application_init ( void )
 
     // Click initialization.
     accel4_cfg_setup( &accel4_cfg );
-    ACCEL4_MAP_MIKROBUS( accel4_cfg, MIKROBUS_1 );
+    ACCEL4_MAP_MIKROBUS( accel4_cfg, MIKROBUS_POSITION_ACCEL4 );
     err_t init_flag  = accel4_init( &accel4, &accel4_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

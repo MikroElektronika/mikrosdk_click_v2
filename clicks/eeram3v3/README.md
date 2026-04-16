@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
     
     eeram3v3_cfg_setup( &eeram3v3_cfg );
-    EERAM3V3_MAP_MIKROBUS( eeram3v3_cfg, MIKROBUS_1 );
+    EERAM3V3_MAP_MIKROBUS( eeram3v3_cfg, MIKROBUS_POSITION_EERAM3V3 );
     err_t init_flag = eeram3v3_init( &eeram3v3, &eeram3v3_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

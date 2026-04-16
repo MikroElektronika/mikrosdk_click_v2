@@ -24,6 +24,10 @@
 #include "log.h"
 #include "digiio.h"
 
+#ifndef MIKROBUS_POSITION_DIGIIO
+    #define MIKROBUS_POSITION_DIGIIO MIKROBUS_1
+#endif
+
 static digiio_t digiio;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     digiio_cfg_setup( &digiio_cfg );
-    DIGIIO_MAP_MIKROBUS( digiio_cfg, MIKROBUS_1 );
+    DIGIIO_MAP_MIKROBUS( digiio_cfg, MIKROBUS_POSITION_DIGIIO );
     if ( SPI_MASTER_ERROR == digiio_init( &digiio, &digiio_cfg ) )
     {
         log_error( &logger, " Communication init." );

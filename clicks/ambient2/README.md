@@ -83,7 +83,7 @@ void application_init( void )
 
     //  Click initialization.
     ambient2_cfg_setup( &ambient2_cfg );
-    AMBIENT2_MAP_MIKROBUS( ambient2_cfg, MIKROBUS_1 );
+    AMBIENT2_MAP_MIKROBUS( ambient2_cfg, MIKROBUS_POSITION_AMBIENT2 );
     ambient2_init( &ambient2, &ambient2_cfg );
     ambient2_default_cfg( &ambient2 );
 

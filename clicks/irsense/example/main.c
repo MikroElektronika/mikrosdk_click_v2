@@ -26,6 +26,10 @@
 #include "log.h"
 #include "irsense.h"
 
+#ifndef MIKROBUS_POSITION_IRSENSE
+    #define MIKROBUS_POSITION_IRSENSE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static irsense_t irsense;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     irsense_cfg_setup( &cfg );
-    IRSENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRSENSE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRSENSE );
     irsense_init( &irsense, &cfg );
 
     eint.ir13h = IRSENSE_EINTEN_IR13_HIGH_INT_DISABLE;

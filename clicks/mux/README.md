@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     mux_cfg_setup( &cfg );
-    MUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MUX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MUX );
     mux_init( &mux, &cfg );
     Delay_ms ( 100 );
     

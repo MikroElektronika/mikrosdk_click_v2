@@ -27,6 +27,10 @@
 #include "log.h"
 #include "buck14.h"
 
+#ifndef MIKROBUS_POSITION_BUCK14
+    #define MIKROBUS_POSITION_BUCK14 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static buck14_t buck14;
@@ -85,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck14_cfg_setup( &cfg );
-    BUCK14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK14_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK14 );
     buck14_init( &buck14, &cfg );
 
     buck14_reset( &buck14 );

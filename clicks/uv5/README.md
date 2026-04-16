@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     uv5_cfg_setup( &uv5_cfg );
-    UV5_MAP_MIKROBUS( uv5_cfg, MIKROBUS_1 );
+    UV5_MAP_MIKROBUS( uv5_cfg, MIKROBUS_POSITION_UV5 );
     if ( I2C_MASTER_ERROR == uv5_init( &uv5, &uv5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

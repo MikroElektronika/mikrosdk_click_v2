@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     color4_cfg_setup( &color4_cfg );
-    COLOR4_MAP_MIKROBUS( color4_cfg, MIKROBUS_1 );
+    COLOR4_MAP_MIKROBUS( color4_cfg, MIKROBUS_POSITION_COLOR4 );
     if ( I2C_MASTER_ERROR == color4_init( &color4, &color4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

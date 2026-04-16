@@ -24,6 +24,10 @@
 #include "log.h"
 #include "templog6.h"
 
+#ifndef MIKROBUS_POSITION_TEMPLOG6
+    #define MIKROBUS_POSITION_TEMPLOG6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static templog6_t templog6;
@@ -54,7 +58,7 @@ void application_init ( )
     //  Click initialization.
 
     templog6_cfg_setup( &cfg );
-    TEMPLOG6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG6 );
     templog6_init( &templog6, &cfg );
         
     // Test communication 

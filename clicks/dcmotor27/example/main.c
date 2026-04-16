@@ -23,6 +23,10 @@
 #include "log.h"
 #include "dcmotor27.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR27
+    #define MIKROBUS_POSITION_DCMOTOR27 MIKROBUS_1
+#endif
+
 static dcmotor27_t dcmotor27;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor27_cfg_setup( &dcmotor27_cfg );
-    DCMOTOR27_MAP_MIKROBUS( dcmotor27_cfg, MIKROBUS_1 );
+    DCMOTOR27_MAP_MIKROBUS( dcmotor27_cfg, MIKROBUS_POSITION_DCMOTOR27 );
     if ( PWM_ERROR == dcmotor27_init( &dcmotor27, &dcmotor27_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "tamper2.h"
 
+#ifndef MIKROBUS_POSITION_TAMPER2
+    #define MIKROBUS_POSITION_TAMPER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static tamper2_t tamper2;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     tamper2_cfg_setup( &cfg );
-    TAMPER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TAMPER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TAMPER2 );
     tamper2_init( &tamper2, &cfg );
 }
 

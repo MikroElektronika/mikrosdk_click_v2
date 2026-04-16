@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ltecat43_cfg_setup( &ltecat43_cfg );
-    LTECAT43_MAP_MIKROBUS( ltecat43_cfg, MIKROBUS_1 );
+    LTECAT43_MAP_MIKROBUS( ltecat43_cfg, MIKROBUS_POSITION_LTECAT43 );
     if ( UART_ERROR == ltecat43_init( &ltecat43, &ltecat43_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     eposmodule_cfg_setup( &eposmodule_cfg );
-    EPOSMODULE_MAP_MIKROBUS( eposmodule_cfg, MIKROBUS_1 );
+    EPOSMODULE_MAP_MIKROBUS( eposmodule_cfg, MIKROBUS_POSITION_EPOSMODULE );
     if ( SPI_MASTER_ERROR == eposmodule_init( &eposmodule, &eposmodule_cfg ) )
     {
         log_error( &logger, " Communication init." );

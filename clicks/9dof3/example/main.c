@@ -30,6 +30,10 @@
 #include "log.h"
 #include "c9dof3.h"
 
+#ifndef MIKROBUS_POSITION_9DOF3
+    #define MIKROBUS_POSITION_9DOF3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c9dof3_t c9dof3;
@@ -62,7 +66,7 @@ void application_init ( void )
     //  Click initialization.
 
     c9dof3_cfg_setup( &cfg );
-    C9DOF3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C9DOF3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_9DOF3 );
     c9dof3_init( &c9dof3, &cfg );
     Delay_ms ( 100 );
 

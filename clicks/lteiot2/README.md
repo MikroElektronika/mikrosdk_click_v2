@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     lteiot2_cfg_setup( &cfg );
-    LTEIOT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LTEIOT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LTEIOT2 );
     lteiot2_init( &lteiot2, &cfg );
 
     lteiot2_module_power( &lteiot2, LTEIOT2_MODULE_POWER_ON );

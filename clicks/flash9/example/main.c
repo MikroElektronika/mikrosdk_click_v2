@@ -24,6 +24,10 @@
 #include "log.h"
 #include "flash9.h"
 
+#ifndef MIKROBUS_POSITION_FLASH9
+    #define MIKROBUS_POSITION_FLASH9 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE           "MikroE - Flash 9 Click board"
 #define STARTING_ADDRESS            0x01234567ul
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     flash9_cfg_setup( &flash9_cfg );
-    FLASH9_MAP_MIKROBUS( flash9_cfg, MIKROBUS_1 );
+    FLASH9_MAP_MIKROBUS( flash9_cfg, MIKROBUS_POSITION_FLASH9 );
     if ( SPI_MASTER_ERROR == flash9_init( &flash9, &flash9_cfg ) )
     {
         log_error( &logger, " Communication init." );

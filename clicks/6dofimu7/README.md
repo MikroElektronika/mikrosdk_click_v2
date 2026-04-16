@@ -90,7 +90,7 @@ void application_init ( )
     //  Click initialization.
 
     c6dofimu7_cfg_setup( &cfg );
-    C6DOFIMU7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C6DOFIMU7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_6DOFIMU7 );
     c6dofimu7_init( &c6dofimu7, &cfg );
     c6dofimu7_default_cfg( &c6dofimu7 );
 }

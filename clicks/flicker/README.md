@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     flicker_cfg_setup( &cfg );
-    FLICKER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLICKER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLICKER );
     flicker_init( &flicker, &cfg );
 }
 ```

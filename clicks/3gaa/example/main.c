@@ -57,6 +57,10 @@
 #include "c3gaa.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_3GAA
+    #define MIKROBUS_POSITION_3GAA MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_SMS                         1               // Example of sending SMS to a phone number
@@ -215,7 +219,7 @@ void application_init ( void )
 
     // Click initialization.
     c3gaa_cfg_setup( &c3gaa_cfg );
-    C3GAA_MAP_MIKROBUS( c3gaa_cfg, MIKROBUS_1 );
+    C3GAA_MAP_MIKROBUS( c3gaa_cfg, MIKROBUS_POSITION_3GAA );
     if ( UART_ERROR == c3gaa_init( &c3gaa, &c3gaa_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

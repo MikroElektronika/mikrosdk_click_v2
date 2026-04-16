@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     compass8_cfg_setup( &compass8_cfg );
-    COMPASS8_MAP_MIKROBUS( compass8_cfg, MIKROBUS_1 );
+    COMPASS8_MAP_MIKROBUS( compass8_cfg, MIKROBUS_POSITION_COMPASS8 );
     if ( I2C_MASTER_ERROR == compass8_init( &compass8, &compass8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

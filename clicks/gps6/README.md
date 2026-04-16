@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gps6_cfg_setup( &gps6_cfg );
-    GPS6_MAP_MIKROBUS( gps6_cfg, MIKROBUS_1 );
+    GPS6_MAP_MIKROBUS( gps6_cfg, MIKROBUS_POSITION_GPS6 );
     if ( UART_ERROR == gps6_init( &gps6, &gps6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

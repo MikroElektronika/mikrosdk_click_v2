@@ -90,7 +90,7 @@ void application_init ( void )
     // Click initialization.
 
     bluetooth2_cfg_setup( &bluetooth2_cfg );
-    BLUETOOTH2_MAP_MIKROBUS( bluetooth2_cfg, MIKROBUS_1 );
+    BLUETOOTH2_MAP_MIKROBUS( bluetooth2_cfg, MIKROBUS_POSITION_BLUETOOTH_2 );
     err_t init_flag  = bluetooth2_init( &bluetooth2, &bluetooth2_cfg );
     if ( UART_ERROR == init_flag ) 
     {

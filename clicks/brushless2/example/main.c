@@ -24,6 +24,10 @@
 #include "log.h"
 #include "brushless2.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS2
+    #define MIKROBUS_POSITION_BRUSHLESS2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static brushless2_t brushless2;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     brushless2_cfg_setup( &cfg );
-    BRUSHLESS2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS2 );
     brushless2_init( &brushless2, &cfg );
     
     log_printf( &logger, "---------------------- \r\n" );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "accel2.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL2
+    #define MIKROBUS_POSITION_ACCEL2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel2_t accel2;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel2_cfg_setup( &cfg );
-    ACCEL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL2 );
     accel2_init( &accel2, &cfg );
 	Delay_ms ( 100 );
 	accel2_setting( &accel2 );

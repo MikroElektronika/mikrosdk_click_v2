@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel14_cfg_setup( &cfg );
-    ACCEL14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL14_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL14 );
     accel14_init( &accel14, &cfg );
 
     Delay_ms ( 100 );

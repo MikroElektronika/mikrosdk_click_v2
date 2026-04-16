@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     color7_cfg_setup( &cfg );
-    COLOR7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR7 );
     color7_init( &color7, &cfg );
 
     color7_default_cfg( &color7 );

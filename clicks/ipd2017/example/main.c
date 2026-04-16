@@ -21,6 +21,10 @@
 #include "log.h"
 #include "ipd2017.h"
 
+#ifndef MIKROBUS_POSITION_IPD2017
+    #define MIKROBUS_POSITION_IPD2017 MIKROBUS_1
+#endif
+
 static ipd2017_t ipd2017;   /**< IPD 2017 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -44,7 +48,7 @@ void application_init ( void )
 
     // Click initialization.
     ipd2017_cfg_setup( &ipd2017_cfg );
-    IPD2017_MAP_MIKROBUS( ipd2017_cfg, MIKROBUS_1 );
+    IPD2017_MAP_MIKROBUS( ipd2017_cfg, MIKROBUS_POSITION_IPD2017 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ipd2017_init( &ipd2017, &ipd2017_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

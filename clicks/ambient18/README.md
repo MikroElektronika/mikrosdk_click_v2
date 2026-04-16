@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient18_cfg_setup( &ambient18_cfg );
-    AMBIENT18_MAP_MIKROBUS( ambient18_cfg, MIKROBUS_1 );
+    AMBIENT18_MAP_MIKROBUS( ambient18_cfg, MIKROBUS_POSITION_AMBIENT18 );
     err_t init_flag = ambient18_init( &ambient18, &ambient18_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

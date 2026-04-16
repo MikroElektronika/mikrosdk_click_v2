@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     uarttoi2c_cfg_setup( &uarttoi2c_cfg );
-    UARTTOI2C_MAP_MIKROBUS( uarttoi2c_cfg, MIKROBUS_1 );
+    UARTTOI2C_MAP_MIKROBUS( uarttoi2c_cfg, MIKROBUS_POSITION_UARTTOI2C );
     if ( UART_ERROR == uarttoi2c_init( &uarttoi2c, &uarttoi2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

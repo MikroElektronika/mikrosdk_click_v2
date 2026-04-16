@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     fingerprint5_cfg_setup( &fingerprint5_cfg );
-    FINGERPRINT5_MAP_MIKROBUS( fingerprint5_cfg, MIKROBUS_1 );
+    FINGERPRINT5_MAP_MIKROBUS( fingerprint5_cfg, MIKROBUS_POSITION_FINGERPRINT5 );
     if ( UART_ERROR == fingerprint5_init( &fingerprint5, &fingerprint5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

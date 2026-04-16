@@ -25,6 +25,10 @@
 #include "log.h"
 #include "thermo22.h"
 
+#ifndef MIKROBUS_POSITION_THERMO22
+    #define MIKROBUS_POSITION_THERMO22 MIKROBUS_1
+#endif
+
 static thermo22_t thermo22;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo22_cfg_setup( &thermo22_cfg );
-    THERMO22_MAP_MIKROBUS( thermo22_cfg, MIKROBUS_1 );
+    THERMO22_MAP_MIKROBUS( thermo22_cfg, MIKROBUS_POSITION_THERMO22 );
     if ( I2C_MASTER_ERROR == thermo22_init( &thermo22, &thermo22_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

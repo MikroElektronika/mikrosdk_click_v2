@@ -25,6 +25,10 @@
 #include "log.h"
 #include "digipot3.h"
 
+#ifndef MIKROBUS_POSITION_DIGIPOT3
+    #define MIKROBUS_POSITION_DIGIPOT3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static digipot3_t digipot3;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     digipot3_cfg_setup( &cfg );
-    DIGIPOT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIGIPOT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIGIPOT3 );
     digipot3_init( &digipot3, &cfg );
 
     Delay_ms ( 200 );

@@ -81,7 +81,7 @@ void application_init ( void )
 
     //  Click initialization.
     linefollower_cfg_setup( &cfg );
-    LINEFOLLOWER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LINEFOLLOWER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LINEFOLLOWER );
     linefollower_init( &linefollower, &cfg );
     
     log_printf( &logger, "----------------------\r\n" );

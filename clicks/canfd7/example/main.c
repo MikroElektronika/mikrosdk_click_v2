@@ -27,6 +27,10 @@
 #include "log.h"
 #include "canfd7.h"
 
+#ifndef MIKROBUS_POSITION_CANFD7
+    #define MIKROBUS_POSITION_CANFD7 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 #define TX_MESSAGE "CAN FD 7 Click \r\n"
 
@@ -71,7 +75,7 @@ void application_init ( void )
 
     // Click initialization.
     canfd7_cfg_setup( &canfd7_cfg );
-    CANFD7_MAP_MIKROBUS( canfd7_cfg, MIKROBUS_1 );
+    CANFD7_MAP_MIKROBUS( canfd7_cfg, MIKROBUS_POSITION_CANFD7 );
     if ( UART_ERROR == canfd7_init( &canfd7, &canfd7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

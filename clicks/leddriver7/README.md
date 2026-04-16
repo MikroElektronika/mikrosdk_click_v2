@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver7_cfg_setup( &cfg );
-    LEDDRIVER7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER7 );
     leddriver7_init( &leddriver7, &cfg );
 
     Delay_ms ( 100 );

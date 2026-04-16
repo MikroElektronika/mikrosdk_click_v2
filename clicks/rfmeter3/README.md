@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rfmeter3_cfg_setup( &rfmeter3_cfg );
-    RFMETER3_MAP_MIKROBUS( rfmeter3_cfg, MIKROBUS_1 );
+    RFMETER3_MAP_MIKROBUS( rfmeter3_cfg, MIKROBUS_POSITION_RFMETER3 );
     if ( ADC_ERROR == rfmeter3_init( &rfmeter3, &rfmeter3_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

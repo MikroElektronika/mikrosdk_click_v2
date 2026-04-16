@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchkey3_cfg_setup( &cfg );
-    TOUCHKEY3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHKEY3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHKEY3 );
     touchkey3_init( &touchkey3, &cfg );
 
     touchkey3_send_command( &touchkey3, TOUCHKEY3_CMD_RESET );

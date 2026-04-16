@@ -89,7 +89,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     nfctag4_cfg_setup( &cfg );
-    NFCTAG4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NFCTAG4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NFCTAG4 );
     nfctag4_init( &nfctag4, &cfg );
 
     nfctag4_default_cfg( &nfctag4 );

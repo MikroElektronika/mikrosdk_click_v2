@@ -33,6 +33,10 @@
 #include "log.h"
 #include "i2ctocan.h"
 
+#ifndef MIKROBUS_POSITION_I2CTOCAN
+    #define MIKROBUS_POSITION_I2CTOCAN MIKROBUS_1
+#endif
+
 #define I2CTOCAN_VAV_PRESS_DEV_ADDR                            0x5C
 #define I2CTOCAN_VAV_PRESS_CMD_START_PRESSURE_CONVERSION       0x21
 #define I2CTOCAN_VAV_PRESS_PRESS_SCALE_FACTOR                  1200
@@ -91,7 +95,7 @@ void application_init ( void ) {
     // Click initialization.
 
     i2ctocan_cfg_setup( &i2ctocan_cfg );
-    I2CTOCAN_MAP_MIKROBUS( i2ctocan_cfg, MIKROBUS_1 );
+    I2CTOCAN_MAP_MIKROBUS( i2ctocan_cfg, MIKROBUS_POSITION_I2CTOCAN );
     err_t init_flag = i2ctocan_init( &i2ctocan, &i2ctocan_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

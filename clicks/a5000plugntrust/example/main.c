@@ -40,6 +40,10 @@
 #include "log.h"
 #include "a5000plugntrust.h"
 
+#ifndef MIKROBUS_POSITION_A5000PLUGNTRUST
+    #define MIKROBUS_POSITION_A5000PLUGNTRUST MIKROBUS_1
+#endif
+
 // Library and log objects
 static a5000plugntrust_t a5000plugntrust;
 static log_t logger;
@@ -238,7 +242,7 @@ void application_init ( void )
 
     // Click initialization.
     a5000plugntrust_cfg_setup( &a5000plugntrust_cfg );
-    A5000PLUGNTRUST_MAP_MIKROBUS( a5000plugntrust_cfg, MIKROBUS_1 );
+    A5000PLUGNTRUST_MAP_MIKROBUS( a5000plugntrust_cfg, MIKROBUS_POSITION_A5000PLUGNTRUST );
     if ( I2C_MASTER_ERROR == a5000plugntrust_init( &a5000plugntrust, &a5000plugntrust_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

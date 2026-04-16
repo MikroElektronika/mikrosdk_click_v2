@@ -27,6 +27,10 @@
 #include "mbusslave.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_MBUSSLAVE
+    #define MIKROBUS_POSITION_MBUSSLAVE MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE - M-Bus Slave Click board\r\n"
@@ -87,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     mbusslave_cfg_setup( &cfg );
-    MBUSSLAVE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MBUSSLAVE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MBUSSLAVE );
     mbusslave_init( &mbusslave, &cfg );
     Delay_ms ( 100 );
 }

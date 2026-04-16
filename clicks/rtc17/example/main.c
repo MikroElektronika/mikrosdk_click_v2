@@ -25,6 +25,10 @@
 #include "log.h"
 #include "rtc17.h"
 
+#ifndef MIKROBUS_POSITION_RTC17
+    #define MIKROBUS_POSITION_RTC17 MIKROBUS_1
+#endif
+
 static rtc17_t rtc17;
 static log_t logger;
 static rtc17_time_t time;
@@ -61,7 +65,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc17_cfg_setup( &rtc17_cfg );
-    RTC17_MAP_MIKROBUS( rtc17_cfg, MIKROBUS_1 );
+    RTC17_MAP_MIKROBUS( rtc17_cfg, MIKROBUS_POSITION_RTC17 );
     if ( I2C_MASTER_ERROR == rtc17_init( &rtc17, &rtc17_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

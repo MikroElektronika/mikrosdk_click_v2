@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent14_cfg_setup( &hallcurrent14_cfg );
-    HALLCURRENT14_MAP_MIKROBUS( hallcurrent14_cfg, MIKROBUS_1 );
+    HALLCURRENT14_MAP_MIKROBUS( hallcurrent14_cfg, MIKROBUS_POSITION_HALLCURRENT14 );
     err_t init_flag = hallcurrent14_init( &hallcurrent14, &hallcurrent14_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

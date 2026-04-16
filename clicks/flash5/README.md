@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     flash5_cfg_setup( &cfg );
-    FLASH5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH5 );
     flash5_init( &flash5, &cfg );
 
     log_printf( &logger, " - Reseting device... \r\n" );

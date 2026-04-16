@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     c3dhall14_cfg_setup( &c3dhall14_cfg );
-    C3DHALL14_MAP_MIKROBUS( c3dhall14_cfg, MIKROBUS_1 );
+    C3DHALL14_MAP_MIKROBUS( c3dhall14_cfg, MIKROBUS_POSITION_3DHALL14 );
     if ( I2C_MASTER_ERROR == c3dhall14_init( &c3dhall14, &c3dhall14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

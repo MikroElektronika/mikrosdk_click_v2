@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     charger25_cfg_setup( &charger25_cfg );
-    CHARGER25_MAP_MIKROBUS( charger25_cfg, MIKROBUS_1 );
+    CHARGER25_MAP_MIKROBUS( charger25_cfg, MIKROBUS_POSITION_CHARGER25 );
     if ( I2C_MASTER_ERROR == charger25_init( &charger25, &charger25_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

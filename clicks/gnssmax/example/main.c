@@ -36,6 +36,10 @@
 #include "log.h"
 #include "gnssmax.h"
 
+#ifndef MIKROBUS_POSITION_GNSSMAX
+    #define MIKROBUS_POSITION_GNSSMAX MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE                     700
 #define DATA_BUFFER_SIZE                        30
 
@@ -126,7 +130,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssmax_cfg_setup( &gnssmax_cfg );
-    GNSSMAX_MAP_MIKROBUS( gnssmax_cfg, MIKROBUS_1 );
+    GNSSMAX_MAP_MIKROBUS( gnssmax_cfg, MIKROBUS_POSITION_GNSSMAX );
     err_t init_flag  = gnssmax_init( &gnssmax, &gnssmax_cfg );
     if ( init_flag == UART_ERROR )
     {

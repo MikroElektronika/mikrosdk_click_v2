@@ -22,6 +22,10 @@
 #include "log.h"
 #include "eeprom3.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM3
+    #define MIKROBUS_POSITION_EEPROM3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static eeprom3_t eeprom3;
@@ -51,7 +55,7 @@ void application_init ( void )
 
     //  Click initialization.
     eeprom3_cfg_setup( &cfg );
-    EEPROM3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EEPROM3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EEPROM3 );
     eeprom3_init( &eeprom3, &cfg );
 }
 

@@ -29,6 +29,10 @@
 #include "log.h"
 #include "dcmotor12.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR12
+    #define MIKROBUS_POSITION_DCMOTOR12 MIKROBUS_1
+#endif
+
 static dcmotor12_t dcmotor12;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor12_cfg_setup( &dcmotor12_cfg );
-    DCMOTOR12_MAP_MIKROBUS( dcmotor12_cfg, MIKROBUS_1 );
+    DCMOTOR12_MAP_MIKROBUS( dcmotor12_cfg, MIKROBUS_POSITION_DCMOTOR12 );
     if ( DCMOTOR12_OK != dcmotor12_init( &dcmotor12, &dcmotor12_cfg ) )
     {
         log_error( &logger, " Communication init." );

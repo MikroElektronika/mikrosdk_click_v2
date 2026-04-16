@@ -27,6 +27,10 @@
 #include "log.h"
 #include "oximeter3.h"
 
+#ifndef MIKROBUS_POSITION_OXIMETER3
+    #define MIKROBUS_POSITION_OXIMETER3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static oximeter3_t oximeter3;
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     oximeter3_cfg_setup( &cfg );
-    OXIMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OXIMETER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OXIMETER3 );
     oximeter3_init( &oximeter3, &cfg );
 
     dev_status = oximeter3_generic_read( &oximeter3, OXIMETER3_REG_PRODUCT_ID );

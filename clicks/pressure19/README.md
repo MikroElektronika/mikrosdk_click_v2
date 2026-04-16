@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure19_cfg_setup( &pressure19_cfg );
-    PRESSURE19_MAP_MIKROBUS( pressure19_cfg, MIKROBUS_1 );
+    PRESSURE19_MAP_MIKROBUS( pressure19_cfg, MIKROBUS_POSITION_PRESSURE19 );
     err_t init_flag = pressure19_init( &pressure19, &pressure19_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

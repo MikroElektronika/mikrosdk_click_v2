@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     smoke2_cfg_setup( &smoke2_cfg );
-    SMOKE2_MAP_MIKROBUS( smoke2_cfg, MIKROBUS_1 );
+    SMOKE2_MAP_MIKROBUS( smoke2_cfg, MIKROBUS_POSITION_SMOKE2 );
     err_t init_flag  = smoke2_init( &smoke2, &smoke2_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) 
     {

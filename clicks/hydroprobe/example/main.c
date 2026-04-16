@@ -23,6 +23,10 @@
 #include "log.h"
 #include "hydroprobe.h"
 
+#ifndef MIKROBUS_POSITION_HYDROPROBE
+    #define MIKROBUS_POSITION_HYDROPROBE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static hydroprobe_t hydroprobe;
@@ -85,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     hydroprobe_cfg_setup( &cfg );
-    HYDROPROBE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HYDROPROBE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HYDROPROBE );
     hydroprobe_init( &hydroprobe, &cfg );
     
     Delay_ms ( 100 );

@@ -31,6 +31,10 @@
 #include "log.h"
 #include "ultrasonic3.h"
 
+#ifndef MIKROBUS_POSITION_ULTRASONIC3
+    #define MIKROBUS_POSITION_ULTRASONIC3 MIKROBUS_1
+#endif
+
 static ultrasonic3_t ultrasonic3;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     ultrasonic3_cfg_setup( &ultrasonic3_cfg );
-    ULTRASONIC3_MAP_MIKROBUS( ultrasonic3_cfg, MIKROBUS_1 );
+    ULTRASONIC3_MAP_MIKROBUS( ultrasonic3_cfg, MIKROBUS_POSITION_ULTRASONIC3 );
     if ( SPI_MASTER_ERROR == ultrasonic3_init( &ultrasonic3, &ultrasonic3_cfg ) )
     {
         log_error( &logger, " Communication init." );

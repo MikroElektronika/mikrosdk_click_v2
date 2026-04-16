@@ -28,6 +28,10 @@
 #include "log.h"
 #include "accelpressure.h"
 
+#ifndef MIKROBUS_POSITION_ACCELPRESSURE
+    #define MIKROBUS_POSITION_ACCELPRESSURE MIKROBUS_1
+#endif
+
 static accelpressure_t accelpressure;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     accelpressure_cfg_setup( &accelpressure_cfg );
-    ACCELPRESSURE_MAP_MIKROBUS( accelpressure_cfg, MIKROBUS_1 );
+    ACCELPRESSURE_MAP_MIKROBUS( accelpressure_cfg, MIKROBUS_POSITION_ACCELPRESSURE );
     if ( I2C_MASTER_ERROR == accelpressure_init( &accelpressure, &accelpressure_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

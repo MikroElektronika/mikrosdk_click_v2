@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     linhall2_cfg_setup( &linhall2_cfg );
-    LINHALL2_MAP_MIKROBUS( linhall2_cfg, MIKROBUS_1 );
+    LINHALL2_MAP_MIKROBUS( linhall2_cfg, MIKROBUS_POSITION_LINHALL2 );
     if ( ADC_ERROR == linhall2_init( &linhall2, &linhall2_cfg ) )
     {
         log_error( &logger, " Communication init." );

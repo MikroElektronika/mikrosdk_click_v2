@@ -27,6 +27,10 @@
 #include "lr3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_LR3
+    #define MIKROBUS_POSITION_LR3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define MASTER
@@ -106,7 +110,7 @@ void application_init ( void )
     //  Click initialization.
 
     lr3_cfg_setup( &cfg );
-    LR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LR3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LR3 );
     lr3_init( &lr3, &cfg );
 
     Delay_ms ( 100 );

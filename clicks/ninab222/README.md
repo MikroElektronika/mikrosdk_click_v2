@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     ninab222_cfg_setup( &ninab222_cfg );
-    NINAB222_MAP_MIKROBUS( ninab222_cfg, MIKROBUS_1 );
+    NINAB222_MAP_MIKROBUS( ninab222_cfg, MIKROBUS_POSITION_NINAB222 );
     if ( UART_ERROR == ninab222_init( &ninab222, &ninab222_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

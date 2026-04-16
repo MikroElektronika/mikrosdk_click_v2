@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     heartrate10_cfg_setup( &heartrate10_cfg );
-    HEARTRATE10_MAP_MIKROBUS( heartrate10_cfg, MIKROBUS_1 );
+    HEARTRATE10_MAP_MIKROBUS( heartrate10_cfg, MIKROBUS_POSITION_HEARTRATE10 );
     if ( I2C_MASTER_ERROR == heartrate10_init( &heartrate10, &heartrate10_cfg ) ) 
     {
         log_error( &logger, " Initializtion." );

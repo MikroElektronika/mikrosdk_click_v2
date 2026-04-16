@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     sram4_cfg_setup( &sram4_cfg );
-    SRAM4_MAP_MIKROBUS( sram4_cfg, MIKROBUS_1 );
+    SRAM4_MAP_MIKROBUS( sram4_cfg, MIKROBUS_POSITION_SRAM4 );
     err_t init_flag  = sram4_init( &sram4, &sram4_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

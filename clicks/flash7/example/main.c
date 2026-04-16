@@ -27,6 +27,10 @@
 #include "log.h"
 #include "flash7.h"
 
+#ifndef MIKROBUS_POSITION_FLASH7
+    #define MIKROBUS_POSITION_FLASH7 MIKROBUS_1
+#endif
+
 static flash7_t flash7;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void ) {
     // Click initialization.
 
     flash7_cfg_setup( &flash7_cfg );
-    FLASH7_MAP_MIKROBUS( flash7_cfg, MIKROBUS_1 );
+    FLASH7_MAP_MIKROBUS( flash7_cfg, MIKROBUS_POSITION_FLASH7 );
     err_t init_flag  = flash7_init( &flash7, &flash7_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

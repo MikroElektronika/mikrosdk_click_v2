@@ -61,6 +61,10 @@
 #include "lteiot14.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_LTEIOT14
+    #define MIKROBUS_POSITION_LTEIOT14 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_SMS                         1               // Example of sending SMS to a phone number
@@ -232,7 +236,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot14_cfg_setup( &lteiot14_cfg );
-    LTEIOT14_MAP_MIKROBUS( lteiot14_cfg, MIKROBUS_1 );
+    LTEIOT14_MAP_MIKROBUS( lteiot14_cfg, MIKROBUS_POSITION_LTEIOT14 );
     if ( UART_ERROR == lteiot14_init( &lteiot14, &lteiot14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

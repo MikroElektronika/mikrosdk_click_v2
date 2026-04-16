@@ -27,6 +27,10 @@
 #include "log.h"
 #include "color6.h"
 
+#ifndef MIKROBUS_POSITION_COLOR6
+    #define MIKROBUS_POSITION_COLOR6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static color6_t color6;
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     color6_cfg_setup( &cfg );
-    COLOR6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR6 );
     color6_init( &color6, &cfg );
 
     color6_software_reset( &color6 );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "accel27.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL27
+    #define MIKROBUS_POSITION_ACCEL27 MIKROBUS_1
+#endif
+
 // The number of data samples for averaging
 #define NUM_OF_SAMPLES  100
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     accel27_cfg_setup( &accel27_cfg );
-    ACCEL27_MAP_MIKROBUS( accel27_cfg, MIKROBUS_1 );
+    ACCEL27_MAP_MIKROBUS( accel27_cfg, MIKROBUS_POSITION_ACCEL27 );
     err_t init_flag = accel27_init( &accel27, &accel27_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

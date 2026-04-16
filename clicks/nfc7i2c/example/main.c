@@ -27,6 +27,10 @@
 #include "log.h"
 #include "nfc7i2c.h"
 
+#ifndef MIKROBUS_POSITION_NFC7I2C
+    #define MIKROBUS_POSITION_NFC7I2C MIKROBUS_1
+#endif
+
 static nfc7i2c_t nfc7i2c;
 static log_t logger;
 
@@ -103,7 +107,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc7i2c_cfg_setup( &nfc7i2c_cfg );
-    NFC7I2C_MAP_MIKROBUS( nfc7i2c_cfg, MIKROBUS_1 );
+    NFC7I2C_MAP_MIKROBUS( nfc7i2c_cfg, MIKROBUS_POSITION_NFC7I2C );
     if ( I2C_MASTER_ERROR == nfc7i2c_init( &nfc7i2c, &nfc7i2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

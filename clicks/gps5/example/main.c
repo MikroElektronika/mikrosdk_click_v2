@@ -28,6 +28,10 @@
 #include "log.h"
 #include "gps5.h"
 
+#ifndef MIKROBUS_POSITION_GPS5
+    #define MIKROBUS_POSITION_GPS5 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static gps5_t gps5;
@@ -86,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     gps5_cfg_setup( &gps5_cfg );
-    GPS5_MAP_MIKROBUS( gps5_cfg, MIKROBUS_1 );
+    GPS5_MAP_MIKROBUS( gps5_cfg, MIKROBUS_POSITION_GPS5 );
     if ( UART_ERROR == gps5_init( &gps5, &gps5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

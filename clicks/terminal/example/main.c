@@ -26,6 +26,10 @@
 #include "log.h"
 #include "terminal.h"
 
+#ifndef MIKROBUS_POSITION_TERMINAL
+    #define MIKROBUS_POSITION_TERMINAL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static terminal_t terminal;
@@ -99,7 +103,7 @@ void application_init ( )
     //  Click initialization.
 
     terminal_cfg_setup( &cfg );
-    TERMINAL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TERMINAL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TERMINAL );
     terminal_init( &terminal, &cfg );
 }
 

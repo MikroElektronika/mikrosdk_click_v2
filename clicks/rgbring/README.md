@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     rgbring_cfg_setup( &rgbring_cfg );
-    RGBRING_MAP_MIKROBUS( rgbring_cfg, MIKROBUS_1 );
+    RGBRING_MAP_MIKROBUS( rgbring_cfg, MIKROBUS_POSITION_RGBRING );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == 
          rgbring_init( &rgbring, &rgbring_logic_zero, &rgbring_logic_one, &rgbring_cfg ) ) 
     {

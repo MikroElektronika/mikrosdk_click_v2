@@ -86,7 +86,7 @@ void application_init ( )
     //  Click initialization.
 
     terminal_cfg_setup( &cfg );
-    TERMINAL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TERMINAL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TERMINAL );
     terminal_init( &terminal, &cfg );
 }
 ```

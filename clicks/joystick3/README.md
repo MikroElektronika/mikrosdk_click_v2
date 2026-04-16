@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     joystick3_cfg_setup( &joystick3_cfg );
-    JOYSTICK3_MAP_MIKROBUS( joystick3_cfg, MIKROBUS_1 );
+    JOYSTICK3_MAP_MIKROBUS( joystick3_cfg, MIKROBUS_POSITION_JOYSTICK3 );
     if ( SPI_MASTER_ERROR == joystick3_init( &joystick3, &joystick3_cfg ) )
     {
         log_error( &logger, " Communication init." );

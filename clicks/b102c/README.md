@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     b102c_cfg_setup( &b102c_cfg );
-    B102C_MAP_MIKROBUS( b102c_cfg, MIKROBUS_1 );
+    B102C_MAP_MIKROBUS( b102c_cfg, MIKROBUS_POSITION_B102C );
     if ( UART_ERROR == b102c_init( &b102c, &b102c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

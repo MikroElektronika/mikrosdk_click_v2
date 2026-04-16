@@ -78,7 +78,7 @@ void application_init ( void )
     //  Click initialization.
 
     charger9_cfg_setup( &cfg );
-    CHARGER9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CHARGER9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CHARGER9 );
     charger9_init( &charger9, &cfg );
     
     charger9_enable( &charger9, CHARGER9_DISABLE );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "boost10.h"
 
+#ifndef MIKROBUS_POSITION_BOOST10
+    #define MIKROBUS_POSITION_BOOST10 MIKROBUS_1
+#endif
+
 static boost10_t boost10;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     boost10_cfg_setup( &boost10_cfg );
-    BOOST10_MAP_MIKROBUS( boost10_cfg, MIKROBUS_1 );
+    BOOST10_MAP_MIKROBUS( boost10_cfg, MIKROBUS_POSITION_BOOST10 );
     if ( SPI_MASTER_ERROR == boost10_init( &boost10, &boost10_cfg ) )
     {
         log_error( &logger, " Communication init." );

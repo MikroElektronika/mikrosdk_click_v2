@@ -88,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     vibrasense_cfg_setup( &cfg );
-    VIBRASENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VIBRASENSE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VIBRASENSE );
     vibrasense_init( &vibrasense, &cfg );
     Delay_ms ( 100 );
     

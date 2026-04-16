@@ -24,6 +24,10 @@
 #include "log.h"
 #include "dac2.h"
 
+#ifndef MIKROBUS_POSITION_DAC2
+    #define MIKROBUS_POSITION_DAC2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dac2_t dac2;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac2_cfg_setup( &cfg );
-    DAC2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC2 );
     dac2_init( &dac2, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

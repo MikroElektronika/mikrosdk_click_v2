@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     relay4_cfg_setup( &relay4_cfg );
-    RELAY4_MAP_MIKROBUS( relay4_cfg, MIKROBUS_1 );
+    RELAY4_MAP_MIKROBUS( relay4_cfg, MIKROBUS_POSITION_RELAY4 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == relay4_init( &relay4, &relay4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

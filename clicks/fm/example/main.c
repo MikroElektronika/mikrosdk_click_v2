@@ -40,6 +40,10 @@
 #include "log.h"
 #include "fm.h"
 
+#ifndef MIKROBUS_POSITION_FM
+    #define MIKROBUS_POSITION_FM MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define SIGNAL_STRENGTH_LOWER_LIMIT 25
@@ -407,7 +411,7 @@ void application_init ( void )
     //  Click initialization.
 
     fm_cfg_setup( &cfg );
-    FM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FM );
     fm_init( &fm, &cfg );
     
     Delay_ms ( 500 );

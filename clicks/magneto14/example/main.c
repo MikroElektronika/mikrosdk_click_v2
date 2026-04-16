@@ -26,6 +26,10 @@
 #include "log.h"
 #include "magneto14.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO14
+    #define MIKROBUS_POSITION_MAGNETO14 MIKROBUS_1
+#endif
+
 static magneto14_t magneto14;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     magneto14_cfg_setup( &magneto14_cfg );
-    MAGNETO14_MAP_MIKROBUS( magneto14_cfg, MIKROBUS_1 );
+    MAGNETO14_MAP_MIKROBUS( magneto14_cfg, MIKROBUS_POSITION_MAGNETO14 );
     if ( SPI_MASTER_ERROR == magneto14_init( &magneto14, &magneto14_cfg ) )
     {
         log_error( &logger, " Communication init." );

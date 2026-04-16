@@ -23,6 +23,10 @@
 #include "log.h"
 #include "proximity14.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY14
+    #define MIKROBUS_POSITION_PROXIMITY14 MIKROBUS_1
+#endif
+
 static proximity14_t proximity14;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     proximity14_cfg_setup( &proximity14_cfg );
-    PROXIMITY14_MAP_MIKROBUS( proximity14_cfg, MIKROBUS_1 );
+    PROXIMITY14_MAP_MIKROBUS( proximity14_cfg, MIKROBUS_POSITION_PROXIMITY14 );
     err_t init_flag = proximity14_init( &proximity14, &proximity14_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

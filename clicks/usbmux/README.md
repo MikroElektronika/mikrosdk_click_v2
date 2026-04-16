@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     usbmux_cfg_setup( &usbmux_cfg );
-    USBMUX_MAP_MIKROBUS( usbmux_cfg, MIKROBUS_1 );
+    USBMUX_MAP_MIKROBUS( usbmux_cfg, MIKROBUS_POSITION_USBMUX );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == usbmux_init( &usbmux, &usbmux_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

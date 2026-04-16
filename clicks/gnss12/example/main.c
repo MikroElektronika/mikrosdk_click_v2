@@ -28,6 +28,10 @@
 #include "log.h"
 #include "gnss12.h"
 
+#ifndef MIKROBUS_POSITION_GNSS12
+    #define MIKROBUS_POSITION_GNSS12 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static gnss12_t gnss12;
@@ -86,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss12_cfg_setup( &gnss12_cfg );
-    GNSS12_MAP_MIKROBUS( gnss12_cfg, MIKROBUS_1 );
+    GNSS12_MAP_MIKROBUS( gnss12_cfg, MIKROBUS_POSITION_GNSS12 );
     err_t init_flag = gnss12_init( &gnss12, &gnss12_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

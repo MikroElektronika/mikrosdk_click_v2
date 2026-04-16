@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     hallswitch_cfg_setup( &cfg );
-    HALLSWITCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HALLSWITCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HALLSWITCH );
     hallswitch_init( &hallswitch, &cfg );
 
     hallswitch_set_npole( &hallswitch, HALLSWITCH_POLE_NO_ACTIVE );

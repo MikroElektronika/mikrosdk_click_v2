@@ -25,6 +25,10 @@
 #include "log.h"
 #include "light6.h"
 
+#ifndef MIKROBUS_POSITION_LIGHT6
+    #define MIKROBUS_POSITION_LIGHT6 MIKROBUS_1
+#endif
+
 static light6_t light6;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     light6_cfg_setup( &light6_cfg );
-    LIGHT6_MAP_MIKROBUS( light6_cfg, MIKROBUS_1 );
+    LIGHT6_MAP_MIKROBUS( light6_cfg, MIKROBUS_POSITION_LIGHT6 );
     if ( I2C_MASTER_ERROR == light6_init( &light6, &light6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

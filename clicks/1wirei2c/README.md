@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     c1wirei2c_cfg_setup( &c1wirei2c_cfg );
-    C1WIREI2C_MAP_MIKROBUS( c1wirei2c_cfg, MIKROBUS_1 );
+    C1WIREI2C_MAP_MIKROBUS( c1wirei2c_cfg, MIKROBUS_POSITION_1WIREI2C );
     if ( ONE_WIRE_ERROR == c1wirei2c_init( &c1wirei2c, &c1wirei2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -37,6 +37,10 @@
 #include "log.h"
 #include "ismrx.h"
 
+#ifndef MIKROBUS_POSITION_ISMRX
+    #define MIKROBUS_POSITION_ISMRX MIKROBUS_1
+#endif
+
 static ismrx_t ismrx;
 static log_t logger;
 
@@ -92,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     ismrx_cfg_setup( &ismrx_cfg );
-    ISMRX_MAP_MIKROBUS( ismrx_cfg, MIKROBUS_1 );
+    ISMRX_MAP_MIKROBUS( ismrx_cfg, MIKROBUS_POSITION_ISMRX );
     if ( SPI_MASTER_ERROR == ismrx_init( &ismrx, &ismrx_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

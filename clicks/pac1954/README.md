@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     pac1954_cfg_setup( &pac1954_cfg );
-    PAC1954_MAP_MIKROBUS( pac1954_cfg, MIKROBUS_1 );
+    PAC1954_MAP_MIKROBUS( pac1954_cfg, MIKROBUS_POSITION_PAC1954 );
     err_t init_flag = pac1954_init( &pac1954, &pac1954_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

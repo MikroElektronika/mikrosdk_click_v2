@@ -31,6 +31,10 @@
 #include "log.h"
 #include "hbridgedriver2.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGEDRIVER2
+    #define MIKROBUS_POSITION_HBRIDGEDRIVER2 MIKROBUS_1
+#endif
+
 static hbridgedriver2_t hbridgedriver2;
 static log_t logger;
 static uint8_t global_fault;
@@ -103,7 +107,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridgedriver2_cfg_setup( &hbridgedriver2_cfg );
-    HBRIDGEDRIVER2_MAP_MIKROBUS( hbridgedriver2_cfg, MIKROBUS_1 );
+    HBRIDGEDRIVER2_MAP_MIKROBUS( hbridgedriver2_cfg, MIKROBUS_POSITION_HBRIDGEDRIVER2 );
     if ( SPI_MASTER_ERROR == hbridgedriver2_init( &hbridgedriver2, &hbridgedriver2_cfg ) )
     {
         log_error( &logger, " Communication init." );

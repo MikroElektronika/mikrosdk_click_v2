@@ -24,6 +24,10 @@
 #include "log.h"
 #include "vibromotor.h"
 
+#ifndef MIKROBUS_POSITION_VIBROMOTOR
+    #define MIKROBUS_POSITION_VIBROMOTOR MIKROBUS_1
+#endif
+
 
 static vibromotor_t vibromotor;
 static log_t logger;
@@ -48,7 +52,7 @@ void application_init ( void ) {
     // Click initialization.
 
     vibromotor_cfg_setup( &vibromotor_cfg );
-    VIBROMOTOR_MAP_MIKROBUS( vibromotor_cfg, MIKROBUS_1 );
+    VIBROMOTOR_MAP_MIKROBUS( vibromotor_cfg, MIKROBUS_POSITION_VIBROMOTOR );
     err_t init_flag  = vibromotor_init( &vibromotor, &vibromotor_cfg );
     if ( PWM_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

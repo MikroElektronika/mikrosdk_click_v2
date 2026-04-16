@@ -28,6 +28,10 @@
 #include "log.h"
 #include "linefollower.h"
 
+#ifndef MIKROBUS_POSITION_LINEFOLLOWER
+    #define MIKROBUS_POSITION_LINEFOLLOWER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static linefollower_t linefollower;
@@ -56,7 +60,7 @@ void application_init ( void )
 
     //  Click initialization.
     linefollower_cfg_setup( &cfg );
-    LINEFOLLOWER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LINEFOLLOWER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LINEFOLLOWER );
     linefollower_init( &linefollower, &cfg );
     
     log_printf( &logger, "----------------------\r\n" );

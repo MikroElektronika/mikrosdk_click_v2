@@ -32,6 +32,10 @@
 #include "log.h"
 #include "ookrx.h"
 
+#ifndef MIKROBUS_POSITION_OOKRX
+    #define MIKROBUS_POSITION_OOKRX MIKROBUS_1
+#endif
+
 #define OOKRX_PREAMBLE      0x5AA5  /**< Packet preamble word. */
 
 static ookrx_t ookrx;       /**< OOK RX Click driver object. */
@@ -107,7 +111,7 @@ void application_init ( void )
 
     // Click initialization.
     ookrx_cfg_setup( &ookrx_cfg );
-    OOKRX_MAP_MIKROBUS( ookrx_cfg, MIKROBUS_1 );
+    OOKRX_MAP_MIKROBUS( ookrx_cfg, MIKROBUS_POSITION_OOKRX );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ookrx_init( &ookrx, &ookrx_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

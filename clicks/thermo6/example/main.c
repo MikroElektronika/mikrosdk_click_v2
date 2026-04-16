@@ -23,6 +23,10 @@
 #include "log.h"
 #include "thermo6.h"
 
+#ifndef MIKROBUS_POSITION_THERMO6
+    #define MIKROBUS_POSITION_THERMO6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo6_t thermo6;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo6_cfg_setup( &cfg );
-    THERMO6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO6 );
     thermo6_init( &thermo6, &cfg );
 
     thermo6_default_cfg( &thermo6 );

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "audioamp11.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOAMP11
+    #define MIKROBUS_POSITION_AUDIOAMP11 MIKROBUS_1
+#endif
+
 static audioamp11_t audioamp11;
 static log_t logger;
 uint8_t vol_ctrl = AUDIOAMP11_GS_12dB_VOLCTRL_m20_5dB;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     audioamp11_cfg_setup( &audioamp11_cfg );
-    AUDIOAMP11_MAP_MIKROBUS( audioamp11_cfg, MIKROBUS_1 );
+    AUDIOAMP11_MAP_MIKROBUS( audioamp11_cfg, MIKROBUS_POSITION_AUDIOAMP11 );
     if ( I2C_MASTER_ERROR == audioamp11_init( &audioamp11, &audioamp11_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

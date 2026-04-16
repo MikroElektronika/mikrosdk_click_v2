@@ -26,6 +26,10 @@
 #include "log.h"
 #include "hbridge6.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE6
+    #define MIKROBUS_POSITION_HBRIDGE6 MIKROBUS_1
+#endif
+
 static hbridge6_t hbridge6;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void ) {
 
     // Click initialization.
     hbridge6_cfg_setup( &hbridge6_cfg );
-    HBRIDGE6_MAP_MIKROBUS( hbridge6_cfg, MIKROBUS_1 );
+    HBRIDGE6_MAP_MIKROBUS( hbridge6_cfg, MIKROBUS_POSITION_HBRIDGE6 );
     err_t init_flag = hbridge6_init( &hbridge6, &hbridge6_cfg );
     if ( I2C_MASTER_ERROR == init_flag || PWM_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

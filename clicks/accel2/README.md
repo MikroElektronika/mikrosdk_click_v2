@@ -87,7 +87,7 @@ void application_init ( void )
    log_info( &logger, "---- Application Init ----" );
 
    accel2_cfg_setup( &cfg );
-   ACCEL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+   ACCEL2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL2 );
    accel2_init( &accel2, &cfg );
 }
 ```

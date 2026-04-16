@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     irsense_cfg_setup( &cfg );
-    IRSENSE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRSENSE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRSENSE );
     irsense_init( &irsense, &cfg );
 
     log_printf( &logger, "     I2C Driver Init       \r\n"  );

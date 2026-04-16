@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     adapter_cfg_setup( &cfg );
-    ADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADAPTER );
     adapter_init( &adapter, &cfg );
 }
 ```

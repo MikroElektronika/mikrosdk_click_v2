@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     nixiepowerin12b_cfg_setup( &nixiepowerin12b_cfg );
-    NIXIEPOWERIN12B_MAP_MIKROBUS( nixiepowerin12b_cfg, MIKROBUS_1 );
+    NIXIEPOWERIN12B_MAP_MIKROBUS( nixiepowerin12b_cfg, MIKROBUS_POSITION_NIXIEPOWERIN12B );
     if ( I2C_MASTER_ERROR == nixiepowerin12b_init( &nixiepowerin12b, &nixiepowerin12b_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

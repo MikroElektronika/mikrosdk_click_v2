@@ -90,7 +90,7 @@ void application_init ( void )
     // Click initialization.
 
     utl7segr_cfg_setup( &utl7segr_cfg );
-    UTL7SEGR_MAP_MIKROBUS( utl7segr_cfg, MIKROBUS_1 );
+    UTL7SEGR_MAP_MIKROBUS( utl7segr_cfg, MIKROBUS_POSITION_UTL7SEGR );
     err_t init_flag  = utl7segr_init( &utl7segr, &utl7segr_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

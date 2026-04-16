@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     antopwm2_cfg_setup( &antopwm2_cfg );
-    ANTOPWM2_MAP_MIKROBUS( antopwm2_cfg, MIKROBUS_1 );
+    ANTOPWM2_MAP_MIKROBUS( antopwm2_cfg, MIKROBUS_POSITION_ANTOPWM2 );
     if ( I2C_MASTER_ERROR == antopwm2_init( &antopwm2, &antopwm2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

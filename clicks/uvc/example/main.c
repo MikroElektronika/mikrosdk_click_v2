@@ -25,6 +25,10 @@
 #include "log.h"
 #include "uvc.h"
 
+#ifndef MIKROBUS_POSITION_UVC
+    #define MIKROBUS_POSITION_UVC MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static uvc_t uvc;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     uvc_cfg_setup( &cfg );
-    UVC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UVC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UVC );
     uvc_init( &uvc, &cfg );
 }
 

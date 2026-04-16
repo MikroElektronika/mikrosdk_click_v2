@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     angle6_cfg_setup( &angle6_cfg );
-    ANGLE6_MAP_MIKROBUS( angle6_cfg, MIKROBUS_1 );
+    ANGLE6_MAP_MIKROBUS( angle6_cfg, MIKROBUS_POSITION_ANGLE6 );
     if ( SPI_MASTER_ERROR == angle6_init( &angle6, &angle6_cfg ) )
     {
         log_error( &logger, " Communication init." );

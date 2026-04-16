@@ -33,6 +33,10 @@
 #include "log.h"
 #include "rfid.h"
 
+#ifndef MIKROBUS_POSITION_RFID
+    #define MIKROBUS_POSITION_RFID MIKROBUS_1
+#endif
+
 static rfid_t rfid;
 static log_t logger;
 
@@ -58,7 +62,7 @@ void application_init ( void )
     // Click initialization.
 
     rfid_cfg_setup( &rfid_cfg );
-    RFID_MAP_MIKROBUS( rfid_cfg, MIKROBUS_1 );
+    RFID_MAP_MIKROBUS( rfid_cfg, MIKROBUS_POSITION_RFID );
     err_t error_flag = rfid_init( &rfid, &rfid_cfg );
     if ( error_flag != RFID_OK ) 
     {

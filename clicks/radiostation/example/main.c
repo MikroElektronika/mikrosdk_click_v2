@@ -25,6 +25,10 @@
 #include "log.h"
 #include "radiostation.h"
 
+#ifndef MIKROBUS_POSITION_RADIOSTATION
+    #define MIKROBUS_POSITION_RADIOSTATION MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static radiostation_t radiostation;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     radiostation_cfg_setup( &cfg, true );
-    RADIOSTATION_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RADIOSTATION_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RADIOSTATION );
     radiostation_init( &radiostation, &cfg );
 
     radiostation.transmit_frequency = 10000; 

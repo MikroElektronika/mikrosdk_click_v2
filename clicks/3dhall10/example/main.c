@@ -24,6 +24,10 @@
 #include "log.h"
 #include "c3dhall10.h"
 
+#ifndef MIKROBUS_POSITION_3DHALL10
+    #define MIKROBUS_POSITION_3DHALL10 MIKROBUS_1
+#endif
+
 static c3dhall10_t c3dhall10;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     c3dhall10_cfg_setup( &c3dhall10_cfg );
-    C3DHALL10_MAP_MIKROBUS( c3dhall10_cfg, MIKROBUS_1 );
+    C3DHALL10_MAP_MIKROBUS( c3dhall10_cfg, MIKROBUS_POSITION_3DHALL10 );
     if ( SPI_MASTER_ERROR == c3dhall10_init( &c3dhall10, &c3dhall10_cfg ) )
     {
         log_error( &logger, " Communication init." );

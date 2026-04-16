@@ -27,6 +27,10 @@
 #include "log.h"
 #include "c8pini2c.h"
 
+#ifndef MIKROBUS_POSITION_8PINI2C
+    #define MIKROBUS_POSITION_8PINI2C MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c8pini2c_t c8pini2c;
@@ -116,7 +120,7 @@ void application_init ( void )
     //  Click initialization.
 
     c8pini2c_cfg_setup( &cfg );
-    C8PINI2C_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C8PINI2C_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_8PINI2C );
     c8pini2c_init( &c8pini2c, &cfg );
 
     status = surfacetemp_setup( );

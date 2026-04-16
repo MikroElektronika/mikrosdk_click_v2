@@ -25,6 +25,10 @@
 #include "log.h"
 #include "lr6.h"
 
+#ifndef MIKROBUS_POSITION_LR6
+    #define MIKROBUS_POSITION_LR6 MIKROBUS_1
+#endif
+
 static lr6_t lr6;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     lr6_cfg_setup( &lr6_cfg );
-    LR6_MAP_MIKROBUS( lr6_cfg, MIKROBUS_1 );
+    LR6_MAP_MIKROBUS( lr6_cfg, MIKROBUS_POSITION_LR6 );
     if ( SPI_MASTER_ERROR == lr6_init( &lr6, &lr6_cfg ) )
     {
         log_error( &logger, " Communication init." );

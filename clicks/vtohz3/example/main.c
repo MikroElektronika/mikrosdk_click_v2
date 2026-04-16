@@ -23,6 +23,10 @@
 #include "log.h"
 #include "vtohz3.h"
 
+#ifndef MIKROBUS_POSITION_VTOHZ3
+    #define MIKROBUS_POSITION_VTOHZ3 MIKROBUS_1
+#endif
+
 static vtohz3_t vtohz3;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     vtohz3_cfg_setup( &vtohz3_cfg );
-    VTOHZ3_MAP_MIKROBUS( vtohz3_cfg, MIKROBUS_1 );
+    VTOHZ3_MAP_MIKROBUS( vtohz3_cfg, MIKROBUS_POSITION_VTOHZ3 );
     if ( SPI_MASTER_ERROR == vtohz3_init( &vtohz3, &vtohz3_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

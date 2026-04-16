@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     capslider2_cfg_setup( &cfg );
-    CAPSLIDER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPSLIDER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPSLIDER2 );
     capslider2_init( &capslider2, &cfg );
 
     Delay_ms ( 500 );

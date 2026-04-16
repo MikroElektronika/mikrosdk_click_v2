@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     smartdof_cfg_setup( &cfg );
-    SMARTDOF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SMARTDOF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SMARTDOF );
     smartdof_init( &smartdof, &cfg );
 
     if ( smartdof_default_cfg ( &smartdof ) !=0 )

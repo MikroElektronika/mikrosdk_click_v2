@@ -26,6 +26,10 @@
 #include "log.h"
 #include "rotaryy.h"
 
+#ifndef MIKROBUS_POSITION_ROTARYY
+    #define MIKROBUS_POSITION_ROTARYY MIKROBUS_1
+#endif
+
 static rotaryy_t rotaryy;
 static log_t logger;
 
@@ -57,7 +61,7 @@ void application_init ( void ) {
     // Click initialization.
 
     rotaryy_cfg_setup( &rotaryy_cfg );
-    ROTARYY_MAP_MIKROBUS( rotaryy_cfg, MIKROBUS_1 );
+    ROTARYY_MAP_MIKROBUS( rotaryy_cfg, MIKROBUS_POSITION_ROTARYY );
     err_t init_flag  = rotaryy_init( &rotaryy, &rotaryy_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

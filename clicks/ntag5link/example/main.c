@@ -26,6 +26,10 @@
 #include "log.h"
 #include "ntag5link.h"
 
+#ifndef MIKROBUS_POSITION_NTAG5LINK
+    #define MIKROBUS_POSITION_NTAG5LINK MIKROBUS_1
+#endif
+
 /**
  * URL to store to memory as NDEF URI record
  */
@@ -66,7 +70,7 @@ void application_init ( void )
 
     // Click initialization.
     ntag5link_cfg_setup( &ntag5link_cfg );
-    NTAG5LINK_MAP_MIKROBUS( ntag5link_cfg, MIKROBUS_1 );
+    NTAG5LINK_MAP_MIKROBUS( ntag5link_cfg, MIKROBUS_POSITION_NTAG5LINK );
     if ( I2C_MASTER_ERROR == ntag5link_init( &ntag5link, &ntag5link_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     buckboost3_cfg_setup( &cfg );
-    BUCKBOOST3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCKBOOST3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCKBOOST3 );
     buckboost3_init( &buckboost3, &cfg );
     
     buckboost3_enable ( &buckboost3, BUCKBOOST3_DEVICE_ENABLE );

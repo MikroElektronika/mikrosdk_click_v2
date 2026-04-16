@@ -93,7 +93,7 @@ void application_init ( void )
     //  Click initialization.
 
     trf_cfg_setup( &cfg );
-    TRF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TRF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TRF );
     trf_init( &trf, &cfg );
 }
 ```

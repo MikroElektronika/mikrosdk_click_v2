@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     slider_cfg_setup( &cfg );
-    SLIDER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SLIDER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SLIDER );
     slider_init( &slider, &cfg );
     slider_default_cfg( &slider );
 }

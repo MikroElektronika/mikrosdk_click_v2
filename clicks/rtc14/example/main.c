@@ -31,6 +31,10 @@
 #include "log.h"
 #include "rtc14.h"
 
+#ifndef MIKROBUS_POSITION_RTC14
+    #define MIKROBUS_POSITION_RTC14 MIKROBUS_1
+#endif
+
 static rtc14_t rtc14;
 static log_t logger;
 static uint8_t new_sec = 255;
@@ -99,7 +103,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc14_cfg_setup( &rtc14_cfg );
-    RTC14_MAP_MIKROBUS( rtc14_cfg, MIKROBUS_1 );
+    RTC14_MAP_MIKROBUS( rtc14_cfg, MIKROBUS_POSITION_RTC14 );
     err_t init_flag = rtc14_init( &rtc14, &rtc14_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

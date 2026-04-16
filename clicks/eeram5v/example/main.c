@@ -24,6 +24,10 @@
 #include "log.h"
 #include "eeram5v.h"
 
+#ifndef MIKROBUS_POSITION_EERAM5V
+    #define MIKROBUS_POSITION_EERAM5V MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static eeram5v_t eeram5v;
@@ -54,7 +58,7 @@ void application_init ( void ) {
     // Click initialization.
     
     eeram5v_cfg_setup( &eeram5v_cfg );
-    EERAM5V_MAP_MIKROBUS( eeram5v_cfg, MIKROBUS_1 );
+    EERAM5V_MAP_MIKROBUS( eeram5v_cfg, MIKROBUS_POSITION_EERAM5V );
     err_t init_flag = eeram5v_init( &eeram5v, &eeram5v_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

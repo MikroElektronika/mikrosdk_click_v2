@@ -37,6 +37,10 @@
 #include "log.h"
 #include "canfd6.h"
 
+#ifndef MIKROBUS_POSITION_CANFD6
+    #define MIKROBUS_POSITION_CANFD6 MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -65,7 +69,7 @@ void application_init ( void ) {
 
     // Click initialization.
     canfd6_cfg_setup( &canfd6_cfg );
-    CANFD6_MAP_MIKROBUS( canfd6_cfg, MIKROBUS_1 );
+    CANFD6_MAP_MIKROBUS( canfd6_cfg, MIKROBUS_POSITION_CANFD6 );
     err_t init_flag = canfd6_init( &canfd6, &canfd6_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     c10dof_cfg_setup( &cfg );
-    C10DOF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C10DOF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_10DOF );
     c10dof_init( &c10dof, &cfg );
     c10dof_default_cfg( &c10dof );
 }

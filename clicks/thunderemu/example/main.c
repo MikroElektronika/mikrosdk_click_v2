@@ -29,6 +29,10 @@
 #include "log.h"
 #include "thunderemu.h"
 
+#ifndef MIKROBUS_POSITION_THUNDEREMU
+    #define MIKROBUS_POSITION_THUNDEREMU MIKROBUS_1
+#endif
+
 static thunderemu_t thunderemu;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     thunderemu_cfg_setup( &thunderemu_cfg );
-    THUNDEREMU_MAP_MIKROBUS( thunderemu_cfg, MIKROBUS_1 );
+    THUNDEREMU_MAP_MIKROBUS( thunderemu_cfg, MIKROBUS_POSITION_THUNDEREMU );
     if ( I2C_MASTER_ERROR == thunderemu_init( &thunderemu, &thunderemu_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

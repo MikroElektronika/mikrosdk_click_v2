@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     adswio_cfg_setup( &cfg );
-    ADSWIO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADSWIO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADSWIO );
     adswio_init( &adswio, &cfg );
     Delay_ms ( 100 );
 

@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     motion_cfg_setup( &cfg );
-    MOTION_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MOTION_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MOTION );
     motion_init( &motion, &cfg );
     log_printf( &logger, "      Motion Click\r\n" );
     log_printf( &logger, "------------------------\r\n" );

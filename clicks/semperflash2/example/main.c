@@ -27,6 +27,10 @@
 #include "log.h"
 #include "semperflash2.h"
 
+#ifndef MIKROBUS_POSITION_SEMPERFLASH2
+    #define MIKROBUS_POSITION_SEMPERFLASH2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static semperflash2_t semperflash2;
@@ -94,7 +98,7 @@ void application_init ( )
     //  Click initialization.
 
     semperflash2_cfg_setup( &cfg );
-    SEMPERFLASH2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SEMPERFLASH2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SEMPERFLASH2 );
     semperflash2_init( &semperflash2, &cfg );
     semperflash2_default_cfg( &semperflash2 );
     id_check( );

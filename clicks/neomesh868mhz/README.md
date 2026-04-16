@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     neomesh868mhz_cfg_setup( &neomesh868mhz_cfg );
-    NEOMESH868MHZ_MAP_MIKROBUS( neomesh868mhz_cfg, MIKROBUS_1 );
+    NEOMESH868MHZ_MAP_MIKROBUS( neomesh868mhz_cfg, MIKROBUS_POSITION_NEOMESH868MHZ );
     if ( UART_ERROR == neomesh868mhz_init( &neomesh868mhz, &neomesh868mhz_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

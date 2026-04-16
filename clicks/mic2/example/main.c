@@ -21,6 +21,10 @@
 #include "log.h"
 #include "mic2.h"
 
+#ifndef MIKROBUS_POSITION_MIC2
+    #define MIKROBUS_POSITION_MIC2 MIKROBUS_1
+#endif
+
 static mic2_t mic2;
 static log_t logger;
  
@@ -44,7 +48,7 @@ void application_init ( void )
 
     // Click initialization.
     mic2_cfg_setup( &cfg );
-    MIC2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC2 );
     mic2_init( &mic2, &cfg );
 
     mic2_set_potentiometer( &mic2, 35 );

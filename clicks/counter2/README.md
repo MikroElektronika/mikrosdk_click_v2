@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     counter2_cfg_setup( &counter2_cfg );
-    COUNTER2_MAP_MIKROBUS( counter2_cfg, MIKROBUS_1 );
+    COUNTER2_MAP_MIKROBUS( counter2_cfg, MIKROBUS_POSITION_COUNTER2 );
     if ( I2C_MASTER_ERROR == counter2_init( &counter2, &counter2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

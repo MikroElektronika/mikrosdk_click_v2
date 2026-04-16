@@ -29,6 +29,10 @@
 #include "log.h"
 #include "gnssantenna.h"
 
+#ifndef MIKROBUS_POSITION_GNSSANTENNA
+    #define MIKROBUS_POSITION_GNSSANTENNA MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -94,7 +98,7 @@ void application_init ( void )
 
     // Board initialization.
     gnssantenna_cfg_setup( &gnssantenna_cfg );
-    GNSSANTENNA_MAP_MIKROBUS( gnssantenna_cfg, MIKROBUS_1 );
+    GNSSANTENNA_MAP_MIKROBUS( gnssantenna_cfg, MIKROBUS_POSITION_GNSSANTENNA );
     if ( UART_ERROR == gnssantenna_init( &gnssantenna, &gnssantenna_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

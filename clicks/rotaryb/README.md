@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     rotaryb_cfg_setup( &rotaryb_cfg );
-    ROTARYB_MAP_MIKROBUS( rotaryb_cfg, MIKROBUS_1 );
+    ROTARYB_MAP_MIKROBUS( rotaryb_cfg, MIKROBUS_POSITION_ROTARYB );
     err_t init_flag  = rotaryb_init( &rotaryb, &rotaryb_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

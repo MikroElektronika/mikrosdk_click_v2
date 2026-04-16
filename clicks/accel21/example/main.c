@@ -28,6 +28,10 @@
 #include "log.h"
 #include "accel21.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL21
+    #define MIKROBUS_POSITION_ACCEL21 MIKROBUS_1
+#endif
+
 static accel21_t accel21;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     accel21_cfg_setup( &accel21_cfg );
-    ACCEL21_MAP_MIKROBUS( accel21_cfg, MIKROBUS_1 );
+    ACCEL21_MAP_MIKROBUS( accel21_cfg, MIKROBUS_POSITION_ACCEL21 );
     err_t init_flag = accel21_init( &accel21, &accel21_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

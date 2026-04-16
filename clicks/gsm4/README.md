@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gsm4_cfg_setup( &gsm4_cfg );
-    GSM4_MAP_MIKROBUS( gsm4_cfg, MIKROBUS_1 );
+    GSM4_MAP_MIKROBUS( gsm4_cfg, MIKROBUS_POSITION_GSM4 );
     if ( UART_ERROR == gsm4_init( &gsm4, &gsm4_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

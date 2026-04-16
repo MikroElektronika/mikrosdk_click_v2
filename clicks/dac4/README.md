@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac4_cfg_setup( &cfg );
-    DAC4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC4 );
     dac4_init( &dac4, &cfg );
     log_info( &logger, "---- Application ----" );
 

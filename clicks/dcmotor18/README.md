@@ -93,7 +93,7 @@ void application_init ( void )
     // Click initialization.
 
     dcmotor18_cfg_setup( &dcmotor18_cfg );
-    DCMOTOR18_MAP_MIKROBUS( dcmotor18_cfg, MIKROBUS_1 );
+    DCMOTOR18_MAP_MIKROBUS( dcmotor18_cfg, MIKROBUS_POSITION_DCMOTOR18 );
     err_t init_flag  = dcmotor18_init( &dcmotor18, &dcmotor18_cfg );
     if ( PWM_ERROR == init_flag )
     {

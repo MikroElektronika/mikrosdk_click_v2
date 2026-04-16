@@ -25,6 +25,10 @@
 #include "log.h"
 #include "audioamp4.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOAMP4
+    #define MIKROBUS_POSITION_AUDIOAMP4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static audioamp4_t audioamp4;
@@ -81,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp4_cfg_setup( &cfg );
-    AUDIOAMP4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOAMP4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOAMP4 );
     audioamp4_init( &audioamp4, &cfg );
     audioamp4_default_cfg( &audioamp4 );
 }

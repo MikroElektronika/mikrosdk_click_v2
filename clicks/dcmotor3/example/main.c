@@ -29,6 +29,10 @@
 #include "log.h"
 #include "dcmotor3.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR3
+    #define MIKROBUS_POSITION_DCMOTOR3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor3_t dcmotor3;
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor3_cfg_setup( &cfg );
-    DCMOTOR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR3 );
     dcmotor3_init( &dcmotor3, &cfg );
 
     dcmotor3_set_duty_cycle ( &dcmotor3, 0.0 );

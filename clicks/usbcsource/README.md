@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     usbcsource_cfg_setup( &usbcsource_cfg );
-    USBCSOURCE_MAP_MIKROBUS( usbcsource_cfg, MIKROBUS_1 );
+    USBCSOURCE_MAP_MIKROBUS( usbcsource_cfg, MIKROBUS_POSITION_USBCSOURCE );
     err_t init_flag = usbcsource_init( &usbcsource, &usbcsource_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

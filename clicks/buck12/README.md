@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck12_cfg_setup( &cfg );
-    BUCK12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK12 );
     buck12_init( &buck12, &cfg );
 
     buck12_control( &buck12, BUCK12_ENABLE );

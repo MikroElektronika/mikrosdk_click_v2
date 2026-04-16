@@ -23,6 +23,10 @@
 #include "log.h"
 #include "flash3.h"
 
+#ifndef MIKROBUS_POSITION_FLASH3
+    #define MIKROBUS_POSITION_FLASH3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static flash3_t flash3;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     flash3_cfg_setup( &cfg );
-    FLASH3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH3 );
     flash3_init( &flash3, &cfg );
 
     Delay_ms ( 100 );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     //  Click initialization.
     rtd2_cfg_setup( &cfg );
-    RTD2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTD2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTD2 );
     rtd2_init( &rtd2, &cfg );
     Delay_ms ( 200 );
 

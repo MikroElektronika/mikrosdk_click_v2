@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel6_cfg_setup( &cfg );
-    ACCEL6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL6 );
     accel6_init( &accel6, &cfg );
 
     accel6_soft_reset( &accel6 );

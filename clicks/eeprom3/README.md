@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     eeprom3_cfg_setup( &cfg );
-    EEPROM3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EEPROM3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EEPROM3 );
     eeprom3_init( &eeprom3, &cfg );
 }
 ```

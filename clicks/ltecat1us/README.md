@@ -84,7 +84,7 @@ void application_init ( void )
     
     // Click initialization.
     ltecat1us_cfg_setup( &ltecat1us_cfg );
-    LTECAT1US_MAP_MIKROBUS( ltecat1us_cfg, MIKROBUS_1 );
+    LTECAT1US_MAP_MIKROBUS( ltecat1us_cfg, MIKROBUS_POSITION_LTECAT1US );
     err_t init_flag  = ltecat1us_init( &ltecat1us, &ltecat1us_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

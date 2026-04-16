@@ -24,6 +24,10 @@
 #include "log.h"
 #include "compass3.h"
 
+#ifndef MIKROBUS_POSITION_COMPASS3
+    #define MIKROBUS_POSITION_COMPASS3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static compass3_t compass3;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     compass3_cfg_setup( &cfg );
-    COMPASS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COMPASS3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COMPASS3 );
     compass3_init( &compass3, &cfg );
     Delay_ms ( 100 );
     

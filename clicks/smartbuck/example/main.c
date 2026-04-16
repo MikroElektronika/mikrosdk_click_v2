@@ -25,6 +25,10 @@
 #include "log.h"
 #include "smartbuck.h"
 
+#ifndef MIKROBUS_POSITION_SMARTBUCK
+    #define MIKROBUS_POSITION_SMARTBUCK MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static smartbuck_t smartbuck;
@@ -95,7 +99,7 @@ void application_init ( void )
     //  Click initialization.
 
     smartbuck_cfg_setup( &cfg );
-    SMARTBUCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SMARTBUCK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SMARTBUCK );
     smartbuck_init( &smartbuck, &cfg );
     smartbuck_default_cfg( &smartbuck );
 }                                                                                                                                            

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "fan5.h"
 
+#ifndef MIKROBUS_POSITION_FAN5
+    #define MIKROBUS_POSITION_FAN5 MIKROBUS_1
+#endif
+
 #define FAN_CONTROL_MODE
 
 static fan5_t fan5;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     fan5_cfg_setup( &fan5_cfg );
-    FAN5_MAP_MIKROBUS( fan5_cfg, MIKROBUS_1 );
+    FAN5_MAP_MIKROBUS( fan5_cfg, MIKROBUS_POSITION_FAN5 );
     if ( I2C_MASTER_ERROR == fan5_init( &fan5, &fan5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

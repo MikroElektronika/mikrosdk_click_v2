@@ -29,6 +29,10 @@
 #include "log.h"
 #include "anynet3gea.h"
 
+#ifndef MIKROBUS_POSITION_ANYNET3GEA
+    #define MIKROBUS_POSITION_ANYNET3GEA MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE                     256
 #define PROCESS_BUFFER_SIZE                 256
@@ -108,7 +112,7 @@ void application_init ( void )
 
     // Click initialization.
     anynet3gea_cfg_setup( &anynet3gea_cfg );
-    ANYNET3GEA_MAP_MIKROBUS( anynet3gea_cfg, MIKROBUS_1 );
+    ANYNET3GEA_MAP_MIKROBUS( anynet3gea_cfg, MIKROBUS_POSITION_ANYNET3GEA );
     if ( UART_ERROR == anynet3gea_init( &anynet3gea, &anynet3gea_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     charger27_cfg_setup( &charger27_cfg );
-    CHARGER27_MAP_MIKROBUS( charger27_cfg, MIKROBUS_1 );
+    CHARGER27_MAP_MIKROBUS( charger27_cfg, MIKROBUS_POSITION_CHARGER27 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == charger27_init( &charger27, &charger27_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

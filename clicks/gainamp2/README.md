@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     gainamp2_cfg_setup( &cfg );
-    GAINAMP2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GAINAMP2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GAINAMP2 );
     gainamp2_init( &gainamp2, &cfg );
     
     gainamp2_set_channel_gain ( &gainamp2, GAINAMP2_CH0, GAINAMP2_GAIN_2X );

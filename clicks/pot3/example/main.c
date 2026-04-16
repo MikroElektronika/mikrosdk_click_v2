@@ -25,6 +25,10 @@
 #include "log.h"
 #include "pot3.h"
 
+#ifndef MIKROBUS_POSITION_POT3
+    #define MIKROBUS_POSITION_POT3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pot3_t pot3;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     pot3_cfg_setup( &pot3_cfg );
-    POT3_MAP_MIKROBUS( pot3_cfg, MIKROBUS_1 );
+    POT3_MAP_MIKROBUS( pot3_cfg, MIKROBUS_POSITION_POT3 );
     pot3_init( &pot3, &pot3_cfg );
 
 	voltage_old = 0;

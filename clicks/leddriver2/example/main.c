@@ -27,6 +27,10 @@
 #include "log.h"
 #include "leddriver2.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER2
+    #define MIKROBUS_POSITION_LEDDRIVER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static leddriver2_t leddriver2;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver2_cfg_setup( &cfg );
-    LEDDRIVER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER2 );
     leddriver2_init( &leddriver2, &cfg );
 
     leddriver2_pwm_start( &leddriver2 );

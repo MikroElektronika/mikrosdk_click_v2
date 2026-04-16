@@ -91,7 +91,7 @@ void application_init ( void )
     // Click initialization.
 
     rtc13_cfg_setup( &rtc13_cfg );
-    RTC13_MAP_MIKROBUS( rtc13_cfg, MIKROBUS_1 );
+    RTC13_MAP_MIKROBUS( rtc13_cfg, MIKROBUS_POSITION_RTC13 );
     err_t init_flag  = rtc13_init( &rtc13, &rtc13_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

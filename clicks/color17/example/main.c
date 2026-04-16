@@ -35,6 +35,10 @@
 #include "log.h"
 #include "color17.h"
 
+#ifndef MIKROBUS_POSITION_COLOR17
+    #define MIKROBUS_POSITION_COLOR17 MIKROBUS_1
+#endif
+
 #define COLOR17_LIM_DARK_LUX                10.0
 #define COLOR17_CCT_LIM_BLUE_COLOR          7000
 #define COLOR17_CCT_LIM_LIGHT_BLUE_COLOR    4000
@@ -75,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     color17_cfg_setup( &color17_cfg );
-    COLOR17_MAP_MIKROBUS( color17_cfg, MIKROBUS_1 );
+    COLOR17_MAP_MIKROBUS( color17_cfg, MIKROBUS_POSITION_COLOR17 );
     if ( I2C_MASTER_ERROR == color17_init( &color17, &color17_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

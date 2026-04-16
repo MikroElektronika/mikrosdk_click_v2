@@ -50,6 +50,10 @@
 #include "log.h"
 #include "ninaw152.h"
 
+#ifndef MIKROBUS_POSITION_NINAW152
+    #define MIKROBUS_POSITION_NINAW152 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_WIFI            0               // Example of sending messages to a TCP/UDP echo server over WiFi
 #define EXAMPLE_BT              1               // Example of processing data from BT connected device
@@ -199,7 +203,7 @@ void application_init ( void )
 
     // Click initialization.
     ninaw152_cfg_setup( &ninaw152_cfg );
-    NINAW152_MAP_MIKROBUS( ninaw152_cfg, MIKROBUS_1 );
+    NINAW152_MAP_MIKROBUS( ninaw152_cfg, MIKROBUS_POSITION_NINAW152 );
     if ( NINAW152_OK != ninaw152_init( &ninaw152, &ninaw152_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

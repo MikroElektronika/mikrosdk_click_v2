@@ -95,7 +95,7 @@ void application_init ( void )
 
     
     no22_cfg_setup( &cfg );
-    NO22_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NO22_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NO22 );
     no22_init( &no22, &cfg );
 
     error_data = no22_set_pht_state( &no22, NO22_PIN_STATE_LOW );

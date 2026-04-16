@@ -28,6 +28,10 @@
 #include "log.h"
 #include "gnsszoe.h"
 
+#ifndef MIKROBUS_POSITION_GNSSZOE
+    #define MIKROBUS_POSITION_GNSSZOE MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 300
 
 static gnsszoe_t gnsszoe;
@@ -86,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     gnsszoe_cfg_setup( &gnsszoe_cfg );
-    GNSSZOE_MAP_MIKROBUS( gnsszoe_cfg, MIKROBUS_1 );
+    GNSSZOE_MAP_MIKROBUS( gnsszoe_cfg, MIKROBUS_POSITION_GNSSZOE );
     err_t init_flag = gnsszoe_init( &gnsszoe, &gnsszoe_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

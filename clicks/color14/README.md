@@ -87,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     color14_cfg_setup( &color14_cfg );
-    COLOR14_MAP_MIKROBUS( color14_cfg, MIKROBUS_1 );
+    COLOR14_MAP_MIKROBUS( color14_cfg, MIKROBUS_POSITION_COLOR14 );
     err_t init_flag = color14_init( &color14, &color14_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

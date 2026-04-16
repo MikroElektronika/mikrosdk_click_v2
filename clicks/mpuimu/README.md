@@ -94,7 +94,7 @@ void application_init ( void )
     //  Click initialization.
 
     mpuimu_cfg_setup( &cfg );
-    MPUIMU_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MPUIMU_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MPUIMU );
     mpuimu_init( &mpuimu, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

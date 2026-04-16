@@ -29,6 +29,10 @@
 #include "log.h"
 #include "raq.h"
 
+#ifndef MIKROBUS_POSITION_RAQ
+    #define MIKROBUS_POSITION_RAQ MIKROBUS_1
+#endif
+
 static raq_t raq;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     raq_cfg_setup( &raq_cfg );
-    RAQ_MAP_MIKROBUS( raq_cfg, MIKROBUS_1 );
+    RAQ_MAP_MIKROBUS( raq_cfg, MIKROBUS_POSITION_RAQ );
     if ( I2C_MASTER_ERROR == raq_init( &raq, &raq_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

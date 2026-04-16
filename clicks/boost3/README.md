@@ -76,7 +76,7 @@ void application_init ( void )
     //  Click initialization.
 
     boost3_cfg_setup( &cfg );
-    BOOST3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOST3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOST3 );
     boost3_init( &boost3, &cfg );
 }
 ```

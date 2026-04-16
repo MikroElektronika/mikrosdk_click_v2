@@ -26,6 +26,10 @@
 #include "log.h"
 #include "audioamp6.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOAMP6
+    #define MIKROBUS_POSITION_AUDIOAMP6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static audioamp6_t audioamp6;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp6_cfg_setup( &cfg );
-    AUDIOAMP6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOAMP6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOAMP6 );
     audioamp6_init( &audioamp6, &cfg );
 
     audioamp6_set_mode( &audioamp6, AUDIOAMP6_MODE_BD );

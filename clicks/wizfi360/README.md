@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     wizfi360_cfg_setup( &wizfi360_cfg );
-    WIZFI360_MAP_MIKROBUS( wizfi360_cfg, MIKROBUS_1 );
+    WIZFI360_MAP_MIKROBUS( wizfi360_cfg, MIKROBUS_POSITION_WIZFI360 );
     if ( UART_ERROR == wizfi360_init( &wizfi360, &wizfi360_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

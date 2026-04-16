@@ -24,6 +24,10 @@
 #include "log.h"
 #include "smartdof5.h"
 
+#ifndef MIKROBUS_POSITION_SMARTDOF5
+    #define MIKROBUS_POSITION_SMARTDOF5 MIKROBUS_1
+#endif
+
 static smartdof5_t smartdof5;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     smartdof5_cfg_setup( &smartdof5_cfg );
-    SMARTDOF5_MAP_MIKROBUS( smartdof5_cfg, MIKROBUS_1 );
+    SMARTDOF5_MAP_MIKROBUS( smartdof5_cfg, MIKROBUS_POSITION_SMARTDOF5 );
     err_t init_flag = smartdof5_init( &smartdof5, &smartdof5_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

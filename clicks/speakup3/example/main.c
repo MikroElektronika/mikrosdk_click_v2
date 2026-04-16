@@ -25,6 +25,10 @@
 #include "log.h"
 #include "speakup3.h"
 
+#ifndef MIKROBUS_POSITION_SPEAKUP3
+    #define MIKROBUS_POSITION_SPEAKUP3 MIKROBUS_1
+#endif
+
 static speakup3_t speakup3;
 static log_t logger;
 
@@ -58,7 +62,7 @@ void application_init ( void )
 
     // Click initialization.
     speakup3_cfg_setup( &speakup3_cfg );
-    SPEAKUP3_MAP_MIKROBUS( speakup3_cfg, MIKROBUS_1 );
+    SPEAKUP3_MAP_MIKROBUS( speakup3_cfg, MIKROBUS_POSITION_SPEAKUP3 );
     if ( UART_ERROR == speakup3_init( &speakup3, &speakup3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

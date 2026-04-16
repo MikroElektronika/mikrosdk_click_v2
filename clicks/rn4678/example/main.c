@@ -32,6 +32,10 @@
 #include "rn4678.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RN4678
+    #define MIKROBUS_POSITION_RN4678 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 20
 #define PROCESS_RX_BUFFER_SIZE 100
 #define PROCESS_PARSER_BUFFER_SIZE 100
@@ -158,7 +162,7 @@ void application_init ( void )
     //  Click initialization.
 
     rn4678_cfg_setup( &cfg );
-    RN4678_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RN4678_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RN4678 );
     rn4678_init( &rn4678, &cfg );
 
     rn4678_enable ( &rn4678 );

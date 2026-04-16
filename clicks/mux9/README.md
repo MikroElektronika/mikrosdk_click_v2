@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     mux9_cfg_setup( &mux9_cfg );
-    MUX9_MAP_MIKROBUS( mux9_cfg, MIKROBUS_1 );
+    MUX9_MAP_MIKROBUS( mux9_cfg, MIKROBUS_POSITION_MUX9 );
     if ( SPI_MASTER_ERROR == mux9_init( &mux9, &mux9_cfg ) )
     {
         log_error( &logger, " Communication init." );

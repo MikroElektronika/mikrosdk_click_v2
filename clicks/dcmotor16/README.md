@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     dcmotor16_cfg_setup( &dcmotor16_cfg );
-    DCMOTOR16_MAP_MIKROBUS( dcmotor16_cfg, MIKROBUS_1 );
+    DCMOTOR16_MAP_MIKROBUS( dcmotor16_cfg, MIKROBUS_POSITION_DCMOTOR16 );
     err_t init_flag  = dcmotor16_init( &dcmotor16, &dcmotor16_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -94,7 +94,7 @@ void application_init ( void )
 
     // Click initialization.
     mlvibrosens_cfg_setup( &mlvibrosens_cfg );
-    MLVIBROSENS_MAP_MIKROBUS( mlvibrosens_cfg, MIKROBUS_1 );
+    MLVIBROSENS_MAP_MIKROBUS( mlvibrosens_cfg, MIKROBUS_POSITION_MLVIBROSENS );
     if ( I2C_MASTER_ERROR == mlvibrosens_init( &mlvibrosens, &mlvibrosens_cfg ) )
     {
         log_error( &logger, " Communication init." );

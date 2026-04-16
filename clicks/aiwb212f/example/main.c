@@ -37,6 +37,10 @@
 #include "log.h"
 #include "aiwb212f.h"
 
+#ifndef MIKROBUS_POSITION_AIWB212F
+    #define MIKROBUS_POSITION_AIWB212F MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_BLE                         1               // BLE Example
@@ -147,7 +151,7 @@ void application_init ( void )
 
     // Click initialization.
     aiwb212f_cfg_setup( &aiwb212f_cfg );
-    AIWB212F_MAP_MIKROBUS( aiwb212f_cfg, MIKROBUS_1 );
+    AIWB212F_MAP_MIKROBUS( aiwb212f_cfg, MIKROBUS_POSITION_AIWB212F );
     if ( UART_ERROR == aiwb212f_init( &aiwb212f, &aiwb212f_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "ambient17.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT17
+    #define MIKROBUS_POSITION_AMBIENT17 MIKROBUS_1
+#endif
+
 static ambient17_t ambient17;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient17_cfg_setup( &ambient17_cfg );
-    AMBIENT17_MAP_MIKROBUS( ambient17_cfg, MIKROBUS_1 );
+    AMBIENT17_MAP_MIKROBUS( ambient17_cfg, MIKROBUS_POSITION_AMBIENT17 );
     if ( I2C_MASTER_ERROR == ambient17_init( &ambient17, &ambient17_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

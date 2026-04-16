@@ -49,6 +49,10 @@
 #include "log.h"
 #include "iotexpresslink3.h"
 
+#ifndef MIKROBUS_POSITION_IOTEXPRESSLINK3
+    #define MIKROBUS_POSITION_IOTEXPRESSLINK3 MIKROBUS_1
+#endif
+
 // Enter valid WiFi credentials below
 #define WIFI_SSID               "MIKROE GUEST"      // WiFi SSID
 #define WIFI_PASS               "!guest.mikroe!"    // WiFi Password
@@ -116,7 +120,7 @@ void application_init ( void )
 
     // Click initialization.
     iotexpresslink3_cfg_setup( &iotexpresslink3_cfg );
-    IOTEXPRESSLINK3_MAP_MIKROBUS( iotexpresslink3_cfg, MIKROBUS_1 );
+    IOTEXPRESSLINK3_MAP_MIKROBUS( iotexpresslink3_cfg, MIKROBUS_POSITION_IOTEXPRESSLINK3 );
     if ( UART_ERROR == iotexpresslink3_init( &iotexpresslink3, &iotexpresslink3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "powerreset.h"
 
+#ifndef MIKROBUS_POSITION_POWERRESET
+    #define MIKROBUS_POSITION_POWERRESET MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static powerreset_t powerreset;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     powerreset_cfg_setup( &cfg );
-    POWERRESET_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POWERRESET_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POWERRESET );
     powerreset_init( &powerreset, &cfg );
 
     Delay_ms ( 100 );

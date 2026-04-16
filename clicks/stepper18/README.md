@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper18_cfg_setup( &stepper18_cfg );
-    STEPPER18_MAP_MIKROBUS( stepper18_cfg, MIKROBUS_1 );
+    STEPPER18_MAP_MIKROBUS( stepper18_cfg, MIKROBUS_POSITION_STEPPER18 );
     err_t init_flag = stepper18_init( &stepper18, &stepper18_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

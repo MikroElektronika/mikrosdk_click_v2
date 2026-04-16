@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     spiisolator_cfg_setup( &cfg );
-    SPIISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPIISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPIISOLATOR );
     spiisolator_init( &spiisolator, &cfg );
     
     c8x8_default_cfg( &spiisolator );

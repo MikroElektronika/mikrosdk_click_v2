@@ -27,6 +27,10 @@
 #include "log.h"
 #include "c3xbuck.h"
 
+#ifndef MIKROBUS_POSITION_3XBUCK
+    #define MIKROBUS_POSITION_3XBUCK MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c3xbuck_t c3xbuck;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     c3xbuck_cfg_setup( &cfg );
-    C3XBUCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C3XBUCK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_3XBUCK );
     c3xbuck_init( &c3xbuck, &cfg );
     Delay_ms ( 100 );
     

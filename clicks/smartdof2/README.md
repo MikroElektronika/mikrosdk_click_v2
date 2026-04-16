@@ -94,7 +94,7 @@ void application_init ( void )
 
     // Click initialization.
     smartdof2_cfg_setup( &smartdof2_cfg );
-    SMARTDOF2_MAP_MIKROBUS( smartdof2_cfg, MIKROBUS_1 );
+    SMARTDOF2_MAP_MIKROBUS( smartdof2_cfg, MIKROBUS_POSITION_SMARTDOF2 );
     err_t init_flag = smartdof2_init( &smartdof2, &smartdof2_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

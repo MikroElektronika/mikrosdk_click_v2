@@ -31,6 +31,10 @@
 #include "log.h"
 #include "airquality2.h"
 
+#ifndef MIKROBUS_POSITION_AIRQUALITY2
+    #define MIKROBUS_POSITION_AIRQUALITY2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static airquality2_t airquality2;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     airquality2_cfg_setup( &cfg );
-    AIRQUALITY2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AIRQUALITY2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AIRQUALITY2 );
     airquality2_init( &airquality2, &cfg );
     
     // Click calibration 

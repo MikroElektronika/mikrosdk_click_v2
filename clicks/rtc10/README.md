@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     rtc10_cfg_setup( &cfg );
-    RTC10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC10 );
     rtc10_init( &rtc10, &cfg );
 
     Delay_ms ( 1000 );

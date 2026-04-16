@@ -23,6 +23,10 @@
 #include "log.h"
 #include "hbridge13.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE13
+    #define MIKROBUS_POSITION_HBRIDGE13 MIKROBUS_1
+#endif
+
 static hbridge13_t hbridge13;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridge13_cfg_setup( &hbridge13_cfg );
-    HBRIDGE13_MAP_MIKROBUS( hbridge13_cfg, MIKROBUS_1 );
+    HBRIDGE13_MAP_MIKROBUS( hbridge13_cfg, MIKROBUS_POSITION_HBRIDGE13 );
     if ( I2C_MASTER_ERROR == hbridge13_init( &hbridge13, &hbridge13_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

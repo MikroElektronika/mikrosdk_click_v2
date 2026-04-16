@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     heartrate7_cfg_setup( &heartrate7_cfg );
-    HEARTRATE7_MAP_MIKROBUS( heartrate7_cfg, MIKROBUS_1 );
+    HEARTRATE7_MAP_MIKROBUS( heartrate7_cfg, MIKROBUS_POSITION_HEARTRATE7 );
     if ( I2C_MASTER_ERROR == heartrate7_init( &heartrate7, &heartrate7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

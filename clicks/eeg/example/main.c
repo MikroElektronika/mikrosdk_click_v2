@@ -21,6 +21,10 @@
 #include "log.h"
 #include "eeg.h"
 
+#ifndef MIKROBUS_POSITION_EEG
+    #define MIKROBUS_POSITION_EEG MIKROBUS_1
+#endif
+
 static eeg_t eeg;   /**< EEG Click driver object. */
 static log_t logger;    /**< Logger object. */
 uint32_t time = 0;
@@ -50,7 +54,7 @@ void application_init ( void )
     
     // Click initialization.
     eeg_cfg_setup( &eeg_cfg );
-    EEG_MAP_MIKROBUS( eeg_cfg, MIKROBUS_1 );
+    EEG_MAP_MIKROBUS( eeg_cfg, MIKROBUS_POSITION_EEG );
     if ( ADC_ERROR == eeg_init( &eeg, &eeg_cfg ) ){
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

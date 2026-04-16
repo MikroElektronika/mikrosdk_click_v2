@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     waterdetect2_cfg_setup( &waterdetect2_cfg );
-    WATERDETECT2_MAP_MIKROBUS( waterdetect2_cfg, MIKROBUS_1 );
+    WATERDETECT2_MAP_MIKROBUS( waterdetect2_cfg, MIKROBUS_POSITION_WATERDETECT2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == waterdetect2_init( &waterdetect2, &waterdetect2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

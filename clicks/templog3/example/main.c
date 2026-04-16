@@ -30,6 +30,10 @@
 #include "log.h"
 #include "templog3.h"
 
+#ifndef MIKROBUS_POSITION_TEMPLOG3
+    #define MIKROBUS_POSITION_TEMPLOG3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static templog3_t templog3;
@@ -76,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     templog3_cfg_setup( &cfg );
-    TEMPLOG3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG3 );
     templog3_init( &templog3, &cfg );
 
     Delay_ms ( 500 );

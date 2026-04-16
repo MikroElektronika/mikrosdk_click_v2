@@ -100,7 +100,7 @@ void application_init ( void )
     //  Click initialization.
 
     adc6_cfg_setup( &cfg );
-    ADC6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC6 );
     adc6_init( &adc6, &cfg );
     adc6_default_cfg( &adc6 );
 

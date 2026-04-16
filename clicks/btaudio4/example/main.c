@@ -31,6 +31,10 @@
 #include "log.h"
 #include "btaudio4.h"
 
+#ifndef MIKROBUS_POSITION_BTAUDIO4
+    #define MIKROBUS_POSITION_BTAUDIO4 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE      200
 #define PROCESS_BUFFER_SIZE  100
@@ -101,7 +105,7 @@ void application_init ( void )
 
     // Click initialization.
     btaudio4_cfg_setup( &btaudio4_cfg );
-    BTAUDIO4_MAP_MIKROBUS( btaudio4_cfg, MIKROBUS_1 );
+    BTAUDIO4_MAP_MIKROBUS( btaudio4_cfg, MIKROBUS_POSITION_BTAUDIO4 );
     if ( UART_ERROR == btaudio4_init( &btaudio4, &btaudio4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

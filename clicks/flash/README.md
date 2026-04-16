@@ -93,7 +93,7 @@ void application_init( void )
     
     //  Click initialization.
     flash_cfg_setup( &flash_cfg );
-    FLASH_MAP_MIKROBUS( flash_cfg, MIKROBUS_1 );
+    FLASH_MAP_MIKROBUS( flash_cfg, MIKROBUS_POSITION_FLASH );
     flash_init( &flash, &flash_cfg );
 
     //  Click reset and default configuration.

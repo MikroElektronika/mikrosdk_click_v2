@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     canfd_cfg_setup( &cfg );
-    CANFD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANFD_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANFD );
     canfd_init( &canfd, &cfg );
 
     Delay_ms ( 500 );

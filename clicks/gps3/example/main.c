@@ -29,6 +29,10 @@
 #include "gps3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_GPS3
+    #define MIKROBUS_POSITION_GPS3 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static gps3_t gps3;
@@ -89,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     gps3_cfg_setup( &gps3_cfg );
-    GPS3_MAP_MIKROBUS( gps3_cfg, MIKROBUS_1 );
+    GPS3_MAP_MIKROBUS( gps3_cfg, MIKROBUS_POSITION_GPS3 );
     if ( UART_ERROR == gps3_init( &gps3, &gps3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "airvelocity.h"
 
+#ifndef MIKROBUS_POSITION_AIRVELOCITY
+    #define MIKROBUS_POSITION_AIRVELOCITY MIKROBUS_1
+#endif
+
 static airvelocity_t airvelocity;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     airvelocity_cfg_setup( &airvelocity_cfg );
-    AIRVELOCITY_MAP_MIKROBUS( airvelocity_cfg, MIKROBUS_1 );
+    AIRVELOCITY_MAP_MIKROBUS( airvelocity_cfg, MIKROBUS_POSITION_AIRVELOCITY );
     if ( I2C_MASTER_ERROR == airvelocity_init( &airvelocity, &airvelocity_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

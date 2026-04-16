@@ -82,7 +82,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     flash3_cfg_setup( &cfg );
-    FLASH3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH3 );
     flash3_init( &flash3, &cfg );
 
     Delay_ms ( 100 );

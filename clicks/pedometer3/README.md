@@ -92,7 +92,7 @@ void application_init ( void )
 
     //  Click initialization.
     pedometer3_cfg_setup( &cfg );
-    PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PEDOMETER3 );
     pedometer3_init( &pedometer3, &cfg );
 
     // Default Click configurations

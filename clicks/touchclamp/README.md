@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchclamp_cfg_setup( &cfg );
-    TOUCHCLAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHCLAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHCLAMP );
     touchclamp_init( &touchclamp, &cfg );
     Delay_ms ( 100 );
     

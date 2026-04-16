@@ -86,7 +86,7 @@ void application_init ( void )
     log_info(&logger, "---- Application Init ----");
 
     sht1x_cfg_setup( &cfg );
-    SHT1X_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHT1X_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHT1X );
     sht1x_init( &sht1x, &cfg );
 }
 ```

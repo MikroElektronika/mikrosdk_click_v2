@@ -25,6 +25,10 @@
 #include "log.h"
 #include "pressure3.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE3
+    #define MIKROBUS_POSITION_PRESSURE3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure3_t pressure3;
@@ -55,7 +59,7 @@ void application_init ( )
     //  Click initialization.
 
     pressure3_cfg_setup( &cfg );
-    PRESSURE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE3 );
     pressure3_init( &pressure3, &cfg );
     pressure3_default_cfg( &pressure3 );
 }

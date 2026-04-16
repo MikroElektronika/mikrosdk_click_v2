@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     presence_cfg_setup( &cfg );
-    PRESENCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESENCE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESENCE );
     presence_init( &presence, &cfg );
 
     if ( PRESENCE_ERROR == presence_default_cfg ( &presence ) )

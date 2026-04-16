@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     brushless4_cfg_setup( &cfg );
-    BRUSHLESS4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS4 );
     brushless4_init( &brushless4, &cfg );
     
     brushless4_set_duty_cycle ( &brushless4, 0.0 );

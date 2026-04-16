@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     expand3_cfg_setup( &expand3_cfg );
-    EXPAND3_MAP_MIKROBUS( expand3_cfg, MIKROBUS_1 );
+    EXPAND3_MAP_MIKROBUS( expand3_cfg, MIKROBUS_POSITION_EXPAND3 );
     if ( ONE_WIRE_ERROR == expand3_init( &expand3, &expand3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

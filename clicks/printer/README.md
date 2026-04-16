@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     printer_cfg_setup( &printer_cfg );
-    PRINTER_MAP_MIKROBUS( printer_cfg, MIKROBUS_1 );
+    PRINTER_MAP_MIKROBUS( printer_cfg, MIKROBUS_POSITION_PRINTER );
     if ( UART_ERROR == printer_init( &printer, &printer_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

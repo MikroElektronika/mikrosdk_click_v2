@@ -82,7 +82,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     thermo14_cfg_setup( &cfg );
-    THERMO14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO14_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO14 );
     thermo14_init( &thermo14, &cfg );
 
     Delay_ms ( 100 );

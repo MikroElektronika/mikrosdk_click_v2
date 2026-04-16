@@ -82,7 +82,7 @@ void application_init ( void )
     //  Click initialization.
 
     manometer2_cfg_setup( &cfg );
-    MANOMETER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MANOMETER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MANOMETER2 );
     manometer2_init( &manometer2, &cfg );
 
     manometer2_read_coef( &manometer2 );

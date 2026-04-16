@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     solidswitch10_cfg_setup( &solidswitch10_cfg );
-    SOLIDSWITCH10_MAP_MIKROBUS( solidswitch10_cfg, MIKROBUS_1 );
+    SOLIDSWITCH10_MAP_MIKROBUS( solidswitch10_cfg, MIKROBUS_POSITION_SOLIDSWITCH10 );
     if ( I2C_MASTER_ERROR == solidswitch10_init( &solidswitch10, &solidswitch10_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

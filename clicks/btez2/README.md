@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     btez2_cfg_setup( &btez2_cfg );
-    BTEZ2_MAP_MIKROBUS( btez2_cfg, MIKROBUS_1 );
+    BTEZ2_MAP_MIKROBUS( btez2_cfg, MIKROBUS_POSITION_BTEZ2 );
     if ( UART_ERROR == btez2_init( &btez2, &btez2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

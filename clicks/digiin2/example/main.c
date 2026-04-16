@@ -22,6 +22,10 @@
 #include "log.h"
 #include "digiin2.h"
 
+#ifndef MIKROBUS_POSITION_DIGIIN2
+    #define MIKROBUS_POSITION_DIGIIN2 MIKROBUS_1
+#endif
+
 static digiin2_t digiin2;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     digiin2_cfg_setup( &digiin2_cfg );
-    DIGIIN2_MAP_MIKROBUS( digiin2_cfg, MIKROBUS_1 );
+    DIGIIN2_MAP_MIKROBUS( digiin2_cfg, MIKROBUS_POSITION_DIGIIN2 );
     if ( SPI_MASTER_ERROR == digiin2_init( &digiin2, &digiin2_cfg ) )
     {
         log_error( &logger, " Communication init." );

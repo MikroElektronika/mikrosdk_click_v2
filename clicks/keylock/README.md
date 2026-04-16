@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     keylock_cfg_setup( &cfg );
-    KEYLOCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    KEYLOCK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_KEYLOCK );
     keylock_init( &keylock, &cfg );
     Delay_ms ( 100 );
     log_printf( &logger, "--------------- \r\n" );

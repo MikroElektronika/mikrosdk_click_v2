@@ -23,6 +23,10 @@
 #include "log.h"
 #include "grideye.h"
 
+#ifndef MIKROBUS_POSITION_GRIDEYE
+    #define MIKROBUS_POSITION_GRIDEYE MIKROBUS_1
+#endif
+
 #define GRIDEYE_TEMP_COEF  0.25
 
 // ------------------------------------------------------------------ VARIABLES
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     grideye_cfg_setup( &cfg );
-    GRIDEYE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GRIDEYE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GRIDEYE );
 
     if ( grideye_init( &grideye, &cfg ) == GRIDEYE_INIT_ERROR )
     {

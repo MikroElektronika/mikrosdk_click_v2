@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     mux5_cfg_setup( &mux5_cfg );
-    MUX5_MAP_MIKROBUS( mux5_cfg, MIKROBUS_1 );
+    MUX5_MAP_MIKROBUS( mux5_cfg, MIKROBUS_POSITION_MUX5 );
     if ( MUX5_OK != mux5_init( &mux5, &mux5_cfg ) )
     {
         log_error( &logger, " Communication init." );

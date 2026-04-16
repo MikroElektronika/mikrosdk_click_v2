@@ -26,6 +26,10 @@
 #include "log.h"
 #include "audioamp3.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOAMP3
+    #define MIKROBUS_POSITION_AUDIOAMP3 MIKROBUS_1
+#endif
+
 uint8_t cnt;
 uint8_t data_out[ 10 ];
 uint8_t status_flag;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp3_cfg_setup( &cfg );
-    AUDIOAMP3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOAMP3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOAMP3 );
     audioamp3_init( &audioamp3, &cfg );
     
     log_printf( &logger, "--------------------------\r\n\n" );

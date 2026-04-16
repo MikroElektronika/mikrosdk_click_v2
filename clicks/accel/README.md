@@ -87,7 +87,7 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     accel_cfg_setup( &cfg );
-    ACCEL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL );
     accel_init( &accel, &cfg );
 
     accel_generic_read( &accel, ACCEL_REG_DEVID, &tmp, 1 );

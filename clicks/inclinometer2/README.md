@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     inclinometer2_cfg_setup( &inclinometer2_cfg );
-    INCLINOMETER2_MAP_MIKROBUS( inclinometer2_cfg, MIKROBUS_1 );
+    INCLINOMETER2_MAP_MIKROBUS( inclinometer2_cfg, MIKROBUS_POSITION_INCLINOMETER2 );
     err_t init_flag  = inclinometer2_init( &inclinometer2, &inclinometer2_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     balancer3_cfg_setup( &cfg );
-    BALANCER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BALANCER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BALANCER3 );
     balancer3_init( &balancer3, &cfg );
          
     balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_EN );

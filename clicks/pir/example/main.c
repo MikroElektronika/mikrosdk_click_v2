@@ -22,6 +22,10 @@
 #include "log.h"
 #include "pir.h"
 
+#ifndef MIKROBUS_POSITION_PIR
+    #define MIKROBUS_POSITION_PIR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pir_t pir;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     pir_cfg_setup( &cfg );
-    PIR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PIR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PIR );
     pir_init( &pir, &cfg );
 }
 

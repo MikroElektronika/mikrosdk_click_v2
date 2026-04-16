@@ -25,6 +25,10 @@
 #include "log.h"
 #include "proximity8.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY8
+    #define MIKROBUS_POSITION_PROXIMITY8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static proximity8_t proximity8;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity8_cfg_setup( &cfg );
-    PROXIMITY8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY8 );
     proximity8_init( &proximity8, &cfg );
 
     //Test Communication

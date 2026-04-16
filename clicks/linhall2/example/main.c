@@ -23,6 +23,10 @@
 #include "log.h"
 #include "linhall2.h"
 
+#ifndef MIKROBUS_POSITION_LINHALL2
+    #define MIKROBUS_POSITION_LINHALL2 MIKROBUS_1
+#endif
+
 static linhall2_t linhall2;   /**< LIN Hall 2 Click driver object. */
 static log_t logger;          /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     linhall2_cfg_setup( &linhall2_cfg );
-    LINHALL2_MAP_MIKROBUS( linhall2_cfg, MIKROBUS_1 );
+    LINHALL2_MAP_MIKROBUS( linhall2_cfg, MIKROBUS_POSITION_LINHALL2 );
     if ( ADC_ERROR == linhall2_init( &linhall2, &linhall2_cfg ) )
     {
         log_error( &logger, " Communication init." );

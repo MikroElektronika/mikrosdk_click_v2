@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     sram_cfg_setup( &cfg );
-    SRAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SRAM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SRAM );
     sram_init( &sram, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

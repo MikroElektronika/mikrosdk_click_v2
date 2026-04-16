@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     microwave6_cfg_setup( &microwave6_cfg );
-    MICROWAVE6_MAP_MIKROBUS( microwave6_cfg, MIKROBUS_1 );
+    MICROWAVE6_MAP_MIKROBUS( microwave6_cfg, MIKROBUS_POSITION_MICROWAVE6 );
     err_t init_flag = microwave6_init( &microwave6, &microwave6_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

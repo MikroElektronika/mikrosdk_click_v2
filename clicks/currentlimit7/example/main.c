@@ -30,6 +30,10 @@
 #include "log.h"
 #include "currentlimit7.h"
 
+#ifndef MIKROBUS_POSITION_CURRENTLIMIT7
+    #define MIKROBUS_POSITION_CURRENTLIMIT7 MIKROBUS_1
+#endif
+
 static currentlimit7_t currentlimit7;
 static log_t logger;
 
@@ -99,7 +103,7 @@ void application_init ( void )
 
     // Click initialization.
     currentlimit7_cfg_setup( &currentlimit7_cfg );
-    CURRENTLIMIT7_MAP_MIKROBUS( currentlimit7_cfg, MIKROBUS_1 );
+    CURRENTLIMIT7_MAP_MIKROBUS( currentlimit7_cfg, MIKROBUS_POSITION_CURRENTLIMIT7 );
     if ( I2C_MASTER_ERROR == currentlimit7_init( &currentlimit7, &currentlimit7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

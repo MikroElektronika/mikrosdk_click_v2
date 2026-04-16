@@ -24,6 +24,10 @@
 #include "log.h"
 #include "shutter.h"
 
+#ifndef MIKROBUS_POSITION_SHUTTER
+    #define MIKROBUS_POSITION_SHUTTER MIKROBUS_1
+#endif
+
 static shutter_t shutter;   /**< Shutter Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     shutter_cfg_setup( &shutter_cfg );
-    SHUTTER_MAP_MIKROBUS( shutter_cfg, MIKROBUS_1 );
+    SHUTTER_MAP_MIKROBUS( shutter_cfg, MIKROBUS_POSITION_SHUTTER );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == shutter_init( &shutter, &shutter_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "airquality3.h"
 
+#ifndef MIKROBUS_POSITION_AIRQUALITY3
+    #define MIKROBUS_POSITION_AIRQUALITY3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static airquality3_t airquality3;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     airquality3_cfg_setup( &cfg );
-    AIRQUALITY3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AIRQUALITY3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AIRQUALITY3 );
     airquality3_init( &airquality3, &cfg );
 
     // Wake-up Click procedure

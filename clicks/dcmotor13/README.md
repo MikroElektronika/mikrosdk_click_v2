@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor13_cfg_setup( &dcmotor13_cfg );
-    DCMOTOR13_MAP_MIKROBUS( dcmotor13_cfg, MIKROBUS_1 );
+    DCMOTOR13_MAP_MIKROBUS( dcmotor13_cfg, MIKROBUS_POSITION_DCMOTOR13 );
     if ( I2C_MASTER_ERROR == dcmotor13_init( &dcmotor13, &dcmotor13_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

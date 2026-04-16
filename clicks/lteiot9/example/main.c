@@ -81,6 +81,10 @@
 #include "log.h"
 #include "lteiot9.h"
 
+#ifndef MIKROBUS_POSITION_LTEIOT9
+    #define MIKROBUS_POSITION_LTEIOT9 MIKROBUS_1
+#endif
+
 #define SIM_APN                             ""  // Set valid SIM APN
 #define PHONE_NUMBER_TO_MESSAGE             ""  // Set Phone number to message
 #define MESSAGE_CONTENT                     "LTE IoT 9 Click"   // Messege content
@@ -257,7 +261,7 @@ void application_init ( void )
     // Click initialization.
 
     lteiot9_cfg_setup( &lteiot9_cfg );
-    LTEIOT9_MAP_MIKROBUS( lteiot9_cfg, MIKROBUS_1 );
+    LTEIOT9_MAP_MIKROBUS( lteiot9_cfg, MIKROBUS_POSITION_LTEIOT9 );
     err_t init_flag  = lteiot9_init( &lteiot9, &lteiot9_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

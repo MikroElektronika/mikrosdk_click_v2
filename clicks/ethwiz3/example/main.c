@@ -30,6 +30,10 @@
 #include "log.h"
 #include "ethwiz3.h"
 
+#ifndef MIKROBUS_POSITION_ETHWIZ3
+    #define MIKROBUS_POSITION_ETHWIZ3 MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT     "ETH WIZ 3 Click board - demo example."
 
@@ -79,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ethwiz3_cfg_setup( &ethwiz3_cfg );
-    ETHWIZ3_MAP_MIKROBUS( ethwiz3_cfg, MIKROBUS_1 );
+    ETHWIZ3_MAP_MIKROBUS( ethwiz3_cfg, MIKROBUS_POSITION_ETHWIZ3 );
     if ( ETHWIZ3_OK != ethwiz3_init( &ethwiz3, &ethwiz3_cfg ) )
     {
         log_error( &logger, " Communication init." );

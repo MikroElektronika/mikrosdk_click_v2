@@ -24,6 +24,10 @@
 #include "log.h"
 #include "heartrate5.h"
 
+#ifndef MIKROBUS_POSITION_HEARTRATE5
+    #define MIKROBUS_POSITION_HEARTRATE5 MIKROBUS_1
+#endif
+
 static heartrate5_t heartrate5;
 static log_t logger;
 static uint32_t sensor_value;
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     heartrate5_cfg_setup( &heartrate5_cfg );
-    HEARTRATE5_MAP_MIKROBUS( heartrate5_cfg, MIKROBUS_1 );
+    HEARTRATE5_MAP_MIKROBUS( heartrate5_cfg, MIKROBUS_POSITION_HEARTRATE5 );
     if ( I2C_MASTER_ERROR == heartrate5_init( &heartrate5, &heartrate5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

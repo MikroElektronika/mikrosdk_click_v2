@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     irbeacon_cfg_setup( &cfg );
-    IRBEACON_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRBEACON_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRBEACON );
     irbeacon_init( &irbeacon, &cfg );
     irbeacon_pwm_start( &irbeacon );
     

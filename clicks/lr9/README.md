@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     lr9_cfg_setup( &lr9_cfg );
-    LR9_MAP_MIKROBUS( lr9_cfg, MIKROBUS_1 );
+    LR9_MAP_MIKROBUS( lr9_cfg, MIKROBUS_POSITION_LR9 );
     if ( UART_ERROR == lr9_init( &lr9, &lr9_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

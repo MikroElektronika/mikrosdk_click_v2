@@ -25,6 +25,10 @@
 #include "log.h"
 #include "stepdown5.h"
 
+#ifndef MIKROBUS_POSITION_STEPDOWN5
+    #define MIKROBUS_POSITION_STEPDOWN5 MIKROBUS_1
+#endif
+
 static stepdown5_t stepdown5;
 static log_t logger;
 
@@ -57,7 +61,7 @@ void application_init ( void )
 
     // Click initialization.
     stepdown5_cfg_setup( &stepdown5_cfg );
-    STEPDOWN5_MAP_MIKROBUS( stepdown5_cfg, MIKROBUS_1 );
+    STEPDOWN5_MAP_MIKROBUS( stepdown5_cfg, MIKROBUS_POSITION_STEPDOWN5 );
     if ( I2C_MASTER_ERROR == stepdown5_init( &stepdown5, &stepdown5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

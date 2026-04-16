@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     ldctouch_cfg_setup( &ldctouch_cfg );
-    LDCTOUCH_MAP_MIKROBUS( ldctouch_cfg, MIKROBUS_1 );
+    LDCTOUCH_MAP_MIKROBUS( ldctouch_cfg, MIKROBUS_POSITION_LDCTOUCH );
     if ( I2C_MASTER_ERROR == ldctouch_init( &ldctouch, &ldctouch_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

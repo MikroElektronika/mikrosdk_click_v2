@@ -90,7 +90,7 @@ void application_init ( )
     //  Click initialization.
 
     geomagnetic_cfg_setup( &cfg );
-    GEOMAGNETIC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GEOMAGNETIC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GEOMAGNETIC );
     geomagnetic_init( &geomagnetic, &cfg );
     geomagnetic_default_cfg( &geomagnetic );
 }

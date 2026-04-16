@@ -24,6 +24,10 @@
 #include "log.h"
 #include "battmon2.h"
 
+#ifndef MIKROBUS_POSITION_BATTMON2
+    #define MIKROBUS_POSITION_BATTMON2 MIKROBUS_1
+#endif
+
 static battmon2_t battmon2;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     battmon2_cfg_setup( &battmon2_cfg );
-    BATTMON2_MAP_MIKROBUS( battmon2_cfg, MIKROBUS_1 );
+    BATTMON2_MAP_MIKROBUS( battmon2_cfg, MIKROBUS_POSITION_BATTMON2 );
     if ( I2C_MASTER_ERROR == battmon2_init( &battmon2, &battmon2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

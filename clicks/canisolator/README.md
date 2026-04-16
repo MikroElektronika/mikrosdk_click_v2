@@ -98,7 +98,7 @@ void application_init ( void )
     //  Click initialization.
 
     canisolator_cfg_setup( &cfg );
-    CANISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANISOLATOR );
     canisolator_init( &canisolator, &cfg );
     
     log_printf( &logger, "---------------------\r\n" );

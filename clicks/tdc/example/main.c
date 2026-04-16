@@ -28,6 +28,10 @@
 #include "log.h"
 #include "tdc.h"
 
+#ifndef MIKROBUS_POSITION_TDC
+    #define MIKROBUS_POSITION_TDC MIKROBUS_1
+#endif
+
 static tdc_t tdc;
 static tdc_t tdc_pulse;
 static log_t logger;
@@ -60,7 +64,7 @@ void application_init ( void )
     // Click initialization.
 
     tdc_cfg_setup( &tdc_cfg );
-    TDC_MAP_MIKROBUS( tdc_cfg, MIKROBUS_1 );
+    TDC_MAP_MIKROBUS( tdc_cfg, MIKROBUS_POSITION_TDC );
     tdc_cfg_setup( &tdc_cfg1 );
     TDC_MAP_MIKROBUS( tdc_cfg1, MIKROBUS_2 );
     err_t init_flag  = tdc_init( &tdc, &tdc_cfg );

@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     ecg6_cfg_setup( &cfg );
-    ECG6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ECG6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ECG6 );
     ecg6_init( &ecg6, &cfg );
     
     Delay_ms ( 1000 );

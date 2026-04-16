@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ir_cfg_setup( &ir_cfg );
-    IR_MAP_MIKROBUS( ir_cfg, MIKROBUS_1 );
+    IR_MAP_MIKROBUS( ir_cfg, MIKROBUS_POSITION_IR );
     err_t error_flag = ir_init( &ir, &ir_cfg );
     if ( ( UART_ERROR == error_flag ) || ( PWM_ERROR == error_flag ) ) 
     {

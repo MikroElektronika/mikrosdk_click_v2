@@ -86,7 +86,7 @@ void application_init ( void )
     // Click initialization.
 
     powermux2_cfg_setup( &powermux2_cfg );
-    POWERMUX2_MAP_MIKROBUS( powermux2_cfg, MIKROBUS_1 );
+    POWERMUX2_MAP_MIKROBUS( powermux2_cfg, MIKROBUS_POSITION_POWERMUX2 );
     err_t init_flag  = powermux2_init( &powermux2, &powermux2_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

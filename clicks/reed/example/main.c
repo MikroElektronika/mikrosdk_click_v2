@@ -23,6 +23,10 @@
 #include "log.h"
 #include "reed.h"
 
+#ifndef MIKROBUS_POSITION_REED
+    #define MIKROBUS_POSITION_REED MIKROBUS_1
+#endif
+
 static reed_t reed;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
     //  Click initialization.
 
     reed_cfg_setup( &reed_cfg );
-    REED_MAP_MIKROBUS( reed_cfg, MIKROBUS_1 );
+    REED_MAP_MIKROBUS( reed_cfg, MIKROBUS_POSITION_REED );
 
     if ( reed_init( &reed, &reed_cfg ) == REED_INIT_ERROR )
     {

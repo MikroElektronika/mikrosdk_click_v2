@@ -28,6 +28,10 @@
 #include "log.h"
 #include "accel15.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL15
+    #define MIKROBUS_POSITION_ACCEL15 MIKROBUS_1
+#endif
+
 static accel15_t accel15;
 static log_t logger;
 static accel15_axis_t axis;
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     accel15_cfg_setup( &accel15_cfg );
-    ACCEL15_MAP_MIKROBUS( accel15_cfg, MIKROBUS_1 );
+    ACCEL15_MAP_MIKROBUS( accel15_cfg, MIKROBUS_POSITION_ACCEL15 );
     err_t init_flag  = accel15_init( &accel15, &accel15_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) 
     {

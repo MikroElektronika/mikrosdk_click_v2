@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     thermostat4_cfg_setup( &thermostat4_cfg );
-    THERMOSTAT4_MAP_MIKROBUS( thermostat4_cfg, MIKROBUS_1 );
+    THERMOSTAT4_MAP_MIKROBUS( thermostat4_cfg, MIKROBUS_POSITION_THERMOSTAT4 );
     if ( SPI_MASTER_ERROR == thermostat4_init( &thermostat4, &thermostat4_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

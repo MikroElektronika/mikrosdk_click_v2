@@ -27,6 +27,10 @@
 #include "log.h"
 #include "headphoneamp.h"
 
+#ifndef MIKROBUS_POSITION_HEADPHONEAMP
+    #define MIKROBUS_POSITION_HEADPHONEAMP MIKROBUS_1
+#endif
+
 static headphoneamp_t headphoneamp;   /**< Headphone AMP Click driver object. */
 static log_t logger;                  /**< Logger object. */
 
@@ -51,7 +55,7 @@ void application_init ( void )
     // Click initialization.
 
     headphoneamp_cfg_setup( &headphoneamp_cfg );
-    HEADPHONEAMP_MAP_MIKROBUS( headphoneamp_cfg, MIKROBUS_1 );
+    HEADPHONEAMP_MAP_MIKROBUS( headphoneamp_cfg, MIKROBUS_POSITION_HEADPHONEAMP );
     if ( headphoneamp_init( &headphoneamp, &headphoneamp_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

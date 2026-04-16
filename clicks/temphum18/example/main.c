@@ -28,6 +28,10 @@
 #include "log.h"
 #include "temphum18.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM18
+    #define MIKROBUS_POSITION_TEMPHUM18 MIKROBUS_1
+#endif
+
 static temphum18_t temphum18;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     temphum18_cfg_setup( &temphum18_cfg );
-    TEMPHUM18_MAP_MIKROBUS( temphum18_cfg, MIKROBUS_1 );
+    TEMPHUM18_MAP_MIKROBUS( temphum18_cfg, MIKROBUS_POSITION_TEMPHUM18 );
     if ( I2C_MASTER_ERROR == temphum18_init( &temphum18, &temphum18_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

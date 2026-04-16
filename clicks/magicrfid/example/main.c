@@ -22,6 +22,10 @@
 #include "log.h"
 #include "magicrfid.h"
 
+#ifndef MIKROBUS_POSITION_MAGICRFID
+    #define MIKROBUS_POSITION_MAGICRFID MIKROBUS_1
+#endif
+
 static magicrfid_t magicrfid;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     magicrfid_cfg_setup( &magicrfid_cfg );
-    MAGICRFID_MAP_MIKROBUS( magicrfid_cfg, MIKROBUS_1 );
+    MAGICRFID_MAP_MIKROBUS( magicrfid_cfg, MIKROBUS_POSITION_MAGICRFID );
     if ( UART_ERROR == magicrfid_init( &magicrfid, &magicrfid_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

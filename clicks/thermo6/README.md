@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo6_cfg_setup( &cfg );
-    THERMO6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO6 );
     thermo6_init( &thermo6, &cfg );
 
     thermo6_default_cfg( &thermo6 );

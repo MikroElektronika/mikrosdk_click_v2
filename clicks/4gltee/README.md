@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     c4gltee_cfg_setup( &c4gltee_cfg );
-    C4GLTEE_MAP_MIKROBUS( c4gltee_cfg, MIKROBUS_1 );
+    C4GLTEE_MAP_MIKROBUS( c4gltee_cfg, MIKROBUS_POSITION_4GLTEE );
     c4gltee_init( &c4gltee, &c4gltee_cfg );
     
     c4gltee_module_power_on( &c4gltee );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "stepup2.h"
 
+#ifndef MIKROBUS_POSITION_STEPUP2
+    #define MIKROBUS_POSITION_STEPUP2 MIKROBUS_1
+#endif
+
 static stepup2_t stepup2;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     stepup2_cfg_setup( &stepup2_cfg );
-    STEPUP2_MAP_MIKROBUS( stepup2_cfg, MIKROBUS_1 );
+    STEPUP2_MAP_MIKROBUS( stepup2_cfg, MIKROBUS_POSITION_STEPUP2 );
     if ( I2C_MASTER_ERROR == stepup2_init( &stepup2, &stepup2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

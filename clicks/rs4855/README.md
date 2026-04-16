@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs4855_cfg_setup( &cfg );
-    RS4855_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4855_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4855 );
     rs4855_init( &rs4855, &cfg );
 
     Delay_ms ( 100 );

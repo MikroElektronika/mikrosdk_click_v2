@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc22_cfg_setup( &rtc22_cfg );
-    RTC22_MAP_MIKROBUS( rtc22_cfg, MIKROBUS_1 );
+    RTC22_MAP_MIKROBUS( rtc22_cfg, MIKROBUS_POSITION_RTC22 );
     if ( I2C_MASTER_ERROR == rtc22_init( &rtc22, &rtc22_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

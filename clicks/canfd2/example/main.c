@@ -28,6 +28,10 @@
 #include "canfd2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_CANFD2
+    #define MIKROBUS_POSITION_CANFD2 MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -84,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     canfd2_cfg_setup( &cfg );
-    CANFD2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANFD2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANFD2 );
     canfd2_init( &canfd2, &cfg );
     
     CANFD2_SET_DATA_SAMPLE_EDGE;

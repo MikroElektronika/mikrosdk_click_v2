@@ -28,6 +28,10 @@
 #include "log.h"
 #include "ismtx.h"
 
+#ifndef MIKROBUS_POSITION_ISMTX
+    #define MIKROBUS_POSITION_ISMTX MIKROBUS_1
+#endif
+
 #define PREAMBLE_BYTE   0xFF
 
 uint8_t tx_data_buf[ 9 ] = { 'M', 'I', 'K', 'R', 'O', 'E', '\r', '\n', 0 };
@@ -55,7 +59,7 @@ void application_init ( void )
 
     // Click initialization.
     ismtx_cfg_setup( &ismtx_cfg );
-    ISMTX_MAP_MIKROBUS( ismtx_cfg, MIKROBUS_1 );
+    ISMTX_MAP_MIKROBUS( ismtx_cfg, MIKROBUS_POSITION_ISMTX );
     if ( SPI_MASTER_ERROR == ismtx_init( &ismtx, &ismtx_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

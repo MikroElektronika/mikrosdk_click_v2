@@ -28,6 +28,10 @@
 #include "log.h"
 #include "boost.h"
 
+#ifndef MIKROBUS_POSITION_BOOST
+    #define MIKROBUS_POSITION_BOOST MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static boost_t boost;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     boost_cfg_setup( &boost_cfg );
-    BOOST_MAP_MIKROBUS( boost_cfg, MIKROBUS_1 );
+    BOOST_MAP_MIKROBUS( boost_cfg, MIKROBUS_POSITION_BOOST );
 
     if ( boost_init( &boost, &boost_cfg ) == BOOST_ERROR )
     {

@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     spitoi2c_cfg_setup( &spitoi2c_cfg );
-    SPITOI2C_MAP_MIKROBUS( spitoi2c_cfg, MIKROBUS_1 );
+    SPITOI2C_MAP_MIKROBUS( spitoi2c_cfg, MIKROBUS_POSITION_SPITOI2C );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == spitoi2c_init( &spitoi2c, &spitoi2c_cfg ) )
     {
         log_error( &logger, " Communication init." );

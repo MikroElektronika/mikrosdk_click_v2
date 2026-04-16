@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     c1x4rgb_cfg_setup( &c1x4rgb_cfg );
-    C1X4RGB_MAP_MIKROBUS( c1x4rgb_cfg, MIKROBUS_1 );
+    C1X4RGB_MAP_MIKROBUS( c1x4rgb_cfg, MIKROBUS_POSITION_1X4RGB );
     if ( I2C_MASTER_ERROR == c1x4rgb_init( &c1x4rgb, &c1x4rgb_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

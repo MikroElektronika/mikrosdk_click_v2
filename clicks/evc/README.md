@@ -89,7 +89,7 @@ log_cfg_t log_cfg;
     //  Click initialization.
 
     evc_cfg_setup( &cfg );
-    EVC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EVC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EVC );
     evc_init( &evc, &cfg );
 
     evc_default_cfg( &evc );

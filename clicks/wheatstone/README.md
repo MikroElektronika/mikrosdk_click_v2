@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     wheatstone_cfg_setup( &cfg );
-    WHEATSTONE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WHEATSTONE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WHEATSTONE );
     wheatstone_init( &wheatstone, &cfg );
 
     wheatstone_set_potentiometer ( &wheatstone, WHEATSTONE_POT_MAX );

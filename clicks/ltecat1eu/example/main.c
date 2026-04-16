@@ -37,6 +37,10 @@
 #include "log.h"
 #include "ltecat1eu.h"
 
+#ifndef MIKROBUS_POSITION_LTECAT1EU
+    #define MIKROBUS_POSITION_LTECAT1EU MIKROBUS_1
+#endif
+
 #define APP_OK                      0
 #define APP_ERROR_DRIVER           -1
 #define APP_ERROR_OVERFLOW         -2
@@ -140,7 +144,7 @@ void application_init ( void )  {
     
     // Click initialization.
     ltecat1eu_cfg_setup( &ltecat1eu_cfg );
-    LTECAT1EU_MAP_MIKROBUS( ltecat1eu_cfg, MIKROBUS_1 );
+    LTECAT1EU_MAP_MIKROBUS( ltecat1eu_cfg, MIKROBUS_POSITION_LTECAT1EU );
     err_t init_flag  = ltecat1eu_init( &ltecat1eu, &ltecat1eu_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

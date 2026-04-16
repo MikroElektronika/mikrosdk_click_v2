@@ -23,6 +23,10 @@
 #include "log.h"
 #include "hallcurrent19.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT19
+    #define MIKROBUS_POSITION_HALLCURRENT19 MIKROBUS_1
+#endif
+
 static hallcurrent19_t hallcurrent19;   /**< Hall Current 19 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent19_cfg_setup( &hallcurrent19_cfg );
-    HALLCURRENT19_MAP_MIKROBUS( hallcurrent19_cfg, MIKROBUS_1 );
+    HALLCURRENT19_MAP_MIKROBUS( hallcurrent19_cfg, MIKROBUS_POSITION_HALLCURRENT19 );
     if ( ADC_ERROR == hallcurrent19_init( &hallcurrent19, &hallcurrent19_cfg ) )
     {
         log_error( &logger, " Communication init." );

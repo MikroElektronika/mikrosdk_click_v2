@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     hztov2_cfg_setup( &cfg );
-    HZTOV2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HZTOV2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HZTOV2 );
     hztov2_init( &hztov2, &cfg );
     hztov2_en_pin( &hztov2, 1 );
     

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "audioamp9.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOAMP9
+    #define MIKROBUS_POSITION_AUDIOAMP9 MIKROBUS_1
+#endif
+
 static audioamp9_t audioamp9;   /**< AudioAmp 9 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     audioamp9_cfg_setup( &audioamp9_cfg );
-    AUDIOAMP9_MAP_MIKROBUS( audioamp9_cfg, MIKROBUS_1 );
+    AUDIOAMP9_MAP_MIKROBUS( audioamp9_cfg, MIKROBUS_POSITION_AUDIOAMP9 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == audioamp9_init( &audioamp9, &audioamp9_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

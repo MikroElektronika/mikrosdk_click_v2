@@ -23,6 +23,10 @@
 #include "log.h"
 #include "touchclamp.h"
 
+#ifndef MIKROBUS_POSITION_TOUCHCLAMP
+    #define MIKROBUS_POSITION_TOUCHCLAMP MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static touchclamp_t touchclamp;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchclamp_cfg_setup( &cfg );
-    TOUCHCLAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHCLAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHCLAMP );
     touchclamp_init( &touchclamp, &cfg );
     Delay_ms ( 100 );
     

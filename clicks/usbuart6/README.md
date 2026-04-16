@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     usbuart6_cfg_setup( &usbuart6_cfg );
-    USBUART6_MAP_MIKROBUS( usbuart6_cfg, MIKROBUS_1 );
+    USBUART6_MAP_MIKROBUS( usbuart6_cfg, MIKROBUS_POSITION_USBUART6 );
     if ( UART_ERROR == usbuart6_init( &usbuart6, &usbuart6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "expand14.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND14
+    #define MIKROBUS_POSITION_EXPAND14 MIKROBUS_1
+#endif
+
 static expand14_t expand14;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     expand14_cfg_setup( &expand14_cfg );
-    EXPAND14_MAP_MIKROBUS( expand14_cfg, MIKROBUS_1 );
+    EXPAND14_MAP_MIKROBUS( expand14_cfg, MIKROBUS_POSITION_EXPAND14 );
     if ( I2C_MASTER_ERROR == expand14_init( &expand14, &expand14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

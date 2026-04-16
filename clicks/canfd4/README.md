@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     canfd4_cfg_setup( &cfg );
-    CANFD4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANFD4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANFD4 );
     canfd4_init( &canfd4, &cfg );
 
     canfd4_set_dev_mode ( &canfd4, CANFD4_NORMAL_MODE );

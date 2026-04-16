@@ -24,6 +24,10 @@
 #include "log.h"
 #include "accel10.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL10
+    #define MIKROBUS_POSITION_ACCEL10 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel10_t accel10;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel10_cfg_setup( &cfg );
-    ACCEL10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL10 );
     accel10_init( &accel10, &cfg );
     Delay_ms ( 500 );
     

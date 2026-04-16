@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     stephanoi_cfg_setup( &stephanoi_cfg );
-    STEPHANOI_MAP_MIKROBUS( stephanoi_cfg, MIKROBUS_1 );
+    STEPHANOI_MAP_MIKROBUS( stephanoi_cfg, MIKROBUS_POSITION_STEPHANOI );
     if ( UART_ERROR == stephanoi_init( &stephanoi, &stephanoi_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

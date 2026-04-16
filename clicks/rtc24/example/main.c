@@ -24,6 +24,10 @@
 #include "log.h"
 #include "rtc24.h"
 
+#ifndef MIKROBUS_POSITION_RTC24
+    #define MIKROBUS_POSITION_RTC24 MIKROBUS_1
+#endif
+
 static rtc24_t rtc24;
 static log_t logger;
 static rtc24_time_t time;
@@ -60,7 +64,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc24_cfg_setup( &rtc24_cfg );
-    RTC24_MAP_MIKROBUS( rtc24_cfg, MIKROBUS_1 );
+    RTC24_MAP_MIKROBUS( rtc24_cfg, MIKROBUS_POSITION_RTC24 );
     if ( I2C_MASTER_ERROR == rtc24_init( &rtc24, &rtc24_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

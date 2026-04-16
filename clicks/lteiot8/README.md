@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot8_cfg_setup( &lteiot8_cfg );
-    LTEIOT8_MAP_MIKROBUS( lteiot8_cfg, MIKROBUS_1 );
+    LTEIOT8_MAP_MIKROBUS( lteiot8_cfg, MIKROBUS_POSITION_LTEIOT8 );
     err_t init_flag  = lteiot8_init( &lteiot8, &lteiot8_cfg );
     if ( init_flag == UART_ERROR ) 
     {

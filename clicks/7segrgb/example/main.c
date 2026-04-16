@@ -41,6 +41,10 @@
 #include "c7segrgb.h"
 #include "c7segrgb_delays.h"
 
+#ifndef MIKROBUS_POSITION_7SEGRGB
+    #define MIKROBUS_POSITION_7SEGRGB MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c7segrgb_t c7segrgb;
@@ -99,7 +103,7 @@ void application_init ( void )
     c7segrgb_cfg_setup( &cfg );
     cfg.logic_one = &logic_one;
     cfg.logic_zero = &logic_zero;
-    C7SEGRGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C7SEGRGB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_7SEGRGB );
     c7segrgb_init( &c7segrgb, &cfg );
     
     for ( uint8_t cnt = 0; cnt < 8; cnt++ )

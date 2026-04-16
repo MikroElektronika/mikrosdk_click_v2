@@ -24,6 +24,10 @@
 #include "log.h"
 #include "headphoneamp3.h"
 
+#ifndef MIKROBUS_POSITION_HEADPHONEAMP3
+    #define MIKROBUS_POSITION_HEADPHONEAMP3 MIKROBUS_1
+#endif
+
 static headphoneamp3_t headphoneamp3;   /**< Headphone AMP 3 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     headphoneamp3_cfg_setup( &headphoneamp3_cfg );
-    HEADPHONEAMP3_MAP_MIKROBUS( headphoneamp3_cfg, MIKROBUS_1 );
+    HEADPHONEAMP3_MAP_MIKROBUS( headphoneamp3_cfg, MIKROBUS_POSITION_HEADPHONEAMP3 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == headphoneamp3_init( &headphoneamp3, &headphoneamp3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

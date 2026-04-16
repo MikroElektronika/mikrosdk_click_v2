@@ -87,7 +87,7 @@ void application_init ( void )
     log_info(&logger, "|-----Application init -----|");
 
     ambient4_cfg_setup( &cfg );
-    AMBIENT4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT4 );
     ambient4_init( &ambient4, &cfg );
     ambient4_default_cfg ( &ambient4 );
 }

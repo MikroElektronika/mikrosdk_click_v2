@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     alcohol3_cfg_setup( &cfg );
-    ALCOHOL3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ALCOHOL3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ALCOHOL3 );
     alcohol3_init( &alcohol3, &cfg );
 
     log_printf( &logger, "--------------------------\r\n\n" );

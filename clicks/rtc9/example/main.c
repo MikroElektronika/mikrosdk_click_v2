@@ -22,6 +22,10 @@
 #include "log.h"
 #include "rtc9.h"
 
+#ifndef MIKROBUS_POSITION_RTC9
+    #define MIKROBUS_POSITION_RTC9 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rtc9_t rtc9;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     rtc9_cfg_setup( &cfg );
-    RTC9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC9 );
     rtc9_init( &rtc9, &cfg );
 
     Delay_ms ( 500 );

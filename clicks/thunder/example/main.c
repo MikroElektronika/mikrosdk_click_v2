@@ -25,6 +25,10 @@
 #include "log.h"
 #include "thunder.h"
 
+#ifndef MIKROBUS_POSITION_THUNDER
+    #define MIKROBUS_POSITION_THUNDER MIKROBUS_1
+#endif
+
 static thunder_t thunder;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     thunder_cfg_setup( &cfg );
-    THUNDER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THUNDER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THUNDER );
     thunder_init( &thunder, &cfg );
 
     thunder_default_cfg( &thunder );

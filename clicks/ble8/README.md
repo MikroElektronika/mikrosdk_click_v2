@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     ble8_cfg_setup( &cfg );
-    BLE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE8 );
     ble8_init( &ble8, &cfg );
 
     ble8_reset( &ble8 );

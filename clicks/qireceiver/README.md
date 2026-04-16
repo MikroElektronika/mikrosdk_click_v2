@@ -94,7 +94,7 @@ void application_init ( void )
     //  Click initialization.
 
     qireceiver_cfg_setup( &cfg );
-    QIRECEIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    QIRECEIVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_QIRECEIVER );
     qireceiver_init( &qireceiver, &cfg );
     
     Delay_ms ( 100 );

@@ -36,6 +36,10 @@
 #include "wifi11.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_WIFI11
+    #define MIKROBUS_POSITION_WIFI11 MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -125,7 +129,7 @@ void application_init ( void )
     //  Click initialization.
 
     wifi11_cfg_setup( &cfg );
-    WIFI11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WIFI11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WIFI11 );
     wifi11_init( &wifi11, &cfg );
     Delay_ms ( 100 );
     

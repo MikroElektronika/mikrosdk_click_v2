@@ -23,6 +23,10 @@
 #include "log.h"
 #include "irsense5.h"
 
+#ifndef MIKROBUS_POSITION_IRSENSE5
+    #define MIKROBUS_POSITION_IRSENSE5 MIKROBUS_1
+#endif
+
 static irsense5_t irsense5;   /**< IR Sense 5 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     irsense5_cfg_setup( &irsense5_cfg );
-    IRSENSE5_MAP_MIKROBUS( irsense5_cfg, MIKROBUS_1 );
+    IRSENSE5_MAP_MIKROBUS( irsense5_cfg, MIKROBUS_POSITION_IRSENSE5 );
     err_t init_flag = irsense5_init( &irsense5, &irsense5_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

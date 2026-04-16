@@ -27,6 +27,10 @@
 #include "rs4855.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS4855
+    #define MIKROBUS_POSITION_RS4855 MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE\r\n"
@@ -85,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs4855_cfg_setup( &cfg );
-    RS4855_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4855_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4855 );
     rs4855_init( &rs4855, &cfg );
 
     Delay_ms ( 100 );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ambient.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT
+    #define MIKROBUS_POSITION_AMBIENT MIKROBUS_1
+#endif
+
 static ambient_t ambient;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient_cfg_setup( &cfg );
-    AMBIENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT );
     ambient_init( &ambient, &cfg );
 
     log_info( &logger, " Application Task " );

@@ -71,7 +71,7 @@ void application_init ( void )
     //  Click initialization.
 
     pwm2_cfg_setup( &cfg );
-    PWM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PWM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PWM2 );
     pwm2_init( &pwm2, &cfg );
     
     pwm2_set_duty_cycle( &pwm2, 0.5 );

@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cisolator7_cfg_setup( &i2cisolator7_cfg );
-    I2CISOLATOR7_MAP_MIKROBUS( i2cisolator7_cfg, MIKROBUS_1 );
+    I2CISOLATOR7_MAP_MIKROBUS( i2cisolator7_cfg, MIKROBUS_POSITION_I2CISOLATOR7 );
     if ( I2C_MASTER_ERROR == i2cisolator7_init( &i2cisolator7, &i2cisolator7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "pressure8.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE8
+    #define MIKROBUS_POSITION_PRESSURE8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure8_t pressure8;
@@ -49,7 +53,7 @@ void application_init ( void )
 
     //  Click initialization.
     pressure8_cfg_setup( &cfg );
-    PRESSURE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE8 );
     pressure8_init( &pressure8, &cfg );
 
     pressure8_device_reset( &pressure8 );

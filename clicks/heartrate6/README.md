@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate6_cfg_setup( &cfg );
-    HEARTRATE6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE6 );
     heartrate6_init( &heartrate6, &cfg );
     Delay_ms ( 500 );
 

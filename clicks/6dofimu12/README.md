@@ -93,7 +93,7 @@ void application_init ( void )
     //  Click initialization.
 
     c6dofimu12_cfg_setup( &cfg );
-    C6DOFIMU12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C6DOFIMU12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_6DOFIMU12 );
     c6dofimu12_init( &c6dofimu12, &cfg );
     Delay_ms ( 100 );
 

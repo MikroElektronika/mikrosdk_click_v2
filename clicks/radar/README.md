@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     radar_cfg_setup( &radar_cfg );
-    RADAR_MAP_MIKROBUS( radar_cfg, MIKROBUS_1 );
+    RADAR_MAP_MIKROBUS( radar_cfg, MIKROBUS_POSITION_RADAR );
     if ( UART_ERROR == radar_init( &radar, &radar_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

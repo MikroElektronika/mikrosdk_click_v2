@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioxover_cfg_setup( &cfg );
-    AUDIOXOVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOXOVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOXOVER );
     audioxover_init( &audioxover, &cfg );
 }
 ```

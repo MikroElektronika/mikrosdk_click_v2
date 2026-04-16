@@ -21,6 +21,10 @@
 #include "log.h"
 #include "clickid.h"
 
+#ifndef MIKROBUS_POSITION_CLICKID
+    #define MIKROBUS_POSITION_CLICKID MIKROBUS_1
+#endif
+
 static clickid_t clickid;
 static log_t logger;
 
@@ -44,7 +48,7 @@ void application_init ( void )
 
     // ClickID initialization.
     clickid_cfg_setup( &clickid_cfg );
-    CLICKID_MAP_MIKROBUS( clickid_cfg, MIKROBUS_1 );
+    CLICKID_MAP_MIKROBUS( clickid_cfg, MIKROBUS_POSITION_CLICKID );
     if ( ONE_WIRE_ERROR == clickid_init( &clickid, &clickid_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

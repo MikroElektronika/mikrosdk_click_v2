@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     micrfrx2_cfg_setup( &micrfrx2_cfg );
-    MICRFRX2_MAP_MIKROBUS( micrfrx2_cfg, MIKROBUS_1 );
+    MICRFRX2_MAP_MIKROBUS( micrfrx2_cfg, MIKROBUS_POSITION_MICRFRX2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == micrfrx2_init( &micrfrx2, &micrfrx2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

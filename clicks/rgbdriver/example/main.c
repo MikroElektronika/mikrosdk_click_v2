@@ -23,6 +23,10 @@
 #include "log.h"
 #include "rgbdriver.h"
 
+#ifndef MIKROBUS_POSITION_RGBDRIVER
+    #define MIKROBUS_POSITION_RGBDRIVER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rgbdriver_t rgbdriver;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     rgbdriver_cfg_setup( &cfg );
-    RGBDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RGBDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RGBDRIVER );
     rgbdriver_init( &rgbdriver, &cfg );
     Delay_ms ( 1000 );
     

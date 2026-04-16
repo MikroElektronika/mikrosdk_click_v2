@@ -96,7 +96,7 @@ void application_init(void)
     Delay_ms ( 1000 );
 
     wifi8_cfg_setup(&wifi8_cfg);
-    WIFI8_MAP_MIKROBUS(wifi8_cfg, MIKROBUS_1);
+    WIFI8_MAP_MIKROBUS(wifi8_cfg, MIKROBUS_POSITION_WIFI8);
     err_t init_flag = wifi8_init(&wifi8, &wifi8_cfg);
     if (init_flag == SPI_MASTER_ERROR)
     {

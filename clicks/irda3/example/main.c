@@ -27,6 +27,10 @@
 #include "log.h"
 #include "irda3.h"
 
+#ifndef MIKROBUS_POSITION_IRDA3
+    #define MIKROBUS_POSITION_IRDA3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define PROCESS_BUFFER_SIZE 200
@@ -65,7 +69,7 @@ void application_init( void ) {
     //  Click initialization.
     
     irda3_cfg_setup( &irda3_cfg );
-    IRDA3_MAP_MIKROBUS( irda3_cfg, MIKROBUS_1 );
+    IRDA3_MAP_MIKROBUS( irda3_cfg, MIKROBUS_POSITION_IRDA3 );
     irda3_init( &irda3, &irda3_cfg );
     irda3_default_cfg( &irda3 );
     irda3_reset( &irda3 );

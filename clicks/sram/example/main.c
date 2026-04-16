@@ -24,6 +24,10 @@
 #include "log.h"
 #include "sram.h"
 
+#ifndef MIKROBUS_POSITION_SRAM
+    #define MIKROBUS_POSITION_SRAM MIKROBUS_1
+#endif
+
 char send_buffer[ 17 ] = { 'm', 'i', 'k', 'r', 'o', 'E', 'l', 'e', 'k', 't', 'r', 'o', 'n', 'i', 'k', 'a', ' ' };
 char mem_data[ 17 ];
 uint8_t n_cnt;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     sram_cfg_setup( &cfg );
-    SRAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SRAM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SRAM );
     sram_init( &sram, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     ultralowpress_cfg_setup( &ultralowpress_cfg );
-    ULTRALOWPRESS_MAP_MIKROBUS( ultralowpress_cfg, MIKROBUS_1 );
+    ULTRALOWPRESS_MAP_MIKROBUS( ultralowpress_cfg, MIKROBUS_POSITION_ULTRALOWPRESS );
     err_t init_flag = ultralowpress_init( &ultralowpress, &ultralowpress_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

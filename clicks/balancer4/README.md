@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     balancer4_cfg_setup( &balancer4_cfg );
-    BALANCER4_MAP_MIKROBUS( balancer4_cfg, MIKROBUS_1 );
+    BALANCER4_MAP_MIKROBUS( balancer4_cfg, MIKROBUS_POSITION_BALANCER4 );
     if ( I2C_MASTER_ERROR == balancer4_init( &balancer4, &balancer4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

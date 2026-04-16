@@ -23,6 +23,10 @@
 #include "log.h"
 #include "balancer2.h"
 
+#ifndef MIKROBUS_POSITION_BALANCER2
+    #define MIKROBUS_POSITION_BALANCER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static balancer2_t balancer2;
@@ -49,7 +53,7 @@ void application_init ( void )
     //  Click initialization.
 
     balancer2_cfg_setup( &cfg );
-    BALANCER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BALANCER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BALANCER2 );
     balancer2_init( &balancer2, &cfg );
 
     Delay_ms ( 100 );

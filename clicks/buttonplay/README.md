@@ -87,7 +87,7 @@ void application_init ( void )
     // Click initialization.
 
     buttonplay_cfg_setup( &buttonplay_cfg );
-    BUTTONPLAY_MAP_MIKROBUS( buttonplay_cfg, MIKROBUS_1 );
+    BUTTONPLAY_MAP_MIKROBUS( buttonplay_cfg, MIKROBUS_POSITION_BUTTONPLAY );
     err_t init_flag  = buttonplay_init( &buttonplay, &buttonplay_cfg );
     if ( PWM_ERROR == init_flag )
     {

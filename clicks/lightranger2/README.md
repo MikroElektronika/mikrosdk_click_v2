@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     lightranger2_cfg_setup( &cfg );
-    LIGHTRANGER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIGHTRANGER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIGHTRANGER2 );
     lightranger2_init( &lightranger2, &cfg );
     lightranger2_default_cfg( &lightranger2 );
     

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     irgesture3_cfg_setup( &irgesture3_cfg );
-    IRGESTURE3_MAP_MIKROBUS( irgesture3_cfg, MIKROBUS_1 );
+    IRGESTURE3_MAP_MIKROBUS( irgesture3_cfg, MIKROBUS_POSITION_IRGESTURE3 );
     if ( I2C_MASTER_ERROR == irgesture3_init( &irgesture3, &irgesture3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

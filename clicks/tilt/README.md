@@ -83,7 +83,7 @@ void application_init ( void )
     //  Click initialization.
 
     tilt_cfg_setup( &cfg );
-    TILT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TILT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TILT );
     tilt_init( &tilt, &cfg );
     
     tilt_direction_old = 0;

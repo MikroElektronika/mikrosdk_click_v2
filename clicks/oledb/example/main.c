@@ -23,6 +23,10 @@
 #include "log.h"
 #include "oledb.h"
 
+#ifndef MIKROBUS_POSITION_OLEDB
+    #define MIKROBUS_POSITION_OLEDB MIKROBUS_1
+#endif
+
 static oledb_t oledb;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     oledb_cfg_setup( &oledb_cfg );
-    OLEDB_MAP_MIKROBUS( oledb_cfg, MIKROBUS_1 );
+    OLEDB_MAP_MIKROBUS( oledb_cfg, MIKROBUS_POSITION_OLEDB );
     err_t init_flag  = oledb_init( &oledb, &oledb_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) 
     {

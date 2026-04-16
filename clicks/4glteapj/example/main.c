@@ -41,6 +41,10 @@
 #include "c4glteapj.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_4GLTEAPJ
+    #define MIKROBUS_POSITION_4GLTEAPJ MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -144,7 +148,7 @@ void application_init ( void ) {
     // Click initialization.
 
     c4glteapj_cfg_setup( &c4glteapj_cfg );
-    C4GLTEAPJ_MAP_MIKROBUS( c4glteapj_cfg, MIKROBUS_1 );
+    C4GLTEAPJ_MAP_MIKROBUS( c4glteapj_cfg, MIKROBUS_POSITION_4GLTEAPJ );
     c4glteapj_init( &c4glteapj, &c4glteapj_cfg );
     
     c4glteapj_module_power_on( &c4glteapj );

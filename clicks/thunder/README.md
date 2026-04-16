@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     thunder_cfg_setup( &cfg );
-    THUNDER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THUNDER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THUNDER );
     thunder_init( &thunder, &cfg );
 
     thunder_default_cfg( &thunder );

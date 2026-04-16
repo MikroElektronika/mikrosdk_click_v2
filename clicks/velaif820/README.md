@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     velaif820_cfg_setup( &velaif820_cfg );
-    VELAIF820_MAP_MIKROBUS( velaif820_cfg, MIKROBUS_1 );
+    VELAIF820_MAP_MIKROBUS( velaif820_cfg, MIKROBUS_POSITION_VELAIF820 );
     if ( UART_ERROR == velaif820_init( &velaif820, &velaif820_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

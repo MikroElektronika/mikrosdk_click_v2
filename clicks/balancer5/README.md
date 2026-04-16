@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     balancer5_cfg_setup( &cfg );
-    BALANCER5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BALANCER5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BALANCER5 );
     balancer5_init( &balancer5, &cfg );
 
     //  Device ID sanity check

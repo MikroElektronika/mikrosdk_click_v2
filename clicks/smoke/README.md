@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     smoke_cfg_setup( &cfg );
-    SMOKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SMOKE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SMOKE );
     smoke_init( &smoke, &cfg );
 
     smoke_reset( &smoke );

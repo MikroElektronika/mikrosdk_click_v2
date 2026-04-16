@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss28_cfg_setup( &gnss28_cfg );
-    GNSS28_MAP_MIKROBUS( gnss28_cfg, MIKROBUS_1 );
+    GNSS28_MAP_MIKROBUS( gnss28_cfg, MIKROBUS_POSITION_GNSS28 );
     if ( UART_ERROR == gnss28_init( &gnss28, &gnss28_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

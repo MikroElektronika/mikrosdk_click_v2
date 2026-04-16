@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     accel35_cfg_setup( &accel35_cfg );
-    ACCEL35_MAP_MIKROBUS( accel35_cfg, MIKROBUS_1 );
+    ACCEL35_MAP_MIKROBUS( accel35_cfg, MIKROBUS_POSITION_ACCEL35 );
     err_t init_flag = accel35_init( &accel35, &accel35_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

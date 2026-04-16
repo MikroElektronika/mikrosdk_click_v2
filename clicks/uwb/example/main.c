@@ -23,6 +23,10 @@
 #include "log.h"
 #include "uwb.h"
 
+#ifndef MIKROBUS_POSITION_UWB
+    #define MIKROBUS_POSITION_UWB MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static uwb_t uwb;
@@ -66,7 +70,7 @@ void application_init ( void )
 
     // Click initialization.
     uwb_cfg_setup( &cfg );
-    UWB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UWB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UWB );
     uwb_init( &uwb, &cfg );
     Delay_ms ( 100 );
     

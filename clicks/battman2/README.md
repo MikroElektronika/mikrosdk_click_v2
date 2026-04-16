@@ -97,7 +97,7 @@ void application_init ( void )
 
     // Click initialization.
     battman2_cfg_setup( &battman2_cfg );
-    BATTMAN2_MAP_MIKROBUS( battman2_cfg, MIKROBUS_1 );
+    BATTMAN2_MAP_MIKROBUS( battman2_cfg, MIKROBUS_POSITION_BATTMAN2 );
     err_t init_flag = battman2_init( &battman2, &battman2_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

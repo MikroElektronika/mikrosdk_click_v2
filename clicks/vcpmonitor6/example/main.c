@@ -25,6 +25,10 @@
 #include "log.h"
 #include "vcpmonitor6.h"
 
+#ifndef MIKROBUS_POSITION_VCPMONITOR6
+    #define MIKROBUS_POSITION_VCPMONITOR6 MIKROBUS_1
+#endif
+
 static vcpmonitor6_t vcpmonitor6;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     vcpmonitor6_cfg_setup( &vcpmonitor6_cfg );
-    VCPMONITOR6_MAP_MIKROBUS( vcpmonitor6_cfg, MIKROBUS_1 );
+    VCPMONITOR6_MAP_MIKROBUS( vcpmonitor6_cfg, MIKROBUS_POSITION_VCPMONITOR6 );
     if ( I2C_MASTER_ERROR == vcpmonitor6_init( &vcpmonitor6, &vcpmonitor6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

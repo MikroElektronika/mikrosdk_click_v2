@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssrtk3ea_cfg_setup( &gnssrtk3ea_cfg );
-    GNSSRTK3EA_MAP_MIKROBUS( gnssrtk3ea_cfg, MIKROBUS_1 );
+    GNSSRTK3EA_MAP_MIKROBUS( gnssrtk3ea_cfg, MIKROBUS_POSITION_GNSSRTK3EA );
     if ( GNSSRTK3EA_OK != gnssrtk3ea_init( &gnssrtk3ea, &gnssrtk3ea_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

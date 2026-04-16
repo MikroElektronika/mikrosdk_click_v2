@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ldo_cfg_setup( &ldo_cfg );
-    LDO_MAP_MIKROBUS( ldo_cfg, MIKROBUS_1 );
+    LDO_MAP_MIKROBUS( ldo_cfg, MIKROBUS_POSITION_LDO );
     if ( I2C_MASTER_ERROR == ldo_init( &ldo, &ldo_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper22_cfg_setup( &stepper22_cfg );
-    STEPPER22_MAP_MIKROBUS( stepper22_cfg, MIKROBUS_1 );
+    STEPPER22_MAP_MIKROBUS( stepper22_cfg, MIKROBUS_POSITION_STEPPER22 );
     err_t init_flag = stepper22_init( &stepper22, &stepper22_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

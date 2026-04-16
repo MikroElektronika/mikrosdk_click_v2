@@ -28,6 +28,10 @@
 #include "canfd4.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_CANFD4
+    #define MIKROBUS_POSITION_CANFD4 MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE\r\n"
@@ -86,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     canfd4_cfg_setup( &cfg );
-    CANFD4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANFD4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANFD4 );
     canfd4_init( &canfd4, &cfg );
 
     canfd4_set_dev_mode ( &canfd4, CANFD4_NORMAL_MODE );

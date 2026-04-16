@@ -29,6 +29,10 @@
 #include "log.h"
 #include "ismrx2.h"
 
+#ifndef MIKROBUS_POSITION_ISMRX2
+    #define MIKROBUS_POSITION_ISMRX2 MIKROBUS_1
+#endif
+
 #define DEFAULT_EXAMPLE        
 // #define MANCHESTER_EXAMPLE       
 
@@ -56,7 +60,7 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
     // Click initialization.
     ismrx2_cfg_setup( &ismrx2_cfg );
-    ISMRX2_MAP_MIKROBUS( ismrx2_cfg, MIKROBUS_1 );
+    ISMRX2_MAP_MIKROBUS( ismrx2_cfg, MIKROBUS_POSITION_ISMRX2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ismrx2_init( &ismrx2, &ismrx2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

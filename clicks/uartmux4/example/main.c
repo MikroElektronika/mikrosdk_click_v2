@@ -23,6 +23,10 @@
 #include "log.h"
 #include "uartmux4.h"
 
+#ifndef MIKROBUS_POSITION_UARTMUX4
+    #define MIKROBUS_POSITION_UARTMUX4 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 #define DEMO_MESSAGE "\r\nMikroE\r\n"
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     uartmux4_cfg_setup( &uartmux4_cfg );
-    UARTMUX4_MAP_MIKROBUS( uartmux4_cfg, MIKROBUS_1 );
+    UARTMUX4_MAP_MIKROBUS( uartmux4_cfg, MIKROBUS_POSITION_UARTMUX4 );
     if ( UART_ERROR == uartmux4_init( &uartmux4, &uartmux4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

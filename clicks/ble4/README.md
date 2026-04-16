@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     ble4_cfg_setup( &cfg );
-    BLE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE4 );
     ble4_init( &ble4, &cfg );
 
     ble4_reset( &ble4 );

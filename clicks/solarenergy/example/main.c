@@ -26,6 +26,10 @@
 #include "log.h"
 #include "solarenergy.h"
 
+#ifndef MIKROBUS_POSITION_SOLARENERGY
+    #define MIKROBUS_POSITION_SOLARENERGY MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static solarenergy_t solarenergy;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     solarenergy_cfg_setup( &cfg );
-    SOLARENERGY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SOLARENERGY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SOLARENERGY );
     solarenergy_init( &solarenergy, &cfg );
 
     log_printf( &logger, "   Initialization   \r\n" );

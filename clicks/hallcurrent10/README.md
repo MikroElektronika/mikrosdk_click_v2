@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent10_cfg_setup( &hallcurrent10_cfg );
-    HALLCURRENT10_MAP_MIKROBUS( hallcurrent10_cfg, MIKROBUS_1 );
+    HALLCURRENT10_MAP_MIKROBUS( hallcurrent10_cfg, MIKROBUS_POSITION_HALLCURRENT10 );
     if ( I2C_MASTER_ERROR == hallcurrent10_init( &hallcurrent10, &hallcurrent10_cfg ) ) 
     {
         log_info( &logger, " Application Init Error. " );

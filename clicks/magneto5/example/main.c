@@ -22,6 +22,10 @@
 #include "log.h"
 #include "magneto5.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO5
+    #define MIKROBUS_POSITION_MAGNETO5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static magneto5_t magneto5;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto5_cfg_setup( &cfg );
-    MAGNETO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO5 );
     magneto5_init( &magneto5, &cfg );
     Delay_ms ( 100 );
 }

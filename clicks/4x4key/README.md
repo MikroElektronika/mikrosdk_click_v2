@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     c4x4key_cfg_setup( &cfg );
-    C4X4KEY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C4X4KEY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_4X4KEY );
     c4x4key_init( &c4x4key, &cfg );
     
     btn_data_old = 0;

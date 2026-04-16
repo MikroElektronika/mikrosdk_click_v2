@@ -23,6 +23,10 @@
 #include "log.h"
 #include "current5.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT5
+    #define MIKROBUS_POSITION_CURRENT5 MIKROBUS_1
+#endif
+
 static current5_t current5;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     current5_cfg_setup( &current5_cfg );
-    CURRENT5_MAP_MIKROBUS( current5_cfg, MIKROBUS_1 );
+    CURRENT5_MAP_MIKROBUS( current5_cfg, MIKROBUS_POSITION_CURRENT5 );
     err_t init_flag  = current5_init( &current5, &current5_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

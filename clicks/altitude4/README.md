@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     altitude4_cfg_setup( &cfg );
-    ALTITUDE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ALTITUDE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ALTITUDE4 );
     altitude4_init( &altitude4, &cfg );
     Delay_ms ( 500 );
 }

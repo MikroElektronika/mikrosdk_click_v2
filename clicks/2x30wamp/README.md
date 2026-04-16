@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     c2x30wamp_cfg_setup( &cfg );
-    C2X30WAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C2X30WAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_2X30WAMP );
     c2x30wamp_init( &c2x30wamp, &cfg );
 
     c2x30wamp_enable( &c2x30wamp, C2X30WAMP_ENABLE );

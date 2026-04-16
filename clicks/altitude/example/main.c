@@ -28,6 +28,10 @@
 #include "log.h"
 #include "altitude.h"
 
+#ifndef MIKROBUS_POSITION_ALTITUDE
+    #define MIKROBUS_POSITION_ALTITUDE MIKROBUS_1
+#endif
+
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -43,7 +47,7 @@ void application_init( void )
 
     //  Click initialization.
     altitude_cfg_setup( &altitude_cfg );
-    ALTITUDE_MAP_MIKROBUS( altitude_cfg, MIKROBUS_1 );
+    ALTITUDE_MAP_MIKROBUS( altitude_cfg, MIKROBUS_POSITION_ALTITUDE );
     altitude_init( &altitude, &altitude_cfg );
     altitude_default_cfg( &altitude );
 

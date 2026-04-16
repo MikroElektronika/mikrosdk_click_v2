@@ -41,6 +41,10 @@
 #include "log.h"
 #include "skolli.h"
 
+#ifndef MIKROBUS_POSITION_SKOLLI
+    #define MIKROBUS_POSITION_SKOLLI MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT     "Skoll-I Click board - demo example."
 
@@ -167,7 +171,7 @@ void application_init ( void )
 
     // Click initialization.
     skolli_cfg_setup( &skolli_cfg );
-    SKOLLI_MAP_MIKROBUS( skolli_cfg, MIKROBUS_1 );
+    SKOLLI_MAP_MIKROBUS( skolli_cfg, MIKROBUS_POSITION_SKOLLI );
     if ( UART_ERROR == skolli_init( &skolli, &skolli_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

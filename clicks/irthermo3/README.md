@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     irthermo3_cfg_setup( &cfg );
-    IRTHERMO3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRTHERMO3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRTHERMO3 );
     irthermo3_init( &irthermo3, &cfg );
 
     irthermo3_cal ( &irthermo3 );

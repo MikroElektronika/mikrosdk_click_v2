@@ -28,6 +28,10 @@
 #include "log.h"
 #include "accelqvar.h"
 
+#ifndef MIKROBUS_POSITION_ACCELQVAR
+    #define MIKROBUS_POSITION_ACCELQVAR MIKROBUS_1
+#endif
+
 // Qvar sensing - the threshold for touch detection, position and sensitivity
 #define ACCELQVAR_THOLD_DETECT_TOUCH    1.0
 #define ACCELQVAR_TOUCH_ZERO            0.0
@@ -56,7 +60,7 @@ void application_init ( void )
 
     // Click initialization.
     accelqvar_cfg_setup( &accelqvar_cfg );
-    ACCELQVAR_MAP_MIKROBUS( accelqvar_cfg, MIKROBUS_1 );
+    ACCELQVAR_MAP_MIKROBUS( accelqvar_cfg, MIKROBUS_POSITION_ACCELQVAR );
     err_t init_flag = accelqvar_init( &accelqvar, &accelqvar_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

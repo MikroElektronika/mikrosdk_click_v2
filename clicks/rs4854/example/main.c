@@ -27,6 +27,10 @@
 #include "rs4854.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS4854
+    #define MIKROBUS_POSITION_RS4854 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 
@@ -84,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs4854_cfg_setup( &cfg );
-    RS4854_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4854_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4854 );
     rs4854_init( &rs4854, &cfg );
     
 #ifdef DEMO_APP_RECEIVER

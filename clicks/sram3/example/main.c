@@ -25,6 +25,10 @@
 #include "log.h"
 #include "sram3.h"
 
+#ifndef MIKROBUS_POSITION_SRAM3
+    #define MIKROBUS_POSITION_SRAM3 MIKROBUS_1
+#endif
+
 static sram3_t sram3;
 static log_t logger;
 uint8_t buf[10] = { 'M','i','k','r','o','E', 0 };
@@ -48,7 +52,7 @@ void application_init ( void ) {
 
     // Click initialization.
     sram3_cfg_setup( &sram3_cfg );
-    SRAM3_MAP_MIKROBUS( sram3_cfg, MIKROBUS_1 );
+    SRAM3_MAP_MIKROBUS( sram3_cfg, MIKROBUS_POSITION_SRAM3 );
     err_t init_flag  = sram3_init( &sram3, &sram3_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {        
         log_error( &logger, " Application Init Error. " );

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "piezoaccel225g.h"
 
+#ifndef MIKROBUS_POSITION_PIEZOACCEL225G
+    #define MIKROBUS_POSITION_PIEZOACCEL225G MIKROBUS_1
+#endif
+
 static piezoaccel225g_t piezoaccel225g;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     piezoaccel225g_cfg_setup( &piezoaccel225g_cfg );
-    PIEZOACCEL225G_MAP_MIKROBUS( piezoaccel225g_cfg, MIKROBUS_1 );
+    PIEZOACCEL225G_MAP_MIKROBUS( piezoaccel225g_cfg, MIKROBUS_POSITION_PIEZOACCEL225G );
     if ( SPI_MASTER_ERROR == piezoaccel225g_init( &piezoaccel225g, &piezoaccel225g_cfg ) )
     {
         log_error( &logger, " Communication init." );

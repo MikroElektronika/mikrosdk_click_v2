@@ -42,6 +42,10 @@
 #include "log.h"
 #include "smartsens.h"
 
+#ifndef MIKROBUS_POSITION_SMARTSENS
+    #define MIKROBUS_POSITION_SMARTSENS MIKROBUS_1
+#endif
+
 /**
  * @brief Example parser selector.
  * @details Macros for selecting example and its parser.
@@ -182,7 +186,7 @@ void application_init ( void )
 
     // Click initialization.
     smartsens_cfg_setup( &smartsens_cfg );
-    SMARTSENS_MAP_MIKROBUS( smartsens_cfg, MIKROBUS_1 );
+    SMARTSENS_MAP_MIKROBUS( smartsens_cfg, MIKROBUS_POSITION_SMARTSENS );
     err_t init_flag = smartsens_init( &smartsens, &smartsens_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

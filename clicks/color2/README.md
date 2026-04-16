@@ -90,7 +90,7 @@ void application_init ( void )
 
     //  Click initialization.
     color2_cfg_setup( &cfg );
-    COLOR2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR2 );
     color2_init( &color2, &cfg );
     
     if ( COLOR2_ERROR == color2_default_cfg ( &color2 ) )

@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp16331inv_cfg_setup( &cfg );
-    MCP16331INV_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP16331INV_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP16331INV );
 
     Delay_ms ( 100 );
 

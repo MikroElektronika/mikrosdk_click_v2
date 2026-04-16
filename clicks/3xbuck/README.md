@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     c3xbuck_cfg_setup( &cfg );
-    C3XBUCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C3XBUCK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_3XBUCK );
     c3xbuck_init( &c3xbuck, &cfg );
     Delay_ms ( 100 );
     

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "c6dofimu27.h"
 
+#ifndef MIKROBUS_POSITION_6DOFIMU27
+    #define MIKROBUS_POSITION_6DOFIMU27 MIKROBUS_1
+#endif
+
 static c6dofimu27_t c6dofimu27;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     c6dofimu27_cfg_setup( &c6dofimu27_cfg );
-    C6DOFIMU27_MAP_MIKROBUS( c6dofimu27_cfg, MIKROBUS_1 );
+    C6DOFIMU27_MAP_MIKROBUS( c6dofimu27_cfg, MIKROBUS_POSITION_6DOFIMU27 );
     err_t init_flag = c6dofimu27_init( &c6dofimu27, &c6dofimu27_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

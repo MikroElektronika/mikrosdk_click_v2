@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     irsense5_cfg_setup( &irsense5_cfg );
-    IRSENSE5_MAP_MIKROBUS( irsense5_cfg, MIKROBUS_1 );
+    IRSENSE5_MAP_MIKROBUS( irsense5_cfg, MIKROBUS_POSITION_IRSENSE5 );
     err_t init_flag = irsense5_init( &irsense5, &irsense5_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

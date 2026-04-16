@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     eeram2_cfg_setup( &cfg );
-    EERAM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EERAM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EERAM2 );
     eeram2_init( &eeram2, &cfg );
 
     eeram2_set_on_hold_status( &eeram2, EERAM2_HOLD_DISABLE );

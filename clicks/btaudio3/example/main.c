@@ -33,6 +33,10 @@
 #include "log.h"
 #include "btaudio3.h"
 
+#ifndef MIKROBUS_POSITION_BTAUDIO3
+    #define MIKROBUS_POSITION_BTAUDIO3 MIKROBUS_1
+#endif
+
 static btaudio3_t btaudio3;
 static log_t logger;
 
@@ -87,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     btaudio3_cfg_setup( &btaudio3_cfg );
-    BTAUDIO3_MAP_MIKROBUS( btaudio3_cfg, MIKROBUS_1 );
+    BTAUDIO3_MAP_MIKROBUS( btaudio3_cfg, MIKROBUS_POSITION_BTAUDIO3 );
     if ( UART_ERROR == btaudio3_init( &btaudio3, &btaudio3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

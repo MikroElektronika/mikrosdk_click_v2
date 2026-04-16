@@ -27,6 +27,10 @@
 #include "log.h"
 #include "analogmux3.h"
 
+#ifndef MIKROBUS_POSITION_ANALOGMUX3
+    #define MIKROBUS_POSITION_ANALOGMUX3 MIKROBUS_1
+#endif
+
 static analogmux3_t analogmux3;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void ) {
     // Click initialization.
 
     analogmux3_cfg_setup( &analogmux3_cfg );
-    ANALOGMUX3_MAP_MIKROBUS( analogmux3_cfg, MIKROBUS_1 );
+    ANALOGMUX3_MAP_MIKROBUS( analogmux3_cfg, MIKROBUS_POSITION_ANALOGMUX3 );
     
     // Vref STM32F407ZG
     analogmux3_cfg.vref = 2.048;

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "uv3.h"
 
+#ifndef MIKROBUS_POSITION_UV3
+    #define MIKROBUS_POSITION_UV3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static uv3_t uv3;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     uv3_cfg_setup( &cfg );
-    UV3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UV3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UV3 );
     uv3_init( &uv3, &cfg );
     uv3_default_cfg ( &uv3 );
 }

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "boostinv3.h"
 
+#ifndef MIKROBUS_POSITION_BOOSTINV3
+    #define MIKROBUS_POSITION_BOOSTINV3 MIKROBUS_1
+#endif
+
 #define BOOSTINV3_MIN_VOL_LVL           4.0f
 #define BOOSTINV3_INCREMENT             0.1f
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     boostinv3_cfg_setup( &boostinv3_cfg );
-    BOOSTINV3_MAP_MIKROBUS( boostinv3_cfg, MIKROBUS_1 );
+    BOOSTINV3_MAP_MIKROBUS( boostinv3_cfg, MIKROBUS_POSITION_BOOSTINV3 );
     if ( I2C_MASTER_ERROR == boostinv3_init( &boostinv3, &boostinv3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

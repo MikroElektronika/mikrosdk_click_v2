@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver13_cfg_setup( &leddriver13_cfg );
-    LEDDRIVER13_MAP_MIKROBUS( leddriver13_cfg, MIKROBUS_1 );
+    LEDDRIVER13_MAP_MIKROBUS( leddriver13_cfg, MIKROBUS_POSITION_LEDDRIVER13 );
     if ( PWM_ERROR == leddriver13_init( &leddriver13, &leddriver13_cfg ) )
     {
         log_error( &logger, " Communication init." );

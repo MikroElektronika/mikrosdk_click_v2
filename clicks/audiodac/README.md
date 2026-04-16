@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     audiodac_cfg_setup( &audiodac_cfg );
-    AUDIODAC_MAP_MIKROBUS( audiodac_cfg, MIKROBUS_1 );
+    AUDIODAC_MAP_MIKROBUS( audiodac_cfg, MIKROBUS_POSITION_AUDIODAC );
     if ( I2C_MASTER_ERROR == audiodac_init( &audiodac, &audiodac_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

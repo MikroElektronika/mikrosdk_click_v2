@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     charger2_cfg_setup( &cfg );
-    CHARGER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CHARGER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CHARGER2 );
     charger2_init( &charger2, &cfg );
 
     Delay_ms ( 500 );

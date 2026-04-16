@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ata6563_cfg_setup( &ata6563_cfg );
-    ATA6563_MAP_MIKROBUS( ata6563_cfg, MIKROBUS_1 );
+    ATA6563_MAP_MIKROBUS( ata6563_cfg, MIKROBUS_POSITION_ATA6563 );
     if ( UART_ERROR == ata6563_init( &ata6563, &ata6563_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

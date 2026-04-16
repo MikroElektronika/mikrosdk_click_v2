@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck8_cfg_setup( &cfg );
-    BUCK8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK8 );
     buck8_init( &buck8, &cfg );
 
     buck8_default_cfg( &buck8 );

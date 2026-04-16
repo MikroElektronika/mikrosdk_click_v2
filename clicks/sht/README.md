@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     sht_cfg_setup( &cfg );
-    SHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHT );
     sht_init( &sht, &cfg );
     
     sht_reset( &sht );

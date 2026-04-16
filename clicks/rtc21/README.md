@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc21_cfg_setup( &rtc21_cfg );
-    RTC21_MAP_MIKROBUS( rtc21_cfg, MIKROBUS_1 );
+    RTC21_MAP_MIKROBUS( rtc21_cfg, MIKROBUS_POSITION_RTC21 );
     if ( I2C_MASTER_ERROR == rtc21_init( &rtc21, &rtc21_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

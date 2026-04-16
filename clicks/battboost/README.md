@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     battboost_cfg_setup( &battboost_cfg );
-    BATTBOOST_MAP_MIKROBUS( battboost_cfg, MIKROBUS_1 );
+    BATTBOOST_MAP_MIKROBUS( battboost_cfg, MIKROBUS_POSITION_BATTBOOST );
     if ( I2C_MASTER_ERROR == battboost_init( &battboost, &battboost_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

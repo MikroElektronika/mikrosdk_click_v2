@@ -85,7 +85,7 @@ void application_init( void )
     //  Click initialization.
 
     adc_cfg_setup( &cfg );
-    ADC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC );
     adc_init( &adc, &cfg );
 }
 ```

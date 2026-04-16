@@ -89,7 +89,7 @@ log_cfg_t log_cfg;
     //  Click initialization.
 
     accel5_cfg_setup( &cfg );
-    ACCEL5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL5 );
     accel5_init( &accel5, &cfg );
 }
 ```

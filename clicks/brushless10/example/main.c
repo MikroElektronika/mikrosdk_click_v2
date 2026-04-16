@@ -24,6 +24,10 @@
 #include "log.h"
 #include "brushless10.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS10
+    #define MIKROBUS_POSITION_BRUSHLESS10 MIKROBUS_1
+#endif
+
 static brushless10_t brushless10;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless10_cfg_setup( &brushless10_cfg );
-    BRUSHLESS10_MAP_MIKROBUS( brushless10_cfg, MIKROBUS_1 );
+    BRUSHLESS10_MAP_MIKROBUS( brushless10_cfg, MIKROBUS_POSITION_BRUSHLESS10 );
     if ( BRUSHLESS10_OK != brushless10_init( &brushless10, &brushless10_cfg ) )
     {
         log_error( &logger, " Communication init." );

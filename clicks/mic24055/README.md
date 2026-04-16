@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     mic24055_cfg_setup( &cfg );
-    MIC24055_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC24055_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC24055 );
     mic24055_init( &mic24055, &cfg );
 }
 ```

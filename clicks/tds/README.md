@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     tds_cfg_setup( &tds_cfg );
-    TDS_MAP_MIKROBUS( tds_cfg, MIKROBUS_1 );
+    TDS_MAP_MIKROBUS( tds_cfg, MIKROBUS_POSITION_TDS );
     err_t init_flag = tds_init( &tds, &tds_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -21,6 +21,10 @@
 #include "log.h"
 #include "tilt4.h"
 
+#ifndef MIKROBUS_POSITION_TILT4
+    #define MIKROBUS_POSITION_TILT4 MIKROBUS_1
+#endif
+
 static tilt4_t tilt4;   /**< Tilt 4 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     tilt4_cfg_setup( &tilt4_cfg );
-    TILT4_MAP_MIKROBUS( tilt4_cfg, MIKROBUS_1 );
+    TILT4_MAP_MIKROBUS( tilt4_cfg, MIKROBUS_POSITION_TILT4 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == tilt4_init( &tilt4, &tilt4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

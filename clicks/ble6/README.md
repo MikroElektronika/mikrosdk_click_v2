@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ble6_cfg_setup( &ble6_cfg );
-    BLE6_MAP_MIKROBUS( ble6_cfg, MIKROBUS_1 );
+    BLE6_MAP_MIKROBUS( ble6_cfg, MIKROBUS_POSITION_BLE6 );
     err_t init_flag  = ble6_init( &ble6, &ble6_cfg );
     if ( UART_ERROR == init_flag ) 
     {

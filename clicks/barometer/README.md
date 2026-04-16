@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     barometer_cfg_setup( &cfg );
-    BAROMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BAROMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BAROMETER );
     barometer_init( &barometer, &cfg );
 
     barometer_default_cfg( &barometer );

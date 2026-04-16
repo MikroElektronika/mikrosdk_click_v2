@@ -29,6 +29,10 @@
 #include "log.h"
 #include "i2cmux5.h"
 
+#ifndef MIKROBUS_POSITION_I2CMUX5
+    #define MIKROBUS_POSITION_I2CMUX5 MIKROBUS_1
+#endif
+
 static i2cmux5_t i2cmux5;
 static log_t logger;
 static uint8_t rx_data;
@@ -55,7 +59,7 @@ void application_init ( void ) {
     // Click initialization.
 
     i2cmux5_cfg_setup( &i2cmux5_cfg );
-    I2CMUX5_MAP_MIKROBUS( i2cmux5_cfg, MIKROBUS_1 );
+    I2CMUX5_MAP_MIKROBUS( i2cmux5_cfg, MIKROBUS_POSITION_I2CMUX5 );
     err_t init_flag = i2cmux5_init( &i2cmux5, &i2cmux5_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

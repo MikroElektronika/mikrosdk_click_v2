@@ -49,6 +49,10 @@
 #include "log.h"
 #include "iotexpresslink.h"
 
+#ifndef MIKROBUS_POSITION_IOTEXPRESSLINK
+    #define MIKROBUS_POSITION_IOTEXPRESSLINK MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 500
 
 // Enter valid WiFi credentials below
@@ -114,7 +118,7 @@ void application_init ( void )
 
     // Click initialization.
     iotexpresslink_cfg_setup( &iotexpresslink_cfg );
-    IOTEXPRESSLINK_MAP_MIKROBUS( iotexpresslink_cfg, MIKROBUS_1 );
+    IOTEXPRESSLINK_MAP_MIKROBUS( iotexpresslink_cfg, MIKROBUS_POSITION_IOTEXPRESSLINK );
     if ( UART_ERROR == iotexpresslink_init( &iotexpresslink, &iotexpresslink_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

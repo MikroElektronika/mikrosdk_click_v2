@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchkey4_cfg_setup( &cfg );
-    TOUCHKEY4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHKEY4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHKEY4 );
     touchkey4_init( &touchkey4, &cfg );
 
     Delay_ms ( 1000 );

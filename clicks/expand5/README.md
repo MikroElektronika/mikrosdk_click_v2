@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     expand5_cfg_setup( &cfg );
-    EXPAND5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND5 );
     expand5_init( &expand5, &cfg );
 
     Delay_ms ( 100 );

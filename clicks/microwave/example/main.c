@@ -30,6 +30,10 @@
 #include "log.h"
 #include "microwave.h"
 
+#ifndef MIKROBUS_POSITION_MICROWAVE
+    #define MIKROBUS_POSITION_MICROWAVE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static microwave_t microwave;
@@ -61,7 +65,7 @@ void application_init( void )
 
     //  Click initialization.
     microwave_cfg_setup( &cfg );
-    MICROWAVE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MICROWAVE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MICROWAVE );
     microwave_init( &microwave, &cfg );
     Delay_ms ( 100 );
 

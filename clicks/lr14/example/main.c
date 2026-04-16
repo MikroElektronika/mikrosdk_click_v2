@@ -39,6 +39,10 @@
 #include "conversions.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_LR14
+    #define MIKROBUS_POSITION_LR14 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE   "MIKROE - LR 14 Click board"
 
 static lr14_t lr14;
@@ -162,7 +166,7 @@ void application_init ( void )
 
     // Click initialization.
     lr14_cfg_setup( &lr14_cfg );
-    LR14_MAP_MIKROBUS( lr14_cfg, MIKROBUS_1 );
+    LR14_MAP_MIKROBUS( lr14_cfg, MIKROBUS_POSITION_LR14 );
     if ( UART_ERROR == lr14_init( &lr14, &lr14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     headphoneamp2_cfg_setup( &headphoneamp2_cfg );
-    HEADPHONEAMP2_MAP_MIKROBUS( headphoneamp2_cfg, MIKROBUS_1 );
+    HEADPHONEAMP2_MAP_MIKROBUS( headphoneamp2_cfg, MIKROBUS_POSITION_HEADPHONEAMP2 );
     if ( I2C_MASTER_ERROR == headphoneamp2_init( &headphoneamp2, &headphoneamp2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

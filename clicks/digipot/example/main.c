@@ -22,6 +22,10 @@
 #include "log.h"
 #include "digipot.h"
 
+#ifndef MIKROBUS_POSITION_DIGIPOT
+    #define MIKROBUS_POSITION_DIGIPOT MIKROBUS_1
+#endif
+
 static digipot_t digipot;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void ) {
     // Click initialization.
 
     digipot_cfg_setup( &digipot_cfg );
-    DIGIPOT_MAP_MIKROBUS( digipot_cfg, MIKROBUS_1 );
+    DIGIPOT_MAP_MIKROBUS( digipot_cfg, MIKROBUS_POSITION_DIGIPOT );
     err_t init_flag  = digipot_init( &digipot, &digipot_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "alcohol3.h"
 
+#ifndef MIKROBUS_POSITION_ALCOHOL3
+    #define MIKROBUS_POSITION_ALCOHOL3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static alcohol3_t alcohol3;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     alcohol3_cfg_setup( &cfg );
-    ALCOHOL3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ALCOHOL3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ALCOHOL3 );
     alcohol3_init( &alcohol3, &cfg );
 
     log_printf( &logger, "--------------------------\r\n\n" );

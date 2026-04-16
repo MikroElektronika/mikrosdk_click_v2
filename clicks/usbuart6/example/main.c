@@ -28,6 +28,10 @@
 #include "log.h"
 #include "usbuart6.h"
 
+#ifndef MIKROBUS_POSITION_USBUART6
+    #define MIKROBUS_POSITION_USBUART6 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static usbuart6_t usbuart6;
@@ -56,7 +60,7 @@ void application_init ( void )
 
     // Click initialization.
     usbuart6_cfg_setup( &usbuart6_cfg );
-    USBUART6_MAP_MIKROBUS( usbuart6_cfg, MIKROBUS_1 );
+    USBUART6_MAP_MIKROBUS( usbuart6_cfg, MIKROBUS_POSITION_USBUART6 );
     if ( UART_ERROR == usbuart6_init( &usbuart6, &usbuart6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

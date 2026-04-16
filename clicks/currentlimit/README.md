@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     currentlimit_cfg_setup( &currentlimit_cfg );
-    CURRENTLIMIT_MAP_MIKROBUS( currentlimit_cfg, MIKROBUS_1 );
+    CURRENTLIMIT_MAP_MIKROBUS( currentlimit_cfg, MIKROBUS_POSITION_CURRENTLIMIT );
     err_t init_flag  = currentlimit_init( &currentlimit, &currentlimit_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

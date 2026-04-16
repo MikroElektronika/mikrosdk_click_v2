@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc8_cfg_setup( &rtc8_cfg );
-    RTC8_MAP_MIKROBUS( rtc8_cfg, MIKROBUS_1 );
+    RTC8_MAP_MIKROBUS( rtc8_cfg, MIKROBUS_POSITION_RTC8 );
     if ( I2C_MASTER_ERROR == rtc8_init( &rtc8, &rtc8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

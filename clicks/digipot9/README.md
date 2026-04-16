@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     digipot9_cfg_setup( &digipot9_cfg );
-    DIGIPOT9_MAP_MIKROBUS( digipot9_cfg, MIKROBUS_1 );
+    DIGIPOT9_MAP_MIKROBUS( digipot9_cfg, MIKROBUS_POSITION_DIGIPOT9 );
     err_t init_flag  = digipot9_init( &digipot9, &digipot9_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) 
     {

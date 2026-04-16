@@ -22,6 +22,10 @@
 #include "log.h"
 #include "pcr.h"
 
+#ifndef MIKROBUS_POSITION_PCR
+    #define MIKROBUS_POSITION_PCR MIKROBUS_1
+#endif
+
 static pcr_t pcr;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     pcr_cfg_setup( &pcr_cfg );
-    PCR_MAP_MIKROBUS( pcr_cfg, MIKROBUS_1 );
+    PCR_MAP_MIKROBUS( pcr_cfg, MIKROBUS_POSITION_PCR );
     if ( I2C_MASTER_ERROR == pcr_init( &pcr, &pcr_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     gps4_cfg_setup( &cfg );
-    GPS4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GPS4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GPS4 );
     gps4_init( &gps4, &cfg );
 
     gps4_module_wakeup( &gps4 );

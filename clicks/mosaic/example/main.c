@@ -30,6 +30,10 @@
 #include "log.h"
 #include "mosaic.h"
 
+#ifndef MIKROBUS_POSITION_MOSAIC
+    #define MIKROBUS_POSITION_MOSAIC MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -108,7 +112,7 @@ void application_init ( void )
 
     // Click initialization.
     mosaic_cfg_setup( &mosaic_cfg );
-    MOSAIC_MAP_MIKROBUS( mosaic_cfg, MIKROBUS_1 );
+    MOSAIC_MAP_MIKROBUS( mosaic_cfg, MIKROBUS_POSITION_MOSAIC );
     if ( UART_ERROR == mosaic_init( &mosaic, &mosaic_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

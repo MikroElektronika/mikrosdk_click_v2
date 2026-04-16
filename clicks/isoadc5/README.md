@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     isoadc5_cfg_setup( &isoadc5_cfg );
-    ISOADC5_MAP_MIKROBUS( isoadc5_cfg, MIKROBUS_1 );
+    ISOADC5_MAP_MIKROBUS( isoadc5_cfg, MIKROBUS_POSITION_ISOADC5 );
     err_t init_flag  = isoadc5_init( &isoadc5, &isoadc5_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) 
     {

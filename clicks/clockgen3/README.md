@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     clockgen3_cfg_setup( &cfg );
-    CLOCKGEN3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CLOCKGEN3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CLOCKGEN3 );
     clockgen3_init( &clockgen3, &cfg );
 
     clockgen3_config( &clockgen3, CLOCKGEN3_CFG_ON_CLK_180 );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pac1720.h"
 
+#ifndef MIKROBUS_POSITION_PAC1720
+    #define MIKROBUS_POSITION_PAC1720 MIKROBUS_1
+#endif
+
 static pac1720_t pac1720;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     pac1720_cfg_setup( &pac1720_cfg );
-    PAC1720_MAP_MIKROBUS( pac1720_cfg, MIKROBUS_1 );
+    PAC1720_MAP_MIKROBUS( pac1720_cfg, MIKROBUS_POSITION_PAC1720 );
     if ( I2C_MASTER_ERROR == pac1720_init( &pac1720, &pac1720_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

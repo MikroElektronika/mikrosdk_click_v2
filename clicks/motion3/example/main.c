@@ -23,6 +23,10 @@
 #include "log.h"
 #include "motion3.h"
 
+#ifndef MIKROBUS_POSITION_MOTION3
+    #define MIKROBUS_POSITION_MOTION3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static motion3_t motion3;   /**< Motion 3 Click driver object. */
@@ -52,7 +56,7 @@ void application_init ( void ) {
     // Click initialization.
 
     motion3_cfg_setup( &motion3_cfg );
-    MOTION3_MAP_MIKROBUS( motion3_cfg, MIKROBUS_5 );
+    MOTION3_MAP_MIKROBUS( motion3_cfg, MIKROBUS_POSITION_MOTION3 );
     if ( motion3_init( &motion3, &motion3_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
        
         log_error( &logger, " Application Init Error. " );

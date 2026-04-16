@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     templog3_cfg_setup( &cfg );
-    TEMPLOG3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG3 );
     templog3_init( &templog3, &cfg );
 
     Delay_ms ( 500 );

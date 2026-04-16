@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp16331_cfg_setup( &cfg );
-    MCP16331_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP16331_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP16331 );
     mcp16331_init( &mcp16331, &cfg );
 }
 ```

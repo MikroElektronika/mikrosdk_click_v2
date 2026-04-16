@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     light4_cfg_setup( &light4_cfg );
-    LIGHT4_MAP_MIKROBUS( light4_cfg, MIKROBUS_1 );
+    LIGHT4_MAP_MIKROBUS( light4_cfg, MIKROBUS_POSITION_LIGHT4 );
     if ( I2C_MASTER_ERROR == light4_init( &light4, &light4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

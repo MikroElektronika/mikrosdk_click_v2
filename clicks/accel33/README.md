@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     accel33_cfg_setup( &accel33_cfg );
-    ACCEL33_MAP_MIKROBUS( accel33_cfg, MIKROBUS_1 );
+    ACCEL33_MAP_MIKROBUS( accel33_cfg, MIKROBUS_POSITION_ACCEL33 );
     err_t init_flag = accel33_init( &accel33, &accel33_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

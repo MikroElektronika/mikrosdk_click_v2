@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless25_cfg_setup( &brushless25_cfg );
-    BRUSHLESS25_MAP_MIKROBUS( brushless25_cfg, MIKROBUS_1 );
+    BRUSHLESS25_MAP_MIKROBUS( brushless25_cfg, MIKROBUS_POSITION_BRUSHLESS25 );
     err_t init_flag = brushless25_init( &brushless25, &brushless25_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

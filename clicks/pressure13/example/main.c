@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pressure13.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE13
+    #define MIKROBUS_POSITION_PRESSURE13 MIKROBUS_1
+#endif
+
 static pressure13_t pressure13;   /**< Pressure 13 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -51,7 +55,7 @@ void application_init ( void ) {
 
     // Click initialization.
     pressure13_cfg_setup( &pressure13_cfg );
-    PRESSURE13_MAP_MIKROBUS( pressure13_cfg, MIKROBUS_1 );
+    PRESSURE13_MAP_MIKROBUS( pressure13_cfg, MIKROBUS_POSITION_PRESSURE13 );
     if ( ADC_ERROR == pressure13_init( &pressure13, &pressure13_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

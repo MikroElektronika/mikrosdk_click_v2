@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo3_cfg_setup( &cfg );
-    THERMO3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO3 );
     thermo3_init( &thermo3, &cfg );
 }
 ```

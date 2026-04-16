@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity13_cfg_setup( &cfg );
-    PROXIMITY13_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY13_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY13 );
     proximity13_init( &proximity13, &cfg );
     
     status = proximity13_get_int_pin_status( &proximity13 );

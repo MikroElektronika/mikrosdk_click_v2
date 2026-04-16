@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     headphoneamp_cfg_setup( &headphoneamp_cfg );
-    HEADPHONEAMP_MAP_MIKROBUS( headphoneamp_cfg, MIKROBUS_1 );
+    HEADPHONEAMP_MAP_MIKROBUS( headphoneamp_cfg, MIKROBUS_POSITION_HEADPHONEAMP );
     if ( headphoneamp_init( &headphoneamp, &headphoneamp_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

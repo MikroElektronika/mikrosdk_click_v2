@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     battmon_cfg_setup( &cfg );
-    BATTMON_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BATTMON_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BATTMON );
     battmon_init( &battmon, &cfg );
 
     Delay_ms ( 500 );

@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     ata6570_cfg_setup( &cfg );
-    ATA6570_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ATA6570_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ATA6570 );
     ata6570_init( &ata6570, &cfg );
     ata6570_write_reg( &ata6570, ATA6570_DMCR, ATA6570_OPMODE_NORMAL );
     Delay_ms ( 500 );

@@ -91,7 +91,7 @@ void application_init ( void )
     // Click initialization.
 
     efuse_cfg_setup( &efuse_cfg );
-    EFUSE_MAP_MIKROBUS( efuse_cfg, MIKROBUS_1 );
+    EFUSE_MAP_MIKROBUS( efuse_cfg, MIKROBUS_POSITION_EFUSE );
     if ( efuse_init( &efuse, &efuse_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

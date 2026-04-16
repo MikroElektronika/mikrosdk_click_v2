@@ -28,6 +28,10 @@
 #include "log.h"
 #include "adac.h"
 
+#ifndef MIKROBUS_POSITION_ADAC
+    #define MIKROBUS_POSITION_ADAC MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static adac_t adac;
@@ -56,7 +60,7 @@ void application_init ( )
     //  Click initialization.
 
     adac_cfg_setup( &cfg );
-    ADAC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADAC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADAC );
     adac_init( &adac, &cfg );
     Delay_ms ( 100 );
     adac_hardware_reset( &adac );

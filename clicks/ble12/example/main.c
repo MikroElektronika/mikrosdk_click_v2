@@ -38,6 +38,10 @@
 #include "log.h"
 #include "ble12.h"
 
+#ifndef MIKROBUS_POSITION_BLE12
+    #define MIKROBUS_POSITION_BLE12 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 #define RSP_TIMEOUT         100
 
@@ -88,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     ble12_cfg_setup( &ble12_cfg );
-    BLE12_MAP_MIKROBUS( ble12_cfg, MIKROBUS_1 );
+    BLE12_MAP_MIKROBUS( ble12_cfg, MIKROBUS_POSITION_BLE12 );
     if ( UART_ERROR == ble12_init( &ble12, &ble12_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

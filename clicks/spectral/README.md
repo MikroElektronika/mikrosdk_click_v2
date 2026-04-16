@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     spectral_cfg_setup( &cfg );
-    SPECTRAL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPECTRAL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPECTRAL );
     spectral_init( &spectral, &cfg );
 
     spectral_module_reset( &spectral );

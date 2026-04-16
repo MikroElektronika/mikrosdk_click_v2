@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     expand7_cfg_setup( &cfg );
-    EXPAND7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND7 );
     expand7_init( &expand7, &cfg );
     Delay_ms ( 100 );
     

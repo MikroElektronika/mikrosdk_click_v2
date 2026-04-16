@@ -95,7 +95,7 @@ void application_init ( void )
     //  Click initialization.
 
     boost6_cfg_setup( &cfg );
-    BOOST6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOST6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOST6 );
     boost6_init( &boost6, &cfg );
 
     log_printf( &logger, "-----------------\r\n" );

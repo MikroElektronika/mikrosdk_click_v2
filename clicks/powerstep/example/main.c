@@ -24,6 +24,10 @@
 #include "log.h"
 #include "powerstep.h"
 
+#ifndef MIKROBUS_POSITION_POWERSTEP
+    #define MIKROBUS_POSITION_POWERSTEP MIKROBUS_1
+#endif
+
 static powerstep_t powerstep;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     powerstep_cfg_setup( &powerstep_cfg );
-    POWERSTEP_MAP_MIKROBUS( powerstep_cfg, MIKROBUS_1 );
+    POWERSTEP_MAP_MIKROBUS( powerstep_cfg, MIKROBUS_POSITION_POWERSTEP );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == powerstep_init( &powerstep, &powerstep_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

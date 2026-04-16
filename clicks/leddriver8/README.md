@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver8_cfg_setup( &cfg );
-    LEDDRIVER8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER8 );
     leddriver8_init( &leddriver8, &cfg );
 
     leddriver8_reset( &leddriver8 );

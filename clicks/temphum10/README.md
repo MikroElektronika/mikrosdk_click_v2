@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum10_cfg_setup( &cfg );
-    TEMPHUM10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM10 );
     temphum10_init( &temphum10, &cfg );
 
     log_info( &logger, "---- Device config ----" );

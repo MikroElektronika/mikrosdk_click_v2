@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pressure11.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE11
+    #define MIKROBUS_POSITION_PRESSURE11 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure11_t pressure11;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure11_cfg_setup( &cfg );
-    PRESSURE11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE11 );
     pressure11_init( &pressure11, &cfg );
     
     uint8_t id_flag =  pressure11_check_id( &pressure11 );

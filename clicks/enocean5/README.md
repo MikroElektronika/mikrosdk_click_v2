@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     enocean5_cfg_setup( &enocean5_cfg );
-    ENOCEAN5_MAP_MIKROBUS( enocean5_cfg, MIKROBUS_1 );
+    ENOCEAN5_MAP_MIKROBUS( enocean5_cfg, MIKROBUS_POSITION_ENOCEAN5 );
     if ( UART_ERROR == enocean5_init( &enocean5, &enocean5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

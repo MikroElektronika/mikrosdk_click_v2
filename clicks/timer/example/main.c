@@ -27,6 +27,10 @@
 #include "log.h"
 #include "timer.h"
 
+#ifndef MIKROBUS_POSITION_TIMER
+    #define MIKROBUS_POSITION_TIMER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static timer_t timer;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     timer_cfg_setup( &cfg );
-    TIMER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TIMER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TIMER );
     timer_init( &timer, &cfg );
     Delay_ms ( 200 );
 

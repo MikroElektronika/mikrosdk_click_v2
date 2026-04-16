@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor24_cfg_setup( &dcmotor24_cfg );
-    DCMOTOR24_MAP_MIKROBUS( dcmotor24_cfg, MIKROBUS_1 );
+    DCMOTOR24_MAP_MIKROBUS( dcmotor24_cfg, MIKROBUS_POSITION_DCMOTOR24 );
     if ( SPI_MASTER_ERROR == dcmotor24_init( &dcmotor24, &dcmotor24_cfg ) )
     {
         log_error( &logger, " Communication init." );

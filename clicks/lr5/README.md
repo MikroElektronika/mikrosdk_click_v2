@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     lr5_cfg_setup( &cfg );
-    LR5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LR5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LR5 );
     lr5_init( &lr5, &cfg );
 
     lr5_response_handler_set( &lr5, &make_response );

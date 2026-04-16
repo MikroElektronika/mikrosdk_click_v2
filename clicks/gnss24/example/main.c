@@ -31,6 +31,10 @@
 #include "log.h"
 #include "gnss24.h"
 
+#ifndef MIKROBUS_POSITION_GNSS24
+    #define MIKROBUS_POSITION_GNSS24 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -109,7 +113,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss24_cfg_setup( &gnss24_cfg );
-    GNSS24_MAP_MIKROBUS( gnss24_cfg, MIKROBUS_1 );
+    GNSS24_MAP_MIKROBUS( gnss24_cfg, MIKROBUS_POSITION_GNSS24 );
     if ( UART_ERROR == gnss24_init( &gnss24, &gnss24_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

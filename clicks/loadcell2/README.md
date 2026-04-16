@@ -97,7 +97,7 @@ void application_init ( void )
     //  Click initialization.
 
     loadcell2_cfg_setup( &cfg );
-    LOADCELL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LOADCELL2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LOADCELL2 );
     loadcell2_init( &loadcell2, &cfg );
     
     log_printf( &logger, "-------------------------\r\n");

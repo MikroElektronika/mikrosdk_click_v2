@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     pot2_cfg_setup( &cfg );
-    POT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POT2 );
     pot2_init( &pot2, &cfg );
 }
 ```

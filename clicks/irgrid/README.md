@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     irgrid_cfg_setup( &irgrid_cfg );
-    IRGRID_MAP_MIKROBUS( irgrid_cfg, MIKROBUS_1 );
+    IRGRID_MAP_MIKROBUS( irgrid_cfg, MIKROBUS_POSITION_IRGRID );
     if ( I2C_MASTER_ERROR == irgrid_init( &irgrid, &irgrid_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

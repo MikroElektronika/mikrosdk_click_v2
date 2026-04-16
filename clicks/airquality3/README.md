@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     airquality3_cfg_setup( &cfg );
-    AIRQUALITY3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AIRQUALITY3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AIRQUALITY3 );
     airquality3_init( &airquality3, &cfg );
 
     // Wake-up Click procedure

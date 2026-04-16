@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     gsmgnss_cfg_setup( &cfg );
-    GSMGNSS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GSMGNSS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GSMGNSS );
     gsmgnss_init( &gsmgnss, &cfg );
 
     gsmgnss_module_power( &gsmgnss, GSMGNSS_MODULE_POWER_ON );

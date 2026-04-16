@@ -22,6 +22,10 @@
 #include "log.h"
 #include "vumeter.h"
 
+#ifndef MIKROBUS_POSITION_VUMETER
+    #define MIKROBUS_POSITION_VUMETER MIKROBUS_1
+#endif
+
 static vumeter_t vumeter;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
     // Click initialization.
 
     vumeter_cfg_setup( &vumeter_cfg );
-    VUMETER_MAP_MIKROBUS( vumeter_cfg, MIKROBUS_1 );
+    VUMETER_MAP_MIKROBUS( vumeter_cfg, MIKROBUS_POSITION_VUMETER );
     err_t init_flag  = vumeter_init( &vumeter, &vumeter_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

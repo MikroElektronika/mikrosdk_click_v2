@@ -25,6 +25,10 @@
 #include "log.h"
 #include "dcmotor6.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR6
+    #define MIKROBUS_POSITION_DCMOTOR6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor6_t dcmotor6;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor6_cfg_setup( &cfg );
-    DCMOTOR6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR6 );
     dcmotor6_init( &dcmotor6, &cfg );
 }
 

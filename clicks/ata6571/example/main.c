@@ -26,6 +26,10 @@
 #include "log.h"
 #include "ata6571.h"
 
+#ifndef MIKROBUS_POSITION_ATA6571
+    #define MIKROBUS_POSITION_ATA6571 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 /*** Demo application mode selection, only one mode should be selected at the same time ***/
@@ -83,7 +87,7 @@ void application_init ( void )
     // Click initialization.
 
     ata6571_cfg_setup( &ata6571_cfg );
-    ATA6571_MAP_MIKROBUS( ata6571_cfg, MIKROBUS_1 );
+    ATA6571_MAP_MIKROBUS( ata6571_cfg, MIKROBUS_POSITION_ATA6571 );
     err_t init_flag = ata6571_init( &ata6571, &ata6571_cfg );
     if ( UART_ERROR == init_flag ) 
     {

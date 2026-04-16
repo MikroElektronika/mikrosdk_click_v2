@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     c4gltena_cfg_setup( &c4gltena_cfg );
-    C4GLTENA_MAP_MIKROBUS( c4gltena_cfg, MIKROBUS_1 );
+    C4GLTENA_MAP_MIKROBUS( c4gltena_cfg, MIKROBUS_POSITION_4GLTENA );
     c4gltena_init( &c4gltena, &c4gltena_cfg );
     
     c4gltena_module_power_on( &c4gltena );

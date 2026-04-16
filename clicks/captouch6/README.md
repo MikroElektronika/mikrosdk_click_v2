@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     captouch6_cfg_setup( &captouch6_cfg );
-    CAPTOUCH6_MAP_MIKROBUS( captouch6_cfg, MIKROBUS_1 );
+    CAPTOUCH6_MAP_MIKROBUS( captouch6_cfg, MIKROBUS_POSITION_CAPTOUCH6 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == captouch6_init( &captouch6, &captouch6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

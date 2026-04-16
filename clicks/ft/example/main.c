@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ft.h"
 
+#ifndef MIKROBUS_POSITION_FT
+    #define MIKROBUS_POSITION_FT MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     ft_cfg_setup( &ft_cfg );
-    FT_MAP_MIKROBUS( ft_cfg, MIKROBUS_1 );
+    FT_MAP_MIKROBUS( ft_cfg, MIKROBUS_POSITION_FT );
     if ( UART_ERROR == ft_init( &ft, &ft_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

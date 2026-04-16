@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp1664_cfg_setup( &cfg );
-    MCP1664_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP1664_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP1664 );
     mcp1664_init( &mcp1664, &cfg );
 
     mcp1664_set_duty_cycle( &mcp1664, duty_cycle );

@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     haptic2_cfg_setup( &haptic2_cfg );
-    HAPTIC2_MAP_MIKROBUS( haptic2_cfg, MIKROBUS_1 );
+    HAPTIC2_MAP_MIKROBUS( haptic2_cfg, MIKROBUS_POSITION_HAPTIC2 );
     err_t init_flag  = haptic2_init( &haptic2, &haptic2_cfg );
     if ( init_flag == PWM_ERROR ) 
     {

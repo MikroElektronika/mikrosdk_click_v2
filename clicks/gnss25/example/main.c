@@ -29,6 +29,10 @@
 #include "log.h"
 #include "gnss25.h"
 
+#ifndef MIKROBUS_POSITION_GNSS25
+    #define MIKROBUS_POSITION_GNSS25 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -94,7 +98,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss25_cfg_setup( &gnss25_cfg );
-    GNSS25_MAP_MIKROBUS( gnss25_cfg, MIKROBUS_1 );
+    GNSS25_MAP_MIKROBUS( gnss25_cfg, MIKROBUS_POSITION_GNSS25 );
     if ( UART_ERROR == gnss25_init( &gnss25, &gnss25_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -51,6 +51,10 @@
 #include "nbiot7.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_NBIOT7
+    #define MIKROBUS_POSITION_NBIOT7 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define DEMO_EXAMPLE                        EXAMPLE_TCP_UDP // Example selection macro
@@ -215,7 +219,7 @@ void application_init ( void )
 
     // Click initialization.
     nbiot7_cfg_setup( &nbiot7_cfg );
-    NBIOT7_MAP_MIKROBUS( nbiot7_cfg, MIKROBUS_1 );
+    NBIOT7_MAP_MIKROBUS( nbiot7_cfg, MIKROBUS_POSITION_NBIOT7 );
     if ( UART_ERROR == nbiot7_init( &nbiot7, &nbiot7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

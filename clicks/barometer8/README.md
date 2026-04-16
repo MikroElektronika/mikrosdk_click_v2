@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     barometer8_cfg_setup( &barometer8_cfg );
-    BAROMETER8_MAP_MIKROBUS( barometer8_cfg, MIKROBUS_1 );
+    BAROMETER8_MAP_MIKROBUS( barometer8_cfg, MIKROBUS_POSITION_BAROMETER8 );
     err_t init_flag  = barometer8_init( &barometer8, &barometer8_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

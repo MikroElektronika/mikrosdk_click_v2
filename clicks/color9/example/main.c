@@ -27,6 +27,10 @@
 #include "log.h"
 #include "color9.h"
 
+#ifndef MIKROBUS_POSITION_COLOR9
+    #define MIKROBUS_POSITION_COLOR9 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static color9_t color9;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     color9_cfg_setup( &cfg );
-    COLOR9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR9 );
     color9_init( &color9, &cfg );
 
     id = color9_read( &color9, COLOR9_PART_ID );

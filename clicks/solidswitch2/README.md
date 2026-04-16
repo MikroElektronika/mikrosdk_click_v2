@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     solidswitch2_cfg_setup( &solidswitch2_cfg );
-    SOLIDSWITCH2_MAP_MIKROBUS( solidswitch2_cfg, MIKROBUS_1 );
+    SOLIDSWITCH2_MAP_MIKROBUS( solidswitch2_cfg, MIKROBUS_POSITION_SOLIDSWITCH2 );
     if ( SPI_MASTER_ERROR == solidswitch2_init( &solidswitch2, &solidswitch2_cfg ) )
     {
         log_error( &logger, " Communication init." );

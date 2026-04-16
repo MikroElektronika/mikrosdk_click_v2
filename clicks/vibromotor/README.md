@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     vibromotor_cfg_setup( &vibromotor_cfg );
-    VIBROMOTOR_MAP_MIKROBUS( vibromotor_cfg, MIKROBUS_1 );
+    VIBROMOTOR_MAP_MIKROBUS( vibromotor_cfg, MIKROBUS_POSITION_VIBROMOTOR );
     err_t init_flag  = vibromotor_init( &vibromotor, &vibromotor_cfg );
     if ( PWM_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

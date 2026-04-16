@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     rng2_cfg_setup( &rng2_cfg );
-    RNG2_MAP_MIKROBUS( rng2_cfg, MIKROBUS_1 );
+    RNG2_MAP_MIKROBUS( rng2_cfg, MIKROBUS_POSITION_RNG2 );
     if ( RNG2_OK != rng2_init( &rng2, &rng2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

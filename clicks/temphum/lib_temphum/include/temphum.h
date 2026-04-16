@@ -1,26 +1,24 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2026 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
  * \file
@@ -32,8 +30,8 @@
  */
 // ----------------------------------------------------------------------------
 
-#ifndef TEMPHIM_H
-#define TEMPHIM_H
+#ifndef TEMPHUM_H
+#define TEMPHUM_H
 
 /**
  * Any initialization code needed for MCU to function properly.
@@ -64,7 +62,7 @@
  * \defgroup map_mikrobus MikroBUS
  * \{
  */
-#define TEMPHIM_MAP_MIKROBUS( cfg, mikrobus ) \
+#define TEMPHUM_MAP_MIKROBUS( cfg, mikrobus ) \
   cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
   cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA ); \
   cfg.int_pin = MIKROBUS( mikrobus, MIKROBUS_INT )
@@ -74,10 +72,10 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define TEMPHIM_RETVAL  uint8_t
+#define TEMPHUM_RETVAL  uint8_t
 
-#define TEMPHIM_OK           0x00
-#define TEMPHIM_INIT_ERROR   0xFF
+#define TEMPHUM_OK           0x00
+#define TEMPHUM_INIT_ERROR   0xFF
 /** \} */
 
 /**
@@ -218,7 +216,7 @@ void temphum_cfg_setup ( temphum_cfg_t *cfg );
  * 
  * @description This function initializes all necessary pins and peripherals used for this Click.
  */
-TEMPHIM_RETVAL temphum_init ( temphum_t *ctx, temphum_cfg_t *cfg );
+TEMPHUM_RETVAL temphum_init ( temphum_t *ctx, temphum_cfg_t *cfg );
 
 /**
  * @brief Click Default Configuration function.
@@ -318,7 +316,7 @@ float temphum_get_humidity( temphum_t *ctx );
 #ifdef __cplusplus
 }
 #endif
-#endif  // _TEMPHIM_H_
+#endif  // _TEMPHUM_H_
 
 /** \} */ // End public_function group
 /// \}    // End Click Driver group  

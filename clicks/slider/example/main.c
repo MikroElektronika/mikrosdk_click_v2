@@ -25,6 +25,10 @@
 #include "log.h"
 #include "slider.h"
 
+#ifndef MIKROBUS_POSITION_SLIDER
+    #define MIKROBUS_POSITION_SLIDER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static slider_t slider;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     slider_cfg_setup( &cfg );
-    SLIDER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SLIDER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SLIDER );
     slider_init( &slider, &cfg );
     Delay_ms ( 200 );
 

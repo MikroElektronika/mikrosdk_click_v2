@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     usbuart5_cfg_setup( &usbuart5_cfg );
-    USBUART5_MAP_MIKROBUS( usbuart5_cfg, MIKROBUS_1 );
+    USBUART5_MAP_MIKROBUS( usbuart5_cfg, MIKROBUS_POSITION_USBUART5 );
     if ( UART_ERROR == usbuart5_init( &usbuart5, &usbuart5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

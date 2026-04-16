@@ -22,6 +22,10 @@
 #include "log.h"
 #include "waterdetect.h"
 
+#ifndef MIKROBUS_POSITION_WATERDETECT
+    #define MIKROBUS_POSITION_WATERDETECT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static waterdetect_t waterdetect;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     waterdetect_cfg_setup( &cfg );
-    WATERDETECT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WATERDETECT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WATERDETECT );
     waterdetect_init( &waterdetect, &cfg );
     Delay_100ms();
     

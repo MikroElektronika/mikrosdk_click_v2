@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     c4glte2voice_cfg_setup( &c4glte2voice_cfg );
-    C4GLTE2VOICE_MAP_MIKROBUS( c4glte2voice_cfg, MIKROBUS_1 );
+    C4GLTE2VOICE_MAP_MIKROBUS( c4glte2voice_cfg, MIKROBUS_POSITION_4GLTE2VOICE );
     if ( UART_ERROR == c4glte2voice_init( &c4glte2voice, &c4glte2voice_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     ireclipse2_cfg_setup( &ireclipse2_cfg );
-    IRECLIPSE2_MAP_MIKROBUS( ireclipse2_cfg, MIKROBUS_1 );
+    IRECLIPSE2_MAP_MIKROBUS( ireclipse2_cfg, MIKROBUS_POSITION_IRECLIPSE2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ireclipse2_init( &ireclipse2, &ireclipse2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

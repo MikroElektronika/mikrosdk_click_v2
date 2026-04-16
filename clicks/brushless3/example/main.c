@@ -27,6 +27,10 @@
 #include "log.h"
 #include "brushless3.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS3
+    #define MIKROBUS_POSITION_BRUSHLESS3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static brushless3_t brushless3;
@@ -57,7 +61,7 @@ void application_init ( void )
 
     //  Click initialization.
     brushless3_cfg_setup( &cfg );
-    BRUSHLESS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS3 );
     brushless3_init( &brushless3, &cfg );
     
     if ( BRUSHLESS3_ERROR == brushless3_default_cfg ( &brushless3 ) )

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "uts7segb2.h"
 
+#ifndef MIKROBUS_POSITION_UTS7SEGB2
+    #define MIKROBUS_POSITION_UTS7SEGB2 MIKROBUS_1
+#endif
+
 static uts7segb2_t uts7segb2;
 static log_t logger;
 static uts7segb2_number_cfg_t number;
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     uts7segb2_cfg_setup( &uts7segb2_cfg );
-    UTS7SEGB2_MAP_MIKROBUS( uts7segb2_cfg, MIKROBUS_1 );
+    UTS7SEGB2_MAP_MIKROBUS( uts7segb2_cfg, MIKROBUS_POSITION_UTS7SEGB2 );
     if ( SPI_MASTER_ERROR == uts7segb2_init( &uts7segb2, &uts7segb2_cfg ) )
     {
         log_error( &logger, " Communication init." );

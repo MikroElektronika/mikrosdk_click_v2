@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     hydrogen2_cfg_setup( &hydrogen2_cfg );
-    HYDROGEN2_MAP_MIKROBUS( hydrogen2_cfg, MIKROBUS_1 );
+    HYDROGEN2_MAP_MIKROBUS( hydrogen2_cfg, MIKROBUS_POSITION_HYDROGEN2 );
     if ( I2C_MASTER_ERROR == hydrogen2_init( &hydrogen2, &hydrogen2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

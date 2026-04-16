@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     spirit2_cfg_setup( &cfg );
-    SPIRIT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPIRIT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPIRIT2 );
     spirit2_init( &spirit2, &cfg );
     Delay_ms ( 1000 );
 

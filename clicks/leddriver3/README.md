@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver3_cfg_setup( &cfg );
-    LEDDRIVER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER3 );
     leddriver3_init( &leddriver3, &cfg );
 }
 ```

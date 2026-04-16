@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pressure18.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE18
+    #define MIKROBUS_POSITION_PRESSURE18 MIKROBUS_1
+#endif
+
 static pressure18_t pressure18;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure18_cfg_setup( &pressure18_cfg );
-    PRESSURE18_MAP_MIKROBUS( pressure18_cfg, MIKROBUS_1 );
+    PRESSURE18_MAP_MIKROBUS( pressure18_cfg, MIKROBUS_POSITION_PRESSURE18 );
     err_t init_flag  = pressure18_init( &pressure18, &pressure18_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "servo.h"
 
+#ifndef MIKROBUS_POSITION_SERVO
+    #define MIKROBUS_POSITION_SERVO MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static servo_t servo;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     servo_cfg_setup( &cfg );
-    SERVO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SERVO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SERVO );
     servo_init( &servo, &cfg );
     
     servo_default_cfg( &servo );

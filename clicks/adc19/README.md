@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     adc19_cfg_setup( &adc19_cfg );
-    ADC19_MAP_MIKROBUS( adc19_cfg, MIKROBUS_1 );
+    ADC19_MAP_MIKROBUS( adc19_cfg, MIKROBUS_POSITION_ADC19 );
     if ( SPI_MASTER_ERROR == adc19_init( &adc19, &adc19_cfg ) )
     {
         log_error( &logger, " Communication init." );

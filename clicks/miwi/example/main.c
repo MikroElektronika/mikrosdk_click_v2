@@ -37,6 +37,10 @@
 #include "log.h"
 #include "miwi.h"
 
+#ifndef MIKROBUS_POSITION_MIWI
+    #define MIKROBUS_POSITION_MIWI MIKROBUS_1
+#endif
+
 // Demo message used as payload in transmitter mode
 #define DEMO_MESSAGE    "MiWi Click Demo!"
 
@@ -66,7 +70,7 @@ void application_init ( void )
 
     // Click initialization.
     miwi_cfg_setup( &miwi_cfg );
-    MIWI_MAP_MIKROBUS( miwi_cfg, MIKROBUS_1 );
+    MIWI_MAP_MIKROBUS( miwi_cfg, MIKROBUS_POSITION_MIWI );
     if ( SPI_MASTER_ERROR == miwi_init( &miwi, &miwi_cfg ) )
     {
         log_error( &logger, " Communication init." );

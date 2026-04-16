@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     uva_cfg_setup( &uva_cfg );
-    UVA_MAP_MIKROBUS( uva_cfg, MIKROBUS_1 );
+    UVA_MAP_MIKROBUS( uva_cfg, MIKROBUS_POSITION_UVA );
     if ( I2C_MASTER_ERROR == uva_init( &uva, &uva_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

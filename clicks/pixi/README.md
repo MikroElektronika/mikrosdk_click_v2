@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     pixi_cfg_setup( &cfg );
-    PIXI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PIXI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PIXI );
     pixi_init( &pixi, &cfg );
 
     //  Device ID check.

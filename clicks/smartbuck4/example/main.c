@@ -26,6 +26,10 @@
 #include "log.h"
 #include "smartbuck4.h"
 
+#ifndef MIKROBUS_POSITION_SMARTBUCK4
+    #define MIKROBUS_POSITION_SMARTBUCK4 MIKROBUS_1
+#endif
+
 static smartbuck4_t smartbuck4;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     smartbuck4_cfg_setup( &smartbuck4_cfg );
-    SMARTBUCK4_MAP_MIKROBUS( smartbuck4_cfg, MIKROBUS_1 );
+    SMARTBUCK4_MAP_MIKROBUS( smartbuck4_cfg, MIKROBUS_POSITION_SMARTBUCK4 );
     if ( I2C_MASTER_ERROR == smartbuck4_init( &smartbuck4, &smartbuck4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

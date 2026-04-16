@@ -29,6 +29,10 @@
 #include "log.h"
 #include "gnss22.h"
 
+#ifndef MIKROBUS_POSITION_GNSS22
+    #define MIKROBUS_POSITION_GNSS22 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             800
 #define PROCESS_BUFFER_SIZE         400
@@ -97,7 +101,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss22_cfg_setup( &gnss22_cfg );
-    GNSS22_MAP_MIKROBUS( gnss22_cfg, MIKROBUS_1 );
+    GNSS22_MAP_MIKROBUS( gnss22_cfg, MIKROBUS_POSITION_GNSS22 );
     if ( UART_ERROR == gnss22_init( &gnss22, &gnss22_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

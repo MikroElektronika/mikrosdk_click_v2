@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     ltecat13aux_cfg_setup( &ltecat13aux_cfg );
-    LTECAT13AUX_MAP_MIKROBUS( ltecat13aux_cfg, MIKROBUS_1 );
+    LTECAT13AUX_MAP_MIKROBUS( ltecat13aux_cfg, MIKROBUS_POSITION_LTECAT13AUX );
     if ( UART_ERROR == ltecat13aux_init( &ltecat13aux, &ltecat13aux_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

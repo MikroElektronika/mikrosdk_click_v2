@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     hallswitch5_cfg_setup( &hallswitch5_cfg );
-    HALLSWITCH5_MAP_MIKROBUS( hallswitch5_cfg, MIKROBUS_1 );
+    HALLSWITCH5_MAP_MIKROBUS( hallswitch5_cfg, MIKROBUS_POSITION_HALLSWITCH5 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == hallswitch5_init( &hallswitch5, &hallswitch5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

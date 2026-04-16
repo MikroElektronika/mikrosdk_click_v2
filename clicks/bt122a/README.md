@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     bt122a_cfg_setup( &bt122a_cfg );
-    BT122A_MAP_MIKROBUS( bt122a_cfg, MIKROBUS_1 );
+    BT122A_MAP_MIKROBUS( bt122a_cfg, MIKROBUS_POSITION_BT122A );
     if ( UART_ERROR == bt122a_init( &bt122a, &bt122a_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

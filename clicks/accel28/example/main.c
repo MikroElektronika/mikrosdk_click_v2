@@ -23,6 +23,10 @@
 #include "log.h"
 #include "accel28.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL28
+    #define MIKROBUS_POSITION_ACCEL28 MIKROBUS_1
+#endif
+
 static accel28_t accel28;
 static log_t logger;
 accel28_data_t accel_data;
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     accel28_cfg_setup( &accel28_cfg );
-    ACCEL28_MAP_MIKROBUS( accel28_cfg, MIKROBUS_1 );
+    ACCEL28_MAP_MIKROBUS( accel28_cfg, MIKROBUS_POSITION_ACCEL28 );
     err_t init_flag = accel28_init( &accel28, &accel28_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

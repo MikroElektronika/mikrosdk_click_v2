@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     uv2_cfg_setup( &cfg );
-    UV2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UV2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UV2 );
     uv2_init( &uv2, &cfg );
 
     Delay_ms ( 100 );

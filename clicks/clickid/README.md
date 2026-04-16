@@ -83,7 +83,7 @@ void application_init ( void )
 
     // ClickID initialization.
     clickid_cfg_setup( &clickid_cfg );
-    CLICKID_MAP_MIKROBUS( clickid_cfg, MIKROBUS_1 );
+    CLICKID_MAP_MIKROBUS( clickid_cfg, MIKROBUS_POSITION_CLICKID );
     if ( ONE_WIRE_ERROR == clickid_init( &clickid, &clickid_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

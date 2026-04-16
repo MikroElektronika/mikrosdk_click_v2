@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum13_cfg_setup( &cfg );
-    TEMPHUM13_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM13_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM13 );
     temphum13_init( &temphum13, &cfg );
     temphum13_default_cfg( &temphum13 );
 }

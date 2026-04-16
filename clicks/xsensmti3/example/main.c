@@ -24,6 +24,10 @@
 #include "log.h"
 #include "xsensmti3.h"
 
+#ifndef MIKROBUS_POSITION_XSENSMTI3
+    #define MIKROBUS_POSITION_XSENSMTI3 MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 200
 #define PROCESS_PARSER_BUFFER_SIZE 1000
 
@@ -67,7 +71,7 @@ void application_init ( void )
 
     // Click initialization.
     xsensmti3_cfg_setup( &xsensmti3_cfg );
-    XSENSMTI3_MAP_MIKROBUS( xsensmti3_cfg, MIKROBUS_1 );
+    XSENSMTI3_MAP_MIKROBUS( xsensmti3_cfg, MIKROBUS_POSITION_XSENSMTI3 );
     if ( UART_ERROR == xsensmti3_init( &xsensmti3, &xsensmti3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

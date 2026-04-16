@@ -22,6 +22,10 @@
 #include "log.h"
 #include "force3.h"
 
+#ifndef MIKROBUS_POSITION_FORCE3
+    #define MIKROBUS_POSITION_FORCE3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static force3_t force3;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     force3_cfg_setup( &cfg );
-    FORCE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FORCE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FORCE3 );
     force3_init( &force3, &cfg );
 }
 

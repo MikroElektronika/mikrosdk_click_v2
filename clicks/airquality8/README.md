@@ -95,7 +95,7 @@ void application_init ( void )
 
     // Click initialization.
     airquality8_cfg_setup( &airquality8_cfg );
-    AIRQUALITY8_MAP_MIKROBUS( airquality8_cfg, MIKROBUS_1 );
+    AIRQUALITY8_MAP_MIKROBUS( airquality8_cfg, MIKROBUS_POSITION_AIRQUALITY8 );
     if ( I2C_MASTER_ERROR == airquality8_init( &airquality8, &airquality8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

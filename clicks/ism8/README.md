@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ism8_cfg_setup( &ism8_cfg );
-    ISM8_MAP_MIKROBUS( ism8_cfg, MIKROBUS_1 );
+    ISM8_MAP_MIKROBUS( ism8_cfg, MIKROBUS_POSITION_ISM8 );
     if ( UART_ERROR == ism8_init( &ism8, &ism8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

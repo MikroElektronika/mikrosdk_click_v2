@@ -25,6 +25,10 @@
 #include "log.h"
 #include "diffpressure.h"
 
+#ifndef MIKROBUS_POSITION_DIFFPRESSURE
+    #define MIKROBUS_POSITION_DIFFPRESSURE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static diffpressure_t diffpressure;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     diffpressure_cfg_setup( &cfg );
-    DIFFPRESSURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIFFPRESSURE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIFFPRESSURE );
     if ( DIFFPRESSURE_OK != diffpressure_init( &diffpressure, &cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "dac7.h"
 
+#ifndef MIKROBUS_POSITION_DAC7
+    #define MIKROBUS_POSITION_DAC7 MIKROBUS_1
+#endif
+
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac7_cfg_setup( &cfg );
-    DAC7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC7 );
     dac7_init( &dac7, &cfg );
     
     log_printf( &logger, "--------------------------\r\n\n" );

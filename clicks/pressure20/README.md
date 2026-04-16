@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure20_cfg_setup( &pressure20_cfg );
-    PRESSURE20_MAP_MIKROBUS( pressure20_cfg, MIKROBUS_1 );
+    PRESSURE20_MAP_MIKROBUS( pressure20_cfg, MIKROBUS_POSITION_PRESSURE20 );
     err_t init_flag  = pressure20_init( &pressure20, &pressure20_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

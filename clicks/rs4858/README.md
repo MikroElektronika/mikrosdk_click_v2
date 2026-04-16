@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     rs4858_cfg_setup( &rs4858_cfg );
-    RS4858_MAP_MIKROBUS( rs4858_cfg, MIKROBUS_2 );
+    RS4858_MAP_MIKROBUS( rs4858_cfg, MIKROBUS_POSITION_RS4858 );
     if ( UART_ERROR == rs4858_init( &rs4858, &rs4858_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

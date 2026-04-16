@@ -33,6 +33,10 @@
 #include "enocean4.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_ENOCEAN4
+    #define MIKROBUS_POSITION_ENOCEAN4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define DEMO_APP_RECEIVER
@@ -332,7 +336,7 @@ void application_init ( void )
     //  Click initialization.
 
     enocean4_cfg_setup( &cfg );
-    ENOCEAN4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ENOCEAN4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ENOCEAN4 );
     enocean4_init( &enocean4, &cfg );
 
     Delay_ms ( 500 );

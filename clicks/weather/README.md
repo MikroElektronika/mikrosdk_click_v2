@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     weather_cfg_setup( &weather_cfg );
-    WEATHER_MAP_MIKROBUS( weather_cfg, MIKROBUS_1 );
+    WEATHER_MAP_MIKROBUS( weather_cfg, MIKROBUS_POSITION_WEATHER );
     if ( WEATHER_OK != weather_init( &weather, &weather_cfg ) )
     {
         log_error( &logger, " Communication init." );

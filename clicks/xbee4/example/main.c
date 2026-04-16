@@ -31,6 +31,10 @@
 #include "log.h"
 #include "xbee4.h"
 
+#ifndef MIKROBUS_POSITION_XBEE4
+    #define MIKROBUS_POSITION_XBEE4 MIKROBUS_1
+#endif
+
 // Device name (Node identifier).
 #define DEVICE_NAME                 "XBEE 4 Click"
 
@@ -116,7 +120,7 @@ void application_init ( void )
 
     // Click initialization.
     xbee4_cfg_setup( &xbee4_cfg );
-    XBEE4_MAP_MIKROBUS( xbee4_cfg, MIKROBUS_1 );
+    XBEE4_MAP_MIKROBUS( xbee4_cfg, MIKROBUS_POSITION_XBEE4 );
     if ( UART_ERROR == xbee4_init( &xbee4, &xbee4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

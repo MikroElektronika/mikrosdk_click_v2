@@ -27,6 +27,10 @@
 #include "ble3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_BLE3
+    #define MIKROBUS_POSITION_BLE3 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 100
 #define PROCESS_PARSER_BUFFER_SIZE 100
@@ -135,7 +139,7 @@ void application_init ( void )
     //  Click initialization.
 
     ble3_cfg_setup( &cfg );
-    BLE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE3 );
     ble3_init( &ble3, &cfg );
     
     log_printf( &logger, "Configuring the module...\n" );

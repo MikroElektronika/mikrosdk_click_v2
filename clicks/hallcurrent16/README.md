@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent16_cfg_setup( &hallcurrent16_cfg );
-    HALLCURRENT16_MAP_MIKROBUS( hallcurrent16_cfg, MIKROBUS_1 );
+    HALLCURRENT16_MAP_MIKROBUS( hallcurrent16_cfg, MIKROBUS_POSITION_HALLCURRENT16 );
     if ( SPI_MASTER_ERROR == hallcurrent16_init( &hallcurrent16, &hallcurrent16_cfg ) )
     {
         log_error( &logger, " Communication init." );

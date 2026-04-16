@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     diffpress2_cfg_setup( &diffpress2_cfg );
-    DIFFPRESS2_MAP_MIKROBUS( diffpress2_cfg, MIKROBUS_1 );
+    DIFFPRESS2_MAP_MIKROBUS( diffpress2_cfg, MIKROBUS_POSITION_DIFFPRESS2 );
     err_t init_flag = diffpress2_init( &diffpress2, &diffpress2_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

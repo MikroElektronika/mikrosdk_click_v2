@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cmux9_cfg_setup( &i2cmux9_cfg );
-    I2CMUX9_MAP_MIKROBUS( i2cmux9_cfg, MIKROBUS_1 );
+    I2CMUX9_MAP_MIKROBUS( i2cmux9_cfg, MIKROBUS_POSITION_I2CMUX9 );
     if ( I2C_MASTER_ERROR == i2cmux9_init( &i2cmux9, &i2cmux9_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "bee.h"
 
+#ifndef MIKROBUS_POSITION_BEE
+    #define MIKROBUS_POSITION_BEE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 // Comment out the line below in order to switch the application mode to receiver
@@ -66,7 +70,7 @@ void application_init ( void )
     //  Click initialization.
 
     bee_cfg_setup( &cfg );
-    BEE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BEE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BEE );
     bee_init( &bee, &cfg );
     
     for ( uint8_t cnt = 0; cnt < 2; cnt++ )

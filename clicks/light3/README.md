@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     light3_cfg_setup( &light3_cfg );
-    LIGHT3_MAP_MIKROBUS( light3_cfg, MIKROBUS_1 );
+    LIGHT3_MAP_MIKROBUS( light3_cfg, MIKROBUS_POSITION_LIGHT3 );
     if ( I2C_MASTER_ERROR == light3_init( &light3, &light3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

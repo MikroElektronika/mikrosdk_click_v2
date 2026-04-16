@@ -23,6 +23,10 @@
 #include "log.h"
 #include "adc19.h"
 
+#ifndef MIKROBUS_POSITION_ADC19
+    #define MIKROBUS_POSITION_ADC19 MIKROBUS_1
+#endif
+
 static adc19_t adc19;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     adc19_cfg_setup( &adc19_cfg );
-    ADC19_MAP_MIKROBUS( adc19_cfg, MIKROBUS_1 );
+    ADC19_MAP_MIKROBUS( adc19_cfg, MIKROBUS_POSITION_ADC19 );
     if ( SPI_MASTER_ERROR == adc19_init( &adc19, &adc19_cfg ) )
     {
         log_error( &logger, " Communication init." );

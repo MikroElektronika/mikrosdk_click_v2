@@ -31,6 +31,10 @@
 #include "log.h"
 #include "audioxover.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOXOVER
+    #define MIKROBUS_POSITION_AUDIOXOVER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static audioxover_t audioxover;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioxover_cfg_setup( &cfg );
-    AUDIOXOVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOXOVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOXOVER );
     audioxover_init( &audioxover, &cfg );
 }
 

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "ata6563.h"
 
+#ifndef MIKROBUS_POSITION_ATA6563
+    #define MIKROBUS_POSITION_ATA6563 MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 #define DEMO_APP_TRANSMITTER
 
@@ -92,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     ata6563_cfg_setup( &ata6563_cfg );
-    ATA6563_MAP_MIKROBUS( ata6563_cfg, MIKROBUS_1 );
+    ATA6563_MAP_MIKROBUS( ata6563_cfg, MIKROBUS_POSITION_ATA6563 );
     if ( UART_ERROR == ata6563_init( &ata6563, &ata6563_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

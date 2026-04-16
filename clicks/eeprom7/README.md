@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     eeprom7_cfg_setup( &eeprom7_cfg );
-    EEPROM7_MAP_MIKROBUS( eeprom7_cfg, MIKROBUS_1 );
+    EEPROM7_MAP_MIKROBUS( eeprom7_cfg, MIKROBUS_POSITION_EEPROM7 );
     err_t init_flag  = eeprom7_init( &eeprom7, &eeprom7_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot19_cfg_setup( &lteiot19_cfg );
-    LTEIOT19_MAP_MIKROBUS( lteiot19_cfg, MIKROBUS_1 );
+    LTEIOT19_MAP_MIKROBUS( lteiot19_cfg, MIKROBUS_POSITION_LTEIOT19 );
     if ( UART_ERROR == lteiot19_init( &lteiot19, &lteiot19_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

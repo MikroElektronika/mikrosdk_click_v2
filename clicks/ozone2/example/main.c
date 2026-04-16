@@ -25,6 +25,10 @@
 #include "log.h"
 #include "ozone2.h"
 
+#ifndef MIKROBUS_POSITION_OZONE2
+    #define MIKROBUS_POSITION_OZONE2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ozone2_t ozone2;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     ozone2_cfg_setup( &ozone2_cfg );
-    OZONE2_MAP_MIKROBUS( ozone2_cfg, MIKROBUS_1 );
+    OZONE2_MAP_MIKROBUS( ozone2_cfg, MIKROBUS_POSITION_OZONE2 );
 
     if ( ozone2_init( &ozone2, &ozone2_cfg ) == OZONE2_INIT_ERROR )
     {

@@ -33,6 +33,10 @@
 #include "log.h"
 #include "dtmf.h"
 
+#ifndef MIKROBUS_POSITION_DTMF
+    #define MIKROBUS_POSITION_DTMF MIKROBUS_1
+#endif
+
 // Demo aplication selection macros
 #define APP_DIALING                 0
 #define APP_ANSWERING               1
@@ -68,7 +72,7 @@ void application_init ( void )
 
     // Click initialization.
     dtmf_cfg_setup( &dtmf_cfg );
-    DTMF_MAP_MIKROBUS( dtmf_cfg, MIKROBUS_1 );
+    DTMF_MAP_MIKROBUS( dtmf_cfg, MIKROBUS_POSITION_DTMF );
     if ( SPI_MASTER_ERROR == dtmf_init( &dtmf, &dtmf_cfg ) )
     {
         log_error( &logger, " Communication init." );

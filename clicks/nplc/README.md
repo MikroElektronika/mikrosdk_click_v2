@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     nplc_cfg_setup( &nplc_cfg );
-    NPLC_MAP_MIKROBUS( nplc_cfg, MIKROBUS_1 );
+    NPLC_MAP_MIKROBUS( nplc_cfg, MIKROBUS_POSITION_NPLC );
     if ( UART_ERROR == nplc_init( &nplc, &nplc_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

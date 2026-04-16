@@ -25,6 +25,10 @@
 #include "log.h"
 #include "hbridge7.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE7
+    #define MIKROBUS_POSITION_HBRIDGE7 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static hbridge7_t hbridge7;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     hbridge7_cfg_setup( &cfg );
-    HBRIDGE7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HBRIDGE7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HBRIDGE7 );
     hbridge7_init( &hbridge7, &cfg );
 }
 

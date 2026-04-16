@@ -88,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient9_cfg_setup( &cfg );
-    AMBIENT9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT9 );
     ambient9_init( &ambient9, &cfg );
 
     ambient9_generic_read( &ambient9, AMBIENT9_REG_PART_ID, &status_data, 1 );

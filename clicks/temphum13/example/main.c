@@ -25,6 +25,10 @@
 #include "log.h"
 #include "temphum13.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM13
+    #define MIKROBUS_POSITION_TEMPHUM13 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static temphum13_t temphum13;
@@ -57,7 +61,7 @@ void application_init ( void )
 
     temphum13_cfg_setup( &cfg );
         Delay_ms ( 500 );
-    TEMPHUM13_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM13_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM13 );
         Delay_ms ( 500 );
     temphum13_init( &temphum13, &cfg );
         Delay_ms ( 500 );

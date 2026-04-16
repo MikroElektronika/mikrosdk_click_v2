@@ -23,6 +23,10 @@
 #include "log.h"
 #include "fram5.h"
 
+#ifndef MIKROBUS_POSITION_FRAM5
+    #define MIKROBUS_POSITION_FRAM5 MIKROBUS_1
+#endif
+
 static fram5_t fram5;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     fram5_cfg_setup( &fram5_cfg );
-    FRAM5_MAP_MIKROBUS( fram5_cfg, MIKROBUS_1 );
+    FRAM5_MAP_MIKROBUS( fram5_cfg, MIKROBUS_POSITION_FRAM5 );
     if ( I2C_MASTER_ERROR == fram5_init( &fram5, &fram5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

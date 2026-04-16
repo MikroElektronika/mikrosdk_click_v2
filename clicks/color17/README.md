@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     color17_cfg_setup( &color17_cfg );
-    COLOR17_MAP_MIKROBUS( color17_cfg, MIKROBUS_1 );
+    COLOR17_MAP_MIKROBUS( color17_cfg, MIKROBUS_POSITION_COLOR17 );
     if ( I2C_MASTER_ERROR == color17_init( &color17, &color17_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

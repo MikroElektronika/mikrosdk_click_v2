@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     nbiot5_cfg_setup( &nbiot5_cfg );
-    NBIOT5_MAP_MIKROBUS( nbiot5_cfg, MIKROBUS_1 );
+    NBIOT5_MAP_MIKROBUS( nbiot5_cfg, MIKROBUS_POSITION_NBIOT5 );
     if ( UART_ERROR == nbiot5_init( &nbiot5, &nbiot5_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

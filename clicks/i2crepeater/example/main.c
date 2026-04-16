@@ -27,6 +27,10 @@
 #include "log.h"
 #include "i2crepeater.h"
 
+#ifndef MIKROBUS_POSITION_I2CREPEATER
+    #define MIKROBUS_POSITION_I2CREPEATER MIKROBUS_1
+#endif
+
 #define DEVICE_NAME             "6DOF IMU 11 Click"
 #define DEVICE_SLAVE_ADDRESS    0x0E
 #define DEVICE_REG_ID           0x00
@@ -55,7 +59,7 @@ void application_init ( void )
 
     // Click initialization.
     i2crepeater_cfg_setup( &i2crepeater_cfg );
-    I2CREPEATER_MAP_MIKROBUS( i2crepeater_cfg, MIKROBUS_1 );
+    I2CREPEATER_MAP_MIKROBUS( i2crepeater_cfg, MIKROBUS_POSITION_I2CREPEATER );
     if ( I2C_MASTER_ERROR == i2crepeater_init( &i2crepeater, &i2crepeater_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

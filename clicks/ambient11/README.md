@@ -100,7 +100,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient11_cfg_setup( &cfg );
-    AMBIENT11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT11 );
     ambient11_init( &ambient11, &cfg );
     ambient11_default_cfg ( &ambient11 );
 }

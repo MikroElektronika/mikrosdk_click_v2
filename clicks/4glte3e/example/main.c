@@ -61,6 +61,10 @@
 #include "generic_pointer.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_4GLTE3E
+    #define MIKROBUS_POSITION_4GLTE3E MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_SMS                         1               // Example of sending SMS to a phone number
@@ -231,7 +235,7 @@ void application_init ( void )
 
     // Click initialization.
     c4glte3e_cfg_setup( &c4glte3e_cfg );
-    C4GLTE3E_MAP_MIKROBUS( c4glte3e_cfg, MIKROBUS_1 );
+    C4GLTE3E_MAP_MIKROBUS( c4glte3e_cfg, MIKROBUS_POSITION_4GLTE3E );
     if ( UART_ERROR == c4glte3e_init( &c4glte3e, &c4glte3e_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

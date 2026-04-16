@@ -22,6 +22,10 @@
 #include "log.h"
 #include "c3dhall4.h"
 
+#ifndef MIKROBUS_POSITION_3DHALL4
+    #define MIKROBUS_POSITION_3DHALL4 MIKROBUS_1
+#endif
+
 static c3dhall4_t c3dhall4;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     c3dhall4_cfg_setup( &c3dhall4_cfg );
-    C3DHALL4_MAP_MIKROBUS( c3dhall4_cfg, MIKROBUS_1 );
+    C3DHALL4_MAP_MIKROBUS( c3dhall4_cfg, MIKROBUS_POSITION_3DHALL4 );
     if ( C3DHALL4_OK != c3dhall4_init( &c3dhall4, &c3dhall4_cfg ) )
     {
         log_error( &logger, " Communication init." );

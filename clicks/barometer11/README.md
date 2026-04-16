@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     barometer11_cfg_setup( &barometer11_cfg );
-    BAROMETER11_MAP_MIKROBUS( barometer11_cfg, MIKROBUS_1 );
+    BAROMETER11_MAP_MIKROBUS( barometer11_cfg, MIKROBUS_POSITION_BAROMETER11 );
     err_t init_flag = barometer11_init( &barometer11, &barometer11_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -93,7 +93,7 @@ void application_init ( void )
     //  Click initialization.
 
     adc9_cfg_setup( &cfg );
-    ADC9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC9 );
     uint8_t err_flag = adc9_init( &adc9, &cfg );
     if ( ADC9_INIT_ERROR == err_flag )
     {

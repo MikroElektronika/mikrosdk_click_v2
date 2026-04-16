@@ -28,6 +28,10 @@
 #include "log.h"
 #include "isoadc6.h"
 
+#ifndef MIKROBUS_POSITION_ISOADC6
+    #define MIKROBUS_POSITION_ISOADC6 MIKROBUS_1
+#endif
+
 static isoadc6_t isoadc6;
 static log_t logger;
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     isoadc6_cfg_setup( &isoadc6_cfg );
-    ISOADC6_MAP_MIKROBUS( isoadc6_cfg, MIKROBUS_1 );
+    ISOADC6_MAP_MIKROBUS( isoadc6_cfg, MIKROBUS_POSITION_ISOADC6 );
     if ( SPI_MASTER_ERROR == isoadc6_init( &isoadc6, &isoadc6_cfg ) )
     {
         log_error( &logger, " Communication init." );

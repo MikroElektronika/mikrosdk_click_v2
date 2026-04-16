@@ -79,7 +79,7 @@ void application_init ( void )
     // Click initialization.
 
     isoadc2_cfg_setup( &isoadc2_cfg );
-    ISOADC2_MAP_MIKROBUS( isoadc2_cfg, MIKROBUS_1 );
+    ISOADC2_MAP_MIKROBUS( isoadc2_cfg, MIKROBUS_POSITION_ISOADC2 );
     err_t init_flag  = isoadc2_init( &isoadc2, &isoadc2_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

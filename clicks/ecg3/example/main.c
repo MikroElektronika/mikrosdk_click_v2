@@ -30,6 +30,10 @@
 #include "log.h"
 #include "ecg3.h"
 
+#ifndef MIKROBUS_POSITION_ECG3
+    #define MIKROBUS_POSITION_ECG3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ecg3_t ecg3;
@@ -94,7 +98,7 @@ void application_init ( void )
     //  Click initialization.
 
     ecg3_cfg_setup( &cfg );
-    ECG3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ECG3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ECG3 );
     ecg3_init( &ecg3, &cfg );
 
     ecg3_sw_reset( &ecg3 );

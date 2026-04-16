@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel10_cfg_setup( &cfg );
-    ACCEL10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL10 );
     accel10_init( &accel10, &cfg );
     Delay_ms ( 500 );
     

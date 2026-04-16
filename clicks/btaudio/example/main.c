@@ -35,6 +35,10 @@
 #include "string.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_BTAUDIO
+    #define MIKROBUS_POSITION_BTAUDIO MIKROBUS_1
+#endif
+
 #define RESPONSE_CMD                "CMD"
 #define RESPONSE_END                "END"
 #define RESPONSE_AOK                "AOK"
@@ -203,7 +207,7 @@ void application_init ( void )
     //  Click initialization.
 
     btaudio_cfg_setup( &cfg );
-    BTAUDIO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BTAUDIO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BTAUDIO );
     btaudio_init( &btaudio, &cfg );
     Delay_ms ( 1000 );
 

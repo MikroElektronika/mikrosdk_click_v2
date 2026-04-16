@@ -23,6 +23,10 @@
 #include "log.h"
 #include "solidswitch8.h"
 
+#ifndef MIKROBUS_POSITION_SOLIDSWITCH8
+    #define MIKROBUS_POSITION_SOLIDSWITCH8 MIKROBUS_1
+#endif
+
 static solidswitch8_t solidswitch8;   /**< SolidSwitch 8 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     solidswitch8_cfg_setup( &solidswitch8_cfg );
-    SOLIDSWITCH8_MAP_MIKROBUS( solidswitch8_cfg, MIKROBUS_1 );
+    SOLIDSWITCH8_MAP_MIKROBUS( solidswitch8_cfg, MIKROBUS_POSITION_SOLIDSWITCH8 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == solidswitch8_init( &solidswitch8, &solidswitch8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

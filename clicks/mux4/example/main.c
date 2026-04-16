@@ -22,6 +22,10 @@
 #include "log.h"
 #include "mux4.h"
 
+#ifndef MIKROBUS_POSITION_MUX4
+    #define MIKROBUS_POSITION_MUX4 MIKROBUS_1
+#endif
+
 static mux4_t mux4;       /**< MUX 4 Click driver object. */
 static log_t logger;      /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
     // Click initialization.
 
     mux4_cfg_setup( &mux4_cfg );
-    MUX4_MAP_MIKROBUS( mux4_cfg, MIKROBUS_1 );
+    MUX4_MAP_MIKROBUS( mux4_cfg, MIKROBUS_POSITION_MUX4 );
     if ( ADC_ERROR == mux4_init( &mux4, &mux4_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

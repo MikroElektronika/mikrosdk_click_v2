@@ -29,6 +29,10 @@
 #include "log.h"
 #include "nfctag5.h"
 
+#ifndef MIKROBUS_POSITION_NFCTAG5
+    #define MIKROBUS_POSITION_NFCTAG5 MIKROBUS_1
+#endif
+
 /**
  * URL to store to memory as NDEF URI record
  */
@@ -69,7 +73,7 @@ void application_init ( void )
 
     // Click initialization.
     nfctag5_cfg_setup( &nfctag5_cfg );
-    NFCTAG5_MAP_MIKROBUS( nfctag5_cfg, MIKROBUS_1 );
+    NFCTAG5_MAP_MIKROBUS( nfctag5_cfg, MIKROBUS_POSITION_NFCTAG5 );
     if ( I2C_MASTER_ERROR == nfctag5_init( &nfctag5, &nfctag5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

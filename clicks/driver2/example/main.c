@@ -22,6 +22,10 @@
 #include "log.h"
 #include "driver2.h"
 
+#ifndef MIKROBUS_POSITION_DRIVER2
+    #define MIKROBUS_POSITION_DRIVER2 MIKROBUS_1
+#endif
+
 static driver2_t driver2;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void ) {
     // Click initialization.
 
     driver2_cfg_setup( &driver2_cfg );
-    DRIVER2_MAP_MIKROBUS( driver2_cfg, MIKROBUS_1 );
+    DRIVER2_MAP_MIKROBUS( driver2_cfg, MIKROBUS_POSITION_DRIVER2 );
     err_t init_flag  = driver2_init( &driver2, &driver2_cfg );
     if ( PWM_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

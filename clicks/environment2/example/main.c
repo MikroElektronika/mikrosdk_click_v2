@@ -28,6 +28,10 @@
 #include "log.h"
 #include "environment2.h"
 
+#ifndef MIKROBUS_POSITION_ENVIRONMENT2
+    #define MIKROBUS_POSITION_ENVIRONMENT2 MIKROBUS_1
+#endif
+
 static environment2_t environment2;
 static log_t logger;
 
@@ -57,7 +61,7 @@ void application_init ( void ) {
     // Click initialization.
 
     environment2_cfg_setup( &environment2_cfg );
-    ENVIRONMENT2_MAP_MIKROBUS( environment2_cfg, MIKROBUS_1 );
+    ENVIRONMENT2_MAP_MIKROBUS( environment2_cfg, MIKROBUS_POSITION_ENVIRONMENT2 );
     err_t init_flag = environment2_init( &environment2, &environment2_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

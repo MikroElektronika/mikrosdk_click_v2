@@ -41,6 +41,10 @@
 #include "log.h"
 #include "bl653.h"
 
+#ifndef MIKROBUS_POSITION_BL653
+    #define MIKROBUS_POSITION_BL653 MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT     "BL653 Click board - demo example."
 
@@ -168,7 +172,7 @@ void application_init ( void )
 
     // Click initialization.
     bl653_cfg_setup( &bl653_cfg );
-    BL653_MAP_MIKROBUS( bl653_cfg, MIKROBUS_1 );
+    BL653_MAP_MIKROBUS( bl653_cfg, MIKROBUS_POSITION_BL653 );
     if ( UART_ERROR == bl653_init( &bl653, &bl653_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

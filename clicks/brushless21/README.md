@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless21_cfg_setup( &brushless21_cfg );
-    BRUSHLESS21_MAP_MIKROBUS( brushless21_cfg, MIKROBUS_1 );
+    BRUSHLESS21_MAP_MIKROBUS( brushless21_cfg, MIKROBUS_POSITION_BRUSHLESS21 );
     err_t init_flag = brushless21_init( &brushless21, &brushless21_cfg );
     if ( ( PWM_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum5_cfg_setup( &cfg );
-    TEMPHUM5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM5 );
     temphum5_init( &temphum5, &cfg );
 }
 ```

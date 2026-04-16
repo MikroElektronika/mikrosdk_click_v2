@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ipd2_cfg_setup( &ipd2_cfg );
-    IPD2_MAP_MIKROBUS( ipd2_cfg, MIKROBUS_1 );
+    IPD2_MAP_MIKROBUS( ipd2_cfg, MIKROBUS_POSITION_IPD2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ipd2_init( &ipd2, &ipd2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

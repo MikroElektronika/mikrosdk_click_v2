@@ -95,7 +95,7 @@ void application_init ( void )
     // Click initialization.
 
     i2cisolator4_cfg_setup( &i2cisolator4_cfg );
-    I2CISOLATOR4_MAP_MIKROBUS( i2cisolator4_cfg, MIKROBUS_1 );
+    I2CISOLATOR4_MAP_MIKROBUS( i2cisolator4_cfg, MIKROBUS_POSITION_I2CISOLATOR4 );
     err_t init_flag = i2cisolator4_init( &i2cisolator4, &i2cisolator4_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

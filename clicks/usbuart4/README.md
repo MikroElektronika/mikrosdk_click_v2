@@ -85,7 +85,7 @@ void application_init ( void )
     // Click initialization.
 
     usbuart4_cfg_setup( &usbuart4_cfg );
-    USBUART4_MAP_MIKROBUS( usbuart4_cfg, MIKROBUS_1 );
+    USBUART4_MAP_MIKROBUS( usbuart4_cfg, MIKROBUS_POSITION_USBUART4 );
     
     err_t init_flag  = usbuart4_init( &usbuart4, &usbuart4_cfg );
     if ( UART_ERROR == init_flag ) {

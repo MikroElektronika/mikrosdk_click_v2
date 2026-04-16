@@ -25,6 +25,10 @@
 #include "log.h"
 #include "angle9.h"
 
+#ifndef MIKROBUS_POSITION_ANGLE9
+    #define MIKROBUS_POSITION_ANGLE9 MIKROBUS_1
+#endif
+
 static angle9_t angle9;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     angle9_cfg_setup( &angle9_cfg );
-    ANGLE9_MAP_MIKROBUS( angle9_cfg, MIKROBUS_1 );
+    ANGLE9_MAP_MIKROBUS( angle9_cfg, MIKROBUS_POSITION_ANGLE9 );
     if ( SPI_MASTER_ERROR == angle9_init( &angle9, &angle9_cfg ) )
     {
         log_error( &logger, " Communication init." );

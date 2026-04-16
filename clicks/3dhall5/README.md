@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     c3dhall5_cfg_setup( &cfg );
-    C3DHALL5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C3DHALL5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_3DHALL5 );
     c3dhall5_init( &c3dhall5, &cfg );
 
     c3dhall5_default_cfg ( &c3dhall5 );

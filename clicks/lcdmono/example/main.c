@@ -44,6 +44,10 @@
 #include "lcdmono_font.h"
 #include "lcdmono_image.h"
 
+#ifndef MIKROBUS_POSITION_LCDMONO
+    #define MIKROBUS_POSITION_LCDMONO MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static lcdmono_t lcdmono;
@@ -62,7 +66,7 @@ void application_init ( void )
 
     //  Click initialization.
     lcdmono_cfg_setup( &cfg );
-    LCDMONO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LCDMONO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LCDMONO );
     lcdmono_init( &lcdmono, &cfg );
 
     lcdmono_display_reset( &lcdmono );

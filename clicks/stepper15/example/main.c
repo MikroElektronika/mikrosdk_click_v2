@@ -30,6 +30,10 @@
 #include "log.h"
 #include "stepper15.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER15
+    #define MIKROBUS_POSITION_STEPPER15 MIKROBUS_1
+#endif
+
 static stepper15_t stepper15;
 static log_t logger;
 static uint8_t step_speed = 100;
@@ -55,7 +59,7 @@ void application_init ( void ) {
     // Click initialization.
 
     stepper15_cfg_setup( &stepper15_cfg );
-    STEPPER15_MAP_MIKROBUS( stepper15_cfg, MIKROBUS_1 );
+    STEPPER15_MAP_MIKROBUS( stepper15_cfg, MIKROBUS_POSITION_STEPPER15 );
     err_t init_flag  = stepper15_init( &stepper15, &stepper15_cfg );
     if ( ( init_flag == I2C_MASTER_ERROR ) || ( init_flag == SPI_MASTER_ERROR ) ) {
         log_error( &logger, " Application Init Error. " );

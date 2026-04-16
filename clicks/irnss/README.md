@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     irnss_cfg_setup( &irnss_cfg );
-    IRNSS_MAP_MIKROBUS( irnss_cfg, MIKROBUS_1 );
+    IRNSS_MAP_MIKROBUS( irnss_cfg, MIKROBUS_POSITION_IRNSS );
     if ( UART_ERROR == irnss_init( &irnss, &irnss_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -27,6 +27,10 @@
 #include "log.h"
 #include "ecg7.h"
 
+#ifndef MIKROBUS_POSITION_ECG7
+    #define MIKROBUS_POSITION_ECG7 MIKROBUS_1
+#endif
+
 static ecg7_t ecg7;   /**< ECG 7 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     ecg7_cfg_setup( &ecg7_cfg );
-    ECG7_MAP_MIKROBUS( ecg7_cfg, MIKROBUS_1 );
+    ECG7_MAP_MIKROBUS( ecg7_cfg, MIKROBUS_POSITION_ECG7 );
     err_t init_flag = ecg7_init( &ecg7, &ecg7_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

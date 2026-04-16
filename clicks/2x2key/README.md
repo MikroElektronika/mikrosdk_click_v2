@@ -99,7 +99,7 @@ void application_init ( void )
     //  Click initialization.
 
     c2x2key_cfg_setup( &cfg );
-    C2X2KEY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C2X2KEY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_2X2KEY );
     c2x2key_init( &c2x2key, &cfg );
     
     log_printf( &logger, "-----------------------\r\n" );

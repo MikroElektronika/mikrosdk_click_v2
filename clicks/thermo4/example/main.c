@@ -23,6 +23,10 @@
 #include "log.h"
 #include "thermo4.h"
 
+#ifndef MIKROBUS_POSITION_THERMO4
+    #define MIKROBUS_POSITION_THERMO4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo4_t thermo4;
@@ -69,7 +73,7 @@ void application_init ( void )
     //  Click initialization.
     
     thermo4_cfg_setup( &cfg );
-    THERMO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO4 );
     thermo4_init( &thermo4, &cfg );
     log_info( &logger, "---- Application Init ----" );
 }

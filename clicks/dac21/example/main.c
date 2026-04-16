@@ -22,6 +22,10 @@
 #include "log.h"
 #include "dac21.h"
 
+#ifndef MIKROBUS_POSITION_DAC21
+    #define MIKROBUS_POSITION_DAC21 MIKROBUS_1
+#endif
+
 // The number of steps by which we will divide the entire voltage range. 
 #define NUMBER_OF_STEPS 20
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     dac21_cfg_setup( &dac21_cfg );
-    DAC21_MAP_MIKROBUS( dac21_cfg, MIKROBUS_1 );
+    DAC21_MAP_MIKROBUS( dac21_cfg, MIKROBUS_POSITION_DAC21 );
     if ( I2C_MASTER_ERROR == dac21_init( &dac21, &dac21_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

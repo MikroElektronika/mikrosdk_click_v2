@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp5_cfg_setup( &cfg );
-    AUDIOAMP5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOAMP5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOAMP5 );
     audioamp5_init( &audioamp5, &cfg );
 
     audioamp5_default_cfg( &audioamp5 );

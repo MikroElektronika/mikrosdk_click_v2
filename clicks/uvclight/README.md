@@ -86,7 +86,7 @@ void application_init ( void )
     //  Click initialization.
 
     uvclight_cfg_setup( &cfg );
-    UVCLIGHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UVCLIGHT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UVCLIGHT );
     uvclight_init( &uvclight, &cfg );
 
     uvclight_set_duty_cycle ( &uvclight, 0.0 );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "mram4.h"
 
+#ifndef MIKROBUS_POSITION_MRAM4
+    #define MIKROBUS_POSITION_MRAM4 MIKROBUS_1
+#endif
+
 static mram4_t mram4;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     mram4_cfg_setup( &mram4_cfg );
-    MRAM4_MAP_MIKROBUS( mram4_cfg, MIKROBUS_1 );
+    MRAM4_MAP_MIKROBUS( mram4_cfg, MIKROBUS_POSITION_MRAM4 );
     if ( SPI_MASTER_ERROR == mram4_init( &mram4, &mram4_cfg ) )
     {
         log_error( &logger, " Communication init." );

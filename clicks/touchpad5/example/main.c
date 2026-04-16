@@ -31,6 +31,10 @@
 #include "log.h"
 #include "touchpad5.h"
 
+#ifndef MIKROBUS_POSITION_TOUCHPAD5
+    #define MIKROBUS_POSITION_TOUCHPAD5 MIKROBUS_1
+#endif
+
 // Snap buffer size
 #define SNAP_BUFFER_SIZE                     ( 8 )
 
@@ -110,7 +114,7 @@ void application_init ( void )
 
     // Click initialization.
     touchpad5_cfg_setup( &touchpad5_cfg );
-    TOUCHPAD5_MAP_MIKROBUS( touchpad5_cfg, MIKROBUS_1 );
+    TOUCHPAD5_MAP_MIKROBUS( touchpad5_cfg, MIKROBUS_POSITION_TOUCHPAD5 );
     if ( I2C_MASTER_ERROR == touchpad5_init( &touchpad5, &touchpad5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

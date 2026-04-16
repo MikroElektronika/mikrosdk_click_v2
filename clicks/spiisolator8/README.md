@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     spiisolator8_cfg_setup( &spiisolator8_cfg );
-    SPIISOLATOR8_MAP_MIKROBUS( spiisolator8_cfg, MIKROBUS_1 );
+    SPIISOLATOR8_MAP_MIKROBUS( spiisolator8_cfg, MIKROBUS_POSITION_SPIISOLATOR8 );
     if ( SPI_MASTER_ERROR == spiisolator8_init( &spiisolator8, &spiisolator8_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -21,6 +21,10 @@
 #include "log.h"
 #include "volume.h"
 
+#ifndef MIKROBUS_POSITION_VOLUME
+    #define MIKROBUS_POSITION_VOLUME MIKROBUS_1
+#endif
+
 float left_speaker_gain;
 float right_speaker_gain;
 uint8_t one_circle;
@@ -48,7 +52,7 @@ void application_init ( void ) {
     // Click initialization.
 
     volume_cfg_setup( &volume_cfg );
-    VOLUME_MAP_MIKROBUS( volume_cfg, MIKROBUS_1 );
+    VOLUME_MAP_MIKROBUS( volume_cfg, MIKROBUS_POSITION_VOLUME );
     err_t init_flag  = volume_init( &volume, &volume_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

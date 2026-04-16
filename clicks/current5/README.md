@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     current5_cfg_setup( &current5_cfg );
-    CURRENT5_MAP_MIKROBUS( current5_cfg, MIKROBUS_1 );
+    CURRENT5_MAP_MIKROBUS( current5_cfg, MIKROBUS_POSITION_CURRENT5 );
     err_t init_flag  = current5_init( &current5, &current5_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

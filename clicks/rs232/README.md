@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs232_cfg_setup( &cfg );
-    RS232_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS232_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS232 );
     rs232_init( &rs232, &cfg );
     
     Delay_ms ( 100 );

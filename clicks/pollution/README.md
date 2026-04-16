@@ -95,7 +95,7 @@ void application_init ( void )
     //  Click initialization.
 
     pollution_cfg_setup( &cfg );
-    POLLUTION_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POLLUTION_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POLLUTION );
     pollution_init( &pollution, &cfg );
     
     log_printf( &logger, "---------------------------------------------\r\n" );

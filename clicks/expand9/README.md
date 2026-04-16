@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     expand9_cfg_setup( &expand9_cfg );
-    EXPAND9_MAP_MIKROBUS( expand9_cfg, MIKROBUS_1 );
+    EXPAND9_MAP_MIKROBUS( expand9_cfg, MIKROBUS_POSITION_EXPAND9 );
     err_t init_flag = expand9_init( &expand9, &expand9_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

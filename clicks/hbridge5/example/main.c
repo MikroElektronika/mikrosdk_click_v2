@@ -23,6 +23,10 @@
 #include "log.h"
 #include "hbridge5.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE5
+    #define MIKROBUS_POSITION_HBRIDGE5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static hbridge5_t hbridge5;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     hbridge5_cfg_setup( &cfg );
-    HBRIDGE5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HBRIDGE5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HBRIDGE5 );
     hbridge5_init( &hbridge5, &cfg );
     hbridge5_default_cfg( &hbridge5 );
 }

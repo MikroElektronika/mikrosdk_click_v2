@@ -23,6 +23,10 @@
 #include "log.h"
 #include "optoencoder2.h"
 
+#ifndef MIKROBUS_POSITION_OPTOENCODER2
+    #define MIKROBUS_POSITION_OPTOENCODER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static optoencoder2_t optoencoder2;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     //  Click initialization.
     optoencoder2_cfg_setup( &cfg );
-    OPTOENCODER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OPTOENCODER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OPTOENCODER2 );
     optoencoder2_init( &optoencoder2, &cfg );
 
     optoencoder2_zero_counter( &optoencoder2 );

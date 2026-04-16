@@ -36,6 +36,10 @@
 #include "log.h"
 #include "waveform3.h"
 
+#ifndef MIKROBUS_POSITION_WAVEFORM3
+    #define MIKROBUS_POSITION_WAVEFORM3 MIKROBUS_1
+#endif
+
 static waveform3_t waveform3;
 static log_t logger;
 
@@ -63,7 +67,7 @@ void application_init ( void ) {
     // Click initialization.
 
     waveform3_cfg_setup( &waveform3_cfg );
-    WAVEFORM3_MAP_MIKROBUS( waveform3_cfg, MIKROBUS_1 );
+    WAVEFORM3_MAP_MIKROBUS( waveform3_cfg, MIKROBUS_POSITION_WAVEFORM3 );
     err_t init_flag  = waveform3_init( &waveform3, &waveform3_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

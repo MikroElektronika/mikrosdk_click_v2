@@ -71,7 +71,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cscanner_cfg_setup( &i2cscanner_cfg );
-    I2CSCANNER_MAP_MIKROBUS( i2cscanner_cfg, MIKROBUS_1 );
+    I2CSCANNER_MAP_MIKROBUS( i2cscanner_cfg, MIKROBUS_POSITION_I2CSCANNER );
     if ( I2CSCANNER_OK != i2cscanner_init( &i2cscanner, &i2cscanner_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

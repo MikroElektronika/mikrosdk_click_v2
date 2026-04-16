@@ -83,7 +83,7 @@ void application_init ( void )
     
     // Click initialization.
     eeg_cfg_setup( &eeg_cfg );
-    EEG_MAP_MIKROBUS( eeg_cfg, MIKROBUS_1 );
+    EEG_MAP_MIKROBUS( eeg_cfg, MIKROBUS_POSITION_EEG );
     if ( ADC_ERROR == eeg_init( &eeg, &eeg_cfg ) ){
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

@@ -31,6 +31,10 @@
 #include "log.h"
 #include "indexcounter.h"
 
+#ifndef MIKROBUS_POSITION_INDEXCOUNTER
+    #define MIKROBUS_POSITION_INDEXCOUNTER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static indexcounter_t indexcounter;
@@ -98,7 +102,7 @@ void application_init ( void )
     //  Click initialization.
 
     indexcounter_cfg_setup( &cfg );
-    INDEXCOUNTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    INDEXCOUNTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_INDEXCOUNTER );
     indexcounter_init( &indexcounter, &cfg );
 }
 

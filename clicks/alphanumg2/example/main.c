@@ -26,6 +26,10 @@
 #include "log.h"
 #include "alphanumg2.h"
 
+#ifndef MIKROBUS_POSITION_ALPHANUMG2
+    #define MIKROBUS_POSITION_ALPHANUMG2 MIKROBUS_1
+#endif
+
 #define ASCII_CHARACTER_DIGIT_0        '0'
 #define ASCII_CHARACTER_UPPERCASE_Z    'Z'
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     alphanumg2_cfg_setup( &alphanumg2_cfg );
-    ALPHANUMG2_MAP_MIKROBUS( alphanumg2_cfg, MIKROBUS_1 );
+    ALPHANUMG2_MAP_MIKROBUS( alphanumg2_cfg, MIKROBUS_POSITION_ALPHANUMG2 );
     if ( SPI_MASTER_ERROR == alphanumg2_init( &alphanumg2, &alphanumg2_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -81,7 +81,7 @@ void application_init ( void )
     //  Click initialization.
 
     powerbank_cfg_setup( &cfg );
-    POWERBANK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POWERBANK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POWERBANK );
     powerbank_init( &powerbank, &cfg );
 
     Delay_ms ( 100 );

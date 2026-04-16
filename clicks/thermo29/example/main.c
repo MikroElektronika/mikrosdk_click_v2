@@ -25,6 +25,10 @@
 #include "log.h"
 #include "thermo29.h"
 
+#ifndef MIKROBUS_POSITION_THERMO29
+    #define MIKROBUS_POSITION_THERMO29 MIKROBUS_1
+#endif
+
 static thermo29_t thermo29;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo29_cfg_setup( &thermo29_cfg );
-    THERMO29_MAP_MIKROBUS( thermo29_cfg, MIKROBUS_1 );
+    THERMO29_MAP_MIKROBUS( thermo29_cfg, MIKROBUS_POSITION_THERMO29 );
     if ( SPI_MASTER_ERROR == thermo29_init( &thermo29, &thermo29_cfg ) )
     {
         log_error( &logger, " Communication init." );

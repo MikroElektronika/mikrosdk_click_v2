@@ -24,6 +24,10 @@
 #include "log.h"
 #include "isoadc7.h"
 
+#ifndef MIKROBUS_POSITION_ISOADC7
+    #define MIKROBUS_POSITION_ISOADC7 MIKROBUS_1
+#endif
+
 static isoadc7_t isoadc7;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     isoadc7_cfg_setup( &isoadc7_cfg );
-    ISOADC7_MAP_MIKROBUS( isoadc7_cfg, MIKROBUS_1 );
+    ISOADC7_MAP_MIKROBUS( isoadc7_cfg, MIKROBUS_POSITION_ISOADC7 );
     if ( SPI_MASTER_ERROR == isoadc7_init( &isoadc7, &isoadc7_cfg ) )
     {
         log_error( &logger, " Communication init." );

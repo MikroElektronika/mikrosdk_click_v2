@@ -21,6 +21,10 @@
 #include "log.h"
 #include "terminal2.h"
 
+#ifndef MIKROBUS_POSITION_TERMINAL2
+    #define MIKROBUS_POSITION_TERMINAL2 MIKROBUS_1
+#endif
+
 static terminal2_t terminal2;   /**< Terminal 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -44,7 +48,7 @@ void application_init ( void )
 
     // Click initialization.
     terminal2_cfg_setup( &terminal2_cfg );
-    TERMINAL2_MAP_MIKROBUS( terminal2_cfg, MIKROBUS_1 );
+    TERMINAL2_MAP_MIKROBUS( terminal2_cfg, MIKROBUS_POSITION_TERMINAL2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == terminal2_init( &terminal2, &terminal2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

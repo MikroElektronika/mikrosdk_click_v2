@@ -38,6 +38,10 @@
 #include "log.h"
 #include "lightranger7.h"
 
+#ifndef MIKROBUS_POSITION_LIGHTRANGER7
+    #define MIKROBUS_POSITION_LIGHTRANGER7 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static lightranger7_t lightranger7;
@@ -85,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     lightranger7_cfg_setup( &lightranger7_cfg );
-    LIGHTRANGER7_MAP_MIKROBUS( lightranger7_cfg, MIKROBUS_1 );
+    LIGHTRANGER7_MAP_MIKROBUS( lightranger7_cfg, MIKROBUS_POSITION_LIGHTRANGER7 );
     if ( UART_ERROR == lightranger7_init( &lightranger7, &lightranger7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

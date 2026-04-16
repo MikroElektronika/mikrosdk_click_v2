@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     rng_cfg_setup( &cfg );
-    RNG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RNG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RNG );
     rng_init( &rng, &cfg );
 
     rng_default_cfg( &rng );

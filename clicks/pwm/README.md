@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     pwm_cfg_setup( &cfg );
-    PWM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PWM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PWM );
     pwm_init( &pwm, &cfg );
     Delay_ms ( 100 );
     

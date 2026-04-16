@@ -31,6 +31,10 @@
 #include "log.h"
 #include "lightranger5.h"
 
+#ifndef MIKROBUS_POSITION_LIGHTRANGER5
+    #define MIKROBUS_POSITION_LIGHTRANGER5 MIKROBUS_1
+#endif
+
 static lightranger5_t lightranger5;
 static log_t logger;
 
@@ -140,7 +144,7 @@ void application_init ( void ) {
     // Click initialization.
 
     lightranger5_cfg_setup( &lightranger5_cfg );
-    LIGHTRANGER5_MAP_MIKROBUS( lightranger5_cfg, MIKROBUS_1 );
+    LIGHTRANGER5_MAP_MIKROBUS( lightranger5_cfg, MIKROBUS_POSITION_LIGHTRANGER5 );
     err_t init_flag = lightranger5_init( &lightranger5, &lightranger5_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

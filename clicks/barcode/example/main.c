@@ -27,6 +27,10 @@
 #include "barcode.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_BARCODE
+    #define MIKROBUS_POSITION_BARCODE MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 2000
 #define PROCESS_RX_BUFFER_SIZE 300
 
@@ -99,7 +103,7 @@ void application_init ( void )
     //  Click initialization.
 
     barcode_cfg_setup( &cfg );
-    BARCODE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BARCODE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BARCODE );
     barcode_init( &barcode, &cfg );
 
     Delay_ms ( 500 );

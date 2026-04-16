@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     magneto12_cfg_setup( &magneto12_cfg );
-    MAGNETO12_MAP_MIKROBUS( magneto12_cfg, MIKROBUS_1 );
+    MAGNETO12_MAP_MIKROBUS( magneto12_cfg, MIKROBUS_POSITION_MAGNETO12 );
     err_t init_flag = magneto12_init( &magneto12, &magneto12_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

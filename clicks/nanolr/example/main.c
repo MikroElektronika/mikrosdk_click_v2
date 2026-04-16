@@ -29,6 +29,10 @@
 #include "nanolr.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_NANOLR
+    #define MIKROBUS_POSITION_NANOLR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 // #define DEMO_APP_RECEIVER
@@ -108,7 +112,7 @@ void application_init ( void )
     //  Click initialization.
 
     nanolr_cfg_setup( &cfg );
-    NANOLR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NANOLR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NANOLR );
     nanolr_init( &nanolr, &cfg );
 
     nanolr_default_cfg( &nanolr );

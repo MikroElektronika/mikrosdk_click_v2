@@ -25,6 +25,10 @@
 #include "log.h"
 #include "ambient18.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT18
+    #define MIKROBUS_POSITION_AMBIENT18 MIKROBUS_1
+#endif
+
 static ambient18_t ambient18;   /**< Ambient 18 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient18_cfg_setup( &ambient18_cfg );
-    AMBIENT18_MAP_MIKROBUS( ambient18_cfg, MIKROBUS_1 );
+    AMBIENT18_MAP_MIKROBUS( ambient18_cfg, MIKROBUS_POSITION_AMBIENT18 );
     err_t init_flag = ambient18_init( &ambient18, &ambient18_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "rmstodc2.h"
 
+#ifndef MIKROBUS_POSITION_RMSTODC2
+    #define MIKROBUS_POSITION_RMSTODC2 MIKROBUS_1
+#endif
+
 static rmstodc2_t rmstodc2;   /**< RMS to DC 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     rmstodc2_cfg_setup( &rmstodc2_cfg );
-    RMSTODC2_MAP_MIKROBUS( rmstodc2_cfg, MIKROBUS_1 );
+    RMSTODC2_MAP_MIKROBUS( rmstodc2_cfg, MIKROBUS_POSITION_RMSTODC2 );
     err_t init_flag = rmstodc2_init( &rmstodc2, &rmstodc2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

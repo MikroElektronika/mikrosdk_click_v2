@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     uarti2cspi_cfg_setup( &cfg );
-    UARTI2CSPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UARTI2CSPI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UARTI2CSPI );
     uarti2cspi_init( &uarti2cspi, &cfg );
     Delay_ms ( 1000 );
 

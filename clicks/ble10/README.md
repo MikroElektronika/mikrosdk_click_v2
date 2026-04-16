@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     ble10_cfg_setup( &ble10_cfg );
-    BLE10_MAP_MIKROBUS( ble10_cfg, MIKROBUS_1 );
+    BLE10_MAP_MIKROBUS( ble10_cfg, MIKROBUS_POSITION_BLE10 );
     err_t init_flag  = ble10_init( &ble10, &ble10_cfg );
     if ( UART_ERROR == init_flag ) 
     {

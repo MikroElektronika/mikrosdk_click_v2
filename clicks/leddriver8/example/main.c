@@ -23,6 +23,10 @@
 #include "log.h"
 #include "leddriver8.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER8
+    #define MIKROBUS_POSITION_LEDDRIVER8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static leddriver8_t leddriver8;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver8_cfg_setup( &cfg );
-    LEDDRIVER8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER8 );
     leddriver8_init( &leddriver8, &cfg );
 
     leddriver8_reset( &leddriver8 );

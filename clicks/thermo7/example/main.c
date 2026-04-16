@@ -22,6 +22,10 @@
 #include "log.h"
 #include "thermo7.h"
 
+#ifndef MIKROBUS_POSITION_THERMO7
+    #define MIKROBUS_POSITION_THERMO7 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo7_t thermo7;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo7_cfg_setup( &cfg );
-    THERMO7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO7 );
     thermo7_init( &thermo7, &cfg );
 
     thermo7_set_configuration( &thermo7, THERMO7_CONFIG_COMPARATOR_MODE | THERMO7_CONFIG_ALERT_POLARITY_ACTIVE_HIGH );

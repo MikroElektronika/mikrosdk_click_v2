@@ -29,6 +29,10 @@
 #include "log.h"
 #include "solarenergy2.h"
 
+#ifndef MIKROBUS_POSITION_SOLARENERGY2
+    #define MIKROBUS_POSITION_SOLARENERGY2 MIKROBUS_1
+#endif
+
 static solarenergy2_t solarenergy2;
 static log_t logger;
 static solarenergy2_status_t status;
@@ -97,7 +101,7 @@ void application_init ( void )
 
     // Click initialization.
     solarenergy2_cfg_setup( &solarenergy2_cfg );
-    SOLARENERGY2_MAP_MIKROBUS( solarenergy2_cfg, MIKROBUS_1 );
+    SOLARENERGY2_MAP_MIKROBUS( solarenergy2_cfg, MIKROBUS_POSITION_SOLARENERGY2 );
     if ( I2C_MASTER_ERROR == solarenergy2_init( &solarenergy2, &solarenergy2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

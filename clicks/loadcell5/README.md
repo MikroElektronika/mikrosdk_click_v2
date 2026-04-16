@@ -93,7 +93,7 @@ void application_init ( void )
     // Click initialization.
 
     loadcell5_cfg_setup( &loadcell5_cfg );
-    LOADCELL5_MAP_MIKROBUS( loadcell5_cfg, MIKROBUS_1 );
+    LOADCELL5_MAP_MIKROBUS( loadcell5_cfg, MIKROBUS_POSITION_LOADCELL5 );
     err_t init_flag  = loadcell5_init( &loadcell5, &loadcell5_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

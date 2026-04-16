@@ -24,6 +24,10 @@
 #include "log.h"
 #include "bargraph3.h"
 
+#ifndef MIKROBUS_POSITION_BARGRAPH3
+    #define MIKROBUS_POSITION_BARGRAPH3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static bargraph3_t bargraph3;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     bargraph3_cfg_setup( &cfg );
-    BARGRAPH3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BARGRAPH3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BARGRAPH3 );
     bargraph3_init( &bargraph3, &cfg );
     
     bargraph3_enable( &bargraph3, BARGRAPH3_DEVICE_ENABLE );

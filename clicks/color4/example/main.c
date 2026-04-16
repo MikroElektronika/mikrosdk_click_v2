@@ -37,6 +37,10 @@
 #include "log.h"
 #include "color4.h"
 
+#ifndef MIKROBUS_POSITION_COLOR4
+    #define MIKROBUS_POSITION_COLOR4 MIKROBUS_1
+#endif
+
 #define COLOR4_LIM_WHITE_COLOR        17000
 #define COLOR4_LIM_DARK_LUX           15.0
 #define COLOR4_CCT_LIM_BLUE_COLOR     9000
@@ -116,7 +120,7 @@ void application_init ( void )
 
     // Click initialization.
     color4_cfg_setup( &color4_cfg );
-    COLOR4_MAP_MIKROBUS( color4_cfg, MIKROBUS_1 );
+    COLOR4_MAP_MIKROBUS( color4_cfg, MIKROBUS_POSITION_COLOR4 );
     if ( I2C_MASTER_ERROR == color4_init( &color4, &color4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

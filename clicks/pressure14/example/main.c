@@ -26,6 +26,10 @@
 #include "log.h"
 #include "pressure14.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE14
+    #define MIKROBUS_POSITION_PRESSURE14 MIKROBUS_1
+#endif
+
 
 // ------------------------------------------------------------------ VARIABLES
 static pressure14_t pressure14;
@@ -55,7 +59,7 @@ void application_init ( void ) {
 
     // Click initialization.
     pressure14_cfg_setup( &pressure14_cfg );
-    PRESSURE14_MAP_MIKROBUS( pressure14_cfg, MIKROBUS_1 );
+    PRESSURE14_MAP_MIKROBUS( pressure14_cfg, MIKROBUS_POSITION_PRESSURE14 );
     err_t init_flag = pressure14_init( &pressure14, &pressure14_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {       
         log_error( &logger, " Application Init Error. " );

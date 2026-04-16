@@ -23,6 +23,10 @@
 #include "log.h"
 #include "buck12.h"
 
+#ifndef MIKROBUS_POSITION_BUCK12
+    #define MIKROBUS_POSITION_BUCK12 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static buck12_t buck12;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck12_cfg_setup( &cfg );
-    BUCK12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK12 );
     buck12_init( &buck12, &cfg );
 
     buck12_control( &buck12, BUCK12_ENABLE );

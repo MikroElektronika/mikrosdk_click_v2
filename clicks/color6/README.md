@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     color6_cfg_setup( &cfg );
-    COLOR6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR6 );
     color6_init( &color6, &cfg );
 
     color6_software_reset( &color6 );

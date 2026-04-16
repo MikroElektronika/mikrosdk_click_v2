@@ -93,7 +93,7 @@ void application_init ( void )
     //  Click initialization.
 
     adac_cfg_setup( &cfg );
-    ADAC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADAC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADAC );
     adac_init( &adac, &cfg );
     Delay_100ms( );
     adac_hardware_reset( &adac );

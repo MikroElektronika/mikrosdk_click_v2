@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     adc7_cfg_setup( &cfg );
-    ADC7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC7 );
     adc7_init( &adc7, &cfg );
     
     adc7_default_cfg( &adc7 );

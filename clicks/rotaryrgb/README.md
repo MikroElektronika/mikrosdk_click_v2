@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     rotaryrgb_cfg_setup( &rotaryrgb_cfg, &rotaryrgb_logic_zero, &rotaryrgb_logic_one );
-    ROTARYRGB_MAP_MIKROBUS( rotaryrgb_cfg, MIKROBUS_1 );
+    ROTARYRGB_MAP_MIKROBUS( rotaryrgb_cfg, MIKROBUS_POSITION_ROTARYRGB );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == rotaryrgb_init( &rotaryrgb, &rotaryrgb_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

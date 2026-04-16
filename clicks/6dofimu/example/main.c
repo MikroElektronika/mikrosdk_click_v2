@@ -32,6 +32,10 @@
 #include "log.h"
 #include "c6dofimu.h"
 
+#ifndef MIKROBUS_POSITION_6DOFIMU
+    #define MIKROBUS_POSITION_6DOFIMU MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c6dofimu_t c6dofimu;
@@ -61,7 +65,7 @@ void application_init ( )
     //  Click initialization.
 
     c6dofimu_cfg_setup( &cfg );
-    C6DOFIMU_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C6DOFIMU_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_6DOFIMU );
     c6dofimu_init( &c6dofimu, &cfg );
     Delay_ms ( 100 );
     c6dofimu_default_cfg( &c6dofimu );

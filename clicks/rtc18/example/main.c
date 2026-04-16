@@ -24,6 +24,10 @@
 #include "log.h"
 #include "rtc18.h"
 
+#ifndef MIKROBUS_POSITION_RTC18
+    #define MIKROBUS_POSITION_RTC18 MIKROBUS_1
+#endif
+
 static rtc18_t rtc18;
 static log_t logger;
 static rtc18_time_t time;
@@ -60,7 +64,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc18_cfg_setup( &rtc18_cfg );
-    RTC18_MAP_MIKROBUS( rtc18_cfg, MIKROBUS_1 );
+    RTC18_MAP_MIKROBUS( rtc18_cfg, MIKROBUS_POSITION_RTC18 );
     if ( I2C_MASTER_ERROR == rtc18_init( &rtc18, &rtc18_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

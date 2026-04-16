@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac5_cfg_setup( &cfg );
-    DAC5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC5 );
     dac5_init( &dac5, &cfg );
 
     if ( dac5_get_device_id( &dac5 ) != DAC5_DEVICE_ID )

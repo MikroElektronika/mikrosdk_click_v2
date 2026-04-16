@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     adc24_cfg_setup( &adc24_cfg );
-    ADC24_MAP_MIKROBUS( adc24_cfg, MIKROBUS_1 );
+    ADC24_MAP_MIKROBUS( adc24_cfg, MIKROBUS_POSITION_ADC24 );
     if ( SPI_MASTER_ERROR == adc24_init( &adc24, &adc24_cfg ) )
     {
         log_error( &logger, " Communication init." );

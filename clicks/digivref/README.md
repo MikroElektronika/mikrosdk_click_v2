@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     digivref_cfg_setup( &cfg );
-    DIGIVREF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIGIVREF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIGIVREF );
     digivref_init( &digivref, &cfg );
 }
 ```

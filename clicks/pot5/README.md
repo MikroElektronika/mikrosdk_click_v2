@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     pot5_cfg_setup( &pot5_cfg );
-    POT5_MAP_MIKROBUS( pot5_cfg, MIKROBUS_1 );
+    POT5_MAP_MIKROBUS( pot5_cfg, MIKROBUS_POSITION_POT5 );
     err_t init_flag = pot5_init( &pot5, &pot5_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

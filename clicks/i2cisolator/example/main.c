@@ -27,6 +27,10 @@
 #include "log.h"
 #include "i2cisolator.h"
 
+#ifndef MIKROBUS_POSITION_I2CISOLATOR
+    #define MIKROBUS_POSITION_I2CISOLATOR MIKROBUS_1
+#endif
+
 /* Register Address */
 #define I2CISOLATOR_IRTHERMO2_CONFIGURATION                       0x02
 #define I2CISOLATOR_IRTHERMO2_OBJECT_TEMPERATURE              0x03
@@ -87,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     i2cisolator_cfg_setup( &cfg );
-    I2CISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CISOLATOR );
     i2cisolator_init( &i2cisolator, &cfg );
 
     log_printf( &logger, "    Driver  Initialized\r\n" );

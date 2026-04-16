@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     digipot7_cfg_setup( &digipot7_cfg );
-    DIGIPOT7_MAP_MIKROBUS( digipot7_cfg, MIKROBUS_1 );
+    DIGIPOT7_MAP_MIKROBUS( digipot7_cfg, MIKROBUS_POSITION_DIGIPOT7 );
     err_t init_flag = digipot7_init( &digipot7, &digipot7_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

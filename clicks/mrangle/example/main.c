@@ -25,6 +25,10 @@
 #include "log.h"
 #include "mrangle.h"
 
+#ifndef MIKROBUS_POSITION_MRANGLE
+    #define MIKROBUS_POSITION_MRANGLE MIKROBUS_1
+#endif
+
 static mrangle_t mrangle;
 static log_t logger;
 static float angle;
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     mrangle_cfg_setup( &mrangle_cfg );
-    MRANGLE_MAP_MIKROBUS( mrangle_cfg, MIKROBUS_1 );
+    MRANGLE_MAP_MIKROBUS( mrangle_cfg, MIKROBUS_POSITION_MRANGLE );
     if ( SPI_MASTER_ERROR == mrangle_init( &mrangle, &mrangle_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

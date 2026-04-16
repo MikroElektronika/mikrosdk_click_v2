@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pressure2.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE2
+    #define MIKROBUS_POSITION_PRESSURE2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure2_t pressure2;
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure2_cfg_setup( &pressure2_cfg );
-    PRESSURE2_MAP_MIKROBUS( pressure2_cfg, MIKROBUS_1 );
+    PRESSURE2_MAP_MIKROBUS( pressure2_cfg, MIKROBUS_POSITION_PRESSURE2 );
     if ( SPI_MASTER_ERROR == pressure2_init( &pressure2, &pressure2_cfg ) )
     {
         log_error( &logger, " Communication init." );

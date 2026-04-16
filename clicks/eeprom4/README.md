@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     eeprom4_cfg_setup( &cfg );
-    EEPROM4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EEPROM4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EEPROM4 );
     eeprom4_init( &eeprom4, &cfg );
 }
 ```

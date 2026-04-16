@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     smartcard2_cfg_setup( &smartcard2_cfg );
-    SMARTCARD2_MAP_MIKROBUS( smartcard2_cfg, MIKROBUS_1 );
+    SMARTCARD2_MAP_MIKROBUS( smartcard2_cfg, MIKROBUS_POSITION_SMARTCARD2 );
     if ( UART_ERROR == smartcard2_init( &smartcard2, &smartcard2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -82,7 +82,7 @@ void application_init ( void )
 
     // Click initialization.
     profet15a_cfg_setup( &profet15a_cfg );
-    PROFET15A_MAP_MIKROBUS( profet15a_cfg, MIKROBUS_1 );
+    PROFET15A_MAP_MIKROBUS( profet15a_cfg, MIKROBUS_POSITION_PROFET15A );
     if ( profet15a_init( &profet15a, &profet15a_cfg ) == ADC_ERROR )
     {
         log_error( &logger, " Application Init Error. " );

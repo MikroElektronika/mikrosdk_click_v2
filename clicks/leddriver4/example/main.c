@@ -26,6 +26,10 @@
 #include "log.h"
 #include "leddriver4.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER4
+    #define MIKROBUS_POSITION_LEDDRIVER4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static leddriver4_t leddriver4;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver4_cfg_setup( &cfg );
-    LEDDRIVER4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER4 );
     leddriver4_init( &leddriver4, &cfg );
     
     leddriver4_set_duty_cycle ( &leddriver4, 0.0 );

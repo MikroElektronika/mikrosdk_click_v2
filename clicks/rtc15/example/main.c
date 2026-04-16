@@ -25,6 +25,10 @@
 #include "log.h"
 #include "rtc15.h"
 
+#ifndef MIKROBUS_POSITION_RTC15
+    #define MIKROBUS_POSITION_RTC15 MIKROBUS_1
+#endif
+
 static rtc15_t rtc15;
 static log_t logger;
 static rtc15_time_t time;
@@ -61,7 +65,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc15_cfg_setup( &rtc15_cfg );
-    RTC15_MAP_MIKROBUS( rtc15_cfg, MIKROBUS_1 );
+    RTC15_MAP_MIKROBUS( rtc15_cfg, MIKROBUS_POSITION_RTC15 );
     if ( I2C_MASTER_ERROR == rtc15_init( &rtc15, &rtc15_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

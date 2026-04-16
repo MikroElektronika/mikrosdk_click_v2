@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     mcp2003b_cfg_setup( &mcp2003b_cfg );
-    MCP2003B_MAP_MIKROBUS( mcp2003b_cfg, MIKROBUS_1 );
+    MCP2003B_MAP_MIKROBUS( mcp2003b_cfg, MIKROBUS_POSITION_MCP2003B );
     if ( UART_ERROR == mcp2003b_init( &mcp2003b, &mcp2003b_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

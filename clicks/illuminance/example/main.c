@@ -24,6 +24,10 @@
 #include "log.h"
 #include "illuminance.h"
 
+#ifndef MIKROBUS_POSITION_ILLUMINANCE
+    #define MIKROBUS_POSITION_ILLUMINANCE MIKROBUS_1
+#endif
+
 static illuminance_t illuminance;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     illuminance_cfg_setup( &illuminance_cfg );
-    ILLUMINANCE_MAP_MIKROBUS( illuminance_cfg, MIKROBUS_1 );
+    ILLUMINANCE_MAP_MIKROBUS( illuminance_cfg, MIKROBUS_POSITION_ILLUMINANCE );
     if ( I2C_MASTER_ERROR == illuminance_init( &illuminance, &illuminance_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

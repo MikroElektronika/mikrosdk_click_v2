@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum11_cfg_setup( &cfg );
-    TEMPHUM11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM11 );
     temphum11_init( &temphum11, &cfg );
 
     // Test comunication

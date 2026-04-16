@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     c2wirespiiso_cfg_setup( &c2wirespiiso_cfg );
-    C2WIRESPIISO_MAP_MIKROBUS( c2wirespiiso_cfg, MIKROBUS_1 );
+    C2WIRESPIISO_MAP_MIKROBUS( c2wirespiiso_cfg, MIKROBUS_POSITION_2WIRESPIISO );
     if ( SPI_MASTER_ERROR == c2wirespiiso_init( &c2wirespiiso, &c2wirespiiso_cfg ) )
     {
         log_error( &logger, " Communication init." );

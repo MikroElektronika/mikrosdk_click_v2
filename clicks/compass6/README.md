@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     compass6_cfg_setup( &compass6_cfg );
-    COMPASS6_MAP_MIKROBUS( compass6_cfg, MIKROBUS_1 );
+    COMPASS6_MAP_MIKROBUS( compass6_cfg, MIKROBUS_POSITION_COMPASS6 );
     err_t init_flag = compass6_init( &compass6, &compass6_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

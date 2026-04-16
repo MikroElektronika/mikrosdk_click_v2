@@ -96,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     c6dofimu17_cfg_setup( &c6dofimu17_cfg );
-    C6DOFIMU17_MAP_MIKROBUS( c6dofimu17_cfg, MIKROBUS_1 );
+    C6DOFIMU17_MAP_MIKROBUS( c6dofimu17_cfg, MIKROBUS_POSITION_6DOFIMU17 );
     err_t init_flag  = c6dofimu17_init( &c6dofimu17, &c6dofimu17_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     digipot6_cfg_setup( &cfg );
-    DIGIPOT6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIGIPOT6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIGIPOT6 );
     digipot6_init( &digipot6, &cfg );
     Delay_100ms( );
     digipot6_default_cfg( &digipot6 );

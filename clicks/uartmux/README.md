@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     uartmux_cfg_setup( &cfg );
-    UARTMUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UARTMUX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UARTMUX );
     uartmux_init( &uartmux, &cfg );
 
     uartmux_set_inhibit_communication( &uartmux, UARTMUX_PIN_STATE_LOW );

@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     stepdown11_cfg_setup( &stepdown11_cfg );
-    STEPDOWN11_MAP_MIKROBUS( stepdown11_cfg, MIKROBUS_1 );
+    STEPDOWN11_MAP_MIKROBUS( stepdown11_cfg, MIKROBUS_POSITION_STEPDOWN11 );
     if ( I2C_MASTER_ERROR == stepdown11_init( &stepdown11, &stepdown11_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

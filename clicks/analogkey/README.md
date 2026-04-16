@@ -78,7 +78,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     analogkey_cfg_setup( &cfg );
-    ANALOGKEY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANALOGKEY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANALOGKEY );
 
     analogkey_set_resolution( &analogkey, ANALOGKEY_ADC_RESOLUTION_12bit );
     

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "fan2.h"
 
+#ifndef MIKROBUS_POSITION_FAN2
+    #define MIKROBUS_POSITION_FAN2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static fan2_t fan2;
@@ -59,7 +63,7 @@ void application_init( void )
     
     //  Click initialization.
     fan2_cfg_setup( &fan2_cfg );
-    FAN2_MAP_MIKROBUS( fan2_cfg, MIKROBUS_1 );
+    FAN2_MAP_MIKROBUS( fan2_cfg, MIKROBUS_POSITION_FAN2 );
     fan2_init( &fan2, &fan2_cfg );
     
     fan2_default_cfg( &fan2 );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "capextend.h"
 
+#ifndef MIKROBUS_POSITION_CAPEXTEND
+    #define MIKROBUS_POSITION_CAPEXTEND MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static capextend_t capextend;
@@ -52,7 +56,7 @@ void application_init ( )
     //  Click initialization.
 
     capextend_cfg_setup( &cfg );
-    CAPEXTEND_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPEXTEND_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPEXTEND );
     capextend_init( &capextend, &cfg );
     capextend_reset( &capextend );
 }

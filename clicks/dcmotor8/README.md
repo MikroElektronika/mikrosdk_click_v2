@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor8_cfg_setup( &cfg );
-    DCMOTOR8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR8 );
     dcmotor8_init( &dcmotor8, &cfg );
 
     dcmotor8_set_duty_cycle ( &dcmotor8, 0.0 );

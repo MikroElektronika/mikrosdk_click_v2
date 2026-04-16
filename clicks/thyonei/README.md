@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     thyonei_cfg_setup( &thyonei_cfg );
-    THYONEI_MAP_MIKROBUS( thyonei_cfg, MIKROBUS_1 );
+    THYONEI_MAP_MIKROBUS( thyonei_cfg, MIKROBUS_POSITION_THYONEI );
     if ( UART_ERROR == thyonei_init( &thyonei, &thyonei_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermoj_cfg_setup( &cfg );
-    THERMOJ_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMOJ_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMOJ );
     thermoj_init( &thermoj, &cfg );
 
     log_printf( &logger, "---------------------------\r\n" );

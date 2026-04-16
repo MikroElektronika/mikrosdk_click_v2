@@ -81,7 +81,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient24_cfg_setup( &ambient24_cfg );
-    AMBIENT24_MAP_MIKROBUS( ambient24_cfg, MIKROBUS_1 );
+    AMBIENT24_MAP_MIKROBUS( ambient24_cfg, MIKROBUS_POSITION_AMBIENT24 );
     if ( I2C_MASTER_ERROR == ambient24_init( &ambient24, &ambient24_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     tfmini_cfg_setup( &tfmini_cfg );
-    TFMINI_MAP_MIKROBUS( tfmini_cfg, MIKROBUS_1 );
+    TFMINI_MAP_MIKROBUS( tfmini_cfg, MIKROBUS_POSITION_TFMINI );
     tfmini_drv_interface_selection ( &tfmini_cfg, TFMINI_DRV_SEL_UART );
     if ( TFMINI_OK != tfmini_init( &tfmini, &tfmini_cfg ) ) 
     {

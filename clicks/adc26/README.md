@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     adc26_cfg_setup( &adc26_cfg );
-    ADC26_MAP_MIKROBUS( adc26_cfg, MIKROBUS_1 );
+    ADC26_MAP_MIKROBUS( adc26_cfg, MIKROBUS_POSITION_ADC26 );
     if ( I2C_MASTER_ERROR == adc26_init( &adc26, &adc26_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

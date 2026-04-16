@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless30_cfg_setup( &brushless30_cfg );
-    BRUSHLESS30_MAP_MIKROBUS( brushless30_cfg, MIKROBUS_1 );
+    BRUSHLESS30_MAP_MIKROBUS( brushless30_cfg, MIKROBUS_POSITION_BRUSHLESS30 );
     if ( SPI_MASTER_ERROR == brushless30_init( &brushless30, &brushless30_cfg ) )
     {
         log_error( &logger, " Communication init." );

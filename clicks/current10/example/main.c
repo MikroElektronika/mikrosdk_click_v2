@@ -27,6 +27,10 @@
 #include "log.h"
 #include "current10.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT10
+    #define MIKROBUS_POSITION_CURRENT10 MIKROBUS_1
+#endif
+
 // Load current [A] used for the data resolution calibration process.
 #define CURRENT10_CALIBRATING_CURRENT   3.0f
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     current10_cfg_setup( &current10_cfg );
-    CURRENT10_MAP_MIKROBUS( current10_cfg, MIKROBUS_1 );
+    CURRENT10_MAP_MIKROBUS( current10_cfg, MIKROBUS_POSITION_CURRENT10 );
     err_t init_flag = current10_init( &current10, &current10_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

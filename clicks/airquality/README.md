@@ -79,7 +79,7 @@ void application_init ( void )
     // Click initialization.
 
     airquality_cfg_setup( &airquality_cfg );
-    AIRQUALITY_MAP_MIKROBUS( airquality_cfg, MIKROBUS_1 );
+    AIRQUALITY_MAP_MIKROBUS( airquality_cfg, MIKROBUS_POSITION_AIRQUALITY );
     if ( airquality_init( &airquality, &airquality_cfg ) == ADC_ERROR ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     adc22_cfg_setup( &adc22_cfg );
-    ADC22_MAP_MIKROBUS( adc22_cfg, MIKROBUS_1 );
+    ADC22_MAP_MIKROBUS( adc22_cfg, MIKROBUS_POSITION_ADC22 );
     if ( SPI_MASTER_ERROR == adc22_init( &adc22, &adc22_cfg ) )
     {
         log_error( &logger, " Communication init." );

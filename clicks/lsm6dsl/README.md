@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     lsm6dsl_cfg_setup( &cfg );
-    LSM6DSL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LSM6DSL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LSM6DSL );
     lsm6dsl_init( &lsm6dsl, &cfg );
 
     lsm6dsl_default_cfg( &lsm6dsl );

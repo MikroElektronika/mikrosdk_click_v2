@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     stereoamp_cfg_setup( &cfg );
-    STEREOAMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STEREOAMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STEREOAMP );
     stereoamp_init( &stereoamp, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

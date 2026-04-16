@@ -31,6 +31,10 @@
 #include "ldc.h"
 #include "math.h"
 
+#ifndef MIKROBUS_POSITION_LDC
+    #define MIKROBUS_POSITION_LDC MIKROBUS_1
+#endif
+
 static ldc_t ldc;
 static log_t logger;
 
@@ -56,7 +60,7 @@ void application_init ( void )
 
     // Click initialization.
     ldc_cfg_setup( &ldc_cfg );
-    LDC_MAP_MIKROBUS( ldc_cfg, MIKROBUS_1 );
+    LDC_MAP_MIKROBUS( ldc_cfg, MIKROBUS_POSITION_LDC );
     err_t init_flag = ldc_init( &ldc, &ldc_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

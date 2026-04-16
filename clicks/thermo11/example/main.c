@@ -27,6 +27,10 @@
 #include "log.h"
 #include "thermo11.h"
 
+#ifndef MIKROBUS_POSITION_THERMO11
+    #define MIKROBUS_POSITION_THERMO11 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo11_t thermo11;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo11_cfg_setup( &cfg );
-    THERMO11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO11 );
     thermo11_init( &thermo11, &cfg );
 
     thermo11_sw_reset( &thermo11 );

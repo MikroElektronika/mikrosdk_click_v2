@@ -88,7 +88,7 @@ void application_init ( void )
 
     //  Click initialization.
     noise_cfg_setup( &cfg );
-    NOISE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NOISE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NOISE );
     noise_init( &noise, &cfg );
 
     noise_default_cfg( &noise );

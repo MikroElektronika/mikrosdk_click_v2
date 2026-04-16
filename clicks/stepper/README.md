@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper_cfg_setup( &stepper_cfg );
-    STEPPER_MAP_MIKROBUS( stepper_cfg, MIKROBUS_1 );
+    STEPPER_MAP_MIKROBUS( stepper_cfg, MIKROBUS_POSITION_STEPPER );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == stepper_init( &stepper, &stepper_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     singlecell_cfg_setup( &cfg );
-    SINGLECELL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SINGLECELL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SINGLECELL );
     singlecell_init( &singlecell, &cfg );
     singlecell_default_cfg ( &singlecell );
    

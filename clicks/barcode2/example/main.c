@@ -31,6 +31,10 @@
 #include "barcode2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_BARCODE2
+    #define MIKROBUS_POSITION_BARCODE2 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 100
 #define PROCESS_RX_BUFFER_SIZE 600
 #define PROCESS_PARSER_BUFFER_SIZE 600
@@ -128,7 +132,7 @@ void application_init ( void )
     //  Click initialization.
 
     barcode2_cfg_setup( &cfg );
-    BARCODE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BARCODE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BARCODE2 );
     barcode2_init( &barcode2, &cfg );
     Delay_ms ( 100 );
 }

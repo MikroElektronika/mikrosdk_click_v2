@@ -24,6 +24,10 @@
 #include "log.h"
 #include "optoencoder5.h"
 
+#ifndef MIKROBUS_POSITION_OPTOENCODER5
+    #define MIKROBUS_POSITION_OPTOENCODER5 MIKROBUS_1
+#endif
+
 static optoencoder5_t optoencoder5;     /**< Opto Encoder 5 Click driver object. */
 static log_t logger;                    /**< Logger object. */
 static uint8_t out_state = 0;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     optoencoder5_cfg_setup( &optoencoder5_cfg );
-    OPTOENCODER5_MAP_MIKROBUS( optoencoder5_cfg, MIKROBUS_1 );
+    OPTOENCODER5_MAP_MIKROBUS( optoencoder5_cfg, MIKROBUS_POSITION_OPTOENCODER5 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == optoencoder5_init( &optoencoder5, &optoencoder5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

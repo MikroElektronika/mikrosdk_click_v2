@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate4_cfg_setup( &cfg );
-    HEARTRATE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE4 );
     heartrate4_init( &heartrate4, &cfg );
 
     Delay_ms ( 100 );

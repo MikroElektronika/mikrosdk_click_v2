@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     charger26_cfg_setup( &charger26_cfg );
-    CHARGER26_MAP_MIKROBUS( charger26_cfg, MIKROBUS_1 );
+    CHARGER26_MAP_MIKROBUS( charger26_cfg, MIKROBUS_POSITION_CHARGER26 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == charger26_init( &charger26, &charger26_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

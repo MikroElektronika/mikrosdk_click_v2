@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.    
     c7seg2_cfg_setup( &c7seg2_pnp_cfg );
-    C7SEG2_MAP_MIKROBUS( c7seg2_pnp_cfg, MIKROBUS_1 );
+    C7SEG2_MAP_MIKROBUS( c7seg2_pnp_cfg, MIKROBUS_POSITION_7SEG2 );
     if ( I2C_MASTER_ERROR == c7seg2_init( &c7seg2, &c7seg2_pnp_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

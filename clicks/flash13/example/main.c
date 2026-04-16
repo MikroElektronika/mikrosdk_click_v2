@@ -24,6 +24,10 @@
 #include "log.h"
 #include "flash13.h"
 
+#ifndef MIKROBUS_POSITION_FLASH13
+    #define MIKROBUS_POSITION_FLASH13 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE_1         "MIKROE"
 #define DEMO_TEXT_MESSAGE_2         "Flash 13 Click"
 #define STARTING_ADDRESS            0x012345ul
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     flash13_cfg_setup( &flash13_cfg );
-    FLASH13_MAP_MIKROBUS( flash13_cfg, MIKROBUS_1 );
+    FLASH13_MAP_MIKROBUS( flash13_cfg, MIKROBUS_POSITION_FLASH13 );
     if ( SPI_MASTER_ERROR == flash13_init( &flash13, &flash13_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "accel8.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL8
+    #define MIKROBUS_POSITION_ACCEL8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel8_t accel8;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel8_cfg_setup( &cfg );
-    ACCEL8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL8 );
     temp_write = accel8_init( &accel8, &cfg );
 	
 	if ( temp_write ==  ACCEL8_INIT_ERROR )

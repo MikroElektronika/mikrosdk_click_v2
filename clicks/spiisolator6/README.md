@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     spiisolator6_cfg_setup( &spiisolator6_cfg );
-    SPIISOLATOR6_MAP_MIKROBUS( spiisolator6_cfg, MIKROBUS_1 );
+    SPIISOLATOR6_MAP_MIKROBUS( spiisolator6_cfg, MIKROBUS_POSITION_SPIISOLATOR6 );
     if ( SPI_MASTER_ERROR == spiisolator6_init( &spiisolator6, &spiisolator6_cfg ) )
     {
         log_error( &logger, " Communication init." );

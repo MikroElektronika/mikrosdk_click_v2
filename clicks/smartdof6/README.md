@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     smartdof6_cfg_setup( &smartdof6_cfg );
-    SMARTDOF6_MAP_MIKROBUS( smartdof6_cfg, MIKROBUS_1 );
+    SMARTDOF6_MAP_MIKROBUS( smartdof6_cfg, MIKROBUS_POSITION_SMARTDOF6 );
     err_t init_flag = smartdof6_init( &smartdof6, &smartdof6_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

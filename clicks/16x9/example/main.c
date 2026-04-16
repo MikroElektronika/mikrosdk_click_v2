@@ -23,6 +23,10 @@
 #include "log.h"
 #include "c16x9.h"
 
+#ifndef MIKROBUS_POSITION_16X9
+    #define MIKROBUS_POSITION_16X9 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c16x9_t c16x9;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     c16x9_cfg_setup( &cfg );
-    C16X9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C16X9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_16X9 );
     c16x9_init( &c16x9, &cfg );
 
     // Image ON

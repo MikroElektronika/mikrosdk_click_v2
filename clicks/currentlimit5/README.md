@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     currentlimit5_cfg_setup( &currentlimit5_cfg );
-    CURRENTLIMIT5_MAP_MIKROBUS( currentlimit5_cfg, MIKROBUS_1 );
+    CURRENTLIMIT5_MAP_MIKROBUS( currentlimit5_cfg, MIKROBUS_POSITION_CURRENTLIMIT5 );
     if ( I2C_MASTER_ERROR == currentlimit5_init( &currentlimit5, &currentlimit5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

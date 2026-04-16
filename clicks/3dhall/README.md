@@ -78,7 +78,7 @@ void application_init ( void )
     //  Click initialization.
 
     c3dhall_cfg_setup( &cfg );
-    C3DHALL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C3DHALL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_3DHALL );
     c3dhall_init( &c3dhall, &cfg );
     Delay_100ms( );
 }

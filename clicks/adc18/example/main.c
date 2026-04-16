@@ -23,6 +23,10 @@
 #include "log.h"
 #include "adc18.h"
 
+#ifndef MIKROBUS_POSITION_ADC18
+    #define MIKROBUS_POSITION_ADC18 MIKROBUS_1
+#endif
+
 static adc18_t adc18;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     adc18_cfg_setup( &adc18_cfg );
-    ADC18_MAP_MIKROBUS( adc18_cfg, MIKROBUS_1 );
+    ADC18_MAP_MIKROBUS( adc18_cfg, MIKROBUS_POSITION_ADC18 );
     if ( SPI_MASTER_ERROR == adc18_init( &adc18, &adc18_cfg ) )
     {
         log_error( &logger, " Communication init." );

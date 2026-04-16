@@ -25,6 +25,10 @@
 #include "log.h"
 #include "irsense4.h"
 
+#ifndef MIKROBUS_POSITION_IRSENSE4
+    #define MIKROBUS_POSITION_IRSENSE4 MIKROBUS_1
+#endif
+
 static irsense4_t irsense4;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     irsense4_cfg_setup( &irsense4_cfg );
-    IRSENSE4_MAP_MIKROBUS( irsense4_cfg, MIKROBUS_1 );
+    IRSENSE4_MAP_MIKROBUS( irsense4_cfg, MIKROBUS_POSITION_IRSENSE4 );
     err_t init_flag = irsense4_init( &irsense4, &irsense4_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     lriot_cfg_setup( &lriot_cfg );
-    LRIOT_MAP_MIKROBUS( lriot_cfg, MIKROBUS_1 );
+    LRIOT_MAP_MIKROBUS( lriot_cfg, MIKROBUS_POSITION_LRIOT );
     
     if ( SPI_MASTER_ERROR == lriot_init( &lriot, &lriot_cfg ) )
     {

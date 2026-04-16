@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     radiostation_cfg_setup( &cfg, true );
-    RADIOSTATION_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RADIOSTATION_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RADIOSTATION );
     radiostation_init( &radiostation, &cfg );
 
     radiostation.transmit_frequency = 10000; 

@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     iqrf_cfg_setup( &cfg );
-    IQRF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IQRF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IQRF );
     iqrf_init( &iqrf, &cfg );
     
     log_printf( &logger, "------------------------------------\r\n" );

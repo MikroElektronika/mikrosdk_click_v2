@@ -23,6 +23,10 @@
 #include "log.h"
 #include "nvsram3.h"
 
+#ifndef MIKROBUS_POSITION_NVSRAM3
+    #define MIKROBUS_POSITION_NVSRAM3 MIKROBUS_1
+#endif
+
 static nvsram3_t nvsram3;
 static log_t logger;
 
@@ -56,7 +60,7 @@ void application_init ( void )
     // Click initialization.
 
     nvsram3_cfg_setup( &nvsram3_cfg );
-    NVSRAM3_MAP_MIKROBUS( nvsram3_cfg, MIKROBUS_1 );
+    NVSRAM3_MAP_MIKROBUS( nvsram3_cfg, MIKROBUS_POSITION_NVSRAM3 );
     err_t init_flag = nvsram3_init( &nvsram3, &nvsram3_cfg );
     
     if ( init_flag == I2C_MASTER_ERROR ) 

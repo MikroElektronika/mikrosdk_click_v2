@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     airquality12_cfg_setup( &airquality12_cfg );
-    AIRQUALITY12_MAP_MIKROBUS( airquality12_cfg, MIKROBUS_1 );
+    AIRQUALITY12_MAP_MIKROBUS( airquality12_cfg, MIKROBUS_POSITION_AIRQUALITY12 );
     if ( AIRQUALITY12_OK != airquality12_init( &airquality12, &airquality12_cfg ) )
     {
         log_error( &logger, " Communication init." );

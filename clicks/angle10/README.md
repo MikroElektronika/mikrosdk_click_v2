@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     angle10_cfg_setup( &angle10_cfg );
-    ANGLE10_MAP_MIKROBUS( angle10_cfg, MIKROBUS_1 );
+    ANGLE10_MAP_MIKROBUS( angle10_cfg, MIKROBUS_POSITION_ANGLE10 );
     if ( ADC_ERROR == angle10_init( &angle10, &angle10_cfg ) )
     {
         log_error( &logger, " Communication init." );

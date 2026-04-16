@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent19_cfg_setup( &hallcurrent19_cfg );
-    HALLCURRENT19_MAP_MIKROBUS( hallcurrent19_cfg, MIKROBUS_1 );
+    HALLCURRENT19_MAP_MIKROBUS( hallcurrent19_cfg, MIKROBUS_POSITION_HALLCURRENT19 );
     if ( ADC_ERROR == hallcurrent19_init( &hallcurrent19, &hallcurrent19_cfg ) )
     {
         log_error( &logger, " Communication init." );

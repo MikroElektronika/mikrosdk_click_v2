@@ -25,6 +25,10 @@
 #include "log.h"
 #include "hallcurrent18.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT18
+    #define MIKROBUS_POSITION_HALLCURRENT18 MIKROBUS_1
+#endif
+
 static hallcurrent18_t hallcurrent18;   /**< Hall Current 18 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent18_cfg_setup( &hallcurrent18_cfg );
-    HALLCURRENT18_MAP_MIKROBUS( hallcurrent18_cfg, MIKROBUS_1 );
+    HALLCURRENT18_MAP_MIKROBUS( hallcurrent18_cfg, MIKROBUS_POSITION_HALLCURRENT18 );
     err_t init_flag = hallcurrent18_init( &hallcurrent18, &hallcurrent18_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

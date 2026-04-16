@@ -81,7 +81,7 @@ void application_init ( void )
     //  Click initialization.
 
     waterdetect_cfg_setup( &cfg );
-    WATERDETECT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WATERDETECT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WATERDETECT );
     waterdetect_init( &waterdetect, &cfg );
     Delay_100ms();
     

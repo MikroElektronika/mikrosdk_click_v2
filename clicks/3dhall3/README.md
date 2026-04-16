@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     c3dhall3_cfg_setup( &cfg );
-    C3DHALL3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C3DHALL3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_3DHALL3 );
     c3dhall3_init( &c3dhall3, &cfg );
     c3dhall3_default_cfg ( &c3dhall3 );
     log_info( &logger, "---- System Init ----" );

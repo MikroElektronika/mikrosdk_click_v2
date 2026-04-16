@@ -26,6 +26,10 @@
 #include "log.h"
 #include "hallcurrent8120a.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT8120A
+    #define MIKROBUS_POSITION_HALLCURRENT8120A MIKROBUS_1
+#endif
+
 static hallcurrent8120a_t hallcurrent8120a;   /**< Hall Current 8 120A Click driver object. */
 static log_t logger;                          /**< Logger object. */
 
@@ -50,7 +54,7 @@ void application_init ( void )
     // Click initialization.
 
     hallcurrent8120a_cfg_setup( &hallcurrent8120a_cfg );
-    HALLCURRENT8120A_MAP_MIKROBUS( hallcurrent8120a_cfg, MIKROBUS_1 );
+    HALLCURRENT8120A_MAP_MIKROBUS( hallcurrent8120a_cfg, MIKROBUS_POSITION_HALLCURRENT8120A );
     if ( ADC_ERROR == hallcurrent8120a_init( &hallcurrent8120a, &hallcurrent8120a_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

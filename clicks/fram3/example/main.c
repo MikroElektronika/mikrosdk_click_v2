@@ -22,6 +22,10 @@
 #include "log.h"
 #include "fram3.h"
 
+#ifndef MIKROBUS_POSITION_FRAM3
+    #define MIKROBUS_POSITION_FRAM3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static fram3_t fram3;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     fram3_cfg_setup( &cfg );
-    FRAM3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FRAM3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FRAM3 );
     fram3_init( &fram3, &cfg );
 }
 

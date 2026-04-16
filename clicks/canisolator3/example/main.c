@@ -27,6 +27,10 @@
 #include "log.h"
 #include "canisolator3.h"
 
+#ifndef MIKROBUS_POSITION_CANISOLATOR3
+    #define MIKROBUS_POSITION_CANISOLATOR3 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 #define TX_MESSAGE "CAN Isolator 3 Click \r\n"
 
@@ -71,7 +75,7 @@ void application_init ( void )
 
     // Click initialization.
     canisolator3_cfg_setup( &canisolator3_cfg );
-    CANISOLATOR3_MAP_MIKROBUS( canisolator3_cfg, MIKROBUS_1 );
+    CANISOLATOR3_MAP_MIKROBUS( canisolator3_cfg, MIKROBUS_POSITION_CANISOLATOR3 );
     if ( UART_ERROR == canisolator3_init( &canisolator3, &canisolator3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

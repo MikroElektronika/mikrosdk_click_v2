@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stepper28.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER28
+    #define MIKROBUS_POSITION_STEPPER28 MIKROBUS_1
+#endif
+
 static stepper28_t stepper28;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper28_cfg_setup( &stepper28_cfg );
-    STEPPER28_MAP_MIKROBUS( stepper28_cfg, MIKROBUS_1 );
+    STEPPER28_MAP_MIKROBUS( stepper28_cfg, MIKROBUS_POSITION_STEPPER28 );
     if ( I2C_MASTER_ERROR == stepper28_init( &stepper28, &stepper28_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

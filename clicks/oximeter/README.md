@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     oximeter_cfg_setup( &cfg );
-    OXIMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OXIMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OXIMETER );
     oximeter_init( &oximeter, &cfg );
     oximeter_default_cfg( &oximeter );
     

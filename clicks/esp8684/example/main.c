@@ -36,6 +36,10 @@
 #include "string.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_ESP8684
+    #define MIKROBUS_POSITION_ESP8684 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 #define ESP8684_SSID                        "MIKROE GUEST"
@@ -149,7 +153,7 @@ void application_init ( void )
 
     // Click initialization.
     esp8684_cfg_setup( &esp8684_cfg );
-    ESP8684_MAP_MIKROBUS( esp8684_cfg, MIKROBUS_1 );
+    ESP8684_MAP_MIKROBUS( esp8684_cfg, MIKROBUS_POSITION_ESP8684 );
     if ( UART_ERROR == esp8684_init( &esp8684, &esp8684_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

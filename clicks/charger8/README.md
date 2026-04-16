@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     charger8_cfg_setup( &cfg );
-    CHARGER8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CHARGER8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CHARGER8 );
     charger8_init( &charger8, &cfg );
 
     charger8_enable( &charger8, CHARGER8_CHARGER_ENABLE );

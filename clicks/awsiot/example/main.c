@@ -49,6 +49,10 @@
 #include "log.h"
 #include "awsiot.h"
 
+#ifndef MIKROBUS_POSITION_AWSIOT
+    #define MIKROBUS_POSITION_AWSIOT MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 500
 
 // Enter valid WiFi credentials below
@@ -114,7 +118,7 @@ void application_init ( void )
 
     // Click initialization.
     awsiot_cfg_setup( &awsiot_cfg );
-    AWSIOT_MAP_MIKROBUS( awsiot_cfg, MIKROBUS_1 );
+    AWSIOT_MAP_MIKROBUS( awsiot_cfg, MIKROBUS_POSITION_AWSIOT );
     if ( UART_ERROR == awsiot_init( &awsiot, &awsiot_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

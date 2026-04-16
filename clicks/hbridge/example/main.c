@@ -24,6 +24,10 @@
 #include "log.h"
 #include "hbridge.h"
 
+#ifndef MIKROBUS_POSITION_HBRIDGE
+    #define MIKROBUS_POSITION_HBRIDGE MIKROBUS_1
+#endif
+
 static hbridge_t hbridge;   /**< H-Bridge Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridge_cfg_setup( &hbridge_cfg );
-    HBRIDGE_MAP_MIKROBUS( hbridge_cfg, MIKROBUS_1 );
+    HBRIDGE_MAP_MIKROBUS( hbridge_cfg, MIKROBUS_POSITION_HBRIDGE );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == hbridge_init( &hbridge, &hbridge_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

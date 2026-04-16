@@ -41,6 +41,10 @@
 #include "c4gltena.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_4GLTENA
+    #define MIKROBUS_POSITION_4GLTENA MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -143,7 +147,7 @@ void application_init ( void ) {
     // Click initialization.
 
     c4gltena_cfg_setup( &c4gltena_cfg );
-    C4GLTENA_MAP_MIKROBUS( c4gltena_cfg, MIKROBUS_1 );
+    C4GLTENA_MAP_MIKROBUS( c4gltena_cfg, MIKROBUS_POSITION_4GLTENA );
     c4gltena_init( &c4gltena, &c4gltena_cfg );
     
     c4gltena_module_power_on( &c4gltena );

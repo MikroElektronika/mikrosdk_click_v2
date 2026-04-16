@@ -1,5 +1,5 @@
 /****************************************************************************
-** Copyright (C) 2020 MikroElektronika d.o.o.
+** Copyright (C) 2026 MikroElektronika d.o.o.
 ** Contact: https://www.mikroe.com/contact
 **
 ** Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,7 +17,7 @@
 ** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
 ** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
 ** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-** USE OR OTHER DEALINGS IN THE SOFTWARE.
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
 ****************************************************************************/
 
 /*!

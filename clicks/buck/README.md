@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck_cfg_setup( &cfg );
-    BUCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK );
     buck_init( &buck, &cfg );
     Delay_ms ( 100 );
 

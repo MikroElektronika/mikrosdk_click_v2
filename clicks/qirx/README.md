@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     qirx_cfg_setup( &qirx_cfg );
-    QIRX_MAP_MIKROBUS( qirx_cfg, MIKROBUS_1 );
+    QIRX_MAP_MIKROBUS( qirx_cfg, MIKROBUS_POSITION_QIRX );
     if ( I2C_MASTER_ERROR == qirx_init( &qirx, &qirx_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

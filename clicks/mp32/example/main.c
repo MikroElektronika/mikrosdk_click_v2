@@ -29,6 +29,10 @@
 #include "mp32.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_MP32
+    #define MIKROBUS_POSITION_MP32 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static mp32_t mp32;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     mp32_cfg_setup( &cfg );
-    MP32_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MP32_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MP32 );
     mp32_init( &mp32, &cfg );
 
     Delay_ms ( 500 );

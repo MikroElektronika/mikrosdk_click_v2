@@ -82,7 +82,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     digipot4_cfg_setup( &cfg );
-    DIGIPOT4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIGIPOT4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIGIPOT4 );
     digipot4_init( &digipot4, &cfg );
 }
 ```

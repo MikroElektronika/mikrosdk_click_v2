@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     vtohz2_cfg_setup( &cfg );
-    VTOHZ2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VTOHZ2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VTOHZ2 );
     vtohz2_init( &vtohz2, &cfg );
 
     vtohz2_enable( &vtohz2, VTOHZ2_ENABLE );

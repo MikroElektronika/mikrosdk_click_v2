@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     stspin233_cfg_setup( &cfg );
-    STSPIN233_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STSPIN233_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STSPIN233 );
     stspin233_init( &stspin233, &cfg );
 
     stspin233_default_cfg( &stspin233 );

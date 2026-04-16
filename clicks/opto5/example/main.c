@@ -23,6 +23,10 @@
 #include "log.h"
 #include "opto5.h"
 
+#ifndef MIKROBUS_POSITION_OPTO5
+    #define MIKROBUS_POSITION_OPTO5 MIKROBUS_1
+#endif
+
 static opto5_t opto5;               /**< Opto 5 Click driver object. */
 static log_t logger;                /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void ) {
     // Click initialization.
 
     opto5_cfg_setup( &opto5_cfg );
-    OPTO5_MAP_MIKROBUS( opto5_cfg, MIKROBUS_1 );
+    OPTO5_MAP_MIKROBUS( opto5_cfg, MIKROBUS_POSITION_OPTO5 );
     if ( opto5_init( &opto5, &opto5_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

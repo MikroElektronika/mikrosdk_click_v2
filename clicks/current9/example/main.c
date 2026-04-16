@@ -28,6 +28,10 @@
 #include "log.h"
 #include "current9.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT9
+    #define MIKROBUS_POSITION_CURRENT9 MIKROBUS_1
+#endif
+
 static current9_t current9;   /**< Current 9 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     current9_cfg_setup( &current9_cfg );
-    CURRENT9_MAP_MIKROBUS( current9_cfg, MIKROBUS_1 );
+    CURRENT9_MAP_MIKROBUS( current9_cfg, MIKROBUS_POSITION_CURRENT9 );
     err_t init_flag = current9_init( &current9, &current9_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

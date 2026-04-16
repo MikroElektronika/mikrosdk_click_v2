@@ -24,6 +24,10 @@
 #include "log.h"
 #include "expand2.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND2
+    #define MIKROBUS_POSITION_EXPAND2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static expand2_t expand2;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     expand2_cfg_setup( &cfg );
-    EXPAND2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND2 );
     expand2_init( &expand2, &cfg );
 
     expand2_default_cfg ( &expand2 );

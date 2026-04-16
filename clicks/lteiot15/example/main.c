@@ -60,6 +60,10 @@
 #include "generic_pointer.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_LTEIOT15
+    #define MIKROBUS_POSITION_LTEIOT15 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_SMS                         1               // Example of sending SMS to a phone number
@@ -229,7 +233,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot15_cfg_setup( &lteiot15_cfg );
-    LTEIOT15_MAP_MIKROBUS( lteiot15_cfg, MIKROBUS_1 );
+    LTEIOT15_MAP_MIKROBUS( lteiot15_cfg, MIKROBUS_POSITION_LTEIOT15 );
     if ( UART_ERROR == lteiot15_init( &lteiot15, &lteiot15_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

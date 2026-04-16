@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     rtc3_cfg_setup( &cfg );
-    RTC3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC3 );
     rtc3_init( &rtc3, &cfg );
     Delay_ms ( 100 );
     

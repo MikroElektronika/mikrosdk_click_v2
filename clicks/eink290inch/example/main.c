@@ -47,6 +47,10 @@
 #include "log.h"
 #include "eink290inch.h"
 #include "eink290inch_image.h"
+
+#ifndef MIKROBUS_POSITION_EINK290INCH
+    #define MIKROBUS_POSITION_EINK290INCH MIKROBUS_1
+#endif
 #ifndef IMAGE_MODE_ONLY
 #include "eink290inch_font.h"
 #endif
@@ -85,7 +89,7 @@ void application_init ( void )
 
     //  Click initialization.
     eink290inch_cfg_setup( &cfg );
-    EINK290INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EINK290INCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EINK290INCH );
     eink290inch_init( &eink290inch, &cfg );
 
     eink290inch_start_config( &eink290inch );

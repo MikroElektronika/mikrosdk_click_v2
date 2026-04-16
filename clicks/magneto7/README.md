@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto7_cfg_setup( &cfg );
-    MAGNETO7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO7 );
     magneto7_init( &magneto7, &cfg );
     Delay_ms ( 300 );
 

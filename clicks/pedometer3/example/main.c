@@ -26,6 +26,10 @@
 #include "log.h"
 #include "pedometer3.h"
 
+#ifndef MIKROBUS_POSITION_PEDOMETER3
+    #define MIKROBUS_POSITION_PEDOMETER3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pedometer3_t pedometer3;
@@ -54,7 +58,7 @@ void application_init ( void )
 
     //  Click initialization.
     pedometer3_cfg_setup( &cfg );
-    PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PEDOMETER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PEDOMETER3 );
     pedometer3_init( &pedometer3, &cfg );
 
     // Default Click configurations

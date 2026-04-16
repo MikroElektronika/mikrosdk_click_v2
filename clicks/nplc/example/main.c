@@ -29,6 +29,10 @@
 #include "log.h"
 #include "nplc.h"
 
+#ifndef MIKROBUS_POSITION_NPLC
+    #define MIKROBUS_POSITION_NPLC MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to receiver
 // #define DEMO_APP_TRANSMITTER
 
@@ -90,7 +94,7 @@ void application_init ( void )
 
     // Click initialization.
     nplc_cfg_setup( &nplc_cfg );
-    NPLC_MAP_MIKROBUS( nplc_cfg, MIKROBUS_1 );
+    NPLC_MAP_MIKROBUS( nplc_cfg, MIKROBUS_POSITION_NPLC );
     if ( UART_ERROR == nplc_init( &nplc, &nplc_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "tilt5.h"
 
+#ifndef MIKROBUS_POSITION_TILT5
+    #define MIKROBUS_POSITION_TILT5 MIKROBUS_1
+#endif
+
 static tilt5_t tilt5;   /**< Tilt 5 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     tilt5_cfg_setup( &tilt5_cfg );
-    TILT5_MAP_MIKROBUS( tilt5_cfg, MIKROBUS_1 );
+    TILT5_MAP_MIKROBUS( tilt5_cfg, MIKROBUS_POSITION_TILT5 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == tilt5_init( &tilt5, &tilt5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

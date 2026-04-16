@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     usbcsink3_cfg_setup( &usbcsink3_cfg );
-    USBCSINK3_MAP_MIKROBUS( usbcsink3_cfg, MIKROBUS_1 );
+    USBCSINK3_MAP_MIKROBUS( usbcsink3_cfg, MIKROBUS_POSITION_USBCSINK3 );
     err_t init_flag = usbcsink3_init( &usbcsink3, &usbcsink3_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "singlecell.h"
 
+#ifndef MIKROBUS_POSITION_SINGLECELL
+    #define MIKROBUS_POSITION_SINGLECELL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static singlecell_t singlecell;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     singlecell_cfg_setup( &cfg );
-    SINGLECELL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SINGLECELL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SINGLECELL );
     singlecell_init( &singlecell, &cfg );
     singlecell_default_cfg ( &singlecell );
    

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cmux8_cfg_setup( &i2cmux8_cfg );
-    I2CMUX8_MAP_MIKROBUS( i2cmux8_cfg, MIKROBUS_1 );
+    I2CMUX8_MAP_MIKROBUS( i2cmux8_cfg, MIKROBUS_POSITION_I2CMUX8 );
     if ( I2C_MASTER_ERROR == i2cmux8_init( &i2cmux8, &i2cmux8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

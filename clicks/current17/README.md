@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     current17_cfg_setup( &current17_cfg );
-    CURRENT17_MAP_MIKROBUS( current17_cfg, MIKROBUS_1 );
+    CURRENT17_MAP_MIKROBUS( current17_cfg, MIKROBUS_POSITION_CURRENT17 );
     if ( CURRENT17_OK != current17_init( &current17, &current17_cfg ) )
     {
         log_error( &logger, " Communication init." );

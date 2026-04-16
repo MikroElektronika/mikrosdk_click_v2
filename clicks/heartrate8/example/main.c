@@ -26,6 +26,10 @@
 #include "log.h"
 #include "heartrate8.h"
 
+#ifndef MIKROBUS_POSITION_HEARTRATE8
+    #define MIKROBUS_POSITION_HEARTRATE8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static heartrate8_t heartrate8;
@@ -81,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate8_cfg_setup( &cfg );
-    HEARTRATE8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE8 );
     heartrate8_init( &heartrate8, &cfg );
     heartrate8_default_cfg( &heartrate8 );
     i = 0;

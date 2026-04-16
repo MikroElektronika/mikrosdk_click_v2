@@ -29,6 +29,10 @@
 #include "log.h"
 #include "cxpi.h"
 
+#ifndef MIKROBUS_POSITION_CXPI
+    #define MIKROBUS_POSITION_CXPI MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 100
 #define PROCESS_PARSER_BUFFER_SIZE 100
@@ -73,7 +77,7 @@ void application_init ( void ) {
     // Click initialization.
 
     cxpi_cfg_setup( &cxpi_cfg );
-    CXPI_MAP_MIKROBUS( cxpi_cfg, MIKROBUS_1 );
+    CXPI_MAP_MIKROBUS( cxpi_cfg, MIKROBUS_POSITION_CXPI );
     err_t init_flag  = cxpi_init( &cxpi, &cxpi_cfg );
     if ( UART_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

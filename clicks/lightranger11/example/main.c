@@ -23,6 +23,10 @@
 #include "log.h"
 #include "lightranger11.h"
 
+#ifndef MIKROBUS_POSITION_LIGHTRANGER11
+    #define MIKROBUS_POSITION_LIGHTRANGER11 MIKROBUS_1
+#endif
+
 static lightranger11_t lightranger11;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     lightranger11_cfg_setup( &lightranger11_cfg );
-    LIGHTRANGER11_MAP_MIKROBUS( lightranger11_cfg, MIKROBUS_1 );
+    LIGHTRANGER11_MAP_MIKROBUS( lightranger11_cfg, MIKROBUS_POSITION_LIGHTRANGER11 );
     if ( I2C_MASTER_ERROR == lightranger11_init( &lightranger11, &lightranger11_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

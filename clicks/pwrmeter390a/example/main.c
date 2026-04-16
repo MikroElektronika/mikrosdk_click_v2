@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pwrmeter390a.h"
 
+#ifndef MIKROBUS_POSITION_PWRMETER390A
+    #define MIKROBUS_POSITION_PWRMETER390A MIKROBUS_1
+#endif
+
 static pwrmeter390a_t pwrmeter390a;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     pwrmeter390a_cfg_setup( &pwrmeter390a_cfg );
-    PWRMETER390A_MAP_MIKROBUS( pwrmeter390a_cfg, MIKROBUS_1 );
+    PWRMETER390A_MAP_MIKROBUS( pwrmeter390a_cfg, MIKROBUS_POSITION_PWRMETER390A );
     if ( I2C_MASTER_ERROR == pwrmeter390a_init( &pwrmeter390a, &pwrmeter390a_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

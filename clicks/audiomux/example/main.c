@@ -29,6 +29,10 @@
 #include "log.h"
 #include "audiomux.h"
 
+#ifndef MIKROBUS_POSITION_AUDIOMUX
+    #define MIKROBUS_POSITION_AUDIOMUX MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static audiomux_t audiomux;
@@ -60,7 +64,7 @@ void application_init ( void )
     //  Click initialization.
 
     audiomux_cfg_setup( &cfg );
-    AUDIOMUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOMUX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOMUX );
     audiomux_init( &audiomux, &cfg );
 
     init_check = 0;

@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     knob_cfg_setup( &cfg );
-    KNOB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    KNOB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_KNOB );
     knob_init( &knob, &cfg );
 
     knob_reset( &knob );

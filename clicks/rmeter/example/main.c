@@ -29,6 +29,10 @@
 #include "log.h"
 #include "rmeter.h"
 
+#ifndef MIKROBUS_POSITION_RMETER
+    #define MIKROBUS_POSITION_RMETER MIKROBUS_1
+#endif
+
 static rmeter_t rmeter;
 static log_t logger;
 
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     rmeter_cfg_setup( &rmeter_cfg );
-    RMETER_MAP_MIKROBUS( rmeter_cfg, MIKROBUS_1 );
+    RMETER_MAP_MIKROBUS( rmeter_cfg, MIKROBUS_POSITION_RMETER );
 
     if ( rmeter_init( &rmeter, &rmeter_cfg ) == RMETER_INIT_ERROR )
     {

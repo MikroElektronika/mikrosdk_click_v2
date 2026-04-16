@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     i2cmux3_cfg_setup( &cfg );
-    I2CMUX3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CMUX3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CMUX3 );
     i2cmux3_init( &i2cmux3, &cfg );
     Delay_ms ( 100 );
     

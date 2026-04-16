@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     smartbuck8_cfg_setup( &smartbuck8_cfg );
-    SMARTBUCK8_MAP_MIKROBUS( smartbuck8_cfg, MIKROBUS_1 );
+    SMARTBUCK8_MAP_MIKROBUS( smartbuck8_cfg, MIKROBUS_POSITION_SMARTBUCK8 );
     if ( I2C_MASTER_ERROR == smartbuck8_init( &smartbuck8, &smartbuck8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

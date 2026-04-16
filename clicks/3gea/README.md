@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     c3gea_cfg_setup( &c3gea_cfg );
-    C3GEA_MAP_MIKROBUS( c3gea_cfg, MIKROBUS_1 );
+    C3GEA_MAP_MIKROBUS( c3gea_cfg, MIKROBUS_POSITION_3GEA );
     if ( UART_ERROR == c3gea_init( &c3gea, &c3gea_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

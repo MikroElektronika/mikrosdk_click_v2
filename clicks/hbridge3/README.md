@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     hbridge3_cfg_setup( &cfg );
-    HBRIDGE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HBRIDGE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HBRIDGE3 );
     hbridge3_init( &hbridge3, &cfg );
     Delay_ms ( 500 );
     

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc6_cfg_setup( &nfc6_cfg );
-    NFC6_MAP_MIKROBUS( nfc6_cfg, MIKROBUS_1 );
+    NFC6_MAP_MIKROBUS( nfc6_cfg, MIKROBUS_POSITION_NFC6 );
     if ( SPI_MASTER_ERROR == nfc6_init( &nfc6, &nfc6_cfg ) )
     {
         log_error( &logger, " Communication init." );

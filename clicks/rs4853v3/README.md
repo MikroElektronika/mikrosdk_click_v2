@@ -78,7 +78,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs4853v3_cfg_setup( &cfg );
-    RS4853V3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4853V3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4853V3 );
     rs4853v3_init( &rs4853v3, &cfg );
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );

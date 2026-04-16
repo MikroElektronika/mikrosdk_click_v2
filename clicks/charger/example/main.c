@@ -25,6 +25,10 @@
 #include "log.h"
 #include "charger.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER
+    #define MIKROBUS_POSITION_CHARGER MIKROBUS_1
+#endif
+
 static charger_t charger;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     charger_cfg_setup( &charger_cfg );
-    CHARGER_MAP_MIKROBUS( charger_cfg, MIKROBUS_1 );
+    CHARGER_MAP_MIKROBUS( charger_cfg, MIKROBUS_POSITION_CHARGER );
     if ( ONE_WIRE_ERROR == charger_init( &charger, &charger_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

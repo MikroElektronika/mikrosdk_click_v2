@@ -38,6 +38,10 @@
 #include "log.h"
 #include "adapter.h"
 
+#ifndef MIKROBUS_POSITION_ADAPTER
+    #define MIKROBUS_POSITION_ADAPTER MIKROBUS_1
+#endif
+
 #define THERMO5_INTER_DIO_DATA_HI_BYTE          0x00
 #define THERMO5_INTER_DIO_DATA_LO_BYTE          0x29
 
@@ -135,7 +139,7 @@ void application_init ( void )
     //  Click initialization.
 
     adapter_cfg_setup( &cfg );
-    ADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADAPTER );
     adapter_init( &adapter, &cfg );
 }
 

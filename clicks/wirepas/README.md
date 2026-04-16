@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     wirepas_cfg_setup( &wirepas_cfg );
-    WIREPAS_MAP_MIKROBUS( wirepas_cfg, MIKROBUS_1 );
+    WIREPAS_MAP_MIKROBUS( wirepas_cfg, MIKROBUS_POSITION_WIREPAS );
     if ( UART_ERROR == wirepas_init( &wirepas, &wirepas_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

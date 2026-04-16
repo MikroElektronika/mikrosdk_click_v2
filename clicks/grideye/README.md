@@ -88,7 +88,7 @@ void application_init ( void )
 
     grideye_cfg_setup( &cfg );
     
-    GRIDEYE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GRIDEYE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GRIDEYE );
     grideye_init( &grideye, &cfg );
 
     grideye_default_cfg ( &grideye );

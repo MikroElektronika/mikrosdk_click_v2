@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     pac1811_cfg_setup( &pac1811_cfg );
-    PAC1811_MAP_MIKROBUS( pac1811_cfg, MIKROBUS_1 );
+    PAC1811_MAP_MIKROBUS( pac1811_cfg, MIKROBUS_POSITION_PAC1811 );
     if ( I2C_MASTER_ERROR == pac1811_init( &pac1811, &pac1811_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

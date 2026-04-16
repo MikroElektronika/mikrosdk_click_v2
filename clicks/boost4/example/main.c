@@ -27,6 +27,10 @@
 #include "log.h"
 #include "boost4.h"
 
+#ifndef MIKROBUS_POSITION_BOOST4
+    #define MIKROBUS_POSITION_BOOST4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static boost4_t boost4;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     boost4_cfg_setup( &cfg );
-    BOOST4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOST4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOST4 );
     boost4_init( &boost4, &cfg );
     log_printf( &logger, "-----------------------------\r\n" );
     log_printf( &logger, "        Boost 4 Click        \r\n" );

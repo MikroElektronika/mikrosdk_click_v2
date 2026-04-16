@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless17_cfg_setup( &brushless17_cfg );
-    BRUSHLESS17_MAP_MIKROBUS( brushless17_cfg, MIKROBUS_1 );
+    BRUSHLESS17_MAP_MIKROBUS( brushless17_cfg, MIKROBUS_POSITION_BRUSHLESS17 );
     if ( PWM_ERROR == brushless17_init( &brushless17, &brushless17_cfg ) )
     {
         log_error( &logger, " Communication init." );

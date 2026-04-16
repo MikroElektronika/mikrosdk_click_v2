@@ -22,6 +22,10 @@
 #include "log.h"
 #include "airquality5.h"
 
+#ifndef MIKROBUS_POSITION_AIRQUALITY5
+    #define MIKROBUS_POSITION_AIRQUALITY5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static airquality5_t airquality5;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     airquality5_cfg_setup( &cfg );
-    AIRQUALITY5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AIRQUALITY5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AIRQUALITY5 );
     airquality5_init( &airquality5, &cfg );
 }
 

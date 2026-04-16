@@ -25,6 +25,10 @@
 #include "log.h"
 #include "battman.h"
 
+#ifndef MIKROBUS_POSITION_BATTMAN
+    #define MIKROBUS_POSITION_BATTMAN MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static battman_t battman;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     battman_cfg_setup( &cfg );
-    BATTMAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BATTMAN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BATTMAN );
     battman_init( &battman, &cfg );
     
     battman_set_enable( &battman, 1 );

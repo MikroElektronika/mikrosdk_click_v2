@@ -23,6 +23,10 @@
 #include "log.h"
 #include "accel7.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL7
+    #define MIKROBUS_POSITION_ACCEL7 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel7_t accel7;
@@ -54,7 +58,7 @@ void application_init (  )
     //  Click initialization.
 
     accel7_cfg_setup( &cfg );
-    ACCEL7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL7 );
     accel7_init( &accel7, &cfg );
     accel7_default_cfg( &accel7, resolution, range );
 

@@ -30,6 +30,10 @@
 #include "log.h"
 #include "capslider2.h"
 
+#ifndef MIKROBUS_POSITION_CAPSLIDER2
+    #define MIKROBUS_POSITION_CAPSLIDER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static capslider2_t capslider2;
@@ -77,7 +81,7 @@ void application_init ( void )
     //  Click initialization.
 
     capslider2_cfg_setup( &cfg );
-    CAPSLIDER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPSLIDER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPSLIDER2 );
     capslider2_init( &capslider2, &cfg );
 
     Delay_ms ( 500 );

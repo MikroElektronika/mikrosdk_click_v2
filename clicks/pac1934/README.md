@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     pac1934_cfg_setup( &cfg );
-    PAC1934_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PAC1934_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PAC1934 );
     pac1934_init( &pac1934, &cfg );
 }
 ```

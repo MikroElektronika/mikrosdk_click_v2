@@ -90,7 +90,7 @@ void application_init ( void )
     // Click initialization.
 
     dac11_cfg_setup( &dac11_cfg );
-    DAC11_MAP_MIKROBUS( dac11_cfg, MIKROBUS_1 );
+    DAC11_MAP_MIKROBUS( dac11_cfg, MIKROBUS_POSITION_DAC11 );
     err_t init_flag  = dac11_init( &dac11, &dac11_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

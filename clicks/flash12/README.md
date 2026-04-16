@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     flash12_cfg_setup( &flash12_cfg );
-    FLASH12_MAP_MIKROBUS( flash12_cfg, MIKROBUS_1 );
+    FLASH12_MAP_MIKROBUS( flash12_cfg, MIKROBUS_POSITION_FLASH12 );
     if ( SPI_MASTER_ERROR == flash12_init( &flash12, &flash12_cfg ) )
     {
         log_error( &logger, " Communication init." );

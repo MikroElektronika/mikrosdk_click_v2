@@ -88,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor10_cfg_setup( &cfg );
-    DCMOTOR10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR10 );
     dcmotor10_init( &dcmotor10, &cfg );
     Delay_ms ( 100 );
     

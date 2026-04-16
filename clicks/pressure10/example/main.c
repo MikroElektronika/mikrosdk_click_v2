@@ -24,6 +24,10 @@
 #include "log.h"
 #include "pressure10.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE10
+    #define MIKROBUS_POSITION_PRESSURE10 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure10_t pressure10;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure10_cfg_setup( &cfg );
-    PRESSURE10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE10 );
     pressure10_init( &pressure10, &cfg );
 
     check_com = pressure10_check_communication( &pressure10 );

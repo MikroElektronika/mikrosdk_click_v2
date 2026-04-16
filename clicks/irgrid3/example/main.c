@@ -23,6 +23,10 @@
 #include "log.h"
 #include "irgrid3.h"
 
+#ifndef MIKROBUS_POSITION_IRGRID3
+    #define MIKROBUS_POSITION_IRGRID3 MIKROBUS_1
+#endif
+
 static irgrid3_t irgrid3;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void ) {
 
     // Click initialization.
     irgrid3_cfg_setup( &irgrid3_cfg );
-    IRGRID3_MAP_MIKROBUS( irgrid3_cfg, MIKROBUS_1 );
+    IRGRID3_MAP_MIKROBUS( irgrid3_cfg, MIKROBUS_POSITION_IRGRID3 );
     err_t init_flag = irgrid3_init( &irgrid3, &irgrid3_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

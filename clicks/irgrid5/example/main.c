@@ -25,6 +25,10 @@
 #include "log.h"
 #include "irgrid5.h"
 
+#ifndef MIKROBUS_POSITION_IRGRID5
+    #define MIKROBUS_POSITION_IRGRID5 MIKROBUS_1
+#endif
+
 static irgrid5_t irgrid5;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     irgrid5_cfg_setup( &irgrid5_cfg );
-    IRGRID5_MAP_MIKROBUS( irgrid5_cfg, MIKROBUS_1 );
+    IRGRID5_MAP_MIKROBUS( irgrid5_cfg, MIKROBUS_POSITION_IRGRID5 );
     if ( I2C_MASTER_ERROR == irgrid5_init( &irgrid5, &irgrid5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

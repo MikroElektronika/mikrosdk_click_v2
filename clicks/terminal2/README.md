@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     terminal2_cfg_setup( &terminal2_cfg );
-    TERMINAL2_MAP_MIKROBUS( terminal2_cfg, MIKROBUS_1 );
+    TERMINAL2_MAP_MIKROBUS( terminal2_cfg, MIKROBUS_POSITION_TERMINAL2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == terminal2_init( &terminal2, &terminal2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

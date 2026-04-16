@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     battmon3_cfg_setup( &battmon3_cfg );
-    BATTMON3_MAP_MIKROBUS( battmon3_cfg, MIKROBUS_1 );
+    BATTMON3_MAP_MIKROBUS( battmon3_cfg, MIKROBUS_POSITION_BATTMON3 );
     if ( I2C_MASTER_ERROR == battmon3_init( &battmon3, &battmon3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

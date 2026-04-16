@@ -80,7 +80,7 @@ void application_init( void )
 
     //  Click object initialization.
     reram_cfg_setup( &reram_cfg );
-    RERAM_MAP_MIKROBUS( reram_cfg, MIKROBUS_1 );
+    RERAM_MAP_MIKROBUS( reram_cfg, MIKROBUS_POSITION_RERAM );
     reram_init( &reram, &reram_cfg );
 
     //  Click start configuration.

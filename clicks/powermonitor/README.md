@@ -100,7 +100,7 @@ void application_init ( void )
 
     // Click initialization.
     powermonitor_cfg_setup( &powermonitor_cfg );
-    POWERMONITOR_MAP_MIKROBUS( powermonitor_cfg, MIKROBUS_1 );
+    POWERMONITOR_MAP_MIKROBUS( powermonitor_cfg, MIKROBUS_POSITION_POWERMONITOR );
     err_t init_flag = powermonitor_init( &powermonitor, &powermonitor_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

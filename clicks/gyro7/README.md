@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     gyro7_cfg_setup( &gyro7_cfg );
-    GYRO7_MAP_MIKROBUS( gyro7_cfg, MIKROBUS_1 );
+    GYRO7_MAP_MIKROBUS( gyro7_cfg, MIKROBUS_POSITION_GYRO7 );
     if ( SPI_MASTER_ERROR == gyro7_init( &gyro7, &gyro7_cfg ) )
     {
         log_error( &logger, " Communication init." );

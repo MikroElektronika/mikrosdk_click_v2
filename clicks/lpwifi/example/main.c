@@ -37,6 +37,10 @@
 #include "string.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_LPWIFI
+    #define MIKROBUS_POSITION_LPWIFI MIKROBUS_1
+#endif
+
 // Set AP SSID
 #define AP_SSID                     ""
 
@@ -156,7 +160,7 @@ void application_init ( void )
     // Click initialization.
 
     lpwifi_cfg_setup( &lpwifi_cfg );
-    LPWIFI_MAP_MIKROBUS( lpwifi_cfg, MIKROBUS_1 );
+    LPWIFI_MAP_MIKROBUS( lpwifi_cfg, MIKROBUS_POSITION_LPWIFI );
     err_t init_flag = lpwifi_init( &lpwifi, &lpwifi_cfg );
     if ( UART_ERROR == init_flag )
     {

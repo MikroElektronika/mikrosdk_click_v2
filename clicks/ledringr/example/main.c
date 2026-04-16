@@ -22,6 +22,10 @@
 #include "log.h"
 #include "ledringr.h"
 
+#ifndef MIKROBUS_POSITION_LEDRINGR
+    #define MIKROBUS_POSITION_LEDRINGR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ledringr_t ledringr;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     ledringr_cfg_setup( &cfg );
-    LEDRINGR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDRINGR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDRINGR );
     ledringr_init( &ledringr, &cfg );
 }
 

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper21_cfg_setup( &stepper21_cfg );
-    STEPPER21_MAP_MIKROBUS( stepper21_cfg, MIKROBUS_1 );
+    STEPPER21_MAP_MIKROBUS( stepper21_cfg, MIKROBUS_POSITION_STEPPER21 );
     if ( I2C_MASTER_ERROR == stepper21_init( &stepper21, &stepper21_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -57,6 +57,10 @@
 #include "generic_pointer.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_LTECAT43
+    #define MIKROBUS_POSITION_LTECAT43 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_SMS                         1               // Example of sending SMS to a phone number
@@ -215,7 +219,7 @@ void application_init ( void )
 
     // Click initialization.
     ltecat43_cfg_setup( &ltecat43_cfg );
-    LTECAT43_MAP_MIKROBUS( ltecat43_cfg, MIKROBUS_1 );
+    LTECAT43_MAP_MIKROBUS( ltecat43_cfg, MIKROBUS_POSITION_LTECAT43 );
     if ( UART_ERROR == ltecat43_init( &ltecat43, &ltecat43_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

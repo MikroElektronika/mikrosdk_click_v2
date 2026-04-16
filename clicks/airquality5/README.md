@@ -88,7 +88,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     airquality5_cfg_setup( &cfg );
-    AIRQUALITY5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AIRQUALITY5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AIRQUALITY5 );
     airquality5_init( &airquality5, &cfg );
 }
 ```

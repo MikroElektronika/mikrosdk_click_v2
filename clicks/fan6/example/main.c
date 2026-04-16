@@ -25,6 +25,10 @@
 #include "log.h"
 #include "fan6.h"
 
+#ifndef MIKROBUS_POSITION_FAN6
+    #define MIKROBUS_POSITION_FAN6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static fan6_t fan6;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     fan6_cfg_setup( &cfg );
-    FAN6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FAN6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FAN6 );
     fan6_init( &fan6, &cfg );
     
     fan6_enable_device( &fan6, 1 );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "serializer.h"
 
+#ifndef MIKROBUS_POSITION_SERIALIZER
+    #define MIKROBUS_POSITION_SERIALIZER MIKROBUS_1
+#endif
+
 static serializer_t serializer;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     serializer_cfg_setup( &serializer_cfg );
-    SERIALIZER_MAP_MIKROBUS( serializer_cfg, MIKROBUS_1 );
+    SERIALIZER_MAP_MIKROBUS( serializer_cfg, MIKROBUS_POSITION_SERIALIZER );
     if ( SPI_MASTER_ERROR == serializer_init( &serializer, &serializer_cfg ) )
     {
         log_error( &logger, " Communication init." );

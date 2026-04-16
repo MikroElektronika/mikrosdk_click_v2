@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     hallcurrent8120a_cfg_setup( &hallcurrent8120a_cfg );
-    HALLCURRENT8120A_MAP_MIKROBUS( hallcurrent8120a_cfg, MIKROBUS_1 );
+    HALLCURRENT8120A_MAP_MIKROBUS( hallcurrent8120a_cfg, MIKROBUS_POSITION_HALLCURRENT8120A );
     if ( ADC_ERROR == hallcurrent8120a_init( &hallcurrent8120a, &hallcurrent8120a_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

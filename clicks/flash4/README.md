@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     flash4_cfg_setup( &cfg );
-    FLASH4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH4 );
     flash4_init( &flash4, &cfg );
     
     flash4_reset( &flash4 );

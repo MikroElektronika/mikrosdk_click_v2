@@ -23,6 +23,10 @@
 #include "log.h"
 #include "irthermo4.h"
 
+#ifndef MIKROBUS_POSITION_IRTHERMO4
+    #define MIKROBUS_POSITION_IRTHERMO4 MIKROBUS_1
+#endif
+
 static irthermo4_t irthermo4;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     irthermo4_cfg_setup( &irthermo4_cfg );
-    IRTHERMO4_MAP_MIKROBUS( irthermo4_cfg, MIKROBUS_1 );
+    IRTHERMO4_MAP_MIKROBUS( irthermo4_cfg, MIKROBUS_POSITION_IRTHERMO4 );
     if ( I2C_MASTER_ERROR == irthermo4_init( &irthermo4, &irthermo4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

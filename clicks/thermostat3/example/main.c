@@ -26,6 +26,10 @@
 #include "log.h"
 #include "thermostat3.h"
 
+#ifndef MIKROBUS_POSITION_THERMOSTAT3
+    #define MIKROBUS_POSITION_THERMOSTAT3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermostat3_t thermostat3;
@@ -86,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermostat3_cfg_setup( &cfg );
-    THERMOSTAT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMOSTAT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMOSTAT3 );
     thermostat3_init( &thermostat3, &cfg );
 
     // Power on delay

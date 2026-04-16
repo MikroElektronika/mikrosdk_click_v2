@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     dht222_cfg_setup( &cfg );
-    DHT222_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DHT222_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DHT222 );
     dht222_init( &dht222, &cfg );
     Delay_ms ( 500 );
 }

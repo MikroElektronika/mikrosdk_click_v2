@@ -29,6 +29,10 @@
 #include "log.h"
 #include "ism9.h"
 
+#ifndef MIKROBUS_POSITION_ISM9
+    #define MIKROBUS_POSITION_ISM9 MIKROBUS_1
+#endif
+
 // Text message to send to initiate communication
 #define DEMO_TEXT_MESSAGE   "MIKROE - ISM 9 Click board"
 
@@ -91,7 +95,7 @@ void application_init ( void )
 
     // Click initialization.
     ism9_cfg_setup( &ism9_cfg );
-    ISM9_MAP_MIKROBUS( ism9_cfg, MIKROBUS_1 );
+    ISM9_MAP_MIKROBUS( ism9_cfg, MIKROBUS_POSITION_ISM9 );
     if ( UART_ERROR == ism9_init( &ism9, &ism9_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

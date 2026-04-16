@@ -22,6 +22,10 @@
 #include "log.h"
 #include "flash5.h"
 
+#ifndef MIKROBUS_POSITION_FLASH5
+    #define MIKROBUS_POSITION_FLASH5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static flash5_t flash5;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     flash5_cfg_setup( &cfg );
-    FLASH5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLASH5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLASH5 );
     flash5_init( &flash5, &cfg );
 
     log_printf( &logger, " - Reseting device... \r\n" );

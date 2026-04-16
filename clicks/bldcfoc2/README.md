@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     bldcfoc2_cfg_setup( &bldcfoc2_cfg );
-    BLDCFOC2_MAP_MIKROBUS( bldcfoc2_cfg, MIKROBUS_1 );
+    BLDCFOC2_MAP_MIKROBUS( bldcfoc2_cfg, MIKROBUS_POSITION_BLDCFOC2 );
     if ( PWM_ERROR == bldcfoc2_init( &bldcfoc2, &bldcfoc2_cfg ) )
     {
         log_error( &logger, " Communication init." );

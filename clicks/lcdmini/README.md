@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     lcdmini_cfg_setup( &lcdmini_cfg );
-    LCDMINI_MAP_MIKROBUS( lcdmini_cfg, MIKROBUS_1 );
+    LCDMINI_MAP_MIKROBUS( lcdmini_cfg, MIKROBUS_POSITION_LCDMINI );
     if ( SPI_MASTER_ERROR == lcdmini_init( &lcdmini, &lcdmini_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     magneticrotary2_cfg_setup( &magneticrotary2_cfg );
-    MAGNETICROTARY2_MAP_MIKROBUS( magneticrotary2_cfg, MIKROBUS_1 );
+    MAGNETICROTARY2_MAP_MIKROBUS( magneticrotary2_cfg, MIKROBUS_POSITION_MAGNETICROTARY2 );
     if ( SPI_MASTER_ERROR == magneticrotary2_init( &magneticrotary2, &magneticrotary2_cfg ) )
     {
         log_error( &logger, " Communication init." );

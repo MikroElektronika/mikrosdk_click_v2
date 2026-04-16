@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     hbridge9_cfg_setup( &hbridge9_cfg );
-    HBRIDGE9_MAP_MIKROBUS( hbridge9_cfg, MIKROBUS_1 );
+    HBRIDGE9_MAP_MIKROBUS( hbridge9_cfg, MIKROBUS_POSITION_HBRIDGE9 );
     err_t init_flag = hbridge9_init( &hbridge9, &hbridge9_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs2322_cfg_setup( &cfg );
-    RS2322_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS2322_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS2322 );
     rs2322_init( &rs2322, &cfg );
 }
 ```

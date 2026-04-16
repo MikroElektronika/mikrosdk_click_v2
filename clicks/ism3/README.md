@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ism3_cfg_setup( &ism3_cfg );
-    ISM3_MAP_MIKROBUS( ism3_cfg, MIKROBUS_1 );
+    ISM3_MAP_MIKROBUS( ism3_cfg, MIKROBUS_POSITION_ISM3 );
     if ( SPI_MASTER_ERROR == ism3_init( &ism3, &ism3_cfg ) )
     {
         log_error( &logger, " Communication init." );

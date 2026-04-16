@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pwrmeter2.h"
 
+#ifndef MIKROBUS_POSITION_PWRMETER2
+    #define MIKROBUS_POSITION_PWRMETER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pwrmeter2_t pwrmeter2;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     pwrmeter2_cfg_setup( &pwrmeter2_cfg );
-    PWRMETER2_MAP_MIKROBUS( pwrmeter2_cfg, MIKROBUS_1 );
+    PWRMETER2_MAP_MIKROBUS( pwrmeter2_cfg, MIKROBUS_POSITION_PWRMETER2 );
     if ( SPI_MASTER_ERROR == pwrmeter2_init( &pwrmeter2, &pwrmeter2_cfg ) )
     {
         log_error( &logger, " Communication init." );

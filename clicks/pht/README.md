@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     pht_cfg_setup( &pht_cfg );
-    PHT_MAP_MIKROBUS( pht_cfg, MIKROBUS_1 );
+    PHT_MAP_MIKROBUS( pht_cfg, MIKROBUS_POSITION_PHT );
     err_t init_flag = pht_init( &pht, &pht_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

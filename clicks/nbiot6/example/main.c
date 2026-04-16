@@ -59,6 +59,10 @@
 #include "nbiot6.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_NBIOT6
+    #define MIKROBUS_POSITION_NBIOT6 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_TCP_UDP                     0               // Example of sending messages to a TCP/UDP echo server
 #define EXAMPLE_SMS                         1               // Example of sending SMS to a phone number
@@ -229,7 +233,7 @@ void application_init ( void )
 
     // Click initialization.
     nbiot6_cfg_setup( &nbiot6_cfg );
-    NBIOT6_MAP_MIKROBUS( nbiot6_cfg, MIKROBUS_1 );
+    NBIOT6_MAP_MIKROBUS( nbiot6_cfg, MIKROBUS_POSITION_NBIOT6 );
     if ( UART_ERROR == nbiot6_init( &nbiot6, &nbiot6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

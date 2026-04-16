@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     mbusmaster_cfg_setup( &cfg );
-    MBUSMASTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MBUSMASTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MBUSMASTER );
     mbusmaster_init( &mbusmaster, &cfg );
     Delay_ms ( 100 );
 }

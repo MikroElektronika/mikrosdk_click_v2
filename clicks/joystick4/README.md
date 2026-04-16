@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     joystick4_cfg_setup( &joystick4_cfg );
-    JOYSTICK4_MAP_MIKROBUS( joystick4_cfg, MIKROBUS_1 );
+    JOYSTICK4_MAP_MIKROBUS( joystick4_cfg, MIKROBUS_POSITION_JOYSTICK4 );
     if ( I2C_MASTER_ERROR == joystick4_init( &joystick4, &joystick4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

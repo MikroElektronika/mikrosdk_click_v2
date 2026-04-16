@@ -27,6 +27,10 @@
 #include "matrixrgb_fonts.h"
 #include "matrixrgb_images.h"
 
+#ifndef MIKROBUS_POSITION_MATRIXRGB
+    #define MIKROBUS_POSITION_MATRIXRGB MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static matrixrgb_t matrixrgb;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     matrixrgb_cfg_setup( &cfg );
-    MATRIXRGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MATRIXRGB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MATRIXRGB );
     matrixrgb_init( &matrixrgb, &cfg );
 
     matrixrgb_device_reset( &matrixrgb );

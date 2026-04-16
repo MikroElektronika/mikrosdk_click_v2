@@ -37,6 +37,10 @@
 #include "log.h"
 #include "xportethse.h"
 
+#ifndef MIKROBUS_POSITION_XPORTETHSE
+    #define MIKROBUS_POSITION_XPORTETHSE MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             300
 #define PROCESS_BUFFER_SIZE         100
@@ -98,7 +102,7 @@ void application_init ( void )
 
     // Click initialization.
     xportethse_cfg_setup( &xportethse_cfg );
-    XPORTETHSE_MAP_MIKROBUS( xportethse_cfg, MIKROBUS_1 );
+    XPORTETHSE_MAP_MIKROBUS( xportethse_cfg, MIKROBUS_POSITION_XPORTETHSE );
     if ( UART_ERROR == xportethse_init( &xportethse, &xportethse_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

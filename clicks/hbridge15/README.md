@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridge15_cfg_setup( &hbridge15_cfg );
-    HBRIDGE15_MAP_MIKROBUS( hbridge15_cfg, MIKROBUS_1 );
+    HBRIDGE15_MAP_MIKROBUS( hbridge15_cfg, MIKROBUS_POSITION_HBRIDGE15 );
     if ( I2C_MASTER_ERROR == hbridge15_init( &hbridge15, &hbridge15_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

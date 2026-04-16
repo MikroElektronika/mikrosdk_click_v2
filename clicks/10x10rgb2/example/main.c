@@ -25,6 +25,10 @@
 #include "c10x10rgb2.h"
 #include "c10x10rgb2_resources.h"
 
+#ifndef MIKROBUS_POSITION_10X10RGB2
+    #define MIKROBUS_POSITION_10X10RGB2 MIKROBUS_1
+#endif
+
 static c10x10rgb2_t c10x10rgb2;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     c10x10rgb2_cfg_setup( &c10x10rgb2_cfg );
-    C10X10RGB2_MAP_MIKROBUS( c10x10rgb2_cfg, MIKROBUS_1 );
+    C10X10RGB2_MAP_MIKROBUS( c10x10rgb2_cfg, MIKROBUS_POSITION_10X10RGB2 );
     if ( SPI_MASTER_ERROR == c10x10rgb2_init( &c10x10rgb2, &c10x10rgb2_cfg ) )
     {
         log_error( &logger, " Communication init." );

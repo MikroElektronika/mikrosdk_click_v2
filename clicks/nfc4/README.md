@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc4_cfg_setup( &nfc4_cfg );
-    NFC4_MAP_MIKROBUS( nfc4_cfg, MIKROBUS_1 );
+    NFC4_MAP_MIKROBUS( nfc4_cfg, MIKROBUS_POSITION_NFC4 );
     err_t init_flag  = nfc4_init( &nfc4, &nfc4_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

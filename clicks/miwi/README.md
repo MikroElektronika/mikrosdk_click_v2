@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     miwi_cfg_setup( &miwi_cfg );
-    MIWI_MAP_MIKROBUS( miwi_cfg, MIKROBUS_1 );
+    MIWI_MAP_MIKROBUS( miwi_cfg, MIKROBUS_POSITION_MIWI );
     if ( SPI_MASTER_ERROR == miwi_init( &miwi, &miwi_cfg ) )
     {
         log_error( &logger, " Communication init." );

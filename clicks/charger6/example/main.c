@@ -30,6 +30,10 @@
 #include "log.h"
 #include "charger6.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER6
+    #define MIKROBUS_POSITION_CHARGER6 MIKROBUS_1
+#endif
+
 static charger6_t charger6;
 static log_t logger;
 
@@ -165,7 +169,7 @@ void application_init ( void ) {
     // Click initialization.
 
     charger6_cfg_setup( &charger6_cfg );
-    CHARGER6_MAP_MIKROBUS( charger6_cfg, MIKROBUS_1 );
+    CHARGER6_MAP_MIKROBUS( charger6_cfg, MIKROBUS_POSITION_CHARGER6 );
     err_t init_flag = charger6_init( &charger6, &charger6_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

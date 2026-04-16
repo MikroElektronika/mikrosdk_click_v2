@@ -27,6 +27,10 @@
 #include "log.h"
 #include "light.h"
 
+#ifndef MIKROBUS_POSITION_LIGHT
+    #define MIKROBUS_POSITION_LIGHT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static light_t light;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     light_cfg_setup( &cfg );
-    LIGHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIGHT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIGHT );
     light_init( &light, &cfg );
 
 }

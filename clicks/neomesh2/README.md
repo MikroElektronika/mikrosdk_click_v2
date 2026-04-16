@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     neomesh2_cfg_setup( &neomesh2_cfg );
-    NEOMESH2_MAP_MIKROBUS( neomesh2_cfg, MIKROBUS_1 );
+    NEOMESH2_MAP_MIKROBUS( neomesh2_cfg, MIKROBUS_POSITION_NEOMESH2 );
     if ( UART_ERROR == neomesh2_init( &neomesh2, &neomesh2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

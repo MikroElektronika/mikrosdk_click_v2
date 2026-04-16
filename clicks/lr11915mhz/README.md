@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     lr11915mhz_cfg_setup( &lr11915mhz_cfg );
-    LR11915MHZ_MAP_MIKROBUS( lr11915mhz_cfg, MIKROBUS_1 );
+    LR11915MHZ_MAP_MIKROBUS( lr11915mhz_cfg, MIKROBUS_POSITION_LR11915MHZ );
     if ( UART_ERROR == lr11915mhz_init( &lr11915mhz, &lr11915mhz_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -27,6 +27,10 @@
 #include "log.h"
 #include "vtohz.h"
 
+#ifndef MIKROBUS_POSITION_VTOHZ
+    #define MIKROBUS_POSITION_VTOHZ MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static vtohz_t vtohz;
@@ -78,7 +82,7 @@ void application_init ( void )
     //  Click initialization.
 
     vtohz_cfg_setup( &cfg );
-    VTOHZ_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VTOHZ_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VTOHZ );
     vtohz_init( &vtohz, &cfg );
     
     vtohz_enable ( &vtohz );

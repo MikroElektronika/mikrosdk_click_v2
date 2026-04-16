@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     lightranger11_cfg_setup( &lightranger11_cfg );
-    LIGHTRANGER11_MAP_MIKROBUS( lightranger11_cfg, MIKROBUS_1 );
+    LIGHTRANGER11_MAP_MIKROBUS( lightranger11_cfg, MIKROBUS_POSITION_LIGHTRANGER11 );
     if ( I2C_MASTER_ERROR == lightranger11_init( &lightranger11, &lightranger11_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

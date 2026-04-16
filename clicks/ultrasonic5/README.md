@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ultrasonic5_cfg_setup( &ultrasonic5_cfg );
-    ULTRASONIC5_MAP_MIKROBUS( ultrasonic5_cfg, MIKROBUS_1 );
+    ULTRASONIC5_MAP_MIKROBUS( ultrasonic5_cfg, MIKROBUS_POSITION_ULTRASONIC5 );
     if ( ULTRASONIC5_OK != ultrasonic5_init( &ultrasonic5, &ultrasonic5_cfg ) )
     {
         log_error( &logger, " Communication init." );

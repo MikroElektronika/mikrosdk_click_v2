@@ -28,6 +28,10 @@
 #include "log.h"
 #include "loadcell3.h"
 
+#ifndef MIKROBUS_POSITION_LOADCELL3
+    #define MIKROBUS_POSITION_LOADCELL3 MIKROBUS_1
+#endif
+
 static loadcell3_t loadcell3;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void ) {
     // Click initialization.
 
     loadcell3_cfg_setup( &loadcell3_cfg );
-    LOADCELL3_MAP_MIKROBUS( loadcell3_cfg, MIKROBUS_1 );
+    LOADCELL3_MAP_MIKROBUS( loadcell3_cfg, MIKROBUS_POSITION_LOADCELL3 );
     err_t init_flag = loadcell3_init( &loadcell3, &loadcell3_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

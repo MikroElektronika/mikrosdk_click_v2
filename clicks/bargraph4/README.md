@@ -85,7 +85,7 @@ void application_init ( void )
     // Click initialization.
 
     bargraph4_cfg_setup( &bargraph4_cfg );
-    BARGRAPH4_MAP_MIKROBUS( bargraph4_cfg, MIKROBUS_1 );
+    BARGRAPH4_MAP_MIKROBUS( bargraph4_cfg, MIKROBUS_POSITION_BARGRAPH4 );
     err_t init_flag  = bargraph4_init( &bargraph4, &bargraph4_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

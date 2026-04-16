@@ -29,6 +29,10 @@
 #include "string.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_WIFIESP
+    #define MIKROBUS_POSITION_WIFIESP MIKROBUS_1
+#endif
+
 #define APP_SSID                            "MIKROE GUEST"
 #define APP_PASSWORD                        "!guest.mikroe!"
 
@@ -245,7 +249,7 @@ void application_init ( void )
 
     // Click initialization.
     wifiesp_cfg_setup( &cfg );
-    WIFIESP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WIFIESP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WIFIESP );
     wifiesp_init( &wifiesp, &cfg );
     wifiesp_default_cfg( &wifiesp );
     Delay_ms ( 1000 );

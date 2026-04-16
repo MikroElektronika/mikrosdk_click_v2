@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     bm78_cfg_setup( &bm78_cfg );
-    BM78_MAP_MIKROBUS( bm78_cfg, MIKROBUS_1 );
+    BM78_MAP_MIKROBUS( bm78_cfg, MIKROBUS_POSITION_BM78 );
     if ( UART_ERROR == bm78_init( &bm78, &bm78_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

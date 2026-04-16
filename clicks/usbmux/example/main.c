@@ -24,6 +24,10 @@
 #include "log.h"
 #include "usbmux.h"
 
+#ifndef MIKROBUS_POSITION_USBMUX
+    #define MIKROBUS_POSITION_USBMUX MIKROBUS_1
+#endif
+
 static usbmux_t usbmux;   /**< USB MUX Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -55,7 +59,7 @@ void application_init ( void )
 
     // Click initialization.
     usbmux_cfg_setup( &usbmux_cfg );
-    USBMUX_MAP_MIKROBUS( usbmux_cfg, MIKROBUS_1 );
+    USBMUX_MAP_MIKROBUS( usbmux_cfg, MIKROBUS_POSITION_USBMUX );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == usbmux_init( &usbmux, &usbmux_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

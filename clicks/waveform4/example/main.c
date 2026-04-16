@@ -25,6 +25,10 @@
 #include "log.h"
 #include "waveform4.h"
 
+#ifndef MIKROBUS_POSITION_WAVEFORM4
+    #define MIKROBUS_POSITION_WAVEFORM4 MIKROBUS_1
+#endif
+
 static waveform4_t waveform4;
 static log_t logger;
 
@@ -76,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     waveform4_cfg_setup( &waveform4_cfg );
-    WAVEFORM4_MAP_MIKROBUS( waveform4_cfg, MIKROBUS_1 );
+    WAVEFORM4_MAP_MIKROBUS( waveform4_cfg, MIKROBUS_POSITION_WAVEFORM4 );
     if ( SPI_MASTER_ERROR == waveform4_init( &waveform4, &waveform4_cfg ) )
     {
         log_error( &logger, " Communication init." );

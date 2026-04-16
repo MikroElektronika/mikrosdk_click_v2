@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     airmotion_cfg_setup( &airmotion_cfg );
-    AIRMOTION_MAP_MIKROBUS( airmotion_cfg, MIKROBUS_1 );
+    AIRMOTION_MAP_MIKROBUS( airmotion_cfg, MIKROBUS_POSITION_AIRMOTION );
     err_t init_flag = airmotion_init( &airmotion, &airmotion_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

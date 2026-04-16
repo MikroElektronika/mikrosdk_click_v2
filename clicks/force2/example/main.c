@@ -27,6 +27,10 @@
 #include "log.h"
 #include "force2.h"
 
+#ifndef MIKROBUS_POSITION_FORCE2
+    #define MIKROBUS_POSITION_FORCE2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static force2_t force2;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     //  Click initialization.
     force2_cfg_setup( &cfg );
-    FORCE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FORCE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FORCE2 );
     force2_init( &force2, &cfg );
 
     log_printf( &logger, "--------------------\r\n" );

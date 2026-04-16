@@ -90,7 +90,7 @@ void application_init ( void )
     // Click initialization.
 
     leddriver10_cfg_setup( &leddriver10_cfg );
-    LEDDRIVER10_MAP_MIKROBUS( leddriver10_cfg, MIKROBUS_1 );
+    LEDDRIVER10_MAP_MIKROBUS( leddriver10_cfg, MIKROBUS_POSITION_LEDDRIVER10 );
     err_t init_flag  = leddriver10_init( &leddriver10, &leddriver10_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) 
     {

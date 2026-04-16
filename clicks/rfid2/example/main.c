@@ -26,6 +26,10 @@
 #include "log.h"
 #include "rfid2.h"
 
+#ifndef MIKROBUS_POSITION_RFID2
+    #define MIKROBUS_POSITION_RFID2 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static rfid2_t rfid2;
@@ -74,7 +78,7 @@ void application_init ( void ) {
 
     // Click initialization.
     rfid2_cfg_setup( &rfid2_cfg );
-    RFID2_MAP_MIKROBUS( rfid2_cfg, MIKROBUS_1 );
+    RFID2_MAP_MIKROBUS( rfid2_cfg, MIKROBUS_POSITION_RFID2 );
     err_t init_flag  = rfid2_init( &rfid2, &rfid2_cfg );
     if ( UART_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -26,6 +26,10 @@
 #include "oledw2.h"
 #include "oledw2_resources.h"
 
+#ifndef MIKROBUS_POSITION_OLEDW2
+    #define MIKROBUS_POSITION_OLEDW2 MIKROBUS_1
+#endif
+
 static oledw2_t oledw2;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     oledw2_cfg_setup( &oledw2_cfg );
-    OLEDW2_MAP_MIKROBUS( oledw2_cfg, MIKROBUS_1 );
+    OLEDW2_MAP_MIKROBUS( oledw2_cfg, MIKROBUS_POSITION_OLEDW2 );
     if ( SPI_MASTER_ERROR == oledw2_init( &oledw2, &oledw2_cfg ) )
     {
         log_error( &logger, " Communication init." );

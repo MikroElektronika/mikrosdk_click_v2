@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     haptic5_cfg_setup( &haptic5_cfg );
-    HAPTIC5_MAP_MIKROBUS( haptic5_cfg, MIKROBUS_1 );
+    HAPTIC5_MAP_MIKROBUS( haptic5_cfg, MIKROBUS_POSITION_HAPTIC5 );
     if ( PWM_ERROR == haptic5_init( &haptic5, &haptic5_cfg ) )
     {
         log_error( &logger, " Communication init." );

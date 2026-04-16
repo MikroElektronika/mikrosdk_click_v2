@@ -26,6 +26,10 @@
 #include "rs4853v3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS4853V3
+    #define MIKROBUS_POSITION_RS4853V3 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 100
 #define PROCESS_PARSER_BUFFER_SIZE 100
@@ -108,7 +112,7 @@ void application_init ( void ) {
     //  Click initialization.
 
     rs4853v3_cfg_setup( &cfg );
-    RS4853V3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS4853V3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS4853V3 );
     rs4853v3_init( &rs4853v3, &cfg );
     log_info( &logger, " Application Task " );
     Delay_ms ( 100 );

@@ -31,6 +31,10 @@
 #include "enocean2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_ENOCEAN2
+    #define MIKROBUS_POSITION_ENOCEAN2 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 200
 
@@ -145,7 +149,7 @@ void application_init ( void )
     //  Click initialization.
 
     enocean2_cfg_setup( &cfg );
-    ENOCEAN2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ENOCEAN2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ENOCEAN2 );
     enocean2_init( &enocean2, &cfg );
 
     enocean2_rx_data.rx_buffer   = &rx_buffer[ 0 ];

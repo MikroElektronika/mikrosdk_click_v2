@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gsm2_cfg_setup( &gsm2_cfg );
-    GSM2_MAP_MIKROBUS( gsm2_cfg, MIKROBUS_1 );
+    GSM2_MAP_MIKROBUS( gsm2_cfg, MIKROBUS_POSITION_GSM2 );
     if ( UART_ERROR == gsm2_init( &gsm2, &gsm2_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

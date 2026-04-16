@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     ups_cfg_setup( &cfg );
-    UPS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UPS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UPS );
     ups_init( &ups, &cfg );
 
     usp_set_mode( &ups, UPS_MODE_ACTIVE );

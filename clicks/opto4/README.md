@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     opto4_cfg_setup( &cfg );
-    OPTO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OPTO4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OPTO4 );
     opto4_init( &opto4, &cfg );
 }
 ```

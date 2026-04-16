@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     canisolator2_cfg_setup( &canisolator2_cfg );
-    CANISOLATOR2_MAP_MIKROBUS( canisolator2_cfg, MIKROBUS_1 );
+    CANISOLATOR2_MAP_MIKROBUS( canisolator2_cfg, MIKROBUS_POSITION_CANISOLATOR2 );
     err_t init_flag  = canisolator2_init( &canisolator2, &canisolator2_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

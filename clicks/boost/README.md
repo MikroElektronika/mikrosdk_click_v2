@@ -87,7 +87,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     boost_cfg_setup( &cfg );
-    BOOST_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOST_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOST );
     boost_init( &boost, &cfg );
 
     boost_default_cfg ( &boost );

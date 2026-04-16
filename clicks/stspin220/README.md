@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     stspin220_cfg_setup( &stspin220_cfg );
-    STSPIN220_MAP_MIKROBUS( stspin220_cfg, MIKROBUS_1 );
+    STSPIN220_MAP_MIKROBUS( stspin220_cfg, MIKROBUS_POSITION_STSPIN220 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == stspin220_init( &stspin220, &stspin220_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

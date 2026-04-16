@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     c420mat_cfg_setup( &cfg );
-    C420MAT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C420MAT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_420MAT );
     c420mat_init( &c420mat, &cfg );
 }
 ```

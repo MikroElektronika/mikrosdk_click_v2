@@ -26,6 +26,10 @@
 #include "log.h"
 #include "buck.h"
 
+#ifndef MIKROBUS_POSITION_BUCK
+    #define MIKROBUS_POSITION_BUCK MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static buck_t buck;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck_cfg_setup( &cfg );
-    BUCK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK );
     buck_init( &buck, &cfg );
     Delay_ms ( 100 );
 

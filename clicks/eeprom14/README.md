@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom14_cfg_setup( &eeprom14_cfg );
-    EEPROM14_MAP_MIKROBUS( eeprom14_cfg, MIKROBUS_1 );
+    EEPROM14_MAP_MIKROBUS( eeprom14_cfg, MIKROBUS_POSITION_EEPROM14 );
     if ( I2C_MASTER_ERROR == eeprom14_init( &eeprom14, &eeprom14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

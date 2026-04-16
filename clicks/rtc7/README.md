@@ -88,7 +88,7 @@ void application_init ( void )
 
     //  Click initialization.
     rtc7_cfg_setup( &cfg );
-    RTC7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC7 );
     rtc7_init( &rtc7, &cfg );
     Delay_ms ( 300 );
     

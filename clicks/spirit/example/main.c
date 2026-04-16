@@ -26,6 +26,10 @@
 #include "log.h"
 #include "spirit.h"
 
+#ifndef MIKROBUS_POSITION_SPIRIT
+    #define MIKROBUS_POSITION_SPIRIT MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 500
 #define PROCESS_COUNTER     20
 
@@ -77,7 +81,7 @@ void application_init ( void )
     //  Click initialization.
 
     spirit_cfg_setup( &cfg );
-    SPIRIT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPIRIT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPIRIT );
     spirit_init( &spirit, &cfg );
     Delay_ms ( 1000 );
 

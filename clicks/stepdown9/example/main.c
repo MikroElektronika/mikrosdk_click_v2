@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stepdown9.h"
 
+#ifndef MIKROBUS_POSITION_STEPDOWN9
+    #define MIKROBUS_POSITION_STEPDOWN9 MIKROBUS_1
+#endif
+
 static stepdown9_t stepdown9;
 static log_t logger;
 
@@ -56,7 +60,7 @@ void application_init ( void )
 
     // Click initialization.
     stepdown9_cfg_setup( &stepdown9_cfg );
-    STEPDOWN9_MAP_MIKROBUS( stepdown9_cfg, MIKROBUS_1 );
+    STEPDOWN9_MAP_MIKROBUS( stepdown9_cfg, MIKROBUS_POSITION_STEPDOWN9 );
     if ( SPI_MASTER_ERROR == stepdown9_init( &stepdown9, &stepdown9_cfg ) )
     {
         log_error( &logger, " Communication init." );

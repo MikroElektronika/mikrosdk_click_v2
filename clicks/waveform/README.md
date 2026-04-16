@@ -83,7 +83,7 @@ void application_init ( )
 
     // Click initialization.
     waveform_cfg_setup( &waveform_cfg );
-    WAVEFORM_MAP_MIKROBUS( waveform_cfg, MIKROBUS_1 );
+    WAVEFORM_MAP_MIKROBUS( waveform_cfg, MIKROBUS_POSITION_WAVEFORM );
     if ( SPI_MASTER_ERROR == waveform_init( &waveform, &waveform_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -27,6 +27,10 @@
 #include "log.h"
 #include "magneticrotary.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETICROTARY
+    #define MIKROBUS_POSITION_MAGNETICROTARY MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static magneticrotary_t magneticrotary;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneticrotary_cfg_setup( &cfg );
-    MAGNETICROTARY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETICROTARY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETICROTARY );
     magneticrotary_init( &magneticrotary, &cfg );
     log_info(&logger, "Magnetic rotary successufully initialized!\r\n");
 

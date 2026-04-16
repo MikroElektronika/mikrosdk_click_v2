@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     c16x12_cfg_setup( &cfg );
-    C16X12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C16X12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_16X12 );
     c16x12_init( &c16x12, &cfg );
 
     c16x12g_device_reset( &c16x12 );

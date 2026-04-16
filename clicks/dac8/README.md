@@ -94,7 +94,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac8_cfg_setup( &cfg );
-    DAC8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC8 );
     
     dac8_init( &dac8, &cfg, DAC8_MASTER_I2C );
 

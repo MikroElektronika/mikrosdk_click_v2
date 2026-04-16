@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     gsmgnss2_cfg_setup( &gsmgnss2_cfg );
-    GSMGNSS2_MAP_MIKROBUS( gsmgnss2_cfg, MIKROBUS_1 );
+    GSMGNSS2_MAP_MIKROBUS( gsmgnss2_cfg, MIKROBUS_POSITION_GSMGNSS2 );
     gsmgnss2_init( &gsmgnss2, &gsmgnss2_cfg );
 
     gsmgnss2_module_power( &gsmgnss2, GSMGNSS2_MODULE_POWER_ON );

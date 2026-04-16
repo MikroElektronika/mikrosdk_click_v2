@@ -22,6 +22,10 @@
 #include "log.h"
 #include "sram2.h"
 
+#ifndef MIKROBUS_POSITION_SRAM2
+    #define MIKROBUS_POSITION_SRAM2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static sram2_t sram2;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     sram2_cfg_setup( &cfg );
-    SRAM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SRAM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SRAM2 );
     sram2_init( &sram2, &cfg );
     
     Delay_ms ( 100 );

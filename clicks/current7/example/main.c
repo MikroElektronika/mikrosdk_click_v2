@@ -24,6 +24,10 @@
 #include "log.h"
 #include "current7.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT7
+    #define MIKROBUS_POSITION_CURRENT7 MIKROBUS_1
+#endif
+
 static current7_t current7;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     current7_cfg_setup( &current7_cfg );
-    CURRENT7_MAP_MIKROBUS( current7_cfg, MIKROBUS_1 );
+    CURRENT7_MAP_MIKROBUS( current7_cfg, MIKROBUS_POSITION_CURRENT7 );
     if ( I2C_MASTER_ERROR == current7_init( &current7, &current7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

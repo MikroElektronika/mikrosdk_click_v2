@@ -30,6 +30,10 @@
 #include "log.h"
 #include "templog2.h"
 
+#ifndef MIKROBUS_POSITION_TEMPLOG2
+    #define MIKROBUS_POSITION_TEMPLOG2 MIKROBUS_1
+#endif
+
 
 // ------------------------------------------------------------------ VARIABLES
 
@@ -45,7 +49,7 @@ void application_init( void )
 
     //  Click initialization.
     templog2_cfg_setup( &templog2_cfg );
-    TEMPLOG2_MAP_MIKROBUS( templog2_cfg, MIKROBUS_1 );
+    TEMPLOG2_MAP_MIKROBUS( templog2_cfg, MIKROBUS_POSITION_TEMPLOG2 );
     templog2_init( &templog2, &templog2_cfg );
 
     //  Click default configuration.

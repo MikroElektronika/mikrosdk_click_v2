@@ -36,6 +36,10 @@
 #include "lightranger14.h"
 #include "math.h"
 
+#ifndef MIKROBUS_POSITION_LIGHTRANGER14
+    #define MIKROBUS_POSITION_LIGHTRANGER14 MIKROBUS_1
+#endif
+
 static lightranger14_t lightranger14;
 static log_t logger;
 
@@ -80,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     lightranger14_cfg_setup( &lightranger14_cfg );
-    LIGHTRANGER14_MAP_MIKROBUS( lightranger14_cfg, MIKROBUS_1 );
+    LIGHTRANGER14_MAP_MIKROBUS( lightranger14_cfg, MIKROBUS_POSITION_LIGHTRANGER14 );
     err_t init_flag = lightranger14_init( &lightranger14, &lightranger14_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

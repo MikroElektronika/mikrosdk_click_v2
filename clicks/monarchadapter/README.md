@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     monarchadapter_cfg_setup( &cfg );
-    MONARCHADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MONARCHADAPTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MONARCHADAPTER );
     monarchadapter_init( &monarchadapter, &cfg );
 
     monarchadapter_power_on( &monarchadapter );

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "nvsram2.h"
 
+#ifndef MIKROBUS_POSITION_NVSRAM2
+    #define MIKROBUS_POSITION_NVSRAM2 MIKROBUS_1
+#endif
+
 static nvsram2_t nvsram2;
 static log_t logger;
 static char demo_data[ 9 ] = { 'm', 'i', 'k', 'r', 'o', 'E', 13 ,10 , 0 };
@@ -52,7 +56,7 @@ void application_init ( void ) {
     // Click initialization.
 
     nvsram2_cfg_setup( &nvsram2_cfg );
-    NVSRAM2_MAP_MIKROBUS( nvsram2_cfg, MIKROBUS_1 );
+    NVSRAM2_MAP_MIKROBUS( nvsram2_cfg, MIKROBUS_POSITION_NVSRAM2 );
     err_t init_flag  = nvsram2_init( &nvsram2, &nvsram2_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         

@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     clockgen2_cfg_setup( &cfg );
-    CLOCKGEN2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CLOCKGEN2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CLOCKGEN2 );
     clockgen2_init( &clockgen2, &cfg );
 
     Delay_ms ( 100 );

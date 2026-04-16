@@ -23,6 +23,10 @@
 #include "log.h"
 #include "peltier.h"
 
+#ifndef MIKROBUS_POSITION_PELTIER
+    #define MIKROBUS_POSITION_PELTIER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static peltier_t peltier;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     peltier_cfg_setup( &cfg );
-    PELTIER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PELTIER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PELTIER );
     peltier_init( &peltier, &cfg );
 }
 

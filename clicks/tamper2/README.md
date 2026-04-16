@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     tamper2_cfg_setup( &cfg );
-    TAMPER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TAMPER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TAMPER2 );
     tamper2_init( &tamper2, &cfg );
 }
 ```

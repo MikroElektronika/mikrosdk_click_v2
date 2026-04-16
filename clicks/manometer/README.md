@@ -82,7 +82,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     manometer_cfg_setup( &cfg );
-    MANOMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MANOMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MANOMETER );
     manometer_init( &manometer, &cfg );
 }
 ```

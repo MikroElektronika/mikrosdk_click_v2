@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ccrf3_cfg_setup( &ccrf3_cfg );
-    CCRF3_MAP_MIKROBUS( ccrf3_cfg, MIKROBUS_1 );
+    CCRF3_MAP_MIKROBUS( ccrf3_cfg, MIKROBUS_POSITION_CCRF3 );
     if ( SPI_MASTER_ERROR == ccrf3_init( &ccrf3, &ccrf3_cfg ) )
     {
         log_error( &logger, " Communication init." );

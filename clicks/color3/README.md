@@ -85,7 +85,7 @@ void application_init ( void )
 
     //  Click initialization.
     color3_cfg_setup( &cfg );
-    COLOR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR3 );
     color3_init( &color3, &cfg );
     Delay_ms ( 100 );
 

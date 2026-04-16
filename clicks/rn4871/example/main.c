@@ -29,6 +29,10 @@
 #include "rn4871.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RN4871
+    #define MIKROBUS_POSITION_RN4871 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 #define PROCESS_PARSER_BUFFER_SIZE 500
@@ -95,7 +99,7 @@ void application_init ( void )
     //  Click initialization.
 
     rn4871_cfg_setup( &cfg );
-    RN4871_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RN4871_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RN4871 );
     rn4871_init( &rn4871, &cfg );
     Delay_ms ( 100 );
     

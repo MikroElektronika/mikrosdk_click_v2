@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     obdii_cfg_setup( &obdii_cfg );
-    OBDII_MAP_MIKROBUS( obdii_cfg, MIKROBUS_1 );
+    OBDII_MAP_MIKROBUS( obdii_cfg, MIKROBUS_POSITION_OBDII );
     if ( UART_ERROR == obdii_init( &obdii, &obdii_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

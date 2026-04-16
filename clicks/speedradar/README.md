@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     speedradar_cfg_setup( &speedradar_cfg );
-    SPEEDRADAR_MAP_MIKROBUS( speedradar_cfg, MIKROBUS_1 );
+    SPEEDRADAR_MAP_MIKROBUS( speedradar_cfg, MIKROBUS_POSITION_SPEEDRADAR );
     if ( UART_ERROR == speedradar_init( &speedradar, &speedradar_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

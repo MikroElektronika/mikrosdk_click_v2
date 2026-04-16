@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver6_cfg_setup( &leddriver6_cfg );
-    LEDDRIVER6_MAP_MIKROBUS( leddriver6_cfg, MIKROBUS_1 );
+    LEDDRIVER6_MAP_MIKROBUS( leddriver6_cfg, MIKROBUS_POSITION_LEDDRIVER6 );
 
     if ( leddriver6_init( &leddriver6, &leddriver6_cfg ) == LEDDRIVER6_INIT_ERROR )
     {

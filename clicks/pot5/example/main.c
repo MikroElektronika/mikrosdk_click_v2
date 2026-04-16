@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pot5.h"
 
+#ifndef MIKROBUS_POSITION_POT5
+    #define MIKROBUS_POSITION_POT5 MIKROBUS_1
+#endif
+
 static pot5_t pot5;   /**< POT 5 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     pot5_cfg_setup( &pot5_cfg );
-    POT5_MAP_MIKROBUS( pot5_cfg, MIKROBUS_1 );
+    POT5_MAP_MIKROBUS( pot5_cfg, MIKROBUS_POSITION_POT5 );
     err_t init_flag = pot5_init( &pot5, &pot5_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

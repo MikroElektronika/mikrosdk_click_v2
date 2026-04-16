@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     audioamp9_cfg_setup( &audioamp9_cfg );
-    AUDIOAMP9_MAP_MIKROBUS( audioamp9_cfg, MIKROBUS_1 );
+    AUDIOAMP9_MAP_MIKROBUS( audioamp9_cfg, MIKROBUS_POSITION_AUDIOAMP9 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == audioamp9_init( &audioamp9, &audioamp9_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

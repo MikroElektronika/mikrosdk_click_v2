@@ -72,7 +72,7 @@ void application_init ( void )
 
     //  Click initialization.
     eink213inch_cfg_setup( &cfg );
-    EINK213INCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EINK213INCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EINK213INCH );
     eink213inch_init( &eink213inch, &cfg );
 
     eink213inch_start_config( &eink213inch );

@@ -30,6 +30,10 @@
 #include "log.h"
 #include "annab412.h"
 
+#ifndef MIKROBUS_POSITION_ANNAB412
+    #define MIKROBUS_POSITION_ANNAB412 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE    200
 #define DEVICE_NAME            "ANNA-B412 Click"
 #define RSP_TIMEOUT            20000
@@ -92,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     annab412_cfg_setup( &annab412_cfg );
-    ANNAB412_MAP_MIKROBUS( annab412_cfg, MIKROBUS_1 );
+    ANNAB412_MAP_MIKROBUS( annab412_cfg, MIKROBUS_POSITION_ANNAB412 );
     if ( UART_ERROR == annab412_init( &annab412, &annab412_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

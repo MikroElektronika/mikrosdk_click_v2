@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     usbcsink4_cfg_setup( &usbcsink4_cfg );
-    USBCSINK4_MAP_MIKROBUS( usbcsink4_cfg, MIKROBUS_1 );
+    USBCSINK4_MAP_MIKROBUS( usbcsink4_cfg, MIKROBUS_POSITION_USBCSINK4 );
     if ( I2C_MASTER_ERROR == usbcsink4_init( &usbcsink4, &usbcsink4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

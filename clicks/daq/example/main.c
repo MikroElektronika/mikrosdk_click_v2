@@ -26,6 +26,10 @@
 #include "log.h"
 #include "daq.h"
 
+#ifndef MIKROBUS_POSITION_DAQ
+    #define MIKROBUS_POSITION_DAQ MIKROBUS_1
+#endif
+
 static daq_t daq;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     daq_cfg_setup( &daq_cfg );
-    DAQ_MAP_MIKROBUS( daq_cfg, MIKROBUS_1 );
+    DAQ_MAP_MIKROBUS( daq_cfg, MIKROBUS_POSITION_DAQ );
     err_t init_flag  = daq_init( &daq, &daq_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) 
     {

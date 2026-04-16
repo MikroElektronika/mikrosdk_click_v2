@@ -23,6 +23,10 @@
 #include "log.h"
 #include "buck18.h"
 
+#ifndef MIKROBUS_POSITION_BUCK18
+    #define MIKROBUS_POSITION_BUCK18 MIKROBUS_1
+#endif
+
 static buck18_t buck18;   /**< Buck 18 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     buck18_cfg_setup( &buck18_cfg );
-    BUCK18_MAP_MIKROBUS( buck18_cfg, MIKROBUS_1 );
+    BUCK18_MAP_MIKROBUS( buck18_cfg, MIKROBUS_POSITION_BUCK18 );
     err_t init_flag = buck18_init( &buck18, &buck18_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

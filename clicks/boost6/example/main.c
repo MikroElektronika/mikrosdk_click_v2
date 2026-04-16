@@ -23,6 +23,10 @@
 #include "log.h"
 #include "boost6.h"
 
+#ifndef MIKROBUS_POSITION_BOOST6
+    #define MIKROBUS_POSITION_BOOST6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static boost6_t boost6;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     boost6_cfg_setup( &cfg );
-    BOOST6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOST6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOST6 );
     boost6_init( &boost6, &cfg );
 
     log_printf( &logger, "-----------------\r\n" );

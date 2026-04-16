@@ -25,6 +25,10 @@
 #include "log.h"
 #include "hwmonitor.h"
 
+#ifndef MIKROBUS_POSITION_HWMONITOR
+    #define MIKROBUS_POSITION_HWMONITOR MIKROBUS_1
+#endif
+
 static hwmonitor_t hwmonitor;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     hwmonitor_cfg_setup( &hwmonitor_cfg );
-    HWMONITOR_MAP_MIKROBUS( hwmonitor_cfg, MIKROBUS_1 );
+    HWMONITOR_MAP_MIKROBUS( hwmonitor_cfg, MIKROBUS_POSITION_HWMONITOR );
     if ( I2C_MASTER_ERROR == hwmonitor_init( &hwmonitor, &hwmonitor_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

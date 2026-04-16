@@ -23,6 +23,10 @@
 #include "log.h"
 #include "heater.h"
 
+#ifndef MIKROBUS_POSITION_HEATER
+    #define MIKROBUS_POSITION_HEATER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static heater_t heater;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     heater_cfg_setup( &cfg, &cfg1 );
-    HEATER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEATER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEATER );
     heater_init( &heater, &cfg, &cfg1 );
 
     

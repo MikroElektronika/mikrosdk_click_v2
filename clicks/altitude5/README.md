@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     altitude5_cfg_setup( &altitude5_cfg );
-    ALTITUDE5_MAP_MIKROBUS( altitude5_cfg, MIKROBUS_1 );
+    ALTITUDE5_MAP_MIKROBUS( altitude5_cfg, MIKROBUS_POSITION_ALTITUDE5 );
     err_t init_flag = altitude5_init( &altitude5, &altitude5_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

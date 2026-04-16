@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     proteuse_cfg_setup( &proteuse_cfg );
-    PROTEUSE_MAP_MIKROBUS( proteuse_cfg, MIKROBUS_1 );
+    PROTEUSE_MAP_MIKROBUS( proteuse_cfg, MIKROBUS_POSITION_PROTEUSE );
     if ( UART_ERROR == proteuse_init( &proteuse, &proteuse_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

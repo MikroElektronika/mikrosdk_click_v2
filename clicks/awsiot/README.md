@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     awsiot_cfg_setup( &awsiot_cfg );
-    AWSIOT_MAP_MIKROBUS( awsiot_cfg, MIKROBUS_1 );
+    AWSIOT_MAP_MIKROBUS( awsiot_cfg, MIKROBUS_POSITION_AWSIOT );
     if ( UART_ERROR == awsiot_init( &awsiot, &awsiot_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

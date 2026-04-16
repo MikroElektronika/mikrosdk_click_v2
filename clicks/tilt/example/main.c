@@ -25,6 +25,10 @@
 #include "log.h"
 #include "tilt.h"
 
+#ifndef MIKROBUS_POSITION_TILT
+    #define MIKROBUS_POSITION_TILT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static tilt_t tilt;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     tilt_cfg_setup( &cfg );
-    TILT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TILT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TILT );
     tilt_init( &tilt, &cfg );
 
     tilt_direction_old = 0;

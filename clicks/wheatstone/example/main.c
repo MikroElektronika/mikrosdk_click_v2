@@ -31,6 +31,10 @@
 #include "log.h"
 #include "wheatstone.h"
 
+#ifndef MIKROBUS_POSITION_WHEATSTONE
+    #define MIKROBUS_POSITION_WHEATSTONE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static wheatstone_t wheatstone;
@@ -58,7 +62,7 @@ void application_init ( void )
 
     // Click initialization.
     wheatstone_cfg_setup( &cfg );
-    WHEATSTONE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WHEATSTONE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WHEATSTONE );
     wheatstone_init( &wheatstone, &cfg );
 
     wheatstone_set_potentiometer ( &wheatstone, WHEATSTONE_POT_MAX );

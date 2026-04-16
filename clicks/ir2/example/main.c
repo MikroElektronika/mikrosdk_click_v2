@@ -24,6 +24,10 @@
 #include "log.h"
 #include "ir2.h"
 
+#ifndef MIKROBUS_POSITION_IR2
+    #define MIKROBUS_POSITION_IR2 MIKROBUS_1
+#endif
+
 #define IR2_TRANSMITTER_MODE    // Uncomment this line to switch to the transmitter mode
 
 #define IR2_ADDRESS     0xAB
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     ir2_cfg_setup( &ir2_cfg );
-    IR2_MAP_MIKROBUS( ir2_cfg, MIKROBUS_1 );
+    IR2_MAP_MIKROBUS( ir2_cfg, MIKROBUS_POSITION_IR2 );
     if ( PWM_ERROR == ir2_init( &ir2, &ir2_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -79,7 +79,7 @@ void application_init( void )
 
     //  Click initialization.
     altitude_cfg_setup( &altitude_cfg );
-    ALTITUDE_MAP_MIKROBUS( altitude_cfg, MIKROBUS_1 );
+    ALTITUDE_MAP_MIKROBUS( altitude_cfg, MIKROBUS_POSITION_ALTITUDE );
     altitude_init( &altitude, &altitude_cfg );
     altitude_default_cfg( &altitude );
 

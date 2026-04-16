@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     ammonia_cfg_setup( &cfg );
-    AMMONIA_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMMONIA_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMMONIA );
     ammonia_init( &ammonia, &cfg );
     Delay_ms ( 100 );
 

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     pir3_cfg_setup( &pir3_cfg );
-    PIR3_MAP_MIKROBUS( pir3_cfg, MIKROBUS_1 );
+    PIR3_MAP_MIKROBUS( pir3_cfg, MIKROBUS_POSITION_PIR3 );
     if ( I2C_MASTER_ERROR == pir3_init( &pir3, &pir3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

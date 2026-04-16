@@ -29,6 +29,10 @@
 #include "log.h"
 #include "gnss11.h"
 
+#ifndef MIKROBUS_POSITION_GNSS11
+    #define MIKROBUS_POSITION_GNSS11 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -94,7 +98,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss11_cfg_setup( &gnss11_cfg );
-    GNSS11_MAP_MIKROBUS( gnss11_cfg, MIKROBUS_1 );
+    GNSS11_MAP_MIKROBUS( gnss11_cfg, MIKROBUS_POSITION_GNSS11 );
     if ( GNSS11_OK != gnss11_init( &gnss11, &gnss11_cfg ) )
     {
         log_error( &logger, " Communication init." );

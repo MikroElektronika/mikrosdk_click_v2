@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     headphoneamp3_cfg_setup( &headphoneamp3_cfg );
-    HEADPHONEAMP3_MAP_MIKROBUS( headphoneamp3_cfg, MIKROBUS_1 );
+    HEADPHONEAMP3_MAP_MIKROBUS( headphoneamp3_cfg, MIKROBUS_POSITION_HEADPHONEAMP3 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == headphoneamp3_init( &headphoneamp3, &headphoneamp3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     fingerprint4_cfg_setup( &fingerprint4_cfg );
-    FINGERPRINT4_MAP_MIKROBUS( fingerprint4_cfg, MIKROBUS_1 );
+    FINGERPRINT4_MAP_MIKROBUS( fingerprint4_cfg, MIKROBUS_POSITION_FINGERPRINT4 );
     if ( FINGERPRINT4_RES_OK != fingerprint4_init( &fingerprint4, &fingerprint4_cfg ) )
     {
         log_error( &logger, " Communication init." );

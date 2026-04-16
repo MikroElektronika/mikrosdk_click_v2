@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     forcecell_cfg_setup( &forcecell_cfg );
-    FORCECELL_MAP_MIKROBUS( forcecell_cfg, MIKROBUS_1 );
+    FORCECELL_MAP_MIKROBUS( forcecell_cfg, MIKROBUS_POSITION_FORCECELL );
     err_t init_flag = forcecell_init( &forcecell, &forcecell_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     c4gltegnss_cfg_setup( &c4gltegnss_cfg );
-    C4GLTEGNSS_MAP_MIKROBUS( c4gltegnss_cfg, MIKROBUS_1 );
+    C4GLTEGNSS_MAP_MIKROBUS( c4gltegnss_cfg, MIKROBUS_POSITION_4GLTEGNSS );
     if ( UART_ERROR == c4gltegnss_init( &c4gltegnss, &c4gltegnss_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

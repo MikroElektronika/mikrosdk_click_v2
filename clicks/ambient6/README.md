@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient6_cfg_setup( &cfg );
-    AMBIENT6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT6 );
     ambient6_init( &ambient6, &cfg );
     ambient6_default_cfg( &ambient6 );    
 }

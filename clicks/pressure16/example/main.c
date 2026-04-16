@@ -27,6 +27,10 @@
 #include "log.h"
 #include "pressure16.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE16
+    #define MIKROBUS_POSITION_PRESSURE16 MIKROBUS_1
+#endif
+
 static pressure16_t pressure16;
 static log_t logger;
 static uint8_t device_id;
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure16_cfg_setup( &pressure16_cfg );
-    PRESSURE16_MAP_MIKROBUS( pressure16_cfg, MIKROBUS_1 );
+    PRESSURE16_MAP_MIKROBUS( pressure16_cfg, MIKROBUS_POSITION_PRESSURE16 );
     err_t init_flag  = pressure16_init( &pressure16, &pressure16_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) 
     {

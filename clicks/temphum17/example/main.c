@@ -28,6 +28,10 @@
 #include "log.h"
 #include "temphum17.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM17
+    #define MIKROBUS_POSITION_TEMPHUM17 MIKROBUS_1
+#endif
+
 static temphum17_t temphum17;
 static log_t logger;
 static float temperature;
@@ -54,7 +58,7 @@ void application_init ( void ) {
     // Click initialization.
 
     temphum17_cfg_setup( &temphum17_cfg );
-    TEMPHUM17_MAP_MIKROBUS( temphum17_cfg, MIKROBUS_1 );
+    TEMPHUM17_MAP_MIKROBUS( temphum17_cfg, MIKROBUS_POSITION_TEMPHUM17 );
     err_t init_flag = temphum17_init( &temphum17, &temphum17_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

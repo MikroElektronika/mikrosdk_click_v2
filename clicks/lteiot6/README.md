@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot6_cfg_setup( &lteiot6_cfg );
-    LTEIOT6_MAP_MIKROBUS( lteiot6_cfg, MIKROBUS_1 );
+    LTEIOT6_MAP_MIKROBUS( lteiot6_cfg, MIKROBUS_POSITION_LTEIOT6 );
     err_t init_flag  = lteiot6_init( &lteiot6, &lteiot6_cfg );
     if ( init_flag == UART_ERROR ) 
     {

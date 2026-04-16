@@ -74,7 +74,7 @@ void application_init ( void )
     //  Click initialization.
 
     mux3_cfg_setup( &cfg );
-    MUX3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MUX3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MUX3 );
     mux3_init( &mux3, &cfg );
 }
 ```

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "temphum19.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM19
+    #define MIKROBUS_POSITION_TEMPHUM19 MIKROBUS_1
+#endif
+
 static temphum19_t temphum19;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     temphum19_cfg_setup( &temphum19_cfg );
-    TEMPHUM19_MAP_MIKROBUS( temphum19_cfg, MIKROBUS_1 );
+    TEMPHUM19_MAP_MIKROBUS( temphum19_cfg, MIKROBUS_POSITION_TEMPHUM19 );
     
     if ( I2C_MASTER_ERROR == temphum19_init( &temphum19, &temphum19_cfg ) ) 
     {

@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     pushbutton_cfg_setup( &pushbutton_cfg );
-    PUSHBUTTON_MAP_MIKROBUS( pushbutton_cfg, MIKROBUS_1 );
+    PUSHBUTTON_MAP_MIKROBUS( pushbutton_cfg, MIKROBUS_POSITION_PUSHBUTTON );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == pushbutton_init( &pushbutton, &pushbutton_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

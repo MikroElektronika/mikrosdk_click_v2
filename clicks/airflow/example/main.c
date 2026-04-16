@@ -24,6 +24,10 @@
 #include "log.h"
 #include "airflow.h"
 
+#ifndef MIKROBUS_POSITION_AIRFLOW
+    #define MIKROBUS_POSITION_AIRFLOW MIKROBUS_1
+#endif
+
 static airflow_t airflow;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     airflow_cfg_setup( &airflow_cfg );
-    AIRFLOW_MAP_MIKROBUS( airflow_cfg, MIKROBUS_1 );
+    AIRFLOW_MAP_MIKROBUS( airflow_cfg, MIKROBUS_POSITION_AIRFLOW );
     err_t init_flag  = airflow_init( &airflow, &airflow_cfg );
     if ( ( init_flag == I2C_MASTER_ERROR ) || ( init_flag == SPI_MASTER_ERROR ) ) 
     {

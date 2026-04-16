@@ -26,6 +26,10 @@
 #include "log.h"
 #include "comparator.h"
 
+#ifndef MIKROBUS_POSITION_COMPARATOR
+    #define MIKROBUS_POSITION_COMPARATOR MIKROBUS_1
+#endif
+
 uint8_t out_state_one;
 uint8_t out_state_two;
 
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     comparator_cfg_setup( &cfg );
-    COMPARATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COMPARATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COMPARATOR );
     comparator_init( &comparator, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

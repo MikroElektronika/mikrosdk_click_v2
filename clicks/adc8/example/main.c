@@ -28,6 +28,10 @@
 #include "log.h"
 #include "adc8.h"
 
+#ifndef MIKROBUS_POSITION_ADC8
+    #define MIKROBUS_POSITION_ADC8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static adc8_t adc8;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     adc8_cfg_setup( &cfg );
-    ADC8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC8 );
     adc8_init( &adc8, &cfg );
 
     adc8_default_cfg( &adc8 );

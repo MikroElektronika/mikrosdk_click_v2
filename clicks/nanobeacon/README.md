@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     nanobeacon_cfg_setup( &nanobeacon_cfg );
-    NANOBEACON_MAP_MIKROBUS( nanobeacon_cfg, MIKROBUS_1 );
+    NANOBEACON_MAP_MIKROBUS( nanobeacon_cfg, MIKROBUS_POSITION_NANOBEACON );
     if ( UART_ERROR == nanobeacon_init( &nanobeacon, &nanobeacon_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

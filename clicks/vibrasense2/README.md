@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     vibrasense2_cfg_setup( &vibrasense2_cfg );
-    VIBRASENSE2_MAP_MIKROBUS( vibrasense2_cfg, MIKROBUS_1 );
+    VIBRASENSE2_MAP_MIKROBUS( vibrasense2_cfg, MIKROBUS_POSITION_VIBRASENSE2 );
     err_t init_flag = vibrasense2_init( &vibrasense2, &vibrasense2_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "c3dhall8.h"
 
+#ifndef MIKROBUS_POSITION_3DHALL8
+    #define MIKROBUS_POSITION_3DHALL8 MIKROBUS_1
+#endif
+
 static c3dhall8_t c3dhall8;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
     // Click initialization.
 
     c3dhall8_cfg_setup( &c3dhall8_cfg );
-    C3DHALL8_MAP_MIKROBUS( c3dhall8_cfg, MIKROBUS_1 );
+    C3DHALL8_MAP_MIKROBUS( c3dhall8_cfg, MIKROBUS_POSITION_3DHALL8 );
     err_t init_flag = c3dhall8_init( &c3dhall8, &c3dhall8_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

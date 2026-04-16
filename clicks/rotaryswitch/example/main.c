@@ -22,6 +22,10 @@
 #include "log.h"
 #include "rotaryswitch.h"
 
+#ifndef MIKROBUS_POSITION_ROTARYSWITCH
+    #define MIKROBUS_POSITION_ROTARYSWITCH MIKROBUS_1
+#endif
+
 static rotaryswitch_t rotaryswitch;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     rotaryswitch_cfg_setup( &rotaryswitch_cfg );
-    ROTARYSWITCH_MAP_MIKROBUS( rotaryswitch_cfg, MIKROBUS_1 );
+    ROTARYSWITCH_MAP_MIKROBUS( rotaryswitch_cfg, MIKROBUS_POSITION_ROTARYSWITCH );
     if ( I2C_MASTER_ERROR == rotaryswitch_init( &rotaryswitch, &rotaryswitch_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

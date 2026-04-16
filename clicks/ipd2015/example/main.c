@@ -21,6 +21,10 @@
 #include "log.h"
 #include "ipd2015.h"
 
+#ifndef MIKROBUS_POSITION_IPD2015
+    #define MIKROBUS_POSITION_IPD2015 MIKROBUS_1
+#endif
+
 static ipd2015_t ipd2015;   /**< IPD 2015 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -44,7 +48,7 @@ void application_init ( void )
 
     // Click initialization.
     ipd2015_cfg_setup( &ipd2015_cfg );
-    IPD2015_MAP_MIKROBUS( ipd2015_cfg, MIKROBUS_1 );
+    IPD2015_MAP_MIKROBUS( ipd2015_cfg, MIKROBUS_POSITION_IPD2015 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ipd2015_init( &ipd2015, &ipd2015_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

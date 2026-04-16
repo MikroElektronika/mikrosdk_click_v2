@@ -26,6 +26,10 @@
 #include "log.h"
 #include "c6dofimu9.h"
 
+#ifndef MIKROBUS_POSITION_6DOFIMU9
+    #define MIKROBUS_POSITION_6DOFIMU9 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c6dofimu9_t c6dofimu9;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     c6dofimu9_cfg_setup( &cfg );
-    C6DOFIMU9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C6DOFIMU9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_6DOFIMU9 );
     c6dofimu9_init( &c6dofimu9, &cfg );
 
     log_printf( &logger, "       Driver  Initialization        \r\n" );

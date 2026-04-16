@@ -34,6 +34,10 @@
 #include "ismrx3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_ISMRX3
+    #define MIKROBUS_POSITION_ISMRX3 MIKROBUS_1
+#endif
+
 static ismrx3_t ismrx3;
 static log_t logger;
 
@@ -84,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ismrx3_cfg_setup( &ismrx3_cfg );
-    ISMRX3_MAP_MIKROBUS( ismrx3_cfg, MIKROBUS_1 );
+    ISMRX3_MAP_MIKROBUS( ismrx3_cfg, MIKROBUS_POSITION_ISMRX3 );
     err_t init_flag  = ismrx3_init( &ismrx3, &ismrx3_cfg );
     if ( init_flag == SPI_MASTER_ERROR )
     {

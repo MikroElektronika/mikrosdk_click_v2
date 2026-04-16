@@ -94,7 +94,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity10_cfg_setup( &cfg );
-    PROXIMITY10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY10 );
     proximity10_init( &proximity10, &cfg );
 
     Delay_ms ( 500 );

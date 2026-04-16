@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     dtmfgenerator_cfg_setup( &dtmfgenerator_cfg );
-    DTMFGENERATOR_MAP_MIKROBUS( dtmfgenerator_cfg, MIKROBUS_1 );
+    DTMFGENERATOR_MAP_MIKROBUS( dtmfgenerator_cfg, MIKROBUS_POSITION_DTMFGENERATOR );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == dtmfgenerator_init( &dtmfgenerator, &dtmfgenerator_cfg ) ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

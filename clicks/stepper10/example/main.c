@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stepper10.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER10
+    #define MIKROBUS_POSITION_STEPPER10 MIKROBUS_1
+#endif
+
 static stepper10_t stepper10;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper10_cfg_setup( &stepper10_cfg );
-    STEPPER10_MAP_MIKROBUS( stepper10_cfg, MIKROBUS_1 );
+    STEPPER10_MAP_MIKROBUS( stepper10_cfg, MIKROBUS_POSITION_STEPPER10 );
     err_t init_flag = stepper10_init( &stepper10, &stepper10_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     mbusslave_cfg_setup( &cfg );
-    MBUSSLAVE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MBUSSLAVE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MBUSSLAVE );
     mbusslave_init( &mbusslave, &cfg );
     Delay_ms ( 100 );
 }

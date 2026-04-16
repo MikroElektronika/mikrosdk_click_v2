@@ -26,6 +26,10 @@
 #include "log.h"
 #include "spiisolator5.h"
 
+#ifndef MIKROBUS_POSITION_SPIISOLATOR5
+    #define MIKROBUS_POSITION_SPIISOLATOR5 MIKROBUS_1
+#endif
+
 #define FLASH11_CMD_GET_ID         0x90, 0x00, 0x00, 0x00, 0x00, 0x00
 #define FLASH11_MANUFACTURER_ID    0x1F
 #define FLASH11_DEVICE_ID          0x15
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     spiisolator5_cfg_setup( &spiisolator5_cfg );
-    SPIISOLATOR5_MAP_MIKROBUS( spiisolator5_cfg, MIKROBUS_1 );
+    SPIISOLATOR5_MAP_MIKROBUS( spiisolator5_cfg, MIKROBUS_POSITION_SPIISOLATOR5 );
     if ( SPI_MASTER_ERROR == spiisolator5_init( &spiisolator5, &spiisolator5_cfg ) )
     {
         log_error( &logger, " Communication init." );

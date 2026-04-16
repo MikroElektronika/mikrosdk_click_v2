@@ -22,6 +22,10 @@
 #include "log.h"
 #include "eeprom9.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM9
+    #define MIKROBUS_POSITION_EEPROM9 MIKROBUS_1
+#endif
+
 static eeprom9_t eeprom9;
 static log_t logger;
 static char demo_data[ 9 ] = { 'M', 'i', 'k', 'r', 'o', 'E', 13 ,10 , 0 };
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom9_cfg_setup( &eeprom9_cfg );
-    EEPROM9_MAP_MIKROBUS( eeprom9_cfg, MIKROBUS_1 );
+    EEPROM9_MAP_MIKROBUS( eeprom9_cfg, MIKROBUS_POSITION_EEPROM9 );
     if ( SPI_MASTER_ERROR == eeprom9_init( &eeprom9, &eeprom9_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "hallcurrent6.h"
 
+#ifndef MIKROBUS_POSITION_HALLCURRENT6
+    #define MIKROBUS_POSITION_HALLCURRENT6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static hallcurrent6_t hallcurrent6;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     hallcurrent6_cfg_setup( &cfg );
-    HALLCURRENT6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HALLCURRENT6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HALLCURRENT6 );
     hallcurrent6_init( &hallcurrent6, &cfg );
 
     log_printf( &logger, "---- App Init Done ----\r\n" );

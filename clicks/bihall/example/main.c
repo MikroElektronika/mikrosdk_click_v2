@@ -25,6 +25,10 @@
 #include "log.h"
 #include "bihall.h"
 
+#ifndef MIKROBUS_POSITION_BIHALL
+    #define MIKROBUS_POSITION_BIHALL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static bihall_t bihall;
@@ -59,7 +63,7 @@ void application_init ( void )
     //  Click initialization.
 
     bihall_cfg_setup( &cfg );
-    BIHALL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BIHALL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BIHALL );
     bihall_init( &bihall, &cfg );
     
     log_printf(&logger, " Detecting magnetic fields\r\n");

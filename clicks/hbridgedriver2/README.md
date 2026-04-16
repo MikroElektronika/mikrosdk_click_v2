@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     hbridgedriver2_cfg_setup( &hbridgedriver2_cfg );
-    HBRIDGEDRIVER2_MAP_MIKROBUS( hbridgedriver2_cfg, MIKROBUS_1 );
+    HBRIDGEDRIVER2_MAP_MIKROBUS( hbridgedriver2_cfg, MIKROBUS_POSITION_HBRIDGEDRIVER2 );
     if ( SPI_MASTER_ERROR == hbridgedriver2_init( &hbridgedriver2, &hbridgedriver2_cfg ) )
     {
         log_error( &logger, " Communication init." );

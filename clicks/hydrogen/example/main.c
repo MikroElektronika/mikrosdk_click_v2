@@ -22,6 +22,10 @@
 #include "log.h"
 #include "hydrogen.h"
 
+#ifndef MIKROBUS_POSITION_HYDROGEN
+    #define MIKROBUS_POSITION_HYDROGEN MIKROBUS_1
+#endif
+
 static hydrogen_t hydrogen;   /**< Hydrogen Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -45,7 +49,7 @@ void application_init ( void ) {
     // Click initialization.
 
     hydrogen_cfg_setup( &hydrogen_cfg );
-    HYDROGEN_MAP_MIKROBUS( hydrogen_cfg, MIKROBUS_1);
+    HYDROGEN_MAP_MIKROBUS( hydrogen_cfg, MIKROBUS_POSITION_HYDROGEN);
     if ( hydrogen_init( &hydrogen, &hydrogen_cfg ) == ADC_ERROR ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

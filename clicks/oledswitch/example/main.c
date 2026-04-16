@@ -33,6 +33,10 @@
 #include "oledswitch.h"
 #include "oledswitch_image.h"
 
+#ifndef MIKROBUS_POSITION_OLEDSWITCH
+    #define MIKROBUS_POSITION_OLEDSWITCH MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static oledswitch_t oledswitch;
@@ -46,7 +50,7 @@ void application_init ( )
     //  Click initialization.
 
     oledswitch_cfg_setup( &cfg );
-    OLEDSWITCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OLEDSWITCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OLEDSWITCH );
     oledswitch_init( &oledswitch, &cfg );
     oledswitch_default_cfg( &oledswitch, OLEDSWITCH_BUFFER_SIZE_SMALL );
 }

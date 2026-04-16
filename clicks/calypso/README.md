@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     calypso_cfg_setup( &calypso_cfg );
-    CALYPSO_MAP_MIKROBUS( calypso_cfg, MIKROBUS_1 );
+    CALYPSO_MAP_MIKROBUS( calypso_cfg, MIKROBUS_POSITION_CALYPSO );
     if ( UART_ERROR == calypso_init( &calypso, &calypso_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

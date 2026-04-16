@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo16_cfg_setup( &cfg );
-    THERMO16_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO16_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO16 );
     thermo16_init( &thermo16, &cfg );
 }
 ```

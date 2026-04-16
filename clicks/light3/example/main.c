@@ -23,6 +23,10 @@
 #include "log.h"
 #include "light3.h"
 
+#ifndef MIKROBUS_POSITION_LIGHT3
+    #define MIKROBUS_POSITION_LIGHT3 MIKROBUS_1
+#endif
+
 static light3_t light3;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     light3_cfg_setup( &light3_cfg );
-    LIGHT3_MAP_MIKROBUS( light3_cfg, MIKROBUS_1 );
+    LIGHT3_MAP_MIKROBUS( light3_cfg, MIKROBUS_POSITION_LIGHT3 );
     if ( I2C_MASTER_ERROR == light3_init( &light3, &light3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

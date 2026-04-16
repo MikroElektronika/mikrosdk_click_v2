@@ -21,6 +21,10 @@
 #include "log.h"
 #include "easypull.h"
 
+#ifndef MIKROBUS_POSITION_EASYPULL
+    #define MIKROBUS_POSITION_EASYPULL MIKROBUS_1
+#endif
+
 static easypull_t easypull;   /**< EasyPull Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -44,7 +48,7 @@ void application_init ( void )
 
     // Click initialization.
     easypull_cfg_setup( &easypull_cfg );
-    EASYPULL_MAP_MIKROBUS( easypull_cfg, MIKROBUS_1 );
+    EASYPULL_MAP_MIKROBUS( easypull_cfg, MIKROBUS_POSITION_EASYPULL );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == easypull_init( &easypull, &easypull_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

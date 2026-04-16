@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     rotaryb2_cfg_setup( &rotaryb2_cfg );
-    ROTARYB2_MAP_MIKROBUS( rotaryb2_cfg, MIKROBUS_1 );
+    ROTARYB2_MAP_MIKROBUS( rotaryb2_cfg, MIKROBUS_POSITION_ROTARYB2 );
     if ( SPI_MASTER_ERROR == rotaryb2_init( &rotaryb2, &rotaryb2_cfg ) )
     {
         log_error( &logger, " Communication init." );

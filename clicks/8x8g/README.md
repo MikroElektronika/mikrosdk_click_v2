@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     c8x8g_cfg_setup( &c8x8g_cfg );
-    C8X8G_MAP_MIKROBUS( c8x8g_cfg, MIKROBUS_1 );
+    C8X8G_MAP_MIKROBUS( c8x8g_cfg, MIKROBUS_POSITION_8X8G );
     err_t init_flag  = c8x8g_init( &c8x8g, &c8x8g_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

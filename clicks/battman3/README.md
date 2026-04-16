@@ -94,7 +94,7 @@ void application_init ( void )
 
     // Click initialization.
     battman3_cfg_setup( &battman3_cfg );
-    BATTMAN3_MAP_MIKROBUS( battman3_cfg, MIKROBUS_1 );
+    BATTMAN3_MAP_MIKROBUS( battman3_cfg, MIKROBUS_POSITION_BATTMAN3 );
     if ( I2C_MASTER_ERROR == battman3_init( &battman3, &battman3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     ftdi_cfg_setup( &ftdi_cfg );
-    FTDI_MAP_MIKROBUS( ftdi_cfg, MIKROBUS_1 );
+    FTDI_MAP_MIKROBUS( ftdi_cfg, MIKROBUS_POSITION_FTDI );
     if ( UART_ERROR == ftdi_init( &ftdi, &ftdi_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

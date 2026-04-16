@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     ph_cfg_setup( &ph_cfg );
-    PH_MAP_MIKROBUS( ph_cfg, MIKROBUS_1 );
+    PH_MAP_MIKROBUS( ph_cfg, MIKROBUS_POSITION_PH );
     if ( UART_ERROR == ph_init( &ph, &ph_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

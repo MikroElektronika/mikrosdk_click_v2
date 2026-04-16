@@ -40,6 +40,10 @@
 #include "wirelesssun.h"
 #include "conversions.h"
 
+#ifndef MIKROBUS_POSITION_WIRELESSSUN
+    #define MIKROBUS_POSITION_WIRELESSSUN MIKROBUS_1
+#endif
+
 // Comment out the line below in order to switch the application mode to ROUTER
 #define DEMO_APP_BORDER
 
@@ -124,7 +128,7 @@ void application_init ( void )
 
     // Click initialization.
     wirelesssun_cfg_setup( &wirelesssun_cfg );
-    WIRELESSSUN_MAP_MIKROBUS( wirelesssun_cfg, MIKROBUS_1 );
+    WIRELESSSUN_MAP_MIKROBUS( wirelesssun_cfg, MIKROBUS_POSITION_WIRELESSSUN );
     if ( UART_ERROR == wirelesssun_init( &wirelesssun, &wirelesssun_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -41,6 +41,10 @@
 #include "c4gltee.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_4GLTEE
+    #define MIKROBUS_POSITION_4GLTEE MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -143,7 +147,7 @@ void application_init ( void ) {
     // Click initialization.
 
     c4gltee_cfg_setup( &c4gltee_cfg );
-    C4GLTEE_MAP_MIKROBUS( c4gltee_cfg, MIKROBUS_1 );
+    C4GLTEE_MAP_MIKROBUS( c4gltee_cfg, MIKROBUS_POSITION_4GLTEE );
     c4gltee_init( &c4gltee, &c4gltee_cfg );
     
     c4gltee_module_power_on( &c4gltee );

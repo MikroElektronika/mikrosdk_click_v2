@@ -25,6 +25,10 @@
 #include "log.h"
 #include "dcmotor14.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR14
+    #define MIKROBUS_POSITION_DCMOTOR14 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dcmotor14_t dcmotor14;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor14_cfg_setup( &cfg );
-    DCMOTOR14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR14_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR14 );
     dcmotor14_init( &dcmotor14, &cfg );
 }
 

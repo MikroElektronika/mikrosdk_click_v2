@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     g2c3g_cfg_setup( &g2c3g_cfg );
-    G2C3G_MAP_MIKROBUS( g2c3g_cfg, MIKROBUS_2 );
+    G2C3G_MAP_MIKROBUS( g2c3g_cfg, MIKROBUS_POSITION_G2C3G );
     if ( UART_ERROR == g2c3g_init( &g2c3g, &g2c3g_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

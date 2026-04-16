@@ -88,7 +88,7 @@ void application_init ( void )
     
     // Click initialization.
     templog_cfg_setup ( &cfg );    
-    TEMPLOG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG );
     if ( TEMPLOG_OK != templog_init ( &templog, &cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "boost7.h"
 
+#ifndef MIKROBUS_POSITION_BOOST7
+    #define MIKROBUS_POSITION_BOOST7 MIKROBUS_1
+#endif
+
 static boost7_t boost7;   /**< Boost 7 Click driver object. */
 static log_t logger;      /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     boost7_cfg_setup( &boost7_cfg );
-    BOOST7_MAP_MIKROBUS( boost7_cfg, MIKROBUS_1 );
+    BOOST7_MAP_MIKROBUS( boost7_cfg, MIKROBUS_POSITION_BOOST7 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == boost7_init( &boost7, &boost7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

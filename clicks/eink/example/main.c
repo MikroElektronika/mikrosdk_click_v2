@@ -49,6 +49,10 @@
 #include "log.h"
 #include "eink.h"
 #include "eink200inch_image.h"
+
+#ifndef MIKROBUS_POSITION_EINK
+    #define MIKROBUS_POSITION_EINK MIKROBUS_1
+#endif
 #ifndef IMAGE_MODE_ONLY
 #include "eink200inch_font.h"
 #endif
@@ -88,7 +92,7 @@ void application_init ( void )
 
     //  Click initialization.
     eink_cfg_setup( &cfg );
-    EINK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EINK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EINK );
     eink_init( &eink, &cfg );
 
     eink_start_config( &eink );

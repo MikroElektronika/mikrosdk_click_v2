@@ -25,6 +25,10 @@
 #include "log.h"
 #include "color3.h"
 
+#ifndef MIKROBUS_POSITION_COLOR3
+    #define MIKROBUS_POSITION_COLOR3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static color3_t color3;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     //  Click initialization.
     color3_cfg_setup( &cfg );
-    COLOR3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR3 );
     color3_init( &color3, &cfg );
     Delay_ms ( 100 );
 

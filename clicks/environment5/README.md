@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     environment5_cfg_setup( &environment5_cfg );
-    ENVIRONMENT5_MAP_MIKROBUS( environment5_cfg, MIKROBUS_1 );
+    ENVIRONMENT5_MAP_MIKROBUS( environment5_cfg, MIKROBUS_POSITION_ENVIRONMENT5 );
     if ( I2C_MASTER_ERROR == environment5_init( &environment5, &environment5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

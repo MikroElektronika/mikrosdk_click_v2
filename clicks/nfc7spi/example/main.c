@@ -27,6 +27,10 @@
 #include "log.h"
 #include "nfc7spi.h"
 
+#ifndef MIKROBUS_POSITION_NFC7SPI
+    #define MIKROBUS_POSITION_NFC7SPI MIKROBUS_1
+#endif
+
 static nfc7spi_t nfc7spi;
 static log_t logger;
 
@@ -103,7 +107,7 @@ void application_init ( void )
 
     // Click initialization.
     nfc7spi_cfg_setup( &nfc7spi_cfg );
-    NFC7SPI_MAP_MIKROBUS( nfc7spi_cfg, MIKROBUS_1 );
+    NFC7SPI_MAP_MIKROBUS( nfc7spi_cfg, MIKROBUS_POSITION_NFC7SPI );
     if ( SPI_MASTER_ERROR == nfc7spi_init( &nfc7spi, &nfc7spi_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -45,6 +45,10 @@
 #include "gsmgnss2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_GSMGNSS2
+    #define MIKROBUS_POSITION_GSMGNSS2 MIKROBUS_1
+#endif
+
 #define APP_OK                              0
 #define APP_ERROR_DRIVER                    -1
 #define APP_ERROR_OVERFLOW                  -2
@@ -153,7 +157,7 @@ void application_init ( void )
 
     // Click initialization.
     gsmgnss2_cfg_setup( &gsmgnss2_cfg );
-    GSMGNSS2_MAP_MIKROBUS( gsmgnss2_cfg, MIKROBUS_1 );
+    GSMGNSS2_MAP_MIKROBUS( gsmgnss2_cfg, MIKROBUS_POSITION_GSMGNSS2 );
     gsmgnss2_init( &gsmgnss2, &gsmgnss2_cfg );
 
     gsmgnss2_module_power( &gsmgnss2, GSMGNSS2_MODULE_POWER_ON );

@@ -96,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     accel16_cfg_setup( &accel16_cfg );
-    ACCEL16_MAP_MIKROBUS( accel16_cfg, MIKROBUS_1 );
+    ACCEL16_MAP_MIKROBUS( accel16_cfg, MIKROBUS_POSITION_ACCEL16 );
     if ( SPI_MASTER_ERROR == accel16_init( &accel16, &accel16_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "compass.h"
 
+#ifndef MIKROBUS_POSITION_COMPASS
+    #define MIKROBUS_POSITION_COMPASS MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static compass_t compass;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     compass_cfg_setup( &cfg );
-    COMPASS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COMPASS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COMPASS );
     compass_init( &compass, &cfg );
     compass_default_config( &compass );
 }

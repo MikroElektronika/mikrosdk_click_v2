@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssmax3_cfg_setup( &gnssmax3_cfg );
-    GNSSMAX3_MAP_MIKROBUS( gnssmax3_cfg, MIKROBUS_1 );
+    GNSSMAX3_MAP_MIKROBUS( gnssmax3_cfg, MIKROBUS_POSITION_GNSSMAX3 );
     if ( UART_ERROR == gnssmax3_init( &gnssmax3, &gnssmax3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

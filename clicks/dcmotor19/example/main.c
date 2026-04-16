@@ -25,6 +25,10 @@
 #include "log.h"
 #include "dcmotor19.h"
 
+#ifndef MIKROBUS_POSITION_DCMOTOR19
+    #define MIKROBUS_POSITION_DCMOTOR19 MIKROBUS_1
+#endif
+
 static dcmotor19_t dcmotor19;   /**< DC Motor 19 Click driver object. */
 static log_t logger;            /**< Logger object. */
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor19_cfg_setup( &dcmotor19_cfg );
-    DCMOTOR19_MAP_MIKROBUS( dcmotor19_cfg, MIKROBUS_1 );
+    DCMOTOR19_MAP_MIKROBUS( dcmotor19_cfg, MIKROBUS_POSITION_DCMOTOR19 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == dcmotor19_init( &dcmotor19, &dcmotor19_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

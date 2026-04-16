@@ -30,6 +30,10 @@
 #include "log.h"
 #include "adac3.h"
 
+#ifndef MIKROBUS_POSITION_ADAC3
+    #define MIKROBUS_POSITION_ADAC3 MIKROBUS_1
+#endif
+
 static adac3_t adac3;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     adac3_cfg_setup( &adac3_cfg );
-    ADAC3_MAP_MIKROBUS( adac3_cfg, MIKROBUS_1 );
+    ADAC3_MAP_MIKROBUS( adac3_cfg, MIKROBUS_POSITION_ADAC3 );
     if ( I2C_MASTER_ERROR == adac3_init( &adac3, &adac3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

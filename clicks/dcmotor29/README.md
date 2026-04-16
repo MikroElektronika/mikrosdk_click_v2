@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor29_cfg_setup( &dcmotor29_cfg );
-    DCMOTOR29_MAP_MIKROBUS( dcmotor29_cfg, MIKROBUS_1 );
+    DCMOTOR29_MAP_MIKROBUS( dcmotor29_cfg, MIKROBUS_POSITION_DCMOTOR29 );
     if ( SPI_MASTER_ERROR == dcmotor29_init( &dcmotor29, &dcmotor29_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "analogkey.h"
 
+#ifndef MIKROBUS_POSITION_ANALOGKEY
+    #define MIKROBUS_POSITION_ANALOGKEY MIKROBUS_1
+#endif
+
 #define ANALOGKEY_N_SAMPLES  50
 
 // ------------------------------------------------------------------ VARIABLES
@@ -51,7 +55,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init... ----" );
 
     analogkey_cfg_setup( &cfg );
-    ANALOGKEY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANALOGKEY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANALOGKEY );
     if ( analogkey_init( &analogkey, &cfg ) == ADC_ERROR )
     {
         log_info( &logger, "---- Application Init Error. ----" );

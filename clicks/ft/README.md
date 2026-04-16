@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ft_cfg_setup( &ft_cfg );
-    FT_MAP_MIKROBUS( ft_cfg, MIKROBUS_1 );
+    FT_MAP_MIKROBUS( ft_cfg, MIKROBUS_POSITION_FT );
     if ( UART_ERROR == ft_init( &ft, &ft_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "microwave6.h"
 
+#ifndef MIKROBUS_POSITION_MICROWAVE6
+    #define MIKROBUS_POSITION_MICROWAVE6 MIKROBUS_1
+#endif
+
 #define MICROWAVE6_THRESHOLD    0.5f
 #define MICROWAVE6_FLAG_CLEAR   0
 #define MICROWAVE6_FLAG_SET     1
@@ -55,7 +59,7 @@ void application_init ( void )
 
     // Click initialization.
     microwave6_cfg_setup( &microwave6_cfg );
-    MICROWAVE6_MAP_MIKROBUS( microwave6_cfg, MIKROBUS_1 );
+    MICROWAVE6_MAP_MIKROBUS( microwave6_cfg, MIKROBUS_POSITION_MICROWAVE6 );
     err_t init_flag = microwave6_init( &microwave6, &microwave6_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

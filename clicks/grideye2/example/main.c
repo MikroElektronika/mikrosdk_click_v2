@@ -24,6 +24,10 @@
 #include "log.h"
 #include "grideye2.h"
 
+#ifndef MIKROBUS_POSITION_GRIDEYE2
+    #define MIKROBUS_POSITION_GRIDEYE2 MIKROBUS_1
+#endif
+
 static grideye2_t grideye2;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     grideye2_cfg_setup( &grideye2_cfg );
-    GRIDEYE2_MAP_MIKROBUS( grideye2_cfg, MIKROBUS_1 );
+    GRIDEYE2_MAP_MIKROBUS( grideye2_cfg, MIKROBUS_POSITION_GRIDEYE2 );
     if ( I2C_MASTER_ERROR == grideye2_init( &grideye2, &grideye2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     currentsens2_cfg_setup( &currentsens2_cfg );
-    CURRENTSENS2_MAP_MIKROBUS( currentsens2_cfg, MIKROBUS_1 );
+    CURRENTSENS2_MAP_MIKROBUS( currentsens2_cfg, MIKROBUS_POSITION_CURRENTSENS2 );
     if ( ADC_ERROR == currentsens2_init( &currentsens2, &currentsens2_cfg ) )
     {
         log_error( &logger, " Communication init." );

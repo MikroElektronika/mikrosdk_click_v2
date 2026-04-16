@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     flame_cfg_setup( &cfg );
-    FLAME_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLAME_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLAME );
     flame_init( &flame, &cfg );
 }
 ```

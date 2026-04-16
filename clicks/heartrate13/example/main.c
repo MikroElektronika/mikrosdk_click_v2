@@ -26,6 +26,10 @@
 #include "log.h"
 #include "heartrate13.h"
 
+#ifndef MIKROBUS_POSITION_HEARTRATE13
+    #define MIKROBUS_POSITION_HEARTRATE13 MIKROBUS_1
+#endif
+
 static heartrate13_t heartrate13;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     heartrate13_cfg_setup( &heartrate13_cfg );
-    HEARTRATE13_MAP_MIKROBUS( heartrate13_cfg, MIKROBUS_1 );
+    HEARTRATE13_MAP_MIKROBUS( heartrate13_cfg, MIKROBUS_POSITION_HEARTRATE13 );
     if ( I2C_MASTER_ERROR == heartrate13_init( &heartrate13, &heartrate13_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

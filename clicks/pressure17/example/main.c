@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pressure17.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE17
+    #define MIKROBUS_POSITION_PRESSURE17 MIKROBUS_1
+#endif
+
 static pressure17_t pressure17;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure17_cfg_setup( &pressure17_cfg );
-    PRESSURE17_MAP_MIKROBUS( pressure17_cfg, MIKROBUS_1 );
+    PRESSURE17_MAP_MIKROBUS( pressure17_cfg, MIKROBUS_POSITION_PRESSURE17 );
     if ( I2C_MASTER_ERROR == pressure17_init( &pressure17, &pressure17_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

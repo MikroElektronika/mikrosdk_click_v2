@@ -71,7 +71,7 @@ void application_init ( void )
     //  Click initialization.
 
     c7x10y_cfg_setup( &c7x10y_cfg );
-    C7X10Y_MAP_MIKROBUS( c7x10y_cfg, MIKROBUS_1 );
+    C7X10Y_MAP_MIKROBUS( c7x10y_cfg, MIKROBUS_POSITION_7X10Y );
     c7x10y_init( &c7x10y, &c7x10y_cfg );
 }
 ```

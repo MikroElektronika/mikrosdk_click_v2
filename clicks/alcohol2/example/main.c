@@ -22,6 +22,10 @@
 #include "log.h"
 #include "alcohol2.h"
 
+#ifndef MIKROBUS_POSITION_ALCOHOL2
+    #define MIKROBUS_POSITION_ALCOHOL2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static alcohol2_t alcohol2;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     alcohol2_cfg_setup( &cfg );
-    ALCOHOL2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ALCOHOL2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ALCOHOL2 );
     alcohol2_init( &alcohol2, &cfg );
 
     alcohol2_write_byte( &alcohol2, ALCOHOL2_MODECN_REG, ALCOHOL2_DEEP_SLEEP_MODE );

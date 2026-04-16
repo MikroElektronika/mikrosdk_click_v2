@@ -29,6 +29,10 @@
 #include "log.h"
 #include "rtc5.h"
 
+#ifndef MIKROBUS_POSITION_RTC5
+    #define MIKROBUS_POSITION_RTC5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rtc5_t rtc5;
@@ -108,7 +112,7 @@ void application_init ( void )
     //  Click initialization.
 
     rtc5_cfg_setup( &cfg );
-    RTC5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC5 );
     rtc5_init( &rtc5, &cfg );
     
     rtc5_default_cfg ( &rtc5);

@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     canbus_cfg_setup( &canbus_cfg );
-    CANBUS_MAP_MIKROBUS( canbus_cfg, MIKROBUS_1 );
+    CANBUS_MAP_MIKROBUS( canbus_cfg, MIKROBUS_POSITION_CANBUS );
     err_t init_flag  = canbus_init( &canbus, &canbus_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     analogmux4_cfg_setup( &analogmux4_cfg );
-    ANALOGMUX4_MAP_MIKROBUS( analogmux4_cfg, MIKROBUS_1 );
+    ANALOGMUX4_MAP_MIKROBUS( analogmux4_cfg, MIKROBUS_POSITION_ANALOGMUX4 );
     if ( ADC_ERROR == analogmux4_init( &analogmux4, &analogmux4_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

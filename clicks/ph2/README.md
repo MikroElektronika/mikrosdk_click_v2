@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     ph2_cfg_setup( &ph2_cfg );
-    PH2_MAP_MIKROBUS( ph2_cfg, MIKROBUS_1 );
+    PH2_MAP_MIKROBUS( ph2_cfg, MIKROBUS_POSITION_PH2 );
     err_t init_flag = ph2_init( &ph2, &ph2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

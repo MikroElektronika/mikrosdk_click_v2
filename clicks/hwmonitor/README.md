@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     hwmonitor_cfg_setup( &hwmonitor_cfg );
-    HWMONITOR_MAP_MIKROBUS( hwmonitor_cfg, MIKROBUS_1 );
+    HWMONITOR_MAP_MIKROBUS( hwmonitor_cfg, MIKROBUS_POSITION_HWMONITOR );
     if ( I2C_MASTER_ERROR == hwmonitor_init( &hwmonitor, &hwmonitor_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

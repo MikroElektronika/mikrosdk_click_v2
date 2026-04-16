@@ -24,6 +24,10 @@
 #include "log.h"
 #include "inclinometer4.h"
 
+#ifndef MIKROBUS_POSITION_INCLINOMETER4
+    #define MIKROBUS_POSITION_INCLINOMETER4 MIKROBUS_1
+#endif
+
 static inclinometer4_t inclinometer4;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     inclinometer4_cfg_setup( &inclinometer4_cfg );
-    INCLINOMETER4_MAP_MIKROBUS( inclinometer4_cfg, MIKROBUS_1 );
+    INCLINOMETER4_MAP_MIKROBUS( inclinometer4_cfg, MIKROBUS_POSITION_INCLINOMETER4 );
     err_t init_flag = inclinometer4_init( &inclinometer4, &inclinometer4_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

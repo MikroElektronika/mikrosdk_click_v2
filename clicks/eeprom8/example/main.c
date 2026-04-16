@@ -25,6 +25,10 @@
 #include "log.h"
 #include "eeprom8.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM8
+    #define MIKROBUS_POSITION_EEPROM8 MIKROBUS_1
+#endif
+
 static eeprom8_t eeprom8;
 static log_t logger;
 
@@ -87,7 +91,7 @@ void application_init ( void )
     
     //  Click initialization.
     eeprom8_cfg_setup( &eeprom8_cfg );
-    EEPROM8_MAP_MIKROBUS( eeprom8_cfg, MIKROBUS_1 );
+    EEPROM8_MAP_MIKROBUS( eeprom8_cfg, MIKROBUS_POSITION_EEPROM8 );
     if ( I2C_MASTER_ERROR == eeprom8_init( &eeprom8, &eeprom8_cfg ) )
     {
         log_error( &logger, " Communication Init " );

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "buckboost4.h"
 
+#ifndef MIKROBUS_POSITION_BUCKBOOST4
+    #define MIKROBUS_POSITION_BUCKBOOST4 MIKROBUS_1
+#endif
+
 static buckboost4_t buckboost4;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     buckboost4_cfg_setup( &buckboost4_cfg );
-    BUCKBOOST4_MAP_MIKROBUS( buckboost4_cfg, MIKROBUS_1 );
+    BUCKBOOST4_MAP_MIKROBUS( buckboost4_cfg, MIKROBUS_POSITION_BUCKBOOST4 );
     if ( I2C_MASTER_ERROR == buckboost4_init( &buckboost4, &buckboost4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

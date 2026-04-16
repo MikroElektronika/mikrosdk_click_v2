@@ -23,6 +23,10 @@
 #include "log.h"
 #include "accel24.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL24
+    #define MIKROBUS_POSITION_ACCEL24 MIKROBUS_1
+#endif
+
 static accel24_t accel24;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     accel24_cfg_setup( &accel24_cfg );
-    ACCEL24_MAP_MIKROBUS( accel24_cfg, MIKROBUS_1 );
+    ACCEL24_MAP_MIKROBUS( accel24_cfg, MIKROBUS_POSITION_ACCEL24 );
     if ( I2C_MASTER_ERROR == accel24_init( &accel24, &accel24_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

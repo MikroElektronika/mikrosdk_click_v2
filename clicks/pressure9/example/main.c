@@ -25,6 +25,10 @@
 #include "log.h"
 #include "pressure9.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE9
+    #define MIKROBUS_POSITION_PRESSURE9 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure9_t pressure9;
@@ -55,7 +59,7 @@ void application_init ( void )
 
     //  Click initialization.
     pressure9_cfg_setup( &cfg );
-    PRESSURE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE9 );
     pressure9_init( &pressure9, &cfg );
     Delay_ms ( 100 );
 

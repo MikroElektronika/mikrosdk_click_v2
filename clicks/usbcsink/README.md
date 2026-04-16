@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     usbcsink_cfg_setup( &usbcsink_cfg );
-    USBCSINK_MAP_MIKROBUS( usbcsink_cfg, MIKROBUS_1 );
+    USBCSINK_MAP_MIKROBUS( usbcsink_cfg, MIKROBUS_POSITION_USBCSINK );
     err_t init_flag = usbcsink_init( &usbcsink, &usbcsink_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

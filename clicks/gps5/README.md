@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gps5_cfg_setup( &gps5_cfg );
-    GPS5_MAP_MIKROBUS( gps5_cfg, MIKROBUS_1 );
+    GPS5_MAP_MIKROBUS( gps5_cfg, MIKROBUS_POSITION_GPS5 );
     if ( UART_ERROR == gps5_init( &gps5, &gps5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

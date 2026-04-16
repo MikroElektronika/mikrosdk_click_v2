@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     isoadc3_cfg_setup( &isoadc3_cfg );
-    ISOADC3_MAP_MIKROBUS( isoadc3_cfg, MIKROBUS_1 );
+    ISOADC3_MAP_MIKROBUS( isoadc3_cfg, MIKROBUS_POSITION_ISOADC3 );
     err_t init_flag = isoadc3_init( &isoadc3, &isoadc3_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

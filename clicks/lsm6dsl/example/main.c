@@ -26,6 +26,10 @@
 #include "log.h"
 #include "lsm6dsl.h"
 
+#ifndef MIKROBUS_POSITION_LSM6DSL
+    #define MIKROBUS_POSITION_LSM6DSL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static lsm6dsl_t lsm6dsl;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     lsm6dsl_cfg_setup( &cfg );
-    LSM6DSL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LSM6DSL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LSM6DSL );
     lsm6dsl_init( &lsm6dsl, &cfg );
 
     lsm6dsl_default_cfg( &lsm6dsl );

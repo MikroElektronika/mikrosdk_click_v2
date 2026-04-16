@@ -27,6 +27,10 @@
 #include "log.h"
 #include "proximity7.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY7
+    #define MIKROBUS_POSITION_PROXIMITY7 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity7_cfg_setup( &cfg );
-    PROXIMITY7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY7 );
     proximity7_init( &proximity7, &cfg );
 
     Delay_ms ( 100 );

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "c2x2rgb.h"
 
+#ifndef MIKROBUS_POSITION_2X2RGB
+    #define MIKROBUS_POSITION_2X2RGB MIKROBUS_1
+#endif
+
 #define DEMO_LED_CURRENT    600
 
 static c2x2rgb_t c2x2rgb;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     c2x2rgb_cfg_setup( &c2x2rgb_cfg );
-    C2X2RGB_MAP_MIKROBUS( c2x2rgb_cfg, MIKROBUS_1 );
+    C2X2RGB_MAP_MIKROBUS( c2x2rgb_cfg, MIKROBUS_POSITION_2X2RGB );
     if ( I2C_MASTER_ERROR == c2x2rgb_init( &c2x2rgb, &c2x2rgb_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

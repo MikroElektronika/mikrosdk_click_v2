@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     timerrelay_cfg_setup( &timerrelay_cfg );
-    TIMERRELAY_MAP_MIKROBUS( timerrelay_cfg, MIKROBUS_1 );
+    TIMERRELAY_MAP_MIKROBUS( timerrelay_cfg, MIKROBUS_POSITION_TIMERRELAY );
     if ( SPI_MASTER_ERROR == timerrelay_init( &timerrelay, &timerrelay_cfg ) )
     {
         log_error( &logger, " Communication init." );

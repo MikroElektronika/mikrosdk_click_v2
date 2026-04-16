@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     vcpmonitor5_cfg_setup( &vcpmonitor5_cfg );
-    VCPMONITOR5_MAP_MIKROBUS( vcpmonitor5_cfg, MIKROBUS_1 );
+    VCPMONITOR5_MAP_MIKROBUS( vcpmonitor5_cfg, MIKROBUS_POSITION_VCPMONITOR5 );
     if ( I2C_MASTER_ERROR == vcpmonitor5_init( &vcpmonitor5, &vcpmonitor5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     //  Click initialization.
     earthquake_cfg_setup( &cfg );
-    EARTHQUAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EARTHQUAKE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EARTHQUAKE );
     earthquake_init( &earthquake, &cfg );
     Delay_ms ( 1000 );
     display_status( earthquake_read_status( &earthquake ) );

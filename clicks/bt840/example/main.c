@@ -42,6 +42,10 @@
 #include "bt840.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_BT840
+    #define MIKROBUS_POSITION_BT840 MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT     "BT840 Click board - demo example."
 
@@ -169,7 +173,7 @@ void application_init ( void )
 
     // Click initialization.
     bt840_cfg_setup( &bt840_cfg );
-    BT840_MAP_MIKROBUS( bt840_cfg, MIKROBUS_1 );
+    BT840_MAP_MIKROBUS( bt840_cfg, MIKROBUS_POSITION_BT840 );
     if ( UART_ERROR == bt840_init( &bt840, &bt840_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

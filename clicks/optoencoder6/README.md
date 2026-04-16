@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     optoencoder6_cfg_setup( &optoencoder6_cfg );
-    OPTOENCODER6_MAP_MIKROBUS( optoencoder6_cfg, MIKROBUS_1 );
+    OPTOENCODER6_MAP_MIKROBUS( optoencoder6_cfg, MIKROBUS_POSITION_OPTOENCODER6 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == optoencoder6_init( &optoencoder6, &optoencoder6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -26,6 +26,10 @@
 #include "log.h"
 #include "altitude4.h"
 
+#ifndef MIKROBUS_POSITION_ALTITUDE4
+    #define MIKROBUS_POSITION_ALTITUDE4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static altitude4_t altitude4;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization.
 
     altitude4_cfg_setup( &cfg );
-    ALTITUDE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ALTITUDE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ALTITUDE4 );
     altitude4_init( &altitude4, &cfg );
     Delay_ms ( 500 );
 }

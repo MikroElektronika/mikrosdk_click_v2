@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     optoencoder5_cfg_setup( &optoencoder5_cfg );
-    OPTOENCODER5_MAP_MIKROBUS( optoencoder5_cfg, MIKROBUS_1 );
+    OPTOENCODER5_MAP_MIKROBUS( optoencoder5_cfg, MIKROBUS_POSITION_OPTOENCODER5 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == optoencoder5_init( &optoencoder5, &optoencoder5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

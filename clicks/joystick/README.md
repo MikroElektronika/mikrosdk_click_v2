@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     joystick_cfg_setup( &cfg );
-    JOYSTCIK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    JOYSTICK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_JOYSTICK );
     joystick_init( &joystick, &cfg );
 
     Delay_100ms( );

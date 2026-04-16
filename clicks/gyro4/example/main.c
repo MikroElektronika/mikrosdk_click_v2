@@ -22,6 +22,10 @@
 #include "log.h"
 #include "gyro4.h"
 
+#ifndef MIKROBUS_POSITION_GYRO4
+    #define MIKROBUS_POSITION_GYRO4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static gyro4_t gyro4;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     gyro4_cfg_setup( &cfg );
-    GYRO4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GYRO4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GYRO4 );
     gyro4_init( &gyro4, &cfg );
 
     Delay_ms ( 500 );

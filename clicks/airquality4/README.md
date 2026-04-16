@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     airquality4_cfg_setup( &cfg );
-    AIRQUALITY4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AIRQUALITY4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AIRQUALITY4 );
     airquality4_init( &airquality4, &cfg );
     airquality4_default_cfg( &airquality4 );
 }

@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     oledw_cfg_setup( &oledw_cfg );
-    OLEDW_MAP_MIKROBUS( oledw_cfg, MIKROBUS_1 );
+    OLEDW_MAP_MIKROBUS( oledw_cfg, MIKROBUS_POSITION_OLEDW );
     err_t init_flag  = oledw_init( &oledw, &oledw_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) {
         log_error( &logger, " Application Init Error. " );

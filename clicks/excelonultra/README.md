@@ -97,7 +97,7 @@ void application_init ( void )
 
     // Click initialization.
     excelonultra_cfg_setup( &excelonultra_cfg );
-    EXCELONULTRA_MAP_MIKROBUS( excelonultra_cfg, MIKROBUS_1 );
+    EXCELONULTRA_MAP_MIKROBUS( excelonultra_cfg, MIKROBUS_POSITION_EXCELONULTRA );
     err_t init_flag  = excelonultra_init( &excelonultra, &excelonultra_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) 
     {

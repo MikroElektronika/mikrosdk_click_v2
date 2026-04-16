@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     pir4_cfg_setup( &pir4_cfg );
-    PIR4_MAP_MIKROBUS( pir4_cfg, MIKROBUS_1 );
+    PIR4_MAP_MIKROBUS( pir4_cfg, MIKROBUS_POSITION_PIR4 );
     if ( I2C_MASTER_ERROR == pir4_init( &pir4, &pir4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

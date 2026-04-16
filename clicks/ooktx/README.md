@@ -73,7 +73,7 @@ void application_init ( void )
 
     // Click initialization.
     ooktx_cfg_setup( &ooktx_cfg );
-    OOKTX_MAP_MIKROBUS( ooktx_cfg, MIKROBUS_1 );
+    OOKTX_MAP_MIKROBUS( ooktx_cfg, MIKROBUS_POSITION_OOKTX );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ooktx_init( &ooktx, &ooktx_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

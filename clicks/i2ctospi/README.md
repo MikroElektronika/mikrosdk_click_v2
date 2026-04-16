@@ -97,7 +97,7 @@ void application_init ( void )
     //  Click initialization.
 
     i2ctospi_cfg_setup( &cfg );
-    I2CTOSPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CTOSPI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CTOSPI );
     i2ctospi_init( &i2ctospi, &cfg );
 
     i2ctospi_default_cfg( &i2ctospi );

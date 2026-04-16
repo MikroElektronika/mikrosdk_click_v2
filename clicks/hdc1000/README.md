@@ -93,7 +93,7 @@ void application_init ( void )
     //  Click initialization.
 
     hdc1000_cfg_setup( &cfg );
-    HDC1000_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HDC1000_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HDC1000 );
     hdc1000_init( &hdc1000, &cfg );
     
     hdc1000_default_cfg( &hdc1000 );

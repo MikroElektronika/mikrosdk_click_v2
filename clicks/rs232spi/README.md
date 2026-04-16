@@ -92,7 +92,7 @@ void application_init ( )
     //  Click initialization.
 
     rs232spi_cfg_setup( &cfg );
-    RS232SPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS232SPI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS232SPI );
     rs232spi_init( &rs232spi, &cfg );
     Delay_100ms( );
     rs232spi_digital_write_rst( &rs232spi, 1 );

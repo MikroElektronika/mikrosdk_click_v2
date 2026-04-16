@@ -23,6 +23,10 @@
 #include "log.h"
 #include "gyro6.h"
 
+#ifndef MIKROBUS_POSITION_GYRO6
+    #define MIKROBUS_POSITION_GYRO6 MIKROBUS_1
+#endif
+
 static gyro6_t gyro6;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     gyro6_cfg_setup( &gyro6_cfg );
-    GYRO6_MAP_MIKROBUS( gyro6_cfg, MIKROBUS_1 );
+    GYRO6_MAP_MIKROBUS( gyro6_cfg, MIKROBUS_POSITION_GYRO6 );
     err_t init_flag  = gyro6_init( &gyro6, &gyro6_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

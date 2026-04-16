@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     boost5_cfg_setup( &boost5_cfg );
-    BOOST5_MAP_MIKROBUS( boost5_cfg, MIKROBUS_1 );
+    BOOST5_MAP_MIKROBUS( boost5_cfg, MIKROBUS_POSITION_BOOST5 );
     if ( ADC_ERROR == boost5_init( &boost5, &boost5_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -29,6 +29,10 @@
 #include "log.h"
 #include "buck16.h"
 
+#ifndef MIKROBUS_POSITION_BUCK16
+    #define MIKROBUS_POSITION_BUCK16 MIKROBUS_1
+#endif
+
 static buck16_t buck16;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void )
 
     // Click initialization.
     buck16_cfg_setup( &buck16_cfg );
-    BUCK16_MAP_MIKROBUS( buck16_cfg, MIKROBUS_1 );
+    BUCK16_MAP_MIKROBUS( buck16_cfg, MIKROBUS_POSITION_BUCK16 );
     err_t init_flag  = buck16_init( &buck16, &buck16_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     pot_cfg_setup( &pot_cfg );
-    POT_MAP_MIKROBUS( pot_cfg, MIKROBUS_1 );
+    POT_MAP_MIKROBUS( pot_cfg, MIKROBUS_POSITION_POT );
     if ( ADC_ERROR == pot_init( &pot, &pot_cfg ) )
     {
         log_error( &logger, " Communication init." );

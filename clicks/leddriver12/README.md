@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver12_cfg_setup( &leddriver12_cfg );
-    LEDDRIVER12_MAP_MIKROBUS( leddriver12_cfg, MIKROBUS_1 );
+    LEDDRIVER12_MAP_MIKROBUS( leddriver12_cfg, MIKROBUS_POSITION_LEDDRIVER12 );
     if ( I2C_MASTER_ERROR == leddriver12_init( &leddriver12, &leddriver12_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

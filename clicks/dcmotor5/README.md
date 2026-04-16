@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor5_cfg_setup( &cfg );
-    DCMOTOR5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR5 );
     dcmotor5_init( &dcmotor5, &cfg );
     
     log_printf( &logger, " Initialization  PWM \r\n" );

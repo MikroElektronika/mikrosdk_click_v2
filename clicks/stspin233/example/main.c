@@ -28,6 +28,10 @@
 #include "stspin233.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_STSPIN233
+    #define MIKROBUS_POSITION_STSPIN233 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 #define PROCESS_PARSER_BUFFER_SIZE 500
@@ -109,7 +113,7 @@ void application_init ( void )
     //  Click initialization.
 
     stspin233_cfg_setup( &cfg );
-    STSPIN233_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STSPIN233_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STSPIN233 );
     stspin233_init( &stspin233, &cfg );
 
     stspin233_default_cfg( &stspin233 );

@@ -29,6 +29,10 @@
 #include "log.h"
 #include "rtc20.h"
 
+#ifndef MIKROBUS_POSITION_RTC20
+    #define MIKROBUS_POSITION_RTC20 MIKROBUS_1
+#endif
+
 static rtc20_t rtc20;
 static log_t logger;
 static uint8_t new_sec = 255;
@@ -61,7 +65,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc20_cfg_setup( &rtc20_cfg );
-    RTC20_MAP_MIKROBUS( rtc20_cfg, MIKROBUS_1 );
+    RTC20_MAP_MIKROBUS( rtc20_cfg, MIKROBUS_POSITION_RTC20 );
     if ( I2C_MASTER_ERROR == rtc20_init( &rtc20, &rtc20_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

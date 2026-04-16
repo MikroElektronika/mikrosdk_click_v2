@@ -73,7 +73,7 @@ void application_init ( void )
 
     // Click initialization.
     buzzer_cfg_setup( &buzzer_cfg );
-    BUZZER_MAP_MIKROBUS( buzzer_cfg, MIKROBUS_1 );
+    BUZZER_MAP_MIKROBUS( buzzer_cfg, MIKROBUS_POSITION_BUZZER );
     if ( PWM_ERROR == buzzer_init( &buzzer, &buzzer_cfg ) )
     {
         log_error( &logger, " Communication init." );

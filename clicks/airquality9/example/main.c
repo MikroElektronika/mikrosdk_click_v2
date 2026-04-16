@@ -24,6 +24,10 @@
 #include "log.h"
 #include "airquality9.h"
 
+#ifndef MIKROBUS_POSITION_AIRQUALITY9
+    #define MIKROBUS_POSITION_AIRQUALITY9 MIKROBUS_1
+#endif
+
 static airquality9_t airquality9;
 static log_t logger;
 
@@ -65,7 +69,7 @@ void application_init ( void )
 
     // Click initialization.
     airquality9_cfg_setup( &airquality9_cfg );
-    AIRQUALITY9_MAP_MIKROBUS( airquality9_cfg, MIKROBUS_1 );
+    AIRQUALITY9_MAP_MIKROBUS( airquality9_cfg, MIKROBUS_POSITION_AIRQUALITY9 );
     err_t init_flag  = airquality9_init( &airquality9, &airquality9_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

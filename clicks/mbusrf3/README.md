@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     mbusrf3_cfg_setup( &mbusrf3_cfg );
-    MBUSRF3_MAP_MIKROBUS( mbusrf3_cfg, MIKROBUS_1 );
+    MBUSRF3_MAP_MIKROBUS( mbusrf3_cfg, MIKROBUS_POSITION_MBUSRF3 );
     if ( UART_ERROR == mbusrf3_init( &mbusrf3, &mbusrf3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -87,7 +87,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     pressure3_cfg_setup( &cfg );
-    PRESSURE3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE3 );
     pressure3_init( &pressure3, &cfg );
     pressure3_default_cfg( &pressure3 );
 }

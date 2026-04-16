@@ -92,7 +92,7 @@ void application_init ( void )
     //  Click initialization.
 
     proximity5_cfg_setup( &cfg );
-    PROXIMITY5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PROXIMITY5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PROXIMITY5 );
     proximity5_init( &proximity5, &cfg );
 
     proximity5_default_cfg( &proximity5 );

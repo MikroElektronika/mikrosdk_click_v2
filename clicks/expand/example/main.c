@@ -28,6 +28,10 @@
 #include "log.h"
 #include "expand.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND
+    #define MIKROBUS_POSITION_EXPAND MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static expand_t expand;
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     expand_cfg_setup( &cfg );
-    EXPAND_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND );
     expand_init( &expand, &cfg );
     
     expand_default_configuration( &expand, EXPAND_SPI_MODULE_POSITION_0 );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "osd.h"
 
+#ifndef MIKROBUS_POSITION_OSD
+    #define MIKROBUS_POSITION_OSD MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static osd_t osd;
@@ -66,7 +70,7 @@ void application_init ( void )
 
     // Click initialization.
     osd_cfg_setup( &cfg );
-    OSD_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OSD_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OSD );
     osd_init( &osd, &cfg );
 
     osd_default_cfg( &osd );

@@ -30,6 +30,10 @@
 #include "log.h"
 #include "accel13.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL13
+    #define MIKROBUS_POSITION_ACCEL13 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel13_t accel13;
@@ -62,7 +66,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel13_cfg_setup( &cfg );
-    ACCEL13_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL13_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL13 );
     accel13_init( &accel13, &cfg );
 
     accel13_generic_read_bytes( &accel13, ACCEL13_REG_WHO_AM_I, &device_id, 1 );

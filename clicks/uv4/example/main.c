@@ -27,6 +27,10 @@
 #include "log.h"
 #include "uv4.h"
 
+#ifndef MIKROBUS_POSITION_UV4
+    #define MIKROBUS_POSITION_UV4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static uv4_t uv4;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     uv4_cfg_setup( &cfg );
-    UV4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UV4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UV4 );
     uv4_init( &uv4, &cfg );
     uv4_default_cfg( &uv4 );
 }

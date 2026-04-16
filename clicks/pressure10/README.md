@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure10_cfg_setup( &cfg );
-    PRESSURE10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE10 );
     pressure10_init( &pressure10, &cfg );
 
     check_com = pressure10_check_communication( &pressure10 );

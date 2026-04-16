@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     efuse7_cfg_setup( &efuse7_cfg );
-    EFUSE7_MAP_MIKROBUS( efuse7_cfg, MIKROBUS_1 );
+    EFUSE7_MAP_MIKROBUS( efuse7_cfg, MIKROBUS_POSITION_EFUSE7 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == efuse7_init( &efuse7, &efuse7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

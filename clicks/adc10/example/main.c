@@ -27,6 +27,10 @@
 #include "log.h"
 #include "adc10.h"
 
+#ifndef MIKROBUS_POSITION_ADC10
+    #define MIKROBUS_POSITION_ADC10 MIKROBUS_1
+#endif
+
 static adc10_t adc10;
 static log_t logger;
 
@@ -55,7 +59,7 @@ void application_init ( void ) {
     // Click initialization.
 
     adc10_cfg_setup( &adc10_cfg );
-    ADC10_MAP_MIKROBUS( adc10_cfg, MIKROBUS_1 );
+    ADC10_MAP_MIKROBUS( adc10_cfg, MIKROBUS_POSITION_ADC10 );
     err_t init_flag  = adc10_init( &adc10, &adc10_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

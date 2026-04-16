@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp73871_cfg_setup( &cfg );
-    MCP73871_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP73871_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP73871 );
     mcp73871_init( &mcp73871, &cfg );
 }
 ```

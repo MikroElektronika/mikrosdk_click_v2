@@ -28,6 +28,10 @@
 #include "log.h"
 #include "gnss10.h"
 
+#ifndef MIKROBUS_POSITION_GNSS10
+    #define MIKROBUS_POSITION_GNSS10 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static gnss10_t gnss10;
@@ -86,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss10_cfg_setup( &gnss10_cfg );
-    GNSS10_MAP_MIKROBUS( gnss10_cfg, MIKROBUS_1 );
+    GNSS10_MAP_MIKROBUS( gnss10_cfg, MIKROBUS_POSITION_GNSS10 );
     err_t init_flag = gnss10_init( &gnss10, &gnss10_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

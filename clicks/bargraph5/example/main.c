@@ -23,6 +23,10 @@
 #include "log.h"
 #include "bargraph5.h"
 
+#ifndef MIKROBUS_POSITION_BARGRAPH5
+    #define MIKROBUS_POSITION_BARGRAPH5 MIKROBUS_1
+#endif
+
 static bargraph5_t bargraph5;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     bargraph5_cfg_setup( &bargraph5_cfg );
-    BARGRAPH5_MAP_MIKROBUS( bargraph5_cfg, MIKROBUS_1 );
+    BARGRAPH5_MAP_MIKROBUS( bargraph5_cfg, MIKROBUS_POSITION_BARGRAPH5 );
     if ( SPI_MASTER_ERROR == bargraph5_init( &bargraph5, &bargraph5_cfg ) )
     {
         log_error( &logger, " Communication init." );

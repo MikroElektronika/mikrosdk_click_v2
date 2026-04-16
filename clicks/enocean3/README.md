@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     enocean3_cfg_setup( &cfg );
-    ENOCEAN3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ENOCEAN3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ENOCEAN3 );
     enocean3_init( &enocean3, &cfg );
 
     Delay_ms ( 500 );

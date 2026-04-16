@@ -25,6 +25,10 @@
 #include "log.h"
 #include "touchkey.h"
 
+#ifndef MIKROBUS_POSITION_TOUCHKEY
+    #define MIKROBUS_POSITION_TOUCHKEY MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static touchkey_t touchkey;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     touchkey_cfg_setup( &cfg );
-    TOUCHKEY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TOUCHKEY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TOUCHKEY );
     touchkey_init( &touchkey, &cfg );
     log_printf( &logger, "Press key\r\n" );
 }

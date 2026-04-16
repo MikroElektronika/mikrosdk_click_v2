@@ -31,6 +31,10 @@
 #include "fingerprint3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_FINGERPRINT3
+    #define MIKROBUS_POSITION_FINGERPRINT3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define LOCATION_IN_LIBRARY            1    // Location in flash where the fingerprint template will be stored.
@@ -119,7 +123,7 @@ void application_init ( void )
 
     //  Click initialization.
     fingerprint3_cfg_setup( &cfg );
-    FINGERPRINT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FINGERPRINT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FINGERPRINT3 );
     err_t init_flag = fingerprint3_init( &fingerprint3, &cfg );
     if ( init_flag == UART_ERROR ) 
     {

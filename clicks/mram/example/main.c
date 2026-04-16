@@ -24,6 +24,10 @@
 #include "log.h"
 #include "mram.h"
 
+#ifndef MIKROBUS_POSITION_MRAM
+    #define MIKROBUS_POSITION_MRAM MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static mram_t mram;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     mram_cfg_setup( &cfg );
-    MRAM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MRAM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MRAM );
     mram_init( &mram, &cfg );
     mram_default_cfg( &mram );
     

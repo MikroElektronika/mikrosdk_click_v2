@@ -81,7 +81,7 @@ void application_init ( void )
     //  Click initialization.
 
     nanopower_cfg_setup( &cfg );
-    NANOPOWER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NANOPOWER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NANOPOWER );
     nanopower_init( &nanopower, &cfg );
 }
 ```

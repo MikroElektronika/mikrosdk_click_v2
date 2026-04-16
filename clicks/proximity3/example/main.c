@@ -24,6 +24,10 @@
 #include "log.h"
 #include "proximity3.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY3
+    #define MIKROBUS_POSITION_PROXIMITY3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static proximity3_t proximity3;
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     proximity3_cfg_setup( &proximity3_cfg );
-    PROXIMITY3_MAP_MIKROBUS( proximity3_cfg, MIKROBUS_1 );
+    PROXIMITY3_MAP_MIKROBUS( proximity3_cfg, MIKROBUS_POSITION_PROXIMITY3 );
     if ( PROXIMITY3_ERROR == proximity3_init( &proximity3, &proximity3_cfg ) )
     {
         log_error( &logger, " Communication init." );

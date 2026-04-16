@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     captouch_cfg_setup( &cfg );
-    CAPTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPTOUCH );
     captouch_init( &captouch, &cfg );
 
     captouch_default_cfg( &captouch );

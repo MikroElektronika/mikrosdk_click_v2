@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss8_cfg_setup( &gnss8_cfg );
-    GNSS8_MAP_MIKROBUS( gnss8_cfg, MIKROBUS_1 );
+    GNSS8_MAP_MIKROBUS( gnss8_cfg, MIKROBUS_POSITION_GNSS8 );
     err_t init_flag  = gnss8_init( &gnss8, &gnss8_cfg );
     if ( UART_ERROR == init_flag ) 
     {

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "excelonlp.h"
 
+#ifndef MIKROBUS_POSITION_EXCELONLP
+    #define MIKROBUS_POSITION_EXCELONLP MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static excelonlp_t excelonlp;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     excelonlp_cfg_setup( &cfg );
-    EXCELONLP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXCELONLP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXCELONLP );
     excelonlp_init( &excelonlp, &cfg );
     
     log_printf( &logger, "Read Device ID: " );

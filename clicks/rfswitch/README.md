@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rfswitch_cfg_setup( &rfswitch_cfg );
-    RFSWITCH_MAP_MIKROBUS( rfswitch_cfg, MIKROBUS_1 );
+    RFSWITCH_MAP_MIKROBUS( rfswitch_cfg, MIKROBUS_POSITION_RFSWITCH );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == rfswitch_init( &rfswitch, &rfswitch_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

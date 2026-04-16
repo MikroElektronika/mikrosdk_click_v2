@@ -27,6 +27,10 @@
 #include "log.h"
 #include "llcspi.h"
 
+#ifndef MIKROBUS_POSITION_LLCSPI
+    #define MIKROBUS_POSITION_LLCSPI MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static llcspi_t llcspi;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     llcspi_cfg_setup( &cfg );
-    LLCSPI_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LLCSPI_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LLCSPI );
     llcspi_init( &llcspi, &cfg );
 }
 

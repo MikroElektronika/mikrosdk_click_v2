@@ -25,6 +25,10 @@
 #include "log.h"
 #include "spectrometer2.h"
 
+#ifndef MIKROBUS_POSITION_SPECTROMETER2
+    #define MIKROBUS_POSITION_SPECTROMETER2 MIKROBUS_1
+#endif
+
 static spectrometer2_t spectrometer2;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     spectrometer2_cfg_setup( &spectrometer2_cfg );
-    SPECTROMETER2_MAP_MIKROBUS( spectrometer2_cfg, MIKROBUS_1 );
+    SPECTROMETER2_MAP_MIKROBUS( spectrometer2_cfg, MIKROBUS_POSITION_SPECTROMETER2 );
     if ( I2C_MASTER_ERROR == spectrometer2_init( &spectrometer2, &spectrometer2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

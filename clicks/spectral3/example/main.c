@@ -26,6 +26,10 @@
 #include "spectral3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_SPECTRAL3
+    #define MIKROBUS_POSITION_SPECTRAL3 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 200
 #define PROCESS_PARSER_BUFFER_SIZE 400
@@ -132,7 +136,7 @@ void application_init ( void )
     //  Click initialization.
 
     spectral3_cfg_setup( &cfg );
-    SPECTRAL3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPECTRAL3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPECTRAL3 );
     spectral3_init( &spectral3, &cfg );
 
     spectral3_module_reset( &spectral3 );

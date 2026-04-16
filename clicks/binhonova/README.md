@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     binhonova_cfg_setup( &binhonova_cfg );
-    BINHONOVA_MAP_MIKROBUS( binhonova_cfg, MIKROBUS_1 );
+    BINHONOVA_MAP_MIKROBUS( binhonova_cfg, MIKROBUS_POSITION_BINHONOVA );
     if ( UART_ERROR == binhonova_init( &binhonova, &binhonova_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

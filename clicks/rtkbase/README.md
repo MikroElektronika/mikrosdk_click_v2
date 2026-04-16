@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rtkbase_cfg_setup( &rtkbase_cfg );
-    RTKBASE_MAP_MIKROBUS( rtkbase_cfg, MIKROBUS_1 );
+    RTKBASE_MAP_MIKROBUS( rtkbase_cfg, MIKROBUS_POSITION_RTKBASE );
     if ( UART_ERROR == rtkbase_init( &rtkbase, &rtkbase_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

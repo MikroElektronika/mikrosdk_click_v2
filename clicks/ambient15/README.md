@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient15_cfg_setup( &ambient15_cfg );
-    AMBIENT15_MAP_MIKROBUS( ambient15_cfg, MIKROBUS_1 );
+    AMBIENT15_MAP_MIKROBUS( ambient15_cfg, MIKROBUS_POSITION_AMBIENT15 );
     if ( I2C_MASTER_ERROR == ambient15_init( &ambient15, &ambient15_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

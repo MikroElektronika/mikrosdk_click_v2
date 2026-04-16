@@ -25,6 +25,10 @@
 #include "log.h"
 #include "thermo8.h"
 
+#ifndef MIKROBUS_POSITION_THERMO8
+    #define MIKROBUS_POSITION_THERMO8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo8_t thermo8;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo8_cfg_setup( &cfg );
-    THERMO8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO8 );
     thermo8_init( &thermo8, &cfg );
     
     Delay_ms ( 100 );

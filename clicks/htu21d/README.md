@@ -35,21 +35,6 @@ all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](ht
 
 ### Example Key Functions
 
-- `htu21d_cfg_setup` Config Object Initialization function. 
-```c
-void htu21d_cfg_setup ( htu21d_cfg_t *cfg );
-``` 
- 
-- `htu21d_init` Initialization function. 
-```c
-err_t htu21d_init ( htu21d_t *ctx, htu21d_cfg_t *cfg );
-```
-
-- `htu21d_default_cfg` Click Default Configuration function. 
-```c
-void htu21d_default_cfg ( htu21d_t *ctx );
-```
-
 - `htu21d_cfg_setup` This function initializes Click configuration structure to init state. 
 ```c
 void htu21d_cfg_setup ( htu21d_cfg_t *cfg );
@@ -60,16 +45,6 @@ void htu21d_cfg_setup ( htu21d_cfg_t *cfg );
 err_t htu21d_init ( htu21d_t *ctx, htu21d_cfg_t *cfg );
 ```
 
-- `htu21d_generic_write` This function writes data to the desired register. 
-```c
-void htu21d_generic_write ( htu21d_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-```
-
-- `htu21d_generic_read` This function reads data from the desired register. 
-```c
-void htu21d_generic_read ( htu21d_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
-```
-
 - `htu21d_read_data` Function read 24-bit data from register address of HTU21D. 
 ```c
 uint32_t htu21d_read_data ( htu21d_t *ctx, uint8_t reg_adr );
@@ -78,11 +53,6 @@ uint32_t htu21d_read_data ( htu21d_t *ctx, uint8_t reg_adr );
 - `htu21d_send_cmd` Function sends command to HTU21D. 
 ```c
 void htu21d_send_cmd ( htu21d_t *ctx, uint8_t cmd_byte );
-```
-
-- `htu21d_readdata` This function reads data from the desired register. 
-```c
-void htu21d_readdata ( htu21d_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 ```
 
 - `htu21d_get_temperature` Function read and calculate temperature in degrees Celsius from the HTU21D sensor. 
@@ -102,6 +72,7 @@ float htu21d_get_humidity ( htu21d_t *ctx );
 > after reset 100 [ ms ] and start write log.
 > 
 
+```c
 void application_init ( void )
 {
     log_cfg_t log_cfg;
@@ -123,7 +94,7 @@ void application_init ( void )
     //  Click initialization.
 
     htu21d_cfg_setup( &cfg );
-    HTU21D_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HTU21D_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HTU21D );
     htu21d_init( &htu21d, &cfg );
     
     htu21d_send_cmd ( &htu21d, HTU21D_SOFT_RESET );
@@ -133,7 +104,7 @@ void application_init ( void )
     log_printf( &logger, "         HTU21D       \r\n" );
     log_printf( &logger, "---------------------------\r\n" );
 }
-
+```
 
 ### Application Task
 
@@ -146,6 +117,7 @@ void application_init ( void )
 > All data logs on usb uart for aproximetly every 3 sec.
 >
 
+```c
 void application_task ( void )
 {
     //  Task implementation.
@@ -161,7 +133,7 @@ void application_task ( void )
     Delay_ms ( 1000 );
     Delay_ms ( 1000 );
 }
- 
+```
 
 ## Application Output
 

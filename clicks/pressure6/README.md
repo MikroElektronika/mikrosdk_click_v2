@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure6_cfg_setup( &cfg );
-    PRESSURE6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE6 );
     pressure6_init( &pressure6, &cfg );
 }
 ```

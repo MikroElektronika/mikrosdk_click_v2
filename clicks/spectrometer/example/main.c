@@ -29,6 +29,10 @@
 #include "log.h"
 #include "spectrometer.h"
 
+#ifndef MIKROBUS_POSITION_SPECTROMETER
+    #define MIKROBUS_POSITION_SPECTROMETER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static spectrometer_t spectrometer;
@@ -66,7 +70,7 @@ void application_init ( void )
     //  Click initialization.
 
     spectrometer_cfg_setup( &cfg );
-    SPECTROMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SPECTROMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SPECTROMETER );
     spectrometer_init( &spectrometer, &cfg );
     Delay_ms ( 100 );
     

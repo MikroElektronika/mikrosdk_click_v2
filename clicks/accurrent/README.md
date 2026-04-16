@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     accurrent_cfg_setup( &cfg );
-    ACCURRENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCURRENT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCURRENT );
     accurrent_init( &accurrent, &cfg );
 }
 ```

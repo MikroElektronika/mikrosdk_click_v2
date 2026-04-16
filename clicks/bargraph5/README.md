@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     bargraph5_cfg_setup( &bargraph5_cfg );
-    BARGRAPH5_MAP_MIKROBUS( bargraph5_cfg, MIKROBUS_1 );
+    BARGRAPH5_MAP_MIKROBUS( bargraph5_cfg, MIKROBUS_POSITION_BARGRAPH5 );
     if ( SPI_MASTER_ERROR == bargraph5_init( &bargraph5, &bargraph5_cfg ) )
     {
         log_error( &logger, " Communication init." );

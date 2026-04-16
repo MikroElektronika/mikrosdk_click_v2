@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     lteiot3_cfg_setup( &lteiot3_cfg );
-    LTEIOT3_MAP_MIKROBUS( lteiot3_cfg, MIKROBUS_1 );
+    LTEIOT3_MAP_MIKROBUS( lteiot3_cfg, MIKROBUS_POSITION_LTEIOT3 );
     if ( UART_ERROR == lteiot3_init( &lteiot3, &lteiot3_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

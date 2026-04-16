@@ -26,6 +26,10 @@
 #include "log.h"
 #include "color10.h"
 
+#ifndef MIKROBUS_POSITION_COLOR10
+    #define MIKROBUS_POSITION_COLOR10 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static color10_t color10;
@@ -123,7 +127,7 @@ void application_init ( void )
     //  Click initialization.
 
     color10_cfg_setup( &cfg );
-    COLOR10_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR10_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR10 );
     color10_init( &color10, &cfg );
     Delay_ms ( 500 );
 

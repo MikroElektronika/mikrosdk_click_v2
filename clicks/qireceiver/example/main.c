@@ -28,6 +28,10 @@
 #include "log.h"
 #include "qireceiver.h"
 
+#ifndef MIKROBUS_POSITION_QIRECEIVER
+    #define MIKROBUS_POSITION_QIRECEIVER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static qireceiver_t qireceiver;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     qireceiver_cfg_setup( &cfg );
-    QIRECEIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    QIRECEIVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_QIRECEIVER );
     qireceiver_init( &qireceiver, &cfg );
     
     Delay_ms ( 100 );

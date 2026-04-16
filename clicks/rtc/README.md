@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc_c_cfg_setup( &cfg );
-    RTC_C_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC_C_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC );
     rtc_c_init( &rtc_c, &cfg );
 
     log_printf( &logger, "------------------\r\n" );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     btez_cfg_setup( &cfg );
-    BTEZ_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BTEZ_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BTEZ );
     btez_init( &btez, &cfg );
     Delay_ms ( 100 );
 

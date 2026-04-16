@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     vreg_cfg_setup( &cfg );
-    VREG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VREG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VREG );
     vreg_init( &vreg, &cfg );
 
     vreg_stop_measuring( &vreg );

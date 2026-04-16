@@ -25,6 +25,10 @@
 #include "log.h"
 #include "linhall.h"
 
+#ifndef MIKROBUS_POSITION_LINHALL
+    #define MIKROBUS_POSITION_LINHALL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static linhall_t linhall;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     linhall_cfg_setup( &cfg );
-    LINHALL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LINHALL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LINHALL );
     linhall_init( &linhall, &cfg );
     
     log_printf( &logger, "  Lin Hall Click  \r\n" );

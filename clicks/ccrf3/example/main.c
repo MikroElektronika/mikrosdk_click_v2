@@ -22,6 +22,10 @@
 #include "log.h"
 #include "ccrf3.h"
 
+#ifndef MIKROBUS_POSITION_CCRF3
+    #define MIKROBUS_POSITION_CCRF3 MIKROBUS_1
+#endif
+
 #define TEXT_TO_SEND "MikroE\r\n"
 
 static ccrf3_t ccrf3;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     ccrf3_cfg_setup( &ccrf3_cfg );
-    CCRF3_MAP_MIKROBUS( ccrf3_cfg, MIKROBUS_1 );
+    CCRF3_MAP_MIKROBUS( ccrf3_cfg, MIKROBUS_POSITION_CCRF3 );
     if ( SPI_MASTER_ERROR == ccrf3_init( &ccrf3, &ccrf3_cfg ) )
     {
         log_error( &logger, " Communication init." );

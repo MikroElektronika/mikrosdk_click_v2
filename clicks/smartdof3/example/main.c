@@ -27,6 +27,10 @@
 #include "log.h"
 #include "smartdof3.h"
 
+#ifndef MIKROBUS_POSITION_SMARTDOF3
+    #define MIKROBUS_POSITION_SMARTDOF3 MIKROBUS_1
+#endif
+
 static smartdof3_t smartdof3;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     smartdof3_cfg_setup( &smartdof3_cfg );
-    SMARTDOF3_MAP_MIKROBUS( smartdof3_cfg, MIKROBUS_1 );
+    SMARTDOF3_MAP_MIKROBUS( smartdof3_cfg, MIKROBUS_POSITION_SMARTDOF3 );
     err_t init_flag = smartdof3_init( &smartdof3, &smartdof3_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

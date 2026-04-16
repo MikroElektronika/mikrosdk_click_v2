@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     airquality11_cfg_setup( &airquality11_cfg );
-    AIRQUALITY11_MAP_MIKROBUS( airquality11_cfg, MIKROBUS_1 );
+    AIRQUALITY11_MAP_MIKROBUS( airquality11_cfg, MIKROBUS_POSITION_AIRQUALITY11 );
     err_t init_flag = airquality11_init( &airquality11, &airquality11_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum2_cfg_setup( &cfg );
-    TEMPHUM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM2 );
     temphum2_init( &temphum2, &cfg );
 
     temphum2_default_cfg( &temphum2 );

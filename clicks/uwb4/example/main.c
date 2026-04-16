@@ -38,6 +38,10 @@
 #include "uwb4.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_UWB4
+    #define MIKROBUS_POSITION_UWB4 MIKROBUS_1
+#endif
+
 // Comment out the line below to switch the example mode to responder
 #define EXAMPLE_INITIATOR
 
@@ -176,7 +180,7 @@ void application_init ( void )
 
     // Click initialization.
     uwb4_cfg_setup( &uwb4_cfg );
-    UWB4_MAP_MIKROBUS( uwb4_cfg, MIKROBUS_1 );
+    UWB4_MAP_MIKROBUS( uwb4_cfg, MIKROBUS_POSITION_UWB4 );
     if ( UART_ERROR == uwb4_init( &uwb4, &uwb4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -87,7 +87,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     templog4_cfg_setup( &cfg );
-    TEMPLOG4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPLOG4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPLOG4 );
     templog4_init( &templog4, &cfg );
     templog4_default_cfg ( &templog4 );
 }

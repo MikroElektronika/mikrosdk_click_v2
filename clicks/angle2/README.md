@@ -94,7 +94,7 @@ void application_init ( void )
     //  Click initialization.
 
     angle2_cfg_setup( &cfg );
-    ANGLE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANGLE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANGLE2 );
     angle2_init( &angle2, &cfg );
 
     Delay_ms ( 300 );

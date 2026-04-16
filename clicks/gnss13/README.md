@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss13_cfg_setup( &gnss13_cfg );
-    GNSS13_MAP_MIKROBUS( gnss13_cfg, MIKROBUS_1 );
+    GNSS13_MAP_MIKROBUS( gnss13_cfg, MIKROBUS_POSITION_GNSS13 );
     if ( UART_ERROR == gnss13_init( &gnss13, &gnss13_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     fram3_cfg_setup( &cfg );
-    FRAM3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FRAM3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FRAM3 );
     fram3_init( &fram3, &cfg );
 }
 ```

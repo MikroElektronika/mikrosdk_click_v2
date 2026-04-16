@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     ezocarrierorp_cfg_setup( &ezocarrierorp_cfg );
-    EZOCARRIERORP_MAP_MIKROBUS( ezocarrierorp_cfg, MIKROBUS_1 );
+    EZOCARRIERORP_MAP_MIKROBUS( ezocarrierorp_cfg, MIKROBUS_POSITION_EZOCARRIERORP );
     if ( UART_ERROR == ezocarrierorp_init( &ezocarrierorp, &ezocarrierorp_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

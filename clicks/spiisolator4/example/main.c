@@ -29,6 +29,10 @@
 #include "log.h"
 #include "spiisolator4.h"
 
+#ifndef MIKROBUS_POSITION_SPIISOLATOR4
+    #define MIKROBUS_POSITION_SPIISOLATOR4 MIKROBUS_1
+#endif
+
 static spiisolator4_t spiisolator4;
 static log_t logger;
 static uint32_t device_id;
@@ -68,7 +72,7 @@ void application_init ( void )
     // Click initialization.
 
     spiisolator4_cfg_setup( &spiisolator4_cfg );
-    SPIISOLATOR4_MAP_MIKROBUS( spiisolator4_cfg, MIKROBUS_1 );
+    SPIISOLATOR4_MAP_MIKROBUS( spiisolator4_cfg, MIKROBUS_POSITION_SPIISOLATOR4 );
     err_t init_flag  = spiisolator4_init( &spiisolator4, &spiisolator4_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

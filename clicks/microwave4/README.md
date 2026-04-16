@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     microwave4_cfg_setup( &microwave4_cfg );
-    MICROWAVE4_MAP_MIKROBUS( microwave4_cfg, MIKROBUS_1 );
+    MICROWAVE4_MAP_MIKROBUS( microwave4_cfg, MIKROBUS_POSITION_MICROWAVE4 );
     err_t init_flag = microwave4_init( &microwave4, &microwave4_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

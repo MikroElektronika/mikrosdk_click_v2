@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     rs232isolator2_cfg_setup( &rs232isolator2_cfg );
-    RS232ISOLATOR2_MAP_MIKROBUS( rs232isolator2_cfg, MIKROBUS_1 );
+    RS232ISOLATOR2_MAP_MIKROBUS( rs232isolator2_cfg, MIKROBUS_POSITION_RS232ISOLATOR2 );
     err_t init_flag  = rs232isolator2_init( &rs232isolator2, &rs232isolator2_cfg );
     if ( init_flag == UART_ERROR ) {
         log_error( &logger, " Application Init Error. " );

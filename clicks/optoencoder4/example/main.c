@@ -23,6 +23,10 @@
 #include "log.h"
 #include "optoencoder4.h"
 
+#ifndef MIKROBUS_POSITION_OPTOENCODER4
+    #define MIKROBUS_POSITION_OPTOENCODER4 MIKROBUS_1
+#endif
+
 static optoencoder4_t optoencoder4; /**< Opto Encoder 4 Click driver object. */
 static log_t logger;                /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     optoencoder4_cfg_setup( &optoencoder4_cfg );
-    OPTOENCODER4_MAP_MIKROBUS( optoencoder4_cfg, MIKROBUS_1 );
+    OPTOENCODER4_MAP_MIKROBUS( optoencoder4_cfg, MIKROBUS_POSITION_OPTOENCODER4 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == optoencoder4_init( &optoencoder4, &optoencoder4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

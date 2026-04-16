@@ -22,6 +22,10 @@
 #include "log.h"
 #include "c8x8y.h"
 
+#ifndef MIKROBUS_POSITION_8X8Y
+    #define MIKROBUS_POSITION_8X8Y MIKROBUS_1
+#endif
+
 static c8x8y_t c8x8y;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void ) {
     // Click initialization.
 
     c8x8y_cfg_setup( &c8x8y_cfg );
-    C8X8Y_MAP_MIKROBUS( c8x8y_cfg, MIKROBUS_1 );
+    C8X8Y_MAP_MIKROBUS( c8x8y_cfg, MIKROBUS_POSITION_8X8Y );
     err_t init_flag  = c8x8y_init( &c8x8y, &c8x8y_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_info( &logger, " Application Init Error. " );

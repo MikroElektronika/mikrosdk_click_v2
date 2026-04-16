@@ -21,6 +21,10 @@
 #include "log.h"
 #include "dac9.h"
 
+#ifndef MIKROBUS_POSITION_DAC9
+    #define MIKROBUS_POSITION_DAC9 MIKROBUS_1
+#endif
+
 static dac9_t dac9;
 static log_t logger;
 static uint16_t res = 2500;
@@ -44,7 +48,7 @@ void application_init ( void ) {
 
     // Click initialization.
     dac9_cfg_setup( &dac9_cfg );
-    DAC9_MAP_MIKROBUS( dac9_cfg, MIKROBUS_1 );
+    DAC9_MAP_MIKROBUS( dac9_cfg, MIKROBUS_POSITION_DAC9 );
     err_t init_flag  = dac9_init( &dac9, &dac9_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) ) {
         log_error( &logger, " Application Init Error. " );

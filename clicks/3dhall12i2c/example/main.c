@@ -24,6 +24,10 @@
 #include "log.h"
 #include "c3dhall12i2c.h"
 
+#ifndef MIKROBUS_POSITION_3DHALL12I2C
+    #define MIKROBUS_POSITION_3DHALL12I2C MIKROBUS_1
+#endif
+
 static c3dhall12i2c_t c3dhall12i2c;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     c3dhall12i2c_cfg_setup( &c3dhall12i2c_cfg );
-    C3DHALL12I2C_MAP_MIKROBUS( c3dhall12i2c_cfg, MIKROBUS_1 );
+    C3DHALL12I2C_MAP_MIKROBUS( c3dhall12i2c_cfg, MIKROBUS_POSITION_3DHALL12I2C );
     if ( I2C_MASTER_ERROR == c3dhall12i2c_init( &c3dhall12i2c, &c3dhall12i2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

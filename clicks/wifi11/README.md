@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     wifi11_cfg_setup( &cfg );
-    WIFI11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    WIFI11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_WIFI11 );
     wifi11_init( &wifi11, &cfg );
     Delay_ms ( 100 );
     

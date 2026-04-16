@@ -34,6 +34,10 @@
 #include "lr5.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_LR5
+    #define MIKROBUS_POSITION_LR5 MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 300
 
@@ -183,7 +187,7 @@ void application_init ( void )
     //  Click initialization.
 
     lr5_cfg_setup( &cfg );
-    LR5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LR5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LR5 );
     lr5_init( &lr5, &cfg );
 
     lr5_response_handler_set( &lr5, &make_response );

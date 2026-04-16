@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     swipeswitch_cfg_setup( &cfg );
-    SWIPESWITCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SWIPESWITCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SWIPESWITCH );
     swipeswitch_init( &swipeswitch, &cfg );
     Delay_ms ( 300 );
     

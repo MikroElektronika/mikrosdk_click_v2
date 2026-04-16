@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss15_cfg_setup( &gnss15_cfg );
-    GNSS15_MAP_MIKROBUS( gnss15_cfg, MIKROBUS_1 );
+    GNSS15_MAP_MIKROBUS( gnss15_cfg, MIKROBUS_POSITION_GNSS15 );
     if ( UART_ERROR == gnss15_init( &gnss15, &gnss15_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

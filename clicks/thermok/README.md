@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermok_cfg_setup( &cfg );
-    THERMOK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMOK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMOK );
     thermok_init( &thermok, &cfg );
 
     // Check communication and reads device ID

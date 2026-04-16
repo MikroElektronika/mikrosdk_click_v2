@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     accel25_cfg_setup( &accel25_cfg );
-    ACCEL25_MAP_MIKROBUS( accel25_cfg, MIKROBUS_1 );
+    ACCEL25_MAP_MIKROBUS( accel25_cfg, MIKROBUS_POSITION_ACCEL25 );
     if ( I2C_MASTER_ERROR == accel25_init( &accel25, &accel25_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

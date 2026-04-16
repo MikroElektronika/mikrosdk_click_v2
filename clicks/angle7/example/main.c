@@ -25,6 +25,10 @@
 #include "log.h"
 #include "angle7.h"
 
+#ifndef MIKROBUS_POSITION_ANGLE7
+    #define MIKROBUS_POSITION_ANGLE7 MIKROBUS_1
+#endif
+
 static angle7_t angle7;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     angle7_cfg_setup( &angle7_cfg );
-    ANGLE7_MAP_MIKROBUS( angle7_cfg, MIKROBUS_1 );
+    ANGLE7_MAP_MIKROBUS( angle7_cfg, MIKROBUS_POSITION_ANGLE7 );
     if ( I2C_MASTER_ERROR == angle7_init( &angle7, &angle7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

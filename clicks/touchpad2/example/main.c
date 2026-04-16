@@ -26,6 +26,10 @@
 #include "log.h"
 #include "touchpad2.h"
 
+#ifndef MIKROBUS_POSITION_TOUCHPAD2
+    #define MIKROBUS_POSITION_TOUCHPAD2 MIKROBUS_1
+#endif
+
 static touchpad2_t touchpad2;
 static log_t logger;
 touchpad2_ver_info_t ver_info;
@@ -51,7 +55,7 @@ void application_init ( void ) {
     // Click initialization.
 
     touchpad2_cfg_setup( &touchpad2_cfg );
-    TOUCHPAD2_MAP_MIKROBUS( touchpad2_cfg, MIKROBUS_1 );
+    TOUCHPAD2_MAP_MIKROBUS( touchpad2_cfg, MIKROBUS_POSITION_TOUCHPAD2 );
     err_t init_flag = touchpad2_init( &touchpad2, &touchpad2_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

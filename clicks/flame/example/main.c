@@ -22,6 +22,10 @@
 #include "log.h"
 #include "flame.h"
 
+#ifndef MIKROBUS_POSITION_FLAME
+    #define MIKROBUS_POSITION_FLAME MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static flame_t flame;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     flame_cfg_setup( &cfg );
-    FLAME_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FLAME_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FLAME );
     flame_init( &flame, &cfg );
 }
 

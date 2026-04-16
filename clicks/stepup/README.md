@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     stepup_cfg_setup( &cfg );
-    STEPUP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STEPUP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STEPUP );
     stepup_init( &stepup, &cfg );
     
     stepup_default_cfg( &stepup );

@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     irdistance_cfg_setup( &cfg );
-    IRDISTANCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRDISTANCE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRDISTANCE );
     irdistance_init( &irdistance, &cfg );
     irdistance_default_cfg ( &irdistance );
 }

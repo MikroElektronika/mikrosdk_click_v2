@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     fram6_cfg_setup( &fram6_cfg );
-    FRAM6_MAP_MIKROBUS( fram6_cfg, MIKROBUS_1 );
+    FRAM6_MAP_MIKROBUS( fram6_cfg, MIKROBUS_POSITION_FRAM6 );
     
     if ( SPI_MASTER_ERROR == fram6_init( &fram6, &fram6_cfg ) )
     {

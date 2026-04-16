@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     ecg4_cfg_setup( &cfg );
-    ECG4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ECG4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ECG4 );
     ecg4_init( &ecg4, &cfg );
 
     ecg4.driver_hdl = make_response;

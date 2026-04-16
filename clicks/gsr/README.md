@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     gsr_cfg_setup( &cfg );
-    GSR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GSR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GSR );
     gsr_init( &gsr, &cfg );
 }
 ```

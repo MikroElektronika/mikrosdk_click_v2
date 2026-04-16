@@ -23,6 +23,10 @@
 #include "log.h"
 #include "haptic3.h"
 
+#ifndef MIKROBUS_POSITION_HAPTIC3
+    #define MIKROBUS_POSITION_HAPTIC3 MIKROBUS_1
+#endif
+
 static haptic3_t haptic3;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     haptic3_cfg_setup( &haptic3_cfg );
-    HAPTIC3_MAP_MIKROBUS( haptic3_cfg, MIKROBUS_1 );
+    HAPTIC3_MAP_MIKROBUS( haptic3_cfg, MIKROBUS_POSITION_HAPTIC3 );
     if ( I2C_MASTER_ERROR == haptic3_init( &haptic3, &haptic3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

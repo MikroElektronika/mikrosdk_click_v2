@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     angle5_cfg_setup( &cfg );
-    ANGLE5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANGLE5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANGLE5 );
     angle5_init( &angle5, &cfg );
 }
 ```

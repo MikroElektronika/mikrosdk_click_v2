@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     amfm_cfg_setup( &cfg );
-    AMFM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMFM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMFM );
     amfm_init( &amfm, &cfg );
 
     Delay_ms ( 100 );

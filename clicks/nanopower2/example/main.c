@@ -22,6 +22,10 @@
 #include "log.h"
 #include "nanopower2.h"
 
+#ifndef MIKROBUS_POSITION_NANOPOWER2
+    #define MIKROBUS_POSITION_NANOPOWER2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static nanopower2_t nanopower2;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     //  Click initialization.
     nanopower2_cfg_setup( &cfg );
-    NANOPOWER2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NANOPOWER2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NANOPOWER2 );
     nanopower2_init( &nanopower2, &cfg );
 
     log_printf( &logger, "NANO POWER 2 is initialized\r\n" );

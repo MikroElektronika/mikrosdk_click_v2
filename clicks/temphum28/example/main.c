@@ -26,6 +26,10 @@
 #include "log.h"
 #include "temphum28.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM28
+    #define MIKROBUS_POSITION_TEMPHUM28 MIKROBUS_1
+#endif
+
 static temphum28_t temphum28;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     temphum28_cfg_setup( &temphum28_cfg );
-    TEMPHUM28_MAP_MIKROBUS( temphum28_cfg, MIKROBUS_1 );
+    TEMPHUM28_MAP_MIKROBUS( temphum28_cfg, MIKROBUS_POSITION_TEMPHUM28 );
     if ( SPI_MASTER_ERROR == temphum28_init( &temphum28, &temphum28_cfg ) )
     {
         log_error( &logger, " Communication init." );

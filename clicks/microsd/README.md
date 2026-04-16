@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     microsd_cfg_setup( &microsd_cfg );
-    MICROSD_MAP_MIKROBUS( microsd_cfg, MIKROBUS_1 );
+    MICROSD_MAP_MIKROBUS( microsd_cfg, MIKROBUS_POSITION_MICROSD );
     if ( MICROSD_ERROR == microsd_init( &microsd, &microsd_cfg ) )
     {
         log_error( &logger, " Communication init." );

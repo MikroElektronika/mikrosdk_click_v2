@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     thunderemu_cfg_setup( &thunderemu_cfg );
-    THUNDEREMU_MAP_MIKROBUS( thunderemu_cfg, MIKROBUS_1 );
+    THUNDEREMU_MAP_MIKROBUS( thunderemu_cfg, MIKROBUS_POSITION_THUNDEREMU );
     if ( I2C_MASTER_ERROR == thunderemu_init( &thunderemu, &thunderemu_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

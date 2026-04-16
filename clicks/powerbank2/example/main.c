@@ -25,6 +25,10 @@
 #include "log.h"
 #include "powerbank2.h"
 
+#ifndef MIKROBUS_POSITION_POWERBANK2
+    #define MIKROBUS_POSITION_POWERBANK2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static powerbank2_t powerbank2;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     powerbank2_cfg_setup( &cfg );
-    POWERBANK2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    POWERBANK2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_POWERBANK2 );
     powerbank2_init( &powerbank2, &cfg );
 }
 

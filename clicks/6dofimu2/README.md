@@ -95,7 +95,7 @@ void application_init ( void )
     //  Click initialization.
 
     c6dofimu2_cfg_setup( &cfg );
-    C6DOFIMU2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C6DOFIMU2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_6DOFIMU2 );
     c6dofimu2_init( &c6dofimu2, &cfg );
     
     log_printf( &logger, "--------------------------\r\n\n" );

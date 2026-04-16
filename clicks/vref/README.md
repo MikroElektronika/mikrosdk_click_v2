@@ -80,7 +80,7 @@ void application_init ( void )
 
     // Click initialization.
     vref_cfg_setup( &vref_cfg );
-    VREF_MAP_MIKROBUS( vref_cfg, MIKROBUS_1 );
+    VREF_MAP_MIKROBUS( vref_cfg, MIKROBUS_POSITION_VREF );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == vref_init( &vref, &vref_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

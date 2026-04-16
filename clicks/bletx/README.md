@@ -103,7 +103,7 @@ void application_init ( void )
 
     // Click initialization.
     bletx_cfg_setup( &bletx_cfg );
-    BLETX_MAP_MIKROBUS( bletx_cfg, MIKROBUS_1 );
+    BLETX_MAP_MIKROBUS( bletx_cfg, MIKROBUS_POSITION_BLETX );
     if ( I2C_MASTER_ERROR == bletx_init( &bletx, &bletx_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

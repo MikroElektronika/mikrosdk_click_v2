@@ -25,6 +25,10 @@
 #include "log.h"
 #include "accel14.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL14
+    #define MIKROBUS_POSITION_ACCEL14 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel14_t accel14;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel14_cfg_setup( &cfg );
-    ACCEL14_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL14_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL14 );
     accel14_init( &accel14, &cfg );
 
     Delay_ms ( 100 );

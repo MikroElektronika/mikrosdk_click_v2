@@ -23,6 +23,10 @@
 #include "log.h"
 #include "expand6.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND6
+    #define MIKROBUS_POSITION_EXPAND6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static expand6_t expand6;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     expand6_cfg_setup( &cfg );
-    EXPAND6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND6 );
     expand6_init( &expand6, &cfg );
 
     expand6_reset ( &expand6 );

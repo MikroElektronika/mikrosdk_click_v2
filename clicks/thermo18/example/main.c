@@ -30,6 +30,10 @@
 #include "log.h"
 #include "thermo18.h"
 
+#ifndef MIKROBUS_POSITION_THERMO18
+    #define MIKROBUS_POSITION_THERMO18 MIKROBUS_1
+#endif
+
 static thermo18_t thermo18;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo18_cfg_setup( &thermo18_cfg );
-    THERMO18_MAP_MIKROBUS( thermo18_cfg, MIKROBUS_1 );
+    THERMO18_MAP_MIKROBUS( thermo18_cfg, MIKROBUS_POSITION_THERMO18 );
     err_t init_flag = thermo18_init( &thermo18, &thermo18_cfg );
     if ( I2C_MASTER_ERROR == init_flag )
     {

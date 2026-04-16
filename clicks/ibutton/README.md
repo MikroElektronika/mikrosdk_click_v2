@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     ibutton_cfg_setup( &ibutton_cfg );
-    IBUTTON_MAP_MIKROBUS( ibutton_cfg, MIKROBUS_1 );
+    IBUTTON_MAP_MIKROBUS( ibutton_cfg, MIKROBUS_POSITION_IBUTTON );
     if ( ONE_WIRE_ERROR == ibutton_init( &ibutton, &ibutton_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

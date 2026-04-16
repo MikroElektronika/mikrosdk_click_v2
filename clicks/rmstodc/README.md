@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     rmstodc_cfg_setup( &cfg );
-    RMSTODC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RMSTODC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RMSTODC );
     rmstodc_init( &rmstodc, &cfg );
     
     rms2dc_enable( &rmstodc, RMS2DC_DEVICE_EN );

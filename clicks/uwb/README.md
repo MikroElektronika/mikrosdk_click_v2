@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     uwb_cfg_setup( &cfg );
-    UWB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UWB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UWB );
     uwb_init( &uwb, &cfg );
     Delay_ms ( 100 );
     

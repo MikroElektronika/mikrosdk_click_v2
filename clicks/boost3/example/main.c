@@ -25,6 +25,10 @@
 #include "log.h"
 #include "boost3.h"
 
+#ifndef MIKROBUS_POSITION_BOOST3
+    #define MIKROBUS_POSITION_BOOST3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static boost3_t boost3;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     boost3_cfg_setup( &cfg );
-    BOOST3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOST3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOST3 );
     boost3_init( &boost3, &cfg );
 }
 

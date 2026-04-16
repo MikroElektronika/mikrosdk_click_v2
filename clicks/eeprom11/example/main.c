@@ -22,6 +22,10 @@
 #include "log.h"
 #include "eeprom11.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM11
+    #define MIKROBUS_POSITION_EEPROM11 MIKROBUS_1
+#endif
+
 #define TX_DATA         "EEPROM 11 Click"
 #define MEMORY_ADDRESS  0x00
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom11_cfg_setup( &eeprom11_cfg );
-    EEPROM11_MAP_MIKROBUS( eeprom11_cfg, MIKROBUS_1 );
+    EEPROM11_MAP_MIKROBUS( eeprom11_cfg, MIKROBUS_POSITION_EEPROM11 );
     if ( I2C_MASTER_ERROR == eeprom11_init( &eeprom11, &eeprom11_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

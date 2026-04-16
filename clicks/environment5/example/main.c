@@ -25,6 +25,10 @@
 #include "log.h"
 #include "environment5.h"
 
+#ifndef MIKROBUS_POSITION_ENVIRONMENT5
+    #define MIKROBUS_POSITION_ENVIRONMENT5 MIKROBUS_1
+#endif
+
 static environment5_t environment5;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     environment5_cfg_setup( &environment5_cfg );
-    ENVIRONMENT5_MAP_MIKROBUS( environment5_cfg, MIKROBUS_1 );
+    ENVIRONMENT5_MAP_MIKROBUS( environment5_cfg, MIKROBUS_POSITION_ENVIRONMENT5 );
     if ( I2C_MASTER_ERROR == environment5_init( &environment5, &environment5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

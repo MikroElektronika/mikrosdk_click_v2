@@ -23,6 +23,10 @@
 #include "log.h"
 #include "hdc1000.h"
 
+#ifndef MIKROBUS_POSITION_HDC1000
+    #define MIKROBUS_POSITION_HDC1000 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static hdc1000_t hdc1000;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     hdc1000_cfg_setup( &cfg );
-    HDC1000_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HDC1000_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HDC1000 );
     hdc1000_init( &hdc1000, &cfg );
     
     log_printf( &logger, "-- Configurating --\r\n" );

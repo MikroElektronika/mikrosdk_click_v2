@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless13_cfg_setup( &brushless13_cfg );
-    BRUSHLESS13_MAP_MIKROBUS( brushless13_cfg, MIKROBUS_1 );
+    BRUSHLESS13_MAP_MIKROBUS( brushless13_cfg, MIKROBUS_POSITION_BRUSHLESS13 );
     if ( I2C_MASTER_ERROR == brushless13_init( &brushless13, &brushless13_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     c3gsara_cfg_setup( &c3gsara_cfg );
-    C3GSARA_MAP_MIKROBUS( c3gsara_cfg, MIKROBUS_1 );
+    C3GSARA_MAP_MIKROBUS( c3gsara_cfg, MIKROBUS_POSITION_3GSARA );
     if ( UART_ERROR == c3gsara_init( &c3gsara, &c3gsara_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

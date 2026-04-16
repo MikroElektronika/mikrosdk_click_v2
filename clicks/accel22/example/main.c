@@ -23,6 +23,10 @@
 #include "log.h"
 #include "accel22.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL22
+    #define MIKROBUS_POSITION_ACCEL22 MIKROBUS_1
+#endif
+
 static accel22_t accel22;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     accel22_cfg_setup( &accel22_cfg );
-    ACCEL22_MAP_MIKROBUS( accel22_cfg, MIKROBUS_1 );
+    ACCEL22_MAP_MIKROBUS( accel22_cfg, MIKROBUS_POSITION_ACCEL22 );
     err_t init_flag  = accel22_init( &accel22, &accel22_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

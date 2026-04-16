@@ -32,6 +32,10 @@
 #include "log.h"
 #include "proteuse.h"
 
+#ifndef MIKROBUS_POSITION_PROTEUSE
+    #define MIKROBUS_POSITION_PROTEUSE MIKROBUS_1
+#endif
+
 // BT device name.
 #define DEVICE_NAME         "Proteus-e Click"
 
@@ -106,7 +110,7 @@ void application_init ( void )
 
     // Click initialization.
     proteuse_cfg_setup( &proteuse_cfg );
-    PROTEUSE_MAP_MIKROBUS( proteuse_cfg, MIKROBUS_1 );
+    PROTEUSE_MAP_MIKROBUS( proteuse_cfg, MIKROBUS_POSITION_PROTEUSE );
     if ( UART_ERROR == proteuse_init( &proteuse, &proteuse_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

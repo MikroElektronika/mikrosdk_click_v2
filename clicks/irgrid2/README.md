@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     irgrid2_cfg_setup( &irgrid2_cfg );
-    IRGRID2_MAP_MIKROBUS( irgrid2_cfg, MIKROBUS_1 );
+    IRGRID2_MAP_MIKROBUS( irgrid2_cfg, MIKROBUS_POSITION_IRGRID2 );
     err_t init_flag = irgrid2_init( &irgrid2, &irgrid2_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

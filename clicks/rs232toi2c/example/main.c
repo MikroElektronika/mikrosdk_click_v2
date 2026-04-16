@@ -24,6 +24,10 @@
 #include "log.h"
 #include "rs232toi2c.h"
 
+#ifndef MIKROBUS_POSITION_RS232TOI2C
+    #define MIKROBUS_POSITION_RS232TOI2C MIKROBUS_1
+#endif
+
 static rs232toi2c_t rs232toi2c;
 static log_t logger;
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     rs232toi2c_cfg_setup( &rs232toi2c_cfg );
-    RS232TOI2C_MAP_MIKROBUS( rs232toi2c_cfg, MIKROBUS_1 );
+    RS232TOI2C_MAP_MIKROBUS( rs232toi2c_cfg, MIKROBUS_POSITION_RS232TOI2C );
     if ( I2C_MASTER_ERROR == rs232toi2c_init( &rs232toi2c, &rs232toi2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

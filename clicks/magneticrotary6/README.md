@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     magneticrotary6_cfg_setup( &magneticrotary6_cfg );
-    MAGNETICROTARY6_MAP_MIKROBUS( magneticrotary6_cfg, MIKROBUS_1 );
+    MAGNETICROTARY6_MAP_MIKROBUS( magneticrotary6_cfg, MIKROBUS_POSITION_MAGNETICROTARY6 );
     if ( SPI_MASTER_ERROR == magneticrotary6_init( &magneticrotary6, &magneticrotary6_cfg ) )
     {
         log_error( &logger, " Communication init." );

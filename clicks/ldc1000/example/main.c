@@ -24,6 +24,10 @@
 #include "log.h"
 #include "ldc1000.h"
 
+#ifndef MIKROBUS_POSITION_LDC1000
+    #define MIKROBUS_POSITION_LDC1000 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ldc1000_t ldc1000;
@@ -56,7 +60,7 @@ void application_init ( )
     //  Click initialization.
 
     ldc1000_cfg_setup( &cfg );
-    LDC1000_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LDC1000_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LDC1000 );
     ldc1000_init( &ldc1000, &cfg );
     Delay_ms ( 100 );
     ldc1000_default_cfg( &ldc1000 );

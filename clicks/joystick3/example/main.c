@@ -24,6 +24,10 @@
 #include "log.h"
 #include "joystick3.h"
 
+#ifndef MIKROBUS_POSITION_JOYSTICK3
+    #define MIKROBUS_POSITION_JOYSTICK3 MIKROBUS_1
+#endif
+
 static joystick3_t joystick3;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     joystick3_cfg_setup( &joystick3_cfg );
-    JOYSTICK3_MAP_MIKROBUS( joystick3_cfg, MIKROBUS_1 );
+    JOYSTICK3_MAP_MIKROBUS( joystick3_cfg, MIKROBUS_POSITION_JOYSTICK3 );
     if ( SPI_MASTER_ERROR == joystick3_init( &joystick3, &joystick3_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -93,7 +93,7 @@ void application_init ( void )
     //  Click initialization
 
     thermo13_cfg_setup( &cfg );
-    THERMO13_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO13_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO13 );
     thermo13_init( &thermo13, &cfg );
 
     // Configuration 

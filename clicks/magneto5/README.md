@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto5_cfg_setup( &cfg );
-    MAGNETO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO5 );
     magneto5_init( &magneto5, &cfg );
 }
 ```

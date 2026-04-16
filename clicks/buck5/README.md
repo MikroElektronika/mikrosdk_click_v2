@@ -87,7 +87,7 @@ void application_init ( void )
     //  Click initialization.
 
     buck5_cfg_setup( &cfg );
-    BUCK5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BUCK5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BUCK5 );
     buck5_init( &buck5, &cfg );
 
     buck5_power_on( &buck5 );

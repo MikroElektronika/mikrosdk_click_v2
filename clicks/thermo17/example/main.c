@@ -22,6 +22,10 @@
 #include "log.h"
 #include "thermo17.h"
 
+#ifndef MIKROBUS_POSITION_THERMO17
+    #define MIKROBUS_POSITION_THERMO17 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo17_t thermo17;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo17_cfg_setup( &cfg );
-    THERMO17_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO17_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO17 );
     thermo17_init( &thermo17, &cfg );
 
     id_data = thermo17_generic_read( &thermo17 ,THERMO17_REG_R_ID );

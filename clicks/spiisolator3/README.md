@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     spiisolator3_cfg_setup( &spiisolator3_cfg );
-    SPIISOLATOR3_MAP_MIKROBUS( spiisolator3_cfg, MIKROBUS_1 );
+    SPIISOLATOR3_MAP_MIKROBUS( spiisolator3_cfg, MIKROBUS_POSITION_SPIISOLATOR3 );
     err_t init_flag  = spiisolator3_init( &spiisolator3, &spiisolator3_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

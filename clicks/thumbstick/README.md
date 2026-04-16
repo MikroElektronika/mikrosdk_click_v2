@@ -82,7 +82,7 @@ void application_init ( void )
     //  Click initialization.
 
     thumbstick_cfg_setup( &cfg );
-    THUMBSTICK_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THUMBSTICK_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THUMBSTICK );
     thumbstick_init( &thumbstick, &cfg );
     
     thumbstick_set_sensitivity( POSTION_SENS_DEFAULT );

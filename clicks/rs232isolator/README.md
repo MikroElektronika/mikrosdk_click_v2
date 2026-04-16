@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs232isolator_cfg_setup( &cfg );
-    RS232ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS232ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS232ISOLATOR );
     rs232isolator_init( &rs232isolator, &cfg );
 }
 ```

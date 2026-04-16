@@ -25,6 +25,10 @@
 #include "log.h"
 #include "shake2wake.h"
 
+#ifndef MIKROBUS_POSITION_SHAKE2WAKE
+    #define MIKROBUS_POSITION_SHAKE2WAKE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static shake2wake_t shake2wake;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     //  Click initialization.
     shake2wake_cfg_setup( &cfg );
-    SHAKE2WAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHAKE2WAKE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHAKE2WAKE );
     shake2wake_init( &shake2wake, &cfg );
     Delay_ms ( 100 );
 

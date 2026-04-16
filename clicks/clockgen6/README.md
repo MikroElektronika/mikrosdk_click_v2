@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     clockgen6_cfg_setup( &clockgen6_cfg );
-    CLOCKGEN6_MAP_MIKROBUS( clockgen6_cfg, MIKROBUS_1 );
+    CLOCKGEN6_MAP_MIKROBUS( clockgen6_cfg, MIKROBUS_POSITION_CLOCKGEN6 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == clockgen6_init( &clockgen6, &clockgen6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

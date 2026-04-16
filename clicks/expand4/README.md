@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     expand4_cfg_setup( &cfg );
-    EXPAND4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    EXPAND4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_EXPAND4 );
     expand4_init( &expand4, &cfg );
     expand4_reset( &expand4 );
 }

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper6_cfg_setup( &stepper6_cfg );
-    STEPPER6_MAP_MIKROBUS( stepper6_cfg, MIKROBUS_1 );
+    STEPPER6_MAP_MIKROBUS( stepper6_cfg, MIKROBUS_POSITION_STEPPER6 );
     err_t init_flag = stepper6_init( &stepper6, &stepper6_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

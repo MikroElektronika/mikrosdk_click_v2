@@ -24,6 +24,10 @@
 #include "log.h"
 #include "compass9.h"
 
+#ifndef MIKROBUS_POSITION_COMPASS9
+    #define MIKROBUS_POSITION_COMPASS9 MIKROBUS_1
+#endif
+
 static compass9_t compass9;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     compass9_cfg_setup( &compass9_cfg );
-    COMPASS9_MAP_MIKROBUS( compass9_cfg, MIKROBUS_1 );
+    COMPASS9_MAP_MIKROBUS( compass9_cfg, MIKROBUS_POSITION_COMPASS9 );
     err_t init_flag = compass9_init( &compass9, &compass9_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

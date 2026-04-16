@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     pll_cfg_setup( &cfg );
-    PLL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PLL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PLL );
     pll_init( &pll, &cfg );
     pll_set_clock_output( &pll, PLL_CLOCK_ENABLE );
 }

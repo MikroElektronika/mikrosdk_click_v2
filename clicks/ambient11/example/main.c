@@ -31,6 +31,10 @@
 #include "log.h"
 #include "ambient11.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT11
+    #define MIKROBUS_POSITION_AMBIENT11 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ambient11_t ambient11;
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient11_cfg_setup( &cfg );
-    AMBIENT11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT11 );
     ambient11_init( &ambient11, &cfg );
     ambient11_default_cfg ( &ambient11 );
 }

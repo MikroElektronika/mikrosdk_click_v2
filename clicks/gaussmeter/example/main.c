@@ -26,6 +26,10 @@
 #include "log.h"
 #include "gaussmeter.h"
 
+#ifndef MIKROBUS_POSITION_GAUSSMETER
+    #define MIKROBUS_POSITION_GAUSSMETER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static gaussmeter_t gaussmeter;
@@ -55,7 +59,7 @@ void application_init ( )
     //  Click initialization.
 
     gaussmeter_cfg_setup( &cfg );
-    GAUSSMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GAUSSMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GAUSSMETER );
     gaussmeter_init( &gaussmeter, &cfg );
     Delay_ms ( 100 );
     gaussmeter_default_cfg( &gaussmeter );

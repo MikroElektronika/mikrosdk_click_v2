@@ -86,7 +86,7 @@ void application_init ( void )
     // Click initialization.
 
     touchpad2_cfg_setup( &touchpad2_cfg );
-    TOUCHPAD2_MAP_MIKROBUS( touchpad2_cfg, MIKROBUS_1 );
+    TOUCHPAD2_MAP_MIKROBUS( touchpad2_cfg, MIKROBUS_POSITION_TOUCHPAD2 );
     err_t init_flag = touchpad2_init( &touchpad2, &touchpad2_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

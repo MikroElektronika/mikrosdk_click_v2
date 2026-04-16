@@ -94,7 +94,7 @@ void application_init ( void )
 
     // Click initialization.
     adc15_cfg_setup( &adc15_cfg );
-    ADC15_MAP_MIKROBUS( adc15_cfg, MIKROBUS_1 );
+    ADC15_MAP_MIKROBUS( adc15_cfg, MIKROBUS_POSITION_ADC15 );
     err_t init_flag  = adc15_init( &adc15, &adc15_cfg );
     if ( SPI_MASTER_ERROR == init_flag )
     {

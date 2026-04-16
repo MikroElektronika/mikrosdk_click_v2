@@ -30,6 +30,10 @@
 #include "log.h"
 #include "stepper25.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER25
+    #define MIKROBUS_POSITION_STEPPER25 MIKROBUS_1
+#endif
+
 static stepper25_t stepper25;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper25_cfg_setup( &stepper25_cfg );
-    STEPPER25_MAP_MIKROBUS( stepper25_cfg, MIKROBUS_1 );
+    STEPPER25_MAP_MIKROBUS( stepper25_cfg, MIKROBUS_POSITION_STEPPER25 );
     if ( SPI_MASTER_ERROR == stepper25_init( &stepper25, &stepper25_cfg ) )
     {
         log_error( &logger, " Communication init." );

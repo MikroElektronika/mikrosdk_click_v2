@@ -21,6 +21,10 @@
 #include "log.h"
 #include "vibromotor3.h"
 
+#ifndef MIKROBUS_POSITION_VIBROMOTOR3
+    #define MIKROBUS_POSITION_VIBROMOTOR3 MIKROBUS_1
+#endif
+
 static vibromotor3_t vibromotor3;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void ) {
 
     // Click initialization.
     vibromotor3_cfg_setup( &vibromotor3_cfg );
-    VIBROMOTOR3_MAP_MIKROBUS( vibromotor3_cfg, MIKROBUS_1 );
+    VIBROMOTOR3_MAP_MIKROBUS( vibromotor3_cfg, MIKROBUS_POSITION_VIBROMOTOR3 );
     err_t init_flag = vibromotor3_init( &vibromotor3, &vibromotor3_cfg );
     if ( I2C_MASTER_ERROR == init_flag || PWM_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

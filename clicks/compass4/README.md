@@ -86,7 +86,7 @@ void application_init ( void )
     //  Click initialization.
 
     compass4_cfg_setup( &cfg );
-    COMPASS4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COMPASS4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COMPASS4 );
     compass4_init( &compass4, &cfg );
 
     compass4_hardware_reset( &compass4 );

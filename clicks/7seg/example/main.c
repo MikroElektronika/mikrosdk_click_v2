@@ -24,6 +24,10 @@
 #include "log.h"
 #include "c7seg.h"
 
+#ifndef MIKROBUS_POSITION_7SEG
+    #define MIKROBUS_POSITION_7SEG MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static c7seg_t c7seg;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     c7seg_cfg_setup( &cfg );
-    C7SEG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C7SEG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_7SEG );
     c7seg_init( &c7seg, &cfg );
     
     c7seg_default_cfg ( &c7seg );

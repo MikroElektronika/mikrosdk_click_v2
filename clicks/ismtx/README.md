@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     ismtx_cfg_setup( &ismtx_cfg );
-    ISMTX_MAP_MIKROBUS( ismtx_cfg, MIKROBUS_1 );
+    ISMTX_MAP_MIKROBUS( ismtx_cfg, MIKROBUS_POSITION_ISMTX );
     if ( SPI_MASTER_ERROR == ismtx_init( &ismtx, &ismtx_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

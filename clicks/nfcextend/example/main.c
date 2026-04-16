@@ -26,6 +26,10 @@
 #include "log.h"
 #include "nfcextend.h"
 
+#ifndef MIKROBUS_POSITION_NFCEXTEND
+    #define MIKROBUS_POSITION_NFCEXTEND MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static nfcextend_t nfcextend;
@@ -88,7 +92,7 @@ void application_init ( )
     //  Click initialization.
 
     nfcextend_cfg_setup( &cfg );
-    NFCEXTEND_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NFCEXTEND_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NFCEXTEND );
     nfcextend_init( &nfcextend, &cfg );
 
     nfcextend_password_present( &nfcextend, default_password );

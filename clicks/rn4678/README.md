@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     rn4678_cfg_setup( &cfg );
-    RN4678_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RN4678_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RN4678 );
     rn4678_init( &rn4678, &cfg );
 
     rn4678_enable ( &rn4678 );

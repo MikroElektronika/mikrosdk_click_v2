@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     zigbee_cfg_setup( &zigbee_cfg );
-    ZIGBEE_MAP_MIKROBUS( zigbee_cfg, MIKROBUS_1 );
+    ZIGBEE_MAP_MIKROBUS( zigbee_cfg, MIKROBUS_POSITION_ZIGBEE );
     if ( UART_ERROR == zigbee_init( &zigbee, &zigbee_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

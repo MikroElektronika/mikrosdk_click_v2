@@ -25,6 +25,10 @@
 #include "log.h"
 #include "angle3.h"
 
+#ifndef MIKROBUS_POSITION_ANGLE3
+    #define MIKROBUS_POSITION_ANGLE3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static angle3_t angle3;
@@ -52,7 +56,7 @@ void application_init ( void )
 
     //  Click initialization.
     angle3_cfg_setup( &angle3_cfg );
-    ANGLE3_MAP_MIKROBUS( angle3_cfg, MIKROBUS_1 );
+    ANGLE3_MAP_MIKROBUS( angle3_cfg, MIKROBUS_POSITION_ANGLE3 );
     if ( ANGLE3_ERROR == angle3_init( &angle3, &angle3_cfg ) )
     {
         log_info( &logger, "---- Application Init Error ----" );

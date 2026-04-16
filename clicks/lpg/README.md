@@ -79,7 +79,7 @@ void application_init ( void )
     // Click initialization.
 
     lpg_cfg_setup( &lpg_cfg );
-    LPG_MAP_MIKROBUS( lpg_cfg, MIKROBUS_1 );
+    LPG_MAP_MIKROBUS( lpg_cfg, MIKROBUS_POSITION_LPG );
     if ( lpg_init( &lpg, &lpg_cfg ) == ADC_ERROR ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

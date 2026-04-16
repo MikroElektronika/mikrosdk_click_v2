@@ -22,6 +22,10 @@
 #include "log.h"
 #include "haptic.h"
 
+#ifndef MIKROBUS_POSITION_HAPTIC
+    #define MIKROBUS_POSITION_HAPTIC MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static haptic_t haptic;
@@ -48,7 +52,7 @@ void application_init ( void )
     //  Click initialization.
 
     haptic_cfg_setup( &cfg );
-    HAPTIC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HAPTIC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HAPTIC );
     haptic_init( &haptic, &cfg );
 
     log_printf( &logger, " Configuring the Click board...\r\n" );

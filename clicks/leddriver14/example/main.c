@@ -23,6 +23,10 @@
 #include "log.h"
 #include "leddriver14.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER14
+    #define MIKROBUS_POSITION_LEDDRIVER14 MIKROBUS_1
+#endif
+
 static leddriver14_t leddriver14;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver14_cfg_setup( &leddriver14_cfg );
-    LEDDRIVER14_MAP_MIKROBUS( leddriver14_cfg, MIKROBUS_1 );
+    LEDDRIVER14_MAP_MIKROBUS( leddriver14_cfg, MIKROBUS_POSITION_LEDDRIVER14 );
     err_t init_flag = leddriver14_init( &leddriver14, &leddriver14_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( PWM_ERROR == init_flag ) ) 
     {

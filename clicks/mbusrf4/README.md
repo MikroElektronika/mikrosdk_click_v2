@@ -86,7 +86,7 @@ void application_init ( void )
     //  Click initialization.
 
     mbusrf4_cfg_setup( &cfg );
-    MBUSRF4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MBUSRF4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MBUSRF4 );
     mbusrf4_init( &mbusrf4, &cfg );
     
     parser_cnt = 0;

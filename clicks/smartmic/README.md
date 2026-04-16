@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     smartmic_cfg_setup( &smartmic_cfg );
-    SMARTMIC_MAP_MIKROBUS( smartmic_cfg, MIKROBUS_1 );
+    SMARTMIC_MAP_MIKROBUS( smartmic_cfg, MIKROBUS_POSITION_SMARTMIC );
     if ( SMARTMIC_OK != smartmic_init( &smartmic, &smartmic_cfg ) )
     {
         log_error( &logger, " Communication init." );

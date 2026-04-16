@@ -26,6 +26,10 @@
 #include "log.h"
 #include "shuttle.h"
 
+#ifndef MIKROBUS_POSITION_SHUTTLE
+    #define MIKROBUS_POSITION_SHUTTLE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static shuttle_t shuttle;
@@ -99,7 +103,7 @@ void application_init ( )
     //  Click initialization.
 
     shuttle_cfg_setup( &cfg );
-    SHUTTLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHUTTLE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHUTTLE );
     shuttle_init( &shuttle, &cfg );
 }
 

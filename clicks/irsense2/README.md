@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     irsense2_cfg_setup( &cfg );
-    IRSENSE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRSENSE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRSENSE2 );
     irsense2_init( &irsense2, &cfg );
 
     Delay_us( 100 );

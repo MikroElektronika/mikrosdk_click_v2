@@ -91,7 +91,7 @@ void application_init ( void )
     // Click initialization.
 
     charger3_cfg_setup( &charger3_cfg );
-    CHARGER3_MAP_MIKROBUS( charger3_cfg, MIKROBUS_1 );
+    CHARGER3_MAP_MIKROBUS( charger3_cfg, MIKROBUS_POSITION_CHARGER3 );
     err_t init_flag = charger3_init( &charger3, &charger3_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

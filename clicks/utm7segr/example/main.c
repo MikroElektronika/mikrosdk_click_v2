@@ -22,6 +22,10 @@
 #include "log.h"
 #include "utm7segr.h"
 
+#ifndef MIKROBUS_POSITION_UTM7SEGR
+    #define MIKROBUS_POSITION_UTM7SEGR MIKROBUS_1
+#endif
+
 static utm7segr_t utm7segr;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void ) {
     // Click initialization.
 
     utm7segr_cfg_setup( &utm7segr_cfg );
-    UTM7SEGR_MAP_MIKROBUS( utm7segr_cfg, MIKROBUS_1 );
+    UTM7SEGR_MAP_MIKROBUS( utm7segr_cfg, MIKROBUS_POSITION_UTM7SEGR );
     err_t init_flag  = utm7segr_init( &utm7segr, &utm7segr_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

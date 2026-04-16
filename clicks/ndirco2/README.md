@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     ndirco2_cfg_setup( &cfg );
-    NDIRCO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NDIRCO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NDIRCO2 );
     ndirco2_init( &ndirco2, &cfg );
 
     Delay_ms ( 300 );

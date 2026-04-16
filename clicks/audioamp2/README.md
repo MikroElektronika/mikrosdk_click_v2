@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     audioamp2_cfg_setup( &cfg );
-    AUDIOAMP2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AUDIOAMP2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AUDIOAMP2 );
     audioamp2_init( &audioamp2, &cfg );
     Delay_ms ( 100 );
     

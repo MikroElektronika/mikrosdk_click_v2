@@ -83,7 +83,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     thermo_cfg_setup( &cfg );
-    THERMO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO );
     thermo_init( &thermo, &cfg );
 
     if ( thermo_check_fault( &thermo ) )

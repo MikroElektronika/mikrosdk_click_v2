@@ -28,6 +28,10 @@
 #include "log.h"
 #include "barcode3.h"
 
+#ifndef MIKROBUS_POSITION_BARCODE3
+    #define MIKROBUS_POSITION_BARCODE3 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -84,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     barcode3_cfg_setup( &barcode3_cfg );
-    BARCODE3_MAP_MIKROBUS( barcode3_cfg, MIKROBUS_1 );
+    BARCODE3_MAP_MIKROBUS( barcode3_cfg, MIKROBUS_POSITION_BARCODE3 );
     if ( UART_ERROR == barcode3_init( &barcode3, &barcode3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     color8_cfg_setup( &cfg );
-    COLOR8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COLOR8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COLOR8 );
     color8_init( &color8, &cfg );
 
     color8_default_cfg( &color8 );

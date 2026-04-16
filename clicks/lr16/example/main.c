@@ -39,6 +39,10 @@
 #include "conversions.h"
 #include "generic_pointer.h"
 
+#ifndef MIKROBUS_POSITION_LR16
+    #define MIKROBUS_POSITION_LR16 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE   "MIKROE - LR 16 Click board"
 
 // Application buffer size
@@ -160,7 +164,7 @@ void application_init ( void )
 
     // Click initialization.
     lr16_cfg_setup( &lr16_cfg );
-    LR16_MAP_MIKROBUS( lr16_cfg, MIKROBUS_1 );
+    LR16_MAP_MIKROBUS( lr16_cfg, MIKROBUS_POSITION_LR16 );
     if ( UART_ERROR == lr16_init( &lr16, &lr16_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

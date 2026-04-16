@@ -23,6 +23,10 @@
 #include "log.h"
 #include "dac4.h"
 
+#ifndef MIKROBUS_POSITION_DAC4
+    #define MIKROBUS_POSITION_DAC4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dac4_t dac4;
@@ -210,7 +214,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac4_cfg_setup( &cfg );
-    DAC4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC4 );
     dac4_init( &dac4, &cfg );
     log_info( &logger, "---- Application ----" );
 

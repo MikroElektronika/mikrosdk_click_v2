@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient7_cfg_setup( &cfg );
-    AMBIENT7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT7 );
     ambient7_init( &ambient7, &cfg );
     
     log_info( &logger, " Application Task " );

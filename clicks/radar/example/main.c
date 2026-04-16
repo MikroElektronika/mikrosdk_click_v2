@@ -23,6 +23,10 @@
 #include "log.h"
 #include "radar.h"
 
+#ifndef MIKROBUS_POSITION_RADAR
+    #define MIKROBUS_POSITION_RADAR MIKROBUS_1
+#endif
+
 static radar_t radar;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     radar_cfg_setup( &radar_cfg );
-    RADAR_MAP_MIKROBUS( radar_cfg, MIKROBUS_1 );
+    RADAR_MAP_MIKROBUS( radar_cfg, MIKROBUS_POSITION_RADAR );
     if ( UART_ERROR == radar_init( &radar, &radar_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -25,6 +25,10 @@
 #include "log.h"
 #include "adc3.h"
 
+#ifndef MIKROBUS_POSITION_ADC3
+    #define MIKROBUS_POSITION_ADC3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static adc3_t adc3;
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     adc3_cfg_setup( &cfg );
-    ADC3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC3 );
     adc3_init( &adc3, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

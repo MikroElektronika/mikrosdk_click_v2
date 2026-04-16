@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     ccrf2_cfg_setup( &cfg );
-    CCRF2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CCRF2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CCRF2 );
     ccrf2_init( &ccrf2, &cfg );
     log_printf( &logger, "----------------------\r\n" );
     log_printf( &logger, " Hardware reset\r\n" );

@@ -34,6 +34,10 @@
 #include "log.h"
 #include "oximeter5.h"
 
+#ifndef MIKROBUS_POSITION_OXIMETER5
+    #define MIKROBUS_POSITION_OXIMETER5 MIKROBUS_1
+#endif
+
 static oximeter5_t oximeter5;
 static log_t logger;
 static uint32_t aun_ir_buffer[ 100 ];
@@ -62,7 +66,7 @@ void application_init ( void )
 
     // Click initialization.
     oximeter5_cfg_setup( &oximeter5_cfg );
-    OXIMETER5_MAP_MIKROBUS( oximeter5_cfg, MIKROBUS_1 );
+    OXIMETER5_MAP_MIKROBUS( oximeter5_cfg, MIKROBUS_POSITION_OXIMETER5 );
     if ( I2C_MASTER_ERROR == oximeter5_init( &oximeter5, &oximeter5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -82,7 +82,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
 
     pressure11_cfg_setup( &cfg );
-    PRESSURE11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE11 );
     pressure11_init( &pressure11, &cfg );
 }
 ```

@@ -30,6 +30,10 @@
 #include "log.h"
 #include "speedradar.h"
 
+#ifndef MIKROBUS_POSITION_SPEEDRADAR
+    #define MIKROBUS_POSITION_SPEEDRADAR MIKROBUS_1
+#endif
+
 // Application buffer size
 #define PROCESS_BUFFER_SIZE        200
 #define PROCESS_C00_RSP_LEN        14
@@ -92,7 +96,7 @@ void application_init ( void )
 
     // Click initialization.
     speedradar_cfg_setup( &speedradar_cfg );
-    SPEEDRADAR_MAP_MIKROBUS( speedradar_cfg, MIKROBUS_1 );
+    SPEEDRADAR_MAP_MIKROBUS( speedradar_cfg, MIKROBUS_POSITION_SPEEDRADAR );
     if ( UART_ERROR == speedradar_init( &speedradar, &speedradar_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

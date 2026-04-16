@@ -23,6 +23,10 @@
 #include "log.h"
 #include "charger19.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER19
+    #define MIKROBUS_POSITION_CHARGER19 MIKROBUS_1
+#endif
+
 static charger19_t charger19;   /**< Charger 19 Click driver object. */
 static log_t logger;            /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     charger19_cfg_setup( &charger19_cfg );
-    CHARGER19_MAP_MIKROBUS( charger19_cfg, MIKROBUS_1 );
+    CHARGER19_MAP_MIKROBUS( charger19_cfg, MIKROBUS_POSITION_CHARGER19 );
     if ( ADC_ERROR == charger19_init( &charger19, &charger19_cfg ) )
     {
         log_error( &logger, " Communication init." );

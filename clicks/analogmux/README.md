@@ -82,7 +82,7 @@ void application_init ( void )
     //  Click initialization.
 
     analogmux_cfg_setup( &cfg );
-    ANALOGMUX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ANALOGMUX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ANALOGMUX );
     analogmux_init( &analogmux, &cfg );
 
     analogmux_set_channel( &analogmux, ANALOGMUX_CHANNEL_0 );

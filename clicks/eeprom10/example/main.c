@@ -24,6 +24,10 @@
 #include "log.h"
 #include "eeprom10.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM10
+    #define MIKROBUS_POSITION_EEPROM10 MIKROBUS_1
+#endif
+
 #define EEPROM10_TEST_ADDRESS       0x0010u
 
 static eeprom10_t eeprom10;
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom10_cfg_setup( &eeprom10_cfg );
-    EEPROM10_MAP_MIKROBUS( eeprom10_cfg, MIKROBUS_1 );
+    EEPROM10_MAP_MIKROBUS( eeprom10_cfg, MIKROBUS_POSITION_EEPROM10 );
     if ( I2C_MASTER_ERROR == eeprom10_init( &eeprom10, &eeprom10_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

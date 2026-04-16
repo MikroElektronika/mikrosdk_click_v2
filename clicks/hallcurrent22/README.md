@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     hallcurrent22_cfg_setup( &hallcurrent22_cfg );
-    HALLCURRENT22_MAP_MIKROBUS( hallcurrent22_cfg, MIKROBUS_1 );
+    HALLCURRENT22_MAP_MIKROBUS( hallcurrent22_cfg, MIKROBUS_POSITION_HALLCURRENT22 );
     if ( HALLCURRENT22_OK != hallcurrent22_init( &hallcurrent22, &hallcurrent22_cfg ) )
     {
         log_error( &logger, " Communication init." );

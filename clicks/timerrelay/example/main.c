@@ -23,6 +23,10 @@
 #include "log.h"
 #include "timerrelay.h"
 
+#ifndef MIKROBUS_POSITION_TIMERRELAY
+    #define MIKROBUS_POSITION_TIMERRELAY MIKROBUS_1
+#endif
+
 static timerrelay_t timerrelay;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     timerrelay_cfg_setup( &timerrelay_cfg );
-    TIMERRELAY_MAP_MIKROBUS( timerrelay_cfg, MIKROBUS_1 );
+    TIMERRELAY_MAP_MIKROBUS( timerrelay_cfg, MIKROBUS_POSITION_TIMERRELAY );
     if ( SPI_MASTER_ERROR == timerrelay_init( &timerrelay, &timerrelay_cfg ) )
     {
         log_error( &logger, " Communication init." );

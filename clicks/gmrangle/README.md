@@ -83,7 +83,7 @@ void application_init ( void )
 
     //  Click initialization.
     gmrangle_cfg_setup( &cfg );
-    GMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GMRANGLE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GMRANGLE );
     gmrangle_init( &gmrangle, &cfg );
     
     GMRANGLE_SET_DATA_SAMPLE_EDGE; 

@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     dram_cfg_setup( &dram_cfg );
-    DRAM_MAP_MIKROBUS( dram_cfg, MIKROBUS_1 );
+    DRAM_MAP_MIKROBUS( dram_cfg, MIKROBUS_POSITION_DRAM );
     if ( SPI_MASTER_ERROR == dram_init( &dram, &dram_cfg ) )
     {
         log_error( &logger, " Communication init." );

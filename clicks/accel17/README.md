@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     accel17_cfg_setup( &accel17_cfg );
-    ACCEL17_MAP_MIKROBUS( accel17_cfg, MIKROBUS_1 );
+    ACCEL17_MAP_MIKROBUS( accel17_cfg, MIKROBUS_POSITION_ACCEL17 );
     err_t init_flag = accel17_init( &accel17, &accel17_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

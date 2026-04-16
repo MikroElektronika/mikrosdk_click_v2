@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     rtc6_cfg_setup( &cfg );
-    RTC6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC6 );
     rtc6_init( &rtc6, &cfg );
 
     // Set UTC time

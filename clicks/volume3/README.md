@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     volume3_cfg_setup( &volume3_cfg );
-    VOLUME3_MAP_MIKROBUS( volume3_cfg, MIKROBUS_1 );
+    VOLUME3_MAP_MIKROBUS( volume3_cfg, MIKROBUS_POSITION_VOLUME3 );
     if ( SPI_MASTER_ERROR == volume3_init( &volume3, &volume3_cfg ) )
     {
         log_error( &logger, " Communication init." );

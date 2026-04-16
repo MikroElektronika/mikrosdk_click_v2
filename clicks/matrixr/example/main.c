@@ -30,6 +30,10 @@
 #include "log.h"
 #include "matrixr.h"
 
+#ifndef MIKROBUS_POSITION_MATRIXR
+    #define MIKROBUS_POSITION_MATRIXR MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static matrixr_t matrixr;
@@ -58,7 +62,7 @@ void application_init ( ) {
     //  Click initialization.
 
     matrixr_cfg_setup( &cfg );
-    MATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MATRIXR );
     matrixr_init( &matrixr, &cfg );
     Delay_ms ( 100 );
     matrixr_default_cfg( &matrixr );

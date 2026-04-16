@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     magneto10_cfg_setup( &magneto10_cfg );
-    MAGNETO10_MAP_MIKROBUS( magneto10_cfg, MIKROBUS_1 );
+    MAGNETO10_MAP_MIKROBUS( magneto10_cfg, MIKROBUS_POSITION_MAGNETO10 );
     
     if ( I2C_MASTER_ERROR == magneto10_init( &magneto10, &magneto10_cfg ) ) 
     {

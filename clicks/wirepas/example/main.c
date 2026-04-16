@@ -33,6 +33,10 @@
 #include "log.h"
 #include "wirepas.h"
 
+#ifndef MIKROBUS_POSITION_WIREPAS
+    #define MIKROBUS_POSITION_WIREPAS MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 300
 #define TX_DATA             "Wirepas Click"
 
@@ -119,7 +123,7 @@ void application_init ( void )
 
     // Click initialization.
     wirepas_cfg_setup( &wirepas_cfg );
-    WIREPAS_MAP_MIKROBUS( wirepas_cfg, MIKROBUS_1 );
+    WIREPAS_MAP_MIKROBUS( wirepas_cfg, MIKROBUS_POSITION_WIREPAS );
     if ( UART_ERROR == wirepas_init( &wirepas, &wirepas_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

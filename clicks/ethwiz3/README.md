@@ -95,7 +95,7 @@ void application_init ( void )
 
     // Click initialization.
     ethwiz3_cfg_setup( &ethwiz3_cfg );
-    ETHWIZ3_MAP_MIKROBUS( ethwiz3_cfg, MIKROBUS_1 );
+    ETHWIZ3_MAP_MIKROBUS( ethwiz3_cfg, MIKROBUS_POSITION_ETHWIZ3 );
     if ( ETHWIZ3_OK != ethwiz3_init( &ethwiz3, &ethwiz3_cfg ) )
     {
         log_error( &logger, " Communication init." );

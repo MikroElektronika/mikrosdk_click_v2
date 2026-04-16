@@ -28,6 +28,10 @@
 #include "log.h"
 #include "current3.h"
 
+#ifndef MIKROBUS_POSITION_CURRENT3
+    #define MIKROBUS_POSITION_CURRENT3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static current3_t current3;
@@ -62,7 +66,7 @@ void application_init ( void )
     //  Click initialization.
 
     current3_cfg_setup( &cfg );
-    CURRENT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CURRENT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CURRENT3 );
     current3_init( &current3, &cfg );
 
     Delay_ms ( 100 );

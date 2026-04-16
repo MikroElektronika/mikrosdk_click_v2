@@ -1,26 +1,24 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2026 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
  * \file
@@ -31,11 +29,11 @@
 
 // ---------------------------------------------- PRIVATE FUNCTION DECLARATIONS 
 
-static uint16_t averaging_data( amrcurent_t *ctx );
+static uint16_t averaging_data( amrcurrent_t *ctx );
 
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
-void amrcurent_cfg_setup ( amrcurent_cfg_t *cfg )
+void amrcurrent_cfg_setup ( amrcurrent_cfg_t *cfg )
 {
     // Communication gpio pins 
 
@@ -52,7 +50,7 @@ void amrcurent_cfg_setup ( amrcurent_cfg_t *cfg )
     cfg->i2c_address = 0x4D;
 }
 
-AMRCURENT_RETVAL amrcurent_init ( amrcurent_t *ctx, amrcurent_cfg_t *cfg )
+AMRCURRENT_RETVAL amrcurrent_init ( amrcurrent_t *ctx, amrcurrent_cfg_t *cfg )
 {
     i2c_master_config_t i2c_cfg;
 
@@ -65,7 +63,7 @@ AMRCURENT_RETVAL amrcurent_init ( amrcurent_t *ctx, amrcurent_cfg_t *cfg )
 
     if ( i2c_master_open( &ctx->i2c, &i2c_cfg ) == I2C_MASTER_ERROR )
     {
-        return AMRCURENT_INIT_ERROR;
+        return AMRCURRENT_INIT_ERROR;
     }
 
     i2c_master_set_slave_address( &ctx->i2c, ctx->slave_address );
@@ -80,10 +78,10 @@ AMRCURENT_RETVAL amrcurent_init ( amrcurent_t *ctx, amrcurent_cfg_t *cfg )
     digital_in_init( &ctx->an, cfg->an );
     digital_in_init( &ctx->flt, cfg->flt );
 
-    return AMRCURENT_OK;
+    return AMRCURRENT_OK;
 }
 
-void amrcurent_generic_write ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+void amrcurrent_generic_write ( amrcurrent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
     uint8_t tx_buf[ 256 ];
     uint8_t cnt;
@@ -98,12 +96,12 @@ void amrcurent_generic_write ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf,
     i2c_master_write( &ctx->i2c, tx_buf, len + 1 );    
 }
 
-void amrcurent_generic_read ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
+void amrcurrent_generic_read ( amrcurrent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len )
 {
     i2c_master_write_then_read( &ctx->i2c, &reg, 1, data_buf, len );
 }
 
-uint16_t amrcurrent_read_value (  amrcurent_t *ctx )
+uint16_t amrcurrent_read_value (  amrcurrent_t *ctx )
 {
     uint8_t cmd;
     uint8_t data_buf[ 2 ];
@@ -111,7 +109,7 @@ uint16_t amrcurrent_read_value (  amrcurent_t *ctx )
 
     cmd = 0x00;
 
-    amrcurent_generic_read( ctx, cmd, data_buf, 2 );
+    amrcurrent_generic_read( ctx, cmd, data_buf, 2 );
 
     temp_data = data_buf[ 0 ];
     temp_data = temp_data << 8;
@@ -120,14 +118,14 @@ uint16_t amrcurrent_read_value (  amrcurent_t *ctx )
     return temp_data;
 }
 
-uint8_t amrcurrent_get_int_pin_state ( amrcurent_t *ctx )
+uint8_t amrcurrent_get_int_pin_state ( amrcurrent_t *ctx )
 {
     uint8_t temp_data;
     temp_data = digital_in_read( &ctx->flt );
     return temp_data;
 }
 
-void amrcurrent_set_rst_pin_state ( amrcurent_t *ctx, uint8_t pin_state )
+void amrcurrent_set_rst_pin_state ( amrcurrent_t *ctx, uint8_t pin_state )
 {
     if ( pin_state == 1 )
     {
@@ -139,7 +137,7 @@ void amrcurrent_set_rst_pin_state ( amrcurent_t *ctx, uint8_t pin_state )
     }
 }
 
-void amrcurrent_hw_reset ( amrcurent_t *ctx )
+void amrcurrent_hw_reset ( amrcurrent_t *ctx )
 {
     digital_out_low( &ctx->voc );
     Delay_1ms(  );
@@ -149,7 +147,7 @@ void amrcurrent_hw_reset ( amrcurent_t *ctx )
     Delay_1ms(  );
 }
 
-float amrcurrent_get_current ( amrcurent_t *ctx )
+float amrcurrent_get_current ( amrcurrent_t *ctx )
 {
     float current;
     float voltage;
@@ -181,7 +179,7 @@ float amrcurrent_get_current ( amrcurent_t *ctx )
 
 // ----------------------------------------------- PRIVATE FUNCTION DEFINITIONS
 
-static uint16_t averaging_data( amrcurent_t *ctx )
+static uint16_t averaging_data( amrcurrent_t *ctx )
 {
     uint32_t sum_data = 0;
     uint16_t new_data = 0;

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "thermo13.h"
 
+#ifndef MIKROBUS_POSITION_THERMO13
+    #define MIKROBUS_POSITION_THERMO13 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo13_t thermo13;
@@ -54,7 +58,7 @@ void application_init ( void )
     //  Click initialization
 
     thermo13_cfg_setup( &cfg );
-    THERMO13_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO13_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO13 );
     thermo13_init( &thermo13, &cfg );
 
     // Configuration 

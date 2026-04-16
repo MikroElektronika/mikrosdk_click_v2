@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     iotexpresslink_cfg_setup( &iotexpresslink_cfg );
-    IOTEXPRESSLINK_MAP_MIKROBUS( iotexpresslink_cfg, MIKROBUS_1 );
+    IOTEXPRESSLINK_MAP_MIKROBUS( iotexpresslink_cfg, MIKROBUS_POSITION_IOTEXPRESSLINK );
     if ( UART_ERROR == iotexpresslink_init( &iotexpresslink, &iotexpresslink_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     keylock2_cfg_setup( &cfg );
-    KEYLOCK2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    KEYLOCK2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_KEYLOCK2 );
     keylock2_init( &keylock2, &cfg );
 }
 ```

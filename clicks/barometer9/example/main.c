@@ -24,6 +24,10 @@
 #include "log.h"
 #include "barometer9.h"
 
+#ifndef MIKROBUS_POSITION_BAROMETER9
+    #define MIKROBUS_POSITION_BAROMETER9 MIKROBUS_1
+#endif
+
 static barometer9_t barometer9;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     barometer9_cfg_setup( &barometer9_cfg );
-    BAROMETER9_MAP_MIKROBUS( barometer9_cfg, MIKROBUS_1 );
+    BAROMETER9_MAP_MIKROBUS( barometer9_cfg, MIKROBUS_POSITION_BAROMETER9 );
     err_t init_flag = barometer9_init( &barometer9, &barometer9_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

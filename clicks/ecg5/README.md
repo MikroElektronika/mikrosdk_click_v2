@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ecg5_cfg_setup( &ecg5_cfg );
-    ECG5_MAP_MIKROBUS( ecg5_cfg, MIKROBUS_1 );
+    ECG5_MAP_MIKROBUS( ecg5_cfg, MIKROBUS_POSITION_ECG5 );
     if ( ADC_ERROR == ecg5_init( &ecg5, &ecg5_cfg ) ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

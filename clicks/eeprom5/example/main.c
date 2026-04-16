@@ -23,6 +23,10 @@
 #include "log.h"
 #include "eeprom5.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM5
+    #define MIKROBUS_POSITION_EEPROM5 MIKROBUS_1
+#endif
+
 static eeprom5_t eeprom5;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom5_cfg_setup( &eeprom5_cfg );
-    EEPROM5_MAP_MIKROBUS( eeprom5_cfg, MIKROBUS_1 );
+    EEPROM5_MAP_MIKROBUS( eeprom5_cfg, MIKROBUS_POSITION_EEPROM5 );
     err_t init_flag  = eeprom5_init( &eeprom5, &eeprom5_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) 
     {

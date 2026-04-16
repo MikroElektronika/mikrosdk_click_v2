@@ -27,6 +27,10 @@
 #include "log.h"
 #include "accel30.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL30
+    #define MIKROBUS_POSITION_ACCEL30 MIKROBUS_1
+#endif
+
 static accel30_t accel30;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     accel30_cfg_setup( &accel30_cfg );
-    ACCEL30_MAP_MIKROBUS( accel30_cfg, MIKROBUS_1 );
+    ACCEL30_MAP_MIKROBUS( accel30_cfg, MIKROBUS_POSITION_ACCEL30 );
     err_t init_flag = accel30_init( &accel30, &accel30_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "mcp2542.h"
 
+#ifndef MIKROBUS_POSITION_MCP2542
+    #define MIKROBUS_POSITION_MCP2542 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 #define DEMO_APP_RECEIVER
@@ -56,7 +60,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp2542_cfg_setup( &cfg );
-    MCP2542_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP2542_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP2542 );
     mcp2542_init( &mcp2542, &cfg );
 
      mcp2542_default_cfg( &mcp2542 );

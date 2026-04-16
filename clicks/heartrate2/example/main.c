@@ -23,6 +23,10 @@
 #include "log.h"
 #include "heartrate2.h"
 
+#ifndef MIKROBUS_POSITION_HEARTRATE2
+    #define MIKROBUS_POSITION_HEARTRATE2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static heartrate2_t heartrate2;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate2_cfg_setup( &cfg );
-    HEARTRATE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE2 );
     heartrate2_init( &heartrate2, &cfg );
     
     log_printf( &logger, "Configuring the module...\r\n" );

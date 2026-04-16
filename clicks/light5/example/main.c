@@ -26,6 +26,10 @@
 #include "log.h"
 #include "light5.h"
 
+#ifndef MIKROBUS_POSITION_LIGHT5
+    #define MIKROBUS_POSITION_LIGHT5 MIKROBUS_1
+#endif
+
 static light5_t light5;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     light5_cfg_setup( &light5_cfg );
-    LIGHT5_MAP_MIKROBUS( light5_cfg, MIKROBUS_1 );
+    LIGHT5_MAP_MIKROBUS( light5_cfg, MIKROBUS_POSITION_LIGHT5 );
     if ( I2C_MASTER_ERROR == light5_init( &light5, &light5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

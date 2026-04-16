@@ -26,6 +26,10 @@
 #include "samltouch.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_SAMLTOUCH
+    #define MIKROBUS_POSITION_SAMLTOUCH MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 1000
 #define PROCESS_BUFFER_SIZE 80
 
@@ -154,7 +158,7 @@ void application_init ( void )
     //  Click initialization.
 
     samltouch_cfg_setup( &cfg );
-    SAMLTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SAMLTOUCH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SAMLTOUCH );
     samltouch_init( &samltouch, &cfg );
     
     Delay_ms ( 500 );

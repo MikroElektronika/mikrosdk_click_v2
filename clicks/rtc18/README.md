@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     rtc18_cfg_setup( &rtc18_cfg );
-    RTC18_MAP_MIKROBUS( rtc18_cfg, MIKROBUS_1 );
+    RTC18_MAP_MIKROBUS( rtc18_cfg, MIKROBUS_POSITION_RTC18 );
     if ( I2C_MASTER_ERROR == rtc18_init( &rtc18, &rtc18_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

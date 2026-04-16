@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stepper5.h"
 
+#ifndef MIKROBUS_POSITION_STEPPER5
+    #define MIKROBUS_POSITION_STEPPER5 MIKROBUS_1
+#endif
+
 static stepper5_t stepper5;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper5_cfg_setup( &stepper5_cfg );
-    STEPPER5_MAP_MIKROBUS( stepper5_cfg, MIKROBUS_1 );
+    STEPPER5_MAP_MIKROBUS( stepper5_cfg, MIKROBUS_POSITION_STEPPER5 );
     if ( UART_ERROR == stepper5_init( &stepper5, &stepper5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

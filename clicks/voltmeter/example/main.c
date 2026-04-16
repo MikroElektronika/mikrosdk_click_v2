@@ -23,6 +23,10 @@
 #include "log.h"
 #include "voltmeter.h"
 
+#ifndef MIKROBUS_POSITION_VOLTMETER
+    #define MIKROBUS_POSITION_VOLTMETER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static voltmeter_t voltmeter;
@@ -48,7 +52,7 @@ void application_init ( void )
 
     //  Click initialization.
     voltmeter_cfg_setup( &cfg );
-    VOLTMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VOLTMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VOLTMETER );
     voltmeter_init( &voltmeter, &cfg );
     Delay_ms ( 100 );
     

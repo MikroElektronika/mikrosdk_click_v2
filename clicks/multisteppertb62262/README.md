@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     multisteppertb62262_cfg_setup( &multisteppertb62262_cfg );
-    MULTISTEPPERTB62262_MAP_MIKROBUS( multisteppertb62262_cfg, MIKROBUS_1 );
+    MULTISTEPPERTB62262_MAP_MIKROBUS( multisteppertb62262_cfg, MIKROBUS_POSITION_MULTISTEPPERTB62262 );
     if ( I2C_MASTER_ERROR == multisteppertb62262_init( &multisteppertb62262, &multisteppertb62262_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     button3_cfg_setup( &button3_cfg );
-    BUTTON3_MAP_MIKROBUS( button3_cfg, MIKROBUS_1 );
+    BUTTON3_MAP_MIKROBUS( button3_cfg, MIKROBUS_POSITION_BUTTON3 );
     if ( I2C_MASTER_ERROR == button3_init( &button3, &button3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

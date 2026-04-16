@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     ble9_cfg_setup( &cfg );
-    BLE9_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BLE9_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BLE9 );
     ble9_init( &ble9, &cfg );
     Delay_ms ( 1000 );
     

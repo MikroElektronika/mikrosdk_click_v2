@@ -30,6 +30,10 @@ percentarg [ % ].
 #include "log.h"
 #include "temphum.h"
 
+#ifndef MIKROBUS_POSITION_TEMPHUM
+    #define MIKROBUS_POSITION_TEMPHUM MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static temphum_t temphum;
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     temphum_cfg_setup( &cfg );
-    TEMPHIM_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TEMPHUM_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TEMPHUM );
     temphum_init( &temphum, &cfg );
 
     temphum_default_cfg( &temphum );

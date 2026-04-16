@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     dcmotor11_cfg_setup( &cfg );
-    DCMOTOR11_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR11_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR11 );
     dcmotor11_init( &dcmotor11, &cfg );
 
    dcmotor11_get_fault( &dcmotor11 );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "button2.h"
 
+#ifndef MIKROBUS_POSITION_BUTTON2
+    #define MIKROBUS_POSITION_BUTTON2 MIKROBUS_1
+#endif
+
 static button2_t button2;   /**< Button 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     button2_cfg_setup( &button2_cfg );
-    BUTTON2_MAP_MIKROBUS( button2_cfg, MIKROBUS_1 );
+    BUTTON2_MAP_MIKROBUS( button2_cfg, MIKROBUS_POSITION_BUTTON2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == button2_init( &button2, &button2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "flash10.h"
 
+#ifndef MIKROBUS_POSITION_FLASH10
+    #define MIKROBUS_POSITION_FLASH10 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE_1         "MIKROE"
 #define DEMO_TEXT_MESSAGE_2         "Flash 10 Click"
 #define STARTING_ADDRESS            0x012345
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     flash10_cfg_setup( &flash10_cfg );
-    FLASH10_MAP_MIKROBUS( flash10_cfg, MIKROBUS_1 );
+    FLASH10_MAP_MIKROBUS( flash10_cfg, MIKROBUS_POSITION_FLASH10 );
     if ( SPI_MASTER_ERROR == flash10_init( &flash10, &flash10_cfg ) )
     {
         log_error( &logger, " Communication init." );

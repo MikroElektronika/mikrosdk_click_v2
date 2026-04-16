@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss6_cfg_setup( &gnss6_cfg );
-    GNSS6_MAP_MIKROBUS( gnss6_cfg, MIKROBUS_1 );
+    GNSS6_MAP_MIKROBUS( gnss6_cfg, MIKROBUS_POSITION_GNSS6 );
     err_t init_flag = gnss6_init( &gnss6, &gnss6_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

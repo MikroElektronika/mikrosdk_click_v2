@@ -22,6 +22,10 @@
 #include "log.h"
 #include "accel5.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL5
+    #define MIKROBUS_POSITION_ACCEL5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel5_t accel5;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel5_cfg_setup( &cfg );
-    ACCEL5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL5 );
 
     if ( accel5_init( &accel5, &cfg ) == ACCEL5_INIT_ERROR )
     {

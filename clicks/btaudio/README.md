@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     btaudio_cfg_setup( &cfg );
-    BTAUDIO_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BTAUDIO_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BTAUDIO );
     btaudio_init( &btaudio, &cfg );
     Delay_ms ( 1000 );
     

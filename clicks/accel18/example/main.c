@@ -25,6 +25,10 @@
 #include "log.h"
 #include "accel18.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL18
+    #define MIKROBUS_POSITION_ACCEL18 MIKROBUS_1
+#endif
+
 static accel18_t accel18;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     accel18_cfg_setup( &accel18_cfg );
-    ACCEL18_MAP_MIKROBUS( accel18_cfg, MIKROBUS_1 );
+    ACCEL18_MAP_MIKROBUS( accel18_cfg, MIKROBUS_POSITION_ACCEL18 );
     err_t init_flag  = accel18_init( &accel18, &accel18_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "relay.h"
 
+#ifndef MIKROBUS_POSITION_RELAY
+    #define MIKROBUS_POSITION_RELAY MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static relay_t relay;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     relay_cfg_setup( &cfg );
-    RELAY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RELAY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RELAY );
     relay_init( &relay, &cfg );
 
     relay_default_cfg ( &relay );

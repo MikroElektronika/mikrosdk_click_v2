@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ism7_cfg_setup( &ism7_cfg );
-    ISM7_MAP_MIKROBUS( ism7_cfg, MIKROBUS_1 );
+    ISM7_MAP_MIKROBUS( ism7_cfg, MIKROBUS_POSITION_ISM7 );
     if ( UART_ERROR == ism7_init( &ism7, &ism7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     barcode_cfg_setup( &cfg );
-    BARCODE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BARCODE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BARCODE );
     barcode_init( &barcode, &cfg );
     
     Delay_ms ( 500 );

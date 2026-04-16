@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     irsense6_cfg_setup( &irsense6_cfg );
-    IRSENSE6_MAP_MIKROBUS( irsense6_cfg, MIKROBUS_1 );
+    IRSENSE6_MAP_MIKROBUS( irsense6_cfg, MIKROBUS_POSITION_IRSENSE6 );
     if ( I2C_MASTER_ERROR == irsense6_init( &irsense6, &irsense6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

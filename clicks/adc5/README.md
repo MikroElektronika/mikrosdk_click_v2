@@ -86,7 +86,7 @@ void application_init ( )
     //  Click initialization.
 
     adc5_cfg_setup( &cfg );
-    ADC5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADC5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADC5 );
     adc5_init( &adc5, &cfg );
 }
 ```

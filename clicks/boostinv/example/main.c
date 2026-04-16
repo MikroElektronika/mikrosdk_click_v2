@@ -24,6 +24,10 @@
 #include "log.h"
 #include "boostinv.h"
 
+#ifndef MIKROBUS_POSITION_BOOSTINV
+    #define MIKROBUS_POSITION_BOOSTINV MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static boostinv_t boostinv;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     boostinv_cfg_setup( &cfg );
-    BOOSTINV_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BOOSTINV_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BOOSTINV );
     boostinv_init( &boostinv, &cfg );
     
     boostinv_default_cfg ( &boostinv );

@@ -28,6 +28,10 @@
 #include "log.h"
 #include "lighttemp.h"
 
+#ifndef MIKROBUS_POSITION_LIGHTTEMP
+    #define MIKROBUS_POSITION_LIGHTTEMP MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static lighttemp_t lighttemp;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     lighttemp_cfg_setup( &cfg );
-    LIGHTTEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIGHTTEMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIGHTTEMP );
     lighttemp_init( &lighttemp, &cfg );
     
     lighttemp_led1_set_duty_cycle ( &lighttemp, 0.0 );

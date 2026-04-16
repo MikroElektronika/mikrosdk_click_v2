@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     canfd3_cfg_setup( &cfg );
-    CANFD3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANFD3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANFD3 );
     canfd3_init( &canfd3, &cfg );
 
     canfd3_set_cs_pin( &canfd3, CANFD3_MODE_NORMAL );

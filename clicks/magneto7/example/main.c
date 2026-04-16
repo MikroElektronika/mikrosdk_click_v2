@@ -22,6 +22,10 @@
 #include "log.h"
 #include "magneto7.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO7
+    #define MIKROBUS_POSITION_MAGNETO7 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static magneto7_t magneto7;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneto7_cfg_setup( &cfg );
-    MAGNETO7_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETO7_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETO7 );
     magneto7_init( &magneto7, &cfg );
     Delay_ms ( 300 );
 

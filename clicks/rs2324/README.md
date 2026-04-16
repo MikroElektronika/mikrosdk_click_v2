@@ -79,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     rs2324_cfg_setup( &rs2324_cfg );
-    RS2324_MAP_MIKROBUS( rs2324_cfg, MIKROBUS_1 );
+    RS2324_MAP_MIKROBUS( rs2324_cfg, MIKROBUS_POSITION_RS2324 );
     if ( UART_ERROR == rs2324_init( &rs2324, &rs2324_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

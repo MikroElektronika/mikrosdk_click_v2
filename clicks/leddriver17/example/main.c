@@ -24,6 +24,10 @@
 #include "log.h"
 #include "leddriver17.h"
 
+#ifndef MIKROBUS_POSITION_LEDDRIVER17
+    #define MIKROBUS_POSITION_LEDDRIVER17 MIKROBUS_1
+#endif
+
 static leddriver17_t leddriver17;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     leddriver17_cfg_setup( &leddriver17_cfg );
-    LEDDRIVER17_MAP_MIKROBUS( leddriver17_cfg, MIKROBUS_1 );
+    LEDDRIVER17_MAP_MIKROBUS( leddriver17_cfg, MIKROBUS_POSITION_LEDDRIVER17 );
     if ( PWM_ERROR == leddriver17_init( &leddriver17, &leddriver17_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     counter_cfg_setup( &cfg );
-    COUNTER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COUNTER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COUNTER );
     counter_init( &counter, &cfg );
 
     counter_default_cfg( &counter );

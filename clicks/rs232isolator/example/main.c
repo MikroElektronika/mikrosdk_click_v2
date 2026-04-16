@@ -27,6 +27,10 @@
 #include "rs232isolator.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_RS232ISOLATOR
+    #define MIKROBUS_POSITION_RS232ISOLATOR MIKROBUS_1
+#endif
+
 #define PROCESS_COUNTER 10
 #define PROCESS_RX_BUFFER_SIZE 500
 #define PROCESS_PARSER_BUFFER_SIZE 500
@@ -118,7 +122,7 @@ void application_init ( void )
     //  Click initialization.
 
     rs232isolator_cfg_setup( &cfg );
-    RS232ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS232ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS232ISOLATOR );
     rs232isolator_init( &rs232isolator, &cfg );
 }
 

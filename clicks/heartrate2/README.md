@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     heartrate2_cfg_setup( &cfg );
-    HEARTRATE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HEARTRATE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HEARTRATE2 );
     heartrate2_init( &heartrate2, &cfg );
     
     log_printf( &logger, "Configuring the module...\r\n" );

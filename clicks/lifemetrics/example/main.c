@@ -32,6 +32,10 @@
 #include "log.h"
 #include "lifemetrics.h"
 
+#ifndef MIKROBUS_POSITION_LIFEMETRICS
+    #define MIKROBUS_POSITION_LIFEMETRICS MIKROBUS_1
+#endif
+
 // It is recommended to keep ENABLE_ACCEL_TEMP_LOG disabled on low-speed systems
 #define ENABLE_ECG_PPG_LOG      1
 #define ENABLE_ACCEL_TEMP_LOG   0
@@ -71,7 +75,7 @@ void application_init ( void )
 
     // Click initialization.
     lifemetrics_cfg_setup( &lifemetrics_cfg );
-    LIFEMETRICS_MAP_MIKROBUS( lifemetrics_cfg, MIKROBUS_1 );
+    LIFEMETRICS_MAP_MIKROBUS( lifemetrics_cfg, MIKROBUS_POSITION_LIFEMETRICS );
     if ( I2C_MASTER_ERROR == lifemetrics_init( &lifemetrics, &lifemetrics_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

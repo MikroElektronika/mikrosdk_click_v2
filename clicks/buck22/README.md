@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     buck22_cfg_setup( &buck22_cfg );
-    BUCK22_MAP_MIKROBUS( buck22_cfg, MIKROBUS_1 );
+    BUCK22_MAP_MIKROBUS( buck22_cfg, MIKROBUS_POSITION_BUCK22 );
     if ( I2C_MASTER_ERROR == buck22_init( &buck22, &buck22_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

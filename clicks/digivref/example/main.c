@@ -22,6 +22,10 @@
 #include "log.h"
 #include "digivref.h"
 
+#ifndef MIKROBUS_POSITION_DIGIVREF
+    #define MIKROBUS_POSITION_DIGIVREF MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static digivref_t digivref;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     digivref_cfg_setup( &cfg );
-    DIGIVREF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIGIVREF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIGIVREF );
     digivref_init( &digivref, &cfg );
 }
 

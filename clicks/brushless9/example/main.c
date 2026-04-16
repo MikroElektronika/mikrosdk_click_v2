@@ -21,6 +21,10 @@
 #include "log.h"
 #include "brushless9.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS9
+    #define MIKROBUS_POSITION_BRUSHLESS9 MIKROBUS_1
+#endif
+
 #define DUTY_CHANGE_DELAY   2000
 #define BREAK_DELAY         5000
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless9_cfg_setup( &brushless9_cfg );
-    BRUSHLESS9_MAP_MIKROBUS( brushless9_cfg, MIKROBUS_1 );
+    BRUSHLESS9_MAP_MIKROBUS( brushless9_cfg, MIKROBUS_POSITION_BRUSHLESS9 );
     err_t init_flag  = brushless9_init( &brushless9, &brushless9_cfg );
     if ( init_flag == PWM_ERROR )
     {

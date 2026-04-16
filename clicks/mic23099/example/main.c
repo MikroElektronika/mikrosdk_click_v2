@@ -25,6 +25,10 @@
 #include "log.h"
 #include "mic23099.h"
 
+#ifndef MIKROBUS_POSITION_MIC23099
+    #define MIKROBUS_POSITION_MIC23099 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static mic23099_t mic23099;
@@ -61,7 +65,7 @@ void application_init ( void )
     //  Click initialization.
 
     mic23099_cfg_setup( &cfg );
-    MIC23099_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC23099_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC23099 );
     mic23099_init( &mic23099, &cfg );
     
     log_printf( &logger, "--------------------------\r\n" );

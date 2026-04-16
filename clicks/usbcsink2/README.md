@@ -90,7 +90,7 @@ void application_init ( void )
 
     // Click initialization.
     usbcsink2_cfg_setup( &usbcsink2_cfg );
-    USBCSINK2_MAP_MIKROBUS( usbcsink2_cfg, MIKROBUS_1 );
+    USBCSINK2_MAP_MIKROBUS( usbcsink2_cfg, MIKROBUS_POSITION_USBCSINK2 );
     err_t init_flag = usbcsink2_init( &usbcsink2, &usbcsink2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

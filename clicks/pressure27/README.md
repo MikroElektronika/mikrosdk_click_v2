@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     pressure27_cfg_setup( &pressure27_cfg );
-    PRESSURE27_MAP_MIKROBUS( pressure27_cfg, MIKROBUS_1 );
+    PRESSURE27_MAP_MIKROBUS( pressure27_cfg, MIKROBUS_POSITION_PRESSURE27 );
     if ( SPI_MASTER_ERROR == pressure27_init( &pressure27, &pressure27_cfg ) )
     {
         log_error( &logger, " Communication init." );

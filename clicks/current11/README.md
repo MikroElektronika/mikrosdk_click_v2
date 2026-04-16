@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     current11_cfg_setup( &current11_cfg );
-    CURRENT11_MAP_MIKROBUS( current11_cfg, MIKROBUS_1 );
+    CURRENT11_MAP_MIKROBUS( current11_cfg, MIKROBUS_POSITION_CURRENT11 );
     err_t init_flag = current11_init( &current11, &current11_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

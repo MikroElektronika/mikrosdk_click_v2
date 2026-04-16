@@ -27,6 +27,10 @@
 #include "log.h"
 #include "gnss16.h"
 
+#ifndef MIKROBUS_POSITION_GNSS16
+    #define MIKROBUS_POSITION_GNSS16 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define PROCESS_BUFFER_SIZE         200
 
@@ -85,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss16_cfg_setup( &gnss16_cfg );
-    GNSS16_MAP_MIKROBUS( gnss16_cfg, MIKROBUS_1 );
+    GNSS16_MAP_MIKROBUS( gnss16_cfg, MIKROBUS_POSITION_GNSS16 );
     if ( UART_ERROR == gnss16_init( &gnss16, &gnss16_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

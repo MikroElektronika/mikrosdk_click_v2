@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pressure6.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE6
+    #define MIKROBUS_POSITION_PRESSURE6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure6_t pressure6;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     pressure6_cfg_setup( &cfg );
-    PRESSURE6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE6 );
     pressure6_init( &pressure6, &cfg );
     pressure6_default_cfg( &pressure6 );
     log_printf( &logger, "--- Start measurement ---\r\n" );

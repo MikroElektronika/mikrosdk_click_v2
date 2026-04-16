@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pressure4.h"
 
+#ifndef MIKROBUS_POSITION_PRESSURE4
+    #define MIKROBUS_POSITION_PRESSURE4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pressure4_t pressure4;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     //  Click initialization.
     pressure4_cfg_setup( &cfg );
-    PRESSURE4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PRESSURE4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PRESSURE4 );
     pressure4_init( &pressure4, &cfg );
 
     pressure4_default_cfg( &pressure4 );

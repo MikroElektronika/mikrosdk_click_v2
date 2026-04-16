@@ -27,6 +27,10 @@
 #include "canfd3.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_CANFD3
+    #define MIKROBUS_POSITION_CANFD3 MIKROBUS_1
+#endif
+
 #define PROCESS_RX_BUFFER_SIZE 500
 
 #define TEXT_TO_SEND "MikroE\r\n"
@@ -83,7 +87,7 @@ void application_init ( void )
     //  Click initialization.
 
     canfd3_cfg_setup( &cfg );
-    CANFD3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CANFD3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CANFD3 );
     canfd3_init( &canfd3, &cfg );
 
     canfd3_set_cs_pin( &canfd3, CANFD3_MODE_NORMAL );

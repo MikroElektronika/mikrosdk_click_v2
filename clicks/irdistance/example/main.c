@@ -27,6 +27,10 @@
 #include "log.h"
 #include "irdistance.h"
 
+#ifndef MIKROBUS_POSITION_IRDISTANCE
+    #define MIKROBUS_POSITION_IRDISTANCE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static irdistance_t irdistance;
@@ -58,7 +62,7 @@ void application_init ( void )
     //  Click initialization.
 
     irdistance_cfg_setup( &cfg );
-    IRDISTANCE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    IRDISTANCE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_IRDISTANCE );
     if ( irdistance_init( &irdistance, &cfg ) == ADC_ERROR )
     {
         log_info( &logger, "---- Application Init Error ----" );

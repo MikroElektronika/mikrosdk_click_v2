@@ -32,6 +32,10 @@
 #include "log.h"
 #include "dac8.h"
 
+#ifndef MIKROBUS_POSITION_DAC8
+    #define MIKROBUS_POSITION_DAC8 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static dac8_t dac8;
@@ -62,7 +66,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac8_cfg_setup( &cfg );
-    DAC8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC8 );
     
     dac8_init( &dac8, &cfg, DAC8_MASTER_I2C );
 

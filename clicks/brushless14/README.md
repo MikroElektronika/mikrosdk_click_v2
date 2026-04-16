@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     brushless14_cfg_setup( &brushless14_cfg );
-    BRUSHLESS14_MAP_MIKROBUS( brushless14_cfg, MIKROBUS_1 );
+    BRUSHLESS14_MAP_MIKROBUS( brushless14_cfg, MIKROBUS_POSITION_BRUSHLESS14 );
     err_t init_flag = brushless14_init( &brushless14, &brushless14_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

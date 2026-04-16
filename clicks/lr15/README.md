@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     lr15_cfg_setup( &lr15_cfg );
-    LR15_MAP_MIKROBUS( lr15_cfg, MIKROBUS_1 );
+    LR15_MAP_MIKROBUS( lr15_cfg, MIKROBUS_POSITION_LR15 );
     if ( UART_ERROR == lr15_init( &lr15, &lr15_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

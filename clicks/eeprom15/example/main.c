@@ -23,6 +23,10 @@
 #include "log.h"
 #include "eeprom15.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM15
+    #define MIKROBUS_POSITION_EEPROM15 MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE_1     "MIKROE"
 #define DEMO_TEXT_MESSAGE_2     "EEPROM 15 Click"
 #define STARTING_ADDRESS        0x10
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom15_cfg_setup( &eeprom15_cfg );
-    EEPROM15_MAP_MIKROBUS( eeprom15_cfg, MIKROBUS_1 );
+    EEPROM15_MAP_MIKROBUS( eeprom15_cfg, MIKROBUS_POSITION_EEPROM15 );
     if ( I2C_MASTER_ERROR == eeprom15_init( &eeprom15, &eeprom15_cfg ) )
     {
         log_error( &logger, " Communication init." );

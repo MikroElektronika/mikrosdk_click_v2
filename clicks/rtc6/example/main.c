@@ -25,6 +25,10 @@
 #include "log.h"
 #include "rtc6.h"
 
+#ifndef MIKROBUS_POSITION_RTC6
+    #define MIKROBUS_POSITION_RTC6 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static rtc6_t rtc6;
@@ -57,7 +61,7 @@ void application_init ( void )
     //  Click initialization.
 
     rtc6_cfg_setup( &cfg );
-    RTC6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RTC6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RTC6 );
     rtc6_init( &rtc6, &cfg );
 
     // Set UTC time

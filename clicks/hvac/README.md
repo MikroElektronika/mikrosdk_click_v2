@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     hvac_cfg_setup( &hvac_cfg );
-    HVAC_MAP_MIKROBUS( hvac_cfg, MIKROBUS_1 );
+    HVAC_MAP_MIKROBUS( hvac_cfg, MIKROBUS_POSITION_HVAC );
     if ( I2C_MASTER_ERROR == hvac_init( &hvac, &hvac_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "ambient12.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT12
+    #define MIKROBUS_POSITION_AMBIENT12 MIKROBUS_1
+#endif
+
 static ambient12_t ambient12;       /**< Ambient 12 Click driver object. */
 static log_t logger;                /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     ambient12_cfg_setup( &ambient12_cfg );
-    AMBIENT12_MAP_MIKROBUS( ambient12_cfg, MIKROBUS_1 );
+    AMBIENT12_MAP_MIKROBUS( ambient12_cfg, MIKROBUS_POSITION_AMBIENT12 );
     if ( ADC_ERROR == ambient12_init( &ambient12, &ambient12_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

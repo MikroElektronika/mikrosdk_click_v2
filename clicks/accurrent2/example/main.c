@@ -26,6 +26,10 @@
 #include "log.h"
 #include "accurrent2.h"
 
+#ifndef MIKROBUS_POSITION_ACCURRENT2
+    #define MIKROBUS_POSITION_ACCURRENT2 MIKROBUS_1
+#endif
+
 static accurrent2_t accurrent2;   /**< AC Current 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     accurrent2_cfg_setup( &accurrent2_cfg );
-    ACCURRENT2_MAP_MIKROBUS( accurrent2_cfg, MIKROBUS_1 );
+    ACCURRENT2_MAP_MIKROBUS( accurrent2_cfg, MIKROBUS_POSITION_ACCURRENT2 );
     err_t init_flag = accurrent2_init( &accurrent2, &accurrent2_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

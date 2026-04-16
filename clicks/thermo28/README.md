@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     thermo28_cfg_setup( &thermo28_cfg );
-    THERMO28_MAP_MIKROBUS( thermo28_cfg, MIKROBUS_1 );
+    THERMO28_MAP_MIKROBUS( thermo28_cfg, MIKROBUS_POSITION_THERMO28 );
     if ( I2C_MASTER_ERROR == thermo28_init( &thermo28, &thermo28_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

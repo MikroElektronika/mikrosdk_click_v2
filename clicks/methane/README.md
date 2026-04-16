@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     methane_cfg_setup( &methane_cfg );
-    METHANE_MAP_MIKROBUS( methane_cfg, MIKROBUS_1 );
+    METHANE_MAP_MIKROBUS( methane_cfg, MIKROBUS_POSITION_METHANE );
     if ( methane_init( &methane, &methane_cfg ) == ADC_ERROR ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

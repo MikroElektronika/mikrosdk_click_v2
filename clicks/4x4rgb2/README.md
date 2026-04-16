@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     c4x4rgb2_cfg_setup( &c4x4rgb2_cfg );
-    C4X4RGB2_MAP_MIKROBUS( c4x4rgb2_cfg, MIKROBUS_1 );
+    C4X4RGB2_MAP_MIKROBUS( c4x4rgb2_cfg, MIKROBUS_POSITION_4X4RGB2 );
     if ( SPI_MASTER_ERROR == c4x4rgb2_init( &c4x4rgb2, &c4x4rgb2_cfg ) )
     {
         log_error( &logger, " Communication init." );

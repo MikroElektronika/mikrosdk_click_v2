@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     lightmixsens_cfg_setup( &cfg );
-    LIGHTMIXSENS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIGHTMIXSENS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIGHTMIXSENS );
     lightmixsens_init( &lightmixsens, &cfg );
 
     lightmixsens_default_cfg( &lightmixsens );

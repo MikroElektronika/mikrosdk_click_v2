@@ -44,6 +44,10 @@
 #include "log.h"
 #include "iotexpresslink2.h"
 
+#ifndef MIKROBUS_POSITION_IOTEXPRESSLINK2
+    #define MIKROBUS_POSITION_IOTEXPRESSLINK2 MIKROBUS_1
+#endif
+
 // Enter valid APN below for inserted SIM card
 #define SIM_APN                 "internet"
 
@@ -120,7 +124,7 @@ void application_init ( void )
 
     // Click initialization.
     iotexpresslink2_cfg_setup( &iotexpresslink2_cfg );
-    IOTEXPRESSLINK2_MAP_MIKROBUS( iotexpresslink2_cfg, MIKROBUS_1 );
+    IOTEXPRESSLINK2_MAP_MIKROBUS( iotexpresslink2_cfg, MIKROBUS_POSITION_IOTEXPRESSLINK2 );
     if ( UART_ERROR == iotexpresslink2_init( &iotexpresslink2, &iotexpresslink2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

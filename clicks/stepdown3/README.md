@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     stepdown3_cfg_setup( &stepdown3_cfg );
-    STEPDOWN3_MAP_MIKROBUS( stepdown3_cfg, MIKROBUS_1 );
+    STEPDOWN3_MAP_MIKROBUS( stepdown3_cfg, MIKROBUS_POSITION_STEPDOWN3 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == stepdown3_init( &stepdown3, &stepdown3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

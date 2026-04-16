@@ -32,6 +32,10 @@
 #include "log.h"
 #include "binhonova.h"
 
+#ifndef MIKROBUS_POSITION_BINHONOVA
+    #define MIKROBUS_POSITION_BINHONOVA MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static binhonova_t binhonova;
@@ -60,7 +64,7 @@ void application_init ( void )
 
     // Click initialization.
     binhonova_cfg_setup( &binhonova_cfg );
-    BINHONOVA_MAP_MIKROBUS( binhonova_cfg, MIKROBUS_1 );
+    BINHONOVA_MAP_MIKROBUS( binhonova_cfg, MIKROBUS_POSITION_BINHONOVA );
     if ( UART_ERROR == binhonova_init( &binhonova, &binhonova_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

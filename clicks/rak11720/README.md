@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     rak11720_cfg_setup( &rak11720_cfg );
-    RAK11720_MAP_MIKROBUS( rak11720_cfg, MIKROBUS_1 );
+    RAK11720_MAP_MIKROBUS( rak11720_cfg, MIKROBUS_POSITION_RAK11720 );
     if ( UART_ERROR == rak11720_init( &rak11720, &rak11720_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

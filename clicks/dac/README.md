@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac_cfg_setup( &cfg );
-    DAC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC );
     dac_init( &dac, &cfg );
 }
 ```

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "eeprom6.h"
 
+#ifndef MIKROBUS_POSITION_EEPROM6
+    #define MIKROBUS_POSITION_EEPROM6 MIKROBUS_1
+#endif
+
 static eeprom6_t eeprom6;
 static log_t logger;
 
@@ -49,7 +53,7 @@ void application_init ( void )
 
     // Click initialization.
     eeprom6_cfg_setup( &eeprom6_cfg );
-    EEPROM6_MAP_MIKROBUS( eeprom6_cfg, MIKROBUS_1 );
+    EEPROM6_MAP_MIKROBUS( eeprom6_cfg, MIKROBUS_POSITION_EEPROM6 );
     if ( ONE_WIRE_ERROR == eeprom6_init( &eeprom6, &eeprom6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

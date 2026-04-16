@@ -27,6 +27,10 @@
 #include "log.h"
 #include "nanopower.h"
 
+#ifndef MIKROBUS_POSITION_NANOPOWER
+    #define MIKROBUS_POSITION_NANOPOWER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static nanopower_t nanopower;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     nanopower_cfg_setup( &cfg );
-    NANOPOWER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NANOPOWER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NANOPOWER );
     nanopower_init( &nanopower, &cfg );
 }
 

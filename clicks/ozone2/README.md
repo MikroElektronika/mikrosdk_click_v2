@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     ozone2_cfg_setup( &cfg );
-    OZONE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OZONE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OZONE2 );
     ozone2_init( &ozone2, &cfg );
 }
 ```

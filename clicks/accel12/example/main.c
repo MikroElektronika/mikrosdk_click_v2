@@ -24,6 +24,10 @@
 #include "log.h"
 #include "accel12.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL12
+    #define MIKROBUS_POSITION_ACCEL12 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static accel12_t accel12;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel12_cfg_setup( &cfg );
-    ACCEL12_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL12_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL12 );
     accel12_init( &accel12, &cfg );
 
     accel12_default_cfg( &accel12 );

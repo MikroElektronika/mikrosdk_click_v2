@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     nanolr_cfg_setup( &cfg );
-    NANOLR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NANOLR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NANOLR );
     nanolr_init( &nanolr, &cfg );
 
     nanolr_default_cfg( &nanolr );

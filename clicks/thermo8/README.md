@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo8_cfg_setup( &cfg );
-    THERMO8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO8 );
     thermo8_init( &thermo8, &cfg );
     Delay_ms ( 100 );
     thermo8_default_cfg( &thermo8 );

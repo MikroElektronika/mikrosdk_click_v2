@@ -23,6 +23,10 @@
 #include "log.h"
 #include "proximity18.h"
 
+#ifndef MIKROBUS_POSITION_PROXIMITY18
+    #define MIKROBUS_POSITION_PROXIMITY18 MIKROBUS_1
+#endif
+
 static proximity18_t proximity18;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     proximity18_cfg_setup( &proximity18_cfg );
-    PROXIMITY18_MAP_MIKROBUS( proximity18_cfg, MIKROBUS_1 );
+    PROXIMITY18_MAP_MIKROBUS( proximity18_cfg, MIKROBUS_POSITION_PROXIMITY18 );
     if ( I2C_MASTER_ERROR == proximity18_init( &proximity18, &proximity18_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

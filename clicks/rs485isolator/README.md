@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     rs485isolator_cfg_setup( &cfg );
-    RS485ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    RS485ISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_RS485ISOLATOR );
     rs485isolator_init( &rs485isolator, &cfg );
     
     log_info( &logger, " Application Task " );

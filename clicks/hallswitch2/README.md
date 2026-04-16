@@ -75,7 +75,7 @@ void application_init ( void )
     // Click initialization.
 
     hallswitch2_cfg_setup( &hallswitch2_cfg );
-    HALLSWITCH2_MAP_MIKROBUS( hallswitch2_cfg, MIKROBUS_1 );
+    HALLSWITCH2_MAP_MIKROBUS( hallswitch2_cfg, MIKROBUS_POSITION_HALLSWITCH2 );
     if ( hallswitch2_init( &hallswitch2, &hallswitch2_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {
         log_error( &logger, " Application Init Error. " );

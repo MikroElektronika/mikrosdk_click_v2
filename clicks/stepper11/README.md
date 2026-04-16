@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     stepper11_cfg_setup( &stepper11_cfg );
-    STEPPER11_MAP_MIKROBUS( stepper11_cfg, MIKROBUS_1 );
+    STEPPER11_MAP_MIKROBUS( stepper11_cfg, MIKROBUS_POSITION_STEPPER11 );
     err_t init_flag = stepper11_init( &stepper11, &stepper11_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) 
     {

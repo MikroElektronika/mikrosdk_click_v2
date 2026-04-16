@@ -79,7 +79,7 @@ void application_init ( void )
     // Click initialization.
 
     alphanumg_cfg_setup( &alphanumg_cfg );
-    ALPHANUMG_MAP_MIKROBUS( alphanumg_cfg, MIKROBUS_1 );
+    ALPHANUMG_MAP_MIKROBUS( alphanumg_cfg, MIKROBUS_POSITION_ALPHANUMG );
     err_t init_flag  = alphanumg_init( &alphanumg, &alphanumg_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -29,6 +29,10 @@
 #include "log.h"
 #include "gnss21.h"
 
+#ifndef MIKROBUS_POSITION_GNSS21
+    #define MIKROBUS_POSITION_GNSS21 MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             500
 #define PROCESS_BUFFER_SIZE         200
@@ -95,7 +99,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss21_cfg_setup( &gnss21_cfg );
-    GNSS21_MAP_MIKROBUS( gnss21_cfg, MIKROBUS_1 );
+    GNSS21_MAP_MIKROBUS( gnss21_cfg, MIKROBUS_POSITION_GNSS21 );
     if ( GNSS21_OK != gnss21_init( &gnss21, &gnss21_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

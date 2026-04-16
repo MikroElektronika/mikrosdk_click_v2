@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     sram2_cfg_setup( &cfg );
-    SRAM2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SRAM2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SRAM2 );
     sram2_init( &sram2, &cfg );
 }
 ```

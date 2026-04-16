@@ -90,7 +90,7 @@ void application_init ( void )
     //  Click initialization.
 
     magneticrotary_cfg_setup( &cfg );
-    MAGNETICROTARY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MAGNETICROTARY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MAGNETICROTARY );
     magneticrotary_init( &magneticrotary, &cfg );
     log_info(&logger, "Magnetic rotary successufully initialized!\r\n");
 

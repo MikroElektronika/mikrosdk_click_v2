@@ -29,6 +29,10 @@
 #include "log.h"
 #include "opto7.h"
 
+#ifndef MIKROBUS_POSITION_OPTO7
+    #define MIKROBUS_POSITION_OPTO7 MIKROBUS_1
+#endif
+
 // Example selection macros
 #define EXAMPLE_GPIO                1               // Example of using GPIO
 #define EXAMPLE_UART                2               // Example of using UART
@@ -95,7 +99,7 @@ void application_init ( void )
     
     // Click initialization.
     opto7_cfg_setup( &opto7_cfg );
-    OPTO7_MAP_MIKROBUS( opto7_cfg, MIKROBUS_1 );
+    OPTO7_MAP_MIKROBUS( opto7_cfg, MIKROBUS_POSITION_OPTO7 );
     
 #if ( DEMO_EXAMPLE == EXAMPLE_GPIO )
     opto7_drv_interface_selection( &opto7_cfg, OPTO7_DRV_SEL_GPIO );

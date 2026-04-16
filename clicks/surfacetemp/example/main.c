@@ -22,6 +22,10 @@
 #include "log.h"
 #include "surfacetemp.h"
 
+#ifndef MIKROBUS_POSITION_SURFACETEMP
+    #define MIKROBUS_POSITION_SURFACETEMP MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static surfacetemp_t surfacetemp;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     surfacetemp_cfg_setup( &cfg );
-    SURFACETEMP_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SURFACETEMP_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SURFACETEMP );
     surfacetemp_init( &surfacetemp, &cfg );
 
     status = surfacetemp_setup( &surfacetemp );

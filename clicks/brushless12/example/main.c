@@ -23,6 +23,10 @@
 #include "log.h"
 #include "brushless12.h"
 
+#ifndef MIKROBUS_POSITION_BRUSHLESS12
+    #define MIKROBUS_POSITION_BRUSHLESS12 MIKROBUS_1
+#endif
+
 static brushless12_t brushless12;       /**< Brushless 12 Click driver object. */
 static log_t logger;                    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
     // Click initialization.
 
     brushless12_cfg_setup( &brushless12_cfg );
-    BRUSHLESS12_MAP_MIKROBUS( brushless12_cfg, MIKROBUS_1 );
+    BRUSHLESS12_MAP_MIKROBUS( brushless12_cfg, MIKROBUS_POSITION_BRUSHLESS12 );
     
     if ( brushless12_init( &brushless12, &brushless12_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {

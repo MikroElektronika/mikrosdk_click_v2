@@ -23,6 +23,10 @@
 #include "log.h"
 #include "balancer3.h"
 
+#ifndef MIKROBUS_POSITION_BALANCER3
+    #define MIKROBUS_POSITION_BALANCER3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static balancer3_t balancer3;
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     balancer3_cfg_setup( &cfg );
-    BALANCER3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BALANCER3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BALANCER3 );
     balancer3_init( &balancer3, &cfg );
          
     balancer3_enable_cell_balance( &balancer3, BALANCER3_CELL_BALANCE_EN );

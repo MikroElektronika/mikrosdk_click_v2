@@ -34,6 +34,10 @@
 #include "log.h"
 #include "efuse3.h"
 
+#ifndef MIKROBUS_POSITION_EFUSE3
+    #define MIKROBUS_POSITION_EFUSE3 MIKROBUS_1
+#endif
+
 static efuse3_t efuse3;
 static log_t logger;
 
@@ -61,7 +65,7 @@ void application_init ( void ) {
     // Click initialization.
 
     efuse3_cfg_setup( &efuse3_cfg );
-    EFUSE3_MAP_MIKROBUS( efuse3_cfg, MIKROBUS_1 );
+    EFUSE3_MAP_MIKROBUS( efuse3_cfg, MIKROBUS_POSITION_EFUSE3 );
     err_t init_flag  = efuse3_init( &efuse3, &efuse3_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

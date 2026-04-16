@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     c4glte3e_cfg_setup( &c4glte3e_cfg );
-    C4GLTE3E_MAP_MIKROBUS( c4glte3e_cfg, MIKROBUS_1 );
+    C4GLTE3E_MAP_MIKROBUS( c4glte3e_cfg, MIKROBUS_POSITION_4GLTE3E );
     if ( UART_ERROR == c4glte3e_init( &c4glte3e, &c4glte3e_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

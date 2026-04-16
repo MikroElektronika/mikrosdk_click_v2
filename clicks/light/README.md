@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     light_cfg_setup( &cfg );
-    LIGHT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LIGHT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LIGHT );
     light_init( &light, &cfg );
 }
 ```

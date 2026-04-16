@@ -86,7 +86,7 @@ void application_init ( void )
     // Click initialization.
 
     ozone3_cfg_setup( &ozone3_cfg );
-    OZONE3_MAP_MIKROBUS( ozone3_cfg, MIKROBUS_1 );
+    OZONE3_MAP_MIKROBUS( ozone3_cfg, MIKROBUS_POSITION_OZONE3 );
     err_t init_flag = ozone3_init( &ozone3, &ozone3_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

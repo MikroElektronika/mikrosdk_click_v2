@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     tdc2_cfg_setup( &tdc2_cfg );
-    TDC2_MAP_MIKROBUS( tdc2_cfg, MIKROBUS_1 );
+    TDC2_MAP_MIKROBUS( tdc2_cfg, MIKROBUS_POSITION_TDC2 );
     if ( SPI_MASTER_ERROR == tdc2_init( &tdc2, &tdc2_cfg ) )
     {
         log_error( &logger, " Communication init." );

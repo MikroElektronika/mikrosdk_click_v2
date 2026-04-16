@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     magneto6_cfg_setup( &magneto6_cfg );
-    MAGNETO6_MAP_MIKROBUS( magneto6_cfg, MIKROBUS_1 );
+    MAGNETO6_MAP_MIKROBUS( magneto6_cfg, MIKROBUS_POSITION_MAGNETO6 );
     if ( I2C_MASTER_ERROR == magneto6_init( &magneto6, &magneto6_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

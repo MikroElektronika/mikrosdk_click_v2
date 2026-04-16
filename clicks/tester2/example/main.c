@@ -23,6 +23,10 @@
 #include "log.h"
 #include "tester2.h"
 
+#ifndef MIKROBUS_POSITION_TESTER2
+    #define MIKROBUS_POSITION_TESTER2 MIKROBUS_1
+#endif
+
 static tester2_t tester2;   /**< Tester 2 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     tester2_cfg_setup( &tester2_cfg );
-    TESTER2_MAP_MIKROBUS( tester2_cfg, MIKROBUS_1 );
+    TESTER2_MAP_MIKROBUS( tester2_cfg, MIKROBUS_POSITION_TESTER2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == tester2_init( &tester2, &tester2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

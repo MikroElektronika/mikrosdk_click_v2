@@ -23,6 +23,10 @@
 #include "log.h"
 #include "digiisolator2.h"
 
+#ifndef MIKROBUS_POSITION_DIGIISOLATOR2
+    #define MIKROBUS_POSITION_DIGIISOLATOR2 MIKROBUS_1
+#endif
+
 static digiisolator2_t digiisolator2;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     digiisolator2_cfg_setup( &digiisolator2_cfg );
-    DIGIISOLATOR2_MAP_MIKROBUS( digiisolator2_cfg, MIKROBUS_1 );
+    DIGIISOLATOR2_MAP_MIKROBUS( digiisolator2_cfg, MIKROBUS_POSITION_DIGIISOLATOR2 );
     if ( DIGIISOLATOR2_OK != digiisolator2_init( &digiisolator2, &digiisolator2_cfg ) )
     {
         log_error( &logger, " Communication init." );

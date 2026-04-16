@@ -30,6 +30,10 @@
 #include "log.h"
 #include "wifinora.h"
 
+#ifndef MIKROBUS_POSITION_WIFINORA
+    #define MIKROBUS_POSITION_WIFINORA MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT                     "WiFi NORA Click board - demo example."
 
@@ -129,7 +133,7 @@ void application_init ( void )
 
     // Click initialization.
     wifinora_cfg_setup( &wifinora_cfg );
-    WIFINORA_MAP_MIKROBUS( wifinora_cfg, MIKROBUS_1 );
+    WIFINORA_MAP_MIKROBUS( wifinora_cfg, MIKROBUS_POSITION_WIFINORA );
     if ( UART_ERROR == wifinora_init( &wifinora, &wifinora_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

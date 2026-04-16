@@ -27,6 +27,10 @@
 #include "log.h"
 #include "shtan.h"
 
+#ifndef MIKROBUS_POSITION_SHTAN
+    #define MIKROBUS_POSITION_SHTAN MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static shtan_t shtan;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     shtan_cfg_setup( &cfg );
-    SHTAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SHTAN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SHTAN );
 
     if ( shtan_init( &shtan, &cfg ) == ADC_ERROR )
     {

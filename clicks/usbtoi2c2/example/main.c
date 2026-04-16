@@ -27,6 +27,10 @@
 #include "log.h"
 #include "usbtoi2c2.h"
 
+#ifndef MIKROBUS_POSITION_USBTOI2C2
+    #define MIKROBUS_POSITION_USBTOI2C2 MIKROBUS_1
+#endif
+
 static usbtoi2c2_t usbtoi2c2;
 static log_t logger;
 
@@ -50,7 +54,7 @@ void application_init ( void )
 
     // Click initialization.
     usbtoi2c2_cfg_setup( &usbtoi2c2_cfg );
-    USBTOI2C2_MAP_MIKROBUS( usbtoi2c2_cfg, MIKROBUS_1 );
+    USBTOI2C2_MAP_MIKROBUS( usbtoi2c2_cfg, MIKROBUS_POSITION_USBTOI2C2 );
     if ( I2C_MASTER_ERROR == usbtoi2c2_init( &usbtoi2c2, &usbtoi2c2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

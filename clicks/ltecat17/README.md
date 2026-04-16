@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     ltecat17_cfg_setup( &ltecat17_cfg );
-    LTECAT17_MAP_MIKROBUS( ltecat17_cfg, MIKROBUS_1 );
+    LTECAT17_MAP_MIKROBUS( ltecat17_cfg, MIKROBUS_POSITION_LTECAT17 );
     if ( UART_ERROR == ltecat17_init( &ltecat17, &ltecat17_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

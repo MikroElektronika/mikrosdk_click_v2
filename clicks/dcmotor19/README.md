@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     dcmotor19_cfg_setup( &dcmotor19_cfg );
-    DCMOTOR19_MAP_MIKROBUS( dcmotor19_cfg, MIKROBUS_1 );
+    DCMOTOR19_MAP_MIKROBUS( dcmotor19_cfg, MIKROBUS_POSITION_DCMOTOR19 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == dcmotor19_init( &dcmotor19, &dcmotor19_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

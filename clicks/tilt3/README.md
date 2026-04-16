@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     tilt3_cfg_setup( &tilt3_cfg );
-    TILT3_MAP_MIKROBUS( tilt3_cfg, MIKROBUS_1 );
+    TILT3_MAP_MIKROBUS( tilt3_cfg, MIKROBUS_POSITION_TILT3 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == tilt3_init( &tilt3, &tilt3_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

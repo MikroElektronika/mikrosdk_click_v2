@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     big7seg_cfg_setup( &cfg );
-    BIG7SEG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BIG7SEG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BIG7SEG );
     big7seg_init( &big7seg, &cfg );
 
     big7seg_set7seg( &big7seg );

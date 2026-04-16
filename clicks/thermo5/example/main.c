@@ -22,6 +22,10 @@
 #include "log.h"
 #include "thermo5.h"
 
+#ifndef MIKROBUS_POSITION_THERMO5
+    #define MIKROBUS_POSITION_THERMO5 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static thermo5_t thermo5;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     thermo5_cfg_setup( &cfg );
-    THERMO5_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    THERMO5_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_THERMO5 );
     thermo5_init( &thermo5, &cfg );
     Delay_ms ( 500 );
     log_printf( &logger, " Thermo 5 Click ready! \r\n" );

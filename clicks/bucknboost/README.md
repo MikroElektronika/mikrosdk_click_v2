@@ -92,7 +92,7 @@ void application_init ( void )
     // Click initialization.
 
     bucknboost_cfg_setup( &bucknboost_cfg );
-    BUCKNBOOST_MAP_MIKROBUS( bucknboost_cfg, MIKROBUS_1 );
+    BUCKNBOOST_MAP_MIKROBUS( bucknboost_cfg, MIKROBUS_POSITION_BUCKNBOOST );
     
     err_t init_flag = bucknboost_init( &bucknboost, &bucknboost_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 

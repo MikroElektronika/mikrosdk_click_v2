@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     xsensmti3_cfg_setup( &xsensmti3_cfg );
-    XSENSMTI3_MAP_MIKROBUS( xsensmti3_cfg, MIKROBUS_1 );
+    XSENSMTI3_MAP_MIKROBUS( xsensmti3_cfg, MIKROBUS_POSITION_XSENSMTI3 );
     if ( UART_ERROR == xsensmti3_init( &xsensmti3, &xsensmti3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

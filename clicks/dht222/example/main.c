@@ -22,6 +22,10 @@
 #include "log.h"
 #include "dht222.h"
 
+#ifndef MIKROBUS_POSITION_DHT222
+    #define MIKROBUS_POSITION_DHT222 MIKROBUS_1
+#endif
+
 static dht222_t dht222;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     //  Click initialization.
     dht222_cfg_setup( &cfg );
-    DHT222_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DHT222_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DHT222 );
     dht222_init( &dht222, &cfg );
     Delay_ms ( 500 );
 }

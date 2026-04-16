@@ -79,7 +79,7 @@ void application_init ( )
     //  Click initialization.
 
     hallcurrent3_cfg_setup( &cfg );
-    HALLCURRENT3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    HALLCURRENT3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_HALLCURRENT3 );
     hallcurrent3_init( &hallcurrent3, &cfg );
 }
 ```

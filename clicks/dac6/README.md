@@ -80,7 +80,7 @@ void application_init ( void )
     //  Click initialization.
 
     dac6_cfg_setup( &cfg );
-    DAC6_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DAC6_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DAC6 );
     dac6_init( &dac6, &cfg );
 }
 ```

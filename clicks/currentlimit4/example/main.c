@@ -28,6 +28,10 @@
 #include "log.h"
 #include "currentlimit4.h"
 
+#ifndef MIKROBUS_POSITION_CURRENTLIMIT4
+    #define MIKROBUS_POSITION_CURRENTLIMIT4 MIKROBUS_1
+#endif
+
 static currentlimit4_t currentlimit4;   /**< Current Limit 4 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     currentlimit4_cfg_setup( &currentlimit4_cfg );
-    CURRENTLIMIT4_MAP_MIKROBUS( currentlimit4_cfg, MIKROBUS_1 );
+    CURRENTLIMIT4_MAP_MIKROBUS( currentlimit4_cfg, MIKROBUS_POSITION_CURRENTLIMIT4 );
     err_t init_flag = currentlimit4_init( &currentlimit4, &currentlimit4_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

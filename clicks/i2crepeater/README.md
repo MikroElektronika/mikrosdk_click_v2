@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     i2crepeater_cfg_setup( &i2crepeater_cfg );
-    I2CREPEATER_MAP_MIKROBUS( i2crepeater_cfg, MIKROBUS_1 );
+    I2CREPEATER_MAP_MIKROBUS( i2crepeater_cfg, MIKROBUS_POSITION_I2CREPEATER );
     if ( I2C_MASTER_ERROR == i2crepeater_init( &i2crepeater, &i2crepeater_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

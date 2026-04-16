@@ -22,6 +22,10 @@
 #include "log.h"
 #include "tiltnshake.h"
 
+#ifndef MIKROBUS_POSITION_TILTNSHAKE
+    #define MIKROBUS_POSITION_TILTNSHAKE MIKROBUS_1
+#endif
+
 static tiltnshake_t tiltnshake;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     tiltnshake_cfg_setup( &cfg );
-    TILTNSHAKE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TILTNSHAKE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TILTNSHAKE );
     tiltnshake_init( &tiltnshake, &cfg );
     
     log_info( &logger, " Application Task " );

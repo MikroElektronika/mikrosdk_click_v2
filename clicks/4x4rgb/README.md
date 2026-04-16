@@ -64,7 +64,7 @@ void application_init ( void )
 
     //  Click initialization.
     c4x4rgb_cfg_setup( &cfg, &c4x4rgb_logic_zero, &c4x4rgb_logic_one, C4X4RGB_CTRL_PIN_IN1 );
-    C4X4RGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C4X4RGB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_4X4RGB );
     c4x4rgb_init( &c4x4rgb, &cfg );
     
     c4x4rgb_fill_screen( &c4x4rgb, C4X4RGB_COLOR_WHITE );

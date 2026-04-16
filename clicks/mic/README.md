@@ -55,7 +55,7 @@ mic_data_t mic_generic_read ( mic_t *ctx );
 
 ### Application Init
 
-> Initializes LOG communication, ADC and configures AN pin as input on MIKROBUS1.
+> Initializes LOG communication, ADC and configures AN pin as input.
 
 ```c
 void application_init ( void )
@@ -79,7 +79,7 @@ void application_init ( void )
     //  Click initialization.
 
     mic_cfg_setup( &cfg );
-    MIC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MIC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MIC );
     mic_init( &mic, &cfg );
 }
 ```

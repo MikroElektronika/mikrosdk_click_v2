@@ -29,6 +29,10 @@
 #include "log.h"
 #include "accel29.h"
 
+#ifndef MIKROBUS_POSITION_ACCEL29
+    #define MIKROBUS_POSITION_ACCEL29 MIKROBUS_1
+#endif
+
 /**
  * Starting accel position, used for calibrating accel offset. 
  * Should be in a range from -24.96 to 24.765 g.
@@ -61,7 +65,7 @@ void application_init ( void )
 
     // Click initialization.
     accel29_cfg_setup( &accel29_cfg );
-    ACCEL29_MAP_MIKROBUS( accel29_cfg, MIKROBUS_1 );
+    ACCEL29_MAP_MIKROBUS( accel29_cfg, MIKROBUS_POSITION_ACCEL29 );
     err_t init_flag = accel29_init( &accel29, &accel29_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

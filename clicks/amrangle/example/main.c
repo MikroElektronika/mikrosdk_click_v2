@@ -27,6 +27,10 @@
 #include "log.h"
 #include "amrangle.h"
 
+#ifndef MIKROBUS_POSITION_AMRANGLE
+    #define MIKROBUS_POSITION_AMRANGLE MIKROBUS_1
+#endif
+
 static amrangle_t amrangle;
 static log_t logger;
 
@@ -53,7 +57,7 @@ void application_init ( void ) {
     // Click initialization.
 
     amrangle_cfg_setup( &amrangle_cfg, AMRANGLE_ARM_TOOLCHAIN );  // Change when switching profile
-    AMRANGLE_MAP_MIKROBUS( amrangle_cfg, MIKROBUS_1 );
+    AMRANGLE_MAP_MIKROBUS( amrangle_cfg, MIKROBUS_POSITION_AMRANGLE );
     err_t init_flag = amrangle_init( &amrangle, &amrangle_cfg );
     if ( init_flag == SPI_MASTER_ERROR ) {
         log_error( &logger, " Application Init Error. " );

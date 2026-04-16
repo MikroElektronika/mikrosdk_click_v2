@@ -84,7 +84,7 @@ void application_init ( void )
     // Click initialization.
 
     expand8_cfg_setup( &expand8_cfg );
-    EXPAND8_MAP_MIKROBUS( expand8_cfg, MIKROBUS_1 );
+    EXPAND8_MAP_MIKROBUS( expand8_cfg, MIKROBUS_POSITION_EXPAND8 );
     err_t init_flag  = expand8_init( &expand8, &expand8_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

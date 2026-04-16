@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     brushless12_cfg_setup( &brushless12_cfg );
-    BRUSHLESS12_MAP_MIKROBUS( brushless12_cfg, MIKROBUS_1 );
+    BRUSHLESS12_MAP_MIKROBUS( brushless12_cfg, MIKROBUS_POSITION_BRUSHLESS12 );
     
     if ( brushless12_init( &brushless12, &brushless12_cfg ) == DIGITAL_OUT_UNSUPPORTED_PIN ) 
     {

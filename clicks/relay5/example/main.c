@@ -21,6 +21,10 @@
 #include "log.h"
 #include "relay5.h"
 
+#ifndef MIKROBUS_POSITION_RELAY5
+    #define MIKROBUS_POSITION_RELAY5 MIKROBUS_1
+#endif
+
 static relay5_t relay5;
 static log_t logger;
 
@@ -44,7 +48,7 @@ void application_init ( void )
 
     // Click initialization.
     relay5_cfg_setup( &relay5_cfg );
-    RELAY5_MAP_MIKROBUS( relay5_cfg, MIKROBUS_1 );
+    RELAY5_MAP_MIKROBUS( relay5_cfg, MIKROBUS_POSITION_RELAY5 );
     if ( I2C_MASTER_ERROR == relay5_init( &relay5, &relay5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

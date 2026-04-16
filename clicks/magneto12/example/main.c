@@ -22,6 +22,10 @@
 #include "log.h"
 #include "magneto12.h"
 
+#ifndef MIKROBUS_POSITION_MAGNETO12
+    #define MIKROBUS_POSITION_MAGNETO12 MIKROBUS_1
+#endif
+
 static magneto12_t magneto12;   /**< Magneto 12 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     magneto12_cfg_setup( &magneto12_cfg );
-    MAGNETO12_MAP_MIKROBUS( magneto12_cfg, MIKROBUS_1 );
+    MAGNETO12_MAP_MIKROBUS( magneto12_cfg, MIKROBUS_POSITION_MAGNETO12 );
     err_t init_flag = magneto12_init( &magneto12, &magneto12_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     dac19_cfg_setup( &dac19_cfg );
-    DAC19_MAP_MIKROBUS( dac19_cfg, MIKROBUS_1 );
+    DAC19_MAP_MIKROBUS( dac19_cfg, MIKROBUS_POSITION_DAC19 );
     if ( I2C_MASTER_ERROR == dac19_init( &dac19, &dac19_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     gnssmax2_cfg_setup( &gnssmax2_cfg );
-    GNSSMAX2_MAP_MIKROBUS( gnssmax2_cfg, MIKROBUS_1 );
+    GNSSMAX2_MAP_MIKROBUS( gnssmax2_cfg, MIKROBUS_POSITION_GNSSMAX2 );
     if ( GNSSMAX2_OK != gnssmax2_init( &gnssmax2, &gnssmax2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

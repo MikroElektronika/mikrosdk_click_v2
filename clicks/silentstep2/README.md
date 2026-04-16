@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     silentstep2_cfg_setup( &silentstep2_cfg );
-    SILENTSTEP2_MAP_MIKROBUS( silentstep2_cfg, MIKROBUS_1 );
+    SILENTSTEP2_MAP_MIKROBUS( silentstep2_cfg, MIKROBUS_POSITION_SILENTSTEP2 );
     err_t init_flag = silentstep2_init( &silentstep2, &silentstep2_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

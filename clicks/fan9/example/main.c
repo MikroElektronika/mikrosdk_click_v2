@@ -23,6 +23,10 @@
 #include "log.h"
 #include "fan9.h"
 
+#ifndef MIKROBUS_POSITION_FAN9
+    #define MIKROBUS_POSITION_FAN9 MIKROBUS_1
+#endif
+
 static fan9_t fan9;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     fan9_cfg_setup( &fan9_cfg );
-    FAN9_MAP_MIKROBUS( fan9_cfg, MIKROBUS_1 );
+    FAN9_MAP_MIKROBUS( fan9_cfg, MIKROBUS_POSITION_FAN9 );
     if ( I2C_MASTER_ERROR == fan9_init( &fan9, &fan9_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

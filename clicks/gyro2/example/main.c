@@ -23,6 +23,10 @@
 #include "log.h"
 #include "gyro2.h"
 
+#ifndef MIKROBUS_POSITION_GYRO2
+    #define MIKROBUS_POSITION_GYRO2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static gyro2_t gyro2;
@@ -52,7 +56,7 @@ void application_init ( void )
     //  Click initialization.
 
     gyro2_cfg_setup( &cfg );
-    GYRO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    GYRO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_GYRO2 );
     gyro2_init( &gyro2, &cfg );
     Delay_ms ( 1000 );
     temp = gyro2_default_cfg( &gyro2 );

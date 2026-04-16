@@ -1,6 +1,6 @@
 /*!
  * \file 
- * \brief AMRCurent Click example
+ * \brief Amrcurrent Click example
  * 
  * # Description
  * This application integrated bi-directional analog output current sensors.
@@ -24,9 +24,13 @@
 #include "log.h"
 #include "amrcurrent.h"
 
+#ifndef MIKROBUS_POSITION_AMRCURRENT
+    #define MIKROBUS_POSITION_AMRCURRENT MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
-static amrcurent_t amrcurent;
+static amrcurrent_t amrcurrent;
 static log_t logger;
 uint16_t read_adc_val;
 float read_curr_val;
@@ -36,7 +40,7 @@ float read_curr_val;
 void application_init ( void )
 {
     log_cfg_t log_cfg;
-    amrcurent_cfg_t cfg;
+    amrcurrent_cfg_t cfg;
 
     /** 
      * Logger initialization.
@@ -53,21 +57,21 @@ void application_init ( void )
 
     //  Click initialization.
 
-    amrcurent_cfg_setup( &cfg );
-    AMRCURENT_MAP_MIKROBUS( cfg, MIKROBUS_1 );
-    amrcurent_init( &amrcurent, &cfg );
+    amrcurrent_cfg_setup( &cfg );
+    AMRCURRENT_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMRCURRENT );
+    amrcurrent_init( &amrcurrent, &cfg );
 }
 
 void application_task ( void )
 {
     //  Task implementation.
 
-    read_adc_val = amrcurrent_read_value ( &amrcurent );
+    read_adc_val = amrcurrent_read_value ( &amrcurrent );
     log_printf( &logger, " - ADC value: %d\r\n ", read_adc_val );
     
     Delay_ms ( 100 );
 
-    read_curr_val = amrcurrent_get_current (  &amrcurent );
+    read_curr_val = amrcurrent_get_current (  &amrcurrent );
     log_printf( &logger, " - Current value: %f\r\n ", read_curr_val );
     
     Delay_ms ( 1000 );

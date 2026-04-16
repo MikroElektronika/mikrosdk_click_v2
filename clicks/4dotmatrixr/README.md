@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     c4dotmatrixr_cfg_setup( &cfg );
-    C4DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C4DOTMATRIXR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_4DOTMATRIXR );
     c4dotmatrixr_init( &c4dotmatrixr, &cfg );
     
     c4dotmatrixr_default_cfg ( &c4dotmatrixr );

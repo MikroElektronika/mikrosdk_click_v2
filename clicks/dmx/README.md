@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     dmx_cfg_setup( &cfg );
-    DMX_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DMX_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DMX );
     dmx_init( &dmx, &cfg );
 
     dmx_set_auto_baud_rate( &dmx, 1 );

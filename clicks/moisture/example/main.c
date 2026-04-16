@@ -24,6 +24,10 @@
 #include "log.h"
 #include "moisture.h"
 
+#ifndef MIKROBUS_POSITION_MOISTURE
+    #define MIKROBUS_POSITION_MOISTURE MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static moisture_t moisture;
@@ -55,7 +59,7 @@ void application_init ( void )
     //  Click initialization.
 
     moisture_cfg_setup( &cfg );
-    MOISTURE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MOISTURE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MOISTURE );
     moisture_init( &moisture, &cfg );
     moisture_soft_reset( &moisture );
     Delay_ms ( 1000 );

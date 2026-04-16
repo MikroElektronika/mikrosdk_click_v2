@@ -85,7 +85,7 @@ void application_init ( )
     //  Click initialization.
 
     stepdown2_cfg_setup( &cfg );
-    STEPDOWN2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STEPDOWN2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STEPDOWN2 );
     stepdown2_init( &stepdown2, &cfg );
 
     stepdown2_digital_write_cs( &stepdown2, 1 );

@@ -86,7 +86,7 @@ void application_init ( void )
 
     // Click initialization.
     temphum28_cfg_setup( &temphum28_cfg );
-    TEMPHUM28_MAP_MIKROBUS( temphum28_cfg, MIKROBUS_1 );
+    TEMPHUM28_MAP_MIKROBUS( temphum28_cfg, MIKROBUS_POSITION_TEMPHUM28 );
     if ( SPI_MASTER_ERROR == temphum28_init( &temphum28, &temphum28_cfg ) )
     {
         log_error( &logger, " Communication init." );

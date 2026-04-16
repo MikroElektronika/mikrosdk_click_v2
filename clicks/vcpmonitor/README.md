@@ -90,7 +90,7 @@ void application_init ( void )
     log_info( &logger, "---- Application Init ----" );
     
     vcpmonitor_cfg_setup( &cfg );
-    VCPMONITOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    VCPMONITOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_VCPMONITOR );
     vcpmonitor_init( &vcpmonitor, &cfg );
     
     if ( VCPMONITOR_OK == vcpmonitor_get_id_value( &vcpmonitor, &manufacture_id, &did_id ) )

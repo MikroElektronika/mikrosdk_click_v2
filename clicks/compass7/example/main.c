@@ -24,6 +24,10 @@
 #include "log.h"
 #include "compass7.h"
 
+#ifndef MIKROBUS_POSITION_COMPASS7
+    #define MIKROBUS_POSITION_COMPASS7 MIKROBUS_1
+#endif
+
 static compass7_t compass7;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     compass7_cfg_setup( &compass7_cfg );
-    COMPASS7_MAP_MIKROBUS( compass7_cfg, MIKROBUS_1 );
+    COMPASS7_MAP_MIKROBUS( compass7_cfg, MIKROBUS_POSITION_COMPASS7 );
     if ( I2C_MASTER_ERROR == compass7_init( &compass7, &compass7_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

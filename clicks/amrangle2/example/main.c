@@ -23,6 +23,10 @@
 #include "log.h"
 #include "amrangle2.h"
 
+#ifndef MIKROBUS_POSITION_AMRANGLE2
+    #define MIKROBUS_POSITION_AMRANGLE2 MIKROBUS_1
+#endif
+
 static amrangle2_t amrangle2;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     amrangle2_cfg_setup( &amrangle2_cfg );
-    AMRANGLE2_MAP_MIKROBUS( amrangle2_cfg, MIKROBUS_1 );
+    AMRANGLE2_MAP_MIKROBUS( amrangle2_cfg, MIKROBUS_POSITION_AMRANGLE2 );
     if ( SPI_MASTER_ERROR == amrangle2_init( &amrangle2, &amrangle2_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -35,6 +35,10 @@
 #include "log.h"
 #include "heartrate9.h"
 
+#ifndef MIKROBUS_POSITION_HEARTRATE9
+    #define MIKROBUS_POSITION_HEARTRATE9 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 200
 
 static heartrate9_t heartrate9;
@@ -83,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     heartrate9_cfg_setup( &heartrate9_cfg );
-    HEARTRATE9_MAP_MIKROBUS( heartrate9_cfg, MIKROBUS_1 );
+    HEARTRATE9_MAP_MIKROBUS( heartrate9_cfg, MIKROBUS_POSITION_HEARTRATE9 );
     err_t init_flag  = heartrate9_init( &heartrate9, &heartrate9_cfg );
     if ( init_flag == UART_ERROR ) 
     {

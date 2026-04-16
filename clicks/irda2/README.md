@@ -88,7 +88,7 @@ void application_init( void )
     
     //  Click initialization.
     irda2_cfg_setup( &irda2_cfg );
-    IRDA2_MAP_MIKROBUS( irda2_cfg, MIKROBUS_1 );
+    IRDA2_MAP_MIKROBUS( irda2_cfg, MIKROBUS_POSITION_IRDA2 );
     if ( UART_ERROR == irda2_init( &irda2, &irda2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

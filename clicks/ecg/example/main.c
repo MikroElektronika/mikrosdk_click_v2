@@ -23,6 +23,10 @@
 #include "log.h"
 #include "ecg.h"
 
+#ifndef MIKROBUS_POSITION_ECG
+    #define MIKROBUS_POSITION_ECG MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ecg_t ecg;
@@ -62,7 +66,7 @@ void application_init ( void )
 
     ecg_cfg_setup( &cfg );
     Delay_ms ( 200 );
-    ECG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ECG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ECG );
     ecg_init( &ecg, &cfg );
     Delay_ms ( 200 );
 

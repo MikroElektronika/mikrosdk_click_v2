@@ -85,7 +85,7 @@ void application_init ( void )
 
     // Click initialization.
     micropump_cfg_setup( &micropump_cfg );
-    MICROPUMP_MAP_MIKROBUS( micropump_cfg, MIKROBUS_1 );
+    MICROPUMP_MAP_MIKROBUS( micropump_cfg, MIKROBUS_POSITION_MICROPUMP );
     if ( ADC_ERROR == micropump_init( &micropump, &micropump_cfg ) )
     {
         log_error( &logger, " Communication init." );

@@ -78,7 +78,7 @@ void application_init ( void )
 
     //  Click initialization.
     force2_cfg_setup( &cfg );
-    FORCE2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FORCE2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FORCE2 );
     force2_init( &force2, &cfg );
 
     log_printf( &logger, "--------------------\r\n" );

@@ -85,7 +85,7 @@ void application_init ( void )
     // Click initialization.
 
     ata6571_cfg_setup( &ata6571_cfg );
-    ATA6571_MAP_MIKROBUS( ata6571_cfg, MIKROBUS_1 );
+    ATA6571_MAP_MIKROBUS( ata6571_cfg, MIKROBUS_POSITION_ATA6571 );
     err_t init_flag = ata6571_init( &ata6571, &ata6571_cfg );
     if ( UART_ERROR == init_flag ) 
     {

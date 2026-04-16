@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     adc13_cfg_setup( &adc13_cfg );
-    ADC13_MAP_MIKROBUS( adc13_cfg, MIKROBUS_1 );
+    ADC13_MAP_MIKROBUS( adc13_cfg, MIKROBUS_POSITION_ADC13 );
     err_t init_flag  = adc13_init( &adc13, &adc13_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) 
     {

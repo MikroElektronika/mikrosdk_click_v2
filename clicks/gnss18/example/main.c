@@ -28,6 +28,10 @@
 #include "log.h"
 #include "gnss18.h"
 
+#ifndef MIKROBUS_POSITION_GNSS18
+    #define MIKROBUS_POSITION_GNSS18 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 300
 
 static gnss18_t gnss18;
@@ -85,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     gnss18_cfg_setup( &gnss18_cfg );
-    GNSS18_MAP_MIKROBUS( gnss18_cfg, MIKROBUS_1 );
+    GNSS18_MAP_MIKROBUS( gnss18_cfg, MIKROBUS_POSITION_GNSS18 );
     err_t init_flag = gnss18_init( &gnss18, &gnss18_cfg );
     if ( ( UART_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

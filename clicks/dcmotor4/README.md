@@ -89,7 +89,7 @@ void application_init ( )
     //  Click initialization.
 
     dcmotor4_cfg_setup( &cfg );
-    DCMOTOR4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DCMOTOR4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DCMOTOR4 );
     Delay_ms ( 100 );
     dcmotor4_init( &dcmotor4, &cfg );
     dcmotor4_pwm_start( &dcmotor4 );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "pedometer.h"
 
+#ifndef MIKROBUS_POSITION_PEDOMETER
+    #define MIKROBUS_POSITION_PEDOMETER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static pedometer_t pedometer;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     pedometer_cfg_setup( &cfg );
-    PEDOMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PEDOMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PEDOMETER );
     pedometer_init( &pedometer, &cfg );
 }
 
@@ -61,7 +65,6 @@ void application_task ( void )
 
     uint8_t new_step;
     uint32_t s_counter;
-    char demoText[ 50 ];
     
     new_step = pedometer_process( &pedometer );
 

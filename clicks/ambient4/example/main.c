@@ -22,6 +22,10 @@
 #include "log.h"
 #include "ambient4.h"
 
+#ifndef MIKROBUS_POSITION_AMBIENT4
+    #define MIKROBUS_POSITION_AMBIENT4 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static ambient4_t ambient4;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient4_cfg_setup( &cfg );
-    AMBIENT4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT4 );
     ambient4_init( &ambient4, &cfg );
     
     ambient4_device_reset( &ambient4 );

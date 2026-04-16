@@ -26,6 +26,10 @@
 #include "log.h"
 #include "uarttoi2c.h"
 
+#ifndef MIKROBUS_POSITION_UARTTOI2C
+    #define MIKROBUS_POSITION_UARTTOI2C MIKROBUS_1
+#endif
+
 // I2C target device configuration
 #define DEVICE_NAME                 "3D Hall 11 Click"
 #define DEVICE_SLAVE_ADDRESS        0x35
@@ -55,7 +59,7 @@ void application_init ( void )
 
     // Click initialization.
     uarttoi2c_cfg_setup( &uarttoi2c_cfg );
-    UARTTOI2C_MAP_MIKROBUS( uarttoi2c_cfg, MIKROBUS_1 );
+    UARTTOI2C_MAP_MIKROBUS( uarttoi2c_cfg, MIKROBUS_POSITION_UARTTOI2C );
     if ( UART_ERROR == uarttoi2c_init( &uarttoi2c, &uarttoi2c_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

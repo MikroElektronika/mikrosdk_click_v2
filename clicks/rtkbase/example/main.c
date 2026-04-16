@@ -30,6 +30,10 @@
 #include "log.h"
 #include "rtkbase.h"
 
+#ifndef MIKROBUS_POSITION_RTKBASE
+    #define MIKROBUS_POSITION_RTKBASE MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 300
 
 static rtkbase_t rtkbase;
@@ -78,7 +82,7 @@ void application_init ( void )
 
     // Click initialization.
     rtkbase_cfg_setup( &rtkbase_cfg );
-    RTKBASE_MAP_MIKROBUS( rtkbase_cfg, MIKROBUS_1 );
+    RTKBASE_MAP_MIKROBUS( rtkbase_cfg, MIKROBUS_POSITION_RTKBASE );
     if ( UART_ERROR == rtkbase_init( &rtkbase, &rtkbase_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "opto3.h"
 
+#ifndef MIKROBUS_POSITION_OPTO3
+    #define MIKROBUS_POSITION_OPTO3 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static opto3_t opto3;
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     opto3_cfg_setup( &cfg );
-    OPTO3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OPTO3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OPTO3 );
     opto3_init( &opto3, &cfg );
 
     log_info( &logger, " Application Task " );

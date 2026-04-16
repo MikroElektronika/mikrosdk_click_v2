@@ -1,39 +1,37 @@
-/*
- * MikroSDK - MikroE Software Development Kit
- * Copyright© 2020 MikroElektronika d.o.o.
- * 
- * Permission is hereby granted, free of charge, to any person 
- * obtaining a copy of this software and associated documentation 
- * files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, 
- * publish, distribute, sublicense, and/or sell copies of the Software, 
- * and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
- * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
- * OR OTHER DEALINGS IN THE SOFTWARE. 
- */
+/****************************************************************************
+** Copyright (C) 2026 MikroElektronika d.o.o.
+** Contact: https://www.mikroe.com/contact
+**
+** Permission is hereby granted, free of charge, to any person obtaining a copy
+** of this software and associated documentation files (the "Software"), to deal
+** in the Software without restriction, including without limitation the rights
+** to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+** copies of the Software, and to permit persons to whom the Software is
+** furnished to do so, subject to the following conditions:
+** The above copyright notice and this permission notice shall be
+** included in all copies or substantial portions of the Software.
+**
+** THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+** OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+** IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+** DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT
+** OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+**  USE OR OTHER DEALINGS IN THE SOFTWARE.
+****************************************************************************/
 
 /*!
  * \file
  *
  * \brief This file contains API for AMR Current Click driver.
  *
- * \addtogroup amrcurent AMR Current Click Driver
+ * \addtogroup amrcurrent AMR Current Click Driver
  * @{
  */
 // ----------------------------------------------------------------------------
 
-#ifndef AMRCURENT_H
-#define AMRCURENT_H
+#ifndef AMRCURRENT_H
+#define AMRCURRENT_H
 
 /**
  * Any initialization code needed for MCU to function properly.
@@ -63,7 +61,7 @@
  * \defgroup map_mikrobus MikroBUS
  * \{
  */
-#define AMRCURENT_MAP_MIKROBUS( cfg, mikrobus ) \
+#define AMRCURRENT_MAP_MIKROBUS( cfg, mikrobus ) \
   cfg.scl  = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
   cfg.sda  = MIKROBUS( mikrobus, MIKROBUS_SDA )
   
@@ -73,10 +71,10 @@
  * \defgroup error_code Error Code
  * \{
  */
-#define AMRCURENT_RETVAL  uint8_t
+#define AMRCURRENT_RETVAL  uint8_t
 
-#define AMRCURENT_OK           0x00
-#define AMRCURENT_INIT_ERROR   0xFF
+#define AMRCURRENT_OK           0x00
+#define AMRCURRENT_INIT_ERROR   0xFF
 /** \} */
 
 /**
@@ -116,7 +114,7 @@ typedef struct
 
     uint8_t slave_address;
 
-} amrcurent_t;
+} amrcurrent_t;
 
 /**
  * @brief Click configuration structure definition.
@@ -139,7 +137,7 @@ typedef struct
     uint32_t i2c_speed;
     uint8_t i2c_address;
 
-} amrcurent_cfg_t;
+} amrcurrent_cfg_t;
 
 /** \} */ // End types group
 
@@ -162,7 +160,7 @@ extern "C"{
  * @description This function initializes Click configuration structure to init state.
  * @note All used pins will be set to unconnected state.
  */
-void amrcurent_cfg_setup ( amrcurent_cfg_t *cfg );
+void amrcurrent_cfg_setup ( amrcurrent_cfg_t *cfg );
 
 /**
  * @brief Initialization function.
@@ -172,16 +170,16 @@ void amrcurent_cfg_setup ( amrcurent_cfg_t *cfg );
  * 
  * @description This function initializes all necessary pins and peripherals used for this Click.
  */
-AMRCURENT_RETVAL amrcurent_init ( amrcurent_t *ctx, amrcurent_cfg_t *cfg );
+AMRCURRENT_RETVAL amrcurrent_init ( amrcurrent_t *ctx, amrcurrent_cfg_t *cfg );
 
 /**
  * @brief Click Default Configuration function.
  *
  * @param ctx  Click object.
  *
- * @description This function executes default configuration for AMRCurent Click.
+ * @description This function executes default configuration for Amrcurrent Click.
  */
-void amrcurent_default_cfg ( amrcurent_t *ctx );
+void amrcurrent_default_cfg ( amrcurrent_t *ctx );
 
 /**
  * @brief Generic write function.
@@ -193,7 +191,7 @@ void amrcurent_default_cfg ( amrcurent_t *ctx );
  *
  * @description This function writes data to the desired register.
  */
-void amrcurent_generic_write ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void amrcurrent_generic_write ( amrcurrent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Generic read function.
@@ -205,7 +203,7 @@ void amrcurent_generic_write ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf,
  *
  * @description This function reads data from the desired register.
  */
-void amrcurent_generic_read ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
+void amrcurrent_generic_read ( amrcurrent_t *ctx, uint8_t reg, uint8_t *data_buf, uint8_t len );
 
 /**
  * @brief Reads ADC current data.
@@ -214,7 +212,7 @@ void amrcurent_generic_read ( amrcurent_t *ctx, uint8_t reg, uint8_t *data_buf, 
  *
  * @description This function read value.
  */
-uint16_t amrcurrent_read_value (  amrcurent_t *ctx );
+uint16_t amrcurrent_read_value (  amrcurrent_t *ctx );
 
 /**
  * @brief Gets state of the FLTB pin on int.
@@ -223,7 +221,7 @@ uint16_t amrcurrent_read_value (  amrcurent_t *ctx );
  *
  * @description This function state of the pin.
  */
-uint8_t amrcurrent_get_int_pin_state ( amrcurent_t *ctx );
+uint8_t amrcurrent_get_int_pin_state ( amrcurrent_t *ctx );
 
 /**
  * @brief Sets state of the reset pin.
@@ -233,7 +231,7 @@ uint8_t amrcurrent_get_int_pin_state ( amrcurent_t *ctx );
  *
  * @description This function sets rst pin state.
  */
-void amrcurrent_set_rst_pin_state ( amrcurent_t *ctx, uint8_t pin_state );
+void amrcurrent_set_rst_pin_state ( amrcurrent_t *ctx, uint8_t pin_state );
 
 /**
  * @brief Hardware reset device.
@@ -242,7 +240,7 @@ void amrcurrent_set_rst_pin_state ( amrcurent_t *ctx, uint8_t pin_state );
  *
  * @description This function reset hardware device.
  */
-void amrcurrent_hw_reset ( amrcurent_t *ctx );
+void amrcurrent_hw_reset ( amrcurrent_t *ctx );
 
 /**
  * @brief Reads current data in mA.
@@ -251,12 +249,12 @@ void amrcurrent_hw_reset ( amrcurent_t *ctx );
  *
  * @description This function gets current.
  */
-float amrcurrent_get_current ( amrcurent_t *ctx );
+float amrcurrent_get_current ( amrcurrent_t *ctx );
 
 #ifdef __cplusplus
 }
 #endif
-#endif  // _AMRCURENT_H_
+#endif  // _AMRCURRENT_H_
 
 /** \} */ // End public_function group
 /// \}    // End Click Driver group  

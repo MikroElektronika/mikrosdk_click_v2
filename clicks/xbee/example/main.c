@@ -29,6 +29,10 @@
 #include "log.h"
 #include "xbee.h"
 
+#ifndef MIKROBUS_POSITION_XBEE
+    #define MIKROBUS_POSITION_XBEE MIKROBUS_1
+#endif
+
 // Device name (Node identifier).
 #define DEVICE_NAME                 "XBEE Click"
 
@@ -102,7 +106,7 @@ void application_init ( void )
 
     // Click initialization.
     xbee_cfg_setup( &xbee_cfg );
-    XBEE_MAP_MIKROBUS( xbee_cfg, MIKROBUS_1 );
+    XBEE_MAP_MIKROBUS( xbee_cfg, MIKROBUS_POSITION_XBEE );
     if ( UART_ERROR == xbee_init( &xbee, &xbee_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

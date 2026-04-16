@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     xsensmti8_cfg_setup( &xsensmti8_cfg );
-    XSENSMTI8_MAP_MIKROBUS( xsensmti8_cfg, MIKROBUS_1 );
+    XSENSMTI8_MAP_MIKROBUS( xsensmti8_cfg, MIKROBUS_POSITION_XSENSMTI8 );
     if ( UART_ERROR == xsensmti8_init( &xsensmti8, &xsensmti8_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

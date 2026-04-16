@@ -96,7 +96,7 @@ void application_init ( void )
     //  Click initialization.
 
     c9dof_cfg_setup( &cfg );
-    C9DOF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C9DOF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_9DOF );
     c9dof_init( &c9dof, &cfg );
     
     c9dof_default_cfg ( &c9dof );

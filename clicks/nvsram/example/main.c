@@ -25,6 +25,10 @@
 #include "log.h"
 #include "nvsram.h"
 
+#ifndef MIKROBUS_POSITION_NVSRAM
+    #define MIKROBUS_POSITION_NVSRAM MIKROBUS_1
+#endif
+
 static nvsram_t nvsram;
 static log_t logger;
 
@@ -52,7 +56,7 @@ void application_init ( void ) {
 
     // Click initialization.
     nvsram_cfg_setup( &nvsram_cfg );
-    NVSRAM_MAP_MIKROBUS( nvsram_cfg, MIKROBUS_1 );
+    NVSRAM_MAP_MIKROBUS( nvsram_cfg, MIKROBUS_POSITION_NVSRAM );
     err_t init_flag = nvsram_init( &nvsram, &nvsram_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     solarenergy_cfg_setup( &cfg );
-    SOLARENERGY_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SOLARENERGY_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SOLARENERGY );
     solarenergy_init( &solarenergy, &cfg );
 
     log_printf( &logger, "   Initialization   \r\n" );

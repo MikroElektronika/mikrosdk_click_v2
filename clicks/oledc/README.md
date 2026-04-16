@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     oledc_cfg_setup( &cfg );
-    OLEDC_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    OLEDC_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_OLEDC );
     oledc_init( &oledc, &cfg );
 
     oledc_default_cfg( &oledc );

@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     stspin250_cfg_setup( &cfg );
-    STSPIN250_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    STSPIN250_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_STSPIN250 );
     stspin250_init( &stspin250, &cfg );
 
     stspin250_enable( &stspin250, STSPIN250_DEVICE_ENABLE );

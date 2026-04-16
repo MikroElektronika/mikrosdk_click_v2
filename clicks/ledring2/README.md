@@ -92,7 +92,7 @@ void application_init ( void )
 
     // Click initialization.
     ledring2_cfg_setup( &ledring2_cfg );
-    LEDRING2_MAP_MIKROBUS( ledring2_cfg, MIKROBUS_1 );
+    LEDRING2_MAP_MIKROBUS( ledring2_cfg, MIKROBUS_POSITION_LEDRING2 );
     if ( I2C_MASTER_ERROR == ledring2_init( &ledring2, &ledring2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

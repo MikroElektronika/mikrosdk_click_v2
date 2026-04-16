@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     ninaw152_cfg_setup( &ninaw152_cfg );
-    NINAW152_MAP_MIKROBUS( ninaw152_cfg, MIKROBUS_1 );
+    NINAW152_MAP_MIKROBUS( ninaw152_cfg, MIKROBUS_POSITION_NINAW152 );
     if ( NINAW152_OK != ninaw152_init( &ninaw152, &ninaw152_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

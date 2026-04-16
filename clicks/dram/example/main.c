@@ -24,6 +24,10 @@
 #include "log.h"
 #include "dram.h"
 
+#ifndef MIKROBUS_POSITION_DRAM
+    #define MIKROBUS_POSITION_DRAM MIKROBUS_1
+#endif
+
 #define DEMO_TEXT_MESSAGE_1     "MikroE"
 #define DEMO_TEXT_MESSAGE_2     "DRAM Click"
 #define STARTING_ADDRESS        0x012345ul
@@ -51,7 +55,7 @@ void application_init ( void )
 
     // Click initialization.
     dram_cfg_setup( &dram_cfg );
-    DRAM_MAP_MIKROBUS( dram_cfg, MIKROBUS_1 );
+    DRAM_MAP_MIKROBUS( dram_cfg, MIKROBUS_POSITION_DRAM );
     if ( SPI_MASTER_ERROR == dram_init( &dram, &dram_cfg ) )
     {
         log_error( &logger, " Communication init." );

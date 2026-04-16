@@ -23,6 +23,10 @@
 #include "log.h"
 #include "tpspressure040my.h"
 
+#ifndef MIKROBUS_POSITION_TPSPRESSURE040MY
+    #define MIKROBUS_POSITION_TPSPRESSURE040MY MIKROBUS_1
+#endif
+
 static tpspressure040my_t tpspressure040my;
 static log_t logger;
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     tpspressure040my_cfg_setup( &tpspressure040my_cfg );
-    TPSPRESSURE040MY_MAP_MIKROBUS( tpspressure040my_cfg, MIKROBUS_1 );
+    TPSPRESSURE040MY_MAP_MIKROBUS( tpspressure040my_cfg, MIKROBUS_POSITION_TPSPRESSURE040MY );
     if ( I2C_MASTER_ERROR == tpspressure040my_init( &tpspressure040my, &tpspressure040my_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

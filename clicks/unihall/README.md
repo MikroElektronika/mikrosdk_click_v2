@@ -83,7 +83,7 @@ void application_init ( void )
     //  Click initialization.
 
     unihall_cfg_setup( &cfg );
-    UNIHALL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    UNIHALL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_UNIHALL );
     unihall_init( &unihall, &cfg );
 
     unihall_state = UNIHALL_NORTH_POLE_DETECTED;

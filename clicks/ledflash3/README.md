@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ledflash3_cfg_setup( &ledflash3_cfg );
-    LEDFLASH3_MAP_MIKROBUS( ledflash3_cfg, MIKROBUS_1 );
+    LEDFLASH3_MAP_MIKROBUS( ledflash3_cfg, MIKROBUS_POSITION_LEDFLASH3 );
     if ( I2C_MASTER_ERROR == ledflash3_init( &ledflash3, &ledflash3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

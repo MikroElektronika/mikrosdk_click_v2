@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ipsdisplay_cfg_setup( &ipsdisplay_cfg );
-    IPSDISPLAY_MAP_MIKROBUS( ipsdisplay_cfg, MIKROBUS_1 );
+    IPSDISPLAY_MAP_MIKROBUS( ipsdisplay_cfg, MIKROBUS_POSITION_IPSDISPLAY );
     if ( SPI_MASTER_ERROR == ipsdisplay_init( &ipsdisplay, &ipsdisplay_cfg ) )
     {
         log_error( &logger, " Communication init." );

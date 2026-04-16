@@ -23,6 +23,10 @@
 #include "log.h"
 #include "tmrmixsens.h"
 
+#ifndef MIKROBUS_POSITION_TMRMIXSENS
+    #define MIKROBUS_POSITION_TMRMIXSENS MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static tmrmixsens_t tmrmixsens;
@@ -53,7 +57,7 @@ void application_init ( void )
     //  Click initialization.
 
     tmrmixsens_cfg_setup( &cfg );
-    TMRMIXSENS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    TMRMIXSENS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_TMRMIXSENS );
     tmrmixsens_init( &tmrmixsens, &cfg );
 }
 

@@ -24,6 +24,10 @@
 #include "log.h"
 #include "capwheel.h"
 
+#ifndef MIKROBUS_POSITION_CAPWHEEL
+    #define MIKROBUS_POSITION_CAPWHEEL MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static capwheel_t capwheel;
@@ -50,7 +54,7 @@ void application_init ( void )
     //  Click initialization.
 
     capwheel_cfg_setup( &cfg );
-    CAPWHEEL_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CAPWHEEL_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CAPWHEEL );
     capwheel_init( &capwheel, &cfg );
 
     capwheel_reset ( &capwheel );

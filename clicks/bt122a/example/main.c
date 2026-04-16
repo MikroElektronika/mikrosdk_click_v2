@@ -33,6 +33,10 @@
 #include "log.h"
 #include "bt122a.h"
 
+#ifndef MIKROBUS_POSITION_BT122A
+    #define MIKROBUS_POSITION_BT122A MIKROBUS_1
+#endif
+
 // Local device name.
 #define DEVICE_NAME     "BT122-A Click"
 
@@ -79,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     bt122a_cfg_setup( &bt122a_cfg );
-    BT122A_MAP_MIKROBUS( bt122a_cfg, MIKROBUS_1 );
+    BT122A_MAP_MIKROBUS( bt122a_cfg, MIKROBUS_POSITION_BT122A );
     if ( UART_ERROR == bt122a_init( &bt122a, &bt122a_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

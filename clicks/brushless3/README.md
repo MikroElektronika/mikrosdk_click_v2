@@ -88,7 +88,7 @@ void application_init ( void )
 
     //  Click initialization.
     brushless3_cfg_setup( &cfg );
-    BRUSHLESS3_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BRUSHLESS3_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BRUSHLESS3 );
     brushless3_init( &brushless3, &cfg );
     
     if ( BRUSHLESS3_ERROR == brushless3_default_cfg ( &brushless3 ) )

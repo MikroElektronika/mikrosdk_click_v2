@@ -24,6 +24,10 @@
 #include "log.h"
 #include "ibutton.h"
 
+#ifndef MIKROBUS_POSITION_IBUTTON
+    #define MIKROBUS_POSITION_IBUTTON MIKROBUS_1
+#endif
+
 #define NUMBER_OF_KEYS  1   // Number of keys to register.
 
 static ibutton_t ibutton;
@@ -75,7 +79,7 @@ void application_init ( void )
 
     // Click initialization.
     ibutton_cfg_setup( &ibutton_cfg );
-    IBUTTON_MAP_MIKROBUS( ibutton_cfg, MIKROBUS_1 );
+    IBUTTON_MAP_MIKROBUS( ibutton_cfg, MIKROBUS_POSITION_IBUTTON );
     if ( ONE_WIRE_ERROR == ibutton_init( &ibutton, &ibutton_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

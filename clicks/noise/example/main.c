@@ -25,6 +25,10 @@
 #include "log.h"
 #include "noise.h"
 
+#ifndef MIKROBUS_POSITION_NOISE
+    #define MIKROBUS_POSITION_NOISE MIKROBUS_1
+#endif
+
 static noise_t noise;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     //  Click initialization.
     noise_cfg_setup( &cfg );
-    NOISE_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    NOISE_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_NOISE );
     noise_init( &noise, &cfg );
 
     noise_default_cfg( &noise );

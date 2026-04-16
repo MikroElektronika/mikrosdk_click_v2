@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     i2cextend_cfg_setup( &i2cextend_cfg );
-    I2CEXTEND_MAP_MIKROBUS( i2cextend_cfg, MIKROBUS_1 );
+    I2CEXTEND_MAP_MIKROBUS( i2cextend_cfg, MIKROBUS_POSITION_I2CEXTEND );
     err_t init_flag = i2cextend_init( &i2cextend, &i2cextend_cfg );
     if ( I2C_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

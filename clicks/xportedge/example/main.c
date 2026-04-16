@@ -39,6 +39,10 @@
 #include "log.h"
 #include "xportedge.h"
 
+#ifndef MIKROBUS_POSITION_XPORTEDGE
+    #define MIKROBUS_POSITION_XPORTEDGE MIKROBUS_1
+#endif
+
 // Link or IP address for pinging
 #define ADDRESS_TO_PING             "https://www.mikroe.com"
 
@@ -110,7 +114,7 @@ void application_init ( void )
 
     // Click initialization.
     xportedge_cfg_setup( &xportedge_cfg );
-    XPORTEDGE_MAP_MIKROBUS( xportedge_cfg, MIKROBUS_1 );
+    XPORTEDGE_MAP_MIKROBUS( xportedge_cfg, MIKROBUS_POSITION_XPORTEDGE );
     if ( UART_ERROR == xportedge_init( &xportedge, &xportedge_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

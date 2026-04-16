@@ -88,7 +88,7 @@ void application_init ( void )
     //  Click initialization.
 
     compass_cfg_setup( &cfg );
-    COMPASS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    COMPASS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_COMPASS );
     compass_init( &compass, &cfg );
     compass_default_config( &compass );
 }

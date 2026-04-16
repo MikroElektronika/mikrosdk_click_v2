@@ -93,7 +93,7 @@ void application_init ( void )
 
     // Click initialization.
     lifemetrics_cfg_setup( &lifemetrics_cfg );
-    LIFEMETRICS_MAP_MIKROBUS( lifemetrics_cfg, MIKROBUS_1 );
+    LIFEMETRICS_MAP_MIKROBUS( lifemetrics_cfg, MIKROBUS_POSITION_LIFEMETRICS );
     if ( I2C_MASTER_ERROR == lifemetrics_init( &lifemetrics, &lifemetrics_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

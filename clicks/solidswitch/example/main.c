@@ -22,6 +22,10 @@
 #include "log.h"
 #include "solidswitch.h"
 
+#ifndef MIKROBUS_POSITION_SOLIDSWITCH
+    #define MIKROBUS_POSITION_SOLIDSWITCH MIKROBUS_1
+#endif
+
 static solidswitch_t solidswitch;
 static log_t logger;
 
@@ -56,7 +60,7 @@ void application_init ( void )
     // Click initialization.
 
     solidswitch_cfg_setup( &solidswitch_cfg );
-    SOLIDSWITCH_MAP_MIKROBUS( solidswitch_cfg, MIKROBUS_1 );
+    SOLIDSWITCH_MAP_MIKROBUS( solidswitch_cfg, MIKROBUS_POSITION_SOLIDSWITCH );
     err_t init_flag = solidswitch_init( &solidswitch, &solidswitch_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

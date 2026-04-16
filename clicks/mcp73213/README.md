@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     mcp73213_cfg_setup( &cfg );
-    MCP73213_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MCP73213_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MCP73213 );
     mcp73213_init( &mcp73213, &cfg );
 
     log_printf( &logger, "   SPI Driver Init     \r\n" );

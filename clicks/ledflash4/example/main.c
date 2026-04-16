@@ -25,6 +25,10 @@
 #include "log.h"
 #include "ledflash4.h"
 
+#ifndef MIKROBUS_POSITION_LEDFLASH4
+    #define MIKROBUS_POSITION_LEDFLASH4 MIKROBUS_1
+#endif
+
 static ledflash4_t ledflash4;
 static log_t logger;
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     ledflash4_cfg_setup( &ledflash4_cfg );
-    LEDFLASH4_MAP_MIKROBUS( ledflash4_cfg, MIKROBUS_1 );
+    LEDFLASH4_MAP_MIKROBUS( ledflash4_cfg, MIKROBUS_POSITION_LEDFLASH4 );
     if ( I2C_MASTER_ERROR == ledflash4_init( &ledflash4, &ledflash4_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

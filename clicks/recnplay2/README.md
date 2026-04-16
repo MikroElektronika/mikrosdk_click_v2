@@ -89,7 +89,7 @@ void application_init ( void )
 
     // Click initialization.
     recnplay2_cfg_setup( &recnplay2_cfg );
-    RECNPLAY2_MAP_MIKROBUS( recnplay2_cfg, MIKROBUS_1 );
+    RECNPLAY2_MAP_MIKROBUS( recnplay2_cfg, MIKROBUS_POSITION_RECNPLAY2 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == recnplay2_init( &recnplay2, &recnplay2_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     scanner_cfg_setup( &cfg );
-    SCANNER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    SCANNER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_SCANNER );
     scanner_init( &scanner, &cfg );
 
     Delay_ms ( 300 );

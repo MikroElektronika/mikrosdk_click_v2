@@ -26,6 +26,10 @@
 #include "log.h"
 #include "multimeter.h"
 
+#ifndef MIKROBUS_POSITION_MULTIMETER
+    #define MIKROBUS_POSITION_MULTIMETER MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static multimeter_t multimeter;
@@ -54,7 +58,7 @@ void application_init ( )
     //  Click initialization.
 
     multimeter_cfg_setup( &cfg );
-    MULTIMETER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    MULTIMETER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_MULTIMETER );
     multimeter_init( &multimeter, &cfg );
     multimeter_default_cfg( &multimeter );
 }

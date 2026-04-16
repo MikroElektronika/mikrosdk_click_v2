@@ -83,7 +83,7 @@ void application_init ( void )
     //  Click initialization.
 
     fan4_cfg_setup( &cfg );
-    FAN4_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    FAN4_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_FAN4 );
     fan4_init( &fan4, &cfg );
 
     fan4_default_cfg( &fan4 );

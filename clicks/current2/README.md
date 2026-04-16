@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     current2_cfg_setup( &cfg );
-    CURRENT2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CURRENT2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CURRENT2 );
     current2_init( &current, &cfg );
     Delay_ms ( 300 );
     log_printf( &logger, "Current 2 is initialized \r\n \r\n" );

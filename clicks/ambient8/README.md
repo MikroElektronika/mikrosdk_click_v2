@@ -87,7 +87,7 @@ void application_init ( void )
     //  Click initialization.
 
     ambient8_cfg_setup( &cfg );
-    AMBIENT8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    AMBIENT8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_AMBIENT8 );
     ambient8_init( &ambient8, &cfg );
 
     window_factor = 1.0;

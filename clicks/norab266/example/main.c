@@ -38,6 +38,10 @@
 #include "log.h"
 #include "norab266.h"
 
+#ifndef MIKROBUS_POSITION_NORAB266
+    #define MIKROBUS_POSITION_NORAB266 MIKROBUS_1
+#endif
+
 // Message content
 #define MESSAGE_CONTENT         "NORA-B266 Click board - demo example."
 
@@ -151,7 +155,7 @@ void application_init ( void )
 
     // Click initialization.
     norab266_cfg_setup( &norab266_cfg );
-    NORAB266_MAP_MIKROBUS( norab266_cfg, MIKROBUS_1 );
+    NORAB266_MAP_MIKROBUS( norab266_cfg, MIKROBUS_POSITION_NORAB266 );
     if ( NORAB266_OK != norab266_init( &norab266, &norab266_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

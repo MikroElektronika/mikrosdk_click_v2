@@ -76,7 +76,7 @@ void application_init ( void )
 
     //  Click initialization.
     c10x10rgb_cfg_setup( &cfg, &logic_zero, &logic_one );
-    C10X10RGB_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C10X10RGB_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_10X10RGB );
     c10x10rgb_init( &c10x10rgb, &cfg );
 
     c10x10rgb_fill_screen( &c10x10rgb, C10X10RGB_COLOR_OFF );

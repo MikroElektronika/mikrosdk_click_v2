@@ -30,6 +30,10 @@
 #include "enocean.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_ENOCEAN
+    #define MIKROBUS_POSITION_ENOCEAN MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static enocean_t enocean;
@@ -169,7 +173,7 @@ void application_init ( void )
     //  Click initialization.
 
     enocean_cfg_setup( &cfg );
-    ENOCEAN_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ENOCEAN_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ENOCEAN );
     enocean_init( &enocean, &cfg );
 
     Delay_ms ( 500 );

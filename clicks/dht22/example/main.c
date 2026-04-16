@@ -25,6 +25,10 @@
 #include "log.h"
 #include "dht22.h"
 
+#ifndef MIKROBUS_POSITION_DHT22
+    #define MIKROBUS_POSITION_DHT22 MIKROBUS_1
+#endif
+
 static dht22_t dht22;   /**< DHT22 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -48,7 +52,7 @@ void application_init ( void )
 
     // Click initialization.
     dht22_cfg_setup( &dht22_cfg );
-    DHT22_MAP_MIKROBUS( dht22_cfg, MIKROBUS_1 );
+    DHT22_MAP_MIKROBUS( dht22_cfg, MIKROBUS_POSITION_DHT22 );
 
    if ( DIGITAL_OUT_UNSUPPORTED_PIN == dht22_init( &dht22, &dht22_cfg ) ) 
     {

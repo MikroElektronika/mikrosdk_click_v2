@@ -22,6 +22,10 @@
 #include "log.h"
 #include "diffpress.h"
 
+#ifndef MIKROBUS_POSITION_DIFFPRESS
+    #define MIKROBUS_POSITION_DIFFPRESS MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static diffpress_t diffpress;
@@ -51,7 +55,7 @@ void application_init ( void )
     //  Click initialization.
 
     diffpress_cfg_setup( &cfg );
-    DIFFPRESS_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    DIFFPRESS_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_DIFFPRESS );
     diffpress_init( &diffpress, &cfg );
 }
 

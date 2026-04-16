@@ -78,7 +78,7 @@ void application_init ( void )
 
     // Click initialization.
     emg_cfg_setup( &emg_cfg );
-    EMG_MAP_MIKROBUS( emg_cfg, MIKROBUS_1 );
+    EMG_MAP_MIKROBUS( emg_cfg, MIKROBUS_POSITION_EMG );
     if ( ADC_ERROR == emg_init( &emg, &emg_cfg ) ) {
         log_error( &logger, " Application Init Error. " );
         log_info( &logger, " Please, run program again... " );

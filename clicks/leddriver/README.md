@@ -70,7 +70,7 @@ void application_init ( void )
     //  Click initialization.
 
     leddriver_cfg_setup( &cfg );
-    LEDDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    LEDDRIVER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_LEDDRIVER );
 
     if ( LEDDRIVER_OK != leddriver_init( &leddriver, &cfg ) )
     {

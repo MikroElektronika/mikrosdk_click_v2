@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     xportethxe_cfg_setup( &xportethxe_cfg );
-    XPORTETHXE_MAP_MIKROBUS( xportethxe_cfg, MIKROBUS_1 );
+    XPORTETHXE_MAP_MIKROBUS( xportethxe_cfg, MIKROBUS_POSITION_XPORTETHXE );
     if ( UART_ERROR == xportethxe_init( &xportethxe, &xportethxe_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

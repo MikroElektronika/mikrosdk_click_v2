@@ -27,6 +27,10 @@
 #include "log.h"
 #include "capslider3.h"
 
+#ifndef MIKROBUS_POSITION_CAPSLIDER3
+    #define MIKROBUS_POSITION_CAPSLIDER3 MIKROBUS_1
+#endif
+
 static capslider3_t capslider3;
 static log_t logger;
 
@@ -66,7 +70,7 @@ void application_init ( void )
 
     // Click initialization.
     capslider3_cfg_setup( &capslider3_cfg );
-    CAPSLIDER3_MAP_MIKROBUS( capslider3_cfg, MIKROBUS_1 );
+    CAPSLIDER3_MAP_MIKROBUS( capslider3_cfg, MIKROBUS_POSITION_CAPSLIDER3 );
     if ( I2C_MASTER_ERROR == capslider3_init( &capslider3, &capslider3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

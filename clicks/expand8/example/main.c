@@ -22,6 +22,10 @@
 #include "log.h"
 #include "expand8.h"
 
+#ifndef MIKROBUS_POSITION_EXPAND8
+    #define MIKROBUS_POSITION_EXPAND8 MIKROBUS_1
+#endif
+
 static expand8_t expand8;
 static log_t logger;
 uint8_t select_port;
@@ -47,7 +51,7 @@ void application_init ( void )
     // Click initialization.
 
     expand8_cfg_setup( &expand8_cfg );
-    EXPAND8_MAP_MIKROBUS( expand8_cfg, MIKROBUS_1 );
+    EXPAND8_MAP_MIKROBUS( expand8_cfg, MIKROBUS_POSITION_EXPAND8 );
     err_t init_flag  = expand8_init( &expand8, &expand8_cfg );
     if ( SPI_MASTER_ERROR == init_flag ) {
         log_error( &logger, " Application Init Error. " );

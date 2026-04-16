@@ -24,6 +24,10 @@
 #include "log.h"
 #include "dac14.h"
 
+#ifndef MIKROBUS_POSITION_DAC14
+    #define MIKROBUS_POSITION_DAC14 MIKROBUS_1
+#endif
+
 static dac14_t dac14;
 static log_t logger;
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     dac14_cfg_setup( &dac14_cfg );
-    DAC14_MAP_MIKROBUS( dac14_cfg, MIKROBUS_1 );
+    DAC14_MAP_MIKROBUS( dac14_cfg, MIKROBUS_POSITION_DAC14 );
     err_t init_flag = dac14_init( &dac14, &dac14_cfg );
     if ( ( I2C_MASTER_ERROR == init_flag ) || ( SPI_MASTER_ERROR == init_flag ) )
     {

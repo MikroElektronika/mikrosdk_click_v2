@@ -91,7 +91,7 @@ void application_init ( void )
 
     // Click initialization.
     powermux3_cfg_setup( &powermux3_cfg );
-    POWERMUX3_MAP_MIKROBUS( powermux3_cfg, MIKROBUS_1 );
+    POWERMUX3_MAP_MIKROBUS( powermux3_cfg, MIKROBUS_POSITION_POWERMUX3 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == powermux3_init( &powermux3, &powermux3_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

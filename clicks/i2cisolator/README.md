@@ -85,7 +85,7 @@ void application_init ( void )
     //  Click initialization.
 
     i2cisolator_cfg_setup( &cfg );
-    I2CISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    I2CISOLATOR_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_I2CISOLATOR );
     i2cisolator_init( &i2cisolator, &cfg );
 
     log_printf( &logger, "    Driver  Initialized\r\n" );

@@ -91,7 +91,7 @@ void application_init ( void )
     //  Click initialization.
 
     accel8_cfg_setup( &cfg );
-    ACCEL8_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ACCEL8_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ACCEL8 );
     accel8_init( &accel8, &cfg );
 
     log_printf( &logger, " *-* Device Reset *-* \r\n");

@@ -22,6 +22,10 @@
 #include "log.h"
 #include "buck22.h"
 
+#ifndef MIKROBUS_POSITION_BUCK22
+    #define MIKROBUS_POSITION_BUCK22 MIKROBUS_1
+#endif
+
 static buck22_t buck22;
 static log_t logger;
 
@@ -45,7 +49,7 @@ void application_init ( void )
 
     // Click initialization.
     buck22_cfg_setup( &buck22_cfg );
-    BUCK22_MAP_MIKROBUS( buck22_cfg, MIKROBUS_1 );
+    BUCK22_MAP_MIKROBUS( buck22_cfg, MIKROBUS_POSITION_BUCK22 );
     if ( I2C_MASTER_ERROR == buck22_init( &buck22, &buck22_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

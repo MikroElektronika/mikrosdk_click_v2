@@ -89,7 +89,7 @@ void application_init ( void )
     //  Click initialization.
 
     bargraph_cfg_setup( &cfg );
-    BARGRAPH_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    BARGRAPH_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_BARGRAPH );
     bargraph_init( &bargraph, &cfg );
 }
 ```

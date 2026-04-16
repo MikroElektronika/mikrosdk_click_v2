@@ -89,7 +89,7 @@ void application_init ( void )
     // Click initialization.
 
     solidswitch_cfg_setup( &solidswitch_cfg );
-    SOLIDSWITCH_MAP_MIKROBUS( solidswitch_cfg, MIKROBUS_1 );
+    SOLIDSWITCH_MAP_MIKROBUS( solidswitch_cfg, MIKROBUS_POSITION_SOLIDSWITCH );
     err_t init_flag = solidswitch_init( &solidswitch, &solidswitch_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

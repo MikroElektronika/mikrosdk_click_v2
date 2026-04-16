@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     tempprobe_cfg_setup( &tempprobe_cfg );
-    TEMPPROBE_MAP_MIKROBUS( tempprobe_cfg, MIKROBUS_1 );
+    TEMPPROBE_MAP_MIKROBUS( tempprobe_cfg, MIKROBUS_POSITION_TEMPPROBE );
     if ( SPI_MASTER_ERROR == tempprobe_init( &tempprobe, &tempprobe_cfg ) ) 
     {
         log_error( &logger, " Application Init Error. " );

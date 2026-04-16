@@ -29,6 +29,10 @@
 #include "log.h"
 #include "ezocarrierec.h"
 
+#ifndef MIKROBUS_POSITION_EZOCARRIEREC
+    #define MIKROBUS_POSITION_EZOCARRIEREC MIKROBUS_1
+#endif
+
 // Application buffer size
 #define APP_BUFFER_SIZE             200
 #define PROCESS_BUFFER_SIZE         200
@@ -106,7 +110,7 @@ void application_init ( void )
 
     // Click initialization.
     ezocarrierec_cfg_setup( &ezocarrierec_cfg );
-    EZOCARRIEREC_MAP_MIKROBUS( ezocarrierec_cfg, MIKROBUS_1 );
+    EZOCARRIEREC_MAP_MIKROBUS( ezocarrierec_cfg, MIKROBUS_POSITION_EZOCARRIEREC );
     if ( UART_ERROR == ezocarrierec_init( &ezocarrierec, &ezocarrierec_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

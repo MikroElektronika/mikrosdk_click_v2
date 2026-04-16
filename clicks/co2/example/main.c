@@ -28,6 +28,10 @@
 #include "log.h"
 #include "co2.h"
 
+#ifndef MIKROBUS_POSITION_CO2
+    #define MIKROBUS_POSITION_CO2 MIKROBUS_1
+#endif
+
 #define CO2_AIR_HUMIDITY 40/*< Relative air humidity in % */
 #define CO2_AIR_PRESSURE 1008/*< Relative air pressure in mBar */
 
@@ -54,7 +58,7 @@ void application_init ( void )
 
     // Click initialization.
     co2_cfg_setup( &co2_cfg );
-    CO2_MAP_MIKROBUS( co2_cfg, MIKROBUS_1 );
+    CO2_MAP_MIKROBUS( co2_cfg, MIKROBUS_POSITION_CO2 );
     err_t init_flag = co2_init( &co2, &co2_cfg );
     if ( init_flag == I2C_MASTER_ERROR ) 
     {

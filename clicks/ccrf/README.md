@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     ccrf_cfg_setup( &cfg );
-    CCRF_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    CCRF_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_CCRF );
     ccrf_init( &ccrf, &cfg );
 
     ccrf_default_cfg( &ccrf );

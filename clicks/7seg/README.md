@@ -95,7 +95,7 @@ void application_init ( void )
     //  Click initialization.
 
     c7seg_cfg_setup( &cfg );
-    C7SEG_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    C7SEG_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_7SEG );
     c7seg_init( &c7seg, &cfg );
     
     c7seg_default_cfg ( &c7seg );

@@ -23,6 +23,10 @@
 #include "log.h"
 #include "charger18.h"
 
+#ifndef MIKROBUS_POSITION_CHARGER18
+    #define MIKROBUS_POSITION_CHARGER18 MIKROBUS_1
+#endif
+
 static charger18_t charger18;   /**< Charger 18 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -46,7 +50,7 @@ void application_init ( void )
 
     // Click initialization.
     charger18_cfg_setup( &charger18_cfg );
-    CHARGER18_MAP_MIKROBUS( charger18_cfg, MIKROBUS_1 );
+    CHARGER18_MAP_MIKROBUS( charger18_cfg, MIKROBUS_POSITION_CHARGER18 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == charger18_init( &charger18, &charger18_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

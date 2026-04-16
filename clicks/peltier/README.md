@@ -84,7 +84,7 @@ void application_init ( void )
     //  Click initialization.
 
     peltier_cfg_setup( &cfg );
-    PELTIER_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    PELTIER_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_PELTIER );
     peltier_init( &peltier, &cfg ); 
 }
 ```

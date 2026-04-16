@@ -83,7 +83,7 @@ void application_init ( void )
 
     // Click initialization.
     ipd2017_cfg_setup( &ipd2017_cfg );
-    IPD2017_MAP_MIKROBUS( ipd2017_cfg, MIKROBUS_1 );
+    IPD2017_MAP_MIKROBUS( ipd2017_cfg, MIKROBUS_POSITION_IPD2017 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == ipd2017_init( &ipd2017, &ipd2017_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

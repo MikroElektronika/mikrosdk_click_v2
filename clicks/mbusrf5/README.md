@@ -87,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     mbusrf5_cfg_setup( &mbusrf5_cfg );
-    MBUSRF5_MAP_MIKROBUS( mbusrf5_cfg, MIKROBUS_1 );
+    MBUSRF5_MAP_MIKROBUS( mbusrf5_cfg, MIKROBUS_POSITION_MBUSRF5 );
     if ( UART_ERROR == mbusrf5_init( &mbusrf5, &mbusrf5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

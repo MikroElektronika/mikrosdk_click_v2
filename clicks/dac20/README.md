@@ -84,7 +84,7 @@ void application_init ( void )
 
     // Click initialization.
     dac20_cfg_setup( &dac20_cfg );
-    DAC20_MAP_MIKROBUS( dac20_cfg, MIKROBUS_1 );
+    DAC20_MAP_MIKROBUS( dac20_cfg, MIKROBUS_POSITION_DAC20 );
     if ( I2C_MASTER_ERROR == dac20_init( &dac20, &dac20_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

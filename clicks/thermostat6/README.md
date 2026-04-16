@@ -87,7 +87,7 @@ void application_init ( void )
 
     // Click initialization.
     thermostat6_cfg_setup( &thermostat6_cfg );
-    THERMOSTAT6_MAP_MIKROBUS( thermostat6_cfg, MIKROBUS_1 );
+    THERMOSTAT6_MAP_MIKROBUS( thermostat6_cfg, MIKROBUS_POSITION_THERMOSTAT6 );
     err_t init_flag = thermostat6_init( &thermostat6, &thermostat6_cfg );
     if ( ( ADC_ERROR == init_flag ) || ( I2C_MASTER_ERROR == init_flag ) )
     {

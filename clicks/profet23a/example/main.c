@@ -33,6 +33,10 @@
 #include "log.h"
 #include "profet23a.h"
 
+#ifndef MIKROBUS_POSITION_PROFET23A
+    #define MIKROBUS_POSITION_PROFET23A MIKROBUS_1
+#endif
+
 static profet23a_t profet23a;   /**< PROFET 2 3A Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -56,7 +60,7 @@ void application_init ( void )
 
     // Click initialization.
     profet23a_cfg_setup( &profet23a_cfg );
-    PROFET23A_MAP_MIKROBUS( profet23a_cfg, MIKROBUS_1 );
+    PROFET23A_MAP_MIKROBUS( profet23a_cfg, MIKROBUS_POSITION_PROFET23A );
     if ( ADC_ERROR == profet23a_init( &profet23a, &profet23a_cfg ) )
     {
         log_error( &logger, " Application Init Error. " );

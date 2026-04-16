@@ -24,6 +24,10 @@
 #include "log.h"
 #include "stspin820.h"
 
+#ifndef MIKROBUS_POSITION_STSPIN820
+    #define MIKROBUS_POSITION_STSPIN820 MIKROBUS_1
+#endif
+
 static stspin820_t stspin820;   /**< STSPIN820 Click driver object. */
 static log_t logger;    /**< Logger object. */
 
@@ -47,7 +51,7 @@ void application_init ( void )
 
     // Click initialization.
     stspin820_cfg_setup( &stspin820_cfg );
-    STSPIN820_MAP_MIKROBUS( stspin820_cfg, MIKROBUS_1 );
+    STSPIN820_MAP_MIKROBUS( stspin820_cfg, MIKROBUS_POSITION_STSPIN820 );
     if ( DIGITAL_OUT_UNSUPPORTED_PIN == stspin820_init( &stspin820, &stspin820_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

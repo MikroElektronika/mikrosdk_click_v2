@@ -26,6 +26,10 @@
 #include "log.h"
 #include "enocean5.h"
 
+#ifndef MIKROBUS_POSITION_ENOCEAN5
+    #define MIKROBUS_POSITION_ENOCEAN5 MIKROBUS_1
+#endif
+
 // Text messages
 #define DEMO_TEXT_MESSAGE_1 "MIKROE"
 #define DEMO_TEXT_MESSAGE_2 "EnOcean 5"
@@ -111,7 +115,7 @@ void application_init ( void )
 
     // Click initialization.
     enocean5_cfg_setup( &enocean5_cfg );
-    ENOCEAN5_MAP_MIKROBUS( enocean5_cfg, MIKROBUS_1 );
+    ENOCEAN5_MAP_MIKROBUS( enocean5_cfg, MIKROBUS_POSITION_ENOCEAN5 );
     if ( UART_ERROR == enocean5_init( &enocean5, &enocean5_cfg ) ) 
     {
         log_error( &logger, " Communication init." );

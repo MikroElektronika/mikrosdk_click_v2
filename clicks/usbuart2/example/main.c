@@ -22,6 +22,10 @@
 #include "usbuart2.h"
 #include "string.h"
 
+#ifndef MIKROBUS_POSITION_USBUART2
+    #define MIKROBUS_POSITION_USBUART2 MIKROBUS_1
+#endif
+
 #define PROCESS_BUFFER_SIZE 500
 
 static usbuart2_t usbuart2;
@@ -51,7 +55,7 @@ void application_init ( void ) {
     // Click initialization.
 
     usbuart2_cfg_setup( &usbuart2_cfg );
-    USBUART2_MAP_MIKROBUS( usbuart2_cfg, MIKROBUS_1 );
+    USBUART2_MAP_MIKROBUS( usbuart2_cfg, MIKROBUS_POSITION_USBUART2 );
     
     err_t init_flag  = usbuart2_init( &usbuart2, &usbuart2_cfg );
     if ( UART_ERROR == init_flag ) {

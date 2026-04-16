@@ -35,6 +35,10 @@
 #include "log.h"
 #include "adswio2.h"
 
+#ifndef MIKROBUS_POSITION_ADSWIO2
+    #define MIKROBUS_POSITION_ADSWIO2 MIKROBUS_1
+#endif
+
 // ------------------------------------------------------------------ VARIABLES
 
 static adswio2_t adswio2;
@@ -83,7 +87,7 @@ void application_init ( void )
     //  Click initialization.
 
     adswio2_cfg_setup( &cfg );
-    ADSWIO2_MAP_MIKROBUS( cfg, MIKROBUS_1 );
+    ADSWIO2_MAP_MIKROBUS( cfg, MIKROBUS_POSITION_ADSWIO2 );
     adswio2_init( &adswio2, &cfg );
     Delay_ms ( 100 );
     

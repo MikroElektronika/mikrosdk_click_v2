@@ -88,7 +88,7 @@ void application_init ( void )
 
     // Click initialization.
     expand14_cfg_setup( &expand14_cfg );
-    EXPAND14_MAP_MIKROBUS( expand14_cfg, MIKROBUS_1 );
+    EXPAND14_MAP_MIKROBUS( expand14_cfg, MIKROBUS_POSITION_EXPAND14 );
     if ( I2C_MASTER_ERROR == expand14_init( &expand14, &expand14_cfg ) ) 
     {
         log_error( &logger, " Communication init." );
