@@ -1,0 +1,22 @@
+{
+    "display_name": "TPS Pressure 100MG Click",
+    "name": "mikroe.click.tpspressure100mg",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6922",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TPS Pressure 100MG Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TPSPressure100MG",
+                "subdir_name": "lib_tpspressure100mg",
+                "path": "TPS Pressure 100MG Click/data/lib_tpspressure100mg"
+            }
+        ]
+    }
+}

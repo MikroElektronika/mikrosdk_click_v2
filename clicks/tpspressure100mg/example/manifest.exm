@@ -1,0 +1,5 @@
+{
+    "name": "TPS Pressure 100MG Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TPS-100MG-CA1N-00-T"]
+}
