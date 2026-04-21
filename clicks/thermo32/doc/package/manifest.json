@@ -1,0 +1,22 @@
+{
+    "display_name": "Thermo 32 Click",
+    "name": "mikroe.click.thermo32",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6941",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermo 32 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermo32",
+                "subdir_name": "lib_thermo32",
+                "path": "Thermo 32 Click/data/lib_thermo32"
+            }
+        ]
+    }
+}
