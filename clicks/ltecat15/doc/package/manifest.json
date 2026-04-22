@@ -1,0 +1,22 @@
+{
+    "display_name": "LTE Cat.1 5 Click",
+    "name": "mikroe.click.ltecat15",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6898",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE Cat.1 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTECat15",
+                "subdir_name": "lib_ltecat15",
+                "path": "LTE Cat.1 5 Click/data/lib_ltecat15"
+            }
+        ]
+    }
+}
