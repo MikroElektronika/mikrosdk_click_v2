@@ -2,7 +2,7 @@
     "display_name": "GNSS 15 Click",
     "name": "mikroe.click.gnss15",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5987",
     "package_changed": true,
     "contents": {

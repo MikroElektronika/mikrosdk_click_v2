@@ -2,7 +2,7 @@
     "display_name": "Hall Switch 2 Click",
     "name": "mikroe.click.hallswitch2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4788",
     "package_changed": true,
     "contents": {

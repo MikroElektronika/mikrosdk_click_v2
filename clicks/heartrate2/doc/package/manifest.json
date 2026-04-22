@@ -2,7 +2,7 @@
     "display_name": "Heart Rate 2 Click",
     "name": "mikroe.click.heartrate2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4037",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "RTK Rover Click",
     "name": "mikroe.click.rtkrover",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5440",
     "package_changed": true,
     "contents": {

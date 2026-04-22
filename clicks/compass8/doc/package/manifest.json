@@ -2,7 +2,7 @@
     "display_name": "Compass 8 Click",
     "name": "mikroe.click.compass8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6099",
     "package_changed": true,
     "contents": {

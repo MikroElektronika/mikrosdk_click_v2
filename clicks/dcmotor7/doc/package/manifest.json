@@ -2,7 +2,7 @@
     "display_name": "DC MOTOR 7 Click",
     "name": "mikroe.click.dcmotor7",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3289",
     "package_changed": true,
     "contents": {

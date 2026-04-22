@@ -2,7 +2,7 @@
     "display_name": "Thumbstick Click",
     "name": "mikroe.click.thumbstick",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1627",
     "package_changed": true,
     "contents": {

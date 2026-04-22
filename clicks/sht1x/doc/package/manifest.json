@@ -2,7 +2,7 @@
     "display_name": "SHT1x Click",
     "name": "mikroe.click.sht1x",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-949",
     "package_changed": true,
     "contents": {

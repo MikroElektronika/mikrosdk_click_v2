@@ -2,7 +2,7 @@
     "display_name": "iButton Click",
     "name": "mikroe.click.ibutton",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3045",
     "package_changed": true,
     "contents": {

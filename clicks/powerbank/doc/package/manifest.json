@@ -2,7 +2,7 @@
     "display_name": "PowerBank Click",
     "name": "mikroe.click.powerbank",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4082",
     "package_changed": true,
     "contents": {

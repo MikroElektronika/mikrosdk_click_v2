@@ -2,7 +2,7 @@
     "display_name": "USB UART ISO Click",
     "name": "mikroe.click.usbuartiso",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5815",
     "package_changed": true,
     "contents": {

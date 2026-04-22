@@ -2,7 +2,7 @@
     "display_name": "Expand 15 Click",
     "name": "mikroe.click.expand15",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5679",
     "package_changed": true,
     "contents": {

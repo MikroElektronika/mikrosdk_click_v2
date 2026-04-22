@@ -2,7 +2,7 @@
     "display_name": "BOOST Click",
     "name": "mikroe.click.boost",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2780",
     "package_changed": true,
     "contents": {

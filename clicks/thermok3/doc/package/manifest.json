@@ -2,7 +2,7 @@
     "display_name": "Thermo K 3 Click",
     "name": "mikroe.click.thermok3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5605",
     "package_changed": true,
     "contents": {

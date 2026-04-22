@@ -2,7 +2,7 @@
     "display_name": "TouchKey Click",
     "name": "mikroe.click.touchkey",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1906",
     "package_changed": true,
     "contents": {

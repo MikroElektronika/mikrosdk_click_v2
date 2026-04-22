@@ -2,7 +2,7 @@
     "display_name": "Altitude Click",
     "name": "mikroe.click.altitude",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1489",
     "package_changed": true,
     "contents": {

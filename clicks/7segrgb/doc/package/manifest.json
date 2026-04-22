@@ -2,7 +2,7 @@
     "display_name": "7-SEG RGB Click",
     "name": "mikroe.click.7segrgb",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2734",
     "package_changed": true,
     "contents": {

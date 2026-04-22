@@ -2,7 +2,7 @@
     "display_name": "Thermo 3 Click",
     "name": "mikroe.click.thermo3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1885",
     "package_changed": true,
     "contents": {

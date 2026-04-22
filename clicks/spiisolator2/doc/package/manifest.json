@@ -2,7 +2,7 @@
     "display_name": "SPI Isolator 2 Click",
     "name": "mikroe.click.spiisolator2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4415",
     "package_changed": true,
     "contents": {

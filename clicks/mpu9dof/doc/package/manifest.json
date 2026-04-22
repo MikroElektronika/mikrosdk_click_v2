@@ -2,7 +2,7 @@
     "display_name": "MPU 9DOF Click",
     "name": "mikroe.click.mpu9dof",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1719",
     "package_changed": true,
     "contents": {

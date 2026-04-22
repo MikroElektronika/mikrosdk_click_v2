@@ -2,7 +2,7 @@
     "display_name": "Color 8 Click",
     "name": "mikroe.click.color8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3213",
     "package_changed": true,
     "contents": {

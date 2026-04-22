@@ -2,7 +2,7 @@
     "display_name": "RMS to DC Click",
     "name": "mikroe.click.rmstodc",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3311",
     "package_changed": true,
     "contents": {

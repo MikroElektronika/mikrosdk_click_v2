@@ -2,7 +2,7 @@
     "display_name": "Dual LIN Click",
     "name": "mikroe.click.duallin",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3870",
     "package_changed": true,
     "contents": {

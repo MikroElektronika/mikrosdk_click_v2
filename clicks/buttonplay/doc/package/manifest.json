@@ -2,7 +2,7 @@
     "display_name": "Button PLAY Click",
     "name": "mikroe.click.buttonplay",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3327",
     "package_changed": true,
     "contents": {

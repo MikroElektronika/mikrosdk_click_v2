@@ -2,7 +2,7 @@
     "display_name": "Air Quality 8 Click",
     "name": "mikroe.click.airquality8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4904",
     "package_changed": true,
     "contents": {

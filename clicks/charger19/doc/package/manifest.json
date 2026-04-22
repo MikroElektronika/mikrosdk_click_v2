@@ -2,7 +2,7 @@
     "display_name": "Charger 19 Click",
     "name": "mikroe.click.charger19",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5899",
     "package_changed": true,
     "contents": {

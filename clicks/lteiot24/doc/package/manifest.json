@@ -2,7 +2,7 @@
     "display_name": "LTE IoT 24 Click",
     "name": "mikroe.click.lteiot24",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6933",
     "package_changed": true,
     "contents": {

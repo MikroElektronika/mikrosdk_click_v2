@@ -2,7 +2,7 @@
     "display_name": "Power MUX 2 Click",
     "name": "mikroe.click.powermux2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4575",
     "package_changed": true,
     "contents": {

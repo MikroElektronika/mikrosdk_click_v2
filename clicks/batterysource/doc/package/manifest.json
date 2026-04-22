@@ -2,7 +2,7 @@
     "display_name": "Battery Source Click",
     "name": "mikroe.click.batterysource",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6090",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "OLED Switch Click",
     "name": "mikroe.click.oledswitch",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2449",
     "package_changed": true,
     "contents": {

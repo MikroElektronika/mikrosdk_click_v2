@@ -2,7 +2,7 @@
     "display_name": "Haptic 4 Click",
     "name": "mikroe.click.haptic4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6045",
     "package_changed": true,
     "contents": {

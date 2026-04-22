@@ -2,7 +2,7 @@
     "display_name": "Slider Click",
     "name": "mikroe.click.slider",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2702",
     "package_changed": true,
     "contents": {

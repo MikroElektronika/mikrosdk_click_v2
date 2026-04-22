@@ -2,7 +2,7 @@
     "display_name": "GNSS RTK 3 EA Click",
     "name": "mikroe.click.gnssrtk3ea",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5933",
     "package_changed": true,
     "contents": {

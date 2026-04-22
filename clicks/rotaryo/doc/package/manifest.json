@@ -2,7 +2,7 @@
     "display_name": "ROTARY O Click",
     "name": "mikroe.click.rotaryo",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2380",
     "package_changed": true,
     "contents": {

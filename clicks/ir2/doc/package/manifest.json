@@ -2,7 +2,7 @@
     "display_name": "IR 2 Click",
     "name": "mikroe.click.ir2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5088",
     "package_changed": true,
     "contents": {

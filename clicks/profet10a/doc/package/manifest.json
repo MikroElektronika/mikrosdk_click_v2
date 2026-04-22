@@ -2,7 +2,7 @@
     "display_name": "PROFET 10A Click",
     "name": "mikroe.click.profet10a",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4817",
     "package_changed": true,
     "contents": {

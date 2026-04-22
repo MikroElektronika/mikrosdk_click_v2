@@ -2,7 +2,7 @@
     "display_name": "LTE Cat.1-US Click",
     "name": "mikroe.click.ltecat1us",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3885",
     "package_changed": true,
     "contents": {

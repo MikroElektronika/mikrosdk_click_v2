@@ -2,7 +2,7 @@
     "display_name": "Load Cell 7 Click",
     "name": "mikroe.click.loadcell7",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5276",
     "package_changed": true,
     "contents": {

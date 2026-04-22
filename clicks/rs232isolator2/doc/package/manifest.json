@@ -2,7 +2,7 @@
     "display_name": "RS232 Isolator 2 Click",
     "name": "mikroe.click.rs232isolator2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4536",
     "package_changed": true,
     "contents": {

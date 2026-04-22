@@ -2,7 +2,7 @@
     "display_name": "6DOF IMU 8 Click",
     "name": "mikroe.click.6dofimu8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3447",
     "package_changed": true,
     "contents": {

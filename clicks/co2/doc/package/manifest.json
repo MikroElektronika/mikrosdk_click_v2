@@ -2,7 +2,7 @@
     "display_name": "CO2 Click",
     "name": "mikroe.click.co2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4725",
     "package_changed": true,
     "contents": {

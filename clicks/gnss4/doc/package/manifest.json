@@ -2,7 +2,7 @@
     "display_name": "GNSS4 Click",
     "name": "mikroe.click.gnss4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2045",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "GNSS 21 Click",
     "name": "mikroe.click.gnss21",
     "type": "click",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "pid": "MIKROE-6409",
     "package_changed": true,
     "contents": {

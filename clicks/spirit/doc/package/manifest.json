@@ -2,7 +2,7 @@
     "display_name": "SPIRIT Click",
     "name": "mikroe.click.spirit",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2568",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "TFmini Click",
     "name": "mikroe.click.tfmini",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4974",
     "package_changed": true,
     "contents": {

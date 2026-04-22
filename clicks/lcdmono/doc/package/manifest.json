@@ -2,7 +2,7 @@
     "display_name": "LCD Mono Click",
     "name": "mikroe.click.lcdmono",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3789",
     "package_changed": true,
     "contents": {

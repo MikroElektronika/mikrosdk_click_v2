@@ -2,7 +2,7 @@
     "display_name": "HDC1000 Click",
     "name": "mikroe.click.hdc1000",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1797",
     "package_changed": true,
     "contents": {

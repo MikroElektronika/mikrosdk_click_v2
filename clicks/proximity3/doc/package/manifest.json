@@ -2,7 +2,7 @@
     "display_name": "Proximity 3 Click",
     "name": "mikroe.click.proximity3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2801",
     "package_changed": true,
     "contents": {

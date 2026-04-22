@@ -2,7 +2,7 @@
     "display_name": "I2C Extend 2 Click",
     "name": "mikroe.click.i2cextend2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4419",
     "package_changed": true,
     "contents": {

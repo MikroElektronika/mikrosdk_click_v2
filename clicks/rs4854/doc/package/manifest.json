@@ -2,7 +2,7 @@
     "display_name": "RS485 4 Click",
     "name": "mikroe.click.rs4854",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3395",
     "package_changed": true,
     "contents": {

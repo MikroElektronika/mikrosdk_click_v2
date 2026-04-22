@@ -2,7 +2,7 @@
     "display_name": "DTMF Click",
     "name": "mikroe.click.dtmf",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5997",
     "package_changed": true,
     "contents": {

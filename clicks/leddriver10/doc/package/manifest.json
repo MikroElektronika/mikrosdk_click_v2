@@ -2,7 +2,7 @@
     "display_name": "LED Driver 10 Click",
     "name": "mikroe.click.leddriver10",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4787",
     "package_changed": true,
     "contents": {

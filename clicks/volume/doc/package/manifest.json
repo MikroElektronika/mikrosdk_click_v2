@@ -2,7 +2,7 @@
     "display_name": "Volume Click",
     "name": "mikroe.click.volume",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4450",
     "package_changed": true,
     "contents": {

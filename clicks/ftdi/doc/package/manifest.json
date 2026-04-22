@@ -2,7 +2,7 @@
     "display_name": "FTDI Click",
     "name": "mikroe.click.ftdi",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1421",
     "package_changed": true,
     "contents": {

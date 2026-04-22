@@ -2,7 +2,7 @@
     "display_name": "4x4 Key Click",
     "name": "mikroe.click.4x4key",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1889",
     "package_changed": true,
     "contents": {

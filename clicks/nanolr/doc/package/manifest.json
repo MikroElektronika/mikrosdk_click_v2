@@ -2,7 +2,7 @@
     "display_name": "Nano LR Click",
     "name": "mikroe.click.nanolr",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4514",
     "package_changed": true,
     "contents": {

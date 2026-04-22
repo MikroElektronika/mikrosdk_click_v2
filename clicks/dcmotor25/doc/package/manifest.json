@@ -2,7 +2,7 @@
     "display_name": "DC Motor 25 Click",
     "name": "mikroe.click.dcmotor25",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5523",
     "package_changed": true,
     "contents": {

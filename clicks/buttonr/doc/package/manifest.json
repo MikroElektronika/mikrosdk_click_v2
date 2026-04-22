@@ -2,7 +2,7 @@
     "display_name": "Button R Click",
     "name": "mikroe.click.buttonr",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1901",
     "package_changed": true,
     "contents": {

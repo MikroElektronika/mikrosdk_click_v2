@@ -2,7 +2,7 @@
     "display_name": "Proximity 18 Click",
     "name": "mikroe.click.proximity18",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5300",
     "package_changed": true,
     "contents": {

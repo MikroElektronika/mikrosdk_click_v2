@@ -2,7 +2,7 @@
     "display_name": "Thermostat 2 Click",
     "name": "mikroe.click.thermostat2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3415",
     "package_changed": true,
     "contents": {

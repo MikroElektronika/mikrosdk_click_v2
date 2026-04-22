@@ -2,7 +2,7 @@
     "display_name": "Speaker Click",
     "name": "mikroe.click.speaker",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4662",
     "package_changed": true,
     "contents": {

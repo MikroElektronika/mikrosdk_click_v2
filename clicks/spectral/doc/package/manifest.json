@@ -2,7 +2,7 @@
     "display_name": "Spectral Click",
     "name": "mikroe.click.spectral",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2972",
     "package_changed": true,
     "contents": {

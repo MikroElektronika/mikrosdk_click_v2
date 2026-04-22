@@ -2,7 +2,7 @@
     "display_name": "NFC Extend Click",
     "name": "mikroe.click.nfcextend",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3971",
     "package_changed": true,
     "contents": {

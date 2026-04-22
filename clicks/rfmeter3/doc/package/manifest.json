@@ -2,7 +2,7 @@
     "display_name": "RF Meter 3 Click",
     "name": "mikroe.click.rfmeter3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4906",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "RS232 2 Click",
     "name": "mikroe.click.rs2322",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1582",
     "package_changed": true,
     "contents": {

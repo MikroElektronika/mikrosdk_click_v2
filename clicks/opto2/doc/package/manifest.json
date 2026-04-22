@@ -2,7 +2,7 @@
     "display_name": "Opto 2 Click",
     "name": "mikroe.click.opto2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3015",
     "package_changed": true,
     "contents": {

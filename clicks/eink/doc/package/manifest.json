@@ -2,7 +2,7 @@
     "display_name": "eINK Click",
     "name": "mikroe.click.eink",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2659",
     "package_changed": true,
     "contents": {

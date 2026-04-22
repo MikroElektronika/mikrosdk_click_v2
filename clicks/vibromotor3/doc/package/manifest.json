@@ -2,7 +2,7 @@
     "display_name": "Vibro Motor 3 Click",
     "name": "mikroe.click.vibromotor3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4356",
     "package_changed": true,
     "contents": {

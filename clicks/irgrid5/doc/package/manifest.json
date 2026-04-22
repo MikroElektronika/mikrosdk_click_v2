@@ -2,7 +2,7 @@
     "display_name": "IR Grid 5 Click",
     "name": "mikroe.click.irgrid5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6764",
     "package_changed": true,
     "contents": {

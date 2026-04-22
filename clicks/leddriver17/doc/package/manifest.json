@@ -2,7 +2,7 @@
     "display_name": "LED Driver 17 Click",
     "name": "mikroe.click.leddriver17",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5565",
     "package_changed": true,
     "contents": {

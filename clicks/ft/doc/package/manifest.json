@@ -2,7 +2,7 @@
     "display_name": "FT Click",
     "name": "mikroe.click.ft",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3929",
     "package_changed": true,
     "contents": {

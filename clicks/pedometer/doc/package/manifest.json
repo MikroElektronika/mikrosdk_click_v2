@@ -2,7 +2,7 @@
     "display_name": "Pedometer Click",
     "name": "mikroe.click.pedometer",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3567",
     "package_changed": true,
     "contents": {

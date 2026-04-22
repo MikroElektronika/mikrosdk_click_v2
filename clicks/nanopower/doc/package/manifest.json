@@ -2,7 +2,7 @@
     "display_name": "Nano Power Click",
     "name": "mikroe.click.nanopower",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3035",
     "package_changed": true,
     "contents": {

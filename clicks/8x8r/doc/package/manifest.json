@@ -2,7 +2,7 @@
     "display_name": "8x8 R Click",
     "name": "mikroe.click.8x8r",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1295",
     "package_changed": true,
     "contents": {

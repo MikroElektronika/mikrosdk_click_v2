@@ -339,6 +339,8 @@
 
 + `LTE Cat.1 5 Click`
 
+*All Click boards have been updated*
+
 **[BACK TO TOP](#changelog)**
 
 ---

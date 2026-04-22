@@ -2,7 +2,7 @@
     "display_name": "Motion 3 Click",
     "name": "mikroe.click.motion3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4049",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "CAN Isolator 3 Click",
     "name": "mikroe.click.canisolator3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5785",
     "package_changed": true,
     "contents": {

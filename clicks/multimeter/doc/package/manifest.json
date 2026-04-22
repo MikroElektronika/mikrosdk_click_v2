@@ -2,7 +2,7 @@
     "display_name": "Multimeter Click",
     "name": "mikroe.click.multimeter",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3116",
     "package_changed": true,
     "contents": {

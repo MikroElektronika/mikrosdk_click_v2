@@ -2,7 +2,7 @@
     "display_name": "8-pin I2C Click",
     "name": "mikroe.click.8pini2c",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4241",
     "package_changed": true,
     "contents": {

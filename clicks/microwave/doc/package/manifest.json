@@ -2,7 +2,7 @@
     "display_name": "Microwave Click",
     "name": "mikroe.click.microwave",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2781",
     "package_changed": true,
     "contents": {

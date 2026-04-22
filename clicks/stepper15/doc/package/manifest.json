@@ -2,7 +2,7 @@
     "display_name": "Stepper 15 Click",
     "name": "mikroe.click.stepper15",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4639",
     "package_changed": true,
     "contents": {

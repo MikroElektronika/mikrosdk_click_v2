@@ -2,7 +2,7 @@
     "display_name": "IrThermo 3 Click",
     "name": "mikroe.click.irthermo3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3121",
     "package_changed": true,
     "contents": {

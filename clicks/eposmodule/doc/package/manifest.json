@@ -2,7 +2,7 @@
     "display_name": "EPOS Module Click",
     "name": "mikroe.click.eposmodule",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6170",
     "package_changed": true,
     "contents": {

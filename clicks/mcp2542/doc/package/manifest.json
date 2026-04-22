@@ -2,7 +2,7 @@
     "display_name": "MCP2542 Click",
     "name": "mikroe.click.mcp2542",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2299",
     "package_changed": true,
     "contents": {

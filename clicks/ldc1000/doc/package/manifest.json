@@ -2,7 +2,7 @@
     "display_name": "LDC 1000 Click",
     "name": "mikroe.click.ldc1000",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1583",
     "package_changed": true,
     "contents": {

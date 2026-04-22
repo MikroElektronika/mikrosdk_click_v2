@@ -2,7 +2,7 @@
     "display_name": "Accel 14 Click",
     "name": "mikroe.click.accel14",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4185",
     "package_changed": true,
     "contents": {

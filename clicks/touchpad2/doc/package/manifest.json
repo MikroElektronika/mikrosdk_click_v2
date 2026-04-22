@@ -2,7 +2,7 @@
     "display_name": "TouchPad 2 Click",
     "name": "mikroe.click.touchpad2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4594",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "SolidSwitch 2 Click",
     "name": "mikroe.click.solidswitch2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5313",
     "package_changed": true,
     "contents": {

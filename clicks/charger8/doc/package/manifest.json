@@ -2,7 +2,7 @@
     "display_name": "Charger 8 Click",
     "name": "mikroe.click.charger8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3348",
     "package_changed": true,
     "contents": {

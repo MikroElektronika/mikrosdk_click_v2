@@ -2,7 +2,7 @@
     "display_name": "eFuse 2 Click",
     "name": "mikroe.click.efuse2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4335",
     "package_changed": true,
     "contents": {

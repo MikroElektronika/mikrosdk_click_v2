@@ -2,7 +2,7 @@
     "display_name": "ADC 3 Click",
     "name": "mikroe.click.adc3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1894",
     "package_changed": true,
     "contents": {

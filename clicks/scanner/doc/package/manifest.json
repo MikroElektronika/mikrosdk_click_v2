@@ -2,7 +2,7 @@
     "display_name": "Scanner Click",
     "name": "mikroe.click.scanner",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4108",
     "package_changed": true,
     "contents": {

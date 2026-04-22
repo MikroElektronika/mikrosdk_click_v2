@@ -2,7 +2,7 @@
     "display_name": "Compass 5 Click",
     "name": "mikroe.click.compass5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4366",
     "package_changed": true,
     "contents": {

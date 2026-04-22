@@ -2,7 +2,7 @@
     "display_name": "ReRAM 2 Click",
     "name": "mikroe.click.reram2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4895",
     "package_changed": true,
     "contents": {

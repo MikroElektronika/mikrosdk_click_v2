@@ -2,7 +2,7 @@
     "display_name": "MCP1664 Click",
     "name": "mikroe.click.mcp1664",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2548",
     "package_changed": true,
     "contents": {

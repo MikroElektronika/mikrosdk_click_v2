@@ -2,7 +2,7 @@
     "display_name": "Air Flow Click",
     "name": "mikroe.click.airflow",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4677",
     "package_changed": true,
     "contents": {

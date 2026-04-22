@@ -2,7 +2,7 @@
     "display_name": "Barometer 8 Click",
     "name": "mikroe.click.barometer8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5128",
     "package_changed": true,
     "contents": {

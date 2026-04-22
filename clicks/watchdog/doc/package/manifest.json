@@ -2,7 +2,7 @@
     "display_name": "Watchdog Click",
     "name": "mikroe.click.watchdog",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4416",
     "package_changed": true,
     "contents": {

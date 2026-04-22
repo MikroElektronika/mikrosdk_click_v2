@@ -2,7 +2,7 @@
     "display_name": "BarGraph Click",
     "name": "mikroe.click.bargraph",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1423",
     "package_changed": true,
     "contents": {

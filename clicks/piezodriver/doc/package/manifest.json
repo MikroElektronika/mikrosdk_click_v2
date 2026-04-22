@@ -2,7 +2,7 @@
     "display_name": "Piezo Driver Click",
     "name": "mikroe.click.piezodriver",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5896",
     "package_changed": true,
     "contents": {

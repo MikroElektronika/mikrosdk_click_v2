@@ -2,7 +2,7 @@
     "display_name": "ADAC Click",
     "name": "mikroe.click.adac",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2690",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "Analog Key Click",
     "name": "mikroe.click.analogkey",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3409",
     "package_changed": true,
     "contents": {

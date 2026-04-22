@@ -2,7 +2,7 @@
     "display_name": "IR Sense 4 Click",
     "name": "mikroe.click.irsense4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5952",
     "package_changed": true,
     "contents": {

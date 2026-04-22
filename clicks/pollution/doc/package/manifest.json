@@ -2,7 +2,7 @@
     "display_name": "Pollution Click",
     "name": "mikroe.click.pollution",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2516",
     "package_changed": true,
     "contents": {

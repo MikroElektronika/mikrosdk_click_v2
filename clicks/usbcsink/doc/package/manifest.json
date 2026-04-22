@@ -2,7 +2,7 @@
     "display_name": "USB-C Sink Click",
     "name": "mikroe.click.usbcsink",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4328",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "H-Bridge Driver Click",
     "name": "mikroe.click.hbridgedriver",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4696",
     "package_changed": true,
     "contents": {

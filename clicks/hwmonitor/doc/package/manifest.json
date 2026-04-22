@@ -2,7 +2,7 @@
     "display_name": "HW Monitor Click",
     "name": "mikroe.click.hwmonitor",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5684",
     "package_changed": true,
     "contents": {

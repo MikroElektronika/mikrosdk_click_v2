@@ -2,7 +2,7 @@
     "display_name": "Relay 6 Click",
     "name": "mikroe.click.relay6",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6001",
     "package_changed": true,
     "contents": {

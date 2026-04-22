@@ -2,7 +2,7 @@
     "display_name": "2x2 key Click",
     "name": "mikroe.click.2x2key",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2152",
     "package_changed": true,
     "contents": {

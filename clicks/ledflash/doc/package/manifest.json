@@ -2,7 +2,7 @@
     "display_name": "LED Flash Click",
     "name": "mikroe.click.ledflash",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2479",
     "package_changed": true,
     "contents": {

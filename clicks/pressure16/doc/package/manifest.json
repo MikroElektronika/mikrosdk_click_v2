@@ -2,7 +2,7 @@
     "display_name": "Pressure 16 Click",
     "name": "mikroe.click.pressure16",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4765",
     "package_changed": true,
     "contents": {

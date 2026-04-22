@@ -2,7 +2,7 @@
     "display_name": "ADC 6 Click",
     "name": "mikroe.click.adc6",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2932",
     "package_changed": true,
     "contents": {

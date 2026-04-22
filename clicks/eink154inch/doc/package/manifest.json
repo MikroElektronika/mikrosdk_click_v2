@@ -2,7 +2,7 @@
     "display_name": "eINK 1.54 inch display",
     "name": "mikroe.click.eink154inch",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3809",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "e Fuse 3 Click",
     "name": "mikroe.click.efuse3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4630",
     "package_changed": true,
     "contents": {

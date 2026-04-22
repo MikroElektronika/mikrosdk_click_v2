@@ -2,7 +2,7 @@
     "display_name": "V to Hz Click",
     "name": "mikroe.click.vtohz",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2889",
     "package_changed": true,
     "contents": {

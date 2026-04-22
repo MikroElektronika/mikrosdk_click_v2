@@ -2,7 +2,7 @@
     "display_name": "A5000 Plug n Trust Click",
     "name": "mikroe.click.a5000plugntrust",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5391",
     "package_changed": true,
     "contents": {

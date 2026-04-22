@@ -2,7 +2,7 @@
     "display_name": "GNSS MAX 2 Click",
     "name": "mikroe.click.gnssmax2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6353",
     "package_changed": true,
     "contents": {

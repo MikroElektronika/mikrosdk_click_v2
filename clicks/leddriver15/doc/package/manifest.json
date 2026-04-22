@@ -2,7 +2,7 @@
     "display_name": "LED Driver 15 Click",
     "name": "mikroe.click.leddriver15",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5583",
     "package_changed": true,
     "contents": {

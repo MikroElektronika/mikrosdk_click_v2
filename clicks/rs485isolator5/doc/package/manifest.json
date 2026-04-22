@@ -2,7 +2,7 @@
     "display_name": "RS485 Isolator 5 Click",
     "name": "mikroe.click.rs485isolator5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6887",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "M-BUS RF 2  Click",
     "name": "mikroe.click.mbusrf2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3303",
     "package_changed": true,
     "contents": {

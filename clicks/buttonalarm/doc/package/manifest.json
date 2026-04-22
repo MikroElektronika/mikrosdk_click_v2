@@ -2,7 +2,7 @@
     "display_name": "Button ALARM Click",
     "name": "mikroe.click.buttonalarm",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3763",
     "package_changed": true,
     "contents": {

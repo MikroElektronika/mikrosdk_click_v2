@@ -2,7 +2,7 @@
     "display_name": "RAQ Click",
     "name": "mikroe.click.raq",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4385",
     "package_changed": true,
     "contents": {

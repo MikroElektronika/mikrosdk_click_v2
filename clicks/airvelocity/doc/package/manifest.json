@@ -2,7 +2,7 @@
     "display_name": "Air Velocity Click",
     "name": "mikroe.click.airvelocity",
     "type": "click",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "pid": "MIKROE-5448",
     "package_changed": true,
     "contents": {

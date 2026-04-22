@@ -2,7 +2,7 @@
     "display_name": "FAN 4 Click",
     "name": "mikroe.click.fan4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3200",
     "package_changed": true,
     "contents": {

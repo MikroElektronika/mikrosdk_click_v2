@@ -2,7 +2,7 @@
     "display_name": "Relay 2 Click",
     "name": "mikroe.click.relay2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1899",
     "package_changed": true,
     "contents": {

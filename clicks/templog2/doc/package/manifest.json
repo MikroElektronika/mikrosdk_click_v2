@@ -2,7 +2,7 @@
     "display_name": "Temp-Log 2 Click",
     "name": "mikroe.click.templog2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3004",
     "package_changed": true,
     "contents": {

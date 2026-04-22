@@ -2,7 +2,7 @@
     "display_name": "GainAMP 2 Click",
     "name": "mikroe.click.gainamp2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2859",
     "package_changed": true,
     "contents": {

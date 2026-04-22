@@ -2,7 +2,7 @@
     "display_name": "MOTION Click",
     "name": "mikroe.click.motion",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1589",
     "package_changed": true,
     "contents": {

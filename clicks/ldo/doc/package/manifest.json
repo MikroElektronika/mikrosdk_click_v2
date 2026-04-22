@@ -2,7 +2,7 @@
     "display_name": "LDO Click",
     "name": "mikroe.click.ldo",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5645",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "GNSS ZOE Click",
     "name": "mikroe.click.gnsszoe",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3660",
     "package_changed": true,
     "contents": {

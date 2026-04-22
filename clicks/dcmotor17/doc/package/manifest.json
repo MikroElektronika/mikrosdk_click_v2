@@ -2,7 +2,7 @@
     "display_name": "DC Motor 17 Click",
     "name": "mikroe.click.dcmotor17",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4454",
     "package_changed": true,
     "contents": {

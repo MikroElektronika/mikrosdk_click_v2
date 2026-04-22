@@ -2,7 +2,7 @@
     "display_name": "Cap Extend Click",
     "name": "mikroe.click.capextend",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2238",
     "package_changed": true,
     "contents": {

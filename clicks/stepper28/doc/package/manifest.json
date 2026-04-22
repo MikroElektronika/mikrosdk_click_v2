@@ -2,7 +2,7 @@
     "display_name": "Stepper 28 Click",
     "name": "mikroe.click.stepper28",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6723",
     "package_changed": true,
     "contents": {

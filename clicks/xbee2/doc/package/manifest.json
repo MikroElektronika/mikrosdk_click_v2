@@ -2,7 +2,7 @@
     "display_name": "XBEE 2 Click",
     "name": "mikroe.click.xbee2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5302",
     "package_changed": true,
     "contents": {

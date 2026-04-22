@@ -2,7 +2,7 @@
     "display_name": "UV 3 Click",
     "name": "mikroe.click.uv3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2736",
     "package_changed": true,
     "contents": {

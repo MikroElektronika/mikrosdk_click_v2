@@ -2,7 +2,7 @@
     "display_name": "Diff Press Click",
     "name": "mikroe.click.diffpress",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3332",
     "package_changed": true,
     "contents": {

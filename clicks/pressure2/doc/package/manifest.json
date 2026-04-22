@@ -2,7 +2,7 @@
     "display_name": "Pressure 2 Click",
     "name": "mikroe.click.pressure2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1880",
     "package_changed": true,
     "contents": {

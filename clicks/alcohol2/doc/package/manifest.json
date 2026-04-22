@@ -2,7 +2,7 @@
     "display_name": "Alcohol 2 Click",
     "name": "mikroe.click.alcohol2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3097",
     "package_changed": true,
     "contents": {

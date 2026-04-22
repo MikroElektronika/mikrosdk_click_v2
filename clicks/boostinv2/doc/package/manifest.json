@@ -2,7 +2,7 @@
     "display_name": "Boost-inv 2 Click",
     "name": "mikroe.click.boostinv2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3123",
     "package_changed": true,
     "contents": {

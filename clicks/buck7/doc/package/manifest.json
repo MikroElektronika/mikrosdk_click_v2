@@ -2,7 +2,7 @@
     "display_name": "BUCK 7 Click",
     "name": "mikroe.click.buck7",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3094",
     "package_changed": true,
     "contents": {

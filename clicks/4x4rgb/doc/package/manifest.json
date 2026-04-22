@@ -2,7 +2,7 @@
     "display_name": "4x4 RGB Click",
     "name": "mikroe.click.4x4rgb",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1881",
     "package_changed": true,
     "contents": {

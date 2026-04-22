@@ -2,7 +2,7 @@
     "display_name": "eINK 2.90 inch display",
     "name": "mikroe.click.eink290inch",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3811",
     "package_changed": true,
     "contents": {

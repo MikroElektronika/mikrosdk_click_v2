@@ -2,7 +2,7 @@
     "display_name": "6DOF IMU 16 Click",
     "name": "mikroe.click.6dofimu16",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6040",
     "package_changed": true,
     "contents": {

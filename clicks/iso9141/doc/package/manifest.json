@@ -2,7 +2,7 @@
     "display_name": "ISO 9141 Click",
     "name": "mikroe.click.iso9141",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4331",
     "package_changed": true,
     "contents": {

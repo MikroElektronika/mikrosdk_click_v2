@@ -2,7 +2,7 @@
     "display_name": "Expand 4 Click",
     "name": "mikroe.click.expand4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1910",
     "package_changed": true,
     "contents": {

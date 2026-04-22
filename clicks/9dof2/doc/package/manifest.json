@@ -2,7 +2,7 @@
     "display_name": "9DOF 2 Click",
     "name": "mikroe.click.9dof2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4128",
     "package_changed": true,
     "contents": {

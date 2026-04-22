@@ -2,7 +2,7 @@
     "display_name": "ISM RX Click",
     "name": "mikroe.click.ismrx",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4499",
     "package_changed": true,
     "contents": {

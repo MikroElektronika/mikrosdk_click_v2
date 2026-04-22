@@ -2,7 +2,7 @@
     "display_name": "CAN-LIN SBC Click",
     "name": "mikroe.click.canlinsbc",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6530",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "NeoMesh 2 Click",
     "name": "mikroe.click.neomesh2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6008",
     "package_changed": true,
     "contents": {

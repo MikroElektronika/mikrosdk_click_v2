@@ -2,7 +2,7 @@
     "display_name": "Magnetic Rotary 5 Click",
     "name": "mikroe.click.magneticrotary5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5691",
     "package_changed": true,
     "contents": {

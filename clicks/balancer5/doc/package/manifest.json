@@ -2,7 +2,7 @@
     "display_name": "Balancer 5 Click",
     "name": "mikroe.click.balancer5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3853",
     "package_changed": true,
     "contents": {

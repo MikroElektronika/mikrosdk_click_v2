@@ -2,7 +2,7 @@
     "display_name": "Led ring R Click",
     "name": "mikroe.click.ledringr",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2153",
     "package_changed": true,
     "contents": {

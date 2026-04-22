@@ -2,7 +2,7 @@
     "display_name": "TempHum 28 Click",
     "name": "mikroe.click.temphum28",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6904",
     "package_changed": true,
     "contents": {

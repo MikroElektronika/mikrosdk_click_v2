@@ -2,7 +2,7 @@
     "display_name": "IR Eclipse 2 Click",
     "name": "mikroe.click.ireclipse2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6047",
     "package_changed": true,
     "contents": {

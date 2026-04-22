@@ -2,7 +2,7 @@
     "display_name": "Single Wire CAN Click",
     "name": "mikroe.click.singlewirecan",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4225",
     "package_changed": true,
     "contents": {

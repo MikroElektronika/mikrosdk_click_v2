@@ -2,7 +2,7 @@
     "display_name": "Altitude 2 Click",
     "name": "mikroe.click.altitude2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3030",
     "package_changed": true,
     "contents": {

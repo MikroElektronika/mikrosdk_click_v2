@@ -2,7 +2,7 @@
     "display_name": "Thermo 27 Click",
     "name": "mikroe.click.thermo27",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5509",
     "package_changed": true,
     "contents": {

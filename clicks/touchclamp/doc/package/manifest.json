@@ -2,7 +2,7 @@
     "display_name": "TouchClamp Click",
     "name": "mikroe.click.touchclamp",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2294",
     "package_changed": true,
     "contents": {

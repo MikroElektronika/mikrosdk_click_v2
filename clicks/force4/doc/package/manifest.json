@@ -2,7 +2,7 @@
     "display_name": "Force 4 Click",
     "name": "mikroe.click.force4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4193",
     "package_changed": true,
     "contents": {

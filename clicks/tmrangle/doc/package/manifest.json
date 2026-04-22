@@ -2,7 +2,7 @@
     "display_name": "TMR Angle Click",
     "name": "mikroe.click.tmrangle",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3769",
     "package_changed": true,
     "contents": {

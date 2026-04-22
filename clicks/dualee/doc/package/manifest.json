@@ -2,7 +2,7 @@
     "display_name": "Dual EE Click",
     "name": "mikroe.click.dualee",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3762",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "Spectrometer 2 Click",
     "name": "mikroe.click.spectrometer2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5167",
     "package_changed": true,
     "contents": {

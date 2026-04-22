@@ -2,7 +2,7 @@
     "display_name": "LR 3 Click",
     "name": "mikroe.click.lr3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4616",
     "package_changed": true,
     "contents": {

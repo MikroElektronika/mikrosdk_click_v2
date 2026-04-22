@@ -2,7 +2,7 @@
     "display_name": "I2C 1-Wire 2  Click",
     "name": "mikroe.click.i2c1wire2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6058",
     "package_changed": true,
     "contents": {

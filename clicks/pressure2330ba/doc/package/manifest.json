@@ -2,7 +2,7 @@
     "display_name": "Pressure 23 30BA Click",
     "name": "mikroe.click.pressure2330ba",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5768",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "IrDA 4 Click",
     "name": "mikroe.click.irda4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5686",
     "package_changed": true,
     "contents": {

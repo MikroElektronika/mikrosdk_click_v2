@@ -2,7 +2,7 @@
     "display_name": "Rec N Play Click",
     "name": "mikroe.click.recnplay",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3345",
     "package_changed": true,
     "contents": {

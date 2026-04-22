@@ -2,7 +2,7 @@
     "display_name": "Rotary B 2 Click",
     "name": "mikroe.click.rotaryb2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5974",
     "package_changed": true,
     "contents": {

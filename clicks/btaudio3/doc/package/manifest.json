@@ -2,7 +2,7 @@
     "display_name": "BT Audio 3 Click",
     "name": "mikroe.click.btaudio3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4947",
     "package_changed": true,
     "contents": {

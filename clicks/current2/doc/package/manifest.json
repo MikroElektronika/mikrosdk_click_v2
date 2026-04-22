@@ -2,7 +2,7 @@
     "display_name": "Current 2 Click",
     "name": "mikroe.click.current2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3292",
     "package_changed": true,
     "contents": {

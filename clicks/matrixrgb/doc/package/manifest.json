@@ -2,7 +2,7 @@
     "display_name": "Matrix RGB Click",
     "name": "mikroe.click.matrixrgb",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2239",
     "package_changed": true,
     "contents": {

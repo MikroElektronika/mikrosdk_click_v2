@@ -2,7 +2,7 @@
     "display_name": "BLE TINY Click",
     "name": "mikroe.click.bletiny",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4582",
     "package_changed": true,
     "contents": {

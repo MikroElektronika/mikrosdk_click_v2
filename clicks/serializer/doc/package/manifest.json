@@ -2,7 +2,7 @@
     "display_name": "Serializer Click",
     "name": "mikroe.click.serializer",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4925",
     "package_changed": true,
     "contents": {

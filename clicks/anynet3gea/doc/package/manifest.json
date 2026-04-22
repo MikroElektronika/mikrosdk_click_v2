@@ -2,7 +2,7 @@
     "display_name": "AnyNet 3G-EA Click",
     "name": "mikroe.click.anynet3gea",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2975",
     "package_changed": true,
     "contents": {

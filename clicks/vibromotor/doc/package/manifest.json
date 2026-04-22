@@ -2,7 +2,7 @@
     "display_name": "Vibro Motor Click",
     "name": "mikroe.click.vibromotor",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2826",
     "package_changed": true,
     "contents": {

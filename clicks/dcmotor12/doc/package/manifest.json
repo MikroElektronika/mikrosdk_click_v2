@@ -2,7 +2,7 @@
     "display_name": "DC Motor 12 Click",
     "name": "mikroe.click.dcmotor12",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5374",
     "package_changed": true,
     "contents": {

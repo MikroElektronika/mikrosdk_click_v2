@@ -2,7 +2,7 @@
     "display_name": "THERMO Click",
     "name": "mikroe.click.thermo",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1197",
     "package_changed": true,
     "contents": {

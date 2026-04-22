@@ -2,7 +2,7 @@
     "display_name": "Thermo 25 Click",
     "name": "mikroe.click.thermo25",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5335",
     "package_changed": true,
     "contents": {

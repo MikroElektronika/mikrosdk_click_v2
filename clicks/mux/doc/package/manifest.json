@@ -2,7 +2,7 @@
     "display_name": "MUX Click",
     "name": "mikroe.click.mux",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3247",
     "package_changed": true,
     "contents": {

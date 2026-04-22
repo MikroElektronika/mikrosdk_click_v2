@@ -2,7 +2,7 @@
     "display_name": "RMS to DC 2 Click",
     "name": "mikroe.click.rmstodc2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5821",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "DIGI POT 11 Click",
     "name": "mikroe.click.digipot11",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5318",
     "package_changed": true,
     "contents": {

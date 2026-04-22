@@ -2,7 +2,7 @@
     "display_name": "Fingerprint 4 Click",
     "name": "mikroe.click.fingerprint4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5465",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "UT-L 7-SEG B Click",
     "name": "mikroe.click.utl7segb",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5824",
     "package_changed": true,
     "contents": {

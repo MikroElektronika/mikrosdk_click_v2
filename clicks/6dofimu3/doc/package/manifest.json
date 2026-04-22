@@ -2,7 +2,7 @@
     "display_name": "6DOF IMU 3 Click",
     "name": "mikroe.click.6dofimu3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4086",
     "package_changed": true,
     "contents": {

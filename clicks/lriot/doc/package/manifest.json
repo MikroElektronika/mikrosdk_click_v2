@@ -2,7 +2,7 @@
     "display_name": "LR IoT Click",
     "name": "mikroe.click.lriot",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5447",
     "package_changed": true,
     "contents": {

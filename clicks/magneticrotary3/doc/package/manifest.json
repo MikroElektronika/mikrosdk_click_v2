@@ -2,7 +2,7 @@
     "display_name": "Magnetic Rotary 3 Click",
     "name": "mikroe.click.magneticrotary3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5203",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "Charger Click",
     "name": "mikroe.click.charger",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2033",
     "package_changed": true,
     "contents": {

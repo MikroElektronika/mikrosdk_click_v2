@@ -2,7 +2,7 @@
     "display_name": "Barometer 10 Click",
     "name": "mikroe.click.barometer10",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5601",
     "package_changed": true,
     "contents": {

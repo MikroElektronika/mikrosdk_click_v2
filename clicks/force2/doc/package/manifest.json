@@ -2,7 +2,7 @@
     "display_name": "Force 2 Click",
     "name": "mikroe.click.force2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4046",
     "package_changed": true,
     "contents": {

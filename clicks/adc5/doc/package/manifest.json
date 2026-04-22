@@ -2,7 +2,7 @@
     "display_name": "ADC 5 Click",
     "name": "mikroe.click.adc5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2846",
     "package_changed": true,
     "contents": {

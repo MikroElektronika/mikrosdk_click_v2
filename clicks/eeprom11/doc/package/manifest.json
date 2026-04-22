@@ -2,7 +2,7 @@
     "display_name": "EEPROM 11 Click",
     "name": "mikroe.click.eeprom11",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5889",
     "package_changed": true,
     "contents": {

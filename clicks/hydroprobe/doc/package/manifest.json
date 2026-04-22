@@ -2,7 +2,7 @@
     "display_name": "Hydro Probe Click",
     "name": "mikroe.click.hydroprobe",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4131",
     "package_changed": true,
     "contents": {

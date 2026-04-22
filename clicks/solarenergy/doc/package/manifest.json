@@ -2,7 +2,7 @@
     "display_name": "SOLAR ENERGY Click",
     "name": "mikroe.click.solarenergy",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2814",
     "package_changed": true,
     "contents": {

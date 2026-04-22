@@ -2,7 +2,7 @@
     "display_name": "PAC1811 Click",
     "name": "mikroe.click.pac1811",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6862",
     "package_changed": true,
     "contents": {

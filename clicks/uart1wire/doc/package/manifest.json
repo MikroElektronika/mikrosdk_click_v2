@@ -2,7 +2,7 @@
     "display_name": "UART 1-Wire Click",
     "name": "mikroe.click.uart1wire",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3340",
     "package_changed": true,
     "contents": {

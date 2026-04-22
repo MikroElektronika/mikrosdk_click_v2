@@ -2,7 +2,7 @@
     "display_name": "NO2 Click",
     "name": "mikroe.click.no2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3098",
     "package_changed": true,
     "contents": {

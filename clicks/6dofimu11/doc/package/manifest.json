@@ -2,7 +2,7 @@
     "display_name": "6DOF IMU 11 Click",
     "name": "mikroe.click.6dofimu11",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3869",
     "package_changed": true,
     "contents": {

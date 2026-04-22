@@ -2,7 +2,7 @@
     "display_name": "Micro Pump Click",
     "name": "mikroe.click.micropump",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6529",
     "package_changed": true,
     "contents": {

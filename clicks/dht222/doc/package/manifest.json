@@ -2,7 +2,7 @@
     "display_name": "DHT22 2 Click",
     "name": "mikroe.click.dht222",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2818",
     "package_changed": true,
     "contents": {

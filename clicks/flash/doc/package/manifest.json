@@ -2,7 +2,7 @@
     "display_name": "Flash Click",
     "name": "mikroe.click.flash",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1199",
     "package_changed": true,
     "contents": {

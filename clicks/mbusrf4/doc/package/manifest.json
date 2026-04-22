@@ -2,7 +2,7 @@
     "display_name": "M-BUS RF 4 Click",
     "name": "mikroe.click.mbusrf4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3692",
     "package_changed": true,
     "contents": {

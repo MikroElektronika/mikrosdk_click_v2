@@ -2,7 +2,7 @@
     "display_name": "LTE IoT 8 Click",
     "name": "mikroe.click.lteiot8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4493",
     "package_changed": true,
     "contents": {

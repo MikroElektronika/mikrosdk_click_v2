@@ -2,7 +2,7 @@
     "display_name": "Magnetic linear Click",
     "name": "mikroe.click.magneticlinear",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3274",
     "package_changed": true,
     "contents": {

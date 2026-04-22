@@ -2,7 +2,7 @@
     "display_name": "I2C Scanner",
     "name": "mikroe.click.i2cscanner",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": null,
     "package_changed": true,
     "contents": {

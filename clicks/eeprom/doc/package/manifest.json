@@ -2,7 +2,7 @@
     "display_name": "EEPROM Click",
     "name": "mikroe.click.eeprom",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1200",
     "package_changed": true,
     "contents": {

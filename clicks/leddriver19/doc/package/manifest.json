@@ -2,7 +2,7 @@
     "display_name": "LED Driver 19 Click",
     "name": "mikroe.click.leddriver19",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5639",
     "package_changed": true,
     "contents": {

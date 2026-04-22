@@ -2,7 +2,7 @@
     "display_name": "RFID 2 Click",
     "name": "mikroe.click.rfid2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4208",
     "package_changed": true,
     "contents": {

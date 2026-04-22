@@ -2,7 +2,7 @@
     "display_name": "Accel 2 Click",
     "name": "mikroe.click.accel2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1905",
     "package_changed": true,
     "contents": {

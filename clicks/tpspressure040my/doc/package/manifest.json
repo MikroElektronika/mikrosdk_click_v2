@@ -2,7 +2,7 @@
     "display_name": "TPS Pressure 040MY Click",
     "name": "mikroe.click.tpspressure040my",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6824",
     "package_changed": true,
     "contents": {

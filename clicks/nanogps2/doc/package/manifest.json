@@ -2,7 +2,7 @@
     "display_name": "Nano GPS 2 Click",
     "name": "mikroe.click.nanogps2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4150",
     "package_changed": true,
     "contents": {

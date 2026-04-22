@@ -2,7 +2,7 @@
     "display_name": "UART to I2C Click",
     "name": "mikroe.click.uarttoi2c",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5508",
     "package_changed": true,
     "contents": {

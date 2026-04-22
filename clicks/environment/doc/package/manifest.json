@@ -2,7 +2,7 @@
     "display_name": "Environment Click",
     "name": "mikroe.click.environment",
     "type": "click",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "pid": "MIKROE-2467",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "MPU IMU Click",
     "name": "mikroe.click.mpuimu",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1577",
     "package_changed": true,
     "contents": {

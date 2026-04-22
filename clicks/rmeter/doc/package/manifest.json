@@ -2,7 +2,7 @@
     "display_name": "R Meter Click",
     "name": "mikroe.click.rmeter",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2396",
     "package_changed": true,
     "contents": {

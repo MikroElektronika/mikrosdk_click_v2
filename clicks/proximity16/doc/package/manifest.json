@@ -2,7 +2,7 @@
     "display_name": "Proximity 16 Click",
     "name": "mikroe.click.proximity16",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5286",
     "package_changed": true,
     "contents": {

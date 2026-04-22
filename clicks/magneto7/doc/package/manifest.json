@@ -2,7 +2,7 @@
     "display_name": "Magneto 7 Click",
     "name": "mikroe.click.magneto7",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3657",
     "package_changed": true,
     "contents": {

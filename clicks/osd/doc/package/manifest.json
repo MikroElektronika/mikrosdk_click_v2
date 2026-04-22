@@ -2,7 +2,7 @@
     "display_name": "OSD Click",
     "name": "mikroe.click.osd",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1366",
     "package_changed": true,
     "contents": {

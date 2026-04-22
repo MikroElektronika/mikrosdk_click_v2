@@ -2,7 +2,7 @@
     "display_name": "Light mix-sens Click",
     "name": "mikroe.click.lightmixsens",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4148",
     "package_changed": true,
     "contents": {

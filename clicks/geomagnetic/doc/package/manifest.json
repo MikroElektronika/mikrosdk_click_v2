@@ -2,7 +2,7 @@
     "display_name": "GeoMagnetic Click",
     "name": "mikroe.click.geomagnetic",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2935",
     "package_changed": true,
     "contents": {

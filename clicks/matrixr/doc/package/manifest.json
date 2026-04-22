@@ -2,7 +2,7 @@
     "display_name": "Matrix R Click",
     "name": "mikroe.click.matrixr",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2245",
     "package_changed": true,
     "contents": {

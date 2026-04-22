@@ -2,7 +2,7 @@
     "display_name": "SPI Extend Click",
     "name": "mikroe.click.spiextend",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4184",
     "package_changed": true,
     "contents": {

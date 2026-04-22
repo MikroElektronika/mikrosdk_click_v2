@@ -2,7 +2,7 @@
     "display_name": "2x20W Amp Click",
     "name": "mikroe.click.2x20wamp",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2779",
     "package_changed": true,
     "contents": {

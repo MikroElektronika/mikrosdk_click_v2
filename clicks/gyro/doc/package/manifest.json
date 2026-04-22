@@ -2,7 +2,7 @@
     "display_name": "Gyro Click",
     "name": "mikroe.click.gyro",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1379",
     "package_changed": true,
     "contents": {

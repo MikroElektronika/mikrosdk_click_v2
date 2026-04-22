@@ -2,7 +2,7 @@
     "display_name": "PROXIMITY 7 Click",
     "name": "mikroe.click.proximity7",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3330",
     "package_changed": true,
     "contents": {

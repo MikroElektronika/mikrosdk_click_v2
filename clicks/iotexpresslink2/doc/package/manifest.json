@@ -2,7 +2,7 @@
     "display_name": "IoT ExpressLink 2 Click",
     "name": "mikroe.click.iotexpresslink2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5927",
     "package_changed": true,
     "contents": {

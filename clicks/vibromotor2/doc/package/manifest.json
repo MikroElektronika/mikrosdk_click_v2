@@ -2,7 +2,7 @@
     "display_name": "Vibro Motor 2 Click",
     "name": "mikroe.click.vibromotor2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3713",
     "package_changed": true,
     "contents": {

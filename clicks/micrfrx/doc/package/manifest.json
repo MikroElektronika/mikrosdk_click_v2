@@ -2,7 +2,7 @@
     "display_name": "MICRF RX Click",
     "name": "mikroe.click.micrfrx",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6014",
     "package_changed": true,
     "contents": {

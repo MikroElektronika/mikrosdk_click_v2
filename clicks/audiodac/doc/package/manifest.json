@@ -2,7 +2,7 @@
     "display_name": "Audio DAC Click",
     "name": "mikroe.click.audiodac",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5587",
     "package_changed": true,
     "contents": {

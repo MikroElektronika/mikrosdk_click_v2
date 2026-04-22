@@ -2,7 +2,7 @@
     "display_name": "IR Gesture Click",
     "name": "mikroe.click.irgesture",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2086",
     "package_changed": true,
     "contents": {

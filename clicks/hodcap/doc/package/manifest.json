@@ -2,7 +2,7 @@
     "display_name": "HOD CAP Click",
     "name": "mikroe.click.hodcap",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5719",
     "package_changed": true,
     "contents": {

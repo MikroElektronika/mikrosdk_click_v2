@@ -2,7 +2,7 @@
     "display_name": "MCP16331 INV Click",
     "name": "mikroe.click.mcp16331inv",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2917",
     "package_changed": true,
     "contents": {

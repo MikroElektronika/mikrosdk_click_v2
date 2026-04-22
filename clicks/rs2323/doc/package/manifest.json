@@ -2,7 +2,7 @@
     "display_name": "RS232 3 Click",
     "name": "mikroe.click.rs2323",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5109",
     "package_changed": true,
     "contents": {

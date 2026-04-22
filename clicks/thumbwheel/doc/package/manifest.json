@@ -2,7 +2,7 @@
     "display_name": "Thumbwheel Click",
     "name": "mikroe.click.thumbwheel",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2366",
     "package_changed": true,
     "contents": {

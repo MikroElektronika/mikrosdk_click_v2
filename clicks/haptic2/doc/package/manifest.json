@@ -2,7 +2,7 @@
     "display_name": "HAPTIC 2 Click",
     "name": "mikroe.click.haptic2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4452",
     "package_changed": true,
     "contents": {

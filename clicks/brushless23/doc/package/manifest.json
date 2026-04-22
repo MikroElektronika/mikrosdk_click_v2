@@ -2,7 +2,7 @@
     "display_name": "Brushless 23 Click",
     "name": "mikroe.click.brushless23",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5100",
     "package_changed": true,
     "contents": {

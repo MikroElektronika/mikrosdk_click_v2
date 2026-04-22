@@ -2,7 +2,7 @@
     "display_name": "Earthquake Click",
     "name": "mikroe.click.earthquake",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2561",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "LED Driver 9 Click",
     "name": "mikroe.click.leddriver9",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4595",
     "package_changed": true,
     "contents": {

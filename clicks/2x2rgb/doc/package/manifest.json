@@ -2,7 +2,7 @@
     "display_name": "2x2 RGB Click",
     "name": "mikroe.click.2x2rgb",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5917",
     "package_changed": true,
     "contents": {

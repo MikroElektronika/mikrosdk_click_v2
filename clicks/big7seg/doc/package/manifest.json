@@ -2,7 +2,7 @@
     "display_name": "BIG 7-SEG Click",
     "name": "mikroe.click.big7seg",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2269",
     "package_changed": true,
     "contents": {

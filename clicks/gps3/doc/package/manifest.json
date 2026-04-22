@@ -2,7 +2,7 @@
     "display_name": "GPS 3 Click",
     "name": "mikroe.click.gps3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1714",
     "package_changed": true,
     "contents": {

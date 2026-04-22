@@ -2,7 +2,7 @@
     "display_name": "RTK Base Click",
     "name": "mikroe.click.rtkbase",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5442",
     "package_changed": true,
     "contents": {

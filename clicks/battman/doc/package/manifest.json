@@ -2,7 +2,7 @@
     "display_name": "BATT-MAN Click",
     "name": "mikroe.click.battman",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2901",
     "package_changed": true,
     "contents": {

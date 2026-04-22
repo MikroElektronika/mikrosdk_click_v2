@@ -2,7 +2,7 @@
     "display_name": "Cap Slider 3 Click",
     "name": "mikroe.click.capslider3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6645",
     "package_changed": true,
     "contents": {

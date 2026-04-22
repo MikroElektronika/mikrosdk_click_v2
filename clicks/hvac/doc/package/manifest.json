@@ -2,7 +2,7 @@
     "display_name": "HVAC Click",
     "name": "mikroe.click.hvac",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4290",
     "package_changed": true,
     "contents": {

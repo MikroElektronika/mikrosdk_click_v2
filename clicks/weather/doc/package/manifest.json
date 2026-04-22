@@ -2,7 +2,7 @@
     "display_name": "Weather Click",
     "name": "mikroe.click.weather",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1978",
     "package_changed": true,
     "contents": {

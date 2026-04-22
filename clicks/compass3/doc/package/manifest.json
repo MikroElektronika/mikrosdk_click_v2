@@ -2,7 +2,7 @@
     "display_name": "Compass 3 Click",
     "name": "mikroe.click.compass3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4063",
     "package_changed": true,
     "contents": {

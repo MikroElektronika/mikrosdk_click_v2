@@ -2,7 +2,7 @@
     "display_name": "7seg Click",
     "name": "mikroe.click.7seg",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1201",
     "package_changed": true,
     "contents": {

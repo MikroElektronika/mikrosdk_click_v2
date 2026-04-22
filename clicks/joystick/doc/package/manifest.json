@@ -2,7 +2,7 @@
     "display_name": "Joystick Click",
     "name": "mikroe.click.joystick",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1506",
     "package_changed": true,
     "contents": {

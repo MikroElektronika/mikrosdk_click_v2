@@ -2,7 +2,7 @@
     "display_name": "Diff Press 5 Click",
     "name": "mikroe.click.diffpress5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6527",
     "package_changed": true,
     "contents": {

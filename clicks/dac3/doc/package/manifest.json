@@ -2,7 +2,7 @@
     "display_name": "DAC 3 Click",
     "name": "mikroe.click.dac3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2038",
     "package_changed": true,
     "contents": {

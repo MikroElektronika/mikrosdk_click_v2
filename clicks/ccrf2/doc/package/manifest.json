@@ -2,7 +2,7 @@
     "display_name": "ccRF 2 Click",
     "name": "mikroe.click.ccrf2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1716",
     "package_changed": true,
     "contents": {

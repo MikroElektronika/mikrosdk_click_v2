@@ -2,7 +2,7 @@
     "display_name": "BATT-MON 3 Click",
     "name": "mikroe.click.battmon3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5098",
     "package_changed": true,
     "contents": {

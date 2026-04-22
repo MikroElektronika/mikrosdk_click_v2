@@ -2,7 +2,7 @@
     "display_name": "GSM GNSS Click",
     "name": "mikroe.click.gsmgnss",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2439",
     "package_changed": true,
     "contents": {

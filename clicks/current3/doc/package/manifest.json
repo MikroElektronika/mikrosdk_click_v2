@@ -2,7 +2,7 @@
     "display_name": "Current 3 Click",
     "name": "mikroe.click.current3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4203",
     "package_changed": true,
     "contents": {

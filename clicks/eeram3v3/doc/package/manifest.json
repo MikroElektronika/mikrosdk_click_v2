@@ -2,7 +2,7 @@
     "display_name": "EERAM 3v3 Click",
     "name": "mikroe.click.eeram3v3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2728",
     "package_changed": true,
     "contents": {

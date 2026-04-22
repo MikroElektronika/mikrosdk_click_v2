@@ -2,7 +2,7 @@
     "display_name": "WiFi ESP Click",
     "name": "mikroe.click.wifiesp",
     "type": "click",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "pid": "MIKROE-2542",
     "package_changed": true,
     "contents": {

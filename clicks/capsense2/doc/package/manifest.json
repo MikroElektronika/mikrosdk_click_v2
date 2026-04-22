@@ -2,7 +2,7 @@
     "display_name": "CapSense 2 Click",
     "name": "mikroe.click.capsense2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4982",
     "package_changed": true,
     "contents": {

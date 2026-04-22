@@ -2,7 +2,7 @@
     "display_name": "Life Metrics Click",
     "name": "mikroe.click.lifemetrics",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6851",
     "package_changed": true,
     "contents": {

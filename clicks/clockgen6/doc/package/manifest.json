@@ -2,7 +2,7 @@
     "display_name": "Clock Gen 6 Click",
     "name": "mikroe.click.clockgen6",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4973",
     "package_changed": true,
     "contents": {

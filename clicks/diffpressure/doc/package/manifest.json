@@ -2,7 +2,7 @@
     "display_name": "Diff pressure Click",
     "name": "mikroe.click.diffpressure",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2387",
     "package_changed": true,
     "contents": {

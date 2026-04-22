@@ -2,7 +2,7 @@
     "display_name": "SHT AN Click",
     "name": "mikroe.click.shtan",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3984",
     "package_changed": true,
     "contents": {

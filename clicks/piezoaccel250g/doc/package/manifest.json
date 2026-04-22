@@ -2,7 +2,7 @@
     "display_name": "Piezo Accel 2 50g Click",
     "name": "mikroe.click.piezoaccel250g",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6407",
     "package_changed": true,
     "contents": {

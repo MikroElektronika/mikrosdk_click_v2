@@ -2,7 +2,7 @@
     "display_name": "USB to I2C 2 Click",
     "name": "mikroe.click.usbtoi2c2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5065",
     "package_changed": true,
     "contents": {

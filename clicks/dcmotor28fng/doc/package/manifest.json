@@ -2,7 +2,7 @@
     "display_name": "DC Motor 28 FNG Click",
     "name": "mikroe.click.dcmotor28fng",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6506",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "Qi RX Click",
     "name": "mikroe.click.qirx",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4345",
     "package_changed": true,
     "contents": {

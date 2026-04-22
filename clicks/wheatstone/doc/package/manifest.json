@@ -2,7 +2,7 @@
     "display_name": "Wheatstone Click",
     "name": "mikroe.click.wheatstone",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4124",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "LR 16 Click",
     "name": "mikroe.click.lr16",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6598",
     "package_changed": true,
     "contents": {

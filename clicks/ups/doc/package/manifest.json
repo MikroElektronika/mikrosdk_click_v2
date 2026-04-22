@@ -2,7 +2,7 @@
     "display_name": "UPS Click",
     "name": "mikroe.click.ups",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3001",
     "package_changed": true,
     "contents": {

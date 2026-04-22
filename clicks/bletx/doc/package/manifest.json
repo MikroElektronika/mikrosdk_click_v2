@@ -2,7 +2,7 @@
     "display_name": "BLE TX Click",
     "name": "mikroe.click.bletx",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4668",
     "package_changed": true,
     "contents": {

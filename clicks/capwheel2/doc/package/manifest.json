@@ -2,7 +2,7 @@
     "display_name": "Cap Wheel 2 Click",
     "name": "mikroe.click.capwheel2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3677",
     "package_changed": true,
     "contents": {

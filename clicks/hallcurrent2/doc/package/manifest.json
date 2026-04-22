@@ -2,7 +2,7 @@
     "display_name": "Hall Current 2 Click",
     "name": "mikroe.click.hallcurrent2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2987",
     "package_changed": true,
     "contents": {

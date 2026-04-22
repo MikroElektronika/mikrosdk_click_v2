@@ -2,7 +2,7 @@
     "display_name": "ECG 3 Click",
     "name": "mikroe.click.ecg3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3273",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "AudioAmp 2 Click",
     "name": "mikroe.click.audioamp2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3077",
     "package_changed": true,
     "contents": {

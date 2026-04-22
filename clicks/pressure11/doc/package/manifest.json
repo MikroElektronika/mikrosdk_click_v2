@@ -2,7 +2,7 @@
     "display_name": "Pressure 11 Click",
     "name": "mikroe.click.pressure11",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3411",
     "package_changed": true,
     "contents": {

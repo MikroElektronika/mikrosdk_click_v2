@@ -2,7 +2,7 @@
     "display_name": "Angle 2 Click",
     "name": "mikroe.click.angle2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2338",
     "package_changed": true,
     "contents": {

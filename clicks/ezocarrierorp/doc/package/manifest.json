@@ -2,7 +2,7 @@
     "display_name": "EZO Carrier ORP Click",
     "name": "mikroe.click.ezocarrierorp",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6013",
     "package_changed": true,
     "contents": {

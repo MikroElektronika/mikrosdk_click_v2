@@ -2,7 +2,7 @@
     "display_name": "LBAND RTK Click",
     "name": "mikroe.click.lbandrtk",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5411",
     "package_changed": true,
     "contents": {

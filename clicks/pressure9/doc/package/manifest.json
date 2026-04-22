@@ -2,7 +2,7 @@
     "display_name": "Pressure 9 Click",
     "name": "mikroe.click.pressure9",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3441",
     "package_changed": true,
     "contents": {

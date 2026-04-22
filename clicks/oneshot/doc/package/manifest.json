@@ -2,7 +2,7 @@
     "display_name": "One Shot Click",
     "name": "mikroe.click.oneshot",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3877",
     "package_changed": true,
     "contents": {

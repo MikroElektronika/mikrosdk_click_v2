@@ -2,7 +2,7 @@
     "display_name": "UNI HALL Click",
     "name": "mikroe.click.unihall",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1647",
     "package_changed": true,
     "contents": {

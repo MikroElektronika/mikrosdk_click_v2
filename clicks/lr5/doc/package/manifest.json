@@ -2,7 +2,7 @@
     "display_name": "LR 5 Click",
     "name": "mikroe.click.lr5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4618",
     "package_changed": true,
     "contents": {

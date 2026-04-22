@@ -2,7 +2,7 @@
     "display_name": "BI HALL Click",
     "name": "mikroe.click.bihall",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1646",
     "package_changed": true,
     "contents": {

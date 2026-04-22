@@ -2,7 +2,7 @@
     "display_name": "DAC 2 Click",
     "name": "mikroe.click.dac2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1918",
     "package_changed": true,
     "contents": {

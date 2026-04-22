@@ -2,7 +2,7 @@
     "display_name": "H-Bridge 3 Click",
     "name": "mikroe.click.hbridge3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3613",
     "package_changed": true,
     "contents": {

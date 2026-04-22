@@ -2,7 +2,7 @@
     "display_name": "Boost 3 Click",
     "name": "mikroe.click.boost3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4287",
     "package_changed": true,
     "contents": {

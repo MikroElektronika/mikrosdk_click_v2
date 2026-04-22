@@ -2,7 +2,7 @@
     "display_name": "Surface Temp 2 Click",
     "name": "mikroe.click.surfacetemp2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4266",
     "package_changed": true,
     "contents": {

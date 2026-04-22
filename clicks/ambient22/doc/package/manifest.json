@@ -2,7 +2,7 @@
     "display_name": "Ambient 22 Click",
     "name": "mikroe.click.ambient22",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5647",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "Buck 2 Click",
     "name": "mikroe.click.buck2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2911",
     "package_changed": true,
     "contents": {

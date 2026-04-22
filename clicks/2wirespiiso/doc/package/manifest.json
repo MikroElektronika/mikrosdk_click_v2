@@ -2,7 +2,7 @@
     "display_name": "2-Wire SPI ISO Click",
     "name": "mikroe.click.2wirespiiso",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6778",
     "package_changed": true,
     "contents": {

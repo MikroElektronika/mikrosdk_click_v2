@@ -2,7 +2,7 @@
     "display_name": "Clock Gen 5 Click",
     "name": "mikroe.click.clockgen5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4413",
     "package_changed": true,
     "contents": {

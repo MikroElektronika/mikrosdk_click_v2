@@ -2,7 +2,7 @@
     "display_name": "LIN HALL Click",
     "name": "mikroe.click.linhall",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1648",
     "package_changed": true,
     "contents": {

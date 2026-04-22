@@ -2,7 +2,7 @@
     "display_name": "H-Bridge 8 Click",
     "name": "mikroe.click.hbridge8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4775",
     "package_changed": true,
     "contents": {

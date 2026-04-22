@@ -2,7 +2,7 @@
     "display_name": "Temp ISO Click",
     "name": "mikroe.click.tempiso",
     "type": "click",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "pid": "MIKROE-6417",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "TempHum 17 Click",
     "name": "mikroe.click.temphum17",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4702",
     "package_changed": true,
     "contents": {

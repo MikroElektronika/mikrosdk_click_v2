@@ -2,7 +2,7 @@
     "display_name": "MCP251863 Click",
     "name": "mikroe.click.mcp251863",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4955",
     "package_changed": true,
     "contents": {

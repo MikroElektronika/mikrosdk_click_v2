@@ -2,7 +2,7 @@
     "display_name": "AlphaNum R Click",
     "name": "mikroe.click.alphanumr",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1864",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "DigiVref Click",
     "name": "mikroe.click.digivref",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3334",
     "package_changed": true,
     "contents": {

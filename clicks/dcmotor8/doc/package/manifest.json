@@ -2,7 +2,7 @@
     "display_name": "DC Motor 8 Click",
     "name": "mikroe.click.dcmotor8",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2893",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "DC Motor 30 Click",
     "name": "mikroe.click.dcmotor30",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6595",
     "package_changed": true,
     "contents": {

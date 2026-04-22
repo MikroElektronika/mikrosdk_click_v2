@@ -2,7 +2,7 @@
     "display_name": "OLED W 2 Click",
     "name": "mikroe.click.oledw2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6793",
     "package_changed": true,
     "contents": {

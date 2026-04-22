@@ -2,7 +2,7 @@
     "display_name": "Waveform 3 Click",
     "name": "mikroe.click.waveform3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4432",
     "package_changed": true,
     "contents": {

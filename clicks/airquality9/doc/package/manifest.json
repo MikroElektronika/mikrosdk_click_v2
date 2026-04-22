@@ -2,7 +2,7 @@
     "display_name": "Air quality 9 Click",
     "name": "mikroe.click.airquality9",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5060",
     "package_changed": true,
     "contents": {

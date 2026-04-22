@@ -2,7 +2,7 @@
     "display_name": "DTMF Decoder Click",
     "name": "mikroe.click.dtmfdecoder",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4579",
     "package_changed": true,
     "contents": {

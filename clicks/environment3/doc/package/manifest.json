@@ -2,7 +2,7 @@
     "display_name": "Environment 3 Click",
     "name": "mikroe.click.environment3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4893",
     "package_changed": true,
     "contents": {

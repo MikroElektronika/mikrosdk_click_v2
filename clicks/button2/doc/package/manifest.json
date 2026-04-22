@@ -2,7 +2,7 @@
     "display_name": "Button 2 Click",
     "name": "mikroe.click.button2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6275",
     "package_changed": true,
     "contents": {

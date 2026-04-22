@@ -2,7 +2,7 @@
     "display_name": "GNSS Antenna Board",
     "name": "mikroe.click.gnssantenna",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6746",
     "package_changed": true,
     "contents": {

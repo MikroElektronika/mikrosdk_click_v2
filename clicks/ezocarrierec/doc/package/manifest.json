@@ -2,7 +2,7 @@
     "display_name": "EZO Carrier EC Click",
     "name": "mikroe.click.ezocarrierec",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6011",
     "package_changed": true,
     "contents": {

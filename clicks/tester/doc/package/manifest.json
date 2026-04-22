@@ -2,7 +2,7 @@
     "display_name": "Tester Click",
     "name": "mikroe.click.tester",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3083",
     "package_changed": true,
     "contents": {

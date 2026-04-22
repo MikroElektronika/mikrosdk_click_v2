@@ -2,7 +2,7 @@
     "display_name": "5G NB IoT Click",
     "name": "mikroe.click.5gnbiot",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4034",
     "package_changed": true,
     "contents": {

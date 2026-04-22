@@ -2,7 +2,7 @@
     "display_name": "VAV Press Click",
     "name": "mikroe.click.vavpress",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4667",
     "package_changed": true,
     "contents": {

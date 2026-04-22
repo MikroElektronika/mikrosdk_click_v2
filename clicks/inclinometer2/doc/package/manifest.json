@@ -2,7 +2,7 @@
     "display_name": "Inclinometer 2 Click",
     "name": "mikroe.click.inclinometer2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5156",
     "package_changed": true,
     "contents": {

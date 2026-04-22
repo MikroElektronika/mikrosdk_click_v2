@@ -2,7 +2,7 @@
     "display_name": "CAN FD 5 Click",
     "name": "mikroe.click.canfd5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4286",
     "package_changed": true,
     "contents": {

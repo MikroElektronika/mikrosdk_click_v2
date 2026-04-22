@@ -2,7 +2,7 @@
     "display_name": "LTE IoT 6 Click",
     "name": "mikroe.click.lteiot6",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4388",
     "package_changed": true,
     "contents": {

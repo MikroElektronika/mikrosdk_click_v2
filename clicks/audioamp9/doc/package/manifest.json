@@ -2,7 +2,7 @@
     "display_name": "AudioAmp 9 Click",
     "name": "mikroe.click.audioamp9",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5595",
     "package_changed": true,
     "contents": {

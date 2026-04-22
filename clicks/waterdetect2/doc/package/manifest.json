@@ -2,7 +2,7 @@
     "display_name": "Water Detect 2 Click",
     "name": "mikroe.click.waterdetect2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5820",
     "package_changed": true,
     "contents": {

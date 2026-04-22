@@ -2,7 +2,7 @@
     "display_name": "Oximeter 5 Click",
     "name": "mikroe.click.oximeter5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4986",
     "package_changed": true,
     "contents": {

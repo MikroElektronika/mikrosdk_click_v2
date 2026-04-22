@@ -2,7 +2,7 @@
     "display_name": "Terminal 2 Click",
     "name": "mikroe.click.terminal2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4951",
     "package_changed": true,
     "contents": {

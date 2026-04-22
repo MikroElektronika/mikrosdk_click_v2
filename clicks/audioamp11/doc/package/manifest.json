@@ -2,7 +2,7 @@
     "display_name": "AudioAMP 11 Click",
     "name": "mikroe.click.audioamp11",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5584",
     "package_changed": true,
     "contents": {

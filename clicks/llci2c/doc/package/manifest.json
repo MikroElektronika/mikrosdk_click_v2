@@ -2,7 +2,7 @@
     "display_name": "LLC I2C Click",
     "name": "mikroe.click.llci2c",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3276",
     "package_changed": true,
     "contents": {

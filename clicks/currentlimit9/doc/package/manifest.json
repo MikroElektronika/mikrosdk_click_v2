@@ -2,7 +2,7 @@
     "display_name": "Current Limit 9 Click",
     "name": "mikroe.click.currentlimit9",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5937",
     "package_changed": true,
     "contents": {

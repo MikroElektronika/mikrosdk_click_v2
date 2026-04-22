@@ -2,7 +2,7 @@
     "display_name": "Manometer Click",
     "name": "mikroe.click.manometer",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2237",
     "package_changed": true,
     "contents": {

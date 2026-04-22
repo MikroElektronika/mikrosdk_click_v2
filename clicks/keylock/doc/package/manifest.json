@@ -2,7 +2,7 @@
     "display_name": "Keylock Click",
     "name": "mikroe.click.keylock",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2564",
     "package_changed": true,
     "contents": {

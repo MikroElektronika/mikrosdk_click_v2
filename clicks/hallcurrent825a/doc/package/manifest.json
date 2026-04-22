@@ -2,7 +2,7 @@
     "display_name": "Hall Current 8 25A Click",
     "name": "mikroe.click.hallcurrent825a",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4632",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "GNSS 5 Click",
     "name": "mikroe.click.gnss5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2670",
     "package_changed": true,
     "contents": {

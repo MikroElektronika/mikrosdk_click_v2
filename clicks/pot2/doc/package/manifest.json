@@ -2,7 +2,7 @@
     "display_name": "POT 2 Click",
     "name": "mikroe.click.pot2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3325",
     "package_changed": true,
     "contents": {

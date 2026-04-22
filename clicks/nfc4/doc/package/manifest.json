@@ -2,7 +2,7 @@
     "display_name": "NFC 4 Click",
     "name": "mikroe.click.nfc4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4842",
     "package_changed": true,
     "contents": {

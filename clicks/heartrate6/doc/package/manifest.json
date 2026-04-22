@@ -2,7 +2,7 @@
     "display_name": "Heart rate 6 Click",
     "name": "mikroe.click.heartrate6",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3215",
     "package_changed": true,
     "contents": {

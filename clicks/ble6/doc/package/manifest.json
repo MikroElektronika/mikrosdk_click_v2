@@ -2,7 +2,7 @@
     "display_name": "BLE 6 Click",
     "name": "mikroe.click.ble6",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4170",
     "package_changed": true,
     "contents": {

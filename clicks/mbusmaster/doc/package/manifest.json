@@ -2,7 +2,7 @@
     "display_name": "M-Bus Master Click",
     "name": "mikroe.click.mbusmaster",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3880",
     "package_changed": true,
     "contents": {

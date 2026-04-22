@@ -2,7 +2,7 @@
     "display_name": "IR distance Click",
     "name": "mikroe.click.irdistance",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1991",
     "package_changed": true,
     "contents": {

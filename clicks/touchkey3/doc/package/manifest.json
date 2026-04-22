@@ -2,7 +2,7 @@
     "display_name": "TouchKey 3 Click",
     "name": "mikroe.click.touchkey3",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2891",
     "package_changed": true,
     "contents": {

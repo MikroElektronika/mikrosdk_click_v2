@@ -2,7 +2,7 @@
     "display_name": "eFuse 7 Click",
     "name": "mikroe.click.efuse7",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5738",
     "package_changed": true,
     "contents": {

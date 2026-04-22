@@ -2,7 +2,7 @@
     "display_name": "1x4 RGB Click",
     "name": "mikroe.click.1x4rgb",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6240",
     "package_changed": true,
     "contents": {

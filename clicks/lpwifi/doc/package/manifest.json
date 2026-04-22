@@ -2,7 +2,7 @@
     "display_name": "LP WiFi Click",
     "name": "mikroe.click.lpwifi",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4836",
     "package_changed": true,
     "contents": {

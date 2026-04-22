@@ -2,7 +2,7 @@
     "display_name": "DMX Click",
     "name": "mikroe.click.dmx",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-4130",
     "package_changed": true,
     "contents": {

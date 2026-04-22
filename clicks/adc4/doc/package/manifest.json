@@ -2,7 +2,7 @@
     "display_name": "ADC 4 Click",
     "name": "mikroe.click.adc4",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2879",
     "package_changed": true,
     "contents": {

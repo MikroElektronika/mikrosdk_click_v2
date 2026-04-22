@@ -2,7 +2,7 @@
     "display_name": "Ultrasonic 5 Click",
     "name": "mikroe.click.ultrasonic5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5804",
     "package_changed": true,
     "contents": {

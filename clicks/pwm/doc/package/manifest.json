@@ -2,7 +2,7 @@
     "display_name": "PWM Click",
     "name": "mikroe.click.pwm",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-1898",
     "package_changed": true,
     "contents": {

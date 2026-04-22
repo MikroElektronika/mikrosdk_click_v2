@@ -2,7 +2,7 @@
     "display_name": "Buck 23 Click",
     "name": "mikroe.click.buck23",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5536",
     "package_changed": true,
     "contents": {

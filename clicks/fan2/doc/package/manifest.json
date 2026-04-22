@@ -2,7 +2,7 @@
     "display_name": "Fan 2 Click",
     "name": "mikroe.click.fan2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2708",
     "package_changed": true,
     "contents": {

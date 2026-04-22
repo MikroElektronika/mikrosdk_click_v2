@@ -2,7 +2,7 @@
     "display_name": "Shutter Click",
     "name": "mikroe.click.shutter",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5493",
     "package_changed": true,
     "contents": {

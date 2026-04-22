@@ -2,7 +2,7 @@
     "display_name": "UT-M 7-SEG R Click",
     "name": "mikroe.click.utm7segr",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2746",
     "package_changed": true,
     "contents": {

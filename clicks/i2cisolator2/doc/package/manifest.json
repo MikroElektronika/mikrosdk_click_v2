@@ -2,7 +2,7 @@
     "display_name": "I2C Isolator 2 Click",
     "name": "mikroe.click.i2cisolator2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-2609",
     "package_changed": true,
     "contents": {

@@ -2,7 +2,7 @@
     "display_name": "UART I2C SPI Click",
     "name": "mikroe.click.uarti2cspi",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-3349",
     "package_changed": true,
     "contents": {

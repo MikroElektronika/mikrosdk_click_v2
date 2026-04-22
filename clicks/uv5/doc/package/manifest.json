@@ -2,7 +2,7 @@
     "display_name": "UV 5 Click",
     "name": "mikroe.click.uv5",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5535",
     "package_changed": true,
     "contents": {

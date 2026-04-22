@@ -2,7 +2,7 @@
     "display_name": "Smart Buck 2 Click",
     "name": "mikroe.click.smartbuck2",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-5871",
     "package_changed": true,
     "contents": {
