@@ -1,0 +1,22 @@
+{
+    "display_name": "GeoMagnetic 2 Click",
+    "name": "mikroe.click.geomagnetic2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6925",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GeoMagnetic 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GeoMagnetic2",
+                "subdir_name": "lib_geomagnetic2",
+                "path": "GeoMagnetic 2 Click/data/lib_geomagnetic2"
+            }
+        ]
+    }
+}
