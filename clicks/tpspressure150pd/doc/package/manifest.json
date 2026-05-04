@@ -1,0 +1,22 @@
+{
+    "display_name": "TPS Pressure 150PD Click",
+    "name": "mikroe.click.tpspressure150pd",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6923",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TPS Pressure 150PD Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TPSPressure150PD",
+                "subdir_name": "lib_tpspressure150pd",
+                "path": "TPS Pressure 150PD Click/data/lib_tpspressure150pd"
+            }
+        ]
+    }
+}

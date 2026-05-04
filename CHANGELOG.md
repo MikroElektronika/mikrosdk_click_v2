@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### May
++ **[20260504](#20260504)**
 #### April
 + **[20260430](#20260430)**
 + **[20260429](#20260429)**
@@ -334,6 +336,16 @@
 
 ---
 ---
+---
+
+## `20260504`
+
+*Following Click boards have been added:*
+
++ `TPS Pressure 150PD Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260430`
