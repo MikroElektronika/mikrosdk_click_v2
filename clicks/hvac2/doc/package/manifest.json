@@ -1,0 +1,22 @@
+{
+    "display_name": "HVAC 2 Click",
+    "name": "mikroe.click.hvac2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6951",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "HVAC 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HVAC2",
+                "subdir_name": "lib_hvac2",
+                "path": "HVAC 2 Click/data/lib_hvac2"
+            }
+        ]
+    }
+}
