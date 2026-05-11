@@ -344,6 +344,12 @@
 *Following Click boards have been added:*
 
 + `HVAC 2 Click`
++ `LTE Cat.1 5 EU Click`
++ `LTE Cat.1 5 NA Click`
+
+*Following Click boards have been removed:*
+
++ `LTE Cat.1 5 Click`
 
 **[BACK TO TOP](#changelog)**
 

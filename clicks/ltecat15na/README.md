@@ -1,14 +1,14 @@
 
 ---
-# LTE Cat.1 5 Click
+# LTE Cat.1 5 NA Click
 
-> [LTE Cat.1 5 Click](https://www.mikroe.com/?pid_product=MIKROE-6898) demo application is developed using
+> [LTE Cat.1 5 NA Click](https://www.mikroe.com/?pid_product=MIKROE-7033) demo application is developed using
 the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
 open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
 all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
 
 <p align="center">
-  <img src="https://www.mikroe.com/?pid_product=MIKROE-6898&image=1" height=300px>
+  <img src="https://www.mikroe.com/?pid_product=MIKROE-7033&image=1" height=300px>
 </p>
 
 ---
@@ -29,33 +29,33 @@ all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](ht
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.LTECat15
+- Click.LTECat15NA
 
 ### Example Key Functions
 
-- `ltecat15_cfg_setup` This function initializes Click configuration structure to initial values.
+- `ltecat15na_cfg_setup` This function initializes Click configuration structure to initial values.
 ```c
-void ltecat15_cfg_setup ( ltecat15_cfg_t *cfg );
+void ltecat15na_cfg_setup ( ltecat15na_cfg_t *cfg );
 ```
 
-- `ltecat15_init` This function initializes all necessary pins and peripherals used for this Click board.
+- `ltecat15na_init` This function initializes all necessary pins and peripherals used for this Click board.
 ```c
-err_t ltecat15_init ( ltecat15_t *ctx, ltecat15_cfg_t *cfg );
+err_t ltecat15na_init ( ltecat15na_t *ctx, ltecat15na_cfg_t *cfg );
 ```
 
-- `ltecat15_set_sim_apn` This function sets APN for sim card.
+- `ltecat15na_set_sim_apn` This function sets APN for sim card.
 ```c
-void ltecat15_set_sim_apn ( ltecat15_t *ctx, uint8_t *sim_apn );
+void ltecat15na_set_sim_apn ( ltecat15na_t *ctx, uint8_t *sim_apn );
 ```
 
-- `ltecat15_send_sms_text` This function sends text message to a phone number.
+- `ltecat15na_send_sms_text` This function sends text message to a phone number.
 ```c
-void ltecat15_send_sms_text ( ltecat15_t *ctx, uint8_t *phone_number, uint8_t *sms_text );
+void ltecat15na_send_sms_text ( ltecat15na_t *ctx, uint8_t *phone_number, uint8_t *sms_text );
 ```
 
-- `ltecat15_cmd_run` This function sends a specified command to the Click module.
+- `ltecat15na_cmd_run` This function sends a specified command to the Click module.
 ```c
-void ltecat15_cmd_run ( ltecat15_t *ctx, uint8_t *cmd );
+void ltecat15na_cmd_run ( ltecat15na_t *ctx, uint8_t *cmd );
 ```
 
 ### Application Init
@@ -66,7 +66,7 @@ void ltecat15_cmd_run ( ltecat15_t *ctx, uint8_t *cmd );
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
-    ltecat15_cfg_t ltecat15_cfg;  /**< Click config object. */
+    ltecat15na_cfg_t ltecat15na_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -82,9 +82,9 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-    ltecat15_cfg_setup( &ltecat15_cfg );
-    LTECAT15_MAP_MIKROBUS( ltecat15_cfg, MIKROBUS_POSITION_LTECAT15 );
-    if ( UART_ERROR == ltecat15_init( &ltecat15, &ltecat15_cfg ) ) 
+    ltecat15na_cfg_setup( &ltecat15na_cfg );
+    LTECAT15NA_MAP_MIKROBUS( ltecat15na_cfg, MIKROBUS_POSITION_LTECAT15NA );
+    if ( UART_ERROR == ltecat15na_init( &ltecat15na, &ltecat15na_cfg ) ) 
     {
         log_error( &logger, " Communication init." );
         for ( ; ; );
@@ -92,7 +92,7 @@ void application_init ( void )
     
     log_info( &logger, " Application Task " );
 
-    app_state = LTECAT15_POWER_UP;
+    app_state = LTECAT15NA_POWER_UP;
     log_printf( &logger, ">>> APP STATE - POWER UP <<<\r\n\n" );
 }
 ```
@@ -100,15 +100,15 @@ void application_init ( void )
 ### Application Task
 
 > Application task is split in few stages:
- - LTECAT15_POWER_UP: 
+ - LTECAT15NA_POWER_UP: 
    > Powers up the device, performs a factory reset and reads system information.
- - LTECAT15_CONFIG_CONNECTION: 
+ - LTECAT15NA_CONFIG_CONNECTION: 
    > Sets configuration to device to be able to connect to the network.
- - LTECAT15_CHECK_CONNECTION:
+ - LTECAT15NA_CHECK_CONNECTION:
    > Waits for the network registration indicated via CEREG command and then checks the signal quality report.
- - LTECAT15_CONFIG_EXAMPLE:
+ - LTECAT15NA_CONFIG_EXAMPLE:
    > Configures device for the selected example.
- - LTECAT15_EXAMPLE:
+ - LTECAT15NA_EXAMPLE:
    > Depending on the selected demo example, it sends an SMS message (in PDU or TXT mode) or TCP/UDP message.
 > By default, the TCP/UDP example is selected.
 
@@ -117,45 +117,45 @@ void application_task ( void )
 {
     switch ( app_state )
     {
-        case LTECAT15_POWER_UP:
+        case LTECAT15NA_POWER_UP:
         {
-            if ( LTECAT15_OK == ltecat15_power_up( &ltecat15 ) )
+            if ( LTECAT15NA_OK == ltecat15na_power_up( &ltecat15na ) )
             {
-                app_state = LTECAT15_CONFIG_CONNECTION;
+                app_state = LTECAT15NA_CONFIG_CONNECTION;
                 log_printf( &logger, ">>> APP STATE - CONFIG CONNECTION <<<\r\n\n" );
             }
             break;
         }
-        case LTECAT15_CONFIG_CONNECTION:
+        case LTECAT15NA_CONFIG_CONNECTION:
         {
-            if ( LTECAT15_OK == ltecat15_config_connection( &ltecat15 ) )
+            if ( LTECAT15NA_OK == ltecat15na_config_connection( &ltecat15na ) )
             {
-                app_state = LTECAT15_CHECK_CONNECTION;
+                app_state = LTECAT15NA_CHECK_CONNECTION;
                 log_printf( &logger, ">>> APP STATE - CHECK CONNECTION <<<\r\n\n" );
             }
             break;
         }
-        case LTECAT15_CHECK_CONNECTION:
+        case LTECAT15NA_CHECK_CONNECTION:
         {
-            if ( LTECAT15_OK == ltecat15_check_connection( &ltecat15 ) )
+            if ( LTECAT15NA_OK == ltecat15na_check_connection( &ltecat15na ) )
             {
-                app_state = LTECAT15_CONFIG_EXAMPLE;
+                app_state = LTECAT15NA_CONFIG_EXAMPLE;
                 log_printf( &logger, ">>> APP STATE - CONFIG EXAMPLE <<<\r\n\n" );
             }
             break;
         }
-        case LTECAT15_CONFIG_EXAMPLE:
+        case LTECAT15NA_CONFIG_EXAMPLE:
         {
-            if ( LTECAT15_OK == ltecat15_config_example( &ltecat15 ) )
+            if ( LTECAT15NA_OK == ltecat15na_config_example( &ltecat15na ) )
             {
-                app_state = LTECAT15_EXAMPLE;
+                app_state = LTECAT15NA_EXAMPLE;
                 log_printf( &logger, ">>> APP STATE - EXAMPLE <<<\r\n\n" );
             }
             break;
         }
-        case LTECAT15_EXAMPLE:
+        case LTECAT15NA_EXAMPLE:
         {
-            ltecat15_example( &ltecat15 );
+            ltecat15na_example( &ltecat15na );
             break;
         }
         default:

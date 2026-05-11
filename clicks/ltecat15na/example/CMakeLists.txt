@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.21)
 if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
-    project(example_ltecat15 LANGUAGES MikroC)
+    project(example_ltecat15na LANGUAGES MikroC)
 else()
-    project(example_ltecat15 LANGUAGES C ASM)
+    project(example_ltecat15na LANGUAGES C ASM)
 endif()
 
 include(mikroeUtils)
@@ -11,22 +11,22 @@ if (NOT PROJECT_TYPE)
     set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
 endif()
 
-add_executable(example_ltecat15
-        example/main.c
+add_executable(example_ltecat15na
+        main.c
     
 )
 
 
-############################ example_ltecat15 GENERATED CODE START ###########################
+############################ example_ltecat15na GENERATED CODE START ###########################
 find_package(MikroC.Core REQUIRED)
-target_link_libraries(example_ltecat15 PUBLIC MikroC.Core)
+target_link_libraries(example_ltecat15na PUBLIC MikroC.Core)
 find_package(MikroSDK.Board REQUIRED)
-target_link_libraries(example_ltecat15 PUBLIC MikroSDK.Board)
+target_link_libraries(example_ltecat15na PUBLIC MikroSDK.Board)
 find_package(MikroSDK.Log REQUIRED)
-target_link_libraries(example_ltecat15 PUBLIC MikroSDK.Log)
-add_subdirectory(lib_ltecat15)
-target_link_libraries(example_ltecat15 PUBLIC Click.LTECat15)
-############################ example_ltecat15 GENERATED CODE END ###########################
+target_link_libraries(example_ltecat15na PUBLIC MikroSDK.Log)
+add_subdirectory(lib_ltecat15na)
+target_link_libraries(example_ltecat15na PUBLIC Click.LTECat15NA)
+############################ example_ltecat15na GENERATED CODE END ###########################
 
 if(COMPILER_REVISION)
     if(${COMPILER_REVISION} VERSION_GREATER_EQUAL "1.0")

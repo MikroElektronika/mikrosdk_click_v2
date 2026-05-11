@@ -1,5 +1,5 @@
 {
-    "name": "LTE Cat.1 5 Click",
+    "name": "LTE Cat.1 5 NA Click",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
     "hw" : ["Click","GC02S1-EU2"]
 }

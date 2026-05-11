@@ -1,0 +1,22 @@
+{
+    "display_name": "LTE Cat.1 5 NA Click",
+    "name": "mikroe.click.ltecat15na",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7033",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LTE Cat.1 5 NA Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LTECat15NA",
+                "subdir_name": "lib_ltecat15na",
+                "path": "LTE Cat.1 5 NA Click/data/lib_ltecat15na"
+            }
+        ]
+    }
+}

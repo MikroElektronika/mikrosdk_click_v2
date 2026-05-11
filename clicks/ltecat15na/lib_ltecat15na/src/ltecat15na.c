@@ -21,11 +21,11 @@
 ****************************************************************************/
 
 /*!
- * @file ltecat15.c
- * @brief LTE Cat.1 5 Click Driver.
+ * @file ltecat15na.c
+ * @brief LTE Cat.1 5 NA Click Driver.
  */
 
-#include "ltecat15.h"
+#include "ltecat15na.h"
 #include "conversions.h"
 
 /**
@@ -94,15 +94,15 @@ static int16_t encode_pdu_message( uint8_t *sms_text, int16_t sms_text_length,
 static int16_t encode_phone_number ( uint8_t *phone_number, uint8_t *output_buffer, uint16_t buffer_size );
 
 /**
- * @brief LTE Cat.1 5 str cut chr function.
+ * @brief LTE Cat.1 5 NA str cut chr function.
  * @details This function removes all selected characters from string str,
  * and returns it to the same str without those characters.
  * @param str : Address of string.
  * @param chr : Character to cut.
  */
-static void ltecat15_str_cut_chr ( uint8_t *str, uint8_t chr );
+static void ltecat15na_str_cut_chr ( uint8_t *str, uint8_t chr );
 
-void ltecat15_cfg_setup ( ltecat15_cfg_t *cfg ) 
+void ltecat15na_cfg_setup ( ltecat15na_cfg_t *cfg ) 
 {
     // Communication gpio pins
     cfg->rx_pin = HAL_PIN_NC;
@@ -122,7 +122,7 @@ void ltecat15_cfg_setup ( ltecat15_cfg_t *cfg )
     cfg->uart_blocking = false;
 }
 
-err_t ltecat15_init ( ltecat15_t *ctx, ltecat15_cfg_t *cfg ) 
+err_t ltecat15na_init ( ltecat15na_t *ctx, ltecat15na_cfg_t *cfg ) 
 {
     uart_config_t uart_cfg;
 
@@ -172,42 +172,42 @@ err_t ltecat15_init ( ltecat15_t *ctx, ltecat15_cfg_t *cfg )
     return UART_SUCCESS;
 }
 
-err_t ltecat15_generic_write ( ltecat15_t *ctx, uint8_t *data_in, uint16_t len ) 
+err_t ltecat15na_generic_write ( ltecat15na_t *ctx, uint8_t *data_in, uint16_t len ) 
 {
     return uart_write( &ctx->uart, data_in, len );
 }
 
-err_t ltecat15_generic_read ( ltecat15_t *ctx, uint8_t *data_out, uint16_t len ) 
+err_t ltecat15na_generic_read ( ltecat15na_t *ctx, uint8_t *data_out, uint16_t len ) 
 {
     return uart_read( &ctx->uart, data_out, len );
 }
 
-void ltecat15_set_wkp_pin ( ltecat15_t *ctx, uint8_t state )
+void ltecat15na_set_wkp_pin ( ltecat15na_t *ctx, uint8_t state )
 {
     digital_out_write ( &ctx->wkp, state );
 }
 
-void ltecat15_set_rst_pin ( ltecat15_t *ctx, uint8_t state )
+void ltecat15na_set_rst_pin ( ltecat15na_t *ctx, uint8_t state )
 {
     digital_out_write ( &ctx->rst, state );
 }
 
-void ltecat15_set_rts_pin ( ltecat15_t *ctx, uint8_t state )
+void ltecat15na_set_rts_pin ( ltecat15na_t *ctx, uint8_t state )
 {
     digital_out_write ( &ctx->rts, state );
 }
 
-uint8_t ltecat15_get_ring_pin ( ltecat15_t *ctx )
+uint8_t ltecat15na_get_ring_pin ( ltecat15na_t *ctx )
 {
     return digital_in_read ( &ctx->ring );
 }
 
-uint8_t ltecat15_get_cts_pin ( ltecat15_t *ctx )
+uint8_t ltecat15na_get_cts_pin ( ltecat15na_t *ctx )
 {
     return digital_in_read ( &ctx->cts );
 }
 
-void ltecat15_reset_device ( ltecat15_t *ctx )
+void ltecat15na_reset_device ( ltecat15na_t *ctx )
 {
     digital_out_low ( &ctx->rst );
     Delay_100ms ( );
@@ -215,18 +215,18 @@ void ltecat15_reset_device ( ltecat15_t *ctx )
     Delay_1sec ( );
 }
 
-void ltecat15_cmd_run ( ltecat15_t *ctx, uint8_t *cmd )
+void ltecat15na_cmd_run ( ltecat15na_t *ctx, uint8_t *cmd )
 {
     uint8_t carriage_return[ 2 ] = { '\r', 0 };
 
     strcpy( ctx->cmd_buffer, cmd );
     strcat( ctx->cmd_buffer, carriage_return );
 
-    ltecat15_generic_write( ctx, ctx->cmd_buffer, strlen ( ctx->cmd_buffer ) );
+    ltecat15na_generic_write( ctx, ctx->cmd_buffer, strlen ( ctx->cmd_buffer ) );
     Delay_100ms(  );
 }
 
-void ltecat15_cmd_set ( ltecat15_t *ctx, uint8_t *cmd, uint8_t *value )
+void ltecat15na_cmd_set ( ltecat15na_t *ctx, uint8_t *cmd, uint8_t *value )
 {
     uint8_t equal_char[ 2 ] = { '=', 0 };
 
@@ -234,61 +234,61 @@ void ltecat15_cmd_set ( ltecat15_t *ctx, uint8_t *cmd, uint8_t *value )
     strcat( ctx->cmd_buffer, equal_char );
     strcat( ctx->cmd_buffer, value );
 
-    ltecat15_cmd_run( ctx, ctx->cmd_buffer );
+    ltecat15na_cmd_run( ctx, ctx->cmd_buffer );
 }
 
-void ltecat15_cmd_get ( ltecat15_t *ctx, uint8_t *cmd )
+void ltecat15na_cmd_get ( ltecat15na_t *ctx, uint8_t *cmd )
 {
     uint8_t check_char[ 2 ] = { '?', 0 };
 
     strcpy( ctx->cmd_buffer, cmd );
     strcat( ctx->cmd_buffer, check_char );
 
-    ltecat15_cmd_run( ctx, ctx->cmd_buffer );
+    ltecat15na_cmd_run( ctx, ctx->cmd_buffer );
 }
 
-void ltecat15_cmd_help ( ltecat15_t *ctx, uint8_t *cmd )
+void ltecat15na_cmd_help ( ltecat15na_t *ctx, uint8_t *cmd )
 {
     uint8_t check_char[ 2 ] = { '?', 0 };
 
-    ltecat15_cmd_set( ctx, cmd, check_char );
+    ltecat15na_cmd_set( ctx, cmd, check_char );
 }
 
-void ltecat15_set_sim_apn ( ltecat15_t *ctx, uint8_t *sim_apn )
+void ltecat15na_set_sim_apn ( ltecat15na_t *ctx, uint8_t *sim_apn )
 {
     uint8_t equal_char[ 2 ] = { '=', 0 };
     uint8_t quotation_char[ 2 ] = { '\"', 0 };
     
-    strcpy( ctx->cmd_buffer, LTECAT15_CMD_DEFINE_PDP_CONTEXT );
+    strcpy( ctx->cmd_buffer, LTECAT15NA_CMD_DEFINE_PDP_CONTEXT );
     strcat( ctx->cmd_buffer, equal_char );
     strcat( ctx->cmd_buffer, "1,\"IP\",\"" );
     strcat( ctx->cmd_buffer, sim_apn );
     strcat( ctx->cmd_buffer, quotation_char );
     
-    ltecat15_cmd_run( ctx, ctx->cmd_buffer );
+    ltecat15na_cmd_run( ctx, ctx->cmd_buffer );
 }
 
-void ltecat15_send_sms_text ( ltecat15_t *ctx, uint8_t *phone_number, uint8_t *sms_text )
+void ltecat15na_send_sms_text ( ltecat15na_t *ctx, uint8_t *phone_number, uint8_t *sms_text )
 {
     uint8_t equal_char[ 2 ] = { '=', 0 };
     uint8_t quotation_char[ 2 ] = { '\"', 0 };
     uint8_t ctrl_z[ 2 ] = { 26, 0 };
     
-    strcpy( ctx->cmd_buffer, LTECAT15_CMD_SEND_SMS );
+    strcpy( ctx->cmd_buffer, LTECAT15NA_CMD_SEND_SMS );
     strcat( ctx->cmd_buffer, equal_char );
     strcat( ctx->cmd_buffer, quotation_char );
     strcat( ctx->cmd_buffer, phone_number );
     strcat( ctx->cmd_buffer, quotation_char );
     
-    ltecat15_cmd_run( ctx, ctx->cmd_buffer );
+    ltecat15na_cmd_run( ctx, ctx->cmd_buffer );
     Delay_1sec ( );
     
     strcpy( ctx->cmd_buffer, sms_text );
     strcat( ctx->cmd_buffer, ctrl_z );
-    ltecat15_cmd_run( ctx, ctx->cmd_buffer );
+    ltecat15na_cmd_run( ctx, ctx->cmd_buffer );
 }
 
-err_t ltecat15_send_sms_pdu ( ltecat15_t *ctx, uint8_t *service_center_number, uint8_t *phone_number, uint8_t *sms_text )
+err_t ltecat15na_send_sms_pdu ( ltecat15na_t *ctx, uint8_t *service_center_number, uint8_t *phone_number, uint8_t *sms_text )
 {
     uint8_t pdu_buf[ SMS_MAX_PDU_LENGTH ] = { 0 };
     uint8_t byte_buf[ 4 ] = { 0 };
@@ -299,21 +299,21 @@ err_t ltecat15_send_sms_pdu ( ltecat15_t *ctx, uint8_t *service_center_number, u
     uint8_t phone_num[ 32 ] = { 0 };
     strcpy ( smsc, service_center_number );
     strcpy ( phone_num, phone_number );
-    ltecat15_str_cut_chr ( smsc, '+' );
-    ltecat15_str_cut_chr ( phone_num, '+' );
+    ltecat15na_str_cut_chr ( smsc, '+' );
+    ltecat15na_str_cut_chr ( phone_num, '+' );
     
     pdu_buf_len = pdu_encode( smsc, phone_num, sms_text, pdu_buf, SMS_MAX_PDU_LENGTH );
     
     if ( pdu_buf_len < 0 )
     {
-        return LTECAT15_ERROR;
+        return LTECAT15NA_ERROR;
     }
     
     length = pdu_buf_len - ( ( strlen( smsc ) - 1 ) / 2 + 3 );
     uint8_to_str( length, byte_buf );
-    ltecat15_str_cut_chr ( byte_buf, ' ' );
+    ltecat15na_str_cut_chr ( byte_buf, ' ' );
     
-    ltecat15_cmd_set( ctx, LTECAT15_CMD_SEND_SMS, byte_buf );
+    ltecat15na_cmd_set( ctx, LTECAT15NA_CMD_SEND_SMS, byte_buf );
     Delay_1sec ( );
     memset( ctx->cmd_buffer, 0, sizeof ( ctx->cmd_buffer ) );
     
@@ -324,9 +324,9 @@ err_t ltecat15_send_sms_pdu ( ltecat15_t *ctx, uint8_t *service_center_number, u
     }
     strcat( ctx->cmd_buffer, ctrl_z );
     
-    ltecat15_cmd_run( ctx, ctx->cmd_buffer );
+    ltecat15na_cmd_run( ctx, ctx->cmd_buffer );
     
-    return LTECAT15_OK;
+    return LTECAT15NA_OK;
 }
 
 static int16_t pdu_encode( uint8_t *service_center_number, uint8_t *phone_number, uint8_t *sms_text,
@@ -334,7 +334,7 @@ static int16_t pdu_encode( uint8_t *service_center_number, uint8_t *phone_number
 {
     if ( buffer_size < 2 )
     {
-        return LTECAT15_ERROR;
+        return LTECAT15NA_ERROR;
     }
         
     int16_t output_buffer_length = 0;
@@ -347,7 +347,7 @@ static int16_t pdu_encode( uint8_t *service_center_number, uint8_t *phone_number
         length = encode_phone_number( service_center_number, output_buffer + 2, buffer_size - 2 );
         if ( length < 0 && length >= 254 )
         {
-            return LTECAT15_ERROR;
+            return LTECAT15NA_ERROR;
         }
         length++;
     }
@@ -355,7 +355,7 @@ static int16_t pdu_encode( uint8_t *service_center_number, uint8_t *phone_number
     output_buffer_length = length + 1;
     if ( output_buffer_length + 4 > buffer_size )
     {
-        return LTECAT15_ERROR;  // Check if it has space for four more bytes.
+        return LTECAT15NA_ERROR;  // Check if it has space for four more bytes.
     }
 
     // 2. Set type of message.
@@ -370,7 +370,7 @@ static int16_t pdu_encode( uint8_t *service_center_number, uint8_t *phone_number
     output_buffer_length += length + 2;
     if ( output_buffer_length + 4 > buffer_size )
     {
-        return LTECAT15_ERROR;  // Check if it has space for four more bytes.
+        return LTECAT15NA_ERROR;  // Check if it has space for four more bytes.
     }
 
     // 4. Protocol identifiers.
@@ -382,14 +382,14 @@ static int16_t pdu_encode( uint8_t *service_center_number, uint8_t *phone_number
     int16_t sms_text_length = strlen( sms_text );
     if ( sms_text_length > SMS_MAX_7BIT_TEXT_LENGTH )
     {
-        return LTECAT15_ERROR;
+        return LTECAT15NA_ERROR;
     }
     output_buffer[ output_buffer_length++ ] = sms_text_length;
     length = encode_pdu_message( sms_text, sms_text_length, output_buffer + output_buffer_length, 
                                                             buffer_size - output_buffer_length );
     if ( length < 0 )
     {
-        return LTECAT15_ERROR;
+        return LTECAT15NA_ERROR;
     }
     output_buffer_length += length;
 
@@ -407,7 +407,7 @@ static int16_t encode_pdu_message( uint8_t *sms_text, int16_t sms_text_length,
     // Check if output buffer is big enough.
     if ( ( sms_text_length * 7 + 7 ) / 8 > buffer_size )
     {
-        return LTECAT15_ERROR;
+        return LTECAT15NA_ERROR;
     }
 
     int16_t output_buffer_length = 0;
@@ -443,7 +443,7 @@ static int16_t encode_phone_number ( uint8_t *phone_number, uint8_t *output_buff
     // Check if the output buffer is big enough.
     if ( ( phone_number_length + 1 ) / 2 > buffer_size )
     {
-        return LTECAT15_ERROR;
+        return LTECAT15NA_ERROR;
     }
 
     int16_t i = 0;
@@ -451,7 +451,7 @@ static int16_t encode_phone_number ( uint8_t *phone_number, uint8_t *output_buff
     {
         if ( phone_number[ i ] < '0' && phone_number[ i ] > '9' )
         {
-            return LTECAT15_ERROR;
+            return LTECAT15NA_ERROR;
         }
 
         if ( 0 == i % 2 ) 
@@ -469,7 +469,7 @@ static int16_t encode_phone_number ( uint8_t *phone_number, uint8_t *output_buff
     return output_buffer_length;
 }
 
-static void ltecat15_str_cut_chr ( uint8_t *str, uint8_t chr )
+static void ltecat15na_str_cut_chr ( uint8_t *str, uint8_t chr )
 {
     uint16_t cnt_0 = 0, cnt_1 = 0;
     for ( cnt_0 = 0; cnt_0 < strlen( str ); )
