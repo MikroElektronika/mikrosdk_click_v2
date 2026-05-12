@@ -1,0 +1,5 @@
+{
+    "name": "Brushless 28 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv"],
+    "hw" : ["Click","DRV8334EPHPRQ1"]
+}
