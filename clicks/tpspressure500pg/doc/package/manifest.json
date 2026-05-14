@@ -1,0 +1,22 @@
+{
+    "display_name": "TPS Pressure 500PG Click",
+    "name": "mikroe.click.tpspressure500pg",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6924",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TPS Pressure 500PG Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TPSPressure500PG",
+                "subdir_name": "lib_tpspressure500pg",
+                "path": "TPS Pressure 500PG Click/data/lib_tpspressure500pg"
+            }
+        ]
+    }
+}
