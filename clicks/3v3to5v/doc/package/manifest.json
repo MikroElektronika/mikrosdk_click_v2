@@ -1,0 +1,22 @@
+{
+    "display_name": "3V3 to 5V Click",
+    "name": "mikroe.click.3v3to5v",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6901",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "3V3 to 5V Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.3V3to5V",
+                "subdir_name": "lib_c3v3to5v",
+                "path": "3V3 to 5V Click/data/lib_c3v3to5v"
+            }
+        ]
+    }
+}
