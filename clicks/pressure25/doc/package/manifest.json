@@ -1,0 +1,22 @@
+{
+    "display_name": "Pressure 25 Click",
+    "name": "mikroe.click.pressure25",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6937",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Pressure 25 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Pressure25",
+                "subdir_name": "lib_pressure25",
+                "path": "Pressure 25 Click/data/lib_pressure25"
+            }
+        ]
+    }
+}
