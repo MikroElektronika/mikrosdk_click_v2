@@ -21,13 +21,13 @@
 ****************************************************************************/
 
 /*!
- * @file rak11720.c
- * @brief RAK11720 Click Driver.
+ * @file rak11720ipex.c
+ * @brief RAK11720 IPEX Click Driver.
  */
 
-#include "rak11720.h"
+#include "rak11720ipex.h"
 
-void rak11720_cfg_setup ( rak11720_cfg_t *cfg ) 
+void rak11720ipex_cfg_setup ( rak11720ipex_cfg_t *cfg ) 
 {
     // Communication gpio pins
     cfg->rx_pin = HAL_PIN_NC;
@@ -44,7 +44,7 @@ void rak11720_cfg_setup ( rak11720_cfg_t *cfg )
     cfg->uart_blocking = false;
 }
 
-err_t rak11720_init ( rak11720_t *ctx, rak11720_cfg_t *cfg ) 
+err_t rak11720ipex_init ( rak11720ipex_t *ctx, rak11720ipex_cfg_t *cfg ) 
 {
     uart_config_t uart_cfg;
 
@@ -88,27 +88,27 @@ err_t rak11720_init ( rak11720_t *ctx, rak11720_cfg_t *cfg )
     return UART_SUCCESS;
 }
 
-err_t rak11720_generic_write ( rak11720_t *ctx, uint8_t *data_in, uint16_t len ) 
+err_t rak11720ipex_generic_write ( rak11720ipex_t *ctx, uint8_t *data_in, uint16_t len ) 
 {
     return uart_write( &ctx->uart, data_in, len );
 }
 
-err_t rak11720_generic_read ( rak11720_t *ctx, uint8_t *data_out, uint16_t len ) 
+err_t rak11720ipex_generic_read ( rak11720ipex_t *ctx, uint8_t *data_out, uint16_t len ) 
 {
     return uart_read( &ctx->uart, data_out, len );
 }
 
-void rak11720_set_boot_pin ( rak11720_t *ctx, uint8_t state )
+void rak11720ipex_set_boot_pin ( rak11720ipex_t *ctx, uint8_t state )
 {
     digital_out_write ( &ctx->boot, state );
 }
 
-void rak11720_set_rst_pin ( rak11720_t *ctx, uint8_t state )
+void rak11720ipex_set_rst_pin ( rak11720ipex_t *ctx, uint8_t state )
 {
     digital_out_write ( &ctx->rst, state );
 }
 
-void rak11720_reset_device ( rak11720_t *ctx )
+void rak11720ipex_reset_device ( rak11720ipex_t *ctx )
 {
     digital_out_low ( &ctx->rst );
     Delay_100ms ( );
@@ -116,36 +116,36 @@ void rak11720_reset_device ( rak11720_t *ctx )
     Delay_1sec ( );
 }
 
-void rak11720_cmd_run ( rak11720_t *ctx, uint8_t *cmd )
+void rak11720ipex_cmd_run ( rak11720ipex_t *ctx, uint8_t *cmd )
 {
     uint8_t cr_lf[ 3 ] = { '\r', '\n', 0 };
     strcpy( ctx->cmd_buffer, cmd );
     strcat( ctx->cmd_buffer, cr_lf );
-    rak11720_generic_write( ctx, ctx->cmd_buffer, strlen ( ctx->cmd_buffer ) );
+    rak11720ipex_generic_write( ctx, ctx->cmd_buffer, strlen ( ctx->cmd_buffer ) );
     Delay_100ms(  );
 }
 
-void rak11720_cmd_set ( rak11720_t *ctx, uint8_t *cmd, uint8_t *value )
+void rak11720ipex_cmd_set ( rak11720ipex_t *ctx, uint8_t *cmd, uint8_t *value )
 {
     uint8_t equal_char[ 2 ] = { '=', 0 };
     strcpy( ctx->cmd_buffer, cmd );
     strcat( ctx->cmd_buffer, equal_char );
     strcat( ctx->cmd_buffer, value );
-    rak11720_cmd_run( ctx, ctx->cmd_buffer );
+    rak11720ipex_cmd_run( ctx, ctx->cmd_buffer );
 }
 
-void rak11720_cmd_get ( rak11720_t *ctx, uint8_t *cmd )
+void rak11720ipex_cmd_get ( rak11720ipex_t *ctx, uint8_t *cmd )
 {
     uint8_t check_char[ 2 ] = { '?', 0 };
-    rak11720_cmd_set( ctx, cmd, check_char );
+    rak11720ipex_cmd_set( ctx, cmd, check_char );
 }
 
-void rak11720_cmd_help ( rak11720_t *ctx, uint8_t *cmd )
+void rak11720ipex_cmd_help ( rak11720ipex_t *ctx, uint8_t *cmd )
 {
     uint8_t check_char[ 2 ] = { '?', 0 };
     strcpy( ctx->cmd_buffer, cmd );
     strcat( ctx->cmd_buffer, check_char );
-    rak11720_cmd_run( ctx, ctx->cmd_buffer );
+    rak11720ipex_cmd_run( ctx, ctx->cmd_buffer );
 }
 
 // ------------------------------------------------------------------------- END

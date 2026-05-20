@@ -42,7 +42,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = rak11720
+PROJECT_NAME           = rak11720sma
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -965,9 +965,9 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = ../clicks/rak11720/example \
-                         ../clicks/rak11720/lib_rak11720/include \
-                         ../clicks/rak11720/README.md
+INPUT                  = ../clicks/rak11720sma/example \
+                         ../clicks/rak11720sma/lib_rak11720sma/include \
+                         ../clicks/rak11720sma/README.md
 
 # This tag can be used to specify the character encoding of the source files
 # that Doxygen parses. Internally Doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1097,7 +1097,7 @@ EXCLUDE_SYMBOLS        =
 # that contain example code fragments that are included (see the \include
 # command).
 
-EXAMPLE_PATH           = ../clicks/rak11720/example
+EXAMPLE_PATH           = ../clicks/rak11720sma/example
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp and
@@ -1178,7 +1178,7 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the Doxygen output.
 
-USE_MDFILE_AS_MAINPAGE = ../clicks/rak11720/README.md
+USE_MDFILE_AS_MAINPAGE = ../clicks/rak11720sma/README.md
 
 # The Fortran standard specifies that for fixed formatted Fortran code all
 # characters from position 72 are to be considered as comment. A common

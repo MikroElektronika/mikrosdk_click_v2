@@ -6,6 +6,7 @@
 
 ### 2026
 #### May
++ **[20260520](#20260520)**
 + **[20260519](#20260519)**
 + **[20260518](#20260518)**
 + **[20260514](#20260514)**
@@ -342,6 +343,21 @@
 
 ---
 ---
+---
+
+## `20260520`
+
+*Following Click boards have been added:*
+
++ `RAK11720 IPEX Click`
++ `RAK11720 SMA Click`
+
+*Following Click boards have been removed:*
+
++ `RAK11720 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260519`

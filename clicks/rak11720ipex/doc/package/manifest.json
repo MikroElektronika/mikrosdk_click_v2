@@ -1,0 +1,22 @@
+{
+    "display_name": "RAK11720 IPEX Click",
+    "name": "mikroe.click.rak11720ipex",
+    "type": "click",
+    "version": "2.2.1",
+    "pid": "MIKROE-6627",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RAK11720 IPEX Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RAK11720IPEX",
+                "subdir_name": "lib_rak11720ipex",
+                "path": "RAK11720 IPEX Click/data/lib_rak11720ipex"
+            }
+        ]
+    }
+}
