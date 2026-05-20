@@ -13,7 +13,7 @@ add_library(lib_rak11720sma STATIC
         src/rak11720sma.c
         include/rak11720sma.h
 )
-add_library(Click.RAK11720SMA SMA  ALIAS lib_rak11720sma)
+add_library(Click.RAK11720SMA ALIAS lib_rak11720sma)
 
 
 

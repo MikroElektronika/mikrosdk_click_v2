@@ -13,7 +13,7 @@ add_library(lib_rak11720ipex STATIC
         src/rak11720ipex.c
         include/rak11720ipex.h
 )
-add_library(Click.RAK11720IPEX IPEX  ALIAS lib_rak11720ipex)
+add_library(Click.RAK11720IPEX ALIAS lib_rak11720ipex)
 
 
 
