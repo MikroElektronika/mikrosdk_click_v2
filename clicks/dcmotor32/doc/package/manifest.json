@@ -1,0 +1,22 @@
+{
+    "display_name": "DC Motor 32 Click",
+    "name": "mikroe.click.dcmotor32",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6832",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DC Motor 32 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DCMotor32",
+                "subdir_name": "lib_dcmotor32",
+                "path": "DC Motor 32 Click/data/lib_dcmotor32"
+            }
+        ]
+    }
+}
