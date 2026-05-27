@@ -1,0 +1,22 @@
+{
+    "display_name": "ST67W Click",
+    "name": "mikroe.click.st67w",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6921",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ST67W Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ST67W",
+                "subdir_name": "lib_st67w",
+                "path": "ST67W Click/data/lib_st67w"
+            }
+        ]
+    }
+}
