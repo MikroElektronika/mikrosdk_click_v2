@@ -1,0 +1,22 @@
+{
+    "display_name": "Proximity 25 Click",
+    "name": "mikroe.click.proximity25",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6990",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Proximity 25 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Proximity25",
+                "subdir_name": "lib_proximity25",
+                "path": "Proximity 25 Click/data/lib_proximity25"
+            }
+        ]
+    }
+}
