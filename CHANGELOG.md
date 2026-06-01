@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### June
++ **[20260601](#20260601)**
 #### May
 + **[20260528](#20260528)**
 + **[20260527](#20260527)**
@@ -347,6 +349,16 @@
 
 ---
 ---
+---
+
+## `20260601`
+
+*Following Click boards have been added:*
+
++ `Opto 8 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260528`

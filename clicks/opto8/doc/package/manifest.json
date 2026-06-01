@@ -1,0 +1,22 @@
+{
+    "display_name": "Opto 8 Click",
+    "name": "mikroe.click.opto8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6928",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Opto 8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Opto8",
+                "subdir_name": "lib_opto8",
+                "path": "Opto 8 Click/data/lib_opto8"
+            }
+        ]
+    }
+}
