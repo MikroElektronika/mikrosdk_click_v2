@@ -1,0 +1,103 @@
+/*!
+ * @file main.c
+ * @brief 3D Hall 16 Click example
+ *
+ * # Description
+ * This example demonstrates the use of 3D Hall 16 Click board by reading
+ * the magnetic field strength from 3 axes and the sensor internal temperature.
+ *
+ * The demo application is composed of two sections :
+ *
+ * ## Application Init
+ * Initializes the driver and performs the Click default configuration.
+ *
+ * ## Application Task
+ * Reads data from the sensor and displays them on the USB UART every 200ms.
+ *
+ * @author Milan Ivancic
+ *
+ */
+
+#include "board.h"
+#include "log.h"
+#include "c3dhall16.h"
+
+#ifndef MIKROBUS_POSITION_3DHALL16
+    #define MIKROBUS_POSITION_3DHALL16 MIKROBUS_1
+#endif
+
+static c3dhall16_t c3dhall16;
+static log_t logger;
+
+void application_init ( void )
+{
+    log_cfg_t log_cfg;  /**< Logger config object. */
+    c3dhall16_cfg_t c3dhall16_cfg;  /**< Click config object. */
+
+    /** 
+     * Logger initialization.
+     * Default baud rate: 115200
+     * Default log level: LOG_LEVEL_DEBUG
+     * @note If USB_UART_RX and USB_UART_TX 
+     * are defined as HAL_PIN_NC, you will 
+     * need to define them manually for log to work. 
+     * See @b LOG_MAP_USB_UART macro definition for detailed explanation.
+     */
+    LOG_MAP_USB_UART( log_cfg );
+    log_init( &logger, &log_cfg );
+    log_info( &logger, " Application Init " );
+
+    // Click initialization.
+    c3dhall16_cfg_setup( &c3dhall16_cfg );
+    C3DHALL16_MAP_MIKROBUS( c3dhall16_cfg, MIKROBUS_POSITION_3DHALL16 );
+    if ( SPI_MASTER_ERROR == c3dhall16_init( &c3dhall16, &c3dhall16_cfg ) )
+    {
+        log_error( &logger, " Communication init." );
+        for ( ; ; );
+    }
+    
+    if ( C3DHALL16_ERROR == c3dhall16_default_cfg ( &c3dhall16 ) )
+    {
+        log_error( &logger, " Default configuration." );
+        for ( ; ; );
+    }
+    
+    log_info( &logger, " Application Task " );
+}
+
+void application_task ( void )
+{
+    float x_axis = 0;
+    float y_axis = 0;
+    float z_axis = 0;
+    float temperature = 0;
+
+    if ( C3DHALL16_OK == c3dhall16_get_data( &c3dhall16, &x_axis, &y_axis, &z_axis, &temperature ) )
+    {
+        log_printf( &logger, " X-axis: %.1f uT\r\n", x_axis );
+        log_printf( &logger, " Y-axis: %.1f uT\r\n", y_axis );
+        log_printf( &logger, " Z-axis: %.1f uT\r\n", z_axis );
+        log_printf( &logger, " Temperature: %.2f C\r\n\n", temperature );
+    }
+
+    Delay_ms( 200 );
+}
+
+int main ( void ) 
+{
+    /* Do not remove this line or clock might not be set correctly. */
+    #ifdef PREINIT_SUPPORTED
+    preinit();
+    #endif
+    
+    application_init( );
+    
+    for ( ; ; ) 
+    {
+        application_task( );
+    }
+
+    return 0;
+}
+
+// ------------------------------------------------------------------------ END
