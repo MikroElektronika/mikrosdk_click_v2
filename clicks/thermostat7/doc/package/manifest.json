@@ -1,0 +1,22 @@
+{
+    "display_name": "Thermostat 7 Click",
+    "name": "mikroe.click.thermostat7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6948",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermostat 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermostat7",
+                "subdir_name": "lib_thermostat7",
+                "path": "Thermostat 7 Click/data/lib_thermostat7"
+            }
+        ]
+    }
+}
