@@ -1,0 +1,22 @@
+{
+    "display_name": "RTC 26 Click",
+    "name": "mikroe.click.rtc26",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6920",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 26 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC26",
+                "subdir_name": "lib_rtc26",
+                "path": "RTC 26 Click/data/lib_rtc26"
+            }
+        ]
+    }
+}
