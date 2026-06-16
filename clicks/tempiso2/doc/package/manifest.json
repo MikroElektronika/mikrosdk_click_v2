@@ -1,0 +1,22 @@
+{
+    "display_name": "Temp ISO 2 Click",
+    "name": "mikroe.click.tempiso2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6999",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Temp ISO 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TempISO2",
+                "subdir_name": "lib_tempiso2",
+                "path": "Temp ISO 2 Click/data/lib_tempiso2"
+            }
+        ]
+    }
+}
