@@ -1,0 +1,22 @@
+{
+    "display_name": "Mosaic 2 Click",
+    "name": "mikroe.click.mosaic2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6931",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Mosaic 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Mosaic2",
+                "subdir_name": "lib_mosaic2",
+                "path": "Mosaic 2 Click/data/lib_mosaic2"
+            }
+        ]
+    }
+}
