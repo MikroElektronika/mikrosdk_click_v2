@@ -1,0 +1,22 @@
+{
+    "display_name": "RTLS UWB Click",
+    "name": "mikroe.click.rtlsuwb",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6863",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTLS UWB Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTLSUWB",
+                "subdir_name": "lib_rtlsuwb",
+                "path": "RTLS UWB Click/data/lib_rtlsuwb"
+            }
+        ]
+    }
+}
