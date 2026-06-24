@@ -1,0 +1,22 @@
+{
+    "display_name": "Hall Switch 6 Click",
+    "name": "mikroe.click.hallswitch6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7005",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Hall Switch 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HallSwitch6",
+                "subdir_name": "lib_hallswitch6",
+                "path": "Hall Switch 6 Click/data/lib_hallswitch6"
+            }
+        ]
+    }
+}
