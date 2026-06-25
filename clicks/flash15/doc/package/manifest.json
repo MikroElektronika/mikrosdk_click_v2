@@ -1,0 +1,22 @@
+{
+    "display_name": "Flash 15 Click",
+    "name": "mikroe.click.flash15",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6955",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Flash 15 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Flash15",
+                "subdir_name": "lib_flash15",
+                "path": "Flash 15 Click/data/lib_flash15"
+            }
+        ]
+    }
+}
