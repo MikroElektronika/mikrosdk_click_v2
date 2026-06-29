@@ -1,0 +1,22 @@
+{
+    "display_name": "PoE Source Click",
+    "name": "mikroe.click.poesource",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6958",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PoE Source Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PoESource",
+                "subdir_name": "lib_poesource",
+                "path": "PoE Source Click/data/lib_poesource"
+            }
+        ]
+    }
+}
