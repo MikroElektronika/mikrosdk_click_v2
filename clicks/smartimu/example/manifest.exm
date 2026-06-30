@@ -1,0 +1,5 @@
+{
+    "name": "Smart IMU Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32"],
+    "hw" : ["Click","BHI385"]
+}

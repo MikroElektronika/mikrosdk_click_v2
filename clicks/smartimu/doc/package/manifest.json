@@ -1,0 +1,22 @@
+{
+    "display_name": "Smart IMU Click",
+    "name": "mikroe.click.smartimu",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6932",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart IMU Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartIMU",
+                "subdir_name": "lib_smartimu",
+                "path": "Smart IMU Click/data/lib_smartimu"
+            }
+        ]
+    }
+}
