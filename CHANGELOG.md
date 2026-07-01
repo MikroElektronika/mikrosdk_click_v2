@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### July
++ **[20260701](#20260701)**
 #### June
 + **[20260630](#20260630)**
 + **[20260629](#20260629)**
@@ -361,6 +363,16 @@
 
 ---
 ---
+---
+
+## `20260701`
+
+*Following Click boards have been added:*
+
++ `Hall Current 25 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260630`
