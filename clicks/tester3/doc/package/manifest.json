@@ -1,0 +1,22 @@
+{
+    "display_name": "Tester 3 Click",
+    "name": "mikroe.click.tester3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6967",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Tester 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Tester3",
+                "subdir_name": "lib_tester3",
+                "path": "Tester 3 Click/data/lib_tester3"
+            }
+        ]
+    }
+}
