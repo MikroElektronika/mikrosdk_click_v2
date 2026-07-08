@@ -1,0 +1,22 @@
+{
+    "display_name": "Remote Temp 2 Click",
+    "name": "mikroe.click.remotetemp2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6996",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Remote Temp 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RemoteTemp2",
+                "subdir_name": "lib_remotetemp2",
+                "path": "Remote Temp 2 Click/data/lib_remotetemp2"
+            }
+        ]
+    }
+}
