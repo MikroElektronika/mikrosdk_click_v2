@@ -1,0 +1,22 @@
+{
+    "display_name": "RTC 27 Click",
+    "name": "mikroe.click.rtc27",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6964",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTC 27 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTC27",
+                "subdir_name": "lib_rtc27",
+                "path": "RTC 27 Click/data/lib_rtc27"
+            }
+        ]
+    }
+}
