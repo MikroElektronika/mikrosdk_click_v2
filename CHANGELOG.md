@@ -377,6 +377,13 @@
 
 + `Remote Temp 3 Click`
 
+*Following Click boards have been updated:*
+
++ `TPS Pressure 040MY Click`
++ `TPS Pressure 100MG Click`
++ `TPS Pressure 150PD Click`
++ `TPS Pressure 500PG Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

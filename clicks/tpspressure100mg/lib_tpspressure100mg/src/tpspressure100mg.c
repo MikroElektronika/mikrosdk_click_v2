@@ -417,14 +417,6 @@ err_t tpspressure100mg_read_data ( tpspressure100mg_t *ctx, float *press, float 
             *press = TPSPRESSURE100MG_PRESSURE_MIN + ( ( press_raw - TPSPRESSURE100MG_DATA_MIN ) / 
                                                        ( TPSPRESSURE100MG_DATA_MAX - TPSPRESSURE100MG_DATA_MIN ) ) * 
                                                      ( TPSPRESSURE100MG_PRESSURE_MAX - TPSPRESSURE100MG_PRESSURE_MIN );
-            if ( *press > TPSPRESSURE100MG_PRESSURE_MAX )
-            {
-                *press = TPSPRESSURE100MG_PRESSURE_MAX;
-            }
-            else if ( *press < TPSPRESSURE100MG_PRESSURE_MIN )
-            {
-                *press = TPSPRESSURE100MG_PRESSURE_MIN;
-            }
         }
         if ( NULL != temp )
         {

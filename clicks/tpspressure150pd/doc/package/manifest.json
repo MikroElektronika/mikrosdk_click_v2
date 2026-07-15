@@ -2,7 +2,7 @@
     "display_name": "TPS Pressure 150PD Click",
     "name": "mikroe.click.tpspressure150pd",
     "type": "click",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "pid": "MIKROE-6923",
     "package_changed": true,
     "contents": {
