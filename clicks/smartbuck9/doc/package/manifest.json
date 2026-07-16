@@ -1,0 +1,22 @@
+{
+    "display_name": "Smart Buck 9 Click",
+    "name": "mikroe.click.smartbuck9",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6982",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Smart Buck 9 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SmartBuck9",
+                "subdir_name": "lib_smartbuck9",
+                "path": "Smart Buck 9 Click/data/lib_smartbuck9"
+            }
+        ]
+    }
+}
