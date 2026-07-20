@@ -1,0 +1,22 @@
+{
+    "display_name": "Temp Alarm 2 Click",
+    "name": "mikroe.click.tempalarm2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6947",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Temp Alarm 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TempAlarm2",
+                "subdir_name": "lib_tempalarm2",
+                "path": "Temp Alarm 2 Click/data/lib_tempalarm2"
+            }
+        ]
+    }
+}
