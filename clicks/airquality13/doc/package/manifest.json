@@ -1,0 +1,22 @@
+{
+    "display_name": "Air Quality 13 Click",
+    "name": "mikroe.click.airquality13",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7008",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Air Quality 13 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.AirQuality13",
+                "subdir_name": "lib_airquality13",
+                "path": "Air Quality 13 Click/data/lib_airquality13"
+            }
+        ]
+    }
+}
