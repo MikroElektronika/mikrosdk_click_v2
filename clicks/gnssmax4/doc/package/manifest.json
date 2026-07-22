@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS MAX 4 Click",
+    "name": "mikroe.click.gnssmax4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6994",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS MAX 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSSMAX4",
+                "subdir_name": "lib_gnssmax4",
+                "path": "GNSS MAX 4 Click/data/lib_gnssmax4"
+            }
+        ]
+    }
+}
