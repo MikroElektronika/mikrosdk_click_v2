@@ -1,0 +1,22 @@
+{
+    "display_name": "USB-C Power 2 Click",
+    "name": "mikroe.click.usbcpower2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6939",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB-C Power 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBCPower2",
+                "subdir_name": "lib_usbcpower2",
+                "path": "USB-C Power 2 Click/data/lib_usbcpower2"
+            }
+        ]
+    }
+}
