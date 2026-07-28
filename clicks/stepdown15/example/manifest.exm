@@ -1,0 +1,5 @@
+{
+    "name": "Step Down 15 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","MCPF1412M06T-E/8FW"]
+}
