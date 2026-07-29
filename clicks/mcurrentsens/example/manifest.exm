@@ -1,0 +1,5 @@
+{
+    "name": "mCurrent Sens Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","MCP3564RT-E/NC","AT34C02D-XHM-B"]
+}

@@ -1,0 +1,22 @@
+{
+    "display_name": "mCurrent Sens Click",
+    "name": "mikroe.click.mcurrentsens",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6985",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "mCurrent Sens Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.mCurrentSens",
+                "subdir_name": "lib_mcurrentsens",
+                "path": "mCurrent Sens Click/data/lib_mcurrentsens"
+            }
+        ]
+    }
+}
