@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### August
++ **[20260803](#20260803)**
 #### July
 + **[20260729](#20260729)**
 + **[20260728](#20260728)**
@@ -376,6 +378,16 @@
 
 ---
 ---
+---
+
+## `20260803`
+
+*Following Click boards have been added:*
+
++ `USB-C Power 3 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260729`

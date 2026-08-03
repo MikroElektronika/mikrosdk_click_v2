@@ -1,0 +1,22 @@
+{
+    "display_name": "USB-C Power 3 Click",
+    "name": "mikroe.click.usbcpower3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6954",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB-C Power 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBCPower3",
+                "subdir_name": "lib_usbcpower3",
+                "path": "USB-C Power 3 Click/data/lib_usbcpower3"
+            }
+        ]
+    }
+}
