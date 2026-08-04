@@ -22,10 +22,11 @@
 
 /*!
  * @file haptic3.c
- * @brief HAPTIC 3 Click Driver.
+ * @brief Haptic 3 Click Driver.
  */
 
 #include "haptic3.h"
+#include "haptic3_scripts.h"
 
 void haptic3_cfg_setup ( haptic3_cfg_t *cfg ) 
 {
@@ -87,17 +88,7 @@ err_t haptic3_default_cfg ( haptic3_t *ctx )
         return HAPTIC3_ERROR;
     }
     
-    error_flag |= haptic3_set_acceleration_mode ( ctx, HAPTIC3_TOP_CFG1_ACCEL_ENABLE );
-    
-    error_flag |= haptic3_set_actuator_type ( ctx, HAPTIC3_TOP_CFG1_ACT_TYPE_LRA );
-    error_flag |= haptic3_set_actuator_abs_volt ( ctx, HAPTIC3_DEFAULT_ACTUATOR_ABS_VOLT );
-    error_flag |= haptic3_set_actuator_nom_volt ( ctx, HAPTIC3_DEFAULT_ACTUATOR_NOM_VOLT );
-    error_flag |= haptic3_set_actuator_imax ( ctx, HAPTIC3_DEFAULT_ACTUATOR_IMAX );
-    error_flag |= haptic3_set_actuator_impedance ( ctx, HAPTIC3_DEFAULT_ACTUATOR_IMPEDANCE );
-    error_flag |= haptic3_set_actuator_lra_freq ( ctx, HAPTIC3_DEFAULT_ACTUATOR_LRA_FREQ );
-    
-    error_flag |= haptic3_set_freq_track ( ctx, HAPTIC3_TOP_CFG1_FREQ_TRACK_DISABLE );
-    error_flag |= haptic3_set_operation_mode ( ctx, HAPTIC3_TOP_CTL1_OP_MODE_DRO );
+    error_flag |= haptic3_load_script ( ctx );
     Delay_1sec ( );
     
     return error_flag;
@@ -310,6 +301,43 @@ err_t haptic3_get_vibration_level ( haptic3_t *ctx, float *level )
         return HAPTIC3_OK;
     }
     return HAPTIC3_ERROR;
+}
+
+err_t haptic3_clear_events ( haptic3_t *ctx )
+{
+    err_t error_flag = HAPTIC3_OK;
+    uint8_t irq = 0;
+    error_flag |= haptic3_read_register ( ctx, HAPTIC3_REG_IRQ_EVENT1, &irq );
+    error_flag |= haptic3_write_register ( ctx, HAPTIC3_REG_IRQ_EVENT1, irq );
+    error_flag |= haptic3_read_register ( ctx, HAPTIC3_REG_IRQ_EVENT_WARNING_DIAG, &irq );
+    error_flag |= haptic3_write_register ( ctx, HAPTIC3_REG_IRQ_EVENT_WARNING_DIAG, irq );
+    error_flag |= haptic3_read_register ( ctx, HAPTIC3_REG_IRQ_EVENT_SEQ_DIAG, &irq );
+    error_flag |= haptic3_write_register ( ctx, HAPTIC3_REG_IRQ_EVENT_SEQ_DIAG, irq );
+    return error_flag;
+}
+
+err_t haptic3_load_script ( haptic3_t *ctx )
+{
+    err_t error_flag = HAPTIC3_OK;
+#if ( HAPTIC3_SCRIPT_SELECTOR == HAPTIC3_SCRIPT_GENERIC )
+    error_flag |= haptic3_set_acceleration_mode ( ctx, HAPTIC3_TOP_CFG1_ACCEL_ENABLE );
+    
+    error_flag |= haptic3_set_actuator_type ( ctx, HAPTIC3_TOP_CFG1_ACT_TYPE_LRA );
+    error_flag |= haptic3_set_actuator_abs_volt ( ctx, HAPTIC3_DEFAULT_ACTUATOR_ABS_VOLT );
+    error_flag |= haptic3_set_actuator_nom_volt ( ctx, HAPTIC3_DEFAULT_ACTUATOR_NOM_VOLT );
+    error_flag |= haptic3_set_actuator_imax ( ctx, HAPTIC3_DEFAULT_ACTUATOR_IMAX );
+    error_flag |= haptic3_set_actuator_impedance ( ctx, HAPTIC3_DEFAULT_ACTUATOR_IMPEDANCE );
+    error_flag |= haptic3_set_actuator_lra_freq ( ctx, HAPTIC3_DEFAULT_ACTUATOR_LRA_FREQ );
+    
+    error_flag |= haptic3_set_freq_track ( ctx, HAPTIC3_TOP_CFG1_FREQ_TRACK_DISABLE );
+    error_flag |= haptic3_set_operation_mode ( ctx, HAPTIC3_TOP_CTL1_OP_MODE_DRO );
+#else
+    for ( uint16_t cnt = 0; ( cnt < sizeof ( haptic3_script ) ) && ( HAPTIC3_OK == error_flag ); cnt += 2 )
+    {
+        error_flag |= haptic3_write_register ( ctx, haptic3_script[ cnt ], haptic3_script[ cnt + 1 ] );
+    }
+#endif
+    return error_flag;
 }
 
 // ------------------------------------------------------------------------- END

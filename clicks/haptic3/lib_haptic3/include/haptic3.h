@@ -22,7 +22,7 @@
 
 /*!
  * @file haptic3.h
- * @brief This file contains API for HAPTIC 3 Click Driver.
+ * @brief This file contains API for Haptic 3 Click Driver.
  */
 
 #ifndef HAPTIC3_H
@@ -51,14 +51,14 @@ extern "C"{
 #include "drv_i2c_master.h"
 
 /*!
- * @addtogroup haptic3 HAPTIC 3 Click Driver
- * @brief API for configuring and manipulating HAPTIC 3 Click driver.
+ * @addtogroup haptic3 Haptic 3 Click Driver
+ * @brief API for configuring and manipulating Haptic 3 Click driver.
  * @{
  */
 
 /**
- * @defgroup haptic3_reg HAPTIC 3 Registers List
- * @brief List of registers of HAPTIC 3 Click driver.
+ * @defgroup haptic3_reg Haptic 3 Registers List
+ * @brief List of registers of Haptic 3 Click driver.
  */
 
 /**
@@ -67,8 +67,8 @@ extern "C"{
  */
 
 /**
- * @brief HAPTIC 3 Register Map.
- * @details Specified Register Map of HAPTIC 3 Click driver.
+ * @brief Haptic 3 Register Map.
+ * @details Specified Register Map of Haptic 3 Click driver.
  */
 #define HAPTIC3_REG_CHIP_REV                    0x00
 #define HAPTIC3_REG_IRQ_EVENT1                  0x03
@@ -125,13 +125,16 @@ extern "C"{
 #define HAPTIC3_REG_IRQ_EVENT_ACTUATOR_FAULT    0x81
 #define HAPTIC3_REG_IRQ_STATUS2                 0x82
 #define HAPTIC3_REG_IRQ_MASK2                   0x83
-#define HAPTIC3_REG_SNP_MEM_X                   0x84
+#define HAPTIC3_REG_SNP_MEM_0                   0x84
+#define HAPTIC3_REG_SNP_MEM_1                   0x85
+#define HAPTIC3_REG_SNP_MEM_99                  0xE7
+
 
 /*! @} */ // haptic3_reg
 
 /**
- * @defgroup haptic3_set HAPTIC 3 Registers Settings
- * @brief Settings for registers of HAPTIC 3 Click driver.
+ * @defgroup haptic3_set Haptic 3 Registers Settings
+ * @brief Settings for registers of Haptic 3 Click driver.
  */
 
 /**
@@ -140,14 +143,14 @@ extern "C"{
  */
 
 /**
- * @brief HAPTIC 3 chip rev value.
- * @details Specified chip rev value of HAPTIC 3 Click driver.
+ * @brief Haptic 3 chip rev value.
+ * @details Specified chip rev value of Haptic 3 Click driver.
  */
 #define HAPTIC3_CHIP_REV                        0xDA
 
 /**
- * @brief HAPTIC 3 top cfg 1 register settings.
- * @details Specified top cfg 1 register settings of HAPTIC 3 Click driver.
+ * @brief Haptic 3 top cfg 1 register settings.
+ * @details Specified top cfg 1 register settings of Haptic 3 Click driver.
  */
 #define HAPTIC3_TOP_CFG1_EMB_MODE_MANUAL        0x00
 #define HAPTIC3_TOP_CFG1_EMB_MODE_AUTO          0x80
@@ -172,8 +175,8 @@ extern "C"{
 #define HAPTIC3_TOP_CFG1_AMPLITUDE_PID_MASK     0x01
 
 /**
- * @brief HAPTIC 3 top ctl 1 register settings.
- * @details Specified top ctl 1 register settings of HAPTIC 3 Click driver.
+ * @brief Haptic 3 top ctl 1 register settings.
+ * @details Specified top ctl 1 register settings of Haptic 3 Click driver.
  */
 #define HAPTIC3_TOP_CTL1_SEQ_STOP               0x00
 #define HAPTIC3_TOP_CTL1_SEQ_START              0x10
@@ -189,8 +192,8 @@ extern "C"{
 #define HAPTIC3_TOP_CTL1_OP_MODE_MASK           0x07
 
 /**
- * @brief HAPTIC 3 calculation macros.
- * @details Specified calculation macros of HAPTIC 3 Click driver.
+ * @brief Haptic 3 calculation macros.
+ * @details Specified calculation macros of Haptic 3 Click driver.
  */
 #define HAPTIC3_ACTUATOR_VOLTAGE_MIN            0.0
 #define HAPTIC3_ACTUATOR_VOLTAGE_MAX            6.0
@@ -212,8 +215,8 @@ extern "C"{
 #define HAPTIC3_ROUND_TO_NEAREST_INT            0.5
 
 /**
- * @brief HAPTIC 3 actuator settings default values.
- * @details Specified actuator settings default values of HAPTIC 3 Click driver.
+ * @brief Haptic 3 actuator settings default values.
+ * @details Specified actuator settings default values of Haptic 3 Click driver.
  */
 #define HAPTIC3_DEFAULT_ACTUATOR_TYPE           HAPTIC3_TOP_CFG1_ACT_TYPE_LRA
 #define HAPTIC3_DEFAULT_ACTUATOR_ABS_VOLT       2.808
@@ -223,17 +226,28 @@ extern "C"{
 #define HAPTIC3_DEFAULT_ACTUATOR_LRA_FREQ       174.0
 
 /**
- * @brief HAPTIC 3 device address setting.
+ * @brief Haptic 3 Click actuator scripts selector.
+ * @details Selects actuator registers script of Haptic 3 Click driver.
+ */
+#define HAPTIC3_SCRIPT_GENERIC                  0
+#define HAPTIC3_SCRIPT_LRA2024A_SINE            1
+#define HAPTIC3_SCRIPT_LRA2024A_CLICK           2
+#define HAPTIC3_SCRIPT_LRA2024A_BUZZ            3
+#define HAPTIC3_SCRIPT_LRA0825BC                4
+#define HAPTIC3_SCRIPT_SELECTOR                 HAPTIC3_SCRIPT_LRA2024A_SINE
+
+/**
+ * @brief Haptic 3 device address setting.
  * @details Specified setting for device slave address selection of
- * HAPTIC 3 Click driver.
+ * Haptic 3 Click driver.
  */
 #define HAPTIC3_DEVICE_ADDRESS                  0x4A
 
 /*! @} */ // haptic3_set
 
 /**
- * @defgroup haptic3_map HAPTIC 3 MikroBUS Map
- * @brief MikroBUS pin mapping of HAPTIC 3 Click driver.
+ * @defgroup haptic3_map Haptic 3 MikroBUS Map
+ * @brief MikroBUS pin mapping of Haptic 3 Click driver.
  */
 
 /**
@@ -243,7 +257,7 @@ extern "C"{
 
 /**
  * @brief MikroBUS pin mapping.
- * @details Mapping pins of HAPTIC 3 Click to the selected MikroBUS.
+ * @details Mapping pins of Haptic 3 Click to the selected MikroBUS.
  */
 #define HAPTIC3_MAP_MIKROBUS( cfg, mikrobus ) \
     cfg.scl = MIKROBUS( mikrobus, MIKROBUS_SCL ); \
@@ -255,8 +269,8 @@ extern "C"{
 /*! @} */ // haptic3
 
 /**
- * @brief HAPTIC 3 Click context object.
- * @details Context object definition of HAPTIC 3 Click driver.
+ * @brief Haptic 3 Click context object.
+ * @details Context object definition of Haptic 3 Click driver.
  */
 typedef struct
 {
@@ -275,8 +289,8 @@ typedef struct
 } haptic3_t;
 
 /**
- * @brief HAPTIC 3 Click configuration object.
- * @details Configuration object definition of HAPTIC 3 Click driver.
+ * @brief Haptic 3 Click configuration object.
+ * @details Configuration object definition of Haptic 3 Click driver.
  */
 typedef struct
 {
@@ -292,7 +306,7 @@ typedef struct
 } haptic3_cfg_t;
 
 /**
- * @brief HAPTIC 3 Click return value data.
+ * @brief Haptic 3 Click return value data.
  * @details Predefined enum values for driver return values.
  */
 typedef enum
@@ -303,13 +317,13 @@ typedef enum
 } haptic3_return_value_t;
 
 /*!
- * @addtogroup haptic3 HAPTIC 3 Click Driver
- * @brief API for configuring and manipulating HAPTIC 3 Click driver.
+ * @addtogroup haptic3 Haptic 3 Click Driver
+ * @brief API for configuring and manipulating Haptic 3 Click driver.
  * @{
  */
 
 /**
- * @brief HAPTIC 3 configuration object setup function.
+ * @brief Haptic 3 configuration object setup function.
  * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
@@ -320,7 +334,7 @@ typedef enum
 void haptic3_cfg_setup ( haptic3_cfg_t *cfg );
 
 /**
- * @brief HAPTIC 3 initialization function.
+ * @brief Haptic 3 initialization function.
  * @details This function initializes all necessary pins and peripherals used
  * for this Click board.
  * @param[out] ctx : Click context object.
@@ -336,8 +350,8 @@ void haptic3_cfg_setup ( haptic3_cfg_t *cfg );
 err_t haptic3_init ( haptic3_t *ctx, haptic3_cfg_t *cfg );
 
 /**
- * @brief HAPTIC 3 default configuration function.
- * @details This function executes a default configuration of HAPTIC 3
+ * @brief Haptic 3 default configuration function.
+ * @details This function executes a default configuration of Haptic 3
  * Click board.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -351,7 +365,7 @@ err_t haptic3_init ( haptic3_t *ctx, haptic3_cfg_t *cfg );
 err_t haptic3_default_cfg ( haptic3_t *ctx );
 
 /**
- * @brief HAPTIC 3 I2C writing function.
+ * @brief Haptic 3 I2C writing function.
  * @details This function writes a desired number of data bytes starting from
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
@@ -368,7 +382,7 @@ err_t haptic3_default_cfg ( haptic3_t *ctx );
 err_t haptic3_generic_write ( haptic3_t *ctx, uint8_t reg, uint8_t *tx_buf, uint8_t tx_len );
 
 /**
- * @brief HAPTIC 3 I2C reading function.
+ * @brief Haptic 3 I2C reading function.
  * @details This function reads a desired number of data bytes starting from
  * the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
@@ -385,7 +399,7 @@ err_t haptic3_generic_write ( haptic3_t *ctx, uint8_t reg, uint8_t *tx_buf, uint
 err_t haptic3_generic_read ( haptic3_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8_t rx_len );
 
 /**
- * @brief HAPTIC 3 write register function.
+ * @brief Haptic 3 write register function.
  * @details This function writes a desired data to the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -399,7 +413,7 @@ err_t haptic3_generic_read ( haptic3_t *ctx, uint8_t reg, uint8_t *rx_buf, uint8
 err_t haptic3_write_register ( haptic3_t *ctx, uint8_t reg, uint8_t data_in );
 
 /**
- * @brief HAPTIC 3 read register function.
+ * @brief Haptic 3 read register function.
  * @details This function reads a desired data from the selected register by using I2C serial interface.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -413,7 +427,7 @@ err_t haptic3_write_register ( haptic3_t *ctx, uint8_t reg, uint8_t data_in );
 err_t haptic3_read_register ( haptic3_t *ctx, uint8_t reg, uint8_t *data_out );
 
 /**
- * @brief HAPTIC 3 write register bits function.
+ * @brief Haptic 3 write register bits function.
  * @details This function writes a desired data bits to the bits specified with @b mask of the selected
  * register.
  * @param[in] ctx : Click context object.
@@ -429,7 +443,7 @@ err_t haptic3_read_register ( haptic3_t *ctx, uint8_t reg, uint8_t *data_out );
 err_t haptic3_write_register_bits ( haptic3_t *ctx, uint8_t reg, uint8_t mask, uint8_t data_in );
 
 /**
- * @brief HAPTIC 3 check communication function.
+ * @brief Haptic 3 check communication function.
  * @details This function checks the communication by reading and verifying the chip ID.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -441,7 +455,7 @@ err_t haptic3_write_register_bits ( haptic3_t *ctx, uint8_t reg, uint8_t mask, u
 err_t haptic3_check_communication ( haptic3_t *ctx );
 
 /**
- * @brief HAPTIC 3 enable device function.
+ * @brief Haptic 3 enable device function.
  * @details This function enables the device by setting the EN pin to high logic state.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -451,7 +465,7 @@ err_t haptic3_check_communication ( haptic3_t *ctx );
 void haptic3_enable_device ( haptic3_t *ctx );
 
 /**
- * @brief HAPTIC 3 disable device function.
+ * @brief Haptic 3 disable device function.
  * @details This function disables the device by setting the EN pin to low logic state.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -461,7 +475,7 @@ void haptic3_enable_device ( haptic3_t *ctx );
 void haptic3_disable_device ( haptic3_t *ctx );
 
 /**
- * @brief HAPTIC 3 get INT pin function.
+ * @brief Haptic 3 get INT pin function.
  * @details This function returns the INT pin logic state.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -471,7 +485,7 @@ void haptic3_disable_device ( haptic3_t *ctx );
 uint8_t haptic3_get_int_pin ( haptic3_t *ctx );
 
 /**
- * @brief HAPTIC 3 set actuator type function.
+ * @brief Haptic 3 set actuator type function.
  * @details This function sets the actuator type bits in TOP CFG1 register.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -485,7 +499,7 @@ uint8_t haptic3_get_int_pin ( haptic3_t *ctx );
 err_t haptic3_set_actuator_type ( haptic3_t *ctx, uint8_t type );
 
 /**
- * @brief HAPTIC 3 set actuator abs volt function.
+ * @brief Haptic 3 set actuator abs volt function.
  * @details This function sets the actuator absolute maximum voltage.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -498,7 +512,7 @@ err_t haptic3_set_actuator_type ( haptic3_t *ctx, uint8_t type );
 err_t haptic3_set_actuator_abs_volt ( haptic3_t *ctx, float abs_volt );
 
 /**
- * @brief HAPTIC 3 set actuator nom volt function.
+ * @brief Haptic 3 set actuator nom volt function.
  * @details This function sets the actuator nominal voltage.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -511,7 +525,7 @@ err_t haptic3_set_actuator_abs_volt ( haptic3_t *ctx, float abs_volt );
 err_t haptic3_set_actuator_nom_volt ( haptic3_t *ctx, float nom_volt );
 
 /**
- * @brief HAPTIC 3 set actuator imax function.
+ * @brief Haptic 3 set actuator imax function.
  * @details This function sets the actuator max current rating.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -524,7 +538,7 @@ err_t haptic3_set_actuator_nom_volt ( haptic3_t *ctx, float nom_volt );
 err_t haptic3_set_actuator_imax ( haptic3_t *ctx, float max_curr );
 
 /**
- * @brief HAPTIC 3 set actuator impedance function.
+ * @brief Haptic 3 set actuator impedance function.
  * @details This function sets the actuator impedance.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -538,7 +552,7 @@ err_t haptic3_set_actuator_imax ( haptic3_t *ctx, float max_curr );
 err_t haptic3_set_actuator_impedance ( haptic3_t *ctx, float impedance );
 
 /**
- * @brief HAPTIC 3 set actuator lra freq function.
+ * @brief Haptic 3 set actuator lra freq function.
  * @details This function sets the actuator LRA frequency.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -551,7 +565,7 @@ err_t haptic3_set_actuator_impedance ( haptic3_t *ctx, float impedance );
 err_t haptic3_set_actuator_lra_freq ( haptic3_t *ctx, float frequency );
 
 /**
- * @brief HAPTIC 3 set operation mode function.
+ * @brief Haptic 3 set operation mode function.
  * @details This function sets the operation mode bits in TOP CTL1 register.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -568,7 +582,7 @@ err_t haptic3_set_actuator_lra_freq ( haptic3_t *ctx, float frequency );
 err_t haptic3_set_operation_mode ( haptic3_t *ctx, uint8_t op_mode );
 
 /**
- * @brief HAPTIC 3 set freq track function.
+ * @brief Haptic 3 set freq track function.
  * @details This function sets the frequency tracking bits in TOP CFG1 register.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -582,7 +596,7 @@ err_t haptic3_set_operation_mode ( haptic3_t *ctx, uint8_t op_mode );
 err_t haptic3_set_freq_track ( haptic3_t *ctx, uint8_t freq_track_en );
 
 /**
- * @brief HAPTIC 3 set acceleration mode function.
+ * @brief Haptic 3 set acceleration mode function.
  * @details This function sets the acceleration mode bits in TOP CFG1 register.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -596,7 +610,7 @@ err_t haptic3_set_freq_track ( haptic3_t *ctx, uint8_t freq_track_en );
 err_t haptic3_set_acceleration_mode ( haptic3_t *ctx, uint8_t accel_en );
 
 /**
- * @brief HAPTIC 3 set vibration level function.
+ * @brief Haptic 3 set vibration level function.
  * @details This function sets the motor vibration level.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -610,7 +624,7 @@ err_t haptic3_set_acceleration_mode ( haptic3_t *ctx, uint8_t accel_en );
 err_t haptic3_set_vibration_level ( haptic3_t *ctx, float level );
 
 /**
- * @brief HAPTIC 3 get vibration level function.
+ * @brief Haptic 3 get vibration level function.
  * @details This function reads the motor vibration level.
  * @param[in] ctx : Click context object.
  * See #haptic3_t object definition for detailed explanation.
@@ -622,6 +636,30 @@ err_t haptic3_set_vibration_level ( haptic3_t *ctx, float level );
  * @note None.
  */
 err_t haptic3_get_vibration_level ( haptic3_t *ctx, float *level );
+
+/**
+ * @brief Haptic 3 clear events function.
+ * @details This function reads and clears all events.
+ * @param[in] ctx : Click context object.
+ * See #haptic3_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t haptic3_clear_events ( haptic3_t *ctx );
+
+/**
+ * @brief Haptic 3 load script function.
+ * @details This function loads the script selected by #HAPTIC3_SCRIPT_SELECTOR macro.
+ * @param[in] ctx : Click context object.
+ * See #haptic3_t object definition for detailed explanation.
+ * @return @li @c  0 - Success,
+ *         @li @c -1 - Error.
+ * See #err_t definition for detailed explanation.
+ * @note None.
+ */
+err_t haptic3_load_script ( haptic3_t *ctx );
 
 #ifdef __cplusplus
 }

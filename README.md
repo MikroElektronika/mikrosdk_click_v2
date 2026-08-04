@@ -455,7 +455,7 @@ A full list of Clicks available in this repository is defined below:
 | Hall Switch 2 Click | [Click Here](./clicks/hallswitch2) | Hall Switch 3 Click | [Click Here](./clicks/hallswitch3) |
 | Hall Switch 5 Click | [Click Here](./clicks/hallswitch5) | Hall Switch 6 Click | [Click Here](./clicks/hallswitch6) |
 | HAPTIC Click | [Click Here](./clicks/haptic) | HAPTIC 2 Click | [Click Here](./clicks/haptic2) |
-| HAPTIC 3 Click | [Click Here](./clicks/haptic3) | Haptic 4 Click | [Click Here](./clicks/haptic4) |
+| Haptic 3 Click | [Click Here](./clicks/haptic3) | Haptic 4 Click | [Click Here](./clicks/haptic4) |
 | Haptic 5 Click | [Click Here](./clicks/haptic5) | H-Bridge Click | [Click Here](./clicks/hbridge) |
 | H-Bridge 10 Click | [Click Here](./clicks/hbridge10) | H-Bridge 11 Click | [Click Here](./clicks/hbridge11) |
 | H-Bridge 12 Click | [Click Here](./clicks/hbridge12) | H-Bridge 13 Click | [Click Here](./clicks/hbridge13) |

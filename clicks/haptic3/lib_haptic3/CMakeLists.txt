@@ -10,10 +10,11 @@ if (NOT PROJECT_TYPE)
 endif()
 
 add_library(lib_haptic3 STATIC
-        src/haptic3.c
-        include/haptic3.h
+    src/haptic3.c
+    include/haptic3.h
+    include/haptic3_scripts.h
 )
-add_library(Click.HAPTIC3  ALIAS lib_haptic3)
+add_library(Click.Haptic3  ALIAS lib_haptic3)
 
 
 

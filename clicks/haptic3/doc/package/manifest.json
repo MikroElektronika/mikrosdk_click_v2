@@ -1,5 +1,5 @@
 {
-    "display_name": "HAPTIC 3 Click",
+    "display_name": "Haptic 3 Click",
     "name": "mikroe.click.haptic3",
     "type": "click",
     "version": "2.2.1",
@@ -8,14 +8,14 @@
     "contents": {
         "examples": [
             {
-                "path": "HAPTIC 3 Click/examples/example"
+                "path": "Haptic 3 Click/examples/example"
             }
         ],
         "libraries": [
             {
-                "alias": "Click.HAPTIC3",
+                "alias": "Click.Haptic3",
                 "subdir_name": "lib_haptic3",
-                "path": "HAPTIC 3 Click/data/lib_haptic3"
+                "path": "Haptic 3 Click/data/lib_haptic3"
             }
         ]
     }

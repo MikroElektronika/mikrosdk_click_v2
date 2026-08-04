@@ -25,7 +25,7 @@ target_link_libraries(example_haptic3 PUBLIC MikroSDK.Board)
 find_package(MikroSDK.Log REQUIRED)
 target_link_libraries(example_haptic3 PUBLIC MikroSDK.Log)
 add_subdirectory(lib_haptic3)
-target_link_libraries(example_haptic3 PUBLIC Click.HAPTIC3)
+target_link_libraries(example_haptic3 PUBLIC Click.Haptic3)
 ############################ example_haptic3 GENERATED CODE END ###########################
 
 if(COMPILER_REVISION)
