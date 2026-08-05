@@ -1,0 +1,5 @@
+{
+    "name": "NFC 9 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic32","xc32","gcc-riscv","clang-riscv","xc16"],
+    "hw" : ["Click","ST25R210-ANET"]
+}

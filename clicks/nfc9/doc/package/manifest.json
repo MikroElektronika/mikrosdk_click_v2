@@ -1,0 +1,22 @@
+{
+    "display_name": "NFC 9 Click",
+    "name": "mikroe.click.nfc9",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7014",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NFC 9 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NFC9",
+                "subdir_name": "lib_nfc9",
+                "path": "NFC 9 Click/data/lib_nfc9"
+            }
+        ]
+    }
+}
