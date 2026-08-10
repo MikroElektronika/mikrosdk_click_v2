@@ -1,0 +1,22 @@
+{
+    "display_name": "USB-C Sink 5 Click",
+    "name": "mikroe.click.usbcsink5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6934",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB-C Sink 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBCSink5",
+                "subdir_name": "lib_usbcsink5",
+                "path": "USB-C Sink 5 Click/data/lib_usbcsink5"
+            }
+        ]
+    }
+}
