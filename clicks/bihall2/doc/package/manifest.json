@@ -1,0 +1,22 @@
+{
+    "display_name": "BI Hall 2 Click",
+    "name": "mikroe.click.bihall2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7053",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BI Hall 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BIHall2",
+                "subdir_name": "lib_bihall2",
+                "path": "BI Hall 2 Click/data/lib_bihall2"
+            }
+        ]
+    }
+}
