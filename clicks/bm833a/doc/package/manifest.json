@@ -1,0 +1,22 @@
+{
+    "display_name": "BM833A Click",
+    "name": "mikroe.click.bm833a",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7002",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BM833A Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BM833A",
+                "subdir_name": "lib_bm833a",
+                "path": "BM833A Click/data/lib_bm833a"
+            }
+        ]
+    }
+}
