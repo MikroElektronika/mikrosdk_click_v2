@@ -1,0 +1,22 @@
+{
+    "display_name": "ADC 29 Click",
+    "name": "mikroe.click.adc29",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7032",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ADC 29 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ADC29",
+                "subdir_name": "lib_adc29",
+                "path": "ADC 29 Click/data/lib_adc29"
+            }
+        ]
+    }
+}
