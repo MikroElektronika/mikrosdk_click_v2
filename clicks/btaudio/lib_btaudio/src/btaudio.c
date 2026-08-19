@@ -31,6 +31,15 @@
 #include "stdlib.h"
 #include "conversions.h"
 
+/**
+ * @brief BT Audio str cut chr function.
+ * @details This function removes all selected characters from string str,
+ * and returns it to the same str without those characters.
+ * @param str : Address of string.
+ * @param chr : Character to cut.
+ */
+static void btaudio_str_cut_chr ( uint8_t *str, uint8_t chr );
+
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void btaudio_cfg_setup ( btaudio_cfg_t *cfg )
@@ -222,7 +231,7 @@ uint8_t btaudio_set_automatic_shutdown ( btaudio_t *ctx, uint16_t seconds )
     }
     
     uint16_to_str ( seconds, tmp );
-    str_cut_chr ( tmp, ' ' );
+    btaudio_str_cut_chr ( tmp, ' ' );
     
     strcat( tmp_buffer, tmp );
     
@@ -240,7 +249,7 @@ void btaudio_set_extended_features ( btaudio_t *ctx, extended_features_bitmask_v
     uint16_t tmp_ext = 1 << ext_features;
 
     uint16_to_hex ( tmp_ext, tmp );
-    str_cut_chr ( tmp, ' ' );
+    btaudio_str_cut_chr ( tmp, ' ' );
     
     strcat( tmp_buffer, tmp );
     
@@ -286,7 +295,7 @@ void btaudio_set_discovery_mask ( btaudio_t *ctx, uint8_t discovery_mask )
     uint8_t tmp_disc = discovery_mask % 16;
     
     uint8_to_hex ( tmp_disc, tmp );
-    str_cut_chr ( tmp, ' ' );
+    btaudio_str_cut_chr ( tmp, ' ' );
     
     strcat( tmp_buffer, tmp );
     btaudio_write_command( ctx, tmp_buffer );
@@ -316,7 +325,7 @@ void btaudio_set_speaker_gain_lvl ( btaudio_t *ctx, uint8_t speaker_gain_lvl )
     uint8_t tmp_gain = speaker_gain_lvl % 16;
 
     uint8_to_hex ( tmp_gain, tmp );
-    str_cut_chr ( tmp, ' ' );
+    btaudio_str_cut_chr ( tmp, ' ' );
     
     strcat( tmp_buffer, tmp );
     btaudio_write_command( ctx, tmp_buffer );
@@ -330,7 +339,7 @@ void btaudio_set_toneain_lvl ( btaudio_t *ctx, uint8_t tone_gain_lvl )
     uint8_t tmp_gain = tone_gain_lvl % 32;
     
     uint8_to_hex ( tmp_gain, tmp );
-    str_cut_chr ( tmp, ' ' );
+    btaudio_str_cut_chr ( tmp, ' ' );
 
     strcat( tmp_buffer, tmp );
     btaudio_write_command( ctx, tmp_buffer );
@@ -674,6 +683,25 @@ void btaudio_transfer_active_calls ( btaudio_t *ctx )
 uint8_t btaudio_interrupt ( btaudio_t *ctx )
 {
    return digital_in_read( &ctx->frs );
+}
+
+static void btaudio_str_cut_chr ( uint8_t *str, uint8_t chr )
+{
+    uint16_t cnt_0 = 0, cnt_1 = 0;
+    for ( cnt_0 = 0; cnt_0 < strlen( str ); )
+    {
+        if ( str[ cnt_0 ] == chr )
+        {
+            for ( cnt_1 = cnt_0; cnt_1 < strlen( str ); cnt_1++ )
+            {
+                str[ cnt_1 ] = str[ cnt_1 + 1 ];
+            }
+        }
+        else
+        {
+            cnt_0++;
+        }
+    }
 }
 
 // ------------------------------------------------------------------------- END

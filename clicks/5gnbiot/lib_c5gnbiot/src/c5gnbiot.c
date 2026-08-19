@@ -64,6 +64,15 @@ static int16_t encode_pdu_message( char *sms_text, int16_t sms_text_length,
 // Encode a digit based phone number for SMS based format.
 static int16_t encode_phone_number ( char *phone_number, uint8_t *output_buffer, uint16_t buffer_size );
 
+/**
+ * @brief 5G NB IoT str cut chr function.
+ * @details This function removes all selected characters from string str,
+ * and returns it to the same str without those characters.
+ * @param str : Address of string.
+ * @param chr : Character to cut.
+ */
+static void c5gnbiot_str_cut_chr ( uint8_t *str, uint8_t chr );
+
 // ------------------------------------------------ PUBLIC FUNCTION DEFINITIONS
 
 void c5gnbiot_cfg_setup ( c5gnbiot_cfg_t *cfg )
@@ -235,8 +244,8 @@ err_t c5gnbiot_send_text_message ( c5gnbiot_t *ctx, char *service_center_number,
     int16_t pdu_buf_len;
     uint8_t length;
     
-    str_cut_chr ( service_center_number, '+' );
-    str_cut_chr ( phone_number, '+' );
+    c5gnbiot_str_cut_chr ( service_center_number, '+' );
+    c5gnbiot_str_cut_chr ( phone_number, '+' );
     
     pdu_buf_len = pdu_encode( service_center_number, phone_number, sms_text, pdu_buf, SMS_MAX_PDU_LENGTH );
     
@@ -247,7 +256,7 @@ err_t c5gnbiot_send_text_message ( c5gnbiot_t *ctx, char *service_center_number,
     
     length = pdu_buf_len - ( ( strlen( service_center_number ) - 1 ) / 2 + 3 );
     uint8_to_str( length, byte_buf );
-    str_cut_chr ( byte_buf, ' ');
+    c5gnbiot_str_cut_chr ( byte_buf, ' ');
     
     strcpy( text, C5GNBIOT_CMD_CMGS );
     strcat( text, "=" );
@@ -407,6 +416,25 @@ static int16_t encode_phone_number ( char *phone_number, uint8_t *output_buffer,
     }
 
     return output_buffer_length;
+}
+
+static void c5gnbiot_str_cut_chr ( uint8_t *str, uint8_t chr )
+{
+    uint16_t cnt_0 = 0, cnt_1 = 0;
+    for ( cnt_0 = 0; cnt_0 < strlen( str ); )
+    {
+        if ( str[ cnt_0 ] == chr )
+        {
+            for ( cnt_1 = cnt_0; cnt_1 < strlen( str ); cnt_1++ )
+            {
+                str[ cnt_1 ] = str[ cnt_1 + 1 ];
+            }
+        }
+        else
+        {
+            cnt_0++;
+        }
+    }
 }
 
 // ------------------------------------------------------------------------- END

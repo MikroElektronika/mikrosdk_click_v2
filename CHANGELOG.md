@@ -395,6 +395,13 @@
 
 + `ADC 29 Click`
 
+*Following Click boards have been updated:*
+
++ `5G NB IoT Click`
++ `BLE TINY Click`
++ `BT Audio Click`
++ `GSM-GPS Click`
+
 **[BACK TO TOP](#changelog)**
 
 ---

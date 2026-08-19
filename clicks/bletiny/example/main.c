@@ -177,10 +177,13 @@ static void bletiny_i2c_example ( void );
 static void bletiny_spi_example ( void );
 
 /**
- * @brief Clear every @b chr from @b str.
- * @details This function clears every occurance of @b chr from @b str.
+ * @brief BLE TINY str cut chr function.
+ * @details This function removes all selected characters from string str,
+ * and returns it to the same str without those characters.
+ * @param str : Address of string.
+ * @param chr : Character to cut.
  */
-static void bletiny_clear_char( uint8_t *str, char chr );
+static void bletiny_str_cut_chr ( uint8_t *str, uint8_t chr );
 
 void application_init ( void )
 {
@@ -481,8 +484,8 @@ static void bletiny_example_init ( void )
 
         if ( BLETINY_OK == bletiny_rsp_check() )
         {
-            bletiny_clear_char(app_buf, 13);
-            bletiny_clear_char(app_buf, 10);
+            bletiny_str_cut_chr(app_buf, 13);
+            bletiny_str_cut_chr(app_buf, 10);
 
             volatile char *__generic_ptr ok_rsp = strstr( app_buf, BLETINY_RSP_OK );
 
@@ -638,11 +641,22 @@ static void bletiny_spi_example ( void )
     Delay_ms ( 1000 );
 }
 
-static void bletiny_clear_char( uint8_t *str, char chr )
+static void bletiny_str_cut_chr ( uint8_t *str, uint8_t chr )
 {
-    while ( 0 != strchr( str, chr ) )
+    uint16_t cnt_0 = 0, cnt_1 = 0;
+    for ( cnt_0 = 0; cnt_0 < strlen( str ); )
     {
-        str_cut_chr( str, chr );
+        if ( str[ cnt_0 ] == chr )
+        {
+            for ( cnt_1 = cnt_0; cnt_1 < strlen( str ); cnt_1++ )
+            {
+                str[ cnt_1 ] = str[ cnt_1 + 1 ];
+            }
+        }
+        else
+        {
+            cnt_0++;
+        }
     }
 }
 
