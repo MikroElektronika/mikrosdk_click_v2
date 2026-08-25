@@ -1,0 +1,22 @@
+{
+    "display_name": "DIGI Isolator 4 Click",
+    "name": "mikroe.click.digiisolator4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7029",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DIGI Isolator 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DIGIIsolator4",
+                "subdir_name": "lib_digiisolator4",
+                "path": "DIGI Isolator 4 Click/data/lib_digiisolator4"
+            }
+        ]
+    }
+}
