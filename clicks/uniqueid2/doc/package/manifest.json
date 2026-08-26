@@ -1,0 +1,22 @@
+{
+    "display_name": "UNIQUE ID 2 Click",
+    "name": "mikroe.click.uniqueid2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7077",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "UNIQUE ID 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.UNIQUEID2",
+                "subdir_name": "lib_uniqueid2",
+                "path": "UNIQUE ID 2 Click/data/lib_uniqueid2"
+            }
+        ]
+    }
+}
