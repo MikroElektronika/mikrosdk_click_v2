@@ -1,0 +1,22 @@
+{
+    "display_name": "MUX 10 Click",
+    "name": "mikroe.click.mux10",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7066",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MUX 10 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MUX10",
+                "subdir_name": "lib_mux10",
+                "path": "MUX 10 Click/data/lib_mux10"
+            }
+        ]
+    }
+}
