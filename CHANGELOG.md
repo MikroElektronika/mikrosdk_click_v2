@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### September
++ **[20260902](#20260902)**
 #### August
 + **[20260831](#20260831)**
 + **[20260826](#20260826)**
@@ -391,6 +393,16 @@
 
 ---
 ---
+---
+
+## `20260902`
+
+*Following Click boards have been added:*
+
++ `EEPROM 18 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260831`
