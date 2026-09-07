@@ -1,0 +1,22 @@
+{
+    "display_name": "USB to Serial Click",
+    "name": "mikroe.click.usbtoserial",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7011",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB to Serial Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBtoSerial",
+                "subdir_name": "lib_usbtoserial",
+                "path": "USB to Serial Click/data/lib_usbtoserial"
+            }
+        ]
+    }
+}

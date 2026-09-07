@@ -6,6 +6,7 @@
 
 ### 2026
 #### September
++ **[20260907](#20260907)**
 + **[20260903](#20260903)**
 + **[20260902](#20260902)**
 #### August
@@ -394,6 +395,16 @@
 
 ---
 ---
+---
+
+## `20260907`
+
+*Following Click boards have been added:*
+
++ `USB to Serial Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260903`
