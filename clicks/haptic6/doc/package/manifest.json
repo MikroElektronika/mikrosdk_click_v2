@@ -1,0 +1,22 @@
+{
+    "display_name": "Haptic 6 Click",
+    "name": "mikroe.click.haptic6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7047",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Haptic 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Haptic6",
+                "subdir_name": "lib_haptic6",
+                "path": "Haptic 6 Click/data/lib_haptic6"
+            }
+        ]
+    }
+}
