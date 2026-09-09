@@ -1,0 +1,22 @@
+{
+    "display_name": "DIGI POT 16 Click",
+    "name": "mikroe.click.digipot16",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6979",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DIGI POT 16 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DIGIPOT16",
+                "subdir_name": "lib_digipot16",
+                "path": "DIGI POT 16 Click/data/lib_digipot16"
+            }
+        ]
+    }
+}
