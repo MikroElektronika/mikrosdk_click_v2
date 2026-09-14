@@ -1,0 +1,22 @@
+{
+    "display_name": "HOD CAP 2 Click",
+    "name": "mikroe.click.hodcap2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6926",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "HOD CAP 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.HODCAP2",
+                "subdir_name": "lib_hodcap2",
+                "path": "HOD CAP 2 Click/data/lib_hodcap2"
+            }
+        ]
+    }
+}
