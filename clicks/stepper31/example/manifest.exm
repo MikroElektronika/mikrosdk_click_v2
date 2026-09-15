@@ -1,0 +1,5 @@
+{
+    "name": "Stepper 31 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","TB67S531FTG(O,EL)","MCP23S17T-E/ML"]
+}
