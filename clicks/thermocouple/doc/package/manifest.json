@@ -1,0 +1,22 @@
+{
+    "display_name": "Thermocouple Click",
+    "name": "mikroe.click.thermocouple",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6984",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Thermocouple Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Thermocouple",
+                "subdir_name": "lib_thermocouple",
+                "path": "Thermocouple Click/data/lib_thermocouple"
+            }
+        ]
+    }
+}
