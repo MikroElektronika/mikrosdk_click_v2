@@ -1,0 +1,22 @@
+{
+    "display_name": "BATT Boost 3 Click",
+    "name": "mikroe.click.battboost3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7027",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BATT Boost 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BATTBoost3",
+                "subdir_name": "lib_battboost3",
+                "path": "BATT Boost 3 Click/data/lib_battboost3"
+            }
+        ]
+    }
+}
