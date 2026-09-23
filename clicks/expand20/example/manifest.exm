@@ -1,0 +1,5 @@
+{
+    "name": "Expand 20 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","NCA6416BYHP"]
+}

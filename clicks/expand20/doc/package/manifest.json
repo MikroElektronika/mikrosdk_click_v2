@@ -1,0 +1,22 @@
+{
+    "display_name": "Expand 20 Click",
+    "name": "mikroe.click.expand20",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7046",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Expand 20 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Expand20",
+                "subdir_name": "lib_expand20",
+                "path": "Expand 20 Click/data/lib_expand20"
+            }
+        ]
+    }
+}
