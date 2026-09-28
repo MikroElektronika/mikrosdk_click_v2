@@ -1,0 +1,22 @@
+{
+    "display_name": "RTD 4 Click",
+    "name": "mikroe.click.rtd4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6966",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RTD 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RTD4",
+                "subdir_name": "lib_rtd4",
+                "path": "RTD 4 Click/data/lib_rtd4"
+            }
+        ]
+    }
+}
