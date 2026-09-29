@@ -1,0 +1,22 @@
+{
+    "display_name": "SPI Isolator 10 Click",
+    "name": "mikroe.click.spiisolator10",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7028",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "SPI Isolator 10 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SPIIsolator10",
+                "subdir_name": "lib_spiisolator10",
+                "path": "SPI Isolator 10 Click/data/lib_spiisolator10"
+            }
+        ]
+    }
+}
