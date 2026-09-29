@@ -1,0 +1,22 @@
+{
+    "display_name": "Radiation Click",
+    "name": "mikroe.click.radiation",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4036",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Radiation Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Radiation",
+                "subdir_name": "lib_radiation",
+                "path": "Radiation Click/data/lib_radiation"
+            }
+        ]
+    }
+}

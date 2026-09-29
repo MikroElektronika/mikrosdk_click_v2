@@ -412,6 +412,26 @@
 *Following Click boards have been added:*
 
 + `SPI Isolator 10 Click`
++ `BLE2 Click`
++ `BLE 5 Click`
++ `BLE P Click`
++ `NFC Tag 2 Click`
++ `nRF C Click`
++ `nRF S Click`
++ `nRF T Click`
++ `Radiation Click`
++ `6LoWPAN C Click`
++ `6LoWPAN T Click`
++ `PULSE Click`
++ `DALI 2 Click`
++ `DALI Click`
++ `TextToSpeech Click`
++ `DeviceDrive Click`
++ `BroadR-Reach Click`
++ `Skywire Click`
++ `L meter Click`
++ `CC3100 Click`
++ `C Meter Click`
 
 **[BACK TO TOP](#changelog)**
 

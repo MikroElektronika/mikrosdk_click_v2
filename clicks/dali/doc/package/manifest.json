@@ -1,0 +1,22 @@
+{
+    "display_name": "DALI Click",
+    "name": "mikroe.click.dali",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1297",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DALI Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DALI",
+                "subdir_name": "lib_dali",
+                "path": "DALI Click/data/lib_dali"
+            }
+        ]
+    }
+}

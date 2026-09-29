@@ -1,0 +1,22 @@
+{
+    "display_name": "nRF S Click",
+    "name": "mikroe.click.nrfs",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1836",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "nRF S Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.nRFS",
+                "subdir_name": "lib_nrfs",
+                "path": "nRF S Click/data/lib_nrfs"
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display_name": "NFC Tag 2 Click",
+    "name": "mikroe.click.nfctag2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2462",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "NFC Tag 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.NFCTag2",
+                "subdir_name": "lib_nfctag2",
+                "path": "NFC Tag 2 Click/data/lib_nfctag2"
+            }
+        ]
+    }
+}

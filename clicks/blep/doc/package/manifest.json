@@ -1,0 +1,22 @@
+{
+    "display_name": "BLE P Click",
+    "name": "mikroe.click.blep",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1597",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BLE P Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BLEP",
+                "subdir_name": "lib_blep",
+                "path": "BLE P Click/data/lib_blep"
+            }
+        ]
+    }
+}

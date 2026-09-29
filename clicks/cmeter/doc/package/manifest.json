@@ -1,0 +1,22 @@
+{
+    "display_name": "C Meter Click",
+    "name": "mikroe.click.cmeter",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2376",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "C Meter Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CMeter",
+                "subdir_name": "lib_cmeter",
+                "path": "C Meter Click/data/lib_cmeter"
+            }
+        ]
+    }
+}

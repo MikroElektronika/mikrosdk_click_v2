@@ -1,0 +1,22 @@
+{
+    "display_name": "PULSE Click",
+    "name": "mikroe.click.pulse",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2032",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PULSE Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PULSE",
+                "subdir_name": "lib_pulse",
+                "path": "PULSE Click/data/lib_pulse"
+            }
+        ]
+    }
+}

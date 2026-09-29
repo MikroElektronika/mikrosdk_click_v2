@@ -1,0 +1,22 @@
+{
+    "display_name": "L meter Click",
+    "name": "mikroe.click.lmeter",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3505",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "L meter Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Lmeter",
+                "subdir_name": "lib_lmeter",
+                "path": "L meter Click/data/lib_lmeter"
+            }
+        ]
+    }
+}

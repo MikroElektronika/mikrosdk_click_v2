@@ -1,0 +1,22 @@
+{
+    "display_name": "BLE 5 Click",
+    "name": "mikroe.click.ble5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4120",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BLE 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BLE5",
+                "subdir_name": "lib_ble5",
+                "path": "BLE 5 Click/data/lib_ble5"
+            }
+        ]
+    }
+}

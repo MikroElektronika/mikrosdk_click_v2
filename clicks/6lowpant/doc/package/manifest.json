@@ -1,0 +1,22 @@
+{
+    "display_name": "6LoWPAN T Click",
+    "name": "mikroe.click.6lowpant",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2218",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "6LoWPAN T Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.6LoWPANT",
+                "subdir_name": "lib_c6lowpant",
+                "path": "6LoWPAN T Click/data/lib_c6lowpant"
+            }
+        ]
+    }
+}

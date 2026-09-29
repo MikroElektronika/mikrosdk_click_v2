@@ -1,0 +1,22 @@
+{
+    "display_name": "BroadR-Reach Click",
+    "name": "mikroe.click.broadrreach",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2796",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BroadR-Reach Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BroadRReach",
+                "subdir_name": "lib_broadrreach",
+                "path": "BroadR-Reach Click/data/lib_broadrreach"
+            }
+        ]
+    }
+}

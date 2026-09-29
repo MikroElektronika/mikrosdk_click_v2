@@ -1,0 +1,22 @@
+{
+    "display_name": "CC3100 Click",
+    "name": "mikroe.click.cc3100",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2336",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "CC3100 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.CC3100",
+                "subdir_name": "lib_cc3100",
+                "path": "CC3100 Click/data/lib_cc3100"
+            }
+        ]
+    }
+}

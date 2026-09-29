@@ -1,0 +1,22 @@
+{
+    "display_name": "DeviceDrive Click",
+    "name": "mikroe.click.devicedrive",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3663",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "DeviceDrive Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.DeviceDrive",
+                "subdir_name": "lib_devicedrive",
+                "path": "DeviceDrive Click/data/lib_devicedrive"
+            }
+        ]
+    }
+}

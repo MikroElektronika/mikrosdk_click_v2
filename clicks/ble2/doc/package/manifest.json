@@ -1,0 +1,22 @@
+{
+    "display_name": "BLE2 Click",
+    "name": "mikroe.click.ble2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1715",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BLE2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BLE2",
+                "subdir_name": "lib_ble2",
+                "path": "BLE2 Click/data/lib_ble2"
+            }
+        ]
+    }
+}

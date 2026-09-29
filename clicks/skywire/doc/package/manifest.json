@@ -1,0 +1,22 @@
+{
+    "display_name": "Skywire Click",
+    "name": "mikroe.click.skywire",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2405",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Skywire Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Skywire",
+                "subdir_name": "lib_skywire",
+                "path": "Skywire Click/data/lib_skywire"
+            }
+        ]
+    }
+}

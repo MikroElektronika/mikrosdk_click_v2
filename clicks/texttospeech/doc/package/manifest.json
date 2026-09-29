@@ -1,0 +1,22 @@
+{
+    "display_name": "TextToSpeech Click",
+    "name": "mikroe.click.texttospeech",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2253",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "TextToSpeech Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TextToSpeech",
+                "subdir_name": "lib_texttospeech",
+                "path": "TextToSpeech Click/data/lib_texttospeech"
+            }
+        ]
+    }
+}
