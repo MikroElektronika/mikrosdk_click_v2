@@ -1,0 +1,22 @@
+{
+    "display_name": "4D - display Click",
+    "name": "mikroe.click.4ddisplay",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3044",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4D - display Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.4Ddisplay",
+                "subdir_name": "lib_c4ddisplay",
+                "path": "4D - display Click/data/lib_c4ddisplay"
+            }
+        ]
+    }
+}

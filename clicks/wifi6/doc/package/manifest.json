@@ -1,0 +1,22 @@
+{
+    "display_name": "WiFi 6 Click",
+    "name": "mikroe.click.wifi6",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2043",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WiFi 6 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WiFi6",
+                "subdir_name": "lib_wifi6",
+                "path": "WiFi 6 Click/data/lib_wifi6"
+            }
+        ]
+    }
+}

@@ -413,6 +413,13 @@
 *Following Click boards have been added:*
 
 + `Stepper 32 Click`
++ `WiFi 6 Click`
++ `WiFly Click`
++ `4D - display Click`
+
+*Following Click boards have been modified:*
+
++ `CC3100 Click`
 
 **[BACK TO TOP](#changelog)**
 

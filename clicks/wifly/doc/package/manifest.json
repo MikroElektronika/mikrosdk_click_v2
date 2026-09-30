@@ -1,0 +1,22 @@
+{
+    "display_name": "WiFly Click",
+    "name": "mikroe.click.wifly",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1937",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WiFly Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WiFly",
+                "subdir_name": "lib_wifly",
+                "path": "WiFly Click/data/lib_wifly"
+            }
+        ]
+    }
+}
