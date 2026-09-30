@@ -1,0 +1,22 @@
+{
+    "display_name": "Stepper 32 Click",
+    "name": "mikroe.click.stepper32",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7092",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Stepper 32 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Stepper32",
+                "subdir_name": "lib_stepper32",
+                "path": "Stepper 32 Click/data/lib_stepper32"
+            }
+        ]
+    }
+}
