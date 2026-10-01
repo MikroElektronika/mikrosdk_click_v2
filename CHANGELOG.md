@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### October
++ **[20261001](#20261001)**
 #### September
 + **[20260930](#20260930)**
 + **[20260929](#20260929)**
@@ -406,6 +408,16 @@
 
 ---
 ---
+---
+
+## `20261001`
+
+*Following Click boards have been added:*
+
++ `MRAM 5 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20260930`

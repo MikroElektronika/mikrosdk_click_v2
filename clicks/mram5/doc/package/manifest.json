@@ -1,0 +1,22 @@
+{
+    "display_name": "MRAM 5 Click",
+    "name": "mikroe.click.mram5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7098",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "MRAM 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.MRAM5",
+                "subdir_name": "lib_mram5",
+                "path": "MRAM 5 Click/data/lib_mram5"
+            }
+        ]
+    }
+}
