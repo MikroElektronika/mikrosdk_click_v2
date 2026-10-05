@@ -1,0 +1,22 @@
+{
+    "display_name": "eFuse 8 Click",
+    "name": "mikroe.click.efuse8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7089",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "eFuse 8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.eFuse8",
+                "subdir_name": "lib_efuse8",
+                "path": "eFuse 8 Click/data/lib_efuse8"
+            }
+        ]
+    }
+}
