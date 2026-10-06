@@ -26,6 +26,7 @@
  */
 
 #include "ambient22.h"
+#include "math.h"
 
 void ambient22_cfg_setup ( ambient22_cfg_t *cfg ) 
 {

@@ -6,6 +6,7 @@
 
 ### 2026
 #### October
++ **[20261006](#20261006)**
 + **[20261005](#20261005)**
 + **[20261001](#20261001)**
 #### September
@@ -409,6 +410,16 @@
 
 ---
 ---
+---
+
+## `20261006`
+
+*Following Click boards have been updated:*
+
++ `Ambient 22 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20261005`
