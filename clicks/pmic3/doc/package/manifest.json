@@ -1,0 +1,22 @@
+{
+    "display_name": "PMIC 3 Click",
+    "name": "mikroe.click.pmic3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7039",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PMIC 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PMIC3",
+                "subdir_name": "lib_pmic3",
+                "path": "PMIC 3 Click/data/lib_pmic3"
+            }
+        ]
+    }
+}
