@@ -1,0 +1,22 @@
+{
+    "display_name": "Remote Temp 4 Click",
+    "name": "mikroe.click.remotetemp4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7095",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Remote Temp 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RemoteTemp4",
+                "subdir_name": "lib_remotetemp4",
+                "path": "Remote Temp 4 Click/data/lib_remotetemp4"
+            }
+        ]
+    }
+}
