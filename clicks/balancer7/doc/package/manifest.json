@@ -1,0 +1,22 @@
+{
+    "display_name": "Balancer 7 Click",
+    "name": "mikroe.click.balancer7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7075",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Balancer 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Balancer7",
+                "subdir_name": "lib_balancer7",
+                "path": "Balancer 7 Click/data/lib_balancer7"
+            }
+        ]
+    }
+}
