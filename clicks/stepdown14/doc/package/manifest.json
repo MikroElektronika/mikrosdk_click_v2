@@ -1,0 +1,22 @@
+{
+    "display_name": "Step Down 14 Click",
+    "name": "mikroe.click.stepdown14",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6965",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Step Down 14 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.StepDown14",
+                "subdir_name": "lib_stepdown14",
+                "path": "Step Down 14 Click/data/lib_stepdown14"
+            }
+        ]
+    }
+}
