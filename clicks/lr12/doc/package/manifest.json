@@ -1,0 +1,22 @@
+{
+    "display_name": "LR 12 Click",
+    "name": "mikroe.click.lr12",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7045",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "LR 12 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.LR12",
+                "subdir_name": "lib_lr12",
+                "path": "LR 12 Click/data/lib_lr12"
+            }
+        ]
+    }
+}
