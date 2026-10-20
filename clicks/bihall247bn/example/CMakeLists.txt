@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.21)
 if (${TOOLCHAIN_LANGUAGE} MATCHES "MikroC")
-    project(example_bihall2 LANGUAGES MikroC)
+    project(example_bihall247bn LANGUAGES MikroC)
 else()
-    project(example_bihall2 LANGUAGES C ASM)
+    project(example_bihall247bn LANGUAGES C ASM)
 endif()
 
 include(mikroeUtils)
@@ -11,22 +11,22 @@ if (NOT PROJECT_TYPE)
     set(PROJECT_TYPE "mikrosdk" CACHE STRING "" FORCE)
 endif()
 
-add_executable(example_bihall2
+add_executable(example_bihall247bn
         main.c
     
 )
 
 
-############################ example_bihall2 GENERATED CODE START ###########################
+############################ example_bihall247bn GENERATED CODE START ###########################
 find_package(MikroC.Core REQUIRED)
-target_link_libraries(example_bihall2 PUBLIC MikroC.Core)
+target_link_libraries(example_bihall247bn PUBLIC MikroC.Core)
 find_package(MikroSDK.Board REQUIRED)
-target_link_libraries(example_bihall2 PUBLIC MikroSDK.Board)
+target_link_libraries(example_bihall247bn PUBLIC MikroSDK.Board)
 find_package(MikroSDK.Log REQUIRED)
-target_link_libraries(example_bihall2 PUBLIC MikroSDK.Log)
-add_subdirectory(lib_bihall2)
-target_link_libraries(example_bihall2 PUBLIC Click.BIHall2)
-############################ example_bihall2 GENERATED CODE END ###########################
+target_link_libraries(example_bihall247bn PUBLIC MikroSDK.Log)
+add_subdirectory(lib_bihall247bn)
+target_link_libraries(example_bihall247bn PUBLIC Click.BIHall247BN)
+############################ example_bihall247bn GENERATED CODE END ###########################
 
 if(COMPILER_REVISION)
     if(${COMPILER_REVISION} VERSION_GREATER_EQUAL "1.0")

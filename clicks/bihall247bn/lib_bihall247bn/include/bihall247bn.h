@@ -21,12 +21,12 @@
 ****************************************************************************/
 
 /*!
- * @file bihall2.h
- * @brief This file contains API for BI Hall 2 Click Driver.
+ * @file bihall247bn.h
+ * @brief This file contains API for BI Hall 2 47BN Click Driver.
  */
 
-#ifndef BIHALL2_H
-#define BIHALL2_H
+#ifndef BIHALL247BN_H
+#define BIHALL247BN_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -51,74 +51,74 @@ extern "C"{
 #include "drv_analog_in.h"
 
 /*!
- * @addtogroup bihall2 BI Hall 2 Click Driver
- * @brief API for configuring and manipulating BI Hall 2 Click driver.
+ * @addtogroup bihall247bn BI Hall 2 47BN Click Driver
+ * @brief API for configuring and manipulating BI Hall 2 47BN Click driver.
  * @{
  */
 
 /**
- * @defgroup bihall2_set BI Hall 2 Settings
- * @brief Settings of BI Hall 2 Click driver.
+ * @defgroup bihall247bn_set BI Hall 2 47BN Settings
+ * @brief Settings of BI Hall 2 47BN Click driver.
  */
 
 /**
- * @addtogroup bihall2_set
+ * @addtogroup bihall247bn_set
  * @{
  */
 
 /**
- * @brief BI Hall 2 default ADC samples number for averaging.
- * @details Specified default ADC samples number for averaging of BI Hall 2 Click driver.
+ * @brief BI Hall 2 47BN default ADC samples number for averaging.
+ * @details Specified default ADC samples number for averaging of BI Hall 2 47BN Click driver.
  */
-#define BIHALL2_NUM_CONVERSIONS     200
+#define BIHALL247BN_NUM_CONVERSIONS     200
 
 /**
- * @brief BI Hall 2 ADC setting.
- * @details Specified settings for ADC of BI Hall 2 Click driver.
+ * @brief BI Hall 2 47BN ADC setting.
+ * @details Specified settings for ADC of BI Hall 2 47BN Click driver.
  */
-#define BIHALL2_ADC_RESOLUTION      0x0FFF
-#define BIHALL2_VREF_3V3            3.3
-#define BIHALL2_VREF_5V             5.0
-#define BIHALL2_VREF                BIHALL2_VREF_3V3
+#define BIHALL247BN_ADC_RESOLUTION      0x0FFF
+#define BIHALL247BN_VREF_3V3            3.3
+#define BIHALL247BN_VREF_5V             5.0
+#define BIHALL247BN_VREF                BIHALL247BN_VREF_3V3
 
 /**
- * @brief BI Hall 2 timeout setting.
- * @details Specified settings for timeout of BI Hall 2 Click driver.
+ * @brief BI Hall 2 47BN timeout setting.
+ * @details Specified settings for timeout of BI Hall 2 47BN Click driver.
  */
-#define BIHALL2_TIMEOUT_MS          2000
+#define BIHALL247BN_TIMEOUT_MS          2000
 
 /**
- * @brief BI Hall 2 voltage to magnetic field strength setting.
- * @details Specified settings for voltage to magnetic field strength of BI Hall 2 Click driver.
+ * @brief BI Hall 2 47BN voltage to magnetic field strength setting.
+ * @details Specified settings for voltage to magnetic field strength of BI Hall 2 47BN Click driver.
  */
-#define BIHALL2_VOLTAGE_PER_GAUSS   0.0047
+#define BIHALL247BN_VOLTAGE_PER_GAUSS   0.0047
 
-/*! @} */ // bihall2_set
+/*! @} */ // bihall247bn_set
 
 /**
- * @defgroup bihall2_map BI Hall 2 MikroBUS Map
- * @brief MikroBUS pin mapping of BI Hall 2 Click driver.
+ * @defgroup bihall247bn_map BI Hall 2 47BN MikroBUS Map
+ * @brief MikroBUS pin mapping of BI Hall 2 47BN Click driver.
  */
 
 /**
- * @addtogroup bihall2_map
+ * @addtogroup bihall247bn_map
  * @{
  */
 
 /**
  * @brief MikroBUS pin mapping.
- * @details Mapping pins of BI Hall 2 Click to the selected MikroBUS.
+ * @details Mapping pins of BI Hall 2 47BN Click to the selected MikroBUS.
  */
-#define BIHALL2_MAP_MIKROBUS( cfg, mikrobus ) \
+#define BIHALL247BN_MAP_MIKROBUS( cfg, mikrobus ) \
     cfg.an = MIKROBUS( mikrobus, MIKROBUS_AN ); \
     cfg.en = MIKROBUS( mikrobus, MIKROBUS_PWM );
 
-/*! @} */ // bihall2_map
-/*! @} */ // bihall2
+/*! @} */ // bihall247bn_map
+/*! @} */ // bihall247bn
 
 /**
- * @brief BI Hall 2 Click context object.
- * @details Context object definition of BI Hall 2 Click driver.
+ * @brief BI Hall 2 47BN Click context object.
+ * @details Context object definition of BI Hall 2 47BN Click driver.
  */
 typedef struct
 {
@@ -127,11 +127,11 @@ typedef struct
     analog_in_t adc;            /**< ADC module object. */
     float       vref;           /**< ADC reference voltage. */
 
-} bihall2_t;
+} bihall247bn_t;
 
 /**
- * @brief BI Hall 2 Click configuration object.
- * @details Configuration object definition of BI Hall 2 Click driver.
+ * @brief BI Hall 2 47BN Click configuration object.
+ * @details Configuration object definition of BI Hall 2 47BN Click driver.
  */
 typedef struct
 {
@@ -141,82 +141,82 @@ typedef struct
     analog_in_resolution_t resolution;  /**< ADC resolution. */
     float                  vref;        /**< ADC reference voltage. */
 
-} bihall2_cfg_t;
+} bihall247bn_cfg_t;
 
 /**
- * @brief BI Hall 2 Click return value data.
+ * @brief BI Hall 2 47BN Click return value data.
  * @details Predefined enum values for driver return values.
  */
 typedef enum
 {
-    BIHALL2_OK = 0,
-    BIHALL2_ERROR = -1
+    BIHALL247BN_OK = 0,
+    BIHALL247BN_ERROR = -1
 
-} bihall2_return_value_t;
+} bihall247bn_return_value_t;
 
 /*!
- * @addtogroup bihall2 BI Hall 2 Click Driver
- * @brief API for configuring and manipulating BI Hall 2 Click driver.
+ * @addtogroup bihall247bn BI Hall 2 47BN Click Driver
+ * @brief API for configuring and manipulating BI Hall 2 47BN Click driver.
  * @{
  */
 
 /**
- * @brief BI Hall 2 configuration object setup function.
+ * @brief BI Hall 2 47BN configuration object setup function.
  * @details This function initializes Click configuration structure to initial
  * values.
  * @param[out] cfg : Click configuration structure.
- * See #bihall2_cfg_t object definition for detailed explanation.
+ * See #bihall247bn_cfg_t object definition for detailed explanation.
  * @return Nothing.
  * @note The all used pins will be set to unconnected state.
  */
-void bihall2_cfg_setup ( bihall2_cfg_t *cfg );
+void bihall247bn_cfg_setup ( bihall247bn_cfg_t *cfg );
 
 /**
- * @brief BI Hall 2 initialization function.
+ * @brief BI Hall 2 47BN initialization function.
  * @details This function initializes all necessary pins and peripherals used
  * for this Click board.
  * @param[out] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @param[in] cfg : Click configuration structure.
- * See #bihall2_cfg_t object definition for detailed explanation.
+ * See #bihall247bn_cfg_t object definition for detailed explanation.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t bihall2_init ( bihall2_t *ctx, bihall2_cfg_t *cfg );
+err_t bihall247bn_init ( bihall247bn_t *ctx, bihall247bn_cfg_t *cfg );
 
 /**
- * @brief BI Hall 2 read raw ADC value function.
+ * @brief BI Hall 2 47BN read raw ADC value function.
  * @details This function reads raw ADC value.
  * @param[in] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @param[out] raw_adc : Output ADC result.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
  * @note None.
  */
-err_t bihall2_read_raw_adc ( bihall2_t *ctx, uint16_t *raw_adc );
+err_t bihall247bn_read_raw_adc ( bihall247bn_t *ctx, uint16_t *raw_adc );
 
 /**
- * @brief BI Hall 2 read voltage level function.
+ * @brief BI Hall 2 47BN read voltage level function.
  * @details This function reads raw ADC value and converts it to proportional voltage level.
  * @param[in] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @param[out] voltage : Output voltage level [V].
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
  * @note The conversion to voltage depends on the entered reference voltage.
  */
-err_t bihall2_read_voltage ( bihall2_t *ctx, float *voltage );
+err_t bihall247bn_read_voltage ( bihall247bn_t *ctx, float *voltage );
 
 /**
- * @brief BI Hall 2 read average voltage level function.
+ * @brief BI Hall 2 47BN read average voltage level function.
  * @details This function reads a desired number of ADC samples and calculates the average voltage level.
  * @param[in] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @param[in] num_conv : Number of ADC samples.
  * @param[out] voltage_avg : Average output voltage level [V].
  * @return @li @c  0 - Success,
@@ -224,59 +224,59 @@ err_t bihall2_read_voltage ( bihall2_t *ctx, float *voltage );
  * See #err_t definition for detailed explanation.
  * @note The conversion to voltage depends on the entered reference voltage.
  */
-err_t bihall2_read_voltage_avg ( bihall2_t *ctx, uint16_t num_conv, float *voltage_avg );
+err_t bihall247bn_read_voltage_avg ( bihall247bn_t *ctx, uint16_t num_conv, float *voltage_avg );
 
 /**
- * @brief BI Hall 2 set vref function.
- * @details This function sets the voltage reference for BI Hall 2 Click driver.
+ * @brief BI Hall 2 47BN set vref function.
+ * @details This function sets the voltage reference for BI Hall 2 47BN Click driver.
  * @param[in] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @param[in] vref : Reference voltage (volts).
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
- * @note The default voltage reference set with @b bihall2_init is defined in BIHALL2_VREF.
+ * @note The default voltage reference set with @b bihall247bn_init is defined in BIHALL247BN_VREF.
  */
-err_t bihall2_set_vref ( bihall2_t *ctx, float vref );
+err_t bihall247bn_set_vref ( bihall247bn_t *ctx, float vref );
 
 /**
- * @brief BI Hall 2 enable device function.
+ * @brief BI Hall 2 47BN enable device function.
  * @details This function enables the device by setting the EN pin to high logic state.
  * @param[in] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @return None.
  * @note None.
  */
-void bihall2_enable_device ( bihall2_t *ctx );
+void bihall247bn_enable_device ( bihall247bn_t *ctx );
 
 /**
- * @brief BI Hall 2 disable device function.
+ * @brief BI Hall 2 47BN disable device function.
  * @details This function disables the device by setting the EN pin to low logic state.
  * @param[in] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @return None.
  * @note None.
  */
-void bihall2_disable_device ( bihall2_t *ctx );
+void bihall247bn_disable_device ( bihall247bn_t *ctx );
 
 /**
- * @brief BI Hall 2 get output function.
+ * @brief BI Hall 2 47BN get output function.
  * @details This function reads the OUT pin voltage level and calculates magnetic field strength in Gauss.
  * @param[in] ctx : Click context object.
- * See #bihall2_t object definition for detailed explanation.
+ * See #bihall247bn_t object definition for detailed explanation.
  * @param[out] output : Magnetic field strength in Gauss.
  * @return @li @c  0 - Success,
  *         @li @c -1 - Error.
  * See #err_t definition for detailed explanation.
  * @note The conversion to voltage depends on the entered reference voltage.
  */
-err_t bihall2_get_output ( bihall2_t *ctx, float *output );
+err_t bihall247bn_get_output ( bihall247bn_t *ctx, float *output );
 
 #ifdef __cplusplus
 }
 #endif
-#endif // BIHALL2_H
+#endif // BIHALL247BN_H
 
-/*! @} */ // bihall2
+/*! @} */ // bihall247bn
 
 // ------------------------------------------------------------------------ END

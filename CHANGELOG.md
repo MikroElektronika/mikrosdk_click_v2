@@ -6,6 +6,7 @@
 
 ### 2026
 #### October
++ **[20261020](#20261020)**
 + **[20261019](#20261019)**
 + **[20261015](#20261015)**
 + **[20261014](#20261014)**
@@ -416,6 +417,20 @@
 
 ---
 ---
+---
+
+## `20261020`
+
+*Following Click boards have been added:*
+
++ `BI Hall 2 47BN Click`
+
+*Following Click boards have been removed:*
+
++ `BI Hall 2 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20261019`

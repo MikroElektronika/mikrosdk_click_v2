@@ -173,7 +173,7 @@ A full list of Clicks available in this repository is defined below:
 | BATT-MON 4 Click | [Click Here](./clicks/battmon4) | BATT-MON 5 Click | [Click Here](./clicks/battmon5) |
 | BEE Click | [Click Here](./clicks/bee) | BGM113 Click | [Click Here](./clicks/bgm113) |
 | BIG 7-SEG Click | [Click Here](./clicks/big7seg) | BI HALL Click | [Click Here](./clicks/bihall) |
-| BI Hall 2 Click | [Click Here](./clicks/bihall2) | Binho Nova Click | [Click Here](./clicks/binhonova) |
+| BI Hall 2 47BN Click | [Click Here](./clicks/bihall247bn) | Binho Nova Click | [Click Here](./clicks/binhonova) |
 | BL653 Click | [Click Here](./clicks/bl653) | BLDC FOC Click | [Click Here](./clicks/bldcfoc) |
 | BLDC FOC 2 Click | [Click Here](./clicks/bldcfoc2) | BLE 10 Click | [Click Here](./clicks/ble10) |
 | BLE 12 Click | [Click Here](./clicks/ble12) | BLE2 Click | [Click Here](./clicks/ble2) |

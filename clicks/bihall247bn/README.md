@@ -1,8 +1,8 @@
 
 ---
-# BI Hall 2 Click
+# BI Hall 2 47BN Click
 
-> [BI Hall 2 Click](https://www.mikroe.com/?pid_product=MIKROE-7053) demo application is developed using
+> [BI Hall 2 47BN Click](https://www.mikroe.com/?pid_product=MIKROE-7053) demo application is developed using
 the [NECTO Studio](https://www.mikroe.com/necto), ensuring compatibility with [mikroSDK](https://www.mikroe.com/mikrosdk)'s
 open-source libraries and tools. Designed for plug-and-play implementation and testing, the demo is fully compatible with
 all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](https://www.mikroe.com/mikrobus) socket.
@@ -23,7 +23,7 @@ all development, starter, and mikromedia boards featuring a [mikroBUS&trade;](ht
 
 ## Example Description
 
-> This example demonstrates the use of the BI Hall 2 Click board for
+> This example demonstrates the use of the BI Hall 2 47BN Click board for
 magnetic field detection. The application reads the sensor output and
 converts it to magnetic field strength expressed in Gauss units.
 
@@ -31,39 +31,39 @@ converts it to magnetic field strength expressed in Gauss units.
 
 - MikroSDK.Board
 - MikroSDK.Log
-- Click.BIHall2
+- Click.BIHall247BN
 
 ### Example Key Functions
 
-- `bihall2_cfg_setup` This function initializes Click configuration structure to initial values.
+- `bihall247bn_cfg_setup` This function initializes Click configuration structure to initial values.
 ```c
-void bihall2_cfg_setup ( bihall2_cfg_t *cfg );
+void bihall247bn_cfg_setup ( bihall247bn_cfg_t *cfg );
 ```
 
-- `bihall2_init` This function initializes all necessary pins and peripherals used for this Click board.
+- `bihall247bn_init` This function initializes all necessary pins and peripherals used for this Click board.
 ```c
-err_t bihall2_init ( bihall2_t *ctx, bihall2_cfg_t *cfg );
+err_t bihall247bn_init ( bihall247bn_t *ctx, bihall247bn_cfg_t *cfg );
 ```
 
-- `bihall2_default_cfg` This function executes a default configuration of BI Hall 2 Click board.
+- `bihall247bn_default_cfg` This function executes a default configuration of BI Hall 2 47BN Click board.
 ```c
-err_t bihall2_default_cfg ( bihall2_t *ctx );
+err_t bihall247bn_default_cfg ( bihall247bn_t *ctx );
 ```
 
-- `bihall2_get_output` This function reads the OUT pin voltage level and calculates magnetic field strength in Gauss.
+- `bihall247bn_get_output` This function reads the OUT pin voltage level and calculates magnetic field strength in Gauss.
 ```c
-err_t bihall2_get_output ( bihall2_t *ctx, float *output );
+err_t bihall247bn_get_output ( bihall247bn_t *ctx, float *output );
 ```
 
 ### Application Init
 
-> Initializes the logger and BI Hall 2 Click driver.
+> Initializes the logger and BI Hall 2 47BN Click driver.
 
 ```c
 void application_init ( void )
 {
     log_cfg_t log_cfg;  /**< Logger config object. */
-    bihall2_cfg_t bihall2_cfg;  /**< Click config object. */
+    bihall247bn_cfg_t bihall247bn_cfg;  /**< Click config object. */
 
     /** 
      * Logger initialization.
@@ -79,9 +79,9 @@ void application_init ( void )
     log_info( &logger, " Application Init " );
 
     // Click initialization.
-    bihall2_cfg_setup( &bihall2_cfg );
-    BIHALL2_MAP_MIKROBUS( bihall2_cfg, MIKROBUS_POSITION_BIHALL2 );
-    if ( ADC_ERROR == bihall2_init( &bihall2, &bihall2_cfg ) )
+    bihall247bn_cfg_setup( &bihall247bn_cfg );
+    BIHALL247BN_MAP_MIKROBUS( bihall247bn_cfg, MIKROBUS_POSITION_BIHALL247BN );
+    if ( ADC_ERROR == bihall247bn_init( &bihall247bn, &bihall247bn_cfg ) )
     {
         log_error( &logger, " Communication init." );
         for ( ; ; );
@@ -99,7 +99,7 @@ void application_init ( void )
 void application_task ( void )
 {
     float mag_field = 0;
-    if ( BIHALL2_OK == bihall2_get_output ( &bihall2, &mag_field ) ) 
+    if ( BIHALL247BN_OK == bihall247bn_get_output ( &bihall247bn, &mag_field ) ) 
     {
         log_printf( &logger, " Magnetic field : %.2f Gauss\r\n\n", mag_field );
     }

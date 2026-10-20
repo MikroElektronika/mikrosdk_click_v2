@@ -21,13 +21,13 @@
 ****************************************************************************/
 
 /*!
- * @file bihall2.c
- * @brief BI Hall 2 Click Driver.
+ * @file bihall247bn.c
+ * @brief BI Hall 2 47BN Click Driver.
  */
 
-#include "bihall2.h"
+#include "bihall247bn.h"
 
-void bihall2_cfg_setup ( bihall2_cfg_t *cfg )
+void bihall247bn_cfg_setup ( bihall247bn_cfg_t *cfg )
 {
     cfg->an = HAL_PIN_NC;
     cfg->en = HAL_PIN_NC;
@@ -35,10 +35,10 @@ void bihall2_cfg_setup ( bihall2_cfg_t *cfg )
     cfg->resolution = ANALOG_IN_RESOLUTION_DEFAULT; /*< Should leave this by default for portability purposes. 
                                                         Different MCU's have different resolutions. 
                                                         Change only if necessary.*/
-    cfg->vref       = BIHALL2_VREF;
+    cfg->vref       = BIHALL247BN_VREF;
 }
 
-err_t bihall2_init ( bihall2_t *ctx, bihall2_cfg_t *cfg ) 
+err_t bihall247bn_init ( bihall247bn_t *ctx, bihall247bn_cfg_t *cfg ) 
 {
     analog_in_config_t adc_cfg;
 
@@ -71,17 +71,17 @@ err_t bihall2_init ( bihall2_t *ctx, bihall2_cfg_t *cfg )
     return ADC_SUCCESS;
 }
 
-err_t bihall2_read_raw_adc ( bihall2_t *ctx, uint16_t *raw_adc ) 
+err_t bihall247bn_read_raw_adc ( bihall247bn_t *ctx, uint16_t *raw_adc ) 
 {
     return analog_in_read( &ctx->adc, raw_adc );
 }
 
-err_t bihall2_read_voltage ( bihall2_t *ctx, float *voltage ) 
+err_t bihall247bn_read_voltage ( bihall247bn_t *ctx, float *voltage ) 
 {
     return analog_in_read_voltage( &ctx->adc, voltage );
 }
 
-err_t bihall2_read_voltage_avg ( bihall2_t *ctx, uint16_t num_conv, float *voltage_avg )
+err_t bihall247bn_read_voltage_avg ( bihall247bn_t *ctx, uint16_t num_conv, float *voltage_avg )
 {
     float voltage = 0;
     float voltage_sum = 0;
@@ -89,53 +89,53 @@ err_t bihall2_read_voltage_avg ( bihall2_t *ctx, uint16_t num_conv, float *volta
     uint16_t timeout_cnt = 0;
     if ( ( 0 == num_conv ) || ( NULL == voltage_avg ) )
     {
-        return BIHALL2_ERROR;
+        return BIHALL247BN_ERROR;
     }
     while ( cnt < num_conv )
     {
-        if ( BIHALL2_OK == bihall2_read_voltage ( ctx, &voltage ) )
+        if ( BIHALL247BN_OK == bihall247bn_read_voltage ( ctx, &voltage ) )
         {
             voltage_sum += voltage;
             cnt++;
         }
         Delay_1ms ( );
-        if ( ++timeout_cnt > BIHALL2_TIMEOUT_MS )
+        if ( ++timeout_cnt > BIHALL247BN_TIMEOUT_MS )
         {
-            return BIHALL2_ERROR;
+            return BIHALL247BN_ERROR;
         }
     }
     *voltage_avg = ( voltage_sum / num_conv );
-    return BIHALL2_OK;
+    return BIHALL247BN_OK;
 }
 
-err_t bihall2_set_vref ( bihall2_t *ctx, float vref ) 
+err_t bihall247bn_set_vref ( bihall247bn_t *ctx, float vref ) 
 {
     ctx->vref = vref;
     return analog_in_set_vref_value( &ctx->adc, vref );
 }
 
-void bihall2_enable_device ( bihall2_t *ctx )
+void bihall247bn_enable_device ( bihall247bn_t *ctx )
 {
     digital_out_high ( &ctx->en );
 }
 
-void bihall2_disable_device ( bihall2_t *ctx )
+void bihall247bn_disable_device ( bihall247bn_t *ctx )
 {
     digital_out_low ( &ctx->en );
 }
 
-err_t bihall2_get_output ( bihall2_t *ctx, float *output )
+err_t bihall247bn_get_output ( bihall247bn_t *ctx, float *output )
 {
     float voltage = 0;
-    if ( BIHALL2_ERROR == bihall2_read_voltage_avg ( ctx, BIHALL2_NUM_CONVERSIONS, &voltage ) )
+    if ( BIHALL247BN_ERROR == bihall247bn_read_voltage_avg ( ctx, BIHALL247BN_NUM_CONVERSIONS, &voltage ) )
     {
-        return BIHALL2_ERROR;
+        return BIHALL247BN_ERROR;
     }
     if ( NULL != output )
     {
-        *output = ( ( voltage - BIHALL2_VREF / 2 ) / BIHALL2_VOLTAGE_PER_GAUSS );
+        *output = ( ( voltage - BIHALL247BN_VREF / 2 ) / BIHALL247BN_VOLTAGE_PER_GAUSS );
     }
-    return BIHALL2_OK;
+    return BIHALL247BN_OK;
 }
 
 // ------------------------------------------------------------------------- END

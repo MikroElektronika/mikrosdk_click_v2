@@ -1,5 +1,5 @@
 {
-    "name": "BI Hall 2 Click",
+    "name": "BI Hall 2 47BN Click",
     "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
     "hw" : ["Click","A31015KEWALT-47BN"]
 }

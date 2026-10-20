@@ -1,0 +1,22 @@
+{
+    "display_name": "BI Hall 2 47BN Click",
+    "name": "mikroe.click.bihall247bn",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7053",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "BI Hall 2 47BN Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.BIHall247BN",
+                "subdir_name": "lib_bihall247bn",
+                "path": "BI Hall 2 47BN Click/data/lib_bihall247bn"
+            }
+        ]
+    }
+}
