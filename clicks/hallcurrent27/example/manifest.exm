@@ -1,0 +1,5 @@
+{
+    "name": "Hall Current 27 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","GXS ANF 10-4 50101A","MCP3221A5"]
+}
