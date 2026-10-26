@@ -1,0 +1,22 @@
+{
+    "display_name": "VCP Monitor 7 Click",
+    "name": "mikroe.click.vcpmonitor7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7073",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "VCP Monitor 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VCPMonitor7",
+                "subdir_name": "lib_vcpmonitor7",
+                "path": "VCP Monitor 7 Click/data/lib_vcpmonitor7"
+            }
+        ]
+    }
+}
