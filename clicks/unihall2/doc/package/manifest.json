@@ -1,0 +1,22 @@
+{
+    "display_name": "UNI Hall 2 Click",
+    "name": "mikroe.click.unihall2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7054",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "UNI Hall 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.UNIHall2",
+                "subdir_name": "lib_unihall2",
+                "path": "UNI Hall 2 Click/data/lib_unihall2"
+            }
+        ]
+    }
+}
