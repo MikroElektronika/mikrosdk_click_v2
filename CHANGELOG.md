@@ -429,6 +429,7 @@
 *Following Click boards have been added:*
 
 + `LTE Cat.1 10 Click`
++ `WiFi 7 Click`
 
 **[BACK TO TOP](#changelog)**
 

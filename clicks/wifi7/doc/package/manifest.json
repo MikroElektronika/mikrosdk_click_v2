@@ -1,0 +1,22 @@
+{
+    "display_name": "WiFi 7 Click",
+    "name": "mikroe.click.wifi7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2046",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WiFi 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WiFI7",
+                "subdir_name": "lib_wifi7",
+                "path": "WiFi 7 Click/data/lib_wifi7"
+            }
+        ]
+    }
+}
