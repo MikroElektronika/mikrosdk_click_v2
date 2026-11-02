@@ -1,0 +1,5 @@
+{
+    "name": "4-20mA T 5 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","XTR200DQCR","TXS0104EPWR","MCP48CMD21T-E/UN"]
+}

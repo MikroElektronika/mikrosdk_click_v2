@@ -5,6 +5,8 @@
 **Updates by date of commit:**
 
 ### 2026
+#### November
++ **[20261102](#20261102)**
 #### October
 + **[20261029](#20261029)**
 + **[20261028](#20261028)**
@@ -422,6 +424,16 @@
 
 ---
 ---
+---
+
+## `20261102`
+
+*Following Click boards have been added:*
+
++ `4-20mA T 5 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20261029`

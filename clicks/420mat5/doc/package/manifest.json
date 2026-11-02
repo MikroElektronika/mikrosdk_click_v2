@@ -1,0 +1,22 @@
+{
+    "display_name": "4-20mA T 5 Click",
+    "name": "mikroe.click.420mat5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7100",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "4-20mA T 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.420mAT5",
+                "subdir_name": "lib_c420mat5",
+                "path": "4-20mA T 5 Click/data/lib_c420mat5"
+            }
+        ]
+    }
+}
