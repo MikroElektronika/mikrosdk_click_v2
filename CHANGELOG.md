@@ -6,6 +6,7 @@
 
 ### 2026
 #### November
++ **[20261103](#20261103)**
 + **[20261102](#20261102)**
 #### October
 + **[20261029](#20261029)**
@@ -424,6 +425,16 @@
 
 ---
 ---
+---
+
+## `20261103`
+
+*Following Click boards have been added:*
+
++ `Ultrasonic 2 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20261102`

@@ -1,0 +1,22 @@
+{
+    "display_name": "Ultrasonic 2 Click",
+    "name": "mikroe.click.ultrasonic2",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3302",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Ultrasonic 2 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Ultrasonic2",
+                "subdir_name": "lib_ultrasonic2",
+                "path": "Ultrasonic 2 Click/data/lib_ultrasonic2"
+            }
+        ]
+    }
+}
