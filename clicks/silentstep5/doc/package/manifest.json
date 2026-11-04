@@ -1,0 +1,22 @@
+{
+    "display_name": "Silent Step 5 Click",
+    "name": "mikroe.click.silentstep5",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7044",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Silent Step 5 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.SilentStep5",
+                "subdir_name": "lib_silentstep5",
+                "path": "Silent Step 5 Click/data/lib_silentstep5"
+            }
+        ]
+    }
+}
