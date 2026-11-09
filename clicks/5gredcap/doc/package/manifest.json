@@ -1,0 +1,22 @@
+{
+    "display_name": "5G RedCap Click",
+    "name": "mikroe.click.5gredcap",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6625",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "5G RedCap Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.5GRedCap",
+                "subdir_name": "lib_c5gredcap",
+                "path": "5G RedCap Click/data/lib_c5gredcap"
+            }
+        ]
+    }
+}
