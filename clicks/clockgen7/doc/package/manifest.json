@@ -1,0 +1,22 @@
+{
+    "display_name": "Clock Gen 7 Click",
+    "name": "mikroe.click.clockgen7",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7088",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Clock Gen 7 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ClockGen7",
+                "subdir_name": "lib_clockgen7",
+                "path": "Clock Gen 7 Click/data/lib_clockgen7"
+            }
+        ]
+    }
+}
