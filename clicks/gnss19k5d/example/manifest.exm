@@ -1,0 +1,5 @@
+{
+    "name": "GNSS 19 K5-D Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocdspic","xc16"],
+    "hw" : ["Click","SE868K5-D"]
+}

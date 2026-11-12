@@ -1,0 +1,22 @@
+{
+    "display_name": "GNSS 19 K5-D Click",
+    "name": "mikroe.click.gnss19k5d",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6816",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "GNSS 19 K5-D Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.GNSS19K5D",
+                "subdir_name": "lib_gnss19k5d",
+                "path": "GNSS 19 K5-D Click/data/lib_gnss19k5d"
+            }
+        ]
+    }
+}

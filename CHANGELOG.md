@@ -437,6 +437,10 @@
 *Following Click boards have been added:*
 
 + `LTE Cat.1 5 Click`
++ `GNSS 19 K5-D Click`
++ `WiFi 4 Click`
++ `PROTO Click`
++ `PMIC 4 Click`
 
 **[BACK TO TOP](#changelog)**
 

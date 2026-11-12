@@ -1,0 +1,22 @@
+{
+    "display_name": "PMIC 4 Click",
+    "name": "mikroe.click.pmic4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7161",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PMIC 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PMIC4",
+                "subdir_name": "lib_pmic4",
+                "path": "PMIC 4 Click/data/lib_pmic4"
+            }
+        ]
+    }
+}

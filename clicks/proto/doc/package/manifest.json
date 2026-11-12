@@ -1,0 +1,22 @@
+{
+    "display_name": "PROTO Click",
+    "name": "mikroe.click.proto",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1507",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "PROTO Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.PROTO",
+                "subdir_name": "lib_proto",
+                "path": "PROTO Click/data/lib_proto"
+            }
+        ]
+    }
+}
