@@ -1,0 +1,22 @@
+{
+    "display_name": "USB-C Power 4 Click",
+    "name": "mikroe.click.usbcpower4",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7121",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "USB-C Power 4 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.USBCPower4",
+                "subdir_name": "lib_usbcpower4",
+                "path": "USB-C Power 4 Click/data/lib_usbcpower4"
+            }
+        ]
+    }
+}
