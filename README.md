@@ -987,7 +987,8 @@ A full list of Clicks available in this repository is defined below:
 | VCP Monitor 2 Click | [Click Here](./clicks/vcpmonitor2) | VCP Monitor 3 Click | [Click Here](./clicks/vcpmonitor3) |
 | VCP Monitor 4 Click | [Click Here](./clicks/vcpmonitor4) | VCP Monitor 5 Click | [Click Here](./clicks/vcpmonitor5) |
 | VCP Monitor 6 Click | [Click Here](./clicks/vcpmonitor6) | VCP Monitor 7 Click | [Click Here](./clicks/vcpmonitor7) |
-| VCT Monitor Click | [Click Here](./clicks/vctmonitor) | Vela IF820 Click | [Click Here](./clicks/velaif820) |
+| VCT Monitor Click | [Click Here](./clicks/vctmonitor) | Veda SL917 EXT Click | [Click Here](./clicks/vedasl917ext) |
+| Veda SL917 INT Click | [Click Here](./clicks/vedasl917int) | Vela IF820 Click | [Click Here](./clicks/velaif820) |
 | Vibra sense Click | [Click Here](./clicks/vibrasense) | Vibra Sense 2 Click | [Click Here](./clicks/vibrasense2) |
 | Vibro Motor Click | [Click Here](./clicks/vibromotor) | Vibro Motor 2 Click | [Click Here](./clicks/vibromotor2) |
 | Vibro Motor 3 Click | [Click Here](./clicks/vibromotor3) | Vibro Motor 4 Click | [Click Here](./clicks/vibromotor4) |
@@ -1001,17 +1002,18 @@ A full list of Clicks available in this repository is defined below:
 | Water Detect 3 Click | [Click Here](./clicks/waterdetect3) | Waveform Click | [Click Here](./clicks/waveform) |
 | Waveform 2 Click | [Click Here](./clicks/waveform2) | Waveform 3 Click | [Click Here](./clicks/waveform3) |
 | Waveform 4 Click | [Click Here](./clicks/waveform4) | Weather Click | [Click Here](./clicks/weather) |
-| Wheatstone Click | [Click Here](./clicks/wheatstone) | WiFi 11 Click | [Click Here](./clicks/wifi11) |
-| WiFi 4 Click | [Click Here](./clicks/wifi4) | WiFi 6 Click | [Click Here](./clicks/wifi6) |
-| WiFi 7 Click | [Click Here](./clicks/wifi7) | WiFi 8 Click | [Click Here](./clicks/wifi8) |
-| WiFi 9 Click | [Click Here](./clicks/wifi9) | WiFi ESP Click | [Click Here](./clicks/wifiesp) |
-| WiFi NINA Click | [Click Here](./clicks/wifinina) | WiFi NORA Click | [Click Here](./clicks/wifinora) |
-| WiFly Click | [Click Here](./clicks/wifly) | Wireless SUN Click | [Click Here](./clicks/wirelesssun) |
-| Wirepas Click | [Click Here](./clicks/wirepas) | WIZFI360 Click | [Click Here](./clicks/wizfi360) |
-| WRLS 2.4GHz Click | [Click Here](./clicks/wrls24ghz) | XBEE Click | [Click Here](./clicks/xbee) |
-| XBEE 2 Click | [Click Here](./clicks/xbee2) | XBEE 3 Click | [Click Here](./clicks/xbee3) |
-| XBEE 4 Click | [Click Here](./clicks/xbee4) | XPort EDGE Click | [Click Here](./clicks/xportedge) |
-| XPort ETH SE Click | [Click Here](./clicks/xportethse) | XPort ETH XE Click | [Click Here](./clicks/xportethxe) |
-| XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) | XSENS MTi-8 Click | [Click Here](./clicks/xsensmti8) |
-| Zero-Cross Click | [Click Here](./clicks/zerocross) | ZigBee Click | [Click Here](./clicks/zigbee) |
+| Wheatstone Click | [Click Here](./clicks/wheatstone) | WiFi 10 Click | [Click Here](./clicks/wifi10) |
+| WiFi 11 Click | [Click Here](./clicks/wifi11) | WiFi 4 Click | [Click Here](./clicks/wifi4) |
+| WiFi 6 Click | [Click Here](./clicks/wifi6) | WiFi 7 Click | [Click Here](./clicks/wifi7) |
+| WiFi 8 Click | [Click Here](./clicks/wifi8) | WiFi 9 Click | [Click Here](./clicks/wifi9) |
+| WiFi ESP Click | [Click Here](./clicks/wifiesp) | WiFi NINA Click | [Click Here](./clicks/wifinina) |
+| WiFi NORA Click | [Click Here](./clicks/wifinora) | WiFly Click | [Click Here](./clicks/wifly) |
+| Wireless SUN Click | [Click Here](./clicks/wirelesssun) | Wirepas Click | [Click Here](./clicks/wirepas) |
+| WIZFI360 Click | [Click Here](./clicks/wizfi360) | WRLS 2.4GHz Click | [Click Here](./clicks/wrls24ghz) |
+| XBEE Click | [Click Here](./clicks/xbee) | XBEE 2 Click | [Click Here](./clicks/xbee2) |
+| XBEE 3 Click | [Click Here](./clicks/xbee3) | XBEE 4 Click | [Click Here](./clicks/xbee4) |
+| XPort EDGE Click | [Click Here](./clicks/xportedge) | XPort ETH SE Click | [Click Here](./clicks/xportethse) |
+| XPort ETH XE Click | [Click Here](./clicks/xportethxe) | XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) |
+| XSENS MTi-8 Click | [Click Here](./clicks/xsensmti8) | Zero-Cross Click | [Click Here](./clicks/zerocross) |
+| ZigBee Click | [Click Here](./clicks/zigbee) |
 

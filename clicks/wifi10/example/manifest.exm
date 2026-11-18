@@ -1,0 +1,5 @@
+{
+    "name": "WiFi 10 Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm"],
+    "hw" : ["Click","SX-ULPAN-2401-SP"]
+}

@@ -439,6 +439,9 @@
 *Following Click boards have been added:*
 
 + `Charge Pump Click`
++ `WiFi 10 Click`
++ `Veda SL917 INT Click`
++ `Veda SL917 EXT Click`
 
 **[BACK TO TOP](#changelog)**
 

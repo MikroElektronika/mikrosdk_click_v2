@@ -1,0 +1,5 @@
+{
+    "name": "Veda SL917 INT Click",
+    "toolchain": ["mikrocarm","gcc-arm","clang-arm","mikrocpic","mikrocpic32","xc32","gcc-riscv","clang-riscv","mikrocavr","mikrocdspic","xc16"],
+    "hw" : ["Click","453-00221"]
+}

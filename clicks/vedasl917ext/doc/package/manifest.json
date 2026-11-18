@@ -1,0 +1,22 @@
+{
+    "display_name": "Veda SL917 EXT Click",
+    "name": "mikroe.click.vedasl917ext",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6488",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Veda SL917 EXT Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VedaSL917EXT",
+                "subdir_name": "lib_vedasl917ext",
+                "path": "Veda SL917 EXT Click/data/lib_vedasl917ext"
+            }
+        ]
+    }
+}

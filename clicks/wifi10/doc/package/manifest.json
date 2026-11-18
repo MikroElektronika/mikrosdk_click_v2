@@ -1,0 +1,22 @@
+{
+    "display_name": "WiFi 10 Click",
+    "name": "mikroe.click.wifi10",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-3432",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "WiFi 10 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.WiFi10",
+                "subdir_name": "lib_wifi10",
+                "path": "WiFi 10 Click/data/lib_wifi10"
+            }
+        ]
+    }
+}

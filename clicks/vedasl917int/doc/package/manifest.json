@@ -1,0 +1,22 @@
+{
+    "display_name": "Veda SL917 INT Click",
+    "name": "mikroe.click.vedasl917int",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6489",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Veda SL917 INT Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.VedaSL917INT",
+                "subdir_name": "lib_vedasl917int",
+                "path": "Veda SL917 INT Click/data/lib_vedasl917int"
+            }
+        ]
+    }
+}
