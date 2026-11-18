@@ -1,0 +1,22 @@
+{
+    "display_name": "Charge Pump Click",
+    "name": "mikroe.click.chargepump",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7093",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Charge Pump Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ChargePump",
+                "subdir_name": "lib_chargepump",
+                "path": "Charge Pump Click/data/lib_chargepump"
+            }
+        ]
+    }
+}
