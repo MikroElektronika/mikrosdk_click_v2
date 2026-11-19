@@ -1,0 +1,22 @@
+{
+    "display_name": "ETH WIZ Click",
+    "name": "mikroe.click.ethwiz",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-1718",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ETH WIZ Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ETHWIZ",
+                "subdir_name": "lib_ethwiz",
+                "path": "ETH WIZ Click/data/lib_ethwiz"
+            }
+        ]
+    }
+}

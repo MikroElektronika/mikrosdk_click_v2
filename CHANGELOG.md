@@ -441,6 +441,7 @@
 
 + `RC Pulse Click`
 + `NFC Tag Click`
++ `ETH WIZ Click`
 
 **[BACK TO TOP](#changelog)**
 
