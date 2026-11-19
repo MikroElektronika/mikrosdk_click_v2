@@ -440,6 +440,7 @@
 *Following Click boards have been added:*
 
 + `RC Pulse Click`
++ `NFC Tag Click`
 
 **[BACK TO TOP](#changelog)**
 
