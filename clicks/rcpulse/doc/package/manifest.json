@@ -1,0 +1,22 @@
+{
+    "display_name": "RC Pulse Click",
+    "name": "mikroe.click.rcpulse",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7072",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "RC Pulse Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.RCPulse",
+                "subdir_name": "lib_rcpulse",
+                "path": "RC Pulse Click/data/lib_rcpulse"
+            }
+        ]
+    }
+}
