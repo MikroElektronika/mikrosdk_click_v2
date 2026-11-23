@@ -1,0 +1,22 @@
+{
+    "display_name": "Relay 8 Click",
+    "name": "mikroe.click.relay8",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7132",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Relay 8 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.Relay8",
+                "subdir_name": "lib_relay8",
+                "path": "Relay 8 Click/data/lib_relay8"
+            }
+        ]
+    }
+}
