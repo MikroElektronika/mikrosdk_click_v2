@@ -1,0 +1,22 @@
+{
+    "display_name": "ETH Click",
+    "name": "mikroe.click.eth",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5548",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ETH Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ETH",
+                "subdir_name": "lib_eth",
+                "path": "ETH Click/data/lib_eth"
+            }
+        ]
+    }
+}

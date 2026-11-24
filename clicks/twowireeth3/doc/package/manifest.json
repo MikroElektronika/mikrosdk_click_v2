@@ -1,0 +1,22 @@
+{
+    "display_name": "Two-Wire ETH 3 Click",
+    "name": "mikroe.click.twowireeth3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-6550",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Two-Wire ETH 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TwoWireETH3",
+                "subdir_name": "lib_twowireeth3",
+                "path": "Two-Wire ETH 3 Click/data/lib_twowireeth3"
+            }
+        ]
+    }
+}

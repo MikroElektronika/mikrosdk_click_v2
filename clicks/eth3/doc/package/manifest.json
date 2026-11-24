@@ -1,0 +1,22 @@
+{
+    "display_name": "ETH 3 Click",
+    "name": "mikroe.click.eth3",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-2850",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "ETH 3 Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ETH3",
+                "subdir_name": "lib_eth3",
+                "path": "ETH 3 Click/data/lib_eth3"
+            }
+        ]
+    }
+}

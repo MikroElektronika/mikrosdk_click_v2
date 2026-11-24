@@ -59,6 +59,8 @@ err_t ism3_init ( ism3_t *ctx, ism3_cfg_t *cfg )
     spi_cfg.miso = cfg->miso;
     spi_cfg.mosi = cfg->mosi;
 
+    ctx->chip_select = cfg->cs;
+    
     if ( SPI_MASTER_ERROR == spi_master_open( &ctx->spi, &spi_cfg ) ) 
     {
         return SPI_MASTER_ERROR;
@@ -80,6 +82,7 @@ err_t ism3_init ( ism3_t *ctx, ism3_cfg_t *cfg )
     }
 
     spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );
 
     digital_out_init( &ctx->rst, cfg->rst );
     digital_out_init( &ctx->cs, cfg->cs );

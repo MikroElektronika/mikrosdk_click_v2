@@ -44,8 +44,9 @@ void ipsdisplay3_cfg_setup ( ipsdisplay3_cfg_t *cfg )
     cfg->dc   = HAL_PIN_NC;
     cfg->bck  = HAL_PIN_NC;
 
-    cfg->spi_speed = 5000000;
-    cfg->spi_mode  = SPI_MASTER_MODE_0;
+    cfg->spi_speed   = 5000000;
+    cfg->spi_mode    = SPI_MASTER_MODE_0;
+    cfg->cs_polarity = SPI_MASTER_CHIP_SELECT_POLARITY_ACTIVE_LOW;
 }
 
 err_t ipsdisplay3_init ( ipsdisplay3_t *ctx, ipsdisplay3_cfg_t *cfg ) 
@@ -57,6 +58,8 @@ err_t ipsdisplay3_init ( ipsdisplay3_t *ctx, ipsdisplay3_cfg_t *cfg )
     spi_cfg.sck  = cfg->sck;
     spi_cfg.miso = cfg->miso;
     spi_cfg.mosi = cfg->mosi;
+
+    ctx->chip_select = cfg->cs;
 
     if ( SPI_MASTER_ERROR == spi_master_open( &ctx->spi, &spi_cfg ) ) 
     {
@@ -77,6 +80,9 @@ err_t ipsdisplay3_init ( ipsdisplay3_t *ctx, ipsdisplay3_cfg_t *cfg )
     {
         return SPI_MASTER_ERROR;
     }
+
+    spi_master_set_chip_select_polarity( cfg->cs_polarity );
+    spi_master_deselect_device( ctx->chip_select );
 
     digital_out_init( &ctx->cs, cfg->cs );
     digital_out_init( &ctx->rst, cfg->rst );

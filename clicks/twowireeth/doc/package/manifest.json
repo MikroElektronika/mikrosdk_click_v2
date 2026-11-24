@@ -1,0 +1,22 @@
+{
+    "display_name": "Two-Wire ETH Click",
+    "name": "mikroe.click.twowireeth",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-5543",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Two-Wire ETH Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.TwoWireETH",
+                "subdir_name": "lib_twowireeth",
+                "path": "Two-Wire ETH Click/data/lib_twowireeth"
+            }
+        ]
+    }
+}

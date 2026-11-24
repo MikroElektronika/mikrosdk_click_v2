@@ -379,7 +379,8 @@ A full list of Clicks available in this repository is defined below:
 | Environment 3 Click | [Click Here](./clicks/environment3) | Environment 4 Click | [Click Here](./clicks/environment4) |
 | Environment 5 Click | [Click Here](./clicks/environment5) | Environment 6 Click | [Click Here](./clicks/environment6) |
 | Environment 7 Click | [Click Here](./clicks/environment7) | EPOS Module Click | [Click Here](./clicks/eposmodule) |
-| ESP8684 Click | [Click Here](./clicks/esp8684) | ETH WIZ Click | [Click Here](./clicks/ethwiz) |
+| ESP8684 Click | [Click Here](./clicks/esp8684) | ETH Click | [Click Here](./clicks/eth) |
+| ETH 3 Click | [Click Here](./clicks/eth3) | ETH WIZ Click | [Click Here](./clicks/ethwiz) |
 | ETH WIZ 3 Click | [Click Here](./clicks/ethwiz3) | EVC Click | [Click Here](./clicks/evc) |
 | Excelon LP Click | [Click Here](./clicks/excelonlp) | Excelon-Ultra Click | [Click Here](./clicks/excelonultra) |
 | Expand Click | [Click Here](./clicks/expand) | Expand 10 Click | [Click Here](./clicks/expand10) |
@@ -955,7 +956,8 @@ A full list of Clicks available in this repository is defined below:
 | Touchpad 5 Click | [Click Here](./clicks/touchpad5) | TPS Pressure 040MY Click | [Click Here](./clicks/tpspressure040my) |
 | TPS Pressure 100MG Click | [Click Here](./clicks/tpspressure100mg) | TPS Pressure 150PD Click | [Click Here](./clicks/tpspressure150pd) |
 | TPS Pressure 500PG Click | [Click Here](./clicks/tpspressure500pg) | tRF Click | [Click Here](./clicks/trf) |
-| Turbidity Click | [Click Here](./clicks/turbidity) | UART 1-Wire Click | [Click Here](./clicks/uart1wire) |
+| Turbidity Click | [Click Here](./clicks/turbidity) | Two-Wire ETH Click | [Click Here](./clicks/twowireeth) |
+| Two-Wire ETH 3 Click | [Click Here](./clicks/twowireeth3) | UART 1-Wire Click | [Click Here](./clicks/uart1wire) |
 | UART I2C SPI Click | [Click Here](./clicks/uarti2cspi) | UART I2C SPI 2 Click | [Click Here](./clicks/uarti2cspi2) |
 | UART Mux Click | [Click Here](./clicks/uartmux) | UART MUX 2 Click | [Click Here](./clicks/uartmux2) |
 | UART MUX 4 Click | [Click Here](./clicks/uartmux4) | UART to I2C Click | [Click Here](./clicks/uarttoi2c) |
@@ -1015,7 +1017,7 @@ A full list of Clicks available in this repository is defined below:
 | XBEE Click | [Click Here](./clicks/xbee) | XBEE 2 Click | [Click Here](./clicks/xbee2) |
 | XBEE 3 Click | [Click Here](./clicks/xbee3) | XBEE 4 Click | [Click Here](./clicks/xbee4) |
 | XPort EDGE Click | [Click Here](./clicks/xportedge) | XPort ETH SE Click | [Click Here](./clicks/xportethse) |
-| XPort ETH XE Click | [Click Here](./clicks/xportethxe) | XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) |
-| XSENS MTi-8 Click | [Click Here](./clicks/xsensmti8) | Zero-Cross Click | [Click Here](./clicks/zerocross) |
-| ZigBee Click | [Click Here](./clicks/zigbee) |
+| XPort ETH XE Click | [Click Here](./clicks/xportethxe) | XPRO-Adapter Click | [Click Here](./clicks/xproadapter) |
+| XSENS MTi-3 Click | [Click Here](./clicks/xsensmti3) | XSENS MTi-8 Click | [Click Here](./clicks/xsensmti8) |
+| Zero-Cross Click | [Click Here](./clicks/zerocross) | ZigBee Click | [Click Here](./clicks/zigbee) |
 

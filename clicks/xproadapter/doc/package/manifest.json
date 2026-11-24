@@ -1,0 +1,22 @@
+{
+    "display_name": "XPRO-Adapter Click",
+    "name": "mikroe.click.xproadapter",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-4123",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "XPRO-Adapter Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.XPROAdapter",
+                "subdir_name": "lib_xproadapter",
+                "path": "XPRO-Adapter Click/data/lib_xproadapter"
+            }
+        ]
+    }
+}

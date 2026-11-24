@@ -502,6 +502,7 @@ typedef struct
 
     // Modules
     spi_master_t spi;               /**< SPI driver object. */
+    pin_name_t   chip_select;       /**< Chip select pin descriptor (used for SPI driver). */
 
     uint8_t      rotation;          /**< Screen rotation settings. */
     ipsdisplay3_font_t font;        /**< Font setting. */ 
@@ -529,6 +530,7 @@ typedef struct
     // static variable
     uint32_t            spi_speed;  /**< SPI serial speed. */
     spi_master_mode_t   spi_mode;   /**< SPI master mode. */
+    spi_master_chip_select_polarity_t cs_polarity;  /**< Chip select pin polarity. */
 
 } ipsdisplay3_cfg_t;
 

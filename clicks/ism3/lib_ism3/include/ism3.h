@@ -606,6 +606,7 @@ typedef struct
 
     // Modules
     spi_master_t spi;           /**< SPI driver object. */
+    pin_name_t chip_select;     /**< Chip select pin descriptor (used for SPI driver). */
 
     uint16_t status;            /**< Status word of the last read/write sequence. */
 

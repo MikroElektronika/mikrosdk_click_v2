@@ -6,6 +6,7 @@
 
 ### 2026
 #### November
++ **[20261124](#20261124)**
 + **[20261123](#20261123)**
 + **[20261119](#20261119)**
 + **[20261118](#20261118)**
@@ -434,6 +435,27 @@
 
 ---
 ---
+---
+
+## `20261124`
+
+*Following Click boards have been added:*
+
++ `ETH Click`
++ `ETH 3 Click`
++ `Two-Wire ETH 3 Click`
++ `Two-Wire ETH Click`
++ `XPRO-Adapter Click`
+
+*Following Click boards have been updated:*
+
++ `IPS Display Click`
++ `IPS Display 2 Click`
++ `IPS Display 3 Click`
++ `ISM 3 Click`
+
+**[BACK TO TOP](#changelog)**
+
 ---
 
 ## `20261123`
