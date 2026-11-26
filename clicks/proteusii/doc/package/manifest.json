@@ -1,0 +1,22 @@
+{
+    "display_name": "Proteus-II Click",
+    "name": "mikroe.click.proteusii",
+    "type": "click",
+    "version": "2.2.0",
+    "pid": "MIKROE-7157",
+    "package_changed": true,
+    "contents": {
+        "examples": [
+            {
+                "path": "Proteus-II Click/examples/example"
+            }
+        ],
+        "libraries": [
+            {
+                "alias": "Click.ProteusII",
+                "subdir_name": "lib_proteusii",
+                "path": "Proteus-II Click/data/lib_proteusii"
+            }
+        ]
+    }
+}
